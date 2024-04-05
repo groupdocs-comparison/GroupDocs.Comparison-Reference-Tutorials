@@ -24,11 +24,6 @@ using System.IO;
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 ```
-## Step 2: Import `GroupDocs.Comparison.Options` Namespace
-```csharp
-using GroupDocs.Comparison.Options;
-```
-### Loading Text from String in GroupDocs Comparison for .NET
 Comparing text from strings using GroupDocs.Comparison for .NET is a straightforward process. Follow these steps to achieve text comparison efficiently:
 ## Step 1: Instantiate Comparer Object
 ```csharp

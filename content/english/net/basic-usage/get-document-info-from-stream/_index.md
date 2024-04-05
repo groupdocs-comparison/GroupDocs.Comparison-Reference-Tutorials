@@ -38,12 +38,10 @@ Here, we retrieve the document information using the `GetDocumentInfo()` method,
 ## Step 3: Display Document Info
 ```csharp
 Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);
-```
-In this step, we print out the extracted document information including file type, page count, and size using the `Console.WriteLine()` method.
-## Step 4: Cleanup Resources
-```csharp
 }
 ```
+In this step, we print out the extracted document information including file type, page count, and size using the `Console.WriteLine()` method.
+
 Finally, we wrap up by closing the `Comparer` object within a `using` block to ensure proper resource disposal.
 
 ## Conclusion

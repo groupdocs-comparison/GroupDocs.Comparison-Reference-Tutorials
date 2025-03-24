@@ -3,7 +3,6 @@ title: Terima dan Tolak Perubahan dalam Perbandingan GroupDocs untuk .NET
 linktitle: Terima dan Tolak Perubahan dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menerima dan menolak perubahan dalam dokumen menggunakan Perbandingan GroupDocs untuk .NET. Sederhanakan alur kerja dokumen Anda dengan mudah.
-type: docs
 weight: 10
 url: /id/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

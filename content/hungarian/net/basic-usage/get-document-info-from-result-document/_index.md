@@ -3,7 +3,6 @@ title: Dokumentuminformációk lekérése a Result Document - GroupDocs.Comparis
 linktitle: Dokumentuminformációk lekérése a Result Document - GroupDocs.Comparison for .NET-ből
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan kérheti le a dokumentumadatokat az eredménydokumentumból a GroupDocs.Comparison for .NET használatával. Egyszerű lépések magyarázata .NET-fejlesztőknek.
-type: docs
 weight: 12
 url: /hu/net/basic-usage/get-document-info-from-result-document/
 ---

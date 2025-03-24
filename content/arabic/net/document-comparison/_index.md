@@ -3,7 +3,6 @@ title: مقارنة المستندات
 linktitle: مقارنة المستندات
 second_title: GroupDocs.Comparison .NET API
 description: قم بمقارنة المستندات في .NET بكفاءة باستخدام GroupDocs.Comparison. تبسيط إدارة المستندات وتعزيز سير العمل وضمان الدقة. يتعلم أكثر!
-type: docs
 weight: 21
 url: /ar/net/document-comparison/
 ---

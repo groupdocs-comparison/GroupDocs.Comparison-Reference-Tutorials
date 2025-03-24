@@ -3,7 +3,6 @@ title: Αποθήκευση στόχων μεταδεδομένων εγγράφ
 linktitle: Αποθήκευση στόχων μεταδεδομένων εγγράφων στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να αποθηκεύετε τον στόχο μεταδεδομένων εγγράφων χρησιμοποιώντας τη σύγκριση GroupDocs για .NET. Εύκολα βήματα για αποτελεσματική σύγκριση εγγράφων στις εφαρμογές σας .NET.
-type: docs
 weight: 15
 url: /el/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

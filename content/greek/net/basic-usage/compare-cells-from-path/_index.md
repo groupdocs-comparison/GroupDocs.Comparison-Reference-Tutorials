@@ -3,7 +3,6 @@ title: Συγκρίνετε κελιά από το Path - GroupDocs.Comparison �
 linktitle: Συγκρίνετε κελιά από το Path - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να συγκρίνετε κελιά από μια διαδρομή χρησιμοποιώντας το GroupDocs.Comparison για .NET. Εντοπίστε αποτελεσματικά τις διαφορές μεταξύ των εγγράφων.
-type: docs
 weight: 10
 url: /el/net/basic-usage/compare-cells-from-path/
 ---

@@ -1,7 +1,6 @@
 ---
 title: .NET için GroupDocs.Comparison Öğreticileri ve Örnekleri
 linktitle: .NET Dersleri için GroupDocs.Comparison
-type: docs
 weight: 10
 url: /tr/net/
 description: Verimli belge ve klasör karşılaştırmasını, yönetimini ve entegrasyonunu zahmetsizce kolaylaştıran GroupDocs.Comparison for .NET'e yönelik kapsamlı eğitimleri keşfedin.

@@ -3,7 +3,6 @@ title: Rychlý start
 linktitle: Rychlý start
 second_title: GroupDocs.Comparison .NET API
 description: Bez námahy integrujte GroupDocs Comparison for .NET do svých projektů. Naučte se efektivní metody nastavení licencí pro přesné pracovní postupy porovnávání dokumentů.
-type: docs
 weight: 25
 url: /cs/net/quick-start/
 ---

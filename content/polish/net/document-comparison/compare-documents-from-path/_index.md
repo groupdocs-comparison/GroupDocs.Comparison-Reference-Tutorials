@@ -3,7 +3,6 @@ title: Porównaj dokumenty ze ścieżki - GroupDocs.Comparison dla .NET
 linktitle: Porównaj dokumenty ze ścieżki - GroupDocs.Comparison dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Bez wysiłku porównuj dokumenty w różnych formatach dzięki GroupDocs.Comparison dla .NET. Oszczędź czas i zapewnij dokładność w zadaniach prawnych, akademickich i biznesowych.
-type: docs
 weight: 15
 url: /pl/net/document-comparison/compare-documents-from-path/
 ---

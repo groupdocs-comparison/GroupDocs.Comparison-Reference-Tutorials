@@ -3,7 +3,6 @@ title: So sánh nhiều tài liệu trong GroupDocs So sánh cho .NET
 linktitle: So sánh nhiều tài liệu trong GroupDocs So sánh cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh nhiều tài liệu một cách hiệu quả bằng cách sử dụng So sánh GroupDocs cho .NET. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 13
 url: /vi/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

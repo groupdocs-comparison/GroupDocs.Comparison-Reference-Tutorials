@@ -3,7 +3,6 @@ title: Menyimpan Metadata Dokumen Buatan Pengguna dalam Perbandingan GroupDocs u
 linktitle: Menyimpan Metadata Dokumen Buatan Pengguna dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menyimpan metadata dokumen yang ditentukan pengguna menggunakan Perbandingan GroupDocs untuk .NET. Bandingkan dan manipulasi metadata dengan mudah menggunakan petunjuk langkah demi langkah.
-type: docs
 weight: 16
 url: /id/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

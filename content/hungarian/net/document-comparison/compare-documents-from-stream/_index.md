@@ -3,7 +3,6 @@ title: Hasonlítsa össze a dokumentumokat a Streamből – GroupDocs.Comparison
 linktitle: Hasonlítsa össze a dokumentumokat a Streamből – GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Egyszerűsítse a dokumentumok összehasonlítását a GroupDocs.Comparison for .NET segítségével. Hasonlítsa össze a dokumentumokat könnyedén, és biztosítsa a fájlok pontosságát.
-type: docs
 weight: 16
 url: /hu/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ A mai rohanó világban, ahol bőséges információ áll rendelkezésre, és fo
 Mielőtt belevágna a GroupDocs.Comparison for .NET használatába, meg kell felelnie néhány előfeltételnek:
 1. .NET-keretrendszer telepítése: Győződjön meg arról, hogy a .NET-keretrendszer telepítve van a rendszeren. Letöltheti a Microsoft webhelyéről.
 2.  A GroupDocs.Comparison letöltése .NET-hez: Látogassa meg a[letöltési link](https://releases.groupdocs.com/comparison/net/) a GroupDocs.Comparison for .NET legújabb verziójának beszerzéséhez.
-3.  Hozzáférési dokumentáció: Ismerkedjen meg a könyvtár funkcióival a hivatkozás segítségével[dokumentáció](https://reference.groupdocs.com/comparison/net/).
+3.  Hozzáférési dokumentáció: Ismerkedjen meg a könyvtár funkcióival a hivatkozás segítségével[dokumentáció](https://tutorials.groupdocs.com/comparison/net/).
 4. A C# alapvető ismerete: Ez az oktatóanyag feltételezi, hogy rendelkezik a C# programozási nyelv alapvető ismereteivel.
 
 ## Névterek importálása

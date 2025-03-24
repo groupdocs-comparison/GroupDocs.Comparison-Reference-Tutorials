@@ -3,7 +3,6 @@ title: Nhận thông tin tài liệu từ đường dẫn - GroupDocs.Comparison
 linktitle: Nhận thông tin tài liệu từ đường dẫn - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách trích xuất thông tin tài liệu từ một đường dẫn bằng GroupDocs.Comparison cho .NET. Các bước dễ dàng để quản lý tài liệu hiệu quả trong C#.
-type: docs
 weight: 13
 url: /vi/net/basic-usage/get-document-info-from-path/
 ---

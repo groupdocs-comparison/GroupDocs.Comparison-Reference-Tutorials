@@ -3,7 +3,6 @@ title: Oldal-előnézeteket generál a céldokumentumhoz
 linktitle: Oldal-előnézeteket generál a céldokumentumhoz
 second_title: GroupDocs.Comparison .NET API
 description: A GroupDocs.Comparison for .NET használatával hatékonyan generálhat oldal-előnézeteket a céldokumentumokhoz. Kövesse lépésenkénti útmutatónkat a dokumentumok zökkenőmentes összehasonlításához.
-type: docs
 weight: 12
 url: /hu/net/document-comparison/generate-page-previews-target-document/
 ---

@@ -3,7 +3,6 @@ title: Yoldaki Belgeleri Karşılaştırın - .NET için GroupDocs.Comparison
 linktitle: Yoldaki Belgeleri Karşılaştırın - .NET için GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET ile çeşitli formatlardaki belgeleri zahmetsizce karşılaştırın. Zamandan tasarruf edin ve yasal, akademik ve ticari görevlerde doğruluk sağlayın.
-type: docs
 weight: 15
 url: /tr/net/document-comparison/compare-documents-from-path/
 ---

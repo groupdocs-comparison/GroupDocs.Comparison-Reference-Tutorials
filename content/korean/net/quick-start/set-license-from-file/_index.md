@@ -3,7 +3,6 @@ title: 파일에서 라이센스 설정 - .NET용 GroupDocs 비교
 linktitle: 파일에서 라이센스 설정 - .NET용 GroupDocs 비교
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교를 응용 프로그램에 원활하게 통합하는 방법을 알아보세요. 손쉽게 네임스페이스를 설정하고 가져오고 문서를 비교할 수 있습니다.
-type: docs
 weight: 10
 url: /ko/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 .NET용 GroupDocs 비교를 통해 개발자는 문서 비교 기능을 .NET 응용 프로그램에 원활하게 통합할 수 있습니다. 이 가이드에 설명된 단계를 수행하면 필요한 환경을 효율적으로 설정하고, 필요한 네임스페이스를 가져오고, 프로젝트 내에서 GroupDocs 비교의 잠재력을 최대한 활용하도록 라이센스를 설정할 수 있습니다.
 ## FAQ
 ### .NET용 GroupDocs 비교에 대한 설명서는 어디에서 찾을 수 있습니까?
- 문서에 액세스할 수 있습니다.[여기](https://reference.groupdocs.com/comparison/net/).
+ 문서에 액세스할 수 있습니다.[여기](https://tutorials.groupdocs.com/comparison/net/).
 ### .NET용 GroupDocs 비교에 사용할 수 있는 무료 평가판이 있습니까?
  예, 무료 평가판을 다운로드할 수 있습니다[여기](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs 비교에 대한 임시 라이센스를 얻으려면 어떻게 해야 합니까?

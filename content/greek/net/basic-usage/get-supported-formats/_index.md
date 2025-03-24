@@ -3,7 +3,6 @@ title: Λάβετε υποστηριζόμενες μορφές - GroupDocs.Comp
 linktitle: Λάβετε υποστηριζόμενες μορφές - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Βελτιώστε την ακρίβεια και τη συνέπεια του εγγράφου με το GroupDocs.Comparison για .NET. Ενσωματώστε απρόσκοπτα αυτό το ισχυρό εργαλείο στις εφαρμογές σας .NET.
-type: docs
 weight: 15
 url: /el/net/basic-usage/get-supported-formats/
 ---

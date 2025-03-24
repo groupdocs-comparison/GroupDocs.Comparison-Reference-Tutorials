@@ -3,7 +3,6 @@ title: Dokumentumok betöltése és mentése
 linktitle: Dokumentumok betöltése és mentése
 second_title: GroupDocs.Comparison .NET API
 description: Könnyedén összehasonlíthatja a dokumentumokat .NET-ben a GroupDocs.Comparison for .NET segítségével. Ismerje meg a betöltési, mentési és betöltési lehetőségek használatát a hatékony dokumentumkezelés érdekében.
-type: docs
 weight: 22
 url: /hu/net/loading-and-saving-documents/
 ---

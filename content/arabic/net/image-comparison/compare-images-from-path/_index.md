@@ -3,7 +3,6 @@ title: مقارنة الصور من المسار - GroupDocs.Comparison for .NET
 linktitle: مقارنة الصور من المسار - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة الصور بكفاءة في .NET باستخدام مكتبة GroupDocs.Comparison. اتبع الدليل خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 10
 url: /ar/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /ar/net/image-comparison/compare-images-from-path/
 ## المتطلبات الأساسية
 قبل الغوص في تعقيدات استخدام GroupDocs.Comparison for .NET، تأكد من استيفاء المتطلبات الأساسية التالية:
 ### 1. قم بتثبيت GroupDocs.Comparison لـ .NET
- تحميل المكتبة من[هنا](https://releases.groupdocs.com/comparison/net/) واتبع تعليمات التثبيت المتوفرة في الوثائق[هنا](https://reference.groupdocs.com/comparison/net/).
+ تحميل المكتبة من[هنا](https://releases.groupdocs.com/comparison/net/) واتبع تعليمات التثبيت المتوفرة في الوثائق[هنا](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. الحصول على الترخيص
  لفتح الإمكانات الكاملة لـ GroupDocs.Comparison for .NET، احصل على ترخيص من[هنا](https://purchase.groupdocs.com/buy) أو الاستفادة من الترخيص المؤقت المتاح[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### 3. الإلمام ببرمجة C#

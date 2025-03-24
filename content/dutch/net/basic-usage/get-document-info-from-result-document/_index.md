@@ -3,7 +3,6 @@ title: Documentinformatie ophalen uit resultaatdocument - GroupDocs.Comparison v
 linktitle: Documentinformatie ophalen uit resultaatdocument - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u documentinformatie uit het resultaatdocument kunt ophalen met GroupDocs.Comparison voor .NET. Eenvoudige stappen uitgelegd voor .NET-ontwikkelaars.
-type: docs
 weight: 12
 url: /nl/net/basic-usage/get-document-info-from-result-document/
 ---

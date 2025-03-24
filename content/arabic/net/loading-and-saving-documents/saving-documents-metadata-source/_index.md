@@ -3,7 +3,6 @@ title: حفظ مصدر البيانات التعريفية للمستندات ف
 linktitle: حفظ مصدر البيانات التعريفية للمستندات في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية حفظ مصدر بيانات تعريف المستند باستخدام GroupDocs Comparison لـ .NET. اتبع دليلنا خطوة بخطوة لإجراء مقارنة سلسة للمستندات في .NET الخاص بك.
-type: docs
 weight: 14
 url: /ar/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

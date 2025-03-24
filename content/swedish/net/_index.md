@@ -1,7 +1,6 @@
 ---
 title: Handledningar och exempel på GroupDocs.Comparison för .NET
 linktitle: GroupDocs.Comparison för .NET Tutorials
-type: docs
 weight: 10
 url: /sv/net/
 description: Upptäck omfattande självstudier för GroupDocs.Comparison för .NET, vilket underlättar effektiv jämförelse, hantering och integration av dokument och mappar utan ansträngning.

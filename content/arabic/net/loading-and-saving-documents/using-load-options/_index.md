@@ -3,7 +3,6 @@ title: استخدام خيارات التحميل في مقارنة GroupDocs ل
 linktitle: استخدام خيارات التحميل في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية استخدام خيارات التحميل في GroupDocs Comparison لـ .NET لمقارنة المستندات ذات الخطوط المخصصة بسلاسة.
-type: docs
 weight: 13
 url: /ar/net/loading-and-saving-documents/using-load-options/
 ---

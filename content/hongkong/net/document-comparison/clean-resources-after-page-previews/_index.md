@@ -3,7 +3,6 @@ title: 頁面預覽後清理資源
 linktitle: 頁面預覽後清理資源
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 逐步比較文件。透過高效的文件管理增強您的 .NET 應用程式。
-type: docs
 weight: 13
 url: /zh-hant/net/document-comparison/clean-resources-after-page-previews/
 ---

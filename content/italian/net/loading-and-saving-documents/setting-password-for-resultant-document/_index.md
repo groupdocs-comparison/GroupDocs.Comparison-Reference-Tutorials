@@ -3,7 +3,6 @@ title: Impostazione della password per il documento risultante nel confronto Gro
 linktitle: Impostazione della password per il documento risultante nel confronto GroupDocs per .NET
 second_title: API GroupDocs.Comparison .NET
 description: Scopri come impostare una password per i documenti risultanti in GroupDocs Comparison for .NET. Migliora la sicurezza e proteggi i file confrontati.
-type: docs
 weight: 17
 url: /it/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Sì, GroupDocs Comparison for .NET supporta il confronto di documenti in vari fo
 ### Ho bisogno di una licenza per utilizzare GroupDocs Comparison per .NET?
  Sì, puoi acquistare una licenza da[Qui](https://purchase.groupdocs.com/buy) o ottenere una licenza temporanea[Qui](https://purchase.groupdocs.com/temporary-license/).
 ### È disponibile documentazione per GroupDocs Comparison per .NET?
- Sì, puoi accedere alla documentazione[Qui](https://reference.groupdocs.com/comparison/net/).
+ Sì, puoi accedere alla documentazione[Qui](https://tutorials.groupdocs.com/comparison/net/).

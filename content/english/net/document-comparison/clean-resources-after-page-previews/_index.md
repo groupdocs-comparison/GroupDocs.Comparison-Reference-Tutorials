@@ -3,7 +3,6 @@ title: Clean Resources After Page Previews
 linktitle: Clean Resources After Page Previews
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to compare documents using GroupDocs.Comparison for .NET step by step. Enhance your .NET applications with efficient document management.
-type: docs
 weight: 13
 url: /net/document-comparison/clean-resources-after-page-previews/
 ---

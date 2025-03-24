@@ -3,7 +3,6 @@ title: GroupDocs の文字列からのテキストの読み込み .NET の比較
 linktitle: GroupDocs の文字列からのテキストの読み込み .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison ライブラリを使用して、.NET アプリケーション内のテキストを簡単に比較します。シームレスな統合により効率と精度が向上します。
-type: docs
 weight: 12
 url: /ja/net/loading-and-saving-documents/loading-text-from-string/
 ---

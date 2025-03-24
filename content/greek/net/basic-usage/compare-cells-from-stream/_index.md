@@ -3,7 +3,6 @@ title: Συγκρίνετε κελιά από το Stream - GroupDocs.Comparison
 linktitle: Συγκρίνετε κελιά από το Stream - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Συγκρίνετε εύκολα έγγραφα σε C# χρησιμοποιώντας το GroupDocs.Comparison για .NET. Βελτιώστε τις εργασίες επεξεργασίας εγγράφων σας με ευκολία.
-type: docs
 weight: 11
 url: /el/net/basic-usage/compare-cells-from-stream/
 ---

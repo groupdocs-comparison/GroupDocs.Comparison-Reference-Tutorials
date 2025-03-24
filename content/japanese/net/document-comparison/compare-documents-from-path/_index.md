@@ -3,7 +3,6 @@ title: パスからドキュメントを比較 - GroupDocs.Comparison for .NET
 linktitle: パスからドキュメントを比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用すると、さまざまな形式のドキュメントを簡単に比較できます。時間を節約し、法律、学術、ビジネスのタスクの正確性を確保します。
-type: docs
 weight: 15
 url: /ja/net/document-comparison/compare-documents-from-path/
 ---

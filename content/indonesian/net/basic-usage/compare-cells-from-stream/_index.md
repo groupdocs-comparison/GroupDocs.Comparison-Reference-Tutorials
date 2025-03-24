@@ -3,7 +3,6 @@ title: Bandingkan Sel dari Aliran - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Sel dari Aliran - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen dalam C# dengan mudah menggunakan GroupDocs.Comparison untuk .NET. Sederhanakan tugas pemrosesan dokumen Anda dengan mudah.
-type: docs
 weight: 11
 url: /id/net/basic-usage/compare-cells-from-stream/
 ---

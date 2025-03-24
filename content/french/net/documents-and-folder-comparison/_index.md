@@ -3,7 +3,6 @@ title: Comparaison de documents et de dossiers
 linktitle: Comparaison de documents et de dossiers
 second_title: API GroupDocs.Comparison .NET
 description: Apprenez à rationaliser les flux de travail documentaires avec les didacticiels GroupDocs Comparison for .NET. Acceptez, rejetez les modifications et comparez les documents et les dossiers sans effort.
-type: docs
 weight: 20
 url: /fr/net/documents-and-folder-comparison/
 ---

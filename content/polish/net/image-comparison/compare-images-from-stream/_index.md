@@ -3,7 +3,6 @@ title: Porównaj obrazy ze strumienia — GroupDocs.Comparison dla platformy .NE
 linktitle: Porównaj obrazy ze strumienia — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak porównywać obrazy ze strumieni za pomocą GroupDocs.Comparison dla platformy .NET. Przewodnik krok po kroku dotyczący bezproblemowej integracji z aplikacjami .NET.
-type: docs
 weight: 11
 url: /pl/net/image-comparison/compare-images-from-stream/
 ---

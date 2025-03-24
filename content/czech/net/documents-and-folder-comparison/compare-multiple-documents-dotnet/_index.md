@@ -3,7 +3,6 @@ title: Porovnání více dokumentů v GroupDocs Porovnání pro .NET
 linktitle: Porovnání více dokumentů v GroupDocs Porovnání pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak efektivně porovnávat více dokumentů pomocí GroupDocs Comparison for .NET. Postupujte podle našeho podrobného průvodce pro bezproblémovou integraci.
-type: docs
 weight: 13
 url: /cs/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

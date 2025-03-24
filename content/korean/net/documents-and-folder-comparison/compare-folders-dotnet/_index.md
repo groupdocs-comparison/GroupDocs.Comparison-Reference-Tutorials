@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 폴더 비교
 linktitle: .NET용 GroupDocs 비교에서 폴더 비교
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교를 사용하여 폴더를 쉽게 비교할 수 있습니다. 효율적인 폴더 비교를 위해 단계별 설명을 따르세요. .NET 애플리케이션을 강화하세요.
-type: docs
 weight: 12
 url: /ko/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ url: /ko/net/documents-and-folder-comparison/compare-folders-dotnet/
 ### 3. 통합 개발 환경(IDE)
 코드 예제를 작성하고 실행하려면 Visual Studio와 같은 IDE가 필요합니다.
 ### 4. GroupDocs 문서에 대한 액세스
-자습서 전체에서 참조할 수 있도록 .NET용 GroupDocs 비교 설명서를 편리하게 보관하십시오. 문서에 액세스할 수 있습니다.[여기](https://reference.groupdocs.com/comparison/net/).
+자습서 전체에서 참조할 수 있도록 .NET용 GroupDocs 비교 설명서를 편리하게 보관하십시오. 문서에 액세스할 수 있습니다.[여기](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 네임스페이스 가져오기
 시작하려면 필요한 네임스페이스를 C# 코드로 가져와야 합니다. 이를 통해 GroupDocs Comparison for .NET에서 제공하는 클래스와 메서드를 사용할 수 있습니다.

@@ -3,7 +3,6 @@ title: 結果ドキュメントからドキュメント情報を取得 - GroupDo
 linktitle: 結果ドキュメントからドキュメント情報を取得 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用して結果ドキュメントからドキュメント情報を取得する方法を学習します。 .NET 開発者向けに簡単な手順を説明します。
-type: docs
 weight: 12
 url: /ja/net/basic-usage/get-document-info-from-result-document/
 ---

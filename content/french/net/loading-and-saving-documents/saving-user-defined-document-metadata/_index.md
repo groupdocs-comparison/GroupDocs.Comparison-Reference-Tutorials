@@ -3,7 +3,6 @@ title: Enregistrement des métadonnées de document définies par l'utilisateur 
 linktitle: Enregistrement des métadonnées de document définies par l'utilisateur dans la comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment enregistrer les métadonnées de documents définies par l'utilisateur à l'aide de GroupDocs Comparison for .NET. Comparez et manipulez facilement les métadonnées grâce à des instructions étape par étape.
-type: docs
 weight: 16
 url: /fr/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

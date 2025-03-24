@@ -3,7 +3,6 @@ title: 소스 문서에 대한 페이지 미리보기 생성
 linktitle: 소스 문서에 대한 페이지 미리보기 생성
 second_title: GroupDocs.비교 .NET API
 description: .NET용 Groupdocs.Comparison을 활용하여 C# 프로젝트의 문서 비교 프로세스를 효과적으로 간소화하는 방법을 알아보세요.
-type: docs
 weight: 11
 url: /ko/net/document-comparison/generate-page-previews-source-document/
 ---

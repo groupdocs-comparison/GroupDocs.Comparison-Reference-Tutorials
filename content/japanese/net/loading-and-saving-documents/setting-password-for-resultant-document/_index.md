@@ -3,7 +3,6 @@ title: GroupDocs Comparison for .NET での結果ドキュメントのパスワ�
 linktitle: GroupDocs Comparison for .NET での結果ドキュメントのパスワードの設定
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET で結果のドキュメントにパスワードを設定する方法を学習します。セキュリティを強化し、比較したファイルを保護します。
-type: docs
 weight: 17
 url: /ja/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ GroupDocs Comparison for .NET で結果のドキュメントにパスワード�
 ### GroupDocs Comparison for .NET を使用するにはライセンスが必要ですか?
 はい、次からライセンスを購入できます。[ここ](https://purchase.groupdocs.com/buy)または仮免許を取得する[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs Comparison for .NET について利用可能なドキュメントはありますか?
-はい、ドキュメントにアクセスできます[ここ](https://reference.groupdocs.com/comparison/net/).
+はい、ドキュメントにアクセスできます[ここ](https://tutorials.groupdocs.com/comparison/net/).

@@ -3,7 +3,6 @@ title: Porównaj komórki ze ścieżki — GroupDocs.Comparison dla platformy .N
 linktitle: Porównaj komórki ze ścieżki — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak porównywać komórki ze ścieżki za pomocą GroupDocs.Comparison dla platformy .NET. Skutecznie identyfikuj różnice między dokumentami.
-type: docs
 weight: 10
 url: /pl/net/basic-usage/compare-cells-from-path/
 ---

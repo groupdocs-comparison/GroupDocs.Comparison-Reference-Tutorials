@@ -3,7 +3,6 @@ title: Dokumente laden und speichern
 linktitle: Dokumente laden und speichern
 second_title: GroupDocs.Comparison .NET-API
 description: Vergleichen Sie mühelos Dokumente in .NET mit GroupDocs.Comparison für .NET. Erfahren Sie mehr über das Laden, Speichern und Nutzen von Ladeoptionen für eine effiziente Dokumentenverwaltung.
-type: docs
 weight: 22
 url: /de/net/loading-and-saving-documents/
 ---

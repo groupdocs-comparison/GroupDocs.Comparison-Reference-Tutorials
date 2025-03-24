@@ -3,7 +3,6 @@ title: स्ट्रीम से दस्तावेज़ों की त
 linktitle: स्ट्रीम से दस्तावेज़ों की तुलना करें - .NET के लिए GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison के साथ दस्तावेज़ तुलना को सुव्यवस्थित करें। दस्तावेज़ों की सहजता से तुलना करें और फ़ाइलों में सटीकता सुनिश्चित करें।
-type: docs
 weight: 16
 url: /hi/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /hi/net/document-comparison/compare-documents-from-stream/
 .NET के लिए GroupDocs.Comparison का उपयोग करने से पहले, आपको कुछ आवश्यक शर्तें अपनानी होंगी:
 1. .NET फ्रेमवर्क स्थापित करें: सुनिश्चित करें कि आपके सिस्टम पर .NET फ्रेमवर्क स्थापित है। आप इसे माइक्रोसॉफ्ट वेबसाइट से डाउनलोड कर सकते हैं।
 2.  .NET के लिए GroupDocs.Comparison डाउनलोड करें: पर जाएँ[लिंक को डाउनलोड करें](https://releases.groupdocs.com/comparison/net/) .NET के लिए GroupDocs.Comparison का नवीनतम संस्करण प्राप्त करने के लिए।
-3.  दस्तावेज़ीकरण तक पहुँच: इसका संदर्भ लेकर पुस्तकालय की कार्यप्रणाली से स्वयं को परिचित करें[प्रलेखन](https://reference.groupdocs.com/comparison/net/).
+3.  दस्तावेज़ीकरण तक पहुँच: इसका संदर्भ लेकर पुस्तकालय की कार्यप्रणाली से स्वयं को परिचित करें[प्रलेखन](https://tutorials.groupdocs.com/comparison/net/).
 4. C# की बुनियादी समझ: यह ट्यूटोरियल मानता है कि आपको C# प्रोग्रामिंग भाषा की बुनियादी समझ है।
 
 ## नामस्थान आयात करें

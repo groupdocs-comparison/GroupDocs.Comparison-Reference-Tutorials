@@ -3,7 +3,6 @@ title: GroupDocs でのドキュメント メタデータ ソースの保存 .NE
 linktitle: GroupDocs でのドキュメント メタデータ ソースの保存 .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用してドキュメント メタデータ ソースを保存する方法を学びます。 .NET でドキュメントをシームレスに比較するには、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 14
 url: /ja/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

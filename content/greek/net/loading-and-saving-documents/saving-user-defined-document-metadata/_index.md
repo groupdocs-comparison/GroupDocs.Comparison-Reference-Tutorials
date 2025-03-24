@@ -3,7 +3,6 @@ title: Αποθήκευση μεταδεδομένων εγγράφου που �
 linktitle: Αποθήκευση μεταδεδομένων εγγράφου που ορίζονται από το χρήστη στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να αποθηκεύετε μεταδεδομένα εγγράφου που ορίζονται από το χρήστη χρησιμοποιώντας τη σύγκριση GroupDocs για .NET. Συγκρίνετε και χειριστείτε εύκολα τα μεταδεδομένα με οδηγίες βήμα προς βήμα.
-type: docs
 weight: 16
 url: /el/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

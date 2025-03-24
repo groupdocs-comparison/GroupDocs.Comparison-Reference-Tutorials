@@ -3,7 +3,6 @@ title: Compare Multiple Documents Settings in GroupDocs Comparison for .NET
 linktitle: Compare Multiple Documents Settings in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Discover how to compare multiple documents effortlessly using GroupDocs Comparison for .NET. Follow our step-by-step guide for seamless document processing.
-type: docs
 weight: 14
 url: /net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---

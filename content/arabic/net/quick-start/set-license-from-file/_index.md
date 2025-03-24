@@ -3,7 +3,6 @@ title: تعيين الترخيص من ملف - مقارنة GroupDocs لـ .NET
 linktitle: تعيين الترخيص من ملف - مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية دمج GroupDocs Comparison for .NET بسلاسة في تطبيقاتك. قم بإعداد واستيراد مساحات الأسماء ومقارنة المستندات دون عناء.
-type: docs
 weight: 10
 url: /ar/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 تمكن GroupDocs Comparison for .NET المطورين من دمج وظيفة مقارنة المستندات بسلاسة في تطبيقات .NET الخاصة بهم. باتباع الخطوات الموضحة في هذا الدليل، يمكنك إعداد البيئة اللازمة بكفاءة، واستيراد مساحات الأسماء المطلوبة، وتعيين الترخيص للاستفادة من الإمكانات الكاملة لمقارنة GroupDocs داخل مشروعاتك.
 ## الأسئلة الشائعة
 ### أين يمكنني العثور على الوثائق الخاصة بمقارنة GroupDocs لـ .NET؟
- يمكنك الوصول إلى الوثائق[هنا](https://reference.groupdocs.com/comparison/net/).
+ يمكنك الوصول إلى الوثائق[هنا](https://tutorials.groupdocs.com/comparison/net/).
 ### هل تتوفر نسخة تجريبية مجانية من GroupDocs Comparison لـ .NET؟
  نعم، يمكنك تنزيل النسخة التجريبية المجانية[هنا](https://releases.groupdocs.com/).
 ### كيف يمكنني الحصول على ترخيص مؤقت لمقارنة GroupDocs لـ .NET؟

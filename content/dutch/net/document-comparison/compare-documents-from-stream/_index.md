@@ -3,7 +3,6 @@ title: Vergelijk documenten uit Stream - GroupDocs.Comparison voor .NET
 linktitle: Vergelijk documenten uit Stream - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Stroomlijn documentvergelijking met GroupDocs.Comparison voor .NET. Vergelijk documenten moeiteloos en zorg voor nauwkeurigheid in alle bestanden.
-type: docs
 weight: 16
 url: /nl/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ In de snelle wereld van vandaag, waar informatie overvloedig aanwezig is en er v
 Voordat u GroupDocs.Comparison voor .NET gaat gebruiken, zijn er een aantal vereisten waaraan u moet voldoen:
 1. Installeer .NET Framework: Zorg ervoor dat .NET Framework op uw systeem is geïnstalleerd. U kunt het downloaden van de Microsoft-website.
 2.  Download GroupDocs.Comparison voor .NET: Bezoek de[download link](https://releases.groupdocs.com/comparison/net/) om de nieuwste versie van GroupDocs.Comparison voor .NET te verkrijgen.
-3.  Toegang tot documentatie: Maak uzelf vertrouwd met de functionaliteiten van de bibliotheek door de[documentatie](https://reference.groupdocs.com/comparison/net/).
+3.  Toegang tot documentatie: Maak uzelf vertrouwd met de functionaliteiten van de bibliotheek door de[documentatie](https://tutorials.groupdocs.com/comparison/net/).
 4. Basiskennis van C#: Deze tutorial gaat ervan uit dat je een basiskennis hebt van de programmeertaal C#.
 
 ## Naamruimten importeren

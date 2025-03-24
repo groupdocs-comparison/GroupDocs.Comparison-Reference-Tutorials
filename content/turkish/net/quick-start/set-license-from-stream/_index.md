@@ -3,7 +3,6 @@ title: Lisansı Akıştan Ayarlayın - .NET için GroupDocs Karşılaştırması
 linktitle: Lisansı Akıştan Ayarlayın - .NET için GroupDocs Karşılaştırması
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i verimli bir şekilde kullanarak lisansları nasıl ayarlayacağınızı öğrenin. Bu eğitimle belge doğruluğunu sağlayın ve zamandan tasarruf edin.
-type: docs
 weight: 11
 url: /tr/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Eğiticiye dalmadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin ol
 - Temel C# ve .NET framework bilgisi.
 - Sisteminizde Visual Studio yüklü.
 -  GroupDocs.Comparison for .NET kitaplığı yüklü. İndirebilirsin[Burada](https://releases.groupdocs.com/comparison/net/).
--  GroupDocs.Comparison for .NET belgelerine erişim[Burada](https://reference.groupdocs.com/comparison/net/).
+-  GroupDocs.Comparison for .NET belgelerine erişim[Burada](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Ad Alanlarını İçe Aktar
 GroupDocs.Comparison for .NET'i kullanmaya başlamak için gerekli ad alanlarını projenize aktarmanız gerekir. Bunu nasıl yapabileceğiniz aşağıda açıklanmıştır:
@@ -67,4 +66,4 @@ Evet, satın alma işlemi yapmadan önce ürünü değerlendirmek için GroupDoc
 ### Lisans sorunlarıyla karşılaşırsam ne yapmalıyım?
  Herhangi bir lisanslama sorunuyla karşılaşırsanız lisanslama SSS'lerine bakın[Burada](https://purchase.groupdocs.com/faqs/licensing) veya GroupDocs desteğiyle iletişime geçin.
 ### GroupDocs.Comparison for .NET için daha fazla öğreticiyi ve kaynağı nerede bulabilirim?
- GroupDocs web sitesinde kapsamlı belgeler ve eğitimler bulabilirsiniz.[Burada](https://reference.groupdocs.com/comparison/net/).
+ GroupDocs web sitesinde kapsamlı belgeler ve eğitimler bulabilirsiniz.[Burada](https://tutorials.groupdocs.com/comparison/net/).

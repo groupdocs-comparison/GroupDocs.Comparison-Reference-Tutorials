@@ -3,7 +3,6 @@ title: Hasonlítsa össze a képeket a Path-ből - GroupDocs.Comparison for .NET
 linktitle: Hasonlítsa össze a képeket a Path-ből - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan hasonlíthat össze hatékonyan képeket .NET-ben a GroupDocs.Comparison könyvtár használatával. Kövesse a lépésenkénti útmutatót a zökkenőmentes integráció érdekében.
-type: docs
 weight: 10
 url: /hu/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ A .NET fejlesztés területén a dokumentumok és képek hatékony összehasonl�
 ## Előfeltételek
 Mielőtt belemerülne a GroupDocs.Comparison for .NET használatának bonyolultságába, győződjön meg arról, hogy teljesülnek a következő előfeltételek:
 ### 1. Telepítse a GroupDocs.Comparison for .NET programot
- Töltse le a könyvtárat innen[itt](https://releases.groupdocs.com/comparison/net/) és kövesse a dokumentációban található telepítési utasításokat[itt](https://reference.groupdocs.com/comparison/net/).
+ Töltse le a könyvtárat innen[itt](https://releases.groupdocs.com/comparison/net/) és kövesse a dokumentációban található telepítési utasításokat[itt](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Szerezzen engedélyt
  A GroupDocs.Comparison .NET-hez való teljes potenciáljának kiaknázásához szerezzen licencet a következőtől[itt](https://purchase.groupdocs.com/buy) vagy használja a rendelkezésre álló ideiglenes licencet[itt](https://purchase.groupdocs.com/temporary-license/).
 ### 3. C# programozás ismerete

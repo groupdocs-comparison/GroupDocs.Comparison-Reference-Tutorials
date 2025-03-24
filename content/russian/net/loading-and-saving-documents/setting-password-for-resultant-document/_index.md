@@ -3,7 +3,6 @@ title: Установка пароля для результирующего д�
 linktitle: Установка пароля для результирующего документа в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как установить пароль для результирующих документов в GroupDocs Comparison для .NET. Повысьте безопасность и защитите сравниваемые файлы.
-type: docs
 weight: 17
 url: /ru/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### Нужна ли мне лицензия для использования GroupDocs Comparison для .NET?
  Да, вы можете приобрести лицензию у[здесь](https://purchase.groupdocs.com/buy) или получить временную лицензию[здесь](https://purchase.groupdocs.com/temporary-license/).
 ### Есть ли какая-либо документация по сравнению GroupDocs для .NET?
- Да, вы можете получить доступ к документации[здесь](https://reference.groupdocs.com/comparison/net/).
+ Да, вы можете получить доступ к документации[здесь](https://tutorials.groupdocs.com/comparison/net/).

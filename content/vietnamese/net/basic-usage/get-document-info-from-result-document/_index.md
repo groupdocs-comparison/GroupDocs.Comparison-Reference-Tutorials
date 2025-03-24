@@ -3,7 +3,6 @@ title: Nhận thông tin tài liệu từ tài liệu kết quả - GroupDocs.Co
 linktitle: Nhận thông tin tài liệu từ tài liệu kết quả - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách truy xuất thông tin tài liệu từ tài liệu kết quả bằng GroupDocs.Comparison cho .NET. Các bước dễ dàng được giải thích cho các nhà phát triển .NET.
-type: docs
 weight: 12
 url: /vi/net/basic-usage/get-document-info-from-result-document/
 ---

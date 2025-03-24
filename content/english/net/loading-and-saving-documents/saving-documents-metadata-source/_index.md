@@ -3,7 +3,6 @@ title: Saving Documents Metadata Source in GroupDocs Comparison for .NET
 linktitle: Saving Documents Metadata Source in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to save document metadata source using GroupDocs Comparison for .NET. Follow our step-by-step guide for seamless document comparison in your .NET.
-type: docs
 weight: 14
 url: /net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

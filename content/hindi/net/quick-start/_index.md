@@ -3,7 +3,6 @@ title: जल्दी शुरू
 linktitle: जल्दी शुरू
 second_title: GroupDocs.Comparison .NET API
 description: अपने प्रोजेक्ट में .NET के लिए GroupDocs Compare को सहजता से एकीकृत करें। सटीक दस्तावेज़ तुलना वर्कफ़्लो के लिए कुशल लाइसेंस सेटिंग विधियाँ सीखें।
-type: docs
 weight: 25
 url: /hi/net/quick-start/
 ---

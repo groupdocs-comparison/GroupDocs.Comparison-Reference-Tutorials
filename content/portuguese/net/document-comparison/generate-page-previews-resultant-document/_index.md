@@ -3,7 +3,6 @@ title: Gerar visualizações de página para o documento resultante
 linktitle: Gerar visualizações de página para o documento resultante
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como gerar visualizações de documentos usando GroupDocs.Comparison for .NET. Compare documentos com eficiência e precisão.
-type: docs
 weight: 10
 url: /pt/net/document-comparison/generate-page-previews-resultant-document/
 ---

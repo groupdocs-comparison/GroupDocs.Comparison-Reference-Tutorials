@@ -3,7 +3,6 @@ title: Önizlemeler için Belirli Görüntü Boyutlarını Ayarlayın
 linktitle: Önizlemeler için Belirli Görüntü Boyutlarını Ayarlayın
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET ile belge karşılaştırma işlevini .NET uygulamalarınıza zahmetsizce entegre edin.
-type: docs
 weight: 14
 url: /tr/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

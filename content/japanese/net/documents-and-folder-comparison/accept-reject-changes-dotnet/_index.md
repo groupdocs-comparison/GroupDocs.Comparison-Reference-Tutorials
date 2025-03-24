@@ -3,7 +3,6 @@ title: .NET の GroupDocs 比較における変更の承認と拒否
 linktitle: .NET の GroupDocs 比較における変更の承認と拒否
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用してドキュメントの変更を承認および拒否する方法を学びます。ドキュメントのワークフローを簡単に合理化します。
-type: docs
 weight: 10
 url: /ja/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

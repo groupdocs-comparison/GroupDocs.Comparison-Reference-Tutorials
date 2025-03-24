@@ -3,7 +3,6 @@ title: Get Document Info from Result Document - GroupDocs.Comparison for .NET
 linktitle: Get Document Info from Result Document - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to retrieve document info from result document using GroupDocs.Comparison for .NET. Easy steps explained for .NET developers.
-type: docs
 weight: 12
 url: /net/basic-usage/get-document-info-from-result-document/
 ---

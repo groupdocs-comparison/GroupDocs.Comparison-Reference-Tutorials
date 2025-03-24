@@ -3,7 +3,6 @@ title: Λάβετε πληροφορίες εγγράφου από το Stream -
 linktitle: Λάβετε πληροφορίες εγγράφου από το Stream - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να συγκρίνετε αποτελεσματικά έγγραφα στο .NET χρησιμοποιώντας το GroupDocs.Comparison, βελτιώνοντας απρόσκοπτα τις ροές εργασίας επεξεργασίας εγγράφων σας.
-type: docs
 weight: 14
 url: /el/net/basic-usage/get-document-info-from-stream/
 ---

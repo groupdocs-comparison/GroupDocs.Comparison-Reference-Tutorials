@@ -3,7 +3,6 @@ title: กำลังโหลดและบันทึกเอกสาร
 linktitle: กำลังโหลดและบันทึกเอกสาร
 second_title: GroupDocs.Comparison .NET API
 description: เปรียบเทียบเอกสารใน .NET ได้อย่างง่ายดายโดยใช้ GroupDocs.Comparison สำหรับ .NET เรียนรู้การโหลด การบันทึก และการใช้ตัวเลือกโหลดเพื่อการจัดการเอกสารที่มีประสิทธิภาพ
-type: docs
 weight: 22
 url: /th/net/loading-and-saving-documents/
 ---

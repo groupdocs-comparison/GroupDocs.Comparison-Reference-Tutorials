@@ -3,7 +3,6 @@ title: Nastavte konkrétní velikosti obrázků pro náhledy
 linktitle: Nastavte konkrétní velikosti obrázků pro náhledy
 second_title: GroupDocs.Comparison .NET API
 description: Pomocí GroupDocs.Comparison for .NET bez námahy integrujte funkci porovnávání dokumentů do svých aplikací .NET.
-type: docs
 weight: 14
 url: /cs/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

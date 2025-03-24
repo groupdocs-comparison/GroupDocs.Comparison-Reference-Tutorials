@@ -3,7 +3,6 @@ title: Vergleich von Dokumenten und Ordnern
 linktitle: Vergleich von Dokumenten und Ordnern
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie Dokument-Workflows mit GroupDocs-Vergleichs-Tutorials für .NET optimieren. Akzeptieren Sie Änderungen, lehnen Sie sie ab und vergleichen Sie Dokumente und Ordner mühelos.
-type: docs
 weight: 20
 url: /de/net/documents-and-folder-comparison/
 ---

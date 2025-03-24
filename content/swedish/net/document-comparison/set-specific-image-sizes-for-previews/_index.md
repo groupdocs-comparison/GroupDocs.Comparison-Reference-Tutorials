@@ -3,7 +3,6 @@ title: Ställ in specifika bildstorlekar för förhandsvisningar
 linktitle: Ställ in specifika bildstorlekar för förhandsvisningar
 second_title: GroupDocs.Comparison .NET API
 description: Integrera enkelt funktionalitet för dokumentjämförelse i dina .NET-applikationer med GroupDocs.Comparison for .NET.
-type: docs
 weight: 14
 url: /sv/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

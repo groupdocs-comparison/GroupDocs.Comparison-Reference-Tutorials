@@ -3,7 +3,6 @@ title: Memuat Dokumen dalam Perbandingan GroupDocs untuk .NET
 linktitle: Memuat Dokumen dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan dokumen secara efisien menggunakan GroupDocs.Comparison untuk .NET. Sederhanakan proses manajemen dokumen Anda.
-type: docs
 weight: 10
 url: /id/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Ya, GroupDocs.Comparison untuk .NET mendukung perbandingan dokumen dengan format
 ### Apakah ada uji coba gratis yang tersedia untuk GroupDocs.Comparison untuk .NET?
  Ya, Anda dapat memanfaatkan uji coba gratis GroupDocs.Comparison untuk .NET dengan mengunjungi[situs web](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Perbandingan untuk .NET?
- Anda dapat merujuk ke dokumentasi komprehensif yang tersedia di[GroupDocs.Perbandingan untuk Dokumentasi .NET](https://reference.groupdocs.com/comparison/net/).
+ Anda dapat merujuk ke dokumentasi komprehensif yang tersedia di[GroupDocs.Perbandingan untuk Dokumentasi .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### Bagaimana saya bisa mendapatkan lisensi sementara untuk GroupDocs.Comparison untuk .NET?
  Anda dapat memperoleh lisensi sementara dengan mengunjungi[halaman lisensi sementara](https://purchase.groupdocs.com/temporary-license/) di situs web GroupDocs.
 ### Di mana saya dapat mencari dukungan untuk GroupDocs.Comparison untuk .NET?

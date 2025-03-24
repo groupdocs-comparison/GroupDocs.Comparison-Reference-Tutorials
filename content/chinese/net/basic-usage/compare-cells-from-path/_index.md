@@ -3,7 +3,6 @@ title: 比较路径中的单元格 - GroupDocs.Comparison for .NET
 linktitle: 比较路径中的单元格 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 比较路径中的单元格。有效识别文档之间的差异。
-type: docs
 weight: 10
 url: /zh/net/basic-usage/compare-cells-from-path/
 ---

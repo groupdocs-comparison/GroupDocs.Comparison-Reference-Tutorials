@@ -3,7 +3,6 @@ title: Dokumentuminformációk beszerzése a Path - GroupDocs.Comparison for .NE
 linktitle: Dokumentuminformációk beszerzése a Path - GroupDocs.Comparison for .NET webhelyről
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan nyerhet ki dokumentuminformációkat egy elérési útból a GroupDocs.Comparison for .NET segítségével. Egyszerű lépések a hatékony dokumentumkezeléshez C#-ban.
-type: docs
 weight: 13
 url: /hu/net/basic-usage/get-document-info-from-path/
 ---

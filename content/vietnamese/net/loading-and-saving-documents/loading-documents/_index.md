@@ -3,7 +3,6 @@ title: Đang tải tài liệu trong So sánh GroupDocs cho .NET
 linktitle: Đang tải tài liệu trong So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh tài liệu một cách hiệu quả bằng GroupDocs.Comparison cho .NET. Hợp lý hóa quy trình quản lý tài liệu của bạn.
-type: docs
 weight: 10
 url: /vi/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Có, GroupDocs.Comparison for .NET hỗ trợ so sánh các tài liệu có đ�
 ### Có bản dùng thử miễn phí GroupDocs.Comparison cho .NET không?
  Có, bạn có thể tận dụng bản dùng thử miễn phí GroupDocs.Comparison cho .NET bằng cách truy cập[trang mạng](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu về GroupDocs.Comparison cho .NET ở đâu?
- Bạn có thể tham khảo tài liệu đầy đủ có sẵn tại[GroupDocs.Comparison cho Tài liệu .NET](https://reference.groupdocs.com/comparison/net/).
+ Bạn có thể tham khảo tài liệu đầy đủ có sẵn tại[GroupDocs.Comparison cho Tài liệu .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### Làm cách nào tôi có thể nhận được giấy phép tạm thời cho GroupDocs.Comparison cho .NET?
  Bạn có thể có được giấy phép tạm thời bằng cách truy cập[trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/) trên trang web GroupDocs.
 ### Tôi có thể tìm kiếm sự hỗ trợ cho GroupDocs.Comparison cho .NET ở đâu?

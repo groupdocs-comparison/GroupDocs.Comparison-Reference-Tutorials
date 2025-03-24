@@ -3,7 +3,6 @@ title: 比較路徑中的儲存格 - GroupDocs.Comparison for .NET
 linktitle: 比較路徑中的儲存格 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 比較路徑中的儲存格。有效識別文件之間的差異。
-type: docs
 weight: 10
 url: /zh-hant/net/basic-usage/compare-cells-from-path/
 ---

@@ -3,7 +3,6 @@ title: 掌握 GroupDocs.Comparison - 教學與指南
 linktitle: GroupDocs.比較教程
 additionalTitle: GroupDocs API 參考
 description: 透過我們的教學探索 GroupDocs.Comparison 的強大功能！學習整合和利用此 API 進行高效的文件比較。
-type: docs
 weight: 11
 url: /zh-hant/
 is_root: true

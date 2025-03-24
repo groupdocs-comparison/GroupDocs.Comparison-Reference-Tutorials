@@ -3,7 +3,6 @@ title: รับข้อมูลเอกสารจาก Path - GroupDocs.C
 linktitle: รับข้อมูลเอกสารจาก Path - GroupDocs.Comparison สำหรับ .NET
 second_title: GroupDocs.Comparison .NET API
 description: เรียนรู้วิธีแยกข้อมูลเอกสารจากเส้นทางโดยใช้ GroupDocs.Comparison สำหรับ .NET ขั้นตอนง่ายๆ สำหรับการจัดการเอกสารอย่างมีประสิทธิภาพใน C#
-type: docs
 weight: 13
 url: /th/net/basic-usage/get-document-info-from-path/
 ---

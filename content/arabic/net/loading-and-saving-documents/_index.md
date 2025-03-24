@@ -3,7 +3,6 @@ title: تحميل وحفظ المستندات
 linktitle: تحميل وحفظ المستندات
 second_title: GroupDocs.Comparison .NET API
 description: يمكنك بسهولة مقارنة المستندات في .NET باستخدام GroupDocs.Comparison لـ .NET. تعرف على خيارات التحميل والحفظ واستخدام التحميل لإدارة المستندات بكفاءة.
-type: docs
 weight: 22
 url: /ar/net/loading-and-saving-documents/
 ---

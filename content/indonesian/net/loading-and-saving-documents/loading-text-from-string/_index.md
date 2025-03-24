@@ -3,7 +3,6 @@ title: Memuat Teks dari String dalam Perbandingan GroupDocs untuk .NET
 linktitle: Memuat Teks dari String dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan teks dalam aplikasi .NET dengan mudah menggunakan pustaka GroupDocs.Comparison. Tingkatkan efisiensi dan akurasi dengan integrasi yang lancar.
-type: docs
 weight: 12
 url: /id/net/loading-and-saving-documents/loading-text-from-string/
 ---

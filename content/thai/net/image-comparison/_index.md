@@ -3,7 +3,6 @@ title: การเปรียบเทียบภาพ
 linktitle: การเปรียบเทียบภาพ
 second_title: GroupDocs.Comparison .NET API
 description: เปรียบเทียบรูปภาพใน .NET อย่างมีประสิทธิภาพโดยใช้ไลบรารี GroupDocs.Comparison บทช่วยสอนทีละขั้นตอนสำหรับการบูรณาการอย่างราบรื่นจากเส้นทางหรือสตรีม
-type: docs
 weight: 23
 url: /th/net/image-comparison/
 ---

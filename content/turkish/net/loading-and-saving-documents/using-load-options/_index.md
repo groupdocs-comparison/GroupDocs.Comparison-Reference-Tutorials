@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerini Kull
 linktitle: .NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerini Kullanma
 second_title: GroupDocs.Comparison .NET API'si
 description: Özel yazı tiplerine sahip belgeleri sorunsuz bir şekilde karşılaştırmak için GroupDocs Comparison for .NET'teki Yükleme Seçeneklerini nasıl kullanacağınızı öğrenin.
-type: docs
 weight: 13
 url: /tr/net/loading-and-saving-documents/using-load-options/
 ---

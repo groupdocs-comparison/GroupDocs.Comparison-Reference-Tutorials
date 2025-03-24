@@ -3,7 +3,6 @@ title: Perbandingan Dokumen
 linktitle: Perbandingan Dokumen
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen di .NET dengan GroupDocs.Comparison secara efisien. Sederhanakan manajemen dokumen, tingkatkan alur kerja, dan pastikan akurasi. Belajarlah lagi!
-type: docs
 weight: 21
 url: /id/net/document-comparison/
 ---

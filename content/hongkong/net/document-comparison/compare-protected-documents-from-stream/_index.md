@@ -3,7 +3,6 @@ title: 比較流中的受保護文件 - GroupDocs.Comparison for .NET
 linktitle: 比較流中的受保護文件 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 比較來自流的受保護文件。輕鬆簡化您的文件比較流程。
-type: docs
 weight: 18
 url: /zh-hant/net/document-comparison/compare-protected-documents-from-stream/
 ---

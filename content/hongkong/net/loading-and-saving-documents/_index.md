@@ -3,7 +3,6 @@ title: 載入和儲存文檔
 linktitle: 載入和儲存文檔
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 輕鬆比較 .NET 中的文件。了解載入、儲存和利用載入選項以實現高效的文件管理。
-type: docs
 weight: 22
 url: /zh-hant/net/loading-and-saving-documents/
 ---

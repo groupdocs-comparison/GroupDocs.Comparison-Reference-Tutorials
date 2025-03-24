@@ -3,7 +3,6 @@ title: مقارنة المستندات والمجلدات
 linktitle: مقارنة المستندات والمجلدات
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية تبسيط سير عمل المستندات باستخدام GroupDocs Comparison لبرامج .NET التعليمية. قبول التغييرات ورفضها ومقارنة المستندات والمجلدات بسهولة.
-type: docs
 weight: 20
 url: /ar/net/documents-and-folder-comparison/
 ---

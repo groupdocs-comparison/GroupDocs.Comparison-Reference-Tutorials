@@ -3,7 +3,6 @@ title: So sánh hình ảnh từ đường dẫn - GroupDocs.Comparison for .NET
 linktitle: So sánh hình ảnh từ đường dẫn - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh hình ảnh hiệu quả trong .NET bằng thư viện GroupDocs.Comparison. Thực hiện theo hướng dẫn từng bước để tích hợp liền mạch.
-type: docs
 weight: 10
 url: /vi/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ Trong lĩnh vực phát triển .NET, khả năng so sánh hiệu quả các tà
 ## Điều kiện tiên quyết
 Trước khi đi sâu vào sự phức tạp của việc sử dụng GroupDocs.Comparison cho .NET, hãy đảm bảo đáp ứng các điều kiện tiên quyết sau:
 ### 1. Cài đặt GroupDocs.Comparison cho .NET
- Tải thư viện từ[đây](https://releases.groupdocs.com/comparison/net/) và làm theo hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://reference.groupdocs.com/comparison/net/).
+ Tải thư viện từ[đây](https://releases.groupdocs.com/comparison/net/) và làm theo hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Xin giấy phép
  Để khai thác toàn bộ tiềm năng của GroupDocs.Comparison cho .NET, hãy lấy giấy phép từ[đây](https://purchase.groupdocs.com/buy) hoặc sử dụng giấy phép tạm thời có sẵn[đây](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Làm quen với lập trình C#

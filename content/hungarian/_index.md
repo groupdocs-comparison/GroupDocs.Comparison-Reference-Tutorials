@@ -3,7 +3,6 @@ title: GroupDocs.Comparison elsajátítása – oktatóanyagok és útmutatók
 linktitle: GroupDocs.Comparison Tutorials
 additionalTitle: GroupDocs API referenciák
 description: Fedezze fel a GroupDocs.Comparison erejét oktatóanyagainkon keresztül! Tanulja meg integrálni és használni ezt az API-t a hatékony dokumentum-összehasonlítás érdekében.
-type: docs
 weight: 11
 url: /hu/
 is_root: true

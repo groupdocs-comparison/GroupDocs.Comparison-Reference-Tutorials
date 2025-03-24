@@ -3,7 +3,6 @@ title: 스트림의 이미지 비교 - .NET용 GroupDocs.Comparison
 linktitle: 스트림의 이미지 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 스트림의 이미지를 비교하는 방법을 알아보세요. .NET 애플리케이션으로의 원활한 통합을 위한 단계별 가이드입니다.
-type: docs
 weight: 11
 url: /ko/net/image-comparison/compare-images-from-stream/
 ---

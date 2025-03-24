@@ -3,7 +3,6 @@ title: Použití možností načtení v porovnání GroupDocs pro .NET
 linktitle: Použití možností načtení v porovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se používat možnosti načtení v GroupDocs Comparison for .NET k bezproblémovému porovnání dokumentů s vlastními fonty.
-type: docs
 weight: 13
 url: /cs/net/loading-and-saving-documents/using-load-options/
 ---

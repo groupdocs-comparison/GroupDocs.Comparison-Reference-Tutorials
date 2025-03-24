@@ -3,7 +3,6 @@ title: Genereer paginavoorbeelden voor het resulterende document
 linktitle: Genereer paginavoorbeelden voor het resulterende document
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u documentvoorbeelden kunt genereren met GroupDocs.Comparison voor .NET. Vergelijk documenten efficiënt en nauwkeurig.
-type: docs
 weight: 10
 url: /nl/net/document-comparison/generate-page-previews-resultant-document/
 ---

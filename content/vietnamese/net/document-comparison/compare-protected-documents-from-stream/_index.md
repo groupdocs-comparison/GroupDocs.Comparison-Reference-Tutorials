@@ -3,7 +3,6 @@ title: So sánh các tài liệu được bảo vệ từ luồng - GroupDocs.Co
 linktitle: So sánh các tài liệu được bảo vệ từ luồng - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh các tài liệu được bảo vệ từ các luồng bằng GroupDocs.Comparison cho .NET. Hợp lý hóa quá trình so sánh tài liệu của bạn một cách dễ dàng.
-type: docs
 weight: 18
 url: /vi/net/document-comparison/compare-protected-documents-from-stream/
 ---

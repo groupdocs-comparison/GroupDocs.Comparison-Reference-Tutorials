@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs 比較中儲存文件元資料目標
 linktitle: 在 .NET 的 GroupDocs 比較中儲存文件元資料目標
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 儲存文件元資料目標。在 .NET 應用程式中進行高效能文件比較的簡單步驟。
-type: docs
 weight: 15
 url: /zh-hant/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

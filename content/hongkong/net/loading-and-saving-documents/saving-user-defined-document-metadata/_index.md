@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs Comparison 中儲存使用者定義的文檔元數
 linktitle: 在 .NET 的 GroupDocs Comparison 中儲存使用者定義的文檔元數據
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 儲存使用者定義的文件元資料。透過逐步說明輕鬆比較和操作元資料。
-type: docs
 weight: 16
 url: /zh-hant/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

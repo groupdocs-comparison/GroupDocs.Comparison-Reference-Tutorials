@@ -3,7 +3,6 @@ title: Đặt kích thước hình ảnh cụ thể cho bản xem trước
 linktitle: Đặt kích thước hình ảnh cụ thể cho bản xem trước
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng tích hợp chức năng so sánh tài liệu vào các ứng dụng .NET của bạn với GroupDocs.Comparison cho .NET.
-type: docs
 weight: 14
 url: /vi/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

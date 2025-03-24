@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교의 문자열에서 텍스트 로드
 linktitle: .NET용 GroupDocs 비교의 문자열에서 텍스트 로드
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison 라이브러리를 사용하여 .NET 응용 프로그램 내에서 텍스트를 쉽게 비교할 수 있습니다. 원활한 통합으로 효율성과 정확성을 향상하세요.
-type: docs
 weight: 12
 url: /ko/net/loading-and-saving-documents/loading-text-from-string/
 ---

@@ -3,7 +3,6 @@ title: Bandingkan Gambar dari Path - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Gambar dari Path - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan gambar secara efisien di .NET menggunakan pustaka GroupDocs.Comparison. Ikuti panduan langkah demi langkah untuk integrasi yang lancar.
-type: docs
 weight: 10
 url: /id/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ Dalam bidang pengembangan .NET, kemampuan membandingkan dokumen dan gambar secar
 ## Prasyarat
 Sebelum mendalami seluk-beluk penggunaan GroupDocs.Comparison untuk .NET, pastikan prasyarat berikut terpenuhi:
 ### 1. Instal GroupDocs.Comparison untuk .NET
- Unduh perpustakaan dari[Di Sini](https://releases.groupdocs.com/comparison/net/) dan ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://reference.groupdocs.com/comparison/net/).
+ Unduh perpustakaan dari[Di Sini](https://releases.groupdocs.com/comparison/net/) dan ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Dapatkan Lisensi
  Untuk membuka potensi penuh GroupDocs.Comparison untuk .NET, dapatkan lisensi dari[Di Sini](https://purchase.groupdocs.com/buy) atau memanfaatkan lisensi sementara yang tersedia[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Familiar dengan Pemrograman C#

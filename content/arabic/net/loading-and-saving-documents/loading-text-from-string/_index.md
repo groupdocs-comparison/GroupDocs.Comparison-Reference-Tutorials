@@ -3,7 +3,6 @@ title: تحميل النص من سلسلة في مقارنة GroupDocs لـ .NET
 linktitle: تحميل النص من سلسلة في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: قم بمقارنة النص بسهولة داخل تطبيقات .NET باستخدام مكتبة GroupDocs.Comparison. تعزيز الكفاءة والدقة من خلال التكامل السلس.
-type: docs
 weight: 12
 url: /ar/net/loading-and-saving-documents/loading-text-from-string/
 ---

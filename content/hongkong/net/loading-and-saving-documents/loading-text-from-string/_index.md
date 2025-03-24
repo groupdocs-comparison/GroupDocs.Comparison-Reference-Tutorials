@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs 比較中從字串載入文本
 linktitle: 在 .NET 的 GroupDocs 比較中從字串載入文本
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 程式庫輕鬆比較 .NET 應用程式中的文字。透過無縫整合提高效率和準確性。
-type: docs
 weight: 12
 url: /zh-hant/net/loading-and-saving-documents/loading-text-from-string/
 ---

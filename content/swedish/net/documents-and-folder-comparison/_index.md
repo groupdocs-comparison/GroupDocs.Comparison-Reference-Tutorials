@@ -3,7 +3,6 @@ title: Jämförelse av dokument och mappar
 linktitle: Jämförelse av dokument och mappar
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig att effektivisera dokumentarbetsflöden med GroupDocs Comparison for .NET-självstudier. Acceptera, avvisa ändringar och jämför dokument och mappar utan ansträngning.
-type: docs
 weight: 20
 url: /sv/net/documents-and-folder-comparison/
 ---

@@ -3,7 +3,6 @@ title: Stream의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 linktitle: Stream의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 스트림에서 보호된 문서를 비교하는 방법을 알아보세요. 문서 비교 프로세스를 손쉽게 간소화하세요.
-type: docs
 weight: 18
 url: /ko/net/document-comparison/compare-protected-documents-from-stream/
 ---

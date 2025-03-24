@@ -3,7 +3,6 @@ title: So sánh các ô từ luồng - GroupDocs.Comparison for .NET
 linktitle: So sánh các ô từ luồng - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng so sánh các tài liệu trong C# bằng GroupDocs.Comparison cho .NET. Hợp lý hóa các tác vụ xử lý tài liệu của bạn một cách dễ dàng.
-type: docs
 weight: 11
 url: /vi/net/basic-usage/compare-cells-from-stream/
 ---

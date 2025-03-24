@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari File - Perbandingan GroupDocs untuk .NET
 linktitle: Tetapkan Lisensi dari File - Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara mengintegrasikan Perbandingan GroupDocs untuk .NET dengan lancar ke dalam aplikasi Anda. Siapkan, impor namespace, dan bandingkan dokumen dengan mudah.
-type: docs
 weight: 10
 url: /id/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 Perbandingan GroupDocs untuk .NET memberdayakan pengembang untuk mengintegrasikan fungsi perbandingan dokumen dengan lancar ke dalam aplikasi .NET mereka. Dengan mengikuti langkah-langkah yang diuraikan dalam panduan ini, Anda dapat secara efisien menyiapkan lingkungan yang diperlukan, mengimpor namespace yang diperlukan, dan mengatur lisensi untuk memanfaatkan potensi penuh Perbandingan GroupDocs dalam proyek Anda.
 ## FAQ
 ### Di mana saya dapat menemukan dokumentasi Perbandingan GroupDocs untuk .NET?
- Anda dapat mengakses dokumentasinya[Di Sini](https://reference.groupdocs.com/comparison/net/).
+ Anda dapat mengakses dokumentasinya[Di Sini](https://tutorials.groupdocs.com/comparison/net/).
 ### Apakah ada uji coba gratis yang tersedia untuk Perbandingan GroupDocs untuk .NET?
  Ya, Anda dapat mengunduh versi uji coba gratis[Di Sini](https://releases.groupdocs.com/).
 ### Bagaimana saya bisa mendapatkan lisensi sementara untuk Perbandingan GroupDocs untuk .NET?

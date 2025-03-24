@@ -3,7 +3,6 @@ title: Bắt đầu nhanh
 linktitle: Bắt đầu nhanh
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng tích hợp So sánh GroupDocs cho .NET vào dự án của bạn. Tìm hiểu các phương pháp cài đặt giấy phép hiệu quả để có quy trình so sánh tài liệu chính xác.
-type: docs
 weight: 25
 url: /vi/net/quick-start/
 ---

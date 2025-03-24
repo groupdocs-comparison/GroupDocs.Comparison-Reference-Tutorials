@@ -3,7 +3,6 @@ title: Vergelijk mappen in GroupDocs-vergelijking voor .NET
 linktitle: Vergelijk mappen in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk moeiteloos mappen met GroupDocs Comparison voor .NET. Volg ons stap-voor-stap voor een efficiënte mapvergelijking. Verbeter uw .NET-applicaties.
-type: docs
 weight: 12
 url: /nl/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Bekendheid met de programmeertaal C# en het .NET-framework is vereist om de voor
 ### 3. Geïntegreerde ontwikkelomgeving (IDE)
 U hebt een IDE zoals Visual Studio nodig om de codevoorbeelden te schrijven en uit te voeren.
 ### 4. Toegang tot GroupDocs-documentatie
-Houd de GroupDocs Comparison for .NET-documentatie bij de hand als referentie tijdens de zelfstudie. U heeft toegang tot de documentatie[hier](https://reference.groupdocs.com/comparison/net/).
+Houd de GroupDocs Comparison for .NET-documentatie bij de hand als referentie tijdens de zelfstudie. U heeft toegang tot de documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Naamruimten importeren
 Om te beginnen moet u de benodigde naamruimten in uw C#-code importeren. Hierdoor kunt u de klassen en methoden van GroupDocs Comparison voor .NET gebruiken.

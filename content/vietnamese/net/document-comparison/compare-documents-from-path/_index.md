@@ -3,7 +3,6 @@ title: So sánh tài liệu từ đường dẫn - GroupDocs.Comparison for .NET
 linktitle: So sánh tài liệu từ đường dẫn - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng so sánh các tài liệu ở nhiều định dạng khác nhau với GroupDocs.Comparison cho .NET. Tiết kiệm thời gian và đảm bảo tính chính xác trong các nhiệm vụ pháp lý, học thuật và kinh doanh.
-type: docs
 weight: 15
 url: /vi/net/document-comparison/compare-documents-from-path/
 ---

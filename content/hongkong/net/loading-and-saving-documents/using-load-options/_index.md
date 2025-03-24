@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs 比較中使用載入選項
 linktitle: 在 .NET 的 GroupDocs 比較中使用載入選項
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 中的載入選項來無縫比較具有自訂字體的文件。
-type: docs
 weight: 13
 url: /zh-hant/net/loading-and-saving-documents/using-load-options/
 ---

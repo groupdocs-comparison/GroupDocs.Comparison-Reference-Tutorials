@@ -3,7 +3,6 @@ title: Zapisywanie źródła metadanych dokumentów w porównaniu GroupDocs dla 
 linktitle: Zapisywanie źródła metadanych dokumentów w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak zapisać źródło metadanych dokumentu za pomocą porównania GroupDocs dla platformy .NET. Postępuj zgodnie z naszym przewodnikiem krok po kroku, aby bezproblemowo porównać dokumenty w swojej platformie .NET.
-type: docs
 weight: 14
 url: /pl/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

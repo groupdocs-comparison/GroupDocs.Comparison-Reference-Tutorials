@@ -3,7 +3,6 @@ title: Jämför dokument från Stream - GroupDocs.Comparison för .NET
 linktitle: Jämför dokument från Stream - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Effektivisera dokumentjämförelse med GroupDocs.Comparison för .NET. Jämför dokument utan ansträngning och säkerställ noggrannhet mellan filer.
-type: docs
 weight: 16
 url: /sv/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ I dagens snabba värld, där information finns i överflöd och förändringar �
 Innan du börjar använda GroupDocs.Comparison för .NET finns det några förutsättningar du måste ha på plats:
 1. Installera .NET Framework: Se till att du har .NET Framework installerat på ditt system. Du kan ladda ner den från Microsofts webbplats.
 2.  Ladda ner GroupDocs.Comparison för .NET: Besök[nedladdningslänk](https://releases.groupdocs.com/comparison/net/) för att få den senaste versionen av GroupDocs.Comparison för .NET.
-3.  Tillgång till dokumentation: Bekanta dig med bibliotekets funktioner genom att hänvisa till[dokumentation](https://reference.groupdocs.com/comparison/net/).
+3.  Tillgång till dokumentation: Bekanta dig med bibliotekets funktioner genom att hänvisa till[dokumentation](https://tutorials.groupdocs.com/comparison/net/).
 4. Grundläggande förståelse för C#: Denna handledning förutsätter att du har en grundläggande förståelse för programmeringsspråket C#.
 
 ## Importera namnområden

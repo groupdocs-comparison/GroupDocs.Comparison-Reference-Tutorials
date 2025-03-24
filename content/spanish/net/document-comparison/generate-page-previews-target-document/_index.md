@@ -3,7 +3,6 @@ title: Generar vistas previas de página para el documento de destino
 linktitle: Generar vistas previas de página para el documento de destino
 second_title: API GroupDocs.Comparison .NET
 description: Genere vistas previas de páginas para documentos de destino de manera eficiente utilizando GroupDocs.Comparison para .NET. Siga nuestra guía paso a paso para comparar documentos sin problemas.
-type: docs
 weight: 12
 url: /es/net/document-comparison/generate-page-previews-target-document/
 ---

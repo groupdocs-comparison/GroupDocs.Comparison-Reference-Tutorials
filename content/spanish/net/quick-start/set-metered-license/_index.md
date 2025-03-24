@@ -3,7 +3,6 @@ title: Establecer licencia medida comparación de GroupDocs para .NET
 linktitle: Establecer licencia medida comparación de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Integre GroupDocs Comparison para .NET sin problemas en sus proyectos .NET para obtener flujos de trabajo de comparación de documentos eficientes.
-type: docs
 weight: 12
 url: /es/net/quick-start/set-metered-license/
 ---

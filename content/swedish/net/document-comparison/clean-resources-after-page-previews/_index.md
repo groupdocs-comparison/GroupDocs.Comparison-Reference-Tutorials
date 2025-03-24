@@ -3,7 +3,6 @@ title: Rengör resurser efter förhandsvisningar av sidan
 linktitle: Rengör resurser efter förhandsvisningar av sidan
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du jämför dokument med GroupDocs.Comparison för .NET steg för steg. Förbättra dina .NET-applikationer med effektiv dokumenthantering.
-type: docs
 weight: 13
 url: /sv/net/document-comparison/clean-resources-after-page-previews/
 ---

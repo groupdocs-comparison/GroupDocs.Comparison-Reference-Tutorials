@@ -3,7 +3,6 @@ title: Akıştan Belge Bilgisi Alma - GroupDocs.Comparison for .NET
 linktitle: Akıştan Belge Bilgisi Alma - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison'ı kullanarak .NET'teki belgeleri verimli bir şekilde nasıl karşılaştıracağınızı öğrenin ve belge işleme iş akışlarınızı sorunsuz bir şekilde geliştirin.
-type: docs
 weight: 14
 url: /tr/net/basic-usage/get-document-info-from-stream/
 ---

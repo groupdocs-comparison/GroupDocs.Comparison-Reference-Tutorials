@@ -3,7 +3,6 @@ title: 设置预览的特定图像尺寸
 linktitle: 设置预览的特定图像尺寸
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 轻松将文档比较功能集成到您的 .NET 应用程序中。
-type: docs
 weight: 14
 url: /zh/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

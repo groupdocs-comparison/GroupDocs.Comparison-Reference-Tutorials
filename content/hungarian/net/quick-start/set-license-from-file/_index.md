@@ -3,7 +3,6 @@ title: Licenc beállítása fájlból – GroupDocs-összehasonlítás a .NET-he
 linktitle: Licenc beállítása fájlból – GroupDocs-összehasonlítás a .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan integrálhatja zökkenőmentesen a GroupDocs Comparison for .NET szolgáltatást alkalmazásaiba. Állítson be, importáljon névtereket és hasonlítsa össze a dokumentumokat könnyedén.
-type: docs
 weight: 10
 url: /hu/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 A GroupDocs Comparis for .NET lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a dokumentum-összehasonlítási funkciókat .NET-alkalmazásaikba. Az ebben az útmutatóban vázolt lépések követésével hatékonyan beállíthatja a szükséges környezetet, importálhatja a szükséges névtereket, és beállíthatja a licencet, hogy a GroupDocs összehasonlításban rejlő teljes potenciált kiaknázza projektjein belül.
 ## GYIK
 ### Hol találom a GroupDocs .NET-hez való összehasonlításának dokumentációját?
- Hozzáférhet a dokumentációhoz[itt](https://reference.groupdocs.com/comparison/net/).
+ Hozzáférhet a dokumentációhoz[itt](https://tutorials.groupdocs.com/comparison/net/).
 ### Elérhető ingyenes próbaverzió a GroupDocs Comparison for .NET számára?
  Igen, letöltheti az ingyenes próbaverziót[itt](https://releases.groupdocs.com/).
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs Comparison for .NET-hez?

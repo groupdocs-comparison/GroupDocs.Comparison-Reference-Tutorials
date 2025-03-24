@@ -3,7 +3,6 @@ title: Comparer les documents protégés à partir du chemin - GroupDocs.Compari
 linktitle: Comparer les documents protégés à partir du chemin - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Comparez sans effort les documents protégés dans .NET à l’aide de GroupDocs.Comparison pour une intégration transparente. Améliorez votre flux de gestion de documents.
-type: docs
 weight: 17
 url: /fr/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Absolument, GroupDocs.Comparison for .NET fournit de nombreuses options pour per
 ### Puis-je essayer GroupDocs.Comparison pour .NET avant d'acheter ?
  Oui, vous pouvez explorer les fonctionnalités de GroupDocs.Comparison pour .NET en accédant à l'essai gratuit disponible[ici](https://releases.groupdocs.com/).
 ### Où puis-je trouver de la documentation et du support pour GroupDocs.Comparison for .NET ?
- Vous pouvez vous référer à la documentation complète[ici](https://reference.groupdocs.com/comparison/net/) et recherchez le soutien des forums communautaires[ici](https://forum.groupdocs.com/c/comparison/12).
+ Vous pouvez vous référer à la documentation complète[ici](https://tutorials.groupdocs.com/comparison/net/) et recherchez le soutien des forums communautaires[ici](https://forum.groupdocs.com/c/comparison/12).
 ### Ai-je besoin d’une licence temporaire pour utiliser GroupDocs.Comparison pour .NET ?
  Bien qu'une licence temporaire soit disponible à des fins de test, vous pouvez obtenir une licence complète en visitant[ici](https://purchase.groupdocs.com/buy).

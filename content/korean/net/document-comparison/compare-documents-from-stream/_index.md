@@ -3,7 +3,6 @@ title: Stream의 문서 비교 - .NET용 GroupDocs.Comparison
 linktitle: Stream의 문서 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 문서 비교를 간소화합니다. 문서를 손쉽게 비교하고 파일 전체의 정확성을 보장하세요.
-type: docs
 weight: 16
 url: /ko/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ko/net/document-comparison/compare-documents-from-stream/
 .NET용 GroupDocs.Comparison을 사용하기 전에 준비해야 할 몇 가지 전제 조건이 있습니다.
 1. .NET Framework 설치: 시스템에 .NET Framework가 설치되어 있는지 확인하십시오. 마이크로소프트 홈페이지에서 다운로드 받으실 수 있습니다.
 2.  .NET용 GroupDocs.Comparison 다운로드:[다운로드 링크](https://releases.groupdocs.com/comparison/net/) .NET용 GroupDocs.Comparison의 최신 버전을 얻으려면
-3.  문서 액세스: 다음을 참조하여 라이브러리의 기능을 숙지하십시오.[선적 서류 비치](https://reference.groupdocs.com/comparison/net/).
+3.  문서 액세스: 다음을 참조하여 라이브러리의 기능을 숙지하십시오.[선적 서류 비치](https://tutorials.groupdocs.com/comparison/net/).
 4. C#의 기본 이해: 이 자습서에서는 사용자가 C# 프로그래밍 언어에 대한 기본적인 이해가 있다고 가정합니다.
 
 ## 네임스페이스 가져오기

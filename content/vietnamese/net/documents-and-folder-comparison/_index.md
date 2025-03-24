@@ -3,7 +3,6 @@ title: So sánh tài liệu và thư mục
 linktitle: So sánh tài liệu và thư mục
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách hợp lý hóa quy trình làm việc của tài liệu với hướng dẫn So sánh GroupDocs cho .NET. Chấp nhận, từ chối các thay đổi và so sánh tài liệu và thư mục một cách dễ dàng.
-type: docs
 weight: 20
 url: /vi/net/documents-and-folder-comparison/
 ---

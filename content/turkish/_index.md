@@ -3,7 +3,6 @@ title: Mastering GroupDocs.Comparison - Öğreticiler ve Kılavuzlar
 linktitle: GroupDocs.Karşılaştırma Eğitimleri
 additionalTitle: GroupDocs API Referansları
 description: Eğitimlerimiz aracılığıyla GroupDocs.Comparison'ın gücünü keşfedin! Verimli belge karşılaştırması için bu API'yi entegre etmeyi ve kullanmayı öğrenin.
-type: docs
 weight: 11
 url: /tr/
 is_root: true

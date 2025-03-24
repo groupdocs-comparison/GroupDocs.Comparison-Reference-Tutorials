@@ -3,7 +3,6 @@ title: Generování náhledů stránek pro zdrojový dokument
 linktitle: Generování náhledů stránek pro zdrojový dokument
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak využít Groupdocs.Comparison pro .NET k efektivnímu zefektivnění procesů porovnávání dokumentů ve vašich C# projektech.
-type: docs
 weight: 11
 url: /cs/net/document-comparison/generate-page-previews-source-document/
 ---

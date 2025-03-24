@@ -3,7 +3,6 @@ title: Сохранение метаданных определяемого по
 linktitle: Сохранение метаданных определяемого пользователем документа в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как сохранять метаданные определяемых пользователем документов с помощью GroupDocs Comparison for .NET. Легко сравнивайте метаданные и манипулируйте ими с помощью пошаговых инструкций.
-type: docs
 weight: 16
 url: /ru/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

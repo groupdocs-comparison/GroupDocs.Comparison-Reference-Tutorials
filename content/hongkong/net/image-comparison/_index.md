@@ -3,7 +3,6 @@ title: 影像比較
 linktitle: 影像比較
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 函式庫有效比較 .NET 中的映像。從路徑或串流無縫整合的逐步教學。
-type: docs
 weight: 23
 url: /zh-hant/net/image-comparison/
 ---

@@ -3,7 +3,6 @@ title: Загрузка и сохранение документов
 linktitle: Загрузка и сохранение документов
 second_title: GroupDocs.Comparison .NET API
 description: С легкостью сравнивайте документы в .NET с помощью GroupDocs.Comparison для .NET. Узнайте, как загружать, сохранять и использовать параметры загрузки для эффективного управления документами.
-type: docs
 weight: 22
 url: /ru/net/loading-and-saving-documents/
 ---

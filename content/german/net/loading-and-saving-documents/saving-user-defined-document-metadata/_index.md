@@ -3,7 +3,6 @@ title: Speichern benutzerdefinierter Dokumentmetadaten im GroupDocs-Vergleich f�
 linktitle: Speichern benutzerdefinierter Dokumentmetadaten im GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie benutzerdefinierte Dokumentmetadaten mit GroupDocs Compare für .NET speichern. Vergleichen und bearbeiten Sie Metadaten ganz einfach mit Schritt-für-Schritt-Anleitungen.
-type: docs
 weight: 16
 url: /de/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

@@ -3,7 +3,6 @@ title: Quick Start
 linktitle: Quick Start
 second_title: GroupDocs.Comparison .NET API
 description: Effortlessly integrate GroupDocs Comparison for .NET into your projects. Learn efficient license setting methods for accurate document comparison workflows.
-type: docs
 weight: 25
 url: /net/quick-start/
 ---

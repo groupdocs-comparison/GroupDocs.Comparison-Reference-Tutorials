@@ -3,7 +3,6 @@ title: Korumalı Belgeleri Yoldan Karşılaştırın - GroupDocs.Comparison for 
 linktitle: Korumalı Belgeleri Yoldan Karşılaştırın - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: Sorunsuz entegrasyon için GroupDocs.Comparison'ı kullanarak .NET'teki korumalı belgeleri zahmetsizce karşılaştırın. Belge yönetimi iş akışınızı geliştirin.
-type: docs
 weight: 17
 url: /tr/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Kesinlikle GroupDocs.Comparison for .NET, karşılaştırma ayarlarını ihtiya�
 ### Satın almadan önce GroupDocs.Comparison for .NET'i deneyebilir miyim?
  Evet, mevcut ücretsiz deneme sürümüne erişerek GroupDocs.Comparison for .NET'in özelliklerini keşfedebilirsiniz.[Burada](https://releases.groupdocs.com/).
 ### GroupDocs.Comparison for .NET'e ilişkin belgeleri ve desteği nerede bulabilirim?
- Kapsamlı belgelere başvurabilirsiniz[Burada](https://reference.groupdocs.com/comparison/net/) ve topluluk forumlarından destek isteyin[Burada](https://forum.groupdocs.com/c/comparison/12).
+ Kapsamlı belgelere başvurabilirsiniz[Burada](https://tutorials.groupdocs.com/comparison/net/) ve topluluk forumlarından destek isteyin[Burada](https://forum.groupdocs.com/c/comparison/12).
 ### GroupDocs.Comparison for .NET'i kullanmak için geçici bir lisansa ihtiyacım var mı?
  Test amaçlı geçici bir lisans mevcut olsa da, şu adresi ziyaret ederek tam lisans alabilirsiniz:[Burada](https://purchase.groupdocs.com/buy).

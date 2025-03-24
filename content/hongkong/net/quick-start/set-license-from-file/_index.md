@@ -3,7 +3,6 @@ title: 從檔案設定許可證 - .NET 的 GroupDocs 比較
 linktitle: 從檔案設定許可證 - .NET 的 GroupDocs 比較
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何將 GroupDocs Comparison for .NET 無縫整合到您的應用程式中。輕鬆設定、匯入命名空間並比較文件。
-type: docs
 weight: 10
 url: /zh-hant/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET 使開發人員能夠將文件比較功能無縫整合到他們的 .NET 應用程式中。透過遵循本指南中概述的步驟，您可以有效地設定必要的環境、匯入所需的命名空間並設定許可證，以在專案中充分利用 GroupDocs Comparison 的潛力。
 ## 常見問題解答
 ### 在哪裡可以找到 GroupDocs Comparison for .NET 的文件？
-您可以存取文檔[這裡](https://reference.groupdocs.com/comparison/net/).
+您可以存取文檔[這裡](https://tutorials.groupdocs.com/comparison/net/).
 ### GroupDocs Comparison for .NET 是否有免費試用版？
 是的，您可以下載免費試用版[這裡](https://releases.groupdocs.com/).
 ### 如何取得 GroupDocs Comparison for .NET 的臨時授權？

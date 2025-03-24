@@ -3,7 +3,6 @@ title: Compare Protected Documents from Stream - GroupDocs.Comparison for .NET
 linktitle: Compare Protected Documents from Stream - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to compare protected documents from streams using GroupDocs.Comparison for .NET. Streamline your document comparison process effortlessly.
-type: docs
 weight: 18
 url: /net/document-comparison/compare-protected-documents-from-stream/
 ---
@@ -57,6 +56,6 @@ Yes, you can explore the features of GroupDocs.Comparison by accessing the free 
 ### Does GroupDocs.Comparison for .NET support document comparison in non-English languages?
 Yes, the library supports document comparison in multiple languages, ensuring flexibility for diverse projects.
 ### Can I customize the output format of compared documents?
-Yes, GroupDocs.Comparison offers options to customize the output format and appearance of compared documents according to your preferences.
+Yes, GroupDocs.Comparison offers options to customize the output format and appearance of compared documents according to your ptutorialss.
 ### Is technical support available for GroupDocs.Comparison for .NET?
 Yes, you can seek assistance and engage with the community through the GroupDocs.Comparison support forum [here](https://forum.groupdocs.com/c/comparison/12).

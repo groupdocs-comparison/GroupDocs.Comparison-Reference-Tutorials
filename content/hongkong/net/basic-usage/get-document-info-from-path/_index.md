@@ -3,7 +3,6 @@ title: 從路徑取得文件資訊 - GroupDocs.Comparison for .NET
 linktitle: 從路徑取得文件資訊 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 從路徑中擷取文件資訊。在 C# 中實現高效能文件管理的簡單步驟。
-type: docs
 weight: 13
 url: /zh-hant/net/basic-usage/get-document-info-from-path/
 ---

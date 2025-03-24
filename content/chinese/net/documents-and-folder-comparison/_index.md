@@ -3,7 +3,6 @@ title: 文档和文件夹比较
 linktitle: 文档和文件夹比较
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何通过 GroupDocs Comparison for .NET 教程简化文档工作流程。轻松接受、拒绝更改并比较文档和文件夹。
-type: docs
 weight: 20
 url: /zh/net/documents-and-folder-comparison/
 ---

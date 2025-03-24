@@ -3,7 +3,6 @@ title: So sánh tài liệu từ luồng - GroupDocs.Comparison for .NET
 linktitle: So sánh tài liệu từ luồng - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Hợp lý hóa việc so sánh tài liệu với GroupDocs.Comparison cho .NET. So sánh các tài liệu một cách dễ dàng và đảm bảo độ chính xác giữa các tập tin.
-type: docs
 weight: 16
 url: /vi/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ Trong thế giới phát triển nhanh chóng ngày nay, nơi thông tin dồi d
 Trước khi đi sâu vào sử dụng GroupDocs.Comparison cho .NET, bạn cần phải có một số điều kiện tiên quyết:
 1. Cài đặt .NET Framework: Đảm bảo bạn đã cài đặt .NET Framework trên hệ thống của mình. Bạn có thể tải xuống từ trang web của Microsoft.
 2.  Tải xuống GroupDocs.Comparison cho .NET: Truy cập[Liên kết tải xuống](https://releases.groupdocs.com/comparison/net/) để có phiên bản mới nhất của GroupDocs.Comparison cho .NET.
-3.  Truy cập Tài liệu: Làm quen với các chức năng của thư viện bằng cách tham khảo[tài liệu](https://reference.groupdocs.com/comparison/net/).
+3.  Truy cập Tài liệu: Làm quen với các chức năng của thư viện bằng cách tham khảo[tài liệu](https://tutorials.groupdocs.com/comparison/net/).
 4. Hiểu biết cơ bản về C#: Hướng dẫn này giả sử bạn có hiểu biết cơ bản về ngôn ngữ lập trình C#.
 
 ## Nhập không gian tên

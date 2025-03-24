@@ -3,7 +3,6 @@ title: छवि तुलना
 linktitle: छवि तुलना
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison लाइब्रेरी का उपयोग करके .NET में छवियों की कुशलतापूर्वक तुलना करें। पथ या स्ट्रीम से निर्बाध एकीकरण के लिए चरण-दर-चरण ट्यूटोरियल।
-type: docs
 weight: 23
 url: /hi/net/image-comparison/
 ---

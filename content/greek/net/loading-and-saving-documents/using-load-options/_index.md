@@ -3,7 +3,6 @@ title: Χρήση επιλογών φόρτωσης στη σύγκριση Grou
 linktitle: Χρήση επιλογών φόρτωσης στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να χρησιμοποιείτε τις Επιλογές Φόρτωσης στο GroupDocs Comparison για .NET για να συγκρίνετε έγγραφα με προσαρμοσμένες γραμματοσειρές απρόσκοπτα.
-type: docs
 weight: 13
 url: /el/net/loading-and-saving-documents/using-load-options/
 ---

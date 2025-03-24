@@ -3,7 +3,6 @@ title: लक्ष्य दस्तावेज़ के लिए पृष
 linktitle: लक्ष्य दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन तैयार करें
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison का उपयोग करके कुशलतापूर्वक लक्षित दस्तावेज़ों के लिए पृष्ठ पूर्वावलोकन तैयार करें। निर्बाध दस्तावेज़ तुलना के लिए हमारी चरण-दर-चरण मार्गदर्शिका का पालन करें।
-type: docs
 weight: 12
 url: /hi/net/document-comparison/generate-page-previews-target-document/
 ---

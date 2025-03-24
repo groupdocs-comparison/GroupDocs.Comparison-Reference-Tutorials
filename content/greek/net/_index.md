@@ -1,7 +1,6 @@
 ---
 title: Σεμινάρια και παραδείγματα GroupDocs.Σύγκριση για .NET
 linktitle: GroupDocs.Σύγκριση για .NET Tutorials
-type: docs
 weight: 10
 url: /el/net/
 description: Ανακαλύψτε ολοκληρωμένα σεμινάρια για το GroupDocs.Comparison για .NET, διευκολύνοντας την αποτελεσματική σύγκριση, διαχείριση και ενσωμάτωση εγγράφων και φακέλων χωρίς κόπο.

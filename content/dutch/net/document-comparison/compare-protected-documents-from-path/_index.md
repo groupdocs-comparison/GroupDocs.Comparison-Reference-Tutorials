@@ -3,7 +3,6 @@ title: Vergelijk beveiligde documenten via pad - GroupDocs.Comparison voor .NET
 linktitle: Vergelijk beveiligde documenten via pad - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk moeiteloos beveiligde documenten in .NET met GroupDocs.Comparison voor naadloze integratie. Verbeter uw documentbeheerworkflow.
-type: docs
 weight: 17
 url: /nl/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Absoluut, GroupDocs.Comparison voor .NET biedt uitgebreide mogelijkheden om de v
 ### Kan ik GroupDocs.Comparison voor .NET uitproberen voordat ik een aankoop doe?
  Ja, u kunt de functies van GroupDocs.Comparison voor .NET verkennen door gebruik te maken van de gratis proefversie[hier](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie en ondersteuning vinden voor GroupDocs.Comparison voor .NET?
- U kunt de uitgebreide documentatie raadplegen[hier](https://reference.groupdocs.com/comparison/net/) en zoek steun op de communityforums[hier](https://forum.groupdocs.com/c/comparison/12).
+ U kunt de uitgebreide documentatie raadplegen[hier](https://tutorials.groupdocs.com/comparison/net/) en zoek steun op de communityforums[hier](https://forum.groupdocs.com/c/comparison/12).
 ### Heb ik een tijdelijke licentie nodig om GroupDocs.Comparison voor .NET te gebruiken?
  Hoewel er een tijdelijke licentie beschikbaar is voor testdoeleinden, kunt u een volledige licentie verkrijgen door te bezoeken[hier](https://purchase.groupdocs.com/buy).

@@ -3,7 +3,6 @@ title: Alapvető használat
 linktitle: Alapvető használat
 second_title: GroupDocs.Comparison .NET API
 description: Hasonlítsa össze a dokumentumokat a .NET-ben a GroupDocs.Comparison segítségével. Tanuljon meg alapvető használati oktatóanyagokat a cella-összehasonlításról, a dokumentuminformáció-kinyerésről és a támogatott formátumokról.
-type: docs
 weight: 24
 url: /hu/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Kulcsfontosságú a dokumentumkezelés labirintusában való eligazodás és ann
 ## Támogatott formátumok beszerzése
  dokumentumok pontosságának és konzisztenciájának biztosítása elengedhetetlen a .NET fejlesztés területén. A GroupDocs.Comparison for .NET lehetővé teszi, hogy ezt elérje. Fedezze fel a támogatott formátumok sorát, és zökkenőmentesen integrálja ezt a hatékony eszközt .NET-alkalmazásaiba. További információ a támogatott formátumokról[itt](./get-supported-formats/).
 
- Kezdje el utazását a GroupDocs.Comparison for .NET elsajátítása felé ezekkel az alapvető használati útmutatókkal. Zökkenőmentesen hasonlítsa össze a cellákat, bontsa ki a dokumentumok adatait, és biztosítsa a dokumentumok pontosságát, javítva ezzel a .NET fejlesztési törekvéseit. Készen állsz a merülésre? Olvass tovább[itt](https://reference.groupdocs.com/comparison/net).
+ Kezdje el utazását a GroupDocs.Comparison for .NET elsajátítása felé ezekkel az alapvető használati útmutatókkal. Zökkenőmentesen hasonlítsa össze a cellákat, bontsa ki a dokumentumok adatait, és biztosítsa a dokumentumok pontosságát, javítva ezzel a .NET fejlesztési törekvéseit. Készen állsz a merülésre? Olvass tovább[itt](https://tutorials.groupdocs.com/comparison/net).
 ## Alapvető használati útmutatók
 ### [Cellák összehasonlítása az elérési útból – GroupDocs.Comparison for .NET](./compare-cells-from-path/)
 Ismerje meg, hogyan hasonlíthatja össze egy útvonal celláit a GroupDocs.Comparison for .NET használatával. Hatékonyan azonosítja a dokumentumok közötti különbségeket.

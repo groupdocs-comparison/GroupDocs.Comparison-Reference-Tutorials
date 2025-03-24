@@ -3,7 +3,6 @@ title: Đặt giấy phép từ luồng - So sánh GroupDocs cho .NET
 linktitle: Đặt giấy phép từ luồng - So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách đặt giấy phép bằng GroupDocs.Comparison cho .NET một cách hiệu quả. Đảm bảo độ chính xác của tài liệu và tiết kiệm thời gian với hướng dẫn này.
-type: docs
 weight: 11
 url: /vi/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Trước khi đi sâu vào hướng dẫn, hãy đảm bảo bạn có các đi�
 - Kiến thức cơ bản về C# và .NET framework.
 - Visual Studio được cài đặt trên hệ thống của bạn.
 -  GroupDocs.Comparison cho thư viện .NET được cài đặt. Bạn có thể tải nó xuống[đây](https://releases.groupdocs.com/comparison/net/).
--  Truy cập vào tài liệu GroupDocs.Comparison cho .NET[đây](https://reference.groupdocs.com/comparison/net/).
+-  Truy cập vào tài liệu GroupDocs.Comparison cho .NET[đây](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Nhập không gian tên
 Để bắt đầu sử dụng GroupDocs.Comparison cho .NET, bạn cần nhập các vùng tên cần thiết vào dự án của mình. Đây là cách bạn có thể làm điều đó:
@@ -67,4 +66,4 @@ Có, bạn có thể yêu cầu dùng thử miễn phí từ trang web GroupDocs
 ### Tôi nên làm gì nếu gặp vấn đề về cấp phép?
  Nếu bạn gặp phải bất kỳ vấn đề cấp phép nào, hãy tham khảo Câu hỏi thường gặp về cấp phép[đây](https://purchase.groupdocs.com/faqs/licensing) hoặc liên hệ với bộ phận hỗ trợ của GroupDocs.
 ### Tôi có thể tìm thêm hướng dẫn và tài nguyên về GroupDocs.Comparison cho .NET ở đâu?
- Bạn có thể tìm thấy tài liệu và hướng dẫn mở rộng trên trang web GroupDocs[đây](https://reference.groupdocs.com/comparison/net/).
+ Bạn có thể tìm thấy tài liệu và hướng dẫn mở rộng trên trang web GroupDocs[đây](https://tutorials.groupdocs.com/comparison/net/).

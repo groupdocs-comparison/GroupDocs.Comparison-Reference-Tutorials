@@ -3,7 +3,6 @@ title: Usando opções de carregamento na comparação de GroupDocs para .NET
 linktitle: Usando opções de carregamento na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como usar as opções de carregamento na comparação de GroupDocs para .NET para comparar documentos com fontes personalizadas perfeitamente.
-type: docs
 weight: 13
 url: /pt/net/loading-and-saving-documents/using-load-options/
 ---

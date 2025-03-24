@@ -3,7 +3,6 @@ title: Tạo bản xem trước trang cho tài liệu nguồn
 linktitle: Tạo bản xem trước trang cho tài liệu nguồn
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách sử dụng Groupdocs.Comparison cho .NET để hợp lý hóa các quy trình so sánh tài liệu trong các dự án C# của bạn một cách hiệu quả.
-type: docs
 weight: 11
 url: /vi/net/document-comparison/generate-page-previews-source-document/
 ---

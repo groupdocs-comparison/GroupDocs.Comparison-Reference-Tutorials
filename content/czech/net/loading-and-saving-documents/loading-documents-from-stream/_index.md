@@ -3,7 +3,6 @@ title: Načítání dokumentů ze streamu v porovnání GroupDocs pro .NET
 linktitle: Načítání dokumentů ze streamu v porovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak bez námahy porovnávat dokumenty v aplikacích .NET pomocí GroupDocs Comparison, výkonné knihovny .NET.
-type: docs
 weight: 11
 url: /cs/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

@@ -3,7 +3,6 @@ title: 경로에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 linktitle: 경로에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 경로에서 문서 정보를 추출하는 방법을 알아보세요. C#에서 효율적인 문서 관리를 위한 쉬운 단계입니다.
-type: docs
 weight: 13
 url: /ko/net/basic-usage/get-document-info-from-path/
 ---

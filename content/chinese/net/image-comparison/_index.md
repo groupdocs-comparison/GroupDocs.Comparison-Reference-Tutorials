@@ -3,7 +3,6 @@ title: 图像比较
 linktitle: 图像比较
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 库有效比较 .NET 中的图像。从路径或流无缝集成的分步教程。
-type: docs
 weight: 23
 url: /zh/net/image-comparison/
 ---

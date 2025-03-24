@@ -3,7 +3,6 @@ title: Lưu nguồn siêu dữ liệu tài liệu trong So sánh GroupDocs cho .
 linktitle: Lưu nguồn siêu dữ liệu tài liệu trong So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách lưu nguồn siêu dữ liệu tài liệu bằng cách sử dụng So sánh GroupDocs cho .NET. Hãy làm theo hướng dẫn từng bước của chúng tôi để so sánh tài liệu liền mạch trong .NET của bạn.
-type: docs
 weight: 14
 url: /vi/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

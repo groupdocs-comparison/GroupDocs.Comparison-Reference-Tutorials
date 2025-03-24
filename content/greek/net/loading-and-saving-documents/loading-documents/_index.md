@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφων στη σύγκριση GroupDocs για 
 linktitle: Φόρτωση εγγράφων στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να συγκρίνετε έγγραφα αποτελεσματικά χρησιμοποιώντας το GroupDocs.Comparison για .NET. Βελτιώστε τις διαδικασίες διαχείρισης εγγράφων σας.
-type: docs
 weight: 10
 url: /el/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### Υπάρχει διαθέσιμη δωρεάν δοκιμή για το GroupDocs.Comparison για .NET;
  Ναι, μπορείτε να επωφεληθείτε από μια δωρεάν δοκιμή του GroupDocs.Comparison για .NET μεταβαίνοντας στο[δικτυακός τόπος](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση για το GroupDocs.Comparison για .NET;
- Μπορείτε να ανατρέξετε στην πλήρη τεκμηρίωση που είναι διαθέσιμη στη διεύθυνση[GroupDocs.Σύγκριση για τεκμηρίωση .NET](https://reference.groupdocs.com/comparison/net/).
+ Μπορείτε να ανατρέξετε στην πλήρη τεκμηρίωση που είναι διαθέσιμη στη διεύθυνση[GroupDocs.Σύγκριση για τεκμηρίωση .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το GroupDocs.Comparison για .NET;
  Μπορείτε να αποκτήσετε μια προσωρινή άδεια μεταβαίνοντας στο[σελίδα προσωρινής άδειας](https://purchase.groupdocs.com/temporary-license/) στον ιστότοπο του GroupDocs.
 ### Πού μπορώ να αναζητήσω υποστήριξη για το GroupDocs.Comparison για .NET;

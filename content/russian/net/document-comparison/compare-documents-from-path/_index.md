@@ -3,7 +3,6 @@ title: Сравнение документов по пути — GroupDocs.Compa
 linktitle: Сравнение документов по пути — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: С легкостью сравнивайте документы в различных форматах с помощью GroupDocs.Comparison для .NET. Экономьте время и обеспечивайте точность при решении юридических, академических и деловых задач.
-type: docs
 weight: 15
 url: /ru/net/document-comparison/compare-documents-from-path/
 ---

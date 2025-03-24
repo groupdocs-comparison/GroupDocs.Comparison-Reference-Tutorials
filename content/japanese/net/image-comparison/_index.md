@@ -3,7 +3,6 @@ title: 画像比較
 linktitle: 画像比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison ライブラリを使用して、.NET で画像を効率的に比較します。パスまたはストリームからのシームレスな統合のためのステップバイステップのチュートリアル。
-type: docs
 weight: 23
 url: /ja/net/image-comparison/
 ---

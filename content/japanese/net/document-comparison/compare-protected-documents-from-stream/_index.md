@@ -3,7 +3,6 @@ title: ストリームからの保護されたドキュメントの比較 - Grou
 linktitle: ストリームからの保護されたドキュメントの比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用して、ストリームから保護されたドキュメントを比較する方法を学習します。文書比較プロセスを簡単に合理化します。
-type: docs
 weight: 18
 url: /ja/net/document-comparison/compare-protected-documents-from-stream/
 ---

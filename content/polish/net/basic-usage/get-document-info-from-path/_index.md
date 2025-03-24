@@ -3,7 +3,6 @@ title: Pobierz informacje o dokumencie ze ścieżki — GroupDocs.Comparison dla
 linktitle: Pobierz informacje o dokumencie ze ścieżki — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak wyodrębnić informacje o dokumencie ze ścieżki za pomocą GroupDocs.Comparison dla .NET. Proste kroki do wydajnego zarządzania dokumentami w języku C#.
-type: docs
 weight: 13
 url: /pl/net/basic-usage/get-document-info-from-path/
 ---

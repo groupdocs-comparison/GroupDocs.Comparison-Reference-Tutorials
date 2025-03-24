@@ -3,7 +3,6 @@ title: Spara användardefinierade dokumentmetadata i GroupDocs Comparison för .
 linktitle: Spara användardefinierade dokumentmetadata i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du sparar användardefinierad dokumentmetadata med GroupDocs Comparison för .NET. Jämför och manipulera enkelt metadata med steg-för-steg-instruktioner.
-type: docs
 weight: 16
 url: /sv/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

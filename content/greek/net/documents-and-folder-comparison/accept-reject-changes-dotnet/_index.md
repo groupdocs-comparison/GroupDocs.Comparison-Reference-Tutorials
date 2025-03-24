@@ -3,7 +3,6 @@ title: Αποδοχή και απόρριψη αλλαγών στη σύγκρι
 linktitle: Αποδοχή και απόρριψη αλλαγών στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να αποδέχεστε και να απορρίπτετε αλλαγές σε έγγραφα χρησιμοποιώντας τη σύγκριση GroupDocs για .NET. Βελτιώστε τις ροές εργασίας του εγγράφου σας χωρίς κόπο.
-type: docs
 weight: 10
 url: /el/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

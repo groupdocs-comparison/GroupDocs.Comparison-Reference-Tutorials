@@ -3,7 +3,6 @@ title: Définition du mot de passe pour le document résultant dans la comparais
 linktitle: Définition du mot de passe pour le document résultant dans la comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment définir un mot de passe pour les documents résultants dans GroupDocs Comparison for .NET. Améliorez la sécurité et protégez vos fichiers comparés.
-type: docs
 weight: 17
 url: /fr/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Oui, GroupDocs Comparison for .NET prend en charge la comparaison de documents d
 ### Ai-je besoin d’une licence pour utiliser GroupDocs Comparison for .NET ?
  Oui, vous pouvez acheter une licence auprès de[ici](https://purchase.groupdocs.com/buy) ou obtenir un permis temporaire[ici](https://purchase.groupdocs.com/temporary-license/).
 ### Existe-t-il une documentation disponible pour la comparaison GroupDocs pour .NET ?
- Oui, vous pouvez accéder à la documentation[ici](https://reference.groupdocs.com/comparison/net/).
+ Oui, vous pouvez accéder à la documentation[ici](https://tutorials.groupdocs.com/comparison/net/).

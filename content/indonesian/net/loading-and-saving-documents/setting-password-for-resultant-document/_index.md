@@ -3,7 +3,6 @@ title: Menetapkan Kata Sandi untuk Dokumen yang Dihasilkan dalam Perbandingan Gr
 linktitle: Menetapkan Kata Sandi untuk Dokumen yang Dihasilkan dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara mengatur kata sandi untuk dokumen yang dihasilkan di Perbandingan GroupDocs untuk .NET. Tingkatkan keamanan dan lindungi file Anda yang dibandingkan.
-type: docs
 weight: 17
 url: /id/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Ya, Perbandingan GroupDocs untuk .NET mendukung perbandingan dokumen dalam berba
 ### Apakah saya memerlukan lisensi untuk menggunakan Perbandingan GroupDocs untuk .NET?
  Ya, Anda dapat membeli lisensi dari[Di Sini](https://purchase.groupdocs.com/buy) atau mendapatkan izin sementara[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Apakah ada dokumentasi yang tersedia untuk Perbandingan GroupDocs untuk .NET?
- Ya, Anda dapat mengakses dokumentasinya[Di Sini](https://reference.groupdocs.com/comparison/net/).
+ Ya, Anda dapat mengakses dokumentasinya[Di Sini](https://tutorials.groupdocs.com/comparison/net/).

@@ -3,7 +3,6 @@ title: Menguasai GroupDocs.Perbandingan - Tutorial dan Panduan
 linktitle: GroupDocs.Tutorial Perbandingan
 additionalTitle: Referensi API GroupDocs
 description: Temukan kehebatan GroupDocs.Perbandingan melalui tutorial kami! Pelajari cara mengintegrasikan dan memanfaatkan API ini untuk perbandingan dokumen yang efisien.
-type: docs
 weight: 11
 url: /id/
 is_root: true

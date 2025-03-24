@@ -1,7 +1,6 @@
 ---
 title: Návody a příklady GroupDocs.Comparison pro .NET
 linktitle: GroupDocs.Comparison pro .NET výukové programy
-type: docs
 weight: 10
 url: /cs/net/
 description: Objevte komplexní výukové programy pro GroupDocs.Comparison pro .NET, které usnadňují efektivní porovnávání dokumentů a složek, správu a integraci bez námahy.

@@ -3,7 +3,6 @@ title: Documents and Folder Comparison
 linktitle: Documents and Folder Comparison
 second_title: GroupDocs.Comparison .NET API
 description: Learn to streamline document workflows with GroupDocs Comparison for .NET tutorials. Accept, reject changes & compare documents and folders effortlessly.
-type: docs
 weight: 20
 url: /net/documents-and-folder-comparison/
 ---

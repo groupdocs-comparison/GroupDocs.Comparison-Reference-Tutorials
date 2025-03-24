@@ -3,7 +3,6 @@ title: 문서 로드 및 저장
 linktitle: 문서 로드 및 저장
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 .NET의 문서를 쉽게 비교할 수 있습니다. 효율적인 문서 관리를 위해 로드 옵션을 로드, 저장 및 활용하는 방법을 알아보세요.
-type: docs
 weight: 22
 url: /ko/net/loading-and-saving-documents/
 ---

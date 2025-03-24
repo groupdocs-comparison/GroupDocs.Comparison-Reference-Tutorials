@@ -3,7 +3,6 @@ title: Compare Images from Stream - GroupDocs.Comparison for .NET
 linktitle: Compare Images from Stream - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to compare images from streams using GroupDocs.Comparison for .NET. Step-by-step guide for seamless integration into .NET applications.
-type: docs
 weight: 11
 url: /net/image-comparison/compare-images-from-stream/
 ---

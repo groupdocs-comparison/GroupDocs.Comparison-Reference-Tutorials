@@ -3,7 +3,6 @@ title: Chấp nhận và từ chối các thay đổi trong so sánh GroupDocs c
 linktitle: Chấp nhận và từ chối các thay đổi trong so sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách chấp nhận và từ chối các thay đổi trong tài liệu bằng cách sử dụng So sánh GroupDocs cho .NET. Hợp lý hóa quy trình làm việc tài liệu của bạn một cách dễ dàng.
-type: docs
 weight: 10
 url: /vi/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

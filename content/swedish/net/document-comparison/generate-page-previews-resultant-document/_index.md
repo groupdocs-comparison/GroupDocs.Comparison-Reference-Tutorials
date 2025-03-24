@@ -3,7 +3,6 @@ title: Generera sidförhandsvisningar för resulterande dokument
 linktitle: Generera sidförhandsvisningar för resulterande dokument
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du genererar dokumentförhandsvisningar med GroupDocs.Comparison för .NET. Jämför dokument effektivt och korrekt.
-type: docs
 weight: 10
 url: /sv/net/document-comparison/generate-page-previews-resultant-document/
 ---

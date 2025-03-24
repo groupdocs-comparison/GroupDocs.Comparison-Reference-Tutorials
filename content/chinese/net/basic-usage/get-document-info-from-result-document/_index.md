@@ -3,7 +3,6 @@ title: 从结果文档中获取文档信息 - GroupDocs.Comparison for .NET
 linktitle: 从结果文档中获取文档信息 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 从结果文档中检索文档信息。为 .NET 开发人员解释了简单的步骤。
-type: docs
 weight: 12
 url: /zh/net/basic-usage/get-document-info-from-result-document/
 ---

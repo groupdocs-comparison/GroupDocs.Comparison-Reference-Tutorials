@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs 比较中从字符串加载文本
 linktitle: 在 .NET 的 GroupDocs 比较中从字符串加载文本
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 库轻松比较 .NET 应用程序中的文本。通过无缝集成提高效率和准确性。
-type: docs
 weight: 12
 url: /zh/net/loading-and-saving-documents/loading-text-from-string/
 ---

@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Birden Çok Belgeyi Karşıl
 linktitle: .NET için GroupDocs Karşılaştırmasında Birden Çok Belgeyi Karşılaştırın
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i kullanarak birden çok belgeyi verimli bir şekilde nasıl karşılaştıracağınızı öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin.
-type: docs
 weight: 13
 url: /tr/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

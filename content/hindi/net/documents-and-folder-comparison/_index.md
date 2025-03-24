@@ -3,7 +3,6 @@ title: दस्तावेज़ और फ़ोल्डर तुलना
 linktitle: दस्तावेज़ और फ़ोल्डर तुलना
 second_title: GroupDocs.Comparison .NET API
 description: .NET ट्यूटोरियल के लिए GroupDocs Compare के साथ दस्तावेज़ वर्कफ़्लो को सुव्यवस्थित करना सीखें। परिवर्तनों को स्वीकार करें, अस्वीकार करें और दस्तावेज़ों और फ़ोल्डरों की तुलना सहजता से करें।
-type: docs
 weight: 20
 url: /hi/net/documents-and-folder-comparison/
 ---

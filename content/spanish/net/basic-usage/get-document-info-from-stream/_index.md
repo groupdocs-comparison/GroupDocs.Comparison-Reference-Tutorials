@@ -3,7 +3,6 @@ title: Obtener información del documento de Stream - GroupDocs.Comparison para 
 linktitle: Obtener información del documento de Stream - GroupDocs.Comparison para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda a comparar documentos de manera eficiente en .NET usando GroupDocs.Comparison, mejorando sus flujos de trabajo de procesamiento de documentos sin problemas.
-type: docs
 weight: 14
 url: /es/net/basic-usage/get-document-info-from-stream/
 ---

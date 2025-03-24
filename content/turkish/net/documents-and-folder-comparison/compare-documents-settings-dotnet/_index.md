@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Belge Ayarlarını Karşıla
 linktitle: .NET için GroupDocs Karşılaştırmasında Belge Ayarlarını Karşılaştırın
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Karşılaştırma ile .NET uygulamalarında belge karşılaştırmasını kolaylaştırın. Gelişmiş özelliklerle belgeleri zahmetsizce karşılaştırın.
-type: docs
 weight: 11
 url: /tr/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

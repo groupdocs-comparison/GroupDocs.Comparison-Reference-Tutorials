@@ -1,7 +1,6 @@
 ---
 title: .NET 的 GroupDocs.Comparison 教學與範例
 linktitle: .NET 教學的 GroupDocs.Comparison
-type: docs
 weight: 10
 url: /zh-hant/net/
 description: 了解適用於 .NET 的 GroupDocs.Comparison 綜合教程，輕鬆促進高效的文件和資料夾比較、管理和整合。

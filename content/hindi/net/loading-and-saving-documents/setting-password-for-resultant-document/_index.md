@@ -3,7 +3,6 @@ title: .NET के लिए GroupDocs तुलना में परिणा
 linktitle: .NET के लिए GroupDocs तुलना में परिणामी दस्तावेज़ के लिए पासवर्ड सेट करना
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs Compare में परिणामी दस्तावेज़ों के लिए पासवर्ड सेट करना सीखें। सुरक्षा बढ़ाएँ और अपनी तुलना की गई फ़ाइलों को सुरक्षित रखें।
-type: docs
 weight: 17
 url: /hi/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### क्या मुझे .NET के लिए GroupDocs Compare का उपयोग करने के लिए लाइसेंस की आवश्यकता है?
  हां, आप यहां से लाइसेंस खरीद सकते हैं[यहाँ](https://purchase.groupdocs.com/buy) या एक अस्थायी लाइसेंस प्राप्त करें[यहाँ](https://purchase.groupdocs.com/temporary-license/).
 ### क्या .NET के लिए GroupDocs Compare के लिए कोई दस्तावेज़ उपलब्ध है?
- हाँ, आप दस्तावेज़ तक पहुँच सकते हैं[यहाँ](https://reference.groupdocs.com/comparison/net/).
+ हाँ, आप दस्तावेज़ तक पहुँच सकते हैं[यहाँ](https://tutorials.groupdocs.com/comparison/net/).

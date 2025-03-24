@@ -3,7 +3,6 @@ title: Vergelijk afbeeldingen van pad - GroupDocs.Comparison voor .NET
 linktitle: Vergelijk afbeeldingen van pad - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u afbeeldingen efficiënt kunt vergelijken in .NET met behulp van de GroupDocs.Comparison-bibliotheek. Volg de stapsgewijze handleiding voor naadloze integratie.
-type: docs
 weight: 10
 url: /nl/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ Op het gebied van .NET-ontwikkeling is de mogelijkheid om documenten en afbeeldi
 ## Vereisten
 Voordat u zich verdiept in de fijne kneepjes van het gebruik van GroupDocs.Comparison voor .NET, moet u ervoor zorgen dat aan de volgende vereisten wordt voldaan:
 ### 1. Installeer GroupDocs.Comparison voor .NET
- Download de bibliotheek van[hier](https://releases.groupdocs.com/comparison/net/) en volg de installatie-instructies in de documentatie[hier](https://reference.groupdocs.com/comparison/net/).
+ Download de bibliotheek van[hier](https://releases.groupdocs.com/comparison/net/) en volg de installatie-instructies in de documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Verkrijg een licentie
  Om het volledige potentieel van GroupDocs.Comparison voor .NET te ontsluiten, koopt u een licentie van[hier](https://purchase.groupdocs.com/buy) of gebruik de beschikbare tijdelijke licentie[hier](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Bekendheid met C#-programmering

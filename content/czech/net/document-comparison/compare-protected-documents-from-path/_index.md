@@ -3,7 +3,6 @@ title: Porovnání chráněných dokumentů z cesty - GroupDocs.Comparison pro .
 linktitle: Porovnání chráněných dokumentů z cesty - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Bez námahy porovnávejte chráněné dokumenty v .NET pomocí GroupDocs.Comparison pro bezproblémovou integraci. Vylepšete svůj pracovní postup správy dokumentů.
-type: docs
 weight: 17
 url: /cs/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Rozhodně, GroupDocs.Comparison for .NET poskytuje rozsáhlé možnosti pro při
 ### Mohu vyzkoušet GroupDocs.Comparison pro .NET před nákupem?
  Ano, můžete prozkoumat funkce GroupDocs.Comparison for .NET přístupem k bezplatné zkušební verzi[tady](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci a podporu pro GroupDocs.Comparison pro .NET?
- Můžete se podívat na komplexní dokumentaci[tady](https://reference.groupdocs.com/comparison/net/) a hledat podporu na komunitních fórech[tady](https://forum.groupdocs.com/c/comparison/12).
+ Můžete se podívat na komplexní dokumentaci[tady](https://tutorials.groupdocs.com/comparison/net/) a hledat podporu na komunitních fórech[tady](https://forum.groupdocs.com/c/comparison/12).
 ### Potřebuji dočasnou licenci k používání GroupDocs.Comparison pro .NET?
  Zatímco pro testovací účely je k dispozici dočasná licence, plnou licenci můžete získat na návštěvě[tady](https://purchase.groupdocs.com/buy).

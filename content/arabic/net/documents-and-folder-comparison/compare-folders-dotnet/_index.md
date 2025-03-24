@@ -3,7 +3,6 @@ title: مقارنة المجلدات في مقارنة GroupDocs لـ .NET
 linktitle: مقارنة المجلدات في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: قارن المجلدات بسهولة باستخدام GroupDocs Comparison for .NET. اتبع خطوة بخطوة لمقارنة المجلدات بكفاءة. تحسين تطبيقات .NET الخاصة بك.
-type: docs
 weight: 12
 url: /ar/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ url: /ar/net/documents-and-folder-comparison/compare-folders-dotnet/
 ### 3. بيئة التطوير المتكاملة (IDE)
 ستحتاج إلى IDE مثل Visual Studio لكتابة أمثلة التعليمات البرمجية وتنفيذها.
 ### 4. الوصول إلى وثائق GroupDocs
-احتفظ بمقارنة GroupDocs لوثائق .NET في متناول يديك للرجوع إليها خلال البرنامج التعليمي. يمكنك الوصول إلى الوثائق[هنا](https://reference.groupdocs.com/comparison/net/).
+احتفظ بمقارنة GroupDocs لوثائق .NET في متناول يديك للرجوع إليها خلال البرنامج التعليمي. يمكنك الوصول إلى الوثائق[هنا](https://tutorials.groupdocs.com/comparison/net/).
 
 ## استيراد مساحات الأسماء
 للبدء، تحتاج إلى استيراد مساحات الأسماء الضرورية إلى كود C# الخاص بك. يتيح لك ذلك استخدام الفئات والأساليب التي توفرها GroupDocs Comparison لـ .NET.

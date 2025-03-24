@@ -3,7 +3,6 @@ title: Ställa in lösenord för resulterande dokument i GroupDocs Comparison f�
 linktitle: Ställa in lösenord för resulterande dokument i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du ställer in ett lösenord för resulterande dokument i GroupDocs Comparison for .NET. Förbättra säkerheten och skydda dina jämförda filer.
-type: docs
 weight: 17
 url: /sv/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Ja, GroupDocs Comparison for .NET stöder jämförelse av dokument i olika forma
 ### Behöver jag en licens för att använda GroupDocs Comparison för .NET?
  Ja, du kan köpa en licens från[här](https://purchase.groupdocs.com/buy) eller skaffa en tillfällig licens[här](https://purchase.groupdocs.com/temporary-license/).
 ### Finns det någon dokumentation tillgänglig för GroupDocs Comparison for .NET?
- Ja, du kan komma åt dokumentationen[här](https://reference.groupdocs.com/comparison/net/).
+ Ja, du kan komma åt dokumentationen[här](https://tutorials.groupdocs.com/comparison/net/).

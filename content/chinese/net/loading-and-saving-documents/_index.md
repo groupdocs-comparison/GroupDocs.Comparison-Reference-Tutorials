@@ -3,7 +3,6 @@ title: 加载和保存文档
 linktitle: 加载和保存文档
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 轻松比较 .NET 中的文档。了解加载、保存和利用加载选项以实现高效的文档管理。
-type: docs
 weight: 22
 url: /zh/net/loading-and-saving-documents/
 ---

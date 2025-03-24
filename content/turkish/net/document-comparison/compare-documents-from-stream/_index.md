@@ -3,7 +3,6 @@ title: Akıştaki Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
 linktitle: Akıştaki Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET ile belge karşılaştırmasını kolaylaştırın. Belgeleri zahmetsizce karşılaştırın ve dosyalar arasında doğruluk sağlayın.
-type: docs
 weight: 16
 url: /tr/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ Bilginin bol olduğu ve değişikliklerin sürekli olduğu günümüzün hızlı
 GroupDocs.Comparison for .NET'i kullanmaya başlamadan önce, yerine getirmeniz gereken birkaç önkoşul vardır:
 1. .NET Framework'ü yükleyin: Sisteminizde .NET Framework'ün kurulu olduğundan emin olun. Microsoft'un web sitesinden indirebilirsiniz.
 2.  .NET için GroupDocs.Comparison'ı indirin:[İndirme: {link](https://releases.groupdocs.com/comparison/net/) GroupDocs.Comparison for .NET'in en son sürümünü edinmek için.
-3.  Belgelere Erişim: Aşağıdaki adrese başvurarak kütüphanenin işlevlerine aşina olun:[dokümantasyon](https://reference.groupdocs.com/comparison/net/).
+3.  Belgelere Erişim: Aşağıdaki adrese başvurarak kütüphanenin işlevlerine aşina olun:[dokümantasyon](https://tutorials.groupdocs.com/comparison/net/).
 4. Temel C# Anlayışı: Bu eğitimde, C# programlama dili hakkında temel bir anlayışa sahip olduğunuz varsayılmaktadır.
 
 ## Ad Alanlarını İçe Aktar

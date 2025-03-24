@@ -3,7 +3,6 @@ title: Få dokumentinformation från resultatdokument - GroupDocs.Comparison fö
 linktitle: Få dokumentinformation från resultatdokument - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du hämtar dokumentinformation från resultatdokument med GroupDocs.Comparison för .NET. Enkla steg förklarade för .NET-utvecklare.
-type: docs
 weight: 12
 url: /sv/net/basic-usage/get-document-info-from-result-document/
 ---

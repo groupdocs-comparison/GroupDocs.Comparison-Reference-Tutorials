@@ -1,7 +1,6 @@
 ---
 title: .NET の GroupDocs.Comparison のチュートリアルと例
 linktitle: .NET チュートリアルの GroupDocs.Comparison
-type: docs
 weight: 10
 url: /ja/net/
 description: GroupDocs.Comparison for .NET の包括的なチュートリアルをご覧ください。ドキュメントとフォルダーの効率的な比較、管理、統合が簡単に行えます。

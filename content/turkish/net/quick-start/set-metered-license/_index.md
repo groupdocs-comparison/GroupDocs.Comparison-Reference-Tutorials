@@ -3,7 +3,6 @@ title: Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
 linktitle: Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
 second_title: GroupDocs.Comparison .NET API'si
 description: Verimli belge karşılaştırma iş akışları için GroupDocs Comparison for .NET'i .NET projelerinize sorunsuz bir şekilde entegre edin.
-type: docs
 weight: 12
 url: /tr/net/quick-start/set-metered-license/
 ---

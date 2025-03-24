@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs Comparison 中从流加载文档
 linktitle: 在 .NET 的 GroupDocs Comparison 中从流加载文档
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用强大的 .NET 库 GroupDocs Comparison 轻松比较 .NET 应用程序中的文档。
-type: docs
 weight: 11
 url: /zh/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

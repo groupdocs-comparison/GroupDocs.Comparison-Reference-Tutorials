@@ -3,7 +3,6 @@ title: Belgeleri Yükleme ve Kaydetme
 linktitle: Belgeleri Yükleme ve Kaydetme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak .NET'teki belgeleri zahmetsizce karşılaştırın. Verimli belge yönetimi için yükleme, kaydetme ve yükleme seçeneklerini kullanmayı öğrenin.
-type: docs
 weight: 22
 url: /tr/net/loading-and-saving-documents/
 ---

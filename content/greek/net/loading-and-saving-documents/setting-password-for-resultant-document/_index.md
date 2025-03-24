@@ -3,7 +3,6 @@ title: Ορισμός κωδικού πρόσβασης για το προκύπ
 linktitle: Ορισμός κωδικού πρόσβασης για το προκύπτον έγγραφο στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να ορίζετε έναν κωδικό πρόσβασης για έγγραφα που προκύπτουν στο GroupDocs Comparison για .NET. Βελτιώστε την ασφάλεια και προστατέψτε τα συγκριτικά αρχεία σας.
-type: docs
 weight: 17
 url: /el/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### Χρειάζομαι άδεια χρήσης για τη σύγκριση GroupDocs για .NET;
  Ναι, μπορείτε να αγοράσετε άδεια από[εδώ](https://purchase.groupdocs.com/buy) ή να αποκτήσετε προσωρινή άδεια[εδώ](https://purchase.groupdocs.com/temporary-license/).
 ### Υπάρχει διαθέσιμη τεκμηρίωση για τη σύγκριση GroupDocs για .NET;
- Ναι, μπορείτε να έχετε πρόσβαση στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/comparison/net/).
+ Ναι, μπορείτε να έχετε πρόσβαση στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/comparison/net/).

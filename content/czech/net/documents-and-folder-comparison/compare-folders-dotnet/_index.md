@@ -3,7 +3,6 @@ title: Porovnání složek v GroupDocs Porovnání pro .NET
 linktitle: Porovnání složek v GroupDocs Porovnání pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Porovnejte složky bez námahy pomocí GroupDocs Comparison for .NET. Následujte náš krok za krokem pro efektivní srovnání složek. Vylepšete své aplikace .NET.
-type: docs
 weight: 12
 url: /cs/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ K pochopení a implementaci příkladů uvedených v tomto tutoriálu je nutná 
 ### 3. Integrované vývojové prostředí (IDE)
 K psaní a spouštění příkladů kódu budete potřebovat IDE, jako je Visual Studio.
 ### 4. Přístup k dokumentaci GroupDocs
-Uschovejte si dokumentaci GroupDocs Comparison for .NET, abyste ji mohli využít v průběhu kurzu. Máte přístup k dokumentaci[tady](https://reference.groupdocs.com/comparison/net/).
+Uschovejte si dokumentaci GroupDocs Comparison for .NET, abyste ji mohli využít v průběhu kurzu. Máte přístup k dokumentaci[tady](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importovat jmenné prostory
 Chcete-li začít, musíte do kódu C# importovat potřebné jmenné prostory. To vám umožní používat třídy a metody poskytované GroupDocs Comparison for .NET.

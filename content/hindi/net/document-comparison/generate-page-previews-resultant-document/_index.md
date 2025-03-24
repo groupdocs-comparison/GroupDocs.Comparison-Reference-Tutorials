@@ -3,7 +3,6 @@ title: परिणामी दस्तावेज़ के लिए पृ
 linktitle: परिणामी दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन तैयार करें
 second_title: GroupDocs.Comparison .NET API
 description: जानें कि .NET के लिए GroupDocs.Comparison का उपयोग करके दस्तावेज़ पूर्वावलोकन कैसे तैयार करें। दस्तावेज़ों की कुशलतापूर्वक और सटीक तुलना करें।
-type: docs
 weight: 10
 url: /hi/net/document-comparison/generate-page-previews-resultant-document/
 ---

@@ -3,7 +3,6 @@ title: Path'den Görüntüleri Karşılaştırın - .NET için GroupDocs.Compari
 linktitle: Path'den Görüntüleri Karşılaştırın - .NET için GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison kitaplığını kullanarak görüntüleri .NET'te verimli bir şekilde nasıl karşılaştıracağınızı öğrenin. Sorunsuz entegrasyon için adım adım kılavuzu izleyin.
-type: docs
 weight: 10
 url: /tr/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /tr/net/image-comparison/compare-images-from-path/
 ## Önkoşullar
 GroupDocs.Comparison for .NET'i kullanmanın inceliklerine dalmadan önce aşağıdaki önkoşulların karşılandığından emin olun:
 ### 1. GroupDocs.Comparison for .NET'i yükleyin
- Kütüphaneyi şuradan indirin:[Burada](https://releases.groupdocs.com/comparison/net/) ve belgelerde verilen kurulum talimatlarını izleyin[Burada](https://reference.groupdocs.com/comparison/net/).
+ Kütüphaneyi şuradan indirin:[Burada](https://releases.groupdocs.com/comparison/net/) ve belgelerde verilen kurulum talimatlarını izleyin[Burada](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Lisans Alın
  GroupDocs.Comparison for .NET'in tüm potansiyelinden yararlanmak için şu adresten bir lisans edinin:[Burada](https://purchase.groupdocs.com/buy) veya mevcut geçici lisansı kullanın[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### 3. C# Programlamaya aşinalık

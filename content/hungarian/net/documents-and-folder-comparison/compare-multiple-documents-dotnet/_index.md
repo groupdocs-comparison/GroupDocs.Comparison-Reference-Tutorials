@@ -3,7 +3,6 @@ title: Több dokumentum összehasonlítása a GroupDocs összehasonlításban .N
 linktitle: Több dokumentum összehasonlítása a GroupDocs összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan hasonlíthat össze több dokumentumot hatékonyan a GroupDocs Comparison for .NET segítségével. Kövesse lépésenkénti útmutatónkat a zökkenőmentes integráció érdekében.
-type: docs
 weight: 13
 url: /hu/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

@@ -3,7 +3,6 @@ title: Carga de texto desde una cadena en la comparación de GroupDocs para .NET
 linktitle: Carga de texto desde una cadena en la comparación de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Compare texto sin esfuerzo dentro de aplicaciones .NET utilizando la biblioteca GroupDocs.Comparison. Mejore la eficiencia y la precisión con una integración perfecta.
-type: docs
 weight: 12
 url: /es/net/loading-and-saving-documents/loading-text-from-string/
 ---

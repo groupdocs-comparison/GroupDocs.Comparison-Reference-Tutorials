@@ -3,7 +3,6 @@ title: Generate Page Previews for Resultant Document
 linktitle: Generate Page Previews for Resultant Document
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to generate document previews using GroupDocs.Comparison for .NET. Compare documents efficiently and accurately.
-type: docs
 weight: 10
 url: /net/document-comparison/generate-page-previews-resultant-document/
 ---

@@ -3,7 +3,6 @@ title: GroupDocs でのドキュメント メタデータ ターゲットの保�
 linktitle: GroupDocs でのドキュメント メタデータ ターゲットの保存 .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用してドキュメントのメタデータ ターゲットを保存する方法を学びます。 .NET アプリケーションでドキュメントを効率的に比較するための簡単な手順。
-type: docs
 weight: 15
 url: /ja/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

@@ -3,7 +3,6 @@ title: 比較 .NET 的 GroupDocs 比較中的資料夾
 linktitle: 比較 .NET 的 GroupDocs 比較中的資料夾
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs Comparison for .NET 輕鬆比較資料夾。請按照我們的步驟進行有效的資料夾比較。增強您的 .NET 應用程式。
-type: docs
 weight: 12
 url: /zh-hant/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ GroupDocs Comparison for .NET 是一個功能強大的程式庫，可讓開發�
 ### 3.整合開發環境（IDE）
 您將需要 Visual Studio 等 IDE 來編寫和執行程式碼範例。
 ### 4. 存取 GroupDocs 文檔
-將 GroupDocs Comparison for .NET 文件放在手邊，以便在整個教學中進行參考。您可以存取文檔[這裡](https://reference.groupdocs.com/comparison/net/).
+將 GroupDocs Comparison for .NET 文件放在手邊，以便在整個教學中進行參考。您可以存取文檔[這裡](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 導入命名空間
 首先，您需要將必要的命名空間匯入到 C# 程式碼中。這允許您使用 GroupDocs Comparison for .NET 提供的類別和方法。

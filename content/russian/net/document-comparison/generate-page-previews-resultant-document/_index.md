@@ -3,7 +3,6 @@ title: Создать предварительный просмотр стран
 linktitle: Создать предварительный просмотр страниц для результирующего документа
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как создавать предварительные просмотры документов с помощью GroupDocs.Comparison для .NET. Сравнивайте документы эффективно и точно.
-type: docs
 weight: 10
 url: /ru/net/document-comparison/generate-page-previews-resultant-document/
 ---

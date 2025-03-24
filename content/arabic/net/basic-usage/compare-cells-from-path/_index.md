@@ -3,7 +3,6 @@ title: مقارنة الخلايا من المسار - GroupDocs.Comparison for 
 linktitle: مقارنة الخلايا من المسار - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة الخلايا من مسار باستخدام GroupDocs.Comparison لـ .NET. تحديد الاختلافات بين المستندات بكفاءة.
-type: docs
 weight: 10
 url: /ar/net/basic-usage/compare-cells-from-path/
 ---

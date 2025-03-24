@@ -3,7 +3,6 @@ title: الحصول على معلومات المستند من Stream - GroupDocs
 linktitle: الحصول على معلومات المستند من Stream - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة المستندات بكفاءة في .NET باستخدام GroupDocs.Comparison، مما يعزز سير عمل معالجة المستندات بسلاسة.
-type: docs
 weight: 14
 url: /ar/net/basic-usage/get-document-info-from-stream/
 ---

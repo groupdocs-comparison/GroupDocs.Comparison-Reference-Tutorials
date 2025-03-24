@@ -3,7 +3,6 @@ title: Φόρτωση κειμένου από τη συμβολοσειρά στ
 linktitle: Φόρτωση κειμένου από τη συμβολοσειρά στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Συγκρίνετε εύκολα κείμενο σε εφαρμογές .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison. Βελτιώστε την αποτελεσματικότητα και την ακρίβεια με απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 12
 url: /el/net/loading-and-saving-documents/loading-text-from-string/
 ---

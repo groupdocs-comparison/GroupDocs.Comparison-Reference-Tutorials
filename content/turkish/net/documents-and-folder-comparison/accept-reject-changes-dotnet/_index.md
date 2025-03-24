@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasındaki Değişiklikleri Kabul Etm
 linktitle: .NET için GroupDocs Karşılaştırmasındaki Değişiklikleri Kabul Etme ve Reddetme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i kullanarak belgelerdeki değişiklikleri nasıl kabul edeceğinizi ve reddedeceğinizi öğrenin. Belge iş akışlarınızı zahmetsizce kolaylaştırın.
-type: docs
 weight: 10
 url: /tr/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

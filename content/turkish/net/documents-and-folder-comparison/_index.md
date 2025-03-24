@@ -3,7 +3,6 @@ title: Belgeler ve Klasör Karşılaştırması
 linktitle: Belgeler ve Klasör Karşılaştırması
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET eğitimleriyle belge iş akışlarını kolaylaştırmayı öğrenin. Değişiklikleri kabul edin, reddedin ve belgeleri ve klasörleri zahmetsizce karşılaştırın.
-type: docs
 weight: 20
 url: /tr/net/documents-and-folder-comparison/
 ---

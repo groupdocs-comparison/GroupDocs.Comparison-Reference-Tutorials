@@ -3,7 +3,6 @@ title: Legen Sie bestimmte Bildgrößen für Vorschauen fest
 linktitle: Legen Sie bestimmte Bildgrößen für Vorschauen fest
 second_title: GroupDocs.Comparison .NET-API
 description: Integrieren Sie mit GroupDocs.Comparison für .NET mühelos Dokumentvergleichsfunktionen in Ihre .NET-Anwendungen.
-type: docs
 weight: 14
 url: /de/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

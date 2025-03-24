@@ -3,7 +3,6 @@ title: Nhận thông tin tài liệu từ luồng - GroupDocs.Comparison for .NE
 linktitle: Nhận thông tin tài liệu từ luồng - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh hiệu quả các tài liệu trong .NET bằng GroupDocs.Comparison, nâng cao quy trình xử lý tài liệu của bạn một cách liền mạch.
-type: docs
 weight: 14
 url: /vi/net/basic-usage/get-document-info-from-stream/
 ---

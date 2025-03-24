@@ -3,7 +3,6 @@ title: Συγκρίνετε έγγραφα από το Stream - GroupDocs.Compar
 linktitle: Συγκρίνετε έγγραφα από το Stream - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Βελτιώστε τη σύγκριση εγγράφων με το GroupDocs.Comparison για .NET. Συγκρίνετε έγγραφα χωρίς κόπο και διασφαλίστε την ακρίβεια μεταξύ των αρχείων.
-type: docs
 weight: 16
 url: /el/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /el/net/document-comparison/compare-documents-from-stream/
 Πριν ξεκινήσετε τη χρήση του GroupDocs.Comparison για .NET, υπάρχουν μερικές προϋποθέσεις που πρέπει να έχετε:
 1. Εγκατάσταση .NET Framework: Βεβαιωθείτε ότι έχετε εγκαταστήσει το .NET Framework στο σύστημά σας. Μπορείτε να το κατεβάσετε από τον ιστότοπο της Microsoft.
 2.  Λήψη GroupDocs.Comparison για .NET: Επισκεφτείτε το[σύνδεσμος λήψης](https://releases.groupdocs.com/comparison/net/) για να αποκτήσετε την πιο πρόσφατη έκδοση του GroupDocs.Comparison για .NET.
-3.  Τεκμηρίωση πρόσβασης: Εξοικειωθείτε με τις λειτουργίες της βιβλιοθήκης ανατρέχοντας στο[τεκμηρίωση](https://reference.groupdocs.com/comparison/net/).
+3.  Τεκμηρίωση πρόσβασης: Εξοικειωθείτε με τις λειτουργίες της βιβλιοθήκης ανατρέχοντας στο[τεκμηρίωση](https://tutorials.groupdocs.com/comparison/net/).
 4. Βασική κατανόηση της C#: Αυτό το σεμινάριο προϋποθέτει ότι έχετε βασική κατανόηση της γλώσσας προγραμματισμού C#.
 
 ## Εισαγωγή χώρων ονομάτων

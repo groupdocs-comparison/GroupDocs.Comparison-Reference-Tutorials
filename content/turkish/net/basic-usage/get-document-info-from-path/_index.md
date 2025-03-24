@@ -3,7 +3,6 @@ title: Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
 linktitle: Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET kullanarak belge bilgilerini yoldan nasıl çıkaracağınızı öğrenin. C#'ta verimli belge yönetimi için kolay adımlar.
-type: docs
 weight: 13
 url: /tr/net/basic-usage/get-document-info-from-path/
 ---

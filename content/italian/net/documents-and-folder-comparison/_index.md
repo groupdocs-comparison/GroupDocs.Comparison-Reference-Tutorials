@@ -3,7 +3,6 @@ title: Confronto di documenti e cartelle
 linktitle: Confronto di documenti e cartelle
 second_title: API GroupDocs.Comparison .NET
 description: Impara a semplificare i flussi di lavoro dei documenti con i tutorial di GroupDocs Comparison for .NET. Accetta, rifiuta le modifiche e confronta documenti e cartelle senza sforzo.
-type: docs
 weight: 20
 url: /it/net/documents-and-folder-comparison/
 ---

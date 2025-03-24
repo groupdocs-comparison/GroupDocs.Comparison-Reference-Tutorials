@@ -3,7 +3,6 @@ title: サポートされている形式を取得する - GroupDocs.Comparison f
 linktitle: サポートされている形式を取得する - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してドキュメントの正確性と一貫性を強化します。この強力なツールを .NET アプリケーションにシームレスに統合します。
-type: docs
 weight: 15
 url: /ja/net/basic-usage/get-supported-formats/
 ---

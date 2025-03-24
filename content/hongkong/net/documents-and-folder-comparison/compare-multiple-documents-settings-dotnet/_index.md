@@ -3,7 +3,6 @@ title: 在 GroupDocs Comparison for .NET 中比較多個文件設置
 linktitle: 在 GroupDocs Comparison for .NET 中比較多個文件設置
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 輕鬆比較多個文件。請遵循我們的無縫文件處理逐步指南。
-type: docs
 weight: 14
 url: /zh-hant/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---

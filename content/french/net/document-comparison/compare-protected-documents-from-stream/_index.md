@@ -3,7 +3,6 @@ title: Comparer les documents protégés de Stream - GroupDocs.Comparison for .N
 linktitle: Comparer les documents protégés de Stream - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment comparer des documents protégés à partir de flux à l'aide de GroupDocs.Comparison for .NET. Rationalisez votre processus de comparaison de documents sans effort.
-type: docs
 weight: 18
 url: /fr/net/document-comparison/compare-protected-documents-from-stream/
 ---

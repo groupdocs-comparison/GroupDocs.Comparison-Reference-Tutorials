@@ -3,7 +3,6 @@ title: 比较路径中的图像 - GroupDocs.Comparison for .NET
 linktitle: 比较路径中的图像 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison 库在 .NET 中有效比较图像。按照分步指南进行无缝集成。
-type: docs
 weight: 10
 url: /zh/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /zh/net/image-comparison/compare-images-from-path/
 ## 先决条件
 在深入研究使用 GroupDocs.Comparison for .NET 的复杂性之前，请确保满足以下先决条件：
 ### 1. 安装 .NET 的 GroupDocs.Comparison
-从以下位置下载库[这里](https://releases.groupdocs.com/comparison/net/)并按照文档中提供的安装说明进行操作[这里](https://reference.groupdocs.com/comparison/net/).
+从以下位置下载库[这里](https://releases.groupdocs.com/comparison/net/)并按照文档中提供的安装说明进行操作[这里](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. 获得许可证
 要释放 GroupDocs.Comparison for .NET 的全部潜力，请从以下位置获取许可证[这里](https://purchase.groupdocs.com/buy)或利用可用的临时许可证[这里](https://purchase.groupdocs.com/temporary-license/).
 ### 3.熟悉C#编程

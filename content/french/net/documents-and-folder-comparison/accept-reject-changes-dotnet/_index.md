@@ -3,7 +3,6 @@ title: Accepter et rejeter les modifications dans la comparaison GroupDocs pour 
 linktitle: Accepter et rejeter les modifications dans la comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment accepter et rejeter les modifications apportées aux documents à l'aide de GroupDocs Comparison for .NET. Rationalisez vos flux de travail documentaires sans effort.
-type: docs
 weight: 10
 url: /fr/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

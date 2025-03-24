@@ -3,7 +3,6 @@ title: مقارنة إعدادات المستندات في مقارنة GroupDoc
 linktitle: مقارنة إعدادات المستندات في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: قم بتبسيط مقارنة المستندات في تطبيقات .NET باستخدام GroupDocs Comparison. قارن المستندات بسهولة بفضل الميزات المتقدمة.
-type: docs
 weight: 11
 url: /ar/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

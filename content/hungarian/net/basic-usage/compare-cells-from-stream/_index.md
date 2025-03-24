@@ -3,7 +3,6 @@ title: Cellák összehasonlítása a Streamből – GroupDocs.Comparison for .NE
 linktitle: Cellák összehasonlítása a Streamből – GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Könnyedén összehasonlíthatja a dokumentumokat C# nyelven a GroupDocs.Comparison for .NET segítségével. Egyszerűsítse dokumentumfeldolgozási feladatait.
-type: docs
 weight: 11
 url: /hu/net/basic-usage/compare-cells-from-stream/
 ---

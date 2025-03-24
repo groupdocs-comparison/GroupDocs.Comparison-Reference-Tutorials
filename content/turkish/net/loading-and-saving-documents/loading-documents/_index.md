@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Belge Yükleme
 linktitle: .NET için GroupDocs Karşılaştırmasında Belge Yükleme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak belgeleri verimli bir şekilde nasıl karşılaştıracağınızı öğrenin. Belge yönetimi süreçlerinizi kolaylaştırın.
-type: docs
 weight: 10
 url: /tr/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Evet, GroupDocs.Comparison for .NET, Word belgeleri, PDF'ler, Excel elektronik t
 ### GroupDocs.Comparison for .NET'in ücretsiz deneme sürümü var mı?
  Evet, GroupDocs.Comparison for .NET'in ücretsiz denemesinden şu adresi ziyaret ederek yararlanabilirsiniz:[İnternet sitesi](https://releases.groupdocs.com/).
 ### GroupDocs.Comparison for .NET belgelerini nerede bulabilirim?
- Şu adreste bulunan kapsamlı belgelere başvurabilirsiniz:[.NET Belgeleri için GroupDocs.Comparison](https://reference.groupdocs.com/comparison/net/).
+ Şu adreste bulunan kapsamlı belgelere başvurabilirsiniz:[.NET Belgeleri için GroupDocs.Comparison](https://tutorials.groupdocs.com/comparison/net/).
 ### GroupDocs.Comparison for .NET için nasıl geçici lisans alabilirim?
  adresini ziyaret ederek geçici lisans alabilirsiniz.[geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/) GroupDocs web sitesinde.
 ### GroupDocs.Comparison for .NET desteğine nereden ulaşabilirim?

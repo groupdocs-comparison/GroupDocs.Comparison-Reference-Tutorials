@@ -3,7 +3,6 @@ title: Λάβετε πληροφορίες εγγράφου από το Path - G
 linktitle: Λάβετε πληροφορίες εγγράφου από το Path - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να εξάγετε πληροφορίες εγγράφου από μια διαδρομή χρησιμοποιώντας το GroupDocs.Comparison για .NET. Εύκολα βήματα για αποτελεσματική διαχείριση εγγράφων σε C#.
-type: docs
 weight: 13
 url: /el/net/basic-usage/get-document-info-from-path/
 ---

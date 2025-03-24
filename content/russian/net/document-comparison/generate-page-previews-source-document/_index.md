@@ -3,7 +3,6 @@ title: Создание предварительного просмотра ст
 linktitle: Создание предварительного просмотра страниц для исходного документа
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как использовать Groupdocs.Comparison для .NET для эффективной оптимизации процессов сравнения документов в ваших проектах C#.
-type: docs
 weight: 11
 url: /ru/net/document-comparison/generate-page-previews-source-document/
 ---

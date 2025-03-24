@@ -3,7 +3,6 @@ title: 스트림의 셀 비교 - .NET용 GroupDocs.Comparison
 linktitle: 스트림의 셀 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 C#으로 문서를 쉽게 비교할 수 있습니다. 문서 처리 작업을 쉽게 간소화하세요.
-type: docs
 weight: 11
 url: /ko/net/basic-usage/compare-cells-from-stream/
 ---

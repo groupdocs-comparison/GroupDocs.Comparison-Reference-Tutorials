@@ -3,7 +3,6 @@ title: Hasilkan Pratinjau Halaman untuk Dokumen Sumber
 linktitle: Hasilkan Pratinjau Halaman untuk Dokumen Sumber
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara memanfaatkan Groupdocs.Comparison untuk .NET untuk menyederhanakan proses perbandingan dokumen dalam proyek C# Anda secara efektif.
-type: docs
 weight: 11
 url: /id/net/document-comparison/generate-page-previews-source-document/
 ---

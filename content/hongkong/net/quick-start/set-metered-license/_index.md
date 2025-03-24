@@ -3,7 +3,6 @@ title: 設定計量許可證 - .NET 的 GroupDocs 比較
 linktitle: 設定計量許可證 - .NET 的 GroupDocs 比較
 second_title: GroupDocs.Comparison .NET API
 description: 將 GroupDocs Comparison for .NET 無縫整合到您的 .NET 專案中，以實現高效的文件比較工作流程。
-type: docs
 weight: 12
 url: /zh-hant/net/quick-start/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: Gyors indítás
 linktitle: Gyors indítás
 second_title: GroupDocs.Comparison .NET API
 description: Könnyedén integrálhatja a GroupDocs Comparison for .NET szolgáltatást projektjeibe. Ismerje meg a hatékony licencbeállítási módszereket a pontos dokumentum-összehasonlítási munkafolyamatok érdekében.
-type: docs
 weight: 25
 url: /hu/net/quick-start/
 ---

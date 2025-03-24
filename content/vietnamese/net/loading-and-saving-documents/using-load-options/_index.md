@@ -3,7 +3,6 @@ title: Sử dụng Tùy chọn tải trong So sánh GroupDocs cho .NET
 linktitle: Sử dụng Tùy chọn tải trong So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách sử dụng Tùy chọn tải trong So sánh GroupDocs cho .NET để so sánh tài liệu với phông chữ tùy chỉnh một cách liền mạch.
-type: docs
 weight: 13
 url: /vi/net/loading-and-saving-documents/using-load-options/
 ---

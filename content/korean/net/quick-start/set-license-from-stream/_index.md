@@ -3,7 +3,6 @@ title: 스트림에서 라이센스 설정 - .NET용 GroupDocs 비교
 linktitle: 스트림에서 라이센스 설정 - .NET용 GroupDocs 비교
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 라이센스를 효율적으로 설정하는 방법을 알아보세요. 이 튜토리얼을 통해 문서의 정확성을 보장하고 시간을 절약하세요.
-type: docs
 weight: 11
 url: /ko/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ url: /ko/net/quick-start/set-license-from-stream/
 - C# 및 .NET 프레임워크에 대한 기본 지식
 - 시스템에 Visual Studio가 설치되어 있습니다.
 -  .NET 라이브러리용 GroupDocs.Comparison이 설치되었습니다. 당신은 그것을 다운로드 할 수 있습니다[여기](https://releases.groupdocs.com/comparison/net/).
--  .NET 문서용 GroupDocs.Comparison에 액세스[여기](https://reference.groupdocs.com/comparison/net/).
+-  .NET 문서용 GroupDocs.Comparison에 액세스[여기](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 네임스페이스 가져오기
 .NET용 GroupDocs.Comparison 사용을 시작하려면 필요한 네임스페이스를 프로젝트로 가져와야 합니다. 방법은 다음과 같습니다.
@@ -67,4 +66,4 @@ Console.WriteLine("\nWe do not ship any license with this example. " +
 ### 라이센스 문제가 발생하면 어떻게 해야 합니까?
  라이선스 문제가 발생하는 경우 라이선스 FAQ를 참조하세요.[여기](https://purchase.groupdocs.com/faqs/licensing) 또는 GroupDocs 지원팀에 문의하세요.
 ### .NET용 GroupDocs.Comparison에 대한 추가 자습서와 리소스는 어디에서 찾을 수 있나요?
- GroupDocs 웹 사이트에서 광범위한 문서와 튜토리얼을 찾을 수 있습니다.[여기](https://reference.groupdocs.com/comparison/net/).
+ GroupDocs 웹 사이트에서 광범위한 문서와 튜토리얼을 찾을 수 있습니다.[여기](https://tutorials.groupdocs.com/comparison/net/).

@@ -3,7 +3,6 @@ title: Änderungen im GroupDocs-Vergleich für .NET akzeptieren und ablehnen
 linktitle: Änderungen im GroupDocs-Vergleich für .NET akzeptieren und ablehnen
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs Compare für .NET Änderungen in Dokumenten akzeptieren und ablehnen. Optimieren Sie Ihre Dokumenten-Workflows mühelos.
-type: docs
 weight: 10
 url: /de/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

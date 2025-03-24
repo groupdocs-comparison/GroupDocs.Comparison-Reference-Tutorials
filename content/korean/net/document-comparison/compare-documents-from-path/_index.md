@@ -3,7 +3,6 @@ title: 경로의 문서 비교 - .NET용 GroupDocs.Comparison
 linktitle: 경로의 문서 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 다양한 형식의 문서를 쉽게 비교할 수 있습니다. 법률, 학술, 비즈니스 업무에서 시간을 절약하고 정확성을 보장하세요.
-type: docs
 weight: 15
 url: /ko/net/document-comparison/compare-documents-from-path/
 ---

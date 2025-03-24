@@ -3,7 +3,6 @@ title: Bandingkan Gambar dari Stream - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Gambar dari Stream - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan gambar dari aliran menggunakan GroupDocs.Comparison untuk .NET. Panduan langkah demi langkah untuk integrasi yang lancar ke dalam aplikasi .NET.
-type: docs
 weight: 11
 url: /id/net/image-comparison/compare-images-from-stream/
 ---

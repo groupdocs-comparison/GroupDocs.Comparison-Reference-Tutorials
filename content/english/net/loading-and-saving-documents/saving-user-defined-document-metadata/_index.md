@@ -3,7 +3,6 @@ title: Saving User Defined Document Metadata in GroupDocs Comparison for .NET
 linktitle: Saving User Defined Document Metadata in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to save user-defined document metadata using GroupDocs Comparison for .NET. Easily compare and manipulate metadata with step-by-step instructions.
-type: docs
 weight: 16
 url: /net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

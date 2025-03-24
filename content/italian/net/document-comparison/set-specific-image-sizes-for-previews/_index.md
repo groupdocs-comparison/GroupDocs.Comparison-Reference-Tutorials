@@ -3,7 +3,6 @@ title: Imposta dimensioni immagine specifiche per le anteprime
 linktitle: Imposta dimensioni immagine specifiche per le anteprime
 second_title: API GroupDocs.Comparison .NET
 description: Integra facilmente la funzionalità di confronto dei documenti nelle tue applicazioni .NET con GroupDocs.Comparison per .NET.
-type: docs
 weight: 14
 url: /it/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

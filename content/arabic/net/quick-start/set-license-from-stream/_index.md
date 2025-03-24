@@ -3,7 +3,6 @@ title: تعيين الترخيص من الدفق - مقارنة GroupDocs لـ .
 linktitle: تعيين الترخيص من الدفق - مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية تعيين التراخيص باستخدام GroupDocs.Comparison لـ .NET بكفاءة. تأكد من دقة المستندات ووفّر الوقت باستخدام هذا البرنامج التعليمي.
-type: docs
 weight: 11
 url: /ar/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ url: /ar/net/quick-start/set-license-from-stream/
 - المعرفة الأساسية بـ C# و.NET Framework.
 - تم تثبيت Visual Studio على نظامك.
 -  تم تثبيت GroupDocs.Comparison لمكتبة .NET. يمكنك تنزيله[هنا](https://releases.groupdocs.com/comparison/net/).
--  الوصول إلى GroupDocs.Comparison لوثائق .NET[هنا](https://reference.groupdocs.com/comparison/net/).
+-  الوصول إلى GroupDocs.Comparison لوثائق .NET[هنا](https://tutorials.groupdocs.com/comparison/net/).
 
 ## استيراد مساحات الأسماء
 لبدء استخدام GroupDocs.Comparison لـ .NET، تحتاج إلى استيراد مساحات الأسماء الضرورية إلى مشروعك. وإليك كيف يمكنك القيام بذلك:
@@ -67,4 +66,4 @@ Console.WriteLine("\nWe do not ship any license with this example. " +
 ### ماذا علي أن أفعل إذا واجهت مشاكل في الترخيص؟
  إذا واجهت أي مشكلات تتعلق بالترخيص، فارجع إلى الأسئلة الشائعة حول الترخيص[هنا](https://purchase.groupdocs.com/faqs/licensing) أو اتصل بدعم GroupDocs.
 ### أين يمكنني العثور على المزيد من البرامج التعليمية والموارد الخاصة بـ GroupDocs.Comparison for .NET؟
- يمكنك العثور على وثائق وبرامج تعليمية شاملة على موقع GroupDocs الإلكتروني[هنا](https://reference.groupdocs.com/comparison/net/).
+ يمكنك العثور على وثائق وبرامج تعليمية شاملة على موقع GroupDocs الإلكتروني[هنا](https://tutorials.groupdocs.com/comparison/net/).

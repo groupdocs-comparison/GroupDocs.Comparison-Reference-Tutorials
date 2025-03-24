@@ -3,7 +3,6 @@ title: Akıştaki Hücreleri Karşılaştırın - GroupDocs.Comparison for .NET
 linktitle: Akıştaki Hücreleri Karşılaştırın - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak C#'taki belgeleri zahmetsizce karşılaştırın. Belge işleme görevlerinizi kolaylıkla kolaylaştırın.
-type: docs
 weight: 11
 url: /tr/net/basic-usage/compare-cells-from-stream/
 ---

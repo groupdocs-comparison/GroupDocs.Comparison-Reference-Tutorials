@@ -3,7 +3,6 @@ title: إنشاء معاينات الصفحة للمستند المصدر
 linktitle: إنشاء معاينات الصفحة للمستند المصدر
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية استخدام Groupdocs.Comparison for .NET لتبسيط عمليات مقارنة المستندات في مشاريع C# الخاصة بك بشكل فعال.
-type: docs
 weight: 11
 url: /ar/net/document-comparison/generate-page-previews-source-document/
 ---

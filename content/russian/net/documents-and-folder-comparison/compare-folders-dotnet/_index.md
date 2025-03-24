@@ -3,7 +3,6 @@ title: Сравнение папок в сравнении GroupDocs для .NET
 linktitle: Сравнение папок в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Легко сравнивайте папки с помощью GroupDocs Comparison для .NET. Следуйте нашим пошаговым инструкциям для эффективного сравнения папок. Улучшите свои приложения .NET.
-type: docs
 weight: 12
 url: /ru/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ GroupDocs Comparison for .NET — это мощная библиотека, ко
 ### 3. Интегрированная среда разработки (IDE).
 Для написания и выполнения примеров кода вам понадобится IDE, например Visual Studio.
 ### 4. Доступ к документации GroupDocs
-Держите документацию GroupDocs Comparison for .NET под рукой, чтобы можно было использовать ее на протяжении всего руководства. Вы можете получить доступ к документации[здесь](https://reference.groupdocs.com/comparison/net/).
+Держите документацию GroupDocs Comparison for .NET под рукой, чтобы можно было использовать ее на протяжении всего руководства. Вы можете получить доступ к документации[здесь](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Импортировать пространства имен
 Для начала вам необходимо импортировать необходимые пространства имен в ваш код C#. Это позволяет вам использовать классы и методы, предоставляемые GroupDocs Comparison для .NET.

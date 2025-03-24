@@ -3,7 +3,6 @@ title: Đặt mật khẩu cho tài liệu kết quả trong so sánh GroupDocs 
 linktitle: Đặt mật khẩu cho tài liệu kết quả trong so sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách đặt mật khẩu cho tài liệu tổng hợp trong So sánh GroupDocs cho .NET. Tăng cường bảo mật và bảo vệ các tập tin được so sánh của bạn.
-type: docs
 weight: 17
 url: /vi/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Có, So sánh GroupDocs cho .NET hỗ trợ so sánh các tài liệu ở nhiề
 ### Tôi có cần giấy phép để sử dụng So sánh GroupDocs cho .NET không?
  Có, bạn có thể mua giấy phép từ[đây](https://purchase.groupdocs.com/buy) hoặc xin giấy phép tạm thời[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Có tài liệu nào về So sánh GroupDocs cho .NET không?
- Có, bạn có thể truy cập tài liệu[đây](https://reference.groupdocs.com/comparison/net/).
+ Có, bạn có thể truy cập tài liệu[đây](https://tutorials.groupdocs.com/comparison/net/).

@@ -3,7 +3,6 @@ title: Vergelijk documentinstellingen in GroupDocs-vergelijking voor .NET
 linktitle: Vergelijk documentinstellingen in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Stroomlijn documentvergelijking in .NET-toepassingen met GroupDocs Comparison. Vergelijk moeiteloos documenten met geavanceerde functies.
-type: docs
 weight: 11
 url: /nl/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

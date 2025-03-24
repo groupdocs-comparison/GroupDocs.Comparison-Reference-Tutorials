@@ -3,7 +3,6 @@ title: Verwenden von Ladeoptionen im GroupDocs-Vergleich für .NET
 linktitle: Verwenden von Ladeoptionen im GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie die Ladeoptionen im GroupDocs-Vergleich für .NET verwenden, um Dokumente mit benutzerdefinierten Schriftarten nahtlos zu vergleichen.
-type: docs
 weight: 13
 url: /de/net/loading-and-saving-documents/using-load-options/
 ---

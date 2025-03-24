@@ -3,7 +3,6 @@ title: Сохранение источника метаданных докуме
 linktitle: Сохранение источника метаданных документов в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как сохранить источник метаданных документа с помощью GroupDocs Comparison для .NET. Следуйте нашему пошаговому руководству для беспрепятственного сравнения документов в вашей .NET.
-type: docs
 weight: 14
 url: /ru/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

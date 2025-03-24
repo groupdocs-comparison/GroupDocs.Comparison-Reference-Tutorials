@@ -3,7 +3,6 @@ title: ソースドキュメントのページプレビューを生成
 linktitle: ソースドキュメントのページプレビューを生成
 second_title: GroupDocs.Comparison .NET API
 description: Groupdocs.Comparison for .NET を利用して、C# プロジェクトのドキュメント比較プロセスを効果的に合理化する方法を学びます。
-type: docs
 weight: 11
 url: /ja/net/document-comparison/generate-page-previews-source-document/
 ---

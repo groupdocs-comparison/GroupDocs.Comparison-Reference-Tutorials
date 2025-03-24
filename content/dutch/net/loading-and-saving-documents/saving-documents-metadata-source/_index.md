@@ -3,7 +3,6 @@ title: Metagegevensbron voor documenten opslaan in GroupDocs-vergelijking voor .
 linktitle: Metagegevensbron voor documenten opslaan in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u de metagegevensbron van documenten kunt opslaan met GroupDocs Comparison voor .NET. Volg onze stapsgewijze handleiding voor een naadloze documentvergelijking in uw .NET.
-type: docs
 weight: 14
 url: /nl/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

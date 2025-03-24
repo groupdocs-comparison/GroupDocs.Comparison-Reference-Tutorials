@@ -3,7 +3,6 @@ title: Bronnen opschonen na paginavoorbeelden
 linktitle: Bronnen opschonen na paginavoorbeelden
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer stap voor stap hoe u documenten kunt vergelijken met GroupDocs.Comparison voor .NET. Verbeter uw .NET-applicaties met efficiënt documentbeheer.
-type: docs
 weight: 13
 url: /nl/net/document-comparison/clean-resources-after-page-previews/
 ---

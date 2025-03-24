@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 문서 메타데이터 소스 저장
 linktitle: .NET용 GroupDocs 비교에서 문서 메타데이터 소스 저장
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교를 사용하여 문서 메타데이터 소스를 저장하는 방법을 알아보세요. .NET에서 원활한 문서 비교를 위해 단계별 가이드를 따르세요.
-type: docs
 weight: 14
 url: /ko/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

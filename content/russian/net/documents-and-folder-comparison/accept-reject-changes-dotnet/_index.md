@@ -3,7 +3,6 @@ title: Принять и отклонить изменения в сравнен
 linktitle: Принять и отклонить изменения в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как принимать и отклонять изменения в документах с помощью GroupDocs Comparison for .NET. Оптимизируйте рабочие процессы с документами без особых усилий.
-type: docs
 weight: 10
 url: /ru/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

@@ -3,7 +3,6 @@ title: Сравнение изображений из потока — GroupDocs
 linktitle: Сравнение изображений из потока — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как сравнивать изображения из потоков с помощью GroupDocs.Comparison для .NET. Пошаговое руководство по плавной интеграции с приложениями .NET.
-type: docs
 weight: 11
 url: /ru/net/image-comparison/compare-images-from-stream/
 ---

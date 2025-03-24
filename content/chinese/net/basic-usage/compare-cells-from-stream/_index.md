@@ -3,7 +3,6 @@ title: 比较流中的单元格 - GroupDocs.Comparison for .NET
 linktitle: 比较流中的单元格 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 轻松比较 C# 中的文档。轻松简化您的文档处理任务。
-type: docs
 weight: 11
 url: /zh/net/basic-usage/compare-cells-from-stream/
 ---

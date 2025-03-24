@@ -3,7 +3,6 @@ title: Načítání textu z řetězce v porovnání GroupDocs pro .NET
 linktitle: Načítání textu z řetězce v porovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Bez námahy porovnávejte text v aplikacích .NET pomocí knihovny GroupDocs.Comparison. Zvyšte efektivitu a přesnost bezproblémovou integrací.
-type: docs
 weight: 12
 url: /cs/net/loading-and-saving-documents/loading-text-from-string/
 ---

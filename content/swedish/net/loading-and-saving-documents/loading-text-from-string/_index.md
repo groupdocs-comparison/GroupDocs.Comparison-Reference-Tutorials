@@ -3,7 +3,6 @@ title: Laddar text från sträng i GroupDocs Comparison för .NET
 linktitle: Laddar text från sträng i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Jämför text i .NET-applikationer utan ansträngning med GroupDocs.Comparison-biblioteket. Förbättra effektiviteten och noggrannheten med sömlös integrering.
-type: docs
 weight: 12
 url: /sv/net/loading-and-saving-documents/loading-text-from-string/
 ---

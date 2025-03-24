@@ -3,7 +3,6 @@ title: Tải và lưu tài liệu
 linktitle: Tải và lưu tài liệu
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng so sánh các tài liệu trong .NET bằng GroupDocs.Comparison cho .NET. Tìm hiểu cách tải, lưu và sử dụng các tùy chọn tải để quản lý tài liệu hiệu quả.
-type: docs
 weight: 22
 url: /vi/net/loading-and-saving-documents/
 ---

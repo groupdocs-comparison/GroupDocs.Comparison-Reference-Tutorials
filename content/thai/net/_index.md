@@ -1,7 +1,6 @@
 ---
 title: บทช่วยสอนและตัวอย่าง GroupDocs.Comparison สำหรับ .NET
 linktitle: GroupDocs.Comparison สำหรับบทช่วยสอน .NET
-type: docs
 weight: 10
 url: /th/net/
 description: ค้นพบบทช่วยสอนที่ครอบคลุมสำหรับ GroupDocs.Comparison สำหรับ .NET ซึ่งอำนวยความสะดวกในการเปรียบเทียบเอกสารและโฟลเดอร์ที่มีประสิทธิภาพ การจัดการ และการบูรณาการได้อย่างง่ายดาย

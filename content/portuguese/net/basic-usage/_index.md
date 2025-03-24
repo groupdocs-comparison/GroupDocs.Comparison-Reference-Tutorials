@@ -3,7 +3,6 @@ title: Uso Básico
 linktitle: Uso Básico
 second_title: API GroupDocs.Comparison .NET
 description: Compare documentos em .NET usando GroupDocs.Comparison. Aprenda tutoriais básicos de uso que abrangem comparação de células, extração de informações de documentos e formatos suportados.
-type: docs
 weight: 24
 url: /pt/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Navegar no labirinto do gerenciamento de documentos e entender como extrair info
 ## Obtenha formatos suportados
 Garantir a precisão e a consistência dos documentos é fundamental no domínio do desenvolvimento .NET. GroupDocs.Comparison for .NET permite que você consiga exatamente isso. Descubra a variedade de formatos suportados e integre perfeitamente esta poderosa ferramenta aos seus aplicativos .NET. Saiba mais sobre os formatos suportados[aqui](./get-supported-formats/).
 
- Embarque em sua jornada para dominar o GroupDocs.Comparison for .NET com estes tutoriais básicos de uso. Compare células perfeitamente, extraia informações de documentos e garanta a precisão dos documentos, aprimorando seus esforços de desenvolvimento .NET. Pronto para mergulhar? Consulte Mais informação[aqui](https://reference.groupdocs.com/comparison/net).
+ Embarque em sua jornada para dominar o GroupDocs.Comparison for .NET com estes tutoriais básicos de uso. Compare células perfeitamente, extraia informações de documentos e garanta a precisão dos documentos, aprimorando seus esforços de desenvolvimento .NET. Pronto para mergulhar? Consulte Mais informação[aqui](https://tutorials.groupdocs.com/comparison/net).
 ## Tutoriais básicos de uso
 ### [Compare células do caminho - GroupDocs.Comparison for .NET](./compare-cells-from-path/)
 Aprenda como comparar células de um caminho usando GroupDocs.Comparison for .NET. Identifique com eficiência diferenças entre documentos.

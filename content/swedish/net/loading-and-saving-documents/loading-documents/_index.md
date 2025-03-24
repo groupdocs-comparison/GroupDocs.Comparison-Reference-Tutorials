@@ -3,7 +3,6 @@ title: Laddar dokument i GroupDocs Comparison för .NET
 linktitle: Laddar dokument i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du jämför dokument effektivt med GroupDocs.Comparison för .NET. Effektivisera dina dokumenthanteringsprocesser.
-type: docs
 weight: 10
 url: /sv/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Ja, GroupDocs.Comparison for .NET stöder jämförelse av dokument i olika forma
 ### Finns det en gratis testversion tillgänglig för GroupDocs.Comparison för .NET?
  Ja, du kan använda en gratis provversion av GroupDocs.Comparison för .NET genom att besöka[hemsida](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för GroupDocs.Comparison för .NET?
- Du kan hänvisa till den omfattande dokumentationen som finns på[GroupDocs.Comparison för .NET-dokumentation](https://reference.groupdocs.com/comparison/net/).
+ Du kan hänvisa till den omfattande dokumentationen som finns på[GroupDocs.Comparison för .NET-dokumentation](https://tutorials.groupdocs.com/comparison/net/).
 ### Hur kan jag få en tillfällig licens för GroupDocs.Comparison för .NET?
  Du kan få en tillfällig licens genom att besöka[sida för tillfällig licens](https://purchase.groupdocs.com/temporary-license/) på GroupDocs webbplats.
 ### Var kan jag söka support för GroupDocs.Comparison för .NET?

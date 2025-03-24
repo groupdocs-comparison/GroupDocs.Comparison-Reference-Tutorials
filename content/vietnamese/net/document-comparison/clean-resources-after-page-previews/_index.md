@@ -3,7 +3,6 @@ title: Làm sạch tài nguyên sau khi xem trước trang
 linktitle: Làm sạch tài nguyên sau khi xem trước trang
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh các tài liệu bằng GroupDocs.Comparison cho .NET từng bước. Nâng cao ứng dụng .NET của bạn bằng tính năng quản lý tài liệu hiệu quả.
-type: docs
 weight: 13
 url: /vi/net/document-comparison/clean-resources-after-page-previews/
 ---

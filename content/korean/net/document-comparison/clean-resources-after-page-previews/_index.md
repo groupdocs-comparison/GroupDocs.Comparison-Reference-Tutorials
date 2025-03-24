@@ -3,7 +3,6 @@ title: 페이지 미리보기 후 리소스 정리
 linktitle: 페이지 미리보기 후 리소스 정리
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 문서를 비교하는 방법을 단계별로 알아보세요. 효율적인 문서 관리로 .NET 애플리케이션을 강화하세요.
-type: docs
 weight: 13
 url: /ko/net/document-comparison/clean-resources-after-page-previews/
 ---

@@ -3,7 +3,6 @@ title: Loading Documents from Stream in GroupDocs Comparison for .NET
 linktitle: Loading Documents from Stream in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to effortlessly compare documents in .NET applications using GroupDocs Comparison, a powerful .NET library.
-type: docs
 weight: 11
 url: /net/loading-and-saving-documents/loading-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ In the realm of document management and comparison tools, GroupDocs Comparison f
 Before delving into the intricacies of using GroupDocs Comparison for .NET, ensure you have the following prerequisites in place:
 1. Installation of GroupDocs Comparison for .NET: Begin by downloading and installing GroupDocs Comparison for .NET library. You can obtain the library from the [download link](https://releases.groupdocs.com/comparison/net/). Follow the installation instructions provided in the documentation.
 2. Basic Understanding of .NET Framework: Familiarize yourself with the .NET framework, particularly C#. Since GroupDocs Comparison for .NET is primarily targeted at .NET developers, a foundational understanding of .NET development is essential.
-3. Integrated Development Environment (IDE): Choose an IDE of your preference for .NET development. Popular choices include Visual Studio, Visual Studio Code, and JetBrains Rider.
+3. Integrated Development Environment (IDE): Choose an IDE of your ptutorials for .NET development. Popular choices include Visual Studio, Visual Studio Code, and JetBrains Rider.
 4. Document Files: Prepare the source and target documents that you intend to compare. Ensure they are accessible within your project directory.
 
 ## Import Namespaces

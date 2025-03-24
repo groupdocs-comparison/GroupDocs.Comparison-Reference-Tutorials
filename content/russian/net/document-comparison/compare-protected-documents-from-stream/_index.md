@@ -3,7 +3,6 @@ title: Сравнение защищенных документов из пот�
 linktitle: Сравнение защищенных документов из потока — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как сравнивать защищенные документы из потоков с помощью GroupDocs.Comparison для .NET. Упростите процесс сравнения документов без особых усилий.
-type: docs
 weight: 18
 url: /ru/net/document-comparison/compare-protected-documents-from-stream/
 ---

@@ -3,7 +3,6 @@ title: 基本用法
 linktitle: 基本用法
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 比较 .NET 中的文档。学习基本使用教程，涵盖单元格比较、文档信息提取和支持的格式。
-type: docs
 weight: 24
 url: /zh/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ GroupDocs.Comparison for .NET 进一步简化了文档比较任务，支持无�
 ## 获取支持的格式
 在 .NET 开发领域，确保文档的准确性和一致性至关重要。 GroupDocs.Comparison for .NET 使您能够实现这一目标。探索一系列支持的格式并将这个强大的工具无缝集成到您的 .NET 应用程序中。了解有关支持格式的更多信息[这里](./get-supported-formats/).
 
-通过这些基本使用教程，踏上掌握 GroupDocs.Comparison for .NET 的旅程。无缝比较单元格、提取文档信息并确保文档准确性，从而增强您的 .NET 开发工作。准备好潜入了吗？阅读更多[这里](https://reference.groupdocs.com/comparison/net).
+通过这些基本使用教程，踏上掌握 GroupDocs.Comparison for .NET 的旅程。无缝比较单元格、提取文档信息并确保文档准确性，从而增强您的 .NET 开发工作。准备好潜入了吗？阅读更多[这里](https://tutorials.groupdocs.com/comparison/net).
 ## 基本使用教程
 ### [比较路径中的单元格 - GroupDocs.Comparison for .NET](./compare-cells-from-path/)
 了解如何使用 GroupDocs.Comparison for .NET 比较路径中的单元格。有效识别文档之间的差异。

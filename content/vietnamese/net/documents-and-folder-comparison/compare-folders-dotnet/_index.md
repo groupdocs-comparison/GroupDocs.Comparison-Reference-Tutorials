@@ -3,7 +3,6 @@ title: So sánh các thư mục trong GroupDocs So sánh cho .NET
 linktitle: So sánh các thư mục trong GroupDocs So sánh cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: So sánh các thư mục một cách dễ dàng bằng cách sử dụng So sánh GroupDocs cho .NET. Hãy làm theo từng bước của chúng tôi để so sánh thư mục hiệu quả. Nâng cao các ứng dụng .NET của bạn.
-type: docs
 weight: 12
 url: /vi/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Cần phải làm quen với ngôn ngữ lập trình C# và .NET framework đ�
 ### 3. Môi trường phát triển tích hợp (IDE)
 Bạn sẽ cần một IDE như Visual Studio để viết và thực thi các đoạn mã mẫu.
 ### 4. Truy cập vào Tài liệu GroupDocs
-Giữ sẵn tài liệu So sánh GroupDocs cho .NET để tham khảo trong suốt hướng dẫn. Bạn có thể truy cập tài liệu[đây](https://reference.groupdocs.com/comparison/net/).
+Giữ sẵn tài liệu So sánh GroupDocs cho .NET để tham khảo trong suốt hướng dẫn. Bạn có thể truy cập tài liệu[đây](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Nhập không gian tên
 Để bắt đầu, bạn cần nhập các vùng tên cần thiết vào mã C# của mình. Điều này cho phép bạn sử dụng các lớp và phương thức được cung cấp bởi So sánh GroupDocs cho .NET.

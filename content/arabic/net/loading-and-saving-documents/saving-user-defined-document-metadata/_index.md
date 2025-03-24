@@ -3,7 +3,6 @@ title: حفظ بيانات تعريف المستند المحددة من قبل 
 linktitle: حفظ بيانات تعريف المستند المحددة من قبل المستخدم في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية حفظ بيانات تعريف المستند المعرفة بواسطة المستخدم باستخدام GroupDocs Comparison for .NET. يمكنك بسهولة مقارنة البيانات الوصفية ومعالجتها من خلال تعليمات خطوة بخطوة.
-type: docs
 weight: 16
 url: /ar/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

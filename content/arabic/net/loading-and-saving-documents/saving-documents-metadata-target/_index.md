@@ -3,7 +3,6 @@ title: حفظ هدف البيانات التعريفية للمستندات في
 linktitle: حفظ هدف البيانات التعريفية للمستندات في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية حفظ البيانات التعريفية للمستندات باستخدام مقارنة GroupDocs لـ .NET. خطوات سهلة لمقارنة المستندات بكفاءة في تطبيقات .NET الخاصة بك.
-type: docs
 weight: 15
 url: /ar/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

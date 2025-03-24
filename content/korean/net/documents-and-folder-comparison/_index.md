@@ -3,7 +3,6 @@ title: 문서 및 폴더 비교
 linktitle: 문서 및 폴더 비교
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교 튜토리얼을 통해 문서 작업 흐름을 간소화하는 방법을 알아보세요. 변경 사항을 승인, 거부하고 문서와 폴더를 쉽게 비교할 수 있습니다.
-type: docs
 weight: 20
 url: /ko/net/documents-and-folder-comparison/
 ---

@@ -3,7 +3,6 @@ title: Perbandingan Dokumen dan Folder
 linktitle: Perbandingan Dokumen dan Folder
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menyederhanakan alur kerja dokumen dengan tutorial Perbandingan GroupDocs untuk .NET. Terima, tolak perubahan & bandingkan dokumen dan folder dengan mudah.
-type: docs
 weight: 20
 url: /id/net/documents-and-folder-comparison/
 ---

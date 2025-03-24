@@ -3,7 +3,6 @@ title: पूर्वावलोकन के लिए विशिष्ट 
 linktitle: पूर्वावलोकन के लिए विशिष्ट छवि आकार सेट करें
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison के साथ अपने .NET अनुप्रयोगों में दस्तावेज़ तुलना कार्यक्षमता को आसानी से एकीकृत करें।
-type: docs
 weight: 14
 url: /hi/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

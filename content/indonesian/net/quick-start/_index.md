@@ -3,7 +3,6 @@ title: Mulai cepat
 linktitle: Mulai cepat
 second_title: GroupDocs.Perbandingan .NET API
 description: Integrasikan Perbandingan GroupDocs untuk .NET dengan mudah ke dalam proyek Anda. Pelajari metode pengaturan lisensi yang efisien untuk alur kerja perbandingan dokumen yang akurat.
-type: docs
 weight: 25
 url: /id/net/quick-start/
 ---

@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Kaynağını
 linktitle: .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Kaynağını Kaydetme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i kullanarak belge meta veri kaynağını nasıl kaydedeceğinizi öğrenin. .NET'inizde kusursuz belge karşılaştırması için adım adım kılavuzumuzu izleyin.
-type: docs
 weight: 14
 url: /tr/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

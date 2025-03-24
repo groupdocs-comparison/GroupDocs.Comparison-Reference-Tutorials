@@ -3,7 +3,6 @@ title: 比较 .NET 的 GroupDocs 比较中的文件夹
 linktitle: 比较 .NET 的 GroupDocs 比较中的文件夹
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs Comparison for .NET 轻松比较文件夹。请按照我们的步骤进行有效的文件夹比较。增强您的 .NET 应用程序。
-type: docs
 weight: 12
 url: /zh/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ GroupDocs Comparison for .NET 是一个功能强大的库，使开发人员能�
 ### 3.集成开发环境（IDE）
 您将需要 Visual Studio 等 IDE 来编写和执行代码示例。
 ### 4. 访问 GroupDocs 文档
-将 GroupDocs Comparison for .NET 文档放在手边，以便在整个教程中进行参考。您可以访问文档[这里](https://reference.groupdocs.com/comparison/net/).
+将 GroupDocs Comparison for .NET 文档放在手边，以便在整个教程中进行参考。您可以访问文档[这里](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 导入命名空间
 首先，您需要将必要的命名空间导入到 C# 代码中。这允许您使用 GroupDocs Comparison for .NET 提供的类和方法。

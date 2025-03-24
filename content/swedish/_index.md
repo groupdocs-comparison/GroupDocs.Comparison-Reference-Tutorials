@@ -3,7 +3,6 @@ title: Bemästra GroupDocs.Comparison - Handledningar och guider
 linktitle: GroupDocs.Comparison Tutorials
 additionalTitle: GroupDocs API-referenser
 description: Upptäck kraften med GroupDocs.Comparison genom våra självstudier! Lär dig att integrera och använda detta API för effektiv dokumentjämförelse.
-type: docs
 weight: 11
 url: /sv/
 is_root: true

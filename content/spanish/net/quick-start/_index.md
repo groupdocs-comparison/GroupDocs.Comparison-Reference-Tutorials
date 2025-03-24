@@ -3,7 +3,6 @@ title: Inicio rápido
 linktitle: Inicio rápido
 second_title: API GroupDocs.Comparison .NET
 description: Integre sin esfuerzo GroupDocs Comparison para .NET en sus proyectos. Aprenda métodos eficientes de configuración de licencias para flujos de trabajo de comparación de documentos precisos.
-type: docs
 weight: 25
 url: /es/net/quick-start/
 ---

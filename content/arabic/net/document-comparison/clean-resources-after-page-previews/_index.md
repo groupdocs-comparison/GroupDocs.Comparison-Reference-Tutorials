@@ -3,7 +3,6 @@ title: تنظيف الموارد بعد معاينة الصفحة
 linktitle: تنظيف الموارد بعد معاينة الصفحة
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET خطوة بخطوة. قم بتحسين تطبيقات .NET الخاصة بك من خلال إدارة المستندات بكفاءة.
-type: docs
 weight: 13
 url: /ar/net/document-comparison/clean-resources-after-page-previews/
 ---

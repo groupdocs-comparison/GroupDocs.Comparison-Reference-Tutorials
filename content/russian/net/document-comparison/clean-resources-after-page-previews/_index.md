@@ -3,7 +3,6 @@ title: Очистка ресурсов после предварительног
 linktitle: Очистка ресурсов после предварительного просмотра страниц
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как шаг за шагом сравнивать документы с помощью GroupDocs.Comparison для .NET. Усовершенствуйте свои приложения .NET с помощью эффективного управления документами.
-type: docs
 weight: 13
 url: /ru/net/document-comparison/clean-resources-after-page-previews/
 ---

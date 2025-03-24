@@ -3,7 +3,6 @@ title: Változások elfogadása és elutasítása a GroupDocs .NET-összehasonl�
 linktitle: Változások elfogadása és elutasítása a GroupDocs .NET-összehasonlításában
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan lehet elfogadni és elutasítani a dokumentumok módosításait a GroupDocs Comparison for .NET segítségével. Egyszerűsítse a dokumentumok munkafolyamatait könnyedén.
-type: docs
 weight: 10
 url: /hu/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

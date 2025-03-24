@@ -3,7 +3,6 @@ title: 문서 비교
 linktitle: 문서 비교
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison을 사용하여 .NET의 문서를 효율적으로 비교합니다. 문서 관리를 간소화하고 작업 흐름을 개선하며 정확성을 보장합니다. 더 알아보기!
-type: docs
 weight: 21
 url: /ko/net/document-comparison/
 ---

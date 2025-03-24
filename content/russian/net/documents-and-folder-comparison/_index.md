@@ -3,7 +3,6 @@ title: Сравнение документов и папок
 linktitle: Сравнение документов и папок
 second_title: GroupDocs.Comparison .NET API
 description: Научитесь оптимизировать рабочие процессы с документами с помощью руководств GroupDocs Comparison для .NET. Принимайте, отклоняйте изменения и сравнивайте документы и папки без особых усилий.
-type: docs
 weight: 20
 url: /ru/net/documents-and-folder-comparison/
 ---

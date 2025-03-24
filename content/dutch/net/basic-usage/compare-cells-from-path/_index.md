@@ -3,7 +3,6 @@ title: Vergelijk cellen uit pad - GroupDocs.Comparison voor .NET
 linktitle: Vergelijk cellen uit pad - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u cellen uit een pad kunt vergelijken met GroupDocs.Comparison voor .NET. Identificeer op efficiënte wijze verschillen tussen documenten.
-type: docs
 weight: 10
 url: /nl/net/basic-usage/compare-cells-from-path/
 ---

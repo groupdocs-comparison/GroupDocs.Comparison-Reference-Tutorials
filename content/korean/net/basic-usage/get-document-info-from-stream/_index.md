@@ -3,7 +3,6 @@ title: Stream에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 linktitle: Stream에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison을 사용하여 .NET에서 문서를 효율적으로 비교하여 문서 처리 워크플로를 원활하게 향상시키는 방법을 알아보세요.
-type: docs
 weight: 14
 url: /ko/net/basic-usage/get-document-info-from-stream/
 ---

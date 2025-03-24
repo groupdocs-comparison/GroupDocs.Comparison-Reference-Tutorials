@@ -3,7 +3,6 @@ title: Získejte informace o dokumentu z dokumentu výsledků - GroupDocs.Compar
 linktitle: Získejte informace o dokumentu z dokumentu výsledků - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak získat informace o dokumentu z výsledného dokumentu pomocí GroupDocs.Comparison for .NET. Snadné kroky vysvětlené pro vývojáře .NET.
-type: docs
 weight: 12
 url: /cs/net/basic-usage/get-document-info-from-result-document/
 ---

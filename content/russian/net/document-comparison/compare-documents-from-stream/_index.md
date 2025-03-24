@@ -3,7 +3,6 @@ title: Сравнение документов из потока — GroupDocs.C
 linktitle: Сравнение документов из потока — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Оптимизируйте сравнение документов с помощью GroupDocs.Comparison для .NET. Легко сравнивайте документы и обеспечивайте точность в разных файлах.
-type: docs
 weight: 16
 url: /ru/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ru/net/document-comparison/compare-documents-from-stream/
 Прежде чем приступить к использованию GroupDocs.Comparison для .NET, необходимо выполнить несколько предварительных условий:
 1. Установите .NET Framework: убедитесь, что в вашей системе установлена .NET Framework. Вы можете скачать его с сайта Microsoft.
 2.  Загрузите GroupDocs.Comparison для .NET: посетите[ссылка для скачивания](https://releases.groupdocs.com/comparison/net/) чтобы получить последнюю версию GroupDocs.Comparison для .NET.
-3.  Доступ к документации: ознакомьтесь с функциями библиотеки, обратившись к[документация](https://reference.groupdocs.com/comparison/net/).
+3.  Доступ к документации: ознакомьтесь с функциями библиотеки, обратившись к[документация](https://tutorials.groupdocs.com/comparison/net/).
 4. Базовые знания C#. В этом руководстве предполагается, что у вас есть базовые знания языка программирования C#.
 
 ## Импортировать пространства имен

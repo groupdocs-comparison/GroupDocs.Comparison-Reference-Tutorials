@@ -3,7 +3,6 @@ title: Установите определенные размеры изобра
 linktitle: Установите определенные размеры изображения для предварительного просмотра
 second_title: GroupDocs.Comparison .NET API
 description: Легко интегрируйте функцию сравнения документов в свои приложения .NET с помощью GroupDocs.Comparison для .NET.
-type: docs
 weight: 14
 url: /ru/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

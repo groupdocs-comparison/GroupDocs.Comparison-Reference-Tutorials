@@ -3,7 +3,6 @@ title: Menyimpan Target Metadata Dokumen dalam Perbandingan GroupDocs untuk .NET
 linktitle: Menyimpan Target Metadata Dokumen dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menyimpan target metadata dokumen menggunakan Perbandingan GroupDocs untuk .NET. Langkah mudah untuk perbandingan dokumen yang efisien di aplikasi .NET Anda.
-type: docs
 weight: 15
 url: /id/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

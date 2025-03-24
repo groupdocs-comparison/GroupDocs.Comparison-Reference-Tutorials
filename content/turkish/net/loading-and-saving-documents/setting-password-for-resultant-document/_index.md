@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola 
 linktitle: .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'te ortaya çıkan belgeler için nasıl parola ayarlayacağınızı öğrenin. Güvenliği artırın ve karşılaştırılan dosyalarınızı koruyun.
-type: docs
 weight: 17
 url: /tr/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Evet, GroupDocs Comparison for .NET, DOCX, PDF, PPTX, XLSX ve daha fazlası gibi
 ### GroupDocs Comparison for .NET'i kullanmak için lisansa ihtiyacım var mı?
  Evet, adresinden lisans satın alabilirsiniz.[Burada](https://purchase.groupdocs.com/buy) veya geçici lisans alın[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### .NET için GroupDocs Karşılaştırması'na yönelik herhangi bir belge var mı?
- Evet, belgelere erişebilirsiniz[Burada](https://reference.groupdocs.com/comparison/net/).
+ Evet, belgelere erişebilirsiniz[Burada](https://tutorials.groupdocs.com/comparison/net/).

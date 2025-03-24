@@ -3,7 +3,6 @@ title: Compare Documents from Path - GroupDocs.Comparison for .NET
 linktitle: Compare Documents from Path - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Effortlessly compare documents in various formats with GroupDocs.Comparison for .NET. Save time and ensure accuracy in legal, academic, and business tasks.
-type: docs
 weight: 15
 url: /net/document-comparison/compare-documents-from-path/
 ---
@@ -51,7 +50,7 @@ In conclusion, GroupDocs.Comparison for .NET offers a seamless solution for comp
 ### Is GroupDocs.Comparison for .NET compatible with all document formats?
 GroupDocs.Comparison supports a wide range of document formats, including DOCX, PDF, PPTX, XLSX, and more. However, it's essential to refer to the documentation for the latest list of supported formats.
 ### Can I customize the output format and appearance of compared documents?
-Yes, GroupDocs.Comparison provides options for customizing the output format and appearance of compared documents. You can adjust settings such as change tracking, formatting styles, and output file type according to your preferences.
+Yes, GroupDocs.Comparison provides options for customizing the output format and appearance of compared documents. You can adjust settings such as change tracking, formatting styles, and output file type according to your ptutorialss.
 ### Does GroupDocs.Comparison offer batch processing capabilities?
 Yes, GroupDocs.Comparison allows batch processing of multiple documents, enabling users to compare multiple files simultaneously and efficiently.
 ### Is technical support available for GroupDocs.Comparison users?

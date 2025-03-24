@@ -3,7 +3,6 @@ title: 从 Stream 设置许可证 - .NET 的 GroupDocs 比较
 linktitle: 从 Stream 设置许可证 - .NET 的 GroupDocs 比较
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 高效设置许可证。通过本教程确保文档准确性并节省时间。
-type: docs
 weight: 11
 url: /zh/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ url: /zh/net/quick-start/set-license-from-stream/
 - C# 和 .NET 框架的基础知识。
 - Visual Studio 安装在您的系统上。
 - 安装了 .NET 库的 GroupDocs.Comparison。你可以下载它[这里](https://releases.groupdocs.com/comparison/net/).
-- 访问 GroupDocs.Comparison for .NET 文档[这里](https://reference.groupdocs.com/comparison/net/).
+- 访问 GroupDocs.Comparison for .NET 文档[这里](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 导入命名空间
 要开始使用 GroupDocs.Comparison for .NET，您需要将必要的命名空间导入到您的项目中。您可以这样做：
@@ -67,4 +66,4 @@ Console.WriteLine("\nWe do not ship any license with this example. " +
 ### 如果遇到许可问题我该怎么办？
 如果您遇到任何许可问题，请参阅许可常见问题解答[这里](https://purchase.groupdocs.com/faqs/licensing)或联系 GroupDocs 支持。
 ### 在哪里可以找到有关 GroupDocs.Comparison for .NET 的更多教程和资源？
-您可以在 GroupDocs 网站上找到大量文档和教程[这里](https://reference.groupdocs.com/comparison/net/).
+您可以在 GroupDocs 网站上找到大量文档和教程[这里](https://tutorials.groupdocs.com/comparison/net/).

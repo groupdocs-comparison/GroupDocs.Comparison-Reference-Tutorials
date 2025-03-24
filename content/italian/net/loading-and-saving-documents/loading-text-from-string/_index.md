@@ -3,7 +3,6 @@ title: Caricamento di testo da una stringa nel confronto di GroupDocs per .NET
 linktitle: Caricamento di testo da una stringa nel confronto di GroupDocs per .NET
 second_title: API GroupDocs.Comparison .NET
 description: Confronta facilmente il testo all'interno delle applicazioni .NET utilizzando la libreria GroupDocs.Comparison. Migliora l'efficienza e la precisione con un'integrazione perfetta.
-type: docs
 weight: 12
 url: /it/net/loading-and-saving-documents/loading-text-from-string/
 ---

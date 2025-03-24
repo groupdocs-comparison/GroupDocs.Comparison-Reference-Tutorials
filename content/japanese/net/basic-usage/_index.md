@@ -3,7 +3,6 @@ title: 基本的な使い方
 linktitle: 基本的な使い方
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison を使用して .NET 内のドキュメントを比較します。セルの比較、ドキュメント情報の抽出、サポートされている形式をカバーする基本的な使用方法のチュートリアルを学習します。
-type: docs
 weight: 24
 url: /ja/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ GroupDocs.Comparison for .NET を使用すると、ドキュメント比較タ�
 ## サポートされている形式を取得する
 .NET 開発の領域では、ドキュメントの正確性と一貫性を確保することが不可欠です。 GroupDocs.Comparison for .NET を使用すると、まさにそれを実現できます。サポートされているさまざまな形式を確認し、この強力なツールを .NET アプリケーションにシームレスに統合します。サポートされている形式の詳細については、こちらをご覧ください。[ここ](./get-supported-formats/).
 
-これらの基本的な使用方法のチュートリアルを使用して、GroupDocs.Comparison for .NET をマスターする旅に乗り出しましょう。セルをシームレスに比較し、ドキュメント情報を抽出し、ドキュメントの正確性を確保して、.NET 開発の取り組みを強化します。飛び込む準備はできていますか?続きを読む[ここ](https://reference.groupdocs.com/comparison/net).
+これらの基本的な使用方法のチュートリアルを使用して、GroupDocs.Comparison for .NET をマスターする旅に乗り出しましょう。セルをシームレスに比較し、ドキュメント情報を抽出し、ドキュメントの正確性を確保して、.NET 開発の取り組みを強化します。飛び込む準備はできていますか?続きを読む[ここ](https://tutorials.groupdocs.com/comparison/net).
 ## 基本的な使い方のチュートリアル
 ### [パスからのセルの比較 - GroupDocs.Comparison for .NET](./compare-cells-from-path/)
 GroupDocs.Comparison for .NET を使用してパスのセルを比較する方法を学習します。ドキュメント間の相違点を効率的に識別します。

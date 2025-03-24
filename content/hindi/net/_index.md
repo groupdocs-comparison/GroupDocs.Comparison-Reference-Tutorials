@@ -1,7 +1,6 @@
 ---
 title: .NET के लिए GroupDocs.Comparison के ट्यूटोरियल और उदाहरण
 linktitle: .NET ट्यूटोरियल के लिए GroupDocs.तुलना
-type: docs
 weight: 10
 url: /hi/net/
 description: .NET के लिए GroupDocs.Comparison के लिए व्यापक ट्यूटोरियल खोजें, जो सहजता से कुशल दस्तावेज़ और फ़ोल्डर तुलना, प्रबंधन और एकीकरण की सुविधा प्रदान करते हैं।

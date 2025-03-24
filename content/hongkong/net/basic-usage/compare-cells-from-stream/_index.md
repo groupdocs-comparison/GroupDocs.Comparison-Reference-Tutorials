@@ -3,7 +3,6 @@ title: 比較流中的單元格 - GroupDocs.Comparison for .NET
 linktitle: 比較流中的單元格 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 輕鬆比較 C# 中的文件。輕鬆簡化您的文件處理任務。
-type: docs
 weight: 11
 url: /zh-hant/net/basic-usage/compare-cells-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Felhasználó által meghatározott dokumentum metaadatok mentése a Grou
 linktitle: Felhasználó által meghatározott dokumentum metaadatok mentése a GroupDocs-összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan mentheti a felhasználó által definiált dokumentumok metaadatait a GroupDocs Comparison for .NET segítségével. Könnyen összehasonlíthatja és kezelheti a metaadatokat a lépésről lépésre történő utasításokkal.
-type: docs
 weight: 16
 url: /hu/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

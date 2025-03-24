@@ -3,7 +3,6 @@ title: Bereinigen Sie Ressourcen nach der Seitenvorschau
 linktitle: Bereinigen Sie Ressourcen nach der Seitenvorschau
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie Schritt für Schritt, wie Sie Dokumente mit GroupDocs.Comparison für .NET vergleichen. Erweitern Sie Ihre .NET-Anwendungen durch effizientes Dokumentenmanagement.
-type: docs
 weight: 13
 url: /de/net/document-comparison/clean-resources-after-page-previews/
 ---

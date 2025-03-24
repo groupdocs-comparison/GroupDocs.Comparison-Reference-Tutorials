@@ -3,7 +3,6 @@ title: تحميل المستندات من الدفق في مقارنة GroupDocs
 linktitle: تحميل المستندات من الدفق في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة المستندات بسهولة في تطبيقات .NET باستخدام GroupDocs Comparison، وهي مكتبة .NET قوية.
-type: docs
 weight: 11
 url: /ar/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

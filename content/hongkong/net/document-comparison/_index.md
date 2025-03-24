@@ -3,7 +3,6 @@ title: 文件比較
 linktitle: 文件比較
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 有效比較 .NET 中的文件。簡化文件管理、增強工作流程並確保準確性。了解更多！
-type: docs
 weight: 21
 url: /zh-hant/net/document-comparison/
 ---

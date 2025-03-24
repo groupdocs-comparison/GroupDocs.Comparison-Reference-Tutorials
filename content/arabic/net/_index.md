@@ -1,7 +1,6 @@
 ---
 title: دروس وأمثلة على GroupDocs.Comparison لـ .NET
 linktitle: GroupDocs.مقارنة البرامج التعليمية لـ .NET
-type: docs
 weight: 10
 url: /ar/net/
 description: اكتشف البرامج التعليمية الشاملة لـ GroupDocs.Comparison for .NET، مما يسهل المقارنة الفعالة للمستندات والمجلدات وإدارتها وتكاملها دون عناء.

@@ -3,7 +3,6 @@ title: Obtenha informações do documento do caminho - GroupDocs.Comparison for 
 linktitle: Obtenha informações do documento do caminho - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como extrair informações de documentos de um caminho usando GroupDocs.Comparison for .NET. Etapas fáceis para gerenciamento eficiente de documentos em C#.
-type: docs
 weight: 13
 url: /pt/net/basic-usage/get-document-info-from-path/
 ---

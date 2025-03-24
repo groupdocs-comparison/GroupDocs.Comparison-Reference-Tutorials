@@ -3,7 +3,6 @@ title: Uzyskaj informacje o dokumencie z dokumentu wynikowego — GroupDocs.Comp
 linktitle: Uzyskaj informacje o dokumencie z dokumentu wynikowego — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak pobrać informacje o dokumencie z dokumentu wynikowego za pomocą GroupDocs.Comparison dla .NET. Wyjaśniono proste kroki dla programistów .NET.
-type: docs
 weight: 12
 url: /pl/net/basic-usage/get-document-info-from-result-document/
 ---

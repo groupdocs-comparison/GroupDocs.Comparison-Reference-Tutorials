@@ -3,7 +3,6 @@ title: Korzystanie z opcji ładowania w porównaniu GroupDocs dla .NET
 linktitle: Korzystanie z opcji ładowania w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak używać opcji ładowania w programie GroupDocs Comparison for .NET, aby bezproblemowo porównywać dokumenty z niestandardowymi czcionkami.
-type: docs
 weight: 13
 url: /pl/net/loading-and-saving-documents/using-load-options/
 ---

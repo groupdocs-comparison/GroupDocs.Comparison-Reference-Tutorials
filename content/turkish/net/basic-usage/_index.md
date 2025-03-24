@@ -3,7 +3,6 @@ title: Temel Kullanım
 linktitle: Temel Kullanım
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison'ı kullanarak .NET'teki belgeleri karşılaştırın. Hücre karşılaştırması, belge bilgisi çıkarma ve desteklenen formatları kapsayan temel kullanım eğitimlerini öğrenin.
-type: docs
 weight: 24
 url: /tr/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Belge yönetimi labirentinde gezinmek, belge bilgilerinin bir yoldan nasıl çı
 ## Desteklenen Formatları Alın
 .NET geliştirme alanında belge doğruluğunun ve tutarlılığının sağlanması zorunludur. GroupDocs.Comparison for .NET size tam da bunu başarma gücü verir. Desteklenen format dizisini keşfedin ve bu güçlü aracı .NET uygulamalarınıza sorunsuz bir şekilde entegre edin. Desteklenen formatlar hakkında daha fazla bilgi edinin[Burada](./get-supported-formats/).
 
- Bu temel kullanım eğitimleriyle GroupDocs.Comparison for .NET konusunda uzmanlaşma yolculuğunuza başlayın. Hücreleri sorunsuz bir şekilde karşılaştırın, belge bilgilerini çıkarın ve belgenin doğruluğunu sağlayarak .NET geliştirme çabalarınızı geliştirin. Dalmaya hazır mısınız? Devamını oku[Burada](https://reference.groupdocs.com/comparison/net).
+ Bu temel kullanım eğitimleriyle GroupDocs.Comparison for .NET konusunda uzmanlaşma yolculuğunuza başlayın. Hücreleri sorunsuz bir şekilde karşılaştırın, belge bilgilerini çıkarın ve belgenin doğruluğunu sağlayarak .NET geliştirme çabalarınızı geliştirin. Dalmaya hazır mısınız? Devamını oku[Burada](https://tutorials.groupdocs.com/comparison/net).
 ## Temel Kullanım Eğitimleri
 ### [Yoldaki Hücreleri Karşılaştır - .NET için GroupDocs.Comparison](./compare-cells-from-path/)
 GroupDocs.Comparison for .NET'i kullanarak bir yoldan hücreleri nasıl karşılaştıracağınızı öğrenin. Belgeler arasındaki farkları etkili bir şekilde belirleyin.

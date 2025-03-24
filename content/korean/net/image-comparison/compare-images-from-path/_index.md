@@ -3,7 +3,6 @@ title: 경로의 이미지 비교 - .NET용 GroupDocs.Comparison
 linktitle: 경로의 이미지 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison 라이브러리를 사용하여 .NET에서 이미지를 효율적으로 비교하는 방법을 알아보세요. 원활한 통합을 위해 단계별 가이드를 따르세요.
-type: docs
 weight: 10
 url: /ko/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /ko/net/image-comparison/compare-images-from-path/
 ## 전제조건
 .NET용 GroupDocs.Comparison을 활용하는 복잡한 과정을 살펴보기 전에 다음 전제 조건이 충족되는지 확인하세요.
 ### 1. .NET용 GroupDocs.Comparison 설치
- 다음에서 라이브러리를 다운로드하세요.[여기](https://releases.groupdocs.com/comparison/net/) 설명서에 제공된 설치 지침을 따르십시오.[여기](https://reference.groupdocs.com/comparison/net/).
+ 다음에서 라이브러리를 다운로드하세요.[여기](https://releases.groupdocs.com/comparison/net/) 설명서에 제공된 설치 지침을 따르십시오.[여기](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. 라이센스 취득
  .NET용 GroupDocs.Comparison의 잠재력을 최대한 활용하려면 다음에서 라이센스를 취득하십시오.[여기](https://purchase.groupdocs.com/buy) 또는 사용 가능한 임시 라이선스를 활용하세요.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### 3. C# 프로그래밍에 대한 지식

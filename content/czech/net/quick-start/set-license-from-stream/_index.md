@@ -3,7 +3,6 @@ title: Nastavit licenci ze streamu – srovnání GroupDocs pro .NET
 linktitle: Nastavit licenci ze streamu – srovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak efektivně nastavit licence pomocí GroupDocs.Comparison for .NET. Zajistěte přesnost dokumentu a ušetřete čas s tímto výukovým programem.
-type: docs
 weight: 11
 url: /cs/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Než se ponoříte do výukového programu, ujistěte se, že máte následujíc
 - Základní znalost C# a .NET frameworku.
 - Visual Studio nainstalované ve vašem systému.
 -  Nainstalovaná knihovna GroupDocs.Comparison pro .NET. Můžete si jej stáhnout[tady](https://releases.groupdocs.com/comparison/net/).
--  Přístup k dokumentaci GroupDocs.Comparison for .NET[tady](https://reference.groupdocs.com/comparison/net/).
+-  Přístup k dokumentaci GroupDocs.Comparison for .NET[tady](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importovat jmenné prostory
 Chcete-li začít používat GroupDocs.Comparison pro .NET, musíte do svého projektu importovat potřebné jmenné prostory. Můžete to udělat takto:
@@ -67,4 +66,4 @@ Ano, na webu GroupDocs můžete požádat o bezplatnou zkušební verzi, abyste 
 ### Co mám dělat, když narazím na problémy s licencí?
  Pokud narazíte na nějaké problémy s licencováním, podívejte se na nejčastější dotazy týkající se licencování[tady](https://purchase.groupdocs.com/faqs/licensing) nebo kontaktujte podporu GroupDocs.
 ### Kde najdu další návody a zdroje pro GroupDocs.Comparison pro .NET?
- Rozsáhlou dokumentaci a návody najdete na webu GroupDocs[tady](https://reference.groupdocs.com/comparison/net/).
+ Rozsáhlou dokumentaci a návody najdete na webu GroupDocs[tady](https://tutorials.groupdocs.com/comparison/net/).

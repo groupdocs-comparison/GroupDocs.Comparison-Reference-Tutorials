@@ -3,7 +3,6 @@ title: Få dokumentinformation från Path - GroupDocs.Comparison för .NET
 linktitle: Få dokumentinformation från Path - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du extraherar dokumentinformation från en sökväg med GroupDocs.Comparison för .NET. Enkla steg för effektiv dokumenthantering i C#.
-type: docs
 weight: 13
 url: /sv/net/basic-usage/get-document-info-from-path/
 ---

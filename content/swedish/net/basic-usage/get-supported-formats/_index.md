@@ -3,7 +3,6 @@ title: Få format som stöds - GroupDocs.Comparison för .NET
 linktitle: Få format som stöds - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Förbättra dokumentets noggrannhet och konsekvens med GroupDocs.Comparison för .NET. Integrera sömlöst detta kraftfulla verktyg i dina .NET-applikationer.
-type: docs
 weight: 15
 url: /sv/net/basic-usage/get-supported-formats/
 ---

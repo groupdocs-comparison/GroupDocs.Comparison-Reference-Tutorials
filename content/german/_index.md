@@ -3,7 +3,6 @@ title: GroupDocs.Comparison meistern – Tutorials und Anleitungen
 linktitle: GroupDocs.Comparison-Tutorials
 additionalTitle: GroupDocs-API-Referenzen
 description: Entdecken Sie die Leistungsfähigkeit von GroupDocs.Comparison durch unsere Tutorials! Erfahren Sie, wie Sie diese API für einen effizienten Dokumentenvergleich integrieren und nutzen.
-type: docs
 weight: 11
 url: /de/
 is_root: true

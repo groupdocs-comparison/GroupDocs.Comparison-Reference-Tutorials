@@ -3,7 +3,6 @@ title: Stream'den Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison fo
 linktitle: Stream'den Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak akışlardaki korumalı belgeleri nasıl karşılaştıracağınızı öğrenin. Belge karşılaştırma sürecinizi zahmetsizce kolaylaştırın.
-type: docs
 weight: 18
 url: /tr/net/document-comparison/compare-protected-documents-from-stream/
 ---

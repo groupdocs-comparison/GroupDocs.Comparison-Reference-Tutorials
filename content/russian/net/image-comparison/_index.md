@@ -3,7 +3,6 @@ title: Сравнение изображений
 linktitle: Сравнение изображений
 second_title: GroupDocs.Comparison .NET API
 description: Эффективно сравнивайте изображения в .NET с помощью библиотеки GroupDocs.Comparison. Пошаговые руководства для плавной интеграции из пути или потока.
-type: docs
 weight: 23
 url: /ru/net/image-comparison/
 ---

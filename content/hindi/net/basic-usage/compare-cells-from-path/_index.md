@@ -3,7 +3,6 @@ title: पथ से कक्षों की तुलना करें - .N
 linktitle: पथ से कक्षों की तुलना करें - .NET के लिए GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison का उपयोग करके पथ से कोशिकाओं की तुलना करना सीखें। दस्तावेज़ों के बीच अंतर को कुशलतापूर्वक पहचानें।
-type: docs
 weight: 10
 url: /hi/net/basic-usage/compare-cells-from-path/
 ---

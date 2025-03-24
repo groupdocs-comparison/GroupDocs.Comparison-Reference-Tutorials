@@ -3,7 +3,6 @@ title: So sánh tài liệu
 linktitle: So sánh tài liệu
 second_title: API GroupDocs.Comparison .NET
 description: So sánh hiệu quả các tài liệu trong .NET với GroupDocs.Comparison. Hợp lý hóa việc quản lý tài liệu, nâng cao quy trình làm việc và đảm bảo độ chính xác. Tìm hiểu thêm!
-type: docs
 weight: 21
 url: /vi/net/document-comparison/
 ---

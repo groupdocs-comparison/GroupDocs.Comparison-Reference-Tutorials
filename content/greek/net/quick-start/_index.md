@@ -3,7 +3,6 @@ title: Γρήγορη εκίνηση
 linktitle: Γρήγορη εκίνηση
 second_title: GroupDocs.Comparison .NET API
 description: Ενσωματώστε χωρίς κόπο το GroupDocs Comparison για .NET στα έργα σας. Μάθετε αποτελεσματικές μεθόδους ρύθμισης αδειών για ακριβείς ροές εργασίας σύγκρισης εγγράφων.
-type: docs
 weight: 25
 url: /el/net/quick-start/
 ---

@@ -3,7 +3,6 @@ title: Σύγκριση ρυθμίσεων εγγράφων στο GroupDocs Σ�
 linktitle: Σύγκριση ρυθμίσεων εγγράφων στο GroupDocs Σύγκριση για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Βελτιώστε τη σύγκριση εγγράφων σε εφαρμογές .NET με τη σύγκριση GroupDocs. Συγκρίνετε έγγραφα χωρίς κόπο με προηγμένες λειτουργίες.
-type: docs
 weight: 11
 url: /el/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

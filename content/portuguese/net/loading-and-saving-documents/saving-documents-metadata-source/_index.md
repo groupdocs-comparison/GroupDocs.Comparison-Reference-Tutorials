@@ -3,7 +3,6 @@ title: Salvando a fonte de metadados de documentos na comparação de GroupDocs 
 linktitle: Salvando a fonte de metadados de documentos na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como salvar a fonte de metadados de documentos usando GroupDocs Comparison for .NET. Siga nosso guia passo a passo para uma comparação perfeita de documentos em seu .NET.
-type: docs
 weight: 14
 url: /pt/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

@@ -3,7 +3,6 @@ title: Porównanie dokumentów i folderów
 linktitle: Porównanie dokumentów i folderów
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak usprawnić obieg dokumentów dzięki samouczkom GroupDocs Comparison for .NET. Akceptuj, odrzucaj zmiany i porównuj dokumenty i foldery bez wysiłku.
-type: docs
 weight: 20
 url: /pl/net/documents-and-folder-comparison/
 ---

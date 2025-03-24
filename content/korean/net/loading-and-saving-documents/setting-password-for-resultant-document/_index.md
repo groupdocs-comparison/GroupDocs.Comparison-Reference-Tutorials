@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 결과 문서의 비밀번호 설정
 linktitle: .NET용 GroupDocs 비교에서 결과 문서의 비밀번호 설정
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교에서 결과 문서에 대한 암호를 설정하는 방법을 알아보세요. 보안을 강화하고 비교 파일을 보호하세요.
-type: docs
 weight: 17
 url: /ko/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### .NET용 GroupDocs 비교를 사용하려면 라이센스가 필요합니까?
  예, 다음에서 라이센스를 구입할 수 있습니다.[여기](https://purchase.groupdocs.com/buy) 아니면 임시면허를 취득하세요.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### .NET용 GroupDocs 비교에 사용할 수 있는 문서가 있습니까?
- 예, 문서에 액세스할 수 있습니다[여기](https://reference.groupdocs.com/comparison/net/).
+ 예, 문서에 액세스할 수 있습니다[여기](https://tutorials.groupdocs.com/comparison/net/).

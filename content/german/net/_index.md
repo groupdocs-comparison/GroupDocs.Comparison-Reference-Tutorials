@@ -1,7 +1,6 @@
 ---
 title: Tutorials und Beispiele von GroupDocs.Comparison für .NET
 linktitle: GroupDocs.Comparison für .NET-Tutorials
-type: docs
 weight: 10
 url: /de/net/
 description: Entdecken Sie umfassende Tutorials für GroupDocs.Comparison für .NET, die den effizienten Vergleich, die Verwaltung und die Integration von Dokumenten und Ordnern mühelos ermöglichen.

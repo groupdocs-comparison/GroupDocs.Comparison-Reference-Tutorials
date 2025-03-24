@@ -3,7 +3,6 @@ title: مقارنة الصور
 linktitle: مقارنة الصور
 second_title: GroupDocs.Comparison .NET API
 description: مقارنة الصور بكفاءة في .NET باستخدام مكتبة GroupDocs.Comparison. برامج تعليمية خطوة بخطوة للتكامل السلس من المسار أو الدفق.
-type: docs
 weight: 23
 url: /ar/net/image-comparison/
 ---

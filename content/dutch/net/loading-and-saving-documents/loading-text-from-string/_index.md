@@ -3,7 +3,6 @@ title: Tekst uit tekenreeks laden in GroupDocs-vergelijking voor .NET
 linktitle: Tekst uit tekenreeks laden in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk moeiteloos tekst binnen .NET-applicaties met behulp van de GroupDocs.Comparison-bibliotheek. Verbeter de efficiëntie en nauwkeurigheid met naadloze integratie.
-type: docs
 weight: 12
 url: /nl/net/loading-and-saving-documents/loading-text-from-string/
 ---

@@ -3,7 +3,6 @@ title: Jämför celler från Path - GroupDocs.Comparison för .NET
 linktitle: Jämför celler från Path - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du jämför celler från en sökväg med GroupDocs.Comparison för .NET. Identifiera på ett effektivt sätt skillnader mellan dokument.
-type: docs
 weight: 10
 url: /sv/net/basic-usage/compare-cells-from-path/
 ---

@@ -3,7 +3,6 @@ title: Hasonlítsa össze a védett dokumentumokat az elérési útból - GroupD
 linktitle: Hasonlítsa össze a védett dokumentumokat az elérési útból - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: A zökkenőmentes integráció érdekében könnyedén hasonlítsa össze a védett dokumentumokat a .NET-ben a GroupDocs.Comparison segítségével. Fokozza a dokumentumkezelési munkafolyamatot.
-type: docs
 weight: 17
 url: /hu/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Természetesen a GroupDocs.Comparison for .NET kiterjedt lehetőségeket kínál
 ### Kipróbálhatom a GroupDocs.Comparison for .NET-et vásárlás előtt?
  Igen, felfedezheti a GroupDocs.Comparison for .NET szolgáltatásait, ha eléri az ingyenes próbaverziót[itt](https://releases.groupdocs.com/).
 ### Hol találom a GroupDocs.Comparison for .NET dokumentációját és támogatását?
- Olvassa el az átfogó dokumentációt[itt](https://reference.groupdocs.com/comparison/net/) és kérjen támogatást a közösségi fórumokon[itt](https://forum.groupdocs.com/c/comparison/12).
+ Olvassa el az átfogó dokumentációt[itt](https://tutorials.groupdocs.com/comparison/net/) és kérjen támogatást a közösségi fórumokon[itt](https://forum.groupdocs.com/c/comparison/12).
 ### Szükségem van ideiglenes licencre a GroupDocs.Comparison for .NET használatához?
  Míg tesztelési célokra rendelkezésre áll egy ideiglenes licenc, a teljes licencet a webhely meglátogatásával szerezheti be[itt](https://purchase.groupdocs.com/buy).

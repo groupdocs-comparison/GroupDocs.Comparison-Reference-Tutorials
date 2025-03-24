@@ -3,7 +3,6 @@ title: Festlegen des Passworts für das resultierende Dokument im GroupDocs-Verg
 linktitle: Festlegen des Passworts für das resultierende Dokument im GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie im GroupDocs-Vergleich für .NET ein Kennwort für resultierende Dokumente festlegen. Erhöhen Sie die Sicherheit und schützen Sie Ihre verglichenen Dateien.
-type: docs
 weight: 17
 url: /de/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Ja, GroupDocs-Vergleich für .NET unterstützt den Vergleich von Dokumenten in v
 ### Benötige ich eine Lizenz, um GroupDocs-Vergleich für .NET zu verwenden?
  Ja, Sie können eine Lizenz erwerben bei[Hier](https://purchase.groupdocs.com/buy) oder eine befristete Lizenz erwerben[Hier](https://purchase.groupdocs.com/temporary-license/).
 ### Gibt es Dokumentation zum GroupDocs-Vergleich für .NET?
- Ja, Sie können auf die Dokumentation zugreifen[Hier](https://reference.groupdocs.com/comparison/net/).
+ Ja, Sie können auf die Dokumentation zugreifen[Hier](https://tutorials.groupdocs.com/comparison/net/).

@@ -3,7 +3,6 @@ title: GroupDocs.Comparison 마스터하기 - 튜토리얼 및 가이드
 linktitle: GroupDocs.비교 튜토리얼
 additionalTitle: GroupDocs API 참조
 description: 튜토리얼을 통해 GroupDocs.Comparison의 강력한 기능을 알아보세요! 효율적인 문서 비교를 위해 이 API를 통합하고 활용하는 방법을 알아보세요.
-type: docs
 weight: 11
 url: /ko/
 is_root: true

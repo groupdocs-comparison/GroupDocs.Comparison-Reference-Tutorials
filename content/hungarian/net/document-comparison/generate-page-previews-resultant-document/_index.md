@@ -3,7 +3,6 @@ title: Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
 linktitle: Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan hozhat létre dokumentum-előnézeteket a GroupDocs.Comparison for .NET használatával. Hatékonyan és pontosan hasonlítsa össze a dokumentumokat.
-type: docs
 weight: 10
 url: /hu/net/document-comparison/generate-page-previews-resultant-document/
 ---

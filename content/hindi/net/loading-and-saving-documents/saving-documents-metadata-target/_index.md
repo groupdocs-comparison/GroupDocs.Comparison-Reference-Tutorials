@@ -3,7 +3,6 @@ title: .NET के लिए GroupDocs तुलना में दस्ता
 linktitle: .NET के लिए GroupDocs तुलना में दस्तावेज़ मेटाडेटा लक्ष्य सहेजना
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs Compare का उपयोग करके दस्तावेज़ मेटाडेटा लक्ष्य को सहेजना सीखें। आपके .NET अनुप्रयोगों में कुशल दस्तावेज़ तुलना के लिए आसान चरण।
-type: docs
 weight: 15
 url: /hi/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

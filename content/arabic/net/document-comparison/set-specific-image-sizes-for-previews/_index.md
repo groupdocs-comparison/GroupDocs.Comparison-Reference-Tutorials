@@ -3,7 +3,6 @@ title: قم بتعيين أحجام صور محددة للمعاينة
 linktitle: قم بتعيين أحجام صور محددة للمعاينة
 second_title: GroupDocs.Comparison .NET API
 description: قم بدمج وظيفة مقارنة المستندات بسهولة في تطبيقات .NET الخاصة بك باستخدام GroupDocs.Comparison لـ .NET.
-type: docs
 weight: 14
 url: /ar/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

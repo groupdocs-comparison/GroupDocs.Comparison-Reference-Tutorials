@@ -3,7 +3,6 @@ title: Ładowanie i zapisywanie dokumentów
 linktitle: Ładowanie i zapisywanie dokumentów
 second_title: GroupDocs.Comparison API .NET
 description: Bez wysiłku porównuj dokumenty w .NET za pomocą GroupDocs.Comparison dla .NET. Dowiedz się, jak ładować, zapisywać i wykorzystywać opcje ładowania w celu wydajnego zarządzania dokumentami.
-type: docs
 weight: 22
 url: /pl/net/loading-and-saving-documents/
 ---

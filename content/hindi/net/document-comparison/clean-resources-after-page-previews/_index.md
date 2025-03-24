@@ -3,7 +3,6 @@ title: पृष्ठ पूर्वावलोकन के बाद स्
 linktitle: पृष्ठ पूर्वावलोकन के बाद स्वच्छ संसाधन
 second_title: GroupDocs.Comparison .NET API
 description: चरण दर चरण .NET के लिए GroupDocs.Comparison का उपयोग करके दस्तावेज़ों की तुलना करना सीखें। कुशल दस्तावेज़ प्रबंधन के साथ अपने .NET अनुप्रयोगों को बेहतर बनाएं।
-type: docs
 weight: 13
 url: /hi/net/document-comparison/clean-resources-after-page-previews/
 ---

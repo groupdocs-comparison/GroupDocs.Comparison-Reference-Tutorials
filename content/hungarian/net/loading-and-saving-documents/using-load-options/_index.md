@@ -3,7 +3,6 @@ title: Betöltési beállítások használata a GroupDocs összehasonlításban 
 linktitle: Betöltési beállítások használata a GroupDocs összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan használhatja a GroupDocs Comparison for .NET Betöltési beállításait a dokumentumok egyéni betűtípusokkal történő zökkenőmentes összehasonlításához.
-type: docs
 weight: 13
 url: /hu/net/loading-and-saving-documents/using-load-options/
 ---

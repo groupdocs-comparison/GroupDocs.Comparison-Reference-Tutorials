@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교의 스트림에서 문서 로드
 linktitle: .NET용 GroupDocs 비교의 스트림에서 문서 로드
 second_title: GroupDocs.비교 .NET API
 description: 강력한 .NET 라이브러리인 GroupDocs 비교를 사용하여 .NET 응용 프로그램의 문서를 손쉽게 비교하는 방법을 알아보세요.
-type: docs
 weight: 11
 url: /ko/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

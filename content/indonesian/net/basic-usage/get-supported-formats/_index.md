@@ -3,7 +3,6 @@ title: Dapatkan Format yang Didukung - GroupDocs.Comparison untuk .NET
 linktitle: Dapatkan Format yang Didukung - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Tingkatkan akurasi dan konsistensi dokumen dengan GroupDocs.Comparison untuk .NET. Integrasikan alat canggih ini dengan mulus ke dalam aplikasi .NET Anda.
-type: docs
 weight: 15
 url: /id/net/basic-usage/get-supported-formats/
 ---

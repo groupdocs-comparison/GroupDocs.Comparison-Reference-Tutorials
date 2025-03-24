@@ -3,7 +3,6 @@ title: Door de gebruiker gedefinieerde documentmetagegevens opslaan in GroupDocs
 linktitle: Door de gebruiker gedefinieerde documentmetagegevens opslaan in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u door de gebruiker gedefinieerde documentmetagegevens kunt opslaan met GroupDocs Comparison voor .NET. Vergelijk en manipuleer eenvoudig metadata met stapsgewijze instructies.
-type: docs
 weight: 16
 url: /nl/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

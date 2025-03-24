@@ -3,7 +3,6 @@ title: Yoldaki Hücreleri Karşılaştır - .NET için GroupDocs.Comparison
 linktitle: Yoldaki Hücreleri Karşılaştır - .NET için GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak bir yoldan hücreleri nasıl karşılaştıracağınızı öğrenin. Belgeler arasındaki farkları etkili bir şekilde belirleyin.
-type: docs
 weight: 10
 url: /tr/net/basic-usage/compare-cells-from-path/
 ---

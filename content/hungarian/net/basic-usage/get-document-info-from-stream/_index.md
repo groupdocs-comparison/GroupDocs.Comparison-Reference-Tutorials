@@ -3,7 +3,6 @@ title: Dokumentuminformációk beszerzése a Streamből – GroupDocs.Comparison
 linktitle: Dokumentuminformációk beszerzése a Streamből – GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Tanulja meg, hogyan lehet hatékonyan összehasonlítani dokumentumokat a .NET-ben a GroupDocs.Comparison segítségével, zökkenőmentesen javítva a dokumentumfeldolgozási munkafolyamatokat.
-type: docs
 weight: 14
 url: /hu/net/basic-usage/get-document-info-from-stream/
 ---

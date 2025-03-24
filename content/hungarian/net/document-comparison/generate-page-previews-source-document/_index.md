@@ -3,7 +3,6 @@ title: Oldal előnézetek létrehozása a forrásdokumentumhoz
 linktitle: Oldal előnézetek létrehozása a forrásdokumentumhoz
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan használhatja a Groupdocs.Comparison for .NET alkalmazást a dokumentum-összehasonlítási folyamatok hatékony egyszerűsítésére a C#-projektekben.
-type: docs
 weight: 11
 url: /hu/net/document-comparison/generate-page-previews-source-document/
 ---

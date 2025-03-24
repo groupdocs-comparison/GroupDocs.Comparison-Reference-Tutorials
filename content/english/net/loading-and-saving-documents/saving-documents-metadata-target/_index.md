@@ -3,7 +3,6 @@ title: Saving Documents Metadata Target in GroupDocs Comparison for .NET
 linktitle: Saving Documents Metadata Target in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to save documents metadata target using GroupDocs Comparison for .NET. Easy steps for efficient document comparison in your .NET applications.
-type: docs
 weight: 15
 url: /net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

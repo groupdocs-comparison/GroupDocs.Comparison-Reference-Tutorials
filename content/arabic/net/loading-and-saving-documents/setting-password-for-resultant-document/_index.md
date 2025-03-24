@@ -3,7 +3,6 @@ title: تعيين كلمة المرور للمستند الناتج في مقا�
 linktitle: تعيين كلمة المرور للمستند الناتج في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية تعيين كلمة مرور للمستندات الناتجة في GroupDocs Comparison for .NET. تعزيز الأمن وحماية الملفات المقارنة الخاصة بك.
-type: docs
 weight: 17
 url: /ar/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### هل أحتاج إلى ترخيص لاستخدام GroupDocs Comparison لـ .NET؟
  نعم يمكنك شراء الترخيص من[هنا](https://purchase.groupdocs.com/buy) أو الحصول على ترخيص مؤقت[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### هل هناك أي وثائق متاحة لمقارنة GroupDocs لـ .NET؟
- نعم، يمكنك الوصول إلى الوثائق[هنا](https://reference.groupdocs.com/comparison/net/).
+ نعم، يمكنك الوصول إلى الوثائق[هنا](https://tutorials.groupdocs.com/comparison/net/).

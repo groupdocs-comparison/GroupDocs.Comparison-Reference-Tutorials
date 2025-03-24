@@ -3,7 +3,6 @@ title: Αποθήκευση προέλευσης μεταδεδομένων εγ
 linktitle: Αποθήκευση προέλευσης μεταδεδομένων εγγράφων στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να αποθηκεύετε την πηγή μεταδεδομένων εγγράφου χρησιμοποιώντας τη σύγκριση GroupDocs για .NET. Ακολουθήστε τον οδηγό βήμα προς βήμα για απρόσκοπτη σύγκριση εγγράφων στο .NET σας.
-type: docs
 weight: 14
 url: /el/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

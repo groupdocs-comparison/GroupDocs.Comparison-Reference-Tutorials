@@ -3,7 +3,6 @@ title: Compare Folders in GroupDocs Comparison for .NET
 linktitle: Compare Folders in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Compare folders effortlessly using GroupDocs Comparison for .NET. Follow our step-by-step for efficient folder comparison. Enhance your .NET applications.
-type: docs
 weight: 12
 url: /net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Familiarity with C# programming language and .NET framework is required to under
 ### 3. Integrated Development Environment (IDE)
 You'll need an IDE such as Visual Studio to write and execute the code examples.
 ### 4. Access to GroupDocs Documentation
-Keep the GroupDocs Comparison for .NET documentation handy for reference throughout the tutorial. You can access the documentation [here](https://reference.groupdocs.com/comparison/net/).
+Keep the GroupDocs Comparison for .NET documentation handy for tutorials throughout the tutorial. You can access the documentation [here](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Import Namespaces
 To start, you need to import the necessary namespaces into your C# code. This allows you to use the classes and methods provided by GroupDocs Comparison for .NET.
@@ -76,6 +75,6 @@ GroupDocs Comparison for .NET is compatible with .NET framework versions 2.0 and
 ### Does GroupDocs Comparison for .NET require a license for commercial use?
 Yes, you need to purchase a license for commercial use. However, you can also avail a free trial to evaluate the library before making a purchase.
 ### Can I customize the output format of the comparison result?
-Yes, you can customize the output format and appearance of the comparison result according to your preferences.
+Yes, you can customize the output format and appearance of the comparison result according to your ptutorialss.
 ### Is technical support available for GroupDocs Comparison for .NET?
 Yes, you can access technical support through the GroupDocs forum [here](https://forum.groupdocs.com/c/comparison/12).

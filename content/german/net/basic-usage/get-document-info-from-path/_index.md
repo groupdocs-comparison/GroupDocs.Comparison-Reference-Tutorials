@@ -3,7 +3,6 @@ title: Dokumentinformationen aus dem Pfad abrufen – GroupDocs.Comparison für 
 linktitle: Dokumentinformationen aus dem Pfad abrufen – GroupDocs.Comparison für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Comparison für .NET Dokumentinformationen aus einem Pfad extrahieren. Einfache Schritte für eine effiziente Dokumentenverwaltung in C#.
-type: docs
 weight: 13
 url: /de/net/basic-usage/get-document-info-from-path/
 ---

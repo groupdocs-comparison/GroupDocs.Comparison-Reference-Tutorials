@@ -3,7 +3,6 @@ title: Generuj podglądy stron dla dokumentu źródłowego
 linktitle: Generuj podglądy stron dla dokumentu źródłowego
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak wykorzystać Groupdocs.Comparison for .NET do efektywnego usprawnienia procesów porównywania dokumentów w projektach C#.
-type: docs
 weight: 11
 url: /pl/net/document-comparison/generate-page-previews-source-document/
 ---

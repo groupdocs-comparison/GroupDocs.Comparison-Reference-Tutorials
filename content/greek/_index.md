@@ -3,7 +3,6 @@ title: Mastering GroupDocs.Comparison - Εκμάθηση και οδηγοί
 linktitle: GroupDocs.Comparison Tutorials
 additionalTitle: Αναφορές API GroupDocs
 description: Ανακαλύψτε τη δύναμη του GroupDocs.Comparison μέσα από τα σεμινάρια μας! Μάθετε να ενσωματώνετε και να χρησιμοποιείτε αυτό το API για αποτελεσματική σύγκριση εγγράφων.
-type: docs
 weight: 11
 url: /el/
 is_root: true

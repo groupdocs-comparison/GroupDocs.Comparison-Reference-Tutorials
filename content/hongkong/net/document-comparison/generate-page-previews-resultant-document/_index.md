@@ -3,7 +3,6 @@ title: 產生結果文件的頁面預覽
 linktitle: 產生結果文件的頁面預覽
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 產生文件預覽。有效率、準確地比較文件。
-type: docs
 weight: 10
 url: /zh-hant/net/document-comparison/generate-page-previews-resultant-document/
 ---

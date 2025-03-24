@@ -3,7 +3,6 @@ title: Συγκρίνετε προστατευμένα έγγραφα από τ�
 linktitle: Συγκρίνετε προστατευμένα έγγραφα από το Path - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Συγκρίνετε εύκολα προστατευμένα έγγραφα στο .NET χρησιμοποιώντας το GroupDocs.Comparison για απρόσκοπτη ενσωμάτωση. Βελτιώστε τη ροή εργασιών διαχείρισης εγγράφων.
-type: docs
 weight: 17
 url: /el/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directo
 ### Μπορώ να δοκιμάσω το GroupDocs.Comparison για .NET πριν το αγοράσω;
  Ναι, μπορείτε να εξερευνήσετε τις δυνατότητες του GroupDocs.Comparison για .NET αποκτώντας πρόσβαση στη διαθέσιμη δωρεάν δοκιμή[εδώ](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση και υποστήριξη για το GroupDocs.Comparison για .NET;
- Μπορείτε να ανατρέξετε στην πλήρη τεκμηρίωση[εδώ](https://reference.groupdocs.com/comparison/net/) και αναζητήστε υποστήριξη από τα φόρουμ της κοινότητας[εδώ](https://forum.groupdocs.com/c/comparison/12).
+ Μπορείτε να ανατρέξετε στην πλήρη τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/comparison/net/) και αναζητήστε υποστήριξη από τα φόρουμ της κοινότητας[εδώ](https://forum.groupdocs.com/c/comparison/12).
 ### Χρειάζομαι μια προσωρινή άδεια χρήσης για να χρησιμοποιήσω το GroupDocs.Comparison για .NET;
  Ενώ μια προσωρινή άδεια είναι διαθέσιμη για δοκιμαστικούς σκοπούς, μπορείτε να αποκτήσετε μια πλήρη άδεια κάνοντας μια επίσκεψη[εδώ](https://purchase.groupdocs.com/buy).

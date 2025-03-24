@@ -3,7 +3,6 @@ title: ドキュメントとフォルダーの比較
 linktitle: ドキュメントとフォルダーの比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET チュートリアルでドキュメントのワークフローを合理化する方法を学びます。変更を承認、拒否し、ドキュメントやフォルダーを簡単に比較します。
-type: docs
 weight: 20
 url: /ja/net/documents-and-folder-comparison/
 ---

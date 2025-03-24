@@ -3,7 +3,6 @@ title: Vergelijking van documenten en mappen
 linktitle: Vergelijking van documenten en mappen
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u documentworkflows kunt stroomlijnen met GroupDocs Comparison for .NET-tutorials. Accepteer, wijs wijzigingen af en vergelijk moeiteloos documenten en mappen.
-type: docs
 weight: 20
 url: /nl/net/documents-and-folder-comparison/
 ---

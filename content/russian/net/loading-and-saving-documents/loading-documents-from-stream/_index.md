@@ -3,7 +3,6 @@ title: Загрузка документов из потока в сравнен
 linktitle: Загрузка документов из потока в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как легко сравнивать документы в приложениях .NET с помощью GroupDocs Comparison, мощной библиотеки .NET.
-type: docs
 weight: 11
 url: /ru/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

@@ -3,7 +3,6 @@ title: تحميل المستندات في مقارنة GroupDocs لـ .NET
 linktitle: تحميل المستندات في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة المستندات بكفاءة باستخدام GroupDocs.Comparison for .NET. تبسيط عمليات إدارة المستندات الخاصة بك.
-type: docs
 weight: 10
 url: /ar/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### هل هناك نسخة تجريبية مجانية متاحة لـ GroupDocs.Comparison لـ .NET؟
  نعم، يمكنك الاستفادة من النسخة التجريبية المجانية من GroupDocs.Comparison لـ .NET من خلال زيارة الموقع[موقع إلكتروني](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على وثائق GroupDocs.Comparison لـ .NET؟
- يمكنك الرجوع إلى الوثائق الشاملة المتاحة على[GroupDocs.Comparison لوثائق .NET](https://reference.groupdocs.com/comparison/net/).
+ يمكنك الرجوع إلى الوثائق الشاملة المتاحة على[GroupDocs.Comparison لوثائق .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Comparison لـ .NET؟
  يمكنك الحصول على ترخيص مؤقت بزيارة[صفحة الترخيص المؤقتة](https://purchase.groupdocs.com/temporary-license/) على موقع GroupDocs.
 ### أين يمكنني طلب الدعم بخصوص GroupDocs.Comparison لـ .NET؟

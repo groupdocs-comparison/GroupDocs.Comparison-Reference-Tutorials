@@ -3,7 +3,6 @@ title: GroupDocs でのユーザー定義ドキュメントのメタデータの
 linktitle: GroupDocs でのユーザー定義ドキュメントのメタデータの保存 .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用してユーザー定義のドキュメント メタデータを保存する方法を学びます。ステップバイステップの指示に従って、メタデータを簡単に比較および操作できます。
-type: docs
 weight: 16
 url: /ja/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

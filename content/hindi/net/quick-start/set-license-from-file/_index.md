@@ -3,7 +3,6 @@ title: फ़ाइल से लाइसेंस सेट करें - .NE
 linktitle: फ़ाइल से लाइसेंस सेट करें - .NET के लिए GroupDocs तुलना
 second_title: GroupDocs.Comparison .NET API
 description: जानें कि .NET के लिए GroupDocs Compare को अपने अनुप्रयोगों में सहजता से कैसे एकीकृत किया जाए। आसानी से सेट अप करें, नामस्थान आयात करें और दस्तावेज़ों की तुलना करें।
-type: docs
 weight: 10
 url: /hi/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 .NET के लिए GroupDocs Compare डेवलपर्स को अपने .NET अनुप्रयोगों में दस्तावेज़ तुलना कार्यक्षमता को सहजता से एकीकृत करने का अधिकार देता है। इस गाइड में उल्लिखित चरणों का पालन करके, आप कुशलतापूर्वक आवश्यक वातावरण स्थापित कर सकते हैं, आवश्यक नामस्थान आयात कर सकते हैं, और अपनी परियोजनाओं के भीतर ग्रुपडॉक्स तुलना की पूरी क्षमता का लाभ उठाने के लिए लाइसेंस सेट कर सकते हैं।
 ## अक्सर पूछे जाने वाले प्रश्न
 ### मुझे .NET के लिए GroupDocs Compare के लिए दस्तावेज़ कहाँ मिल सकते हैं?
- आप दस्तावेज़ तक पहुंच सकते हैं[यहाँ](https://reference.groupdocs.com/comparison/net/).
+ आप दस्तावेज़ तक पहुंच सकते हैं[यहाँ](https://tutorials.groupdocs.com/comparison/net/).
 ### क्या .NET के लिए GroupDocs Compare के लिए कोई निःशुल्क परीक्षण उपलब्ध है?
  हाँ, आप निःशुल्क परीक्षण संस्करण डाउनलोड कर सकते हैं[यहाँ](https://releases.groupdocs.com/).
 ### मैं .NET के लिए GroupDocs Compare के लिए अस्थायी लाइसेंस कैसे प्राप्त कर सकता हूँ?

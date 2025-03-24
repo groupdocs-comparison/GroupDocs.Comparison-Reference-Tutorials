@@ -3,7 +3,6 @@ title: 比較流中的圖片 - GroupDocs.Comparison for .NET
 linktitle: 比較流中的圖片 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 比較流中的圖片。無縫整合到 .NET 應用程式的逐步指南。
-type: docs
 weight: 11
 url: /zh-hant/net/image-comparison/compare-images-from-stream/
 ---

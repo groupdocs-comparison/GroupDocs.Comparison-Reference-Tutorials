@@ -3,7 +3,6 @@ title: مقارنة المستندات من الدفق - GroupDocs.Comparison fo
 linktitle: مقارنة المستندات من الدفق - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تبسيط عملية مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET. قارن المستندات بسهولة وتأكد من الدقة عبر الملفات.
-type: docs
 weight: 16
 url: /ar/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ar/net/document-comparison/compare-documents-from-stream/
 قبل الغوص في استخدام GroupDocs.Comparison لـ .NET، هناك بعض المتطلبات الأساسية التي يتعين عليك توفرها:
 1. تثبيت .NET Framework: تأكد من تثبيت .NET Framework على نظامك. يمكنك تنزيله من موقع مايكروسوفت.
 2.  تنزيل GroupDocs.Comparison لـ .NET: قم بزيارة[رابط التحميل](https://releases.groupdocs.com/comparison/net/) للحصول على أحدث إصدار من GroupDocs.Comparison لـ .NET.
-3.  الوصول إلى الوثائق: تعرف على وظائف المكتبة من خلال الرجوع إلى[توثيق](https://reference.groupdocs.com/comparison/net/).
+3.  الوصول إلى الوثائق: تعرف على وظائف المكتبة من خلال الرجوع إلى[توثيق](https://tutorials.groupdocs.com/comparison/net/).
 4. الفهم الأساسي لـ C#: يفترض هذا البرنامج التعليمي أن لديك فهمًا أساسيًا للغة البرمجة C#.
 
 ## استيراد مساحات الأسماء

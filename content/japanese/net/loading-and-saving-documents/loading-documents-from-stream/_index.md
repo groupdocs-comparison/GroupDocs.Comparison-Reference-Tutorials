@@ -3,7 +3,6 @@ title: GroupDocs でのストリームからのドキュメントのロード .N
 linktitle: GroupDocs でのストリームからのドキュメントのロード .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: 強力な .NET ライブラリである GroupDocs Comparison を使用して、.NET アプリケーションでドキュメントを簡単に比較する方法を学びます。
-type: docs
 weight: 11
 url: /ja/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

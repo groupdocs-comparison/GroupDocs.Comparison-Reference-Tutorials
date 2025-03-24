@@ -3,7 +3,6 @@ title: Görüntü Karşılaştırma
 linktitle: Görüntü Karşılaştırma
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison kitaplığını kullanarak .NET'teki görüntüleri etkili bir şekilde karşılaştırın. Yol veya akıştan kusursuz entegrasyon için adım adım eğitimler.
-type: docs
 weight: 23
 url: /tr/net/image-comparison/
 ---

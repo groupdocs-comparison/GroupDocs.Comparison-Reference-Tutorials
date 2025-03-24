@@ -3,7 +3,6 @@ title: GroupDocs でのフォルダーの比較 .NET の比較
 linktitle: GroupDocs でのフォルダーの比較 .NET の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用して、フォルダーを簡単に比較します。効率的にフォルダーを比較するには、ステップバイステップに従ってください。 .NET アプリケーションを強化します。
-type: docs
 weight: 12
 url: /ja/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ GroupDocs Comparison for .NET は、開発者が .NET アプリケーション�
 ### 3. 統合開発環境（IDE）
 コード例を作成して実行するには、Visual Studio などの IDE が必要です。
 ### 4. GroupDocs ドキュメントへのアクセス
-GroupDocs Comparison for .NET ドキュメントは、チュートリアル全体で参照できるよう手元に置いておいてください。ドキュメントにアクセスできます[ここ](https://reference.groupdocs.com/comparison/net/).
+GroupDocs Comparison for .NET ドキュメントは、チュートリアル全体で参照できるよう手元に置いておいてください。ドキュメントにアクセスできます[ここ](https://tutorials.groupdocs.com/comparison/net/).
 
 ## 名前空間のインポート
 まず、必要な名前空間を C# コードにインポートする必要があります。これにより、GroupDocs Comparison for .NET によって提供されるクラスとメソッドを使用できるようになります。

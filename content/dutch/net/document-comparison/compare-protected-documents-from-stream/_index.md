@@ -3,7 +3,6 @@ title: Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .N
 linktitle: Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u beveiligde documenten uit streams kunt vergelijken met GroupDocs.Comparison voor .NET. Stroomlijn uw documentvergelijkingsproces moeiteloos.
-type: docs
 weight: 18
 url: /nl/net/document-comparison/compare-protected-documents-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Támogatott formátumok letöltése – GroupDocs.Comparison for .NET
 linktitle: Támogatott formátumok letöltése – GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Növelje a dokumentumok pontosságát és konzisztenciáját a GroupDocs.Comparison for .NET segítségével. Zökkenőmentesen integrálja ezt a hatékony eszközt .NET-alkalmazásaiba.
-type: docs
 weight: 15
 url: /hu/net/basic-usage/get-supported-formats/
 ---

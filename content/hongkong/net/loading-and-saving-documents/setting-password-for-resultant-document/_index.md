@@ -3,7 +3,6 @@ title: 為 .NET 的 GroupDocs 比較中的結果文件設定密碼
 linktitle: 為 .NET 的 GroupDocs 比較中的結果文件設定密碼
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何在 GroupDocs Comparison for .NET 中為產生的文件設定密碼。增強安全性並保護您的比較文件。
-type: docs
 weight: 17
 url: /zh-hant/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### 我需要許可證才能使用 GroupDocs Comparison for .NET 嗎？
 是的，您可以從以下位置購買許可證[這裡](https://purchase.groupdocs.com/buy)或獲得臨時許可證[這裡](https://purchase.groupdocs.com/temporary-license/).
 ### 有沒有適用於 .NET 的 GroupDocs Comparison 的文件？
-是的，您可以存取文檔[這裡](https://reference.groupdocs.com/comparison/net/).
+是的，您可以存取文檔[這裡](https://tutorials.groupdocs.com/comparison/net/).

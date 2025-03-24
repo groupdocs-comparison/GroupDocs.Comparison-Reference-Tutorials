@@ -3,7 +3,6 @@ title: Ορίστε συγκεκριμένα μεγέθη εικόνας για 
 linktitle: Ορίστε συγκεκριμένα μεγέθη εικόνας για προεπισκοπήσεις
 second_title: GroupDocs.Comparison .NET API
 description: Ενσωματώστε εύκολα τη λειτουργία σύγκρισης εγγράφων στις εφαρμογές σας .NET με το GroupDocs.Comparison για .NET.
-type: docs
 weight: 14
 url: /el/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

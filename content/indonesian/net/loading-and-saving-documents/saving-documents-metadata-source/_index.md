@@ -3,7 +3,6 @@ title: Menyimpan Sumber Metadata Dokumen dalam Perbandingan GroupDocs untuk .NET
 linktitle: Menyimpan Sumber Metadata Dokumen dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menyimpan sumber metadata dokumen menggunakan Perbandingan GroupDocs untuk .NET. Ikuti panduan langkah demi langkah kami untuk perbandingan dokumen yang lancar di .NET Anda.
-type: docs
 weight: 14
 url: /id/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

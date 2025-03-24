@@ -3,7 +3,6 @@ title: مقارنة المستندات من المسار - GroupDocs.Comparison 
 linktitle: مقارنة المستندات من المسار - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: يمكنك بسهولة مقارنة المستندات بتنسيقات مختلفة باستخدام GroupDocs.Comparison for .NET. توفير الوقت والتأكد من الدقة في المهام القانونية والأكاديمية والتجارية.
-type: docs
 weight: 15
 url: /ar/net/document-comparison/compare-documents-from-path/
 ---

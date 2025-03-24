@@ -3,7 +3,6 @@ title: Ustaw określone rozmiary obrazów dla podglądów
 linktitle: Ustaw określone rozmiary obrazów dla podglądów
 second_title: GroupDocs.Comparison API .NET
 description: Bezproblemowo integruj funkcję porównywania dokumentów z aplikacjami .NET za pomocą GroupDocs.Comparison dla .NET.
-type: docs
 weight: 14
 url: /pl/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

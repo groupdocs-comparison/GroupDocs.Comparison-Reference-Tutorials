@@ -3,7 +3,6 @@ title: Jämför skyddade dokument från Path - GroupDocs.Comparison för .NET
 linktitle: Jämför skyddade dokument från Path - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Jämför enkelt skyddade dokument i .NET med GroupDocs.Comparison för sömlös integration. Förbättra ditt arbetsflöde för dokumenthantering.
-type: docs
 weight: 17
 url: /sv/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Absolut, GroupDocs.Comparison för .NET ger omfattande alternativ för att anpas
 ### Kan jag prova GroupDocs.Comparison för .NET innan jag köper?
  Ja, du kan utforska funktionerna i GroupDocs.Comparison för .NET genom att få tillgång till den kostnadsfria testversionen[här](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation och support för GroupDocs.Comparison for .NET?
- Du kan hänvisa till den omfattande dokumentationen[här](https://reference.groupdocs.com/comparison/net/) och söka stöd från community-forumen[här](https://forum.groupdocs.com/c/comparison/12).
+ Du kan hänvisa till den omfattande dokumentationen[här](https://tutorials.groupdocs.com/comparison/net/) och söka stöd från community-forumen[här](https://forum.groupdocs.com/c/comparison/12).
 ### Behöver jag en tillfällig licens för att använda GroupDocs.Comparison för .NET?
  Även om en tillfällig licens är tillgänglig för teständamål kan du få en fullständig licens genom att besöka[här](https://purchase.groupdocs.com/buy).

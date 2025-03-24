@@ -3,7 +3,6 @@ title: Menggunakan Opsi Muat dalam Perbandingan GroupDocs untuk .NET
 linktitle: Menggunakan Opsi Muat dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara menggunakan Opsi Muat di Perbandingan GroupDocs untuk .NET untuk membandingkan dokumen dengan font khusus dengan lancar.
-type: docs
 weight: 13
 url: /id/net/loading-and-saving-documents/using-load-options/
 ---

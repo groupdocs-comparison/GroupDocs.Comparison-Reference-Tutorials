@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 문서 로드
 linktitle: .NET용 GroupDocs 비교에서 문서 로드
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 문서를 효율적으로 비교하는 방법을 알아보세요. 문서 관리 프로세스를 간소화하세요.
-type: docs
 weight: 10
 url: /ko/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### .NET용 GroupDocs.Comparison에 대한 무료 평가판이 있습니까?
  예, 다음을 방문하여 .NET용 GroupDocs.Comparison 무료 평가판을 이용하실 수 있습니다.[웹사이트](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Comparison에 대한 설명서는 어디서 찾을 수 있나요?
- 다음에서 제공되는 포괄적인 문서를 참조할 수 있습니다.[.NET 문서용 GroupDocs.Comparison](https://reference.groupdocs.com/comparison/net/).
+ 다음에서 제공되는 포괄적인 문서를 참조할 수 있습니다.[.NET 문서용 GroupDocs.Comparison](https://tutorials.groupdocs.com/comparison/net/).
 ### .NET용 GroupDocs.Comparison의 임시 라이센스를 얻으려면 어떻게 해야 합니까?
  방문하시면 임시면허증을 받으실 수 있습니다.[임시 라이센스 페이지](https://purchase.groupdocs.com/temporary-license/) GroupDocs 웹사이트에서.
 ### .NET용 GroupDocs.Comparison에 대한 지원은 어디서 구할 수 있나요?

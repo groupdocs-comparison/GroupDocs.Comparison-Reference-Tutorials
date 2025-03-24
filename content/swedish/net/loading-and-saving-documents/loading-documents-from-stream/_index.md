@@ -3,7 +3,6 @@ title: Laddar dokument från Stream i GroupDocs Comparison for .NET
 linktitle: Laddar dokument från Stream i GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du enkelt jämför dokument i .NET-applikationer med GroupDocs Comparison, ett kraftfullt .NET-bibliotek.
-type: docs
 weight: 11
 url: /sv/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

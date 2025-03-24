@@ -3,7 +3,6 @@ title: स्ट्रीम से लाइसेंस सेट करें
 linktitle: स्ट्रीम से लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना
 second_title: GroupDocs.Comparison .NET API
 description: जानें कि .NET के लिए GroupDocs.Comparison का कुशलतापूर्वक उपयोग करके लाइसेंस कैसे सेट करें। इस ट्यूटोरियल के साथ दस्तावेज़ सटीकता सुनिश्चित करें और समय बचाएं।
-type: docs
 weight: 11
 url: /hi/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ url: /hi/net/quick-start/set-license-from-stream/
 - C# और .NET फ्रेमवर्क का बुनियादी ज्ञान।
 - आपके सिस्टम पर विज़ुअल स्टूडियो स्थापित है।
 -  .NET लाइब्रेरी के लिए GroupDocs.Comparison स्थापित किया गया। आप इसे डाउनलोड कर सकते हैं[यहाँ](https://releases.groupdocs.com/comparison/net/).
--  .NET दस्तावेज़ के लिए GroupDocs.Comparison तक पहुंच[यहाँ](https://reference.groupdocs.com/comparison/net/).
+-  .NET दस्तावेज़ के लिए GroupDocs.Comparison तक पहुंच[यहाँ](https://tutorials.groupdocs.com/comparison/net/).
 
 ## नामस्थान आयात करें
 .NET के लिए GroupDocs.Comparison का उपयोग शुरू करने के लिए, आपको अपने प्रोजेक्ट में आवश्यक नेमस्पेस आयात करना होगा। यहां बताया गया है कि आप यह कैसे कर सकते हैं:
@@ -67,4 +66,4 @@ Console.WriteLine("\nWe do not ship any license with this example. " +
 ### यदि मुझे लाइसेंस संबंधी समस्याएं आती हैं तो मुझे क्या करना चाहिए?
  यदि आपको कोई लाइसेंस संबंधी समस्या आती है, तो लाइसेंस संबंधी अक्सर पूछे जाने वाले प्रश्न देखें[यहाँ](https://purchase.groupdocs.com/faqs/licensing) या GroupDocs सहायता से संपर्क करें.
 ### मुझे .NET के लिए GroupDocs.Comparison के लिए और अधिक ट्यूटोरियल और संसाधन कहां मिल सकते हैं?
- आप GroupDocs वेबसाइट पर व्यापक दस्तावेज़ और ट्यूटोरियल पा सकते हैं[यहाँ](https://reference.groupdocs.com/comparison/net/).
+ आप GroupDocs वेबसाइट पर व्यापक दस्तावेज़ और ट्यूटोरियल पा सकते हैं[यहाँ](https://tutorials.groupdocs.com/comparison/net/).

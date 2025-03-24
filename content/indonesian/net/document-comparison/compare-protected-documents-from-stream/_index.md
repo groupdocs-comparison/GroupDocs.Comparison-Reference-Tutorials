@@ -3,7 +3,6 @@ title: Bandingkan Dokumen yang Dilindungi dari Stream - GroupDocs.Comparison unt
 linktitle: Bandingkan Dokumen yang Dilindungi dari Stream - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan dokumen yang dilindungi dari aliran menggunakan GroupDocs.Comparison untuk .NET. Sederhanakan proses perbandingan dokumen Anda dengan mudah.
-type: docs
 weight: 18
 url: /id/net/document-comparison/compare-protected-documents-from-stream/
 ---

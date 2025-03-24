@@ -3,7 +3,6 @@ title: Vergelijk documenten uit pad - GroupDocs.Comparison voor .NET
 linktitle: Vergelijk documenten uit pad - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk moeiteloos documenten in verschillende formaten met GroupDocs.Comparison voor .NET. Bespaar tijd en zorg voor nauwkeurigheid bij juridische, academische en zakelijke taken.
-type: docs
 weight: 15
 url: /nl/net/document-comparison/compare-documents-from-path/
 ---

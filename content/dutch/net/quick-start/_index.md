@@ -3,7 +3,6 @@ title: Snelle start
 linktitle: Snelle start
 second_title: GroupDocs.Vergelijking .NET API
 description: Integreer GroupDocs Comparison for .NET moeiteloos in uw projecten. Leer efficiënte methoden voor het instellen van licenties voor nauwkeurige workflows voor documentvergelijking.
-type: docs
 weight: 25
 url: /nl/net/quick-start/
 ---

@@ -3,7 +3,6 @@ title: 경로의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 linktitle: 경로의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: 원활한 통합을 위해 GroupDocs.Comparison을 사용하여 .NET에서 보호된 문서를 쉽게 비교할 수 있습니다. 문서 관리 워크플로를 강화하세요.
-type: docs
 weight: 17
 url: /ko/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directo
 ### 구매하기 전에 .NET용 GroupDocs.Comparison을 사용해 볼 수 있습니까?
  예, 무료 평가판에 액세스하여 .NET용 GroupDocs.Comparison의 기능을 탐색할 수 있습니다.[여기](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Comparison에 대한 설명서와 지원은 어디서 찾을 수 있나요?
- 종합 문서를 참조할 수 있습니다.[여기](https://reference.groupdocs.com/comparison/net/) 커뮤니티 포럼에서 지원을 구하세요.[여기](https://forum.groupdocs.com/c/comparison/12).
+ 종합 문서를 참조할 수 있습니다.[여기](https://tutorials.groupdocs.com/comparison/net/) 커뮤니티 포럼에서 지원을 구하세요.[여기](https://forum.groupdocs.com/c/comparison/12).
 ### .NET용 GroupDocs.Comparison을 사용하려면 임시 라이센스가 필요합니까?
  테스트 목적으로 임시 라이센스를 사용할 수 있지만 다음 사이트를 방문하여 정식 라이센스를 얻을 수 있습니다.[여기](https://purchase.groupdocs.com/buy).

@@ -3,7 +3,6 @@ title: Uzyskaj informacje o dokumencie ze strumienia — GroupDocs.Comparison dl
 linktitle: Uzyskaj informacje o dokumencie ze strumienia — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak efektywnie porównywać dokumenty w platformie .NET przy użyciu programu GroupDocs.Comparison, usprawniając płynnie przepływ pracy związany z przetwarzaniem dokumentów.
-type: docs
 weight: 14
 url: /pl/net/basic-usage/get-document-info-from-stream/
 ---

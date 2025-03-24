@@ -3,7 +3,6 @@ title: Nastavení hesla pro výsledný dokument ve srovnání GroupDocs pro .NET
 linktitle: Nastavení hesla pro výsledný dokument ve srovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak nastavit heslo pro výsledné dokumenty v GroupDocs Comparison for .NET. Zvyšte zabezpečení a chraňte své porovnávané soubory.
-type: docs
 weight: 17
 url: /cs/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Ano, GroupDocs Comparison for .NET podporuje porovnávání dokumentů v různý
 ### Potřebuji licenci k používání GroupDocs Comparison for .NET?
  Ano, můžete si zakoupit licenci od[tady](https://purchase.groupdocs.com/buy) nebo získat dočasnou licenci[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Je k dispozici nějaká dokumentace pro GroupDocs Comparison for .NET?
- Ano, máte přístup k dokumentaci[tady](https://reference.groupdocs.com/comparison/net/).
+ Ano, máte přístup k dokumentaci[tady](https://tutorials.groupdocs.com/comparison/net/).

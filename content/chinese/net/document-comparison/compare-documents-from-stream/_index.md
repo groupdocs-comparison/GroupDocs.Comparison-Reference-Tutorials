@@ -3,7 +3,6 @@ title: 比较流中的文档 - GroupDocs.Comparison for .NET
 linktitle: 比较流中的文档 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 简化文档比较。轻松比较文档并确保跨文件的准确性。
-type: docs
 weight: 16
 url: /zh/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /zh/net/document-comparison/compare-documents-from-stream/
 在深入使用 GroupDocs.Comparison for .NET 之前，您需要满足一些先决条件：
 1. 安装 .NET Framework：确保您的系统上安装了 .NET Framework。您可以从 Microsoft 网站下载它。
 2. 下载 .NET 的 GroupDocs.Comparison：访问[下载链接](https://releases.groupdocs.com/comparison/net/)获取最新版本的 GroupDocs.Comparison for .NET。
-3. 访问文档：通过参考文档来熟悉库的功能[文档](https://reference.groupdocs.com/comparison/net/).
+3. 访问文档：通过参考文档来熟悉库的功能[文档](https://tutorials.groupdocs.com/comparison/net/).
 4. C# 的基本了解：本教程假设您对 C# 编程语言有基本的了解。
 
 ## 导入命名空间

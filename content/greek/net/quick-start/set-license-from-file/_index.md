@@ -3,7 +3,6 @@ title: Ορισμός άδειας χρήσης από File - GroupDocs Comparis
 linktitle: Ορισμός άδειας χρήσης από File - GroupDocs Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να ενσωματώνετε απρόσκοπτα το GroupDocs Comparison για .NET στις εφαρμογές σας. Ρυθμίστε, εισαγάγετε χώρους ονομάτων και συγκρίνετε έγγραφα χωρίς κόπο.
-type: docs
 weight: 10
 url: /el/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 Το GroupDocs Comparison για .NET δίνει τη δυνατότητα στους προγραμματιστές να ενσωματώνουν απρόσκοπτα τη λειτουργία σύγκρισης εγγράφων στις εφαρμογές τους .NET. Ακολουθώντας τα βήματα που περιγράφονται σε αυτόν τον οδηγό, μπορείτε να ρυθμίσετε αποτελεσματικά το απαραίτητο περιβάλλον, να εισαγάγετε τους απαιτούμενους χώρους ονομάτων και να ορίσετε την άδεια χρήσης για να αξιοποιήσετε πλήρως τις δυνατότητες του GroupDocs Comparison στα έργα σας.
 ## Συχνές ερωτήσεις
 ### Πού μπορώ να βρω την τεκμηρίωση για τη σύγκριση GroupDocs για .NET;
- Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/comparison/net/).
+ Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/comparison/net/).
 ### Υπάρχει διαθέσιμη δωρεάν δοκιμή για το GroupDocs Comparison για .NET;
  Ναι, μπορείτε να κάνετε λήψη της δωρεάν δοκιμαστικής έκδοσης[εδώ](https://releases.groupdocs.com/).
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια χρήσης για τη σύγκριση GroupDocs για .NET;

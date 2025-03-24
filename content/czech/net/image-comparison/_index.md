@@ -3,7 +3,6 @@ title: Porovnání obrázků
 linktitle: Porovnání obrázků
 second_title: GroupDocs.Comparison .NET API
 description: Efektivně porovnávejte obrázky v .NET pomocí knihovny GroupDocs.Comparison. Výukové programy krok za krokem pro bezproblémovou integraci z cesty nebo streamu.
-type: docs
 weight: 23
 url: /cs/net/image-comparison/
 ---

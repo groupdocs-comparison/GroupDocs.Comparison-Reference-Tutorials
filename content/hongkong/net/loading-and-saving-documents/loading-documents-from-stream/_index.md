@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs Comparison 中從串流載入文檔
 linktitle: 在 .NET 的 GroupDocs Comparison 中從串流載入文檔
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用強大的 .NET 函式庫 GroupDocs Comparison 輕鬆比較 .NET 應用程式中的文件。
-type: docs
 weight: 11
 url: /zh-hant/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

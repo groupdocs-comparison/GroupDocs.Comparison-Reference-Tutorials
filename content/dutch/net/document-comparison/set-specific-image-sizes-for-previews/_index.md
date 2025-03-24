@@ -3,7 +3,6 @@ title: Stel specifieke afbeeldingsformaten in voor voorbeelden
 linktitle: Stel specifieke afbeeldingsformaten in voor voorbeelden
 second_title: GroupDocs.Vergelijking .NET API
 description: Integreer de functionaliteit voor documentvergelijking moeiteloos in uw .NET-applicaties met GroupDocs.Comparison voor .NET.
-type: docs
 weight: 14
 url: /nl/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

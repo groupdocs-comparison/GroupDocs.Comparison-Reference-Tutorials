@@ -3,7 +3,6 @@ title: Använda laddningsalternativ i GroupDocs Comparison för .NET
 linktitle: Använda laddningsalternativ i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du använder Load Options i GroupDocs Comparison för .NET för att sömlöst jämföra dokument med anpassade teckensnitt.
-type: docs
 weight: 13
 url: /sv/net/loading-and-saving-documents/using-load-options/
 ---

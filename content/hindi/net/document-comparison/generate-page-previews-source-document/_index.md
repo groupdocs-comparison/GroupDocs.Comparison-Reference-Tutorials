@@ -3,7 +3,6 @@ title: स्रोत दस्तावेज़ के लिए पृष्
 linktitle: स्रोत दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन तैयार करें
 second_title: GroupDocs.Comparison .NET API
 description: अपने C# प्रोजेक्ट में दस्तावेज़ तुलना प्रक्रियाओं को प्रभावी ढंग से सुव्यवस्थित करने के लिए .NET के लिए Groupdocs.Comparison का उपयोग करना सीखें।
-type: docs
 weight: 11
 url: /hi/net/document-comparison/generate-page-previews-source-document/
 ---

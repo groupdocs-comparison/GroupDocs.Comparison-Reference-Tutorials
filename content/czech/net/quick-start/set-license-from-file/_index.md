@@ -3,7 +3,6 @@ title: Nastavit licenci ze souboru – GroupDocs Comparison for .NET
 linktitle: Nastavit licenci ze souboru – GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak bezproblémově integrovat GroupDocs Comparison for .NET do vašich aplikací. Nastavujte, importujte jmenné prostory a porovnávejte dokumenty bez námahy.
-type: docs
 weight: 10
 url: /cs/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET umožňuje vývojářům bezproblémově integrovat funkce porovnávání dokumentů do jejich aplikací .NET. Podle kroků uvedených v této příručce můžete efektivně nastavit potřebné prostředí, importovat požadované jmenné prostory a nastavit licenci tak, abyste využili plný potenciál GroupDocs Comparison ve svých projektech.
 ## FAQ
 ### Kde najdu dokumentaci pro GroupDocs Comparison for .NET?
- Máte přístup k dokumentaci[tady](https://reference.groupdocs.com/comparison/net/).
+ Máte přístup k dokumentaci[tady](https://tutorials.groupdocs.com/comparison/net/).
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs Comparison for .NET?
  Ano, můžete si stáhnout bezplatnou zkušební verzi[tady](https://releases.groupdocs.com/).
 ### Jak mohu získat dočasnou licenci pro GroupDocs Comparison for .NET?

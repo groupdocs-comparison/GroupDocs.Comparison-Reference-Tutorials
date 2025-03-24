@@ -3,7 +3,6 @@ title: ファイルからライセンスを設定 - .NET の GroupDocs の比較
 linktitle: ファイルからライセンスを設定 - .NET の GroupDocs の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET をアプリケーションにシームレスに統合する方法を学びます。ネームスペースをセットアップ、インポートし、ドキュメントを簡単に比較します。
-type: docs
 weight: 10
 url: /ja/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET を使用すると、開発者はドキュメント比較機能を .NET アプリケーションにシームレスに統合できます。このガイドで説明されている手順に従うことで、必要な環境を効率的にセットアップし、必要な名前空間をインポートし、プロジェクト内で GroupDocs Comparison の可能性を最大限に活用するライセンスを設定できます。
 ## よくある質問
 ### GroupDocs Comparison for .NET のドキュメントはどこで見つけられますか?
-ドキュメントにアクセスできます[ここ](https://reference.groupdocs.com/comparison/net/).
+ドキュメントにアクセスできます[ここ](https://tutorials.groupdocs.com/comparison/net/).
 ### GroupDocs Comparison for .NET に利用できる無料トライアルはありますか?
 はい、無料試用版をダウンロードできます[ここ](https://releases.groupdocs.com/).
 ### GroupDocs Comparison for .NET の一時ライセンスを取得するにはどうすればよいですか?

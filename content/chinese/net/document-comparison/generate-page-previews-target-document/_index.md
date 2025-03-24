@@ -3,7 +3,6 @@ title: 生成目标文档的页面预览
 linktitle: 生成目标文档的页面预览
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 高效生成目标文档的页面预览。请按照我们的分步指南进行无缝文档比较。
-type: docs
 weight: 12
 url: /zh/net/document-comparison/generate-page-previews-target-document/
 ---

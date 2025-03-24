@@ -3,7 +3,6 @@ title: Laadopties gebruiken in GroupDocs-vergelijking voor .NET
 linktitle: Laadopties gebruiken in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u Laadopties in GroupDocs Comparison voor .NET kunt gebruiken om documenten met aangepaste lettertypen naadloos te vergelijken.
-type: docs
 weight: 13
 url: /nl/net/loading-and-saving-documents/using-load-options/
 ---

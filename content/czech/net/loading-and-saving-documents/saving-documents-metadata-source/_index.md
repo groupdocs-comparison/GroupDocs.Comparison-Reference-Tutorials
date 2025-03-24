@@ -3,7 +3,6 @@ title: Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
 linktitle: Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak uložit zdroj metadat dokumentu pomocí GroupDocs Comparison for .NET. Postupujte podle našeho podrobného průvodce pro bezproblémové porovnání dokumentů ve vašem .NET.
-type: docs
 weight: 14
 url: /cs/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

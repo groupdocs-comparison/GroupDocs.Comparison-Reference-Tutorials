@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Kullanıcı Tanımlı Belge 
 linktitle: .NET için GroupDocs Karşılaştırmasında Kullanıcı Tanımlı Belge Meta Verilerini Kaydetme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i kullanarak kullanıcı tanımlı belge meta verilerini nasıl kaydedeceğinizi öğrenin. Adım adım talimatlarla meta verileri kolayca karşılaştırın ve değiştirin.
-type: docs
 weight: 16
 url: /tr/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

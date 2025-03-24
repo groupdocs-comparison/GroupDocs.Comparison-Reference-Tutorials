@@ -3,7 +3,6 @@ title: Tetapkan Ukuran Gambar Tertentu untuk Pratinjau
 linktitle: Tetapkan Ukuran Gambar Tertentu untuk Pratinjau
 second_title: GroupDocs.Perbandingan .NET API
 description: Integrasikan fungsionalitas perbandingan dokumen dengan mudah ke dalam aplikasi .NET Anda dengan GroupDocs.Comparison untuk .NET.
-type: docs
 weight: 14
 url: /id/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

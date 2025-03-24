@@ -3,7 +3,6 @@ title: Ladda och spara dokument
 linktitle: Ladda och spara dokument
 second_title: GroupDocs.Comparison .NET API
 description: Jämför enkelt dokument i .NET med GroupDocs.Comparison för .NET. Lär dig att ladda, spara och använda inläsningsalternativ för effektiv dokumenthantering.
-type: docs
 weight: 22
 url: /sv/net/loading-and-saving-documents/
 ---

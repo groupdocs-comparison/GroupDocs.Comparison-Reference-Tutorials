@@ -3,7 +3,6 @@ title: So sánh hình ảnh từ luồng - GroupDocs.Comparison for .NET
 linktitle: So sánh hình ảnh từ luồng - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh hình ảnh từ các luồng bằng GroupDocs.Comparison cho .NET. Hướng dẫn từng bước để tích hợp liền mạch vào các ứng dụng .NET.
-type: docs
 weight: 11
 url: /vi/net/image-comparison/compare-images-from-stream/
 ---

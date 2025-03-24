@@ -3,7 +3,6 @@ title: Podstawowe użycie
 linktitle: Podstawowe użycie
 second_title: GroupDocs.Comparison API .NET
 description: Porównaj dokumenty w .NET za pomocą GroupDocs.Comparison. Poznaj podstawowe samouczki dotyczące użytkowania, obejmujące porównywanie komórek, wyodrębnianie informacji o dokumentach i obsługiwane formaty.
-type: docs
 weight: 24
 url: /pl/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Poruszanie się po labiryncie zarządzania dokumentami i zrozumienie, jak wyodr�
 ## Uzyskaj obsługiwane formaty
 Zapewnienie dokładności i spójności dokumentów jest koniecznością w obszarze rozwoju .NET. Dzięki GroupDocs.Comparison dla .NET możesz to osiągnąć. Odkryj gamę obsługiwanych formatów i bezproblemowo zintegruj to potężne narzędzie z aplikacjami .NET. Dowiedz się więcej o obsługiwanych formatach[Tutaj](./get-supported-formats/).
 
- Wyrusz w podróż do opanowania narzędzia GroupDocs.Comparison dla platformy .NET dzięki tym podstawowym samouczkom dotyczącym użytkowania. Bezproblemowo porównuj komórki, wyodrębniaj informacje z dokumentów i zapewniaj dokładność dokumentów, usprawniając wysiłki związane z rozwojem platformy .NET. Gotowy do nurkowania? Czytaj więcej[Tutaj](https://reference.groupdocs.com/comparison/net).
+ Wyrusz w podróż do opanowania narzędzia GroupDocs.Comparison dla platformy .NET dzięki tym podstawowym samouczkom dotyczącym użytkowania. Bezproblemowo porównuj komórki, wyodrębniaj informacje z dokumentów i zapewniaj dokładność dokumentów, usprawniając wysiłki związane z rozwojem platformy .NET. Gotowy do nurkowania? Czytaj więcej[Tutaj](https://tutorials.groupdocs.com/comparison/net).
 ## Podstawowe samouczki dotyczące użytkowania
 ### [Porównaj komórki ze ścieżki — GroupDocs.Comparison dla platformy .NET](./compare-cells-from-path/)
 Dowiedz się, jak porównywać komórki ze ścieżki za pomocą GroupDocs.Comparison dla platformy .NET. Skutecznie identyfikuj różnice między dokumentami.

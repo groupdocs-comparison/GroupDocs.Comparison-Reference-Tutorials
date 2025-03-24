@@ -3,7 +3,6 @@ title: Mért licenc beállítása – GroupDocs-összehasonlítás .NET-hez
 linktitle: Mért licenc beállítása – GroupDocs-összehasonlítás .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Integrálja a GroupDocs Comparison for .NET szolgáltatást zökkenőmentesen .NET-projektjeibe a hatékony dokumentum-összehasonlítási munkafolyamatok érdekében.
-type: docs
 weight: 12
 url: /hu/net/quick-start/set-metered-license/
 ---

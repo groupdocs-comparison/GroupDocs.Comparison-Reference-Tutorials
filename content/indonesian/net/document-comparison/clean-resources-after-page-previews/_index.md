@@ -3,7 +3,6 @@ title: Bersihkan Sumber Daya Setelah Pratinjau Halaman
 linktitle: Bersihkan Sumber Daya Setelah Pratinjau Halaman
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan dokumen menggunakan GroupDocs.Comparison untuk .NET langkah demi langkah. Tingkatkan aplikasi .NET Anda dengan manajemen dokumen yang efisien.
-type: docs
 weight: 13
 url: /id/net/document-comparison/clean-resources-after-page-previews/
 ---

@@ -3,7 +3,6 @@ title: Générer des aperçus de page pour le document cible
 linktitle: Générer des aperçus de page pour le document cible
 second_title: API GroupDocs.Comparison .NET
 description: Générez efficacement des aperçus de page pour les documents cibles à l'aide de GroupDocs.Comparison for .NET. Suivez notre guide étape par étape pour une comparaison transparente des documents.
-type: docs
 weight: 12
 url: /fr/net/document-comparison/generate-page-previews-target-document/
 ---

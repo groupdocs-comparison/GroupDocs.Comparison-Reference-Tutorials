@@ -1,7 +1,6 @@
 ---
 title: Poradniki i przykłady GroupDocs.Comparison dla .NET
 linktitle: Porównanie GroupDocs dla samouczków .NET
-type: docs
 weight: 10
 url: /pl/net/
 description: Odkryj wszechstronne samouczki dotyczące GroupDocs.Comparison dla .NET, ułatwiające wydajne porównywanie dokumentów i folderów, zarządzanie nimi i bezproblemową integrację.

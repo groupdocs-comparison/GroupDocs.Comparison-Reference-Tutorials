@@ -3,7 +3,6 @@ title: Memuat Dokumen dari Aliran dalam Perbandingan GroupDocs untuk .NET
 linktitle: Memuat Dokumen dari Aliran dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan dokumen dengan mudah dalam aplikasi .NET menggunakan GroupDocs Comparison, pustaka .NET yang canggih.
-type: docs
 weight: 11
 url: /id/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

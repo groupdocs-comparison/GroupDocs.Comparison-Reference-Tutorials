@@ -3,7 +3,6 @@ title: Kaynak Belge için Sayfa Önizlemeleri Oluştur
 linktitle: Kaynak Belge için Sayfa Önizlemeleri Oluştur
 second_title: GroupDocs.Comparison .NET API'si
 description: C# projelerinizde belge karşılaştırma süreçlerini etkili bir şekilde kolaylaştırmak için Groupdocs.Comparison for .NET'i nasıl kullanacağınızı öğrenin.
-type: docs
 weight: 11
 url: /tr/net/document-comparison/generate-page-previews-source-document/
 ---

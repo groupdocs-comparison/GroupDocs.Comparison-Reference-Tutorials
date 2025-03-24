@@ -3,7 +3,6 @@ title: 結果のドキュメントのページプレビューを生成
 linktitle: 結果のドキュメントのページプレビューを生成
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してドキュメント プレビューを生成する方法を学びます。文書を効率的かつ正確に比較します。
-type: docs
 weight: 10
 url: /ja/net/document-comparison/generate-page-previews-resultant-document/
 ---

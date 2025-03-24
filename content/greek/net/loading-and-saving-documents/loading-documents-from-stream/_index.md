@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφων από τη ροή στη σύγκρισ�
 linktitle: Φόρτωση εγγράφων από τη ροή στη σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να συγκρίνετε εύκολα έγγραφα σε εφαρμογές .NET χρησιμοποιώντας το GroupDocs Comparison, μια ισχυρή βιβλιοθήκη .NET.
-type: docs
 weight: 11
 url: /el/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

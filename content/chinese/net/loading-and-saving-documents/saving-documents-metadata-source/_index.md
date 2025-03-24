@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs Comparison 中保存文档元数据源
 linktitle: 在 .NET 的 GroupDocs Comparison 中保存文档元数据源
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 保存文档元数据源。按照我们的分步指南在 .NET 中进行无缝文档比较。
-type: docs
 weight: 14
 url: /zh/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

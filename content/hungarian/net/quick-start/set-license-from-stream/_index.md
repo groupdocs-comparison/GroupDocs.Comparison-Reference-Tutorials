@@ -3,7 +3,6 @@ title: Licenc beállítása a Streamből – GroupDocs-összehasonlítás a .NET
 linktitle: Licenc beállítása a Streamből – GroupDocs-összehasonlítás a .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan állíthat be hatékonyan licenceket a GroupDocs.Comparison for .NET használatával. Ezzel az oktatóanyaggal biztosíthatja a dokumentumok pontosságát, és időt takaríthat meg.
-type: docs
 weight: 11
 url: /hu/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy rendelkezik
 - C# és .NET keretrendszer alapismeretei.
 - A Visual Studio telepítve van a rendszerére.
 -  A GroupDocs.Comparison for .NET könyvtár telepítve. Letöltheti[itt](https://releases.groupdocs.com/comparison/net/).
--  Hozzáférés a GroupDocs.Comparison .NET dokumentációhoz[itt](https://reference.groupdocs.com/comparison/net/).
+-  Hozzáférés a GroupDocs.Comparison .NET dokumentációhoz[itt](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Névterek importálása
 A GroupDocs.Comparison for .NET használatának megkezdéséhez importálnia kell a szükséges névtereket a projektbe. A következőképpen teheti meg:
@@ -67,4 +66,4 @@ Igen, kérhet ingyenes próbaverziót a GroupDocs webhelyről, hogy vásárlás 
 ### Mi a teendő, ha engedélyezési problémákba ütközöm?
  Ha bármilyen licencelési problémába ütközik, tekintse meg a licenceléssel kapcsolatos GYIK-et[itt](https://purchase.groupdocs.com/faqs/licensing) vagy lépjen kapcsolatba a GroupDocs ügyfélszolgálatával.
 ### Hol találok további oktatóanyagokat és forrásokat a GroupDocs.Comparison for .NET számára?
- A GroupDocs webhelyén kiterjedt dokumentációt és oktatóanyagokat találhat[itt](https://reference.groupdocs.com/comparison/net/).
+ A GroupDocs webhelyén kiterjedt dokumentációt és oktatóanyagokat találhat[itt](https://tutorials.groupdocs.com/comparison/net/).

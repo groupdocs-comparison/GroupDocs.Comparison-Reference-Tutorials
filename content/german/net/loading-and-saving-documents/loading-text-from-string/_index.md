@@ -3,7 +3,6 @@ title: Laden von Text aus einer Zeichenfolge im GroupDocs-Vergleich für .NET
 linktitle: Laden von Text aus einer Zeichenfolge im GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Vergleichen Sie mühelos Text in .NET-Anwendungen mithilfe der GroupDocs.Comparison-Bibliothek. Steigern Sie Effizienz und Genauigkeit durch nahtlose Integration.
-type: docs
 weight: 12
 url: /de/net/loading-and-saving-documents/loading-text-from-string/
 ---

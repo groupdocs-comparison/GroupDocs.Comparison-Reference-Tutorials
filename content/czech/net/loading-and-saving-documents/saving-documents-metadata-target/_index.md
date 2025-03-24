@@ -3,7 +3,6 @@ title: Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
 linktitle: Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak uložit cíl metadat dokumentů pomocí GroupDocs Comparison for .NET. Snadné kroky pro efektivní porovnání dokumentů ve vašich aplikacích .NET.
-type: docs
 weight: 15
 url: /cs/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

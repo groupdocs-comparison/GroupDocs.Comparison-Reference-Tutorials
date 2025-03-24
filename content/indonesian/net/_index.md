@@ -1,7 +1,6 @@
 ---
 title: Tutorial dan Contoh GroupDocs.Perbandingan untuk .NET
 linktitle: GroupDocs.Perbandingan untuk Tutorial .NET
-type: docs
 weight: 10
 url: /id/net/
 description: Temukan tutorial komprehensif untuk GroupDocs.Perbandingan untuk .NET, memfasilitasi perbandingan, pengelolaan, dan integrasi dokumen dan folder yang efisien dengan mudah.

@@ -3,7 +3,6 @@ title: Generate Page Previews for Target Document
 linktitle: Generate Page Previews for Target Document
 second_title: GroupDocs.Comparison .NET API
 description: Generate page previews for target documents efficiently using GroupDocs.Comparison for .NET. Follow our step-by-step guide for seamless document comparison.
-type: docs
 weight: 12
 url: /net/document-comparison/generate-page-previews-target-document/
 ---

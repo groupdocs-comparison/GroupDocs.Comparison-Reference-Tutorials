@@ -3,7 +3,6 @@ title: Wyczyść zasoby po podglądach stron
 linktitle: Wyczyść zasoby po podglądach stron
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak krok po kroku porównywać dokumenty za pomocą GroupDocs.Comparison for .NET. Ulepsz swoje aplikacje .NET dzięki wydajnemu zarządzaniu dokumentami.
-type: docs
 weight: 13
 url: /pl/net/document-comparison/clean-resources-after-page-previews/
 ---

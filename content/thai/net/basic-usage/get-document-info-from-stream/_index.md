@@ -3,7 +3,6 @@ title: รับข้อมูลเอกสารจากสตรีม - G
 linktitle: รับข้อมูลเอกสารจากสตรีม - GroupDocs.Comparison สำหรับ .NET
 second_title: GroupDocs.Comparison .NET API
 description: เรียนรู้วิธีเปรียบเทียบเอกสารใน .NET อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Comparison ซึ่งปรับปรุงเวิร์กโฟลว์การประมวลผลเอกสารของคุณได้อย่างราบรื่น
-type: docs
 weight: 14
 url: /th/net/basic-usage/get-document-info-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Compare células do caminho - GroupDocs.Comparison for .NET
 linktitle: Compare células do caminho - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como comparar células de um caminho usando GroupDocs.Comparison for .NET. Identifique com eficiência diferenças entre documentos.
-type: docs
 weight: 10
 url: /pt/net/basic-usage/compare-cells-from-path/
 ---

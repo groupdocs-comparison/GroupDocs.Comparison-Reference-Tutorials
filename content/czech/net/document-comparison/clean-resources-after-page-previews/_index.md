@@ -3,7 +3,6 @@ title: Vyčistit zdroje po náhledech stránek
 linktitle: Vyčistit zdroje po náhledech stránek
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak porovnávat dokumenty pomocí GroupDocs.Comparison for .NET krok za krokem. Vylepšete své aplikace .NET efektivní správou dokumentů.
-type: docs
 weight: 13
 url: /cs/net/document-comparison/clean-resources-after-page-previews/
 ---

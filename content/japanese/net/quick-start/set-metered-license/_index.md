@@ -3,7 +3,6 @@ title: 従量制ライセンスの設定 - .NET の GroupDocs の比較
 linktitle: 従量制ライセンスの設定 - .NET の GroupDocs の比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を .NET プロジェクトにシームレスに統合して、効率的なドキュメント比較ワークフローを実現します。
-type: docs
 weight: 12
 url: /ja/net/quick-start/set-metered-license/
 ---

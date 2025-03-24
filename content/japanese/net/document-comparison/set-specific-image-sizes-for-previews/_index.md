@@ -3,7 +3,6 @@ title: プレビュー用に特定の画像サイズを設定する
 linktitle: プレビュー用に特定の画像サイズを設定する
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用すると、ドキュメント比較機能を .NET アプリケーションに簡単に統合できます。
-type: docs
 weight: 14
 url: /ja/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

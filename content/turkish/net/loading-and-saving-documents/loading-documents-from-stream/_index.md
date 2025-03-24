@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında Akıştan Belge Yükleme
 linktitle: .NET için GroupDocs Karşılaştırmasında Akıştan Belge Yükleme
 second_title: GroupDocs.Comparison .NET API'si
 description: Güçlü bir .NET kitaplığı olan GroupDocs Comparison'ı kullanarak .NET uygulamalarındaki belgeleri zahmetsizce nasıl karşılaştıracağınızı öğrenin.
-type: docs
 weight: 11
 url: /tr/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Сравнение ячеек по пути — GroupDocs.Comparison дл
 linktitle: Сравнение ячеек по пути — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как сравнивать ячейки пути с помощью GroupDocs.Comparison для .NET. Эффективно выявляйте различия между документами.
-type: docs
 weight: 10
 url: /ru/net/basic-usage/compare-cells-from-path/
 ---

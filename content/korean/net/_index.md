@@ -1,7 +1,6 @@
 ---
 title: .NET용 GroupDocs.Comparison의 자습서 및 예
 linktitle: .NET 자습서용 GroupDocs.Comparison
-type: docs
 weight: 10
 url: /ko/net/
 description: 효율적인 문서 및 폴더 비교, 관리 및 통합을 손쉽게 수행할 수 있는 .NET용 GroupDocs.Comparison에 대한 포괄적인 자습서를 살펴보세요.

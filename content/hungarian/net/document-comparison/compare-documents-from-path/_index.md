@@ -3,7 +3,6 @@ title: Hasonlítsa össze a dokumentumokat az elérési útból - GroupDocs.Comp
 linktitle: Hasonlítsa össze a dokumentumokat az elérési útból - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Könnyedén összehasonlíthatja a különböző formátumú dokumentumokat a GroupDocs.Comparison for .NET segítségével. Takarítson meg időt és biztosítsa a jogi, tudományos és üzleti feladatok pontosságát.
-type: docs
 weight: 15
 url: /hu/net/document-comparison/compare-documents-from-path/
 ---

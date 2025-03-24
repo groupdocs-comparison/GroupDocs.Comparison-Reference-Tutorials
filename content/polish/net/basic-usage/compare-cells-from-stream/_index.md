@@ -3,7 +3,6 @@ title: Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .
 linktitle: Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Bez wysiłku porównuj dokumenty w języku C# za pomocą GroupDocs.Comparison dla .NET. Z łatwością usprawnij zadania związane z przetwarzaniem dokumentów.
-type: docs
 weight: 11
 url: /pl/net/basic-usage/compare-cells-from-stream/
 ---

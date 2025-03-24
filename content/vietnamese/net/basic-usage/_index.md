@@ -3,7 +3,6 @@ title: Cách sử dụng cơ bản
 linktitle: Cách sử dụng cơ bản
 second_title: API GroupDocs.Comparison .NET
 description: So sánh các tài liệu trong .NET bằng GroupDocs.Comparison. Tìm hiểu các hướng dẫn sử dụng cơ bản bao gồm so sánh ô, trích xuất thông tin tài liệu và các định dạng được hỗ trợ.
-type: docs
 weight: 24
 url: /vi/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Trong lĩnh vực phát triển .NET, GroupDocs.Comparison nổi lên như một
 ## Nhận các định dạng được hỗ trợ
 Đảm bảo tính chính xác và nhất quán của tài liệu là điều bắt buộc trong lĩnh vực phát triển .NET. GroupDocs.Comparison for .NET cho phép bạn đạt được điều đó. Khám phá hàng loạt định dạng được hỗ trợ và tích hợp liền mạch công cụ mạnh mẽ này vào các ứng dụng .NET của bạn. Tìm hiểu thêm về các định dạng được hỗ trợ[đây](./get-supported-formats/).
 
- Bắt đầu hành trình làm chủ GroupDocs.Comparison cho .NET với các hướng dẫn sử dụng cơ bản này. So sánh liền mạch các ô, trích xuất thông tin tài liệu và đảm bảo độ chính xác của tài liệu, nâng cao nỗ lực phát triển .NET của bạn. Sẵn sàng để đi sâu vào? Đọc thêm[đây](https://reference.groupdocs.com/comparison/net).
+ Bắt đầu hành trình làm chủ GroupDocs.Comparison cho .NET với các hướng dẫn sử dụng cơ bản này. So sánh liền mạch các ô, trích xuất thông tin tài liệu và đảm bảo độ chính xác của tài liệu, nâng cao nỗ lực phát triển .NET của bạn. Sẵn sàng để đi sâu vào? Đọc thêm[đây](https://tutorials.groupdocs.com/comparison/net).
 ## Hướng dẫn sử dụng cơ bản
 ### [So sánh các ô từ đường dẫn - GroupDocs.Comparison for .NET](./compare-cells-from-path/)
 Tìm hiểu cách so sánh các ô từ một đường dẫn bằng GroupDocs.Comparison cho .NET. Xác định hiệu quả sự khác biệt giữa các tài liệu.

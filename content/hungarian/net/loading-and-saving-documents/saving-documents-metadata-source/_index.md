@@ -3,7 +3,6 @@ title: Dokumentumok metaadatforrásának mentése a GroupDocs-összehasonlítás
 linktitle: Dokumentumok metaadatforrásának mentése a GroupDocs-összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan mentheti a dokumentum metaadatforrását a GroupDocs Comparison for .NET segítségével. Kövesse lépésenkénti útmutatónkat a dokumentumok zökkenőmentes összehasonlításához a .NET-ben.
-type: docs
 weight: 14
 url: /hu/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

@@ -3,7 +3,6 @@ title: Gemeten licentie instellen - GroupDocs-vergelijking voor .NET
 linktitle: Gemeten licentie instellen - GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Integreer GroupDocs Comparison for .NET naadloos in uw .NET-projecten voor efficiënte documentvergelijkingsworkflows.
-type: docs
 weight: 12
 url: /nl/net/quick-start/set-metered-license/
 ---

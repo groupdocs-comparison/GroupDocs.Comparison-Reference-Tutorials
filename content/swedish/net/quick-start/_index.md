@@ -3,7 +3,6 @@ title: Snabbstart
 linktitle: Snabbstart
 second_title: GroupDocs.Comparison .NET API
 description: Integrera GroupDocs Comparison för .NET enkelt i dina projekt. Lär dig effektiva licensinställningsmetoder för exakta arbetsflöden för dokumentjämförelse.
-type: docs
 weight: 25
 url: /sv/net/quick-start/
 ---

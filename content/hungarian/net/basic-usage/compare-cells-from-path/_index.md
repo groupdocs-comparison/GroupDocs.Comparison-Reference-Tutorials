@@ -3,7 +3,6 @@ title: Cellák összehasonlítása az elérési útból – GroupDocs.Comparison
 linktitle: Cellák összehasonlítása az elérési útból – GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan hasonlíthatja össze egy útvonal celláit a GroupDocs.Comparison for .NET használatával. Hatékonyan azonosítja a dokumentumok közötti különbségeket.
-type: docs
 weight: 10
 url: /hu/net/basic-usage/compare-cells-from-path/
 ---

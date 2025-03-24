@@ -3,7 +3,6 @@ title: Bandingkan Dokumen yang Dilindungi dari Path - GroupDocs.Comparison untuk
 linktitle: Bandingkan Dokumen yang Dilindungi dari Path - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen yang dilindungi dengan mudah di .NET menggunakan GroupDocs.Comparison untuk integrasi yang lancar. Tingkatkan alur kerja manajemen dokumen Anda.
-type: docs
 weight: 17
 url: /id/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Tentu saja, GroupDocs.Comparison untuk .NET menyediakan opsi luas untuk menyesua
 ### Bisakah saya mencoba GroupDocs.Comparison untuk .NET sebelum membeli?
  Ya, Anda dapat menjelajahi fitur GroupDocs.Comparison untuk .NET dengan mengakses uji coba gratis yang tersedia[Di Sini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi dan dukungan untuk GroupDocs.Comparison untuk .NET?
- Anda dapat merujuk ke dokumentasi komprehensif[Di Sini](https://reference.groupdocs.com/comparison/net/) dan mencari dukungan dari forum komunitas[Di Sini](https://forum.groupdocs.com/c/comparison/12).
+ Anda dapat merujuk ke dokumentasi komprehensif[Di Sini](https://tutorials.groupdocs.com/comparison/net/) dan mencari dukungan dari forum komunitas[Di Sini](https://forum.groupdocs.com/c/comparison/12).
 ### Apakah saya memerlukan lisensi sementara untuk menggunakan GroupDocs.Comparison untuk .NET?
  Meskipun lisensi sementara tersedia untuk tujuan pengujian, Anda dapat memperoleh lisensi penuh dengan mengunjungi[Di Sini](https://purchase.groupdocs.com/buy).

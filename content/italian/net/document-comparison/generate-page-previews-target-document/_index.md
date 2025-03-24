@@ -3,7 +3,6 @@ title: Genera anteprime di pagina per il documento di destinazione
 linktitle: Genera anteprime di pagina per il documento di destinazione
 second_title: API GroupDocs.Comparison .NET
 description: Genera anteprime di pagina per i documenti di destinazione in modo efficiente utilizzando GroupDocs.Comparison per .NET. Segui la nostra guida passo passo per un confronto diretto dei documenti.
-type: docs
 weight: 12
 url: /it/net/document-comparison/generate-page-previews-target-document/
 ---

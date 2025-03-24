@@ -3,7 +3,6 @@ title: 지원되는 형식 가져오기 - .NET용 GroupDocs.Comparison
 linktitle: 지원되는 형식 가져오기 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 문서의 정확성과 일관성을 향상하세요. 이 강력한 도구를 .NET 애플리케이션에 원활하게 통합하세요.
-type: docs
 weight: 15
 url: /ko/net/basic-usage/get-supported-formats/
 ---

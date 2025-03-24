@@ -3,7 +3,6 @@ title: ページプレビュー後のリソースのクリーンアップ
 linktitle: ページプレビュー後のリソースのクリーンアップ
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してドキュメントを比較する方法を段階的に学習します。効率的なドキュメント管理により .NET アプリケーションを強化します。
-type: docs
 weight: 13
 url: /ja/net/document-comparison/clean-resources-after-page-previews/
 ---

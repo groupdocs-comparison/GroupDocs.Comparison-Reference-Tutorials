@@ -3,7 +3,6 @@ title: Загрузка текста из строки в сравнении Gro
 linktitle: Загрузка текста из строки в сравнении GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: С легкостью сравнивайте текст в приложениях .NET с помощью библиотеки GroupDocs.Comparison. Повысьте эффективность и точность благодаря бесшовной интеграции.
-type: docs
 weight: 12
 url: /ru/net/loading-and-saving-documents/loading-text-from-string/
 ---

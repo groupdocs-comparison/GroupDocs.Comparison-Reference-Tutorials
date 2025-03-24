@@ -1,7 +1,6 @@
 ---
 title: Hướng dẫn và ví dụ về GroupDocs.Comparison cho .NET
 linktitle: GroupDocs.Comparison cho các hướng dẫn .NET
-type: docs
 weight: 10
 url: /vi/net/
 description: Khám phá các hướng dẫn toàn diện về GroupDocs.Comparison dành cho .NET, tạo điều kiện thuận lợi cho việc so sánh, quản lý và tích hợp tài liệu và thư mục hiệu quả một cách dễ dàng.

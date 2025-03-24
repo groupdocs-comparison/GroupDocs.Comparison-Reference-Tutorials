@@ -3,7 +3,6 @@ title: Memuat dan Menyimpan Dokumen
 linktitle: Memuat dan Menyimpan Dokumen
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen di .NET dengan mudah menggunakan GroupDocs.Comparison untuk .NET. Pelajari memuat, menyimpan, dan memanfaatkan opsi pemuatan untuk manajemen dokumen yang efisien.
-type: docs
 weight: 22
 url: /id/net/loading-and-saving-documents/
 ---

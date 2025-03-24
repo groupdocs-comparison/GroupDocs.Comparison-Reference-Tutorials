@@ -3,7 +3,6 @@ title: Establecer tamaños de imagen específicos para vistas previas
 linktitle: Establecer tamaños de imagen específicos para vistas previas
 second_title: API GroupDocs.Comparison .NET
 description: Integre sin esfuerzo la funcionalidad de comparación de documentos en sus aplicaciones .NET con GroupDocs.Comparison para .NET.
-type: docs
 weight: 14
 url: /es/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

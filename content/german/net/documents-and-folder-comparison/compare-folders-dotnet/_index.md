@@ -3,7 +3,6 @@ title: Vergleichen Sie Ordner im GroupDocs-Vergleich für .NET
 linktitle: Vergleichen Sie Ordner im GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Vergleichen Sie Ordner mühelos mit dem GroupDocs-Vergleich für .NET. Folgen Sie unserer Schritt-für-Schritt-Anleitung für einen effizienten Ordnervergleich. Verbessern Sie Ihre .NET-Anwendungen.
-type: docs
 weight: 12
 url: /de/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Um die in diesem Tutorial bereitgestellten Beispiele zu verstehen und umzusetzen
 ### 3. Integrierte Entwicklungsumgebung (IDE)
 Sie benötigen eine IDE wie Visual Studio, um die Codebeispiele zu schreiben und auszuführen.
 ### 4. Zugriff auf die GroupDocs-Dokumentation
-Halten Sie die GroupDocs-Vergleichsdokumentation für .NET während des gesamten Tutorials als Referenz bereit. Sie können auf die Dokumentation zugreifen[Hier](https://reference.groupdocs.com/comparison/net/).
+Halten Sie die GroupDocs-Vergleichsdokumentation für .NET während des gesamten Tutorials als Referenz bereit. Sie können auf die Dokumentation zugreifen[Hier](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Namespaces importieren
 Zunächst müssen Sie die erforderlichen Namespaces in Ihren C#-Code importieren. Dadurch können Sie die von GroupDocs Compare für .NET bereitgestellten Klassen und Methoden verwenden.

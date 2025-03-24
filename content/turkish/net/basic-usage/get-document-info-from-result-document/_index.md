@@ -3,7 +3,6 @@ title: Sonuç Belgesinden Belge Bilgisi Alma - GroupDocs.Comparison for .NET
 linktitle: Sonuç Belgesinden Belge Bilgisi Alma - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak sonuç belgesinden belge bilgilerini nasıl alacağınızı öğrenin. .NET geliştiricileri için açıklanan kolay adımlar.
-type: docs
 weight: 12
 url: /tr/net/basic-usage/get-document-info-from-result-document/
 ---

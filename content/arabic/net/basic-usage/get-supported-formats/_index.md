@@ -3,7 +3,6 @@ title: الحصول على التنسيقات المدعومة - GroupDocs.Compa
 linktitle: الحصول على التنسيقات المدعومة - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: قم بتحسين دقة المستندات واتساقها باستخدام GroupDocs.Comparison for .NET. قم بدمج هذه الأداة القوية بسلاسة في تطبيقات .NET الخاصة بك.
-type: docs
 weight: 15
 url: /ar/net/basic-usage/get-supported-formats/
 ---

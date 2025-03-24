@@ -3,7 +3,6 @@ title: Loading Text from String in GroupDocs Comparison for .NET
 linktitle: Loading Text from String in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Effortlessly compare text within .NET applications using GroupDocs.Comparison library. Enhance efficiency and accuracy with seamless integration.
-type: docs
 weight: 12
 url: /net/loading-and-saving-documents/loading-text-from-string/
 ---

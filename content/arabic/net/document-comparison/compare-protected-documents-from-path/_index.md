@@ -3,7 +3,6 @@ title: مقارنة المستندات المحمية من المسار - GroupD
 linktitle: مقارنة المستندات المحمية من المسار - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: يمكنك بسهولة مقارنة المستندات المحمية في .NET باستخدام GroupDocs.Comparison لتحقيق التكامل السلس. تعزيز سير عمل إدارة المستندات الخاصة بك.
-type: docs
 weight: 17
 url: /ar/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directo
 ### هل يمكنني تجربة GroupDocs.Comparison لـ .NET قبل الشراء؟
  نعم، يمكنك استكشاف ميزات GroupDocs.Comparison for .NET عن طريق الوصول إلى الإصدار التجريبي المجاني المتاح[هنا](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على الوثائق والدعم الخاص بـ GroupDocs.Comparison لـ .NET؟
- يمكنك الرجوع إلى الوثائق الشاملة[هنا](https://reference.groupdocs.com/comparison/net/) وطلب الدعم من منتديات المجتمع[هنا](https://forum.groupdocs.com/c/comparison/12).
+ يمكنك الرجوع إلى الوثائق الشاملة[هنا](https://tutorials.groupdocs.com/comparison/net/) وطلب الدعم من منتديات المجتمع[هنا](https://forum.groupdocs.com/c/comparison/12).
 ### هل أحتاج إلى ترخيص مؤقت لاستخدام GroupDocs.Comparison لـ .NET؟
  في حين أن الترخيص المؤقت متاح لأغراض الاختبار، يمكنك الحصول على ترخيص كامل عن طريق زيارة[هنا](https://purchase.groupdocs.com/buy).

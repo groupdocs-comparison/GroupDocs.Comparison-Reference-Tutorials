@@ -3,7 +3,6 @@ title: รับรูปแบบที่รองรับ - GroupDocs.Compar
 linktitle: รับรูปแบบที่รองรับ - GroupDocs.Comparison สำหรับ .NET
 second_title: GroupDocs.Comparison .NET API
 description: ปรับปรุงความถูกต้องและความสม่ำเสมอของเอกสารด้วย GroupDocs.Comparison สำหรับ .NET ผสานรวมเครื่องมืออันทรงพลังนี้เข้ากับแอปพลิเคชัน .NET ของคุณได้อย่างราบรื่น
-type: docs
 weight: 15
 url: /th/net/basic-usage/get-supported-formats/
 ---

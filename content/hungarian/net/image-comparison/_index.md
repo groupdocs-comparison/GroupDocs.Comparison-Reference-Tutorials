@@ -3,7 +3,6 @@ title: Kép összehasonlítása
 linktitle: Kép összehasonlítása
 second_title: GroupDocs.Comparison .NET API
 description: Hatékonyan hasonlítsa össze a képeket a .NET-ben a GroupDocs.Comparison könyvtár segítségével. Lépésről lépésre oktatóanyagok az útvonalból vagy adatfolyamból történő zökkenőmentes integrációhoz.
-type: docs
 weight: 23
 url: /hu/net/image-comparison/
 ---

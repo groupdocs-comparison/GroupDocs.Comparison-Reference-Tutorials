@@ -3,7 +3,6 @@ title: Setting Password for Resultant Document in GroupDocs Comparison for .NET
 linktitle: Setting Password for Resultant Document in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to set a password for resultant documents in GroupDocs Comparison for .NET. Enhance security and protect your compared files.
-type: docs
 weight: 17
 url: /net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ You can seek assistance from the GroupDocs Comparison community forum [here](htt
 ### Do I need a license to use GroupDocs Comparison for .NET?
 Yes, you can purchase a license from [here](https://purchase.groupdocs.com/buy) or obtain a temporary license [here](https://purchase.groupdocs.com/temporary-license/).
 ### Is there any documentation available for GroupDocs Comparison for .NET?
-Yes, you can access the documentation [here](https://reference.groupdocs.com/comparison/net/).
+Yes, you can access the documentation [here](https://tutorials.groupdocs.com/comparison/net/).

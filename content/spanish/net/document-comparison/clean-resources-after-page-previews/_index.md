@@ -3,7 +3,6 @@ title: Limpiar recursos después de las vistas previas de la página
 linktitle: Limpiar recursos después de las vistas previas de la página
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda a comparar documentos usando GroupDocs.Comparison para .NET paso a paso. Mejore sus aplicaciones .NET con una gestión de documentos eficiente.
-type: docs
 weight: 13
 url: /es/net/document-comparison/clean-resources-after-page-previews/
 ---

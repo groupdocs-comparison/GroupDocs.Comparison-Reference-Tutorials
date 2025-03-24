@@ -3,7 +3,6 @@ title: مقارنة المستندات المحمية من الدفق - GroupDoc
 linktitle: مقارنة المستندات المحمية من الدفق - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة المستندات المحمية من التدفقات باستخدام GroupDocs.Comparison لـ .NET. قم بتبسيط عملية مقارنة المستندات الخاصة بك دون عناء.
-type: docs
 weight: 18
 url: /ar/net/document-comparison/compare-protected-documents-from-stream/
 ---

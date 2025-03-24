@@ -3,7 +3,6 @@ title: パスからのイメージの比較 - GroupDocs.Comparison for .NET
 linktitle: パスからのイメージの比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison ライブラリを使用して .NET で画像を効率的に比較する方法を学びます。シームレスな統合については、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 10
 url: /ja/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /ja/net/image-comparison/compare-images-from-path/
 ## 前提条件
 GroupDocs.Comparison for .NET の利用の複雑な説明に入る前に、次の前提条件が満たされていることを確認してください。
 ### 1. GroupDocs.Comparison for .NET をインストールする
-からライブラリをダウンロードします[ここ](https://releases.groupdocs.com/comparison/net/)ドキュメントに記載されているインストール手順に従ってください。[ここ](https://reference.groupdocs.com/comparison/net/).
+からライブラリをダウンロードします[ここ](https://releases.groupdocs.com/comparison/net/)ドキュメントに記載されているインストール手順に従ってください。[ここ](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. ライセンスを取得する
 GroupDocs.Comparison for .NET の可能性を最大限に引き出すには、次からライセンスを取得します。[ここ](https://purchase.groupdocs.com/buy)または、利用可能な一時ライセンスを利用します[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### 3. C# プログラミングに関する知識

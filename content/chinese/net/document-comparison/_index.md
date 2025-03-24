@@ -3,7 +3,6 @@ title: 文档比较
 linktitle: 文档比较
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 有效比较 .NET 中的文档。简化文档管理、增强工作流程并确保准确性。了解更多！
-type: docs
 weight: 21
 url: /zh/net/document-comparison/
 ---

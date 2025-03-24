@@ -3,7 +3,6 @@ title: 결과 문서에서 문서 정보 가져오기 - .NET용 GroupDocs.Compar
 linktitle: 결과 문서에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 결과 문서에서 문서 정보를 검색하는 방법을 알아보세요. .NET 개발자를 위해 설명된 쉬운 단계입니다.
-type: docs
 weight: 12
 url: /ko/net/basic-usage/get-document-info-from-result-document/
 ---

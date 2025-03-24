@@ -3,7 +3,6 @@ title: GroupDocs Comparison for .NET での複数のドキュメントの比較
 linktitle: GroupDocs Comparison for .NET での複数のドキュメントの比較
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET を使用して複数のドキュメントを効率的に比較する方法を学びます。シームレスな統合については、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 13
 url: /ja/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

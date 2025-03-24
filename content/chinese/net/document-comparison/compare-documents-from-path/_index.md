@@ -3,7 +3,6 @@ title: 比较路径中的文档 - GroupDocs.Comparison for .NET
 linktitle: 比较路径中的文档 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 轻松比较各种格式的文档。节省时间并确保法律、学术和业务任务的准确性。
-type: docs
 weight: 15
 url: /zh/net/document-comparison/compare-documents-from-path/
 ---

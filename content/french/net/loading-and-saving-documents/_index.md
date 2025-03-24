@@ -3,7 +3,6 @@ title: Chargement et enregistrement de documents
 linktitle: Chargement et enregistrement de documents
 second_title: API GroupDocs.Comparison .NET
 description: Comparez sans effort des documents dans .NET à l’aide de GroupDocs.Comparison for .NET. Apprenez à charger, enregistrer et utiliser les options de chargement pour une gestion efficace des documents.
-type: docs
 weight: 22
 url: /fr/net/loading-and-saving-documents/
 ---

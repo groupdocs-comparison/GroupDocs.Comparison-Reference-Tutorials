@@ -3,7 +3,6 @@ title: Získejte podporované formáty – GroupDocs.Comparison pro .NET
 linktitle: Získejte podporované formáty – GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Vylepšete přesnost a konzistenci dokumentů pomocí GroupDocs.Comparison pro .NET. Bezproblémově integrujte tento výkonný nástroj do svých aplikací .NET.
-type: docs
 weight: 15
 url: /cs/net/basic-usage/get-supported-formats/
 ---

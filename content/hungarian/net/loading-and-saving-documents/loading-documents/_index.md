@@ -3,7 +3,6 @@ title: Dokumentumok betöltése a GroupDocs-összehasonlításban .NET-hez
 linktitle: Dokumentumok betöltése a GroupDocs-összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan lehet hatékonyan összehasonlítani dokumentumokat a GroupDocs.Comparison for .NET használatával. Egyszerűsítse dokumentumkezelési folyamatait.
-type: docs
 weight: 10
 url: /hu/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Igen, a GroupDocs.Comparison for .NET támogatja a különböző formátumú dok
 ### Elérhető ingyenes próbaverzió a GroupDocs.Comparison for .NET számára?
  Igen, igénybe veheti a GroupDocs.Comparison ingyenes próbaverzióját .NET-hez, ha ellátogat a[weboldal](https://releases.groupdocs.com/).
 ### Hol találom a GroupDocs.Comparison for .NET dokumentációját?
- Az alábbi címen elérhető átfogó dokumentációt tekintheti meg[GroupDocs.Comparison for .NET Documentation](https://reference.groupdocs.com/comparison/net/).
+ Az alábbi címen elérhető átfogó dokumentációt tekintheti meg[GroupDocs.Comparison for .NET Documentation](https://tutorials.groupdocs.com/comparison/net/).
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Comparison for .NET számára?
  Ideiglenes engedélyt a következő címen szerezhet be[ideiglenes licenc oldal](https://purchase.groupdocs.com/temporary-license/) a GroupDocs honlapján.
 ### Hol kérhetek támogatást a GroupDocs.Comparison for .NET számára?

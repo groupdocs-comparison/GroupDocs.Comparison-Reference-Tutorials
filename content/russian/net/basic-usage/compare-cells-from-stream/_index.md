@@ -3,7 +3,6 @@ title: Сравнение ячеек из потока — GroupDocs.Comparison 
 linktitle: Сравнение ячеек из потока — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: С легкостью сравнивайте документы на C# с помощью GroupDocs.Comparison для .NET. С легкостью оптимизируйте задачи по обработке документов.
-type: docs
 weight: 11
 url: /ru/net/basic-usage/compare-cells-from-stream/
 ---

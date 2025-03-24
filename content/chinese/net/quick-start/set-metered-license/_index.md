@@ -3,7 +3,6 @@ title: 设置计量许可证 - .NET 的 GroupDocs 比较
 linktitle: 设置计量许可证 - .NET 的 GroupDocs 比较
 second_title: GroupDocs.Comparison .NET API
 description: 将 GroupDocs Comparison for .NET 无缝集成到您的 .NET 项目中，以实现高效的文档比较工作流程。
-type: docs
 weight: 12
 url: /zh/net/quick-start/set-metered-license/
 ---

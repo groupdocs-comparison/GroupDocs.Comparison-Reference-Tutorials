@@ -3,7 +3,6 @@ title: Enregistrement de la cible des métadonnées des documents dans la compar
 linktitle: Enregistrement de la cible des métadonnées des documents dans la comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment enregistrer la cible des métadonnées des documents à l’aide de GroupDocs Comparison for .NET. Étapes simples pour une comparaison efficace des documents dans vos applications .NET.
-type: docs
 weight: 15
 url: /fr/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

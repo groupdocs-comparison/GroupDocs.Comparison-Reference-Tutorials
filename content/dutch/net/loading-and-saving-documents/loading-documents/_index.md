@@ -3,7 +3,6 @@ title: Documenten laden in GroupDocs-vergelijking voor .NET
 linktitle: Documenten laden in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u documenten efficiënt kunt vergelijken met GroupDocs.Comparison voor .NET. Stroomlijn uw documentbeheerprocessen.
-type: docs
 weight: 10
 url: /nl/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Ja, GroupDocs.Comparison voor .NET ondersteunt het vergelijken van documenten va
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Comparison voor .NET?
  Ja, u kunt profiteren van een gratis proefversie van GroupDocs.Comparison voor .NET door naar de[website](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie vinden voor GroupDocs.Comparison voor .NET?
- U kunt de uitgebreide documentatie raadplegen die beschikbaar is op[GroupDocs.Vergelijking voor .NET-documentatie](https://reference.groupdocs.com/comparison/net/).
+ U kunt de uitgebreide documentatie raadplegen die beschikbaar is op[GroupDocs.Vergelijking voor .NET-documentatie](https://tutorials.groupdocs.com/comparison/net/).
 ### Hoe kan ik een tijdelijke licentie verkrijgen voor GroupDocs.Comparison voor .NET?
  U kunt een tijdelijke licentie verkrijgen door naar de website te gaan[tijdelijke licentiepagina](https://purchase.groupdocs.com/temporary-license/) op de GroupDocs-website.
 ### Waar kan ik ondersteuning zoeken voor GroupDocs.Comparison voor .NET?

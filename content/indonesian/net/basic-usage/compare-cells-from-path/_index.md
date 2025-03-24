@@ -3,7 +3,6 @@ title: Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Comparison untuk .NET. Identifikasi perbedaan antar dokumen secara efisien.
-type: docs
 weight: 10
 url: /id/net/basic-usage/compare-cells-from-path/
 ---

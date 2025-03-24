@@ -3,7 +3,6 @@ title: مقارنة الخلايا من الدفق - GroupDocs.Comparison for .N
 linktitle: مقارنة الخلايا من الدفق - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: يمكنك بسهولة مقارنة المستندات في لغة C# باستخدام GroupDocs.Comparison for .NET. قم بتبسيط مهام معالجة المستندات الخاصة بك بسهولة.
-type: docs
 weight: 11
 url: /ar/net/basic-usage/compare-cells-from-stream/
 ---

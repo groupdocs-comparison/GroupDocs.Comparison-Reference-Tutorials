@@ -3,7 +3,6 @@ title: Documenten laden en opslaan
 linktitle: Documenten laden en opslaan
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk moeiteloos documenten in .NET met GroupDocs.Comparison voor .NET. Leer laden, opslaan en gebruiken van laadopties voor efficiënt documentbeheer.
-type: docs
 weight: 22
 url: /nl/net/loading-and-saving-documents/
 ---

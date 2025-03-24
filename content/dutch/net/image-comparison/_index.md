@@ -3,7 +3,6 @@ title: Beeldvergelijking
 linktitle: Beeldvergelijking
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk afbeeldingen efficiënt in .NET met behulp van de GroupDocs.Comparison-bibliotheek. Stapsgewijze tutorials voor naadloze integratie vanuit pad of stream.
-type: docs
 weight: 23
 url: /nl/net/image-comparison/
 ---

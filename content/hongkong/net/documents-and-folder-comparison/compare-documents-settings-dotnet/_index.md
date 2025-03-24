@@ -3,7 +3,6 @@ title: 比較 .NET 的 GroupDocs 比較中的文件設置
 linktitle: 比較 .NET 的 GroupDocs 比較中的文件設置
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs Comparison 簡化 .NET 應用程式中的文件比較。使用進階功能輕鬆比較文件。
-type: docs
 weight: 11
 url: /zh-hant/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

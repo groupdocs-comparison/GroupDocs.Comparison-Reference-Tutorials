@@ -3,7 +3,6 @@ title: Utilisation de base
 linktitle: Utilisation de base
 second_title: API GroupDocs.Comparison .NET
 description: Comparez des documents dans .NET à l'aide de GroupDocs.Comparison. Découvrez des didacticiels d'utilisation de base couvrant la comparaison de cellules, l'extraction d'informations sur les documents et les formats pris en charge.
-type: docs
 weight: 24
 url: /fr/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Pour naviguer dans le labyrinthe de la gestion documentaire, il est essentiel de
 ## Obtenez les formats pris en charge
 Garantir l’exactitude et la cohérence des documents est impératif dans le domaine du développement .NET. GroupDocs.Comparison for .NET vous permet d’y parvenir. Découvrez la gamme de formats pris en charge et intégrez de manière transparente cet outil puissant dans vos applications .NET. En savoir plus sur les formats pris en charge[ici](./get-supported-formats/).
 
- Embarquez pour maîtriser GroupDocs.Comparison pour .NET avec ces didacticiels d'utilisation de base. Comparez en toute transparence les cellules, extrayez les informations du document et garantissez l'exactitude des documents, améliorant ainsi vos efforts de développement .NET. Prêt à plonger ? En savoir plus[ici](https://reference.groupdocs.com/comparison/net).
+ Embarquez pour maîtriser GroupDocs.Comparison pour .NET avec ces didacticiels d'utilisation de base. Comparez en toute transparence les cellules, extrayez les informations du document et garantissez l'exactitude des documents, améliorant ainsi vos efforts de développement .NET. Prêt à plonger ? En savoir plus[ici](https://tutorials.groupdocs.com/comparison/net).
 ## Tutoriels d'utilisation de base
 ### [Comparer les cellules du chemin - GroupDocs.Comparison pour .NET](./compare-cells-from-path/)
 Découvrez comment comparer les cellules d’un chemin à l’aide de GroupDocs.Comparison for .NET. Identifiez efficacement les différences entre les documents.

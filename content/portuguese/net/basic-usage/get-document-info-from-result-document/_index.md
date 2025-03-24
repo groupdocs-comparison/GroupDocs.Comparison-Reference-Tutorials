@@ -3,7 +3,6 @@ title: Obtenha informações do documento do documento de resultado - GroupDocs.
 linktitle: Obtenha informações do documento do documento de resultado - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como recuperar informações do documento do documento de resultado usando GroupDocs.Comparison for .NET. Etapas fáceis explicadas para desenvolvedores .NET.
-type: docs
 weight: 12
 url: /pt/net/basic-usage/get-document-info-from-result-document/
 ---

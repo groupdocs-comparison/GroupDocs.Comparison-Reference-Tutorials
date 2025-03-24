@@ -3,7 +3,6 @@ title: Zellen aus Pfad vergleichen – GroupDocs.Comparison für .NET
 linktitle: Zellen aus Pfad vergleichen – GroupDocs.Comparison für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie Zellen aus einem Pfad mit GroupDocs.Comparison für .NET vergleichen. Identifizieren Sie effizient Unterschiede zwischen Dokumenten.
-type: docs
 weight: 10
 url: /de/net/basic-usage/compare-cells-from-path/
 ---

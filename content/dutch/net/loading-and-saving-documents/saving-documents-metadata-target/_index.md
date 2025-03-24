@@ -3,7 +3,6 @@ title: Metagegevensdoel voor documenten opslaan in GroupDocs-vergelijking voor .
 linktitle: Metagegevensdoel voor documenten opslaan in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u metagegevens van documenten kunt opslaan met GroupDocs Comparison voor .NET. Eenvoudige stappen voor efficiënte documentvergelijking in uw .NET-toepassingen.
-type: docs
 weight: 15
 url: /nl/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

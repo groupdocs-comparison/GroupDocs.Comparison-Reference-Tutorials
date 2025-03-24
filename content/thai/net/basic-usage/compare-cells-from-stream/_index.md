@@ -3,7 +3,6 @@ title: เปรียบเทียบเซลล์จากสตรีม 
 linktitle: เปรียบเทียบเซลล์จากสตรีม - GroupDocs.Comparison สำหรับ .NET
 second_title: GroupDocs.Comparison .NET API
 description: เปรียบเทียบเอกสารใน C# ได้อย่างง่ายดายโดยใช้ GroupDocs.Comparison สำหรับ .NET ปรับปรุงงานการประมวลผลเอกสารของคุณได้อย่างง่ายดาย
-type: docs
 weight: 11
 url: /th/net/basic-usage/compare-cells-from-stream/
 ---

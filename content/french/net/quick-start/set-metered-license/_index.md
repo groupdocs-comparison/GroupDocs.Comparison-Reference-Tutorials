@@ -3,7 +3,6 @@ title: Définir une licence limitée - Comparaison GroupDocs pour .NET
 linktitle: Définir une licence limitée - Comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Intégrez GroupDocs Comparison for .NET de manière transparente dans vos projets .NET pour des flux de travail efficaces de comparaison de documents.
-type: docs
 weight: 12
 url: /fr/net/quick-start/set-metered-license/
 ---

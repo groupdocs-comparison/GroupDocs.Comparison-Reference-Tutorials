@@ -3,7 +3,6 @@ title: Jämför dokumentinställningar i GroupDocs Comparison för .NET
 linktitle: Jämför dokumentinställningar i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Effektivisera dokumentjämförelse i .NET-applikationer med GroupDocs Comparison. Jämför dokument utan ansträngning med avancerade funktioner.
-type: docs
 weight: 11
 url: /sv/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---

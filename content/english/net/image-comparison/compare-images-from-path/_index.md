@@ -3,7 +3,6 @@ title: Compare Images from Path - GroupDocs.Comparison for .NET
 linktitle: Compare Images from Path - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to compare images efficiently in .NET using GroupDocs.Comparison library. Follow step-by-step guide for seamless integration.
-type: docs
 weight: 10
 url: /net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ In the realm of .NET development, the ability to efficiently compare documents a
 ## Prerequisites
 Before diving into the intricacies of utilizing GroupDocs.Comparison for .NET, ensure the following prerequisites are met:
 ### 1. Install GroupDocs.Comparison for .NET
-Download the library from [here](https://releases.groupdocs.com/comparison/net/) and follow the installation instructions provided in the documentation [here](https://reference.groupdocs.com/comparison/net/).
+Download the library from [here](https://releases.groupdocs.com/comparison/net/) and follow the installation instructions provided in the documentation [here](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Obtain a License
 To unlock the full potential of GroupDocs.Comparison for .NET, acquire a license from [here](https://purchase.groupdocs.com/buy) or utilize the temporary license available [here](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Familiarity with C# Programming
@@ -69,7 +68,7 @@ Yes, GroupDocs.Comparison for .NET supports comparing various document formats i
 ### Is there a trial version available for GroupDocs.Comparison for .NET?
 Yes, you can access the trial version [here](https://releases.groupdocs.com/) to evaluate the features before making a purchase.
 ### Can I customize the output format of the comparison result?
-Absolutely, GroupDocs.Comparison for .NET offers flexibility in configuring the output format according to your preferences.
+Absolutely, GroupDocs.Comparison for .NET offers flexibility in configuring the output format according to your ptutorialss.
 ### Does GroupDocs.Comparison for .NET support batch processing?
 Yes, developers can leverage batch processing capabilities to compare multiple files simultaneously, improving efficiency.
 ### Where can I seek assistance if I encounter any issues during implementation?

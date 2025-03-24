@@ -3,7 +3,6 @@ title: Hedef Belge için Sayfa Önizlemeleri Oluştur
 linktitle: Hedef Belge için Sayfa Önizlemeleri Oluştur
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak hedef belgeler için sayfa önizlemelerini verimli bir şekilde oluşturun. Sorunsuz belge karşılaştırması için adım adım kılavuzumuzu izleyin.
-type: docs
 weight: 12
 url: /tr/net/document-comparison/generate-page-previews-target-document/
 ---

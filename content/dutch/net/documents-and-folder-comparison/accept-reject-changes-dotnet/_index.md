@@ -3,7 +3,6 @@ title: Wijzigingen in GroupDocs-vergelijking voor .NET accepteren en weigeren
 linktitle: Wijzigingen in GroupDocs-vergelijking voor .NET accepteren en weigeren
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u wijzigingen in documenten kunt accepteren en afwijzen met GroupDocs Comparison voor .NET. Stroomlijn uw documentworkflows moeiteloos.
-type: docs
 weight: 10
 url: /nl/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

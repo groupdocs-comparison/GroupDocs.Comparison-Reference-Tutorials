@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 로드 옵션 사용
 linktitle: .NET용 GroupDocs 비교에서 로드 옵션 사용
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교의 로드 옵션을 사용하여 문서를 사용자 정의 글꼴과 원활하게 비교하는 방법을 알아보세요.
-type: docs
 weight: 13
 url: /ko/net/loading-and-saving-documents/using-load-options/
 ---

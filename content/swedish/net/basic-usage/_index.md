@@ -3,7 +3,6 @@ title: Grundläggande användning
 linktitle: Grundläggande användning
 second_title: GroupDocs.Comparison .NET API
 description: Jämför dokument i .NET med GroupDocs.Comparison. Lär dig självstudier för grundläggande användning som täcker celljämförelse, extrahering av dokumentinformation och format som stöds.
-type: docs
 weight: 24
 url: /sv/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Att navigera i dokumenthanteringens labyrint, förstå hur man extraherar dokume
 ## Skaffa format som stöds
 Att säkerställa dokumentets noggrannhet och konsistens är absolut nödvändigt inom området för .NET-utveckling. GroupDocs.Comparison for .NET ger dig möjlighet att uppnå just det. Upptäck mängden av format som stöds och integrera detta kraftfulla verktyg sömlöst i dina .NET-applikationer. Läs mer om format som stöds[här](./get-supported-formats/).
 
- Ge dig ut på din resa för att bemästra GroupDocs.Comparison för .NET med dessa självstudier för grundläggande användning. Jämför celler sömlöst, extrahera dokumentinformation och säkerställ dokumentets noggrannhet, vilket förbättrar dina .NET-utvecklingssträvanden. Redo att dyka i? Läs mer[här](https://reference.groupdocs.com/comparison/net).
+ Ge dig ut på din resa för att bemästra GroupDocs.Comparison för .NET med dessa självstudier för grundläggande användning. Jämför celler sömlöst, extrahera dokumentinformation och säkerställ dokumentets noggrannhet, vilket förbättrar dina .NET-utvecklingssträvanden. Redo att dyka i? Läs mer[här](https://tutorials.groupdocs.com/comparison/net).
 ## Handledningar för grundläggande användning
 ### [Jämför celler från Path - GroupDocs.Comparison för .NET](./compare-cells-from-path/)
 Lär dig hur du jämför celler från en sökväg med GroupDocs.Comparison för .NET. Identifiera på ett effektivt sätt skillnader mellan dokument.

@@ -3,7 +3,6 @@ title: 계량 라이센스 설정 - .NET용 GroupDocs 비교
 linktitle: 계량 라이센스 설정 - .NET용 GroupDocs 비교
 second_title: GroupDocs.비교 .NET API
 description: 효율적인 문서 비교 작업 흐름을 위해 .NET용 GroupDocs 비교를 .NET 프로젝트에 완벽하게 통합하세요.
-type: docs
 weight: 12
 url: /ko/net/quick-start/set-metered-license/
 ---

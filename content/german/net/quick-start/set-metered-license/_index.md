@@ -3,7 +3,6 @@ title: Festlegen einer gemessenen Lizenz – GroupDocs-Vergleich für .NET
 linktitle: Festlegen einer gemessenen Lizenz – GroupDocs-Vergleich für .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Integrieren Sie GroupDocs Compare for .NET nahtlos in Ihre .NET-Projekte für effiziente Dokumentenvergleichs-Workflows.
-type: docs
 weight: 12
 url: /de/net/quick-start/set-metered-license/
 ---

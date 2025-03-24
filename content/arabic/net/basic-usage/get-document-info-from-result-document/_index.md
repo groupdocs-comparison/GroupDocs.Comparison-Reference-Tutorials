@@ -3,7 +3,6 @@ title: الحصول على معلومات المستند من مستند الن�
 linktitle: الحصول على معلومات المستند من مستند النتيجة - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية استرداد معلومات المستند من المستند الناتج باستخدام GroupDocs.Comparison for .NET. شرح الخطوات السهلة لمطوري .NET.
-type: docs
 weight: 12
 url: /ar/net/basic-usage/get-document-info-from-result-document/
 ---

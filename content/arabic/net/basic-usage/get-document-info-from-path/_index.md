@@ -3,7 +3,6 @@ title: الحصول على معلومات المستند من المسار - Gro
 linktitle: الحصول على معلومات المستند من المسار - GroupDocs.Comparison لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية استخراج معلومات المستند من المسار باستخدام GroupDocs.Comparison for .NET. خطوات سهلة لإدارة المستندات بكفاءة في C#.
-type: docs
 weight: 13
 url: /ar/net/basic-usage/get-document-info-from-path/
 ---

@@ -3,7 +3,6 @@ title: 미리보기를 위한 특정 이미지 크기 설정
 linktitle: 미리보기를 위한 특정 이미지 크기 설정
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하면 문서 비교 기능을 .NET 응용 프로그램에 손쉽게 통합할 수 있습니다.
-type: docs
 weight: 14
 url: /ko/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

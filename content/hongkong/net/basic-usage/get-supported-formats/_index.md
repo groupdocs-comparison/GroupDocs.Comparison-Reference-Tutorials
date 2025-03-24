@@ -3,7 +3,6 @@ title: 取得支援的格式 - GroupDocs.Comparison for .NET
 linktitle: 取得支援的格式 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison for .NET 提高文件的準確性和一致性。將這個強大的工具無縫整合到您的 .NET 應用程式中。
-type: docs
 weight: 15
 url: /zh-hant/net/basic-usage/get-supported-formats/
 ---

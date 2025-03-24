@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasında String'den Metin Yükleme
 linktitle: .NET için GroupDocs Karşılaştırmasında String'den Metin Yükleme
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison kitaplığını kullanarak .NET uygulamalarındaki metinleri zahmetsizce karşılaştırın. Sorunsuz entegrasyonla verimliliği ve doğruluğu artırın.
-type: docs
 weight: 12
 url: /tr/net/loading-and-saving-documents/loading-text-from-string/
 ---

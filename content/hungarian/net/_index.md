@@ -1,7 +1,6 @@
 ---
 title: Oktatóanyagok és példák a GroupDocs.Comparison for .NET-hez
 linktitle: GroupDocs.Comparison for .NET Tutorials
-type: docs
 weight: 10
 url: /hu/net/
 description: Fedezze fel a GroupDocs.Comparison for .NET átfogó oktatóanyagait, amelyek megkönnyítik a dokumentumok és mappák hatékony összehasonlítását, kezelését és integrációját.

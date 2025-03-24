@@ -3,7 +3,6 @@ title: Állítson be konkrét képméreteket az előnézetekhez
 linktitle: Állítson be konkrét képméreteket az előnézetekhez
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET segítségével könnyedén integrálhatja a dokumentum-összehasonlítási funkciókat .NET-alkalmazásaiba.
-type: docs
 weight: 14
 url: /hu/net/document-comparison/set-specific-image-sizes-for-previews/
 ---

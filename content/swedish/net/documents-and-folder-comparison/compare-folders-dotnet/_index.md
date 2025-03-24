@@ -3,7 +3,6 @@ title: Jämför mappar i GroupDocs Comparison för .NET
 linktitle: Jämför mappar i GroupDocs Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Jämför mappar utan ansträngning med GroupDocs Comparison för .NET. Följ vårt steg-för-steg för effektiv mappjämförelse. Förbättra dina .NET-applikationer.
-type: docs
 weight: 12
 url: /sv/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Bekantskap med programmeringsspråket C# och .NET-ramverket krävs för att för
 ### 3. Integrated Development Environment (IDE)
 Du behöver en IDE som Visual Studio för att skriva och köra kodexemplen.
 ### 4. Tillgång till GroupDocs-dokumentation
-Håll GroupDocs Comparison for .NET-dokumentationen till hands som referens genom hela handledningen. Du kan komma åt dokumentationen[här](https://reference.groupdocs.com/comparison/net/).
+Håll GroupDocs Comparison for .NET-dokumentationen till hands som referens genom hela handledningen. Du kan komma åt dokumentationen[här](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importera namnområden
 För att börja måste du importera de nödvändiga namnrymden till din C#-kod. Detta låter dig använda klasserna och metoderna som tillhandahålls av GroupDocs Comparison för .NET.

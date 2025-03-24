@@ -3,7 +3,6 @@ title: 產生來源文件的頁面預覽
 linktitle: 產生來源文件的頁面預覽
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何利用 Groupdocs.Comparison for .NET 有效簡化 C# 專案中的文件比較流程。
-type: docs
 weight: 11
 url: /zh-hant/net/document-comparison/generate-page-previews-source-document/
 ---

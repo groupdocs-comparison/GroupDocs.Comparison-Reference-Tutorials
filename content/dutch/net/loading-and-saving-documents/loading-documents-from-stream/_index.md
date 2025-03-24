@@ -3,7 +3,6 @@ title: Documenten uit Stream laden in GroupDocs-vergelijking voor .NET
 linktitle: Documenten uit Stream laden in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u moeiteloos documenten in .NET-toepassingen kunt vergelijken met GroupDocs Comparison, een krachtige .NET-bibliotheek.
-type: docs
 weight: 11
 url: /nl/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

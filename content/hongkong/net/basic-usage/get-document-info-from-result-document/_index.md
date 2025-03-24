@@ -3,7 +3,6 @@ title: 從結果文件中取得文件資訊 - GroupDocs.Comparison for .NET
 linktitle: 從結果文件中取得文件資訊 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 從結果文件中擷取文件資訊。為 .NET 開發人員解釋了簡單的步驟。
-type: docs
 weight: 12
 url: /zh-hant/net/basic-usage/get-document-info-from-result-document/
 ---

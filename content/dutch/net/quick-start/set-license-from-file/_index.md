@@ -3,7 +3,6 @@ title: Licentie instellen vanuit bestand - GroupDocs-vergelijking voor .NET
 linktitle: Licentie instellen vanuit bestand - GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u GroupDocs Comparison for .NET naadloos in uw applicaties kunt integreren. Moeiteloos naamruimten instellen, importeren en documenten vergelijken.
-type: docs
 weight: 10
 url: /nl/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison voor .NET stelt ontwikkelaars in staat om de functionaliteit voor documentvergelijking naadloos te integreren in hun .NET-applicaties. Door de stappen in deze handleiding te volgen, kunt u op efficiënte wijze de benodigde omgeving opzetten, de vereiste naamruimten importeren en de licentie instellen om het volledige potentieel van GroupDocs Comparison binnen uw projecten te benutten.
 ## Veelgestelde vragen
 ### Waar kan ik de documentatie voor GroupDocs Comparison voor .NET vinden?
- U heeft toegang tot de documentatie[hier](https://reference.groupdocs.com/comparison/net/).
+ U heeft toegang tot de documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).
 ### Is er een gratis proefversie beschikbaar voor GroupDocs Comparison for .NET?
  Ja, u kunt de gratis proefversie downloaden[hier](https://releases.groupdocs.com/).
 ### Hoe kan ik een tijdelijke licentie verkrijgen voor GroupDocs Comparison voor .NET?

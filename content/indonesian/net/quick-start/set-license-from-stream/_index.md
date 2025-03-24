@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari Stream - Perbandingan GroupDocs untuk .NET
 linktitle: Tetapkan Lisensi dari Stream - Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara mengatur lisensi menggunakan GroupDocs.Comparison untuk .NET secara efisien. Pastikan keakuratan dokumen dan hemat waktu dengan tutorial ini.
-type: docs
 weight: 11
 url: /id/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Sebelum masuk ke tutorial, pastikan Anda memiliki prasyarat berikut:
 - Pengetahuan dasar tentang kerangka C# dan .NET.
 - Visual Studio diinstal pada sistem Anda.
 -  GroupDocs.Perbandingan untuk perpustakaan .NET diinstal. Anda dapat mengunduhnya[Di Sini](https://releases.groupdocs.com/comparison/net/).
--  Akses ke dokumentasi GroupDocs.Comparison untuk .NET[Di Sini](https://reference.groupdocs.com/comparison/net/).
+-  Akses ke dokumentasi GroupDocs.Comparison untuk .NET[Di Sini](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Impor Namespace
 Untuk mulai menggunakan GroupDocs.Comparison untuk .NET, Anda perlu mengimpor namespace yang diperlukan ke dalam proyek Anda. Inilah cara Anda melakukannya:
@@ -67,4 +66,4 @@ Ya, Anda dapat meminta uji coba gratis dari situs GroupDocs untuk mengevaluasi p
 ### Apa yang harus saya lakukan jika saya mengalami masalah perizinan?
  Jika Anda mengalami masalah perizinan, lihat FAQ perizinan[Di Sini](https://purchase.groupdocs.com/faqs/licensing) atau hubungi dukungan GroupDocs.
 ### Di mana saya dapat menemukan lebih banyak tutorial dan sumber daya untuk GroupDocs.Perbandingan untuk .NET?
- Anda dapat menemukan dokumentasi dan tutorial ekstensif di situs web GroupDocs[Di Sini](https://reference.groupdocs.com/comparison/net/).
+ Anda dapat menemukan dokumentasi dan tutorial ekstensif di situs web GroupDocs[Di Sini](https://tutorials.groupdocs.com/comparison/net/).

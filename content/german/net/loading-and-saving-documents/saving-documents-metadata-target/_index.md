@@ -3,7 +3,6 @@ title: Metadatenziel f체r das Speichern von Dokumenten im GroupDocs-Vergleich f�
 linktitle: Metadatenziel f체r das Speichern von Dokumenten im GroupDocs-Vergleich f체r .NET
 second_title: GroupDocs.Comparison .NET-API
 description: Erfahren Sie, wie Sie mithilfe des GroupDocs-Vergleichs f체r .NET Metadaten von Dokumenten als Ziel speichern. Einfache Schritte f체r einen effizienten Dokumentenvergleich in Ihren .NET-Anwendungen.
-type: docs
 weight: 15
 url: /de/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

@@ -3,7 +3,6 @@ title: Dapatkan Info Dokumen dari Dokumen Hasil - GroupDocs.Comparison untuk .NE
 linktitle: Dapatkan Info Dokumen dari Dokumen Hasil - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara mengambil info dokumen dari dokumen hasil menggunakan GroupDocs.Comparison untuk .NET. Penjelasan langkah mudah untuk pengembang .NET.
-type: docs
 weight: 12
 url: /id/net/basic-usage/get-document-info-from-result-document/
 ---

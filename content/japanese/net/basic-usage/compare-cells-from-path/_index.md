@@ -3,7 +3,6 @@ title: パスからのセルの比較 - GroupDocs.Comparison for .NET
 linktitle: パスからのセルの比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してパスのセルを比較する方法を学習します。ドキュメント間の相違点を効率的に識別します。
-type: docs
 weight: 10
 url: /ja/net/basic-usage/compare-cells-from-path/
 ---

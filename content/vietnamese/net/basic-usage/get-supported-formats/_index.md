@@ -3,7 +3,6 @@ title: Nhận các định dạng được hỗ trợ - GroupDocs.Comparison cho
 linktitle: Nhận các định dạng được hỗ trợ - GroupDocs.Comparison cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Nâng cao độ chính xác và tính nhất quán của tài liệu với GroupDocs.Comparison cho .NET. Tích hợp liền mạch công cụ mạnh mẽ này vào các ứng dụng .NET của bạn.
-type: docs
 weight: 15
 url: /vi/net/basic-usage/get-supported-formats/
 ---

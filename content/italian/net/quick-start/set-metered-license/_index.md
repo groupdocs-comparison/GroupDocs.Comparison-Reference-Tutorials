@@ -3,7 +3,6 @@ title: Imposta licenza a consumo - Confronto GroupDocs per .NET
 linktitle: Imposta licenza a consumo - Confronto GroupDocs per .NET
 second_title: API GroupDocs.Comparison .NET
 description: Integra GroupDocs Comparison for .NET perfettamente nei tuoi progetti .NET per flussi di lavoro efficienti di confronto dei documenti.
-type: docs
 weight: 12
 url: /it/net/quick-start/set-metered-license/
 ---

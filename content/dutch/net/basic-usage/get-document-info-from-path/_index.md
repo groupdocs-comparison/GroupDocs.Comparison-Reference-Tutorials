@@ -3,7 +3,6 @@ title: Documentinformatie ophalen uit pad - GroupDocs.Comparison voor .NET
 linktitle: Documentinformatie ophalen uit pad - GroupDocs.Comparison voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u documentinformatie uit een pad kunt extraheren met GroupDocs.Comparison voor .NET. Eenvoudige stappen voor efficiënt documentbeheer in C#.
-type: docs
 weight: 13
 url: /nl/net/basic-usage/get-document-info-from-path/
 ---

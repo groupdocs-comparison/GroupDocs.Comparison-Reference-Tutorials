@@ -3,7 +3,6 @@ title: 从文件设置许可证 - .NET 的 GroupDocs 比较
 linktitle: 从文件设置许可证 - .NET 的 GroupDocs 比较
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何将 GroupDocs Comparison for .NET 无缝集成到您的应用程序中。轻松设置、导入命名空间并比较文档。
-type: docs
 weight: 10
 url: /zh/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET 使开发人员能够将文档比较功能无缝集成到他们的 .NET 应用程序中。通过遵循本指南中概述的步骤，您可以有效地设置必要的环境、导入所需的命名空间并设置许可证，以在项目中充分利用 GroupDocs Comparison 的潜力。
 ## 常见问题解答
 ### 在哪里可以找到 GroupDocs Comparison for .NET 的文档？
-您可以访问文档[这里](https://reference.groupdocs.com/comparison/net/).
+您可以访问文档[这里](https://tutorials.groupdocs.com/comparison/net/).
 ### GroupDocs Comparison for .NET 是否有免费试用版？
 是的，您可以下载免费试用版[这里](https://releases.groupdocs.com/).
 ### 如何获得 GroupDocs Comparison for .NET 的临时许可证？

@@ -3,7 +3,6 @@ title: ストリームからのドキュメントの比較 - GroupDocs.Compariso
 linktitle: ストリームからのドキュメントの比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してドキュメントの比較を合理化します。ドキュメントを簡単に比較し、ファイル全体の正確性を確保します。
-type: docs
 weight: 16
 url: /ja/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ja/net/document-comparison/compare-documents-from-stream/
 GroupDocs.Comparison for .NET の使用に入る前に、いくつかの前提条件を満たしている必要があります。
 1. .NET Framework をインストールする: システムに .NET Framework がインストールされていることを確認します。 Microsoft Web サイトからダウンロードできます。
 2.  .NET 用 GroupDocs.Comparison をダウンロードします。[ダウンロードリンク](https://releases.groupdocs.com/comparison/net/) GroupDocs.Comparison for .NET の最新バージョンを入手します。
-3. ドキュメントへのアクセス: を参照して、ライブラリの機能をよく理解してください。[ドキュメンテーション](https://reference.groupdocs.com/comparison/net/).
+3. ドキュメントへのアクセス: を参照して、ライブラリの機能をよく理解してください。[ドキュメンテーション](https://tutorials.groupdocs.com/comparison/net/).
 4. C# の基本的な理解: このチュートリアルは、C# プログラミング言語の基本を理解していることを前提としています。
 
 ## 名前空間のインポート

@@ -3,7 +3,6 @@ title: 從流中取得文件資訊 - GroupDocs.Comparison for .NET
 linktitle: 從流中取得文件資訊 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison 高效比較 .NET 中的文檔，從而無縫增強文檔處理工作流程。
-type: docs
 weight: 14
 url: /zh-hant/net/basic-usage/get-document-info-from-stream/
 ---

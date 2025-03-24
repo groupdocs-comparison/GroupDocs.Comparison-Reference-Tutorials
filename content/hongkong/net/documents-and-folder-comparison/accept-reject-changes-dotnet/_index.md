@@ -3,7 +3,6 @@ title: 接受與拒絕 .NET 的 GroupDocs 比較中的更改
 linktitle: 接受與拒絕 .NET 的 GroupDocs 比較中的更改
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 接受和拒絕文件中的變更。輕鬆簡化您的文件工作流程。
-type: docs
 weight: 10
 url: /zh-hant/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---

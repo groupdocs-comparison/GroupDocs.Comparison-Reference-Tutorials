@@ -3,7 +3,6 @@ title: Lisansı Dosyadan Ayarlayın - .NET için GroupDocs Karşılaştırması
 linktitle: Lisansı Dosyadan Ayarlayın - .NET için GroupDocs Karşılaştırması
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i uygulamalarınıza sorunsuz bir şekilde nasıl entegre edeceğinizi öğrenin. Ad alanlarını ayarlayın, içe aktarın ve belgeleri zahmetsizce karşılaştırın.
-type: docs
 weight: 10
 url: /tr/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET, geliştiricilerin belge karşılaştırma işlevselliğini .NET uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanır. Bu kılavuzda özetlenen adımları izleyerek gerekli ortamı verimli bir şekilde kurabilir, gerekli ad alanlarını içe aktarabilir ve projelerinizde GroupDocs Comparison'ın tüm potansiyelinden yararlanacak şekilde lisansı ayarlayabilirsiniz.
 ## SSS'ler
 ### .NET için GroupDocs Karşılaştırması belgelerini nerede bulabilirim?
- Dokümantasyona ulaşabilirsiniz[Burada](https://reference.groupdocs.com/comparison/net/).
+ Dokümantasyona ulaşabilirsiniz[Burada](https://tutorials.groupdocs.com/comparison/net/).
 ### GroupDocs Comparison for .NET'in ücretsiz deneme sürümü var mı?
  Evet, ücretsiz deneme sürümünü indirebilirsiniz[Burada](https://releases.groupdocs.com/).
 ### GroupDocs Comparison for .NET için nasıl geçici lisans alabilirim?

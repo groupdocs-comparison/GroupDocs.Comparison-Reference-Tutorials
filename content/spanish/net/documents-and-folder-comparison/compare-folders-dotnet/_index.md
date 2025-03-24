@@ -3,7 +3,6 @@ title: Comparar carpetas en GroupDocs Comparación para .NET
 linktitle: Comparar carpetas en GroupDocs Comparación para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Compare carpetas sin esfuerzo utilizando GroupDocs Comparison para .NET. Siga nuestro paso a paso para una comparación de carpetas eficiente. Mejore sus aplicaciones .NET.
-type: docs
 weight: 12
 url: /es/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Se requiere familiaridad con el lenguaje de programación C# y el marco .NET par
 ### 3. Entorno de desarrollo integrado (IDE)
 Necesitará un IDE como Visual Studio para escribir y ejecutar los ejemplos de código.
 ### 4. Acceso a la documentación de GroupDocs
-Tenga a mano la documentación de Comparación de GroupDocs para .NET como referencia a lo largo del tutorial. Puedes acceder a la documentación[aquí](https://reference.groupdocs.com/comparison/net/).
+Tenga a mano la documentación de Comparación de GroupDocs para .NET como referencia a lo largo del tutorial. Puedes acceder a la documentación[aquí](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importar espacios de nombres
 Para comenzar, necesita importar los espacios de nombres necesarios en su código C#. Esto le permite utilizar las clases y métodos proporcionados por GroupDocs Comparison para .NET.

@@ -3,7 +3,6 @@ title: Dokumentum összehasonlítás
 linktitle: Dokumentum összehasonlítás
 second_title: GroupDocs.Comparison .NET API
 description: Hatékonyan hasonlítsa össze a dokumentumokat a .NET-ben a GroupDocs.Comparison segítségével. Egyszerűsítse a dokumentumkezelést, javítsa a munkafolyamatot és biztosítsa a pontosságot. Tudj meg többet!
-type: docs
 weight: 21
 url: /hu/net/document-comparison/
 ---

@@ -3,7 +3,6 @@ title: クイックスタート
 linktitle: クイックスタート
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET をプロジェクトに簡単に統合します。正確なドキュメント比較ワークフローのための効率的なライセンス設定方法を学びます。
-type: docs
 weight: 25
 url: /ja/net/quick-start/
 ---

@@ -3,7 +3,6 @@ title: Szöveg betöltése karakterláncból a GroupDocs-összehasonlításban .
 linktitle: Szöveg betöltése karakterláncból a GroupDocs-összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Könnyedén összehasonlíthatja a szöveget .NET-alkalmazásokon belül a GroupDocs.Comparison könyvtár segítségével. Növelje a hatékonyságot és a pontosságot a zökkenőmentes integrációval.
-type: docs
 weight: 12
 url: /hu/net/loading-and-saving-documents/loading-text-from-string/
 ---

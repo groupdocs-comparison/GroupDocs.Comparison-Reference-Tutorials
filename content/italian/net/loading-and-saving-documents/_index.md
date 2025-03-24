@@ -3,7 +3,6 @@ title: Caricamento e salvataggio di documenti
 linktitle: Caricamento e salvataggio di documenti
 second_title: API GroupDocs.Comparison .NET
 description: Confronta facilmente i documenti in .NET utilizzando GroupDocs.Comparison per .NET. Scopri come caricare, salvare e utilizzare le opzioni di caricamento per una gestione efficiente dei documenti.
-type: docs
 weight: 22
 url: /it/net/loading-and-saving-documents/
 ---

@@ -3,7 +3,6 @@ title: Načítání dokumentů v GroupDocs Porovnání pro .NET
 linktitle: Načítání dokumentů v GroupDocs Porovnání pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak efektivně porovnávat dokumenty pomocí GroupDocs.Comparison for .NET. Zefektivněte své procesy správy dokumentů.
-type: docs
 weight: 10
 url: /cs/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Ano, GroupDocs.Comparison for .NET podporuje porovnávání dokumentů různých
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs.Comparison pro .NET?
  Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Comparison pro .NET návštěvou stránky[webová stránka](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci k GroupDocs.Comparison pro .NET?
- Můžete se podívat na komplexní dokumentaci dostupnou na adrese[GroupDocs.Comparison pro dokumentaci .NET](https://reference.groupdocs.com/comparison/net/).
+ Můžete se podívat na komplexní dokumentaci dostupnou na adrese[GroupDocs.Comparison pro dokumentaci .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### Jak mohu získat dočasnou licenci pro GroupDocs.Comparison pro .NET?
  Dočasnou licenci můžete získat na adrese[dočasná licenční stránka](https://purchase.groupdocs.com/temporary-license/) na webu GroupDocs.
 ### Kde mohu hledat podporu pro GroupDocs.Comparison pro .NET?

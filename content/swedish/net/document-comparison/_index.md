@@ -3,7 +3,6 @@ title: Dokumentjämförelse
 linktitle: Dokumentjämförelse
 second_title: GroupDocs.Comparison .NET API
 description: Jämför effektivt dokument i .NET med GroupDocs.Comparison. Effektivisera dokumenthanteringen, förbättra arbetsflödet och säkerställa noggrannhet. Läs mer!
-type: docs
 weight: 21
 url: /sv/net/document-comparison/
 ---

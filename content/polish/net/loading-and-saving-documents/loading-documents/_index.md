@@ -3,7 +3,6 @@ title: Ładowanie dokumentów w porównaniu GroupDocs dla .NET
 linktitle: Ładowanie dokumentów w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak efektywnie porównywać dokumenty za pomocą GroupDocs.Comparison dla .NET. Usprawnij procesy zarządzania dokumentami.
-type: docs
 weight: 10
 url: /pl/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Tak, GroupDocs.Comparison dla .NET obsługuje porównywanie dokumentów w różn
 ### Czy dostępna jest bezpłatna wersja próbna programu GroupDocs.Comparison dla .NET?
  Tak, możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Comparison dla .NET, odwiedzając stronę[strona internetowa](https://releases.groupdocs.com/).
 ### Gdzie mogę znaleźć dokumentację GroupDocs.Comparison dla .NET?
- Z obszerną dokumentacją można zapoznać się pod adresem[GroupDocs. Porównanie dokumentacji .NET](https://reference.groupdocs.com/comparison/net/).
+ Z obszerną dokumentacją można zapoznać się pod adresem[GroupDocs. Porównanie dokumentacji .NET](https://tutorials.groupdocs.com/comparison/net/).
 ### Jak mogę uzyskać tymczasową licencję na GroupDocs.Comparison dla .NET?
  Licencję tymczasową można uzyskać odwiedzając stronę[strona licencji tymczasowej](https://purchase.groupdocs.com/temporary-license/) w witrynie GroupDocs.
 ### Gdzie mogę uzyskać pomoc dotyczącą GroupDocs.Comparison dla .NET?

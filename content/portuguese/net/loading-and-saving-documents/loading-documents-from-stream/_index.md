@@ -3,7 +3,6 @@ title: Carregando documentos do stream na comparação de GroupDocs para .NET
 linktitle: Carregando documentos do stream na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como comparar facilmente documentos em aplicativos .NET usando GroupDocs Comparison, uma poderosa biblioteca .NET.
-type: docs
 weight: 11
 url: /pt/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

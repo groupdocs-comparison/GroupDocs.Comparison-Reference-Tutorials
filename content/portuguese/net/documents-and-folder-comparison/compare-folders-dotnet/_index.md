@@ -3,7 +3,6 @@ title: Compare pastas na comparação de GroupDocs para .NET
 linktitle: Compare pastas na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Compare pastas sem esforço usando GroupDocs Comparison for .NET. Siga nosso passo a passo para uma comparação eficiente de pastas. Aprimore seus aplicativos .NET.
-type: docs
 weight: 12
 url: /pt/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Antes de prosseguir com este tutorial, certifique-se de ter os seguintes pré-re
 ### 3. Ambiente de Desenvolvimento Integrado (IDE)
 Você precisará de um IDE como o Visual Studio para escrever e executar os exemplos de código.
 ### 4. Acesso à documentação do GroupDocs
-Mantenha a documentação do GroupDocs Comparison for .NET à mão para referência ao longo do tutorial. Você pode acessar a documentação[aqui](https://reference.groupdocs.com/comparison/net/).
+Mantenha a documentação do GroupDocs Comparison for .NET à mão para referência ao longo do tutorial. Você pode acessar a documentação[aqui](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importar namespaces
 Para começar, você precisa importar os namespaces necessários para o seu código C#. Isso permite que você use as classes e métodos fornecidos pelo GroupDocs Comparison for .NET.

@@ -3,7 +3,6 @@ title: Ställ in licens från fil - GroupDocs Comparison for .NET
 linktitle: Ställ in licens från fil - GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du integrerar GroupDocs Comparison för .NET sömlöst i dina applikationer. Konfigurera, importera namnutrymmen och jämför dokument utan ansträngning.
-type: docs
 weight: 10
 url: /sv/net/quick-start/set-license-from-file/
 ---
@@ -51,7 +50,7 @@ Console.WriteLine("License set successfully.");
 GroupDocs Comparison for .NET ger utvecklare möjlighet att sömlöst integrera funktionalitet för dokumentjämförelse i sina .NET-applikationer. Genom att följa stegen som beskrivs i den här guiden kan du effektivt ställa in den nödvändiga miljön, importera nödvändiga namnrymder och ställa in licensen för att utnyttja den fulla potentialen hos GroupDocs Comparison i dina projekt.
 ## FAQ's
 ### Var kan jag hitta dokumentationen för GroupDocs Comparison for .NET?
- Du kan komma åt dokumentationen[här](https://reference.groupdocs.com/comparison/net/).
+ Du kan komma åt dokumentationen[här](https://tutorials.groupdocs.com/comparison/net/).
 ### Finns det en gratis testversion tillgänglig för GroupDocs Comparison för .NET?
  Ja, du kan ladda ner den kostnadsfria testversionen[här](https://releases.groupdocs.com/).
 ### Hur kan jag få en tillfällig licens för GroupDocs Comparison för .NET?

@@ -3,7 +3,6 @@ title: Đang tải văn bản từ chuỗi trong so sánh GroupDocs cho .NET
 linktitle: Đang tải văn bản từ chuỗi trong so sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng so sánh văn bản trong các ứng dụng .NET bằng thư viện GroupDocs.Comparison. Nâng cao hiệu quả và độ chính xác với sự tích hợp liền mạch.
-type: docs
 weight: 12
 url: /vi/net/loading-and-saving-documents/loading-text-from-string/
 ---

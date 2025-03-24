@@ -3,7 +3,6 @@ title: Akıştaki Görselleri Karşılaştırın - GroupDocs.Comparison for .NET
 linktitle: Akıştaki Görselleri Karşılaştırın - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak akışlardaki görüntüleri nasıl karşılaştıracağınızı öğrenin. .NET uygulamalarına kusursuz entegrasyon için adım adım kılavuz.
-type: docs
 weight: 11
 url: /tr/net/image-comparison/compare-images-from-stream/
 ---

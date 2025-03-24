@@ -3,7 +3,6 @@ title: Sonuç Belgesi için Sayfa Önizlemeleri Oluşturun
 linktitle: Sonuç Belgesi için Sayfa Önizlemeleri Oluşturun
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak belge önizlemelerini nasıl oluşturacağınızı öğrenin. Belgeleri verimli ve doğru bir şekilde karşılaştırın.
-type: docs
 weight: 10
 url: /tr/net/document-comparison/generate-page-previews-resultant-document/
 ---

@@ -3,7 +3,6 @@ title: Generieren Sie Seitenvorschauen für das Zieldokument
 linktitle: Generieren Sie Seitenvorschauen für das Zieldokument
 second_title: GroupDocs.Comparison .NET-API
 description: Generieren Sie effizient Seitenvorschauen für Zieldokumente mit GroupDocs.Comparison für .NET. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für einen reibungslosen Dokumentenvergleich.
-type: docs
 weight: 12
 url: /de/net/document-comparison/generate-page-previews-target-document/
 ---

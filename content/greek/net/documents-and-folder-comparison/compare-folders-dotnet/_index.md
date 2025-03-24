@@ -3,7 +3,6 @@ title: Σύγκριση φακέλων στο GroupDocs Σύγκριση για 
 linktitle: Σύγκριση φακέλων στο GroupDocs Σύγκριση για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Συγκρίνετε φακέλους χωρίς κόπο χρησιμοποιώντας τη σύγκριση GroupDocs για .NET. Ακολουθήστε τα βήμα προς βήμα μας για αποτελεσματική σύγκριση φακέλων. Βελτιώστε τις εφαρμογές σας .NET.
-type: docs
 weight: 12
 url: /el/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ url: /el/net/documents-and-folder-comparison/compare-folders-dotnet/
 ### 3. Ολοκληρωμένο Αναπτυξιακό Περιβάλλον (IDE)
 Θα χρειαστείτε ένα IDE όπως το Visual Studio για να γράψετε και να εκτελέσετε τα παραδείγματα κώδικα.
 ### 4. Πρόσβαση στην τεκμηρίωση GroupDocs
-Διατηρήστε την τεκμηρίωση GroupDocs Comparison για .NET εύχρηστη για αναφορά σε όλο το σεμινάριο. Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/comparison/net/).
+Διατηρήστε την τεκμηρίωση GroupDocs Comparison για .NET εύχρηστη για αναφορά σε όλο το σεμινάριο. Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Εισαγωγή χώρων ονομάτων
 Για να ξεκινήσετε, πρέπει να εισαγάγετε τους απαραίτητους χώρους ονομάτων στον κώδικα C#. Αυτό σας επιτρέπει να χρησιμοποιείτε τις κλάσεις και τις μεθόδους που παρέχονται από το GroupDocs Comparison για .NET.

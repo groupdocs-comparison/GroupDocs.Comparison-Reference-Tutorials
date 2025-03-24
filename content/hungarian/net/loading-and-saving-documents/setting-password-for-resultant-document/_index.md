@@ -3,7 +3,6 @@ title: Jelszó beállítása az eredményül kapott dokumentumhoz a GroupDocs .N
 linktitle: Jelszó beállítása az eredményül kapott dokumentumhoz a GroupDocs .NET-összehasonlításában
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan állíthat be jelszót az eredményül kapott dokumentumokhoz a GroupDocs Comparison for .NET alkalmazásban. Növelje a biztonságot és védje az összehasonlított fájlokat.
-type: docs
 weight: 17
 url: /hu/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Igen, a GroupDocs Comparison for .NET támogatja a különböző formátumú dok
 ### Szükségem van licencre a GroupDocs Comparison for .NET használatához?
  Igen, vásárolhat licencet a webhelyről[itt](https://purchase.groupdocs.com/buy) vagy ideiglenes engedélyt szerezni[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Elérhető valamilyen dokumentáció a GroupDocs .NET-hez való összehasonlításához?
- Igen, hozzáférhet a dokumentációhoz[itt](https://reference.groupdocs.com/comparison/net/).
+ Igen, hozzáférhet a dokumentációhoz[itt](https://tutorials.groupdocs.com/comparison/net/).

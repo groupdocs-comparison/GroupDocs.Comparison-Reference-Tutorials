@@ -3,7 +3,6 @@ title: 기본 사용법
 linktitle: 기본 사용법
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison을 사용하여 .NET의 문서를 비교합니다. 셀 비교, 문서 정보 추출 및 지원되는 형식을 다루는 기본 사용 튜토리얼을 알아보세요.
-type: docs
 weight: 24
 url: /ko/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ url: /ko/net/basic-usage/
 ## 지원되는 형식 얻기
 .NET 개발 영역에서는 문서의 정확성과 일관성을 보장하는 것이 필수적입니다. .NET용 GroupDocs.Comparison을 사용하면 바로 이러한 목표를 달성할 수 있습니다. 지원되는 다양한 형식을 찾아보고 이 강력한 도구를 .NET 애플리케이션에 원활하게 통합하세요. 지원되는 형식에 대해 자세히 알아보기[여기](./get-supported-formats/).
 
- 기본 사용법 튜토리얼을 통해 .NET용 GroupDocs.Comparison을 마스터하는 여정을 시작해 보세요. 셀을 원활하게 비교하고, 문서 정보를 추출하고, 문서 정확성을 보장하여 .NET 개발 노력을 향상시킵니다. 다이빙할 준비가 되셨나요? 더 읽어보세요[여기](https://reference.groupdocs.com/comparison/net).
+ 기본 사용법 튜토리얼을 통해 .NET용 GroupDocs.Comparison을 마스터하는 여정을 시작해 보세요. 셀을 원활하게 비교하고, 문서 정보를 추출하고, 문서 정확성을 보장하여 .NET 개발 노력을 향상시킵니다. 다이빙할 준비가 되셨나요? 더 읽어보세요[여기](https://tutorials.groupdocs.com/comparison/net).
 ## 기본 사용법 튜토리얼
 ### [경로의 셀 비교 - .NET용 GroupDocs.Comparison](./compare-cells-from-path/)
 .NET용 GroupDocs.Comparison을 사용하여 경로의 셀을 비교하는 방법을 알아보세요. 문서 간의 차이점을 효율적으로 식별합니다.

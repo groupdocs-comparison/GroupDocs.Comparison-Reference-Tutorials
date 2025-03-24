@@ -3,7 +3,6 @@ title: Definir licença do Stream - Comparação de GroupDocs para .NET
 linktitle: Definir licença do Stream - Comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como definir licenças usando GroupDocs.Comparison for .NET de forma eficiente. Garanta a precisão dos documentos e economize tempo com este tutorial.
-type: docs
 weight: 11
 url: /pt/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Antes de mergulhar no tutorial, certifique-se de ter os seguintes pré-requisito
 - Conhecimento básico de C# e .NET framework.
 - Visual Studio instalado em seu sistema.
 -  Biblioteca GroupDocs.Comparison para .NET instalada. Você pode baixá-lo[aqui](https://releases.groupdocs.com/comparison/net/).
--  Acesso à documentação do GroupDocs.Comparison for .NET[aqui](https://reference.groupdocs.com/comparison/net/).
+-  Acesso à documentação do GroupDocs.Comparison for .NET[aqui](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importar namespaces
 Para começar a usar GroupDocs.Comparison for .NET, você precisa importar os namespaces necessários para o seu projeto. Veja como você pode fazer isso:
@@ -67,4 +66,4 @@ Sim, você pode solicitar uma avaliação gratuita no site GroupDocs para avalia
 ### O que devo fazer se encontrar problemas de licenciamento?
  Se você encontrar algum problema de licenciamento, consulte as perguntas frequentes sobre licenciamento[aqui](https://purchase.groupdocs.com/faqs/licensing) ou entre em contato com o suporte do GroupDocs.
 ### Onde posso encontrar mais tutoriais e recursos para GroupDocs.Comparison for .NET?
- Você pode encontrar extensa documentação e tutoriais no site GroupDocs[aqui](https://reference.groupdocs.com/comparison/net/).
+ Você pode encontrar extensa documentação e tutoriais no site GroupDocs[aqui](https://tutorials.groupdocs.com/comparison/net/).

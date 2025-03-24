@@ -3,7 +3,6 @@ title: مقارنة مستندات متعددة في مقارنة GroupDocs لـ
 linktitle: مقارنة مستندات متعددة في مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: تعرف على كيفية مقارنة مستندات متعددة بكفاءة باستخدام GroupDocs Comparison for .NET. اتبع دليلنا خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 13
 url: /ar/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

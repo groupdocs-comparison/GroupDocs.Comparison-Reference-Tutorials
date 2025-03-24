@@ -3,7 +3,6 @@ title: Porovnání dokumentů ze streamu - GroupDocs.Comparison pro .NET
 linktitle: Porovnání dokumentů ze streamu - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Zjednodušte srovnání dokumentů s GroupDocs.Comparison pro .NET. Porovnávejte dokumenty bez námahy a zajistěte přesnost mezi soubory.
-type: docs
 weight: 16
 url: /cs/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ V dnešním uspěchaném světě, kde je informací dostatek a změny jsou neust
 Než se pustíte do používání GroupDocs.Comparison pro .NET, musíte mít splněno několik předpokladů:
 1. Instalace rozhraní .NET Framework: Ujistěte se, že máte v systému nainstalované rozhraní .NET Framework. Můžete si jej stáhnout z webu společnosti Microsoft.
 2.  Stáhnout GroupDocs.Comparison pro .NET: Navštivte stránku[odkaz ke stažení](https://releases.groupdocs.com/comparison/net/) získat nejnovější verzi GroupDocs.Comparison pro .NET.
-3.  Přístupová dokumentace: Seznamte se s funkcemi knihovny odkazem na[dokumentace](https://reference.groupdocs.com/comparison/net/).
+3.  Přístupová dokumentace: Seznamte se s funkcemi knihovny odkazem na[dokumentace](https://tutorials.groupdocs.com/comparison/net/).
 4. Základní porozumění C#: Tento tutoriál předpokládá, že máte základní znalosti programovacího jazyka C#.
 
 ## Importovat jmenné prostory

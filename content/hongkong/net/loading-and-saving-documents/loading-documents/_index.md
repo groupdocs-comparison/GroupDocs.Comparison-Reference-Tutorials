@@ -3,7 +3,6 @@ title: 在 .NET 的 GroupDocs 比較中載入文檔
 linktitle: 在 .NET 的 GroupDocs 比較中載入文檔
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs.Comparison for .NET 有效地比較文件。簡化您的文件管理流程。
-type: docs
 weight: 10
 url: /zh-hant/net/loading-and-saving-documents/loading-documents/
 ---
@@ -58,7 +57,7 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ### GroupDocs.Comparison for .NET 是否有免費試用版？
 是的，您可以存取 GroupDocs.Comparison for .NET 免費試用版[網站](https://releases.groupdocs.com/).
 ### 在哪裡可以找到 GroupDocs.Comparison for .NET 的文件？
-您可以參考以下位置提供的綜合文件：[.NET 文件的 GroupDocs.Comparison](https://reference.groupdocs.com/comparison/net/).
+您可以參考以下位置提供的綜合文件：[.NET 文件的 GroupDocs.Comparison](https://tutorials.groupdocs.com/comparison/net/).
 ### 如何取得 GroupDocs.Comparison for .NET 的臨時授權？
 您可以透過訪問獲得臨時許可證[臨時許可證頁面](https://purchase.groupdocs.com/temporary-license/)在 GroupDocs 網站上。
 ### 在哪裡可以尋求對 GroupDocs.Comparison for .NET 的支援？

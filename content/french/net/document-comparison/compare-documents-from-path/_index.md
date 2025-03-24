@@ -3,7 +3,6 @@ title: Comparer les documents à partir du chemin - GroupDocs.Comparison pour .N
 linktitle: Comparer les documents à partir du chemin - GroupDocs.Comparison pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Comparez sans effort des documents dans différents formats avec GroupDocs.Comparison for .NET. Gagnez du temps et garantissez l’exactitude des tâches juridiques, académiques et commerciales.
-type: docs
 weight: 15
 url: /fr/net/document-comparison/compare-documents-from-path/
 ---

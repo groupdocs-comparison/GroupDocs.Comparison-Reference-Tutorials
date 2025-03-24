@@ -3,7 +3,6 @@ title: Hızlı başlangıç
 linktitle: Hızlı başlangıç
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i projelerinize zahmetsizce entegre edin. Doğru belge karşılaştırma iş akışları için etkili lisans ayarlama yöntemlerini öğrenin.
-type: docs
 weight: 25
 url: /tr/net/quick-start/
 ---

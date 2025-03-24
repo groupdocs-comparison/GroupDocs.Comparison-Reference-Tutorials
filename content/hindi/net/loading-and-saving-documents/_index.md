@@ -3,7 +3,6 @@ title: दस्तावेज़ लोड करना और सहेजन
 linktitle: दस्तावेज़ लोड करना और सहेजना
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ों की आसानी से तुलना करें। कुशल दस्तावेज़ प्रबंधन के लिए लोड विकल्पों को लोड करना, सहेजना और उपयोग करना सीखें।
-type: docs
 weight: 22
 url: /hi/net/loading-and-saving-documents/
 ---

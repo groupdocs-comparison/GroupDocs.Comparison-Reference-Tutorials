@@ -3,7 +3,6 @@ title: Bandingkan Dokumen dari Path - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Dokumen dari Path - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen dalam berbagai format dengan mudah menggunakan GroupDocs.Comparison untuk .NET. Menghemat waktu dan memastikan keakuratan dalam tugas hukum, akademik, dan bisnis.
-type: docs
 weight: 15
 url: /id/net/document-comparison/compare-documents-from-path/
 ---

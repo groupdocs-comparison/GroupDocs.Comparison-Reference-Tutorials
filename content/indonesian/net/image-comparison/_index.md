@@ -3,7 +3,6 @@ title: Perbandingan Gambar
 linktitle: Perbandingan Gambar
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan gambar secara efisien di .NET menggunakan pustaka GroupDocs.Comparison. Tutorial langkah demi langkah untuk integrasi yang lancar dari jalur atau aliran.
-type: docs
 weight: 23
 url: /id/net/image-comparison/
 ---

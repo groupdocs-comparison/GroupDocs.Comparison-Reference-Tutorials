@@ -3,7 +3,6 @@ title: Lưu siêu dữ liệu tài liệu do người dùng xác định trong s
 linktitle: Lưu siêu dữ liệu tài liệu do người dùng xác định trong so sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách lưu siêu dữ liệu tài liệu do người dùng xác định bằng cách sử dụng So sánh GroupDocs cho .NET. Dễ dàng so sánh và thao tác siêu dữ liệu với hướng dẫn từng bước.
-type: docs
 weight: 16
 url: /vi/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

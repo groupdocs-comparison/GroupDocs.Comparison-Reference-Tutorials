@@ -3,7 +3,6 @@ title: Základní použití
 linktitle: Základní použití
 second_title: GroupDocs.Comparison .NET API
 description: Porovnejte dokumenty v .NET pomocí GroupDocs.Comparison. Naučte se základní výukové programy týkající se porovnávání buněk, extrakce informací o dokumentu a podporovaných formátů.
-type: docs
 weight: 24
 url: /cs/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Procházení labyrintem správy dokumentů a pochopení toho, jak extrahovat inf
 ## Získejte podporované formáty
 Zajištění přesnosti a konzistence dokumentů je v oblasti vývoje .NET zásadní. GroupDocs.Comparison for .NET vám umožňuje dosáhnout právě toho. Objevte řadu podporovaných formátů a bezproblémově integrujte tento výkonný nástroj do svých aplikací .NET. Další informace o podporovaných formátech[tady](./get-supported-formats/).
 
- Vydejte se na svou cestu ke zvládnutí GroupDocs.Comparison for .NET s těmito základními návody k použití. Bezproblémově porovnávejte buňky, extrahujte informace o dokumentech a zajistěte přesnost dokumentu, čímž rozšíříte své úsilí o vývoj .NET. Jste připraveni se ponořit? Přečtěte si více[tady](https://reference.groupdocs.com/comparison/net).
+ Vydejte se na svou cestu ke zvládnutí GroupDocs.Comparison for .NET s těmito základními návody k použití. Bezproblémově porovnávejte buňky, extrahujte informace o dokumentech a zajistěte přesnost dokumentu, čímž rozšíříte své úsilí o vývoj .NET. Jste připraveni se ponořit? Přečtěte si více[tady](https://tutorials.groupdocs.com/comparison/net).
 ## Základní návody k použití
 ### [Porovnat buňky z cesty - GroupDocs.Comparison pro .NET](./compare-cells-from-path/)
 Naučte se porovnávat buňky z cesty pomocí GroupDocs.Comparison for .NET. Efektivně identifikujte rozdíly mezi dokumenty.

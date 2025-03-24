@@ -3,7 +3,6 @@ title: Ładowanie tekstu z ciągu w porównaniu GroupDocs dla .NET
 linktitle: Ładowanie tekstu z ciągu w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Bezproblemowe porównywanie tekstu w aplikacjach .NET przy użyciu biblioteki GroupDocs.Comparison. Zwiększ wydajność i dokładność dzięki bezproblemowej integracji.
-type: docs
 weight: 12
 url: /pl/net/loading-and-saving-documents/loading-text-from-string/
 ---

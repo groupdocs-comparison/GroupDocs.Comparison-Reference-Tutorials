@@ -3,7 +3,6 @@ title: 빠른 시작
 linktitle: 빠른 시작
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교를 프로젝트에 손쉽게 통합하세요. 정확한 문서 비교 워크플로를 위한 효율적인 라이선스 설정 방법을 알아보세요.
-type: docs
 weight: 25
 url: /ko/net/quick-start/
 ---

@@ -3,7 +3,6 @@ title: So sánh các tài liệu được bảo vệ từ đường dẫn - Grou
 linktitle: So sánh các tài liệu được bảo vệ từ đường dẫn - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Dễ dàng so sánh các tài liệu được bảo vệ trong .NET bằng GroupDocs.Comparison để tích hợp liền mạch. Tăng cường quy trình quản lý tài liệu của bạn.
-type: docs
 weight: 17
 url: /vi/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ Hoàn toàn có thể, GroupDocs.Comparison for .NET cung cấp các tùy chọn
 ### Tôi có thể dùng thử GroupDocs.Comparison cho .NET trước khi mua không?
  Có, bạn có thể khám phá các tính năng của GroupDocs.Comparison for .NET bằng cách truy cập bản dùng thử miễn phí có sẵn[đây](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu và hỗ trợ cho GroupDocs.Comparison cho .NET ở đâu?
- Bạn có thể tham khảo tài liệu đầy đủ[đây](https://reference.groupdocs.com/comparison/net/) và tìm kiếm sự hỗ trợ từ các diễn đàn cộng đồng[đây](https://forum.groupdocs.com/c/comparison/12).
+ Bạn có thể tham khảo tài liệu đầy đủ[đây](https://tutorials.groupdocs.com/comparison/net/) và tìm kiếm sự hỗ trợ từ các diễn đàn cộng đồng[đây](https://forum.groupdocs.com/c/comparison/12).
 ### Tôi có cần giấy phép tạm thời để sử dụng GroupDocs.Comparison cho .NET không?
  Mặc dù giấy phép tạm thời có sẵn cho mục đích thử nghiệm nhưng bạn có thể lấy giấy phép đầy đủ bằng cách truy cập[đây](https://purchase.groupdocs.com/buy).

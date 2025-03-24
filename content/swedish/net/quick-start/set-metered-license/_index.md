@@ -3,7 +3,6 @@ title: Set Metered License - GroupDocs Comparison for .NET
 linktitle: Set Metered License - GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Integrera GroupDocs Comparison för .NET sömlöst i dina .NET-projekt för effektiva arbetsflöden för dokumentjämförelse.
-type: docs
 weight: 12
 url: /sv/net/quick-start/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: Ustawianie hasła dla dokumentu wynikowego w porównaniu GroupDocs dla .N
 linktitle: Ustawianie hasła dla dokumentu wynikowego w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak ustawić hasło dla dokumentów wynikowych w porównaniu GroupDocs dla .NET. Zwiększ bezpieczeństwo i chroń porównywane pliki.
-type: docs
 weight: 17
 url: /pl/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Tak, GroupDocs Comparison for .NET obsługuje porównywanie dokumentów w różn
 ### Czy potrzebuję licencji, aby korzystać z porównania GroupDocs dla .NET?
  Tak, możesz kupić licencję od[Tutaj](https://purchase.groupdocs.com/buy) lub uzyskaj licencję tymczasową[Tutaj](https://purchase.groupdocs.com/temporary-license/).
 ### Czy dostępna jest dokumentacja dotycząca porównania GroupDocs dla platformy .NET?
- Tak, możesz uzyskać dostęp do dokumentacji[Tutaj](https://reference.groupdocs.com/comparison/net/).
+ Tak, możesz uzyskać dostęp do dokumentacji[Tutaj](https://tutorials.groupdocs.com/comparison/net/).

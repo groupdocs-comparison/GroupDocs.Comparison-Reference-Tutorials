@@ -3,7 +3,6 @@ title: So sánh các ô từ đường dẫn - GroupDocs.Comparison for .NET
 linktitle: So sánh các ô từ đường dẫn - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách so sánh các ô từ một đường dẫn bằng GroupDocs.Comparison cho .NET. Xác định hiệu quả sự khác biệt giữa các tài liệu.
-type: docs
 weight: 10
 url: /vi/net/basic-usage/compare-cells-from-path/
 ---

@@ -3,7 +3,6 @@ title: ストリームからのセルの比較 - GroupDocs.Comparison for .NET
 linktitle: ストリームからのセルの比較 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用して、C# でドキュメントを簡単に比較します。文書処理タスクを簡単に合理化します。
-type: docs
 weight: 11
 url: /ja/net/basic-usage/compare-cells-from-stream/
 ---

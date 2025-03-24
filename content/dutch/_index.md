@@ -3,7 +3,6 @@ title: GroupDocs beheersen. Vergelijking - Tutorials en handleidingen
 linktitle: GroupDocs.Vergelijkingshandleidingen
 additionalTitle: GroupDocs API-referenties
 description: Ontdek de kracht van GroupDocs.Comparison via onze tutorials! Leer hoe u deze API kunt integreren en gebruiken voor een efficiënte documentvergelijking.
-type: docs
 weight: 11
 url: /nl/
 is_root: true

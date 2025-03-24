@@ -3,7 +3,6 @@ title: Sayfa Önizlemelerinden Sonra Kaynakları Temizleyin
 linktitle: Sayfa Önizlemelerinden Sonra Kaynakları Temizleyin
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET'i kullanarak belgeleri adım adım nasıl karşılaştıracağınızı öğrenin. .NET uygulamalarınızı verimli belge yönetimiyle geliştirin.
-type: docs
 weight: 13
 url: /tr/net/document-comparison/clean-resources-after-page-previews/
 ---

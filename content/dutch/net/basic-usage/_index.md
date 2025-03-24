@@ -3,7 +3,6 @@ title: Basisgebruik
 linktitle: Basisgebruik
 second_title: GroupDocs.Vergelijking .NET API
 description: Vergelijk documenten in .NET met GroupDocs.Comparison. Leer basistutorials over celvergelijking, extractie van documentinformatie en ondersteunde formaten.
-type: docs
 weight: 24
 url: /nl/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Navigeren door het labyrint van documentbeheer en begrijpen hoe u documentinform
 ## Ondersteunde formaten verkrijgen
 Het garanderen van de accuraatheid en consistentie van documenten is van cruciaal belang bij de ontwikkeling van .NET. Met GroupDocs.Comparison voor .NET kunt u precies dat bereiken. Ontdek de reeks ondersteunde formaten en integreer deze krachtige tool naadloos in uw .NET-applicaties. Meer informatie over ondersteunde formaten[hier](./get-supported-formats/).
 
- Begin aan uw reis om GroupDocs.Comparison voor .NET onder de knie te krijgen met deze basistutorials voor gebruik. Vergelijk naadloos cellen, extraheer documentinformatie en zorg voor documentnauwkeurigheid, waardoor uw .NET-ontwikkelingsinspanningen worden verbeterd. Klaar om erin te duiken? Lees verder[hier](https://reference.groupdocs.com/comparison/net).
+ Begin aan uw reis om GroupDocs.Comparison voor .NET onder de knie te krijgen met deze basistutorials voor gebruik. Vergelijk naadloos cellen, extraheer documentinformatie en zorg voor documentnauwkeurigheid, waardoor uw .NET-ontwikkelingsinspanningen worden verbeterd. Klaar om erin te duiken? Lees verder[hier](https://tutorials.groupdocs.com/comparison/net).
 ## Basisgebruiksaanwijzingen
 ### [Vergelijk cellen uit pad - GroupDocs.Comparison voor .NET](./compare-cells-from-path/)
 Leer hoe u cellen uit een pad kunt vergelijken met GroupDocs.Comparison voor .NET. Identificeer op efficiënte wijze verschillen tussen documenten.

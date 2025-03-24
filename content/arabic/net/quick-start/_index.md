@@ -3,7 +3,6 @@ title: بداية سريعة
 linktitle: بداية سريعة
 second_title: GroupDocs.Comparison .NET API
 description: قم بدمج GroupDocs Comparison for .NET بسهولة في مشاريعك. تعرف على طرق إعداد الترخيص الفعالة لسير عمل مقارنة المستندات الدقيقة.
-type: docs
 weight: 25
 url: /ar/net/quick-start/
 ---

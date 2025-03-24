@@ -3,7 +3,6 @@ title: 이미지 비교
 linktitle: 이미지 비교
 second_title: GroupDocs.비교 .NET API
 description: GroupDocs.Comparison 라이브러리를 사용하여 .NET의 이미지를 효율적으로 비교합니다. 경로 또는 스트림의 원활한 통합을 위한 단계별 튜토리얼입니다.
-type: docs
 weight: 23
 url: /ko/net/image-comparison/
 ---

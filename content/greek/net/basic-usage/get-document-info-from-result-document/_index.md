@@ -3,7 +3,6 @@ title: Λάβετε πληροφορίες εγγράφου από το Έγγρ
 linktitle: Λάβετε πληροφορίες εγγράφου από το Έγγραφο αποτελεσμάτων - GroupDocs.Comparison για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να ανακτάτε πληροφορίες εγγράφου από το έγγραφο αποτελεσμάτων χρησιμοποιώντας το GroupDocs.Comparison για .NET. Εύκολα βήματα που εξηγούνται για προγραμματιστές .NET.
-type: docs
 weight: 12
 url: /el/net/basic-usage/get-document-info-from-result-document/
 ---

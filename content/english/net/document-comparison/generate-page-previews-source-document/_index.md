@@ -3,7 +3,6 @@ title: Generate Page Previews for Source Document
 linktitle: Generate Page Previews for Source Document
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to utilize Groupdocs.Comparison for .NET to streamline document comparison processes in your C# projects effectively.
-type: docs
 weight: 11
 url: /net/document-comparison/generate-page-previews-source-document/
 ---

@@ -3,7 +3,6 @@ title: Obtenga formatos compatibles GroupDocs.Comparison para .NET
 linktitle: Obtenga formatos compatibles GroupDocs.Comparison para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Mejore la precisión y coherencia de los documentos con GroupDocs.Comparison para .NET. Integre perfectamente esta poderosa herramienta en sus aplicaciones .NET.
-type: docs
 weight: 15
 url: /es/net/basic-usage/get-supported-formats/
 ---

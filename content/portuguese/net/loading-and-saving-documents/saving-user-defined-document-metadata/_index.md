@@ -3,7 +3,6 @@ title: Salvando metadados de documentos definidos pelo usuário na comparação 
 linktitle: Salvando metadados de documentos definidos pelo usuário na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como salvar metadados de documentos definidos pelo usuário usando GroupDocs Comparison for .NET. Compare e manipule facilmente metadados com instruções passo a passo.
-type: docs
 weight: 16
 url: /pt/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

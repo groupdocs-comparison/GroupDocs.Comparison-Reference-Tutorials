@@ -3,7 +3,6 @@ title: GroupDocs Comparison for .NET でのロード オプションの使用
 linktitle: GroupDocs Comparison for .NET でのロード オプションの使用
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs Comparison for .NET の読み込みオプションを使用して、ドキュメントとカスタム フォントをシームレスに比較する方法を学びます。
-type: docs
 weight: 13
 url: /ja/net/loading-and-saving-documents/using-load-options/
 ---

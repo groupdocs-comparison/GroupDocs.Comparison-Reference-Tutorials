@@ -3,7 +3,6 @@ title: .NET için GroupDocs Karşılaştırmasındaki Klasörleri Karşılaştı
 linktitle: .NET için GroupDocs Karşılaştırmasındaki Klasörleri Karşılaştırın
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs Comparison for .NET'i kullanarak klasörleri zahmetsizce karşılaştırın. Verimli klasör karşılaştırması için adım adım izleyin. .NET uygulamalarınızı geliştirin.
-type: docs
 weight: 12
 url: /tr/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Bu eğitimde sağlanan örnekleri anlamak ve uygulamak için C# programlama dili
 ### 3. Entegre Geliştirme Ortamı (IDE)
 Kod örneklerini yazmak ve yürütmek için Visual Studio gibi bir IDE'ye ihtiyacınız olacak.
 ### 4. GroupDocs Dokümantasyonuna Erişim
-Eğitim boyunca başvurmak üzere GroupDocs Comparison for .NET belgelerini el altında bulundurun. Dokümantasyona ulaşabilirsiniz[Burada](https://reference.groupdocs.com/comparison/net/).
+Eğitim boyunca başvurmak üzere GroupDocs Comparison for .NET belgelerini el altında bulundurun. Dokümantasyona ulaşabilirsiniz[Burada](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Ad Alanlarını İçe Aktar
 Başlamak için gerekli ad alanlarını C# kodunuza aktarmanız gerekir. Bu, GroupDocs Comparison for .NET tarafından sağlanan sınıfları ve yöntemleri kullanmanıza olanak tanır.

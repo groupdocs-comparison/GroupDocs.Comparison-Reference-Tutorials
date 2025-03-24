@@ -3,7 +3,6 @@ title: Mappák összehasonlítása a GroupDocs-összehasonlításban .NET-hez
 linktitle: Mappák összehasonlítása a GroupDocs-összehasonlításban .NET-hez
 second_title: GroupDocs.Comparison .NET API
 description: Hasonlítsa össze a mappákat könnyedén a GroupDocs Comparison for .NET segítségével. Kövesse lépésről lépésre a mappa hatékony összehasonlításához. Bővítse .NET-alkalmazásait.
-type: docs
 weight: 12
 url: /hu/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Az oktatóanyagban található példák megértéséhez és megvalósításához
 ### 3. Integrált fejlesztési környezet (IDE)
 A kódpéldák írásához és végrehajtásához szüksége lesz egy IDE-re, például a Visual Studiora.
 ### 4. Hozzáférés a GroupDocs dokumentációjához
-Tartsa kéznél a GroupDocs Comparison for .NET dokumentációt referenciaként az oktatóanyag során. Hozzáférhet a dokumentációhoz[itt](https://reference.groupdocs.com/comparison/net/).
+Tartsa kéznél a GroupDocs Comparison for .NET dokumentációt referenciaként az oktatóanyag során. Hozzáférhet a dokumentációhoz[itt](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Névterek importálása
 A kezdéshez importálnia kell a szükséges névtereket a C# kódjába. Ez lehetővé teszi a GroupDocs Comparison for .NET által biztosított osztályok és metódusok használatát.

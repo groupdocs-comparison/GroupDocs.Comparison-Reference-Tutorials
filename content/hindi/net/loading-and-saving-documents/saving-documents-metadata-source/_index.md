@@ -3,7 +3,6 @@ title: .NET के लिए GroupDocs तुलना में दस्ता
 linktitle: .NET के लिए GroupDocs तुलना में दस्तावेज़ मेटाडेटा स्रोत सहेजना
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs Compare का उपयोग करके दस्तावेज़ मेटाडेटा स्रोत को सहेजना सीखें। अपने .NET में निर्बाध दस्तावेज़ तुलना के लिए हमारी चरण-दर-चरण मार्गदर्शिका का पालन करें।
-type: docs
 weight: 14
 url: /hi/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

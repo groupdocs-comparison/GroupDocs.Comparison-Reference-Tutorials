@@ -3,7 +3,6 @@ title: Ustaw licencję licznikową — porównanie GroupDocs dla .NET
 linktitle: Ustaw licencję licznikową — porównanie GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Bezproblemowo zintegruj program GroupDocs Comparison for .NET ze swoimi projektami .NET, aby uzyskać efektywny przepływ pracy związany z porównywaniem dokumentów.
-type: docs
 weight: 12
 url: /pl/net/quick-start/set-metered-license/
 ---

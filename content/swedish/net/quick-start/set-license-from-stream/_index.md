@@ -3,7 +3,6 @@ title: Ställ in licens från Stream - GroupDocs Comparison for .NET
 linktitle: Ställ in licens från Stream - GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Lär dig hur du ställer in licenser med GroupDocs.Comparison för .NET effektivt. Säkerställ dokumentets noggrannhet och spara tid med denna handledning.
-type: docs
 weight: 11
 url: /sv/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Innan du dyker in i handledningen, se till att du har följande förutsättninga
 - Grundläggande kunskaper i C# och .NET framework.
 - Visual Studio installerat på ditt system.
 -  GroupDocs.Comparison för .NET-biblioteket installerat. Du kan ladda ner den[här](https://releases.groupdocs.com/comparison/net/).
--  Tillgång till GroupDocs.Comparison för .NET-dokumentationen[här](https://reference.groupdocs.com/comparison/net/).
+-  Tillgång till GroupDocs.Comparison för .NET-dokumentationen[här](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importera namnområden
 För att börja använda GroupDocs.Comparison för .NET måste du importera de nödvändiga namnrymden till ditt projekt. Så här kan du göra det:
@@ -67,4 +66,4 @@ Ja, du kan begära en gratis provperiod från GroupDocs webbplats för att utvä
 ### Vad ska jag göra om jag stöter på licensproblem?
  Om du stöter på några licensproblem, se licensfrågorna[här](https://purchase.groupdocs.com/faqs/licensing) eller kontakta GroupDocs support.
 ### Var kan jag hitta fler handledningar och resurser för GroupDocs.Comparison for .NET?
- Du kan hitta omfattande dokumentation och handledning på GroupDocs-webbplatsen[här](https://reference.groupdocs.com/comparison/net/).
+ Du kan hitta omfattande dokumentation och handledning på GroupDocs-webbplatsen[här](https://tutorials.groupdocs.com/comparison/net/).

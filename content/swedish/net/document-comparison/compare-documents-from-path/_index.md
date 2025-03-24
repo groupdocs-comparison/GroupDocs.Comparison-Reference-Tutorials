@@ -3,7 +3,6 @@ title: Jämför dokument från Path - GroupDocs.Comparison för .NET
 linktitle: Jämför dokument från Path - GroupDocs.Comparison för .NET
 second_title: GroupDocs.Comparison .NET API
 description: Jämför enkelt dokument i olika format med GroupDocs.Comparison för .NET. Spara tid och säkerställ noggrannhet i juridiska, akademiska och affärsuppgifter.
-type: docs
 weight: 15
 url: /sv/net/document-comparison/compare-documents-from-path/
 ---

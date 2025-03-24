@@ -3,7 +3,6 @@ title: Porównaj chronione dokumenty ze strumienia — GroupDocs.Comparison dla 
 linktitle: Porównaj chronione dokumenty ze strumienia — GroupDocs.Comparison dla platformy .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak porównywać chronione dokumenty ze strumieni za pomocą GroupDocs.Comparison dla platformy .NET. Usprawnij proces porównywania dokumentów bez wysiłku.
-type: docs
 weight: 18
 url: /pl/net/document-comparison/compare-protected-documents-from-stream/
 ---

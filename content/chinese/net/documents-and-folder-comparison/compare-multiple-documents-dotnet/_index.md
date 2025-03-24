@@ -3,7 +3,6 @@ title: 在 GroupDocs Comparison for .NET 中比较多个文档
 linktitle: 在 GroupDocs Comparison for .NET 中比较多个文档
 second_title: GroupDocs.Comparison .NET API
 description: 了解如何使用 GroupDocs Comparison for .NET 有效地比较多个文档。请按照我们的分步指南进行无缝集成。
-type: docs
 weight: 13
 url: /zh/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---

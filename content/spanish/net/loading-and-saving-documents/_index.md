@@ -3,7 +3,6 @@ title: Cargar y guardar documentos
 linktitle: Cargar y guardar documentos
 second_title: API GroupDocs.Comparison .NET
 description: Compare documentos en .NET sin esfuerzo utilizando GroupDocs.Comparison para .NET. Aprenda a cargar, guardar y utilizar opciones de carga para una gestión eficiente de documentos.
-type: docs
 weight: 22
 url: /es/net/loading-and-saving-documents/
 ---

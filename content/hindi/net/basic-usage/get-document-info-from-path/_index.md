@@ -3,7 +3,6 @@ title: पथ से दस्तावेज़ जानकारी प्र
 linktitle: पथ से दस्तावेज़ जानकारी प्राप्त करें - .NET के लिए GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API
 description: .NET के लिए GroupDocs.Comparison का उपयोग करके पथ से दस्तावेज़ जानकारी निकालने का तरीका जानें। C# में कुशल दस्तावेज़ प्रबंधन के लिए आसान चरण।
-type: docs
 weight: 13
 url: /hi/net/basic-usage/get-document-info-from-path/
 ---

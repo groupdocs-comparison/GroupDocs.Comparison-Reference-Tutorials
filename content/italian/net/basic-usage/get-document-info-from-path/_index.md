@@ -3,7 +3,6 @@ title: Ottieni informazioni sul documento dal percorso - GroupDocs.Comparison pe
 linktitle: Ottieni informazioni sul documento dal percorso - GroupDocs.Comparison per .NET
 second_title: API GroupDocs.Comparison .NET
 description: Scopri come estrarre le informazioni sul documento da un percorso utilizzando GroupDocs.Comparison per .NET. Semplici passaggi per una gestione efficiente dei documenti in C#.
-type: docs
 weight: 13
 url: /it/net/basic-usage/get-document-info-from-path/
 ---

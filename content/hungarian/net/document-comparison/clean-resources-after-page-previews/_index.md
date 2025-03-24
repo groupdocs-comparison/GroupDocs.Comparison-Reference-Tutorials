@@ -3,7 +3,6 @@ title: Tisztítsa meg az erőforrásokat az oldal előnézete után
 linktitle: Tisztítsa meg az erőforrásokat az oldal előnézete után
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg, hogyan hasonlíthatja össze a dokumentumokat a GroupDocs.Comparison for .NET használatával lépésről lépésre. Bővítse .NET-alkalmazásait hatékony dokumentumkezeléssel.
-type: docs
 weight: 13
 url: /hu/net/document-comparison/clean-resources-after-page-previews/
 ---

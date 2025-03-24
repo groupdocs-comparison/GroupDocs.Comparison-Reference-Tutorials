@@ -3,7 +3,6 @@ title: Ukládání uživatelem definovaných metadat dokumentu ve srovnání Gro
 linktitle: Ukládání uživatelem definovaných metadat dokumentu ve srovnání GroupDocs pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se ukládat uživatelsky definovaná metadata dokumentu pomocí GroupDocs Comparison for .NET. Snadno porovnávejte a upravujte metadata pomocí podrobných pokynů.
-type: docs
 weight: 16
 url: /cs/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

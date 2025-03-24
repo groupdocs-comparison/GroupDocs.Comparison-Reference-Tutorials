@@ -3,7 +3,6 @@ title: .NET용 GroupDocs 비교에서 사용자 정의 문서 메타데이터 �
 linktitle: .NET용 GroupDocs 비교에서 사용자 정의 문서 메타데이터 저장
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs 비교를 사용하여 사용자 정의 문서 메타데이터를 저장하는 방법을 알아보세요. 단계별 지침을 통해 메타데이터를 쉽게 비교하고 조작할 수 있습니다.
-type: docs
 weight: 16
 url: /ko/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

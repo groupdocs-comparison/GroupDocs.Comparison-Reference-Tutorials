@@ -3,7 +3,6 @@ title: Dokumentumok és mappák összehasonlítása
 linktitle: Dokumentumok és mappák összehasonlítása
 second_title: GroupDocs.Comparison .NET API
 description: Ismerje meg a dokumentum-munkafolyamatok egyszerűsítését a GroupDocs Comparison for .NET oktatóanyagok segítségével. Fogadja el, utasítsa el a változtatásokat, és könnyedén hasonlítsa össze a dokumentumokat és mappákat.
-type: docs
 weight: 20
 url: /hu/net/documents-and-folder-comparison/
 ---

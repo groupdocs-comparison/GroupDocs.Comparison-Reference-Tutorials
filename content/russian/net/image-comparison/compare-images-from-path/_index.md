@@ -3,7 +3,6 @@ title: Сравнение изображений по пути — GroupDocs.Com
 linktitle: Сравнение изображений по пути — GroupDocs.Comparison для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Узнайте, как эффективно сравнивать изображения в .NET с помощью библиотеки GroupDocs.Comparison. Следуйте пошаговому руководству для бесшовной интеграции.
-type: docs
 weight: 10
 url: /ru/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /ru/net/image-comparison/compare-images-from-path/
 ## Предварительные условия
 Прежде чем углубляться в тонкости использования GroupDocs.Comparison для .NET, убедитесь, что выполнены следующие предварительные условия:
 ### 1. Установите GroupDocs.Comparison для .NET.
- Загрузите библиотеку с[здесь](https://releases.groupdocs.com/comparison/net/) и следуйте инструкциям по установке, приведенным в документации.[здесь](https://reference.groupdocs.com/comparison/net/).
+ Загрузите библиотеку с[здесь](https://releases.groupdocs.com/comparison/net/) и следуйте инструкциям по установке, приведенным в документации.[здесь](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Получить лицензию
  Чтобы раскрыть весь потенциал GroupDocs.Comparison для .NET, приобретите лицензию на сайте[здесь](https://purchase.groupdocs.com/buy) или используйте доступную временную лицензию[здесь](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Знакомство с программированием на C#.

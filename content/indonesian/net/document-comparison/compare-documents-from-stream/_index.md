@@ -3,7 +3,6 @@ title: Bandingkan Dokumen dari Stream - GroupDocs.Comparison untuk .NET
 linktitle: Bandingkan Dokumen dari Stream - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Sederhanakan perbandingan dokumen dengan GroupDocs.Comparison untuk .NET. Bandingkan dokumen dengan mudah dan pastikan keakuratan seluruh file.
-type: docs
 weight: 16
 url: /id/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ Di dunia yang serba cepat saat ini, dimana informasi berlimpah dan perubahan ter
 Sebelum mulai menggunakan GroupDocs.Comparison untuk .NET, ada beberapa prasyarat yang perlu Anda miliki:
 1. Instal .NET Framework: Pastikan Anda telah menginstal .NET Framework di sistem Anda. Anda dapat mengunduhnya dari situs web Microsoft.
 2.  Unduh GroupDocs.Comparison untuk .NET: Kunjungi[tautan unduhan](https://releases.groupdocs.com/comparison/net/) untuk mendapatkan versi terbaru GroupDocs.Comparison untuk .NET.
-3.  Akses Dokumentasi: Biasakan diri Anda dengan fungsi perpustakaan dengan mengacu pada[dokumentasi](https://reference.groupdocs.com/comparison/net/).
+3.  Akses Dokumentasi: Biasakan diri Anda dengan fungsi perpustakaan dengan mengacu pada[dokumentasi](https://tutorials.groupdocs.com/comparison/net/).
 4. Pemahaman Dasar C#: Tutorial ini mengasumsikan Anda memiliki pemahaman dasar tentang bahasa pemrograman C#.
 
 ## Impor Namespace

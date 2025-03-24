@@ -3,7 +3,6 @@ title: पथ से छवियों की तुलना करें - .N
 linktitle: पथ से छवियों की तुलना करें - .NET के लिए GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison लाइब्रेरी का उपयोग करके .NET में छवियों की कुशलतापूर्वक तुलना करना सीखें। निर्बाध एकीकरण के लिए चरण-दर-चरण मार्गदर्शिका का पालन करें।
-type: docs
 weight: 10
 url: /hi/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ url: /hi/net/image-comparison/compare-images-from-path/
 ## आवश्यक शर्तें
 .NET के लिए GroupDocs.Comparison का उपयोग करने की जटिलताओं में गोता लगाने से पहले, सुनिश्चित करें कि निम्नलिखित शर्तें पूरी हो गई हैं:
 ### 1. .NET के लिए GroupDocs.Comparison स्थापित करें
- लाइब्रेरी यहां से डाउनलोड करें[यहाँ](https://releases.groupdocs.com/comparison/net/) और दस्तावेज़ में दिए गए इंस्टॉलेशन निर्देशों का पालन करें[यहाँ](https://reference.groupdocs.com/comparison/net/).
+ लाइब्रेरी यहां से डाउनलोड करें[यहाँ](https://releases.groupdocs.com/comparison/net/) और दस्तावेज़ में दिए गए इंस्टॉलेशन निर्देशों का पालन करें[यहाँ](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. लाइसेंस प्राप्त करें
  .NET के लिए GroupDocs.Comparison की पूरी क्षमता को अनलॉक करने के लिए, यहां से लाइसेंस प्राप्त करें[यहाँ](https://purchase.groupdocs.com/buy) या उपलब्ध अस्थायी लाइसेंस का उपयोग करें[यहाँ](https://purchase.groupdocs.com/temporary-license/).
 ### 3. सी# प्रोग्रामिंग से परिचित होना

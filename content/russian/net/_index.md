@@ -1,7 +1,6 @@
 ---
 title: Учебники и примеры GroupDocs.Comparison для .NET
 linktitle: GroupDocs.Comparison для учебных пособий по .NET
-type: docs
 weight: 10
 url: /ru/net/
 description: Откройте для себя подробные руководства по GroupDocs.Comparison для .NET, которые облегчают эффективное сравнение, управление и интеграцию документов и папок.

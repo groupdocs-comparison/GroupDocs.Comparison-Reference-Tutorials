@@ -3,7 +3,6 @@ title: Bandingkan Folder dalam Perbandingan GroupDocs untuk .NET
 linktitle: Bandingkan Folder dalam Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan folder dengan mudah menggunakan Perbandingan GroupDocs untuk .NET. Ikuti langkah demi langkah kami untuk perbandingan folder yang efisien. Tingkatkan aplikasi .NET Anda.
-type: docs
 weight: 12
 url: /id/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Keakraban dengan bahasa pemrograman C# dan kerangka .NET diperlukan untuk memaha
 ### 3. Lingkungan Pengembangan Terpadu (IDE)
 Anda memerlukan IDE seperti Visual Studio untuk menulis dan mengeksekusi contoh kode.
 ### 4. Akses ke Dokumentasi GroupDocs
-Simpan dokumentasi Perbandingan GroupDocs untuk .NET untuk referensi sepanjang tutorial. Anda dapat mengakses dokumentasinya[Di Sini](https://reference.groupdocs.com/comparison/net/).
+Simpan dokumentasi Perbandingan GroupDocs untuk .NET untuk referensi sepanjang tutorial. Anda dapat mengakses dokumentasinya[Di Sini](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Impor Namespace
 Untuk memulai, Anda perlu mengimpor namespace yang diperlukan ke dalam kode C# Anda. Ini memungkinkan Anda untuk menggunakan kelas dan metode yang disediakan oleh GroupDocs Comparison untuk .NET.

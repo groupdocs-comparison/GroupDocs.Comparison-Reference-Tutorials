@@ -3,7 +3,6 @@ title: 比較路徑中的受保護文件 - GroupDocs.Comparison for .NET
 linktitle: 比較路徑中的受保護文件 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: 使用 GroupDocs.Comparison 輕鬆比較 .NET 中的受保護文檔，以實現無縫整合。增強您的文件管理工作流程。
-type: docs
 weight: 17
 url: /zh-hant/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ GroupDocs.Comparison for .NET 簡化了比較受保護文件的流程，為開�
 ### 我可以在購買前嘗試適用於 .NET 的 GroupDocs.Comparison 嗎？
 是的，您可以透過造訪可用的免費試用版來探索 GroupDocs.Comparison for .NET 的功能[這裡](https://releases.groupdocs.com/).
 ### 在哪裡可以找到 GroupDocs.Comparison for .NET 的文件和支援？
-您可以參考綜合文檔[這裡](https://reference.groupdocs.com/comparison/net/)並尋求社區論壇的支持[這裡](https://forum.groupdocs.com/c/comparison/12).
+您可以參考綜合文檔[這裡](https://tutorials.groupdocs.com/comparison/net/)並尋求社區論壇的支持[這裡](https://forum.groupdocs.com/c/comparison/12).
 ### 我需要臨時授權才能使用 GroupDocs.Comparison for .NET 嗎？
 雖然臨時許可證可用於測試目的，但您可以透過造訪取得完整許可證[這裡](https://purchase.groupdocs.com/buy).

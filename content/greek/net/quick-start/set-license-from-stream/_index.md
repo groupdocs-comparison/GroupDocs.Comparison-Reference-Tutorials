@@ -3,7 +3,6 @@ title: Ορισμός άδειας χρήσης από το Stream - Σύγκρ�
 linktitle: Ορισμός άδειας χρήσης από το Stream - Σύγκριση GroupDocs για .NET
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να ορίζετε αποτελεσματικά άδειες χρησιμοποιώντας το GroupDocs.Comparison για .NET. Διασφαλίστε την ακρίβεια του εγγράφου και εξοικονομήστε χρόνο με αυτό το σεμινάριο.
-type: docs
 weight: 11
 url: /el/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ url: /el/net/quick-start/set-license-from-stream/
 - Βασικές γνώσεις C# και .NET Framework.
 - Το Visual Studio είναι εγκατεστημένο στο σύστημά σας.
 -  Εγκαταστάθηκε το GroupDocs.Comparison για τη βιβλιοθήκη .NET. Μπορείτε να το κατεβάσετε[εδώ](https://releases.groupdocs.com/comparison/net/).
--  Πρόσβαση στην τεκμηρίωση GroupDocs.Comparison για .NET[εδώ](https://reference.groupdocs.com/comparison/net/).
+-  Πρόσβαση στην τεκμηρίωση GroupDocs.Comparison για .NET[εδώ](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Εισαγωγή χώρων ονομάτων
 Για να ξεκινήσετε να χρησιμοποιείτε το GroupDocs.Comparison για .NET, πρέπει να εισαγάγετε τους απαραίτητους χώρους ονομάτων στο έργο σας. Δείτε πώς μπορείτε να το κάνετε:
@@ -67,4 +66,4 @@ Console.WriteLine("\nWe do not ship any license with this example. " +
 ### Τι πρέπει να κάνω εάν αντιμετωπίσω προβλήματα αδειοδότησης;
  Εάν αντιμετωπίζετε προβλήματα αδειοδότησης, ανατρέξτε στις Συνήθεις Ερωτήσεις σχετικά με την αδειοδότηση[εδώ](https://purchase.groupdocs.com/faqs/licensing) ή επικοινωνήστε με την υποστήριξη GroupDocs.
 ### Πού μπορώ να βρω περισσότερα σεμινάρια και πόρους για το GroupDocs.Comparison για .NET;
- Μπορείτε να βρείτε εκτενή τεκμηρίωση και σεμινάρια στον ιστότοπο του GroupDocs[εδώ](https://reference.groupdocs.com/comparison/net/).
+ Μπορείτε να βρείτε εκτενή τεκμηρίωση και σεμινάρια στον ιστότοπο του GroupDocs[εδώ](https://tutorials.groupdocs.com/comparison/net/).

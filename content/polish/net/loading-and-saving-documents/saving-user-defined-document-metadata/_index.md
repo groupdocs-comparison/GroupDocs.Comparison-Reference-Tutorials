@@ -3,7 +3,6 @@ title: Zapisywanie metadanych dokumentu zdefiniowanego przez użytkownika w por�
 linktitle: Zapisywanie metadanych dokumentu zdefiniowanego przez użytkownika w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Dowiedz się, jak zapisywać metadane dokumentów zdefiniowanych przez użytkownika za pomocą narzędzia GroupDocs Comparison dla platformy .NET. Z łatwością porównuj metadane i manipuluj nimi, korzystając z instrukcji krok po kroku.
-type: docs
 weight: 16
 url: /pl/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---

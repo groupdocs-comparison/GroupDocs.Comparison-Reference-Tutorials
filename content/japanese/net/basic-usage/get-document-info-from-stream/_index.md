@@ -3,7 +3,6 @@ title: ストリームからドキュメント情報を取得 - GroupDocs.Compar
 linktitle: ストリームからドキュメント情報を取得 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison を使用して .NET でドキュメントを効率的に比較し、ドキュメント処理ワークフローをシームレスに強化する方法を学びます。
-type: docs
 weight: 14
 url: /ja/net/basic-usage/get-document-info-from-stream/
 ---

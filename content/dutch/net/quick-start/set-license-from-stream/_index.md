@@ -3,7 +3,6 @@ title: Licentie instellen vanuit Stream - GroupDocs-vergelijking voor .NET
 linktitle: Licentie instellen vanuit Stream - GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u efficiënt licenties kunt instellen met GroupDocs.Comparison voor .NET. Zorg voor documentnauwkeurigheid en bespaar tijd met deze tutorial.
-type: docs
 weight: 11
 url: /nl/net/quick-start/set-license-from-stream/
 ---
@@ -14,7 +13,7 @@ Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende ver
 - Basiskennis van C# en .NET framework.
 - Visual Studio is op uw systeem geïnstalleerd.
 -  GroupDocs.Comparison voor .NET-bibliotheek geïnstalleerd. Je kunt het downloaden[hier](https://releases.groupdocs.com/comparison/net/).
--  Toegang tot de GroupDocs.Comparison voor .NET-documentatie[hier](https://reference.groupdocs.com/comparison/net/).
+-  Toegang tot de GroupDocs.Comparison voor .NET-documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Naamruimten importeren
 Om GroupDocs.Comparison voor .NET te gaan gebruiken, moet u de benodigde naamruimten in uw project importeren. Hier ziet u hoe u het kunt doen:
@@ -67,4 +66,4 @@ Ja, u kunt een gratis proefversie aanvragen op de GroupDocs-website om het produ
 ### Wat moet ik doen als ik licentieproblemen tegenkom?
  Als u licentieproblemen ondervindt, raadpleegt u de veelgestelde vragen over licenties[hier](https://purchase.groupdocs.com/faqs/licensing) of neem contact op met GroupDocs-ondersteuning.
 ### Waar kan ik meer tutorials en bronnen vinden voor GroupDocs.Comparison voor .NET?
- Op de GroupDocs-website vindt u uitgebreide documentatie en tutorials[hier](https://reference.groupdocs.com/comparison/net/).
+ Op de GroupDocs-website vindt u uitgebreide documentatie en tutorials[hier](https://tutorials.groupdocs.com/comparison/net/).

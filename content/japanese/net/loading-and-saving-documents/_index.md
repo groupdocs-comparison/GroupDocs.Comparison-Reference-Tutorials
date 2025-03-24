@@ -3,7 +3,6 @@ title: ドキュメントのロードと保存
 linktitle: ドキュメントのロードと保存
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用して、.NET 内のドキュメントを簡単に比較します。効率的なドキュメント管理のための読み込み、保存、読み込みオプションの利用について学びます。
-type: docs
 weight: 22
 url: /ja/net/loading-and-saving-documents/
 ---

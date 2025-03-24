@@ -3,7 +3,6 @@ title: Porovnat buňky z cesty - GroupDocs.Comparison pro .NET
 linktitle: Porovnat buňky z cesty - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se porovnávat buňky z cesty pomocí GroupDocs.Comparison for .NET. Efektivně identifikujte rozdíly mezi dokumenty.
-type: docs
 weight: 10
 url: /cs/net/basic-usage/compare-cells-from-path/
 ---

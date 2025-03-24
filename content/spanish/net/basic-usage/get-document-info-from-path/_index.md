@@ -3,7 +3,6 @@ title: Obtener información del documento desde la ruta - GroupDocs.Comparison p
 linktitle: Obtener información del documento desde la ruta - GroupDocs.Comparison para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda a extraer información de un documento de una ruta usando GroupDocs.Comparison para .NET. Pasos sencillos para una gestión eficiente de documentos en C#.
-type: docs
 weight: 13
 url: /es/net/basic-usage/get-document-info-from-path/
 ---

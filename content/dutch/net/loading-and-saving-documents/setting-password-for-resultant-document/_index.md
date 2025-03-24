@@ -3,7 +3,6 @@ title: Wachtwoord instellen voor resulterend document in GroupDocs-vergelijking 
 linktitle: Wachtwoord instellen voor resulterend document in GroupDocs-vergelijking voor .NET
 second_title: GroupDocs.Vergelijking .NET API
 description: Leer hoe u een wachtwoord instelt voor resulterende documenten in GroupDocs Comparison voor .NET. Verbeter de beveiliging en bescherm uw vergeleken bestanden.
-type: docs
 weight: 17
 url: /nl/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Ja, GroupDocs Comparison voor .NET ondersteunt het vergelijken van documenten in
 ### Heb ik een licentie nodig om GroupDocs Comparison voor .NET te gebruiken?
  Ja, u kunt een licentie kopen bij[hier](https://purchase.groupdocs.com/buy) of een tijdelijke licentie verkrijgen[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Is er documentatie beschikbaar voor GroupDocs Comparison for .NET?
- Ja, u heeft toegang tot de documentatie[hier](https://reference.groupdocs.com/comparison/net/).
+ Ja, u heeft toegang tot de documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).

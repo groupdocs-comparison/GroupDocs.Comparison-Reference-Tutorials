@@ -3,7 +3,6 @@ title: Porównaj foldery w porównaniu GroupDocs dla .NET
 linktitle: Porównaj foldery w porównaniu GroupDocs dla .NET
 second_title: GroupDocs.Comparison API .NET
 description: Porównuj foldery bez wysiłku, korzystając z porównania GroupDocs dla platformy .NET. Postępuj zgodnie z naszymi instrukcjami krok po kroku, aby skutecznie porównać foldery. Ulepsz swoje aplikacje .NET.
-type: docs
 weight: 12
 url: /pl/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
@@ -18,7 +17,7 @@ Aby zrozumieć i wdrożyć przykłady podane w tym samouczku, wymagana jest znaj
 ### 3. Zintegrowane środowisko programistyczne (IDE)
 Do napisania i wykonania przykładów kodu potrzebne będzie środowisko IDE, takie jak Visual Studio.
 ### 4. Dostęp do dokumentacji GroupDocs
-Zachowaj pod ręką dokumentację GroupDocs Comparison for .NET, aby móc z niej skorzystać w całym samouczku. Można uzyskać dostęp do dokumentacji[Tutaj](https://reference.groupdocs.com/comparison/net/).
+Zachowaj pod ręką dokumentację GroupDocs Comparison for .NET, aby móc z niej skorzystać w całym samouczku. Można uzyskać dostęp do dokumentacji[Tutaj](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Importuj przestrzenie nazw
 Aby rozpocząć, musisz zaimportować niezbędne przestrzenie nazw do swojego kodu C#. Umożliwia to korzystanie z klas i metod udostępnianych przez GroupDocs Comparison for .NET.

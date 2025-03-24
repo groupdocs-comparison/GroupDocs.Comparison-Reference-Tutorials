@@ -3,7 +3,6 @@ title: Καθαρίστε τους πόρους μετά τις προεπισκ
 linktitle: Καθαρίστε τους πόρους μετά τις προεπισκοπήσεις σελίδων
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να συγκρίνετε έγγραφα χρησιμοποιώντας το GroupDocs.Comparison για .NET βήμα προς βήμα. Βελτιώστε τις εφαρμογές σας .NET με αποτελεσματική διαχείριση εγγράφων.
-type: docs
 weight: 13
 url: /el/net/document-comparison/clean-resources-after-page-previews/
 ---

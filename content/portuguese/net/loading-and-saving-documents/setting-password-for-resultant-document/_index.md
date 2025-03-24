@@ -3,7 +3,6 @@ title: Definindo senha para documento resultante na comparação de GroupDocs pa
 linktitle: Definindo senha para documento resultante na comparação de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como definir uma senha para documentos resultantes em Comparação de GroupDocs para .NET. Aumente a segurança e proteja seus arquivos comparados.
-type: docs
 weight: 17
 url: /pt/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
@@ -63,4 +62,4 @@ Sim, o GroupDocs Comparison for .NET oferece suporte à comparação de document
 ### Preciso de uma licença para usar o GroupDocs Comparison for .NET?
  Sim, você pode comprar uma licença de[aqui](https://purchase.groupdocs.com/buy) ou obter uma licença temporária[aqui](https://purchase.groupdocs.com/temporary-license/).
 ### Existe alguma documentação disponível para comparação de GroupDocs para .NET?
- Sim, você pode acessar a documentação[aqui](https://reference.groupdocs.com/comparison/net/).
+ Sim, você pode acessar a documentação[aqui](https://tutorials.groupdocs.com/comparison/net/).

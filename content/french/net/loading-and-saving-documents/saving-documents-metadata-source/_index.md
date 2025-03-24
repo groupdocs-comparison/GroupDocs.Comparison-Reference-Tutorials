@@ -3,7 +3,6 @@ title: Enregistrement de la source de métadonnées des documents dans la compar
 linktitle: Enregistrement de la source de métadonnées des documents dans la comparaison GroupDocs pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Découvrez comment enregistrer la source de métadonnées du document à l’aide de GroupDocs Comparison for .NET. Suivez notre guide étape par étape pour une comparaison transparente des documents dans votre .NET.
-type: docs
 weight: 14
 url: /fr/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---

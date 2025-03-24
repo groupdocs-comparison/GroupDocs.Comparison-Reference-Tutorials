@@ -3,7 +3,6 @@ title: Penggunaan Dasar
 linktitle: Penggunaan Dasar
 second_title: GroupDocs.Perbandingan .NET API
 description: Bandingkan dokumen di .NET menggunakan GroupDocs.Comparison. Pelajari tutorial penggunaan dasar yang mencakup perbandingan sel, ekstraksi info dokumen, dan format yang didukung.
-type: docs
 weight: 24
 url: /id/net/basic-usage/
 ---
@@ -29,7 +28,7 @@ Menavigasi labirin manajemen dokumen, memahami cara mengekstrak informasi dokume
 ## Dapatkan Format yang Didukung
 Memastikan keakuratan dan konsistensi dokumen sangat penting dalam bidang pengembangan .NET. GroupDocs.Comparison untuk .NET memberdayakan Anda untuk mencapai hal itu. Temukan beragam format yang didukung dan integrasikan alat canggih ini dengan lancar ke dalam aplikasi .NET Anda. Pelajari lebih lanjut tentang format yang didukung[Di Sini](./get-supported-formats/).
 
- Mulailah perjalanan Anda untuk menguasai GroupDocs.Perbandingan untuk .NET dengan tutorial penggunaan dasar ini. Bandingkan sel dengan lancar, ekstrak informasi dokumen, dan pastikan keakuratan dokumen, sehingga meningkatkan upaya pengembangan .NET Anda. Siap untuk terjun? Baca selengkapnya[Di Sini](https://reference.groupdocs.com/comparison/net).
+ Mulailah perjalanan Anda untuk menguasai GroupDocs.Perbandingan untuk .NET dengan tutorial penggunaan dasar ini. Bandingkan sel dengan lancar, ekstrak informasi dokumen, dan pastikan keakuratan dokumen, sehingga meningkatkan upaya pengembangan .NET Anda. Siap untuk terjun? Baca selengkapnya[Di Sini](https://tutorials.groupdocs.com/comparison/net).
 ## Tutorial Penggunaan Dasar
 ### [Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET](./compare-cells-from-path/)
 Pelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Comparison untuk .NET. Identifikasi perbedaan antar dokumen secara efisien.

@@ -3,7 +3,6 @@ title: Đặt giấy phép đo lường - So sánh GroupDocs cho .NET
 linktitle: Đặt giấy phép đo lường - So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tích hợp So sánh GroupDocs cho .NET một cách liền mạch vào các dự án .NET của bạn để có quy trình so sánh tài liệu hiệu quả.
-type: docs
 weight: 12
 url: /vi/net/quick-start/set-metered-license/
 ---

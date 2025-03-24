@@ -3,7 +3,6 @@ title: Porovnat buňky ze streamu - GroupDocs.Comparison pro .NET
 linktitle: Porovnat buňky ze streamu - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Bez námahy porovnávejte dokumenty v C# pomocí GroupDocs.Comparison for .NET. Snadno zjednodušte své úlohy zpracování dokumentů.
-type: docs
 weight: 11
 url: /cs/net/basic-usage/compare-cells-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Generuj podglądy stron dla dokumentu docelowego
 linktitle: Generuj podglądy stron dla dokumentu docelowego
 second_title: GroupDocs.Comparison API .NET
 description: Efektywnie generuj podglądy stron dla dokumentów docelowych za pomocą GroupDocs.Comparison dla .NET. Postępuj zgodnie z naszym przewodnikiem krok po kroku, aby bezproblemowo porównać dokumenty.
-type: docs
 weight: 12
 url: /pl/net/document-comparison/generate-page-previews-target-document/
 ---

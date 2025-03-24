@@ -3,7 +3,6 @@ title: Desteklenen Formatları Alın - .NET için GroupDocs.Comparison
 linktitle: Desteklenen Formatları Alın - .NET için GroupDocs.Comparison
 second_title: GroupDocs.Comparison .NET API'si
 description: GroupDocs.Comparison for .NET ile belge doğruluğunu ve tutarlılığını geliştirin. Bu güçlü aracı .NET uygulamalarınıza sorunsuz bir şekilde entegre edin.
-type: docs
 weight: 15
 url: /tr/net/basic-usage/get-supported-formats/
 ---

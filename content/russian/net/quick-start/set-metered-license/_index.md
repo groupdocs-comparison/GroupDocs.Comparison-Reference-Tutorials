@@ -3,7 +3,6 @@ title: Установка лимитной лицензии — сравнени
 linktitle: Установка лимитной лицензии — сравнение GroupDocs для .NET
 second_title: GroupDocs.Comparison .NET API
 description: Беспрепятственно интегрируйте GroupDocs Comparison для .NET в свои проекты .NET для эффективных рабочих процессов сравнения документов.
-type: docs
 weight: 12
 url: /ru/net/quick-start/set-metered-license/
 ---

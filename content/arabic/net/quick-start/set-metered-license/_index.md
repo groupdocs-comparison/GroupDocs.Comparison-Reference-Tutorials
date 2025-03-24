@@ -3,7 +3,6 @@ title: تعيين الترخيص المقنن - مقارنة GroupDocs لـ .NET
 linktitle: تعيين الترخيص المقنن - مقارنة GroupDocs لـ .NET
 second_title: GroupDocs.Comparison .NET API
 description: قم بدمج مقارنة GroupDocs لـ .NET بسلاسة في مشاريع .NET الخاصة بك للحصول على سير عمل فعال لمقارنة المستندات.
-type: docs
 weight: 12
 url: /ar/net/quick-start/set-metered-license/
 ---

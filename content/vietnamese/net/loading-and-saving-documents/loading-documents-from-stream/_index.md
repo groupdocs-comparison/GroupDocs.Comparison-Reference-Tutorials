@@ -3,7 +3,6 @@ title: Đang tải tài liệu từ luồng trong So sánh GroupDocs cho .NET
 linktitle: Đang tải tài liệu từ luồng trong So sánh GroupDocs cho .NET
 second_title: API GroupDocs.Comparison .NET
 description: Tìm hiểu cách dễ dàng so sánh các tài liệu trong các ứng dụng .NET bằng cách sử dụng So sánh GroupDocs, một thư viện .NET mạnh mẽ.
-type: docs
 weight: 11
 url: /vi/net/loading-and-saving-documents/loading-documents-from-stream/
 ---

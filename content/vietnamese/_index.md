@@ -3,7 +3,6 @@ title: Làm chủ GroupDocs.Comparison - Hướng dẫn và Hướng dẫn
 linktitle: Hướng dẫn GroupDocs.Comparison
 additionalTitle: Tài liệu tham khảo API GroupDocs
 description: Khám phá sức mạnh của GroupDocs.Comparison thông qua các hướng dẫn của chúng tôi! Tìm hiểu cách tích hợp và sử dụng API này để so sánh tài liệu hiệu quả.
-type: docs
 weight: 11
 url: /vi/
 is_root: true

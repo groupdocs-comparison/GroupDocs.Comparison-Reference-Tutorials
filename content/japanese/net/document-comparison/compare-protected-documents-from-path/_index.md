@@ -3,7 +3,6 @@ title: 保護されたドキュメントをパスから比較する - GroupDocs.
 linktitle: 保護されたドキュメントをパスから比較する - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison を使用して .NET で保護されたドキュメントを簡単に比較し、シームレスに統合します。ドキュメント管理ワークフローを強化します。
-type: docs
 weight: 17
 url: /ja/net/document-comparison/compare-protected-documents-from-path/
 ---
@@ -60,6 +59,6 @@ GroupDocs.Comparison for .NET は、保護されたドキュメントを比較�
 ### 購入する前に GroupDocs.Comparison for .NET を試してみることはできますか?
 はい、利用可能な無料トライアルにアクセスして、GroupDocs.Comparison for .NET の機能を探索できます。[ここ](https://releases.groupdocs.com/).
 ### GroupDocs.Comparison for .NET のドキュメントとサポートはどこで見つけられますか?
-包括的なドキュメントを参照できます[ここ](https://reference.groupdocs.com/comparison/net/)コミュニティ フォーラムからのサポートを求めます[ここ](https://forum.groupdocs.com/c/comparison/12).
+包括的なドキュメントを参照できます[ここ](https://tutorials.groupdocs.com/comparison/net/)コミュニティ フォーラムからのサポートを求めます[ここ](https://forum.groupdocs.com/c/comparison/12).
 ### GroupDocs.Comparison for .NET を使用するには一時ライセンスが必要ですか?
 一時ライセンスはテスト目的で利用できますが、次のサイトにアクセスして完全なライセンスを取得できます。[ここ](https://purchase.groupdocs.com/buy).

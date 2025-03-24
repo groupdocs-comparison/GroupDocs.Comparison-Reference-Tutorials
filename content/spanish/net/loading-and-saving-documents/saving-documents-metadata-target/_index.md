@@ -3,7 +3,6 @@ title: Guardar el destino de metadatos de documentos en la comparación de Group
 linktitle: Guardar el destino de metadatos de documentos en la comparación de GroupDocs para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda a guardar el destino de metadatos de documentos utilizando GroupDocs Comparison para .NET. Pasos sencillos para una comparación eficiente de documentos en sus aplicaciones .NET.
-type: docs
 weight: 15
 url: /es/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---

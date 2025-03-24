@@ -3,7 +3,6 @@ title: Bildjämförelse
 linktitle: Bildjämförelse
 second_title: GroupDocs.Comparison .NET API
 description: Jämför effektivt bilder i .NET med GroupDocs.Comparison-biblioteket. Steg-för-steg tutorials för sömlös integration från sökväg eller ström.
-type: docs
 weight: 23
 url: /sv/net/image-comparison/
 ---

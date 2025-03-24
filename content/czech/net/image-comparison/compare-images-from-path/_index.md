@@ -3,7 +3,6 @@ title: Porovnat obrázky z Path - GroupDocs.Comparison pro .NET
 linktitle: Porovnat obrázky z Path - GroupDocs.Comparison pro .NET
 second_title: GroupDocs.Comparison .NET API
 description: Naučte se, jak efektivně porovnávat obrázky v .NET pomocí knihovny GroupDocs.Comparison. Postupujte podle podrobného průvodce pro bezproblémovou integraci.
-type: docs
 weight: 10
 url: /cs/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ V oblasti vývoje .NET je schopnost efektivně porovnávat dokumenty a obrázky 
 ## Předpoklady
 Než se ponoříte do složitosti používání GroupDocs.Comparison pro .NET, ujistěte se, že jsou splněny následující předpoklady:
 ### 1. Nainstalujte GroupDocs.Comparison pro .NET
- Stáhněte si knihovnu z[tady](https://releases.groupdocs.com/comparison/net/) a postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://reference.groupdocs.com/comparison/net/).
+ Stáhněte si knihovnu z[tady](https://releases.groupdocs.com/comparison/net/) a postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Získejte licenci
  Chcete-li odemknout plný potenciál GroupDocs.Comparison pro .NET, získejte licenci od[tady](https://purchase.groupdocs.com/buy) nebo použijte dostupnou dočasnou licenci[tady](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Znalost programování v C#

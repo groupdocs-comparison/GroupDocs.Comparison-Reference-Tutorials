@@ -3,7 +3,6 @@ title: Genera anteprime di pagina per il documento risultante
 linktitle: Genera anteprime di pagina per il documento risultante
 second_title: API GroupDocs.Comparison .NET
 description: Scopri come generare anteprime di documenti utilizzando GroupDocs.Comparison per .NET. Confronta i documenti in modo efficiente e accurato.
-type: docs
 weight: 10
 url: /it/net/document-comparison/generate-page-previews-resultant-document/
 ---

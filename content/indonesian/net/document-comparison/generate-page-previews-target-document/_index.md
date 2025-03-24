@@ -3,7 +3,6 @@ title: Hasilkan Pratinjau Halaman untuk Dokumen Target
 linktitle: Hasilkan Pratinjau Halaman untuk Dokumen Target
 second_title: GroupDocs.Perbandingan .NET API
 description: Hasilkan pratinjau halaman untuk dokumen target secara efisien menggunakan GroupDocs.Comparison untuk .NET. Ikuti panduan langkah demi langkah kami untuk perbandingan dokumen yang lancar.
-type: docs
 weight: 12
 url: /id/net/document-comparison/generate-page-previews-target-document/
 ---

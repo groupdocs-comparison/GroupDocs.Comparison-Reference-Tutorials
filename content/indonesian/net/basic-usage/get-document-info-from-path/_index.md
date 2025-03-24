@@ -3,7 +3,6 @@ title: Dapatkan Info Dokumen dari Path - GroupDocs.Comparison untuk .NET
 linktitle: Dapatkan Info Dokumen dari Path - GroupDocs.Comparison untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Pelajari cara mengekstrak info dokumen dari jalur menggunakan GroupDocs.Comparison untuk .NET. Langkah mudah untuk manajemen dokumen yang efisien di C#.
-type: docs
 weight: 13
 url: /id/net/basic-usage/get-document-info-from-path/
 ---

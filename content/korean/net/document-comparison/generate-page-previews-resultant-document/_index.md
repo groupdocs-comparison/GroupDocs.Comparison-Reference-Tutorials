@@ -3,7 +3,6 @@ title: 결과 문서에 대한 페이지 미리보기 생성
 linktitle: 결과 문서에 대한 페이지 미리보기 생성
 second_title: GroupDocs.비교 .NET API
 description: .NET용 GroupDocs.Comparison을 사용하여 문서 미리보기를 생성하는 방법을 알아보세요. 문서를 효율적이고 정확하게 비교하세요.
-type: docs
 weight: 10
 url: /ko/net/document-comparison/generate-page-previews-resultant-document/
 ---

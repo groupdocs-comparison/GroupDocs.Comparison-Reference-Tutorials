@@ -3,7 +3,6 @@ title: So sánh hình ảnh
 linktitle: So sánh hình ảnh
 second_title: API GroupDocs.Comparison .NET
 description: So sánh hiệu quả hình ảnh trong .NET bằng thư viện GroupDocs.Comparison. Hướng dẫn từng bước để tích hợp liền mạch từ đường dẫn hoặc luồng.
-type: docs
 weight: 23
 url: /vi/net/image-comparison/
 ---

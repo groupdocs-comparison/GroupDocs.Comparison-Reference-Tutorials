@@ -3,7 +3,6 @@ title: Zvládnutí GroupDocs.Comparison - Návody a průvodce
 linktitle: GroupDocs.Comparison výukové programy
 additionalTitle: Reference API GroupDocs
 description: Objevte sílu GroupDocs.Comparison prostřednictvím našich výukových programů! Naučte se integrovat a používat toto API pro efektivní porovnávání dokumentů.
-type: docs
 weight: 11
 url: /cs/
 is_root: true

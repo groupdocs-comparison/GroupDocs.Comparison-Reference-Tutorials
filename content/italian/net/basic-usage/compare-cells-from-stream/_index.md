@@ -3,7 +3,6 @@ title: Confronta celle dal flusso - GroupDocs.Comparison per .NET
 linktitle: Confronta celle dal flusso - GroupDocs.Comparison per .NET
 second_title: API GroupDocs.Comparison .NET
 description: Confronta facilmente i documenti in C# utilizzando GroupDocs.Comparison per .NET. Semplifica con facilità le attività di elaborazione dei documenti.
-type: docs
 weight: 11
 url: /it/net/basic-usage/compare-cells-from-stream/
 ---

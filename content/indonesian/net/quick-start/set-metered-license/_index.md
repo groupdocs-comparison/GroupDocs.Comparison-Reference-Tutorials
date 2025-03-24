@@ -3,7 +3,6 @@ title: Tetapkan Lisensi Terukur - Perbandingan GroupDocs untuk .NET
 linktitle: Tetapkan Lisensi Terukur - Perbandingan GroupDocs untuk .NET
 second_title: GroupDocs.Perbandingan .NET API
 description: Integrasikan Perbandingan GroupDocs untuk .NET dengan lancar ke dalam proyek .NET Anda untuk alur kerja perbandingan dokumen yang efisien.
-type: docs
 weight: 12
 url: /id/net/quick-start/set-metered-license/
 ---

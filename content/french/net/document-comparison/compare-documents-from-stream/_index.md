@@ -3,7 +3,6 @@ title: Comparer les documents de Stream - GroupDocs.Comparison pour .NET
 linktitle: Comparer les documents de Stream - GroupDocs.Comparison pour .NET
 second_title: API GroupDocs.Comparison .NET
 description: Rationalisez la comparaison de documents avec GroupDocs.Comparison pour .NET. Comparez les documents sans effort et garantissez l’exactitude des fichiers.
-type: docs
 weight: 16
 url: /fr/net/document-comparison/compare-documents-from-stream/
 ---
@@ -13,7 +12,7 @@ Dans le monde en évolution rapide d'aujourd'hui, où les informations sont abon
 Avant de vous lancer dans l'utilisation de GroupDocs.Comparison pour .NET, vous devez mettre en place quelques conditions préalables :
 1. Installez .NET Framework : assurez-vous que .NET Framework est installé sur votre système. Vous pouvez le télécharger sur le site Web de Microsoft.
 2.  Téléchargez GroupDocs.Comparison pour .NET : visitez le[lien de téléchargement](https://releases.groupdocs.com/comparison/net/) pour obtenir la dernière version de GroupDocs.Comparison pour .NET.
-3.  Accéder à la Documentation : Familiarisez-vous avec les fonctionnalités de la bibliothèque en vous référant au[documentation](https://reference.groupdocs.com/comparison/net/).
+3.  Accéder à la Documentation : Familiarisez-vous avec les fonctionnalités de la bibliothèque en vous référant au[documentation](https://tutorials.groupdocs.com/comparison/net/).
 4. Compréhension de base de C# : ce didacticiel suppose que vous possédez une compréhension de base du langage de programmation C#.
 
 ## Importer des espaces de noms

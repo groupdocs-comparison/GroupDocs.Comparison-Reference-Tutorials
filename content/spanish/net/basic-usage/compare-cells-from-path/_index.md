@@ -3,7 +3,6 @@ title: Comparar celdas de la ruta - GroupDocs.Comparison para .NET
 linktitle: Comparar celdas de la ruta - GroupDocs.Comparison para .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda a comparar celdas de una ruta usando GroupDocs.Comparison para .NET. Identificar eficientemente diferencias entre documentos.
-type: docs
 weight: 10
 url: /es/net/basic-usage/compare-cells-from-path/
 ---

@@ -3,7 +3,6 @@ title: パスからドキュメント情報を取得 - GroupDocs.Comparison for 
 linktitle: パスからドキュメント情報を取得 - GroupDocs.Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: GroupDocs.Comparison for .NET を使用してパスからドキュメント情報を抽出する方法を学びます。 C# で効率的にドキュメントを管理するための簡単な手順。
-type: docs
 weight: 13
 url: /ja/net/basic-usage/get-document-info-from-path/
 ---

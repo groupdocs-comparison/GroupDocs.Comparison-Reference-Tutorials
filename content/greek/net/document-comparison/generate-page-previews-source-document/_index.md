@@ -3,7 +3,6 @@ title: Δημιουργήστε προεπισκοπήσεις σελίδας γ
 linktitle: Δημιουργήστε προεπισκοπήσεις σελίδας για έγγραφο προέλευσης
 second_title: GroupDocs.Comparison .NET API
 description: Μάθετε πώς να χρησιμοποιείτε το Groupdocs.Comparison για .NET για να βελτιστοποιήσετε αποτελεσματικά τις διαδικασίες σύγκρισης εγγράφων στα έργα σας C#.
-type: docs
 weight: 11
 url: /el/net/document-comparison/generate-page-previews-source-document/
 ---

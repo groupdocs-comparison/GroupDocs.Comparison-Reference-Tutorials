@@ -3,7 +3,6 @@ title: Using Load Options in GroupDocs Comparison for .NET
 linktitle: Using Load Options in GroupDocs Comparison for .NET
 second_title: GroupDocs.Comparison .NET API
 description: Learn how to use Load Options in GroupDocs Comparison for .NET to compare documents with custom fonts seamlessly.
-type: docs
 weight: 13
 url: /net/loading-and-saving-documents/using-load-options/
 ---

@@ -3,7 +3,6 @@ title: Načítání a ukládání dokumentů
 linktitle: Načítání a ukládání dokumentů
 second_title: GroupDocs.Comparison .NET API
 description: Bez námahy porovnávejte dokumenty v .NET pomocí GroupDocs.Comparison pro .NET. Naučte se načítat, ukládat a využívat možnosti načítání pro efektivní správu dokumentů.
-type: docs
 weight: 22
 url: /cs/net/loading-and-saving-documents/
 ---

@@ -3,7 +3,6 @@ title: Compare imagens do caminho - GroupDocs.Comparison for .NET
 linktitle: Compare imagens do caminho - GroupDocs.Comparison for .NET
 second_title: API GroupDocs.Comparison .NET
 description: Aprenda como comparar imagens com eficiência em .NET usando a biblioteca GroupDocs.Comparison. Siga o guia passo a passo para uma integração perfeita.
-type: docs
 weight: 10
 url: /pt/net/image-comparison/compare-images-from-path/
 ---
@@ -12,7 +11,7 @@ No domínio do desenvolvimento .NET, a capacidade de comparar documentos e image
 ## Pré-requisitos
 Antes de mergulhar nas complexidades da utilização do GroupDocs.Comparison for .NET, certifique-se de que os seguintes pré-requisitos sejam atendidos:
 ### 1. Instale GroupDocs.Comparison para .NET
- Baixe a biblioteca de[aqui](https://releases.groupdocs.com/comparison/net/) e siga as instruções de instalação fornecidas na documentação[aqui](https://reference.groupdocs.com/comparison/net/).
+ Baixe a biblioteca de[aqui](https://releases.groupdocs.com/comparison/net/) e siga as instruções de instalação fornecidas na documentação[aqui](https://tutorials.groupdocs.com/comparison/net/).
 ### 2. Obtenha uma licença
  Para desbloquear todo o potencial do GroupDocs.Comparison for .NET, adquira uma licença de[aqui](https://purchase.groupdocs.com/buy) ou utilize a licença temporária disponível[aqui](https://purchase.groupdocs.com/temporary-license/).
 ### 3. Familiaridade com programação C#

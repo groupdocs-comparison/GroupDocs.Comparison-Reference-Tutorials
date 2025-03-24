@@ -6,6 +6,9 @@ description: So sánh hiệu quả các tài liệu trong .NET với GroupDocs.C
 weight: 21
 url: /vi/net/document-comparison/
 ---
+
+# So sánh tài liệu
+
 ## Giới thiệu
 
 Trong thế giới kỹ thuật số phát triển nhanh chóng ngày nay, việc quản lý tài liệu hiệu quả là rất quan trọng đối với các doanh nghiệp cũng như cá nhân. Cho dù bạn là chuyên gia pháp lý, nhà nghiên cứu học thuật hay chủ doanh nghiệp thì khả năng so sánh tài liệu một cách chính xác và liền mạch là điều tối quan trọng. Với GroupDocs.Comparison dành cho .NET, bạn có thể đơn giản hóa quy trình này một cách dễ dàng.

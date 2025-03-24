@@ -6,6 +6,9 @@ description: Bandingkan dokumen dalam C# dengan mudah menggunakan GroupDocs.Comp
 weight: 11
 url: /id/net/basic-usage/compare-cells-from-stream/
 ---
+
+# Bandingkan Sel dari Aliran - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Dalam dunia pengembangan perangkat lunak, kemampuan membandingkan dokumen secara efisien sangatlah penting. Baik Anda sedang mengerjakan dokumen hukum, kontrak, atau bentuk teks lainnya, kemampuan mengidentifikasi perbedaan secara akurat dapat menghemat waktu dan mencegah kesalahan. Untungnya, GroupDocs.Comparison untuk .NET memberikan solusi ampuh untuk tugas perbandingan dokumen.
 ## Prasyarat

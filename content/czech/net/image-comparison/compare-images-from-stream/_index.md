@@ -6,6 +6,9 @@ description: Naučte se porovnávat obrázky ze streamů pomocí GroupDocs.Compa
 weight: 11
 url: /cs/net/image-comparison/compare-images-from-stream/
 ---
+
+# Porovnání obrázků ze streamu - GroupDocs.Comparison pro .NET
+
 ## Úvod
 V oblasti vývoje .NET je zásadní zajistit přesnost a konzistenci mezi dokumenty nebo obrázky. GroupDocs.Comparison for .NET poskytuje vývojářům robustní řešení pro efektivní porovnávání obrázků. Tento tutoriál vás provede procesem porovnávání obrázků ze streamů pomocí GroupDocs.Comparison for .NET. Pomocí těchto kroků budete schopni bezproblémově integrovat funkce porovnávání obrázků do vašich aplikací .NET.
 ## Předpoklady

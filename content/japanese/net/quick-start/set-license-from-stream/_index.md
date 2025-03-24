@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用してライセンスを効�
 weight: 11
 url: /ja/net/quick-start/set-license-from-stream/
 ---
+
+# ストリームからのライセンスの設定 - .NET の GroupDocs の比較
+
 ## 導入
 .NET 開発の世界では、ドキュメントを効率的に管理し、比較することが非常に重要です。法的契約書、財務報告書、またはその他のドキュメントを大量に使用するアプリケーションに取り組んでいる場合でも、ドキュメントを正確に比較できる機能により、時間を節約し、正確性を確保できます。ここで、GroupDocs.Comparison for .NET が役に立ちます。 
 ## 前提条件

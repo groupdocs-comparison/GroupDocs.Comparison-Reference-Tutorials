@@ -6,6 +6,9 @@ description: Vergelijk moeiteloos mappen met GroupDocs Comparison voor .NET. Vol
 weight: 12
 url: /nl/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Vergelijk mappen in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 GroupDocs Comparison voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos mappen kunnen vergelijken binnen hun .NET-applicaties. Deze tutorial leidt u stap voor stap door het proces van het vergelijken van mappen met behulp van GroupDocs Comparison voor .NET. Aan het einde van deze zelfstudie kunt u de bibliotheek gebruiken om mappen efficiënt en effectief te vergelijken.
 ## Vereisten

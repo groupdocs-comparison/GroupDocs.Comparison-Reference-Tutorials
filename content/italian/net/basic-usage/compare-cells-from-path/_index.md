@@ -6,6 +6,9 @@ description: Scopri come confrontare le celle di un percorso utilizzando GroupDo
 weight: 10
 url: /it/net/basic-usage/compare-cells-from-path/
 ---
+
+# Confronta celle dal percorso - GroupDocs.Comparison per .NET
+
 ## introduzione
 Benvenuti nell'esercitazione completa sull'utilizzo di GroupDocs.Comparison per .NET per confrontare le celle di un percorso. In questa guida ti guideremo attraverso il processo passo dopo passo, assicurandoti di comprendere a fondo ogni concetto. GroupDocs.Comparison per .NET è un potente strumento per confrontare vari formati di documenti, tra cui celle, testo e immagini, consentendo agli sviluppatori di identificare in modo efficiente differenze e somiglianze tra i documenti.
 ## Prerequisiti

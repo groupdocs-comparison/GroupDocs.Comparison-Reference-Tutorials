@@ -6,6 +6,9 @@ description: Dowiedz się, jak krok po kroku porównywać dokumenty za pomocą G
 weight: 13
 url: /pl/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Wyczyść zasoby po podglądach stron
+
 ## Wstęp
 świecie rozwoju .NET efektywne zarządzanie dokumentami i porównywanie ich jest niezbędne w różnych zastosowaniach, od kancelarii prawnych po instytucje edukacyjne. Na szczęście dzięki narzędziom takim jak GroupDocs.Comparison dla .NET programiści mogą z łatwością usprawnić proces porównywania dokumentów. W tym samouczku pokażemy, jak krok po kroku wykorzystać GroupDocs.Comparison dla .NET do porównywania dokumentów.
 ## Warunki wstępne

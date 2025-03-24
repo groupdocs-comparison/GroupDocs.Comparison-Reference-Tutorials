@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 从路径中提取
 weight: 13
 url: /zh/net/basic-usage/get-document-info-from-path/
 ---
+
+# 从路径获取文档信息 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在软件开发领域，特别是在 .NET 框架环境中，高效的文档比较是至关重要的。无论您是处理法律文档、代码修订还是任何其他需要精确性的内容，拥有一个强大的文档比较工具都可以节省时间、精力并减少潜在的错误。该领域中一个如此强大的工具是 GroupDocs.Comparison for .NET。本教程将指导您完成利用 GroupDocs.Comparison for .NET 从给定路径获取文档信息的过程，分解每个步骤以确保清晰且易于实施。
 ## 先决条件

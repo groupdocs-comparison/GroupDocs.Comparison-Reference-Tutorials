@@ -6,6 +6,9 @@ description: Integreer GroupDocs Comparison for .NET naadloos in uw .NET-project
 weight: 12
 url: /nl/net/quick-start/set-metered-license/
 ---
+
+# Gemeten licentie instellen - GroupDocs-vergelijking voor .NET
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling zijn robuuste tools voor documentvergelijking onmisbaar. GroupDocs Comparison for .NET onderscheidt zich als een krachtige oplossing voor het programmatisch vergelijken van verschillende documentformaten. Van tekstdocumenten tot spreadsheets en presentaties: met deze bibliotheek kunnen ontwikkelaars op efficiënte wijze verschillen tussen bestanden identificeren.
 ## Vereisten

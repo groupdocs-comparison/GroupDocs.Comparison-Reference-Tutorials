@@ -6,6 +6,9 @@ description: Naučte se používat možnosti načtení v GroupDocs Comparison fo
 weight: 13
 url: /cs/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Použití možností načtení v porovnání GroupDocs pro .NET
+
 ## Úvod
 Vítejte v našem výukovém programu o využití možností načítání ve srovnání GroupDocs pro .NET! V tomto tutoriálu vás krok za krokem provedeme procesem porovnávání dokumentů pomocí možností načítání. Ať už jste začátečník nebo zkušený vývojář, tato příručka vám pomůže hladce integrovat GroupDocs Comparison do vašich aplikací .NET.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan nyerhet ki dokumentuminformációkat egy elér�
 weight: 13
 url: /hu/net/basic-usage/get-document-info-from-path/
 ---
+
+# Dokumentuminformációk beszerzése a Path - GroupDocs.Comparison for .NET webhelyről
+
 ## Bevezetés
 szoftverfejlesztés területén, különösen a .NET-keretkörnyezetekben, a hatékony dokumentum-összehasonlítás kritikus szükséglet. Legyen szó jogi dokumentumokról, kódváltozatokról vagy bármilyen más olyan tartalomról, ahol a pontosság számít, a dokumentumok összehasonlítására szolgáló robusztus eszközzel időt, erőfeszítést és esetleges hibákat takaríthat meg. Az egyik ilyen hatékony eszköz ebben a tartományban a GroupDocs.Comparison for .NET. Ez az oktatóanyag végigvezeti Önt a GroupDocs.Comparison for .NET használatának folyamatán, hogy dokumentuminformációkat szerezzen be egy adott útvonalról, lebontva az egyes lépéseket az egyértelműség és a könnyű megvalósítás érdekében.
 ## Előfeltételek

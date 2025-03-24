@@ -6,6 +6,9 @@ description: Streamline document comparison in .NET applications with GroupDocs 
 weight: 11
 url: /net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# Compare Documents Settings in GroupDocs Comparison for .NET
+
 ## Introduction
 In the realm of document management and comparison, GroupDocs Comparison for .NET stands out as a powerful tool, empowering developers to seamlessly integrate document comparison functionalities into their .NET applications. With its robust features and ease of use, GroupDocs Comparison for .NET simplifies the process of comparing documents, ensuring accuracy and efficiency.
 ## Prerequisites

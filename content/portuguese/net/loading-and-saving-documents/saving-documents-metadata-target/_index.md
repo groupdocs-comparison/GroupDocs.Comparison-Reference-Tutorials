@@ -6,6 +6,9 @@ description: Aprenda como salvar o destino de metadados de documentos usando Gro
 weight: 15
 url: /pt/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Salvando o destino de metadados de documentos na comparação de GroupDocs para .NET
+
 ## Introdução
 Neste tutorial, orientaremos você no processo de salvar o destino de metadados do documento usando o GroupDocs Comparison for .NET. GroupDocs Comparison for .NET é uma biblioteca poderosa que permite comparar e mesclar documentos em seus aplicativos .NET.
 ## Pré-requisitos

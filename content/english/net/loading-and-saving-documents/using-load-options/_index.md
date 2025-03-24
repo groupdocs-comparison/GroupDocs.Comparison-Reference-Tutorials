@@ -6,6 +6,9 @@ description: Learn how to use Load Options in GroupDocs Comparison for .NET to c
 weight: 13
 url: /net/loading-and-saving-documents/using-load-options/
 ---
+
+# Using Load Options in GroupDocs Comparison for .NET
+
 ## Introduction
 Welcome to our tutorial on utilizing Load Options in GroupDocs Comparison for .NET! In this tutorial, we'll walk you through the process of comparing documents using Load Options in a step-by-step manner. Whether you're a beginner or an experienced developer, this guide will help you seamlessly integrate GroupDocs Comparison into your .NET applications.
 ## Prerequisites

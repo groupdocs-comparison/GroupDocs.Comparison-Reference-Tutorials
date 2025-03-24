@@ -6,6 +6,9 @@ description: Lär dig hur du accepterar och avvisar ändringar i dokument med Gr
 weight: 10
 url: /sv/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Acceptera och avvisa ändringar i GroupDocs Comparison for .NET
+
 ## Introduktion
 När det gäller dokumenthantering och samarbete är det av största vikt att säkerställa filernas noggrannhet och integritet. GroupDocs Comparison for .NET framstår som en robust lösning som ger utvecklare möjlighet att utan ansträngning acceptera och avvisa ändringar i dokument, och därigenom effektivisera arbetsflöden och öka produktiviteten. Den här handledningen guidar dig genom processen att acceptera och avvisa ändringar med GroupDocs Comparison för .NET, och dela upp varje steg för tydlighet och enkel implementering.
 ## Förutsättningar

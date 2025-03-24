@@ -6,6 +6,9 @@ description: Effortlessly compare documents in various formats with GroupDocs.Co
 weight: 15
 url: /net/document-comparison/compare-documents-from-path/
 ---
+
+# Compare Documents from Path - GroupDocs.Comparison for .NET
+
 ## Introduction
 In today's digital era, document comparison plays a crucial role in various fields, including legal, business, and academia. Whether you're a lawyer comparing contracts, a student reviewing essays, or a business professional examining reports, having a reliable tool for document comparison can save time and ensure accuracy. GroupDocs.Comparison for .NET offers a powerful solution for comparing documents with ease and efficiency. In this tutorial, we'll guide you through the process of comparing documents using GroupDocs.Comparison for .NET.
 ## Prerequisites

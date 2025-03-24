@@ -6,6 +6,9 @@ description: Pelajari cara menyimpan target metadata dokumen menggunakan Perband
 weight: 15
 url: /id/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Menyimpan Target Metadata Dokumen dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses penyimpanan target metadata dokumen menggunakan Perbandingan GroupDocs untuk .NET. Perbandingan GroupDocs untuk .NET adalah perpustakaan canggih yang memungkinkan Anda membandingkan dan menggabungkan dokumen dalam aplikasi .NET Anda.
 ## Prasyarat

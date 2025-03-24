@@ -6,6 +6,9 @@ description: Lär dig hur du ställer in ett lösenord för resulterande dokumen
 weight: 17
 url: /sv/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Ställa in lösenord för resulterande dokument i GroupDocs Comparison för .NET
+
 ## Introduktion
 I den här självstudien guidar vi dig genom processen att ställa in ett lösenord för det resulterande dokumentet med hjälp av GroupDocs Comparison för .NET. Den här funktionen lägger till ett extra lager av säkerhet till dina jämförda dokument, och säkerställer att endast behöriga personer kan komma åt dem.
 ## Förutsättningar

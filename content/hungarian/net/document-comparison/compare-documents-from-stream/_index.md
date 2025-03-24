@@ -6,6 +6,9 @@ description: Egyszerűsítse a dokumentumok összehasonlítását a GroupDocs.Co
 weight: 16
 url: /hu/net/document-comparison/compare-documents-from-stream/
 ---
+
+# Hasonlítsa össze a dokumentumokat a Streamből – GroupDocs.Comparison for .NET
+
 ## Bevezetés
 A mai rohanó világban, ahol bőséges információ áll rendelkezésre, és folyamatosak a változások, a dokumentumok pontosságának és következetességének biztosítása a legfontosabb. Függetlenül attól, hogy jogi területen, pénzügyi szektorban vagy bármely más iparágban dolgozik, ahol a dokumentumok integritása kulcsfontosságú, a GroupDocs.Comparison for .NET robusztus megoldást kínál az összehasonlítási folyamat egyszerűsítésére.
 ## Előfeltételek

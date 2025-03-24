@@ -6,6 +6,9 @@ description: GroupDocs.Comparison を使用して .NET で保護されたドキ�
 weight: 17
 url: /ja/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# 保護されたドキュメントをパスから比較する - GroupDocs.Comparison for .NET
+
 ## 導入
 ソフトウェア開発の世界では、効率的かつ正確なドキュメントの比較は、法律、金融、教育などのさまざまな業界にとって非常に重要です。 GroupDocs.Comparison for .NET は、.NET アプリケーション内で保護されたドキュメントを簡単に比較するための包括的なソリューションを提供します。このチュートリアルでは、GroupDocs.Comparison for .NET を使用して保護されたドキュメントを比較するプロセスを段階的に説明します。
 ## 前提条件

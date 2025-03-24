@@ -6,6 +6,9 @@ description: Naučte se, jak nastavit heslo pro výsledné dokumenty v GroupDocs
 weight: 17
 url: /cs/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Nastavení hesla pro výsledný dokument ve srovnání GroupDocs pro .NET
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem nastavení hesla pro výsledný dokument pomocí GroupDocs Comparison for .NET. Tato funkce přidává k porovnávaným dokumentům další vrstvu zabezpečení a zajišťuje, že k nim budou mít přístup pouze oprávněné osoby.
 ## Předpoklady

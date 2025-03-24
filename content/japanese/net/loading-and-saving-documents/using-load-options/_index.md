@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET の読み込みオプションを使�
 weight: 13
 url: /ja/net/loading-and-saving-documents/using-load-options/
 ---
+
+# GroupDocs Comparison for .NET でのロード オプションの使用
+
 ## 導入
 GroupDocs Comparison for .NET でのロード オプションの利用に関するチュートリアルへようこそ。このチュートリアルでは、ロード オプションを使用してドキュメントを比較するプロセスを段階的に説明します。初心者でも経験豊富な開発者でも、このガイドは GroupDocs Comparison を .NET アプリケーションにシームレスに統合するのに役立ちます。
 ## 前提条件

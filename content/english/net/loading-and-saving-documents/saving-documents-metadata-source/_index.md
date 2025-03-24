@@ -6,6 +6,9 @@ description: Learn how to save document metadata source using GroupDocs Comparis
 weight: 14
 url: /net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Saving Documents Metadata Source in GroupDocs Comparison for .NET
+
 ## Introduction
 In the world of software development, efficient document comparison is crucial for various industries, including legal, finance, and education. GroupDocs Comparison for .NET offers a powerful solution for comparing documents in .NET applications seamlessly. This tutorial will guide you through the process of using GroupDocs Comparison for .NET to save document metadata source. By following these steps, you'll be able to harness the full potential of this library to enhance your document comparison tasks.
 ## Prerequisites

@@ -6,6 +6,9 @@ description: Aprenda a comparar documentos de manera eficiente usando GroupDocs.
 weight: 10
 url: /es/net/loading-and-saving-documents/loading-documents/
 ---
+
+# Carga de documentos en comparación de GroupDocs para .NET
+
 ## Introducción
 ¡Bienvenido a nuestro tutorial completo sobre cómo utilizar GroupDocs.Comparison para .NET! En este tutorial, lo guiaremos a través del proceso de comparar documentos paso a paso utilizando esta poderosa herramienta. GroupDocs.Comparison para .NET ofrece un sólido conjunto de funciones para la comparación de documentos, lo que permite a los desarrolladores comparar de manera eficiente varios formatos de documentos, como documentos de Word, PDF, hojas de cálculo de Excel y más.
 ## Requisitos previos

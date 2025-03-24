@@ -6,6 +6,9 @@ description: Learn how to set licenses using GroupDocs.Comparison for .NET effic
 weight: 11
 url: /net/quick-start/set-license-from-stream/
 ---
+
+# Set License from Stream - GroupDocs Comparison for .NET
+
 ## Introduction
 In the world of .NET development, managing and comparing documents efficiently is crucial. Whether you're working on legal contracts, financial reports, or any other document-intensive application, the ability to compare documents accurately can save time and ensure accuracy. This is where GroupDocs.Comparison for .NET comes into play. 
 ## Prerequisites

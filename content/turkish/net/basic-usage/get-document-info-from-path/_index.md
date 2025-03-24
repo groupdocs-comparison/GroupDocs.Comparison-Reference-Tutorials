@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET kullanarak belge bilgilerini yoldan n
 weight: 13
 url: /tr/net/basic-usage/get-document-info-from-path/
 ---
+
+# Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
+
 ## giriiş
 Yazılım geliştirme alanında, özellikle .NET çerçeve ortamlarında, verimli belge karşılaştırması kritik bir gerekliliktir. İster yasal belgeler, kod revizyonları veya hassasiyetin önemli olduğu herhangi bir içerik üzerinde çalışıyor olun, belgeleri karşılaştırmak için güçlü bir araca sahip olmak zamandan, emekten ve olası hatalardan tasarruf etmenizi sağlayabilir. Bu etki alanındaki güçlü araçlardan biri GroupDocs.Comparison for .NET'tir. Bu eğitim, netlik ve uygulama kolaylığı sağlamak için her adımı parçalara ayırarak belirli bir yoldan belge bilgileri elde etmek için GroupDocs.Comparison for .NET'ten yararlanma sürecinde size rehberlik edecektir.
 ## Önkoşullar

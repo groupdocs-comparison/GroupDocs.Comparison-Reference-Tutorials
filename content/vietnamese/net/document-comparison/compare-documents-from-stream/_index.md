@@ -6,6 +6,9 @@ description: Hợp lý hóa việc so sánh tài liệu với GroupDocs.Comparis
 weight: 16
 url: /vi/net/document-comparison/compare-documents-from-stream/
 ---
+
+# So sánh tài liệu từ luồng - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong thế giới phát triển nhanh chóng ngày nay, nơi thông tin dồi dào và thay đổi liên tục, việc đảm bảo tính chính xác và nhất quán giữa các tài liệu là điều tối quan trọng. Cho dù bạn làm trong lĩnh vực pháp lý, lĩnh vực tài chính hay bất kỳ ngành nào khác mà tính toàn vẹn của tài liệu là rất quan trọng, GroupDocs.Comparison dành cho .NET đều cung cấp giải pháp mạnh mẽ để hợp lý hóa quy trình so sánh.
 ## Điều kiện tiên quyết

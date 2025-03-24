@@ -6,6 +6,9 @@ description: Vergelijk moeiteloos documenten in C# met GroupDocs.Comparison voor
 weight: 11
 url: /nl/net/basic-usage/compare-cells-from-stream/
 ---
+
+# Vergelijk cellen uit Stream - GroupDocs.Comparison voor .NET
+
 ## Invoering
 In de wereld van softwareontwikkeling is het vermogen om documenten efficiënt te vergelijken cruciaal. Of u nu aan juridische documenten, contracten of een andere vorm van tekst werkt: het nauwkeurig identificeren van verschillen kan tijd besparen en fouten voorkomen. Gelukkig biedt GroupDocs.Comparison voor .NET een krachtige oplossing voor documentvergelijkingstaken.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Pelajari cara mengatur lisensi menggunakan GroupDocs.Comparison unt
 weight: 11
 url: /id/net/quick-start/set-license-from-stream/
 ---
+
+# Tetapkan Lisensi dari Stream - Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam dunia pengembangan .NET, mengelola dan membandingkan dokumen secara efisien sangatlah penting. Baik Anda sedang mengerjakan kontrak hukum, laporan keuangan, atau aplikasi intensif dokumen lainnya, kemampuan untuk membandingkan dokumen secara akurat dapat menghemat waktu dan memastikan keakuratan. Di sinilah GroupDocs.Comparison untuk .NET berperan. 
 ## Prasyarat

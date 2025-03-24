@@ -6,6 +6,9 @@ description: Découvrez comment comparer efficacement plusieurs documents à l�
 weight: 13
 url: /fr/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---
+
+# Comparez plusieurs documents dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans le domaine du développement de logiciels, une comparaison efficace des documents est un besoin essentiel. Qu'il s'agisse de documents juridiques, de contrats commerciaux ou de projets de rédaction collaborative, il est primordial de garantir l'exactitude et la cohérence entre plusieurs versions. GroupDocs Comparison for .NET fournit une solution puissante pour répondre à ce besoin de manière transparente dans le framework .NET.
 ## Conditions préalables

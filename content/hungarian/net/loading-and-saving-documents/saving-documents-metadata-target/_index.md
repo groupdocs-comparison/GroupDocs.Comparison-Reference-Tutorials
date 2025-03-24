@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan mentheti el a dokumentumok metaadat-célját a 
 weight: 15
 url: /hu/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Dokumentumok metaadat-céljának mentése a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük a dokumentum-metaadat-cél mentésének folyamatán a GroupDocs Comparison for .NET használatával. A GroupDocs Comparison for .NET egy hatékony könyvtár, amely lehetővé teszi a dokumentumok összehasonlítását és egyesítését a .NET-alkalmazásokban.
 ## Előfeltételek

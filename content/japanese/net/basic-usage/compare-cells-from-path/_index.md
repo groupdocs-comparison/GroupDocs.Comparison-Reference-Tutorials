@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用してパスのセルを比�
 weight: 10
 url: /ja/net/basic-usage/compare-cells-from-path/
 ---
+
+# パスからのセルの比較 - GroupDocs.Comparison for .NET
+
 ## 導入
 GroupDocs.Comparison for .NET を利用してパスのセルを比較するための包括的なチュートリアルへようこそ。このガイドでは、プロセスを段階的に説明し、各概念を完全に理解できるようにします。 GroupDocs.Comparison for .NET は、セル、テキスト、画像などのさまざまなドキュメント形式を比較するための強力なツールであり、開発者がドキュメント間の差異と類似点を効率的に識別できるようにします。
 ## 前提条件

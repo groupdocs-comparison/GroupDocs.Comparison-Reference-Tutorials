@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison 高效比较 .NET 中的文
 weight: 14
 url: /zh/net/basic-usage/get-document-info-from-stream/
 ---
+
+# 从流中获取文档信息 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在 .NET 开发领域，无论您使用的是 Word 文档、PDF 还是任何其他文件格式，有效比较文档都是一项至关重要的任务。 GroupDocs.Comparison for .NET 提供了强大的文档比较解决方案，使开发人员能够无缝地简化此过程。在本教程中，我们将逐步深入研究使用 GroupDocs.Comparison for .NET 比较文档的基础知识。最后，您将深入了解如何利用这个强大的工具来增强文档处理工作流程。
 ## 先决条件

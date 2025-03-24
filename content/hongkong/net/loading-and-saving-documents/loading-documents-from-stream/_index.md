@@ -6,6 +6,9 @@ description: 了解如何使用強大的 .NET 函式庫 GroupDocs Comparison 輕
 weight: 11
 url: /zh-hant/net/loading-and-saving-documents/loading-documents-from-stream/
 ---
+
+# 在 .NET 的 GroupDocs Comparison 中從串流載入文檔
+
 ## 介紹
 在文件管理和比較工具領域，GroupDocs Comparison for .NET 是專為 .NET 開發人員量身打造的強大解決方案。這個強大的程式庫使開發人員能夠將文件比較功能無縫整合到他們的 .NET 應用程式中。無論您正在開發內容管理系統、法律應用程式或任何其他需要文件分析和比較的項目，GroupDocs Comparison for .NET 都是可靠的盟友。
 ## 先決條件

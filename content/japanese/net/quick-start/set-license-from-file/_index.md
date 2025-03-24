@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET をアプリケーションにシー�
 weight: 10
 url: /ja/net/quick-start/set-license-from-file/
 ---
+
+# ファイルからライセンスを設定 - .NET の GroupDocs の比較
+
 ## 導入
 .NET 開発の分野では、法律、金融、教育などのさまざまな業界にとって、ドキュメントを比較するための効率的なツールを持つことが不可欠です。 GroupDocs Comparison for .NET は、.NET アプリケーション内でドキュメントをシームレスに比較するための堅牢なソリューションを提供します。この記事は、GroupDocs Comparison for .NET を効果的に活用するための包括的なガイドとして機能し、重要な手順を説明し、その実装についての洞察を提供します。
 ## 前提条件

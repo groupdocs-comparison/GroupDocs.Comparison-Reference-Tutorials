@@ -6,6 +6,9 @@ description: Naučte se, jak uložit zdroj metadat dokumentu pomocí GroupDocs C
 weight: 14
 url: /cs/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
+
 ## Úvod
 Ve světě vývoje softwaru je efektivní porovnávání dokumentů zásadní pro různá odvětví, včetně práva, financí a vzdělávání. GroupDocs Comparison for .NET nabízí výkonné řešení pro bezproblémové porovnávání dokumentů v aplikacích .NET. Tento výukový program vás provede procesem použití GroupDocs Comparison for .NET k uložení zdroje metadat dokumentu. Dodržením těchto kroků budete moci využít plný potenciál této knihovny k vylepšení úloh porovnávání dokumentů.
 ## Předpoklady

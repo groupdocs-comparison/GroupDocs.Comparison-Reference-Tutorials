@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET'i kullanarak klasörleri zahmetsizce 
 weight: 12
 url: /tr/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# .NET için GroupDocs Karşılaştırmasındaki Klasörleri Karşılaştırın
+
 ## giriiş
 GroupDocs Comparison for .NET, geliştiricilerin .NET uygulamaları içindeki klasörleri zahmetsizce karşılaştırmasına olanak tanıyan güçlü bir kitaplıktır. Bu eğitim, GroupDocs Comparison for .NET'i kullanarak klasörleri adım adım karşılaştırma sürecinde size rehberlik edecektir. Bu eğitimin sonunda, klasörleri verimli ve etkili bir şekilde karşılaştırmak için kitaplığı kullanabileceksiniz.
 ## Önkoşullar

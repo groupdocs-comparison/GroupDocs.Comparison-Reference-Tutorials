@@ -7,6 +7,9 @@ weight: 23
 url: /hu/net/image-comparison/
 ---
 
+# Kép összehasonlítása
+
+
 ## Bevezetés
 
 Ki szeretné használni a GroupDocs.Comparison .NET-hez nyújtott teljesítményét? Merüljön el átfogó oktatóanyagainkban, amelyek lefedik a kép-összehasonlítási technikákat ennek a sokoldalú könyvtárnak a használatával.

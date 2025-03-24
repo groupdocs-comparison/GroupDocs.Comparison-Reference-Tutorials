@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用してパスからドキュ�
 weight: 13
 url: /ja/net/basic-usage/get-document-info-from-path/
 ---
+
+# パスからドキュメント情報を取得 - GroupDocs.Comparison for .NET
+
 ## 導入
 ソフトウェア開発の領域、特に .NET Framework 環境では、効率的なドキュメントの比較が非常に重要です。法的文書、コードの改訂、または精度が重要なその他のコンテンツに取り組んでいる場合でも、文書を比較するための堅牢なツールがあれば、時間と労力を節約し、潜在的なエラーを節約できます。この分野における強力なツールの 1 つが、GroupDocs.Comparison for .NET です。このチュートリアルでは、GroupDocs.Comparison for .NET を利用して特定のパスからドキュメント情報を取得するプロセスを説明し、実装を明確にして容易にするために各ステップを詳しく説明します。
 ## 前提条件

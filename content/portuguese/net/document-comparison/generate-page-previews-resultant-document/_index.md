@@ -6,6 +6,9 @@ description: Aprenda como gerar visualizações de documentos usando GroupDocs.C
 weight: 10
 url: /pt/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Gerar visualizações de página para o documento resultante
+
 ## Introdução
 No mundo do desenvolvimento de software, comparar documentos com eficiência e precisão é fundamental. Esteja você trabalhando em um projeto que envolve colaboração entre membros da equipe ou lidando com documentos legais, ser capaz de comparar versões de maneira eficaz pode economizar tempo e garantir precisão. GroupDocs.Comparison for .NET é uma ferramenta poderosa projetada para agilizar o processo de comparação de documentos para desenvolvedores .NET. Neste tutorial, nos aprofundaremos em como usar GroupDocs.Comparison for .NET para gerar visualizações de páginas para documentos resultantes. Descreveremos cada etapa para garantir uma compreensão abrangente do processo.
 ## Pré-requisitos

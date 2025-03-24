@@ -6,6 +6,9 @@ description: GroupDocs.Comparison을 사용하여 .NET의 문서를 효율적으
 weight: 21
 url: /ko/net/document-comparison/
 ---
+
+# 문서 비교
+
 ## 소개
 
 오늘날 빠르게 변화하는 디지털 세계에서 효율적인 문서 관리는 기업과 개인 모두에게 중요합니다. 법률 전문가, 학술 연구원, 사업주 등 누구에게나 문서를 정확하고 원활하게 비교하는 능력이 가장 중요합니다. .NET용 GroupDocs.Comparison을 사용하면 이 프로세스를 쉽게 간소화할 수 있습니다.

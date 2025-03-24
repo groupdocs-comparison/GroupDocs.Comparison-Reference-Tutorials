@@ -6,6 +6,9 @@ description: Naučte se, jak uložit cíl metadat dokumentů pomocí GroupDocs C
 weight: 15
 url: /cs/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem ukládání cíle metadat dokumentu pomocí GroupDocs Comparison for .NET. GroupDocs Comparison for .NET je výkonná knihovna, která vám umožňuje porovnávat a slučovat dokumenty ve vašich aplikacích .NET.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Dowiedz się, jak zapisywać docelowe metadane dokumentów przy uż
 weight: 15
 url: /pl/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Zapisywanie docelowych metadanych dokumentów w porównaniu GroupDocs dla .NET
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces zapisywania docelowych metadanych dokumentu przy użyciu narzędzia GroupDocs Comparison dla platformy .NET. Porównanie GroupDocs dla .NET to potężna biblioteka, która umożliwia porównywanie i łączenie dokumentów w aplikacjach .NET.
 ## Warunki wstępne

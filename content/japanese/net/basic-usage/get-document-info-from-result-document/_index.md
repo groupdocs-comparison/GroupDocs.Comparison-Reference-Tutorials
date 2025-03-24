@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用して結果ドキュメン�
 weight: 12
 url: /ja/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# 結果ドキュメントからドキュメント情報を取得 - GroupDocs.Comparison for .NET
+
 ## 導入
 .NET 開発の領域では、ドキュメントの管理と比較が一般的な要件です。 GroupDocs.Comparison for .NET は、このタスクに対する堅牢なソリューションを提供し、開発者がドキュメント比較機能をアプリケーションにシームレスに統合できるようにします。このチュートリアルでは、GroupDocs.Comparison for .NET を利用して結果ドキュメントからドキュメント情報を取得するプロセスを説明します。 
 ## 前提条件

@@ -6,6 +6,9 @@ description: Genere vistas previas de páginas para documentos de destino de man
 weight: 12
 url: /es/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Generar vistas previas de página para el documento de destino
+
 ## Introducción
 En el mundo digital actual, donde la información es abundante y evoluciona constantemente, la necesidad de herramientas eficientes de comparación de documentos se ha vuelto primordial. Ya sea que sea un profesional del derecho que analiza contratos, un ejecutivo de negocios que revisa propuestas o un estudiante que revisa ensayos, comparar documentos con precisión es esencial para garantizar la precisión y eficiencia en su trabajo. Afortunadamente, GroupDocs.Comparison para .NET ofrece una poderosa solución para comparar varios formatos de documentos sin problemas dentro de sus aplicaciones .NET.
 ## Requisitos previos

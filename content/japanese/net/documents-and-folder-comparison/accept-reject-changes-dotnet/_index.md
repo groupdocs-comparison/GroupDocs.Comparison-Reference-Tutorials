@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を使用してドキュメントの�
 weight: 10
 url: /ja/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# .NET の GroupDocs 比較における変更の承認と拒否
+
 ## 導入
 ドキュメント管理とコラボレーションの領域では、ファイルの正確性と整合性を確保することが最も重要です。 GroupDocs Comparison for .NET は堅牢なソリューションとして登場し、開発者がドキュメント内の変更を簡単に承認および拒否できるようにすることで、ワークフローを合理化し、生産性を向上させます。このチュートリアルでは、GroupDocs Comparison for .NET を使用して変更を承認および拒否するプロセスを説明し、明確さと実装の容易さのために各ステップに分けて説明します。
 ## 前提条件

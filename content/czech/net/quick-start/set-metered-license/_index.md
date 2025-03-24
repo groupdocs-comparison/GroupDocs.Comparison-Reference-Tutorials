@@ -6,6 +6,9 @@ description: Integrujte GroupDocs Comparison for .NET hladce do svých projektů
 weight: 12
 url: /cs/net/quick-start/set-metered-license/
 ---
+
+# Set Metered License – GroupDocs Comparison for .NET
+
 ## Úvod
 V oblasti vývoje .NET jsou robustní nástroje pro porovnávání dokumentů nepostradatelné. GroupDocs Comparison for .NET vyniká jako výkonné řešení pro programové porovnávání různých formátů dokumentů. Od textových dokumentů po tabulky a prezentace umožňuje tato knihovna vývojářům efektivně identifikovat rozdíly mezi soubory.
 ## Předpoklady

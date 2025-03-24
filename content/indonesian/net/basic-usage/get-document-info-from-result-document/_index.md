@@ -6,6 +6,9 @@ description: Pelajari cara mengambil info dokumen dari dokumen hasil menggunakan
 weight: 12
 url: /id/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Dapatkan Info Dokumen dari Dokumen Hasil - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, mengelola dan membandingkan dokumen merupakan kebutuhan umum. GroupDocs.Comparison untuk .NET menawarkan solusi tangguh untuk tugas ini, memungkinkan pengembang mengintegrasikan fungsi perbandingan dokumen ke dalam aplikasi mereka dengan lancar. Tutorial ini akan memandu Anda melalui proses penggunaan GroupDocs.Comparison untuk .NET untuk mengambil informasi dokumen dari dokumen hasil. 
 ## Prasyarat

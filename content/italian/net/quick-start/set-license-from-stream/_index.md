@@ -6,6 +6,9 @@ description: Scopri come impostare le licenze utilizzando GroupDocs.Comparison p
 weight: 11
 url: /it/net/quick-start/set-license-from-stream/
 ---
+
+# Imposta la licenza dal flusso - Confronto GroupDocs per .NET
+
 ## introduzione
 Nel mondo dello sviluppo .NET, gestire e confrontare i documenti in modo efficiente è fondamentale. Che tu stia lavorando su contratti legali, report finanziari o qualsiasi altra applicazione ad alta intensità di documenti, la possibilità di confrontare i documenti in modo accurato può farti risparmiare tempo e garantire l'accuratezza. È qui che entra in gioco GroupDocs.Comparison per .NET. 
 ## Prerequisiti

@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用して、C# でドキュメ�
 weight: 11
 url: /ja/net/basic-usage/compare-cells-from-stream/
 ---
+
+# ストリームからのセルの比較 - GroupDocs.Comparison for .NET
+
 ## 導入
 ソフトウェア開発の世界では、ドキュメントを効率的に比較する機能が非常に重要です。法的文書、契約書、またはその他の形式のテキストを扱う場合でも、相違点を正確に識別できれば時間を節約し、エラーを防ぐことができます。幸いなことに、GroupDocs.Comparison for .NET は、ドキュメント比較タスクのための強力なソリューションを提供します。
 ## 前提条件

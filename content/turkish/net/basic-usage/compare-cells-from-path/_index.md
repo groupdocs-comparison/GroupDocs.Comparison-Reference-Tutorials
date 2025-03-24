@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET'i kullanarak bir yoldan hücreleri na
 weight: 10
 url: /tr/net/basic-usage/compare-cells-from-path/
 ---
+
+# Yoldaki Hücreleri Karşılaştır - .NET için GroupDocs.Comparison
+
 ## giriiş
 Bir yoldan hücreleri karşılaştırmak için GroupDocs.Comparison for .NET'in kullanılmasına ilişkin kapsamlı eğitime hoş geldiniz. Bu kılavuzda, her bir konsepti iyice kavramanızı sağlayacak şekilde süreç boyunca size adım adım yol göstereceğiz. GroupDocs.Comparison for .NET, hücreler, metin ve resimler de dahil olmak üzere çeşitli belge formatlarını karşılaştırmak için güçlü bir araçtır ve geliştiricilerin belgeler arasındaki farkları ve benzerlikleri verimli bir şekilde belirlemesine olanak tanır.
 ## Önkoşullar

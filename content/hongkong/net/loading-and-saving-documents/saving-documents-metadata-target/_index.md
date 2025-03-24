@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 儲存文件元資
 weight: 15
 url: /zh-hant/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# 在 .NET 的 GroupDocs 比較中儲存文件元資料目標
+
 ## 介紹
 在本教學中，我們將引導您完成使用 GroupDocs Comparison for .NET 儲存文件元資料目標的過程。 GroupDocs Comparison for .NET 是一個功能強大的程式庫，可讓您比較和合併 .NET 應用程式中的文件。
 ## 先決條件

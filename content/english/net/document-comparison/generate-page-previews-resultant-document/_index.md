@@ -6,6 +6,9 @@ description: Learn how to generate document previews using GroupDocs.Comparison 
 weight: 10
 url: /net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Generate Page Previews for Resultant Document
+
 ## Introduction
 In the world of software development, comparing documents efficiently and accurately is paramount. Whether you're working on a project that involves collaboration among team members or dealing with legal documents, being able to compare versions effectively can save time and ensure accuracy. GroupDocs.Comparison for .NET is a powerful tool designed to streamline the document comparison process for .NET developers. In this tutorial, we'll delve into how to use GroupDocs.Comparison for .NET to generate page previews for resultant documents. We'll break down each step to ensure a comprehensive understanding of the process.
 ## Prerequisites

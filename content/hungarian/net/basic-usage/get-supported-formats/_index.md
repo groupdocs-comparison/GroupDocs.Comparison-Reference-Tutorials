@@ -6,6 +6,9 @@ description: Növelje a dokumentumok pontosságát és konzisztenciáját a Grou
 weight: 15
 url: /hu/net/basic-usage/get-supported-formats/
 ---
+
+# Támogatott formátumok letöltése – GroupDocs.Comparison for .NET
+
 ## Bevezetés
 A mai digitális korban, ahol bőséges és folyamatosan fejlődő információ áll rendelkezésre, a dokumentumok pontosságának és következetességének biztosítása a legfontosabb. Legyen szó szoftverfejlesztőről, jogi szakemberről vagy bárki, aki rendszeresen foglalkozik dokumentumokkal, a dokumentumok összehasonlítását megkönnyítő eszközökkel időt, erőfeszítést és esetleges hibákat takaríthat meg. A GroupDocs.Comparison for .NET egy ilyen eszköz, amely átfogó megoldást kínál különféle dokumentumformátumok összehasonlítására .NET-alkalmazásokon belül.
 ## Előfeltételek

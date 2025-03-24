@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh tài liệu một cách hiệu quả b�
 weight: 10
 url: /vi/net/loading-and-saving-documents/loading-documents/
 ---
+
+# Đang tải tài liệu trong So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện của chúng tôi về cách sử dụng GroupDocs.Comparison cho .NET! Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn từng bước quy trình so sánh tài liệu bằng cách sử dụng công cụ mạnh mẽ này. GroupDocs.Comparison cho .NET cung cấp một bộ tính năng mạnh mẽ để so sánh tài liệu, cho phép các nhà phát triển so sánh hiệu quả các định dạng tài liệu khác nhau như tài liệu Word, PDF, bảng tính Excel, v.v.
 ## Điều kiện tiên quyết

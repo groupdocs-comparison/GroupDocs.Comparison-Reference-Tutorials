@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用すると、ドキュメン�
 weight: 14
 url: /ja/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# プレビュー用に特定の画像サイズを設定する
+
 ## 導入
 ソフトウェア開発の分野では、情報の完全性と一貫性を確保するために、効率的かつ正確なドキュメントの比較が非常に重要です。 GroupDocs.Comparison for .NET は、ドキュメント比較機能を .NET アプリケーションにシームレスに組み込もうとする開発者に堅牢なソリューションを提供します。
 ## 前提条件

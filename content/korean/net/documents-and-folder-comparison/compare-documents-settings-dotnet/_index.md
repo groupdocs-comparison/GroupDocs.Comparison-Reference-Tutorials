@@ -6,6 +6,9 @@ description: GroupDocs 비교를 사용하여 .NET 응용 프로그램에서 문
 weight: 11
 url: /ko/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# .NET용 GroupDocs 비교에서 문서 설정 비교
+
 ## 소개
 문서 관리 및 비교 영역에서 .NET용 GroupDocs 비교는 개발자가 문서 비교 기능을 .NET 응용 프로그램에 원활하게 통합할 수 있도록 지원하는 강력한 도구입니다. 강력한 기능과 사용 편의성을 갖춘 GroupDocs Comparison for .NET은 문서 비교 프로세스를 단순화하여 정확성과 효율성을 보장합니다.
 ## 전제조건

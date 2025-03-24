@@ -6,6 +6,9 @@ description: Bandingkan folder dengan mudah menggunakan Perbandingan GroupDocs u
 weight: 12
 url: /id/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Bandingkan Folder dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Perbandingan GroupDocs untuk .NET adalah perpustakaan canggih yang memungkinkan pengembang membandingkan folder dengan mudah dalam aplikasi .NET mereka. Tutorial ini akan memandu Anda melalui proses membandingkan folder langkah demi langkah menggunakan Perbandingan GroupDocs untuk .NET. Di akhir tutorial ini, Anda akan dapat memanfaatkan perpustakaan untuk membandingkan folder secara efisien dan efektif.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 接受和拒绝文
 weight: 10
 url: /zh/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# 接受和拒绝 .NET 的 GroupDocs 比较中的更改
+
 ## 介绍
 在文档管理和协作领域，确保文件的准确性和完整性至关重要。 GroupDocs Comparison for .NET 成为一种强大的解决方案，使开发人员能够轻松接受和拒绝文档中的更改，从而简化工作流程并提高工作效率。本教程将指导您使用 GroupDocs Comparison for .NET 完成接受和拒绝更改的过程，并分解每个步骤以使其清晰且易于实施。
 ## 先决条件

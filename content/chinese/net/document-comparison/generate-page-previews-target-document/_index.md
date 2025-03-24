@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 高效生成目标文档的页
 weight: 12
 url: /zh/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# 生成目标文档的页面预览
+
 ## 介绍
 在当今的数字世界中，信息丰富且不断发展，对高效文档比较工具的需求变得至关重要。无论您是分析合同的法律专业人士、审查提案的企业高管还是修改论文的学生，准确比较文档对于确保工作的准确性和效率至关重要。幸运的是，GroupDocs.Comparison for .NET 提供了一个强大的解决方案，可以在 .NET 应用程序中无缝比较各种文档格式。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Gere visualizações de páginas para documentos de destino com efi
 weight: 12
 url: /pt/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Gerar visualizações de página para documento de destino
+
 ## Introdução
 No mundo digital de hoje, onde a informação é abundante e em constante evolução, a necessidade de ferramentas eficientes de comparação de documentos tornou-se primordial. Quer você seja um profissional jurídico analisando contratos, um executivo de negócios revisando propostas ou um estudante revisando redações, comparar documentos com precisão é essencial para garantir precisão e eficiência em seu trabalho. Felizmente, GroupDocs.Comparison for .NET oferece uma solução poderosa para comparar vários formatos de documentos perfeitamente em seus aplicativos .NET.
 ## Pré-requisitos

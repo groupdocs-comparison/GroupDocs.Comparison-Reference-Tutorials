@@ -6,6 +6,9 @@ description: Bez námahy porovnávejte dokumenty v C# pomocí GroupDocs.Comparis
 weight: 11
 url: /cs/net/basic-usage/compare-cells-from-stream/
 ---
+
+# Porovnat buňky ze streamu - GroupDocs.Comparison pro .NET
+
 ## Úvod
 Ve světě vývoje softwaru je schopnost efektivně porovnávat dokumenty klíčová. Ať už pracujete na právních dokumentech, smlouvách nebo jakékoli jiné formě textu, schopnost přesně identifikovat rozdíly může ušetřit čas a předejít chybám. Naštěstí GroupDocs.Comparison for .NET poskytuje výkonné řešení pro úlohy porovnávání dokumentů.
 ## Předpoklady

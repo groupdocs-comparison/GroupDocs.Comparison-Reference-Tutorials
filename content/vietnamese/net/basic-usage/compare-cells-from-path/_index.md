@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh các ô từ một đường dẫn bằn
 weight: 10
 url: /vi/net/basic-usage/compare-cells-from-path/
 ---
+
+# So sánh các ô từ đường dẫn - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện về cách sử dụng GroupDocs.Comparison cho .NET để so sánh các ô từ một đường dẫn. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn từng bước thực hiện quy trình, đảm bảo bạn nắm bắt kỹ từng khái niệm. GroupDocs.Comparison cho .NET là một công cụ mạnh mẽ để so sánh các định dạng tài liệu khác nhau, bao gồm ô, văn bản và hình ảnh, cho phép các nhà phát triển xác định một cách hiệu quả sự khác biệt và tương đồng giữa các tài liệu.
 ## Điều kiện tiên quyết

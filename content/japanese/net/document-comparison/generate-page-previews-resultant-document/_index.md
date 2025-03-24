@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用してドキュメント プ
 weight: 10
 url: /ja/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# 結果のドキュメントのページプレビューを生成
+
 ## 導入
 ソフトウェア開発の世界では、ドキュメントを効率的かつ正確に比較することが最も重要です。チーム メンバー間のコラボレーションが必要なプロジェクトに取り組んでいる場合でも、法的文書を扱っている場合でも、バージョンを効果的に比較できれば時間を節約し、正確性を確保できます。 GroupDocs.Comparison for .NET は、.NET 開発者向けのドキュメント比較プロセスを合理化するように設計された強力なツールです。このチュートリアルでは、GroupDocs.Comparison for .NET を使用して、結果のドキュメントのページ プレビューを生成する方法を詳しく説明します。プロセスを包括的に理解できるように、各ステップを詳しく説明します。
 ## 前提条件

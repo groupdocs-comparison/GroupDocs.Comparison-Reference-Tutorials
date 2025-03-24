@@ -6,6 +6,9 @@ description: Découvrez comment comparer plusieurs documents sans effort à l'ai
 weight: 14
 url: /fr/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Comparer plusieurs paramètres de documents dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans ce didacticiel, nous verrons comment comparer efficacement plusieurs documents à l'aide de GroupDocs Comparison for .NET. Cette puissante bibliothèque permet aux développeurs d'intégrer de manière transparente des fonctionnalités de comparaison de documents dans leurs applications .NET.
 ## Conditions préalables

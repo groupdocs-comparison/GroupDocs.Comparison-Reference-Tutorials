@@ -6,6 +6,9 @@ description: Compare sin esfuerzo documentos protegidos en .NET utilizando Group
 weight: 17
 url: /es/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# Comparar documentos protegidos desde la ruta GroupDocs.Comparison para .NET
+
 ## Introducción
 En el mundo del desarrollo de software, la comparación de documentos eficiente y precisa es crucial para diversos sectores, incluidos el jurídico, el financiero y el educativo. GroupDocs.Comparison para .NET proporciona una solución integral para comparar documentos protegidos sin esfuerzo dentro de sus aplicaciones .NET. Este tutorial lo guiará a través del proceso de comparar documentos protegidos paso a paso usando GroupDocs.Comparison para .NET.
 ## Requisitos previos

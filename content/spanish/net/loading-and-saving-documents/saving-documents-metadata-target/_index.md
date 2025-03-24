@@ -6,6 +6,9 @@ description: Aprenda a guardar el destino de metadatos de documentos utilizando 
 weight: 15
 url: /es/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Guardar el destino de metadatos de documentos en la comparación de GroupDocs para .NET
+
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de guardar el destino de metadatos del documento usando GroupDocs Comparison para .NET. GroupDocs Comparison para .NET es una poderosa biblioteca que le permite comparar y fusionar documentos en sus aplicaciones .NET.
 ## Requisitos previos

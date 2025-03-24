@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison 有效比較 .NET 中的文件。簡化
 weight: 21
 url: /zh-hant/net/document-comparison/
 ---
+
+# 文件比較
+
 ## 介紹
 
 在當今快節奏的數位世界中，高效的文件管理對於企業和個人都至關重要。無論您是法律專業人士、學術研究人員還是企業主，準確、無縫地比較文件的能力都是至關重要的。透過 GroupDocs.Comparison for .NET，您可以輕鬆簡化此流程。

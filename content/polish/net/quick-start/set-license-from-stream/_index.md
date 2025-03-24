@@ -6,6 +6,9 @@ description: Dowiedz się, jak efektywnie ustawiać licencje za pomocą GroupDoc
 weight: 11
 url: /pl/net/quick-start/set-license-from-stream/
 ---
+
+# Ustaw licencję ze strumienia — porównanie GroupDocs dla .NET
+
 ## Wstęp
 W świecie programowania .NET efektywne zarządzanie dokumentami i porównywanie ich jest kluczowe. Niezależnie od tego, czy pracujesz nad umowami prawnymi, raportami finansowymi, czy inną aplikacją wymagającą dużej ilości dokumentów, możliwość dokładnego porównywania dokumentów może zaoszczędzić czas i zapewnić dokładność. W tym miejscu do gry wchodzi GroupDocs.Comparison dla .NET. 
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Comparez sans effort des documents dans .NET à l’aide de GroupDo
 weight: 22
 url: /fr/net/loading-and-saving-documents/
 ---
+
+# Chargement et enregistrement de documents
+
 ## Introduction
 
 La comparaison sans effort des documents au sein des applications .NET est primordiale pour rationaliser les processus de gestion des documents. GroupDocs.Comparison for .NET propose des didacticiels complets sur le chargement et l'enregistrement de documents, garantissant une intégration transparente et une efficacité accrue.

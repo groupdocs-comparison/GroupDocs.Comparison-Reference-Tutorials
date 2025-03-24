@@ -6,6 +6,9 @@ description: Dowiedz się, jak zapisywać metadane dokumentów zdefiniowanych pr
 weight: 16
 url: /pl/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Zapisywanie metadanych dokumentu zdefiniowanego przez użytkownika w porównaniu GroupDocs dla .NET
+
 ## Wstęp
 W tym samouczku omówimy, jak zapisać metadane dokumentu zdefiniowane przez użytkownika za pomocą narzędzia GroupDocs Comparison dla platformy .NET. Metadane mają kluczowe znaczenie dla efektywnego organizowania dokumentów i zarządzania nimi. Dzięki porównaniu GroupDocs możesz łatwo porównywać metadane i manipulować nimi, aby spełnić Twoje specyficzne wymagania.
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie die Metadatenquelle eines Dokuments mithilfe 
 weight: 14
 url: /de/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Speichern der Metadatenquelle von Dokumenten im GroupDocs-Vergleich für .NET
+
 ## Einführung
 In der Welt der Softwareentwicklung ist ein effizienter Dokumentenvergleich für verschiedene Branchen, darunter Recht, Finanzen und Bildung, von entscheidender Bedeutung. GroupDocs-Vergleich für .NET bietet eine leistungsstarke Lösung für den nahtlosen Vergleich von Dokumenten in .NET-Anwendungen. Dieses Tutorial führt Sie durch den Prozess der Verwendung von GroupDocs Compare für .NET zum Speichern der Dokumentmetadatenquelle. Wenn Sie diese Schritte befolgen, können Sie das volle Potenzial dieser Bibliothek nutzen, um Ihre Dokumentenvergleichsaufgaben zu verbessern.
 ## Voraussetzungen

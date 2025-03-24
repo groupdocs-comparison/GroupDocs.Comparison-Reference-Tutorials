@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison 高效比較 .NET 中的文
 weight: 14
 url: /zh-hant/net/basic-usage/get-document-info-from-stream/
 ---
+
+# 從流中取得文件資訊 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在 .NET 開發領域，無論您使用的是 Word 文件、PDF 或任何其他文件格式，有效比較文件都是一項至關重要的任務。 GroupDocs.Comparison for .NET 提供了強大的文件比較解決方案，使開發人員能夠無縫地簡化此流程。在本教程中，我們將逐步深入研究使用 GroupDocs.Comparison for .NET 比較文件的基礎知識。最後，您將深入了解如何利用這個強大的工具來增強文件處理工作流程。
 ## 先決條件

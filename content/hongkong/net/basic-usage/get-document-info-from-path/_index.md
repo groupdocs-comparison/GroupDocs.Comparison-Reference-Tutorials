@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 從路徑中擷取
 weight: 13
 url: /zh-hant/net/basic-usage/get-document-info-from-path/
 ---
+
+# 從路徑取得文件資訊 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在軟體開發領域，特別是在 .NET 框架環境中，高效的文件比較是至關重要的。無論您是處理法律文件、程式碼修訂或任何其他需要精確性的內容，擁有強大的文件比較工具都可以節省時間、精力並減少潛在的錯誤。該領域中一個如此強大的工具是 GroupDocs.Comparison for .NET。本教學將引導您完成利用 GroupDocs.Comparison for .NET 從給定路徑獲取文件資訊的過程，分解每個步驟以確保清晰且易於實施。
 ## 先決條件

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan használhatja a GroupDocs Comparison for .NET B
 weight: 13
 url: /hu/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Betöltési beállítások használata a GroupDocs összehasonlításban .NET-hez
+
 ## Bevezetés
 Üdvözöljük oktatóanyagunkban a GroupDocs .NET-összehasonlításának betöltési opcióinak használatáról! Ebben az oktatóanyagban lépésről lépésre végigvezetjük a dokumentumok összehasonlításának folyamatán a Betöltési beállítások használatával. Akár kezdő, akár tapasztalt fejlesztő, ez az útmutató segít zökkenőmentesen integrálni a GroupDocs Comparison szolgáltatást .NET-alkalmazásaiba.
 ## Előfeltételek

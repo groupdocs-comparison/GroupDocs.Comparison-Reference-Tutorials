@@ -6,6 +6,9 @@ description: Lär dig att effektivisera dokumentarbetsflöden med GroupDocs Comp
 weight: 20
 url: /sv/net/documents-and-folder-comparison/
 ---
+
+# Jämförelse av dokument och mappar
+
 ## Introduktion
 
 GroupDocs Comparison for .NET ger utvecklare en kraftfull uppsättning verktyg för att effektivisera dokumentarbetsflöden. Oavsett om du arbetar med enskilda dokument eller hela mappar är det avgörande att förstå hur man använder funktionerna effektivt för att optimera effektiviteten. I den här artikeln kommer vi att utforska olika handledningar som erbjuds av GroupDocs Comparison för .NET, med fokus på jämförelse av dokument och mappar.

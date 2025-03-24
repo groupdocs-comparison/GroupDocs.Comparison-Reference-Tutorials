@@ -6,6 +6,9 @@ description: Aprenda como definir uma senha para documentos resultantes em Compa
 weight: 17
 url: /pt/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Definindo senha para documento resultante na comparação de GroupDocs para .NET
+
 ## Introdução
 Neste tutorial, orientaremos você no processo de definição de uma senha para o documento resultante usando Comparação de GroupDocs para .NET. Este recurso adiciona uma camada extra de segurança aos seus documentos comparados, garantindo que apenas pessoas autorizadas possam acessá-los.
 ## Pré-requisitos

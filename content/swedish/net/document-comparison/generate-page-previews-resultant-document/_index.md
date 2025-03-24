@@ -6,6 +6,9 @@ description: Lär dig hur du genererar dokumentförhandsvisningar med GroupDocs.
 weight: 10
 url: /sv/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Generera sidförhandsvisningar för resulterande dokument
+
 ## Introduktion
 en värld av mjukvaruutveckling är det viktigt att jämföra dokument effektivt och korrekt. Oavsett om du arbetar med ett projekt som involverar samarbete mellan teammedlemmar eller hanterar juridiska dokument, kan det spara tid och säkerställa noggrannhet att kunna jämföra versioner effektivt. GroupDocs.Comparison for .NET är ett kraftfullt verktyg som är utformat för att effektivisera dokumentjämförelseprocessen för .NET-utvecklare. I den här självstudien kommer vi att fördjupa oss i hur man använder GroupDocs.Comparison för .NET för att generera sidförhandsvisningar för resulterande dokument. Vi kommer att dela upp varje steg för att säkerställa en heltäckande förståelse av processen.
 ## Förutsättningar

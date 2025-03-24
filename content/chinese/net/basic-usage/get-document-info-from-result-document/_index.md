@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 从结果文档中
 weight: 12
 url: /zh/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# 从结果文档中获取文档信息 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在 .NET 开发领域，管理和比较文档是一个常见的需求。 GroupDocs.Comparison for .NET 为此任务提供了强大的解决方案，使开发人员能够将文档比较功能无缝集成到他们的应用程序中。本教程将指导您完成使用 GroupDocs.Comparison for .NET 从结果文档中检索文档信息的过程。 
 ## 先决条件

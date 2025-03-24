@@ -6,6 +6,9 @@ description: Rationalisez la comparaison de documents avec GroupDocs.Comparison 
 weight: 16
 url: /fr/net/document-comparison/compare-documents-from-stream/
 ---
+
+# Comparer les documents de Stream - GroupDocs.Comparison pour .NET
+
 ## Introduction
 Dans le monde en évolution rapide d'aujourd'hui, où les informations sont abondantes et les changements sont constants, il est primordial de garantir l'exactitude et la cohérence des documents. Que vous soyez dans le domaine juridique, le secteur financier ou tout autre secteur où l'intégrité des documents est cruciale, GroupDocs.Comparison for .NET offre une solution robuste pour rationaliser le processus de comparaison.
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: Tanulja meg, hogyan lehet hatékonyan összehasonlítani dokumentum
 weight: 14
 url: /hu/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Dokumentuminformációk beszerzése a Streamből – GroupDocs.Comparison for .NET
+
 ## Bevezetés
 .NET-fejlesztés világában a dokumentumok hatékony összehasonlítása kulcsfontosságú feladat, akár Word-dokumentumokkal, PDF-ekkel vagy bármilyen más fájlformátummal dolgozik. A GroupDocs.Comparison for .NET robusztus megoldást kínál a dokumentumok összehasonlítására, lehetővé téve a fejlesztők számára, hogy zökkenőmentesen egyszerűsítsék ezt a folyamatot. Ebben az oktatóanyagban lépésről lépésre elmélyülünk a GroupDocs.Comparison for .NET használatának alapjaiban dokumentumok összehasonlítására. A végére alapos ismerete lesz arról, hogyan használhatja ezt a hatékony eszközt a dokumentumfeldolgozási munkafolyamatok javítására.
 ## Előfeltételek

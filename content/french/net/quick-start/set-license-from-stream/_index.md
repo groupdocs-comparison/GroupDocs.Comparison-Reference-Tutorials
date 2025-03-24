@@ -6,6 +6,9 @@ description: Découvrez comment définir efficacement des licences à l’aide d
 weight: 11
 url: /fr/net/quick-start/set-license-from-stream/
 ---
+
+# Définir la licence à partir du flux - Comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans le monde du développement .NET, la gestion et la comparaison efficaces des documents sont cruciales. Que vous travailliez sur des contrats juridiques, des rapports financiers ou toute autre application gourmande en documents, la possibilité de comparer des documents avec précision peut vous faire gagner du temps et garantir leur exactitude. C'est là que GroupDocs.Comparison pour .NET entre en jeu. 
 ## Conditions préalables

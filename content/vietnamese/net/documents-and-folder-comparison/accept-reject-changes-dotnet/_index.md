@@ -6,6 +6,9 @@ description: Tìm hiểu cách chấp nhận và từ chối các thay đổi tr
 weight: 10
 url: /vi/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Chấp nhận và từ chối các thay đổi trong so sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong lĩnh vực quản lý và cộng tác tài liệu, việc đảm bảo tính chính xác và toàn vẹn của tệp là điều tối quan trọng. So sánh GroupDocs cho .NET nổi lên như một giải pháp mạnh mẽ, trao quyền cho các nhà phát triển dễ dàng chấp nhận và từ chối các thay đổi trong tài liệu, từ đó hợp lý hóa quy trình công việc và nâng cao năng suất. Hướng dẫn này sẽ hướng dẫn bạn quy trình chấp nhận và từ chối các thay đổi bằng cách sử dụng So sánh GroupDocs cho .NET, chia nhỏ từng bước để rõ ràng và dễ thực hiện.
 ## Điều kiện tiên quyết

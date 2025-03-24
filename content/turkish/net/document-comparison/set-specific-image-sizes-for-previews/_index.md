@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET ile belge karşılaştırma işlevini
 weight: 14
 url: /tr/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Önizlemeler için Belirli Görüntü Boyutlarını Ayarlayın
+
 ## giriiş
 Yazılım geliştirme alanında, bilgilerin bütünlüğünü ve tutarlılığını sağlamak için verimli ve doğru belge karşılaştırması çok önemlidir. GroupDocs.Comparison for .NET, belge karşılaştırma işlevselliğini .NET uygulamalarına sorunsuz bir şekilde dahil etmek isteyen geliştiriciler için güçlü bir çözüm sağlar.
 ## Önkoşullar

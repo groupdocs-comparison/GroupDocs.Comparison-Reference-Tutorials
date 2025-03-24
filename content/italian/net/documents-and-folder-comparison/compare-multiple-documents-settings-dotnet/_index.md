@@ -6,6 +6,9 @@ description: Scopri come confrontare più documenti senza sforzo utilizzando Gro
 weight: 14
 url: /it/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Confronta le impostazioni di più documenti nel confronto GroupDocs per .NET
+
 ## introduzione
 In questo tutorial, approfondiremo come confrontare più documenti in modo efficiente utilizzando GroupDocs Comparison per .NET. Questa potente libreria consente agli sviluppatori di integrare perfettamente funzionalità di confronto dei documenti nelle loro applicazioni .NET.
 ## Prerequisiti

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 결과 문서에서 �
 weight: 12
 url: /ko/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# 결과 문서에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
+
 ## 소개
 .NET 개발 영역에서는 문서 관리 및 비교가 일반적인 요구 사항입니다. .NET용 GroupDocs.Comparison은 이 작업을 위한 강력한 솔루션을 제공하므로 개발자는 문서 비교 기능을 응용 프로그램에 원활하게 통합할 수 있습니다. 이 자습서에서는 .NET용 GroupDocs.Comparison을 활용하여 결과 문서에서 문서 정보를 검색하는 과정을 안내합니다. 
 ## 전제조건

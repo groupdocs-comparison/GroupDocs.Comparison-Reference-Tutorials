@@ -6,6 +6,9 @@ description: Découvrez comment générer des aperçus de documents à l’aide 
 weight: 10
 url: /fr/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Générer des aperçus de page pour le document résultant
+
 ## Introduction
 Dans le monde du développement de logiciels, comparer les documents de manière efficace et précise est primordial. Que vous travailliez sur un projet qui implique une collaboration entre les membres de l'équipe ou que vous traitiez de documents juridiques, être capable de comparer efficacement les versions peut vous faire gagner du temps et garantir l'exactitude. GroupDocs.Comparison for .NET est un outil puissant conçu pour rationaliser le processus de comparaison de documents pour les développeurs .NET. Dans ce didacticiel, nous verrons comment utiliser GroupDocs.Comparison pour .NET pour générer des aperçus de page pour les documents résultants. Nous décomposerons chaque étape pour garantir une compréhension complète du processus.
 ## Conditions préalables

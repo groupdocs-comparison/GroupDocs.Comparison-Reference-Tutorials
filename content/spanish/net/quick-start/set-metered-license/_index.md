@@ -6,6 +6,9 @@ description: Integre GroupDocs Comparison para .NET sin problemas en sus proyect
 weight: 12
 url: /es/net/quick-start/set-metered-license/
 ---
+
+# Establecer licencia medida comparación de GroupDocs para .NET
+
 ## Introducción
 En el ámbito del desarrollo .NET, contar con herramientas sólidas para la comparación de documentos es indispensable. GroupDocs Comparison para .NET se destaca como una poderosa solución para comparar varios formatos de documentos mediante programación. Desde documentos de texto hasta hojas de cálculo y presentaciones, esta biblioteca permite a los desarrolladores identificar de manera eficiente las diferencias entre archivos.
 ## Requisitos previos

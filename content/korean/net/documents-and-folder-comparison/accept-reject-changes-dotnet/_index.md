@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 사용하여 문서의 변경 사항을
 weight: 10
 url: /ko/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# .NET용 GroupDocs 비교에서 변경 사항 승인 및 거부
+
 ## 소개
 문서 관리 및 협업 영역에서는 파일의 정확성과 무결성을 보장하는 것이 무엇보다 중요합니다. .NET용 GroupDocs 비교는 개발자가 문서 내의 변경 사항을 쉽게 승인하고 거부할 수 있도록 지원하여 작업 흐름을 간소화하고 생산성을 향상시키는 강력한 솔루션으로 등장합니다. 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 변경 사항을 승인하고 거부하는 과정을 안내하고 명확성과 구현 용이성을 위해 각 단계를 세분화합니다.
 ## 전제조건

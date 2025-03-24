@@ -6,6 +6,9 @@ description: Pelajari cara membandingkan dokumen secara efisien di .NET mengguna
 weight: 14
 url: /id/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Dapatkan Info Dokumen dari Stream - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Dalam dunia pengembangan .NET, membandingkan dokumen secara efisien adalah tugas penting, baik Anda bekerja dengan dokumen Word, PDF, atau format file lainnya. GroupDocs.Comparison untuk .NET memberikan solusi tangguh untuk perbandingan dokumen, memungkinkan pengembang menyederhanakan proses ini dengan lancar. Dalam tutorial ini, kita akan mempelajari dasar-dasar penggunaan GroupDocs.Comparison untuk .NET untuk membandingkan dokumen, langkah demi langkah. Pada akhirnya, Anda akan memiliki pemahaman yang kuat tentang cara memanfaatkan alat canggih ini untuk meningkatkan alur kerja pemrosesan dokumen Anda.
 ## Prasyarat

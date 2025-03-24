@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を使用して、フォルダーを�
 weight: 12
 url: /ja/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# GroupDocs でのフォルダーの比較 .NET の比較
+
 ## 導入
 GroupDocs Comparison for .NET は、開発者が .NET アプリケーション内でフォルダーを簡単に比較できるようにする強力なライブラリです。このチュートリアルでは、GroupDocs Comparison for .NET を使用してフォルダーを比較するプロセスを段階的に説明します。このチュートリアルを終えると、ライブラリを利用してフォルダーを効率的かつ効果的に比較できるようになります。
 ## 前提条件

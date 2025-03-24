@@ -6,6 +6,9 @@ description: Hợp lý hóa việc so sánh tài liệu trong các ứng dụng 
 weight: 11
 url: /vi/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# So sánh cài đặt tài liệu trong So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong lĩnh vực quản lý và so sánh tài liệu, So sánh GroupDocs cho .NET nổi bật như một công cụ mạnh mẽ, trao quyền cho các nhà phát triển tích hợp liền mạch các chức năng so sánh tài liệu vào các ứng dụng .NET của họ. Với các tính năng mạnh mẽ và dễ sử dụng, GroupDocs Compare for .NET đơn giản hóa quá trình so sánh tài liệu, đảm bảo tính chính xác và hiệu quả.
 ## Điều kiện tiên quyết

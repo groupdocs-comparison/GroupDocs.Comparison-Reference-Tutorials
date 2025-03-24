@@ -6,6 +6,9 @@ description: Scopri come generare anteprime di documenti utilizzando GroupDocs.C
 weight: 10
 url: /it/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Genera anteprime di pagina per il documento risultante
+
 ## introduzione
 Nel mondo dello sviluppo software, confrontare i documenti in modo efficiente e accurato è fondamentale. Che tu stia lavorando a un progetto che prevede la collaborazione tra i membri del team o che tu abbia a che fare con documenti legali, essere in grado di confrontare le versioni in modo efficace può farti risparmiare tempo e garantire l'accuratezza. GroupDocs.Comparison per .NET è un potente strumento progettato per semplificare il processo di confronto dei documenti per gli sviluppatori .NET. In questo tutorial, approfondiremo come utilizzare GroupDocs.Comparison per .NET per generare anteprime di pagina per i documenti risultanti. Analizzeremo ogni passaggio per garantire una comprensione completa del processo.
 ## Prerequisiti

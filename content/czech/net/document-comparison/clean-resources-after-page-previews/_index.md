@@ -6,6 +6,9 @@ description: Naučte se, jak porovnávat dokumenty pomocí GroupDocs.Comparison 
 weight: 13
 url: /cs/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Vyčistit zdroje po náhledech stránek
+
 ## Úvod
 Ve světě vývoje .NET je efektivní správa a porovnávání dokumentů zásadní pro různé aplikace, od právních firem po vzdělávací instituce. Naštěstí s nástroji jako GroupDocs.Comparison for .NET mohou vývojáři proces porovnávání dokumentů snadno zefektivnit. V tomto tutoriálu prozkoumáme, jak využít GroupDocs.Comparison pro .NET k porovnání dokumentů krok za krokem.
 ## Předpoklady

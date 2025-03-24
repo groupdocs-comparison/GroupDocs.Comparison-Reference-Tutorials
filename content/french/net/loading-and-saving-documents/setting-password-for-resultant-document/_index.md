@@ -6,6 +6,9 @@ description: Découvrez comment définir un mot de passe pour les documents rés
 weight: 17
 url: /fr/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Définition du mot de passe pour le document résultant dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans ce didacticiel, nous vous guiderons tout au long du processus de définition d'un mot de passe pour le document résultant à l'aide de GroupDocs Comparison for .NET. Cette fonctionnalité ajoute une couche de sécurité supplémentaire à vos documents comparés, garantissant que seules les personnes autorisées peuvent y accéder.
 ## Conditions préalables

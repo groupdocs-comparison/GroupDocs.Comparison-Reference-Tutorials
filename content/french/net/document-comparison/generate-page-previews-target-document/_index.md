@@ -6,6 +6,9 @@ description: Générez efficacement des aperçus de page pour les documents cibl
 weight: 12
 url: /fr/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Générer des aperçus de page pour le document cible
+
 ## Introduction
 Dans le monde numérique d’aujourd’hui, où l’information est abondante et en constante évolution, le besoin d’outils efficaces de comparaison de documents est devenu primordial. Que vous soyez un professionnel du droit analysant des contrats, un dirigeant d'entreprise examinant des propositions ou un étudiant révisant des dissertations, comparer avec précision les documents est essentiel pour garantir l'exactitude et l'efficacité de votre travail. Heureusement, GroupDocs.Comparison for .NET offre une solution puissante pour comparer de manière transparente différents formats de documents au sein de vos applications .NET.
 ## Conditions préalables

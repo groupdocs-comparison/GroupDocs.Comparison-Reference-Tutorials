@@ -6,6 +6,9 @@ description: A GroupDocs.Comparison for .NET használatával hatékonyan generá
 weight: 12
 url: /hu/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Oldal-előnézeteket generál a céldokumentumhoz
+
 ## Bevezetés
 Napjaink digitális világában, ahol bőséges és folyamatosan fejlődő információ áll rendelkezésre, a hatékony dokumentum-összehasonlító eszközök iránti igény kiemelt fontosságúvá vált. Legyen szó szerződéseket elemző jogi szakemberről, javaslatokat felülvizsgáló cégvezetőről vagy esszéket lektoráló diákról, a dokumentumok pontos összehasonlítása elengedhetetlen a munkája pontosságának és hatékonyságának biztosításához. Szerencsére a GroupDocs.Comparison for .NET hatékony megoldást kínál a különböző dokumentumformátumok zökkenőmentes összehasonlítására a .NET-alkalmazásokon belül.
 ## Előfeltételek

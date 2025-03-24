@@ -6,6 +6,9 @@ description: Leer hoe u moeiteloos documenten in .NET-toepassingen kunt vergelij
 weight: 11
 url: /nl/net/loading-and-saving-documents/loading-documents-from-stream/
 ---
+
+# Documenten uit Stream laden in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 Op het gebied van documentbeheer en vergelijkingstools onderscheidt GroupDocs Comparison for .NET zich als een robuuste oplossing op maat voor .NET-ontwikkelaars. Deze krachtige bibliotheek stelt ontwikkelaars in staat de functionaliteit voor documentvergelijking naadloos te integreren in hun .NET-applicaties. Of u nu werkt aan een contentmanagementsysteem, een juridische toepassing of een ander project dat documentanalyse en -vergelijking vereist, GroupDocs Comparison voor .NET is een betrouwbare bondgenoot.
 ## Vereisten

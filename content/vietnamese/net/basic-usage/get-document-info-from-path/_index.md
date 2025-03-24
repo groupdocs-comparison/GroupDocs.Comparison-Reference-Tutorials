@@ -6,6 +6,9 @@ description: Tìm hiểu cách trích xuất thông tin tài liệu từ một �
 weight: 13
 url: /vi/net/basic-usage/get-document-info-from-path/
 ---
+
+# Nhận thông tin tài liệu từ đường dẫn - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển phần mềm, đặc biệt là trong môi trường .NET framework, việc so sánh tài liệu hiệu quả là một điều cần thiết. Cho dù bạn đang làm việc trên các tài liệu pháp lý, bản sửa đổi mã hay bất kỳ nội dung nào khác cần độ chính xác thì việc có một công cụ mạnh mẽ để so sánh các tài liệu có thể tiết kiệm thời gian, công sức và các lỗi tiềm ẩn. Một công cụ mạnh mẽ như vậy trong miền này là GroupDocs.Comparison for .NET. Hướng dẫn này sẽ hướng dẫn bạn quy trình tận dụng GroupDocs.Comparison cho .NET để lấy thông tin tài liệu từ một đường dẫn nhất định, chia nhỏ từng bước để đảm bảo sự rõ ràng và dễ thực hiện.
 ## Điều kiện tiên quyết

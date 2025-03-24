@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 逐步比較文件
 weight: 13
 url: /zh-hant/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# 頁面預覽後清理資源
+
 ## 介紹
 在 .NET 開發領域，有效管理和比較文件對於從律師事務所到教育機構的各種應用程式至關重要。幸運的是，透過 GroupDocs.Comparison for .NET 等工具，開發人員可以輕鬆簡化比較文件的流程。在本教學中，我們將逐步探索如何利用 GroupDocs.Comparison for .NET 來比較文件。
 ## 先決條件

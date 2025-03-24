@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 有效地設定授
 weight: 11
 url: /zh-hant/net/quick-start/set-license-from-stream/
 ---
+
+# 從 Stream 設定授權 - .NET 的 GroupDocs 比較
+
 ## 介紹
 在 .NET 開發領域，有效管理和比較文件至關重要。無論您正在處理法律合約、財務報告或任何其他文件密集型應用程序，準確比較文件的能力都可以節省時間並確保準確性。這就是 .NET 的 GroupDocs.Comparison 發揮作用的地方。 
 ## 先決條件

@@ -6,6 +6,9 @@ description: Integrálja a GroupDocs Comparison for .NET szolgáltatást zökken
 weight: 12
 url: /hu/net/quick-start/set-metered-license/
 ---
+
+# Mért licenc beállítása – GroupDocs-összehasonlítás .NET-hez
+
 ## Bevezetés
 A .NET fejlesztés területén nélkülözhetetlen a dokumentumok összehasonlításához szükséges robusztus eszközök megléte. A GroupDocs Comparison for .NET hatékony megoldás a különféle dokumentumformátumok programozott összehasonlítására. A szöveges dokumentumoktól a táblázatokig és prezentációkig ez a könyvtár lehetővé teszi a fejlesztők számára, hogy hatékonyan azonosítsák a fájlok közötti különbségeket.
 ## Előfeltételek

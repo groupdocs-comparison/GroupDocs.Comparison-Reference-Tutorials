@@ -6,6 +6,9 @@ description: Apprenez à rationaliser les flux de travail documentaires avec les
 weight: 20
 url: /fr/net/documents-and-folder-comparison/
 ---
+
+# Comparaison de documents et de dossiers
+
 ## Introduction
 
 GroupDocs Comparison for .NET fournit aux développeurs un ensemble d'outils puissants pour rationaliser les flux de travail documentaires. Que vous travailliez avec des documents individuels ou des dossiers entiers, comprendre comment utiliser efficacement les fonctionnalités est crucial pour optimiser l'efficacité. Dans cet article, nous explorerons divers didacticiels proposés par GroupDocs Comparison for .NET, en nous concentrant sur la comparaison de documents et de dossiers.

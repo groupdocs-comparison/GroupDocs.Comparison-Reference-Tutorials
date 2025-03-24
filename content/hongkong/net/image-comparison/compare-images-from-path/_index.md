@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison 函式庫在 .NET 中有效
 weight: 10
 url: /zh-hant/net/image-comparison/compare-images-from-path/
 ---
+
+# 比較路徑中的圖片 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在 .NET 開發領域，有效比較文件和圖像的能力對於各種應用程式至關重要。無論是為了識別變更、驗證準確性還是確保合規性，開發人員都在尋求能夠簡化比較過程的可靠工具。 GroupDocs.Comparison for .NET 作為一個強大的解決方案出現，提供了一套量身定制的功能來無縫滿足這些需求。
 ## 先決條件

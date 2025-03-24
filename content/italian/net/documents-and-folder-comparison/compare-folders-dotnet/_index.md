@@ -6,6 +6,9 @@ description: Confronta le cartelle senza sforzo utilizzando GroupDocs Comparison
 weight: 12
 url: /it/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Confronta le cartelle nel confronto di GroupDocs per .NET
+
 ## introduzione
 GroupDocs Comparison for .NET è una potente libreria che consente agli sviluppatori di confrontare facilmente le cartelle all'interno delle loro applicazioni .NET. Questo tutorial ti guiderà attraverso il processo di confronto delle cartelle passo dopo passo utilizzando GroupDocs Comparison for .NET. Al termine di questo tutorial sarai in grado di utilizzare la libreria per confrontare le cartelle in modo efficiente ed efficace.
 ## Prerequisiti

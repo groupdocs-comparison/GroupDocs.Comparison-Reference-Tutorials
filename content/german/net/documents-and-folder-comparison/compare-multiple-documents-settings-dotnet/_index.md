@@ -6,6 +6,9 @@ description: Entdecken Sie, wie Sie mit GroupDocs Compare for .NET mühelos mehr
 weight: 14
 url: /de/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Vergleichen Sie die Einstellungen mehrerer Dokumente im GroupDocs-Vergleich für .NET
+
 ## Einführung
 In diesem Tutorial befassen wir uns damit, wie Sie mit GroupDocs Compare for .NET mehrere Dokumente effizient vergleichen können. Mit dieser leistungsstarken Bibliothek können Entwickler Dokumentvergleichsfunktionen nahtlos in ihre .NET-Anwendungen integrieren.
 ## Voraussetzungen

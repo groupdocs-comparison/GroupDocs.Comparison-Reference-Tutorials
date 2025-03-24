@@ -6,6 +6,9 @@ description: Aprenda a establecer una contraseña para los documentos resultante
 weight: 17
 url: /es/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Configuración de contraseña para el documento resultante en la comparación de GroupDocs para .NET
+
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de configuración de una contraseña para el documento resultante usando GroupDocs Comparison para .NET. Esta característica agrega una capa adicional de seguridad a sus documentos comparados, garantizando que solo las personas autorizadas puedan acceder a ellos.
 ## Requisitos previos

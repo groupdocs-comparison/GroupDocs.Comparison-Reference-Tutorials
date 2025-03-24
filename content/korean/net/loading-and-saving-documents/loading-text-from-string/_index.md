@@ -6,6 +6,9 @@ description: GroupDocs.Comparison 라이브러리를 사용하여 .NET 응용 �
 weight: 12
 url: /ko/net/loading-and-saving-documents/loading-text-from-string/
 ---
+
+# .NET용 GroupDocs 비교의 문자열에서 텍스트 로드
+
 ## 소개
 소프트웨어 개발의 세계에서는 효율성과 정확성이 가장 중요합니다. 숙련된 개발자이든 이제 막 시작하는 개발자이든 올바른 도구를 사용하면 큰 변화를 가져올 수 있습니다. .NET용 GroupDocs.Comparison은 개발자가 .NET 응용 프로그램 내에서 쉽게 텍스트를 비교할 수 있도록 지원하는 도구 중 하나입니다. 이 강력한 라이브러리는 텍스트 비교 프로세스를 간소화하여 개발자가 품질 저하 없이 핵심 작업에 집중할 수 있도록 해줍니다.
 ## 전제조건

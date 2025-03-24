@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 简化文档比较。轻松比
 weight: 16
 url: /zh/net/document-comparison/compare-documents-from-stream/
 ---
+
+# 比较流中的文档 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在当今快节奏的世界中，信息丰富且变化不断，确保文档之间的准确性和一致性至关重要。无论您是在法律领域、金融领域还是任何其他对文档完整性至关重要的行业，GroupDocs.Comparison for .NET 都可以提供强大的解决方案来简化比较过程。
 ## 先决条件

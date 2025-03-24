@@ -6,6 +6,9 @@ description: Naučte se, jak efektivně nastavit licence pomocí GroupDocs.Compa
 weight: 11
 url: /cs/net/quick-start/set-license-from-stream/
 ---
+
+# Nastavit licenci ze streamu – srovnání GroupDocs pro .NET
+
 ## Úvod
 Ve světě vývoje .NET je efektivní správa a porovnávání dokumentů zásadní. Ať už pracujete na právních smlouvách, finančních výkazech nebo jakékoli jiné aplikaci náročné na dokumenty, možnost přesného srovnání dokumentů může ušetřit čas a zajistit přesnost. Zde vstupuje do hry GroupDocs.Comparison for .NET. 
 ## Předpoklady

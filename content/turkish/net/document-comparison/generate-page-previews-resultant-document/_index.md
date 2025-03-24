@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET'i kullanarak belge önizlemelerini na
 weight: 10
 url: /tr/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Sonuç Belgesi için Sayfa Önizlemeleri Oluşturun
+
 ## giriiş
 Yazılım geliştirme dünyasında belgeleri verimli ve doğru bir şekilde karşılaştırmak çok önemlidir. İster ekip üyeleri arasında işbirliğini içeren bir proje üzerinde çalışıyor olun ister yasal belgelerle ilgileniyor olun, sürümleri etkili bir şekilde karşılaştırabilmek zamandan tasarruf etmenizi ve doğruluğu garanti etmenizi sağlar. GroupDocs.Comparison for .NET, .NET geliştiricileri için belge karşılaştırma sürecini kolaylaştırmak üzere tasarlanmış güçlü bir araçtır. Bu öğreticide, elde edilen belgeler için sayfa önizlemeleri oluşturmak amacıyla GroupDocs.Comparison for .NET'in nasıl kullanılacağını açıklayacağız. Sürecin kapsamlı bir şekilde anlaşılmasını sağlamak için her adımı ayrıntılı olarak ele alacağız.
 ## Önkoşullar

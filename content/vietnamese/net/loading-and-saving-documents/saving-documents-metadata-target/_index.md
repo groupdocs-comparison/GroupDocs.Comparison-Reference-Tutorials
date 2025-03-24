@@ -6,6 +6,9 @@ description: Tìm hiểu cách lưu mục tiêu siêu dữ liệu của tài li�
 weight: 15
 url: /vi/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Lưu mục tiêu siêu dữ liệu tài liệu trong so sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình lưu mục tiêu siêu dữ liệu tài liệu bằng cách sử dụng So sánh GroupDocs cho .NET. So sánh GroupDocs cho .NET là một thư viện mạnh mẽ cho phép bạn so sánh và hợp nhất các tài liệu trong các ứng dụng .NET của mình.
 ## Điều kiện tiên quyết

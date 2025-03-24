@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison 輕鬆比較 .NET 中的受保護文檔
 weight: 17
 url: /zh-hant/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# 比較路徑中的受保護文件 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在軟體開發領域，高效、準確的文件比較對於各個行業（包括法律、金融和教育）至關重要。 GroupDocs.Comparison for .NET 提供了一個全面的解決方案，可以在 .NET 應用程式中輕鬆比較受保護的文件。本教學課程將引導您使用 GroupDocs.Comparison for .NET 逐步完成比較受保護文件的流程。
 ## 先決條件

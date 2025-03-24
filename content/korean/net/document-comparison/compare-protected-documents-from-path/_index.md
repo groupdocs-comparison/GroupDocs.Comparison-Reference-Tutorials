@@ -6,6 +6,9 @@ description: 원활한 통합을 위해 GroupDocs.Comparison을 사용하여 .NE
 weight: 17
 url: /ko/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# 경로의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
+
 ## 소개
 소프트웨어 개발 세계에서는 법률, 금융, 교육 등 다양한 산업에서 효율적이고 정확한 문서 비교가 매우 중요합니다. .NET용 GroupDocs.Comparison은 .NET 응용 프로그램 내에서 보호된 문서를 손쉽게 비교할 수 있는 포괄적인 솔루션을 제공합니다. 이 자습서에서는 .NET용 GroupDocs.Comparison을 사용하여 보호된 문서를 단계별로 비교하는 과정을 안내합니다.
 ## 전제조건

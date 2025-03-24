@@ -6,6 +6,9 @@ description: Bezproblemowo integruj funkcję porównywania dokumentów z aplikac
 weight: 14
 url: /pl/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Ustaw określone rozmiary obrazów dla podglądów
+
 ## Wstęp
 W dziedzinie tworzenia oprogramowania wydajne i dokładne porównywanie dokumentów ma kluczowe znaczenie dla zapewnienia integralności i spójności informacji. GroupDocs.Comparison dla .NET zapewnia solidne rozwiązanie dla programistów, którzy chcą bezproblemowo włączyć funkcję porównywania dokumentów do swoich aplikacji .NET.
 ## Warunki wstępne

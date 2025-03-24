@@ -6,6 +6,9 @@ description: Bez námahy porovnávejte chráněné dokumenty v .NET pomocí Grou
 weight: 17
 url: /cs/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# Porovnání chráněných dokumentů z cesty - GroupDocs.Comparison pro .NET
+
 ## Úvod
 Ve světě vývoje softwaru je efektivní a přesné porovnávání dokumentů zásadní pro různá odvětví, včetně práva, financí a vzdělávání. GroupDocs.Comparison for .NET poskytuje komplexní řešení pro snadné porovnávání chráněných dokumentů v rámci vašich aplikací .NET. Tento tutoriál vás provede procesem porovnávání chráněných dokumentů krok za krokem pomocí GroupDocs.Comparison for .NET.
 ## Předpoklady

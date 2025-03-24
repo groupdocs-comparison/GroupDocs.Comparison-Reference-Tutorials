@@ -6,6 +6,9 @@ description: Tích hợp So sánh GroupDocs cho .NET một cách liền mạch v
 weight: 12
 url: /vi/net/quick-start/set-metered-license/
 ---
+
+# Đặt giấy phép đo lường - So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc có các công cụ mạnh mẽ để so sánh tài liệu là điều không thể thiếu. So sánh GroupDocs cho .NET nổi bật như một giải pháp mạnh mẽ để so sánh các định dạng tài liệu khác nhau theo chương trình. Từ tài liệu văn bản đến bảng tính và bản trình bày, thư viện này cho phép các nhà phát triển xác định một cách hiệu quả sự khác biệt giữa các tệp.
 ## Điều kiện tiên quyết

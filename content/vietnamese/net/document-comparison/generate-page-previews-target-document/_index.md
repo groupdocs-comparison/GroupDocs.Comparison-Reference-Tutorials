@@ -6,6 +6,9 @@ description: Tạo bản xem trước trang cho tài liệu đích một cách h
 weight: 12
 url: /vi/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Tạo bản xem trước trang cho tài liệu đích
+
 ## Giới thiệu
 Trong thế giới kỹ thuật số ngày nay, nơi thông tin dồi dào và không ngừng phát triển, nhu cầu về các công cụ so sánh tài liệu hiệu quả đã trở nên quan trọng. Cho dù bạn là chuyên gia pháp lý phân tích hợp đồng, giám đốc điều hành kinh doanh xem xét các đề xuất hay sinh viên đang sửa bài luận thì việc so sánh chính xác các tài liệu là điều cần thiết để đảm bảo tính chính xác và hiệu quả trong công việc của bạn. May mắn thay, GroupDocs.Comparison dành cho .NET cung cấp một giải pháp mạnh mẽ để so sánh liền mạch các định dạng tài liệu khác nhau trong các ứng dụng .NET của bạn.
 ## Điều kiện tiên quyết

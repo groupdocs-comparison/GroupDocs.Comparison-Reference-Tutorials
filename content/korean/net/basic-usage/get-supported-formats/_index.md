@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 문서의 정확성과
 weight: 15
 url: /ko/net/basic-usage/get-supported-formats/
 ---
+
+# 지원되는 형식 가져오기 - .NET용 GroupDocs.Comparison
+
 ## 소개
 정보가 풍부하고 끊임없이 진화하는 오늘날의 디지털 시대에는 문서의 정확성과 일관성을 보장하는 것이 무엇보다 중요합니다. 소프트웨어 개발자, 법률 전문가 또는 정기적으로 문서를 다루는 사람이라면 누구나 문서 비교를 용이하게 하는 도구를 사용하면 시간, 노력 및 잠재적인 오류를 줄일 수 있습니다. .NET용 GroupDocs.Comparison은 .NET 응용 프로그램 내에서 다양한 문서 형식을 비교하기 위한 포괄적인 솔루션을 제공하는 도구 중 하나입니다.
 ## 전제조건

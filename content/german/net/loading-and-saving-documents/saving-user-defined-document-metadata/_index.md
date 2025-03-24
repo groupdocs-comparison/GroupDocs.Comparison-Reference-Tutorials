@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie benutzerdefinierte Dokumentmetadaten mit Grou
 weight: 16
 url: /de/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Speichern benutzerdefinierter Dokumentmetadaten im GroupDocs-Vergleich für .NET
+
 ## Einführung
 In diesem Tutorial erfahren Sie, wie Sie benutzerdefinierte Dokumentmetadaten mit GroupDocs Compare für .NET speichern. Metadaten sind für die effiziente Organisation und Verwaltung von Dokumenten von entscheidender Bedeutung. Mit GroupDocs Compare können Sie Metadaten ganz einfach vergleichen und bearbeiten, um sie an Ihre spezifischen Anforderungen anzupassen.
 ## Voraussetzungen

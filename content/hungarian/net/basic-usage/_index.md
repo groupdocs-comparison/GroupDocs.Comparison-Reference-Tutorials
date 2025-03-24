@@ -6,6 +6,9 @@ description: Hasonlítsa össze a dokumentumokat a .NET-ben a GroupDocs.Comparis
 weight: 24
 url: /hu/net/basic-usage/
 ---
+
+# Alapvető használat
+
 ## Bevezetés
 
 A .NET fejlesztés területén a GroupDocs.Comparison hatékony szövetségesként jelenik meg, amely figyelemre méltó hatékonysággal ésszerűsíti a dokumentumfeldolgozási feladatokat. Ez a cikk egy átfogó útmutatót mutat be az alapvető használati útmutatókról, és bemutatja a GroupDocs.Comparison for .NET képességeit.

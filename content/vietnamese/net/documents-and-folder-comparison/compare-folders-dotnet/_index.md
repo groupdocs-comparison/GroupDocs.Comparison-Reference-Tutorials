@@ -6,6 +6,9 @@ description: So sánh các thư mục một cách dễ dàng bằng cách sử d
 weight: 12
 url: /vi/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# So sánh các thư mục trong GroupDocs So sánh cho .NET
+
 ## Giới thiệu
 So sánh GroupDocs cho .NET là một thư viện mạnh mẽ cho phép các nhà phát triển so sánh các thư mục một cách dễ dàng trong các ứng dụng .NET của họ. Hướng dẫn này sẽ hướng dẫn bạn từng bước trong quá trình so sánh các thư mục bằng cách sử dụng So sánh GroupDocs cho .NET. Đến cuối hướng dẫn này, bạn sẽ có thể sử dụng thư viện để so sánh các thư mục một cách hiệu quả và hiệu quả.
 ## Điều kiện tiên quyết

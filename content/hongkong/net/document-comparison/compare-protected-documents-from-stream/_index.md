@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 比較來自流的
 weight: 18
 url: /zh-hant/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# 比較流中的受保護文件 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在 .NET 開發領域，文件的有效比較對於各種應用程式至關重要。無論您正在開發內容管理系統、法律軟體或任何其他以文件為中心的項目，準確比較文件的能力都可以簡化工作流程並提高工作效率。本教學深入探討如何使用 GroupDocs.Comparison for .NET，這是一個功能強大的工具，可以簡化比較流中受保護文件的過程。透過遵循下面概述的逐步指南，您將全面了解如何在 .NET 專案中有效地利用此程式庫。
 ## 先決條件

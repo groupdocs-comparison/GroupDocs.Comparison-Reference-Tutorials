@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 比较路径中的
 weight: 10
 url: /zh/net/basic-usage/compare-cells-from-path/
 ---
+
+# 比较路径中的单元格 - GroupDocs.Comparison for .NET
+
 ## 介绍
 欢迎阅读有关利用 GroupDocs.Comparison for .NET 比较路径中的单元格的综合教程。在本指南中，我们将逐步引导您完成整个过程，确保您彻底掌握每个概念。 GroupDocs.Comparison for .NET 是一个功能强大的工具，用于比较各种文档格式（包括单元格、文本和图像），使开发人员能够有效识别文档之间的差异和相似之处。
 ## 先决条件

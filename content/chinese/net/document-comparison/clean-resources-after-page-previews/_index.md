@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 逐步比较文档
 weight: 13
 url: /zh/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# 页面预览后清理资源
+
 ## 介绍
 在 .NET 开发领域，有效管理和比较文档对于从律师事务所到教育机构的各种应用程序至关重要。幸运的是，借助 GroupDocs.Comparison for .NET 等工具，开发人员可以轻松简化比较文档的过程。在本教程中，我们将逐步探索如何利用 GroupDocs.Comparison for .NET 来比较文档。
 ## 先决条件

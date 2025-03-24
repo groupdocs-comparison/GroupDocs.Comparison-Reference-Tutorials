@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 다양한 형식의 �
 weight: 15
 url: /ko/net/document-comparison/compare-documents-from-path/
 ---
+
+# 경로의 문서 비교 - .NET용 GroupDocs.Comparison
+
 ## 소개
 오늘날 디지털 시대에 문서 비교는 법률, 비즈니스, 학계 등 다양한 분야에서 중요한 역할을 하고 있습니다. 계약서를 비교하는 변호사, 에세이를 검토하는 학생, 보고서를 검토하는 비즈니스 전문가 등 문서 비교를 위한 신뢰할 수 있는 도구를 사용하면 시간을 절약하고 정확성을 보장할 수 있습니다. .NET용 GroupDocs.Comparison은 문서를 쉽고 효율적으로 비교할 수 있는 강력한 솔루션을 제공합니다. 이 자습서에서는 .NET용 GroupDocs.Comparison을 사용하여 문서를 비교하는 과정을 안내합니다.
 ## 전제조건

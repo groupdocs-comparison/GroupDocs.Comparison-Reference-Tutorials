@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET ile belge doğruluğunu ve tutarlıl�
 weight: 15
 url: /tr/net/basic-usage/get-supported-formats/
 ---
+
+# Desteklenen Formatları Alın - .NET için GroupDocs.Comparison
+
 ## giriiş
 Bilginin bol olduğu ve sürekli geliştiği günümüz dijital çağında, belgelerin doğruluğunun ve tutarlılığının sağlanması her şeyden önemlidir. İster bir yazılım geliştiricisi olun, ister hukukçu olun, ister düzenli olarak belgelerle uğraşan biri olun, belge karşılaştırmayı kolaylaştıran araçlara sahip olmak size zaman, emek ve olası hatalardan tasarruf ettirebilir. GroupDocs.Comparison for .NET, .NET uygulamaları içindeki çeşitli belge formatlarını karşılaştırmak için kapsamlı bir çözüm sunan böyle bir araçtır.
 ## Önkoşullar

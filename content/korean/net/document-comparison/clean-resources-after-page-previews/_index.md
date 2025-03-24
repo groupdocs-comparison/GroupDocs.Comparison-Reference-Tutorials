@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 문서를 비교하는
 weight: 13
 url: /ko/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# 페이지 미리보기 후 리소스 정리
+
 ## 소개
 .NET 개발 세계에서 문서를 효율적으로 관리하고 비교하는 것은 법률 회사에서 교육 기관에 이르기까지 다양한 응용 프로그램에 필수적입니다. 다행히도 개발자는 .NET용 GroupDocs.Comparison과 같은 도구를 사용하여 문서 비교 프로세스를 쉽게 간소화할 수 있습니다. 이 자습서에서는 .NET용 GroupDocs.Comparison을 활용하여 문서를 단계별로 비교하는 방법을 살펴보겠습니다.
 ## 전제조건

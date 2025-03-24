@@ -6,6 +6,9 @@ description: 了解如何透過 GroupDocs Comparison for .NET 教學簡化文件
 weight: 20
 url: /zh-hant/net/documents-and-folder-comparison/
 ---
+
+# 文件和資料夾比較
+
 ## 介紹
 
 GroupDocs Comparison for .NET 為開發人員提供了一套強大的工具來簡化文件工作流程。無論您處理的是單一文件還是整個資料夾，了解如何有效利用這些功能對於優化效率至關重要。在本文中，我們將探討 GroupDocs Comparison for .NET 提供的各種教程，並將重點放在文件和資料夾比較上。

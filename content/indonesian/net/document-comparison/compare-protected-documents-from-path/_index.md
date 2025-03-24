@@ -6,6 +6,9 @@ description: Bandingkan dokumen yang dilindungi dengan mudah di .NET menggunakan
 weight: 17
 url: /id/net/document-comparison/compare-protected-documents-from-path/
 ---
+
+# Bandingkan Dokumen yang Dilindungi dari Path - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Dalam dunia pengembangan perangkat lunak, perbandingan dokumen yang efisien dan akurat sangat penting untuk berbagai industri, termasuk hukum, keuangan, dan pendidikan. GroupDocs.Comparison untuk .NET memberikan solusi komprehensif untuk membandingkan dokumen yang dilindungi dengan mudah dalam aplikasi .NET Anda. Tutorial ini akan memandu Anda melalui proses membandingkan dokumen yang dilindungi langkah demi langkah menggunakan GroupDocs.Comparison untuk .NET.
 ## Prasyarat

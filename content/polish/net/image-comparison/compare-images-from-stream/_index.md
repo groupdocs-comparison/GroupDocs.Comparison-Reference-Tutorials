@@ -6,6 +6,9 @@ description: Dowiedz się, jak porównywać obrazy ze strumieni za pomocą Group
 weight: 11
 url: /pl/net/image-comparison/compare-images-from-stream/
 ---
+
+# Porównaj obrazy ze strumienia — GroupDocs.Comparison dla platformy .NET
+
 ## Wstęp
 W dziedzinie programowania .NET kluczowe znaczenie ma zapewnienie dokładności i spójności dokumentów i obrazów. GroupDocs.Comparison dla .NET zapewnia programistom niezawodne rozwiązanie umożliwiające efektywne porównywanie obrazów. Ten samouczek przeprowadzi Cię przez proces porównywania obrazów ze strumieni przy użyciu programu GroupDocs.Comparison dla platformy .NET. Wykonując poniższe kroki, będziesz w stanie bezproblemowo zintegrować możliwości porównywania obrazów z aplikacjami .NET.
 ## Warunki wstępne

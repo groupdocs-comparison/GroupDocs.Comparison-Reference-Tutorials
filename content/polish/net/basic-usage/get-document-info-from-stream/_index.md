@@ -6,6 +6,9 @@ description: Dowiedz się, jak efektywnie porównywać dokumenty w platformie .N
 weight: 14
 url: /pl/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Uzyskaj informacje o dokumencie ze strumienia — GroupDocs.Comparison dla platformy .NET
+
 ## Wstęp
 świecie programowania .NET wydajne porównywanie dokumentów jest kluczowym zadaniem, niezależnie od tego, czy pracujesz z dokumentami programu Word, plikami PDF czy jakimkolwiek innym formatem plików. GroupDocs.Comparison dla .NET zapewnia solidne rozwiązanie do porównywania dokumentów, umożliwiając programistom bezproblemowe usprawnienie tego procesu. W tym samouczku krok po kroku omówimy podstawy korzystania z narzędzia GroupDocs.Comparison for .NET do porównywania dokumentów. Na koniec będziesz mieć solidną wiedzę, jak wykorzystać to potężne narzędzie do usprawnienia procesów przetwarzania dokumentów.
 ## Warunki wstępne

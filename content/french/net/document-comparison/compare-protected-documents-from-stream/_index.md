@@ -6,6 +6,9 @@ description: Découvrez comment comparer des documents protégés à partir de f
 weight: 18
 url: /fr/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# Comparer les documents protégés de Stream - GroupDocs.Comparison for .NET
+
 ## Introduction
 Dans le domaine du développement .NET, une comparaison efficace des documents est cruciale pour diverses applications. Que vous travailliez sur des systèmes de gestion de contenu, des logiciels juridiques ou tout autre projet centré sur les documents, la possibilité de comparer des documents avec précision peut rationaliser les flux de travail et améliorer la productivité. Ce didacticiel explique comment utiliser GroupDocs.Comparison pour .NET, un outil puissant qui simplifie le processus de comparaison de documents protégés à partir de flux. En suivant le guide étape par étape décrit ci-dessous, vous comprendrez parfaitement comment utiliser efficacement cette bibliothèque dans vos projets .NET.
 ## Conditions préalables

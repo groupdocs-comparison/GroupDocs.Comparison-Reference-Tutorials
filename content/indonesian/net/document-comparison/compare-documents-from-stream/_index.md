@@ -6,6 +6,9 @@ description: Sederhanakan perbandingan dokumen dengan GroupDocs.Comparison untuk
 weight: 16
 url: /id/net/document-comparison/compare-documents-from-stream/
 ---
+
+# Bandingkan Dokumen dari Stream - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Di dunia yang serba cepat saat ini, dimana informasi berlimpah dan perubahan terjadi secara konstan, memastikan keakuratan dan konsistensi di seluruh dokumen adalah hal yang terpenting. Baik Anda bekerja di bidang hukum, sektor keuangan, atau industri lainnya yang mengutamakan integritas dokumen, GroupDocs.Comparison untuk .NET menawarkan solusi tangguh untuk menyederhanakan proses perbandingan.
 ## Prasyarat

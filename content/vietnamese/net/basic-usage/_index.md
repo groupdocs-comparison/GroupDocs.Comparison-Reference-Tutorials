@@ -6,6 +6,9 @@ description: So sánh các tài liệu trong .NET bằng GroupDocs.Comparison. T
 weight: 24
 url: /vi/net/basic-usage/
 ---
+
+# Cách sử dụng cơ bản
+
 ## Giới thiệu
 
 Trong lĩnh vực phát triển .NET, GroupDocs.Comparison nổi lên như một đồng minh đắc lực, đơn giản hóa các tác vụ xử lý tài liệu với hiệu quả vượt trội. Đi sâu vào các khả năng của nó, bài viết này trình bày hướng dẫn toàn diện về các hướng dẫn sử dụng cơ bản, hé lộ sức mạnh của GroupDocs.Comparison cho .NET.

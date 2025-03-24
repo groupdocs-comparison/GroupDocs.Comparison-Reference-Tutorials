@@ -6,6 +6,9 @@ description: Upptäck hur du enkelt jämför flera dokument med GroupDocs Compar
 weight: 14
 url: /sv/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Jämför inställningar för flera dokument i GroupDocs Comparison för .NET
+
 ## Introduktion
 I den här självstudien kommer vi att fördjupa oss i hur man jämför flera dokument effektivt med GroupDocs Comparison för .NET. Detta kraftfulla bibliotek låter utvecklare integrera funktioner för dokumentjämförelse i sina .NET-applikationer sömlöst.
 ## Förutsättningar

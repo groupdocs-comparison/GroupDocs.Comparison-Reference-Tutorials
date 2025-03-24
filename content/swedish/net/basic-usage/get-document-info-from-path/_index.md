@@ -6,6 +6,9 @@ description: Lär dig hur du extraherar dokumentinformation från en sökväg me
 weight: 13
 url: /sv/net/basic-usage/get-document-info-from-path/
 ---
+
+# Få dokumentinformation från Path - GroupDocs.Comparison för .NET
+
 ## Introduktion
 Inom området för mjukvaruutveckling, särskilt i .NET framework-miljöer, är effektiv jämförelse av dokument en kritisk nödvändighet. Oavsett om du arbetar med juridiska dokument, kodrevisioner eller annat innehåll där precision är viktig, kan ett robust verktyg för att jämföra dokument spara tid, ansträngning och potentiella fel. Ett sådant kraftfullt verktyg i den här domänen är GroupDocs.Comparison för .NET. Denna handledning guidar dig genom processen att utnyttja GroupDocs.Comparison för .NET för att få dokumentinformation från en given väg, och dela upp varje steg för att säkerställa tydlighet och enkel implementering.
 ## Förutsättningar

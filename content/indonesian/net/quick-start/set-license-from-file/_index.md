@@ -6,6 +6,9 @@ description: Pelajari cara mengintegrasikan Perbandingan GroupDocs untuk .NET de
 weight: 10
 url: /id/net/quick-start/set-license-from-file/
 ---
+
+# Tetapkan Lisensi dari File - Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, memiliki alat yang efisien untuk perbandingan dokumen sangat penting bagi berbagai industri, termasuk hukum, keuangan, dan pendidikan. Perbandingan GroupDocs untuk .NET memberikan solusi tangguh untuk membandingkan dokumen dengan lancar dalam aplikasi .NET Anda. Artikel ini berfungsi sebagai panduan komprehensif untuk memanfaatkan Perbandingan GroupDocs untuk .NET secara efektif, menguraikan langkah-langkah penting dan memberikan wawasan tentang penerapannya.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: Integrieren Sie mit GroupDocs.Comparison für .NET mühelos Dokumen
 weight: 14
 url: /de/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Legen Sie bestimmte Bildgrößen für Vorschauen fest
+
 ## Einführung
 Im Bereich der Softwareentwicklung ist ein effizienter und genauer Dokumentenvergleich von entscheidender Bedeutung, um die Integrität und Konsistenz von Informationen sicherzustellen. GroupDocs.Comparison für .NET bietet eine robuste Lösung für Entwickler, die Dokumentvergleichsfunktionen nahtlos in ihre .NET-Anwendungen integrieren möchten.
 ## Voraussetzungen

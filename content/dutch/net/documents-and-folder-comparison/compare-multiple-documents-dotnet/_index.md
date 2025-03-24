@@ -6,6 +6,9 @@ description: Leer hoe u meerdere documenten efficiënt kunt vergelijken met Grou
 weight: 13
 url: /nl/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---
+
+# Vergelijk meerdere documenten in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 Op het gebied van softwareontwikkeling is efficiënte documentvergelijking een cruciale behoefte. Of het nu gaat om juridische documenten, zakelijke contracten of gezamenlijke schrijfprojecten, het garanderen van nauwkeurigheid en consistentie in meerdere versies is van het allergrootste belang. GroupDocs Comparison for .NET biedt een krachtige oplossing om naadloos aan deze behoefte te voldoen binnen het .NET-framework.
 ## Vereisten

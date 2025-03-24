@@ -6,6 +6,9 @@ description: Aprenda a optimizar los flujos de trabajo de documentos con los tut
 weight: 20
 url: /es/net/documents-and-folder-comparison/
 ---
+
+# Comparación de documentos y carpetas
+
 ## Introducción
 
 GroupDocs Comparison para .NET proporciona a los desarrolladores un potente conjunto de herramientas para optimizar los flujos de trabajo de documentos. Ya sea que esté trabajando con documentos individuales o carpetas enteras, comprender cómo utilizar las funciones de manera efectiva es crucial para optimizar la eficiencia. En este artículo, exploraremos varios tutoriales ofrecidos por GroupDocs Comparison para .NET, centrándonos en la comparación de documentos y carpetas.

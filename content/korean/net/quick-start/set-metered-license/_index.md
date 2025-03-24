@@ -6,6 +6,9 @@ description: 효율적인 문서 비교 작업 흐름을 위해 .NET용 GroupDoc
 weight: 12
 url: /ko/net/quick-start/set-metered-license/
 ---
+
+# 계량 라이센스 설정 - .NET용 GroupDocs 비교
+
 ## 소개
 .NET 개발 영역에서는 문서 비교를 위한 강력한 도구를 갖추는 것이 필수적입니다. .NET용 GroupDocs 비교는 프로그래밍 방식으로 다양한 문서 형식을 비교할 수 있는 강력한 솔루션입니다. 텍스트 문서에서 스프레드시트 및 프리젠테이션에 이르기까지 이 라이브러리를 통해 개발자는 파일 간의 차이점을 효율적으로 식별할 수 있습니다.
 ## 전제조건

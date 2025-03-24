@@ -6,6 +6,9 @@ description: Scopri come salvare l'origine dei metadati del documento utilizzand
 weight: 14
 url: /it/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Salvataggio dell'origine metadati dei documenti nel confronto GroupDocs per .NET
+
 ## introduzione
 Nel mondo dello sviluppo software, un confronto efficiente dei documenti è fondamentale per vari settori, tra cui quello legale, finanziario e dell'istruzione. GroupDocs Comparison for .NET offre una potente soluzione per confrontare facilmente i documenti nelle applicazioni .NET. Questo tutorial ti guiderà attraverso il processo di utilizzo di GroupDocs Comparison for .NET per salvare l'origine dei metadati del documento. Seguendo questi passaggi, sarai in grado di sfruttare tutto il potenziale di questa libreria per migliorare le tue attività di confronto dei documenti.
 ## Prerequisiti

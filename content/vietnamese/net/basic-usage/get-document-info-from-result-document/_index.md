@@ -6,6 +6,9 @@ description: Tìm hiểu cách truy xuất thông tin tài liệu từ tài li�
 weight: 12
 url: /vi/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Nhận thông tin tài liệu từ tài liệu kết quả - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc quản lý và so sánh các tài liệu là một yêu cầu chung. GroupDocs.Comparison cho .NET cung cấp một giải pháp mạnh mẽ cho nhiệm vụ này, cho phép các nhà phát triển tích hợp liền mạch các chức năng so sánh tài liệu vào ứng dụng của họ. Hướng dẫn này sẽ hướng dẫn bạn quy trình sử dụng GroupDocs.Comparison cho .NET để truy xuất thông tin tài liệu từ tài liệu kết quả. 
 ## Điều kiện tiên quyết

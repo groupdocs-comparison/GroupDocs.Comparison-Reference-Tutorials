@@ -6,6 +6,9 @@ description: GroupDocs.Comparison'ı kullanarak .NET'teki belgeleri karşılaşt
 weight: 24
 url: /tr/net/basic-usage/
 ---
+
+# Temel Kullanım
+
 ## giriiş
 
 .NET geliştirme alanında GroupDocs.Comparison, belge işleme görevlerini dikkate değer bir verimlilikle kolaylaştıran güçlü bir müttefik olarak ortaya çıkıyor. Yeteneklerini derinlemesine inceleyen bu makale, temel kullanım eğitimleri hakkında kapsamlı bir kılavuz sunarak GroupDocs.Comparison for .NET'in gücünü ortaya koyuyor.

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 儲存使用者定
 weight: 16
 url: /zh-hant/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# 在 .NET 的 GroupDocs Comparison 中儲存使用者定義的文檔元數據
+
 ## 介紹
 在本教學中，我們將探討如何使用 GroupDocs Comparison for .NET 儲存使用者定義的文件元資料。元資料對於有效組織和管理文件至關重要。透過 GroupDocs Comparison，您可以輕鬆比較和操作元資料以滿足您的特定要求。
 ## 先決條件

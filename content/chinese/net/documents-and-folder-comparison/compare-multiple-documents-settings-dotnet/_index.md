@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 轻松比较多个
 weight: 14
 url: /zh/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# 在 GroupDocs Comparison for .NET 中比较多个文档设置
+
 ## 介绍
 在本教程中，我们将深入研究如何使用 GroupDocs Comparison for .NET 有效地比较多个文档。这个强大的库允许开发人员将文档比较功能无缝集成到他们的 .NET 应用程序中。
 ## 先决条件

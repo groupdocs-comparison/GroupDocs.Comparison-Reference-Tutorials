@@ -6,6 +6,9 @@ description: Porovnejte složky bez námahy pomocí GroupDocs Comparison for .NE
 weight: 12
 url: /cs/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Porovnání složek v GroupDocs Porovnání pro .NET
+
 ## Úvod
 GroupDocs Comparison for .NET je výkonná knihovna, která umožňuje vývojářům bez námahy porovnávat složky v rámci jejich aplikací .NET. Tento tutoriál vás provede procesem porovnávání složek krok za krokem pomocí GroupDocs Comparison for .NET. Na konci tohoto tutoriálu budete moci používat knihovnu k efektivnímu a efektivnímu porovnávání složek.
 ## Předpoklady

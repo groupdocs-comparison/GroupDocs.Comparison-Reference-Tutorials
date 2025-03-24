@@ -6,6 +6,9 @@ description: Naučte se porovnávat buňky z cesty pomocí GroupDocs.Comparison 
 weight: 10
 url: /cs/net/basic-usage/compare-cells-from-path/
 ---
+
+# Porovnat buňky z cesty - GroupDocs.Comparison pro .NET
+
 ## Úvod
 Vítejte v obsáhlém tutoriálu o využití GroupDocs.Comparison pro .NET k porovnání buněk z cesty. V této příručce vás provedeme procesem krok za krokem a zajistíme, že každý koncept důkladně pochopíte. GroupDocs.Comparison for .NET je výkonný nástroj pro porovnávání různých formátů dokumentů, včetně buněk, textu a obrázků, což umožňuje vývojářům efektivně identifikovat rozdíly a podobnosti mezi dokumenty.
 ## Předpoklady

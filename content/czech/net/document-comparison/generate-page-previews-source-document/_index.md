@@ -6,6 +6,9 @@ description: Naučte se, jak využít Groupdocs.Comparison pro .NET k efektivní
 weight: 11
 url: /cs/net/document-comparison/generate-page-previews-source-document/
 ---
+
+# Generování náhledů stránek pro zdrojový dokument
+
 ## Úvod
 dnešním uspěchaném digitálním světě hraje správa a porovnávání dokumentů zásadní roli v různých odvětvích. Vývojáři hledající robustní řešení se často obracejí na Groupdocs.Comparison for .NET. Tento výkonný nástroj umožňuje vývojářům bez námahy porovnávat dokumenty, což jim umožňuje zefektivnit pracovní postupy a zvýšit produktivitu. V tomto tutoriálu prozkoumáme základy Groupdocs.Comparison pro .NET a rozebereme každý krok, abychom zajistili bezproblémové učení.
 ## Předpoklady

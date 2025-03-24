@@ -6,6 +6,9 @@ description: Özel yazı tiplerine sahip belgeleri sorunsuz bir şekilde karşı
 weight: 13
 url: /tr/net/loading-and-saving-documents/using-load-options/
 ---
+
+# .NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerini Kullanma
+
 ## giriiş
 .NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerini kullanmaya ilişkin eğitimimize hoş geldiniz! Bu öğreticide, Yükleme Seçeneklerini kullanarak belgeleri adım adım karşılaştırma sürecinde size yol göstereceğiz. İster yeni başlayan ister deneyimli bir geliştirici olun, bu kılavuz GroupDocs Karşılaştırmasını .NET uygulamalarınızla sorunsuz bir şekilde entegre etmenize yardımcı olacaktır.
 ## Önkoşullar

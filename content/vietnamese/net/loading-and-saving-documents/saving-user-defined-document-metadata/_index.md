@@ -6,6 +6,9 @@ description: Tìm hiểu cách lưu siêu dữ liệu tài liệu do người d�
 weight: 16
 url: /vi/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Lưu siêu dữ liệu tài liệu do người dùng xác định trong so sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ khám phá cách lưu siêu dữ liệu tài liệu do người dùng xác định bằng cách sử dụng So sánh GroupDocs cho .NET. Siêu dữ liệu rất quan trọng để tổ chức và quản lý tài liệu một cách hiệu quả. Với So sánh GroupDocs, bạn có thể dễ dàng so sánh và thao tác siêu dữ liệu để đáp ứng các yêu cầu cụ thể của mình.
 ## Điều kiện tiên quyết

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan hasonlíthatja össze a dokumentumokat a GroupD
 weight: 13
 url: /hu/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Tisztítsa meg az erőforrásokat az oldal előnézete után
+
 ## Bevezetés
 .NET fejlesztés világában a dokumentumok hatékony kezelése és összehasonlítása elengedhetetlen a különböző alkalmazásokhoz, a jogi irodáktól az oktatási intézményekig. Szerencsére az olyan eszközökkel, mint a GroupDocs.Comparison for .NET, a fejlesztők könnyedén leegyszerűsíthetik a dokumentumok összehasonlításának folyamatát. Ebben az oktatóanyagban megvizsgáljuk, hogyan használható a GroupDocs.Comparison for .NET a dokumentumok lépésről lépésre történő összehasonlítására.
 ## Előfeltételek

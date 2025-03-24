@@ -6,6 +6,9 @@ description: 了解如何將 GroupDocs Comparison for .NET 無縫整合到您的
 weight: 10
 url: /zh-hant/net/quick-start/set-license-from-file/
 ---
+
+# 從檔案設定許可證 - .NET 的 GroupDocs 比較
+
 ## 介紹
 在 .NET 開發領域，擁有有效的文件比較工具對於各個行業（包括法律、金融和教育）至關重要。 GroupDocs Comparison for .NET 提供了一個強大的解決方案，可在 .NET 應用程式中無縫比較文件。本文作為有效利用 GroupDocs Comparison for .NET 的綜合指南，分解了基本步驟並提供了對其實施的見解。
 ## 先決條件

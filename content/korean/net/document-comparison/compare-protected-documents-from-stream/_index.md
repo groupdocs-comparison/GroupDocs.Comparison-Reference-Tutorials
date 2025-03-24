@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 스트림에서 보호
 weight: 18
 url: /ko/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# Stream의 보호된 문서 비교 - .NET용 GroupDocs.Comparison
+
 ## 소개
 .NET 개발 영역에서 문서의 효율적인 비교는 다양한 애플리케이션에 매우 중요합니다. 콘텐츠 관리 시스템, 법률 소프트웨어, 기타 문서 중심 프로젝트 등 어떤 작업을 하든 문서를 정확하게 비교할 수 있으면 작업 흐름을 간소화하고 생산성을 높일 수 있습니다. 이 자습서에서는 스트림에서 보호된 문서를 비교하는 프로세스를 단순화하는 강력한 도구인 .NET용 GroupDocs.Comparison을 사용하는 방법을 자세히 설명합니다. 아래에 설명된 단계별 가이드를 따르면 .NET 프로젝트에서 이 라이브러리를 효과적으로 활용하는 방법에 대한 포괄적인 이해를 얻을 수 있습니다.
 ## 전제조건

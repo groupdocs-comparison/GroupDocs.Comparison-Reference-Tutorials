@@ -6,6 +6,9 @@ description: 使用 GroupDocs Comparison for .NET 輕鬆比較資料夾。請按
 weight: 12
 url: /zh-hant/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# 比較 .NET 的 GroupDocs 比較中的資料夾
+
 ## 介紹
 GroupDocs Comparison for .NET 是一個功能強大的程式庫，可讓開發人員在其 .NET 應用程式中輕鬆比較資料夾。本教學將引導您使用 GroupDocs Comparison for .NET 逐步完成比較資料夾的過程。在本教程結束時，您將能夠利用該程式庫高效且有效地比較資料夾。
 ## 先決條件

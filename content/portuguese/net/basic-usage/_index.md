@@ -6,6 +6,9 @@ description: Compare documentos em .NET usando GroupDocs.Comparison. Aprenda tut
 weight: 24
 url: /pt/net/basic-usage/
 ---
+
+# Uso Básico
+
 ## Introdução
 
 No domínio do desenvolvimento .NET, GroupDocs.Comparison surge como um poderoso aliado, agilizando tarefas de processamento de documentos com notável eficiência. Aprofundando seus recursos, este artigo apresenta um guia abrangente sobre tutoriais básicos de uso, revelando as proezas do GroupDocs.Comparison para .NET.

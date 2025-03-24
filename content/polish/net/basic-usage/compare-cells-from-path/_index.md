@@ -6,6 +6,9 @@ description: Dowiedz się, jak porównywać komórki ze ścieżki za pomocą Gro
 weight: 10
 url: /pl/net/basic-usage/compare-cells-from-path/
 ---
+
+# Porównaj komórki ze ścieżki — GroupDocs.Comparison dla platformy .NET
+
 ## Wstęp
 Witamy w kompleksowym samouczku dotyczącym wykorzystania GroupDocs.Comparison dla platformy .NET do porównywania komórek ze ścieżki. W tym przewodniku przeprowadzimy Cię krok po kroku przez proces, upewniając się, że dokładnie rozumiesz każdą koncepcję. GroupDocs.Comparison dla .NET to potężne narzędzie do porównywania różnych formatów dokumentów, w tym komórek, tekstu i obrazów, umożliwiające programistom skuteczne identyfikowanie różnic i podobieństw między dokumentami.
 ## Warunki wstępne

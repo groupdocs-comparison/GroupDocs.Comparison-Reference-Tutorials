@@ -6,6 +6,9 @@ description: Tìm hiểu cách đặt giấy phép bằng GroupDocs.Comparison c
 weight: 11
 url: /vi/net/quick-start/set-license-from-stream/
 ---
+
+# Đặt giấy phép từ luồng - So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong thế giới phát triển .NET, việc quản lý và so sánh các tài liệu một cách hiệu quả là rất quan trọng. Cho dù bạn đang làm việc trên các hợp đồng pháp lý, báo cáo tài chính hay bất kỳ ứng dụng sử dụng nhiều tài liệu nào khác, khả năng so sánh tài liệu một cách chính xác có thể tiết kiệm thời gian và đảm bảo độ chính xác. Đây là lúc GroupDocs.Comparison dành cho .NET phát huy tác dụng. 
 ## Điều kiện tiên quyết

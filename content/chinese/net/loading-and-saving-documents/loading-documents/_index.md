@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 有效地比较文
 weight: 10
 url: /zh/net/loading-and-saving-documents/loading-documents/
 ---
+
+# 在 .NET 的 GroupDocs 比较中加载文档
+
 ## 介绍
 欢迎来到我们关于使用 GroupDocs.Comparison for .NET 的综合教程！在本教程中，我们将引导您使用这个强大的工具逐步完成比较文档的过程。 GroupDocs.Comparison for .NET 提供了一组强大的文档比较功能，使开发人员能够有效地比较各种文档格式，例如 Word 文档、PDF、Excel 电子表格等。
 ## 先决条件

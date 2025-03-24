@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie Lizenzen mit GroupDocs.Comparison für .NET e
 weight: 11
 url: /de/net/quick-start/set-license-from-stream/
 ---
+
+# Lizenz aus Stream festlegen – GroupDocs-Vergleich für .NET
+
 ## Einführung
 In der Welt der .NET-Entwicklung ist die effiziente Verwaltung und der Vergleich von Dokumenten von entscheidender Bedeutung. Unabhängig davon, ob Sie an rechtlichen Verträgen, Finanzberichten oder anderen dokumentenintensiven Anwendungen arbeiten, kann die Möglichkeit, Dokumente genau zu vergleichen, Zeit sparen und Genauigkeit gewährleisten. Hier kommt GroupDocs.Comparison für .NET ins Spiel. 
 ## Voraussetzungen

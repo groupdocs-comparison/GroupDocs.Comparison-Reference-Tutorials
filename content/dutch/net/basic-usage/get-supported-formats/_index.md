@@ -6,6 +6,9 @@ description: Verbeter de nauwkeurigheid en consistentie van documenten met Group
 weight: 15
 url: /nl/net/basic-usage/get-supported-formats/
 ---
+
+# Ondersteunde formaten verkrijgen - GroupDocs.Comparison voor .NET
+
 ## Invoering
 In het huidige digitale tijdperk, waarin informatie overvloedig aanwezig is en voortdurend evolueert, is het garanderen van de nauwkeurigheid en consistentie van documenten van cruciaal belang. Of u nu een softwareontwikkelaar, een juridische professional of iemand anders bent die regelmatig met documenten te maken heeft, met hulpmiddelen die het vergelijken van documenten vergemakkelijken, kunt u tijd, moeite en potentiële fouten besparen. GroupDocs.Comparison voor .NET is zo'n tool en biedt een uitgebreide oplossing voor het vergelijken van verschillende documentformaten binnen .NET-toepassingen.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Compare folders effortlessly using GroupDocs Comparison for .NET. F
 weight: 12
 url: /net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Compare Folders in GroupDocs Comparison for .NET
+
 ## Introduction
 GroupDocs Comparison for .NET is a powerful library that enables developers to compare folders effortlessly within their .NET applications. This tutorial will guide you through the process of comparing folders step by step using GroupDocs Comparison for .NET. By the end of this tutorial, you'll be able to utilize the library to compare folders efficiently and effectively.
 ## Prerequisites

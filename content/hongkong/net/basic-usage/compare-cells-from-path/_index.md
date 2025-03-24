@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 比較路徑中的
 weight: 10
 url: /zh-hant/net/basic-usage/compare-cells-from-path/
 ---
+
+# 比較路徑中的儲存格 - GroupDocs.Comparison for .NET
+
 ## 介紹
 歡迎閱讀利用 GroupDocs.Comparison for .NET 比較路徑中的儲存格的綜合教學。在本指南中，我們將逐步引導您完成整個過程，確保您徹底掌握每個概念。 GroupDocs.Comparison for .NET 是一個功能強大的工具，用於比較各種文件格式（包括單元格、文字和圖像），使開發人員能夠有效識別文件之間的差異和相似之處。
 ## 先決條件

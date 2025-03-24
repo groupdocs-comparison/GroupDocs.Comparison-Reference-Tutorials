@@ -6,6 +6,9 @@ description: Lär dig hur du jämför celler från en sökväg med GroupDocs.Com
 weight: 10
 url: /sv/net/basic-usage/compare-cells-from-path/
 ---
+
+# Jämför celler från Path - GroupDocs.Comparison för .NET
+
 ## Introduktion
 Välkommen till den omfattande handledningen om hur du använder GroupDocs.Comparison för .NET för att jämföra celler från en sökväg. I den här guiden går vi igenom processen steg för steg, så att du förstår varje koncept grundligt. GroupDocs.Comparison for .NET är ett kraftfullt verktyg för att jämföra olika dokumentformat, inklusive celler, text och bilder, vilket gör det möjligt för utvecklare att effektivt identifiera skillnader och likheter mellan dokument.
 ## Förutsättningar

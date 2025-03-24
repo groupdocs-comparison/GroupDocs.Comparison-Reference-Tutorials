@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan állíthat be jelszót az eredményül kapott d
 weight: 17
 url: /hu/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Jelszó beállítása az eredményül kapott dokumentumhoz a GroupDocs .NET-összehasonlításában
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük a jelszó beállításának folyamatán az eredményül kapott dokumentumhoz a GroupDocs Comparison for .NET segítségével. Ez a funkció egy extra biztonsági réteget ad az összehasonlított dokumentumokhoz, biztosítva, hogy csak az arra jogosult személyek férhessenek hozzá.
 ## Előfeltételek

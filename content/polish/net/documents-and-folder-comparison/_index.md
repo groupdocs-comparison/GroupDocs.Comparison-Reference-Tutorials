@@ -6,6 +6,9 @@ description: Dowiedz się, jak usprawnić obieg dokumentów dzięki samouczkom G
 weight: 20
 url: /pl/net/documents-and-folder-comparison/
 ---
+
+# Porównanie dokumentów i folderów
+
 ## Wstęp
 
 Porównanie GroupDocs dla .NET zapewnia programistom potężny zestaw narzędzi usprawniających obieg dokumentów. Niezależnie od tego, czy pracujesz z pojedynczymi dokumentami, czy całymi folderami, zrozumienie, jak efektywnie korzystać z tych funkcji, ma kluczowe znaczenie dla optymalizacji wydajności. W tym artykule omówimy różne samouczki oferowane przez GroupDocs Comparison dla .NET, koncentrując się na porównaniu dokumentów i folderów.

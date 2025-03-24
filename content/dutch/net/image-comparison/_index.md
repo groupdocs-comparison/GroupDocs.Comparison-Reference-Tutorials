@@ -7,6 +7,9 @@ weight: 23
 url: /nl/net/image-comparison/
 ---
 
+# Beeldvergelijking
+
+
 ## Invoering
 
 Wilt u de kracht van GroupDocs.Comparison voor .NET benutten? Duik in onze uitgebreide tutorials over beeldvergelijkingstechnieken met behulp van deze veelzijdige bibliotheek.

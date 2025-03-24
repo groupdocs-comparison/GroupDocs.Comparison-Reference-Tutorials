@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 比较流中的图
 weight: 11
 url: /zh/net/image-comparison/compare-images-from-stream/
 ---
+
+# 比较流中的图像 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在 .NET 开发领域，确保文档或图像的准确性和一致性至关重要。 GroupDocs.Comparison for .NET 为开发人员提供了一个强大的解决方案来有效地比较图像。本教程将指导您完成使用 GroupDocs.Comparison for .NET 比较流中图像的过程。通过执行这些步骤，您将能够将图像比较功能无缝集成到您的 .NET 应用程序中。
 ## 先决条件

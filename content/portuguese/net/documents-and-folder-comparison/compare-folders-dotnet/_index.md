@@ -6,6 +6,9 @@ description: Compare pastas sem esforço usando GroupDocs Comparison for .NET. S
 weight: 12
 url: /pt/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Compare pastas na comparação de GroupDocs para .NET
+
 ## Introdução
 GroupDocs Comparison for .NET é uma biblioteca poderosa que permite aos desenvolvedores comparar pastas sem esforço em seus aplicativos .NET. Este tutorial irá guiá-lo através do processo de comparação de pastas passo a passo usando GroupDocs Comparison for .NET. Ao final deste tutorial, você poderá utilizar a biblioteca para comparar pastas de maneira eficiente e eficaz.
 ## Pré-requisitos

@@ -6,6 +6,9 @@ description: Porovnejte dokumenty v .NET pomocí GroupDocs.Comparison. Naučte s
 weight: 24
 url: /cs/net/basic-usage/
 ---
+
+# Základní použití
+
 ## Úvod
 
 V oblasti vývoje .NET se GroupDocs.Comparison ukazuje jako mocný spojenec, který zjednodušuje úlohy zpracování dokumentů s pozoruhodnou účinností. Tento článek, který se ponoří do jeho schopností, představuje komplexního průvodce základními návody k použití, který odhaluje zdatnost GroupDocs.Comparison pro .NET.

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 사용하여 폴더를 쉽게 비교할
 weight: 12
 url: /ko/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# .NET용 GroupDocs 비교에서 폴더 비교
+
 ## 소개
 .NET용 GroupDocs 비교는 개발자가 .NET 응용 프로그램 내에서 폴더를 쉽게 비교할 수 있게 해주는 강력한 라이브러리입니다. 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 폴더를 단계별로 비교하는 과정을 안내합니다. 이 튜토리얼이 끝나면 라이브러리를 활용하여 폴더를 효율적이고 효과적으로 비교할 수 있게 됩니다.
 ## 전제조건

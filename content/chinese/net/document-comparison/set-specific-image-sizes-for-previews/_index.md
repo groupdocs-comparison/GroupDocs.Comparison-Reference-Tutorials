@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 轻松将文档比较功能集
 weight: 14
 url: /zh/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# 设置预览的特定图像尺寸
+
 ## 介绍
 在软件开发领域，高效、准确的文档比较对于确保信息的完整性和一致性至关重要。 GroupDocs.Comparison for .NET 为寻求将文档比较功能无缝合并到其 .NET 应用程序中的开发人员提供了强大的解决方案。
 ## 先决条件

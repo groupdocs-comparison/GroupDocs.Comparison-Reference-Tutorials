@@ -6,6 +6,9 @@ description: Aprenda a simplificar fluxos de trabalho de documentos com tutoriai
 weight: 20
 url: /pt/net/documents-and-folder-comparison/
 ---
+
+# Comparação de documentos e pastas
+
 ## Introdução
 
 GroupDocs Comparison for .NET fornece aos desenvolvedores um poderoso conjunto de ferramentas para agilizar fluxos de trabalho de documentos. Esteja você trabalhando com documentos individuais ou pastas inteiras, entender como utilizar os recursos de maneira eficaz é crucial para otimizar a eficiência. Neste artigo, exploraremos vários tutoriais oferecidos pelo GroupDocs Comparison for .NET, com foco na comparação de documentos e pastas.

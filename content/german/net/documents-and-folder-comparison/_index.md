@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie Dokument-Workflows mit GroupDocs-Vergleichs-T
 weight: 20
 url: /de/net/documents-and-folder-comparison/
 ---
+
+# Vergleich von Dokumenten und Ordnern
+
 ## Einführung
 
 GroupDocs-Vergleich für .NET bietet Entwicklern leistungsstarke Tools zur Optimierung von Dokument-Workflows. Unabhängig davon, ob Sie mit einzelnen Dokumenten oder ganzen Ordnern arbeiten, ist es für die Effizienzoptimierung von entscheidender Bedeutung, zu verstehen, wie Sie die Funktionen effektiv nutzen. In diesem Artikel untersuchen wir verschiedene Tutorials, die von GroupDocs Compare für .NET angeboten werden, wobei der Schwerpunkt auf dem Vergleich von Dokumenten und Ordnern liegt.

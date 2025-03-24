@@ -6,6 +6,9 @@ description: Impara a semplificare i flussi di lavoro dei documenti con i tutori
 weight: 20
 url: /it/net/documents-and-folder-comparison/
 ---
+
+# Confronto di documenti e cartelle
+
 ## introduzione
 
 GroupDocs Comparison for .NET fornisce agli sviluppatori un potente set di strumenti per semplificare i flussi di lavoro dei documenti. Che tu stia lavorando con singoli documenti o intere cartelle, capire come utilizzare le funzionalità in modo efficace è fondamentale per ottimizzare l'efficienza. In questo articolo esploreremo vari tutorial offerti da GroupDocs Comparison for .NET, concentrandoci sul confronto di documenti e cartelle.

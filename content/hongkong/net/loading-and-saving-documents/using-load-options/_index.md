@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 中的載入選項
 weight: 13
 url: /zh-hant/net/loading-and-saving-documents/using-load-options/
 ---
+
+# 在 .NET 的 GroupDocs 比較中使用載入選項
+
 ## 介紹
 歡迎來到我們關於在 .NET 的 GroupDocs Comparison 中使用載入選項的教學！在本教學中，我們將引導您逐步完成使用「載入選項」比較文件的過程。無論您是初學者還是經驗豐富的開發人員，本指南都將幫助您將 GroupDocs Comparison 無縫整合到您的 .NET 應用程式中。
 ## 先決條件

@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh các tài liệu được bảo vệ t�
 weight: 18
 url: /vi/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# So sánh các tài liệu được bảo vệ từ luồng - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc so sánh hiệu quả các tài liệu là rất quan trọng đối với các ứng dụng khác nhau. Cho dù bạn đang làm việc trên hệ thống quản lý nội dung, phần mềm pháp lý hay bất kỳ dự án tập trung vào tài liệu nào khác, việc có khả năng so sánh tài liệu một cách chính xác có thể hợp lý hóa quy trình công việc và nâng cao năng suất. Hướng dẫn này đi sâu vào việc sử dụng GroupDocs.Comparison cho .NET, một công cụ mạnh mẽ giúp đơn giản hóa quá trình so sánh các tài liệu được bảo vệ từ các luồng. Bằng cách làm theo hướng dẫn từng bước được nêu bên dưới, bạn sẽ hiểu toàn diện về cách sử dụng hiệu quả thư viện này trong các dự án .NET của mình.
 ## Điều kiện tiên quyết

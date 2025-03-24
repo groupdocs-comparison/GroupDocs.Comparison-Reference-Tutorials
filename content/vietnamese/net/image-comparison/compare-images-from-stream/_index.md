@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh hình ảnh từ các luồng bằng Gro
 weight: 11
 url: /vi/net/image-comparison/compare-images-from-stream/
 ---
+
+# So sánh hình ảnh từ luồng - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc đảm bảo tính chính xác và nhất quán giữa các tài liệu hoặc hình ảnh là rất quan trọng. GroupDocs.Comparison for .NET cung cấp giải pháp mạnh mẽ cho các nhà phát triển để so sánh hình ảnh một cách hiệu quả. Hướng dẫn này sẽ hướng dẫn bạn quy trình so sánh hình ảnh từ các luồng bằng GroupDocs.Comparison cho .NET. Bằng cách làm theo các bước này, bạn sẽ có thể tích hợp liền mạch khả năng so sánh hình ảnh vào các ứng dụng .NET của mình.
 ## Điều kiện tiên quyết

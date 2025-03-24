@@ -6,6 +6,9 @@ description: Tìm hiểu cách đặt mật khẩu cho tài liệu tổng hợp 
 weight: 17
 url: /vi/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Đặt mật khẩu cho tài liệu kết quả trong so sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình đặt mật khẩu cho tài liệu thu được bằng cách sử dụng So sánh GroupDocs cho .NET. Tính năng này bổ sung thêm một lớp bảo mật cho các tài liệu được so sánh của bạn, đảm bảo rằng chỉ những cá nhân được ủy quyền mới có thể truy cập chúng.
 ## Điều kiện tiên quyết

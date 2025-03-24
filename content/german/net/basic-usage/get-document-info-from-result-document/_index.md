@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Comparison für .NET Dokumentin
 weight: 12
 url: /de/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Dokumentinformationen aus dem Ergebnisdokument abrufen – GroupDocs.Comparison für .NET
+
 ## Einführung
 Im Bereich der .NET-Entwicklung ist die Verwaltung und der Vergleich von Dokumenten eine häufige Anforderung. GroupDocs.Comparison für .NET bietet eine robuste Lösung für diese Aufgabe und ermöglicht Entwicklern die nahtlose Integration von Dokumentvergleichsfunktionen in ihre Anwendungen. Dieses Tutorial führt Sie durch den Prozess der Verwendung von GroupDocs.Comparison für .NET zum Abrufen von Dokumentinformationen aus dem Ergebnisdokument. 
 ## Voraussetzungen

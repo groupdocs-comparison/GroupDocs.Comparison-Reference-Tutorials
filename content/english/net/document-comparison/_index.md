@@ -6,6 +6,9 @@ description: Efficiently compare documents in .NET with GroupDocs.Comparison. St
 weight: 21
 url: /net/document-comparison/
 ---
+
+# Document Comparison
+
 ## Introduction
 
 In today's fast-paced digital world, efficient document management is crucial for businesses and individuals alike. Whether you're a legal professional, academic researcher, or business owner, the ability to compare documents accurately and seamlessly is paramount. With GroupDocs.Comparison for .NET, you can streamline this process effortlessly.

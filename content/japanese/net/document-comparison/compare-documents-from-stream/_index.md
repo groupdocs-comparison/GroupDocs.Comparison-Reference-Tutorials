@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET を使用してドキュメントの�
 weight: 16
 url: /ja/net/document-comparison/compare-documents-from-stream/
 ---
+
+# ストリームからのドキュメントの比較 - GroupDocs.Comparison for .NET
+
 ## 導入
 情報が豊富で変化が絶えない今日のペースの速い世界では、ドキュメント全体で正確さと一貫性を確保することが最も重要です。法務分野、金融分野、または文書の完全性が重要なその他の業界のいずれの場合でも、GroupDocs.Comparison for .NET は比較プロセスを合理化する堅牢なソリューションを提供します。
 ## 前提条件

@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET'i kullanarak belgelerdeki değişikli
 weight: 10
 url: /tr/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# .NET için GroupDocs Karşılaştırmasındaki Değişiklikleri Kabul Etme ve Reddetme
+
 ## giriiş
 Belge yönetimi ve işbirliği alanında, dosyaların doğruluğunun ve bütünlüğünün sağlanması çok önemlidir. GroupDocs Comparison for .NET, geliştiricilere belgelerdeki değişiklikleri zahmetsizce kabul etme ve reddetme yetkisi veren, böylece iş akışlarını kolaylaştıran ve üretkenliği artıran güçlü bir çözüm olarak ortaya çıkıyor. Bu eğitim, GroupDocs Comparison for .NET'i kullanarak değişiklikleri kabul etme ve reddetme süreci boyunca size rehberlik edecek ve netlik ve uygulama kolaylığı için her adımı parçalara ayıracaktır.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Lär dig hur du sparar användardefinierad dokumentmetadata med Gro
 weight: 16
 url: /sv/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Spara användardefinierade dokumentmetadata i GroupDocs Comparison för .NET
+
 ## Introduktion
 I den här handledningen kommer vi att utforska hur man sparar användardefinierad dokumentmetadata med hjälp av GroupDocs Comparison for .NET. Metadata är avgörande för att organisera och hantera dokument effektivt. Med GroupDocs Comparison kan du enkelt jämföra och manipulera metadata för att möta dina specifika krav.
 ## Förutsättningar

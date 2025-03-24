@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan használhatja a Groupdocs.Comparison for .NET a
 weight: 11
 url: /hu/net/document-comparison/generate-page-previews-source-document/
 ---
+
+# Oldal előnézetek létrehozása a forrásdokumentumhoz
+
 ## Bevezetés
 mai rohanó digitális világban a dokumentumkezelés és az összehasonlítás kulcsszerepet játszik a különböző iparágakban. A robusztus megoldásokat kereső fejlesztők gyakran a Groupdocs.Comparison for .NET-hez fordulnak. Ez a hatékony eszköz lehetővé teszi a fejlesztők számára a dokumentumok könnyű összehasonlítását, lehetővé téve számukra a munkafolyamatok egyszerűsítését és a termelékenység növelését. Ebben az oktatóanyagban a Groupdocs.Comparison for .NET alapjait fedezzük fel, lebontva az egyes lépéseket a zökkenőmentes tanulási élmény biztosítása érdekében.
 ## Előfeltételek

@@ -6,6 +6,9 @@ url: /zh/net/
 description: 了解适用于 .NET 的 GroupDocs.Comparison 综合教程，轻松促进高效的文档和文件夹比较、管理和集成。
 is_root: true
 ---
+
+# .NET 的 GroupDocs.Comparison 教程和示例
+
 ## 介绍
 
 了解如何使用 GroupDocs.Comparison for .NET 教程简化文档工作流程。无论是文档或文件夹比较、管理还是集成，我们都能满足您的要求。深入研究我们详细的教程和示例，掌握利用这个强大工具的艺术。从接受和拒绝更改到无缝文档和图像比较，探索分步指南以增强您的工作流程并确保项目的准确性。了解如何使用 GroupDocs.Comparison for .NET 高效比较文档、文件夹和图像，使您能够轻松优化文档管理并简化工作流程。|

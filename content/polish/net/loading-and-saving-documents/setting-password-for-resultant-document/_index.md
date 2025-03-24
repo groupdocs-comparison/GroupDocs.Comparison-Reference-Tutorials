@@ -6,6 +6,9 @@ description: Dowiedz się, jak ustawić hasło dla dokumentów wynikowych w por�
 weight: 17
 url: /pl/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Ustawianie hasła dla dokumentu wynikowego w porównaniu GroupDocs dla .NET
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces ustawiania hasła dla wynikowego dokumentu za pomocą narzędzia GroupDocs Comparison dla .NET. Ta funkcja dodaje dodatkową warstwę bezpieczeństwa do porównywanych dokumentów, zapewniając, że dostęp do nich mają tylko upoważnione osoby.
 ## Warunki wstępne

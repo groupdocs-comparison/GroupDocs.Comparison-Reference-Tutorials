@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan lehet elfogadni és elutasítani a dokumentumok
 weight: 10
 url: /hu/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Változások elfogadása és elutasítása a GroupDocs .NET-összehasonlításában
+
 ## Bevezetés
 A dokumentumkezelés és az együttműködés területén a fájlok pontosságának és integritásának biztosítása a legfontosabb. A GroupDocs Comparison for .NET robusztus megoldásként jelenik meg, amely lehetővé teszi a fejlesztők számára, hogy könnyedén elfogadják és elutasítsák a dokumentumokon belüli módosításokat, ezáltal egyszerűsítve a munkafolyamatokat és növelve a termelékenységet. Ez az oktatóanyag végigvezeti Önt a változtatások elfogadásának és elutasításának folyamatán a GroupDocs Comparison for .NET használatával, és az egyes lépéseket lebontja az áttekinthetőség és a könnyebb megvalósítás érdekében.
 ## Előfeltételek

@@ -7,6 +7,9 @@ weight: 23
 url: /pt/net/image-comparison/
 ---
 
+# Comparação de imagens
+
+
 ## Introdução
 
 Você está procurando aproveitar o poder do GroupDocs.Comparison para .NET? Mergulhe em nossos tutoriais abrangentes que cobrem técnicas de comparação de imagens usando esta biblioteca versátil.

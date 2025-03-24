@@ -6,6 +6,9 @@ description: Aprenda a extraer información de un documento de una ruta usando G
 weight: 13
 url: /es/net/basic-usage/get-document-info-from-path/
 ---
+
+# Obtener información del documento desde la ruta - GroupDocs.Comparison para .NET
+
 ## Introducción
 En el ámbito del desarrollo de software, particularmente en entornos de framework .NET, la comparación eficiente de documentos es una necesidad crítica. Ya sea que esté trabajando en documentos legales, revisiones de código o cualquier otro contenido donde la precisión sea importante, tener una herramienta sólida para comparar documentos puede ahorrar tiempo, esfuerzo y posibles errores. Una de esas herramientas poderosas en este dominio es GroupDocs.Comparison para .NET. Este tutorial lo guiará a través del proceso de aprovechar GroupDocs.Comparison para .NET para obtener información del documento de una ruta determinada, desglosando cada paso para garantizar la claridad y facilidad de implementación.
 ## Requisitos previos

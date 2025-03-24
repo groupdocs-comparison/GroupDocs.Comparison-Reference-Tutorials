@@ -6,6 +6,9 @@ description: Naučte se ukládat uživatelsky definovaná metadata dokumentu pom
 weight: 16
 url: /cs/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Ukládání uživatelem definovaných metadat dokumentu ve srovnání GroupDocs pro .NET
+
 ## Úvod
 V tomto tutoriálu prozkoumáme, jak uložit uživatelsky definovaná metadata dokumentu pomocí GroupDocs Comparison for .NET. Metadata jsou zásadní pro efektivní organizaci a správu dokumentů. Pomocí GroupDocs Comparison můžete snadno porovnávat a upravovat metadata tak, aby vyhovovala vašim specifickým požadavkům.
 ## Předpoklady

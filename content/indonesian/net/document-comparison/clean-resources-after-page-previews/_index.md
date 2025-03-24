@@ -6,6 +6,9 @@ description: Pelajari cara membandingkan dokumen menggunakan GroupDocs.Compariso
 weight: 13
 url: /id/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Bersihkan Sumber Daya Setelah Pratinjau Halaman
+
 ## Perkenalan
 Dalam dunia pengembangan .NET, mengelola dan membandingkan dokumen secara efisien sangat penting untuk berbagai aplikasi, mulai dari firma hukum hingga institusi pendidikan. Untungnya, dengan alat seperti GroupDocs.Comparison untuk .NET, pengembang dapat menyederhanakan proses membandingkan dokumen dengan mudah. Dalam tutorial ini, kita akan mempelajari cara memanfaatkan GroupDocs.Comparison untuk .NET untuk membandingkan dokumen langkah demi langkah.
 ## Prasyarat

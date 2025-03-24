@@ -6,6 +6,9 @@ description: Pelajari cara menyimpan metadata dokumen yang ditentukan pengguna m
 weight: 16
 url: /id/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Menyimpan Metadata Dokumen Buatan Pengguna dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam tutorial ini, kita akan mempelajari cara menyimpan metadata dokumen yang ditentukan pengguna menggunakan Perbandingan GroupDocs untuk .NET. Metadata sangat penting untuk mengatur dan mengelola dokumen secara efisien. Dengan Perbandingan GroupDocs, Anda dapat dengan mudah membandingkan dan memanipulasi metadata untuk memenuhi kebutuhan spesifik Anda.
 ## Prasyarat

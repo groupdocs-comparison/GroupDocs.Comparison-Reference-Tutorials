@@ -6,6 +6,9 @@ description: Tingkatkan akurasi dan konsistensi dokumen dengan GroupDocs.Compari
 weight: 15
 url: /id/net/basic-usage/get-supported-formats/
 ---
+
+# Dapatkan Format yang Didukung - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Di era digital saat ini, dimana informasi melimpah dan terus berkembang, memastikan keakuratan dan konsistensi dokumen adalah hal yang terpenting. Baik Anda seorang pengembang perangkat lunak, profesional hukum, atau siapa pun yang sering menangani dokumen, memiliki alat yang memfasilitasi perbandingan dokumen dapat menghemat waktu, tenaga, dan potensi kesalahan. GroupDocs.Comparison for .NET adalah salah satu alat tersebut, menawarkan solusi komprehensif untuk membandingkan berbagai format dokumen dalam aplikasi .NET.
 ## Prasyarat

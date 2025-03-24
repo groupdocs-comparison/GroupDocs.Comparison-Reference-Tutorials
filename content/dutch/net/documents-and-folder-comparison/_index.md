@@ -6,6 +6,9 @@ description: Leer hoe u documentworkflows kunt stroomlijnen met GroupDocs Compar
 weight: 20
 url: /nl/net/documents-and-folder-comparison/
 ---
+
+# Vergelijking van documenten en mappen
+
 ## Invoering
 
 GroupDocs Comparison voor .NET biedt ontwikkelaars een krachtige set tools om documentworkflows te stroomlijnen. Of u nu met afzonderlijke documenten of hele mappen werkt, het is van cruciaal belang dat u begrijpt hoe u de functies effectief kunt gebruiken om de efficiëntie te optimaliseren. In dit artikel zullen we verschillende tutorials verkennen die worden aangeboden door GroupDocs Comparison voor .NET, waarbij de nadruk ligt op het vergelijken van documenten en mappen.

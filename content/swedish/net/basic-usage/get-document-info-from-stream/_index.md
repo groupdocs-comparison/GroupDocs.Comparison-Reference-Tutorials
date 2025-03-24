@@ -6,6 +6,9 @@ description: Lär dig hur du effektivt jämför dokument i .NET med GroupDocs.Co
 weight: 14
 url: /sv/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Få dokumentinformation från Stream - GroupDocs.Comparison för .NET
+
 ## Introduktion
 en värld av .NET-utveckling är effektiv jämförelse av dokument en avgörande uppgift, oavsett om du arbetar med Word-dokument, PDF-filer eller något annat filformat. GroupDocs.Comparison för .NET tillhandahåller en robust lösning för dokumentjämförelse, vilket gör att utvecklare kan effektivisera denna process sömlöst. I den här handledningen kommer vi att fördjupa oss i grunderna för att använda GroupDocs.Comparison för .NET för att jämföra dokument, steg för steg. I slutet kommer du att ha en gedigen förståelse för hur du kan utnyttja detta kraftfulla verktyg för att förbättra dina arbetsflöden för dokumentbearbetning.
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: Leer hoe u de metagegevensbron van documenten kunt opslaan met Grou
 weight: 14
 url: /nl/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Metagegevensbron voor documenten opslaan in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 In de wereld van softwareontwikkeling is efficiënte documentvergelijking cruciaal voor verschillende sectoren, waaronder de juridische sector, de financiële sector en het onderwijs. GroupDocs Comparison voor .NET biedt een krachtige oplossing voor het naadloos vergelijken van documenten in .NET-applicaties. Deze tutorial leidt u door het proces van het gebruik van GroupDocs Comparison voor .NET om de metadatabron van documenten op te slaan. Door deze stappen te volgen, kunt u het volledige potentieel van deze bibliotheek benutten om uw documentvergelijkingstaken te verbeteren.
 ## Vereisten

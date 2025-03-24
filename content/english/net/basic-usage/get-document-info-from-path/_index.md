@@ -6,6 +6,9 @@ description: Learn how to extract document info from a path using GroupDocs.Comp
 weight: 13
 url: /net/basic-usage/get-document-info-from-path/
 ---
+
+# Get Document Info from Path - GroupDocs.Comparison for .NET
+
 ## Introduction
 In the realm of software development, particularly in .NET framework environments, efficient document comparison is a critical necessity. Whether you're working on legal documents, code revisions, or any other content where precision matters, having a robust tool for comparing documents can save time, effort, and potential errors. One such powerful tool in this domain is GroupDocs.Comparison for .NET. This tutorial will guide you through the process of leveraging GroupDocs.Comparison for .NET to obtain document information from a given path, breaking down each step to ensure clarity and ease of implementation.
 ## Prerequisites

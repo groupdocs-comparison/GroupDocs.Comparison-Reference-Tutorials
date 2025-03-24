@@ -6,6 +6,9 @@ description: Aprenda como comparar células de um caminho usando GroupDocs.Compa
 weight: 10
 url: /pt/net/basic-usage/compare-cells-from-path/
 ---
+
+# Compare células do caminho - GroupDocs.Comparison for .NET
+
 ## Introdução
 Bem-vindo ao tutorial abrangente sobre a utilização do GroupDocs.Comparison for .NET para comparar células de um caminho. Neste guia, orientaremos você no processo passo a passo, garantindo que você compreenda cada conceito completamente. GroupDocs.Comparison for .NET é uma ferramenta poderosa para comparar vários formatos de documentos, incluindo células, texto e imagens, permitindo que os desenvolvedores identifiquem com eficiência diferenças e semelhanças entre documentos.
 ## Pré-requisitos

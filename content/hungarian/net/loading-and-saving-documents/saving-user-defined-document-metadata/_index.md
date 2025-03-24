@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan mentheti a felhasználó által definiált doku
 weight: 16
 url: /hu/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Felhasználó által meghatározott dokumentum metaadatok mentése a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 Ebben az oktatóanyagban megvizsgáljuk, hogyan menthetők el a felhasználó által meghatározott dokumentumok metaadatai a GroupDocs Comparison for .NET segítségével. A metaadatok kulcsfontosságúak a dokumentumok hatékony rendszerezéséhez és kezeléséhez. A GroupDocs Comparison segítségével könnyedén összehasonlíthatja és manipulálhatja a metaadatokat, hogy megfeleljenek az Ön speciális követelményeinek.
 ## Előfeltételek

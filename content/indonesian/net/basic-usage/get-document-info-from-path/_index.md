@@ -6,6 +6,9 @@ description: Pelajari cara mengekstrak info dokumen dari jalur menggunakan Group
 weight: 13
 url: /id/net/basic-usage/get-document-info-from-path/
 ---
+
+# Dapatkan Info Dokumen dari Path - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Dalam bidang pengembangan perangkat lunak, khususnya di lingkungan kerangka .NET, perbandingan dokumen yang efisien merupakan kebutuhan penting. Baik Anda sedang mengerjakan dokumen hukum, revisi kode, atau konten lainnya yang mengutamakan presisi, memiliki alat canggih untuk membandingkan dokumen dapat menghemat waktu, tenaga, dan potensi kesalahan. Salah satu alat canggih dalam domain ini adalah GroupDocs.Comparison untuk .NET. Tutorial ini akan memandu Anda melalui proses memanfaatkan GroupDocs.Comparison untuk .NET guna memperoleh informasi dokumen dari jalur tertentu, menguraikan setiap langkah untuk memastikan kejelasan dan kemudahan penerapan.
 ## Prasyarat

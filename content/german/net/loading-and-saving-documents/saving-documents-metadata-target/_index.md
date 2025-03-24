@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe des GroupDocs-Vergleichs für .NET M
 weight: 15
 url: /de/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Metadatenziel für das Speichern von Dokumenten im GroupDocs-Vergleich für .NET
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Speicherns von Dokumentmetadaten als Ziel mithilfe von GroupDocs Compare für .NET. GroupDocs Compare for .NET ist eine leistungsstarke Bibliothek, mit der Sie Dokumente in Ihren .NET-Anwendungen vergleichen und zusammenführen können.
 ## Voraussetzungen

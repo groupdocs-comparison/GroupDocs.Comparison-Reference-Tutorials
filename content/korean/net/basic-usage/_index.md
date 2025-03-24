@@ -6,6 +6,9 @@ description: GroupDocs.Comparison을 사용하여 .NET의 문서를 비교합니
 weight: 24
 url: /ko/net/basic-usage/
 ---
+
+# 기본 사용법
+
 ## 소개
 
 .NET 개발 영역에서 GroupDocs.Comparison은 놀라운 효율성으로 문서 처리 작업을 간소화하는 강력한 동맹으로 등장합니다. 기능을 자세히 살펴보는 이 기사에서는 기본 사용법 자습서에 대한 포괄적인 가이드를 제시하고 .NET용 GroupDocs.Comparison의 우수성을 공개합니다.

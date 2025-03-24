@@ -6,6 +6,9 @@ description: Vergelijk documenten in .NET met GroupDocs.Comparison. Leer basistu
 weight: 24
 url: /nl/net/basic-usage/
 ---
+
+# Basisgebruik
+
 ## Invoering
 
 Op het gebied van .NET-ontwikkeling komt GroupDocs.Comparison naar voren als een krachtige bondgenoot, die documentverwerkingstaken met opmerkelijke efficiëntie stroomlijnt. Dit artikel verdiept zich in de mogelijkheden ervan en presenteert een uitgebreide handleiding over tutorials voor basisgebruik, waarin de kracht van GroupDocs.Comparison voor .NET wordt onthuld.

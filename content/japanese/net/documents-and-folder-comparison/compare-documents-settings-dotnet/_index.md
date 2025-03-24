@@ -6,6 +6,9 @@ description: GroupDocs Comparison を使用して、.NET アプリケーショ�
 weight: 11
 url: /ja/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# GroupDocs Comparison for .NET でのドキュメント設定の比較
+
 ## 導入
 ドキュメントの管理と比較の分野では、GroupDocs Comparison for .NET は強力なツールとして際立っており、開発者がドキュメント比較機能を .NET アプリケーションにシームレスに統合できるようにします。 GroupDocs Comparison for .NET は、堅牢な機能と使いやすさにより、ドキュメントを比較するプロセスを簡素化し、正確さと効率性を確保します。
 ## 前提条件

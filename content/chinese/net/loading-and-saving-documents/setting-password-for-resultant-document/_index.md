@@ -6,6 +6,9 @@ description: 了解如何在 GroupDocs Comparison for .NET 中为生成的文档
 weight: 17
 url: /zh/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# 为 .NET 的 GroupDocs 比较中的结果文档设置密码
+
 ## 介绍
 在本教程中，我们将指导您完成使用 GroupDocs Comparison for .NET 为生成的文档设置密码的过程。此功能为您比较的文档增加了额外的安全层，确保只有授权的个人才能访问它们。
 ## 先决条件

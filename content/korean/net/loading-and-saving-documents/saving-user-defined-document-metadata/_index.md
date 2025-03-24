@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 사용하여 사용자 정의 문서 �
 weight: 16
 url: /ko/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# .NET용 GroupDocs 비교에서 사용자 정의 문서 메타데이터 저장
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 사용자 정의 문서 메타데이터를 저장하는 방법을 살펴보겠습니다. 메타데이터는 문서를 효율적으로 구성하고 관리하는 데 중요합니다. GroupDocs 비교를 사용하면 특정 요구 사항에 맞게 메타데이터를 쉽게 비교하고 조작할 수 있습니다.
 ## 전제조건

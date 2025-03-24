@@ -6,6 +6,9 @@ description: Verbessern Sie die Genauigkeit und Konsistenz von Dokumenten mit Gr
 weight: 15
 url: /de/net/basic-usage/get-supported-formats/
 ---
+
+# Erhalten Sie unterstützte Formate – GroupDocs.Comparison für .NET
+
 ## Einführung
 Im heutigen digitalen Zeitalter, in dem Informationen reichlich vorhanden sind und sich ständig weiterentwickeln, ist die Gewährleistung der Genauigkeit und Konsistenz von Dokumenten von größter Bedeutung. Unabhängig davon, ob Sie Softwareentwickler, Jurist oder jemand sind, der regelmäßig mit Dokumenten zu tun hat, können Sie mit Tools, die den Dokumentenvergleich erleichtern, Zeit und Mühe sparen und potenzielle Fehler vermeiden. GroupDocs.Comparison für .NET ist ein solches Tool und bietet eine umfassende Lösung zum Vergleich verschiedener Dokumentformate in .NET-Anwendungen.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Dowiedz się, jak zapisać źródło metadanych dokumentu za pomoc�
 weight: 14
 url: /pl/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Zapisywanie źródła metadanych dokumentów w porównaniu GroupDocs dla .NET
+
 ## Wstęp
 świecie tworzenia oprogramowania efektywne porównywanie dokumentów ma kluczowe znaczenie dla różnych branż, w tym prawnej, finansowej i edukacyjnej. Porównanie GroupDocs dla .NET oferuje zaawansowane rozwiązanie do płynnego porównywania dokumentów w aplikacjach .NET. Ten samouczek przeprowadzi Cię przez proces korzystania z narzędzia GroupDocs Comparison for .NET w celu zapisywania źródła metadanych dokumentu. Wykonując poniższe kroki, będziesz w stanie wykorzystać pełny potencjał tej biblioteki, aby usprawnić zadania porównywania dokumentów.
 ## Warunki wstępne

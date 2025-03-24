@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 대상 문서에 대�
 weight: 12
 url: /ko/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# 대상 문서에 대한 페이지 미리보기 생성
+
 ## 소개
 정보가 풍부하고 끊임없이 진화하는 오늘날의 디지털 세계에서는 효율적인 문서 비교 도구의 필요성이 가장 중요해졌습니다. 계약을 분석하는 법률 전문가이든, 제안을 검토하는 기업 임원이든, 에세이를 수정하는 학생이든 관계없이 문서를 정확하게 비교하는 것은 작업의 정확성과 효율성을 보장하는 데 필수적입니다. 다행히 .NET용 GroupDocs.Comparison은 .NET 응용 프로그램 내에서 다양한 문서 형식을 원활하게 비교할 수 있는 강력한 솔루션을 제공합니다.
 ## 전제조건

@@ -6,6 +6,9 @@ description: Naučte se, jak získat informace o dokumentu z výsledného dokume
 weight: 12
 url: /cs/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Získejte informace o dokumentu z dokumentu výsledků - GroupDocs.Comparison pro .NET
+
 ## Úvod
 V oblasti vývoje .NET je správa a porovnávání dokumentů běžným požadavkem. GroupDocs.Comparison for .NET nabízí robustní řešení pro tento úkol a umožňuje vývojářům bezproblémově integrovat funkce porovnávání dokumentů do svých aplikací. Tento výukový program vás provede procesem využití GroupDocs.Comparison for .NET k načtení informací o dokumentu z výsledného dokumentu. 
 ## Předpoklady

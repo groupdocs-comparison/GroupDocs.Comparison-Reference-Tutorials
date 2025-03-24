@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を使用してドキュメント メ
 weight: 14
 url: /ja/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# GroupDocs でのドキュメント メタデータ ソースの保存 .NET の比較
+
 ## 導入
 ソフトウェア開発の世界では、法律、金融、教育などのさまざまな業界にとって、ドキュメントを効率的に比較することが重要です。 GroupDocs Comparison for .NET は、.NET アプリケーション内のドキュメントをシームレスに比較するための強力なソリューションを提供します。このチュートリアルでは、GroupDocs Comparison for .NET を使用してドキュメントのメタデータ ソースを保存するプロセスについて説明します。これらの手順に従うことで、このライブラリの可能性を最大限に活用してドキュメント比較タスクを強化できるようになります。
 ## 前提条件

@@ -6,6 +6,9 @@ description: Learn to streamline document workflows with GroupDocs Comparison fo
 weight: 20
 url: /net/documents-and-folder-comparison/
 ---
+
+# Documents and Folder Comparison
+
 ## Introduction
 
 GroupDocs Comparison for .NET provides developers with a powerful set of tools to streamline document workflows. Whether you're working with individual documents or entire folders, understanding how to utilize the features effectively is crucial for optimizing efficiency. In this article, we'll explore various tutorials offered by GroupDocs Comparison for .NET, focusing on document and folder comparison.

@@ -6,6 +6,9 @@ description: 使用 GroupDocs Comparison 简化 .NET 应用程序中的文档比
 weight: 11
 url: /zh/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# 比较 .NET 的 GroupDocs 比较中的文档设置
+
 ## 介绍
 在文档管理和比较领域，GroupDocs Comparison for .NET 是一款功能强大的工具，使开发人员能够将文档比较功能无缝集成到他们的 .NET 应用程序中。凭借其强大的功能和易用性，GroupDocs Comparison for .NET 简化了比较文档的过程，确保了准确性和效率。
 ## 先决条件

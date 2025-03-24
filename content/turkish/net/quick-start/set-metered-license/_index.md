@@ -6,6 +6,9 @@ description: Verimli belge karşılaştırma iş akışları için GroupDocs Com
 weight: 12
 url: /tr/net/quick-start/set-metered-license/
 ---
+
+# Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
+
 ## giriiş
 .NET geliştirme alanında, belge karşılaştırması için sağlam araçlara sahip olmak vazgeçilmezdir. GroupDocs Comparison for .NET, çeşitli belge formatlarını programlı olarak karşılaştırmak için güçlü bir çözüm olarak öne çıkıyor. Metin belgelerinden elektronik tablolara ve sunumlara kadar bu kitaplık, geliştiricilerin dosyalar arasındaki farkları etkili bir şekilde tanımlamasına olanak tanır.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: 使用 GroupDocs Comparison for .NET 轻松比较文件夹。请按
 weight: 12
 url: /zh/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# 比较 .NET 的 GroupDocs 比较中的文件夹
+
 ## 介绍
 GroupDocs Comparison for .NET 是一个功能强大的库，使开发人员能够在其 .NET 应用程序中轻松比较文件夹。本教程将指导您使用 GroupDocs Comparison for .NET 逐步完成比较文件夹的过程。在本教程结束时，您将能够利用该库高效且有效地比较文件夹。
 ## 先决条件

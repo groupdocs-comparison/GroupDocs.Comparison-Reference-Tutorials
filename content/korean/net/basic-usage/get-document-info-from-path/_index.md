@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 경로에서 문서 �
 weight: 13
 url: /ko/net/basic-usage/get-document-info-from-path/
 ---
+
+# 경로에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
+
 ## 소개
 소프트웨어 개발 영역, 특히 .NET 프레임워크 환경에서는 효율적인 문서 비교가 매우 중요합니다. 법률 문서, 코드 개정 또는 정확성이 중요한 기타 콘텐츠 작업을 할 때 문서 비교를 위한 강력한 도구를 사용하면 시간, 노력 및 잠재적인 오류를 줄일 수 있습니다. 이 분야의 강력한 도구 중 하나는 .NET용 GroupDocs.Comparison입니다. 이 자습서에서는 .NET용 GroupDocs.Comparison을 활용하여 특정 경로에서 문서 정보를 얻는 프로세스를 안내하고 명확성과 구현 용이성을 보장하기 위해 각 단계를 세분화합니다.
 ## 전제조건

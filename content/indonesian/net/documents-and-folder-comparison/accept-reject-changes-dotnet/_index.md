@@ -6,6 +6,9 @@ description: Pelajari cara menerima dan menolak perubahan dalam dokumen mengguna
 weight: 10
 url: /id/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Terima dan Tolak Perubahan dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam bidang manajemen dokumen dan kolaborasi, memastikan keakuratan dan integritas file adalah hal yang terpenting. Perbandingan GroupDocs untuk .NET muncul sebagai solusi tangguh, memberdayakan pengembang untuk dengan mudah menerima dan menolak perubahan dalam dokumen, sehingga menyederhanakan alur kerja dan meningkatkan produktivitas. Tutorial ini akan memandu Anda melalui proses menerima dan menolak perubahan menggunakan Perbandingan GroupDocs untuk .NET, menguraikan setiap langkah untuk kejelasan dan kemudahan penerapan.
 ## Prasyarat

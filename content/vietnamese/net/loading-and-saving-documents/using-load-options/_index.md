@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng Tùy chọn tải trong So sánh Grou
 weight: 13
 url: /vi/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Sử dụng Tùy chọn tải trong So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn của chúng tôi về cách sử dụng Tùy chọn tải trong So sánh GroupDocs cho .NET! Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình so sánh các tài liệu bằng Tùy chọn tải theo từng bước. Cho dù bạn là người mới bắt đầu hay nhà phát triển có kinh nghiệm, hướng dẫn này sẽ giúp bạn tích hợp liền mạch So sánh GroupDocs vào các ứng dụng .NET của mình.
 ## Điều kiện tiên quyết

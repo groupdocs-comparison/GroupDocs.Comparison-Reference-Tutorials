@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie im GroupDocs-Vergleich für .NET ein Kennwort
 weight: 17
 url: /de/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Festlegen des Passworts für das resultierende Dokument im GroupDocs-Vergleich für .NET
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Festlegens eines Kennworts für das resultierende Dokument mithilfe von GroupDocs Compare für .NET. Diese Funktion verleiht Ihren verglichenen Dokumenten eine zusätzliche Sicherheitsebene und stellt sicher, dass nur autorisierte Personen darauf zugreifen können.
 ## Voraussetzungen

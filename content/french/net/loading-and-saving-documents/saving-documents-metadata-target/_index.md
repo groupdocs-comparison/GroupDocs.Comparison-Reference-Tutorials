@@ -6,6 +6,9 @@ description: Découvrez comment enregistrer la cible des métadonnées des docum
 weight: 15
 url: /fr/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Enregistrement de la cible des métadonnées des documents dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans ce didacticiel, nous vous guiderons tout au long du processus d'enregistrement de la cible des métadonnées du document à l'aide de GroupDocs Comparison for .NET. GroupDocs Comparison for .NET est une bibliothèque puissante qui vous permet de comparer et de fusionner des documents dans vos applications .NET.
 ## Conditions préalables

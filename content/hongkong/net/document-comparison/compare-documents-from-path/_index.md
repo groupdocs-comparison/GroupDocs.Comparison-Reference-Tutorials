@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 輕鬆比較各種格式的文
 weight: 15
 url: /zh-hant/net/document-comparison/compare-documents-from-path/
 ---
+
+# 比較路徑中的文件 - GroupDocs.Comparison for .NET
+
 ## 介紹
 在當今的數位時代，文件比較在法律、商業和學術界等各個領域都發揮著至關重要的作用。無論您是比較合約的律師、審查論文的學生或審查報告的商業專業人士，擁有可靠的文件比較工具都可以節省時間並確保準確性。 GroupDocs.Comparison for .NET 提供了一個強大的解決方案，可以輕鬆有效地比較文件。在本教學中，我們將引導您完成使用 GroupDocs.Comparison for .NET 比較文件的過程。
 ## 先決條件

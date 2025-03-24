@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を使用して複数のドキュメ�
 weight: 13
 url: /ja/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---
+
+# GroupDocs Comparison for .NET での複数のドキュメントの比較
+
 ## 導入
 ソフトウェア開発の分野では、ドキュメントを効率的に比較することが非常に重要です。法的文書、ビジネス契約、または共同執筆プロジェクトのいずれであっても、複数のバージョン間で正確さと一貫性を確保することが最も重要です。 GroupDocs Comparison for .NET は、.NET フレームワーク内でこのニーズにシームレスに対処する強力なソリューションを提供します。
 ## 前提条件

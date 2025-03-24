@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 경로의 셀을 비�
 weight: 10
 url: /ko/net/basic-usage/compare-cells-from-path/
 ---
+
+# 경로의 셀 비교 - .NET용 GroupDocs.Comparison
+
 ## 소개
 .NET용 GroupDocs.Comparison을 활용하여 경로의 셀을 비교하는 방법에 대한 포괄적인 자습서에 오신 것을 환영합니다. 이 가이드에서는 각 개념을 철저하게 이해할 수 있도록 프로세스를 단계별로 안내합니다. .NET용 GroupDocs.Comparison은 셀, 텍스트, 이미지 등 다양한 문서 형식을 비교하기 위한 강력한 도구로, 개발자가 문서 간의 차이점과 유사점을 효율적으로 식별할 수 있도록 해줍니다.
 ## 전제조건

@@ -6,6 +6,9 @@ description: Leer hoe u documentinformatie uit het resultaatdocument kunt ophale
 weight: 12
 url: /nl/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Documentinformatie ophalen uit resultaatdocument - GroupDocs.Comparison voor .NET
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling is het beheren en vergelijken van documenten een veel voorkomende vereiste. GroupDocs.Comparison voor .NET biedt een robuuste oplossing voor deze taak, waardoor ontwikkelaars functionaliteiten voor documentvergelijking naadloos in hun applicaties kunnen integreren. Deze zelfstudie begeleidt u bij het gebruik van GroupDocs.Comparison voor .NET om documentinformatie uit het resultaatdocument op te halen. 
 ## Vereisten

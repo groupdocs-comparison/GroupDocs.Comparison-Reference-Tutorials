@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET'i kullanarak sonuç belgesinden belge
 weight: 12
 url: /tr/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Sonuç Belgesinden Belge Bilgisi Alma - GroupDocs.Comparison for .NET
+
 ## giriiş
 .NET geliştirme alanında, belgeleri yönetmek ve karşılaştırmak ortak bir gerekliliktir. GroupDocs.Comparison for .NET, bu görev için güçlü bir çözüm sunarak geliştiricilerin belge karşılaştırma işlevlerini uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanır. Bu eğitim, sonuç belgeden belge bilgilerini almak için GroupDocs.Comparison for .NET'i kullanma sürecinde size rehberlik edecektir. 
 ## Önkoşullar

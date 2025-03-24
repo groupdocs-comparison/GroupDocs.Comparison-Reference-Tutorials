@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を使用してドキュメントの�
 weight: 15
 url: /ja/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# GroupDocs でのドキュメント メタデータ ターゲットの保存 .NET の比較
+
 ## 導入
 このチュートリアルでは、GroupDocs Comparison for .NET を使用してドキュメント メタデータ ターゲットを保存するプロセスを説明します。 GroupDocs Comparison for .NET は、.NET アプリケーションでドキュメントを比較およびマージできる強力なライブラリです。
 ## 前提条件

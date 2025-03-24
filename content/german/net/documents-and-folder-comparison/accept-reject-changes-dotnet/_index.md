@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs Compare für .NET Änderungen i
 weight: 10
 url: /de/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Änderungen im GroupDocs-Vergleich für .NET akzeptieren und ablehnen
+
 ## Einführung
 Im Bereich Dokumentenmanagement und Zusammenarbeit ist die Sicherstellung der Genauigkeit und Integrität der Dateien von größter Bedeutung. GroupDocs Compare für .NET erweist sich als robuste Lösung, die es Entwicklern ermöglicht, Änderungen in Dokumenten mühelos zu akzeptieren und abzulehnen, wodurch Arbeitsabläufe optimiert und die Produktivität gesteigert werden. Dieses Tutorial führt Sie durch den Prozess des Akzeptierens und Ablehnens von Änderungen mithilfe von GroupDocs Compare für .NET und schlüsselt jeden Schritt auf, um Klarheit und eine einfache Implementierung zu gewährleisten.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: اكتشف كيفية مقارنة مستندات متعددة بس
 weight: 14
 url: /ar/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# مقارنة إعدادات المستندات المتعددة في مقارنة GroupDocs لـ .NET
+
 ## مقدمة
 في هذا البرنامج التعليمي، سوف نتعمق في كيفية مقارنة مستندات متعددة بكفاءة باستخدام GroupDocs Comparison for .NET. تسمح هذه المكتبة القوية للمطورين بدمج إمكانيات مقارنة المستندات في تطبيقات .NET الخاصة بهم بسلاسة.
 ## المتطلبات الأساسية

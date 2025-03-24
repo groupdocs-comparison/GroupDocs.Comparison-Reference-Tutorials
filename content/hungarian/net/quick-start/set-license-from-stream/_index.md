@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan állíthat be hatékonyan licenceket a GroupDoc
 weight: 11
 url: /hu/net/quick-start/set-license-from-stream/
 ---
+
+# Licenc beállítása a Streamből – GroupDocs-összehasonlítás a .NET-hez
+
 ## Bevezetés
 A .NET fejlesztés világában a dokumentumok hatékony kezelése és összehasonlítása kulcsfontosságú. Legyen szó jogi szerződésekről, pénzügyi jelentésekről vagy bármilyen más dokumentum-igényes alkalmazásról, a dokumentumok pontos összehasonlításának képessége időt takaríthat meg, és biztosítja a pontosságot. Itt jön képbe a GroupDocs.Comparison for .NET. 
 ## Előfeltételek

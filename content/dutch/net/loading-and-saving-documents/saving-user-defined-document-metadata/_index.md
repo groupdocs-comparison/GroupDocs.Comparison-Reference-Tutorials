@@ -6,6 +6,9 @@ description: Leer hoe u door de gebruiker gedefinieerde documentmetagegevens kun
 weight: 16
 url: /nl/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Door de gebruiker gedefinieerde documentmetagegevens opslaan in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 In deze zelfstudie onderzoeken we hoe u door de gebruiker gedefinieerde documentmetagegevens kunt opslaan met behulp van GroupDocs Comparison voor .NET. Metadata zijn cruciaal voor het efficiënt organiseren en beheren van documenten. Met GroupDocs Comparison kunt u eenvoudig metadata vergelijken en manipuleren om aan uw specifieke vereisten te voldoen.
 ## Vereisten

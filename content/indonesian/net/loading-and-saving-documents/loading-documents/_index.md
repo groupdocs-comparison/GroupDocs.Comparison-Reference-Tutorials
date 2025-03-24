@@ -6,6 +6,9 @@ description: Pelajari cara membandingkan dokumen secara efisien menggunakan Grou
 weight: 10
 url: /id/net/loading-and-saving-documents/loading-documents/
 ---
+
+# Memuat Dokumen dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Selamat datang di tutorial komprehensif kami tentang penggunaan GroupDocs.Comparison untuk .NET! Dalam tutorial ini, kami akan memandu Anda melalui proses membandingkan dokumen langkah demi langkah menggunakan alat canggih ini. GroupDocs.Comparison untuk .NET menawarkan serangkaian fitur canggih untuk perbandingan dokumen, memungkinkan pengembang membandingkan berbagai format dokumen secara efisien seperti dokumen Word, PDF, spreadsheet Excel, dan banyak lagi.
 ## Prasyarat

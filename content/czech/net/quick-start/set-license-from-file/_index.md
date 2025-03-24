@@ -6,6 +6,9 @@ description: Naučte se, jak bezproblémově integrovat GroupDocs Comparison for
 weight: 10
 url: /cs/net/quick-start/set-license-from-file/
 ---
+
+# Nastavit licenci ze souboru – GroupDocs Comparison for .NET
+
 ## Úvod
 V oblasti vývoje .NET jsou účinné nástroje pro porovnávání dokumentů životně důležité pro různá odvětví, včetně práva, financí a vzdělávání. GroupDocs Comparison for .NET poskytuje robustní řešení pro bezproblémové porovnávání dokumentů v rámci vašich aplikací .NET. Tento článek slouží jako obsáhlý průvodce pro efektivní využití GroupDocs Comparison for .NET, rozebírá základní kroky a poskytuje přehled o jeho implementaci.
 ## Předpoklady

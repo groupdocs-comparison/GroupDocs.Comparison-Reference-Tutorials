@@ -6,6 +6,9 @@ description: Temukan cara membandingkan beberapa dokumen dengan mudah menggunaka
 weight: 14
 url: /id/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Bandingkan Pengaturan Beberapa Dokumen di Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam tutorial ini, kita akan mempelajari cara membandingkan beberapa dokumen secara efisien menggunakan Perbandingan GroupDocs untuk .NET. Pustaka yang kuat ini memungkinkan pengembang untuk mengintegrasikan kemampuan perbandingan dokumen ke dalam aplikasi .NET mereka dengan mulus.
 ## Prasyarat

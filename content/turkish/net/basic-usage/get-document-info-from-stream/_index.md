@@ -6,6 +6,9 @@ description: GroupDocs.Comparison'ı kullanarak .NET'teki belgeleri verimli bir 
 weight: 14
 url: /tr/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Akıştan Belge Bilgisi Alma - GroupDocs.Comparison for .NET
+
 ## giriiş
 .NET geliştirme dünyasında, ister Word belgeleriyle, ister PDF'lerle veya başka herhangi bir dosya biçimiyle çalışıyor olun, belgeleri verimli bir şekilde karşılaştırmak çok önemli bir görevdir. GroupDocs.Comparison for .NET, belge karşılaştırması için güçlü bir çözüm sunarak geliştiricilerin bu süreci sorunsuz bir şekilde kolaylaştırmasına olanak tanır. Bu öğreticide, belgeleri adım adım karşılaştırmak için GroupDocs.Comparison for .NET kullanmanın temellerini inceleyeceğiz. Sonunda, belge işleme iş akışlarınızı geliştirmek için bu güçlü araçtan nasıl yararlanacağınız konusunda sağlam bir anlayışa sahip olacaksınız.
 ## Önkoşullar

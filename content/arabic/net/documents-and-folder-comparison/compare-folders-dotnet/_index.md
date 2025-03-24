@@ -6,6 +6,9 @@ description: قارن المجلدات بسهولة باستخدام GroupDocs C
 weight: 12
 url: /ar/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# مقارنة المجلدات في مقارنة GroupDocs لـ .NET
+
 ## مقدمة
 تعد GroupDocs Comparison for .NET مكتبة قوية تمكن المطورين من مقارنة المجلدات بسهولة داخل تطبيقات .NET الخاصة بهم. سيرشدك هذا البرنامج التعليمي خلال عملية مقارنة المجلدات خطوة بخطوة باستخدام GroupDocs Comparison for .NET. بحلول نهاية هذا البرنامج التعليمي، ستتمكن من استخدام المكتبة لمقارنة المجلدات بكفاءة وفعالية.
 ## المتطلبات الأساسية

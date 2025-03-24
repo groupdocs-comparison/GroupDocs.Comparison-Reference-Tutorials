@@ -6,6 +6,9 @@ description: Dễ dàng tích hợp chức năng so sánh tài liệu vào các 
 weight: 14
 url: /vi/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Đặt kích thước hình ảnh cụ thể cho bản xem trước
+
 ## Giới thiệu
 Trong lĩnh vực phát triển phần mềm, việc so sánh tài liệu hiệu quả và chính xác là rất quan trọng để đảm bảo tính toàn vẹn và nhất quán của thông tin. GroupDocs.Comparison cho .NET cung cấp một giải pháp mạnh mẽ cho các nhà phát triển đang tìm cách kết hợp chức năng so sánh tài liệu vào các ứng dụng .NET của họ một cách liền mạch.
 ## Điều kiện tiên quyết

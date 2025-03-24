@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 문서 비교를 간�
 weight: 16
 url: /ko/net/document-comparison/compare-documents-from-stream/
 ---
+
+# Stream의 문서 비교 - .NET용 GroupDocs.Comparison
+
 ## 소개
 정보가 풍부하고 변화가 끊임없이 일어나는 오늘날의 빠르게 변화하는 세상에서는 문서 전체의 정확성과 일관성을 보장하는 것이 무엇보다 중요합니다. 법률 분야, 금융 분야 또는 문서 무결성이 중요한 기타 산업 분야에 관계없이 .NET용 GroupDocs.Comparison은 비교 프로세스를 간소화하는 강력한 솔루션을 제공합니다.
 ## 전제조건

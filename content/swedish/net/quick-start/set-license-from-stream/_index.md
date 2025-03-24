@@ -6,6 +6,9 @@ description: Lär dig hur du ställer in licenser med GroupDocs.Comparison för 
 weight: 11
 url: /sv/net/quick-start/set-license-from-stream/
 ---
+
+# Ställ in licens från Stream - GroupDocs Comparison for .NET
+
 ## Introduktion
 I en värld av .NET-utveckling är det avgörande att hantera och jämföra dokument effektivt. Oavsett om du arbetar med juridiska kontrakt, finansiella rapporter eller någon annan dokumentintensiv applikation, kan möjligheten att jämföra dokument korrekt spara tid och säkerställa noggrannhet. Det är här GroupDocs.Comparison för .NET kommer in i bilden. 
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 사용하여 여러 문서를 손쉽게
 weight: 14
 url: /ko/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# .NET용 GroupDocs 비교에서 여러 문서 설정 비교
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 여러 문서를 효율적으로 비교하는 방법을 자세히 살펴보겠습니다. 이 강력한 라이브러리를 통해 개발자는 문서 비교 기능을 .NET 애플리케이션에 원활하게 통합할 수 있습니다.
 ## 전제조건

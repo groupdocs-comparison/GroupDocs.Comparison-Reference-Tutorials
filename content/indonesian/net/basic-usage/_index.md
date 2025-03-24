@@ -6,6 +6,9 @@ description: Bandingkan dokumen di .NET menggunakan GroupDocs.Comparison. Pelaja
 weight: 24
 url: /id/net/basic-usage/
 ---
+
+# Penggunaan Dasar
+
 ## Perkenalan
 
 Dalam bidang pengembangan .NET, GroupDocs.Comparison muncul sebagai sekutu yang kuat, menyederhanakan tugas pemrosesan dokumen dengan efisiensi luar biasa. Menggali kemampuannya, artikel ini menyajikan panduan komprehensif tentang tutorial penggunaan dasar, mengungkap kehebatan GroupDocs.Comparison untuk .NET.

@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET'i uygulamalarınıza sorunsuz bir şe
 weight: 10
 url: /tr/net/quick-start/set-license-from-file/
 ---
+
+# Lisansı Dosyadan Ayarlayın - .NET için GroupDocs Karşılaştırması
+
 ## giriiş
 .NET geliştirme alanında belge karşılaştırmaya yönelik etkili araçlara sahip olmak, hukuk, finans ve eğitim de dahil olmak üzere çeşitli endüstriler için hayati öneme sahiptir. GroupDocs Comparison for .NET, .NET uygulamalarınızdaki belgeleri sorunsuz bir şekilde karşılaştırmak için güçlü bir çözüm sağlar. Bu makale, GroupDocs Comparison for .NET'in etkili bir şekilde kullanılması, temel adımların parçalara ayrılması ve uygulanmasına ilişkin öngörülerin sağlanması için kapsamlı bir kılavuz görevi görmektedir.
 ## Önkoşullar

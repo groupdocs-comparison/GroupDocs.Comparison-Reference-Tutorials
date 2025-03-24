@@ -7,6 +7,9 @@ weight: 23
 url: /zh-hant/net/image-comparison/
 ---
 
+# 影像比較
+
+
 ## 介紹
 
 您是否希望利用 GroupDocs.Comparison for .NET 的強大功能？深入了解我們的綜合教程，涵蓋使用這個多功能庫的圖像比較技術。

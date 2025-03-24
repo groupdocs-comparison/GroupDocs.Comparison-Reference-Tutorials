@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan kérheti le a dokumentumadatokat az eredménydo
 weight: 12
 url: /hu/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Dokumentuminformációk lekérése a Result Document - GroupDocs.Comparison for .NET-ből
+
 ## Bevezetés
 A .NET fejlesztés területén általános követelmény a dokumentumok kezelése és összehasonlítása. A GroupDocs.Comparison for .NET robusztus megoldást kínál erre a feladatra, lehetővé téve a fejlesztők számára, hogy a dokumentum-összehasonlítási funkciókat zökkenőmentesen integrálják alkalmazásaikba. Ez az oktatóanyag végigvezeti Önt a GroupDocs.Comparison for .NET használatán a dokumentuminformációk lekéréséhez az eredménydokumentumból. 
 ## Előfeltételek

@@ -6,6 +6,9 @@ description: Découvrez comment utiliser Groupdocs.Comparison pour .NET pour rat
 weight: 11
 url: /fr/net/document-comparison/generate-page-previews-source-document/
 ---
+
+# Générer des aperçus de page pour le document source
+
 ## Introduction
 Dans le monde numérique en évolution rapide d’aujourd’hui, la gestion et la comparaison des documents jouent un rôle crucial dans divers secteurs. Les développeurs à la recherche de solutions robustes se tournent souvent vers Groupdocs.Comparison for .NET. Cet outil puissant permet aux développeurs de comparer des documents sans effort, leur permettant ainsi de rationaliser les flux de travail et d'améliorer la productivité. Dans ce didacticiel, nous explorerons les éléments essentiels de Groupdocs.Comparison pour .NET, en décomposant chaque étape pour garantir une expérience d'apprentissage transparente.
 ## Conditions préalables

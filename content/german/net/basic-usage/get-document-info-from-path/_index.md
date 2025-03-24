@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Comparison für .NET Dokumentin
 weight: 13
 url: /de/net/basic-usage/get-document-info-from-path/
 ---
+
+# Dokumentinformationen aus dem Pfad abrufen – GroupDocs.Comparison für .NET
+
 ## Einführung
 Im Bereich der Softwareentwicklung, insbesondere in .NET-Framework-Umgebungen, ist ein effizienter Dokumentenvergleich eine entscheidende Notwendigkeit. Unabhängig davon, ob Sie an juristischen Dokumenten, Coderevisionen oder anderen Inhalten arbeiten, bei denen es auf Präzision ankommt, kann ein robustes Tool zum Vergleichen von Dokumenten Zeit und Mühe sparen und potenzielle Fehler vermeiden. Ein solches leistungsstarkes Tool in diesem Bereich ist GroupDocs.Comparison für .NET. Dieses Tutorial führt Sie durch den Prozess der Nutzung von GroupDocs.Comparison für .NET zum Abrufen von Dokumentinformationen aus einem bestimmten Pfad und schlüsselt jeden Schritt auf, um Klarheit und einfache Implementierung zu gewährleisten.
 ## Voraussetzungen

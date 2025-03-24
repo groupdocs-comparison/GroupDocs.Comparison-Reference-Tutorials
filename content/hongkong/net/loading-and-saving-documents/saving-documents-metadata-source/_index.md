@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 儲存文件元資
 weight: 14
 url: /zh-hant/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# 在 .NET 的 GroupDocs Comparison 中儲存文件元資料來源
+
 ## 介紹
 在軟體開發領域，有效的文件比較對於各個行業（包括法律、金融和教育）至關重要。 GroupDocs Comparison for .NET 提供了一個強大的解決方案，用於無縫比較 .NET 應用程式中的文件。本教學將引導您完成使用 GroupDocs Comparison for .NET 儲存文件元資料來源的過程。透過執行這些步驟，您將能夠充分利用該程式庫的潛力來增強您的文件比較任務。
 ## 先決條件

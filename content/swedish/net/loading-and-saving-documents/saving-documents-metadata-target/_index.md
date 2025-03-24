@@ -6,6 +6,9 @@ description: Lär dig hur du sparar dokumentmetadatamål med GroupDocs Compariso
 weight: 15
 url: /sv/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Spara dokumentmetadatamål i GroupDocs Comparison för .NET
+
 ## Introduktion
 I den här självstudien guidar vi dig genom processen att spara dokumentmetadatamål med hjälp av GroupDocs Comparison för .NET. GroupDocs Comparison for .NET är ett kraftfullt bibliotek som låter dig jämföra och slå samman dokument i dina .NET-applikationer.
 ## Förutsättningar

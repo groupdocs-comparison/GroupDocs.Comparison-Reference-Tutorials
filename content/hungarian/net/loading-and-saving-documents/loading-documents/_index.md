@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan lehet hatékonyan összehasonlítani dokumentum
 weight: 10
 url: /hu/net/loading-and-saving-documents/loading-documents/
 ---
+
+# Dokumentumok betöltése a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 Üdvözöljük átfogó oktatóanyagunkban a GroupDocs.Comparison for .NET használatáról! Ebben az oktatóanyagban lépésről lépésre végigvezetjük a dokumentumok összehasonlításának folyamatán, ezzel a hatékony eszközzel. A GroupDocs.Comparison for .NET robusztus szolgáltatáskészletet kínál a dokumentumok összehasonlításához, lehetővé téve a fejlesztők számára, hogy hatékonyan hasonlítsák össze a különböző dokumentumformátumokat, például Word dokumentumokat, PDF-eket, Excel-táblázatokat és még sok mást.
 ## Előfeltételek

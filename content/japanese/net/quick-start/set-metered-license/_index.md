@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET を .NET プロジェクトにシー�
 weight: 12
 url: /ja/net/quick-start/set-metered-license/
 ---
+
+# 従量制ライセンスの設定 - .NET の GroupDocs の比較
+
 ## 導入
 .NET 開発の領域では、ドキュメント比較のための強力なツールが不可欠です。 GroupDocs Comparison for .NET は、さまざまなドキュメント形式をプログラム的に比較するための強力なソリューションとして際立っています。このライブラリを使用すると、テキスト ドキュメントからスプレッドシート、プレゼンテーションに至るまで、開発者はファイル間の差異を効率的に識別できます。
 ## 前提条件

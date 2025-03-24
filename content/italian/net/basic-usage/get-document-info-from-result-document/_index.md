@@ -6,6 +6,9 @@ description: Scopri come recuperare le informazioni sul documento dal documento 
 weight: 12
 url: /it/net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Ottieni informazioni sul documento dal documento risultato - GroupDocs.Comparison per .NET
+
 ## introduzione
 Nell'ambito dello sviluppo .NET, la gestione e il confronto dei documenti sono un requisito comune. GroupDocs.Comparison per .NET offre una soluzione solida per questo compito, consentendo agli sviluppatori di integrare perfettamente le funzionalità di confronto dei documenti nelle loro applicazioni. Questo tutorial ti guiderà attraverso il processo di utilizzo di GroupDocs.Comparison per .NET per recuperare le informazioni sul documento dal documento risultato. 
 ## Prerequisiti

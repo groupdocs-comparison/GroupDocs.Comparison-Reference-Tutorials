@@ -6,6 +6,9 @@ description: Leer hoe u een wachtwoord instelt voor resulterende documenten in G
 weight: 17
 url: /nl/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Wachtwoord instellen voor resulterend document in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het instellen van een wachtwoord voor het resulterende document met behulp van GroupDocs Comparison voor .NET. Deze functie voegt een extra beveiligingslaag toe aan uw vergeleken documenten, zodat alleen geautoriseerde personen er toegang toe hebben.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Tìm hiểu cách hợp lý hóa quy trình làm việc của tài 
 weight: 20
 url: /vi/net/documents-and-folder-comparison/
 ---
+
+# So sánh tài liệu và thư mục
+
 ## Giới thiệu
 
 So sánh GroupDocs cho .NET cung cấp cho các nhà phát triển một bộ công cụ mạnh mẽ để hợp lý hóa quy trình làm việc của tài liệu. Cho dù bạn đang làm việc với từng tài liệu hay toàn bộ thư mục, việc hiểu cách sử dụng các tính năng một cách hiệu quả là rất quan trọng để tối ưu hóa hiệu quả. Trong bài viết này, chúng ta sẽ khám phá nhiều hướng dẫn khác nhau do So sánh GroupDocs cho .NET cung cấp, tập trung vào so sánh tài liệu và thư mục.

@@ -6,6 +6,9 @@ description: Lär dig hur du jämför skyddade dokument från strömmar med Grou
 weight: 18
 url: /sv/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# Jämför skyddade dokument från Stream - GroupDocs.Comparison för .NET
+
 ## Introduktion
 När det gäller .NET-utveckling är effektiv jämförelse av dokument avgörande för olika applikationer. Oavsett om du arbetar med innehållshanteringssystem, juridisk programvara eller något annat dokumentcentrerat projekt, kan förmågan att jämföra dokument korrekt effektivisera arbetsflöden och förbättra produktiviteten. Denna handledning fördjupar sig i att använda GroupDocs.Comparison för .NET, ett kraftfullt verktyg som förenklar processen att jämföra skyddade dokument från strömmar. Genom att följa den steg-för-steg-guide som beskrivs nedan får du en omfattande förståelse för hur du effektivt använder det här biblioteket i dina .NET-projekt.
 ## Förutsättningar

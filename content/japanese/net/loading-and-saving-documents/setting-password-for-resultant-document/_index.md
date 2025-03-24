@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET で結果のドキュメントにパ�
 weight: 17
 url: /ja/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# GroupDocs Comparison for .NET での結果ドキュメントのパスワードの設定
+
 ## 導入
 このチュートリアルでは、GroupDocs Comparison for .NET を使用して、結果のドキュメントにパスワードを設定するプロセスを説明します。この機能により、比較対象のドキュメントにセキュリティ層が追加され、許可された個人のみがドキュメントにアクセスできるようになります。
 ## 前提条件

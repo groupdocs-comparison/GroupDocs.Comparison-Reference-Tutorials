@@ -6,6 +6,9 @@ description: Ontdek hoe u moeiteloos meerdere documenten kunt vergelijken met Gr
 weight: 14
 url: /nl/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Vergelijk meerdere documentinstellingen in GroupDocs-vergelijking voor .NET
+
 ## Invoering
 In deze zelfstudie gaan we dieper in op hoe u meerdere documenten efficiënt kunt vergelijken met behulp van GroupDocs Comparison voor .NET. Met deze krachtige bibliotheek kunnen ontwikkelaars documentvergelijkingsmogelijkheden naadloos in hun .NET-applicaties integreren.
 ## Vereisten

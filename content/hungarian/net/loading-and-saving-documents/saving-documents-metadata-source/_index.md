@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan mentheti a dokumentum metaadatforrását a Grou
 weight: 14
 url: /hu/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Dokumentumok metaadatforrásának mentése a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 szoftverfejlesztés világában a hatékony dokumentum-összehasonlítás kulcsfontosságú a különböző iparágakban, beleértve a jogi, a pénzügyeket és az oktatást. A GroupDocs Comparison for .NET hatékony megoldást kínál a dokumentumok zökkenőmentes összehasonlítására .NET-alkalmazásokban. Ez az oktatóanyag végigvezeti a GroupDocs Comparison for .NET használatán a dokumentum metaadatforrásának mentéséhez. Ha követi ezeket a lépéseket, akkor képes lesz teljes mértékben kihasználni a könyvtárban rejlő lehetőségeket a dokumentum-összehasonlítási feladatok javítására.
 ## Előfeltételek

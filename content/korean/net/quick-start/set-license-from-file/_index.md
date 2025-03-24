@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 응용 프로그램에 원활하게 통
 weight: 10
 url: /ko/net/quick-start/set-license-from-file/
 ---
+
+# 파일에서 라이센스 설정 - .NET용 GroupDocs 비교
+
 ## 소개
 .NET 개발 영역에서 문서 비교를 위한 효율적인 도구를 갖는 것은 법률, 금융, 교육을 포함한 다양한 산업에 필수적입니다. .NET용 GroupDocs 비교는 .NET 응용 프로그램 내에서 문서를 원활하게 비교할 수 있는 강력한 솔루션을 제공합니다. 이 문서는 .NET용 GroupDocs 비교를 효과적으로 활용하고 필수 단계를 세분화하고 구현에 대한 통찰력을 제공하기 위한 포괄적인 가이드 역할을 합니다.
 ## 전제조건

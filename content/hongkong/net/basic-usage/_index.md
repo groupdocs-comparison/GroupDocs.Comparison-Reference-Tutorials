@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison 比較 .NET 中的文件。學習基本
 weight: 24
 url: /zh-hant/net/basic-usage/
 ---
+
+# 基本用法
+
 ## 介紹
 
 在 .NET 開發領域，GroupDocs.Comparison 作為一個強大的盟友出現，以顯著的效率簡化了文件處理任務。本文深入探討了其功能，提供了基本使用教學課程的綜合指南，揭示了 GroupDocs.Comparison for .NET 的強大功能。

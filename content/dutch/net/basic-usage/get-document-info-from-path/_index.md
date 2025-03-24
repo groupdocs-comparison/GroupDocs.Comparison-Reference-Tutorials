@@ -6,6 +6,9 @@ description: Leer hoe u documentinformatie uit een pad kunt extraheren met Group
 weight: 13
 url: /nl/net/basic-usage/get-document-info-from-path/
 ---
+
+# Documentinformatie ophalen uit pad - GroupDocs.Comparison voor .NET
+
 ## Invoering
 Op het gebied van softwareontwikkeling, vooral in .NET-frameworkomgevingen, is efficiënte documentvergelijking een cruciale noodzaak. Of u nu werkt aan juridische documenten, codeherzieningen of andere inhoud waarbij precisie van belang is, een robuust hulpmiddel voor het vergelijken van documenten kan u tijd, moeite en potentiële fouten besparen. Een van die krachtige tools op dit gebied is GroupDocs.Comparison voor .NET. Deze tutorial leidt u door het proces van het gebruik van GroupDocs.Comparison voor .NET om documentinformatie van een bepaald pad te verkrijgen, waarbij elke stap wordt opgesplitst om duidelijkheid en implementatiegemak te garanderen.
 ## Vereisten

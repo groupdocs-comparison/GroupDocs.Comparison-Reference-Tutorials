@@ -6,6 +6,9 @@ description: Dễ dàng so sánh các tài liệu ở nhiều định dạng kh�
 weight: 15
 url: /vi/net/document-comparison/compare-documents-from-path/
 ---
+
+# So sánh tài liệu từ đường dẫn - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc so sánh tài liệu đóng một vai trò quan trọng trong nhiều lĩnh vực khác nhau, bao gồm pháp lý, kinh doanh và học thuật. Cho dù bạn là luật sư so sánh hợp đồng, sinh viên đang đánh giá bài luận hay chuyên gia kinh doanh đang kiểm tra báo cáo, việc có một công cụ đáng tin cậy để so sánh tài liệu có thể tiết kiệm thời gian và đảm bảo độ chính xác. GroupDocs.Comparison for .NET cung cấp giải pháp mạnh mẽ để so sánh tài liệu một cách dễ dàng và hiệu quả. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình so sánh các tài liệu bằng GroupDocs.Comparison cho .NET.
 ## Điều kiện tiên quyết

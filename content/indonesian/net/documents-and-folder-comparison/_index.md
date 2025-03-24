@@ -6,6 +6,9 @@ description: Pelajari cara menyederhanakan alur kerja dokumen dengan tutorial Pe
 weight: 20
 url: /id/net/documents-and-folder-comparison/
 ---
+
+# Perbandingan Dokumen dan Folder
+
 ## Perkenalan
 
 Perbandingan GroupDocs untuk .NET memberi pengembang seperangkat alat canggih untuk menyederhanakan alur kerja dokumen. Baik Anda bekerja dengan dokumen individual atau seluruh folder, memahami cara memanfaatkan fitur secara efektif sangat penting untuk mengoptimalkan efisiensi. Pada artikel ini, kita akan menjelajahi berbagai tutorial yang ditawarkan oleh GroupDocs Comparison untuk .NET, dengan fokus pada perbandingan dokumen dan folder.

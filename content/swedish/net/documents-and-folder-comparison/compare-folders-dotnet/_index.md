@@ -6,6 +6,9 @@ description: Jämför mappar utan ansträngning med GroupDocs Comparison för .N
 weight: 12
 url: /sv/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Jämför mappar i GroupDocs Comparison för .NET
+
 ## Introduktion
 GroupDocs Comparison for .NET är ett kraftfullt bibliotek som gör det möjligt för utvecklare att jämföra mappar utan ansträngning i sina .NET-applikationer. Denna handledning guidar dig genom processen att jämföra mappar steg för steg med GroupDocs Comparison för .NET. I slutet av den här handledningen kommer du att kunna använda biblioteket för att jämföra mappar effektivt och effektivt.
 ## Förutsättningar

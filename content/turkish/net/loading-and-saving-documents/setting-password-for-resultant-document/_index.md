@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET'te ortaya çıkan belgeler için nas�
 weight: 17
 url: /tr/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
+
 ## giriiş
 Bu öğreticide, GroupDocs Comparison for .NET'i kullanarak elde edilen belge için parola ayarlama sürecinde size yol göstereceğiz. Bu özellik, karşılaştırılan belgelerinize ekstra bir güvenlik katmanı ekleyerek yalnızca yetkili kişilerin bunlara erişebilmesini sağlar.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh hiệu quả các tài liệu trong .NET
 weight: 14
 url: /vi/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Nhận thông tin tài liệu từ luồng - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong thế giới phát triển .NET, việc so sánh hiệu quả các tài liệu là một nhiệm vụ quan trọng, cho dù bạn đang làm việc với tài liệu Word, PDF hay bất kỳ định dạng tệp nào khác. GroupDocs.Comparison cho .NET cung cấp giải pháp mạnh mẽ để so sánh tài liệu, cho phép các nhà phát triển hợp lý hóa quy trình này một cách liền mạch. Trong hướng dẫn này, chúng ta sẽ đi sâu vào các nguyên tắc cơ bản của việc sử dụng GroupDocs.Comparison cho .NET để so sánh các tài liệu theo từng bước. Cuối cùng, bạn sẽ hiểu rõ về cách tận dụng công cụ mạnh mẽ này để nâng cao quy trình xử lý tài liệu của mình.
 ## Điều kiện tiên quyết

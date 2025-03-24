@@ -6,6 +6,9 @@ description: Tìm hiểu cách lưu nguồn siêu dữ liệu tài liệu bằng
 weight: 14
 url: /vi/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Lưu nguồn siêu dữ liệu tài liệu trong So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong thế giới phát triển phần mềm, việc so sánh tài liệu hiệu quả là rất quan trọng đối với các ngành khác nhau, bao gồm pháp lý, tài chính và giáo dục. So sánh GroupDocs cho .NET cung cấp một giải pháp mạnh mẽ để so sánh các tài liệu trong các ứng dụng .NET một cách liền mạch. Hướng dẫn này sẽ hướng dẫn bạn trong quá trình sử dụng So sánh GroupDocs cho .NET để lưu nguồn siêu dữ liệu tài liệu. Bằng cách làm theo các bước này, bạn sẽ có thể khai thác toàn bộ tiềm năng của thư viện này để nâng cao các tác vụ so sánh tài liệu của mình.
 ## Điều kiện tiên quyết

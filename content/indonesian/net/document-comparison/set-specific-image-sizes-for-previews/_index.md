@@ -6,6 +6,9 @@ description: Integrasikan fungsionalitas perbandingan dokumen dengan mudah ke da
 weight: 14
 url: /id/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Tetapkan Ukuran Gambar Tertentu untuk Pratinjau
+
 ## Perkenalan
 Dalam bidang pengembangan perangkat lunak, perbandingan dokumen yang efisien dan akurat sangat penting untuk memastikan integritas dan konsistensi informasi. GroupDocs.Comparison untuk .NET memberikan solusi tangguh bagi pengembang yang ingin menggabungkan fungsionalitas perbandingan dokumen ke dalam aplikasi .NET mereka dengan lancar.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: Fedezze fel, hogyan hasonlíthat össze több dokumentumot könnyed
 weight: 14
 url: /hu/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# Több dokumentum beállításainak összehasonlítása a GroupDocs Comparison for .NET alkalmazásban
+
 ## Bevezetés
 Ebben az oktatóanyagban megvizsgáljuk, hogyan lehet több dokumentumot hatékonyan összehasonlítani a GroupDocs Comparison for .NET használatával. Ez a nagy teljesítményű könyvtár lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a dokumentum-összehasonlítási lehetőségeket .NET-alkalmazásaikba.
 ## Előfeltételek

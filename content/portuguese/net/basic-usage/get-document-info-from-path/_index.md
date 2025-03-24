@@ -6,6 +6,9 @@ description: Aprenda como extrair informações de documentos de um caminho usan
 weight: 13
 url: /pt/net/basic-usage/get-document-info-from-path/
 ---
+
+# Obtenha informações do documento do caminho - GroupDocs.Comparison for .NET
+
 ## Introdução
 No domínio do desenvolvimento de software, especialmente em ambientes de estrutura .NET, a comparação eficiente de documentos é uma necessidade crítica. Esteja você trabalhando em documentos jurídicos, revisões de código ou qualquer outro conteúdo onde a precisão seja importante, ter uma ferramenta robusta para comparar documentos pode economizar tempo, esforço e possíveis erros. Uma ferramenta poderosa neste domínio é GroupDocs.Comparison for .NET. Este tutorial irá guiá-lo através do processo de aproveitamento do GroupDocs.Comparison for .NET para obter informações de documentos de um determinado caminho, detalhando cada etapa para garantir clareza e facilidade de implementação.
 ## Pré-requisitos

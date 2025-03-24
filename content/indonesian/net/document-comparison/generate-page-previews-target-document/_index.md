@@ -6,6 +6,9 @@ description: Hasilkan pratinjau halaman untuk dokumen target secara efisien meng
 weight: 12
 url: /id/net/document-comparison/generate-page-previews-target-document/
 ---
+
+# Hasilkan Pratinjau Halaman untuk Dokumen Target
+
 ## Perkenalan
 Di dunia digital saat ini, di mana informasi berlimpah dan terus berkembang, kebutuhan akan alat perbandingan dokumen yang efisien menjadi hal yang sangat penting. Baik Anda seorang profesional hukum yang menganalisis kontrak, eksekutif bisnis yang meninjau proposal, atau mahasiswa yang merevisi esai, membandingkan dokumen secara akurat sangat penting untuk memastikan keakuratan dan efisiensi dalam pekerjaan Anda. Untungnya, GroupDocs.Comparison untuk .NET menawarkan solusi ampuh untuk membandingkan berbagai format dokumen dengan lancar dalam aplikasi .NET Anda.
 ## Prasyarat

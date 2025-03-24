@@ -6,6 +6,9 @@ description: Apprenez à comparer efficacement des documents dans .NET à l'aide
 weight: 14
 url: /fr/net/basic-usage/get-document-info-from-stream/
 ---
+
+# Obtenir des informations sur le document à partir de Stream - GroupDocs.Comparison pour .NET
+
 ## Introduction
 Dans le monde du développement .NET, comparer efficacement des documents est une tâche cruciale, que vous travailliez avec des documents Word, des PDF ou tout autre format de fichier. GroupDocs.Comparison for .NET fournit une solution robuste pour la comparaison de documents, permettant aux développeurs de rationaliser ce processus de manière transparente. Dans ce didacticiel, nous aborderons les principes fondamentaux de l'utilisation de GroupDocs.Comparison for .NET pour comparer des documents, étape par étape. À la fin, vous comprendrez parfaitement comment tirer parti de cet outil puissant pour améliorer vos flux de travail de traitement de documents.
 ## Conditions préalables

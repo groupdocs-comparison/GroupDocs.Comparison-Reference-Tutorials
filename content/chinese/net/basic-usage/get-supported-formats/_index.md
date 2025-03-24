@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 提高文档的准确性和一
 weight: 15
 url: /zh/net/basic-usage/get-supported-formats/
 ---
+
+# 获取支持的格式 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在当今的数字时代，信息丰富且不断发展，确保文档的准确性和一致性至关重要。无论您是软件开发人员、法律专业人士还是经常处理文档的任何人，拥有便于文档比较的工具都可以节省您的时间、精力和潜在的错误。 GroupDocs.Comparison for .NET 就是这样一个工具，它提供了用于比较 .NET 应用程序中的各种文档格式的全面解决方案。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Lär dig hur du sparar dokumentmetadatakälla med GroupDocs Compari
 weight: 14
 url: /sv/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Spara dokument Metadatakälla i GroupDocs Comparison för .NET
+
 ## Introduktion
 en värld av mjukvaruutveckling är effektiv jämförelse av dokument avgörande för olika branscher, inklusive juridik, finans och utbildning. GroupDocs Comparison for .NET erbjuder en kraftfull lösning för att sömlöst jämföra dokument i .NET-applikationer. Denna handledning guidar dig genom processen att använda GroupDocs Comparison för .NET för att spara dokumentmetadatakälla. Genom att följa dessa steg kommer du att kunna utnyttja det här bibliotekets fulla potential för att förbättra dina dokumentjämförelseuppgifter.
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: Tìm hiểu cách sử dụng Groupdocs.Comparison cho .NET để h
 weight: 11
 url: /vi/net/document-comparison/generate-page-previews-source-document/
 ---
+
+# Tạo bản xem trước trang cho tài liệu nguồn
+
 ## Giới thiệu
 Trong thế giới kỹ thuật số phát triển nhanh chóng ngày nay, việc quản lý và so sánh tài liệu đóng vai trò quan trọng trong các ngành khác nhau. Các nhà phát triển đang tìm kiếm giải pháp mạnh mẽ thường chuyển sang Groupdocs.Comparison cho .NET. Công cụ mạnh mẽ này cho phép các nhà phát triển so sánh các tài liệu một cách dễ dàng, cho phép họ hợp lý hóa quy trình làm việc và nâng cao năng suất. Trong hướng dẫn này, chúng ta sẽ khám phá những điều cơ bản của Groupdocs.Comparison dành cho .NET, chia nhỏ từng bước để đảm bảo trải nghiệm học tập liền mạch.
 ## Điều kiện tiên quyết

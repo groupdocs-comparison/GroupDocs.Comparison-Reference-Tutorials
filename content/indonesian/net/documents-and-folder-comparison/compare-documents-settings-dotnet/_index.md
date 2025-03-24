@@ -6,6 +6,9 @@ description: Sederhanakan perbandingan dokumen dalam aplikasi .NET dengan Perban
 weight: 11
 url: /id/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# Bandingkan Pengaturan Dokumen di Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam bidang manajemen dan perbandingan dokumen, GroupDocs Comparison for .NET menonjol sebagai alat yang ampuh, memberdayakan pengembang untuk mengintegrasikan fungsi perbandingan dokumen ke dalam aplikasi .NET mereka dengan lancar. Dengan fitur-fitur canggih dan kemudahan penggunaan, GroupDocs Comparison untuk .NET menyederhanakan proses membandingkan dokumen, memastikan akurasi dan efisiensi.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: Lär dig hur du använder Load Options i GroupDocs Comparison för 
 weight: 13
 url: /sv/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Använda laddningsalternativ i GroupDocs Comparison för .NET
+
 ## Introduktion
 Välkommen till vår handledning om hur du använder laddningsalternativ i GroupDocs Comparison för .NET! I den här handledningen går vi igenom processen att jämföra dokument med hjälp av laddningsalternativ på ett steg-för-steg-sätt. Oavsett om du är nybörjare eller en erfaren utvecklare hjälper den här guiden dig att sömlöst integrera GroupDocs Comparison i dina .NET-applikationer.
 ## Förutsättningar

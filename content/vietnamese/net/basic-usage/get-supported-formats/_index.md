@@ -6,6 +6,9 @@ description: Nâng cao độ chính xác và tính nhất quán của tài liệ
 weight: 15
 url: /vi/net/basic-usage/get-supported-formats/
 ---
+
+# Nhận các định dạng được hỗ trợ - GroupDocs.Comparison cho .NET
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, nơi thông tin dồi dào và không ngừng phát triển thì việc đảm bảo tính chính xác và thống nhất của tài liệu là điều tối quan trọng. Cho dù bạn là nhà phát triển phần mềm, chuyên gia pháp lý hay bất kỳ ai thường xuyên xử lý tài liệu, việc có các công cụ hỗ trợ so sánh tài liệu có thể giúp bạn tiết kiệm thời gian, công sức và tránh các lỗi tiềm ẩn. GroupDocs.Comparison for .NET là một trong những công cụ như vậy, cung cấp giải pháp toàn diện để so sánh các định dạng tài liệu khác nhau trong các ứng dụng .NET.
 ## Điều kiện tiên quyết

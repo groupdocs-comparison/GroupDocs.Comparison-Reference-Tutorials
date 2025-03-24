@@ -6,6 +6,9 @@ description: Aprenda a guardar la fuente de metadatos de documentos usando Group
 weight: 14
 url: /es/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# Guardar fuente de metadatos de documentos en comparación de GroupDocs para .NET
+
 ## Introducción
 En el mundo del desarrollo de software, la comparación eficiente de documentos es crucial para diversas industrias, incluidas las legales, las finanzas y la educación. GroupDocs Comparison para .NET ofrece una poderosa solución para comparar documentos en aplicaciones .NET sin problemas. Este tutorial lo guiará a través del proceso de uso de GroupDocs Comparison para .NET para guardar la fuente de metadatos del documento. Si sigue estos pasos, podrá aprovechar todo el potencial de esta biblioteca para mejorar sus tareas de comparación de documentos.
 ## Requisitos previos

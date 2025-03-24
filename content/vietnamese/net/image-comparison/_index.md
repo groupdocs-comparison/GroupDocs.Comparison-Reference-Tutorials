@@ -7,6 +7,9 @@ weight: 23
 url: /vi/net/image-comparison/
 ---
 
+# So sánh hình ảnh
+
+
 ## Giới thiệu
 
 Bạn đang muốn khai thác sức mạnh của GroupDocs.Comparison cho .NET? Đi sâu vào các hướng dẫn toàn diện của chúng tôi về các kỹ thuật so sánh hình ảnh bằng thư viện đa năng này.

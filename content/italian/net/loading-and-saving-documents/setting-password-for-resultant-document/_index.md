@@ -6,6 +6,9 @@ description: Scopri come impostare una password per i documenti risultanti in Gr
 weight: 17
 url: /it/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Impostazione della password per il documento risultante nel confronto GroupDocs per .NET
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di impostazione di una password per il documento risultante utilizzando GroupDocs Comparison for .NET. Questa funzionalità aggiunge un ulteriore livello di sicurezza ai documenti confrontati, garantendo che solo le persone autorizzate possano accedervi.
 ## Prerequisiti

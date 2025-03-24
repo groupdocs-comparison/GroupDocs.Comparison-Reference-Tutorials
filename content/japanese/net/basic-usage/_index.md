@@ -6,6 +6,9 @@ description: GroupDocs.Comparison を使用して .NET 内のドキュメント�
 weight: 24
 url: /ja/net/basic-usage/
 ---
+
+# 基本的な使い方
+
 ## 導入
 
 .NET 開発の分野では、GroupDocs.Comparison が強力な味方として登場し、文書処理タスクを驚くほど効率的に合理化します。この記事では、その機能を詳しく掘り下げ、基本的な使用方法のチュートリアルに関する包括的なガイドを提供し、.NET 向け GroupDocs.Comparison の優れた機能を明らかにします。

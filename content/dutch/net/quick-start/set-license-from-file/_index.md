@@ -6,6 +6,9 @@ description: Leer hoe u GroupDocs Comparison for .NET naadloos in uw applicaties
 weight: 10
 url: /nl/net/quick-start/set-license-from-file/
 ---
+
+# Licentie instellen vanuit bestand - GroupDocs-vergelijking voor .NET
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling zijn efficiënte tools voor het vergelijken van documenten van cruciaal belang voor verschillende sectoren, waaronder de juridische sector, de financiële sector en het onderwijs. GroupDocs Comparison voor .NET biedt een robuuste oplossing voor het naadloos vergelijken van documenten binnen uw .NET-applicaties. Dit artikel dient als een uitgebreide handleiding voor het effectief gebruiken van GroupDocs Comparison voor .NET, waarbij essentiële stappen worden opgesplitst en inzicht wordt gegeven in de implementatie ervan.
 ## Vereisten

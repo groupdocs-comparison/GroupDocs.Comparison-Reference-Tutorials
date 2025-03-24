@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 라이센스를 효율
 weight: 11
 url: /ko/net/quick-start/set-license-from-stream/
 ---
+
+# 스트림에서 라이센스 설정 - .NET용 GroupDocs 비교
+
 ## 소개
 .NET 개발 세계에서는 문서를 효율적으로 관리하고 비교하는 것이 중요합니다. 법적 계약서, 재무 보고서 또는 기타 문서 집약적인 응용 프로그램을 작업하는 경우 문서를 정확하게 비교하는 기능을 통해 시간을 절약하고 정확성을 보장할 수 있습니다. 여기가 .NET용 GroupDocs.Comparison이 작동하는 곳입니다. 
 ## 전제조건

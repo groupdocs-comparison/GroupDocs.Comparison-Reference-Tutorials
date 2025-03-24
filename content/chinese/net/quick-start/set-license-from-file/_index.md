@@ -6,6 +6,9 @@ description: 了解如何将 GroupDocs Comparison for .NET 无缝集成到您的
 weight: 10
 url: /zh/net/quick-start/set-license-from-file/
 ---
+
+# 从文件设置许可证 - .NET 的 GroupDocs 比较
+
 ## 介绍
 在 .NET 开发领域，拥有有效的文档比较工具对于各个行业（包括法律、金融和教育）至关重要。 GroupDocs Comparison for .NET 提供了一个强大的解决方案，用于在 .NET 应用程序中无缝比较文档。本文作为有效利用 GroupDocs Comparison for .NET 的综合指南，分解了基本步骤并提供了对其实施的见解。
 ## 先决条件

@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini
 weight: 15
 url: /tr/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme
+
 ## giriiş
 Bu öğreticide, GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini kaydetme sürecinde size yol göstereceğiz. GroupDocs Comparison for .NET, .NET uygulamalarınızdaki belgeleri karşılaştırmanıza ve birleştirmenize olanak tanıyan güçlü bir kitaplıktır.
 ## Önkoşullar

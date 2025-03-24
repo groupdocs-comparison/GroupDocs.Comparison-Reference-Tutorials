@@ -6,6 +6,9 @@ description: Compare facilmente documentos em .NET usando GroupDocs.Comparison f
 weight: 22
 url: /pt/net/loading-and-saving-documents/
 ---
+
+# Carregando e salvando documentos
+
 ## Introdução
 
 A comparação fácil de documentos em aplicativos .NET é fundamental para processos simplificados de gerenciamento de documentos. GroupDocs.Comparison for .NET oferece tutoriais abrangentes sobre como carregar e salvar documentos, garantindo integração perfeita e maior eficiência.

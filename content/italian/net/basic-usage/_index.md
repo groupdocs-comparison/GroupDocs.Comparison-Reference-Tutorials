@@ -6,6 +6,9 @@ description: Confronta i documenti in .NET utilizzando GroupDocs.Comparison. Sco
 weight: 24
 url: /it/net/basic-usage/
 ---
+
+# Utilizzo di base
+
 ## introduzione
 
 Nell'ambito dello sviluppo .NET, GroupDocs.Comparison emerge come un potente alleato, ottimizzando le attività di elaborazione dei documenti con notevole efficienza. Approfondendo le sue capacità, questo articolo presenta una guida completa sui tutorial sull'utilizzo di base, svelando l'abilità di GroupDocs.Comparison per .NET.

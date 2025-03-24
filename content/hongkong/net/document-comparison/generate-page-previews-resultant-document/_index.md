@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 產生文件預覽
 weight: 10
 url: /zh-hant/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# 產生結果文件的頁面預覽
+
 ## 介紹
 在軟體開發領域，有效率、準確地比較文件至關重要。無論您正在處理涉及團隊成員之間協作的專案還是處理法律文檔，能夠有效比較版本都可以節省時間並確保準確性。 GroupDocs.Comparison for .NET 是一款功能強大的工具，旨在簡化 .NET 開發人員的文件比較流程。在本教學中，我們將深入研究如何使用 GroupDocs.Comparison for .NET 產生結果文件的頁面預覽。我們將分解每個步驟，以確保全面了解該過程。
 ## 先決條件

@@ -6,6 +6,9 @@ description: Aprenda como usar as opções de carregamento na comparação de Gr
 weight: 13
 url: /pt/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Usando opções de carregamento na comparação de GroupDocs para .NET
+
 ## Introdução
 Bem-vindo ao nosso tutorial sobre como utilizar opções de carregamento na comparação de GroupDocs para .NET! Neste tutorial, orientaremos você passo a passo no processo de comparação de documentos usando Opções de carregamento. Quer você seja um desenvolvedor iniciante ou experiente, este guia o ajudará a integrar perfeitamente o GroupDocs Comparison em seus aplicativos .NET.
 ## Pré-requisitos

@@ -6,6 +6,9 @@ description: Tìm hiểu cách so sánh các tài liệu bằng GroupDocs.Compar
 weight: 13
 url: /vi/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Làm sạch tài nguyên sau khi xem trước trang
+
 ## Giới thiệu
 Trong thế giới phát triển .NET, việc quản lý và so sánh tài liệu một cách hiệu quả là điều cần thiết cho nhiều ứng dụng khác nhau, từ các công ty pháp lý đến các tổ chức giáo dục. May mắn thay, với các công cụ như GroupDocs.Comparison dành cho .NET, các nhà phát triển có thể đơn giản hóa quá trình so sánh tài liệu một cách dễ dàng. Trong hướng dẫn này, chúng ta sẽ khám phá cách sử dụng GroupDocs.Comparison cho .NET để so sánh các tài liệu theo từng bước.
 ## Điều kiện tiên quyết

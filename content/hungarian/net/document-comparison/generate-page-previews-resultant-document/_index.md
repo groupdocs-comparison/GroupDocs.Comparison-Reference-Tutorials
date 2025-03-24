@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan hozhat létre dokumentum-előnézeteket a Group
 weight: 10
 url: /hu/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
+
 ## Bevezetés
 szoftverfejlesztés világában a dokumentumok hatékony és pontos összehasonlítása a legfontosabb. Akár olyan projekten dolgozik, amely a csapattagok közötti együttműködést vagy jogi dokumentumokat foglal magában, a verziók hatékony összehasonlítása időt takaríthat meg, és biztosítja a pontosságot. A GroupDocs.Comparison for .NET egy hatékony eszköz, amely a dokumentum-összehasonlítási folyamat egyszerűsítésére szolgál a .NET-fejlesztők számára. Ebben az oktatóanyagban megvizsgáljuk, hogyan használhatjuk a GroupDocs.Comparison for .NET alkalmazást oldal-előnézetek létrehozására az eredményül kapott dokumentumokhoz. A folyamat átfogó megértése érdekében az egyes lépéseket lebontjuk.
 ## Előfeltételek

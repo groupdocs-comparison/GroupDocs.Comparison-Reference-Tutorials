@@ -6,6 +6,9 @@ description: Integra facilmente la funzionalità di confronto dei documenti nell
 weight: 14
 url: /it/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Imposta dimensioni immagine specifiche per le anteprime
+
 ## introduzione
 Nell'ambito dello sviluppo software, il confronto efficiente e accurato dei documenti è fondamentale per garantire l'integrità e la coerenza delle informazioni. GroupDocs.Comparison per .NET fornisce una soluzione solida per gli sviluppatori che desiderano incorporare perfettamente funzionalità di confronto dei documenti nelle proprie applicazioni .NET.
 ## Prerequisiti

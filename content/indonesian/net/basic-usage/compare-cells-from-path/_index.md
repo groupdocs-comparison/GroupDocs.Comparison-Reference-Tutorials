@@ -6,6 +6,9 @@ description: Pelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Co
 weight: 10
 url: /id/net/basic-usage/compare-cells-from-path/
 ---
+
+# Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
+
 ## Perkenalan
 Selamat datang di tutorial komprehensif tentang penggunaan GroupDocs.Comparison untuk .NET untuk membandingkan sel dari suatu jalur. Dalam panduan ini, kami akan memandu Anda melalui proses langkah demi langkah, memastikan Anda memahami setiap konsep secara menyeluruh. GroupDocs.Comparison for .NET adalah alat yang ampuh untuk membandingkan berbagai format dokumen, termasuk sel, teks, dan gambar, memungkinkan pengembang mengidentifikasi perbedaan dan persamaan antar dokumen secara efisien.
 ## Prasyarat

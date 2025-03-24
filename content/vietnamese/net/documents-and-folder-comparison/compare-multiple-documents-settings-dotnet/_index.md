@@ -6,6 +6,9 @@ description: Khám phá cách so sánh nhiều tài liệu một cách dễ dàn
 weight: 14
 url: /vi/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/
 ---
+
+# So sánh nhiều cài đặt tài liệu trong So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ đi sâu vào cách so sánh nhiều tài liệu một cách hiệu quả bằng cách sử dụng So sánh GroupDocs cho .NET. Thư viện mạnh mẽ này cho phép các nhà phát triển tích hợp khả năng so sánh tài liệu vào các ứng dụng .NET của họ một cách liền mạch.
 ## Điều kiện tiên quyết

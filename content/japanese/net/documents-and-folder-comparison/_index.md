@@ -6,6 +6,9 @@ description: GroupDocs Comparison for .NET チュートリアルでドキュメ�
 weight: 20
 url: /ja/net/documents-and-folder-comparison/
 ---
+
+# ドキュメントとフォルダーの比較
+
 ## 導入
 
 GroupDocs Comparison for .NET は、ドキュメント ワークフローを合理化するための強力なツール セットを開発者に提供します。個々のドキュメントを操作する場合でも、フォルダー全体を操作する場合でも、効率を最適化するには、機能を効果的に利用する方法を理解することが重要です。この記事では、ドキュメントとフォルダーの比較に焦点を当て、GroupDocs Comparison for .NET によって提供されるさまざまなチュートリアルを検討します。

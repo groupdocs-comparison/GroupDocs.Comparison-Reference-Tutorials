@@ -6,6 +6,9 @@ description: Découvrez comment accepter et rejeter les modifications apportées
 weight: 10
 url: /fr/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Accepter et rejeter les modifications dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans le domaine de la gestion documentaire et de la collaboration, il est primordial de garantir l’exactitude et l’intégrité des fichiers. GroupDocs Comparison for .NET apparaît comme une solution robuste, permettant aux développeurs d'accepter et de rejeter sans effort les modifications apportées aux documents, rationalisant ainsi les flux de travail et améliorant la productivité. Ce didacticiel vous guidera tout au long du processus d'acceptation et de rejet des modifications à l'aide de GroupDocs Comparison for .NET, en décomposant chaque étape pour plus de clarté et de facilité de mise en œuvre.
 ## Conditions préalables

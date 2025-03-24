@@ -6,6 +6,9 @@ description: Pomocí GroupDocs.Comparison for .NET bez námahy integrujte funkci
 weight: 14
 url: /cs/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Nastavte konkrétní velikosti obrázků pro náhledy
+
 ## Úvod
 V oblasti vývoje softwaru je efektivní a přesné porovnávání dokumentů zásadní pro zajištění integrity a konzistence informací. GroupDocs.Comparison for .NET poskytuje robustní řešení pro vývojáře, kteří chtějí bezproblémově začlenit funkci porovnávání dokumentů do svých aplikací .NET.
 ## Předpoklady

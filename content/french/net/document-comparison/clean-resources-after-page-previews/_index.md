@@ -6,6 +6,9 @@ description: Apprenez à comparer des documents à l’aide de GroupDocs.Compari
 weight: 13
 url: /fr/net/document-comparison/clean-resources-after-page-previews/
 ---
+
+# Nettoyer les ressources après les aperçus de page
+
 ## Introduction
 Dans le monde du développement .NET, la gestion et la comparaison efficaces des documents sont essentielles pour diverses applications, des cabinets juridiques aux établissements d'enseignement. Heureusement, avec des outils tels que GroupDocs.Comparison pour .NET, les développeurs peuvent facilement rationaliser le processus de comparaison de documents. Dans ce didacticiel, nous verrons comment utiliser GroupDocs.Comparison pour .NET pour comparer des documents étape par étape.
 ## Conditions préalables

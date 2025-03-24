@@ -6,6 +6,9 @@ description: Découvrez comment intégrer GroupDocs Comparison for .NET de mani�
 weight: 10
 url: /fr/net/quick-start/set-license-from-file/
 ---
+
+# Définir la licence à partir d'un fichier - Comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans le domaine du développement .NET, disposer d'outils efficaces de comparaison de documents est vital pour divers secteurs, notamment le droit, la finance et l'éducation. GroupDocs Comparison for .NET fournit une solution robuste pour comparer des documents de manière transparente au sein de vos applications .NET. Cet article sert de guide complet pour utiliser efficacement GroupDocs Comparison pour .NET, en décomposant les étapes essentielles et en fournissant des informations sur sa mise en œuvre.
 ## Conditions préalables

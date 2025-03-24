@@ -6,6 +6,9 @@ description: Leer hoe u beveiligde documenten uit streams kunt vergelijken met G
 weight: 18
 url: /nl/net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .NET
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling is een efficiënte vergelijking van documenten cruciaal voor verschillende toepassingen. Of u nu werkt aan contentmanagementsystemen, juridische software of een ander documentgericht project, de mogelijkheid om documenten nauwkeurig te vergelijken kan de workflows stroomlijnen en de productiviteit verhogen. In deze zelfstudie wordt dieper ingegaan op het gebruik van GroupDocs.Comparison voor .NET, een krachtige tool die het proces van het vergelijken van beveiligde documenten uit streams vereenvoudigt. Door de onderstaande stapsgewijze handleiding te volgen, krijgt u een uitgebreid inzicht in hoe u deze bibliotheek effectief kunt gebruiken in uw .NET-projecten.
 ## Vereisten

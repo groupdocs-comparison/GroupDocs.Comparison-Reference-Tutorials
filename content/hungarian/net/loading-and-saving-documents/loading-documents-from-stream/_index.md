@@ -6,6 +6,9 @@ description: Tanulja meg, hogyan lehet könnyedén összehasonlítani dokumentum
 weight: 11
 url: /hu/net/loading-and-saving-documents/loading-documents-from-stream/
 ---
+
+# Dokumentumok betöltése a Streamből a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 A dokumentumkezelő és -összehasonlító eszközök terén a GroupDocs Comparison for .NET kiemelkedik a .NET-fejlesztők számára kialakított robusztus megoldásként. Ez a hatékony könyvtár lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a dokumentum-összehasonlítási funkciókat .NET-alkalmazásaikba. Akár tartalomkezelő rendszeren, jogi alkalmazáson vagy bármilyen más, dokumentumelemzést és összehasonlítást igénylő projekten dolgozik, a GroupDocs Comparison for .NET megbízható szövetséges.
 ## Előfeltételek

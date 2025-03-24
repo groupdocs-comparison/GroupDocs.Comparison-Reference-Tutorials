@@ -6,6 +6,9 @@ description: Aprenda a guardar metadatos de documentos definidos por el usuario 
 weight: 16
 url: /es/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Guardar metadatos de documentos definidos por el usuario en la comparación de GroupDocs para .NET
+
 ## Introducción
 En este tutorial, exploraremos cómo guardar metadatos de documentos definidos por el usuario usando GroupDocs Comparison para .NET. Los metadatos son cruciales para organizar y gestionar documentos de manera eficiente. Con GroupDocs Comparison, puede comparar y manipular metadatos fácilmente para cumplir con sus requisitos específicos.
 ## Requisitos previos

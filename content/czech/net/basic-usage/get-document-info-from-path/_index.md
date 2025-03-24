@@ -6,6 +6,9 @@ description: Naučte se, jak extrahovat informace o dokumentu z cesty pomocí Gr
 weight: 13
 url: /cs/net/basic-usage/get-document-info-from-path/
 ---
+
+# Získejte informace o dokumentu z Path - GroupDocs.Comparison pro .NET
+
 ## Úvod
 oblasti vývoje softwaru, zejména v prostředích .NET framework, je efektivní porovnávání dokumentů zásadní nutností. Ať už pracujete na právních dokumentech, revizích kódu nebo jiném obsahu, kde záleží na přesnosti, robustní nástroj pro porovnávání dokumentů může ušetřit čas, námahu a potenciální chyby. Jedním z takových mocných nástrojů v této doméně je GroupDocs.Comparison for .NET. Tento výukový program vás provede procesem využití GroupDocs.Comparison pro .NET k získání informací o dokumentu z dané cesty, přičemž každý krok rozebere, aby byla zajištěna srozumitelnost a snadná implementace.
 ## Předpoklady

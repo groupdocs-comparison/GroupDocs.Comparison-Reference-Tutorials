@@ -6,6 +6,9 @@ description: Integrasikan Perbandingan GroupDocs untuk .NET dengan lancar ke dal
 weight: 12
 url: /id/net/quick-start/set-metered-license/
 ---
+
+# Tetapkan Lisensi Terukur - Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, memiliki alat yang kuat untuk perbandingan dokumen sangat diperlukan. Perbandingan GroupDocs untuk .NET menonjol sebagai solusi ampuh untuk membandingkan berbagai format dokumen secara terprogram. Dari dokumen teks hingga spreadsheet dan presentasi, perpustakaan ini memungkinkan pengembang mengidentifikasi perbedaan antar file secara efisien.
 ## Prasyarat

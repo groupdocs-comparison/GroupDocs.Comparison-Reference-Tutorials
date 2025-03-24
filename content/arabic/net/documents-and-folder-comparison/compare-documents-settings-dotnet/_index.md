@@ -6,6 +6,9 @@ description: قم بتبسيط مقارنة المستندات في تطبيقا
 weight: 11
 url: /ar/net/documents-and-folder-comparison/compare-documents-settings-dotnet/
 ---
+
+# مقارنة إعدادات المستندات في مقارنة GroupDocs لـ .NET
+
 ## مقدمة
 في مجال إدارة المستندات ومقارنتها، تبرز GroupDocs Comparison for .NET كأداة قوية، تمكن المطورين من دمج وظائف مقارنة المستندات بسلاسة في تطبيقات .NET الخاصة بهم. بفضل ميزاته القوية وسهولة الاستخدام، تعمل GroupDocs Comparison for .NET على تبسيط عملية مقارنة المستندات، مما يضمن الدقة والكفاءة.
 ## المتطلبات الأساسية

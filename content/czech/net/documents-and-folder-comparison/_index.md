@@ -6,6 +6,9 @@ description: Naučte se zefektivnit pracovní postupy s dokumenty pomocí GroupD
 weight: 20
 url: /cs/net/documents-and-folder-comparison/
 ---
+
+# Porovnání dokumentů a složek
+
 ## Úvod
 
 GroupDocs Comparison for .NET poskytuje vývojářům výkonnou sadu nástrojů pro zjednodušení pracovních postupů s dokumenty. Ať už pracujete s jednotlivými dokumenty nebo celými složkami, pochopení toho, jak efektivně využívat funkce, je zásadní pro optimalizaci efektivity. V tomto článku prozkoumáme různé výukové programy, které nabízí GroupDocs Comparison for .NET, se zaměřením na porovnání dokumentů a složek.

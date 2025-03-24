@@ -6,6 +6,9 @@ description: Bez wysiłku porównuj dokumenty w języku C# za pomocą GroupDocs.
 weight: 11
 url: /pl/net/basic-usage/compare-cells-from-stream/
 ---
+
+# Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .NET
+
 ## Wstęp
 W świecie tworzenia oprogramowania umiejętność sprawnego porównywania dokumentów jest kluczowa. Niezależnie od tego, czy pracujesz nad dokumentami prawnymi, umowami czy jakąkolwiek inną formą tekstu, możliwość dokładnego zidentyfikowania różnic może zaoszczędzić czas i zapobiec błędom. Na szczęście GroupDocs.Comparison dla .NET zapewnia wydajne rozwiązanie do zadań porównywania dokumentów.
 ## Warunki wstępne

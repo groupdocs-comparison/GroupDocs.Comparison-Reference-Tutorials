@@ -6,6 +6,9 @@ description: Compare eficientemente documentos en .NET con GroupDocs.Comparison.
 weight: 21
 url: /es/net/document-comparison/
 ---
+
+# Comparación de documentos
+
 ## Introducción
 
 En el acelerado mundo digital actual, la gestión eficiente de documentos es crucial tanto para las empresas como para los particulares. Ya sea que sea un profesional del derecho, un investigador académico o propietario de un negocio, la capacidad de comparar documentos de manera precisa y fluida es primordial. Con GroupDocs.Comparison para .NET, puede optimizar este proceso sin esfuerzo.

@@ -6,6 +6,9 @@ description: Dowiedz się, jak wyodrębnić informacje o dokumencie ze ścieżki
 weight: 13
 url: /pl/net/basic-usage/get-document-info-from-path/
 ---
+
+# Pobierz informacje o dokumencie ze ścieżki — GroupDocs.Comparison dla platformy .NET
+
 ## Wstęp
 dziedzinie tworzenia oprogramowania, szczególnie w środowiskach .NET Framework, efektywne porównywanie dokumentów jest koniecznością krytyczną. Niezależnie od tego, czy pracujesz nad dokumentami prawnymi, zmianami w kodzie, czy jakąkolwiek inną treścią, w której liczy się precyzja, posiadanie solidnego narzędzia do porównywania dokumentów może zaoszczędzić czas, wysiłek i potencjalne błędy. Jednym z takich potężnych narzędzi w tej domenie jest GroupDocs.Comparison dla .NET. Ten samouczek poprowadzi Cię przez proces wykorzystania GroupDocs.Comparison dla .NET w celu uzyskania informacji o dokumencie z danej ścieżki, dzieląc każdy krok w celu zapewnienia przejrzystości i łatwości implementacji.
 ## Warunki wstępne

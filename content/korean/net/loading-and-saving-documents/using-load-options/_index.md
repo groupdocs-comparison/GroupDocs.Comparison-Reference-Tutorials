@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교의 로드 옵션을 사용하여 문서를
 weight: 13
 url: /ko/net/loading-and-saving-documents/using-load-options/
 ---
+
+# .NET용 GroupDocs 비교에서 로드 옵션 사용
+
 ## 소개
 .NET용 GroupDocs 비교에서 로드 옵션 활용에 대한 자습서에 오신 것을 환영합니다! 이 자습서에서는 로드 옵션을 사용하여 문서를 비교하는 과정을 단계별로 안내합니다. 초보자이든 숙련된 개발자이든 이 가이드는 GroupDocs 비교를 .NET 응용 프로그램에 원활하게 통합하는 데 도움이 될 것입니다.
 ## 전제조건

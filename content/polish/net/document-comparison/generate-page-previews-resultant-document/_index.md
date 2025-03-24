@@ -6,6 +6,9 @@ description: Dowiedz się, jak generować podglądy dokumentów za pomocą Group
 weight: 10
 url: /pl/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Generuj podglądy stron dla dokumentu wynikowego
+
 ## Wstęp
 świecie tworzenia oprogramowania wydajne i dokładne porównywanie dokumentów jest sprawą najwyższej wagi. Niezależnie od tego, czy pracujesz nad projektem wymagającym współpracy między członkami zespołu, czy zajmujesz się dokumentami prawnymi, możliwość skutecznego porównywania wersji może zaoszczędzić czas i zapewnić dokładność. GroupDocs.Comparison for .NET to potężne narzędzie zaprojektowane w celu usprawnienia procesu porównywania dokumentów dla programistów .NET. W tym samouczku omówimy, jak używać GroupDocs.Comparison for .NET do generowania podglądów stron dla wynikowych dokumentów. Omówimy każdy krok, aby zapewnić kompleksowe zrozumienie procesu.
 ## Warunki wstępne

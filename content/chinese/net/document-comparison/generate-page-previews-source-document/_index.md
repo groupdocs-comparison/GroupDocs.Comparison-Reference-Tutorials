@@ -6,6 +6,9 @@ description: 了解如何利用 Groupdocs.Comparison for .NET 有效地简化 C#
 weight: 11
 url: /zh/net/document-comparison/generate-page-previews-source-document/
 ---
+
+# 生成源文档的页面预览
+
 ## 介绍
 在当今快节奏的数字世界中，文档管理和比较在各个行业中发挥着至关重要的作用。寻求强大解决方案的开发人员通常会转向 Groupdocs.Comparison for .NET。这个强大的工具使开发人员能够轻松比较文档，从而简化工作流程并提高生产力。在本教程中，我们将探索 .NET 的 Groupdocs.Comparison 的基本要素，分解每个步骤以确保无缝的学习体验。
 ## 先决条件

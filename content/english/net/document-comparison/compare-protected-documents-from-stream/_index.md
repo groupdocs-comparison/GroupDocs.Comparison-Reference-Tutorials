@@ -6,6 +6,9 @@ description: Learn how to compare protected documents from streams using GroupDo
 weight: 18
 url: /net/document-comparison/compare-protected-documents-from-stream/
 ---
+
+# Compare Protected Documents from Stream - GroupDocs.Comparison for .NET
+
 ## Introduction
 In the realm of .NET development, efficient comparison of documents is crucial for various applications. Whether you're working on content management systems, legal software, or any other document-centric project, having the ability to compare documents accurately can streamline workflows and enhance productivity. This tutorial delves into using GroupDocs.Comparison for .NET, a powerful tool that simplifies the process of comparing protected documents from streams. By following the step-by-step guide outlined below, you'll gain a comprehensive understanding of how to effectively utilize this library in your .NET projects.
 ## Prerequisites

@@ -6,6 +6,9 @@ description: Dễ dàng so sánh các tài liệu trong C# bằng GroupDocs.Comp
 weight: 11
 url: /vi/net/basic-usage/compare-cells-from-stream/
 ---
+
+# So sánh các ô từ luồng - GroupDocs.Comparison for .NET
+
 ## Giới thiệu
 Trong thế giới phát triển phần mềm, khả năng so sánh tài liệu một cách hiệu quả là rất quan trọng. Cho dù bạn đang làm việc trên các tài liệu pháp lý, hợp đồng hay bất kỳ dạng văn bản nào khác, việc có thể xác định chính xác sự khác biệt có thể tiết kiệm thời gian và ngăn ngừa sai sót. May mắn thay, GroupDocs.Comparison cho .NET cung cấp một giải pháp mạnh mẽ cho các tác vụ so sánh tài liệu.
 ## Điều kiện tiên quyết

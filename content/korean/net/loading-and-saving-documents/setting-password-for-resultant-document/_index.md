@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교에서 결과 문서에 대한 암호를 �
 weight: 17
 url: /ko/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# .NET용 GroupDocs 비교에서 결과 문서의 비밀번호 설정
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 결과 문서에 대한 암호를 설정하는 과정을 안내합니다. 이 기능은 비교 문서에 추가 보안 계층을 추가하여 승인된 개인만 해당 문서에 액세스할 수 있도록 보장합니다.
 ## 전제조건

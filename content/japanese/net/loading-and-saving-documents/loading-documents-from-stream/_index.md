@@ -6,6 +6,9 @@ description: 強力な .NET ライブラリである GroupDocs Comparison を使
 weight: 11
 url: /ja/net/loading-and-saving-documents/loading-documents-from-stream/
 ---
+
+# GroupDocs でのストリームからのドキュメントのロード .NET の比較
+
 ## 導入
 ドキュメント管理および比較ツールの分野では、GroupDocs Comparison for .NET は .NET 開発者向けにカスタマイズされた堅牢なソリューションとして際立っています。この強力なライブラリにより、開発者はドキュメント比較機能を .NET アプリケーションにシームレスに統合できます。コンテンツ管理システム、法的アプリケーション、またはドキュメントの分析と比較が必要なその他のプロジェクトに取り組んでいる場合でも、GroupDocs Comparison for .NET は信頼できる味方です。
 ## 前提条件

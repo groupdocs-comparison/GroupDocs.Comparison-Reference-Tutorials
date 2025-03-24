@@ -6,6 +6,9 @@ description: Integreer de functionaliteit voor documentvergelijking moeiteloos i
 weight: 14
 url: /nl/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Stel specifieke afbeeldingsformaten in voor voorbeelden
+
 ## Invoering
 Op het gebied van softwareontwikkeling is een efficiënte en nauwkeurige documentvergelijking van cruciaal belang om de integriteit en consistentie van informatie te garanderen. GroupDocs.Comparison voor .NET biedt een robuuste oplossing voor ontwikkelaars die functionaliteit voor documentvergelijking naadloos in hun .NET-toepassingen willen integreren.
 ## Vereisten

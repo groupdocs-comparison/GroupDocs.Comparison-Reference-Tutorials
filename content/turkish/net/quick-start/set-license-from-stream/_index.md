@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET'i verimli bir şekilde kullanarak lis
 weight: 11
 url: /tr/net/quick-start/set-license-from-stream/
 ---
+
+# Lisansı Akıştan Ayarlayın - .NET için GroupDocs Karşılaştırması
+
 ## giriiş
 .NET geliştirme dünyasında, belgeleri verimli bir şekilde yönetmek ve karşılaştırmak çok önemlidir. İster yasal sözleşmeler, ister finansal raporlar, ister başka herhangi bir belge yoğun uygulama üzerinde çalışıyor olun, belgeleri doğru bir şekilde karşılaştırma yeteneği, zamandan tasarruf sağlayabilir ve doğruluk sağlayabilir. GroupDocs.Comparison for .NET tam da burada devreye giriyor. 
 ## Önkoşullar

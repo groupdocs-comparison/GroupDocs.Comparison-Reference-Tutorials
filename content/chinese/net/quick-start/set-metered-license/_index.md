@@ -6,6 +6,9 @@ description: 将 GroupDocs Comparison for .NET 无缝集成到您的 .NET 项目
 weight: 12
 url: /zh/net/quick-start/set-metered-license/
 ---
+
+# 设置计量许可证 - .NET 的 GroupDocs 比较
+
 ## 介绍
 在 .NET 开发领域，拥有强大的文档比较工具是必不可少的。 GroupDocs Comparison for .NET 是一个以编程方式比较各种文档格式的强大解决方案。从文本文档到电子表格和演示文稿，该库使开发人员能够有效地识别文件之间的差异。
 ## 先决条件

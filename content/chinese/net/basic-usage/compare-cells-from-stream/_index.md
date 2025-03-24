@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 轻松比较 C# 中的文档�
 weight: 11
 url: /zh/net/basic-usage/compare-cells-from-stream/
 ---
+
+# 比较流中的单元格 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在软件开发领域，有效比较文档的能力至关重要。无论您正在处理法律文件、合同还是任何其他形式的文本，能够准确识别差异都可以节省时间并防止错误。幸运的是，GroupDocs.Comparison for .NET 为文档比较任务提供了强大的解决方案。
 ## 先决条件

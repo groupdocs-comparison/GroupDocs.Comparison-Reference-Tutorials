@@ -6,6 +6,9 @@ description: Tìm hiểu cách tích hợp So sánh GroupDocs cho .NET một cá
 weight: 10
 url: /vi/net/quick-start/set-license-from-file/
 ---
+
+# Đặt giấy phép từ tệp - So sánh GroupDocs cho .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc có các công cụ hiệu quả để so sánh tài liệu là rất quan trọng đối với các ngành khác nhau, bao gồm pháp lý, tài chính và giáo dục. So sánh GroupDocs cho .NET cung cấp giải pháp mạnh mẽ để so sánh các tài liệu một cách liền mạch trong các ứng dụng .NET của bạn. Bài viết này đóng vai trò là hướng dẫn toàn diện để sử dụng So sánh GroupDocs cho .NET một cách hiệu quả, chia nhỏ các bước cần thiết và cung cấp thông tin chi tiết về cách triển khai nó.
 ## Điều kiện tiên quyết

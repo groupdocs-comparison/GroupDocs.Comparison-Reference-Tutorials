@@ -6,6 +6,9 @@ description: .NET용 GroupDocs 비교를 사용하여 문서 메타데이터 대
 weight: 15
 url: /ko/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# .NET용 GroupDocs 비교에서 문서 메타데이터 대상 저장
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs 비교를 사용하여 문서 메타데이터 대상을 저장하는 과정을 안내합니다. .NET용 GroupDocs 비교는 .NET 응용 프로그램에서 문서를 비교하고 병합할 수 있는 강력한 라이브러리입니다.
 ## 전제조건

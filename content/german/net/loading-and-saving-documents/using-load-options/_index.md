@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie die Ladeoptionen im GroupDocs-Vergleich für 
 weight: 13
 url: /de/net/loading-and-saving-documents/using-load-options/
 ---
+
+# Verwenden von Ladeoptionen im GroupDocs-Vergleich für .NET
+
 ## Einführung
 Willkommen zu unserem Tutorial zur Verwendung von Ladeoptionen im GroupDocs-Vergleich für .NET! In diesem Tutorial führen wir Sie Schritt für Schritt durch den Prozess des Vergleichs von Dokumenten mithilfe der Ladeoptionen. Unabhängig davon, ob Sie Anfänger oder erfahrener Entwickler sind, hilft Ihnen dieser Leitfaden dabei, GroupDocs Compare nahtlos in Ihre .NET-Anwendungen zu integrieren.
 ## Voraussetzungen

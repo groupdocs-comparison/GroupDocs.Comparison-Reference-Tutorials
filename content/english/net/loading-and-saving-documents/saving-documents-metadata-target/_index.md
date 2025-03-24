@@ -6,6 +6,9 @@ description: Learn how to save documents metadata target using GroupDocs Compari
 weight: 15
 url: /net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Saving Documents Metadata Target in GroupDocs Comparison for .NET
+
 ## Introduction
 In this tutorial, we'll guide you through the process of saving document metadata target using GroupDocs Comparison for .NET. GroupDocs Comparison for .NET is a powerful library that allows you to compare and merge documents in your .NET applications.
 ## Prerequisites

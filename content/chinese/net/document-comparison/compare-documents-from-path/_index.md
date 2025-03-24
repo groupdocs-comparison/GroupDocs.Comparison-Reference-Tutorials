@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Comparison for .NET 轻松比较各种格式的文
 weight: 15
 url: /zh/net/document-comparison/compare-documents-from-path/
 ---
+
+# 比较路径中的文档 - GroupDocs.Comparison for .NET
+
 ## 介绍
 在当今的数字时代，文档比较在法律、商业和学术界等各个领域都发挥着至关重要的作用。无论您是比较合同的律师、审阅论文的学生还是审查报告的商业专业人士，拥有可靠的文档比较工具都可以节省时间并确保准确性。 GroupDocs.Comparison for .NET 提供了一个强大的解决方案，可以轻松高效地比较文档。在本教程中，我们将指导您完成使用 GroupDocs.Comparison for .NET 比较文档的过程。
 ## 先决条件

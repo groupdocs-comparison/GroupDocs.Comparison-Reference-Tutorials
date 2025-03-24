@@ -6,6 +6,9 @@ description: Aprenda como integrar o GroupDocs Comparison for .NET perfeitamente
 weight: 10
 url: /pt/net/quick-start/set-license-from-file/
 ---
+
+# Definir licença do arquivo - Comparação de GroupDocs para .NET
+
 ## Introdução
 No domínio do desenvolvimento .NET, ter ferramentas eficientes para comparação de documentos é vital para vários setores, incluindo jurídico, financeiro e educacional. GroupDocs Comparison for .NET fornece uma solução robusta para comparar documentos perfeitamente em seus aplicativos .NET. Este artigo serve como um guia abrangente para a utilização eficaz do GroupDocs Comparison for .NET, detalhando as etapas essenciais e fornecendo insights sobre sua implementação.
 ## Pré-requisitos

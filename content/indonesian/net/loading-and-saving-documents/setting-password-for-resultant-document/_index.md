@@ -6,6 +6,9 @@ description: Pelajari cara mengatur kata sandi untuk dokumen yang dihasilkan di 
 weight: 17
 url: /id/net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Menetapkan Kata Sandi untuk Dokumen yang Dihasilkan dalam Perbandingan GroupDocs untuk .NET
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses pengaturan kata sandi untuk dokumen yang dihasilkan menggunakan Perbandingan GroupDocs untuk .NET. Fitur ini menambahkan lapisan keamanan ekstra pada dokumen Anda yang dibandingkan, memastikan bahwa hanya individu yang berwenang yang dapat mengaksesnya.
 ## Prasyarat

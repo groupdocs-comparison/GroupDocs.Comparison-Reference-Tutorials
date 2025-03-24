@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Comparison을 사용하여 문서를 효율적으
 weight: 10
 url: /ko/net/loading-and-saving-documents/loading-documents/
 ---
+
+# .NET용 GroupDocs 비교에서 문서 로드
+
 ## 소개
 .NET용 GroupDocs.Comparison 활용에 대한 포괄적인 튜토리얼에 오신 것을 환영합니다! 이 튜토리얼에서는 이 강력한 도구를 사용하여 문서를 단계별로 비교하는 과정을 안내합니다. .NET용 GroupDocs.Comparison은 문서 비교를 위한 강력한 기능 세트를 제공하므로 개발자는 Word 문서, PDF, Excel 스프레드시트 등과 같은 다양한 문서 형식을 효율적으로 비교할 수 있습니다.
 ## 전제조건

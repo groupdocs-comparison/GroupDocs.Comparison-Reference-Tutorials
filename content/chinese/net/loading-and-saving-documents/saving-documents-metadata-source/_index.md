@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs Comparison for .NET 保存文档元数
 weight: 14
 url: /zh/net/loading-and-saving-documents/saving-documents-metadata-source/
 ---
+
+# 在 .NET 的 GroupDocs Comparison 中保存文档元数据源
+
 ## 介绍
 在软件开发领域，有效的文档比较对于各个行业（包括法律、金融和教育）至关重要。 GroupDocs Comparison for .NET 提供了一个强大的解决方案，用于无缝比较 .NET 应用程序中的文档。本教程将指导您完成使用 GroupDocs Comparison for .NET 保存文档元数据源的过程。通过执行这些步骤，您将能够充分利用该库的潜力来增强您的文档比较任务。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Naučte se, jak efektivně porovnávat více dokumentů pomocí Gro
 weight: 13
 url: /cs/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
 ---
+
+# Porovnání více dokumentů v GroupDocs Porovnání pro .NET
+
 ## Úvod
 oblasti vývoje softwaru je zásadní potřeba efektivní srovnávání dokumentů. Ať už jde o právní dokumenty, obchodní smlouvy nebo projekty společného psaní, zajištění přesnosti a konzistence ve více verzích je prvořadé. GroupDocs Comparison for .NET poskytuje výkonné řešení pro bezproblémové řešení této potřeby v rámci .NET.
 ## Předpoklady

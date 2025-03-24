@@ -6,6 +6,9 @@ description: Learn how to set a password for resultant documents in GroupDocs Co
 weight: 17
 url: /net/loading-and-saving-documents/setting-password-for-resultant-document/
 ---
+
+# Setting Password for Resultant Document in GroupDocs Comparison for .NET
+
 ## Introduction
 In this tutorial, we'll guide you through the process of setting a password for the resultant document using GroupDocs Comparison for .NET. This feature adds an extra layer of security to your compared documents, ensuring that only authorized individuals can access them.
 ## Prerequisites

@@ -6,6 +6,9 @@ description: Hasonlítsa össze a mappákat könnyedén a GroupDocs Comparison f
 weight: 12
 url: /hu/net/documents-and-folder-comparison/compare-folders-dotnet/
 ---
+
+# Mappák összehasonlítása a GroupDocs-összehasonlításban .NET-hez
+
 ## Bevezetés
 GroupDocs Comparison for .NET egy hatékony könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén összehasonlítsák a mappákat .NET-alkalmazásaikon belül. Ez az oktatóanyag lépésről lépésre végigvezeti a mappák összehasonlításának folyamatán a GroupDocs Comparison for .NET segítségével. Ennek az oktatóanyagnak a végére használhatja a könyvtárat a mappák hatékony és eredményes összehasonlítására.
 ## Előfeltételek

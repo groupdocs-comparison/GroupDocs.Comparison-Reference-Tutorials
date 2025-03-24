@@ -6,6 +6,9 @@ description: تعرف على كيفية حفظ البيانات التعريفي
 weight: 15
 url: /ar/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# حفظ هدف البيانات التعريفية للمستندات في مقارنة GroupDocs لـ .NET
+
 ## مقدمة
 في هذا البرنامج التعليمي، سنرشدك خلال عملية حفظ بيانات تعريف المستند المستهدفة باستخدام GroupDocs Comparison for .NET. تعد GroupDocs Comparison for .NET مكتبة قوية تسمح لك بمقارنة المستندات ودمجها في تطبيقات .NET الخاصة بك.
 ## المتطلبات الأساسية

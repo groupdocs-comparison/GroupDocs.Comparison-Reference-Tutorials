@@ -6,6 +6,9 @@ description: Learn how to retrieve document info from result document using Grou
 weight: 12
 url: /net/basic-usage/get-document-info-from-result-document/
 ---
+
+# Get Document Info from Result Document - GroupDocs.Comparison for .NET
+
 ## Introduction
 In the realm of .NET development, managing and comparing documents is a common requirement. GroupDocs.Comparison for .NET offers a robust solution for this task, allowing developers to seamlessly integrate document comparison functionalities into their applications. This tutorial will guide you through the process of utilizing GroupDocs.Comparison for .NET to retrieve document information from the result document. 
 ## Prerequisites

@@ -6,6 +6,9 @@ description: GroupDocs.Comparison for .NET segítségével könnyedén integrál
 weight: 14
 url: /hu/net/document-comparison/set-specific-image-sizes-for-previews/
 ---
+
+# Állítson be konkrét képméreteket az előnézetekhez
+
 ## Bevezetés
 A szoftverfejlesztés területén a hatékony és pontos dokumentum-összehasonlítás kulcsfontosságú az információk integritásának és következetességének biztosításához. A GroupDocs.Comparison for .NET robusztus megoldást kínál azoknak a fejlesztőknek, akik a dokumentum-összehasonlítási funkciókat zökkenőmentesen szeretnék beépíteni .NET-alkalmazásaikba.
 ## Előfeltételek

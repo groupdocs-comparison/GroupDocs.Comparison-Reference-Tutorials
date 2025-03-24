@@ -6,6 +6,9 @@ description: 了解如何通过 GroupDocs Comparison for .NET 教程简化文档
 weight: 20
 url: /zh/net/documents-and-folder-comparison/
 ---
+
+# 文档和文件夹比较
+
 ## 介绍
 
 GroupDocs Comparison for .NET 为开发人员提供了一套强大的工具来简化文档工作流程。无论您处理的是单个文档还是整个文件夹，了解如何有效利用这些功能对于优化效率至关重要。在本文中，我们将探讨 GroupDocs Comparison for .NET 提供的各种教程，重点关注文档和文件夹比较。

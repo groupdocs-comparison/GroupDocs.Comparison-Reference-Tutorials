@@ -6,6 +6,9 @@ description: Узнайте, как сохранить целевые метад
 weight: 15
 url: /ru/net/loading-and-saving-documents/saving-documents-metadata-target/
 ---
+
+# Сохранение цели метаданных документов в сравнении GroupDocs для .NET
+
 ## Введение
 В этом руководстве мы покажем вам процесс сохранения целевых метаданных документа с помощью GroupDocs Comparison для .NET. GroupDocs Comparison for .NET — это мощная библиотека, которая позволяет сравнивать и объединять документы в ваших .NET-приложениях.
 ## Предварительные условия

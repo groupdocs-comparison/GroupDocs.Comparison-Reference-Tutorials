@@ -6,6 +6,9 @@ description: Découvrez comment enregistrer les métadonnées de documents défi
 weight: 16
 url: /fr/net/loading-and-saving-documents/saving-user-defined-document-metadata/
 ---
+
+# Enregistrement des métadonnées de document définies par l'utilisateur dans la comparaison GroupDocs pour .NET
+
 ## Introduction
 Dans ce didacticiel, nous explorerons comment enregistrer les métadonnées de documents définies par l'utilisateur à l'aide de GroupDocs Comparison for .NET. Les métadonnées sont cruciales pour organiser et gérer efficacement les documents. Avec GroupDocs Comparison, vous pouvez facilement comparer et manipuler les métadonnées pour répondre à vos besoins spécifiques.
 ## Conditions préalables

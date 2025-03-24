@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Comparison for .NET 高效设置许可
 weight: 11
 url: /zh/net/quick-start/set-license-from-stream/
 ---
+
+# 从 Stream 设置许可证 - .NET 的 GroupDocs 比较
+
 ## 介绍
 在 .NET 开发领域，有效管理和比较文档至关重要。无论您正在处理法律合同、财务报告还是任何其他文档密集型应用程序，准确比较文档的能力都可以节省时间并确保准确性。这就是 .NET 的 GroupDocs.Comparison 发挥作用的地方。 
 ## 先决条件

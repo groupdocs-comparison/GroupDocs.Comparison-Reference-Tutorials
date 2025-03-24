@@ -6,6 +6,9 @@ description: Naučte se generovat náhledy dokumentů pomocí GroupDocs.Comparis
 weight: 10
 url: /cs/net/document-comparison/generate-page-previews-resultant-document/
 ---
+
+# Generování náhledů stránek pro výsledný dokument
+
 ## Úvod
 Ve světě vývoje softwaru je efektivní a přesné porovnávání dokumentů prvořadé. Ať už pracujete na projektu, který zahrnuje spolupráci mezi členy týmu, nebo se zabýváte právními dokumenty, schopnost efektivně porovnávat verze může ušetřit čas a zajistit přesnost. GroupDocs.Comparison for .NET je výkonný nástroj navržený pro zefektivnění procesu porovnávání dokumentů pro vývojáře .NET. V tomto tutoriálu se ponoříme do toho, jak používat GroupDocs.Comparison pro .NET ke generování náhledů stránek pro výsledné dokumenty. Každý krok rozebereme, abychom zajistili komplexní pochopení procesu.
 ## Předpoklady

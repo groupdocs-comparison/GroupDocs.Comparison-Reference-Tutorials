@@ -6,6 +6,9 @@ description: Naučte se přijímat a odmítat změny v dokumentech pomocí Group
 weight: 10
 url: /cs/net/documents-and-folder-comparison/accept-reject-changes-dotnet/
 ---
+
+# Přijmout a odmítnout změny v porovnání GroupDocs pro .NET
+
 ## Úvod
 V oblasti správy dokumentů a spolupráce je prvořadé zajištění přesnosti a integrity souborů. GroupDocs Comparison for .NET se ukazuje jako robustní řešení, které umožňuje vývojářům bez námahy přijímat a odmítat změny v dokumentech, čímž zefektivňuje pracovní postupy a zvyšuje produktivitu. Tento výukový program vás provede procesem přijímání a odmítání změn pomocí GroupDocs Comparison for .NET, přičemž každý krok rozebere pro srozumitelnost a snadnou implementaci.
 ## Předpoklady

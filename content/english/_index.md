@@ -26,5 +26,16 @@ These are links to some useful resources:
 - [Image Comparison](./net/image-comparison/)
 - [Basic Usage](./net/basic-usage/)
 - [Quick Start](./net/quick-start/)
+- [Getting Started](./net/getting-started/)
+- [Document Loading](./net/document-loading/)
+- [Basic Comparison](./net/basic-comparison/)
+- [Advanced Comparison](./net/advanced-comparison/)
+- [Change Management](./net/change-management/)
+- [Document Information](./net/document-information/)
+- [Preview Generation](./net/preview-generation/)
+- [Metadata Management](./net/metadata-management/)
+- [Security & Protection](./net/security-protection/)
+- [Licensing & Configuration](./net/licensing-configuration/)
+- [Comparison Options](./net/comparison-options/)
 
 

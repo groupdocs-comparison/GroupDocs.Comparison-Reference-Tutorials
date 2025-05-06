@@ -20,7 +20,7 @@ is_root: true
 
 # GroupDocs.Comparison Tutorials & Developer Guide
 
-![GroupDocs.Comparison Banner](https://www.groupdocs.cloud/templates/groupdocs/img/products/comparison/border/groupdocs-comparison-net.svg)
+![GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)
 
 Welcome to the **complete guide to document comparison** with GroupDocs.Comparison! Our comprehensive tutorials show you how to efficiently identify differences between documents in various formats including **Word, PDF, Excel, PowerPoint, images, and more**.
 

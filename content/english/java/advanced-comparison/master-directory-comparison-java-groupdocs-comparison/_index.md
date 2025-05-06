@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Master Directory Comparison in Java with GroupDocs.Comparison
 
 ## Introduction
@@ -197,7 +195,3 @@ For further exploration, consider integrating this solution with other systems o
 
 **2. How do I customize the output format of my comparison results?**
 - Adjust `FolderComparisonExtension` in `CompareOptions` to specify desired formats like HTML or PDF.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

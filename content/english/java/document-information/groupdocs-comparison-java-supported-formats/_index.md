@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Retrieve Supported File Formats with GroupDocs.Comparison for Java
 
 ## Introduction
@@ -145,7 +143,3 @@ In this tutorial, we explored how to retrieve supported file types using GroupDo
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [Support Forum](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

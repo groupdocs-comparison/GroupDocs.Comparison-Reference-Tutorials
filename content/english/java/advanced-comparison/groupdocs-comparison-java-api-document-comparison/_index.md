@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison in Java with GroupDocs.Comparison API
 
 ## Introduction
@@ -174,7 +172,3 @@ Explore further features of GroupDocs.Comparison, such as handling password-prot
 - **Temporary License:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Support:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison Using GroupDocs.Comparison in Java
 
 In today's digital age, managing and comparing documents is vital for both businesses and individuals. Whether you're collaborating on projects or ensuring data consistency across document versions, having the right tools can make a significant difference. This tutorial explores how to use GroupDocs.Comparison for Java to seamlessly compare Word documents using streams. By the end of this guide, you'll be able to implement a powerful comparison feature in your Java applications.
@@ -183,7 +181,3 @@ A5: Detailed documentation and API references are available [here](https://docs.
 - **Support Forum:** [GroupDocs Support](https://forum.groupdocs.com/c/comparison)
 
 Embark on your document comparison journey with GroupDocs.Comparison in Java today!
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

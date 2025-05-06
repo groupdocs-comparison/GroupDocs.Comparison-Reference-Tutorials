@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # How to Compare Multiple Protected Documents Using GroupDocs.Comparison in Java
 
 **Introduction**
@@ -185,7 +183,3 @@ For further assistance and documentation:
 - **Temporary License**: [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Support**: [GroupDocs Forum](https://forum.groupdocs.com/c)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -13,9 +13,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison in Java Using GroupDocs.Comparison API
 
 ## Introduction
@@ -242,7 +240,3 @@ By leveraging GroupDocs.Comparison for Java, you can automate document compariso
 For more advanced features or troubleshooting, refer to the [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/) and join their [community forums](https://forum.groupdocs.com/c/comparison)."  
   "keyword_recommendations": [
     "document comparison java
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

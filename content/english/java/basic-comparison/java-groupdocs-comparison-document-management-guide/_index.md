@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Java Document Comparison with GroupDocs.Comparison
 
 ## Introduction
@@ -169,7 +167,3 @@ We encourage you to dive deeper into the documentation and explore more complex 
 - [Support Forum](https://forum.groupdocs.com/c/comparison)
 
 By leveraging GroupDocs.Comparison for Java, you're equipped to handle document comparison tasks with ease and precision. Whether for business applications or personal projects, this tool is designed to meet a wide range of needs.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

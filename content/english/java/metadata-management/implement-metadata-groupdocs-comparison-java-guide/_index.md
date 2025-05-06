@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Implement Document Metadata with GroupDocs.Comparison in Java: A Complete Guide
 
 ## Introduction
@@ -180,7 +178,3 @@ Setting document metadata during a comparison operation with GroupDocs.Compariso
 - Free Trial: [Try for Free](https://releases.groupdocs.com/comparison/java/)
 - Temporary License: [Request Here](https://purchase.groupdocs.com/temporary-license/)
 - Support: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

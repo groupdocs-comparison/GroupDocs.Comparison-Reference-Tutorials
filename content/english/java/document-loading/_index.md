@@ -4,9 +4,7 @@ description: "Learn how to load documents from various sources such as file path
 weight: 2
 url: "/java/document-loading/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Document Loading Tutorials for GroupDocs.Comparison Java
 
 Our document loading tutorials provide comprehensive guidance for preparing documents for comparison in Java applications. These step-by-step guides demonstrate how to load documents from local storage, memory streams, and string content, as well as how to configure loading options for different document types. Each tutorial includes complete Java code examples to help you implement robust document loading functionality in your comparison applications.
@@ -27,7 +25,3 @@ Learn how to efficiently compare Word documents using Java streams with the powe
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

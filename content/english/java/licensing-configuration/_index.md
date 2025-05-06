@@ -4,9 +4,7 @@ description: "Complete tutorials for setting up licensing, metered licensing, an
 weight: 10
 url: "/java/licensing-configuration/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Licensing and Configuration Tutorials for GroupDocs.Comparison Java
 
 Our licensing and configuration tutorials provide essential guidance for properly setting up GroupDocs.Comparison in Java applications. These step-by-step guides show you how to implement different licensing options, configure metered billing, check license status, and optimize library settings for your specific requirements. Each tutorial includes detailed Java code examples for proper initialization and configuration, helping you build properly licensed and optimized document comparison solutions.
@@ -30,7 +28,3 @@ Learn how to automate licensing for GroupDocs.Comparison using a URL in Java. St
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

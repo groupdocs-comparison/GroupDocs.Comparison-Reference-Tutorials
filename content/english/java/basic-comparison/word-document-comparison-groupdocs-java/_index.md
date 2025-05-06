@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Implementing Word Document Comparison in Java with GroupDocs.Comparison
 
 ## Introduction
@@ -173,7 +171,3 @@ Ready to try it out? Implement these steps in your projects today!
 
 This tutorial aimed to provide a practical guide for implementing document comparison in Java using GroupDocs.Comparison. Happy coding, and may your document comparisons be efficient!
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

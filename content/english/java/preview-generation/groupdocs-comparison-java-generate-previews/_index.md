@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering GroupDocs.Comparison for Java: Effortless Document Preview Generation
 
 ## Introduction
@@ -172,7 +170,3 @@ A5: Check your environment setup, ensure all dependencies are correctly installe
 - **Free Trial**: [Try Free Version](https://releases.groupdocs.com/comparison/java/)
 - **Temporary License**: [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

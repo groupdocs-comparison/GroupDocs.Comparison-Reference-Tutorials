@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparisons in Java with GroupDocs.Comparison
 
 Discover the efficient process of initializing, comparing, and updating changes in documents using the powerful GroupDocs.Comparison library for Java. This tutorial guides you through setting up your environment, understanding key features, and implementing real-world solutions.
@@ -212,7 +210,3 @@ For further exploration, check out more advanced features and customization opti
    - Yes, GroupDocs.Comparison supports a wide range of document formats.
 
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

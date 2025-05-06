@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # How to Load and Compare Password-Protected Word Documents in Java Using GroupDocs.Comparison
 
 ## Introduction
@@ -218,7 +216,3 @@ Explore additional features of GroupDocs.Comparison such as customizing comparis
 - "compare password-protected Word documents Java"
 - "GroupDocs.Comparison Java setup"
 - "loading protected Word documents Java"
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

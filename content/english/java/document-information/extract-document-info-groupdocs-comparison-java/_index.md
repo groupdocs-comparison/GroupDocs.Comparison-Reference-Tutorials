@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Extract Document Metadata with GroupDocs.Comparison for Java
 
 In the digital age, managing and analyzing document properties is essential across various sectors such as legal, administrative, or corporate settings. Understanding your documents’ metadata can significantly boost productivity. This comprehensive guide will walk you through using the GroupDocs.Comparison library to extract vital information like file type, page count, and size from documents effortlessly.
@@ -193,7 +191,3 @@ Ready to try it out? Dive deeper into the documentation at [GroupDocs.Comparison
 - **Support:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
 
 By following this guide, you've unlocked powerful document metadata extraction capabilities using GroupDocs.Comparison for Java. Happy coding!
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

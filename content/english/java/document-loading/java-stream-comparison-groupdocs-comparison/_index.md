@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Java Stream Document Comparison with GroupDocs.Comparison for Efficient Workflow Management
 
 In today's fast-paced digital environment, managing and comparing large volumes of documents is crucial for ensuring consistency and accuracy across contracts, reports, or legal documents. This tutorial will guide you through using the powerful GroupDocs.Comparison library in Java to efficiently compare multiple Word documents via streams, allowing for customization with style settings.
@@ -173,7 +171,3 @@ By following this tutorial, you've learned how to set up and use GroupDocs.Compa
 ### Resources
 - **Documentation**: [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)
 - **API Reference**: [API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

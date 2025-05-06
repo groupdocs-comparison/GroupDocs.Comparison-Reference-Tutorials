@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison: A Guide to Comparing Password-Protected Word Documents with GroupDocs.Comparison for Java
 
 ## Introduction
@@ -191,7 +189,3 @@ A: Common applications include legal reviews, collaborative editing, version con
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/
 
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

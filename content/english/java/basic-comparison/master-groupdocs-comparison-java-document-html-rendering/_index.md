@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison and HTML Rendering in Java with GroupDocs.Comparison
 
 ## Introduction
@@ -211,7 +209,3 @@ You've now mastered using GroupDocs.Comparison for Java to compare documents and
 - **Download**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)
 - **Purchase and Licensing**: [Buy GroupDocs](https://purchase.groupdocs.com/buy)
 - **Free Trial**: Explore with a [Free Trial](https://releases.groupdocs.com/comparison/java/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

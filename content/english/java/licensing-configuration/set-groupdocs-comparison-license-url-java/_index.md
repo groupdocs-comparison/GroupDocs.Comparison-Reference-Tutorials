@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering GroupDocs.Comparison Java: Setting License via URL
 
 ## Introduction
@@ -152,7 +150,3 @@ Experiment further by integrating GroupDocs.Comparison features into your applic
 
 By utilizing these resources, you can further enhance your understanding and mastery of GroupDocs.Comparison for Java. Happy coding!
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

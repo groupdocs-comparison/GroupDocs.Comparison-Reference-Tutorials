@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Implement Java Stream Document Comparison Using GroupDocs.Comparer: A Comprehensive Guide
 
 ## Introduction
@@ -186,7 +184,3 @@ A5: Visit the [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison
 - **Purchase**: Acquire a license at [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy).
 - **Free Trial**: Test features with a free trial on [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/).
 - **Temporary License**: Obtain for extended testing from [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/).
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

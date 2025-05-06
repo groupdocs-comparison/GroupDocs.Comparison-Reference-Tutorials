@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Metadata Extraction with GroupDocs in Java
 
 In today's digital landscape, efficiently managing and extracting information from documents is crucial for businesses across industries. Whether you're dealing with legal contracts, academic papers, or financial reports, understanding document metadata such as file type, page count, and size can streamline workflows and enhance data analysis. This tutorial guides you through using GroupDocs.Comparison in Java to extract valuable document information via both input streams and file paths.
@@ -205,7 +203,3 @@ Explore the [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java
 
 **Q1:** What file formats does GroupDocs.Comparison support?
 - **A:** GroupDocs.Comparison supports a wide range of document formats including DOCX, PDF, XLSX, and more. Refer to the official documentation for a complete list.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -4,9 +4,7 @@ description: "Step-by-step tutorials for generating page previews for source, ta
 weight: 7
 url: "/java/preview-generation/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Preview Generation Tutorials for GroupDocs.Comparison Java
 
 Learn how to create document previews with our comprehensive GroupDocs.Comparison tutorials for Java developers. These practical guides demonstrate how to generate page previews for source documents, target documents, and comparison results, customize preview image sizes, and implement resource cleaning for optimal memory usage. Each tutorial includes detailed Java code examples for efficiently implementing document preview functionality in your comparison applications.
@@ -24,7 +22,3 @@ Learn how to generate document previews effortlessly with GroupDocs.Comparison f
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

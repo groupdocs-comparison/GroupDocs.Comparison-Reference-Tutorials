@@ -4,9 +4,7 @@ description: "Step-by-step tutorials for working with protected documents and im
 weight: 9
 url: "/java/security-protection/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Document Security and Protection Tutorials for GroupDocs.Comparison Java
 
 Master document security features with our detailed GroupDocs.Comparison tutorials for Java. These comprehensive guides demonstrate how to compare password-protected documents, set passwords for resultant files, implement secure comparison workflows, and manage document protection programmatically. Each tutorial provides working Java code examples for secure document comparison operations, helping you build applications that maintain confidentiality while enabling effective document comparison.
@@ -33,7 +31,3 @@ Learn how to protect your documents with passwords using GroupDocs.Comparison fo
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -4,9 +4,7 @@ description: "Step-by-step tutorials for advanced comparison features including 
 weight: 4
 url: "/java/advanced-comparison/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Advanced Document Comparison Tutorials for GroupDocs.Comparison Java
 
 Our advanced comparison tutorials show you how to leverage GroupDocs.Comparison's powerful features in Java applications. These comprehensive guides cover comparing multiple documents simultaneously, comparing password-protected files, comparing entire folders, and customizing comparison settings for different scenarios. Each tutorial includes practical Java code examples for implementing sophisticated document comparison operations that go beyond basic functionality.
@@ -42,7 +40,3 @@ Learn how to efficiently compare and manage document changes in Java with GroupD
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

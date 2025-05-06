@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Implementing Set License from File in GroupDocs.Comparison for Java
 
 ## Introduction
@@ -183,7 +181,3 @@ Visit the [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)
 - **Free Trial**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/java/)
 - **Temporary License**: [Request Temporary Access](https://purchase.groupdocs.com/temporary-license/)
 - **Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

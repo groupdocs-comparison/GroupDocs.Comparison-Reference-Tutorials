@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # How to Compare Cell Files Using GroupDocs.Comparison in Java
 
 ## Introduction
@@ -174,7 +172,3 @@ Ready to take your data management skills to the next level? Try implementing th
 - **API Reference**: [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)
 - **Download GroupDocs.Comparison**: [Java Downloads](https://releases.groupdocs.com/comparison/java/) 
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

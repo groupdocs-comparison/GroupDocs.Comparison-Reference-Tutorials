@@ -4,9 +4,7 @@ description: "Learn to work with document metadata, properties, and metadata con
 weight: 8
 url: "/java/metadata-management/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Document Metadata Management Tutorials for GroupDocs.Comparison Java
 
 Our metadata management tutorials show you how to control document properties when comparing documents with GroupDocs.Comparison in Java. These step-by-step guides cover setting metadata sources, defining custom metadata for resultant documents, and implementing metadata retention policies. Each tutorial includes practical Java code examples for common metadata management scenarios, helping you build applications that maintain appropriate document properties throughout the comparison process.
@@ -27,7 +25,3 @@ Learn how to manage and set custom metadata for documents using GroupDocs.Compar
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

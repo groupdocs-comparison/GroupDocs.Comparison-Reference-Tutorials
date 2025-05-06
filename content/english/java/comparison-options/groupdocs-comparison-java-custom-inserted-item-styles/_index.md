@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Customizing Inserted Item Styles in Java Document Comparisons Using GroupDocs.Comparison
 
 ## Introduction
@@ -185,7 +183,3 @@ As next steps, experiment with different style settings or explore other feature
    - While you can add multiple target documents for comparison, performance may vary based on system capabilities.
 5. **Where can I find support if I encounter issues with GroupDocs.Comparison?**
    - The [GroupDocs Support Forum](https://forum.groupdocs.com) is available for assistance.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Java Document Comparison and Preview Generation with GroupDocs.Comparison
 
 ## Introduction
@@ -206,7 +204,3 @@ A: Yes, you can tweak settings to change how differences are highlighted or form
 
 **Q: Can I integrate GroupDocs.Comparison with other Java frameworks?**
 A: Absolutely! It can be integrated with Spring Boot, Hibernate, and more.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -4,9 +4,7 @@ description: "Step-by-step tutorials for GroupDocs.Comparison installation, lice
 weight: 1
 url: "/java/getting-started/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # GroupDocs.Comparison Getting Started Tutorials for Java Developers
 
 Begin your journey with these essential GroupDocs.Comparison tutorials that walk you through installation, licensing configuration, and creating your first document comparisons in Java. Our beginner-friendly guides demonstrate how to set up your development environment, initialize the GroupDocs.Comparison library, and perform fundamental comparison operations. Follow these tutorials to quickly master the basics and prepare for more advanced document comparison tasks in your Java applications.
@@ -23,7 +21,3 @@ Begin your journey with these essential GroupDocs.Comparison tutorials that walk
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

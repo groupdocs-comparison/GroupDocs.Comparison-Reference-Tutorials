@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison and Credit Management in Java with GroupDocs.Comparison API
 
 In today's fast-paced business environment, efficiently managing documents and tracking resource usage is crucial. Whether you're comparing legal contracts, editing technical manuals, or just keeping track of your software usage credits, the right tools can make a significant difference. In this tutorial, we will explore how to harness the power of GroupDocs.Comparison for Java to both compare documents seamlessly and monitor credit consumption.
@@ -194,7 +192,3 @@ Ready to start comparing documents like a pro? Implement these solutions today!
 - **Download**: [Latest Release](https://releases.groupdocs.com/comparison/java/)
 - **Purchase**:
   - Purchase: [Buy Now](https://purchase.groupdocs.com/buy)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

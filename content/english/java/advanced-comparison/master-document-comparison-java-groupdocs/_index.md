@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Document Comparison in Java with GroupDocs.Comparison
 
 **Efficiently Compare Multiple Word, Text, and Email Documents Using GroupDocs.Comparison for Java**
@@ -206,7 +204,3 @@ You've now learned how to compare Word, Text, and Email documents using GroupDoc
 ## FAQ Section
 **Q1: What file formats can I compare using GroupDocs.Comparison for Java?**
 A1: GroupDocs.Comparison supports a wide range of document formats, including Word, Text, PDF, Email (EML), Excel, PowerPoint, and more.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # How to Implement Java Document Comparison by Setting Metadata Source with GroupDocs.Comparison
 
 ## Introduction
@@ -192,7 +190,3 @@ A: You can use the library’s API to build custom integration layers within you
 For further exploration and detailed information, refer to the following resources:
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

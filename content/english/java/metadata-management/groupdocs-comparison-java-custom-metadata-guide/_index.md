@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Set Custom Metadata in Java Documents Using GroupDocs.Comparison: A Step-by-Step Guide
 
 ## Introduction
@@ -202,7 +200,3 @@ Next steps include exploring additional GroupDocs.Comparison functionalities or 
 3. **How do I troubleshoot common issues in setting custom metadata?**
    - Ensure all paths are correctly defined and accessible, and verify that you're using a compatible version of GroupDocs.Comparison (25.2 or higher).
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

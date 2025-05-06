@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Java: Document Comparison with GroupDocs.Comparison API
 
 Welcome to this comprehensive guide where we explore document comparison in Java using the powerful GroupDocs.Comparison API. Whether you're managing legal documents, academic papers, or any other text files, comparing them efficiently is crucial. In this tutorial, we'll walk through how to accept or reject detected changes between two documents using streams in Java.
@@ -176,7 +174,3 @@ A: Use try-catch blocks around your code to gracefully handle and log any issues
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License Information](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

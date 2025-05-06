@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Java Document Comparison with GroupDocs.Comparison
 
 **Unlock Efficient Document Management: A Comprehensive Guide to Using GroupDocs.Comparison in Java**
@@ -197,7 +195,3 @@ A2: Implement try-catch blocks around file streams to manage `FileNotFoundExcept
 
 **Q3: Can GroupDocs.Comparison be integrated with cloud storage solutions?**
 A3: Yes, integration is possible. You can modify the file paths in your code to work with various cloud storage services.
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

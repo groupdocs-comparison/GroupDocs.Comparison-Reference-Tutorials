@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Secure Your Documents with a Password Using GroupDocs.Comparison for Java
 
 In today's digital age, ensuring the security of your documents is paramount. Unauthorized access can lead to significant data breaches. This tutorial will guide you through securing your resultant document with a password using **GroupDocs.Comparison for Java**—a robust library designed for comparing various document formats seamlessly.
@@ -144,7 +142,3 @@ Finally, execute the comparison and save your secured document:
 import java.nio.file.Path;
 
 final Path resultPath = comparer.compare("SetPasswordForResultantDocument.docx\
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

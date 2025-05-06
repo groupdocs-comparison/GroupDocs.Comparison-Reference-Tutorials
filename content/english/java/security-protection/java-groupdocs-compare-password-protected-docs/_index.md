@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Mastering Password-Protected Document Comparison in Java with GroupDocs.Comparison
 
 ## Introduction
@@ -169,7 +167,3 @@ A: It provides a detailed comparison report that includes all changes. You can c
 - **Free Trial**: [Try GroupDocs](https://releases.groupdocs.com/comparison/java/)
 - **Temporary License**: [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Support Forum**: [GroupDocs Support](https://forum.groupdocs.com/c/comparison)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

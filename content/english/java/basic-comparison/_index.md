@@ -4,9 +4,7 @@ description: "Complete tutorials for comparing different document types such as 
 weight: 3
 url: "/java/basic-comparison/"
 ---
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Basic Document Comparison Tutorials for GroupDocs.Comparison Java
 
 Master basic document comparison with our detailed GroupDocs.Comparison Java tutorials. These step-by-step guides demonstrate how to compare documents of various formats including Word, PDF, Excel, and images. Each tutorial includes working Java code examples that show how to identify differences between documents, generate comparison reports, and implement comparison operations for different document types.
@@ -57,7 +55,3 @@ Learn how to efficiently compare Word documents using GroupDocs.Comparison for J
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

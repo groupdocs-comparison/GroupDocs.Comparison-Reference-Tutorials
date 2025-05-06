@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # Java Document Comparison Using GroupDocs.Comparison: A Comprehensive Guide
 
 ## Introduction
@@ -249,7 +247,3 @@ In this tutorial, you've learned how to leverage GroupDocs.Comparison for Java t
 
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)
 - [API Reference](https://reference.gro
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

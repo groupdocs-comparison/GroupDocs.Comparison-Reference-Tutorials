@@ -11,9 +11,7 @@ keywords:
 
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+
 # How to Set GroupDocs License from Stream in Java: A Step-by-Step Guide
 
 ## Introduction
@@ -174,7 +172,3 @@ To further enhance your expertise, explore additional features of GroupDocs.Comp
 
 By following this guide and utilizing the resources available, you’ll be well-equipped to implement GroupDocs.Comparison’s licensing features in your Java applications. Happy coding!
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

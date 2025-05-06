@@ -18,9 +18,6 @@ Each section below is packed with practical examples to help you compare Word, P
 
 ## 📚 Java Comparison Tutorials by Category
 
-### [Getting Started](./getting-started)
-Quick-start tutorials for installing GroupDocs.Comparison for Java, applying license keys, and running your first document comparison.
-
 ### [Document Loading](./document-loading)
 Learn to load documents from local paths, memory streams, or strings. Supports Word, Excel, PDF, images, and more.
 
@@ -29,9 +26,6 @@ Compare two documents of various formats. Includes Word-to-Word, PDF-to-PDF, and
 
 ### [Advanced Comparison](./advanced-comparison)
 Compare multiple documents simultaneously, adjust sensitivity, and handle password-protected files with custom comparison settings.
-
-### [Change Management](./change-management)
-Access detailed changes between documents, accept or reject revisions programmatically, and apply filters to highlight key edits.
 
 ### [Document Information](./document-information)
 Extract and display metadata like page count, format type, and supported file extensions before running comparisons.

@@ -83,15 +83,12 @@ Implement powerful document comparison capabilities in your Java applications wi
 <div class="col-md-6">
 
 #### Getting Started
-- [Quick Start Guide](./java/getting-started/) - Begin comparing documents in Java
-- [Installation Guide](./java/getting-started/) - Set up your Java environment
-- [Licensing Options](./java/licensing-and-configuration/) - Understand deployment licensing
+- [Licensing Options](./java/licensing-configuration) - Understand deployment licensing
 
 #### Core Functionality
 - [Document Loading](./java/document-loading/) - Load documents from various sources
 - [Basic Comparison](./java/basic-comparison/) - Implement fundamental comparison
 - [Advanced Comparison](./java/advanced-comparison/) - Handle complex comparison scenarios
-- [Change Management](./java/change-management/) - Process and manage detected changes
 
 </div>
 <div class="col-md-6">
@@ -99,13 +96,9 @@ Implement powerful document comparison capabilities in your Java applications wi
 #### Advanced Features
 - [Preview Generation](./java/preview-generation/) - Generate visual comparison previews
 - [Metadata Management](./java/metadata-management/) - Control document metadata
-- [Security & Protection](./java/security-and-protection/) - Compare protected documents
+- [Security & Protection](./java/security-protection/) - Compare protected documents
 - [Comparison Options](./java/comparison-options/) - Fine-tune comparison settings
-
-#### Integration & Deployment
-- [Maven Integration](./java/getting-started/) - Integrate using Maven
-- [Gradle Setup](./java/getting-started/) - Configure with Gradle
-- [Enterprise Deployment](./java/licensing-and-configuration/) - Enterprise-level implementation
+- [Document Information](./java/document-information) - Extract and display metadata
 
 </div>
 </div>

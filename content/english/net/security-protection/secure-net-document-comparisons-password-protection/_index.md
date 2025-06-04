@@ -25,7 +25,7 @@ In today's digital world, safeguarding sensitive information is paramount. This 
 
 By mastering these skills, you can ensure document integrity while controlling access.
 
-## Prerequisites (H2)
+## Prerequisites
 Before starting, ensure you have:
 
 ### Required Libraries and Versions
@@ -38,7 +38,7 @@ Before starting, ensure you have:
 - Basic understanding of C#
 - Familiarity with document comparison concepts.
 
-## Setting Up GroupDocs.Comparison for .NET (H2)
+## Setting Up GroupDocs.Comparison for .NET
 Install the library using one of these methods:
 
 **NuGet Package Manager Console**
@@ -64,7 +64,7 @@ Comparer comparer = new Comparer("source.docx");
 ```
 
 ## Implementation Guide
-### Protect Result Document by Password (H2)
+### Protect Result Document by Password
 This feature secures the resultant document from your comparison with a password.
 
 #### Overview
@@ -123,7 +123,7 @@ We will use GroupDocs.Comparison to compare two documents and save the output wi
 - **Error: File Not Found**: Verify your file paths are correct and accessible.
 - **Insufficient Permissions**: Ensure your application has permissions to read/write files in specified directories.
 
-## Practical Applications (H2)
+## Practical Applications
 Here are some use cases for this feature:
 1. **Legal Document Management**: Securely save comparison results of legal documents for confidential review.
 2. **Financial Reports**: Protect sensitive financial data by password-protecting compared reports before sharing.
@@ -131,7 +131,7 @@ Here are some use cases for this feature:
 
 Integration with other .NET systems, such as ASP.NET applications or Windows services, is straightforward, allowing you to incorporate document comparison and protection seamlessly into your existing workflows.
 
-## Performance Considerations (H2)
+## Performance Considerations
 ### Optimization Tips
 - **Batch Processing**: Handle multiple comparisons in batches to optimize resource usage.
 - **Memory Management**: Dispose of resources properly using `using` statements to free up memory efficiently.
@@ -149,7 +149,7 @@ By following this tutorial, you’ve learned how to use GroupDocs.Comparison for
 
 Try implementing this solution in your projects and experience enhanced document security firsthand!
 
-## FAQ Section (H2)
+## FAQ Section
 1. **How do I obtain a temporary license for GroupDocs.Comparison?**
    - Visit the [temporary license page](https://purchase.groupdocs.com/temporary-license/) to apply.
 

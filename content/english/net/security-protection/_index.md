@@ -11,9 +11,6 @@ Master document security features with our detailed GroupDocs.Comparison tutoria
 
 ## Available Tutorials
 
-### [How to Compare Password-Protected Documents Using GroupDocs.Comparison for .NET (Tutorial)](./compare-password-protected-documents-groupdocs-comparison-net/)
-Learn how to efficiently compare password-protected Word documents with GroupDocs.Comparison in a .NET environment. Streamline your document comparison tasks easily.
-
 ### [Secure Document Comparisons in .NET&#58; Password Protect Results Using GroupDocs.Comparison](./secure-net-document-comparisons-password-protection/)
 Learn how to secure document comparisons in .NET by password protecting results with GroupDocs.Comparison, ensuring only authorized access.
 

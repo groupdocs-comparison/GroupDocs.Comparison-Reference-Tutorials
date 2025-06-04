@@ -11,9 +11,6 @@ Discover how to effectively manage document changes with our GroupDocs.Compariso
 
 ## Available Tutorials
 
-### [How to Retrieve Source and Target Texts Between Word Documents Using GroupDocs.Comparison .NET](./retrieve-source-target-texts-word-documents-groupdocs-comparison-net/)
-Learn how to use GroupDocs.Comparison for .NET to efficiently identify changes between Word documents, track edits, and audit modifications with ease.
-
 ### [Master Document Change Management&#58; Accept and Reject Edits with GroupDocs.Comparison .NET](./groupdocs-comparison-net-accept-reject-changes/)
 Learn how to manage document changes using GroupDocs.Comparison for .NET. Streamline your workflow by programmatically comparing, accepting, or rejecting edits in Word documents.
 

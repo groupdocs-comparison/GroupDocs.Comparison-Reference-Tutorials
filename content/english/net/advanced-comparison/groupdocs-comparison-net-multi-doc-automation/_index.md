@@ -148,12 +148,10 @@ Ready to get started? Implement this solution in your projects today!
    - Refer to the [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/net/) for comprehensive details.
 
 ## Resources
-- **Documentation**: https://docs.groupdocs.com/comparison/net/
-- **API Reference**: https://reference.groupdocs.com/comparison/net/
-- **Download**: https://releases.groupdocs.com/comparison/net/
-- **Purchase**: https://purchase.groupdocs.com/buy
-- **Free Trial**: https://releases.groupdocs.com/comparison/net/
-- **Temporary License**: https://purchase.groupdocs.com/temporary-license/
-- **Support**: https://forum.groupdocs.com/c/comparison/ 
-
-Implementing GroupDocs.Comparison for .NET in your projects can significantly enhance document management workflows. Try it out today!
+- [Documentation](https://docs.groupdocs.com/comparison/net/)
+- [API Reference](https://reference.groupdocs.com/comparison/net/)
+- [Download](https://releases.groupdocs.com/comparison/net/)
+- [Purchase](https://purchase.groupdocs.com/buy)
+- [Free Trial](https://releases.groupdocs.com/comparison/net/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [Support](https://forum.groupdocs.com/c/comparison/)

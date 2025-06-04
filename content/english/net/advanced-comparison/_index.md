@@ -23,17 +23,11 @@ Learn how to efficiently compare folders using GroupDocs.Comparison for .NET, sa
 ### [How to Compare Multiple Password-Protected Word Documents in .NET Using GroupDocs.Comparison](./compare-password-protected-docs-groupdocs-dotnet/)
 Learn how to compare multiple password-protected Word documents seamlessly using GroupDocs.Comparison for .NET. Follow this step-by-step guide with code examples and practical applications.
 
-### [How to Compare Password-Protected Word Documents with GroupDocs.Comparison for .NET](./compare-password-protected-documents-groupdocs-comparison-net/)
-Learn how to seamlessly compare password-protected documents using GroupDocs.Comparison for .NET. Ideal for secure document version control and collaborative editing.
-
 ### [Implement Multi-Document Comparison in .NET Using GroupDocs.Comparison](./implement-multi-doc-comparison-groupdocs-net/)
 Learn how to implement multi-document comparison with GroupDocs.Comparison for .NET. This guide covers setup, configuration, and practical applications.
 
 ### [Master Document Comparison in .NET&#58; Preserve Metadata Using GroupDocs.Comparison](./groupdocs-comparison-net-metadata-target/)
 Learn how to set metadata targets in document comparison with GroupDocs.Comparison for .NET. Enhance your document management skills and ensure accurate metadata preservation.
-
-### [Mastering Document Comparison in .NET with GroupDocs&#58; A Comprehensive Guide for Developers](./mastering-document-comparison-net-groupdocs/)
-Learn how to use GroupDocs.Comparison for .NET to efficiently compare Word, PDF, and more document types. This guide covers setup, comparison techniques, and optimization tips.
 
 ### [Mastering Document Comparison in .NET&#58; A Comprehensive Guide to Using GroupDocs.Comparison](./mastering-document-comparison-groupdocs-dotnet/)
 Learn how to master document comparison in .NET using GroupDocs.Comparison for seamless workflow automation and enhanced productivity.

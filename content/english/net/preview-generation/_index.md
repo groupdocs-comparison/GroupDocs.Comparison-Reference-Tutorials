@@ -11,9 +11,6 @@ Learn how to create document previews with our comprehensive GroupDocs.Compariso
 
 ## Available Tutorials
 
-### [Create Stunning Page Previews in .NET Using GroupDocs.Comparison&#58; A Comprehensive Guide](./groupdocs-comparison-net-page-previews/)
-Learn how to generate document page previews with GroupDocs.Comparison for .NET. Follow this step-by-step guide to enhance your application's functionality.
-
 ### [Generate Document Previews Efficiently with GroupDocs.Comparison for .NET Developers](./generate-document-previews-groupdocs-comparison-net/)
 Learn how to automate document comparison and generate previews using GroupDocs.Comparison for .NET. Streamline your workflow with practical examples.
 

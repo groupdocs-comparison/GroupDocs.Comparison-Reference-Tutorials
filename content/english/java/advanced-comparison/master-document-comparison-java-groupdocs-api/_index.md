@@ -190,5 +190,4 @@ Ready to start comparing documents like a pro? Implement these solutions today!
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)
 - **API Reference**: [Reference Guide](https://reference.groupdocs.com/comparison/java/)
 - **Download**: [Latest Release](https://releases.groupdocs.com/comparison/java/)
-- **Purchase**:
-  - Purchase: [Buy Now](https://purchase.groupdocs.com/buy)
+- **Purchase**: [Buy Now](https://purchase.groupdocs.com/buy)

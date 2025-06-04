@@ -20,9 +20,6 @@ Learn how to efficiently compare password-protected Word documents using GroupDo
 ### [Mastering Password-Protected Document Comparison in Java with GroupDocs.Comparison](./java-groupdocs-compare-password-protected-docs/)
 Learn how to compare password-protected Word documents in Java using GroupDocs.Comparison. This guide covers setup, implementation, and best practices for seamless document comparison.
 
-### [Secure Documents with Password Using GroupDocs.Comparison for Java](./secure-documents-password-groupdocs-java/)
-Learn how to protect your documents with passwords using GroupDocs.Comparison for Java, ensuring data security and preventing unauthorized access.
-
 ## Additional Resources
 
 - [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)

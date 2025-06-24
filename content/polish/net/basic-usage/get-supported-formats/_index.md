@@ -1,27 +1,27 @@
 ---
-title: Uzyskaj obsługiwane formaty — GroupDocs.Comparison dla platformy .NET
-linktitle: Uzyskaj obsługiwane formaty — GroupDocs.Comparison dla platformy .NET
-second_title: GroupDocs.Comparison API .NET
-description: Zwiększ dokładność i spójność dokumentów dzięki GroupDocs.Comparison dla platformy .NET. Bezproblemowo zintegruj to potężne narzędzie z aplikacjami .NET.
-weight: 15
-url: /pl/net/basic-usage/get-supported-formats/
+"description": "Zwiększ dokładność i spójność dokumentów dzięki GroupDocs.Comparison dla .NET. Bezproblemowo zintegruj to potężne narzędzie ze swoimi aplikacjami .NET."
+"linktitle": "Uzyskaj obsługiwane formaty - GroupDocs.Comparison dla .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Uzyskaj obsługiwane formaty - GroupDocs.Comparison dla .NET"
+"url": "/pl/net/basic-usage/get-supported-formats/"
+"weight": 15
 ---
 
-# Uzyskaj obsługiwane formaty — GroupDocs.Comparison dla platformy .NET
+# Uzyskaj obsługiwane formaty - GroupDocs.Comparison dla .NET
 
 ## Wstęp
-W dzisiejszej epoce cyfrowej, gdzie informacji jest mnóstwo i stale się rozwijają, zapewnienie dokładności i spójności dokumentów jest sprawą najwyższej wagi. Niezależnie od tego, czy jesteś programistą, prawnikiem, czy kimś, kto regularnie zajmuje się dokumentami, posiadanie narzędzi ułatwiających porównywanie dokumentów może zaoszczędzić czas, wysiłek i potencjalne błędy. Jednym z takich narzędzi jest GroupDocs.Comparison for .NET, oferujący kompleksowe rozwiązanie do porównywania różnych formatów dokumentów w aplikacjach .NET.
-## Warunki wstępne
-Przed przystąpieniem do samouczka dotyczącego korzystania z programu GroupDocs.Comparison dla platformy .NET upewnij się, że spełnione są następujące wymagania wstępne:
-### 1. Instalacja GroupDocs.Comparison dla .NET
- Aby rozpocząć, musisz pobrać i zainstalować GroupDocs.Comparison dla .NET. Możesz znaleźć link do pobrania[Tutaj](https://releases.groupdocs.com/comparison/net/)Postępuj zgodnie z dostarczonymi instrukcjami instalacji, aby bezproblemowo zintegrować go ze środowiskiem .NET.
+dzisiejszej erze cyfrowej, w której informacji jest pod dostatkiem i która ciągle ewoluuje, zapewnienie dokładności i spójności dokumentów jest najważniejsze. Niezależnie od tego, czy jesteś programistą, prawnikiem czy osobą regularnie zajmującą się dokumentami, posiadanie narzędzi ułatwiających porównywanie dokumentów może zaoszczędzić czas, wysiłek i potencjalne błędy. GroupDocs.Comparison for .NET to jedno z takich narzędzi, oferujące kompleksowe rozwiązanie do porównywania różnych formatów dokumentów w aplikacjach .NET.
+## Wymagania wstępne
+Zanim przejdziesz do samouczka dotyczącego korzystania z GroupDocs.Comparison dla platformy .NET, upewnij się, że spełnione są następujące wymagania wstępne:
+### 1. Instalowanie GroupDocs.Comparison dla .NET
+Na początek musisz pobrać i zainstalować GroupDocs.Comparison dla .NET. Link do pobrania znajdziesz tutaj [Tutaj](https://releases.groupdocs.com/comparison/net/). Postępuj zgodnie z dostarczonymi instrukcjami instalacji, aby bezproblemowo zintegrować go ze środowiskiem .NET.
 ### 2. Znajomość .NET Framework
-Podstawowa znajomość platformy .NET jest niezbędna do skutecznego wdrożenia GroupDocs.Comparison. Jeśli dopiero zaczynasz przygodę z platformą .NET, rozważ zapoznanie się z jej koncepcjami i składnią za pośrednictwem samouczków online lub dokumentacji.
+Podstawowe zrozumienie struktury .NET jest niezbędne do skutecznego wdrożenia GroupDocs.Comparison. Jeśli jesteś nowy w .NET, rozważ zapoznanie się z jego koncepcjami i składnią za pomocą samouczków online lub dokumentacji.
 ### 3. Zintegrowane środowisko programistyczne (IDE)
-Upewnij się, że masz zainstalowane środowisko IDE, takie jak Visual Studio, aby bez wysiłku pisać i wykonywać kod .NET. GroupDocs.Comparison dla .NET bezproblemowo integruje się z popularnymi środowiskami IDE, zwiększając możliwości programowania.
+Upewnij się, że masz zainstalowane IDE, takie jak Visual Studio, aby pisać i wykonywać kod .NET bez wysiłku. GroupDocs.Comparison dla .NET bezproblemowo integruje się z popularnymi IDE, ulepszając Twoje doświadczenie programistyczne.
 
 ## Importuj przestrzenie nazw
-Przed zagłębieniem się w przykłady kodu istotne jest zaimportowanie niezbędnych przestrzeni nazw, aby uzyskać dostęp do funkcjonalności udostępnianych przez GroupDocs.Comparison dla .NET.
+Zanim przejdziemy do przykładów kodu, konieczne jest zaimportowanie niezbędnych przestrzeni nazw w celu uzyskania dostępu do funkcjonalności udostępnianych przez GroupDocs.Comparison dla platformy .NET.
 ```csharp
 using System;
 using System.Linq;
@@ -30,19 +30,19 @@ using GroupDocs.Comparison;
 using GroupDocs.Comparison.Result;
 ```
 
-## Krok 1: Inicjowanie aplikacji konsolowej
-Najpierw utwórz nowy projekt aplikacji konsolowej w swoim IDE i otwórz plik główny.
+## Krok 1: Inicjalizacja aplikacji konsoli
+Najpierw utwórz nowy projekt aplikacji konsolowej w swoim środowisku IDE i otwórz plik główny.
 ## Krok 2: Importowanie niezbędnych bibliotek
-Zaimportuj wymagane przestrzenie nazw, jak wyjaśniono wcześniej, aby uzyskać dostęp do GroupDocs.Comparison i podstawowych funkcji .NET.
+Zaimportuj wymagane przestrzenie nazw, jak wyjaśniono wcześniej, aby uzyskać dostęp do GroupDocs.Comparison i podstawowych funkcjonalności .NET.
 ## Krok 3: Pobieranie obsługiwanych formatów plików
-Użyj dostarczonego fragmentu kodu, aby pobrać listę obsługiwanych typów plików do porównania.
+Użyj podanego fragmentu kodu, aby pobrać listę obsługiwanych typów plików w celu porównania.
 ```csharp
 IEnumerable<FileType> fileTypes = FileType
     .GetSupportedFileTypes()
     .OrderBy(fileType => fileType.Extension);
 ```
 ## Krok 4: Wyświetlanie obsługiwanych formatów
-Przeglądaj listę obsługiwanych typów plików i wyświetl je w konsoli.
+Przejrzyj listę obsługiwanych typów plików i wyświetl je w konsoli.
 ```csharp
 foreach (FileType fileType in fileTypes)
     Console.WriteLine(fileType);
@@ -54,15 +54,15 @@ Console.WriteLine("\nSupported file types retrieved successfully.");
 ```
 
 ## Wniosek
-GroupDocs.Comparison dla .NET oferuje solidne rozwiązanie do porównywania dokumentów w aplikacjach .NET. Wykonując kroki opisane w tym samouczku, możesz bezproblemowo zintegrować go ze swoimi projektami i zwiększyć dokładność i spójność dokumentów.
-## Często zadawane pytania
-### Czy GroupDocs.Comparison for .NET jest kompatybilny ze wszystkimi platformami .NET?
-Tak, GroupDocs.Comparison for .NET obsługuje różne platformy .NET, zapewniając kompatybilność w różnych środowiskach.
-### Czy mogę dostosować proces porównania do moich konkretnych wymagań?
-Oczywiście GroupDocs.Comparison dla .NET zapewnia szerokie możliwości dostosowywania, dzięki czemu możesz dostosować proces porównywania do swoich potrzeb.
-### Czy dostępna jest bezpłatna wersja próbna programu GroupDocs.Comparison dla .NET?
- Tak, możesz poznać funkcje GroupDocs.Comparison dla .NET w ramach bezpłatnej wersji próbnej[Tutaj](https://releases.groupdocs.com/).
-### Jak mogę uzyskać pomoc techniczną dotyczącą GroupDocs.Comparison dla .NET?
- Aby uzyskać pomoc techniczną i wsparcie, odwiedź forum GroupDocs.Comparison[Tutaj](https://forum.groupdocs.com/c/comparison/12).
-### Czy mogę kupić tymczasową licencję na krótkotrwałe użytkowanie?
- Tak, możesz nabyć tymczasową licencję na GroupDocs.Comparison dla .NET, aby spełnić Twoje krótkoterminowe potrzeby projektowe. Ucz się więcej[Tutaj](https://purchase.groupdocs.com/temporary-license/).
+GroupDocs.Comparison dla .NET oferuje solidne rozwiązanie do porównywania dokumentów w aplikacjach .NET. Postępując zgodnie z krokami opisanymi w tym samouczku, możesz bezproblemowo zintegrować je ze swoimi projektami i zwiększyć dokładność i spójność dokumentów.
+## Najczęściej zadawane pytania
+### Czy GroupDocs.Comparison dla .NET jest kompatybilny ze wszystkimi platformami .NET?
+Tak, GroupDocs.Comparison dla .NET obsługuje różne struktury .NET, zapewniając kompatybilność w różnych środowiskach.
+### Czy mogę dostosować proces porównywania do moich konkretnych wymagań?
+Oczywiście, GroupDocs.Comparison dla platformy .NET oferuje rozbudowane opcje dostosowywania, dzięki którym możesz dostosować proces porównywania do swoich konkretnych potrzeb.
+### Czy jest dostępna bezpłatna wersja próbna GroupDocs.Comparison dla .NET?
+Tak, możesz zapoznać się z funkcjami GroupDocs.Comparison dla .NET za pośrednictwem bezpłatnej wersji próbnej dostępnej [Tutaj](https://releases.groupdocs.com/).
+### Jak mogę uzyskać pomoc techniczną dotyczącą GroupDocs.Comparison dla platformy .NET?
+Aby uzyskać pomoc techniczną i wsparcie, możesz odwiedzić forum GroupDocs.Comparison [Tutaj](https://forum.groupdocs.com/c/comparison/12).
+### Czy mogę zakupić licencję tymczasową do krótkoterminowego użytkowania?
+Tak, możesz nabyć tymczasową licencję na GroupDocs.Comparison dla .NET, aby spełnić krótkoterminowe potrzeby projektowe. Dowiedz się więcej [Tutaj](https://purchase.groupdocs.com/temporary-license/).

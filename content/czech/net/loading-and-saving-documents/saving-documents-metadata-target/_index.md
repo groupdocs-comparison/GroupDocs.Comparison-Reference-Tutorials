@@ -1,23 +1,23 @@
 ---
-title: Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
-linktitle: Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
-second_title: GroupDocs.Comparison .NET API
-description: Naučte se, jak uložit cíl metadat dokumentů pomocí GroupDocs Comparison for .NET. Snadné kroky pro efektivní porovnání dokumentů ve vašich aplikacích .NET.
-weight: 15
-url: /cs/net/loading-and-saving-documents/saving-documents-metadata-target/
+"description": "Naučte se, jak ukládat cílová metadata dokumentů pomocí nástroje GroupDocs Comparison pro .NET. Snadné kroky pro efektivní porovnávání dokumentů ve vašich .NET aplikacích."
+"linktitle": "Ukládání cílových metadat dokumentů v porovnání GroupDocs pro .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Ukládání cílových metadat dokumentů v porovnání GroupDocs pro .NET"
+"url": "/cs/net/loading-and-saving-documents/saving-documents-metadata-target/"
+"weight": 15
 ---
 
-# Ukládání cíle metadat dokumentů ve srovnání GroupDocs pro .NET
+# Ukládání cílových metadat dokumentů v porovnání GroupDocs pro .NET
 
-## Úvod
-V tomto tutoriálu vás provedeme procesem ukládání cíle metadat dokumentu pomocí GroupDocs Comparison for .NET. GroupDocs Comparison for .NET je výkonná knihovna, která vám umožňuje porovnávat a slučovat dokumenty ve vašich aplikacích .NET.
+## Zavedení
+V tomto tutoriálu vás provedeme procesem ukládání cílových metadat dokumentů pomocí nástroje GroupDocs Comparison for .NET. GroupDocs Comparison for .NET je výkonná knihovna, která umožňuje porovnávat a slučovat dokumenty ve vašich .NET aplikacích.
 ## Předpoklady
 Než začnete, ujistěte se, že máte následující předpoklady:
-1.  GroupDocs Comparison for .NET: Ujistěte se, že jste si stáhli a nainstalovali GroupDocs Comparison for .NET. Můžete si jej stáhnout z[tady](https://releases.groupdocs.com/comparison/net/).
-2. Vývojové prostředí .NET: Ve vašem systému byste měli mít nastavené vývojové prostředí .NET.
+1. Porovnání GroupDocs pro .NET: Ujistěte se, že jste si stáhli a nainstalovali Porovnání GroupDocs pro .NET. Můžete si ho stáhnout z [zde](https://releases.groupdocs.com/comparison/net/).
+2. Vývojové prostředí .NET: V systému byste měli mít nainstalované vývojové prostředí .NET.
 
 ## Importovat jmenné prostory
-Než začneme kódovat, importujme potřebné jmenné prostory:
+Než začneme s kódováním, importujme potřebné jmenné prostory:
 ```csharp
 using System;
 using System.IO;
@@ -30,8 +30,8 @@ Nejprve zadejte výstupní adresář, kam chcete uložit porovnávané dokumenty
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-## Krok 2: Porovnejte dokumenty a uložte cíl metadat
- Nyní inicializujte a`Comparer`objekt se zdrojovým dokumentem a přidejte cílové dokumenty, které chcete porovnat. Poté zavolejte na`Compare` a zadejte název výstupního souboru spolu s možnostmi uložení pro klonování typu metadat jako cíl.
+## Krok 2: Porovnání dokumentů a uložení cíle metadat
+Nyní inicializujte `Comparer` objekt se zdrojovým dokumentem a přidejte cílový dokument (dokumenty), který chcete porovnat. Poté zavolejte funkci `Compare` metodu a zadejte název výstupního souboru spolu s možnostmi uložení pro klonování typu metadat jako cíle.
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
@@ -39,23 +39,23 @@ using (Comparer comparer = new Comparer("SOURCE.docx"))
     comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 }
 ```
-## Krok 3: Zobrazte zprávu o úspěchu
-Nakonec zobrazte zprávu o úspěchu, která označuje, že dokumenty byly úspěšně porovnány, a zadejte cestu, kam je výstupní soubor uložen.
+## Krok 3: Zobrazení zprávy o úspěchu
+Nakonec zobrazte zprávu o úspěšném porovnání dokumentů a uveďte cestu k uloženému výstupnímu souboru.
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
-Gratulujeme! Úspěšně jste uložili cíl metadat dokumentů pomocí GroupDocs Comparison for .NET.
+Gratulujeme! Úspěšně jste uložili cíl metadat dokumentů pomocí nástroje GroupDocs Comparison pro .NET.
 
 ## Závěr
-V tomto tutoriálu jsme se zabývali procesem ukládání cíle metadat dokumentů pomocí GroupDocs Comparison for .NET. Podle výše uvedených kroků můžete efektivně porovnávat a ukládat dokumenty ve svých aplikacích .NET.
-## FAQ
+V tomto tutoriálu jsme se zabývali procesem ukládání metadat dokumentů pomocí nástroje GroupDocs Comparison pro .NET. Dodržením výše uvedených kroků můžete efektivně porovnávat a ukládat dokumenty ve vašich .NET aplikacích.
+## Často kladené otázky
 ### Mohu porovnávat dokumenty různých formátů?
 Ano, GroupDocs Comparison for .NET podporuje porovnávání dokumentů různých formátů, jako jsou DOCX, PDF, PPTX, XLSX a další.
 ### Je k dispozici zkušební verze?
- Ano, můžete získat bezplatnou zkušební verzi od[tady](https://releases.groupdocs.com/).
+Ano, můžete získat bezplatnou zkušební verzi od [zde](https://releases.groupdocs.com/).
 ### Jak mohu získat podporu, pokud narazím na nějaké problémy?
- Pomoc můžete vyhledat na fóru komunity GroupDocs Comparison[tady](https://forum.groupdocs.com/c/comparison/12).
-### Mohu přizpůsobit výstupní formát porovnávaných dokumentů?
+Pomoc můžete vyhledat na fóru komunity GroupDocs Comparison. [zde](https://forum.groupdocs.com/c/comparison/12).
+### Mohu si přizpůsobit výstupní formát porovnávaných dokumentů?
 Ano, výstupní formát a další možnosti si můžete přizpůsobit podle svých požadavků.
 ### Je GroupDocs Comparison for .NET vhodný pro rozsáhlé úlohy porovnávání dokumentů?
-Ano, GroupDocs Comparison for .NET je navržen tak, aby efektivně zvládal úlohy porovnávání dokumentů ve velkém měřítku.
+Ano, nástroj GroupDocs Comparison for .NET je navržen tak, aby efektivně zvládal úlohy porovnávání dokumentů velkého rozsahu.

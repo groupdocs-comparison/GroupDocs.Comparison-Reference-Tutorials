@@ -1,24 +1,24 @@
 ---
-title: .NET için GroupDocs Karşılaştırmasında Birden Çok Belgeyi Karşılaştırın
-linktitle: .NET için GroupDocs Karşılaştırmasında Birden Çok Belgeyi Karşılaştırın
-second_title: GroupDocs.Comparison .NET API'si
-description: GroupDocs Comparison for .NET'i kullanarak birden çok belgeyi verimli bir şekilde nasıl karşılaştıracağınızı öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin.
-weight: 13
-url: /tr/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/
+"description": "GroupDocs Comparison for .NET kullanarak birden fazla belgeyi etkili bir şekilde nasıl karşılaştıracağınızı öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin."
+"linktitle": ".NET için GroupDocs Karşılaştırmasında Birden Fazla Belgeyi Karşılaştırın"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": ".NET için GroupDocs Karşılaştırmasında Birden Fazla Belgeyi Karşılaştırın"
+"url": "/tr/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
+"weight": 13
 ---
 
-# .NET için GroupDocs Karşılaştırmasında Birden Çok Belgeyi Karşılaştırın
+# .NET için GroupDocs Karşılaştırmasında Birden Fazla Belgeyi Karşılaştırın
 
 ## giriiş
-Yazılım geliştirme alanında verimli belge karşılaştırması kritik bir ihtiyaçtır. İster yasal belgeler, ister iş sözleşmeleri, ister işbirlikçi yazma projeleri olsun, birden fazla sürümde doğruluk ve tutarlılığın sağlanması çok önemlidir. GroupDocs Comparison for .NET, bu ihtiyacı .NET çerçevesinde sorunsuz bir şekilde karşılamak için güçlü bir çözüm sağlar.
-## Önkoşullar
-.NET için GroupDocs Karşılaştırmasını kullanmaya başlamadan önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
-### 1. .NET için GroupDocs Karşılaştırmasını yükleyin
- Öncelikle GroupDocs Comparison for .NET'i şuradan indirin:[İndirme: {link](https://releases.groupdocs.com/comparison/net/). .NET ortamınıza entegre etmek için sağlanan kurulum talimatlarını izleyin.
-### 2. Kaynak ve Hedef Belgeleri Alın
+Yazılım geliştirme alanında, etkili belge karşılaştırması kritik bir ihtiyaçtır. İster yasal belgeler, ister iş sözleşmeleri veya işbirlikli yazma projeleri olsun, birden fazla sürümde doğruluk ve tutarlılığı sağlamak çok önemlidir. GroupDocs Comparison for .NET, .NET çerçevesi içinde bu ihtiyaca sorunsuz bir şekilde yanıt vermek için güçlü bir çözüm sunar.
+## Ön koşullar
+GroupDocs Comparison for .NET'i kullanmaya başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
+### 1. .NET için GroupDocs Comparison'ı yükleyin
+Öncelikle, GroupDocs Comparison for .NET'i şu adresten indirin: [indirme bağlantısı](https://releases.groupdocs.com/comparison/net/).NET ortamınıza entegre etmek için verilen kurulum talimatlarını izleyin.
+### 2. Kaynak ve Hedef Belgeleri Edinin
 Karşılaştırmak istediğiniz belgeleri toplayın. Bu belgelerin .NET uygulama ortamınızda erişilebilir olduğundan emin olun.
 ### 3. Ad Alanlarını Tanıyın
-GroupDocs Comparison for .NET'i etkili bir şekilde kullanmak için gerekli ad alanlarını projenize aktarın. Bu ad alanları belge karşılaştırması için gereken işlevlere erişim sağlar.
+GroupDocs Comparison for .NET'i etkili bir şekilde kullanmak için, gerekli ad alanlarını projenize aktarın. Bu ad alanları, belge karşılaştırması için gereken işlevlere erişim sağlar.
 
 ## Ad Alanlarını İçe Aktar
 .NET projenize aşağıdaki ad alanlarını ekleyin:
@@ -29,18 +29,18 @@ using System.IO;
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 ```
-Bu ad alanı, belgelerin işlenmesi için çok önemli olan dosya girişi ve çıkışıyla ilgili işlemleri mümkün kılar.
+Bu ad alanı, belgelerin işlenmesi için kritik öneme sahip olan dosya girişi ve çıkışıyla ilgili işlemleri etkinleştirir.
 
-Bu ad alanı, GroupDocs Comparison for .NET tarafından sağlanan sınıflara ve yöntemlere erişim sağlayarak belge karşılaştırma işlemlerini kolaylaştırır.
+Bu ad alanı, .NET için GroupDocs Comparison tarafından sağlanan sınıflara ve yöntemlere erişim sağlayarak belge karşılaştırma işlemlerini kolaylaştırır.
 ## Adım 1: Çıktı Dizinini ve Dosya Adını Tanımlayın
-Karşılaştırılan belgenin kaydedilmesini istediğiniz dizini çıktı dosyası adıyla birlikte belirtin.
+Karşılaştırılan belgenin kaydedilmesini istediğiniz dizini ve çıktı dosya adını belirtin.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
- Değiştirildiğinden emin olun`"Your Document Directory"` İstenilen dizin yolu ile.
+Değiştirdiğinizden emin olun `"Your Document Directory"` İstenilen dizin yolu ile.
 ## Adım 2: Karşılaştırıcıyı Başlatın ve Belgeleri Ekleyin
- Bir örneğini oluşturun`Comparer` karşılaştırma için birden fazla hedef belgeyle birlikte kaynak belgeyi sınıfa ekleyin ve ekleyin.
+Bir örneğini oluşturun `Comparer` sınıfı oluşturun ve karşılaştırma için kaynak belgeyi birden fazla hedef belgeyle birlikte ekleyin.
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
@@ -49,23 +49,23 @@ using (Comparer comparer = new Comparer("SOURCE.docx"))
     comparer.Add("TARGET3.docx");
 }
 ```
- Yer değiştirmek`"SOURCE.docx"`, `"TARGET.docx"`, `"TARGET2.docx"` , Ve`"TARGET3.docx"` kaynak ve hedef belgelerinize giden yollarla.
-## 3. Adım: Karşılaştırma Yapın ve Çıktıyı Kaydedin
- Çağır`Compare` yöntemi`Comparer` örneğin belge karşılaştırmasını gerçekleştirmek ve sonucu belirtilen çıktı dosyasına kaydetmek için.
+Yer değiştirmek `"SOURCE.docx"`, `"TARGET.docx"`, `"TARGET2.docx"`, Ve `"TARGET3.docx"` Kaynak ve hedef belgelerinize giden yolları belirtin.
+## Adım 3: Karşılaştırmayı Gerçekleştirin ve Çıktıyı Kaydedin
+Çağırmak `Compare` yöntemi `Comparer` Belge karşılaştırmasını gerçekleştirmek ve sonucu belirtilen çıktı dosyasına kaydetmek için örnek.
 ```csharp
 comparer.Compare(outputFileName);
 ```
 
 ## Çözüm
-Sonuç olarak, GroupDocs Comparison for .NET, .NET çerçevesinde birden fazla belgeyi sorunsuz bir şekilde karşılaştırmak için güçlü bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek belgeleri verimli bir şekilde karşılaştırabilir ve projelerinizde doğruluk ve tutarlılık sağlayabilirsiniz.
-## SSS'ler
-### GroupDocs Comparison for .NET tüm belge formatlarıyla uyumlu mu?
-Evet, GroupDocs Comparison for .NET, DOCX, PDF, XLSX ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
+Sonuç olarak, GroupDocs Comparison for .NET, .NET framework içinde birden fazla belgeyi sorunsuz bir şekilde karşılaştırmak için sağlam bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek, belgeleri verimli bir şekilde karşılaştırabilir ve projelerinizde doğruluk ve tutarlılık sağlayabilirsiniz.
+## SSS
+### GroupDocs Comparison for .NET tüm belge formatlarıyla uyumlu mudur?
+Evet, GroupDocs Comparison for .NET DOCX, PDF, XLSX ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
 ### Karşılaştırma ayarlarını özelleştirebilir miyim?
-Kesinlikle, GroupDocs Comparison for .NET, karşılaştırma türü, stil ve ayrıntı düzeyi de dahil olmak üzere kapsamlı özelleştirme seçenekleri sunar.
+Kesinlikle, GroupDocs Comparison for .NET, karşılaştırma türü, stili ve ayrıntı düzeyi dahil olmak üzere kapsamlı özelleştirme seçenekleri sunar.
 ### Test amaçlı deneme sürümü mevcut mu?
- Evet, GroupDocs Comparison for .NET'in ücretsiz deneme sürümüne şu adresten erişebilirsiniz:[Burada](https://releases.groupdocs.com/).
-### Herhangi bir teknik sorun veya soru için nasıl destek alabilirim?
- Yardım isteyebilir ve toplulukla iletişim kurabilirsiniz.[GroupDocs Karşılaştırma forumu](https://forum.groupdocs.com/c/comparison/12).
-### Kısa süreli kullanım için geçici lisanslar mevcut mu?
-Evet, kısa vadeli proje ihtiyaçlarını karşılamak için geçici lisanslar satın alınabilir. Ziyaret etmek[Burada](https://purchase.groupdocs.com/temporary-license/) daha fazla bilgi için.
+Evet, GroupDocs Comparison for .NET'in ücretsiz deneme sürümüne şu adresten erişebilirsiniz: [Burada](https://releases.groupdocs.com/).
+### Herhangi bir teknik sorun veya sorum olduğunda nasıl destek alabilirim?
+Topluluk aracılığıyla yardım arayabilir ve toplulukla etkileşime girebilirsiniz. [GroupDocs Karşılaştırma forumu](https://forum.groupdocs.com/c/comparison/12).
+### Kısa süreli kullanımlar için geçici lisanslar mevcut mudur?
+Evet, kısa vadeli proje ihtiyaçlarını karşılamak için geçici lisanslar satın alınabilir. Ziyaret edin [Burada](https://purchase.groupdocs.com/temporary-license/) Daha fazla bilgi için.

@@ -1,23 +1,23 @@
 ---
-title: .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
-linktitle: .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
-second_title: GroupDocs.Comparison .NET API'si
-description: GroupDocs Comparison for .NET'te ortaya çıkan belgeler için nasıl parola ayarlayacağınızı öğrenin. Güvenliği artırın ve karşılaştırılan dosyalarınızı koruyun.
-weight: 17
-url: /tr/net/loading-and-saving-documents/setting-password-for-resultant-document/
+"description": "GroupDocs Comparison for .NET'te sonuç belgeleri için bir parola ayarlamayı öğrenin. Güvenliği artırın ve karşılaştırılan dosyalarınızı koruyun."
+"linktitle": ".NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": ".NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama"
+"url": "/tr/net/loading-and-saving-documents/setting-password-for-resultant-document/"
+"weight": 17
 ---
 
 # .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
 
 ## giriiş
-Bu öğreticide, GroupDocs Comparison for .NET'i kullanarak elde edilen belge için parola ayarlama sürecinde size yol göstereceğiz. Bu özellik, karşılaştırılan belgelerinize ekstra bir güvenlik katmanı ekleyerek yalnızca yetkili kişilerin bunlara erişebilmesini sağlar.
-## Önkoşullar
+Bu eğitimde, GroupDocs Comparison for .NET kullanarak sonuç belgesi için bir parola ayarlama sürecinde size rehberlik edeceğiz. Bu özellik, karşılaştırılan belgelerinize ekstra bir güvenlik katmanı ekleyerek yalnızca yetkili kişilerin erişebilmesini sağlar.
+## Ön koşullar
 Devam etmeden önce aşağıdakilere sahip olduğunuzdan emin olun:
-1.  .NET için GroupDocs Karşılaştırması: .NET ortamınızda GroupDocs Karşılaştırma kitaplığının kurulu olduğundan emin olun. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/comparison/net/).
-2. Kaynak ve Hedef Belgeler: Kaynak belgeyi hazırlayın (`SOURCE.docx`) ve hedef belge (`TARGET.docx`) karşılaştırmak istediğiniz belgeyi seçin ve elde edilen belge için bir parola belirleyin.
+1. .NET için GroupDocs Karşılaştırması: .NET ortamınıza GroupDocs Karşılaştırması kitaplığının yüklendiğinden emin olun. Bunu şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/comparison/net/).
+2. Kaynak ve Hedef Belgeler: Kaynak belgeyi hazırlayın (`SOURCE.docx`) ve hedef belge (`TARGET.docx`) karşılaştırmak istediğiniz belgeyi seçin ve ortaya çıkan belge için bir şifre belirleyin.
 
 ## Ad Alanlarını İçe Aktar
-GroupDocs Karşılaştırma işlevini kullanmak için öncelikle gerekli ad alanlarını C# projenize aktarmanız gerekir:
+Öncelikle GroupDocs Karşılaştırma işlevini kullanmak için gerekli ad alanlarını C# projenize aktarmanız gerekir:
 ```csharp
 using System;
 using System.IO;
@@ -29,8 +29,8 @@ using GroupDocs.Comparison.Options;
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-Ortaya çıkan belgeyi kaydetmek istediğiniz dizini belirtin ve çıktı dosyasının adını tanımlayın.
-## 2. Adım: Belgeleri Parola Ayarlarıyla Karşılaştırın
+Sonuç belgesini kaydetmek istediğiniz dizini belirtin ve çıktı dosyasının adını tanımlayın.
+## Adım 2: Belgeleri Parola Ayarlarıyla Karşılaştırın
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
@@ -46,23 +46,23 @@ using (Comparer comparer = new Comparer("SOURCE.docx"))
     comparer.Compare(outputFileName, sOptions, cOptions);
 }
 ```
- Burada bir başlangıç başlatıyoruz`Comparer` kaynak belgeyle nesne. Daha sonra karşılaştırılacak hedef belgeyi ekliyoruz. biz ayarladık`PasswordSaveOption` ile`User` Ortaya çıkan belgeye bir parolanın uygulanacağını belirtmek için. İstenilen şifreyi girin`Password` mülkiyeti`SaveOptions` nesne.
-## 3. Adım: Başarı Mesajını Görüntüleyin
+Burada bir tane başlatıyoruz `Comparer` nesneyi kaynak belgeyle birlikte ekleriz. Sonra, karşılaştırılacak hedef belgeyi ekleriz. `PasswordSaveOption` ile `User` sonuç belgeye bir parola uygulanacağını belirtmek için. İstenen parolayı girin `Password` mülkiyeti `SaveOptions` nesne.
+## Adım 3: Başarı Mesajını Göster
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
-Son olarak, belgelerin başarıyla karşılaştırıldığını ve ortaya çıkan belgenin belirlenen şifreyle belirtilen dizine kaydedildiğini belirten bir başarı mesajı görüntüleriz.
+Son olarak, belgelerin başarıyla karşılaştırıldığını ve belirlenen parola ile elde edilen belgenin belirtilen dizine kaydedildiğini belirten bir başarı mesajı görüntüleriz.
 
 ## Çözüm
-GroupDocs Comparison for .NET'te elde edilen belge için bir parola ayarlamak, karşılaştırılan belgelerinize ekstra bir güvenlik katmanı ekleyerek gizlilik ve bütünlük sağlar. Bu eğitimde özetlenen adımları takip ederek bu özelliği .NET uygulamalarınıza kolayca uygulayabilirsiniz.
-## SSS'ler
+GroupDocs Comparison for .NET'te sonuç belgesi için bir parola belirlemek, karşılaştırılan belgelerinize ekstra bir güvenlik katmanı ekleyerek gizliliği ve bütünlüğü garanti eder. Bu eğitimde özetlenen adımları izleyerek, bu özelliği .NET uygulamalarınızda kolayca uygulayabilirsiniz.
+## SSS
 ### Farklı formatlardaki belgeleri karşılaştırabilir miyim?
-Evet, GroupDocs Comparison for .NET, DOCX, PDF, PPTX, XLSX ve daha fazlası gibi çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
+Evet, GroupDocs Comparison for .NET, DOCX, PDF, PPTX, XLSX gibi çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
 ### Deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümünü şuradan indirebilirsiniz:[Burada](https://releases.groupdocs.com/).
+Evet, ücretsiz deneme sürümünü şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/).
 ### Herhangi bir sorunla karşılaşırsam nasıl destek alabilirim?
- GroupDocs Karşılaştırma topluluğu forumundan yardım isteyebilirsiniz.[Burada](https://forum.groupdocs.com/c/comparison/12).
+GroupDocs Comparison topluluk forumundan yardım alabilirsiniz [Burada](https://forum.groupdocs.com/c/comparison/12).
 ### GroupDocs Comparison for .NET'i kullanmak için lisansa ihtiyacım var mı?
- Evet, adresinden lisans satın alabilirsiniz.[Burada](https://purchase.groupdocs.com/buy) veya geçici lisans alın[Burada](https://purchase.groupdocs.com/temporary-license/).
-### .NET için GroupDocs Karşılaştırması'na yönelik herhangi bir belge var mı?
- Evet, belgelere erişebilirsiniz[Burada](https://tutorials.groupdocs.com/comparison/net/).
+Evet, lisansı şu adresten satın alabilirsiniz: [Burada](https://purchase.groupdocs.com/buy) veya geçici bir lisans alın [Burada](https://purchase.groupdocs.com/temporary-license/).
+### GroupDocs Comparison for .NET için herhangi bir doküman mevcut mu?
+Evet, belgelere erişebilirsiniz [Burada](https://tutorials.groupdocs.com/comparison/net/).

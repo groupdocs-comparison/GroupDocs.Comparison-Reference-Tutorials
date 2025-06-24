@@ -1,24 +1,24 @@
 ---
-title: Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
-linktitle: Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
-second_title: GroupDocs.Perbandingan .NET API
-description: Pelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Comparison untuk .NET. Identifikasi perbedaan antar dokumen secara efisien.
-weight: 10
-url: /id/net/basic-usage/compare-cells-from-path/
+"description": "Pelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Comparison untuk .NET. Identifikasi perbedaan antar dokumen secara efisien."
+"linktitle": "Bandingkan Sel dari Jalur - GroupDocs.Comparison untuk .NET"
+"second_title": "API Perbandingan GroupDocs.NET"
+"title": "Bandingkan Sel dari Jalur - GroupDocs.Comparison untuk .NET"
+"url": "/id/net/basic-usage/compare-cells-from-path/"
+"weight": 10
 ---
 
-# Bandingkan Sel dari Path - GroupDocs.Comparison untuk .NET
+# Bandingkan Sel dari Jalur - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan
-Selamat datang di tutorial komprehensif tentang penggunaan GroupDocs.Comparison untuk .NET untuk membandingkan sel dari suatu jalur. Dalam panduan ini, kami akan memandu Anda melalui proses langkah demi langkah, memastikan Anda memahami setiap konsep secara menyeluruh. GroupDocs.Comparison for .NET adalah alat yang ampuh untuk membandingkan berbagai format dokumen, termasuk sel, teks, dan gambar, memungkinkan pengembang mengidentifikasi perbedaan dan persamaan antar dokumen secara efisien.
+Selamat datang di tutorial lengkap tentang penggunaan GroupDocs.Comparison untuk .NET guna membandingkan sel dari suatu jalur. Dalam panduan ini, kami akan memandu Anda melalui proses ini langkah demi langkah, memastikan Anda memahami setiap konsep secara menyeluruh. GroupDocs.Comparison untuk .NET adalah alat yang hebat untuk membandingkan berbagai format dokumen, termasuk sel, teks, dan gambar, yang memungkinkan pengembang untuk mengidentifikasi perbedaan dan kesamaan antar dokumen secara efisien.
 ## Prasyarat
-Sebelum kita mendalami tutorialnya, pastikan Anda telah menyiapkan prasyarat berikut:
-1. GroupDocs.Comparison untuk .NET Library: Unduh dan instal perpustakaan dari[Di Sini](https://releases.groupdocs.com/comparison/net/).
-2. Lingkungan Pengembangan: Memiliki lingkungan kerja dengan Visual Studio atau alat pengembangan .NET lainnya yang diinstal.
-3. File Dokumen: Siapkan file sumber dan sel target yang ingin Anda bandingkan.
+Sebelum kita masuk ke tutorial, pastikan Anda telah menyiapkan prasyarat berikut:
+1. GroupDocs.Comparison untuk Pustaka .NET: Unduh dan instal pustaka dari [Di Sini](https://releases.groupdocs.com/comparison/net/).
+2. Lingkungan Pengembangan: Miliki lingkungan kerja dengan Visual Studio atau alat pengembangan .NET lainnya yang terpasang.
+3. Berkas Dokumen: Siapkan berkas sel sumber dan target yang ingin Anda bandingkan.
 4. Pengetahuan Dasar C#: Keakraban dengan bahasa pemrograman C# akan bermanfaat.
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 Mari kita mulai dengan mengimpor namespace yang diperlukan dalam proyek C# Anda:
 ```csharp
 using System;
@@ -31,7 +31,7 @@ string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "result.xlsx");
 ```
 ## Langkah 2: Inisialisasi Pembanding dan Tambahkan Dokumen
-Selanjutnya, buat objek Comparer dan tambahkan file sumber dan sel target yang ingin Anda bandingkan:
+Berikutnya, buat objek Comparer dan tambahkan file sel sumber dan target yang ingin Anda bandingkan:
 ```csharp
 using (Comparer comparer = new Comparer("source.xlsx"))
 {
@@ -42,22 +42,22 @@ Sekarang, jalankan proses perbandingan dan simpan file sel yang dibandingkan ke 
 ```csharp
 comparer.Compare(outputFileName);
 ```
-## Langkah 4: Tampilkan Pesan Sukses
+## Langkah 4: Menampilkan Pesan Sukses
 Terakhir, tampilkan pesan sukses yang menunjukkan bahwa dokumen telah berhasil dibandingkan:
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
 
 ## Kesimpulan
-Selamat! Anda telah berhasil mempelajari cara membandingkan sel dari suatu jalur menggunakan GroupDocs.Comparison untuk .NET. Pustaka canggih ini menyediakan cara mudah untuk mengidentifikasi perbedaan antar dokumen, sehingga meningkatkan kemampuan pemrosesan dokumen Anda.
-## FAQ
+Selamat! Anda telah berhasil mempelajari cara membandingkan sel dari jalur menggunakan GroupDocs.Comparison untuk .NET. Pustaka canggih ini menyediakan cara yang mudah untuk mengidentifikasi perbedaan antar dokumen, sehingga meningkatkan kemampuan pemrosesan dokumen Anda.
+## Pertanyaan yang Sering Diajukan
 ### Apakah GroupDocs.Comparison untuk .NET kompatibel dengan sistem operasi yang berbeda?
 GroupDocs.Comparison untuk .NET kompatibel dengan sistem operasi Windows.
 ### Bisakah saya membandingkan dokumen dengan format berbeda menggunakan GroupDocs.Comparison untuk .NET?
 Ya, GroupDocs.Comparison untuk .NET mendukung perbandingan dokumen dalam berbagai format, termasuk sel, teks, dan gambar.
 ### Apakah GroupDocs.Comparison untuk .NET menawarkan uji coba gratis?
- Ya, Anda dapat mengakses uji coba gratis GroupDocs.Comparison untuk .NET[Di Sini](https://releases.groupdocs.com/).
+Ya, Anda dapat mengakses uji coba gratis GroupDocs.Comparison untuk .NET [Di Sini](https://releases.groupdocs.com/).
 ### Bagaimana saya bisa mendapatkan dukungan untuk GroupDocs.Comparison untuk .NET?
-Anda dapat mencari dukungan dan bantuan dari komunitas GroupDocs.Comparison[Di Sini](https://forum.groupdocs.com/c/comparison/12).
-### Di mana saya dapat membeli lisensi GroupDocs.Comparison untuk .NET?
- Anda dapat membeli lisensi GroupDocs.Comparison untuk .NET[Di Sini](https://purchase.groupdocs.com/buy).
+Anda dapat mencari dukungan dan bantuan dari komunitas GroupDocs.Comparison [Di Sini](https://forum.groupdocs.com/c/comparison/12).
+### Di mana saya dapat membeli lisensi untuk GroupDocs.Comparison untuk .NET?
+Anda dapat membeli lisensi untuk GroupDocs.Comparison untuk .NET [Di Sini](https://purchase.groupdocs.com/buy).

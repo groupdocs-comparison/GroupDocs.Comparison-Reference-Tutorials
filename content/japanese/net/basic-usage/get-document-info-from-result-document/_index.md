@@ -1,21 +1,21 @@
 ---
-title: 結果ドキュメントからドキュメント情報を取得 - GroupDocs.Comparison for .NET
-linktitle: 結果ドキュメントからドキュメント情報を取得 - GroupDocs.Comparison for .NET
-second_title: GroupDocs.Comparison .NET API
-description: GroupDocs.Comparison for .NET を使用して結果ドキュメントからドキュメント情報を取得する方法を学習します。 .NET 開発者向けに簡単な手順を説明します。
-weight: 12
-url: /ja/net/basic-usage/get-document-info-from-result-document/
+"description": "GroupDocs.Comparison for .NETを使用して、結果ドキュメントからドキュメント情報を取得する方法を学びます。.NET開発者向けに簡単な手順を説明します。"
+"linktitle": "結果ドキュメントからドキュメント情報を取得する - GroupDocs.Comparison for .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "結果ドキュメントからドキュメント情報を取得する - GroupDocs.Comparison for .NET"
+"url": "/ja/net/basic-usage/get-document-info-from-result-document/"
+"weight": 12
 ---
 
-# 結果ドキュメントからドキュメント情報を取得 - GroupDocs.Comparison for .NET
+# 結果ドキュメントからドキュメント情報を取得する - GroupDocs.Comparison for .NET
 
 ## 導入
-.NET 開発の領域では、ドキュメントの管理と比較が一般的な要件です。 GroupDocs.Comparison for .NET は、このタスクに対する堅牢なソリューションを提供し、開発者がドキュメント比較機能をアプリケーションにシームレスに統合できるようにします。このチュートリアルでは、GroupDocs.Comparison for .NET を利用して結果ドキュメントからドキュメント情報を取得するプロセスを説明します。 
+.NET開発において、ドキュメントの管理と比較は一般的な要件です。GroupDocs.Comparison for .NETは、このタスクに対応する堅牢なソリューションを提供し、開発者がドキュメント比較機能をアプリケーションにシームレスに統合できるようにします。このチュートリアルでは、GroupDocs.Comparison for .NETを使用して結果ドキュメントからドキュメント情報を取得する手順を説明します。 
 ## 前提条件
-このチュートリアルに入る前に、次の前提条件を満たしていることを確認してください。
-1. GroupDocs.Comparison for .NET: GroupDocs.Comparison for .NET ライブラリをインストールします。からダウンロードできます[ここ](https://releases.groupdocs.com/comparison/net/).
-2. 開発環境: IDE (Visual Studio など) および必要な構成を含む .NET 開発環境をセットアップします。
-3. ドキュメント ファイル: ソースおよびターゲットのドキュメント ファイルを準備します (例:`SOURCE.docx`そして`TARGET.docx`）比較用。
+このチュートリアルに進む前に、次の前提条件が満たされていることを確認してください。
+1. GroupDocs.Comparison for .NET: GroupDocs.Comparison for .NETライブラリをインストールします。ダウンロードはこちらから。 [ここ](https://releases。groupdocs.com/comparison/net/).
+2. 開発環境: IDE (Visual Studio など) や必要な構成を含む .NET 開発環境をセットアップします。
+3. ドキュメントファイル: ソースドキュメントファイルとターゲットドキュメントファイルを準備します（例： `SOURCE.docx` そして `TARGET.docx`）と比較のため。
 
 ## 名前空間のインポート
 まず、GroupDocs.Comparison 機能にアクセスするために必要な名前空間をインポートする必要があります。
@@ -28,38 +28,38 @@ using GroupDocs.Comparison;
 using GroupDocs.Comparison.Interfaces;
 ```
 
-## ステップ 1: ソースドキュメントを使用して比較器を初期化する
+## ステップ1: ソースドキュメントでComparerを初期化する
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx")))
 {
 ```
-このステップでは、`Comparer`オブジェクトとソースドキュメント (`SOURCE.docx`この場合）`using`適切な資源処分を保証するためのステートメント。
-## ステップ 2: 比較対象のドキュメントを追加する
+このステップでは、 `Comparer` オブジェクトをソースドキュメント（`SOURCE.docx` この場合、 `using` 適切なリソースの処分を保証するための声明。
+## ステップ2: 比較対象文書を追加する
 ```csharp
 comparer.Add(File.OpenRead("TARGET.docx"));
 ```
-ここで、対象のドキュメントを追加します(`TARGET.docx`) を比較用の比較オブジェクトに渡します。
-## ステップ 3: 結果ドキュメントからドキュメント情報を取得する
+ここで、ターゲットドキュメント（`TARGET.docx`) を比較用の比較オブジェクトに追加します。
+## ステップ3: 結果ドキュメントからドキュメント情報を取得する
 ```csharp
 IDocumentInfo info = comparer.Targets.FirstOrDefault().GetDocumentInfo();
 ```
-このステップでは、結果ドキュメントからドキュメント情報を取得します。を使用してターゲットドキュメントにアクセスします`FirstOrDefault()`そして電話します`GetDocumentInfo()`ファイルの種類、ページ数、ドキュメントのサイズなどの情報を取得します。
-## ステップ 4: ドキュメント情報の表示
+このステップでは、結果文書から文書情報を取得します。 `FirstOrDefault()` そして電話をかける `GetDocumentInfo()` ファイルの種類、ページ数、ドキュメントのサイズなどの情報を取得します。
+## ステップ4: ドキュメント情報を表示する
 ```csharp
 Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);
 ```
-ここでは、ファイルタイプ、ページ数、バイト単位のドキュメントサイズなど、取得したドキュメント情報を表示します。
+ここでは、ファイルの種類、ページ数、バイト単位のドキュメント サイズなど、取得したドキュメント情報を表示します。
 
 ## 結論
-GroupDocs.Comparison for .NET は、.NET アプリケーションでのドキュメント比較のプロセスを簡素化します。このチュートリアルに従うことで、GroupDocs.Comparison for .NET を使用して結果ドキュメントからドキュメント情報を取得する方法を学習しました。これらのテクニックをプロジェクトに組み込んで、ドキュメント管理機能を強化します。
+GroupDocs.Comparison for .NETは、.NETアプリケーションにおけるドキュメント比較プロセスを簡素化します。このチュートリアルでは、GroupDocs.Comparison for .NETを使用して結果ドキュメントからドキュメント情報を取得する方法を学習しました。これらのテクニックをプロジェクトに組み込むことで、ドキュメント管理機能を強化しましょう。
 ## よくある質問
 ### GroupDocs.Comparison for .NET はさまざまなドキュメント形式と互換性がありますか?
-はい、GroupDocs.Comparison for .NET は、DOCX、PDF、PPTX、XLSX などの幅広いドキュメント形式をサポートしています。
+はい、GroupDocs.Comparison for .NET は、DOCX、PDF、PPTX、XLSX など、幅広いドキュメント形式をサポートしています。
 ### ドキュメント比較設定をカスタマイズできますか?
-確かに、GroupDocs.Comparison for .NET は、特定の要件に合わせてドキュメントを比較するための広範なカスタマイズ オプションを提供します。
-### 評価用に利用できる試用版はありますか?
-はい、無料試用版を次からダウンロードできます。[ここ](https://releases.groupdocs.com/).
+はい、GroupDocs.Comparison for .NET は、特定の要件に合わせてドキュメントを比較するための広範なカスタマイズ オプションを提供します。
+### 評価用に試用版はありますか?
+はい、無料試用版をダウンロードできます。 [ここ](https://releases。groupdocs.com/).
 ### GroupDocs.Comparison for .NET のサポートを受けるにはどうすればよいですか?
- GroupDocs.Comparison フォーラムで支援を求めたり、コミュニティに参加したりできます。[ここ](https://forum.groupdocs.com/c/comparison/12).
+GroupDocs.Comparisonフォーラムでサポートを求めたり、コミュニティに参加したりできます。 [ここ](https://forum。groupdocs.com/c/comparison/12).
 ### GroupDocs.Comparison for .NET のライセンス オプションは何ですか?
-ライセンス オプションを調べて、次からライセンスを購入できます。[ここ](https://purchase.groupdocs.com/buy).
+ライセンスオプションを確認し、ライセンスを購入することができます。 [ここ](https://purchase。groupdocs.com/buy).

@@ -1,31 +1,31 @@
 ---
-title: Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .NET
-linktitle: Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .NET
-second_title: GroupDocs.Comparison API .NET
-description: Bez wysiłku porównuj dokumenty w języku C# za pomocą GroupDocs.Comparison dla .NET. Z łatwością usprawnij zadania związane z przetwarzaniem dokumentów.
-weight: 11
-url: /pl/net/basic-usage/compare-cells-from-stream/
+"description": "Bezproblemowo porównuj dokumenty w języku C#, korzystając z GroupDocs.Comparison dla platformy .NET. Usprawnij zadania związane z przetwarzaniem dokumentów."
+"linktitle": "Porównaj komórki ze strumienia - GroupDocs.Comparison dla .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Porównaj komórki ze strumienia - GroupDocs.Comparison dla .NET"
+"url": "/pl/net/basic-usage/compare-cells-from-stream/"
+"weight": 11
 ---
 
-# Porównaj komórki ze strumienia — GroupDocs.Comparison dla platformy .NET
+# Porównaj komórki ze strumienia - GroupDocs.Comparison dla .NET
 
 ## Wstęp
-W świecie tworzenia oprogramowania umiejętność sprawnego porównywania dokumentów jest kluczowa. Niezależnie od tego, czy pracujesz nad dokumentami prawnymi, umowami czy jakąkolwiek inną formą tekstu, możliwość dokładnego zidentyfikowania różnic może zaoszczędzić czas i zapobiec błędom. Na szczęście GroupDocs.Comparison dla .NET zapewnia wydajne rozwiązanie do zadań porównywania dokumentów.
-## Warunki wstępne
+W świecie rozwoju oprogramowania umiejętność efektywnego porównywania dokumentów jest kluczowa. Niezależnie od tego, czy pracujesz nad dokumentami prawnymi, umowami czy jakąkolwiek inną formą tekstu, możliwość dokładnego identyfikowania różnic może zaoszczędzić czas i zapobiec błędom. Na szczęście GroupDocs.Comparison dla .NET zapewnia potężne rozwiązanie do zadań porównywania dokumentów.
+## Wymagania wstępne
 Zanim przejdziesz do samouczka, upewnij się, że spełniasz następujące wymagania wstępne:
-1.  GroupDocs.Comparison dla .NET: Upewnij się, że pobrałeś i zainstalowałeś GroupDocs.Comparison dla .NET. Możesz znaleźć link do pobrania[Tutaj](https://releases.groupdocs.com/comparison/net/).
-2. Podstawowa znajomość języka C#: W tym samouczku założono znajomość języka programowania C#.
-3. Zintegrowane środowisko programistyczne (IDE): Zainstaluj w swoim systemie IDE, takie jak Visual Studio, do celów kodowania.
-4. Dokumenty do porównania: Przygotuj dokumenty, które chcesz porównać. Upewnij się, że są one dostępne z poziomu kodu C#.
+1. GroupDocs.Comparison dla .NET: Upewnij się, że pobrałeś i zainstalowałeś GroupDocs.Comparison dla .NET. Link do pobrania znajdziesz [Tutaj](https://releases.groupdocs.com/comparison/net/).
+2. Podstawowa znajomość języka C#: W tym samouczku zakłada się znajomość języka programowania C#.
+3. Zintegrowane środowisko programistyczne (IDE): Zainstaluj w systemie środowisko IDE, np. Visual Studio, w celu kodowania.
+4. Dokumenty do porównania: Przygotuj dokumenty, które chcesz porównać. Upewnij się, że są dostępne z kodu C#.
 
 ## Importuj przestrzenie nazw
-Aby korzystać z funkcjonalności GroupDocs.Comparison for .NET, musisz zaimportować niezbędne przestrzenie nazw do swojego kodu C#. Wykonaj następujące kroki:
+Aby użyć GroupDocs.Comparison dla funkcjonalności .NET, musisz zaimportować niezbędne przestrzenie nazw do swojego kodu C#. Wykonaj następujące kroki:
 
 ```csharp
 using System;
 using System.IO;
 ```
-Spowoduje to zaimportowanie przestrzeni nazw GroupDocs.Comparison, umożliwiając dostęp do jej klas i metod.
+Importuje przestrzeń nazw GroupDocs.Comparison, umożliwiając dostęp do jej klas i metod.
 
 ## Krok 1: Zainicjuj zmienne wyjściowe
 ```csharp
@@ -37,7 +37,7 @@ Ten krok inicjuje zmienne dla katalogu wyjściowego i nazwy pliku, w którym zos
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("source.xlsx")))
 ```
- Tutaj tworzony jest obiekt Comparer poprzez otwarcie dokumentu źródłowego „source.xlsx” za pomocą`File.OpenRead()`.
+Tutaj obiekt Comparer jest tworzony poprzez otwarcie dokumentu źródłowego „source.xlsx” za pomocą `File.OpenRead()`.
 ## Krok 3: Dodaj dokument docelowy
 ```csharp
 comparer.Add(File.OpenRead("target.xlsx"));
@@ -47,23 +47,23 @@ Dokument docelowy „target.xlsx” jest dodawany do obiektu porównującego w c
 ```csharp
 comparer.Compare(File.Create(outputFileName));
 ```
- Metoda Compare jest wywoływana na obiekcie porównującym w celu przeprowadzenia porównania dokumentów. Porównywany dokument jest zapisywany przy użyciu`File.Create()`.
+Metoda Compare jest wywoływana na obiekcie comparer w celu wykonania porównania dokumentów. Porównywany dokument jest zapisywany przy użyciu `File.Create()`.
 ## Krok 5: Wyświetl komunikat o powodzeniu
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
-Na koniec zostanie wyświetlony komunikat o powodzeniu, wskazujący, że dokumenty zostały pomyślnie porównane i dane wyjściowe są dostępne w określonym katalogu.
+Na koniec wyświetlany jest komunikat informujący o powodzeniu porównania dokumentów i dostępności danych wyjściowych w określonym katalogu.
 
 ## Wniosek
-Podsumowując, GroupDocs.Comparison dla .NET zapewnia solidną platformę do płynnego porównywania dokumentów w aplikacjach C#. Wykonując kroki opisane w tym samouczku, możesz efektywnie porównywać dokumenty i usprawniać zadania przetwarzania dokumentów.
-## Często zadawane pytania
-### Czy GroupDocs.Comparison for .NET jest kompatybilny ze wszystkimi formatami dokumentów?
-Tak, GroupDocs.Comparison dla .NET obsługuje szeroką gamę formatów dokumentów, w tym Word, Excel, PowerPoint, PDF i inne.
+Podsumowując, GroupDocs.Comparison dla .NET zapewnia solidną platformę do bezproblemowego porównywania dokumentów w aplikacjach C#. Postępując zgodnie z krokami opisanymi w tym samouczku, możesz skutecznie porównywać dokumenty i usprawniać zadania przetwarzania dokumentów.
+## Najczęściej zadawane pytania
+### Czy GroupDocs.Comparison dla .NET jest kompatybilny ze wszystkimi formatami dokumentów?
+Tak, GroupDocs.Comparison dla platformy .NET obsługuje szeroką gamę formatów dokumentów, w tym Word, Excel, PowerPoint, PDF i inne.
 ### Czy mogę dostosować format wyjściowy porównywanych dokumentów?
-Oczywiście GroupDocs.Comparison dla .NET oferuje różne opcje dostosowywania, dzięki czemu możesz dostosować dane wyjściowe do swoich wymagań.
+Oczywiście, GroupDocs.Comparison dla .NET oferuje różne opcje dostosowywania, pozwalające dostosować dane wyjściowe do Twoich wymagań.
 ### Czy GroupDocs.Comparison dla .NET wymaga licencji do użytku komercyjnego?
- Tak, do użytku komercyjnego wymagana jest licencja. Licencję można uzyskać od[Tutaj](https://purchase.groupdocs.com/buy).
-### Czy dostępna jest bezpłatna wersja próbna programu GroupDocs.Comparison dla .NET?
- Tak, możesz skorzystać z bezpłatnego okresu próbnego[Tutaj](https://releases.groupdocs.com/).
-### Gdzie mogę szukać pomocy lub wsparcia związanego z GroupDocs.Comparison dla .NET?
- Możesz odwiedzić forum GroupDocs.Comparison[Tutaj](https://forum.groupdocs.com/c/comparison/12) w celu uzyskania pomocy lub pytań.
+Tak, licencja jest wymagana do użytku komercyjnego. Licencję można uzyskać od [Tutaj](https://purchase.groupdocs.com/buy).
+### Czy jest dostępna bezpłatna wersja próbna GroupDocs.Comparison dla .NET?
+Tak, możesz skorzystać z bezpłatnego okresu próbnego [Tutaj](https://releases.groupdocs.com/).
+### Gdzie mogę szukać pomocy lub wsparcia w zakresie GroupDocs.Comparison dla platformy .NET?
+Możesz odwiedzić forum GroupDocs.Comparison [Tutaj](https://forum.groupdocs.com/c/comparison/12) W razie pytań lub potrzeby pomocy proszę o kontakt.

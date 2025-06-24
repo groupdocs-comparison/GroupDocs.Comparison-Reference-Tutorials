@@ -1,58 +1,58 @@
 ---
-title: Hasonlítsa össze a képeket a Streamből – GroupDocs.Comparison for .NET
-linktitle: Hasonlítsa össze a képeket a Streamből – GroupDocs.Comparison for .NET
-second_title: GroupDocs.Comparison .NET API
-description: Ismerje meg, hogyan hasonlíthatja össze a streamekből származó képeket a GroupDocs.Comparison for .NET segítségével. Lépésről lépésre útmutató a .NET-alkalmazásokba való zökkenőmentes integrációhoz.
-weight: 11
-url: /hu/net/image-comparison/compare-images-from-stream/
+"description": "Tanulja meg, hogyan hasonlíthatja össze a streamekből származó képeket a GroupDocs.Comparison for .NET segítségével. Lépésről lépésre útmutató a .NET alkalmazásokba való zökkenőmentes integrációhoz."
+"linktitle": "Képek összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Képek összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez"
+"url": "/hu/net/image-comparison/compare-images-from-stream/"
+"weight": 11
 ---
 
-# Hasonlítsa össze a képeket a Streamből – GroupDocs.Comparison for .NET
+# Képek összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés
-A .NET fejlesztés területén kulcsfontosságú a dokumentumok és képek pontosságának és konzisztenciájának biztosítása. A GroupDocs.Comparison for .NET robusztus megoldást kínál a fejlesztőknek a képek hatékony összehasonlítására. Ez az oktatóanyag végigvezeti a streamekből származó képek összehasonlításának folyamatán a GroupDocs.Comparison for .NET használatával. Ha követi ezeket a lépéseket, zökkenőmentesen integrálhatja a kép-összehasonlítási képességeket .NET-alkalmazásaiba.
+A .NET fejlesztés területén kulcsfontosságú a dokumentumok és képek pontosságának és következetességének biztosítása. A GroupDocs.Comparison for .NET robusztus megoldást kínál a fejlesztőknek a képek hatékony összehasonlításához. Ez az oktatóanyag végigvezeti Önt a streamekből származó képek összehasonlításának folyamatán a GroupDocs.Comparison for .NET használatával. A következő lépéseket követve zökkenőmentesen integrálhatja a kép-összehasonlító funkciókat .NET alkalmazásaiba.
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételeket teljesítette:
+Mielőtt belevágnál az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
 ### 1. Telepítse a GroupDocs.Comparison for .NET programot
-Győződjön meg arról, hogy a GroupDocs.Comparison for .NET telepítve van a fejlesztői környezetében. A szükséges fájlokat letöltheti a[letöltési link](https://releases.groupdocs.com/comparison/net/).
-### 2. Szerezzen engedélyt
- A GroupDocs.Comparison for .NET használatához érvényes licencre lesz szüksége. Licenszet vásárolhat innen[GroupDocs](https://purchase.groupdocs.com/buy) vagy szerezzen ideiglenes engedélyt értékelési célból[itt](https://purchase.groupdocs.com/temporary-license/).
-### 3. .NET fejlesztés ismerete
-Ennek az oktatóanyagnak a követéséhez alapvető .NET programozási ismeretekre van szükség.
+Győződjön meg arról, hogy a GroupDocs.Comparison for .NET telepítve van a fejlesztői környezetében. A szükséges fájlokat letöltheti innen: [letöltési link](https://releases.groupdocs.com/comparison/net/).
+### 2. Szerezzen be egy engedélyt
+A GroupDocs.Comparison for .NET használatához érvényes licencre lesz szüksége. Vásárolhat licencet a következő címen: [Csoportdokumentumok](https://purchase.groupdocs.com/buy) vagy szerezzen be ideiglenes engedélyt értékelési célokra a következőtől: [itt](https://purchase.groupdocs.com/temporary-license/).
+### 3. .NET fejlesztéssel kapcsolatos ismeretek
+A bemutató követéséhez alapvető .NET programozási ismeretek szükségesek.
 
 ## Névterek importálása
-Mielőtt folytatná az összehasonlítási folyamatot, győződjön meg róla, hogy importálja a szükséges névtereket a .NET-projektbe. 
+Az összehasonlítási folyamat folytatása előtt győződjön meg arról, hogy importálta a szükséges névtereket a .NET-projektjébe. 
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 ```
-## 1. lépés: Határozza meg a kimeneti könyvtárat és a fájl nevét
-Először is adja meg azt a könyvtárat, ahol tárolni kívánja az összehasonlítás eredményét és a kimeneti fájl nevét.
+## 1. lépés: Kimeneti könyvtár és fájlnév meghatározása
+Először is, add meg azt a könyvtárat, ahová az összehasonlítás eredményét menteni szeretnéd, és a kimeneti fájl nevét.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.png");
 ```
-## 2. lépés: Az Összehasonlító inicializálása
- Ezután inicializálja a`Comparer` objektumot a forrás képfolyam biztosításával.
+## 2. lépés: Az összehasonlító inicializálása
+Ezután inicializálja a `Comparer` objektum a forrásképfolyam megadásával.
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.png")))
 {
 ```
 ## 3. lépés: Célkép hozzáadása
-Adja hozzá a célképet az összehasonlítási folyamathoz az adatfolyam megadásával.
+Adja hozzá a célképet az összehasonlítási folyamathoz a hozzá tartozó adatfolyam megadásával.
 ```csharp
 comparer.Add(File.OpenRead("TARGET.png"));
 ```
-## 4. lépés: Konfigurálja az összehasonlítási beállításokat
- Konfigurálja a kép-összehasonlítás beállításait. Ebben a példában beállítjuk`GenerateSummaryPage`to false, hogy megakadályozza az összefoglaló oldal létrehozását.
+## 4. lépés: Összehasonlítási beállítások konfigurálása
+Konfigurálja a kép-összehasonlítás beállításait. Ebben a példában a következőt állítottuk be: `GenerateSummaryPage` hamis értékre állítja az összegző oldal létrehozásának megakadályozását.
 ```csharp
 CompareOptions options = new CompareOptions();
 options.GenerateSummaryPage = false;
 ```
-## 5. lépés: Végezze el az összehasonlítást
- Végezze el az összehasonlítási folyamatot a`Compare` módszert, és megadja a kimeneti fájl nevét és az összehasonlítási lehetőségeket.
+## 5. lépés: Összehasonlítás végrehajtása
+Hajtsa végre az összehasonlítási folyamatot a következő meghívásával: `Compare` metódust, valamint a kimeneti fájl nevének és összehasonlítási beállítások megadását.
 ```csharp
 comparer.Compare(outputFileName, options);
 ```
@@ -63,15 +63,15 @@ Console.WriteLine($"\nImages compared successfully.\nCheck output in {Directory.
 ```
 
 ## Következtetés
-Összefoglalva, a GroupDocs.Comparison for .NET hatékony megoldást kínál a .NET-alkalmazásokon belüli képek összehasonlítására. Az ebben az oktatóanyagban felvázolt útmutató lépésenkénti követésével a fejlesztők zökkenőmentesen integrálhatják a kép-összehasonlítási funkciókat projektjeikbe, így biztosítva a dokumentumok pontosságát és konzisztenciáját.
+Összefoglalva, a GroupDocs.Comparison for .NET hatékony megoldást kínál a képek összehasonlítására a .NET alkalmazásokon belül. Az ebben az oktatóanyagban ismertetett lépésenkénti útmutató követésével a fejlesztők zökkenőmentesen integrálhatják a kép-összehasonlító funkciókat projektjeikbe, biztosítva a pontosságot és a következetességet a dokumentumok között.
 ## GYIK
-### A GroupDocs.Comparison for .NET összehasonlíthatja a különböző formátumú képeket?
-Igen, a GroupDocs.Comparison for .NET támogatja a különböző formátumú képek összehasonlítását, beleértve a PNG, JPEG, GIF, BMP és egyebeket.
+### A GroupDocs.Comparison for .NET képes összehasonlítani a különböző formátumú képeket?
+Igen, a GroupDocs.Comparison for .NET támogatja a képek összehasonlítását különböző formátumokban, beleértve a PNG, JPEG, GIF, BMP és egyebeket.
 ### Lehetséges az összehasonlítási beállítások testreszabása?
-A fejlesztők teljesen saját igényeiknek megfelelően testreszabhatják az összehasonlítási beállításokat, például figyelmen kívül hagyhatják a kis formázási különbségeket vagy beállíthatják a tűrésszinteket.
+A fejlesztők természetesen testreszabhatják az összehasonlítási beállításokat az igényeiknek megfelelően, például figyelmen kívül hagyhatják a kis formázási különbségeket vagy beállíthatják a tűréshatárokat.
 ### Összehasonlíthatom a memóriafolyamokban tárolt képeket?
-Igen, összehasonlíthatja a memóriafolyamokból származó képeket, amint az ebben az oktatóanyagban látható.
+Igen, összehasonlíthatja a memóriafolyamokból származó képeket, ahogy azt ebben az oktatóanyagban is bemutattuk.
 ### A GroupDocs.Comparison for .NET támogatja a dokumentumok összehasonlítását is?
-Igen, a GroupDocs.Comparison for .NET nemcsak képek, hanem különféle formátumú dokumentumok, például Word, Excel, PDF stb. összehasonlítását is támogatja.
-### Létezik próbaverzió tesztelési célból?
- Igen, ingyenes próbaverziót szerezhet be a webhelyről[itt](https://releases.groupdocs.com/).
+Igen, a GroupDocs.Comparison for .NET nemcsak a képek, hanem a különféle formátumú dokumentumok, például Word, Excel, PDF és egyebek összehasonlítását is támogatja.
+### Van elérhető próbaverzió tesztelési célokra?
+Igen, letölthet egy ingyenes próbaverziót innen: [itt](https://releases.groupdocs.com/).

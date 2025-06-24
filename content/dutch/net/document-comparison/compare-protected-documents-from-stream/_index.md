@@ -1,24 +1,24 @@
 ---
-title: Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .NET
-linktitle: Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .NET
-second_title: GroupDocs.Vergelijking .NET API
-description: Leer hoe u beveiligde documenten uit streams kunt vergelijken met GroupDocs.Comparison voor .NET. Stroomlijn uw documentvergelijkingsproces moeiteloos.
-weight: 18
-url: /nl/net/document-comparison/compare-protected-documents-from-stream/
+"description": "Leer hoe u beveiligde documenten uit streams kunt vergelijken met GroupDocs.Comparison voor .NET. Stroomlijn uw documentvergelijkingsproces moeiteloos."
+"linktitle": "Beveiligde documenten uit Stream vergelijken - GroupDocs.Comparison voor .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Beveiligde documenten uit Stream vergelijken - GroupDocs.Comparison voor .NET"
+"url": "/nl/net/document-comparison/compare-protected-documents-from-stream/"
+"weight": 18
 ---
 
-# Vergelijk beveiligde documenten uit Stream - GroupDocs.Comparison voor .NET
+# Beveiligde documenten uit Stream vergelijken - GroupDocs.Comparison voor .NET
 
 ## Invoering
-Op het gebied van .NET-ontwikkeling is een efficiënte vergelijking van documenten cruciaal voor verschillende toepassingen. Of u nu werkt aan contentmanagementsystemen, juridische software of een ander documentgericht project, de mogelijkheid om documenten nauwkeurig te vergelijken kan de workflows stroomlijnen en de productiviteit verhogen. In deze zelfstudie wordt dieper ingegaan op het gebruik van GroupDocs.Comparison voor .NET, een krachtige tool die het proces van het vergelijken van beveiligde documenten uit streams vereenvoudigt. Door de onderstaande stapsgewijze handleiding te volgen, krijgt u een uitgebreid inzicht in hoe u deze bibliotheek effectief kunt gebruiken in uw .NET-projecten.
+In de wereld van .NET-ontwikkeling is efficiënte documentvergelijking cruciaal voor diverse toepassingen. Of u nu werkt aan contentmanagementsystemen, juridische software of een ander documentgericht project, de mogelijkheid om documenten nauwkeurig te vergelijken kan workflows stroomlijnen en de productiviteit verhogen. Deze tutorial gaat dieper in op het gebruik van GroupDocs.Comparison voor .NET, een krachtige tool die het vergelijken van beveiligde documenten uit streams vereenvoudigt. Door de onderstaande stapsgewijze handleiding te volgen, krijgt u een uitgebreid inzicht in hoe u deze bibliotheek effectief kunt gebruiken in uw .NET-projecten.
 ## Vereisten
-Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-1. Basiskennis van .NET-ontwikkeling: Bekendheid met C#-programmering en het .NET-framework is essentieel om de concepten te begrijpen die in deze tutorial worden besproken.
-2.  Installatie van GroupDocs.Comparison voor .NET: Download en installeer de GroupDocs.Comparison voor .NET-bibliotheek vanaf de website[hier](https://releases.groupdocs.com/comparison/net/)Volg de meegeleverde installatie-instructies om de bibliotheek in uw .NET-project te integreren.
-3. Toegang tot beveiligde documenten: bereid de bron- en doeldocumenten voor die u wilt vergelijken. Deze documenten moeten met een wachtwoord worden beveiligd om een veilige vergelijking te garanderen.
+Voordat u met de tutorial begint, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+1. Basiskennis van .NET-ontwikkeling: Kennis van C#-programmering en het .NET Framework is essentieel om de concepten te begrijpen die in deze tutorial worden besproken.
+2. Installatie van GroupDocs.Comparison voor .NET: Download en installeer de GroupDocs.Comparison voor .NET-bibliotheek van de website [hier](https://releases.groupdocs.com/comparison/net/)Volg de installatie-instructies om de bibliotheek in uw .NET-project te integreren.
+3. Toegang tot beveiligde documenten: Bereid de bron- en doeldocumenten voor die u wilt vergelijken. Deze documenten moeten met een wachtwoord worden beveiligd om een veilige vergelijking te garanderen.
 
 ## Naamruimten importeren
-Voordat u doorgaat met het vergelijkingsproces, moet u ervoor zorgen dat u de benodigde naamruimten in uw .NET-project importeert. Met deze stap heeft u naadloos toegang tot de functionaliteiten van de GroupDocs.Comparison-bibliotheek.
+Voordat u verdergaat met het vergelijkingsproces, moet u ervoor zorgen dat u de benodigde naamruimten in uw .NET-project importeert. Met deze stap krijgt u naadloos toegang tot de functionaliteiten van de GroupDocs.Comparison-bibliotheek.
 
 ```csharp
 using System;
@@ -35,30 +35,30 @@ string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx"_PROTECTED), new LoadOptions() { Password = "1234" }))
 {
 ```
-## Stap 3: Voeg doeldocument toe voor vergelijking
+## Stap 3: Doeldocument toevoegen voor vergelijking
 ```csharp
     comparer.Add(File.OpenRead("TARGET.docx"_PROTECTED), new LoadOptions() { Password = "5678" });
 ```
-## Stap 4: Voer een documentvergelijking uit
+## Stap 4: Documentvergelijking uitvoeren
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 }
 ```
-## Stap 5: Geef de uitvoerlocatie weer
+## Stap 5: Weergave-uitvoerlocatie
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Conclusie
-Kortom, GroupDocs.Comparison voor .NET biedt een handige oplossing voor het vergelijken van beveiligde documenten uit streams in uw .NET-applicaties. Door de stappen in deze zelfstudie te volgen, kunt u de functionaliteit voor documentvergelijking naadloos in uw projecten integreren, waardoor de efficiëntie en productiviteit worden verbeterd.
+Kortom, GroupDocs.Comparison voor .NET biedt een handige oplossing voor het vergelijken van beveiligde documenten uit streams in uw .NET-applicaties. Door de stappen in deze tutorial te volgen, kunt u de functionaliteit voor documentvergelijking naadloos integreren in uw projecten, wat de efficiëntie en productiviteit verbetert.
 ## Veelgestelde vragen
 ### Kan ik documenten in verschillende formaten vergelijken met GroupDocs.Comparison voor .NET?
 Ja, GroupDocs.Comparison ondersteunt het vergelijken van documenten in verschillende formaten, waaronder DOCX, PDF, PPTX en meer.
 ### Is er een proefversie beschikbaar voor GroupDocs.Comparison voor .NET?
- Ja, u kunt de functies van GroupDocs.Comparison verkennen door gebruik te maken van de gratis proefversie[hier](https://releases.groupdocs.com/).
-### Ondersteunt GroupDocs.Comparison voor .NET documentvergelijking in niet-Engelse talen?
-Ja, de bibliotheek ondersteunt documentvergelijking in meerdere talen, waardoor flexibiliteit voor diverse projecten wordt gegarandeerd.
-### Kan ik het uitvoerformaat van vergeleken documenten aanpassen?
-Ja, GroupDocs.Comparison biedt opties om het uitvoerformaat en het uiterlijk van vergeleken documenten aan te passen aan uw voorkeuren.
+Ja, u kunt de functies van GroupDocs.Comparison verkennen door de gratis proefversie te gebruiken [hier](https://releases.groupdocs.com/).
+### Ondersteunt GroupDocs.Comparison voor .NET documentvergelijking in niet-Engelstalige talen?
+Ja, de bibliotheek ondersteunt documentvergelijking in meerdere talen, wat flexibiliteit voor uiteenlopende projecten garandeert.
+### Kan ik de uitvoeropmaak van vergeleken documenten aanpassen?
+Ja, GroupDocs.Comparison biedt opties om de uitvoeropmaak en het uiterlijk van vergeleken documenten aan te passen aan uw wensen.
 ### Is er technische ondersteuning beschikbaar voor GroupDocs.Comparison voor .NET?
- Ja, u kunt hulp zoeken en in contact komen met de community via het GroupDocs.Comparison-ondersteuningsforum[hier](https://forum.groupdocs.com/c/comparison/12).
+Ja, u kunt hulp zoeken en contact opnemen met de community via het GroupDocs.Comparison-ondersteuningsforum [hier](https://forum.groupdocs.com/c/comparison/12).

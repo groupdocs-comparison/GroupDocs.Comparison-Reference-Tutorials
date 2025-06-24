@@ -1,22 +1,22 @@
 ---
-title: Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
-linktitle: Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
-second_title: GroupDocs.Comparison .NET API
-description: Naučte se, jak uložit zdroj metadat dokumentu pomocí GroupDocs Comparison for .NET. Postupujte podle našeho podrobného průvodce pro bezproblémové porovnání dokumentů ve vašem .NET.
-weight: 14
-url: /cs/net/loading-and-saving-documents/saving-documents-metadata-source/
+"description": "Naučte se, jak uložit zdroj metadat dokumentu pomocí nástroje GroupDocs Comparison pro .NET. Postupujte podle našeho podrobného návodu pro bezproblémové porovnání dokumentů ve vašem .NET."
+"linktitle": "Ukládání zdroje metadat dokumentů v porovnání GroupDocs pro .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Ukládání zdroje metadat dokumentů v porovnání GroupDocs pro .NET"
+"url": "/cs/net/loading-and-saving-documents/saving-documents-metadata-source/"
+"weight": 14
 ---
 
-# Ukládání zdroje metadat dokumentů ve srovnání GroupDocs pro .NET
+# Ukládání zdroje metadat dokumentů v porovnání GroupDocs pro .NET
 
-## Úvod
-Ve světě vývoje softwaru je efektivní porovnávání dokumentů zásadní pro různá odvětví, včetně práva, financí a vzdělávání. GroupDocs Comparison for .NET nabízí výkonné řešení pro bezproblémové porovnávání dokumentů v aplikacích .NET. Tento výukový program vás provede procesem použití GroupDocs Comparison for .NET k uložení zdroje metadat dokumentu. Dodržením těchto kroků budete moci využít plný potenciál této knihovny k vylepšení úloh porovnávání dokumentů.
+## Zavedení
+Ve světě vývoje softwaru je efektivní porovnávání dokumentů klíčové pro různá odvětví, včetně práva, financí a vzdělávání. GroupDocs Comparison for .NET nabízí výkonné řešení pro bezproblémové porovnávání dokumentů v aplikacích .NET. Tento tutoriál vás provede procesem použití GroupDocs Comparison for .NET k uložení zdroje metadat dokumentů. Dodržením těchto kroků budete moci plně využít potenciál této knihovny k vylepšení vašich úkolů porovnávání dokumentů.
 ## Předpoklady
-Než se pustíte do výukového programu, ujistěte se, že máte nastaveny následující předpoklady:
+Než se pustíte do tutoriálu, ujistěte se, že máte nastaveny následující předpoklady:
 1. Nastavení prostředí: Mějte na svém počítači připravené vývojové prostředí .NET.
-2.  GroupDocs Comparison Installation: Stáhněte a nainstalujte GroupDocs Comparison for .NET z[odkaz ke stažení](https://releases.groupdocs.com/comparison/net/).
+2. Instalace porovnání GroupDocs: Stáhněte a nainstalujte porovnání GroupDocs pro .NET z [odkaz ke stažení](https://releases.groupdocs.com/comparison/net/).
 3. Soubory dokumentů: Připravte zdrojové a cílové soubory dokumentů, které chcete porovnat.
-4. Základní znalost C#: Seznamte se se základy programovacího jazyka C#, abyste porozuměli poskytnutým úryvkům kódu.
+4. Základní znalost C#: Seznamte se se základy programovacího jazyka C#, abyste pochopili poskytnuté úryvky kódu.
 
 ## Importovat jmenné prostory
 Než budete pokračovat v procesu porovnávání, nezapomeňte importovat potřebné jmenné prostory:
@@ -32,38 +32,38 @@ using GroupDocs.Comparison.Options;
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-V tomto kroku definujeme adresář, kam se bude porovnávaný dokument ukládat a určíme název výstupního souboru.
-## Krok 2: Inicializujte objekt Comparer
+V tomto kroku definujeme adresář, kam bude uložen porovnávaný dokument, a zadáme název výstupního souboru.
+## Krok 2: Inicializace objektu Comparer
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 ```
- Zde inicializujeme a`Comparer` objekt poskytnutím cesty ke zdrojovému dokumentu. Tento objekt bude použit pro porovnání dokumentů.
-## Krok 3: Přidejte cílový dokument
+Zde inicializujeme `Comparer` objekt poskytnutím cesty ke zdrojovému dokumentu. Tento objekt bude použit pro porovnání dokumentů.
+## Krok 3: Přidání cílového dokumentu
 ```csharp
 comparer.Add("TARGET.docx");
 ```
-Cílový dokument přidáme k objektu porovnávače. Toto je dokument, se kterým bude zdrojový dokument porovnán.
-## Krok 4: Porovnejte dokumenty a uložte zdroj metadat
+Cílový dokument přidáme do objektu porovnávání. Jedná se o dokument, se kterým bude porovnáván zdrojový dokument.
+## Krok 4: Porovnání dokumentů a uložení zdroje metadat
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Source });
 ```
- V tomto kroku porovnáme zdrojové a cílové dokumenty pomocí`Compare` metoda porovnávacího objektu. Dále specifikujeme název výstupního souboru a set`CloneMetadataType` na`MetadataType.Source` pro uložení zdroje metadat dokumentu.
-## Krok 5: Zobrazte výstupní adresář
+V tomto kroku porovnáváme zdrojové a cílové dokumenty pomocí `Compare` metodu objektu porovnávače. Dále zadáme název výstupního souboru a nastavíme `CloneMetadataType` na `MetadataType.Source` uložit zdroj metadat dokumentu.
+## Krok 5: Zobrazení výstupního adresáře
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
-Nakonec zobrazíme zprávu o úspěšném porovnání dokumentů a poskytneme výstupní adresář, do kterého je porovnávaný dokument uložen.
+Nakonec zobrazíme zprávu o úspěšném porovnání dokumentů a poskytneme výstupní adresář, kam je porovnávaný dokument uložen.
 
 ## Závěr
-Na závěr, GroupDocs Comparison for .NET nabízí komplexní řešení úloh porovnávání dokumentů v aplikacích .NET. Sledováním tohoto kurzu jste se naučili, jak efektivně uložit zdroj metadat dokumentu a zlepšit tak proces porovnávání dokumentů.
-## FAQ
-### Může GroupDocs Comparison for .NET porovnávat dokumenty různých formátů?
+Závěrem lze říci, že GroupDocs Comparison for .NET nabízí komplexní řešení pro úlohy porovnávání dokumentů v aplikacích .NET. Dodržováním tohoto tutoriálu jste se naučili, jak efektivně ukládat zdroj metadat dokumentů a vylepšovat tak proces porovnávání dokumentů.
+## Často kladené otázky
+### Může GroupDocs Comparison pro .NET porovnávat dokumenty různých formátů?
 Ano, GroupDocs Comparison podporuje porovnávání dokumentů v různých formátech, včetně DOCX, PDF, PPTX a dalších.
-### Je k dispozici zkušební verze pro GroupDocs Comparison pro .NET?
- Ano, ke zkušební verzi máte přístup z[tady](https://releases.groupdocs.com/).
-### Mohu přizpůsobit výstupní formát porovnávaných dokumentů?
-Rozhodně, GroupDocs Comparison poskytuje možnosti přizpůsobení výstupního formátu podle vašich požadavků.
-### Je k dispozici technická podpora pro GroupDocs Comparison pro uživatele .NET?
- Ano, můžete požádat o technickou pomoc[Fórum podpory](https://forum.groupdocs.com/c/comparison/12).
-### Kde si mohu zakoupit licenci pro GroupDocs Comparison for .NET?
- Licenci si můžete zakoupit na webu GroupDocs[tady](https://purchase.groupdocs.com/buy).
+### Je k dispozici zkušební verze nástroje GroupDocs Comparison pro .NET?
+Ano, zkušební verzi můžete získat z [zde](https://releases.groupdocs.com/).
+### Mohu si přizpůsobit výstupní formát porovnávaných dokumentů?
+Rozhodně, GroupDocs Comparison nabízí možnosti přizpůsobení výstupního formátu podle vašich požadavků.
+### Je k dispozici technická podpora pro uživatele GroupDocs Comparison pro .NET?
+Ano, můžete požádat o technickou pomoc od [fórum podpory](https://forum.groupdocs.com/c/comparison/12).
+### Kde si mohu zakoupit licenci pro GroupDocs Comparison pro .NET?
+Licenci si můžete zakoupit na webových stránkách GroupDocs. [zde](https://purchase.groupdocs.com/buy).

@@ -1,24 +1,24 @@
 ---
-title: Confronta i documenti protetti dal flusso - GroupDocs.Comparison per .NET
-linktitle: Confronta i documenti protetti dal flusso - GroupDocs.Comparison per .NET
-second_title: API GroupDocs.Comparison .NET
-description: Scopri come confrontare i documenti protetti dai flussi utilizzando GroupDocs.Comparison per .NET. Semplifica il processo di confronto dei documenti senza sforzo.
-weight: 18
-url: /it/net/document-comparison/compare-protected-documents-from-stream/
+"description": "Scopri come confrontare documenti protetti da flussi utilizzando GroupDocs.Comparison per .NET. Semplifica il processo di confronto dei documenti senza sforzo."
+"linktitle": "Confronta i documenti protetti dal flusso - GroupDocs.Comparison per .NET"
+"second_title": "API .NET di GroupDocs.Comparison"
+"title": "Confronta i documenti protetti dal flusso - GroupDocs.Comparison per .NET"
+"url": "/it/net/document-comparison/compare-protected-documents-from-stream/"
+"weight": 18
 ---
 
 # Confronta i documenti protetti dal flusso - GroupDocs.Comparison per .NET
 
-## introduzione
-Nell'ambito dello sviluppo .NET, il confronto efficiente dei documenti è fondamentale per varie applicazioni. Che tu stia lavorando su sistemi di gestione dei contenuti, software legale o qualsiasi altro progetto incentrato sui documenti, avere la possibilità di confrontare i documenti in modo accurato può semplificare i flussi di lavoro e migliorare la produttività. Questo tutorial approfondisce l'utilizzo di GroupDocs.Comparison per .NET, un potente strumento che semplifica il processo di confronto dei documenti protetti dai flussi. Seguendo la guida passo passo descritta di seguito, acquisirai una comprensione completa di come utilizzare in modo efficace questa libreria nei tuoi progetti .NET.
+## Introduzione
+Nell'ambito dello sviluppo .NET, il confronto efficiente dei documenti è fondamentale per diverse applicazioni. Che si lavori su sistemi di gestione dei contenuti, software legali o qualsiasi altro progetto incentrato sui documenti, la possibilità di confrontare i documenti in modo accurato può semplificare i flussi di lavoro e aumentare la produttività. Questo tutorial approfondisce l'utilizzo di GroupDocs.Comparison per .NET, un potente strumento che semplifica il processo di confronto dei documenti protetti dai flussi. Seguendo la guida dettagliata descritta di seguito, acquisirai una comprensione completa di come utilizzare efficacemente questa libreria nei tuoi progetti .NET.
 ## Prerequisiti
-Prima di immergerti nel tutorial, assicurati di disporre dei seguenti prerequisiti:
-1. Conoscenza di base dello sviluppo .NET: la familiarità con la programmazione C# e il framework .NET è essenziale per comprendere i concetti discussi in questo tutorial.
-2.  Installazione di GroupDocs.Comparison per .NET: scaricare e installare la libreria GroupDocs.Comparison per .NET dal sito Web[Qui](https://releases.groupdocs.com/comparison/net/)Segui le istruzioni di installazione fornite per integrare la libreria nel tuo progetto .NET.
-3. Accesso ai documenti protetti: prepara i documenti di origine e di destinazione che intendi confrontare. Questi documenti dovrebbero essere protetti da password per garantire un confronto sicuro.
+Prima di immergerti nel tutorial, assicurati di avere i seguenti prerequisiti:
+1. Conoscenza di base dello sviluppo .NET: la familiarità con la programmazione C# e con il framework .NET è essenziale per comprendere i concetti trattati in questo tutorial.
+2. Installazione di GroupDocs.Comparison per .NET: Scarica e installa la libreria GroupDocs.Comparison per .NET dal sito web [Qui](https://releases.groupdocs.com/comparison/net/)Seguire le istruzioni di installazione fornite per integrare la libreria nel progetto .NET.
+3. Accesso ai documenti protetti: preparare i documenti sorgente e di destinazione che si intende confrontare. Questi documenti devono essere protetti da password per garantire un confronto sicuro.
 
 ## Importa spazi dei nomi
-Prima di procedere con il processo di confronto, assicurati di importare gli spazi dei nomi necessari nel tuo progetto .NET. Questo passaggio consente di accedere senza problemi alle funzionalità fornite dalla libreria GroupDocs.Comparison.
+Prima di procedere con il processo di confronto, assicurati di importare gli spazi dei nomi necessari nel tuo progetto .NET. Questo passaggio ti consente di accedere senza problemi alle funzionalità fornite dalla libreria GroupDocs.Comparison.
 
 ```csharp
 using System;
@@ -30,12 +30,12 @@ using System.IO;
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-## Passaggio 2: inizializzare l'oggetto di confronto
+## Passaggio 2: inizializzare l'oggetto Comparer
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx"_PROTECTED), new LoadOptions() { Password = "1234" }))
 {
 ```
-## Passaggio 3: aggiungi il documento di destinazione per il confronto
+## Passaggio 3: aggiungere il documento di destinazione per il confronto
 ```csharp
     comparer.Add(File.OpenRead("TARGET.docx"_PROTECTED), new LoadOptions() { Password = "5678" });
 ```
@@ -44,21 +44,21 @@ using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx"_PROTECTED), 
     comparer.Compare(File.Create(outputFileName));
 }
 ```
-## Passaggio 5: Visualizza la posizione di output
+## Passaggio 5: visualizzare la posizione di output
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Conclusione
-In conclusione, GroupDocs.Comparison per .NET offre una soluzione conveniente per confrontare i documenti protetti dai flussi nelle vostre applicazioni .NET. Seguendo i passaggi descritti in questo tutorial, puoi integrare perfettamente la funzionalità di confronto dei documenti nei tuoi progetti, migliorando l'efficienza e la produttività.
+In conclusione, GroupDocs.Comparison per .NET offre una soluzione pratica per confrontare documenti protetti provenienti da flussi nelle applicazioni .NET. Seguendo i passaggi descritti in questo tutorial, è possibile integrare perfettamente la funzionalità di confronto dei documenti nei progetti, migliorando l'efficienza e la produttività.
 ## Domande frequenti
-### Posso confrontare documenti in diversi formati utilizzando GroupDocs.Comparison per .NET?
-Sì, GroupDocs.Comparison supporta il confronto di documenti in vari formati, inclusi DOCX, PDF, PPTX e altri.
-### È disponibile una versione di prova per GroupDocs.Comparison per .NET?
- Sì, puoi esplorare le funzionalità di GroupDocs.Comparison accedendo alla versione di prova gratuita[Qui](https://releases.groupdocs.com/).
+### Posso confrontare documenti in formati diversi utilizzando GroupDocs.Comparison per .NET?
+Sì, GroupDocs.Comparison supporta il confronto di documenti in vari formati, tra cui DOCX, PDF, PPTX e altri.
+### Esiste una versione di prova disponibile per GroupDocs.Comparison per .NET?
+Sì, puoi esplorare le funzionalità di GroupDocs.Comparison accedendo alla versione di prova gratuita [Qui](https://releases.groupdocs.com/).
 ### GroupDocs.Comparison per .NET supporta il confronto di documenti in lingue diverse dall'inglese?
-Sì, la biblioteca supporta il confronto di documenti in più lingue, garantendo flessibilità per progetti diversi.
+Sì, la libreria supporta il confronto di documenti in più lingue, garantendo flessibilità per progetti diversi.
 ### Posso personalizzare il formato di output dei documenti confrontati?
-Sì, GroupDocs.Comparison offre opzioni per personalizzare il formato di output e l'aspetto dei documenti confrontati in base alle tue preferenze.
+Sì, GroupDocs.Comparison offre opzioni per personalizzare il formato di output e l'aspetto dei documenti confrontati in base alle tue esigenze.
 ### È disponibile supporto tecnico per GroupDocs.Comparison per .NET?
- Sì, puoi chiedere assistenza e interagire con la community tramite il forum di supporto GroupDocs.Comparison[Qui](https://forum.groupdocs.com/c/comparison/12).
+Sì, puoi cercare assistenza e interagire con la community tramite il forum di supporto GroupDocs.Comparison [Qui](https://forum.groupdocs.com/c/comparison/12).

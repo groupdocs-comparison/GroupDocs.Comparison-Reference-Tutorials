@@ -1,24 +1,24 @@
 ---
-title: Stream'den Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
-linktitle: Stream'den Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
-second_title: GroupDocs.Comparison .NET API'si
-description: GroupDocs.Comparison for .NET'i kullanarak akışlardaki korumalı belgeleri nasıl karşılaştıracağınızı öğrenin. Belge karşılaştırma sürecinizi zahmetsizce kolaylaştırın.
-weight: 18
-url: /tr/net/document-comparison/compare-protected-documents-from-stream/
+"description": "GroupDocs.Comparison for .NET kullanarak akışlardaki korumalı belgeleri nasıl karşılaştıracağınızı öğrenin. Belge karşılaştırma sürecinizi zahmetsizce kolaylaştırın."
+"linktitle": "Stream'den Korunan Belgeleri Karşılaştırın - .NET için GroupDocs.Comparison"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Stream'den Korunan Belgeleri Karşılaştırın - .NET için GroupDocs.Comparison"
+"url": "/tr/net/document-comparison/compare-protected-documents-from-stream/"
+"weight": 18
 ---
 
-# Stream'den Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
+# Stream'den Korunan Belgeleri Karşılaştırın - .NET için GroupDocs.Comparison
 
 ## giriiş
-.NET geliştirme alanında, çeşitli uygulamalar için belgelerin verimli bir şekilde karşılaştırılması çok önemlidir. İçerik yönetim sistemleri, yasal yazılımlar veya başka herhangi bir belge merkezli proje üzerinde çalışıyor olsanız da, belgeleri doğru şekilde karşılaştırma yeteneğine sahip olmak iş akışlarını kolaylaştırabilir ve üretkenliği artırabilir. Bu eğitimde, korumalı belgeleri akışlardan karşılaştırma işlemini basitleştiren güçlü bir araç olan GroupDocs.Comparison for .NET'in kullanımı anlatılmaktadır. Aşağıda özetlenen adım adım kılavuzu takip ederek, bu kütüphaneyi .NET projelerinizde nasıl etkili bir şekilde kullanacağınıza dair kapsamlı bir anlayış kazanacaksınız.
-## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
-1. .NET Geliştirmeye İlişkin Temel Bilgi: C# programlamaya ve .NET çerçevesine aşina olmak, bu eğitimde tartışılan kavramları kavramak için çok önemlidir.
-2.  GroupDocs.Comparison for .NET kurulumu: GroupDocs.Comparison for .NET kitaplığını web sitesinden indirip yükleyin.[Burada](https://releases.groupdocs.com/comparison/net/)Kitaplığı .NET projenize entegre etmek için sağlanan kurulum talimatlarını izleyin.
-3. Korumalı Belgelere Erişim: Karşılaştırmayı düşündüğünüz kaynak ve hedef belgeleri hazırlayın. Güvenli karşılaştırmayı sağlamak için bu belgeler şifre korumalı olmalıdır.
+.NET geliştirme alanında, belgelerin etkili bir şekilde karşılaştırılması çeşitli uygulamalar için hayati önem taşır. İçerik yönetim sistemleri, yasal yazılımlar veya başka bir belge merkezli proje üzerinde çalışıyor olun, belgeleri doğru bir şekilde karşılaştırma becerisine sahip olmak iş akışlarını kolaylaştırabilir ve üretkenliği artırabilir. Bu eğitim, akışlardan korunan belgeleri karşılaştırma sürecini basitleştiren güçlü bir araç olan .NET için GroupDocs.Comparison'ı kullanmayı ele alır. Aşağıda özetlenen adım adım kılavuzu izleyerek, bu kitaplığı .NET projelerinizde etkili bir şekilde nasıl kullanacağınıza dair kapsamlı bir anlayış kazanacaksınız.
+## Ön koşullar
+Eğitime başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
+1. .NET Geliştirmenin Temel Bilgileri: Bu eğitimde ele alınan kavramları kavramak için C# programlama ve .NET framework'üne aşinalık şarttır.
+2. GroupDocs.Comparison for .NET'in Kurulumu: GroupDocs.Comparison for .NET kitaplığını web sitesinden indirin ve kurun [Burada](https://releases.groupdocs.com/comparison/net/)Kütüphaneyi .NET projenize entegre etmek için verilen kurulum talimatlarını izleyin.
+3. Korunan Belgelere Erişim: Karşılaştırmayı planladığınız kaynak ve hedef belgeleri hazırlayın. Bu belgeler güvenli karşılaştırmayı sağlamak için parola korumalı olmalıdır.
 
 ## Ad Alanlarını İçe Aktar
-Karşılaştırma işlemine devam etmeden önce gerekli ad alanlarını .NET projenize aktardığınızdan emin olun. Bu adım, GroupDocs.Comparison kitaplığı tarafından sağlanan işlevlere sorunsuz bir şekilde erişmenizi sağlar.
+Karşılaştırma sürecine geçmeden önce, gerekli ad alanlarını .NET projenize aktardığınızdan emin olun. Bu adım, GroupDocs.Comparison kitaplığı tarafından sağlanan işlevlere sorunsuz bir şekilde erişmenizi sağlar.
 
 ```csharp
 using System;
@@ -35,30 +35,30 @@ string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx"_PROTECTED), new LoadOptions() { Password = "1234" }))
 {
 ```
-## 3. Adım: Karşılaştırma için Hedef Belgeyi Ekleyin
+## Adım 3: Karşılaştırma için Hedef Belgeyi Ekleyin
 ```csharp
     comparer.Add(File.OpenRead("TARGET.docx"_PROTECTED), new LoadOptions() { Password = "5678" });
 ```
-## 4. Adım: Belge Karşılaştırmasını Gerçekleştirin
+## Adım 4: Belge Karşılaştırmasını Gerçekleştirin
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 }
 ```
-## Adım 5: Çıkış Konumunu Görüntüleyin
+## Adım 5: Çıktı Konumunu Görüntüle
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Çözüm
-Sonuç olarak, GroupDocs.Comparison for .NET, .NET uygulamalarınızdaki akışlardan korunan belgeleri karşılaştırmak için kullanışlı bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek belge karşılaştırma işlevini projelerinize sorunsuz bir şekilde entegre edebilir, verimliliği ve üretkenliği artırabilirsiniz.
-## SSS'ler
-### GroupDocs.Comparison for .NET'i kullanarak farklı formatlardaki belgeleri karşılaştırabilir miyim?
-Evet, GroupDocs.Comparison, DOCX, PDF, PPTX ve daha fazlası dahil olmak üzere çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
-### GroupDocs.Comparison for .NET'in deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümüne erişerek GroupDocs.Comparison'ın özelliklerini keşfedebilirsiniz.[Burada](https://releases.groupdocs.com/).
-### GroupDocs.Comparison for .NET, İngilizce dışındaki dillerde belge karşılaştırmasını destekliyor mu?
-Evet, kütüphane birden fazla dilde belge karşılaştırmasını destekleyerek farklı projeler için esneklik sağlar.
+Sonuç olarak, GroupDocs.Comparison for .NET, .NET uygulamalarınızdaki akışlardan korunan belgeleri karşılaştırmak için kullanışlı bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek, belge karşılaştırma işlevselliğini projelerinize sorunsuz bir şekilde entegre edebilir, verimliliği ve üretkenliği artırabilirsiniz.
+## SSS
+### GroupDocs.Comparison for .NET kullanarak farklı formatlardaki belgeleri karşılaştırabilir miyim?
+Evet, GroupDocs.Comparison DOCX, PDF, PPTX ve daha fazlası dahil olmak üzere çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
+### GroupDocs.Comparison for .NET için deneme sürümü mevcut mu?
+Evet, GroupDocs.Comparison'ın özelliklerini ücretsiz deneme sürümüne erişerek keşfedebilirsiniz. [Burada](https://releases.groupdocs.com/).
+### GroupDocs.Comparison for .NET İngilizce dışındaki dillerde belge karşılaştırmasını destekliyor mu?
+Evet, kütüphane birden fazla dilde belge karşılaştırmasını destekleyerek farklı projeler için esneklik sağlıyor.
 ### Karşılaştırılan belgelerin çıktı formatını özelleştirebilir miyim?
-Evet, GroupDocs.Comparison, karşılaştırılan belgelerin çıktı formatını ve görünümünü tercihlerinize göre özelleştirmek için seçenekler sunar.
+Evet, GroupDocs.Comparison, karşılaştırılan belgelerin çıktı formatını ve görünümünü kendi çalışmanıza göre özelleştirme seçenekleri sunar.
 ### GroupDocs.Comparison for .NET için teknik destek mevcut mu?
- Evet, GroupDocs.Comparison destek forumu aracılığıyla yardım isteyebilir ve toplulukla etkileşime geçebilirsiniz.[Burada](https://forum.groupdocs.com/c/comparison/12).
+Evet, GroupDocs.Comparison destek forumu aracılığıyla yardım arayabilir ve toplulukla etkileşime girebilirsiniz. [Burada](https://forum.groupdocs.com/c/comparison/12).

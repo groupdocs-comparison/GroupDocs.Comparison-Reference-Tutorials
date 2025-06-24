@@ -1,51 +1,51 @@
 ---
-title: .NET용 GroupDocs 비교의 스트림에서 문서 로드
-linktitle: .NET용 GroupDocs 비교의 스트림에서 문서 로드
-second_title: GroupDocs.비교 .NET API
-description: 강력한 .NET 라이브러리인 GroupDocs 비교를 사용하여 .NET 응용 프로그램의 문서를 손쉽게 비교하는 방법을 알아보세요.
-weight: 11
-url: /ko/net/loading-and-saving-documents/loading-documents-from-stream/
+"description": "강력한 .NET 라이브러리인 GroupDocs Comparison을 사용하여 .NET 애플리케이션에서 문서를 손쉽게 비교하는 방법을 알아보세요."
+"linktitle": ".NET용 GroupDocs 비교에서 Stream에서 문서 로드"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": ".NET용 GroupDocs 비교에서 Stream에서 문서 로드"
+"url": "/ko/net/loading-and-saving-documents/loading-documents-from-stream/"
+"weight": 11
 ---
 
-# .NET용 GroupDocs 비교의 스트림에서 문서 로드
+# .NET용 GroupDocs 비교에서 Stream에서 문서 로드
 
 ## 소개
-문서 관리 및 비교 도구 영역에서 GroupDocs Comparison for .NET은 .NET 개발자를 위해 맞춤화된 강력한 솔루션으로 돋보입니다. 이 강력한 라이브러리를 통해 개발자는 문서 비교 기능을 .NET 애플리케이션에 원활하게 통합할 수 있습니다. 콘텐츠 관리 시스템, 법률 응용 프로그램 또는 문서 분석 및 비교가 필요한 기타 프로젝트 작업 중이라면 GroupDocs Comparison for .NET은 신뢰할 수 있는 동맹입니다.
-## 전제조건
-.NET용 GroupDocs 비교 사용의 복잡성을 자세히 알아보기 전에 다음 전제 조건이 충족되었는지 확인하세요.
-1.  .NET용 GroupDocs 비교 설치: .NET용 GroupDocs 비교 라이브러리를 다운로드하고 설치하는 것으로 시작합니다. 도서관에서 도서관을 구할 수 있습니다.[다운로드 링크](https://releases.groupdocs.com/comparison/net/). 설명서에 제공된 설치 지침을 따르십시오.
-2. .NET Framework의 기본 이해: .NET Framework, 특히 C#에 익숙해집니다. .NET용 GroupDocs 비교는 주로 .NET 개발자를 대상으로 하므로 .NET 개발에 대한 기본적인 이해가 필수적입니다.
-3. 통합 개발 환경(IDE): .NET 개발을 위해 선호하는 IDE를 선택합니다. 인기 있는 선택에는 Visual Studio, Visual Studio Code 및 JetBrains Rider가 있습니다.
-4. 문서 파일: 비교하려는 원본 문서와 대상 문서를 준비합니다. 프로젝트 디렉터리 내에서 액세스할 수 있는지 확인하세요.
+문서 관리 및 비교 도구 분야에서 GroupDocs Comparison for .NET은 .NET 개발자를 위한 강력한 솔루션으로 두각을 나타냅니다. 이 강력한 라이브러리는 개발자가 문서 비교 기능을 .NET 애플리케이션에 원활하게 통합할 수 있도록 지원합니다. 콘텐츠 관리 시스템, 법률 애플리케이션 또는 문서 분석 및 비교가 필요한 기타 프로젝트를 진행하는 경우, GroupDocs Comparison for .NET은 든든한 동반자가 되어 줄 것입니다.
+## 필수 조건
+.NET에서 GroupDocs Comparison을 사용하는 복잡한 내용을 살펴보기 전에 다음 필수 구성 요소가 있는지 확인하세요.
+1. GroupDocs Comparison for .NET 설치: 먼저 GroupDocs Comparison for .NET 라이브러리를 다운로드하고 설치하세요. 라이브러리는 다음에서 다운로드할 수 있습니다. [다운로드 링크](https://releases.groupdocs.com/comparison/net/)설명서에 제공된 설치 지침을 따르세요.
+2. .NET Framework에 대한 기본 이해: .NET Framework, 특히 C#에 익숙해지세요. GroupDocs Comparison for .NET은 주로 .NET 개발자를 대상으로 하므로 .NET 개발에 대한 기본적인 이해가 필수적입니다.
+3. 통합 개발 환경(IDE): .NET 개발을 위한 튜토리얼용 IDE를 선택하세요. Visual Studio, Visual Studio Code, JetBrains Rider 등이 많이 사용됩니다.
+4. 문서 파일: 비교할 원본 문서와 대상 문서를 준비하세요. 프로젝트 디렉터리에서 접근할 수 있는지 확인하세요.
 
 ## 네임스페이스 가져오기
-코드를 살펴보기 전에 .NET용 GroupDocs 비교 기능에 액세스하는 데 필요한 네임스페이스를 가져와야 합니다.
+코드를 살펴보기 전에 .NET용 GroupDocs Comparison 기능에 액세스하는 데 필요한 네임스페이스를 가져왔는지 확인하세요.
 ```csharp
 using System;
 using System.IO;
 ```
 ## 1단계: 출력 디렉터리 및 파일 이름 정의
-먼저 비교 문서를 저장할 디렉터리를 설정하고 출력 파일 이름을 지정합니다.
+먼저, 비교한 문서를 저장할 디렉토리를 설정하고 출력 파일 이름을 지정합니다.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
 ## 2단계: 오픈 소스 및 대상 문서 스트림
- 비교하려는 소스 문서와 대상 문서 모두에 대한 오픈 스트림입니다. 바꾸다`"SOURCE.docx"` 그리고`"TARGET.docx"` 소스 및 대상 문서의 경로를 각각 사용합니다.
+비교할 원본 문서와 대상 문서 모두에 대한 스트림을 엽니다. 바꾸기 `"SOURCE.docx"` 그리고 `"TARGET.docx"` 각각 소스 및 대상 문서에 대한 경로를 포함합니다.
 ```csharp
 using (Stream sourceStream = File.OpenRead("SOURCE.docx"))
 using (Stream targetStream = File.OpenRead("TARGET.docx"))
 {
 ```
-## 3단계: 비교기 초기화 및 문서 추가
- 인스턴스를 생성합니다.`Comparer` 클래스를 사용하여 비교를 위한 대상 문서를 추가합니다.`Add` 방법.
+## 3단계: 비교자 초기화 및 문서 추가
+인스턴스를 생성합니다 `Comparer` 클래스를 추가하고 다음을 사용하여 비교를 위한 대상 문서를 추가합니다. `Add` 방법.
 ```csharp
 using (Comparer comparer = new Comparer(sourceStream))
 {
     comparer.Add(targetStream);
 ```
 ## 4단계: 비교 수행 및 출력 저장
- 비교 프로세스를 실행하고 비교된 문서를 지정된 출력 파일에 저장합니다.`Compare` 방법.
+비교 프로세스를 실행하고 비교된 문서를 지정된 출력 파일에 저장합니다. `Compare` 방법.
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 }
@@ -57,15 +57,15 @@ Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputD
 ```
 
 ## 결론
-이 자습서에서는 .NET용 GroupDocs 비교를 활용하여 .NET 응용 프로그램 내에서 문서를 원활하게 비교하는 방법을 살펴보았습니다. 단계별 가이드를 따르면 문서 비교 기능을 효율적으로 통합하여 문서 관리 시스템 또는 애플리케이션을 향상시킬 수 있습니다.
-## FAQ
-### .NET용 GroupDocs 비교는 다양한 문서 형식과 호환됩니까?
-예, .NET용 GroupDocs 비교는 DOCX, PDF, PPTX, XLSX 등을 포함한 광범위한 문서 형식을 지원합니다.
-### 내 요구 사항에 따라 비교 설정을 사용자 정의할 수 있습니까?
-물론 .NET용 GroupDocs 비교는 필요에 따라 비교 프로세스를 맞춤화할 수 있는 광범위한 사용자 정의 옵션을 제공합니다.
-### 구매하기 전에 테스트할 수 있는 평가판이 있나요?
- 예, 다음에서 .NET용 GroupDocs 비교 무료 평가판을 이용할 수 있습니다.[여기](https://releases.groupdocs.com/).
-### .NET용 GroupDocs 비교는 기술 지원을 제공합니까?
-예, GroupDocs 포럼에서 도움을 구하고 토론에 참여할 수 있습니다.[여기](https://forum.groupdocs.com/c/comparison/12).
-### 평가 목적으로 임시 라이선스를 얻을 수 있나요?
- 물론 평가 목적으로 임시 라이센스를 얻을 수 있습니다.[여기](https://purchase.groupdocs.com/temporary-license/).
+이 튜토리얼에서는 GroupDocs Comparison for .NET을 활용하여 .NET 애플리케이션 내에서 문서를 원활하게 비교하는 방법을 살펴보았습니다. 단계별 가이드를 따라 문서 비교 기능을 효율적으로 통합하여 문서 관리 시스템이나 애플리케이션을 더욱 강화할 수 있습니다.
+## 자주 묻는 질문
+### GroupDocs Comparison for .NET은 다양한 문서 형식과 호환됩니까?
+네, GroupDocs Comparison for .NET은 DOCX, PDF, PPTX, XLSX 등 다양한 문서 형식을 지원합니다.
+### 내 요구 사항에 맞게 비교 설정을 사용자 정의할 수 있나요?
+물론입니다. GroupDocs Comparison for .NET은 광범위한 사용자 정의 옵션을 제공하므로 필요에 따라 비교 프로세스를 맞춤 설정할 수 있습니다.
+### 구매하기 전에 테스트해 볼 수 있는 체험판이 있나요?
+예, .NET용 GroupDocs Comparison의 무료 평가판을 이용할 수 있습니다. [여기](https://releases.groupdocs.com/).
+### GroupDocs Comparison for .NET은 기술 지원을 제공합니까?
+네, GroupDocs 포럼에서 도움을 요청하고 토론에 참여할 수 있습니다. [여기](https://forum.groupdocs.com/c/comparison/12).
+### 평가 목적으로 임시 라이센스를 얻을 수 있나요?
+물론, 평가 목적으로 임시 라이센스를 취득할 수 있습니다. [여기](https://purchase.groupdocs.com/temporary-license/).

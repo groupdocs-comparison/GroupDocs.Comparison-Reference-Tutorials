@@ -1,36 +1,36 @@
 ---
-title: Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
-linktitle: Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
-second_title: GroupDocs.Comparison .NET API'si
-description: Verimli belge karşılaştırma iş akışları için GroupDocs Comparison for .NET'i .NET projelerinize sorunsuz bir şekilde entegre edin.
-weight: 12
-url: /tr/net/quick-start/set-metered-license/
+"description": "Verimli belge karşılaştırma iş akışları için GroupDocs Comparison for .NET'i .NET projelerinize sorunsuz bir şekilde entegre edin."
+"linktitle": "Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması"
+"url": "/tr/net/quick-start/set-metered-license/"
+"weight": 12
 ---
 
 # Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
 
 ## giriiş
-.NET geliştirme alanında, belge karşılaştırması için sağlam araçlara sahip olmak vazgeçilmezdir. GroupDocs Comparison for .NET, çeşitli belge formatlarını programlı olarak karşılaştırmak için güçlü bir çözüm olarak öne çıkıyor. Metin belgelerinden elektronik tablolara ve sunumlara kadar bu kitaplık, geliştiricilerin dosyalar arasındaki farkları etkili bir şekilde tanımlamasına olanak tanır.
-## Önkoşullar
-.NET için GroupDocs Karşılaştırmasını kullanmanın inceliklerine dalmadan önce, aşağıdaki önkoşulların yerine getirildiğinden emin olun:
-1. .NET Geliştirme Bilgisi: C# programlama ve .NET ortamına aşinalık, .NET için GroupDocs Karşılaştırmasını etkili bir şekilde kullanmak için çok önemlidir.
-2.  GroupDocs Karşılaştırma Kütüphanesinin Kurulumu: GroupDocs Comparison for .NET kütüphanesini şuradan indirip yükleyin:[İndirme: {link](https://releases.groupdocs.com/comparison/net/).
-3. Ölçülü Lisans: Kitaplığın tüm potansiyelini açığa çıkarmak için GroupDocs'tan ölçülü bir lisans edinin. adresinden geçici lisans alabilirsiniz.[Burada](https://purchase.groupdocs.com/temporary-license/).
-4. Entegre Geliştirme Ortamı (IDE): Sorunsuz geliştirme deneyimi için Visual Studio benzeri bir IDE'nin kurulu olmasını sağlayın.
+.NET geliştirme alanında, belge karşılaştırması için sağlam araçlara sahip olmak vazgeçilmezdir. .NET için GroupDocs Comparison, çeşitli belge biçimlerini programatik olarak karşılaştırmak için güçlü bir çözüm olarak öne çıkar. Metin belgelerinden elektronik tablolara ve sunumlara kadar, bu kitaplık geliştiricilerin dosyalar arasındaki farkları etkili bir şekilde belirlemesini sağlar.
+## Ön koşullar
+GroupDocs Comparison for .NET'i kullanmanın inceliklerine dalmadan önce, aşağıdaki ön koşulların mevcut olduğundan emin olun:
+1. .NET Geliştirme Bilgisi: GroupDocs Comparison for .NET'i etkin bir şekilde kullanmak için C# programlama ve .NET ortamına aşinalık şarttır.
+2. GroupDocs Comparison Kütüphanesinin Kurulumu: GroupDocs Comparison for .NET kütüphanesini aşağıdaki adresten indirin ve kurun: [indirme bağlantısı](https://releases.groupdocs.com/comparison/net/).
+3. Ölçülü Lisans: Kütüphanenin tüm potansiyelini ortaya çıkarmak için GroupDocs'tan ölçülü bir lisans edinin. Geçici bir lisansı şu adresten alabilirsiniz: [Burada](https://purchase.groupdocs.com/temporary-license/).
+4. Entegre Geliştirme Ortamı (IDE): Kusursuz bir geliştirme deneyimi için Visual Studio gibi bir IDE'nin yüklü olmasını sağlayın.
 
 ## Ad Alanlarını İçe Aktar
-GroupDocs Comparison for .NET'i kullanmaya başlamak için gerekli ad alanlarını projenize aktarın. Bu adımları takip et:
+GroupDocs Comparison for .NET'i kullanmaya başlamak için gerekli ad alanlarını projenize aktarın. Şu adımları izleyin:
 
 ```csharp
 using System;
 ```
 Bu ad alanları, belge karşılaştırma işlevselliği için gereken temel sınıflara ve yöntemlere erişim sağlar.
-## Ölçülü Lisans Ayarlama
-GroupDocs Comparison for .NET'in tüm özelliklerini kullanmadan önce, ölçülü bir lisans ayarlamak çok önemlidir. İşte bunu başarmak için adım adım bir kılavuz:
-## Adım 1: Genel ve Özel Anahtarları Alın
-İlk olarak, ölçülü bir lisans satın aldıktan sonra GroupDocs tarafından sağlanan genel ve özel anahtarları edinin.
-## 2. Adım: Ölçülü Lisansı Ayarlayın
-Şimdi, ölçülü lisansı aşağıda gösterildiği gibi ayarlamak için elde edilen genel ve özel anahtarları kullanın:
+## Ölçülü Lisans Kurulumu
+GroupDocs Comparison for .NET'in tüm özelliklerini kullanmadan önce, ölçülü bir lisans kurmak çok önemlidir. İşte bunu başarmak için adım adım bir kılavuz:
+## Adım 1: Genel ve Özel Anahtarları Edinin
+Öncelikle ölçülü lisans satın aldıktan sonra GroupDocs tarafından sağlanan genel ve özel anahtarları edinin.
+## Adım 2: Ölçülü Lisansı Ayarlayın
+Şimdi, elde edilen genel ve özel anahtarları kullanarak aşağıda gösterildiği gibi ölçülü lisansı ayarlayalım:
 ```csharp
 string publicKey = "*****";
 string privateKey = "*****";
@@ -38,18 +38,18 @@ Metered metered = new Metered();
 metered.SetMeteredKey(publicKey, privateKey);
 Console.WriteLine("License set successfully.");
 ```
- Yer değiştirmek`"*****"`GroupDocs tarafından sağlanan gerçek genel ve özel anahtarlarınızla. Bu kod, sağlanan anahtarlarla ölçülü lisansı başlatır ve GroupDocs Comparison for .NET'in tüm işlevlerine erişim sağlar.
+Yer değiştirmek `"*****"` GroupDocs tarafından sağlanan gerçek genel ve özel anahtarlarınızla. Bu kod, sağlanan anahtarlarla ölçülü lisansı başlatır ve .NET için GroupDocs Comparison'ın tüm işlevlerine erişimi sağlar.
 
 ## Çözüm
-Sonuç olarak, GroupDocs Comparison for .NET, .NET uygulamaları içinde belge karşılaştırması için kapsamlı bir çözüm sunar. Geliştiriciler, ad alanlarını içe aktarmak ve ölçülü bir lisans ayarlamak için özetlenen adımları izleyerek bu güçlü kitaplığı projelerine sorunsuz bir şekilde entegre edebilir ve verimli belge karşılaştırma iş akışlarını kolaylaştırabilir.
-## SSS'ler
+Sonuç olarak, GroupDocs Comparison for .NET, .NET uygulamaları içinde belge karşılaştırması için kapsamlı bir çözüm sunar. Ad alanlarını içe aktarmak ve ölçülü bir lisans kurmak için belirtilen adımları izleyerek, geliştiriciler bu güçlü kütüphaneyi projelerine sorunsuz bir şekilde entegre edebilir ve verimli belge karşılaştırma iş akışlarını kolaylaştırabilir.
+## SSS
 ### GroupDocs Comparison for .NET'i lisans olmadan kullanabilir miyim?
-Hayır, kütüphanenin tüm işlevlerini kullanabilmek için geçerli bir lisans gereklidir. Ancak test amaçlı olarak geçici bir lisans alabilirsiniz.
-### GroupDocs Comparison for .NET hangi belge formatlarını destekler?
-.NET için GroupDocs Karşılaştırması, DOCX, XLSX, PPTX, PDF ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
-### .NET için GroupDocs Karşılaştırması .NET Core ile uyumlu mu?
-Evet, GroupDocs Comparison for .NET, hem .NET Framework hem de .NET Core ortamlarıyla uyumludur.
+Hayır, kütüphanenin tüm işlevselliğinden yararlanmak için geçerli bir lisansa ihtiyaç vardır. Ancak, test amaçlı geçici bir lisans edinebilirsiniz.
+### GroupDocs Comparison for .NET hangi belge biçimlerini destekler?
+GroupDocs Comparison for .NET, DOCX, XLSX, PPTX, PDF ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
+### GroupDocs Comparison for .NET, .NET Core ile uyumlu mudur?
+Evet, GroupDocs Comparison for .NET hem .NET Framework hem de .NET Core ortamlarıyla uyumludur.
 ### Karşılaştırma ayarlarını özelleştirebilir miyim?
-Evet, geliştiriciler belge karşılaştırmanın karşılaştırma türü, stil ayarları ve karşılaştırma kapsamı gibi çeşitli yönlerini özelleştirme esnekliğine sahiptir.
+Evet, geliştiriciler karşılaştırma türü, stil ayarları ve karşılaştırma kapsamı gibi belge karşılaştırmasının çeşitli yönlerini özelleştirme esnekliğine sahiptir.
 ### Herhangi bir sorunla karşılaşırsam nereden yardım alabilirim?
- GroupDocs Karşılaştırma topluluğu forumundan yardım isteyebilirsiniz.[Burada](https://forum.groupdocs.com/c/comparison/12).
+GroupDocs Comparison topluluk forumundan yardım alabilirsiniz [Burada](https://forum.groupdocs.com/c/comparison/12).

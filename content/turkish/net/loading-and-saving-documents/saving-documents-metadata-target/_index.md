@@ -1,23 +1,23 @@
 ---
-title: .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme
-linktitle: .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme
-second_title: GroupDocs.Comparison .NET API'si
-description: GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini nasıl kaydedeceğinizi öğrenin. .NET uygulamalarınızda verimli belge karşılaştırması için kolay adımlar.
-weight: 15
-url: /tr/net/loading-and-saving-documents/saving-documents-metadata-target/
+"description": "GroupDocs Comparison for .NET kullanarak belge meta veri hedefini nasıl kaydedeceğinizi öğrenin. .NET uygulamalarınızda etkili belge karşılaştırması için kolay adımlar."
+"linktitle": ".NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": ".NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme"
+"url": "/tr/net/loading-and-saving-documents/saving-documents-metadata-target/"
+"weight": 15
 ---
 
 # .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme
 
 ## giriiş
-Bu öğreticide, GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini kaydetme sürecinde size yol göstereceğiz. GroupDocs Comparison for .NET, .NET uygulamalarınızdaki belgeleri karşılaştırmanıza ve birleştirmenize olanak tanıyan güçlü bir kitaplıktır.
-## Önkoşullar
-Başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1.  .NET için GroupDocs Karşılaştırması: .NET için GroupDocs Karşılaştırmasını indirip yüklediğinizden emin olun. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/comparison/net/).
-2. .NET Geliştirme Ortamı: Sisteminizde .NET geliştirme ortamının kurulu olması gerekmektedir.
+Bu eğitimde, .NET için GroupDocs Comparison'ı kullanarak belge meta veri hedefini kaydetme sürecinde size rehberlik edeceğiz. .NET için GroupDocs Comparison, .NET uygulamalarınızdaki belgeleri karşılaştırmanıza ve birleştirmenize olanak tanıyan güçlü bir kütüphanedir.
+## Ön koşullar
+Başlamadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. GroupDocs Comparison for .NET: GroupDocs Comparison for .NET'i indirip kurduğunuzdan emin olun. Bunu şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/comparison/net/).
+2. .NET Geliştirme Ortamı: Sisteminizde bir .NET geliştirme ortamı kurulu olmalıdır.
 
 ## Ad Alanlarını İçe Aktar
-Kodlamaya başlamadan önce gerekli ad alanlarını içe aktaralım:
+Kodlamaya başlamadan önce gerekli namespace'leri import edelim:
 ```csharp
 using System;
 using System.IO;
@@ -25,13 +25,13 @@ using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 ```
 ## Adım 1: Çıktı Dizinini ve Dosya Adını Tanımlayın
-Öncelikle, karşılaştırılan belgeleri kaydetmek istediğiniz çıktı dizinini ve çıktı dosyasının adını belirtin.
+Öncelikle karşılaştırılan belgelerin kaydedileceği çıktı dizinini ve çıktı dosyasının adını belirtin.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-## 2. Adım: Belgeleri Karşılaştırın ve Meta Veri Hedefini Kaydedin
- Şimdi, bir başlat`Comparer`kaynak belgeyle nesneyi seçin ve karşılaştırmak istediğiniz hedef belgeyi/belgeleri ekleyin. Daha sonra şu numarayı arayın:`Compare` yöntemini seçin ve meta veri türünü hedef olarak kopyalamak için kaydetme seçenekleriyle birlikte çıktı dosyası adını belirtin.
+## Adım 2: Belgeleri Karşılaştırın ve Meta Veri Hedefini Kaydedin
+Şimdi, bir tane başlatın `Comparer` kaynak belgeyle nesneyi ekleyin ve karşılaştırmak istediğiniz hedef belgeyi/belgeleri ekleyin. Ardından, `Compare` yöntemini belirtin ve meta veri türünü hedef olarak klonlamak için kaydetme seçenekleriyle birlikte çıktı dosyası adını belirtin.
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
@@ -39,23 +39,23 @@ using (Comparer comparer = new Comparer("SOURCE.docx"))
     comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 }
 ```
-## 3. Adım: Başarı Mesajını Görüntüleyin
+## Adım 3: Başarı Mesajını Göster
 Son olarak, belgelerin başarıyla karşılaştırıldığını belirten bir başarı mesajı görüntüleyin ve çıktı dosyasının kaydedildiği yolu belirtin.
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {outputDirectory}.");
 ```
-Tebrikler! GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini başarıyla kaydettiniz.
+Tebrikler! GroupDocs Comparison for .NET kullanarak belge meta veri hedefini başarıyla kaydettiniz.
 
 ## Çözüm
-Bu öğreticide, GroupDocs Comparison for .NET'i kullanarak belge meta veri hedefini kaydetme sürecini ele aldık. Yukarıda özetlenen adımları izleyerek, .NET uygulamalarınızdaki belgeleri verimli bir şekilde karşılaştırabilir ve kaydedebilirsiniz.
-## SSS'ler
+Bu eğitimde, .NET için GroupDocs Comparison'ı kullanarak belge meta veri hedefini kaydetme sürecini ele aldık. Yukarıda özetlenen adımları izleyerek, .NET uygulamalarınızdaki belgeleri verimli bir şekilde karşılaştırabilir ve kaydedebilirsiniz.
+## SSS
 ### Farklı formatlardaki belgeleri karşılaştırabilir miyim?
-Evet, GroupDocs Comparison for .NET, DOCX, PDF, PPTX, XLSX ve daha fazlası gibi çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
+Evet, GroupDocs Comparison for .NET, DOCX, PDF, PPTX, XLSX gibi çeşitli formatlardaki belgelerin karşılaştırılmasını destekler.
 ### Deneme sürümü mevcut mu?
- Evet, şu adresten ücretsiz deneme alabilirsiniz:[Burada](https://releases.groupdocs.com/).
+Evet, ücretsiz deneme sürümünü şu adresten alabilirsiniz: [Burada](https://releases.groupdocs.com/).
 ### Herhangi bir sorunla karşılaşırsam nasıl destek alabilirim?
- GroupDocs Karşılaştırma topluluğu forumundan yardım isteyebilirsiniz.[Burada](https://forum.groupdocs.com/c/comparison/12).
+GroupDocs Comparison topluluk forumundan yardım alabilirsiniz [Burada](https://forum.groupdocs.com/c/comparison/12).
 ### Karşılaştırılan belgelerin çıktı formatını özelleştirebilir miyim?
-Evet, çıktı formatını ve diğer seçenekleri gereksinimlerinize göre özelleştirebilirsiniz.
-### GroupDocs Comparison for .NET büyük ölçekli belge karşılaştırma görevleri için uygun mu?
-Evet, GroupDocs Comparison for .NET, büyük ölçekli belge karşılaştırma görevlerini verimli bir şekilde gerçekleştirmek üzere tasarlanmıştır.
+Evet, ihtiyaçlarınıza göre çıktı formatını ve diğer seçenekleri özelleştirebilirsiniz.
+### GroupDocs Comparison for .NET büyük ölçekli belge karşılaştırma görevleri için uygun mudur?
+Evet, GroupDocs Comparison for .NET, büyük ölçekli belge karşılaştırma görevlerini etkili bir şekilde ele almak üzere tasarlanmıştır.

@@ -36,6 +36,7 @@ Welcome to the **complete guide to document comparison** with GroupDocs.Comparis
 
 {{% alert color="primary" %}}
 Master document comparison in your .NET applications with our step-by-step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer-focused guides cover everything from basic setup to advanced integration scenarios.
+
 {{% /alert %}}
 
 ### Essential .NET Tutorials
@@ -75,6 +76,7 @@ Master document comparison in your .NET applications with our step-by-step tutor
 
 {{% alert color="primary" %}}
 Implement powerful document comparison capabilities in your Java applications with our comprehensive tutorials. Learn to integrate GroupDocs.Comparison for Java into enterprise systems, web applications, and desktop software with clear, practical examples.
+
 {{% /alert %}}
 
 ### Essential Java Tutorials

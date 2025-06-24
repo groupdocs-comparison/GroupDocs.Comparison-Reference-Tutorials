@@ -1,42 +1,42 @@
 ---
-title: Oldal előnézetek létrehozása a forrásdokumentumhoz
-linktitle: Oldal előnézetek létrehozása a forrásdokumentumhoz
-second_title: GroupDocs.Comparison .NET API
-description: Ismerje meg, hogyan használhatja a Groupdocs.Comparison for .NET alkalmazást a dokumentum-összehasonlítási folyamatok hatékony egyszerűsítésére a C#-projektekben.
-weight: 11
-url: /hu/net/document-comparison/generate-page-previews-source-document/
+"description": "Ismerje meg, hogyan használhatja a Groupdocs.Comparison for .NET-et a C#-projektjeiben zajló dokumentum-összehasonlítási folyamatok hatékony egyszerűsítéséhez."
+"linktitle": "Oldal előnézetek generálása forrásdokumentumhoz"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Oldal előnézetek generálása forrásdokumentumhoz"
+"url": "/hu/net/document-comparison/generate-page-previews-source-document/"
+"weight": 11
 ---
 
-# Oldal előnézetek létrehozása a forrásdokumentumhoz
+# Oldal előnézetek generálása forrásdokumentumhoz
 
 ## Bevezetés
-mai rohanó digitális világban a dokumentumkezelés és az összehasonlítás kulcsszerepet játszik a különböző iparágakban. A robusztus megoldásokat kereső fejlesztők gyakran a Groupdocs.Comparison for .NET-hez fordulnak. Ez a hatékony eszköz lehetővé teszi a fejlesztők számára a dokumentumok könnyű összehasonlítását, lehetővé téve számukra a munkafolyamatok egyszerűsítését és a termelékenység növelését. Ebben az oktatóanyagban a Groupdocs.Comparison for .NET alapjait fedezzük fel, lebontva az egyes lépéseket a zökkenőmentes tanulási élmény biztosítása érdekében.
+A mai gyorsan változó digitális világban a dokumentumkezelés és az összehasonlítás kulcsfontosságú szerepet játszik számos iparágban. A robusztus megoldásokat kereső fejlesztők gyakran a Groupdocs.Comparison for .NET-hez fordulnak. Ez a hatékony eszköz lehetővé teszi a fejlesztők számára, hogy könnyedén összehasonlítsák a dokumentumokat, lehetővé téve számukra a munkafolyamatok egyszerűsítését és a termelékenység növelését. Ebben az oktatóanyagban a Groupdocs.Comparison for .NET lényegét vizsgáljuk meg, lépésről lépésre lebontva a zökkenőmentes tanulási élmény biztosítása érdekében.
 ## Előfeltételek
-Mielőtt belevágna a Groupdocs.Comparison for .NET-be, győződjön meg arról, hogy a következő előfeltételekkel rendelkezik:
+Mielőtt belemerülnél a Groupdocs.Comparison for .NET használatába, győződj meg arról, hogy a következő előfeltételek teljesülnek:
 ### 1. .NET fejlesztői környezet beállítása
-Győződjön meg arról, hogy rendelkezik működőképes .NET fejlesztői környezettel, beleértve a Visual Studio-t vagy bármely más választott IDE-t.
-### 2. Groupdocs.Comparison for .NET Installation
- Töltse le és telepítse a Groupdocs.Comparison for .NET alkalmazást a[letöltési link](https://releases.groupdocs.com/comparison/net/).
-### 3. A C# alapjai
-Ismerkedjen meg a C# programozási nyelv alapjaival a Groupdocs.Comparison for .NET hatékony használatához.
+Győződjön meg arról, hogy rendelkezik egy működőképes .NET fejlesztői környezettel, beleértve a Visual Studio-t vagy bármilyen más, Ön által választott IDE-t.
+### 2. Groupdocs.Comparison a .NET telepítéséhez
+Töltse le és telepítse a Groupdocs.Comparison for .NET programot a következő címről: [letöltési link](https://releases.groupdocs.com/comparison/net/).
+### 3. A C# alapvető ismeretei
+Ismerkedj meg a C# programozási nyelv alapjaival, hogy hatékonyan használhasd a Groupdocs.Comparison for .NET eszközt.
 
 ## Névterek importálása
-A C# projektben importálja a szükséges névtereket a Groupdocs.Comparison funkciók eléréséhez.
+A C# projektedben importáld a Groupdocs.Comparison funkciók eléréséhez szükséges névtereket.
 
 ```csharp
 using System;
 using System.IO;
 ```
 
-Most pedig nézzük meg a forrásdokumentum oldal-előnézeteinek generálásának folyamatát a Groupdocs.Comparison for .NET használatával.
-## 1. lépés: Inicializálja az összehasonlító objektumot
+Most pedig nézzük meg részletesebben, hogyan generálhatunk előnézeteket a forrásdokumentumhoz a Groupdocs.Comparison for .NET használatával.
+## 1. lépés: Az összehasonlító objektum inicializálása
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
-    // Itt a kódod
+    // A kódod itt
 }
 ```
-## 2. lépés: Adja meg az előnézeti beállításokat
+## 2. lépés: Előnézeti beállítások meghatározása
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
@@ -44,7 +44,7 @@ PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     return File.Create(pagePath);
 });
 ```
-## 3. lépés: Adja meg az előnézeti formátumot és az oldalszámokat
+## 3. lépés: Az előnézet formátumának és az oldalszámozásnak az megadása
 ```csharp
 previewOptions.PreviewFormat = PreviewFormats.PNG;
 previewOptions.PageNumbers = new int[] { 1, 2 };
@@ -53,21 +53,21 @@ previewOptions.PageNumbers = new int[] { 1, 2 };
 ```csharp
 comparer.Source.GeneratePreview(previewOptions);
 ```
-## 5. lépés: Jelenítse meg a sikeres üzenetet
+## 5. lépés: Sikeres üzenet megjelenítése
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Következtetés
-Összefoglalva, a Groupdocs.Comparison for .NET átfogó megoldást kínál a dokumentumok összehasonlítására C# alkalmazásokban. Az oktatóanyagban ismertetett lépések követésével hatékonyan integrálhatja ezt a hatékony eszközt projektjeibe, növelve a hatékonyságot és a termelékenységet.
+Összefoglalva, a Groupdocs.Comparison for .NET átfogó megoldást kínál a dokumentumok összehasonlításához C# alkalmazásokban. Az ebben az oktatóanyagban ismertetett lépéseket követve hatékonyan integrálhatja ezt a hatékony eszközt projektjeibe, növelve a hatékonyságot és a termelékenységet.
 ## GYIK
 ### A Groupdocs.Comparison for .NET kompatibilis a különböző dokumentumformátumokkal?
-Igen, a Groupdocs.Comparison for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a DOCX, PDF, PPTX és egyebeket.
+Igen, a Groupdocs.Comparison for .NET számos dokumentumformátumot támogat, beleértve a DOCX, PDF, PPTX és egyebeket.
 ### Testreszabhatom az összehasonlítási lehetőségeket az igényeim szerint?
-Természetesen a Groupdocs.Comparison for .NET kiterjedt testreszabási lehetőségeket kínál az összehasonlítási folyamat személyre szabásához.
-### Elérhető ingyenes próbaverzió a Groupdocs.Comparison for .NET számára?
- Igen, elérheti a Groupdocs.Comparison ingyenes próbaverzióját a .NET-hez a webhelyről[weboldal](https://releases.groupdocs.com/).
+Természetesen a Groupdocs.Comparison for .NET széleskörű testreszabási lehetőségeket kínál, hogy az összehasonlítási folyamatot az Ön egyedi igényeihez igazítsa.
+### Van ingyenes próbaverzió a Groupdocs.Comparison for .NET-hez?
+Igen, hozzáférhet a Groupdocs.Comparison for .NET ingyenes próbaverziójához a következő címen: [weboldal](https://releases.groupdocs.com/).
 ### Hogyan kérhetek segítséget vagy támogatást a Groupdocs.Comparison for .NET-hez?
- Látogassa meg a Groupdocs.Comparison oldalt[fórum](https://forum.groupdocs.com/c/comparison/12) az eszközzel kapcsolatos bármilyen kérdés vagy támogatás esetén.
-### Hol vásárolhatok licencet a Groupdocs.Comparison for .NET számára?
- A Groupdocs.Comparison for .NET-hez licencet vásárolhat a webhelyről[vásárlási oldal](https://purchase.groupdocs.com/buy).
+Meglátogathatod a Groupdocs.Comparison oldalt. [fórum](https://forum.groupdocs.com/c/comparison/12) az eszközzel kapcsolatos bármilyen kérdés vagy támogatás esetén.
+### Hol vásárolhatok licencet a Groupdocs.Comparison for .NET-hez?
+A Groupdocs.Comparison for .NET licencét a következő címen vásárolhatja meg: [vásárlási oldal](https://purchase.groupdocs.com/buy).

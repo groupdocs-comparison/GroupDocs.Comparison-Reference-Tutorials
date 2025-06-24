@@ -1,64 +1,64 @@
 ---
-title: Védett dokumentumok összehasonlítása a Streamből – GroupDocs.Comparison for .NET
-linktitle: Védett dokumentumok összehasonlítása a Streamből – GroupDocs.Comparison for .NET
-second_title: GroupDocs.Comparison .NET API
-description: Ismerje meg, hogyan hasonlíthatja össze az adatfolyamokból származó védett dokumentumokat a GroupDocs.Comparison for .NET használatával. Egyszerűsítse a dokumentum-összehasonlítási folyamatot könnyedén.
-weight: 18
-url: /hu/net/document-comparison/compare-protected-documents-from-stream/
+"description": "Tanulja meg, hogyan hasonlíthatja össze a védett dokumentumokat adatfolyamokból a GroupDocs.Comparison for .NET segítségével. Egyszerűsítse dokumentum-összehasonlítási folyamatát könnyedén."
+"linktitle": "Védett dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison for .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Védett dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison for .NET"
+"url": "/hu/net/document-comparison/compare-protected-documents-from-stream/"
+"weight": 18
 ---
 
-# Védett dokumentumok összehasonlítása a Streamből – GroupDocs.Comparison for .NET
+# Védett dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison for .NET
 
 ## Bevezetés
-.NET fejlesztés területén a dokumentumok hatékony összehasonlítása kulcsfontosságú a különböző alkalmazások számára. Akár tartalomkezelő rendszeren, jogi szoftveren vagy bármilyen más dokumentumközpontú projekten dolgozik, a dokumentumok pontos összehasonlításának képessége leegyszerűsítheti a munkafolyamatokat és növelheti a termelékenységet. Ez az oktatóanyag a GroupDocs.Comparison for .NET használatával foglalkozik. Ez egy hatékony eszköz, amely leegyszerűsíti a védett dokumentumok adatfolyamokból való összehasonlítását. Az alábbiakban ismertetett, lépésenkénti útmutatót követve átfogó képet kap arról, hogyan használhatja hatékonyan ezt a könyvtárat a .NET-projektekben.
+A .NET fejlesztés területén a dokumentumok hatékony összehasonlítása kulcsfontosságú a különféle alkalmazásokhoz. Akár tartalomkezelő rendszereken, jogi szoftvereken vagy bármilyen más dokumentumközpontú projekten dolgozik, a dokumentumok pontos összehasonlításának képessége egyszerűsítheti a munkafolyamatokat és növelheti a termelékenységet. Ez az oktatóanyag a GroupDocs.Comparison for .NET használatát mutatja be, amely egy hatékony eszköz, amely leegyszerűsíti a védett dokumentumok adatfolyamokból történő összehasonlításának folyamatát. Az alábbi lépésenkénti útmutató követésével átfogó képet kaphat arról, hogyan használhatja hatékonyan ezt a könyvtárat .NET projektjeiben.
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
-1. Alapvető ismeretek a .NET fejlesztésről: A C# programozás és a .NET keretrendszer ismerete elengedhetetlen az oktatóanyagban tárgyalt fogalmak megértéséhez.
-2.  A GroupDocs.Comparison for .NET telepítése: Töltse le és telepítse a GroupDocs.Comparison for .NET könyvtárat a webhelyről[itt](https://releases.groupdocs.com/comparison/net/)Kövesse a mellékelt telepítési utasításokat a könyvtár integrálásához a .NET-projektbe.
-3. Hozzáférés a védett dokumentumokhoz: Készítse elő az összehasonlítani kívánt forrás- és céldokumentumot. Ezeket a dokumentumokat jelszóval kell védeni a biztonságos összehasonlítás érdekében.
+Mielőtt belemerülnél az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
+1. .NET fejlesztési alapismeretek: A C# programozás és a .NET keretrendszer ismerete elengedhetetlen az ebben az oktatóanyagban tárgyalt fogalmak megértéséhez.
+2. A GroupDocs.Comparison for .NET telepítése: Töltse le és telepítse a GroupDocs.Comparison for .NET könyvtárat a webhelyről. [itt](https://releases.groupdocs.com/comparison/net/)Kövesse a mellékelt telepítési utasításokat a könyvtár .NET-projektbe való integrálásához.
+3. Hozzáférés védett dokumentumokhoz: Készítse elő az összehasonlítani kívánt forrás- és céldokumentumokat. Ezeket a dokumentumokat jelszóval kell védeni a biztonságos összehasonlítás érdekében.
 
 ## Névterek importálása
-Mielőtt folytatná az összehasonlítási folyamatot, győződjön meg arról, hogy importálja a szükséges névtereket a .NET-projektbe. Ez a lépés lehetővé teszi a GroupDocs.Comparison könyvtár által biztosított funkciók zökkenőmentes elérését.
+Az összehasonlítási folyamat folytatása előtt győződjön meg arról, hogy importálta a szükséges névtereket a .NET-projektjébe. Ez a lépés lehetővé teszi a GroupDocs.Comparison könyvtár által biztosított funkciók zökkenőmentes elérését.
 
 ```csharp
 using System;
 using System.IO;
 ```
 
-## 1. lépés: Határozza meg a kimeneti könyvtárat és a fájl nevét
+## 1. lépés: Kimeneti könyvtár és fájlnév meghatározása
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-## 2. lépés: Inicializálja az összehasonlító objektumot
+## 2. lépés: Összehasonlító objektum inicializálása
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx"_PROTECTED), new LoadOptions() { Password = "1234" }))
 {
 ```
-## 3. lépés: Adjon hozzá céldokumentumot az összehasonlításhoz
+## 3. lépés: Céldokumentum hozzáadása összehasonlításhoz
 ```csharp
     comparer.Add(File.OpenRead("TARGET.docx"_PROTECTED), new LoadOptions() { Password = "5678" });
 ```
-## 4. lépés: Végezze el a dokumentumok összehasonlítását
+## 4. lépés: Dokumentum-összehasonlítás végrehajtása
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 }
 ```
-## 5. lépés: A kimenet helyének megjelenítése
+## 5. lépés: Kimeneti hely megjelenítése
 ```csharp
 Console.WriteLine($"\nDocuments compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Következtetés
-Összefoglalva, a GroupDocs.Comparison for .NET kényelmes megoldást kínál a .NET-alkalmazások adatfolyamaiból származó védett dokumentumok összehasonlítására. Az oktatóanyagban ismertetett lépések követésével zökkenőmentesen integrálhatja a dokumentum-összehasonlítási funkciót projektjeibe, növelve a hatékonyságot és a termelékenységet.
+Összefoglalva, a GroupDocs.Comparison for .NET kényelmes megoldást kínál a .NET alkalmazásokban található adatfolyamokból származó védett dokumentumok összehasonlítására. Az ebben az oktatóanyagban ismertetett lépéseket követve zökkenőmentesen integrálhatja a dokumentum-összehasonlítási funkciókat projektjeibe, növelve a hatékonyságot és a termelékenységet.
 ## GYIK
-### Összehasonlíthatom a különböző formátumú dokumentumokat a GroupDocs.Comparison for .NET használatával?
+### Összehasonlíthatom a különböző formátumú dokumentumokat a GroupDocs.Comparison for .NET segítségével?
 Igen, a GroupDocs.Comparison támogatja a dokumentumok összehasonlítását különböző formátumokban, beleértve a DOCX, PDF, PPTX és egyebeket.
-### Elérhető a GroupDocs.Comparison .NET-hez próbaverziója?
- Igen, felfedezheti a GroupDocs.Comparison szolgáltatásait az ingyenes próbaverzió elérésével[itt](https://releases.groupdocs.com/).
-### A GroupDocs.Comparison for .NET támogatja a dokumentumok összehasonlítását nem angol nyelveken?
-Igen, a könyvtár támogatja a dokumentumok összehasonlítását több nyelven, rugalmasságot biztosítva a különböző projektekhez.
+### Van elérhető próbaverzió a GroupDocs.Comparison for .NET-hez?
+Igen, a GroupDocs.Comparison funkcióit ingyenes próbaverzióval fedezheti fel. [itt](https://releases.groupdocs.com/).
+### A GroupDocs.Comparison for .NET támogatja a dokumentumok összehasonlítását nem angol nyelven?
+Igen, a könyvtár támogatja a dokumentumok összehasonlítását több nyelven, így rugalmasságot biztosít a különféle projektek számára.
 ### Testreszabhatom az összehasonlított dokumentumok kimeneti formátumát?
-Igen, a GroupDocs.Comparison lehetőséget kínál az összehasonlított dokumentumok kimeneti formátumának és megjelenésének testreszabására az Ön preferenciái szerint.
-### Elérhető technikai támogatás a GroupDocs.Comparison for .NET számára?
- Igen, kérhet segítséget és kapcsolatba léphet a közösséggel a GroupDocs.Comparison támogatási fórumon keresztül[itt](https://forum.groupdocs.com/c/comparison/12).
+Igen, a GroupDocs.Comparison lehetőséget kínál az összehasonlított dokumentumok kimeneti formátumának és megjelenésének testreszabására az oktatóanyagok igényei szerint.
+### Elérhető technikai támogatás a GroupDocs.Comparison for .NET-hez?
+Igen, kérhet segítséget és kapcsolatba léphet a közösséggel a GroupDocs.Comparison támogatási fórumon keresztül. [itt](https://forum.groupdocs.com/c/comparison/12).

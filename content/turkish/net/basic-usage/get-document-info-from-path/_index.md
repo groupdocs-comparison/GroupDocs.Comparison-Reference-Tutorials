@@ -1,60 +1,60 @@
 ---
-title: Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
-linktitle: Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
-second_title: GroupDocs.Comparison .NET API'si
-description: GroupDocs.Comparison for .NET kullanarak belge bilgilerini yoldan nasıl çıkaracağınızı öğrenin. C#'ta verimli belge yönetimi için kolay adımlar.
-weight: 13
-url: /tr/net/basic-usage/get-document-info-from-path/
+"description": "GroupDocs.Comparison for .NET kullanarak bir yoldan belge bilgilerinin nasıl çıkarılacağını öğrenin. C# dilinde etkili belge yönetimi için kolay adımlar."
+"linktitle": "Yoldan Belge Bilgilerini Al - .NET için GroupDocs.Comparison"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Yoldan Belge Bilgilerini Al - .NET için GroupDocs.Comparison"
+"url": "/tr/net/basic-usage/get-document-info-from-path/"
+"weight": 13
 ---
 
-# Path - GroupDocs.Comparison for .NET'ten Belge Bilgisi Alma
+# Yoldan Belge Bilgilerini Al - .NET için GroupDocs.Comparison
 
 ## giriiş
-Yazılım geliştirme alanında, özellikle .NET çerçeve ortamlarında, verimli belge karşılaştırması kritik bir gerekliliktir. İster yasal belgeler, kod revizyonları veya hassasiyetin önemli olduğu herhangi bir içerik üzerinde çalışıyor olun, belgeleri karşılaştırmak için güçlü bir araca sahip olmak zamandan, emekten ve olası hatalardan tasarruf etmenizi sağlayabilir. Bu etki alanındaki güçlü araçlardan biri GroupDocs.Comparison for .NET'tir. Bu eğitim, netlik ve uygulama kolaylığı sağlamak için her adımı parçalara ayırarak belirli bir yoldan belge bilgileri elde etmek için GroupDocs.Comparison for .NET'ten yararlanma sürecinde size rehberlik edecektir.
-## Önkoşullar
-Bu eğitime dalmadan önce aşağıdaki önkoşulların ayarlandığından emin olun:
-1. Ortam Kurulumu: Bir .NET geliştirme ortamının yapılandırılmış ve hazır olmasını sağlayın.
-2.  GroupDocs.Comparison for .NET: Sağlanan kaynaktan GroupDocs.Comparison for .NET'i indirin ve yükleyin.[İndirme: {link](https://releases.groupdocs.com/comparison/net/).
-3. Karşılaştırılacak Belge: Bilgi çıkarmak istediğiniz bir belge (örneğin, DOCX, PDF) hazırlayın.
-4. Temel C# Anlayışı: C# programlama dilinin temellerine aşina olun.
+Yazılım geliştirme alanında, özellikle .NET framework ortamlarında, verimli belge karşılaştırması kritik bir gerekliliktir. İster yasal belgeler, ister kod revizyonları veya hassasiyetin önemli olduğu başka herhangi bir içerik üzerinde çalışıyor olun, belgeleri karşılaştırmak için sağlam bir araca sahip olmak zamandan, emekten ve olası hatalardan tasarruf sağlayabilir. Bu alandaki bu tür güçlü araçlardan biri de .NET için GroupDocs.Comparison'dır. Bu eğitim, belirli bir yoldan belge bilgilerini almak için .NET için GroupDocs.Comparison'ı kullanma sürecinde size rehberlik edecek ve her adımı açıklık ve uygulama kolaylığı sağlamak için parçalara ayıracaktır.
+## Ön koşullar
+Bu eğitime başlamadan önce aşağıdaki ön koşulların sağlandığından emin olun:
+1. Ortam Kurulumu: .NET geliştirme ortamını yapılandırın ve hazırlayın.
+2. GroupDocs.Comparison for .NET: Sağlanan kaynaktan GroupDocs.Comparison for .NET'i indirin ve yükleyin [indirme bağlantısı](https://releases.groupdocs.com/comparison/net/).
+3. Karşılaştırılacak Belge: Bilgi çıkarmak istediğiniz bir belge (örneğin DOCX, PDF) hazırlayın.
+4. C# Temel Anlayışı: C# programlama dilinin temellerini öğrenin.
 
 ## Ad Alanlarını İçe Aktar
-Bu bölümde, GroupDocs.Comparison for .NET'i kullanarak belge karşılaştırmasını kolaylaştırmak için gerekli ad alanlarını içe aktaracağız.
+Bu bölümde, .NET için GroupDocs.Comparison'ı kullanarak belge karşılaştırmasını kolaylaştırmak için gerekli ad alanlarını içe aktaracağız.
 ```csharp
 using System;
 using GroupDocs.Comparison.Interfaces;
 ```
 
-System ad alanı, örneğimizde kullanacağımız temel G/Ç işlemleri ve konsol çıktısı için gereklidir.
+Sistem ad alanı, örneğimizde kullanacağımız temel G/Ç işlemleri ve konsol çıktıları için önemlidir.
 
-## 1. Adım: Karşılaştırıcı Nesnesini Başlatın
+## Adım 1: Karşılaştırıcı Nesnesini Başlatın
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
 ```
- Yeni bir örneğini oluşturuyoruz`Comparer` kaynak belgenin yolunu ("SOURCE.docx") parametre olarak ileten sınıf.
-## 2. Adım: Belge Bilgilerini Alın
+Yeni bir örnek oluşturuyoruz `Comparer` sınıf, kaynak belgenin yolunu ("SOURCE.docx") parametre olarak geçirmektedir.
+## Adım 2: Belge Bilgilerini Alın
 ```csharp
     IDocumentInfo info = comparer.Source.GetDocumentInfo();
 ```
- Kullanmak`GetDocumentInfo()` yöntemi`Source` özelliği, dosya türü, sayfa sayısı ve boyutu dahil olmak üzere belge bilgilerini alırız.
-## 3. Adım: Belge Bilgilerini Görüntüleme
+Kullanımı `GetDocumentInfo()` yöntemi `Source` Mülkiyet, dosya türü, sayfa sayısı ve boyutu da dahil olmak üzere belge bilgilerini elde ederiz.
+## Adım 3: Belge Bilgilerini Görüntüle
 ```csharp
     Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);
 }
 ```
-Kullanıcının görünürlüğü için dosya türü, sayfa sayısı ve boyutu gibi çıkarılan belge bilgilerini konsola yazdırıyoruz.
+Çıkarılan belge bilgilerini (dosya türü, sayfa sayısı, boyut gibi) kullanıcıların görebileceği şekilde konsola yazdırıyoruz.
 
 ## Çözüm
-Bu öğreticide, C# kullanarak belirli bir yoldan belge bilgilerini ayıklamak için GroupDocs.Comparison for .NET'in nasıl kullanılacağını araştırdık. Yukarıda özetlenen adım adım kılavuzu takip ederek, belge karşılaştırma işlevini .NET uygulamalarınıza sorunsuz bir şekilde entegre edebilir, belge yönetimi görevlerinde üretkenliği ve doğruluğu artırabilirsiniz.
-## SSS'ler
-### GroupDocs.Comparison for .NET çeşitli belge formatlarını işleyebilir mi?
-Evet, GroupDocs.Comparison, DOCX, PDF, PPTX, XLSX ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
-### GroupDocs.Comparison for .NET'in ücretsiz deneme sürümü var mı?
- Evet, sağlanan ücretsiz deneme sürümünden yararlanabilirsiniz[bağlantı](https://releases.groupdocs.com/).
+Bu eğitimde, C# kullanarak verilen bir yoldan belge bilgilerini çıkarmak için GroupDocs.Comparison for .NET'i nasıl kullanacağımızı inceledik. Yukarıda özetlenen adım adım kılavuzu izleyerek, belge karşılaştırma işlevselliğini .NET uygulamalarınıza sorunsuz bir şekilde entegre edebilir, belge yönetimi görevlerinde üretkenliği ve doğruluğu artırabilirsiniz.
+## SSS
+### GroupDocs.Comparison for .NET çeşitli belge biçimlerini işleyebilir mi?
+Evet, GroupDocs.Comparison DOCX, PDF, PPTX, XLSX ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
+### GroupDocs.Comparison for .NET için ücretsiz deneme sürümü mevcut mu?
+Evet, sağlanan ücretsiz denemeden yararlanabilirsiniz [bağlantı](https://releases.groupdocs.com/).
 ### GroupDocs.Comparison for .NET için geçici lisansları nasıl edinebilirim?
- Geçici lisanslar adresinden alınabilir.[geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/).
-### GroupDocs.Comparison for .NET ile ilgili desteği nerede bulabilirim veya yardım isteyebilirim?
- GroupDocs.Comparison sayfasını ziyaret edebilirsiniz.[destek Forumu](https://forum.groupdocs.com/c/comparison/12) İhtiyaç duyulan herhangi bir soru veya yardım için.
-### GroupDocs.Comparison for .NET, kurumsal düzeyde belge yönetimi görevlerine uygun mu?
-GroupDocs.Comparison kesinlikle kurumsal düzeyde belge karşılaştırma ve yönetim gereksinimleri için tasarlanmış güçlü özellikler sunar.
+Geçici lisanslar, [geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/).
+### GroupDocs.Comparison for .NET ile ilgili destek veya yardımı nerede bulabilirim?
+GroupDocs.Comparison'ı ziyaret edebilirsiniz [destek forumu](https://forum.groupdocs.com/c/comparison/12) Herhangi bir sorunuz veya yardıma ihtiyacınız varsa.
+### GroupDocs.Comparison for .NET kurumsal düzeydeki belge yönetimi görevleri için uygun mudur?
+Kesinlikle, GroupDocs.Comparison kurumsal düzeyde belge karşılaştırma ve yönetim gereksinimlerine göre tasarlanmış sağlam özellikler sunar.

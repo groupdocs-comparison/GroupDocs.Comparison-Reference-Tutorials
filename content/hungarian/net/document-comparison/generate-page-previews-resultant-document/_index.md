@@ -1,50 +1,50 @@
 ---
-title: Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
-linktitle: Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
-second_title: GroupDocs.Comparison .NET API
-description: Ismerje meg, hogyan hozhat létre dokumentum-előnézeteket a GroupDocs.Comparison for .NET használatával. Hatékonyan és pontosan hasonlítsa össze a dokumentumokat.
-weight: 10
-url: /hu/net/document-comparison/generate-page-previews-resultant-document/
+"description": "Tanulja meg, hogyan hozhat létre dokumentum-előnézeteket a GroupDocs.Comparison for .NET segítségével. Hasonlítsa össze a dokumentumokat hatékonyan és pontosan."
+"linktitle": "Oldal előnézetek generálása a kapott dokumentumhoz"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Oldal előnézetek generálása a kapott dokumentumhoz"
+"url": "/hu/net/document-comparison/generate-page-previews-resultant-document/"
+"weight": 10
 ---
 
-# Hozzon létre oldal-előnézeteket az eredménydokumentumhoz
+# Oldal előnézetek generálása a kapott dokumentumhoz
 
 ## Bevezetés
-szoftverfejlesztés világában a dokumentumok hatékony és pontos összehasonlítása a legfontosabb. Akár olyan projekten dolgozik, amely a csapattagok közötti együttműködést vagy jogi dokumentumokat foglal magában, a verziók hatékony összehasonlítása időt takaríthat meg, és biztosítja a pontosságot. A GroupDocs.Comparison for .NET egy hatékony eszköz, amely a dokumentum-összehasonlítási folyamat egyszerűsítésére szolgál a .NET-fejlesztők számára. Ebben az oktatóanyagban megvizsgáljuk, hogyan használhatjuk a GroupDocs.Comparison for .NET alkalmazást oldal-előnézetek létrehozására az eredményül kapott dokumentumokhoz. A folyamat átfogó megértése érdekében az egyes lépéseket lebontjuk.
+szoftverfejlesztés világában a dokumentumok hatékony és pontos összehasonlítása kiemelkedő fontosságú. Akár egy olyan projekten dolgozik, amely csapattagok közötti együttműködést igényel, akár jogi dokumentumokkal foglalkozik, a verziók hatékony összehasonlítása időt takaríthat meg és biztosíthatja a pontosságot. A GroupDocs.Comparison for .NET egy hatékony eszköz, amelyet a .NET-fejlesztők dokumentum-összehasonlítási folyamatának egyszerűsítésére terveztek. Ebben az oktatóanyagban részletesen bemutatjuk, hogyan használható a GroupDocs.Comparison for .NET a kapott dokumentumok oldalelőnézeteinek létrehozására. A folyamat átfogó megértése érdekében minden lépést lebontunk.
 ## Előfeltételek
-Mielőtt elkezdené, meg kell felelnie néhány előfeltételnek:
-1.  GroupDocs.Comparison for .NET: Győződjön meg arról, hogy telepítette a GroupDocs.Comparison for .NET programot. Ha nem, letöltheti innen[itt](https://releases.groupdocs.com/comparison/net/).
-2. A .NET alapvető ismerete: Ha jól ismeri a .NET keretrendszert és a C# programozási nyelvet, hasznos lesz, ha ezt az oktatóanyagot követi.
-3. Dokumentumfájlok: Szüksége lesz az összehasonlítani kívánt forrás- és céldokumentumfájlokra. Győződjön meg róla, hogy készen van.
-4. Fejlesztői környezet: Állítsa be fejlesztői környezetét a Visual Studio vagy bármely más preferált IDE segítségével a .NET fejlesztéshez.
+Mielőtt belekezdenénk, van néhány előfeltétel, aminek teljesülnie kell:
+1. GroupDocs.Comparison for .NET: Győződjön meg arról, hogy telepítette a GroupDocs.Comparison for .NET alkalmazást. Ha nem, letöltheti innen: [itt](https://releases.groupdocs.com/comparison/net/).
+2. .NET alapismeretek: A .NET keretrendszer és a C# programozási nyelv ismerete hasznos lesz a bemutató követéséhez.
+3. Dokumentumfájlok: Szükséged lesz a forrás- és céldokumentumfájlokra, amelyeket össze szeretnél hasonlítani. Győződj meg róla, hogy készenlétben vannak.
+4. Fejlesztői környezet: Állítsa be fejlesztői környezetét a Visual Studio vagy bármely más preferált IDE segítségével .NET fejlesztéshez.
 
 ## Névterek importálása
-Először is importálnia kell a szükséges névtereket a GroupDocs.Comparison for .NET funkcióinak használatához.
+Először is importálnia kell a szükséges névtereket a GroupDocs.Comparison .NET funkciók használatához.
 ## 1. lépés: Névterek importálása
 ```csharp
 using System;
 using System.IO;
 ```
-Most bontsuk fel a példát több lépésre, hogy alaposan megértsük az egyes részeket.
-### 1. lépés: Állítsa be a kimeneti könyvtárat és a fájl nevét
+Most bontsuk le a bemutatott példát több lépésre, hogy alaposan megértsük az egyes részeket.
+### 1. lépés: Kimeneti könyvtár és fájlnév beállítása
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.docx");
 ```
-Ebben a lépésben meghatározzuk a kimeneti könyvtárat, ahová az eredményül kapott dokumentumot elmentjük, és adjuk meg az eredményül kapott fájl nevét.
-## 2. lépés: Az Összehasonlító inicializálása és dokumentumok hozzáadása
+Ebben a lépésben meghatározzuk a kimeneti könyvtárat, ahová a létrejövő dokumentumot menteni fogjuk, és megadjuk a létrejövő fájl nevét.
+## 2. lépés: A Comparer inicializálása és dokumentumok hozzáadása
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.docx"))
 {
     comparer.Add("TARGET.docx");
 ```
- Itt inicializáljuk a`Comparer` objektumot a forrásdokumentum elérési útjának megadásával. Ezután hozzáadjuk a céldokumentumot, amelyet össze szeretnénk hasonlítani a forrásdokumentummal.
-## 3. lépés: Hasonlítsa össze a dokumentumokat és állítsa elő a kimenetet
+Itt inicializáljuk a `Comparer` objektumot a forrásdokumentum elérési útjának megadásával. Ezután hozzáadjuk a céldokumentumot, amelyet össze szeretnénk hasonlítani a forrásdokumentummal.
+## 3. lépés: Dokumentumok összehasonlítása és kimenet generálása
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 ```
-Ez a lépés összehasonlítja a forrás- és céldokumentumot, és az összehasonlítás alapján létrehozza az eredményül kapott dokumentumot. A kimeneti fájl a megadott helyen jön létre.
-## 4. lépés: Oldal-előnézetek létrehozása
+Ez a lépés összehasonlítja a forrás- és céldokumentumokat, és az összehasonlítás alapján létrehozza az eredménydokumentumot. A kimeneti fájl a megadott helyen jön létre.
+## 4. lépés: Oldal előnézetek generálása
 ```csharp
     Document document = new Document(File.OpenRead(outputFileName));
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
@@ -57,18 +57,18 @@ Ez a lépés összehasonlítja a forrás- és céldokumentumot, és az összehas
     document.GeneratePreview(previewOptions);
 }
 ```
-Ebben az utolsó lépésben oldal-előnézeteket generálunk az eredményül kapott dokumentumhoz. Megadjuk az előnézetek formátumát (jelen esetben PNG) és azokat az oldalszámokat, amelyekhez előnézetet szeretnénk generálni.
+Ebben az utolsó lépésben előnézeti képeket generálunk a kapott dokumentumhoz. Megadjuk az előnézetek formátumát (ebben az esetben PNG) és az oldalszámokat, amelyekhez előnézeteket szeretnénk generálni.
 
 ## Következtetés
-A GroupDocs.Comparison for .NET kényelmes és hatékony módot kínál dokumentumok összehasonlítására és oldal-előnézetek létrehozására. Az oktatóanyagban ismertetett lépések követésével zökkenőmentesen integrálhatja a dokumentum-összehasonlítási funkciókat .NET-alkalmazásaiba, növelve a termelékenységet és a pontosságot.
+A GroupDocs.Comparison for .NET kényelmes és hatékony módszert kínál a dokumentumok összehasonlítására és az oldalelőnézetek létrehozására. Az ebben az oktatóanyagban ismertetett lépéseket követve zökkenőmentesen integrálhatja a dokumentum-összehasonlítási funkciókat .NET-alkalmazásaiba, növelve a termelékenységet és a pontosságot.
 ## GYIK
-### Összehasonlíthatom a különböző formátumú dokumentumokat a GroupDocs.Comparison for .NET használatával?
-Igen, a GroupDocs.Comparison for .NET támogatja a különböző formátumú dokumentumok összehasonlítását, például DOCX, PDF, PPTX stb.
-### Elérhető a GroupDocs.Comparison .NET-hez próbaverziója?
- Igen, letölthet egy ingyenes próbaverziót a webhelyről[itt](https://releases.groupdocs.com/).
-### Testreszabhatom a GroupDocs.Comparison for .NET összehasonlítási beállításait?
-Természetesen a GroupDocs.Comparison for .NET lehetőségek széles skáláját kínálja az összehasonlítási folyamat igényeinek megfelelő testreszabásához.
+### Összehasonlíthatom a különböző formátumú dokumentumokat a GroupDocs.Comparison for .NET segítségével?
+Igen, a GroupDocs.Comparison for .NET támogatja a különféle formátumú dokumentumok, például DOCX, PDF, PPTX és egyebek összehasonlítását.
+### Van elérhető próbaverzió a GroupDocs.Comparison for .NET-hez?
+Igen, letölthet egy ingyenes próbaverziót innen [itt](https://releases.groupdocs.com/).
+### Testreszabhatom az összehasonlítási beállításokat a GroupDocs.Comparison for .NET fájlban?
+Természetesen a GroupDocs.Comparison for .NET széleskörű lehetőségeket kínál az összehasonlítási folyamat testreszabásához az Ön igényei szerint.
 ### A GroupDocs.Comparison for .NET támogatja a felhőintegrációt?
-Igen, a GroupDocs.Comparison for .NET felhő API-kat kínál a felhőplatformokkal való zökkenőmentes integrációhoz.
+Igen, a GroupDocs.Comparison for .NET felhőalapú API-kat kínál a felhőplatformokkal való zökkenőmentes integrációhoz.
 ### Hol kaphatok támogatást a GroupDocs.Comparison for .NET-hez?
- Támogatást kaphat a GroupDocs közösségi fórumain[itt](https://forum.groupdocs.com/c/comparison/12).
+Támogatást kaphatsz a GroupDocs közösségi fórumain [itt](https://forum.groupdocs.com/c/comparison/12).

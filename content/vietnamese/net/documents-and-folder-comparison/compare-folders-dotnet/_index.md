@@ -1,29 +1,29 @@
 ---
-title: So sánh các thư mục trong GroupDocs So sánh cho .NET
-linktitle: So sánh các thư mục trong GroupDocs So sánh cho .NET
-second_title: API GroupDocs.Comparison .NET
-description: So sánh các thư mục một cách dễ dàng bằng cách sử dụng So sánh GroupDocs cho .NET. Hãy làm theo từng bước của chúng tôi để so sánh thư mục hiệu quả. Nâng cao các ứng dụng .NET của bạn.
-weight: 12
-url: /vi/net/documents-and-folder-comparison/compare-folders-dotnet/
+"description": "So sánh các thư mục một cách dễ dàng bằng GroupDocs Comparison for .NET. Làm theo từng bước của chúng tôi để so sánh thư mục hiệu quả. Nâng cao ứng dụng .NET của bạn."
+"linktitle": "So sánh các thư mục trong GroupDocs So sánh cho .NET"
+"second_title": "API GroupDocs.So sánh .NET"
+"title": "So sánh các thư mục trong GroupDocs So sánh cho .NET"
+"url": "/vi/net/documents-and-folder-comparison/compare-folders-dotnet/"
+"weight": 12
 ---
 
 # So sánh các thư mục trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu
-So sánh GroupDocs cho .NET là một thư viện mạnh mẽ cho phép các nhà phát triển so sánh các thư mục một cách dễ dàng trong các ứng dụng .NET của họ. Hướng dẫn này sẽ hướng dẫn bạn từng bước trong quá trình so sánh các thư mục bằng cách sử dụng So sánh GroupDocs cho .NET. Đến cuối hướng dẫn này, bạn sẽ có thể sử dụng thư viện để so sánh các thư mục một cách hiệu quả và hiệu quả.
+GroupDocs Comparison for .NET là một thư viện mạnh mẽ cho phép các nhà phát triển so sánh các thư mục một cách dễ dàng trong các ứng dụng .NET của họ. Hướng dẫn này sẽ hướng dẫn bạn từng bước trong quá trình so sánh các thư mục bằng GroupDocs Comparison for .NET. Đến cuối hướng dẫn này, bạn sẽ có thể sử dụng thư viện để so sánh các thư mục một cách hiệu quả.
 ## Điều kiện tiên quyết
-Trước khi bạn tiếp tục với hướng dẫn này, hãy đảm bảo rằng bạn có các điều kiện tiên quyết sau:
-### 1. Cài đặt So sánh GroupDocs cho .NET
- Đảm bảo bạn đã cài đặt So sánh GroupDocs cho .NET trong môi trường phát triển của mình. Bạn có thể tải thư viện từ trang web[đây](https://releases.groupdocs.com/comparison/net/).
+Trước khi thực hiện hướng dẫn này, hãy đảm bảo rằng bạn đáp ứng đủ các điều kiện tiên quyết sau:
+### 1. Cài đặt GroupDocs So sánh cho .NET
+Hãy đảm bảo bạn đã cài đặt GroupDocs Comparison for .NET trong môi trường phát triển của mình. Bạn có thể tải xuống thư viện từ trang web [đây](https://releases.groupdocs.com/comparison/net/).
 ### 2. Kiến thức cơ bản về phát triển .NET
-Cần phải làm quen với ngôn ngữ lập trình C# và .NET framework để hiểu và triển khai các ví dụ được cung cấp trong hướng dẫn này.
+Cần phải quen thuộc với ngôn ngữ lập trình C# và .NET framework để hiểu và triển khai các ví dụ được cung cấp trong hướng dẫn này.
 ### 3. Môi trường phát triển tích hợp (IDE)
-Bạn sẽ cần một IDE như Visual Studio để viết và thực thi các đoạn mã mẫu.
+Bạn sẽ cần một IDE như Visual Studio để viết và thực thi các ví dụ mã.
 ### 4. Truy cập vào Tài liệu GroupDocs
-Giữ sẵn tài liệu So sánh GroupDocs cho .NET để tham khảo trong suốt hướng dẫn. Bạn có thể truy cập tài liệu[đây](https://tutorials.groupdocs.com/comparison/net/).
+Giữ tài liệu So sánh GroupDocs cho .NET tiện dụng cho các hướng dẫn trong suốt hướng dẫn. Bạn có thể truy cập tài liệu [đây](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Nhập không gian tên
-Để bắt đầu, bạn cần nhập các vùng tên cần thiết vào mã C# của mình. Điều này cho phép bạn sử dụng các lớp và phương thức được cung cấp bởi So sánh GroupDocs cho .NET.
+Để bắt đầu, bạn cần nhập các không gian tên cần thiết vào mã C# của mình. Điều này cho phép bạn sử dụng các lớp và phương thức do GroupDocs Comparison cung cấp cho .NET.
 ## Bước 1: Nhập không gian tên so sánh GroupDocs
 ```csharp
 using System;
@@ -33,13 +33,13 @@ using GroupDocs.Comparison.Options;
 ```
 
 ## Bước 1: Xác định thư mục đầu ra và tên tệp
-Đầu tiên, xác định thư mục đầu ra nơi kết quả so sánh sẽ được lưu trữ và chỉ định tên tệp đầu ra.
+Đầu tiên, hãy xác định thư mục đầu ra nơi kết quả so sánh sẽ được lưu trữ và chỉ định tên tệp đầu ra.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, Constants.RESULT_FOLDER);
 ```
-## Bước 2: Định cấu hình các tùy chọn so sánh
-Tiếp theo, định cấu hình các tùy chọn để so sánh thư mục theo yêu cầu của bạn. Bạn có thể kích hoạt các tính năng như so sánh thư mục và chỉ định phần mở rộng tệp để so sánh.
+## Bước 2: Cấu hình Tùy chọn so sánh
+Tiếp theo, cấu hình các tùy chọn để so sánh thư mục theo yêu cầu của bạn. Bạn có thể bật các tính năng như so sánh thư mục và chỉ định phần mở rộng tệp để so sánh.
 ```csharp
 Options.CompareOptions compareOptions = new Options.CompareOptions
 {
@@ -58,26 +58,26 @@ Thêm thư mục đích mà bạn muốn so sánh với thư mục nguồn. Bạ
 comparer.Add(Constants.TARGET_FOLDER, compareOptions);
 ```
 ## Bước 5: Thực hiện so sánh thư mục
-Thực hiện so sánh thư mục và lưu kết quả vào tệp đầu ra được chỉ định.
+Thực hiện so sánh thư mục và lưu kết quả vào tệp đầu ra đã chỉ định.
 ```csharp
 comparer.Compare(outputFileName, compareOptions);
 ```
 ## Bước 6: Hiển thị kết quả
-Cuối cùng, hiển thị thông báo cho biết so sánh thành công và vị trí của tệp đầu ra.
+Cuối cùng, hiển thị thông báo cho biết việc so sánh thành công và vị trí của tệp đầu ra.
 ```csharp
 Console.WriteLine($"\nFolders compared successfully.\nCheck output in {Directory.GetCurrentDirectory()}.");
 ```
 
 ## Phần kết luận
-Tóm lại, So sánh GroupDocs cho .NET cung cấp một cách thuận tiện để so sánh các thư mục trong các ứng dụng .NET của bạn. Bằng cách làm theo hướng dẫn này, bạn đã học được cách sử dụng thư viện để so sánh các thư mục một cách hiệu quả. Thử nghiệm với các tùy chọn so sánh khác nhau để đáp ứng các yêu cầu cụ thể của bạn và nâng cao chức năng của ứng dụng của bạn.
+Tóm lại, GroupDocs Comparison for .NET cung cấp một cách thuận tiện để so sánh các thư mục trong các ứng dụng .NET của bạn. Bằng cách làm theo hướng dẫn này, bạn đã học cách sử dụng thư viện để so sánh các thư mục một cách hiệu quả. Thử nghiệm với các tùy chọn so sánh khác nhau để đáp ứng các yêu cầu cụ thể của bạn và nâng cao chức năng của các ứng dụng của bạn.
 ## Câu hỏi thường gặp
-### So sánh GroupDocs cho .NET có thể so sánh các tệp khác với tệp văn bản không?
-Có, So sánh GroupDocs cho .NET hỗ trợ so sánh các định dạng tệp khác nhau bao gồm tài liệu Word, bảng tính Excel, PDF, v.v.
+### GroupDocs Comparison for .NET có thể so sánh các tệp khác ngoài tệp văn bản không?
+Có, GroupDocs Comparison for .NET hỗ trợ so sánh nhiều định dạng tệp khác nhau bao gồm tài liệu Word, bảng tính Excel, PDF, v.v.
 ### So sánh GroupDocs cho .NET có tương thích với tất cả các phiên bản của .NET framework không?
 So sánh GroupDocs cho .NET tương thích với .NET framework phiên bản 2.0 trở lên.
-### So sánh GroupDocs cho .NET có yêu cầu giấy phép sử dụng thương mại không?
-Có, bạn cần mua giấy phép để sử dụng thương mại. Tuy nhiên, bạn cũng có thể tận dụng bản dùng thử miễn phí để đánh giá thư viện trước khi mua hàng.
+### So sánh GroupDocs cho .NET có yêu cầu giấy phép sử dụng cho mục đích thương mại không?
+Có, bạn cần mua giấy phép để sử dụng thương mại. Tuy nhiên, bạn cũng có thể dùng thử miễn phí để đánh giá thư viện trước khi mua.
 ### Tôi có thể tùy chỉnh định dạng đầu ra của kết quả so sánh không?
-Có, bạn có thể tùy chỉnh định dạng đầu ra và hình thức của kết quả so sánh theo sở thích của mình.
-### Có hỗ trợ kỹ thuật cho So sánh GroupDocs cho .NET không?
- Có, bạn có thể truy cập hỗ trợ kỹ thuật thông qua diễn đàn GroupDocs[đây](https://forum.groupdocs.com/c/comparison/12).
+Có, bạn có thể tùy chỉnh định dạng đầu ra và giao diện của kết quả so sánh theo hướng dẫn của bạn.
+### Có hỗ trợ kỹ thuật nào cho GroupDocs Comparison dành cho .NET không?
+Có, bạn có thể truy cập hỗ trợ kỹ thuật thông qua diễn đàn GroupDocs [đây](https://forum.groupdocs.com/c/comparison/12).

@@ -1,40 +1,40 @@
 ---
-title: Licentie instellen vanuit Stream - GroupDocs-vergelijking voor .NET
-linktitle: Licentie instellen vanuit Stream - GroupDocs-vergelijking voor .NET
-second_title: GroupDocs.Vergelijking .NET API
-description: Leer hoe u efficiënt licenties kunt instellen met GroupDocs.Comparison voor .NET. Zorg voor documentnauwkeurigheid en bespaar tijd met deze tutorial.
-weight: 11
-url: /nl/net/quick-start/set-license-from-stream/
+"description": "Leer hoe u efficiënt licenties instelt met GroupDocs.Comparison voor .NET. Zorg voor nauwkeurige documenten en bespaar tijd met deze tutorial."
+"linktitle": "Licentie instellen vanuit stream - GroupDocs-vergelijking voor .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Licentie instellen vanuit stream - GroupDocs-vergelijking voor .NET"
+"url": "/nl/net/quick-start/set-license-from-stream/"
+"weight": 11
 ---
 
-# Licentie instellen vanuit Stream - GroupDocs-vergelijking voor .NET
+# Licentie instellen vanuit stream - GroupDocs-vergelijking voor .NET
 
 ## Invoering
-In de wereld van .NET-ontwikkeling is het efficiënt beheren en vergelijken van documenten cruciaal. Of u nu werkt aan juridische contracten, financiële rapporten of andere documentintensieve toepassingen, de mogelijkheid om documenten nauwkeurig te vergelijken kan tijd besparen en nauwkeurigheid garanderen. Dit is waar GroupDocs.Comparison voor .NET in het spel komt. 
+In de wereld van .NET-ontwikkeling is het efficiënt beheren en vergelijken van documenten cruciaal. Of u nu werkt aan juridische contracten, financiële rapporten of een andere documentintensieve applicatie, de mogelijkheid om documenten nauwkeurig te vergelijken kan tijd besparen en de nauwkeurigheid garanderen. Dit is waar GroupDocs.Comparison voor .NET om de hoek komt kijken. 
 ## Vereisten
-Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-- Basiskennis van C# en .NET framework.
-- Visual Studio is op uw systeem geïnstalleerd.
--  GroupDocs.Comparison voor .NET-bibliotheek geïnstalleerd. Je kunt het downloaden[hier](https://releases.groupdocs.com/comparison/net/).
--  Toegang tot de GroupDocs.Comparison voor .NET-documentatie[hier](https://tutorials.groupdocs.com/comparison/net/).
+Voordat u met de tutorial begint, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+- Basiskennis van C# en .NET Framework.
+- Visual Studio op uw systeem geïnstalleerd.
+- GroupDocs.Comparison voor .NET-bibliotheek geïnstalleerd. U kunt het downloaden. [hier](https://releases.groupdocs.com/comparison/net/).
+- Toegang tot GroupDocs.Comparison voor .NET-documentatie [hier](https://tutorials.groupdocs.com/comparison/net/).
 
 ## Naamruimten importeren
-Om GroupDocs.Comparison voor .NET te gaan gebruiken, moet u de benodigde naamruimten in uw project importeren. Hier ziet u hoe u het kunt doen:
+Om GroupDocs.Comparison voor .NET te kunnen gebruiken, moet u de benodigde naamruimten in uw project importeren. Zo doet u dat:
 
-Voeg in uw project de volgende naamruimteverwijzingen toe bovenaan uw codebestand:
+Voeg in uw project de volgende naamruimte-tutorialss toe bovenaan uw codebestand:
 ```csharp
 using System;
 using System.IO;
 ```
-Deze naamruimten bieden toegang tot essentiële klassen en methoden die nodig zijn voor documentvergelijkingstaken.
+Deze naamruimten bieden toegang tot essentiële klassen en methoden die vereist zijn voor documentvergelijkingstaken.
 
-## Stap 1: Controleer het bestaan van licentiebestanden
+## Stap 1: Controleer of het licentiebestand bestaat
 ```csharp
 if (File.Exists(Constants.LicensePath))
 {
 ```
 Met deze stap wordt gecontroleerd of het licentiebestand in het opgegeven pad bestaat.
-## Stap 2: Stel de licentie in via Stream
+## Stap 2: Licentie instellen vanuit stream
 ```csharp
 using (FileStream stream = File.OpenRead(Constants.LicensePath))
 {
@@ -42,31 +42,31 @@ using (FileStream stream = File.OpenRead(Constants.LicensePath))
     license.SetLicense(stream);
 }
 ```
- Als het licentiebestand bestaat, creëert deze stap een bestandsstroom om het licentiebestand te lezen en stelt de licentie voor GroupDocs in. Vergelijking met behulp van de`SetLicense` methode.
-## Stap 3: Afhandeling van licentieafwezigheid
+Als het licentiebestand bestaat, wordt met deze stap een bestandsstroom gemaakt om het licentiebestand te lezen en wordt de licentie voor GroupDocs.Comparison ingesteld met behulp van de `SetLicense` methode.
+## Stap 3: Omgaan met ontbrekende licenties
 ```csharp
 Console.WriteLine("License set successfully.");
 ```
-Als de licentie succesvol is ingesteld, wordt bij deze stap een succesbericht afgedrukt.
+Als de licentie succesvol is ingesteld, wordt er bij deze stap een succesbericht weergegeven.
 ## Stap 4: Vraag om licentie te verkrijgen
 ```csharp
 Console.WriteLine("\nWe do not ship any license with this example. " +
                   "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
-                  "\nLearn more about licensing at https://Purchase.groupdocs.com/faqs/licensing. " +
-                  "\nLear how to request temporary license at https://aankoop.groupdocs.com/tijdelijke-licentie.");
+                  "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
+                  "\nLear how to request temporary license at https://purchase.groupdocs.com/temporary-license.");
 ```
-Als het licentiebestand niet bestaat, wordt de gebruiker bij deze stap gevraagd een licentie aan te vragen via de GroupDocs-website.
+Als het licentiebestand niet bestaat, wordt de gebruiker in deze stap gevraagd een licentie aan te vragen op de GroupDocs-website.
 
 ## Conclusie
-In deze zelfstudie hebben we onderzocht hoe u een licentie kunt instellen met GroupDocs.Comparison voor .NET. Door de hierboven beschreven stappen te volgen, kunt u documenten in uw .NET-applicaties efficiënt beheren en vergelijken, waardoor nauwkeurigheid wordt gewaarborgd en kostbare tijd wordt bespaard.
+In deze tutorial hebben we uitgelegd hoe je een licentie instelt met GroupDocs.Comparison voor .NET. Door de bovenstaande stappen te volgen, kun je documenten in je .NET-applicaties efficiënt beheren en vergelijken, wat zorgt voor nauwkeurigheid en kostbare tijd bespaart.
 ## Veelgestelde vragen
 ### Heb ik een licentie nodig om GroupDocs.Comparison voor .NET te gebruiken?
-Ja, u heeft een licentie nodig om GroupDocs.Comparison voor .NET te gebruiken. U kunt een tijdelijke of permanente licentie verkrijgen via de GroupDocs-website.
-### Kan ik GroupDocs.Comparison voor .NET uitproberen voordat ik een aankoop doe?
-Ja, u kunt een gratis proefversie aanvragen op de GroupDocs-website om het product te evalueren voordat u een aankoop doet.
+Ja, u hebt een licentie nodig om GroupDocs.Comparison voor .NET te gebruiken. U kunt een tijdelijke of permanente licentie verkrijgen via de GroupDocs-website.
+### Kan ik GroupDocs.Comparison voor .NET uitproberen voordat ik het koop?
+Ja, u kunt een gratis proefversie aanvragen via de GroupDocs-website om het product te evalueren voordat u tot aankoop overgaat.
 ### Hoe kan ik ondersteuning krijgen voor GroupDocs.Comparison voor .NET?
- U kunt ondersteuning krijgen van het GroupDocs-forum dat gewijd is aan vergelijking[hier](https://forum.groupdocs.com/c/comparison/12).
-### Wat moet ik doen als ik licentieproblemen tegenkom?
- Als u licentieproblemen ondervindt, raadpleegt u de veelgestelde vragen over licenties[hier](https://purchase.groupdocs.com/faqs/licensing) of neem contact op met GroupDocs-ondersteuning.
+U kunt ondersteuning krijgen van het GroupDocs-forum dat speciaal is bedoeld voor vergelijking [hier](https://forum.groupdocs.com/c/comparison/12).
+### Wat moet ik doen als ik problemen ondervind met licenties?
+Als u problemen ondervindt met de licentie, raadpleeg dan de veelgestelde vragen over licenties. [hier](https://purchase.groupdocs.com/faqs/licensing) of neem contact op met de ondersteuning van GroupDocs.
 ### Waar kan ik meer tutorials en bronnen vinden voor GroupDocs.Comparison voor .NET?
- Op de GroupDocs-website vindt u uitgebreide documentatie en tutorials[hier](https://tutorials.groupdocs.com/comparison/net/).
+Uitgebreide documentatie en tutorials vindt u op de GroupDocs-website [hier](https://tutorials.groupdocs.com/comparison/net/).

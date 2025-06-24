@@ -1,53 +1,53 @@
 ---
-title: Nastavte konkrétní velikosti obrázků pro náhledy
-linktitle: Nastavte konkrétní velikosti obrázků pro náhledy
-second_title: GroupDocs.Comparison .NET API
-description: Pomocí GroupDocs.Comparison for .NET bez námahy integrujte funkci porovnávání dokumentů do svých aplikací .NET.
-weight: 14
-url: /cs/net/document-comparison/set-specific-image-sizes-for-previews/
+"description": "Snadno integrujte funkce porovnávání dokumentů do svých .NET aplikací s GroupDocs.Comparison for .NET."
+"linktitle": "Nastavení konkrétních velikostí obrázků pro náhledy"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Nastavení konkrétních velikostí obrázků pro náhledy"
+"url": "/cs/net/document-comparison/set-specific-image-sizes-for-previews/"
+"weight": 14
 ---
 
-# Nastavte konkrétní velikosti obrázků pro náhledy
+# Nastavení konkrétních velikostí obrázků pro náhledy
 
-## Úvod
-V oblasti vývoje softwaru je efektivní a přesné porovnávání dokumentů zásadní pro zajištění integrity a konzistence informací. GroupDocs.Comparison for .NET poskytuje robustní řešení pro vývojáře, kteří chtějí bezproblémově začlenit funkci porovnávání dokumentů do svých aplikací .NET.
+## Zavedení
+oblasti vývoje softwaru je efektivní a přesné porovnávání dokumentů klíčové pro zajištění integrity a konzistence informací. GroupDocs.Comparison for .NET poskytuje robustní řešení pro vývojáře, kteří chtějí bezproblémově začlenit funkci porovnávání dokumentů do svých .NET aplikací.
 ## Předpoklady
-Než se pustíte do implementace porovnávání dokumentů pomocí GroupDocs.Comparison for .NET, ujistěte se, že máte splněny následující předpoklady:
+Než se pustíte do implementace porovnávání dokumentů pomocí GroupDocs.Comparison pro .NET, ujistěte se, že máte splněny následující předpoklady:
 ### 1. Nainstalujte GroupDocs.Comparison pro .NET
- Chcete-li začít, musíte mít ve svém vývojovém prostředí nainstalovanou aplikaci GroupDocs.Comparison for .NET. Potřebné soubory si můžete stáhnout z[odkaz ke stažení](https://releases.groupdocs.com/comparison/net/).
-### 2. Nastavte své vývojové prostředí
-Ujistěte se, že máte nakonfigurované vhodné vývojové prostředí, včetně sady Visual Studio nebo jakéhokoli preferovaného vývojového prostředí .NET.
-### 3. Seznámení s .NET Framework
-Základní znalost rámce .NET a programovacího jazyka C# je nezbytná pro efektivní využití GroupDocs.Comparison pro .NET.
+Pro začátek je potřeba mít ve svém vývojovém prostředí nainstalovaný GroupDocs.Comparison pro .NET. Potřebné soubory si můžete stáhnout z [odkaz ke stažení](https://releases.groupdocs.com/comparison/net/).
+### 2. Nastavení vývojového prostředí
+Ujistěte se, že máte nakonfigurované vhodné vývojové prostředí, včetně Visual Studia nebo jakéhokoli preferovaného vývojového IDE pro .NET.
+### 3. Znalost .NET Frameworku
+Základní znalost frameworku .NET a programovacího jazyka C# je nezbytná pro efektivní využití GroupDocs.Comparison pro .NET.
 
 ## Importovat jmenné prostory
-Před implementací funkce porovnávání dokumentů musíte importovat potřebné jmenné prostory pro přístup k požadovaným třídám a metodám.
+Před implementací funkce porovnávání dokumentů je nutné importovat potřebné jmenné prostory pro přístup k požadovaným třídám a metodám.
 ```csharp
 using System;
 using System.IO;
 ```
-## Krok 1: Nastavte výstupní adresář a název souboru
-Nejprve definujte výstupní adresář a název souboru, kam se bude porovnávaný dokument uložit.
+## Krok 1: Nastavení výstupního adresáře a názvu souboru
+Nejprve definujte výstupní adresář a název souboru, kam bude uložen porovnávaný dokument.
 ```csharp
 string outputDirectory = "Your Document Directory";
 string outputFileName = Path.Combine(outputDirectory, "RESULT.pptx");
 ```
-## Krok 2: Inicializujte program Comparer
- Instantovat a`Comparer` objekt předáním cesty zdrojového dokumentu jako parametru.
+## Krok 2: Inicializace porovnávače
+Vytvořte instanci `Comparer` objekt předáním cesty ke zdrojovému dokumentu jako parametru.
 ```csharp
 using (Comparer comparer = new Comparer("SOURCE.pptx"))
 ```
-## Krok 3: Přidejte cílový dokument
-Přidejte cílové dokumenty, které chcete porovnat se zdrojovým dokumentem.
+## Krok 3: Přidání cílového dokumentu
+Přidejte cílové dokumenty, které chcete porovnat se zdrojovými dokumenty.
 ```csharp
 comparer.Add("TARGET.pptx");
 ```
-## Krok 4: Proveďte srovnání
- Vyvolat`Compare` způsob, jak provést porovnání dokumentů a uložit výsledek.
+## Krok 4: Proveďte porovnání
+Vyvolat `Compare` metoda pro provedení porovnání dokumentů a uložení výsledku.
 ```csharp
 comparer.Compare(File.Create(outputFileName));
 ```
-## Krok 5: Vygenerujte náhledy dokumentů
+## Krok 5: Generování náhledů dokumentů
 Vygenerujte náhledy porovnávaného dokumentu pro vizuální kontrolu.
 ```csharp
 Document document = new Document(File.OpenRead(outputFileName));
@@ -63,21 +63,21 @@ previewOptions.Width = 1000;
 document.GeneratePreview(previewOptions);
 ```
 ## Krok 6: Zobrazení výstupu
-Zobrazte zprávu o úspěchu s cestou k vygenerovaným náhledům dokumentů.
+Zobrazit zprávu o úspěchu s cestou k vygenerovaným náhledům dokumentů.
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {outputDirectory}.");
 ```
 
 ## Závěr
-Začlenění funkce porovnávání dokumentů do vašich aplikací .NET zjednodušuje GroupDocs.Comparison for .NET. Dodržením nastíněných kroků mohou vývojáři bez problémů integrovat tento výkonný nástroj, aby zajistili přesnost a konzistenci v procesech správy dokumentů.
-## FAQ
-### Je GroupDocs.Comparison for .NET kompatibilní se všemi formáty dokumentů?
-GroupDocs.Comparison for .NET podporuje širokou škálu formátů dokumentů, včetně DOCX, PDF, PPTX, XLSX a dalších.
-### Mohu přizpůsobit možnosti srovnání na základě svých požadavků?
-Ano, GroupDocs.Comparison for .NET poskytuje rozsáhlé možnosti přizpůsobení procesu porovnání podle konkrétních potřeb.
-### Nabízí GroupDocs.Comparison for .NET podporu pro verzování dokumentů?
-Zatímco GroupDocs.Comparison for .NET se primárně zaměřuje na porovnávání dokumentů, lze jej integrovat se systémy správy verzí pro komplexní řešení správy dokumentů.
-### Je k dispozici bezplatná zkušební verze pro GroupDocs.Comparison pro .NET?
- Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Comparison for .NET z webu[webová stránka](https://releases.groupdocs.com/).
-### Kde najdu další podporu a pomoc pro GroupDocs.Comparison for .NET?
- Můžete prozkoumat vyhrazené[Fórum podpory](https://forum.groupdocs.com/c/comparison/12) pro GroupDocs.Comparison for .NET hledat pomoc, sdílet zkušenosti a spojit se s komunitou.
+Začlenění funkce porovnávání dokumentů do vašich .NET aplikací je zjednodušeno díky GroupDocs.Comparison for .NET. Dodržením popsaných kroků mohou vývojáři bezproblémově integrovat tento výkonný nástroj a zajistit tak přesnost a konzistenci v procesech správy dokumentů.
+## Často kladené otázky
+### Je GroupDocs.Comparison pro .NET kompatibilní se všemi formáty dokumentů?
+GroupDocs.Comparison pro .NET podporuje širokou škálu formátů dokumentů, včetně DOCX, PDF, PPTX, XLSX a dalších.
+### Mohu si přizpůsobit možnosti porovnání podle svých požadavků?
+Ano, GroupDocs.Comparison pro .NET nabízí rozsáhlé možnosti pro přizpůsobení procesu porovnávání podle specifických potřeb.
+### Nabízí GroupDocs.Comparison pro .NET podporu pro verzování dokumentů?
+Ačkoli se GroupDocs.Comparison pro .NET primárně zaměřuje na porovnávání dokumentů, lze jej integrovat se systémy pro správu verzí a vytvořit tak komplexní řešení pro správu dokumentů.
+### Je k dispozici bezplatná zkušební verze GroupDocs.Comparison pro .NET?
+Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Comparison pro .NET z [webové stránky](https://releases.groupdocs.com/).
+### Kde najdu další podporu a pomoc pro GroupDocs.Comparison pro .NET?
+Můžete si prohlédnout vyhrazené [fórum podpory](https://forum.groupdocs.com/c/comparison/12) pro GroupDocs.Comparison pro .NET, kde můžete vyhledat pomoc, sdílet zkušenosti a spojit se s komunitou.

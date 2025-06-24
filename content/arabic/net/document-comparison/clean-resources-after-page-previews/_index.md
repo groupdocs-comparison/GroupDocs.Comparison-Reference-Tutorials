@@ -1,24 +1,24 @@
 ---
-title: تنظيف الموارد بعد معاينة الصفحة
-linktitle: تنظيف الموارد بعد معاينة الصفحة
-second_title: GroupDocs.Comparison .NET API
-description: تعرف على كيفية مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET خطوة بخطوة. قم بتحسين تطبيقات .NET الخاصة بك من خلال إدارة المستندات بكفاءة.
-weight: 13
-url: /ar/net/document-comparison/clean-resources-after-page-previews/
+"description": "تعلّم كيفية مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET خطوة بخطوة. حسّن تطبيقات .NET لديك بإدارة مستندات فعّالة."
+"linktitle": "تنظيف الموارد بعد معاينات الصفحة"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "تنظيف الموارد بعد معاينات الصفحة"
+"url": "/ar/net/document-comparison/clean-resources-after-page-previews/"
+"weight": 13
 ---
 
-# تنظيف الموارد بعد معاينة الصفحة
+# تنظيف الموارد بعد معاينات الصفحة
 
 ## مقدمة
-في عالم تطوير .NET، تعد إدارة المستندات ومقارنتها بكفاءة أمرًا ضروريًا لمختلف التطبيقات، بدءًا من الشركات القانونية وحتى المؤسسات التعليمية. لحسن الحظ، باستخدام أدوات مثل GroupDocs.Comparison for .NET، يمكن للمطورين تبسيط عملية مقارنة المستندات بسهولة. في هذا البرنامج التعليمي، سوف نستكشف كيفية استخدام GroupDocs.Comparison لـ .NET لمقارنة المستندات خطوة بخطوة.
+في عالم تطوير .NET، تُعدّ إدارة المستندات ومقارنتها بكفاءة أمرًا بالغ الأهمية لمختلف التطبيقات، من الشركات القانونية إلى المؤسسات التعليمية. لحسن الحظ، باستخدام أدوات مثل GroupDocs.Comparison لـ .NET، يُمكن للمطورين تبسيط عملية مقارنة المستندات بسهولة. في هذا البرنامج التعليمي، سنستكشف كيفية استخدام GroupDocs.Comparison لـ .NET لمقارنة المستندات خطوة بخطوة.
 ## المتطلبات الأساسية
-قبل الغوص في البرنامج التعليمي، تأكد من توفر المتطلبات الأساسية التالية:
-1.  GroupDocs.Comparison for .NET: قم بتنزيل المكتبة وتثبيتها من[هنا](https://releases.groupdocs.com/comparison/net/).
-2. بيئة تطوير .NET: تأكد من أن لديك بيئة تطوير .NET عاملة تم إعدادها على جهازك.
+قبل الغوص في البرنامج التعليمي، تأكد من أن لديك المتطلبات الأساسية التالية:
+1. GroupDocs.Comparison لـ .NET: قم بتنزيل المكتبة وتثبيتها من [هنا](https://releases.groupdocs.com/comparison/net/).
+2. بيئة تطوير .NET: تأكد من إعداد بيئة تطوير .NET عاملة على جهازك.
 3. عينات المستندات: قم بإعداد المستندات المصدر والهدف التي تريد مقارنتها.
 
 ## استيراد مساحات الأسماء
-في مشروع .NET الخاص بك، ابدأ باستيراد مساحات الأسماء الضرورية للوصول إلى وظائف GroupDocs.Comparison لـ .NET.
+في مشروع .NET الخاص بك، ابدأ باستيراد المساحات الأسماء الضرورية للوصول إلى وظائف GroupDocs.Comparison لـ .NET.
 
 ```csharp
 using System;
@@ -36,7 +36,7 @@ using (Comparer comparer = new Comparer("SOURCE.pptx"))
 {
     comparer.Add("TARGET.pptx");
 ```
-## الخطوة 3: إجراء المقارنة وإنشاء المخرجات
+## الخطوة 3: إجراء المقارنة وتوليد الناتج
 ```csharp
     comparer.Compare(File.Create(outputFileName));
 ```
@@ -60,15 +60,15 @@ Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in
 ```
 
 ## خاتمة
-في الختام، يوفر GroupDocs.Comparison for .NET حلاً قويًا لمقارنة المستندات بسهولة داخل تطبيقات .NET. من خلال اتباع الخطوات الموضحة في هذا البرنامج التعليمي، يمكن للمطورين دمج وظيفة مقارنة المستندات في مشاريعهم بسلاسة، مما يعزز الإنتاجية والكفاءة.
+في الختام، يوفر GroupDocs.Comparison لـ .NET حلاً فعالاً لمقارنة المستندات بسهولة داخل تطبيقات .NET. باتباع الخطوات الموضحة في هذا البرنامج التعليمي، يمكن للمطورين دمج وظيفة مقارنة المستندات بسلاسة في مشاريعهم، مما يعزز الإنتاجية والكفاءة.
 ## الأسئلة الشائعة
-### هل GroupDocs.Comparison for .NET متوافق مع تنسيقات المستندات المختلفة؟
-نعم، يدعم GroupDocs.Comparison for .NET نطاقًا واسعًا من تنسيقات المستندات، بما في ذلك DOCX وPPTX وXLSX وPDF والمزيد.
-### هل يمكنني تخصيص تنسيق الإخراج للمستندات المقارنة؟
-بالتأكيد، يوفر GroupDocs.Comparison for .NET المرونة في اختيار تنسيق الإخراج وفقًا لمتطلباتك.
+### هل GroupDocs.Comparison لـ .NET متوافق مع تنسيقات المستندات المختلفة؟
+نعم، يدعم GroupDocs.Comparison لـ .NET مجموعة واسعة من تنسيقات المستندات، بما في ذلك DOCX، وPPTX، وXLSX، وPDF، والمزيد.
+### هل يمكنني تخصيص تنسيق إخراج المستندات المقارنة؟
+بالتأكيد، يوفر GroupDocs.Comparison لـ .NET المرونة في اختيار تنسيق الإخراج وفقًا لمتطلباتك.
 ### هل هناك نسخة تجريبية متاحة لأغراض الاختبار؟
- نعم، يمكنك استكشاف ميزات GroupDocs.Comparison for .NET مع توفر نسخة تجريبية مجانية[هنا](https://releases.groupdocs.com/).
-### كيف يمكنني الحصول على الدعم لأية مشكلات أو استفسارات تتعلق بـ GroupDocs.Comparison for .NET؟
- يمكنك طلب المساعدة من منتدى مجتمع GroupDocs.Comparison[هنا](https://forum.groupdocs.com/c/comparison/12).
-### أين يمكنني شراء ترخيص GroupDocs.Comparison لـ .NET؟
-يمكنك شراء ترخيص GroupDocs.Comparison لـ .NET من[هذا الرابط](https://purchase.groupdocs.com/buy).
+نعم، يمكنك استكشاف ميزات GroupDocs.Comparison لـ .NET من خلال إصدار تجريبي مجاني متاح [هنا](https://releases.groupdocs.com/).
+### كيف يمكنني الحصول على الدعم لأي مشكلات أو استفسارات متعلقة بـ GroupDocs.Comparison لـ .NET؟
+يمكنك طلب المساعدة من منتدى مجتمع GroupDocs.Comparison [هنا](https://forum.groupdocs.com/c/comparison/12).
+### أين يمكنني شراء ترخيص لـ GroupDocs.Comparison لـ .NET؟
+يمكنك شراء ترخيص لـ GroupDocs.Comparison لـ .NET من [هذا الرابط](https://purchase.groupdocs.com/buy).

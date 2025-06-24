@@ -1,35 +1,35 @@
 ---
-title: Ustaw licencję licznikową — porównanie GroupDocs dla .NET
-linktitle: Ustaw licencję licznikową — porównanie GroupDocs dla .NET
-second_title: GroupDocs.Comparison API .NET
-description: Bezproblemowo zintegruj program GroupDocs Comparison for .NET ze swoimi projektami .NET, aby uzyskać efektywny przepływ pracy związany z porównywaniem dokumentów.
-weight: 12
-url: /pl/net/quick-start/set-metered-license/
+"description": "Bezproblemowa integracja narzędzia GroupDocs Comparison for .NET ze projektami .NET zapewnia wydajne przepływy pracy związane z porównywaniem dokumentów."
+"linktitle": "Ustaw licencję licznikową - porównanie GroupDocs dla .NET"
+"second_title": "GroupDocs.Comparison .NET API"
+"title": "Ustaw licencję licznikową - porównanie GroupDocs dla .NET"
+"url": "/pl/net/quick-start/set-metered-license/"
+"weight": 12
 ---
 
-# Ustaw licencję licznikową — porównanie GroupDocs dla .NET
+# Ustaw licencję licznikową - porównanie GroupDocs dla .NET
 
 ## Wstęp
-W dziedzinie programowania .NET posiadanie solidnych narzędzi do porównywania dokumentów jest niezbędne. Porównanie GroupDocs dla .NET wyróżnia się jako potężne rozwiązanie do programowego porównywania różnych formatów dokumentów. Od dokumentów tekstowych po arkusze kalkulacyjne i prezentacje — ta biblioteka umożliwia programistom skuteczne identyfikowanie różnic między plikami.
-## Warunki wstępne
-Zanim zagłębisz się w zawiłości korzystania z narzędzia GroupDocs Comparison dla .NET, upewnij się, że spełnione są następujące wymagania wstępne:
-1. Znajomość programowania .NET: Znajomość programowania C# i środowiska .NET jest niezbędna do efektywnego wykorzystania oprogramowania GroupDocs Comparison dla .NET.
-2.  Instalacja biblioteki porównawczej GroupDocs: Pobierz i zainstaluj bibliotekę porównawczą GroupDocs dla .NET z[link do pobrania](https://releases.groupdocs.com/comparison/net/).
-3. Licencja licznikowa: Kup licencję licznikową od GroupDocs, aby odblokować pełny potencjał biblioteki. Licencję tymczasową można uzyskać od[Tutaj](https://purchase.groupdocs.com/temporary-license/).
-4. Zintegrowane środowisko programistyczne (IDE): Zainstaluj środowisko IDE takie jak Visual Studio, aby zapewnić płynne programowanie.
+W dziedzinie rozwoju .NET posiadanie solidnych narzędzi do porównywania dokumentów jest niezbędne. GroupDocs Comparison for .NET wyróżnia się jako potężne rozwiązanie do porównywania różnych formatów dokumentów programowo. Od dokumentów tekstowych po arkusze kalkulacyjne i prezentacje, ta biblioteka umożliwia programistom skuteczne identyfikowanie różnic między plikami.
+## Wymagania wstępne
+Zanim zagłębisz się w szczegóły korzystania z narzędzia GroupDocs Comparison dla platformy .NET, upewnij się, że spełnione są następujące wymagania wstępne:
+1. Znajomość programowania .NET: Znajomość programowania w języku C# i środowiska .NET jest niezbędna do efektywnego wykorzystania narzędzia GroupDocs Comparison for .NET.
+2. Instalacja biblioteki porównawczej GroupDocs: Pobierz i zainstaluj bibliotekę porównawczą GroupDocs dla platformy .NET z [link do pobrania](https://releases.groupdocs.com/comparison/net/).
+3. Licencja mierzona: Uzyskaj licencję mierzoną od GroupDocs, aby odblokować pełny potencjał biblioteki. Możesz uzyskać tymczasową licencję od [Tutaj](https://purchase.groupdocs.com/temporary-license/).
+4. Zintegrowane środowisko programistyczne (IDE): Zainstalowanie środowiska IDE, np. Visual Studio, zapewni płynne środowisko programistyczne.
 
 ## Importuj przestrzenie nazw
-Aby rozpocząć korzystanie z porównania GroupDocs dla .NET, zaimportuj niezbędne przestrzenie nazw do swojego projektu. Wykonaj następujące kroki:
+Aby rozpocząć korzystanie z GroupDocs Comparison dla .NET, zaimportuj niezbędne przestrzenie nazw do swojego projektu. Wykonaj następujące kroki:
 
 ```csharp
 using System;
 ```
-Te przestrzenie nazw zapewniają dostęp do podstawowych klas i metod potrzebnych do funkcjonalności porównywania dokumentów.
-## Konfigurowanie licencji taryfowej
-Przed wykorzystaniem wszystkich funkcji porównania GroupDocs dla .NET kluczowe znaczenie ma skonfigurowanie licencji taryfowej. Oto przewodnik krok po kroku, jak to osiągnąć:
+Te przestrzenie nazw zapewniają dostęp do podstawowych klas i metod niezbędnych do realizacji funkcji porównywania dokumentów.
+## Konfigurowanie licencji licznikowej
+Przed skorzystaniem z pełnych funkcji GroupDocs Comparison dla .NET, kluczowe jest skonfigurowanie licencji mierzonej. Oto przewodnik krok po kroku, jak to osiągnąć:
 ## Krok 1: Zdobądź klucze publiczne i prywatne
-Po pierwsze, po zakupie licencji licznikowej zdobądź klucze publiczne i prywatne dostarczone przez GroupDocs.
-## Krok 2: Skonfiguruj licencję taryfową
+Najpierw zdobądź klucze publiczne i prywatne udostępnione przez GroupDocs po zakupieniu licencji taryfowej.
+## Krok 2: Skonfiguruj licencję licznikową
 Teraz użyj uzyskanych kluczy publicznych i prywatnych, aby skonfigurować licencję licznikową, jak pokazano poniżej:
 ```csharp
 string publicKey = "*****";
@@ -38,18 +38,18 @@ Metered metered = new Metered();
 metered.SetMeteredKey(publicKey, privateKey);
 Console.WriteLine("License set successfully.");
 ```
- Zastępować`"*****"` rzeczywistymi kluczami publicznymi i prywatnymi dostarczonymi przez GroupDocs. Ten kod inicjuje licencję licznikową za pomocą dostarczonych kluczy, umożliwiając dostęp do pełnej funkcjonalności porównania GroupDocs dla .NET.
+Zastępować `"*****"` z Twoimi rzeczywistymi kluczami publicznymi i prywatnymi dostarczonymi przez GroupDocs. Ten kod inicjuje licencję mierzoną dostarczonymi kluczami, umożliwiając dostęp do pełnej funkcjonalności GroupDocs Comparison for .NET.
 
 ## Wniosek
-Podsumowując, GroupDocs Comparison for .NET oferuje kompleksowe rozwiązanie do porównywania dokumentów w aplikacjach .NET. Postępując zgodnie z opisanymi krokami importowania przestrzeni nazw i konfigurowania licencji taryfowej, programiści mogą bezproblemowo zintegrować tę zaawansowaną bibliotekę ze swoimi projektami, ułatwiając wydajne przepływy pracy związane z porównywaniem dokumentów.
-## Często zadawane pytania
-### Czy mogę korzystać z porównania GroupDocs dla .NET bez licencji?
-Nie, do korzystania z pełnej funkcjonalności biblioteki wymagana jest ważna licencja. Można jednak uzyskać licencję tymczasową do celów testowych.
-### Jakie formaty dokumentów obsługuje porównanie GroupDocs dla .NET?
-Porównanie GroupDocs dla .NET obsługuje szeroką gamę formatów dokumentów, w tym DOCX, XLSX, PPTX, PDF i inne.
-### Czy porównanie GroupDocs dla .NET jest kompatybilne z .NET Core?
-Tak, porównanie GroupDocs dla .NET jest kompatybilne zarówno ze środowiskami .NET Framework, jak i .NET Core.
+Podsumowując, GroupDocs Comparison for .NET oferuje kompleksowe rozwiązanie do porównywania dokumentów w aplikacjach .NET. Postępując zgodnie z opisanymi krokami importowania przestrzeni nazw i konfigurowania licencji mierzonej, deweloperzy mogą bezproblemowo zintegrować tę potężną bibliotekę ze swoimi projektami, ułatwiając wydajne przepływy pracy porównywania dokumentów.
+## Najczęściej zadawane pytania
+### Czy mogę używać narzędzia GroupDocs Comparison dla platformy .NET bez licencji?
+Nie, do korzystania z pełnej funkcjonalności biblioteki wymagana jest ważna licencja. Możesz jednak uzyskać tymczasową licencję do celów testowych.
+### Jakie formaty dokumentów obsługuje GroupDocs Comparison for .NET?
+GroupDocs Comparison for .NET obsługuje szeroką gamę formatów dokumentów, w tym DOCX, XLSX, PPTX, PDF i inne.
+### Czy narzędzie GroupDocs Comparison for .NET jest kompatybilne z platformą .NET Core?
+Tak, narzędzie GroupDocs Comparison for .NET jest kompatybilne zarówno ze środowiskami .NET Framework, jak i .NET Core.
 ### Czy mogę dostosować ustawienia porównania?
 Tak, programiści mają możliwość dostosowania różnych aspektów porównywania dokumentów, takich jak typ porównania, ustawienia stylu i zakres porównania.
-### Gdzie mogę szukać pomocy, jeśli napotkam jakiekolwiek problemy?
- Możesz zwrócić się o pomoc na forum społeczności GroupDocs Comparison[Tutaj](https://forum.groupdocs.com/c/comparison/12).
+### Gdzie mogę szukać pomocy, jeśli napotkam jakieś problemy?
+Możesz szukać pomocy na forum społecznościowym GroupDocs Comparison [Tutaj](https://forum.groupdocs.com/c/comparison/12).

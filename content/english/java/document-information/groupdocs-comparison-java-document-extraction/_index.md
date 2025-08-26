@@ -1,37 +1,59 @@
 ---
-title: "Master Document Metadata Extraction with GroupDocs in Java"
-description: "Learn how to efficiently extract document metadata using GroupDocs.Comparison in Java. Streamline workflows and enhance data analysis by understanding file types, page counts, and sizes."
-date: "2025-05-05"
+title: "How to Extract Document Metadata in Java - Complete GroupDocs Guide (2025)"
+linktitle: "Extract Document Metadata Java"
+description: "Learn how to extract document metadata in Java using GroupDocs.Comparison. Get file type, page count, and size with simple code examples. Complete tutorial with troubleshooting tips."
+keywords: "extract document metadata Java, GroupDocs Java tutorial, document information extraction, Java file metadata API, how to get document properties in Java"
 weight: 1
 url: "/java/document-information/groupdocs-comparison-java-document-extraction/"
-keywords:
-- document metadata extraction
-- GroupDocs.Comparison Java
-- extracting document information
-
+date: "2025-01-02"
+lastmod: "2025-01-02"
+categories: ["Java Development"]
+tags: ["GroupDocs", "document-processing", "metadata-extraction", "java-tutorial"]
 ---
 
+# How to Extract Document Metadata in Java Using GroupDocs (Complete 2025 Guide)
 
-# Mastering Document Metadata Extraction with GroupDocs in Java
+Ever found yourself staring at a folder full of documents, wondering which ones are PDFs, how many pages they contain, or their file sizes? If you're working with document processing in Java, you've probably faced this challenge. Whether you're building a content management system, automating document workflows, or just need to organize files programmatically, extracting document metadata is a game-changer.
 
-In today's digital landscape, efficiently managing and extracting information from documents is crucial for businesses across industries. Whether you're dealing with legal contracts, academic papers, or financial reports, understanding document metadata such as file type, page count, and size can streamline workflows and enhance data analysis. This tutorial guides you through using GroupDocs.Comparison in Java to extract valuable document information via both input streams and file paths.
+In this comprehensive guide, you'll learn how to extract document metadata in Java using GroupDocs.Comparison – one of the most powerful libraries for document processing. We'll cover everything from basic setup to advanced troubleshooting, so you can confidently implement document metadata extraction in your Java applications.
 
-## What You'll Learn:
-- Extracting document metadata with Java using GroupDocs.Comparison
-- Setting up your environment for GroupDocs.Comparison
-- Implementing document info extraction with InputStreams and file paths
-- Applying real-world solutions with this powerful tool
+## Why Extract Document Metadata in Java?
 
-Let's dive into the prerequisites to get started!
+Before diving into the code, let's talk about why document metadata extraction matters in real-world applications:
 
-## Prerequisites
-Before we begin, ensure you have the following ready:
-- **Java Development Kit (JDK):** Version 8 or higher is required.
-- **GroupDocs.Comparison for Java:** This library enables document comparison and metadata extraction. 
-- **Maven Setup:** Familiarity with Maven project management will be beneficial.
+**Common Business Scenarios:**
+- **Document Management Systems**: Automatically categorize and organize uploaded files
+- **Legal Software**: Verify document completeness by checking page counts
+- **Educational Platforms**: Validate student submissions meet format requirements
+- **Financial Applications**: Ensure reports comply with regulatory standards
+- **Content Auditing**: Analyze document collections for compliance or quality control
 
-### Required Libraries & Dependencies
-To include GroupDocs.Comparison in your Maven project, add the following to your `pom.xml`:
+The ability to programmatically extract metadata saves countless hours of manual work and reduces human error. Plus, with GroupDocs.Comparison, you get support for 100+ file formats – from common ones like PDF and DOCX to specialized formats.
+
+## What You'll Learn in This Tutorial
+
+By the end of this guide, you'll be able to:
+- Set up GroupDocs.Comparison in your Java project
+- Extract document metadata using both file paths and InputStreams
+- Handle common errors and edge cases
+- Optimize performance for large-scale document processing
+- Apply these techniques to real-world scenarios
+
+Let's get started!
+
+## Prerequisites and Setup
+
+### What You'll Need
+
+Before we jump into coding, make sure you have:
+- **Java Development Kit (JDK) 8 or higher** (JDK 11+ recommended for better performance)
+- **Maven or Gradle** for dependency management
+- **Your favorite IDE** (IntelliJ IDEA, Eclipse, or VS Code work great)
+- **Basic Java knowledge** – if you can write a for loop, you're good to go!
+
+### Adding GroupDocs.Comparison to Your Project
+
+The easiest way to get started is through Maven. Add this to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -50,156 +72,599 @@ To include GroupDocs.Comparison in your Maven project, add the following to your
 </dependencies>
 ```
 
-### Environment Setup
-Ensure that you have a Java IDE like IntelliJ IDEA or Eclipse configured with Maven support. This setup will simplify managing dependencies and building your project.
+**Pro Tip**: Always use the latest version for the best features and security updates. Check the [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) for the most current version.
 
-## Setting Up GroupDocs.Comparison for Java
+### Getting Your License (Don't Skip This!)
 
-### Installation Information
-To start using GroupDocs.Comparison, follow these steps:
+While GroupDocs.Comparison works without a license for evaluation, you'll see watermarks on processed documents. Here's how to get properly licensed:
 
-1. **Add Dependency:** Include the dependency in your `pom.xml` as shown above.
-2. **License Acquisition:**
-   - **Free Trial:** Download a trial version from [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/).
-   - **Temporary License:** Obtain it for extended features via [Temporary License Page](https://purchase.groupdocs.com/temporary-license/).
-   - **Purchase:** For full access, visit the [Purchase Page](https://purchase.groupdocs.com/buy).
+1. **Free Trial**: Perfect for testing – download from [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)
+2. **Temporary License**: Great for development – get one at the [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)
+3. **Full License**: For production use – available at the [Purchase Page](https://purchase.groupdocs.com/buy)
 
-### Basic Initialization and Setup
-Once you've added the dependency, initialize GroupDocs.Comparison in your Java application:
+## Basic Setup and Initialization
+
+Let's start with a simple example to make sure everything's working:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 
-public class DocumentComparison {
+public class DocumentMetadataExtractor {
     public static void main(String[] args) {
-        String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
+        String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
         
         try (Comparer comparer = new Comparer(sourceFilePath)) {
-            // Ready to extract document info or compare documents.
+            System.out.println("GroupDocs.Comparison is ready to use!");
+            // We'll add metadata extraction code here
         } catch (Exception e) {
+            System.err.println("Error initializing GroupDocs: " + e.getMessage());
             e.printStackTrace();
         }
     }
 }
 ```
 
-This snippet sets up a basic framework for using GroupDocs.Comparison, focusing on extracting document information. Let's delve into the implementation.
+This basic setup creates a `Comparer` object – your main tool for working with documents. The try-with-resources statement ensures proper cleanup of resources.
 
-## Implementation Guide
+## Method 1: Extract Document Metadata Using File Paths
 
-### Feature 1: Document Info Extraction with InputStreams
+This is the most straightforward approach, perfect when you're working with local files or have direct access to file paths.
 
-#### Overview
-This feature allows you to extract metadata from documents directly through an `InputStream`. It’s particularly useful when dealing with files stored in databases or received over network streams.
+### Step-by-Step Implementation
 
-##### Step-by-Step Implementation
-
-**Step 1:** Import Necessary Libraries
+Here's how to extract document metadata using file paths:
 
 ```java
 import com.groupdocs.comparison.Comparer;
-import java.io.FileInputStream;
-import java.io.InputStream;
-```
+import com.groupdocs.comparison.result.IDocumentInfo;
 
-**Step 2:** Initialize InputStream and Comparer Object
-
-Replace `YOUR_DOCUMENT_DIRECTORY` with the actual path to your document.
-
-```java
-String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
-
-try (InputStream sourceStream = new FileInputStream(sourceFilePath)) {
-    try (Comparer comparer = new Comparer(sourceStream)) {
-        // Extracted information will be obtained from here.
-```
-
-**Step 3:** Extract and Display Document Information
-
-Utilize the `getDocumentInfo()` method to retrieve metadata.
-
-```java
-        IDocumentInfo info = comparer.getSource().getDocumentInfo();
-        
-        System.out.printf("
+public class FilePathMetadataExtraction {
+    public static void extractMetadataFromPath(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.printf("
+File Analysis Results:
 File type: %s
 Number of pages: %d
-Document size: %d bytes%n", 
-            info.getFileType().getFileFormat(), info.getPageCount(), info.getSize());
+Document size: %d bytes (%.2f KB)%n", 
+                info.getFileType().getFileFormat(), 
+                info.getPageCount(), 
+                info.getSize(),
+                info.getSize() / 1024.0);
+        } catch (Exception e) {
+            System.err.println("Failed to extract metadata: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    public static void main(String[] args) {
+        String documentPath = "YOUR_DOCUMENT_DIRECTORY/sample.pdf";
+        extractMetadataFromPath(documentPath);
     }
 }
 ```
 
-- **Parameters Explained:** `sourceStream` is the input stream for your document.
-- **Return Values:** The method `getDocumentInfo()` returns an object containing metadata such as file type, page count, and size.
+### What's Happening Here?
 
-**Troubleshooting Tips:**
-- Ensure the document path is correct to avoid `FileNotFoundException`.
-- Verify that the GroupDocs library version matches your project requirements.
+1. **Comparer Initialization**: We create a `Comparer` object with the file path
+2. **Info Extraction**: `getDocumentInfo()` retrieves all available metadata
+3. **Data Display**: We format and display the key information (type, pages, size)
 
-### Feature 2: Document Info Extraction with File Paths
+### When to Use This Method
 
-#### Overview
-This approach simplifies extraction by using direct file paths instead of streams. It's suitable for local files or when stream handling isn't necessary.
+File path extraction is ideal when:
+- Working with local files
+- Files are stored in accessible directories
+- You need simple, straightforward metadata extraction
+- Performance isn't critical (small to medium file volumes)
 
-##### Step-by-Step Implementation
+## Method 2: Extract Document Metadata Using InputStreams
 
-**Step 1:** Import Libraries and Initialize `File` Object
+InputStreams are incredibly powerful for handling documents from various sources – databases, network streams, or when you need more control over file handling.
+
+### Step-by-Step Implementation
 
 ```java
 import com.groupdocs.comparison.Comparer;
-import java.io.File;
+import com.groupdocs.comparison.result.IDocumentInfo;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.IOException;
 
-String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
-File sourceFile = new File(sourceFilePath);
-```
-
-**Step 2:** Create Comparer Instance with File Path
-
-```java
-try (Comparer comparer = new Comparer(sourceFilePath)) {
-    IDocumentInfo info = comparer.getSource().getDocumentInfo();
+public class InputStreamMetadataExtraction {
+    public static void extractMetadataFromStream(String filePath) {
+        try (InputStream sourceStream = new FileInputStream(filePath);
+             Comparer comparer = new Comparer(sourceStream)) {
+            
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.println("Document Metadata Analysis:");
+            System.out.println("==========================");
+            System.out.printf("File Format: %s%n", info.getFileType().getFileFormat());
+            System.out.printf("Total Pages: %d%n", info.getPageCount());
+            System.out.printf("File Size: %d bytes%n", info.getSize());
+            System.out.printf("Size (Human Readable): %s%n", formatFileSize(info.getSize()));
+            
+        } catch (IOException e) {
+            System.err.println("IO Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Metadata extraction failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
     
-    System.out.printf("
-File type: %s
-Number of pages: %d
-Document size: %d bytes%n", 
-        info.getFileType().getFileFormat(), info.getPageCount(), info.getSize());
+    // Helper method to make file sizes more readable
+    private static String formatFileSize(long size) {
+        if (size < 1024) return size + " bytes";
+        if (size < 1024 * 1024) return String.format("%.2f KB", size / 1024.0);
+        if (size < 1024 * 1024 * 1024) return String.format("%.2f MB", size / (1024.0 * 1024.0));
+        return String.format("%.2f GB", size / (1024.0 * 1024.0 * 1024.0));
+    }
+    
+    public static void main(String[] args) {
+        String documentPath = "YOUR_DOCUMENT_DIRECTORY/report.xlsx";
+        extractMetadataFromStream(documentPath);
+    }
 }
 ```
 
-- **Parameters Explained:** The `sourceFilePath` is directly used to initialize the Comparer object.
-- **Return Values:** Similar to using streams, metadata is extracted via `getDocumentInfo()`.
+### Why Use InputStreams?
 
-**Troubleshooting Tips:**
-- Ensure file paths are valid and accessible.
-- Confirm that your environment has read permissions for the specified files.
+InputStreams are particularly useful when:
+- **Database Storage**: Documents stored as BLOBs in databases
+- **Network Sources**: Files received via HTTP requests or FTP
+- **Memory Management**: Better control over resource usage
+- **Security**: More control over file access and permissions
+- **Scalability**: Easier to implement connection pooling and resource management
 
-## Practical Applications
+## Real-World Applications and Use Cases
 
-1. **Content Management Systems (CMS):** Automatically categorize documents based on size or type.
-2. **Legal Document Processing:** Validate document completeness by checking page counts against requirements.
-3. **Academic Institutions:** Automate the verification of submission file formats and sizes before processing.
-4. **Financial Reporting:** Ensure compliance with report formatting standards by inspecting document metadata.
-5. **Integration with Data Analytics Tools:** Extract metadata for further analysis in business intelligence platforms.
+Let's explore some practical scenarios where document metadata extraction shines:
 
-## Performance Considerations
+### 1. Content Management System Integration
 
-To optimize performance when using GroupDocs.Comparison:
-- **Memory Management:** Utilize Java's garbage collection effectively to handle large documents without memory leaks.
-- **Resource Usage:** Monitor CPU and memory usage, especially when processing multiple files concurrently.
-- **Best Practices:**
-  - Limit the number of simultaneous operations to avoid overloading system resources.
-  - Use buffered streams for reading files to enhance I/O performance.
+```java
+public class DocumentCatalogSystem {
+    public void catalogDocument(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            // Store in database or index for search
+            DocumentRecord record = new DocumentRecord();
+            record.setFileType(info.getFileType().getFileFormat());
+            record.setPageCount(info.getPageCount());
+            record.setFileSize(info.getSize());
+            record.setFilePath(filePath);
+            
+            // Save to your database here
+            saveDocumentRecord(record);
+            
+        } catch (Exception e) {
+            logError("Failed to catalog document: " + filePath, e);
+        }
+    }
+}
+```
 
-## Conclusion
+### 2. Document Validation for Legal Systems
 
-By mastering document metadata extraction with GroupDocs.Comparison in Java, you unlock new efficiencies in handling and analyzing documents. Whether through InputStreams or file paths, this powerful library offers flexibility and precision in extracting metadata. As you integrate these techniques into your projects, consider exploring additional features of GroupDocs.Comparison to further enhance your document management solutions.
+```java
+public class LegalDocumentValidator {
+    public boolean validateSubmission(String documentPath) {
+        try (Comparer comparer = new Comparer(documentPath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            // Check if document meets legal requirements
+            boolean isValidFormat = isAcceptedFormat(info.getFileType().getFileFormat());
+            boolean hasValidPageCount = info.getPageCount() > 0 && info.getPageCount() <= 50;
+            boolean isValidSize = info.getSize() <= 10 * 1024 * 1024; // 10MB max
+            
+            return isValidFormat && hasValidPageCount && isValidSize;
+            
+        } catch (Exception e) {
+            return false; // Invalid if we can't process it
+        }
+    }
+    
+    private boolean isAcceptedFormat(String format) {
+        return Arrays.asList("PDF", "DOCX", "DOC").contains(format.toUpperCase());
+    }
+}
+```
 
-## Next Steps
-Explore the [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/) for advanced functionalities like comparing documents or generating reports based on extracted metadata.
+### 3. Batch Document Processing
 
-## FAQ Section
+```java
+public class BatchDocumentProcessor {
+    public void processDocumentDirectory(String directoryPath) {
+        File directory = new File(directoryPath);
+        File[] files = directory.listFiles((dir, name) -> 
+            name.toLowerCase().endsWith(".pdf") || 
+            name.toLowerCase().endsWith(".docx") ||
+            name.toLowerCase().endsWith(".xlsx"));
+        
+        if (files == null) {
+            System.out.println("No documents found in directory");
+            return;
+        }
+        
+        System.out.println("Processing " + files.length + " documents...");
+        
+        for (File file : files) {
+            processDocument(file.getAbsolutePath());
+        }
+    }
+    
+    private void processDocument(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.printf("%s: %s, %d pages, %s%n", 
+                new File(filePath).getName(),
+                info.getFileType().getFileFormat(),
+                info.getPageCount(),
+                formatFileSize(info.getSize()));
+                
+        } catch (Exception e) {
+            System.err.println("Error processing " + filePath + ": " + e.getMessage());
+        }
+    }
+}
+```
 
-**Q1:** What file formats does GroupDocs.Comparison support?
-- **A:** GroupDocs.Comparison supports a wide range of document formats including DOCX, PDF, XLSX, and more. Refer to the official documentation for a complete list.
+## Common Issues and Troubleshooting
+
+Even with the best code, things can go wrong. Here are the most common issues you'll encounter and how to solve them:
+
+### Issue 1: FileNotFoundException
+
+**Problem**: The most common error when starting out.
+```
+java.io.FileNotFoundException: YOUR_DOCUMENT_DIRECTORY/document.pdf (No such file or directory)
+```
+
+**Solutions**:
+- Check if the file path is correct and the file exists
+- Use absolute paths instead of relative paths
+- Ensure your application has read permissions for the file
+
+```java
+// Better approach with file existence checking
+public static boolean processDocumentSafely(String filePath) {
+    File file = new File(filePath);
+    
+    if (!file.exists()) {
+        System.err.println("File not found: " + filePath);
+        return false;
+    }
+    
+    if (!file.canRead()) {
+        System.err.println("Cannot read file: " + filePath);
+        return false;
+    }
+    
+    try (Comparer comparer = new Comparer(filePath)) {
+        // Your metadata extraction code here
+        return true;
+    } catch (Exception e) {
+        System.err.println("Processing failed: " + e.getMessage());
+        return false;
+    }
+}
+```
+
+### Issue 2: Unsupported File Format
+
+**Problem**: Trying to process unsupported file types.
+
+**Solution**: Always check supported formats first:
+
+```java
+public static boolean isSupportedFormat(String filePath) {
+    String extension = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
+    Set<String> supportedFormats = Set.of(
+        "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", 
+        "txt", "rtf", "odt", "ods", "odp"
+    );
+    return supportedFormats.contains(extension);
+}
+```
+
+### Issue 3: Memory Issues with Large Files
+
+**Problem**: OutOfMemoryError when processing very large documents.
+
+**Solution**: Implement proper memory management:
+
+```java
+public static void processLargeDocument(String filePath) {
+    // Set JVM options: -Xmx2g -XX:+UseG1GC
+    
+    System.gc(); // Suggest garbage collection before processing
+    
+    try (Comparer comparer = new Comparer(filePath)) {
+        IDocumentInfo info = comparer.getSource().getDocumentInfo();
+        
+        if (info.getSize() > 100 * 1024 * 1024) { // 100MB
+            System.out.println("Warning: Processing large file (" + 
+                formatFileSize(info.getSize()) + ")");
+        }
+        
+        // Process document
+        
+    } catch (OutOfMemoryError e) {
+        System.err.println("File too large to process: " + filePath);
+        // Consider splitting or using streaming approach
+    }
+}
+```
+
+### Issue 4: License-Related Errors
+
+**Problem**: Watermarks appearing or license exceptions.
+
+**Solution**: Properly initialize your license:
+
+```java
+public class LicenseManager {
+    private static boolean licenseSet = false;
+    
+    public static void setLicense() {
+        if (!licenseSet) {
+            try {
+                License license = new License();
+                license.setLicense("path/to/your/license.lic");
+                licenseSet = true;
+                System.out.println("License applied successfully");
+            } catch (Exception e) {
+                System.err.println("License error: " + e.getMessage());
+                System.out.println("Running in evaluation mode");
+            }
+        }
+    }
+}
+```
+
+## Performance Optimization Tips
+
+When processing many documents or large files, performance becomes crucial. Here are proven optimization strategies:
+
+### 1. Resource Management
+
+```java
+public class OptimizedDocumentProcessor {
+    private static final int MAX_CONCURRENT_PROCESSES = Runtime.getRuntime().availableProcessors();
+    private ExecutorService executorService = Executors.newFixedThreadPool(MAX_CONCURRENT_PROCESSES);
+    
+    public void processDocumentsConcurrently(List<String> filePaths) {
+        List<Future<DocumentMetadata>> futures = new ArrayList<>();
+        
+        for (String filePath : filePaths) {
+            Future<DocumentMetadata> future = executorService.submit(() -> {
+                return extractMetadata(filePath);
+            });
+            futures.add(future);
+        }
+        
+        // Collect results
+        for (Future<DocumentMetadata> future : futures) {
+            try {
+                DocumentMetadata metadata = future.get(30, TimeUnit.SECONDS);
+                processMetadata(metadata);
+            } catch (TimeoutException e) {
+                System.err.println("Document processing timed out");
+            }
+        }
+    }
+}
+```
+
+### 2. Caching Strategy
+
+```java
+public class CachedMetadataExtractor {
+    private static final Map<String, DocumentMetadata> metadataCache = new ConcurrentHashMap<>();
+    
+    public DocumentMetadata getDocumentMetadata(String filePath) {
+        File file = new File(filePath);
+        String cacheKey = filePath + "_" + file.lastModified();
+        
+        return metadataCache.computeIfAbsent(cacheKey, key -> {
+            return extractMetadataInternal(filePath);
+        });
+    }
+    
+    private DocumentMetadata extractMetadataInternal(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            return new DocumentMetadata(
+                info.getFileType().getFileFormat(),
+                info.getPageCount(),
+                info.getSize()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to extract metadata", e);
+        }
+    }
+}
+```
+
+### 3. Memory-Efficient Processing
+
+```java
+public class MemoryEfficientProcessor {
+    public void processLargeDirectory(String directoryPath) {
+        try (Stream<Path> paths = Files.walk(Paths.get(directoryPath))) {
+            paths.filter(Files::isRegularFile)
+                 .filter(path -> isSupportedFormat(path.toString()))
+                 .forEach(path -> {
+                     processDocument(path.toString());
+                     System.gc(); // Suggest cleanup after each document
+                 });
+        } catch (IOException e) {
+            System.err.println("Error accessing directory: " + e.getMessage());
+        }
+    }
+}
+```
+
+## Advanced Use Cases
+
+### Building a Document Analytics Dashboard
+
+```java
+public class DocumentAnalytics {
+    public Map<String, Integer> getFormatDistribution(List<String> filePaths) {
+        Map<String, Integer> formatCounts = new HashMap<>();
+        
+        for (String filePath : filePaths) {
+            try (Comparer comparer = new Comparer(filePath)) {
+                IDocumentInfo info = comparer.getSource().getDocumentInfo();
+                String format = info.getFileType().getFileFormat();
+                formatCounts.merge(format, 1, Integer::sum);
+            } catch (Exception e) {
+                formatCounts.merge("ERROR", 1, Integer::sum);
+            }
+        }
+        
+        return formatCounts;
+    }
+    
+    public long getTotalDocumentSize(List<String> filePaths) {
+        return filePaths.stream()
+                .mapToLong(this::getDocumentSize)
+                .sum();
+    }
+    
+    private long getDocumentSize(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            return comparer.getSource().getDocumentInfo().getSize();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+}
+```
+
+## Best Practices and Pro Tips
+
+### 1. Always Use Try-With-Resources
+```java
+// Good - automatic resource management
+try (Comparer comparer = new Comparer(filePath)) {
+    // Your code here
+} catch (Exception e) {
+    // Handle errors
+}
+
+// Avoid - manual resource management (error-prone)
+Comparer comparer = new Comparer(filePath);
+// If exception occurs here, resources might not be cleaned up
+comparer.close();
+```
+
+### 2. Implement Proper Error Handling
+```java
+public class RobustDocumentProcessor {
+    public Optional<DocumentMetadata> extractMetadata(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            return Optional.of(new DocumentMetadata(info));
+        } catch (Exception e) {
+            logError("Failed to process: " + filePath, e);
+            return Optional.empty();
+        }
+    }
+}
+```
+
+### 3. Validate Input Parameters
+```java
+public void processDocument(String filePath) {
+    Objects.requireNonNull(filePath, "File path cannot be null");
+    
+    if (filePath.trim().isEmpty()) {
+        throw new IllegalArgumentException("File path cannot be empty");
+    }
+    
+    if (!new File(filePath).exists()) {
+        throw new IllegalArgumentException("File does not exist: " + filePath);
+    }
+    
+    // Process the document
+}
+```
+
+## Conclusion and Next Steps
+
+Congratulations! You've now mastered document metadata extraction in Java using GroupDocs.Comparison. You can extract file types, page counts, and sizes from virtually any document format, handle errors gracefully, and optimize performance for large-scale operations.
+
+### Key Takeaways:
+- **Two Methods**: File paths for simplicity, InputStreams for flexibility
+- **Error Handling**: Always expect and handle exceptions gracefully
+- **Performance**: Use caching, concurrent processing, and proper resource management
+- **Real-World Ready**: The techniques you've learned scale from single documents to enterprise applications
+
+### What's Next?
+
+Ready to take your document processing skills further? Consider exploring:
+- **Document Comparison**: Use GroupDocs.Comparison to compare documents and generate difference reports
+- **Advanced Metadata**: Extract custom properties, author information, and creation dates
+- **Integration**: Connect with databases, web services, and cloud storage
+- **Automation**: Build scheduled jobs for document processing workflows
+
+## Frequently Asked Questions
+
+**Q: What file formats does GroupDocs.Comparison support for metadata extraction?**
+A: GroupDocs.Comparison supports 100+ formats including PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX, TXT, RTF, ODT, ODS, ODP, and many more. Check the official documentation for the complete list.
+
+**Q: How do I handle password-protected documents?**
+A: You can specify passwords when creating the Comparer object:
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+try (Comparer comparer = new Comparer(filePath, loadOptions)) {
+    // Extract metadata from password-protected document
+}
+```
+
+**Q: Can I extract metadata from documents stored in cloud services like AWS S3?**
+A: Yes! Use InputStreams to read from cloud services:
+```java
+// Example with AWS S3
+S3Object object = s3Client.getObject("bucket-name", "document-key");
+try (InputStream stream = object.getObjectContent();
+     Comparer comparer = new Comparer(stream)) {
+    // Extract metadata
+}
+```
+
+**Q: What's the performance impact of metadata extraction on large files?**
+A: Metadata extraction is generally fast as it only reads file headers, not the entire content. Even for large files (100MB+), extraction typically takes less than a second. The main factors affecting performance are disk I/O speed and available memory.
+
+**Q: How accurate is the page count for different document types?**
+A: Page count accuracy depends on the document format:
+- **PDF**: Highly accurate (actual page count)
+- **Word Documents**: Accurate for most cases, may vary with complex layouts
+- **Excel**: Returns worksheet count, not printed pages
+- **PowerPoint**: Returns slide count
+
+**Q: Can I extract metadata from corrupted documents?**
+A: GroupDocs.Comparison will throw an exception for corrupted documents. Always implement proper error handling to gracefully handle such cases and log them for further investigation.
+
+**Q: Is there a way to extract additional metadata like author, creation date, or keywords?**
+A: The basic `getDocumentInfo()` method provides file type, page count, and size. For extended metadata, you might need to use specialized document libraries for each format or explore GroupDocs' other products like GroupDocs.Metadata.
+
+**Q: How do I optimize memory usage when processing thousands of documents?**
+A: Use these strategies:
+- Process documents in batches
+- Implement proper garbage collection hints
+- Use streaming approaches when possible
+- Cache only essential metadata
+- Consider using multiple threads with controlled concurrency
+
+### Resources for Continued Learning:
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
+- [API Reference Guide](https://apireference.groupdocs.com/comparison/java)
+- [Community Forum](https://forum.groupdocs.com/) for questions and discussions

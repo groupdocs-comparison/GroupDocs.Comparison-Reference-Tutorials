@@ -52,67 +52,47 @@ Before diving into specific tutorials, here's what you should know about GroupDo
 ## Available Tutorials
 
 ### Password-Protected Document Handling
-{{< tutorial-link "./groupdocs-compare-protected-word-documents-java/" >}}
+
 [How to Load and Compare Password-Protected Word Documents in Java Using GroupDocs.Comparison](./groupdocs-compare-protected-word-documents-java/)
 
 Learn how to efficiently load and compare password-protected Word documents in Java with GroupDocs.Comparison. This tutorial is essential if you're working in environments where document security is paramount - think legal firms, financial institutions, or healthcare organizations.
 
-**When You'll Need This:** Processing confidential documents, automated compliance reviews, secure document workflows.
-{{< /tutorial-link >}}
 
 ### Multi-Document Stream Processing
-{{< tutorial-link "./java-groupdocs-comparison-multi-stream-document-guide/" >}}
+
 [Java Multi-Stream Document Comparison using GroupDocs.Comparison: A Comprehensive Guide](./java-groupdocs-comparison-multi-stream-document-guide/)
 
 Master Java document comparison with GroupDocs.Comparison. Learn to compare multiple documents efficiently using streams for enhanced productivity. This approach is crucial for web applications where you can't afford to write temporary files to disk.
 
-**When You'll Need This:** Web-based document management, high-volume processing, memory-constrained environments.
-{{< /tutorial-link >}}
-
 ### Directory and Folder Analysis
-{{< tutorial-link "./master-directory-comparison-java-groupdocs-comparison/" >}}
+
 [Master Directory Comparison in Java Using GroupDocs.Comparison for Seamless File Audits](./master-directory-comparison-java-groupdocs-comparison/)
 
 Learn how to efficiently compare directories using GroupDocs.Comparison in Java. Perfect for file audits, version control, and data synchronization. This tutorial covers handling nested folders, filtering files by type, and generating comprehensive audit reports.
 
-**When You'll Need This:** Project folder monitoring, backup verification, compliance auditing, synchronized folder analysis.
-{{< /tutorial-link >}}
-
 ### API Credit Management and Optimization
-{{< tutorial-link "./master-document-comparison-java-groupdocs-api/" >}}
+
 [Master Document Comparison in Java with GroupDocs.Comparison API](./master-document-comparison-java-groupdocs-api/)
 
 Learn how to efficiently compare documents and manage credit usage in Java using the powerful GroupDocs.Comparison API. Understanding credit optimization is crucial for production environments where you need to balance functionality with cost-effectiveness.
 
-**When You'll Need This:** Enterprise deployments, cost optimization, high-volume processing scenarios.
-{{< /tutorial-link >}}
-
 ### Specialized Cell File Processing
-{{< tutorial-link "./groupdocs-comparison-java-api-document-comparison/" >}}
+
 [Master Document Comparison in Java: Using GroupDocs.Comparison API for Efficient Cell File Analysis](./groupdocs-comparison-java-api-document-comparison/)
 
 Learn to efficiently compare cell files in Java using the GroupDocs.Comparison API. This guide covers setup, comparison techniques, and practical applications specifically for spreadsheet and cell-based documents.
 
-**When You'll Need This:** Financial data analysis, spreadsheet version control, data validation workflows.
-{{< /tutorial-link >}}
-
 ### Multi-Format Document Processing
-{{< tutorial-link "./master-document-comparison-java-groupdocs/" >}}
+
 [Master Document Comparison in Java: Using GroupDocs.Comparison for Word, Text, and Email Documents](./master-document-comparison-java-groupdocs/)
 
 Learn how to efficiently compare multiple Word, Text, and Email documents using GroupDocs.Comparison for Java. This tutorial shows you how to handle different document formats in unified workflows.
 
-**When You'll Need This:** Mixed-format document processing, email archive analysis, multi-type content management.
-{{< /tutorial-link >}}
-
 ### Comprehensive Change Management
-{{< tutorial-link "./master-java-document-comparisons-groupdocs/" >}}
+
 [Master Document Comparisons in Java using GroupDocs.Comparison Library](./master-java-document-comparisons-groupdocs/)
 
 Learn how to efficiently compare and manage document changes in Java with GroupDocs.Comparison. This guide covers setup, usage, and practical applications for comprehensive change tracking and management.
-
-**When You'll Need This:** Change tracking systems, document lifecycle management, collaborative editing environments.
-{{< /tutorial-link >}}
 
 ## Choosing the Right Tutorial for Your Needs
 

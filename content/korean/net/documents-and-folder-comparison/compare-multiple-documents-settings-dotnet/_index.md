@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs Comparison에서 여러 문서 비교 설정"
 "url": "/ko/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # .NET용 GroupDocs Comparison에서 여러 문서 비교 설정
 
 ## 소개

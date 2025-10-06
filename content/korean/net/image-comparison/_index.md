@@ -5,8 +5,8 @@
 "title": "이미지 비교"
 "url": "/ko/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # 이미지 비교
 
 

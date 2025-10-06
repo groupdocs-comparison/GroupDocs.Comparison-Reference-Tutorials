@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 高階文件比較教學"
 "url": "/zh-hant/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 高階文件比較教學
 
 我們的進階比較教學將向您展示如何在 .NET 應用程式中充分利用 GroupDocs.Comparison 的強大功能。這些全面的指南涵蓋了同時比較多個文件、比較受密碼保護的文件、比較整個資料夾以及針對不同場景自訂比較設定等內容。每個教學課程都包含實用的 C# 程式碼範例，用於實現超越基本功能的複雜文件比較操作。

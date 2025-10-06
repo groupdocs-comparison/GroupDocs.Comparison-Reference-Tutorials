@@ -5,8 +5,8 @@
 "title": "Documentinfo ophalen uit resultaatdocument - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Documentinfo ophalen uit resultaatdocument - GroupDocs.Comparison voor .NET
 
 ## Invoering

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 的比较选项和设置教程"
 "url": "/zh/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Java 的比较选项和设置教程
 
 使用我们的 GroupDocs.Comparison Java 选项教程，学习如何微调文档比较功能。这些详细的指南演示了如何配置比较敏感度、自定义变更检测算法、设置不同变更类型的显示首选项以及实现专门的比较规则。每个教程都包含用于实现自定义比较选项的 Java 代码示例，帮助您构建能够精确定制以满足特定文档分析需求的比较应用程序。

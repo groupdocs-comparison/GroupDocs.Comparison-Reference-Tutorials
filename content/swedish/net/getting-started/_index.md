@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Komma igång-handledningar för .NET-utvecklare"
 "url": "/sv/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Komma igång-handledningar för .NET-utvecklare
 
 Börja din resa med dessa viktiga GroupDocs.Comparison-handledningar som guidar dig genom installation, licenskonfiguration och hur du skapar dina första dokumentjämförelser i .NET. Våra nybörjarvänliga guider visar hur du konfigurerar din utvecklingsmiljö, initierar GroupDocs.Comparison-biblioteket och utför grundläggande jämförelseåtgärder. Följ dessa handledningar för att snabbt behärska grunderna och förbereda dig för mer avancerade dokumentjämförelseuppgifter i dina .NET-applikationer.

@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních adresářů v Javě pomocí GroupDocs.Comparison pro bezproblémové audity souborů"
 "url": "/cs/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Porovnání hlavních adresářů v Javě pomocí GroupDocs.Comparison
 
 ## Zavedení

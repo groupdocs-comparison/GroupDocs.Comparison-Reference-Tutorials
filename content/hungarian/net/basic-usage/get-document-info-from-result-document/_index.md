@@ -5,8 +5,8 @@
 "title": "Dokumentuminformációk lekérése az eredménydokumentumból - GroupDocs.Comparison for .NET"
 "url": "/hu/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Dokumentuminformációk lekérése az eredménydokumentumból - GroupDocs.Comparison for .NET
 
 ## Bevezetés

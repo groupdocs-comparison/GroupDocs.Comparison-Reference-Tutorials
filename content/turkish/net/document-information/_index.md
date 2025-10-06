@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Belge Bilgi Eğitimleri"
 "url": "/tr/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Belge Bilgi Eğitimleri
 
 Belge bilgi eğitimlerimiz, .NET'te GroupDocs.Comparison kullanarak belge meta verilerine erişim için rehberlik sağlar. Bu pratik kılavuzlar, kaynak, hedef ve sonuç belgeleri hakkında bilgi almayı, dosya biçimlerini belirlemeyi ve belge özelliklerine programatik olarak erişmeyi gösterir. Her eğitim, belge verilerini etkili bir şekilde analiz edebilen ve işleyebilen uygulamalar oluşturmanıza yardımcı olan yaygın belge bilgi senaryoları için çalışan C# kod örnekleri içerir.

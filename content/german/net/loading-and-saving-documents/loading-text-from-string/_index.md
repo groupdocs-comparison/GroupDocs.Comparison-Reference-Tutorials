@@ -5,8 +5,8 @@
 "title": "Laden von Text aus Zeichenfolge im GroupDocs-Vergleich für .NET"
 "url": "/de/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Laden von Text aus Zeichenfolge im GroupDocs-Vergleich für .NET
 
 ## Einführung

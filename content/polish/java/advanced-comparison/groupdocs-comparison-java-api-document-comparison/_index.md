@@ -4,8 +4,8 @@
 "title": "Porównanie dokumentów głównych w języku Java przy użyciu interfejsu API GroupDocs.Comparison w celu wydajnej analizy plików komórek"
 "url": "/pl/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów w Javie z API GroupDocs.Comparison
 
 ## Wstęp

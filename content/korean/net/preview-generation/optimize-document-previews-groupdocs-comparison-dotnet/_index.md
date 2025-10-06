@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET API를 사용하여 문서 미리 보기 생성 및 최적화"
 "url": "/ko/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 문서 미리보기 생성 및 최적화
 
 ## 소개

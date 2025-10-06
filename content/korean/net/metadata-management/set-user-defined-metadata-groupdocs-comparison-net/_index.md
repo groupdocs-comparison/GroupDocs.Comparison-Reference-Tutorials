@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET을 사용하여 문서에 사용자 정의 메타데이터를 설정하는 방법 | 문서 관리 가이드"
 "url": "/ko/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison을 사용하여 문서에 사용자 정의 메타데이터를 설정하는 방법
 
 ## 소개

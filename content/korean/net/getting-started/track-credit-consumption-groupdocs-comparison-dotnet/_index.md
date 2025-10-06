@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET을 사용하여 신용 소비를 추적하는 방법&#58; 종합 가이드"
 "url": "/ko/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison을 사용하여 신용 소비를 추적하는 방법: 포괄적인 가이드
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": ".NET के लिए GroupDocs.तुलना में सभी समर्थित फ़ाइल स्वरूपों को कैसे सूचीबद्ध करें"
 "url": "/hi/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.तुलना में सभी समर्थित फ़ाइल स्वरूपों को कैसे सूचीबद्ध करें
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Licentie instellen vanuit bestand - GroupDocs-vergelijking voor .NET"
 "url": "/nl/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Licentie instellen vanuit bestand - GroupDocs-vergelijking voor .NET
 
 ## Invoering

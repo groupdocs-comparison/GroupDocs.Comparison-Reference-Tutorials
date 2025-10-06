@@ -5,8 +5,8 @@
 "title": "So sánh hình ảnh từ Path - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # So sánh hình ảnh từ Path - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

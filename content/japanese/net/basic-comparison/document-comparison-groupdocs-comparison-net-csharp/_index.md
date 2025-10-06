@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用してストリームからの Word ファイルに対する .NET でのドキュメント比較を実装する"
 "url": "/ja/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET を使用してストリームからドキュメント比較を実装する方法
 
 ## 導入

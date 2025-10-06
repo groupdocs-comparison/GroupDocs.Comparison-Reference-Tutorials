@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Security"]
 tags: ["password-protection", "document-security", "groupdocs-comparison"]
+type: docs
 ---
-
 # How to Password Protect Compared Documents in .NET - Complete Security Guide
 
 ## Introduction

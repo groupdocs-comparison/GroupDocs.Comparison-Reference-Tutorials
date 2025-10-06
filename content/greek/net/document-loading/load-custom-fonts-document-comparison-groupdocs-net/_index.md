@@ -4,8 +4,8 @@
 "title": "Πώς να φορτώσετε προσαρμοσμένες γραμματοσειρές για σύγκριση εγγράφων χρησιμοποιώντας το GroupDocs.Comparison .NET"
 "url": "/el/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να φορτώσετε προσαρμοσμένες γραμματοσειρές για σύγκριση εγγράφων χρησιμοποιώντας το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

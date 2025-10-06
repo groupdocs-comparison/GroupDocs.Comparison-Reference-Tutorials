@@ -4,8 +4,8 @@
 "title": "Cara Mengabaikan Header dan Footer dalam Perbandingan DOC Menggunakan GroupDocs.Comparison .NET"
 "url": "/id/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mengabaikan Header dan Footer dalam Perbandingan Dokumen dengan GroupDocs.Comparison .NET
 
 ## Perkenalan

@@ -5,8 +5,8 @@
 "title": "Sayfa Önizlemeleri Sonrasında Temiz Kaynaklar"
 "url": "/tr/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Sayfa Önizlemeleri Sonrasında Temiz Kaynaklar
 
 ## giriiş

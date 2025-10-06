@@ -3,8 +3,8 @@
 "title": "Dokumentum metaadat-kezelési oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Dokumentum metaadat-kezelési oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Metaadat-kezelési oktatóanyagaink bemutatják, hogyan szabályozhatja a dokumentumok tulajdonságait a GroupDocs.Comparison segítségével történő .NET-beli összehasonlításakor. Ezek a lépésről lépésre szóló útmutatók a metaadat-források beállítását, az eredményül kapott dokumentumok egyéni metaadatainak definiálását és a metaadat-megőrzési szabályzatok megvalósítását ismertetik. Minden oktatóanyag gyakorlati C# kódpéldákat tartalmaz a gyakori metaadat-kezelési forgatókönyvekhez, segítve olyan alkalmazások létrehozását, amelyek a teljes összehasonlítási folyamat során fenntartják a megfelelő dokumentumtulajdonságokat.

@@ -4,8 +4,8 @@
 "title": "Bandingkan Dokumen dari Stream Menggunakan GroupDocs.Comparison .NET - Panduan Lengkap untuk Pengembang"
 "url": "/id/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Membandingkan Beberapa Dokumen dari Streams menggunakan GroupDocs.Comparison .NET
 
 ## Perkenalan

@@ -3,8 +3,8 @@
 "title": "Haladó dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison Java-hoz"
 "url": "/hu/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Haladó dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison Java-hoz
 
 Összehasonlító oktatóanyagaink bemutatják, hogyan használhatja ki a GroupDocs.Comparison hatékony funkcióit Java alkalmazásokban. Ezek az átfogó útmutatók több dokumentum egyidejű összehasonlítását, jelszóval védett fájlok összehasonlítását, teljes mappák összehasonlítását, valamint az összehasonlítási beállítások testreszabását különböző forgatókönyvekhez tartalmazzák. Minden oktatóanyag gyakorlati Java kódpéldákat tartalmaz a kifinomult dokumentum-összehasonlítási műveletek megvalósításához, amelyek túlmutatnak az alapvető funkciókon.

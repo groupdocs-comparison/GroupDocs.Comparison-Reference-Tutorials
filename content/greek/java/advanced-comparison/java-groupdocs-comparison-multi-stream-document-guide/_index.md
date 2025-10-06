@@ -4,8 +4,8 @@
 "title": "Σύγκριση εγγράφων πολλαπλών ροών Java χρησιμοποιώντας το GroupDocs.Comparison&#58; Ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων πολλαπλών ροών Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

@@ -4,8 +4,8 @@
 "title": "Come confrontare le immagini senza una pagina di riepilogo utilizzando GroupDocs.Comparison per .NET"
 "url": "/it/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Come implementare il confronto delle immagini senza una pagina di riepilogo utilizzando GroupDocs.Comparison per .NET
 
 ## Introduzione

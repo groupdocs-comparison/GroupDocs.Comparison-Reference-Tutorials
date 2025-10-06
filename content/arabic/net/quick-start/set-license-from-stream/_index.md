@@ -5,8 +5,8 @@
 "title": "تعيين الترخيص من Stream - مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # تعيين الترخيص من Stream - مقارنة GroupDocs لـ .NET
 
 ## مقدمة

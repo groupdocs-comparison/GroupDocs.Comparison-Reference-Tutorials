@@ -5,8 +5,8 @@
 "title": "Vergelijk instellingen voor meerdere documenten in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # Vergelijk instellingen voor meerdere documenten in GroupDocs Vergelijking voor .NET
 
 ## Invoering

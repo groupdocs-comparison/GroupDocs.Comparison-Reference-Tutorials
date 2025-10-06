@@ -4,8 +4,8 @@
 "title": "Kompletní tutoriál k GroupDocs.Comparison pro Javu"
 "url": "/cs/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison pro Javu – Podrobné návody a příklady kódu
 
 ## Naučte se porovnávání dokumentů v Javě – rychlé, přesné a výkonné

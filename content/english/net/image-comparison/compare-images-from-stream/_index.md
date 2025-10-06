@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Image Processing"]
 tags: ["image-comparison", "dotnet", "streams", "csharp"]
+type: docs
 ---
-
 # Image Comparison .NET - Compare Images from Stream Using GroupDocs.Comparison
 
 ## Introduction

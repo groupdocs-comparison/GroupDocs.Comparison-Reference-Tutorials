@@ -4,8 +4,8 @@
 "title": "Generování a optimalizace náhledů dokumentů pomocí rozhraní GroupDocs.Comparison .NET API"
 "url": "/cs/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Generování a optimalizace náhledů dokumentů pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

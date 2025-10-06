@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;ı Kullanarak Java Belgelerinde Özel Meta Verilerini Ayarlama&#58; Adım Adım Kılavuz"
 "url": "/tr/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanarak Java Belgelerinde Özel Meta Veri Ayarlama: Adım Adım Kılavuz
 
 ## giriiş

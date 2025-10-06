@@ -5,8 +5,8 @@
 "title": "Confronta le cartelle in GroupDocs Confronto per .NET"
 "url": "/it/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # Confronta le cartelle in GroupDocs Confronto per .NET
 
 ## Introduzione

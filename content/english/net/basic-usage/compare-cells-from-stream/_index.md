@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["csharp", "excel-comparison", "streams", "groupdocs", "dotnet"]
+type: docs
 ---
-
 # How to Compare Excel Files in C# Using Streams - Complete Guide
 
 ## Introduction

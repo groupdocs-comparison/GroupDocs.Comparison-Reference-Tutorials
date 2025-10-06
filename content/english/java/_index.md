@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["document-comparison", "java-api", "file-comparison", "groupdocs"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial – Master File Comparison with GroupDocs
 
 ## The Complete Guide to Document Comparison in Java Applications

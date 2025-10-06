@@ -4,8 +4,8 @@
 "title": "如何使用 Java 中的 GroupDocs.Comparison 比較受密碼保護的文檔"
 "url": "/zh-hant/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 Java 中使用 GroupDocs.Comparison 比較多個受保護的文檔
 
 **介紹**

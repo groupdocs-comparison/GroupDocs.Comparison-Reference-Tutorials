@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-tutorials", "groupdocs", "customization"]
+type: docs
 ---
-
 # Java Document Comparison Customization - Complete Guide
 
 Ever struggled with document comparisons that highlight every tiny formatting change or miss important content differences? You're not alone. Most developers start with basic document comparison but quickly realize they need fine-grained control over what gets detected, how changes are displayed, and how sensitive the comparison algorithm should be.

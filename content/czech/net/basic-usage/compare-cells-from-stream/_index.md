@@ -5,8 +5,8 @@
 "title": "Porovnání buněk ze streamu - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Porovnání buněk ze streamu - GroupDocs.Comparison pro .NET
 
 ## Zavedení

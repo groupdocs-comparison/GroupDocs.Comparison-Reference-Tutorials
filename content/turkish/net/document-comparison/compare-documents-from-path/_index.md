@@ -5,8 +5,8 @@
 "title": "Yoldan Belgeleri Karşılaştır - .NET için GroupDocs.Comparison"
 "url": "/tr/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Yoldan Belgeleri Karşılaştır - .NET için GroupDocs.Comparison
 
 ## giriiş

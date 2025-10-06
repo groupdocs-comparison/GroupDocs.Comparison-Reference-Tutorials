@@ -4,8 +4,8 @@
 "title": "Abrufen unterstützter Dateiformate mit GroupDocs.Comparison für Java – Ein umfassender Leitfaden"
 "url": "/de/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Abrufen unterstützter Dateiformate mit GroupDocs.Comparison für Java
 
 ## Einführung

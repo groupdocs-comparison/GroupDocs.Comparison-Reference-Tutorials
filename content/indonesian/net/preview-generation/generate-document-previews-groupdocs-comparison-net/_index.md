@@ -4,8 +4,8 @@
 "title": "Hasilkan Pratinjau Dokumen Secara Efisien dengan GroupDocs.Comparison untuk Pengembang .NET"
 "url": "/id/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Hasilkan Pratinjau Dokumen Secara Efisien dengan GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

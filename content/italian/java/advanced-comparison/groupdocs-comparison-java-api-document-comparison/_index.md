@@ -4,8 +4,8 @@
 "title": "Confronto di documenti master in Java tramite l'API GroupDocs.Comparison per un'analisi efficiente dei file di celle"
 "url": "/it/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Padroneggiare il confronto dei documenti in Java con l'API GroupDocs.Comparison
 
 ## Introduzione

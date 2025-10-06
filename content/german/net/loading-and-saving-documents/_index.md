@@ -5,8 +5,8 @@
 "title": "Laden und Speichern von Dokumenten"
 "url": "/de/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Laden und Speichern von Dokumenten
 
 ## Einführung

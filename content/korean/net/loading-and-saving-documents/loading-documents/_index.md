@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 문서 로드"
 "url": "/ko/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 문서 로드
 
 ## 소개

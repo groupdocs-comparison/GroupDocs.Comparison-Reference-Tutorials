@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบเอกสารหลักและการเรนเดอร์ HTML ใน Java ด้วย GroupDocs.Comparison"
 "url": "/th/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การเปรียบเทียบเอกสารและการเรนเดอร์ HTML ใน Java ด้วย GroupDocs.Comparison
 
 ## การแนะนำ

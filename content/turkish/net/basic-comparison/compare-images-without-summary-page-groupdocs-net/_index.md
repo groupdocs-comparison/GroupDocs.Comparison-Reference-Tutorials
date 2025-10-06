@@ -4,8 +4,8 @@
 "title": ".NET için GroupDocs.Comparison Kullanarak Özet Sayfası Olmadan Görselleri Nasıl Karşılaştırabilirsiniz"
 "url": "/tr/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison Kullanarak Özet Sayfası Olmadan Görüntü Karşılaştırması Nasıl Uygulanır
 
 ## giriiş

@@ -5,8 +5,8 @@
 "title": "ドキュメントの比較"
 "url": "/ja/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # ドキュメントの比較
 
 ## 導入

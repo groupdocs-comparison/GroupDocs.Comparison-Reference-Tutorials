@@ -4,8 +4,8 @@
 "title": "掌握使用 GroupDocs.Comparison 进行 Java 流文档比较，实现高效的工作流管理"
 "url": "/zh/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 掌握使用 GroupDocs.Comparison 进行 Java 流文档比较，实现高效的工作流管理
 
 在当今快节奏的数字环境中，管理和比较大量文档对于确保合同、报告或法律文件的一致性和准确性至关重要。本教程将指导您使用 Java 中强大的 GroupDocs.Comparison 库，通过流高效地比较多个 Word 文档，并支持通过样式设置进行自定义。

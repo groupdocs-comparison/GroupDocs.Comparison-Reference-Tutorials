@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET एपीआई के साथ दस्तावेज़ पूर्वावलोकन उत्पन्न और अनुकूलित करें"
 "url": "/hi/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET के साथ दस्तावेज़ पूर्वावलोकन उत्पन्न और अनुकूलित करें
 
 ## परिचय

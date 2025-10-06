@@ -4,8 +4,8 @@
 "title": "Comparaison de répertoires principaux en Java à l'aide de GroupDocs.Comparison pour des audits de fichiers transparents"
 "url": "/fr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Comparaison de répertoires principaux en Java avec GroupDocs.Comparison
 
 ## Introduction

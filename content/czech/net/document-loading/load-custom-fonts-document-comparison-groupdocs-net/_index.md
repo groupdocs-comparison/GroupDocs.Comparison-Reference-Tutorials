@@ -4,8 +4,8 @@
 "title": "Jak načíst vlastní písma pro porovnání dokumentů pomocí GroupDocs.Comparison .NET"
 "url": "/cs/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak načíst vlastní písma pro porovnání dokumentů pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

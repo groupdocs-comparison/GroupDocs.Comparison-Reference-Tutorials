@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Multi-Aliran Java menggunakan GroupDocs.Comparison&#58; Panduan Lengkap"
 "url": "/id/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen Multi-Aliran Java dengan GroupDocs.Comparison
 
 ## Perkenalan

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison 라이브러리를 사용하여 .NET에서 텍스트 문자열 비교 마스터하기"
 "url": "/ko/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison 라이브러리를 사용하여 .NET에서 텍스트 문자열 비교 마스터하기
 
 ## 소개

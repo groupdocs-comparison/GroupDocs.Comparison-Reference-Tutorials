@@ -4,8 +4,8 @@
 "title": "Tự động so sánh tài liệu trong .NET bằng cách sử dụng GroupDocs.Comparison Streams"
 "url": "/vi/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Tự động so sánh tài liệu trong .NET bằng cách sử dụng GroupDocs.Comparison Streams
 ## Giới thiệu
 Bạn đang tìm kiếm một cách hiệu quả để tự động so sánh tài liệu? Hướng dẫn này trình bày cách so sánh tài liệu bằng luồng trong môi trường .NET với GroupDocs.Comparison cho .NET. Bằng cách sử dụng luồng tệp, cách tiếp cận này mang lại sự linh hoạt và hiệu quả, đặc biệt là khi xử lý các tệp lớn hoặc tài nguyên dựa trên mạng.

@@ -5,8 +5,8 @@
 "title": "Mengatur Kata Sandi untuk Dokumen Hasil dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Mengatur Kata Sandi untuk Dokumen Hasil dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

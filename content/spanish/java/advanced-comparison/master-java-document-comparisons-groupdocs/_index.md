@@ -4,8 +4,8 @@
 "title": "Comparación de documentos maestros en Java mediante la biblioteca GroupDocs.Comparison"
 "url": "/es/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos en Java con GroupDocs.Comparison
 
 Descubra el eficiente proceso de inicialización, comparación y actualización de cambios en documentos con la potente biblioteca GroupDocs.Comparison para Java. Este tutorial le guiará en la configuración de su entorno, la comprensión de las características clave y la implementación de soluciones prácticas.

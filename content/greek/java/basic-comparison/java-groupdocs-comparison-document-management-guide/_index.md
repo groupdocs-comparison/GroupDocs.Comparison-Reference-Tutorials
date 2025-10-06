@@ -4,8 +4,8 @@
 "title": "Σύγκριση εγγράφων Master Java χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

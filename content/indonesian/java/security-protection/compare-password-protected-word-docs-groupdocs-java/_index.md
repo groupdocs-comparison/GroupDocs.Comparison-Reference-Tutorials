@@ -4,8 +4,8 @@
 "title": "Cara Membandingkan Dokumen Word yang Dilindungi Kata Sandi Menggunakan GroupDocs.Comparison untuk Java"
 "url": "/id/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen: Panduan untuk Membandingkan Dokumen Word yang Dilindungi Kata Sandi dengan GroupDocs.Comparison untuk Java
 
 ## Perkenalan

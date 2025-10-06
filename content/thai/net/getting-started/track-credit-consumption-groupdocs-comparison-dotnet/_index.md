@@ -4,8 +4,8 @@
 "title": "วิธีติดตามการใช้เครดิตโดยใช้ GroupDocs.Comparison สำหรับ .NET คำแนะนำที่ครอบคลุม"
 "url": "/th/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # วิธีติดตามการใช้เครดิตโดยใช้ GroupDocs.Comparison สำหรับ .NET: คู่มือฉบับสมบูรณ์
 
 ## การแนะนำ

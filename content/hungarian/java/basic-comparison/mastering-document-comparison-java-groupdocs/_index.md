@@ -4,8 +4,8 @@
 "title": "Fődokumentum-összehasonlítás Java-ban a GroupDocs.Comparison API használatával"
 "url": "/hu/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása Java-ban a GroupDocs.Comparison API használatával
 
 ## Bevezetés

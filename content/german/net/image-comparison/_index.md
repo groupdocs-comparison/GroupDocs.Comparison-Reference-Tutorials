@@ -5,8 +5,8 @@
 "title": "Bildervergleich"
 "url": "/de/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Bildervergleich
 
 

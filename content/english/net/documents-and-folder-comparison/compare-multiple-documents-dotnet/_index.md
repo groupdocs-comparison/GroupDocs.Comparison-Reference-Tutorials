@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["groupdocs", "document-comparison", "dotnet", "csharp", "api"]
+type: docs
 ---
-
 # How to Compare Multiple Documents in .NET
 
 ## Why You Need Multi-Document Comparison in Your .NET Applications

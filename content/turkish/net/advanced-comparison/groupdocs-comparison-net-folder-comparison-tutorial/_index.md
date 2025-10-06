@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET Kullanarak Klasörleri Nasıl Karşılaştırabilir ve Sonuçları TXT/HTML Olarak Nasıl Kaydedebilirsiniz?"
 "url": "/tr/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Klasör Karşılaştırması Nasıl Uygulanır ve Sonuçlar TXT/HTML Olarak Nasıl Kaydedilir
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "A dokumentum-összehasonlítás módosításainak szerzőjének beállítása a GroupDocs.Comparison for .NET használatával"
 "url": "/hu/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Változások szerzőinek halmaza dokumentum-összehasonlításban a GroupDocs.Comparison for .NET használatával
 
 ## Bevezetés

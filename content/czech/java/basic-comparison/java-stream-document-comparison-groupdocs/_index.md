@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů v Java Stream pomocí GroupDocs.Comparer – Komplexní průvodce"
 "url": "/cs/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Implementace porovnávání dokumentů v Java Stream pomocí GroupDocs.Comparer: Komplexní průvodce
 
 ## Zavedení

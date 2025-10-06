@@ -5,8 +5,8 @@
 "title": "Önizlemeler için Belirli Görüntü Boyutlarını Ayarlayın"
 "url": "/tr/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Önizlemeler için Belirli Görüntü Boyutlarını Ayarlayın
 
 ## giriiş

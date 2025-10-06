@@ -5,8 +5,8 @@
 "title": "परिणाम दस्तावेज़ से दस्तावेज़ जानकारी प्राप्त करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # परिणाम दस्तावेज़ से दस्तावेज़ जानकारी प्राप्त करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

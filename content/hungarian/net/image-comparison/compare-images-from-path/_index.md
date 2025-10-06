@@ -5,8 +5,8 @@
 "title": "Képek összehasonlítása a Path-ből - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Képek összehasonlítása a Path-ből - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

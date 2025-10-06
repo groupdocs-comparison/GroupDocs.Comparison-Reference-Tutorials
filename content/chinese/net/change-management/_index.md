@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 变更管理教程"
 "url": "/zh/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 变更管理教程
 
 通过我们的 GroupDocs.Comparison .NET 教程，了解如何有效管理文档变更。这些详细的指南演示了如何识别文档之间的具体差异、接受或拒绝单个变更、设置跟踪变更的作者以及如何以编程方式管理修订。每个教程都提供分步说明和 C# 代码示例，帮助您在文档比较工作流程中实现全面的变更管理功能。

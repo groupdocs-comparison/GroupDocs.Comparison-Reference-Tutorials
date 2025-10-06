@@ -4,8 +4,8 @@
 "title": "मास्टर दस्तावेज़ परिवर्तन प्रबंधन&#58; GroupDocs.Comparison .NET के साथ संपादन स्वीकारें और अस्वीकार करें"
 "url": "/hi/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET के साथ मास्टर दस्तावेज़ परिवर्तन प्रबंधन
 
 ## परिचय

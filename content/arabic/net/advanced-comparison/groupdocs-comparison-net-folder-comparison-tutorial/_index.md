@@ -4,8 +4,8 @@
 "title": "كيفية مقارنة المجلدات وحفظ النتائج بتنسيق TXT/HTML باستخدام GroupDocs.Comparison .NET"
 "url": "/ar/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة المجلدات وحفظ النتائج بتنسيق TXT/HTML باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

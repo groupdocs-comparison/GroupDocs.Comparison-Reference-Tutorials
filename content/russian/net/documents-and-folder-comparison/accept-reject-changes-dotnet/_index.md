@@ -5,8 +5,8 @@
 "title": "Принять и отклонить изменения в сравнении GroupDocs для .NET"
 "url": "/ru/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Принять и отклонить изменения в сравнении GroupDocs для .NET
 
 ## Введение

@@ -5,8 +5,8 @@
 "title": "लक्ष्य दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # लक्ष्य दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन उत्पन्न करें
 
 ## परिचय

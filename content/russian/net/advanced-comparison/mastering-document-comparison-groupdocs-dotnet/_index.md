@@ -4,8 +4,8 @@
 "title": "Освоение сравнения документов в .NET&#58; Полное руководство по использованию GroupDocs.Comparison"
 "url": "/ru/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Освоение сравнения документов в .NET с помощью GroupDocs.Comparison
 
 Раскройте потенциал автоматизации сравнений документов в средах .NET с помощью GroupDocs.Comparison. Это руководство поможет вам оптимизировать рабочий процесс и повысить производительность за счет эффективного управления версиями документов.

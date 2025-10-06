@@ -5,8 +5,8 @@
 "title": "Perbandingan Dokumen dan Folder"
 "url": "/id/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Perbandingan Dokumen dan Folder
 
 ## Perkenalan

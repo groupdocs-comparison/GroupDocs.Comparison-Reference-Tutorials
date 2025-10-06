@@ -5,8 +5,8 @@
 "title": "Vergelijking van het opslaan van documentmetagegevens in GroupDocs voor .NET"
 "url": "/nl/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Vergelijking van het opslaan van documentmetagegevens in GroupDocs voor .NET
 
 ## Invoering

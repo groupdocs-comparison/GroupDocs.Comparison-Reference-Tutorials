@@ -5,8 +5,8 @@
 "title": "दस्तावेज़ लोड करना और सहेजना"
 "url": "/hi/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # दस्तावेज़ लोड करना और सहेजना
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Dokumentuminformációk lekérése a Streamből - GroupDocs.Comparison for .NET"
 "url": "/hu/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Dokumentuminformációk lekérése a Streamből - GroupDocs.Comparison for .NET
 
 ## Bevezetés

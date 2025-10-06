@@ -4,8 +4,8 @@
 "title": "Управление изменениями в главном документе&#58; принятие и отклонение изменений с помощью GroupDocs.Comparison .NET"
 "url": "/ru/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Управление изменениями в основных документах с помощью GroupDocs.Comparison .NET
 
 ## Введение

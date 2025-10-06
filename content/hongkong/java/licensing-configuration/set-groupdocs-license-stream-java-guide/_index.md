@@ -4,8 +4,8 @@
 "title": "如何在 Java 中從 Stream 設定 GroupDocs 許可證 — 逐步指南"
 "url": "/zh-hant/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 Java 中從 Stream 設定 GroupDocs 許可證：逐步指南
 
 ## 介紹

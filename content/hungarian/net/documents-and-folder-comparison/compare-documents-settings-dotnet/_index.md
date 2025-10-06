@@ -5,8 +5,8 @@
 "title": "Dokumentumok összehasonlítása beállítások a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # Dokumentumok összehasonlítása beállítások a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

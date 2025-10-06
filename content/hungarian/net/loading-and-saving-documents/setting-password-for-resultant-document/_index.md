@@ -5,8 +5,8 @@
 "title": "Jelszó beállítása a kapott dokumentumhoz a GroupDocs Comparison for .NET-ben"
 "url": "/hu/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Jelszó beállítása a kapott dokumentumhoz a GroupDocs Comparison for .NET-ben
 
 ## Bevezetés

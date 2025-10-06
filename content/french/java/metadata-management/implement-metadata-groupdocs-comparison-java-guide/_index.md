@@ -4,8 +4,8 @@
 "title": "Implémenter les métadonnées de document avec GroupDocs.Comparison en Java - Un guide complet"
 "url": "/fr/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Implémenter les métadonnées de documents avec GroupDocs.Comparison en Java : guide complet
 
 ## Introduction

@@ -5,8 +5,8 @@
 "title": "Cách sử dụng cơ bản"
 "url": "/vi/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Cách sử dụng cơ bản
 
 ## Giới thiệu

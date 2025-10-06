@@ -4,8 +4,8 @@
 "title": "Πώς να ρυθμίσετε την άδεια χρήσης GroupDocs.Comparison σε .NET™ - Ένας οδηγός βήμα προς βήμα"
 "url": "/el/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να ρυθμίσετε την άδεια χρήσης GroupDocs.Comparison στο .NET
 
 ## Εισαγωγή

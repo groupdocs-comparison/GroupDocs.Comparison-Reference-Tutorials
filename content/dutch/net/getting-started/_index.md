@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Aan de slag-zelfstudies voor .NET-ontwikkelaars"
 "url": "/nl/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Aan de slag-zelfstudies voor .NET-ontwikkelaars
 
 Begin uw reis met deze essentiële GroupDocs.Comparison-tutorials die u begeleiden bij de installatie, licentieconfiguratie en het maken van uw eerste documentvergelijkingen in .NET. Onze beginnersvriendelijke handleidingen laten zien hoe u uw ontwikkelomgeving instelt, de GroupDocs.Comparison-bibliotheek initialiseert en basisvergelijkingsbewerkingen uitvoert. Volg deze tutorials om snel de basis onder de knie te krijgen en u voor te bereiden op geavanceerdere documentvergelijkingen in uw .NET-applicaties.

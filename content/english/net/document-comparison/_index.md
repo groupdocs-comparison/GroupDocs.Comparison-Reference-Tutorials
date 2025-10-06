@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "dotnet", "csharp", "groupdocs"]
+type: docs
 ---
-
 # Document Comparison in .NET: Your Complete Developer Guide
 
 ## Why Document Comparison Matters for Developers

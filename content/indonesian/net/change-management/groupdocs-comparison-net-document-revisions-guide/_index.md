@@ -4,8 +4,8 @@
 "title": "Revisi Dokumen Master Secara Efisien dengan GroupDocs.Comparison .NET&#58; Panduan Lengkap"
 "url": "/id/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Revisi Dokumen dengan GroupDocs.Comparison .NET: Panduan Langkah demi Langkah
 
 ## Perkenalan

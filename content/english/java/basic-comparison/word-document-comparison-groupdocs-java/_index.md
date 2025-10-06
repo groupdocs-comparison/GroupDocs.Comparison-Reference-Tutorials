@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "word-documents", "java-libraries"]
+type: docs
 ---
-
 # Java Word Document Comparison - Complete Guide with GroupDocs
 
 ## Introduction

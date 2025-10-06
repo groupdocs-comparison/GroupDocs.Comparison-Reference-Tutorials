@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison 在 .NET 中比较多个受密码保护的 Word 文档"
 "url": "/zh/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison 在 .NET 中比较多个受密码保护的 Word 文档
 
 ## 介绍

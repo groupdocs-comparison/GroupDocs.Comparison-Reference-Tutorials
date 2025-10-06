@@ -4,8 +4,8 @@
 "title": "วิธีการละเว้นส่วนหัวและส่วนท้ายในการเปรียบเทียบ DOC โดยใช้ GroupDocs.Comparison .NET"
 "url": "/th/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการละเว้นส่วนหัวและส่วนท้ายในการเปรียบเทียบเอกสารด้วย GroupDocs.Comparison .NET
 
 ## การแนะนำ

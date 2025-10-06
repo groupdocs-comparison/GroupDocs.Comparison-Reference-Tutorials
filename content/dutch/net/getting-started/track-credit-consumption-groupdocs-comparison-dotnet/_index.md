@@ -4,8 +4,8 @@
 "title": "Hoe u uw kredietverbruik kunt bijhouden met GroupDocs.Comparison voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Hoe u uw kredietverbruik kunt bijhouden met GroupDocs.Comparison voor .NET: een uitgebreide handleiding
 
 ## Invoering

@@ -4,8 +4,8 @@
 "title": "Как загрузить и сравнить защищенные паролем документы Word в Java с помощью GroupDocs.Comparison"
 "url": "/ru/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Как загрузить и сравнить защищенные паролем документы Word в Java с помощью GroupDocs.Comparison
 
 ## Введение

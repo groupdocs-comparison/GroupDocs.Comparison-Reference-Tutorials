@@ -5,8 +5,8 @@
 "title": "Ange licens från fil - GroupDocs-jämförelse för .NET"
 "url": "/sv/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Ange licens från fil - GroupDocs-jämförelse för .NET
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "Jak śledzić zużycie kredytu za pomocą GroupDocs.Comparison dla .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Jak śledzić zużycie kredytu za pomocą GroupDocs.Comparison dla .NET: kompleksowy przewodnik
 
 ## Wstęp

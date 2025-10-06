@@ -5,8 +5,8 @@
 "title": "在 .NET 的 GroupDocs 比较中从字符串加载文本"
 "url": "/zh/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # 在 .NET 的 GroupDocs 比较中从字符串加载文本
 
 ## 介绍

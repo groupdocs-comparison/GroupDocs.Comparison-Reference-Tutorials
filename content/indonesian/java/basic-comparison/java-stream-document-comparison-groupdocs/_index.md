@@ -4,8 +4,8 @@
 "title": "Menerapkan Perbandingan Dokumen Aliran Java Menggunakan GroupDocs.Comparer; Panduan Lengkap"
 "url": "/id/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Perbandingan Dokumen Aliran Java Menggunakan GroupDocs.Comparer: Panduan Lengkap
 
 ## Perkenalan

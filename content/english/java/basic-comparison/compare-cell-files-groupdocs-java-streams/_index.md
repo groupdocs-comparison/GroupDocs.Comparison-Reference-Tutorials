@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["java", "excel-comparison", "groupdocs", "file-streams", "automation"]
+type: docs
 ---
-
 # How to Compare Excel Files Using Java Streams
 
 ## Introduction

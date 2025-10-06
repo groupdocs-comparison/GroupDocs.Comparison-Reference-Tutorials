@@ -5,8 +5,8 @@
 "title": "Tetapkan Lisensi dari Stream - Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Tetapkan Lisensi dari Stream - Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

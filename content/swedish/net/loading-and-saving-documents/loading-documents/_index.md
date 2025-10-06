@@ -5,8 +5,8 @@
 "title": "Laddar dokument i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Laddar dokument i GroupDocs-jämförelse för .NET
 
 ## Introduktion

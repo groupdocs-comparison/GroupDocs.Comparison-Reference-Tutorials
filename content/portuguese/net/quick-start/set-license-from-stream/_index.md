@@ -5,8 +5,8 @@
 "title": "Definir licença do fluxo - Comparação do GroupDocs para .NET"
 "url": "/pt/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Definir licença do fluxo - Comparação do GroupDocs para .NET
 
 ## Introdução

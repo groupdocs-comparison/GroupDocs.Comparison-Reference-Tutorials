@@ -5,8 +5,8 @@
 "title": "파일에서 라이선스 설정 - .NET용 GroupDocs 비교"
 "url": "/ko/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # 파일에서 라이선스 설정 - .NET용 GroupDocs 비교
 
 ## 소개

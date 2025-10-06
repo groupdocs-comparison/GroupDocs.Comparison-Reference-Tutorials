@@ -5,8 +5,8 @@
 "title": "プレビュー用の特定の画像サイズを設定する"
 "url": "/ja/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # プレビュー用の特定の画像サイズを設定する
 
 ## 導入

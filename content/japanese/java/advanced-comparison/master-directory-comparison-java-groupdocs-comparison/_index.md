@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java でのマスターディレクトリ比較によるシームレスなファイル監査"
 "url": "/ja/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java でのマスターディレクトリ比較
 
 ## 導入

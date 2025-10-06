@@ -6,8 +6,8 @@
 "title": "บทช่วยสอน API ซอฟต์แวร์เปรียบเทียบเอกสาร | GroupDocs.Comparison"
 "url": "/th/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison บทช่วยสอนและคู่มือสำหรับนักพัฒนา
 
 ![แบนเนอร์เปรียบเทียบ GroupDocs](./groupdocs-comparison-net.svg)

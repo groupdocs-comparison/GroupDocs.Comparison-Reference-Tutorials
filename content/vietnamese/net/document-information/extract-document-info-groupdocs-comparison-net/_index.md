@@ -4,8 +4,8 @@
 "title": "Cách trích xuất thông tin tài liệu bằng GroupDocs.Comparison cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách trích xuất thông tin tài liệu bằng GroupDocs.Comparison cho .NET: Hướng dẫn từng bước
 
 ## Giới thiệu

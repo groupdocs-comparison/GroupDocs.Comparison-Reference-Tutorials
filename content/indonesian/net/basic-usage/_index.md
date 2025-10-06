@@ -5,8 +5,8 @@
 "title": "Penggunaan Dasar"
 "url": "/id/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Penggunaan Dasar
 
 ## Perkenalan

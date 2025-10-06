@@ -5,8 +5,8 @@
 "title": "Sonuç Belgesi için Sayfa Önizlemeleri Oluştur"
 "url": "/tr/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Sonuç Belgesi için Sayfa Önizlemeleri Oluştur
 
 ## giriiş

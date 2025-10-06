@@ -4,8 +4,8 @@
 "title": "Сравнение многопоточных документов Java с помощью GroupDocs.Comparison&#58; Подробное руководство"
 "url": "/ru/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Освоение многопоточного сравнения документов Java с помощью GroupDocs.Comparison
 
 ## Введение

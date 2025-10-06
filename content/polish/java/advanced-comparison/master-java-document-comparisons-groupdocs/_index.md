@@ -4,8 +4,8 @@
 "title": "Porównania dokumentów głównych w Javie przy użyciu biblioteki GroupDocs.Comparison"
 "url": "/pl/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów w Javie za pomocą GroupDocs.Comparison
 
 Odkryj wydajny proces inicjowania, porównywania i aktualizowania zmian w dokumentach przy użyciu potężnej biblioteki GroupDocs.Comparison dla Java. Ten samouczek przeprowadzi Cię przez konfigurację środowiska, zrozumienie kluczowych funkcji i implementację rzeczywistych rozwiązań.

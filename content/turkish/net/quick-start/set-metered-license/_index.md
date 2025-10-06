@@ -5,8 +5,8 @@
 "title": "Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması"
 "url": "/tr/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Ölçülü Lisans Ayarla - .NET için GroupDocs Karşılaştırması
 
 ## giriiş

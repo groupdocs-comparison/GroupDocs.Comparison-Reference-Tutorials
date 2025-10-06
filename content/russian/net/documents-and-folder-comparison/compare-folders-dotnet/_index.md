@@ -5,8 +5,8 @@
 "title": "Сравнение папок в GroupDocs Сравнение для .NET"
 "url": "/ru/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # Сравнение папок в GroupDocs Сравнение для .NET
 
 ## Введение

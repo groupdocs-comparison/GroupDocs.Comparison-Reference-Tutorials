@@ -4,8 +4,8 @@
 "title": "Come impostare i metadati dei documenti con GroupDocs.Comparison .NET per una gestione efficiente dei documenti"
 "url": "/it/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Come impostare i metadati dei documenti con GroupDocs.Comparison .NET: una guida completa
 
 Nell'era digitale odierna, una gestione efficiente dei documenti è fondamentale sia per le aziende che per i privati. Un aspetto cruciale di questo processo è il confronto efficace dei documenti. Che stiate sviluppando un sistema di gestione documentale o che gestiate frequentemente più versioni di documenti, l'utilizzo della libreria GroupDocs.Comparison può semplificare il flusso di lavoro consentendo una gestione precisa dei metadati durante i confronti.

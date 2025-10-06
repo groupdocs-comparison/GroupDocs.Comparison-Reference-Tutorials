@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 掌握 Java 文件比較"
 "url": "/zh-hant/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 文件比較
 
 ## 介紹

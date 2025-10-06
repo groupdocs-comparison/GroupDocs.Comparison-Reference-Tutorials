@@ -6,8 +6,8 @@
 "title": "문서 비교 소프트웨어 API 튜토리얼 | GroupDocs.Comparison"
 "url": "/ko/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison 튜토리얼 및 개발자 가이드
 
 ![GroupDocs.Comparison 배너](./groupdocs-comparison-net.svg)

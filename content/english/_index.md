@@ -16,8 +16,8 @@ keywords:
 weight: 11
 url: /
 is_root: true
+type: docs
 ---
-
 # GroupDocs.Comparison Tutorials & Developer Guide
 
 ![GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)

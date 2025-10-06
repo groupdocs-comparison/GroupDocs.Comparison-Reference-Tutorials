@@ -10,8 +10,8 @@ lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "dotnet", "groupdocs", "tutorial"]
 is_root: true
+type: docs
 ---
-
 # Complete GroupDocs.Comparison Tutorial for .NET Developers
 
 ## Why Document Comparison Matters (And Why This Library Rocks)

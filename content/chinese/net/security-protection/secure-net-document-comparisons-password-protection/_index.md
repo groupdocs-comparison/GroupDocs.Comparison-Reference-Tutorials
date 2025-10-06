@@ -4,8 +4,8 @@
 "title": ".NET 中的安全文档比较&#58;使用 GroupDocs.Comparison 密码保护结果"
 "url": "/zh/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # 在 .NET 中保护文档比较：使用 GroupDocs.Comparison 对结果进行密码保护
 
 ## 介绍

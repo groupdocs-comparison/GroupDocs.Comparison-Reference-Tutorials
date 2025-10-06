@@ -5,8 +5,8 @@
 "title": "Comparar configurações de documentos no GroupDocs Comparison para .NET"
 "url": "/pt/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # Comparar configurações de documentos no GroupDocs Comparison para .NET
 
 ## Introdução

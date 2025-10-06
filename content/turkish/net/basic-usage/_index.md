@@ -5,8 +5,8 @@
 "title": "Temel Kullanım"
 "url": "/tr/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Temel Kullanım
 
 ## giriiş

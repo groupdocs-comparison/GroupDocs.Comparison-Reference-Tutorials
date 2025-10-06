@@ -4,8 +4,8 @@
 "title": "Festlegen benutzerdefinierter Metadaten in Java-Dokumenten mithilfe von GroupDocs.Comparison – Eine Schritt-für-Schritt-Anleitung"
 "url": "/de/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Festlegen benutzerdefinierter Metadaten in Java-Dokumenten mithilfe von GroupDocs.Comparison: Eine Schritt-für-Schritt-Anleitung
 
 ## Einführung

@@ -4,8 +4,8 @@
 "title": "تنفيذ مقارنة مستندات Java باستخدام GroupDocs.Comparison - دليل شامل"
 "url": "/ar/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة مستندات Java عن طريق تعيين مصدر البيانات الوصفية باستخدام GroupDocs.Comparison
 
 ## مقدمة

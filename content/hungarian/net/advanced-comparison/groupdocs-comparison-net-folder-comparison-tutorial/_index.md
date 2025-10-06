@@ -4,8 +4,8 @@
 "title": "Mappák összehasonlítása és az eredmények mentése TXT/HTML formátumban a GroupDocs.Comparison .NET használatával"
 "url": "/hu/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Mappa-összehasonlítás megvalósítása és az eredmények mentése TXT/HTML formátumban a GroupDocs.Comparison .NET segítségével
 
 ## Bevezetés

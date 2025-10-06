@@ -4,8 +4,8 @@
 "title": "Az összes támogatott fájlformátum listázása a GroupDocs.Comparison for .NET fájlban"
 "url": "/hu/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Az összes támogatott fájlformátum listázása a GroupDocs.Comparison for .NET fájlban
 
 ## Bevezetés

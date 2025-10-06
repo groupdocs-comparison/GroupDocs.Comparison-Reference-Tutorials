@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme"
 "url": "/tr/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Belge Meta Veri Hedefini Kaydetme
 
 ## giriiş

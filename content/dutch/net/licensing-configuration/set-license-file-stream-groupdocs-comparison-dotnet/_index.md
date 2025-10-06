@@ -4,8 +4,8 @@
 "title": "Licentie instellen in GroupDocs. Vergelijking voor .NET met behulp van FileStream"
 "url": "/nl/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Licentie instellen in GroupDocs. Vergelijking voor .NET met behulp van FileStream
 
 **Invoering**

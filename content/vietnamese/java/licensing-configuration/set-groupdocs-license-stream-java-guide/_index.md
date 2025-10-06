@@ -4,8 +4,8 @@
 "title": "Cách thiết lập giấy phép GroupDocs từ Stream trong Java&#58; Hướng dẫn từng bước"
 "url": "/vi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Cách thiết lập giấy phép GroupDocs từ Stream trong Java: Hướng dẫn từng bước
 
 ## Giới thiệu

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "dotnet", "groupdocs", "document-preview"]
+type: docs
 ---
-
 # Document Comparison in .NET: Generate Page Previews for Resultant Documents
 
 ## Introduction

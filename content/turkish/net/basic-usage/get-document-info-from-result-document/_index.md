@@ -5,8 +5,8 @@
 "title": "Sonuç Belgesinden Belge Bilgilerini Al - GroupDocs.Comparison for .NET"
 "url": "/tr/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Sonuç Belgesinden Belge Bilgilerini Al - GroupDocs.Comparison for .NET
 
 ## giriiş

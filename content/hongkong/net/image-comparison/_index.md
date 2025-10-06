@@ -5,8 +5,8 @@
 "title": "影像比較"
 "url": "/zh-hant/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # 影像比較
 
 

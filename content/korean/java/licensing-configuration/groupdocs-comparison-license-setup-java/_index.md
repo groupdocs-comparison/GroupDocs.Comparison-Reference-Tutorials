@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java에서 파일로부터 라이선스를 설정하는 방법&#58; 종합 가이드"
 "url": "/ko/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Java용 GroupDocs.Comparison에서 파일로부터 라이선스 설정 구현
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "GroupDocs를 사용한 Java 문서 비교 및 미리보기&#58; 종합 가이드"
 "url": "/ko/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용한 Java 문서 비교 및 미리보기 생성 마스터하기
 
 ## 소개

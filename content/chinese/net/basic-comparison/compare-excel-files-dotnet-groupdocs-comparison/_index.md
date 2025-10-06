@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison 库在 .NET 中比较 Excel 文件"
 "url": "/zh/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison 库在 .NET 中比较 Excel 文件
 
 ## 介绍

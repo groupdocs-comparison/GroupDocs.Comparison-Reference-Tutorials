@@ -5,8 +5,8 @@
 "title": "Stream에서 보호된 문서 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Stream에서 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

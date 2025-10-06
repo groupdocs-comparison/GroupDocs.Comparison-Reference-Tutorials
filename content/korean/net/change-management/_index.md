@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET을 위한 변경 관리 튜토리얼"
 "url": "/ko/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 위한 변경 관리 튜토리얼
 
 GroupDocs.Comparison .NET 튜토리얼을 통해 문서 변경 사항을 효과적으로 관리하는 방법을 알아보세요. 이 상세한 가이드는 문서 간의 구체적인 차이점을 파악하고, 개별 변경 사항을 적용 또는 거부하고, 추적된 변경 사항에 작성자를 설정하고, 프로그래밍 방식으로 수정 사항을 관리하는 방법을 보여줍니다. 각 튜토리얼은 C# 코드 예제와 함께 단계별 지침을 제공하여 문서 비교 워크플로에서 포괄적인 변경 관리 기능을 구현하는 데 도움을 줍니다.

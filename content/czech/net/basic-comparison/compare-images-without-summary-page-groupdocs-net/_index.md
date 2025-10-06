@@ -4,8 +4,8 @@
 "title": "Jak porovnat obrázky bez souhrnné stránky pomocí GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnání obrázků bez souhrnné stránky pomocí GroupDocs.Comparison pro .NET
 
 ## Zavedení

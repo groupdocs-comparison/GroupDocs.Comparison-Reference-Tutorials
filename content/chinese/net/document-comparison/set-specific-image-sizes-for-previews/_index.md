@@ -5,8 +5,8 @@
 "title": "设置预览的特定图像大小"
 "url": "/zh/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # 设置预览的特定图像大小
 
 ## 介绍

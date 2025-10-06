@@ -4,8 +4,8 @@
 "title": "GroupDocs ile Java'da Ana Belge Karşılaştırması ve HTML Oluşturma.Comparison"
 "url": "/tr/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java'da Belge Karşılaştırma ve HTML Oluşturmada Uzmanlaşma
 
 ## giriiş

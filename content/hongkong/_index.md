@@ -6,8 +6,8 @@
 "title": "文件比較軟體 API 教學 | GroupDocs.Comparison"
 "url": "/zh-hant/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison 教學與開發者指南
 
 ![GroupDocs.Comparison 橫幅](./groupdocs-comparison-net.svg)

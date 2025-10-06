@@ -4,8 +4,8 @@
 "title": "Fődokumentumok összehasonlítása Java nyelven a GroupDocs.Comparison könyvtár használatával"
 "url": "/hu/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása Java nyelven a GroupDocs.Comparison segítségével
 
 Fedezze fel a dokumentumokban végrehajtott módosítások inicializálásának, összehasonlításának és frissítésének hatékony folyamatát a hatékony GroupDocs.Comparison Java könyvtár segítségével. Ez az oktatóanyag végigvezeti Önt a környezet beállításán, a főbb funkciók megértésén és a valós megoldások megvalósításán.

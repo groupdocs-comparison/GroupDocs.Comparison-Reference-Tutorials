@@ -5,8 +5,8 @@
 "title": "Bandingkan Sel dari Jalur - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Bandingkan Sel dari Jalur - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

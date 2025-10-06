@@ -5,8 +5,8 @@
 "title": "Použití možností načítání v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Použití možností načítání v porovnání GroupDocs pro .NET
 
 ## Zavedení

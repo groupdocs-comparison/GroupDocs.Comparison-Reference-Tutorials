@@ -5,8 +5,8 @@
 "title": "Porovnání nastavení více dokumentů v porovnání GroupDocs pro .NET"
 "url": "/cs/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # Porovnání nastavení více dokumentů v porovnání GroupDocs pro .NET
 
 ## Zavedení

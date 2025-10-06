@@ -5,8 +5,8 @@
 "title": "Nhận thông tin tài liệu từ Stream - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Nhận thông tin tài liệu từ Stream - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

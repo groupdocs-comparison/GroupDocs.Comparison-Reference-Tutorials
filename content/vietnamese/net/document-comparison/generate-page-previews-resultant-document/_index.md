@@ -5,8 +5,8 @@
 "title": "Tạo bản xem trước trang cho tài liệu kết quả"
 "url": "/vi/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Tạo bản xem trước trang cho tài liệu kết quả
 
 ## Giới thiệu

@@ -5,8 +5,8 @@
 "title": "Σύγκριση εγγράφων από το Stream - GroupDocs.Comparison για .NET"
 "url": "/el/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # Σύγκριση εγγράφων από το Stream - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

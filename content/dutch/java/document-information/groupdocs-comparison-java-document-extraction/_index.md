@@ -4,8 +4,8 @@
 "title": "Metadata-extractie van hoofddocumenten met GroupDocs in Java"
 "url": "/nl/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Het beheersen van documentmetadata-extractie met GroupDocs in Java
 
 In het huidige digitale landschap is het efficiënt beheren en extraheren van informatie uit documenten cruciaal voor bedrijven in alle sectoren. Of u nu werkt met juridische contracten, academische papers of financiële rapporten, inzicht in documentmetadata zoals bestandstype, pagina-aantal en grootte kan workflows stroomlijnen en data-analyse verbeteren. Deze tutorial begeleidt u bij het gebruik van GroupDocs.Comparison in Java om waardevolle documentinformatie te extraheren via zowel invoerstromen als bestandspaden.

@@ -3,8 +3,8 @@
 "title": "Hướng dẫn về Tùy chọn và Cài đặt So sánh cho GroupDocs.Comparison .NET"
 "url": "/vi/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Hướng dẫn về Tùy chọn và Cài đặt So sánh cho GroupDocs.Comparison .NET
 
 Học cách tinh chỉnh so sánh tài liệu với các hướng dẫn về tùy chọn GroupDocs.Comparison của chúng tôi dành cho .NET. Các hướng dẫn chi tiết này trình bày cách cấu hình độ nhạy so sánh, tùy chỉnh các thuật toán phát hiện thay đổi, thiết lập tùy chọn hiển thị cho các loại thay đổi khác nhau và triển khai các quy tắc so sánh chuyên biệt. Mỗi hướng dẫn bao gồm các ví dụ mã C# đang hoạt động để triển khai các tùy chọn so sánh tùy chỉnh, giúp bạn xây dựng các ứng dụng so sánh có thể được điều chỉnh chính xác theo các yêu cầu phân tích tài liệu cụ thể của bạn.

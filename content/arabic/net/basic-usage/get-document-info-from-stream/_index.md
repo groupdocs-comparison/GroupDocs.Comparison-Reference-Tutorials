@@ -5,8 +5,8 @@
 "title": "الحصول على معلومات المستند من Stream - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # الحصول على معلومات المستند من Stream - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

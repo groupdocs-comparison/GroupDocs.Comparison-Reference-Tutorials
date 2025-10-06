@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 문서 비교를 위한 사용자 지정 글꼴을 로드하는 방법"
 "url": "/ko/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 문서 비교를 위한 사용자 지정 글꼴을 로드하는 방법
 
 ## 소개

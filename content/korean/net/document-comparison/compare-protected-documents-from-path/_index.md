@@ -5,8 +5,8 @@
 "title": "Path에서 보호된 문서 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Path에서 보호된 문서 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

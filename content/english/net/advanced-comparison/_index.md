@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "document-comparison", "dotnet", "automation"]
+type: docs
 ---
-
 # Document Comparison .NET - Advanced Features & Automation Guide
 
 Are you tired of manually reviewing multiple versions of contracts, reports, or technical documentation? If you're working with .NET applications and need to automate document comparison beyond basic file-to-file comparisons, you've come to the right place.

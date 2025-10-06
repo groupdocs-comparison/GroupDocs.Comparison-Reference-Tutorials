@@ -5,8 +5,8 @@
 "title": "Ställ in uppmätt licens - GroupDocs-jämförelse för .NET"
 "url": "/sv/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Ställ in uppmätt licens - GroupDocs-jämförelse för .NET
 
 ## Introduktion

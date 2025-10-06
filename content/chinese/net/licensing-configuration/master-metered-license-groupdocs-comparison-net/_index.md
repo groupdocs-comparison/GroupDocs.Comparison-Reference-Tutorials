@@ -4,8 +4,8 @@
 "title": "如何在 GroupDocs.Comparison .NET 中设置计量许可证——分步指南"
 "url": "/zh/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 GroupDocs.Comparison .NET 中设置计量许可证：分步指南
 
 ## 介绍

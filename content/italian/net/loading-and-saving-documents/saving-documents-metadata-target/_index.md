@@ -5,8 +5,8 @@
 "title": "Salvataggio dei metadati dei documenti Target nel confronto GroupDocs per .NET"
 "url": "/it/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Salvataggio dei metadati dei documenti Target nel confronto GroupDocs per .NET
 
 ## Introduzione

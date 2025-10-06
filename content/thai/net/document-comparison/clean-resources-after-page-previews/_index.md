@@ -5,8 +5,8 @@
 "title": "ทำความสะอาดทรัพยากรหลังการดูตัวอย่างหน้า"
 "url": "/th/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # ทำความสะอาดทรัพยากรหลังการดูตัวอย่างหน้า
 
 ## การแนะนำ

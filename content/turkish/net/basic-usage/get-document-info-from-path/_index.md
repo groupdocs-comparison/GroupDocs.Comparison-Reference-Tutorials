@@ -5,8 +5,8 @@
 "title": "Yoldan Belge Bilgilerini Al - .NET için GroupDocs.Comparison"
 "url": "/tr/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Yoldan Belge Bilgilerini Al - .NET için GroupDocs.Comparison
 
 ## giriiş

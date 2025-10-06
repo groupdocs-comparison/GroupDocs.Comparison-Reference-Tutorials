@@ -4,8 +4,8 @@
 "title": "تخصيص أنماط العناصر المدرجة في مقارنات مستندات Java باستخدام GroupDocs.Comparison"
 "url": "/ar/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # تخصيص أنماط العناصر المدرجة في مقارنات مستندات Java باستخدام GroupDocs.Comparison
 
 ## مقدمة

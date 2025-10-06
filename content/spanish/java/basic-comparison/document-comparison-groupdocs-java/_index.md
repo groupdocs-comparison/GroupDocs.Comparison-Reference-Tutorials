@@ -4,8 +4,8 @@
 "title": "Domine la comparación de documentos en Java con GroupDocs.Comparison&#58; una guía completa"
 "url": "/es/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos con GroupDocs.Comparison en Java
 
 En la era digital actual, gestionar y comparar documentos es vital tanto para empresas como para particulares. Ya sea que colabore en proyectos o garantice la coherencia de datos entre versiones de documentos, contar con las herramientas adecuadas puede marcar una diferencia significativa. Este tutorial explora cómo usar GroupDocs.Comparison para Java para comparar documentos de Word sin problemas mediante secuencias. Al finalizar esta guía, podrá implementar una potente función de comparación en sus aplicaciones Java.

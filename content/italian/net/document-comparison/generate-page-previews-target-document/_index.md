@@ -5,8 +5,8 @@
 "title": "Genera anteprime di pagina per il documento di destinazione"
 "url": "/it/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Genera anteprime di pagina per il documento di destinazione
 
 ## Introduzione

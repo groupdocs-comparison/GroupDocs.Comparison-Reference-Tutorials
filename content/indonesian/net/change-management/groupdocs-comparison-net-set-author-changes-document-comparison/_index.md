@@ -4,8 +4,8 @@
 "title": "Mengatur Penulis Perubahan dalam Perbandingan Dokumen Menggunakan GroupDocs.Comparison untuk .NET"
 "url": "/id/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Penulis Set Perubahan dalam Perbandingan Dokumen Menggunakan GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

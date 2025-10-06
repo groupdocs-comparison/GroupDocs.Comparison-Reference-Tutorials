@@ -5,8 +5,8 @@
 "title": "设置计量许可证 - GroupDocs .NET 比较"
 "url": "/zh/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # 设置计量许可证 - GroupDocs .NET 比较
 
 ## 介绍

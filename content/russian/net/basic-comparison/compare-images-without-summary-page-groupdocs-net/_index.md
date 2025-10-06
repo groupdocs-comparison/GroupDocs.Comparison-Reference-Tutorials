@@ -4,8 +4,8 @@
 "title": "Как сравнить изображения без страницы сводки с помощью GroupDocs.Comparison для .NET"
 "url": "/ru/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Как реализовать сравнение изображений без страницы сводки с помощью GroupDocs.Comparison для .NET
 
 ## Введение

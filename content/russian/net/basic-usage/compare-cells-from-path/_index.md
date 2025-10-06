@@ -5,8 +5,8 @@
 "title": "Сравнение ячеек из пути - GroupDocs.Comparison для .NET"
 "url": "/ru/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Сравнение ячеек из пути - GroupDocs.Comparison для .NET
 
 ## Введение

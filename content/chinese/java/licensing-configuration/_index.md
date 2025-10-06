@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 的许可和配置教程"
 "url": "/zh/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison Java 的许可和配置教程
 
 我们的许可和配置教程提供了在 Java 应用程序中正确设置 GroupDocs.Comparison 的基本指导。这些分步指南将向您展示如何实现不同的许可选项、配置计量计费、检查许可状态以及根据您的特定需求优化库设置。每个教程都包含详细的 Java 代码示例，用于正确的初始化和配置，帮助您构建获得正确许可且经过优化的文档比较解决方案。

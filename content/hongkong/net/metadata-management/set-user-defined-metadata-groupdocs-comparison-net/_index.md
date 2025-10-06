@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison for .NET 在文件中設定使用者定義的元資料 | 文件管理指南"
 "url": "/zh-hant/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison for .NET 在文件中設定使用者定義的元數據
 
 ## 介紹

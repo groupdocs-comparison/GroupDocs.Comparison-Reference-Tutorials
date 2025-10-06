@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["GroupDocs", ".NET", "C#", "Document Processing"]
+type: docs
 ---
-
 # Document Comparison Tutorial .NET - Complete GroupDocs Guide
 
 Learning how to compare documents programmatically can save you countless hours of manual review. Whether you're building a document management system, implementing version control, or automating compliance checks, GroupDocs.Comparison for .NET provides the tools you need to identify differences between documents with just a few lines of code.

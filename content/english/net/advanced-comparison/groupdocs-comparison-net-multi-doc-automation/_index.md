@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "automation", "groupdocs", "csharp"]
+type: docs
 ---
-
 # Document Comparison .NET Automation
 
 ## The Hidden Cost of Manual Document Review

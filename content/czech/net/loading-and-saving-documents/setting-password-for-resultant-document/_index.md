@@ -5,8 +5,8 @@
 "title": "Nastavení hesla pro výsledný dokument v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Nastavení hesla pro výsledný dokument v porovnání GroupDocs pro .NET
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "Jak porównać wiele dokumentów chronionych hasłem w .NET przy użyciu GroupDocs.Comparison"
 "url": "/pl/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Jak porównać wiele dokumentów chronionych hasłem w .NET przy użyciu GroupDocs.Comparison
 
 ## Wstęp

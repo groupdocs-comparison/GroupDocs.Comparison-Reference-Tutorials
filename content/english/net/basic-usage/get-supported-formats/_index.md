@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Comparison"]
 tags: ["supported-formats", "file-types", "NET-API", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs.Comparison Supported Formats - Complete File Type Guide
 
 ## Introduction

@@ -4,8 +4,8 @@
 "title": "GroupDocs के साथ समर्थित फ़ाइल स्वरूपों को पुनः प्राप्त करें.Java के लिए तुलना एक व्यापक गाइड"
 "url": "/hi/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # जावा के लिए GroupDocs.Comparison के साथ समर्थित फ़ाइल स्वरूपों को पुनः प्राप्त करें
 
 ## परिचय

@@ -3,8 +3,8 @@
 "title": "Lizenzierungs- und Konfigurationstutorials für GroupDocs.Comparison .NET"
 "url": "/de/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Lizenzierungs- und Konfigurationstutorials für GroupDocs.Comparison .NET
 
 Unsere Tutorials zu Lizenzierung und Konfiguration bieten wichtige Hinweise zur korrekten Einrichtung von GroupDocs.Comparison in .NET-Anwendungen. Diese Schritt-für-Schritt-Anleitungen zeigen Ihnen, wie Sie verschiedene Lizenzoptionen implementieren, die nutzungsabhängige Abrechnung konfigurieren, den Lizenzstatus prüfen und die Bibliothekseinstellungen für Ihre spezifischen Anforderungen optimieren. Jedes Tutorial enthält detaillierte C#-Codebeispiele für die korrekte Initialisierung und Konfiguration und unterstützt Sie beim Erstellen ordnungsgemäß lizenzierter und optimierter Dokumentenvergleichslösungen.

@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบการตั้งค่าเอกสารหลายฉบับใน GroupDocs การเปรียบเทียบสำหรับ .NET"
 "url": "/th/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # เปรียบเทียบการตั้งค่าเอกสารหลายฉบับใน GroupDocs การเปรียบเทียบสำหรับ .NET
 
 ## การแนะนำ

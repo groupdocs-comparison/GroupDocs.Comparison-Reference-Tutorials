@@ -5,8 +5,8 @@
 "title": "生成目标文档的页面预览"
 "url": "/zh/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # 生成目标文档的页面预览
 
 ## 介绍

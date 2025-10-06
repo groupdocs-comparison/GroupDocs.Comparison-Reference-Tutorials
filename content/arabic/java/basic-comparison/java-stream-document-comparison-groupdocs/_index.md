@@ -4,8 +4,8 @@
 "title": "تنفيذ مقارنة مستندات Java Stream باستخدام GroupDocs.Comparer - دليل شامل"
 "url": "/ar/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ مقارنة مستندات Java Stream باستخدام GroupDocs.Comparer: دليل شامل
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用して .NET で複数ドキュメントの比較を実装する"
 "url": "/ja/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用して .NET で複数ドキュメントの比較を実装する: 包括的なガイド
 
 ## 導入

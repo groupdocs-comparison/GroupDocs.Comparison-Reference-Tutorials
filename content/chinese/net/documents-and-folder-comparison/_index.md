@@ -5,8 +5,8 @@
 "title": "文档和文件夹比较"
 "url": "/zh/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # 文档和文件夹比较
 
 ## 介绍

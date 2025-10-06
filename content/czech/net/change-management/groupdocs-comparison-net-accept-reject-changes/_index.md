@@ -4,8 +4,8 @@
 "title": "Správa změn hlavních dokumentů – přijímání a zamítání úprav pomocí GroupDocs.Comparison .NET"
 "url": "/cs/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Správa změn hlavních dokumentů pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

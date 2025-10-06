@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kullanarak Java'da Parola Korumalı Word Belgeleri Nasıl Yüklenir ve Karşılaştırılır"
 "url": "/tr/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanarak Java'da Parola Korumalı Word Belgeleri Nasıl Yüklenir ve Karşılaştırılır
 
 ## giriiş

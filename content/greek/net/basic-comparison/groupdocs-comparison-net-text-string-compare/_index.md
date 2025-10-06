@@ -4,8 +4,8 @@
 "title": "Σύγκριση συμβολοσειρών κύριου κειμένου στο .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison"
 "url": "/el/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Σύγκριση συμβολοσειρών κύριου κειμένου στο .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison
 
 ## Εισαγωγή

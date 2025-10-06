@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 사용자 정의 문서 메타데이터 저장"
 "url": "/ko/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 사용자 정의 문서 메타데이터 저장
 
 ## 소개

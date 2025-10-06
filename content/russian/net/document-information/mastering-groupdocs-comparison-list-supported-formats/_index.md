@@ -4,8 +4,8 @@
 "title": "Как составить список всех поддерживаемых форматов файлов в GroupDocs.Comparison для .NET"
 "url": "/ru/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Как составить список всех поддерживаемых форматов файлов в GroupDocs.Comparison для .NET
 
 ## Введение

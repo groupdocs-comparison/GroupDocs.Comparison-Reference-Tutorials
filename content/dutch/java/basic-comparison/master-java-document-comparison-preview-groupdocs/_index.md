@@ -4,8 +4,8 @@
 "title": "Java-documentvergelijking en -voorbeeld met GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Java-documentvergelijking en previewgeneratie onder de knie krijgen met GroupDocs.Comparison
 
 ## Invoering

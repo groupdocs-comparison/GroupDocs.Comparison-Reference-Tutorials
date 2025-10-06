@@ -5,8 +5,8 @@
 "title": "Definindo senha para documento resultante na comparação do GroupDocs para .NET"
 "url": "/pt/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Definindo senha para documento resultante na comparação do GroupDocs para .NET
 
 ## Introdução

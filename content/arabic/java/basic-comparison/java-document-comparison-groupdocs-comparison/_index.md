@@ -4,8 +4,8 @@
 "title": "مقارنة مستندات جافا باستخدام GroupDocs.Comparison - دليل شامل"
 "url": "/ar/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # مقارنة مستندات جافا باستخدام GroupDocs.Comparison: دليل شامل
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "जावा में GroupDocs.Comparison के साथ दस्तावेज़ मेटाडेटा को लागू करें&#58; एक संपूर्ण गाइड"
 "url": "/hi/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # जावा में GroupDocs.Comparison के साथ दस्तावेज़ मेटाडेटा को लागू करें: एक संपूर्ण गाइड
 
 ## परिचय

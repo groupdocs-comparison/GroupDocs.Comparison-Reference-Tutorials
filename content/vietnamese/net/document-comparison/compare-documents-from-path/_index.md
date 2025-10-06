@@ -5,8 +5,8 @@
 "title": "So sánh các tài liệu từ Path - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # So sánh các tài liệu từ Path - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

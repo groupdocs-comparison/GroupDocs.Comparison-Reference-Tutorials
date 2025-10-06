@@ -5,8 +5,8 @@
 "title": "Confronta le immagini dal percorso - GroupDocs.Comparison per .NET"
 "url": "/it/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Confronta le immagini dal percorso - GroupDocs.Comparison per .NET
 
 ## Introduzione

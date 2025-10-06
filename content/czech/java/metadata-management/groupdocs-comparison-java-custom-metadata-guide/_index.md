@@ -4,8 +4,8 @@
 "title": "Nastavení vlastních metadat v dokumentech Java pomocí GroupDocs.Comparison – Podrobný návod"
 "url": "/cs/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Nastavení vlastních metadat v dokumentech Java pomocí GroupDocs.Comparison: Podrobný návod
 
 ## Zavedení

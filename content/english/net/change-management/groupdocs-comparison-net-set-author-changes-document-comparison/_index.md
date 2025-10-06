@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["dotnet", "document-tracking", "collaboration", "revision-control"]
+type: docs
 ---
-
 # How to Track Document Changes with Author Names in .NET
 
 ## Introduction

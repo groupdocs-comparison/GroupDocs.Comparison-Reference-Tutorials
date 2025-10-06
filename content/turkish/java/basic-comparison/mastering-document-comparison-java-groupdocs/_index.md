@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API'sini Kullanarak Java'da Ana Belge Karşılaştırması"
 "url": "/tr/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API'sini Kullanarak Java'da Belge Karşılaştırmasında Ustalaşma
 
 ## giriiş

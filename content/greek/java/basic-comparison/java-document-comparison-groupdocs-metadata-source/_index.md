@@ -4,8 +4,8 @@
 "title": "Υλοποίηση Σύγκρισης Εγγράφων Java Χρησιμοποιώντας το GroupDocs.Comparison&#58; Ένας Πλήρης Οδηγός"
 "url": "/el/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση εγγράφων Java ορίζοντας την προέλευση μεταδεδομένων με το GroupDocs.Comparison
 
 ## Εισαγωγή

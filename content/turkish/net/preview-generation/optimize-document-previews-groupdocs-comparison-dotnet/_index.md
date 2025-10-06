@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET API ile Belge Önizlemelerini Oluşturun ve Optimize Edin"
 "url": "/tr/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Önizlemeleri Oluşturun ve Optimize Edin
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "GroupDocs का उपयोग करके जावा में दस्तावेज़ तुलना लागू करें&#58; एक व्यापक गाइड"
 "url": "/hi/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # ग्रुपडॉक्स के साथ जावा में दस्तावेज़ तुलना लागू करें: एक व्यापक गाइड
 
 ## परिचय

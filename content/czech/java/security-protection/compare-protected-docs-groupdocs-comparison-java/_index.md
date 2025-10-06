@@ -4,8 +4,8 @@
 "title": "Jak porovnat dokumenty chráněné heslem pomocí GroupDocs.Comparison v Javě"
 "url": "/cs/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnat více chráněných dokumentů pomocí GroupDocs.Comparison v Javě
 
 **Zavedení**

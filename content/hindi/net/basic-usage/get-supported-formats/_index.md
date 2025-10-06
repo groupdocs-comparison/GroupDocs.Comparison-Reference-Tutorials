@@ -5,8 +5,8 @@
 "title": "समर्थित प्रारूप प्राप्त करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # समर्थित प्रारूप प्राप्त करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

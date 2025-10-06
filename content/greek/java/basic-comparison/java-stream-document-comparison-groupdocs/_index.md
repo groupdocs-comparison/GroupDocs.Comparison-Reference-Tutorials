@@ -4,8 +4,8 @@
 "title": "Υλοποίηση Σύγκρισης Εγγράφων Java Stream Χρησιμοποιώντας το GroupDocs.Comparer&#58; Ένας Πλήρης Οδηγός"
 "url": "/el/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση σύγκρισης εγγράφων ροής Java χρησιμοποιώντας το GroupDocs.Comparer: Ένας ολοκληρωμένος οδηγός
 
 ## Εισαγωγή

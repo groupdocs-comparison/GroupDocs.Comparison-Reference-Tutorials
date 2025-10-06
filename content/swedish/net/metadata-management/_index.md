@@ -3,8 +3,8 @@
 "title": "Handledningar för hantering av dokumentmetadata för GroupDocs.Comparison .NET"
 "url": "/sv/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Handledningar för hantering av dokumentmetadata för GroupDocs.Comparison .NET
 
 Våra handledningar för metadatahantering visar hur du styr dokumentegenskaper när du jämför dokument med GroupDocs.Comparison i .NET. Dessa steg-för-steg-guider behandlar hur du ställer in metadatakällor, definierar anpassade metadata för resulterande dokument och implementerar policyer för metadatalagring. Varje handledning innehåller praktiska C#-kodexempel för vanliga scenarier för metadatahantering, vilket hjälper dig att bygga applikationer som upprätthåller lämpliga dokumentegenskaper under hela jämförelseprocessen.

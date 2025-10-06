@@ -4,8 +4,8 @@
 "title": "JavaでURL経由でGroupDocs.Comparisonライセンスを設定する - ライセンス自動化の簡素化"
 "url": "/ja/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Java をマスターする: URL 経由でライセンスを設定する
 
 ## 導入

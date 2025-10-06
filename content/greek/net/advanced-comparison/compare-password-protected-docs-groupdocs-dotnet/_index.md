@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε πολλά έγγραφα Word που προστατεύονται με κωδικό πρόσβασης στο .NET χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε πολλά έγγραφα Word που προστατεύονται με κωδικό πρόσβασης στο .NET χρησιμοποιώντας το GroupDocs.Comparison
 
 ## Εισαγωγή

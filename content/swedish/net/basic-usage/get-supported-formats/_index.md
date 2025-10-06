@@ -5,8 +5,8 @@
 "title": "Hämta format som stöds - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Hämta format som stöds - GroupDocs.Comparison för .NET
 
 ## Introduktion

@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Klasörleri Karşılaştırın"
 "url": "/tr/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Klasörleri Karşılaştırın
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Načtení podporovaných formátů souborů pomocí GroupDocs.Comparison pro Javu – Komplexní průvodce"
 "url": "/cs/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Načtení podporovaných formátů souborů pomocí GroupDocs.Comparison pro Javu
 
 ## Zavedení

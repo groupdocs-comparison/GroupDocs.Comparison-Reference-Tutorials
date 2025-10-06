@@ -4,8 +4,8 @@
 "title": "Vollständiger GroupDocs.Comparison für Java-Tutorialhandbuch"
 "url": "/de/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison für Java – Schritt-für-Schritt-Tutorials und Codebeispiele
 
 ## Lernen Sie den Dokumentenvergleich in Java – schnell, genau und leistungsstark

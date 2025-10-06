@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 設定文件元資料以實現高效率的文件管理"
 "url": "/zh-hant/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 設定文件元資料：綜合指南
 
 在當今的數位時代，高效的文件管理對企業和個人都至關重要。其中，一個關鍵環節是有效地比較文件。無論您是開發文件管理系統，還是經常處理多個文件版本，使用 GroupDocs.Comparison 庫都可以簡化您的工作流程，在比較過程中實現精確的元資料管理。

@@ -5,8 +5,8 @@
 "title": "Seitenvorschauen für das resultierende Dokument generieren"
 "url": "/de/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Seitenvorschauen für das resultierende Dokument generieren
 
 ## Einführung

@@ -4,8 +4,8 @@
 "title": "स्ट्रीम से Word फ़ाइलों के लिए GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना लागू करें"
 "url": "/hi/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Comparison के साथ स्ट्रीम से दस्तावेज़ तुलना कैसे लागू करें
 
 ## परिचय

@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů v Javě pomocí GroupDocs – Komplexní průvodce"
 "url": "/cs/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Implementace porovnávání dokumentů v Javě pomocí GroupDocs: Komplexní průvodce
 
 ## Zavedení

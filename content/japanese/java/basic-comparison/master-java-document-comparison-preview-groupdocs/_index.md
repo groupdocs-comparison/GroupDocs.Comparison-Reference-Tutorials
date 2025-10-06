@@ -4,8 +4,8 @@
 "title": "GroupDocs による Java ドキュメントの比較とプレビューの総合ガイド"
 "url": "/ja/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java ドキュメントの比較とプレビュー生成の習得
 
 ## 導入

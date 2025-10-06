@@ -4,8 +4,8 @@
 "title": "ตั้งค่าข้อมูลเมตาแบบกำหนดเองในเอกสาร Java โดยใช้ GroupDocs.Comparison คำแนะนำทีละขั้นตอน"
 "url": "/th/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # ตั้งค่าข้อมูลเมตาแบบกำหนดเองในเอกสาร Java โดยใช้ GroupDocs.Comparison: คำแนะนำทีละขั้นตอน
 
 ## การแนะนำ

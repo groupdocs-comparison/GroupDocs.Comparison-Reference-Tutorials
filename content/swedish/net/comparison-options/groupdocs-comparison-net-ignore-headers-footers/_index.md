@@ -4,8 +4,8 @@
 "title": "Hur man ignorerar sidhuvuden och sidfot i DOC-jämförelser med GroupDocs.Comparison .NET"
 "url": "/sv/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Hur man ignorerar sidhuvuden och sidfot i dokumentjämförelser med GroupDocs.Comparison .NET
 
 ## Introduktion

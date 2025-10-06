@@ -4,8 +4,8 @@
 "title": "Opanowanie GroupDocs.Comparison dla Java&#58; Bezproblemowe generowanie podglądu dokumentów"
 "url": "/pl/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie GroupDocs.Comparison dla Java: bezproblemowe generowanie podglądu dokumentu
 
 ## Wstęp

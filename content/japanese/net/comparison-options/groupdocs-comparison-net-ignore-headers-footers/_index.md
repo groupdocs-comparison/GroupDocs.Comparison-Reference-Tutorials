@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用して DOC 比較でヘッダーとフッターを無視する方法"
 "url": "/ja/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET でドキュメント比較時にヘッダーとフッターを無視する方法
 
 ## 導入

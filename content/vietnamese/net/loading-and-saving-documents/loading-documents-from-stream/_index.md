@@ -5,8 +5,8 @@
 "title": "Tải tài liệu từ Stream trong So sánh GroupDocs cho .NET"
 "url": "/vi/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Tải tài liệu từ Stream trong So sánh GroupDocs cho .NET
 
 ## Giới thiệu

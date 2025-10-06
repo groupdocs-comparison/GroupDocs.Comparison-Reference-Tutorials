@@ -4,8 +4,8 @@
 "title": "通过 Java 中的 URL 设置 GroupDocs.Comparison 许可证——简化许可自动化"
 "url": "/zh/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # 掌握 GroupDocs.Comparison Java：通过 URL 设置许可证
 
 ## 介绍

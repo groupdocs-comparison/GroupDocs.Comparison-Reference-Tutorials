@@ -4,8 +4,8 @@
 "title": "Kop- en voetteksten negeren in DOC-vergelijkingen met GroupDocs.Comparison .NET"
 "url": "/nl/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Kop- en voetteksten negeren bij documentvergelijkingen met GroupDocs.Comparison .NET
 
 ## Invoering

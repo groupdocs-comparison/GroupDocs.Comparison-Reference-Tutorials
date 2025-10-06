@@ -4,8 +4,8 @@
 "title": "マスタードキュメントの変更管理 - GroupDocs.Comparison .NET による編集の承認と拒否"
 "url": "/ja/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET によるマスター ドキュメントの変更管理
 
 ## 導入

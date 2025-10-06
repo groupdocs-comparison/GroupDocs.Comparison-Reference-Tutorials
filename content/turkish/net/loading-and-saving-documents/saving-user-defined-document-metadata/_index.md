@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Kullanıcı Tanımlı Belge Meta Verilerini Kaydetme"
 "url": "/tr/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Kullanıcı Tanımlı Belge Meta Verilerini Kaydetme
 
 ## giriiş

@@ -5,8 +5,8 @@
 "title": "Tetapkan Lisensi dari File - Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Tetapkan Lisensi dari File - Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

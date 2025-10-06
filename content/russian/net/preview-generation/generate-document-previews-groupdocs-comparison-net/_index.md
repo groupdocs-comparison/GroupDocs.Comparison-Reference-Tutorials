@@ -4,8 +4,8 @@
 "title": "Эффективное создание предварительных просмотров документов с помощью GroupDocs.Comparison для разработчиков .NET"
 "url": "/ru/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Эффективное создание предварительных просмотров документов с помощью GroupDocs.Comparison для .NET
 
 ## Введение

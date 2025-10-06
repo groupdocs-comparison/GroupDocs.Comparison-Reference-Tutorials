@@ -4,8 +4,8 @@
 "title": "Ställ in anpassade metadata i Java-dokument med GroupDocs.Comparison – en steg-för-steg-guide"
 "url": "/sv/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Ställ in anpassade metadata i Java-dokument med GroupDocs.Comparison: En steg-för-steg-guide
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API를 사용하여 Java에서 마스터 문서 비교를 수행하고 효율적인 셀 파일 분석을 수행합니다."
 "url": "/ko/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API를 사용하여 Java에서 문서 비교 마스터하기
 
 ## 소개

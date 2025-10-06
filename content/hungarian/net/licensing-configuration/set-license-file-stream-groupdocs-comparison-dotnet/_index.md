@@ -4,8 +4,8 @@
 "title": "Licenc beállítása a GroupDocs.Comparison fájlban .NET-hez FileStream használatával"
 "url": "/hu/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Licenc beállítása a GroupDocs.Comparison fájlban .NET-hez FileStream használatával
 
 **Bevezetés**

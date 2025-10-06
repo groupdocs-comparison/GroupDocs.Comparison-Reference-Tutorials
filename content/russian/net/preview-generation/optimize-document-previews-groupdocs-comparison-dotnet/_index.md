@@ -4,8 +4,8 @@
 "title": "Создавайте и оптимизируйте предварительные просмотры документов с помощью API GroupDocs.Comparison .NET"
 "url": "/ru/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Создание и оптимизация предпросмотров документов с помощью GroupDocs.Comparison .NET
 
 ## Введение

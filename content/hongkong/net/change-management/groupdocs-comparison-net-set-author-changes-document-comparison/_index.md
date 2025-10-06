@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison for .NET 設定文件比較中更改的作者"
 "url": "/zh-hant/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for .NET 在文件比較中實作設定變更作者
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 在 Java 中實作 Word 文件比較"
 "url": "/zh-hant/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 在 Java 中實作 Word 文件比較
 
 ## 介紹

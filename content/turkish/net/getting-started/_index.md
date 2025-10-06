@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET Geliştiricileri için Başlangıç Eğitimleri"
 "url": "/tr/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET Geliştiricileri için Başlangıç Eğitimleri
 
 .NET'te kurulum, lisans yapılandırması ve ilk belge karşılaştırmalarınızı oluşturma konusunda size yol gösterecek bu temel GroupDocs.Comparison eğitimleriyle yolculuğunuza başlayın. Başlangıç seviyesindekilere uygun kılavuzlarımız, geliştirme ortamınızı nasıl kuracağınızı, GroupDocs.Comparison kitaplığını nasıl başlatacağınızı ve temel karşılaştırma işlemlerini nasıl gerçekleştireceğinizi gösterir. Temel bilgileri hızla öğrenmek ve .NET uygulamalarınızda daha gelişmiş belge karşılaştırma görevlerine hazırlanmak için bu eğitimleri izleyin.

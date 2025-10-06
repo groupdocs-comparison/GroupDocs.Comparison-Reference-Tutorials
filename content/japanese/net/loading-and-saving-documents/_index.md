@@ -5,8 +5,8 @@
 "title": "ドキュメントの読み込みと保存"
 "url": "/ja/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # ドキュメントの読み込みと保存
 
 ## 導入

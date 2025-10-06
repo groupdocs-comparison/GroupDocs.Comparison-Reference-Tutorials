@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-streams", "groupdocs", "word-documents"]
+type: docs
 ---
-
 # Java Document Comparison: Stream-Based Word Document Comparison with GroupDocs
 
 If you've ever struggled with comparing multiple versions of Word documents in your Java application, you're not alone. Whether you're building a collaboration platform, implementing version control, or just need to track changes between document revisions, **java document comparison** can quickly become complex without the right approach.

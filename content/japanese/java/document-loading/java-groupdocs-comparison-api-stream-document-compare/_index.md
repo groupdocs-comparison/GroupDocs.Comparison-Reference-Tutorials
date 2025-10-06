@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison APIを使用したJavaドキュメント比較 - ストリームベースのアプローチ"
 "url": "/ja/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Java をマスターする: GroupDocs.Comparison API を使用したドキュメント比較
 
 この包括的なガイドへようこそ。ここでは、強力なGroupDocs.Comparison APIを用いてJavaでドキュメント比較を行う方法を解説します。法律文書、学術論文、その他のテキストファイルを管理する場合、それらを効率的に比較することは非常に重要です。このチュートリアルでは、Javaのストリームを使用して、2つのドキュメント間で検出された変更を承認または拒否する方法を詳しく説明します。

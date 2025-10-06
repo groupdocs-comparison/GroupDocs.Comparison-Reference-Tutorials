@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Comparison για Java"
 "url": "/el/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Mastering Document Comparison: Ένας οδηγός για τη σύγκριση εγγράφων Word που προστατεύονται με κωδικό πρόσβασης με το GroupDocs.Comparison για Java
 
 ## Εισαγωγή

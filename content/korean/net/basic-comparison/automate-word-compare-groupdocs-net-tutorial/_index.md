@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 Word 문서 비교 자동화하기&#58; 완전한 튜토리얼"
 "url": "/ko/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 Word 문서 비교 자동화: 전체 튜토리얼
 
 ## 소개

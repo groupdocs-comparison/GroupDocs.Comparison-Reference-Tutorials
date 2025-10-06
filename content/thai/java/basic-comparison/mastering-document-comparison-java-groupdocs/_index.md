@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบเอกสารหลักใน Java โดยใช้ GroupDocs.Comparison API"
 "url": "/th/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การเปรียบเทียบเอกสารใน Java โดยใช้ GroupDocs.Comparison API
 
 ## การแนะนำ

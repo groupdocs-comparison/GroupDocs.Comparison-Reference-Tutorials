@@ -5,8 +5,8 @@
 "title": "문서 비교"
 "url": "/ko/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # 문서 비교
 
 ## 소개

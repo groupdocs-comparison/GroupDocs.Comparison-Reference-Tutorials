@@ -5,8 +5,8 @@
 "title": "스트림에서 셀 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 스트림에서 셀 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

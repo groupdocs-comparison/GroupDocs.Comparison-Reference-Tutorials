@@ -4,8 +4,8 @@
 "title": "Automatizace porovnávání více dokumentů v .NET pomocí knihovny GroupDocs.Comparison"
 "url": "/cs/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnávání více dokumentů v .NET pomocí GroupDocs.Comparison
 
 ## Zavedení

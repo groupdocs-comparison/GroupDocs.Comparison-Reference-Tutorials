@@ -4,8 +4,8 @@
 "title": "Come monitorare il consumo di credito utilizzando GroupDocs.Comparison per .NET&#58; una guida completa"
 "url": "/it/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Come monitorare il consumo di credito utilizzando GroupDocs.Comparison per .NET: una guida completa
 
 ## Introduzione

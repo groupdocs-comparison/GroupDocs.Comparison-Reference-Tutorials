@@ -4,8 +4,8 @@
 "title": "أتمتة مقارنة المستندات باستخدام GroupDocs.Comparison .NET - دليل كامل"
 "url": "/ar/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # أتمتة مقارنة المستندات باستخدام GroupDocs.Comparison .NET
 ## ابدء
 في عالم إدارة المستندات سريع الخطى اليوم، تُوفّر أتمتة مقارنة المستندات الوقت وتُقلّل الأخطاء مقارنةً بالطرق اليدوية. سيُوضّح لك هذا الدليل الشامل كيفية استخدام GroupDocs.Comparison لـ .NET لأتمتة هذه العملية بفعالية.

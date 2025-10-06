@@ -5,8 +5,8 @@
 "title": "تعيين الترخيص من الملف - مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # تعيين الترخيص من الملف - مقارنة GroupDocs لـ .NET
 
 ## مقدمة

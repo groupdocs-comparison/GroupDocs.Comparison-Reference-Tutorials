@@ -4,8 +4,8 @@
 "title": "Extrahera dokumentmetadata med GroupDocs.Comparison för Java – en omfattande guide"
 "url": "/sv/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Extrahera dokumentmetadata med GroupDocs.Comparison för Java
 
 I den digitala tidsåldern är det viktigt att hantera och analysera dokumentegenskaper inom olika sektorer, såsom juridiska, administrativa eller företagsmiljöer. Att förstå dina dokuments metadata kan öka produktiviteten avsevärt. Den här omfattande guiden guidar dig genom hur du använder GroupDocs.Comparison-biblioteket för att enkelt extrahera viktig information som filtyp, sidantal och storlek från dokument.

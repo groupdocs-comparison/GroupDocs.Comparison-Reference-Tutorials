@@ -5,8 +5,8 @@
 "title": "页面预览后清理资源"
 "url": "/zh/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # 页面预览后清理资源
 
 ## 介绍

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["File Comparison"]
 tags: ["excel", "dotnet", "groupdocs", "file-comparison", "csharp"]
+type: docs
 ---
-
 # Compare Excel Files in .NET
 
 ## Introduction

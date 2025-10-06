@@ -4,8 +4,8 @@
 "title": "Hướng dẫn hoàn chỉnh về GroupDocs.Comparison cho Java"
 "url": "/vi/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison cho Java – Hướng dẫn từng bước và Ví dụ về mã
 
 ## Học cách so sánh tài liệu trong Java – Nhanh chóng, chính xác và mạnh mẽ

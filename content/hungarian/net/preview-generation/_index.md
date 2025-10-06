@@ -3,8 +3,8 @@
 "title": "Előnézeti generálási oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Előnézeti generálási oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Tanulja meg, hogyan hozhat létre dokumentumok előnézeteit átfogó GroupDocs.Comparison oktatóanyagaink segítségével .NET fejlesztőknek. Ezek a gyakorlati útmutatók bemutatják, hogyan hozhat létre oldal előnézeteket forrásdokumentumokhoz, céldokumentumokhoz és összehasonlítási eredményekhez, hogyan szabhatja testre az előnézeti képek méretét, és hogyan valósíthat meg erőforrás-tisztítást az optimális memóriahasználat érdekében. Minden oktatóanyag részletes C# kódpéldákat tartalmaz a dokumentum-előnézeti funkciók hatékony megvalósításához az összehasonlító alkalmazásokban.

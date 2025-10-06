@@ -4,8 +4,8 @@
 "title": "Efektivní revize hlavních dokumentů s GroupDocs.Comparison .NET – Komplexní průvodce"
 "url": "/cs/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Zvládání revizí dokumentů pomocí GroupDocs.Comparison .NET: Podrobný průvodce
 
 ## Zavedení

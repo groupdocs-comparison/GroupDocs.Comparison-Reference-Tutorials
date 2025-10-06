@@ -5,8 +5,8 @@
 "title": "Ange specifika bildstorlekar för förhandsvisningar"
 "url": "/sv/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Ange specifika bildstorlekar för förhandsvisningar
 
 ## Introduktion

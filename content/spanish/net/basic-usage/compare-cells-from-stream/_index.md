@@ -5,8 +5,8 @@
 "title": "Comparar celdas de una secuencia - GroupDocs.Comparison para .NET"
 "url": "/es/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Comparar celdas de una secuencia - GroupDocs.Comparison para .NET
 
 ## Introducción

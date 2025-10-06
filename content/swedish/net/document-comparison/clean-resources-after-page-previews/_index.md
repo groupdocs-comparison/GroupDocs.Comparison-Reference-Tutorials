@@ -5,8 +5,8 @@
 "title": "Rensa resurser efter förhandsgranskningar av sidor"
 "url": "/sv/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Rensa resurser efter förhandsgranskningar av sidor
 
 ## Introduktion

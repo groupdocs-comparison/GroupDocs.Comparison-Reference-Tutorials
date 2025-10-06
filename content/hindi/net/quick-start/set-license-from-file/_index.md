@@ -5,8 +5,8 @@
 "title": "फ़ाइल से लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना"
 "url": "/hi/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # फ़ाइल से लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Καθαροί πόροι μετά τις προεπισκοπήσεις σελίδας"
 "url": "/el/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Καθαροί πόροι μετά τις προεπισκοπήσεις σελίδας
 
 ## Εισαγωγή

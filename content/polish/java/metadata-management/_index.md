@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące zarządzania metadanymi dokumentów dla GroupDocs.Comparison Java"
 "url": "/pl/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Samouczki dotyczące zarządzania metadanymi dokumentów dla GroupDocs.Comparison Java
 
 Nasze samouczki dotyczące zarządzania metadanymi pokazują, jak kontrolować właściwości dokumentu podczas porównywania dokumentów za pomocą GroupDocs.Comparison w Javie. Te przewodniki krok po kroku obejmują ustawianie źródeł metadanych, definiowanie niestandardowych metadanych dla wynikowych dokumentów i wdrażanie zasad przechowywania metadanych. Każdy samouczek zawiera praktyczne przykłady kodu Java dla typowych scenariuszy zarządzania metadanymi, pomagając w tworzeniu aplikacji, które utrzymują odpowiednie właściwości dokumentu w całym procesie porównywania.

@@ -5,8 +5,8 @@
 "title": "경로에서 이미지 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # 경로에서 이미지 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

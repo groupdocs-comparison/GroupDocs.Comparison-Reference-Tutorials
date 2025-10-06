@@ -5,8 +5,8 @@
 "title": "Imposta dimensioni specifiche delle immagini per le anteprime"
 "url": "/it/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Imposta dimensioni specifiche delle immagini per le anteprime
 
 ## Introduzione

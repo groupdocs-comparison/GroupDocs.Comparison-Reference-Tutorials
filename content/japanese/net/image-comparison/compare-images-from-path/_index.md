@@ -5,8 +5,8 @@
 "title": "パスから画像を比較する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # パスから画像を比較する - GroupDocs.Comparison for .NET
 
 ## 導入

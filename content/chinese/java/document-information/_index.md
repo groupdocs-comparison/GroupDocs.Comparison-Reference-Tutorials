@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 文档信息教程"
 "url": "/zh/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # GroupDocs.Comparison Java 文档信息教程
 
 我们的文档信息教程提供了使用 Java 中的 GroupDocs.Comparison 访问文档元数据的指导。这些实用指南将向您展示如何检索源文档、目标文档和结果文档的信息、确定文件格式以及如何以编程方式访问文档属性。每个教程都包含针对常见文档信息场景的 Java 代码示例，帮助您构建能够有效分析和处理文档数据的应用程序。

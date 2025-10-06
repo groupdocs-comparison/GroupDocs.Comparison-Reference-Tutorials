@@ -4,8 +4,8 @@
 "title": "Come estrarre informazioni sui documenti utilizzando GroupDocs.Comparison per .NET&#58; una guida completa"
 "url": "/it/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Come estrarre informazioni da un documento utilizzando GroupDocs.Comparison per .NET: una guida passo passo
 
 ## Introduzione

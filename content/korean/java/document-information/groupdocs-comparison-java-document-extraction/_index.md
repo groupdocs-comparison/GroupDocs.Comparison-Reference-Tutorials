@@ -4,8 +4,8 @@
 "title": "Java에서 GroupDocs를 사용하여 마스터 문서 메타데이터 추출"
 "url": "/ko/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Java에서 GroupDocs를 사용하여 문서 메타데이터 추출 마스터하기
 
 오늘날의 디지털 환경에서는 모든 산업 분야의 기업에 문서에서 정보를 효율적으로 관리하고 추출하는 것이 매우 중요합니다. 법적 계약서, 학술 논문, 재무 보고서 등 어떤 문서를 다루든 파일 유형, 페이지 수, 크기 등의 문서 메타데이터를 이해하면 워크플로를 간소화하고 데이터 분석을 향상시킬 수 있습니다. 이 튜토리얼에서는 Java에서 GroupDocs.Comparison을 사용하여 입력 스트림과 파일 경로를 통해 중요한 문서 정보를 추출하는 방법을 안내합니다.

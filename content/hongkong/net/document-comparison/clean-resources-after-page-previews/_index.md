@@ -5,8 +5,8 @@
 "title": "頁面預覽後清理資源"
 "url": "/zh-hant/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # 頁面預覽後清理資源
 
 ## 介紹

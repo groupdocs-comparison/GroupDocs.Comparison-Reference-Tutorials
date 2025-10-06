@@ -5,8 +5,8 @@
 "title": "Imposta licenza da Stream - Confronto GroupDocs per .NET"
 "url": "/it/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Imposta licenza da Stream - Confronto GroupDocs per .NET
 
 ## Introduzione

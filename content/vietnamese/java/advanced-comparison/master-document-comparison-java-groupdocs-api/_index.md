@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong Java với GroupDocs.Comparison API"
 "url": "/vi/java/advanced-comparison/master-document-comparison-java-groupdocs-api/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu và quản lý tín dụng trong Java với API GroupDocs.Comparison
 
 Trong môi trường kinh doanh phát triển nhanh như hiện nay, việc quản lý tài liệu hiệu quả và theo dõi việc sử dụng tài nguyên là rất quan trọng. Cho dù bạn đang so sánh các hợp đồng pháp lý, biên tập hướng dẫn kỹ thuật hay chỉ theo dõi tín dụng sử dụng phần mềm của mình, các công cụ phù hợp có thể tạo ra sự khác biệt đáng kể. Trong hướng dẫn này, chúng ta sẽ khám phá cách khai thác sức mạnh của GroupDocs.Comparison for Java để so sánh tài liệu một cách liền mạch và theo dõi mức tiêu thụ tín dụng.

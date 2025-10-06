@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 Stream에서 문서 로드"
 "url": "/ko/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 Stream에서 문서 로드
 
 ## 소개

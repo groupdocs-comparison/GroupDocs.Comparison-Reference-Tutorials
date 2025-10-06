@@ -5,8 +5,8 @@
 "title": "Nastavení konkrétních velikostí obrázků pro náhledy"
 "url": "/cs/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Nastavení konkrétních velikostí obrázků pro náhledy
 
 ## Zavedení

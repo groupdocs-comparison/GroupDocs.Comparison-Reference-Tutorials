@@ -4,8 +4,8 @@
 "title": "تعيين بيانات تعريفية مخصصة في مستندات Java باستخدام GroupDocs.Comparison - دليل خطوة بخطوة"
 "url": "/ar/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # تعيين بيانات تعريفية مخصصة في مستندات Java باستخدام GroupDocs.Comparison: دليل خطوة بخطوة
 
 ## مقدمة

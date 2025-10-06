@@ -4,8 +4,8 @@
 "title": "Αυτοματοποιήστε τη σύγκριση εγγράφων του Word χρησιμοποιώντας το GroupDocs.Comparison .NET™ Ένα πλήρες σεμινάριο"
 "url": "/el/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Αυτοματοποίηση σύγκρισης εγγράφων Word χρησιμοποιώντας το GroupDocs.Comparison .NET: Ένα πλήρες σεμινάριο
 
 ## Εισαγωγή

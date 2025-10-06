@@ -5,8 +5,8 @@
 "title": "Ställa in lösenord för resulterande dokument i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Ställa in lösenord för resulterande dokument i GroupDocs-jämförelse för .NET
 
 ## Introduktion

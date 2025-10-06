@@ -4,8 +4,8 @@
 "title": "Aangepaste metagegevens instellen in Java-documenten met behulp van GroupDocs.Comparison&#58; een stapsgewijze handleiding"
 "url": "/nl/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Aangepaste metagegevens instellen in Java-documenten met behulp van GroupDocs.Comparison: een stapsgewijze handleiding
 
 ## Invoering

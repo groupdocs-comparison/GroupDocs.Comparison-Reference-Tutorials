@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 스트림에서 Word 파일에 대한 .NET 문서 비교 구현"
 "url": "/ko/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison을 사용하여 Stream에서 문서 비교를 구현하는 방법
 
 ## 소개

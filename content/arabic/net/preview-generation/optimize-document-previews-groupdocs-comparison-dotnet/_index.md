@@ -4,8 +4,8 @@
 "title": "إنشاء معاينات المستندات وتحسينها باستخدام GroupDocs.Comparison .NET API"
 "url": "/ar/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # إنشاء معاينات المستندات وتحسينها باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

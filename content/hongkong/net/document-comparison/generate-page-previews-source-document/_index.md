@@ -5,8 +5,8 @@
 "title": "產生來源文件的頁面預覽"
 "url": "/zh-hant/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # 產生來源文件的頁面預覽
 
 ## 介紹

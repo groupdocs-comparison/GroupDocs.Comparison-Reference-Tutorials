@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Getting Started"]
 tags: ["quickstart", "license", "setup", "integration"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET Quick Start Guide
 
 ## Why Choose GroupDocs Comparison for Your .NET Projects?

@@ -5,8 +5,8 @@
 "title": "加载和保存文档"
 "url": "/zh/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # 加载和保存文档
 
 ## 介绍

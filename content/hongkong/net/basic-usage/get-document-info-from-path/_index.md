@@ -5,8 +5,8 @@
 "title": "從路徑取得文件資訊 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # 從路徑取得文件資訊 - GroupDocs.Comparison for .NET
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "كيفية تعيين بيانات تعريفية مُعرّفة من قِبل المستخدم في المستندات باستخدام GroupDocs.Comparison لـ .NET | دليل إدارة المستندات"
 "url": "/ar/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تعيين البيانات التعريفية المحددة من قبل المستخدم في المستندات باستخدام GroupDocs.Comparison لـ .NET
 
 ## مقدمة

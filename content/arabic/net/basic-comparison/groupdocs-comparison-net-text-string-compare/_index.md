@@ -4,8 +4,8 @@
 "title": "مقارنة سلسلة نصية رئيسية في .NET باستخدام مكتبة GroupDocs.Comparison"
 "url": "/ar/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # مقارنة سلسلة نصية رئيسية في .NET باستخدام مكتبة GroupDocs.Comparison
 
 ## مقدمة

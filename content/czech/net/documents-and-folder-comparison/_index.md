@@ -5,8 +5,8 @@
 "title": "Porovnání dokumentů a složek"
 "url": "/cs/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Porovnání dokumentů a složek
 
 ## Zavedení

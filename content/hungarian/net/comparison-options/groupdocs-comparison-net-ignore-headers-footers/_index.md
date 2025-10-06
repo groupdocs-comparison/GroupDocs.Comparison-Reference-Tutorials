@@ -4,8 +4,8 @@
 "title": "Fejlécek és láblécek figyelmen kívül hagyása DOC-összehasonlításokban a GroupDocs.Comparison .NET használatával"
 "url": "/hu/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Fejlécek és láblécek figyelmen kívül hagyása dokumentum-összehasonlításokban a GroupDocs.Comparison .NET segítségével
 
 ## Bevezetés

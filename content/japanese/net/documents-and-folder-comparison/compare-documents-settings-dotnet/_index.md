@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET のドキュメント比較設定"
 "url": "/ja/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs Comparison for .NET のドキュメント比較設定
 
 ## 導入

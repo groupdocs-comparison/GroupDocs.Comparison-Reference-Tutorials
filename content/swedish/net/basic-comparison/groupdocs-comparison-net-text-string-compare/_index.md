@@ -4,8 +4,8 @@
 "title": "Jämförelse av huvudtextsträngar i .NET med hjälp av GroupDocs.Comparison-biblioteket"
 "url": "/sv/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Jämförelse av huvudtextsträngar i .NET med hjälp av GroupDocs.Comparison-biblioteket
 
 ## Introduktion

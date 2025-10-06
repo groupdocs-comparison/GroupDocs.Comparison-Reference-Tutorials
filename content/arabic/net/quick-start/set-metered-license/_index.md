@@ -5,8 +5,8 @@
 "title": "تعيين ترخيص مقنن - مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # تعيين ترخيص مقنن - مقارنة GroupDocs لـ .NET
 
 ## مقدمة

@@ -5,8 +5,8 @@
 "title": "画像比較"
 "url": "/ja/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # 画像比較
 
 

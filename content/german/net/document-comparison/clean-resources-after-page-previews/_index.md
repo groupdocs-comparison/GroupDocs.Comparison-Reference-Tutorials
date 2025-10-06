@@ -5,8 +5,8 @@
 "title": "Ressourcen nach Seitenvorschauen bereinigen"
 "url": "/de/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Ressourcen nach Seitenvorschauen bereinigen
 
 ## Einführung

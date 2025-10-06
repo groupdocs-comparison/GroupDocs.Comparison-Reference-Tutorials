@@ -5,8 +5,8 @@
 "title": "从路径获取文档信息 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # 从路径获取文档信息 - GroupDocs.Comparison for .NET
 
 ## 介绍

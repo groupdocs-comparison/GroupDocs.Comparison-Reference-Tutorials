@@ -5,8 +5,8 @@
 "title": ".NET के लिए GroupDocs तुलना में स्ट्रीम से दस्तावेज़ लोड करना"
 "url": "/hi/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # .NET के लिए GroupDocs तुलना में स्ट्रीम से दस्तावेज़ लोड करना
 
 ## परिचय

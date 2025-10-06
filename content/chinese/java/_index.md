@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Java 完整教程指南"
 "url": "/zh/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for Java – 分步教程和代码示例
 
 ## 学习 Java 中的文档比较——快速、准确、强大

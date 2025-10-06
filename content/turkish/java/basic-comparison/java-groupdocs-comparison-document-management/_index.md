@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kullanarak Java Belge Karşılaştırması ve Sayfa Önizlemeleri"
 "url": "/tr/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java Belge Karşılaştırmasında Uzmanlaşma
 
 **Verimli Belge Yönetiminin Kilidini Açın: Java'da GroupDocs.Comparison Kullanımına İlişkin Kapsamlı Bir Kılavuz**

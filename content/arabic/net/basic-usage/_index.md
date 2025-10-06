@@ -5,8 +5,8 @@
 "title": "الاستخدام الأساسي"
 "url": "/ar/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # الاستخدام الأساسي
 
 ## مقدمة

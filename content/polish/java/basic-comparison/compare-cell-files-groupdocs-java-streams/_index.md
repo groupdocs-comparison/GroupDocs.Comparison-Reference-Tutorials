@@ -4,8 +4,8 @@
 "title": "Jak porównywać pliki komórek za pomocą GroupDocs.Comparison w Javie? Kompleksowy przewodnik"
 "url": "/pl/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Jak porównywać pliki komórek za pomocą GroupDocs.Comparison w Javie
 
 ## Wstęp

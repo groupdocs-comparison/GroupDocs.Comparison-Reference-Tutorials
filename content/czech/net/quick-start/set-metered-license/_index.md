@@ -5,8 +5,8 @@
 "title": "Nastavení měřené licence - porovnání GroupDocs pro .NET"
 "url": "/cs/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Nastavení měřené licence - porovnání GroupDocs pro .NET
 
 ## Zavedení

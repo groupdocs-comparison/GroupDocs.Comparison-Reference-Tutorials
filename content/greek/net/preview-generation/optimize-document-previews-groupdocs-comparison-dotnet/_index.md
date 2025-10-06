@@ -4,8 +4,8 @@
 "title": "Δημιουργία και βελτιστοποίηση προεπισκοπήσεων εγγράφων με το GroupDocs.Comparison .NET API"
 "url": "/el/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Δημιουργήστε και βελτιστοποιήστε τις προεπισκοπήσεις εγγράφων με το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

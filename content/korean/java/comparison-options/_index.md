@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 비교 옵션 및 설정 튜토리얼"
 "url": "/ko/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 비교 옵션 및 설정 튜토리얼
 
 Java용 GroupDocs.Comparison 옵션 튜토리얼을 통해 문서 비교를 세부적으로 조정하는 방법을 알아보세요. 이 상세한 가이드는 비교 민감도 설정, 변경 감지 알고리즘 사용자 지정, 다양한 변경 유형에 대한 표시 환경 설정, 그리고 특수 비교 규칙 구현 방법을 보여줍니다. 각 튜토리얼에는 사용자 지정 비교 옵션을 구현하는 데 필요한 Java 코드 예제가 포함되어 있어, 특정 문서 분석 요구 사항에 맞춰 정확하게 맞춤 설정할 수 있는 비교 애플리케이션을 구축하는 데 도움이 됩니다.

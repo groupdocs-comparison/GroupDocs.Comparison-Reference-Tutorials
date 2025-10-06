@@ -5,8 +5,8 @@
 "title": "Metered License instellen - GroupDocs-vergelijking voor .NET"
 "url": "/nl/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Metered License instellen - GroupDocs-vergelijking voor .NET
 
 ## Invoering

@@ -5,8 +5,8 @@
 "title": "Configuración de contraseña para el documento resultante en GroupDocs Comparación para .NET"
 "url": "/es/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Configuración de contraseña para el documento resultante en GroupDocs Comparación para .NET
 
 ## Introducción

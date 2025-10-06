@@ -4,8 +4,8 @@
 "title": "Cách so sánh hình ảnh không có trang tóm tắt bằng GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách triển khai so sánh hình ảnh mà không cần trang tóm tắt bằng cách sử dụng GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

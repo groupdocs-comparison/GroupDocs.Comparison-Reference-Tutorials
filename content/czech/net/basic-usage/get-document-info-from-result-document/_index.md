@@ -5,8 +5,8 @@
 "title": "Získání informací o dokumentu z výsledného dokumentu - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Získání informací o dokumentu z výsledného dokumentu - GroupDocs.Comparison pro .NET
 
 ## Zavedení

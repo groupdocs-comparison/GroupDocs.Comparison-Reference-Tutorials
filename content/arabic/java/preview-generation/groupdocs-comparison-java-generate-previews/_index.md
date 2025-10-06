@@ -4,8 +4,8 @@
 "title": "إتقان GroupDocs.Comparison لإنشاء معاينة سهلة للمستندات بلغة Java"
 "url": "/ar/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # إتقان GroupDocs.Comparison لـ Java: إنشاء معاينة للمستندات بسهولة
 
 ## مقدمة

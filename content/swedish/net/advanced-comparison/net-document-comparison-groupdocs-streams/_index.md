@@ -4,8 +4,8 @@
 "title": "Automatisera dokumentjämförelse i .NET med hjälp av GroupDocs.Comparison-strömmar"
 "url": "/sv/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Automatisera dokumentjämförelse i .NET med hjälp av GroupDocs.Comparison-strömmar
 ## Introduktion
 Letar du efter ett effektivt sätt att automatisera dokumentjämförelse? Den här handledningen visar hur man jämför dokument med hjälp av strömmar i en .NET-miljö med GroupDocs.Comparison för .NET. Genom att använda filströmmar erbjuder denna metod flexibilitet och effektivitet, särskilt när man hanterar stora filer eller nätverksbaserade resurser.

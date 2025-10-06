@@ -4,8 +4,8 @@
 "title": "Установка пользовательских метаданных в документах Java с помощью GroupDocs.Comparison&#58; Пошаговое руководство"
 "url": "/ru/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Установка пользовательских метаданных в документах Java с помощью GroupDocs.Comparison: пошаговое руководство
 
 ## Введение

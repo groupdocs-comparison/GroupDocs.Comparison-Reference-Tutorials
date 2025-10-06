@@ -5,8 +5,8 @@
 "title": "Ορισμός Άδειας Χρήσης από το Stream - Σύγκριση GroupDocs για .NET"
 "url": "/el/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Ορισμός Άδειας Χρήσης από το Stream - Σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

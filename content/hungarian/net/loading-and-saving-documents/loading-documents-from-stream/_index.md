@@ -5,8 +5,8 @@
 "title": "Dokumentumok betöltése a streamből a GroupDocs Comparison for .NET-ben"
 "url": "/hu/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Dokumentumok betöltése a streamből a GroupDocs Comparison for .NET-ben
 
 ## Bevezetés

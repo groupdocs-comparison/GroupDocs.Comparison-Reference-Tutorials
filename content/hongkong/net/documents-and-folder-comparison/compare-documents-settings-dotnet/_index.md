@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比較中比較 .NET 的文件設置"
 "url": "/zh-hant/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # 在 GroupDocs 比較中比較 .NET 的文件設置
 
 ## 介紹

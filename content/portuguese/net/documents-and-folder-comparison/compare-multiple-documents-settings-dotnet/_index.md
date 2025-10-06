@@ -5,8 +5,8 @@
 "title": "Comparar configurações de vários documentos no GroupDocs Comparison para .NET"
 "url": "/pt/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # Comparar configurações de vários documentos no GroupDocs Comparison para .NET
 
 ## Introdução

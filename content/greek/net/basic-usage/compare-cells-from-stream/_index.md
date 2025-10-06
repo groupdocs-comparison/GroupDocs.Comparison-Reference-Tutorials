@@ -5,8 +5,8 @@
 "title": "Σύγκριση κελιών από τη ροή - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Σύγκριση κελιών από τη ροή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Security"]
 tags: ["security", "password-protection", "document-comparison", "net"]
+type: docs
 ---
-
 # Document Security Comparison .NET - Complete Protection Guide
 
 When you're dealing with sensitive documents in your .NET applications, security isn't just a nice-to-have—it's absolutely essential. Whether you're comparing confidential contracts, financial reports, or proprietary documentation, you need robust security measures that don't compromise functionality.

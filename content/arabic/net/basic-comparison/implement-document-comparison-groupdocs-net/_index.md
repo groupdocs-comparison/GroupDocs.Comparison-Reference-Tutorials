@@ -4,8 +4,8 @@
 "title": "كيفية تنفيذ مقارنة المستندات في .NET باستخدام GroupDocs.Comparison - دليل خطوة بخطوة"
 "url": "/ar/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة المستندات في .NET باستخدام GroupDocs.Comparison: دليل خطوة بخطوة
 
 ## مقدمة

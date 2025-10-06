@@ -4,8 +4,8 @@
 "title": "Jak porovnat více dokumentů chráněných heslem v .NET pomocí GroupDocs.Comparison"
 "url": "/cs/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnat více dokumentů chráněných heslem v .NET pomocí GroupDocs.Comparison
 
 ## Zavedení

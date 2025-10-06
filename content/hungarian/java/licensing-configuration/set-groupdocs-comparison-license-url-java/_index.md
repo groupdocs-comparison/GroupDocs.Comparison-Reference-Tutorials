@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison licenc beállítása URL-en keresztül Java-ban – A licencelés automatizálásának egyszerűsítése"
 "url": "/hu/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Java elsajátítása: Licenc beállítása URL-en keresztül
 
 ## Bevezetés

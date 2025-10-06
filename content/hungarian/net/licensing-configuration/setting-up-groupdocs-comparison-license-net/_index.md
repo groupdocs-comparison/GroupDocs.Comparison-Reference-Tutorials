@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison licenc beállítása .NET-ben – lépésről lépésre útmutató"
 "url": "/hu/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison licenc beállítása .NET-ben
 
 ## Bevezetés

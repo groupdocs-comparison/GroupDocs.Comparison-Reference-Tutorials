@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 比較資料夾並將結果儲存為 TXT/HTML"
 "url": "/zh-hant/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 實作資料夾比較並將結果儲存為 TXT/HTML
 
 ## 介紹

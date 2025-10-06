@@ -4,8 +4,8 @@
 "title": "Jak zobrazit seznam všech podporovaných formátů souborů v GroupDocs.Comparison pro .NET"
 "url": "/cs/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Jak zobrazit seznam všech podporovaných formátů souborů v GroupDocs.Comparison pro .NET
 
 ## Zavedení

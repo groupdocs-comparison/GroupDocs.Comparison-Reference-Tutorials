@@ -5,8 +5,8 @@
 "title": "Jämför celler från ström - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Jämför celler från ström - GroupDocs.Comparison för .NET
 
 ## Introduktion

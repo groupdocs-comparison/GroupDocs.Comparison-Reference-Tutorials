@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET 比较 Excel 文件——全面的分步指南"
 "url": "/zh/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 比较 Excel 文件：全面的分步指南
 ## 介绍
 在这个日益依赖数据的世界里，比较不同版本的 Excel 文件对企业和个人都至关重要。无论您是跟踪财务报告的变化还是管理项目更新，如果没有合适的工具，这项任务都可能非常耗时。GroupDocs.Comparison for .NET 是一款功能强大的库，可以精确地简化此过程。

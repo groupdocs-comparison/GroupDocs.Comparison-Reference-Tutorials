@@ -4,8 +4,8 @@
 "title": "Jak ustawić licencję z pliku w GroupDocs.Comparison dla Java&#58; Kompleksowy przewodnik"
 "url": "/pl/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementacja Ustaw Licencję z Pliku w GroupDocs.Comparison dla Java
 
 ## Wstęp

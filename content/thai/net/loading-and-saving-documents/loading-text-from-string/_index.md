@@ -5,8 +5,8 @@
 "title": "การโหลดข้อความจากสตริงใน GroupDocs การเปรียบเทียบสำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # การโหลดข้อความจากสตริงใน GroupDocs การเปรียบเทียบสำหรับ .NET
 
 ## การแนะนำ

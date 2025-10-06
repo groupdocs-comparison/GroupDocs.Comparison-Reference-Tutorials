@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison for .NET 追蹤信用消耗—綜合指南"
 "url": "/zh-hant/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison for .NET 追蹤信用消耗：綜合指南
 
 ## 介紹

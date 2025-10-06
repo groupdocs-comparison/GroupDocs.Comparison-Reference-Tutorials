@@ -3,8 +3,8 @@
 "title": "Výukové programy pro licencování a konfiguraci GroupDocs.Comparison v Javě"
 "url": "/cs/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Výukové programy pro licencování a konfiguraci GroupDocs.Comparison v Javě
 
 Naše návody k licencování a konfiguraci poskytují základní pokyny pro správné nastavení GroupDocs.Comparison v aplikacích Java. Tyto podrobné návody vám ukážou, jak implementovat různé možnosti licencování, konfigurovat fakturaci podle měření, kontrolovat stav licence a optimalizovat nastavení knihovny pro vaše specifické požadavky. Každý návod obsahuje podrobné příklady kódu Java pro správnou inicializaci a konfiguraci, které vám pomohou vytvořit správně licencovaná a optimalizovaná řešení pro porovnávání dokumentů.

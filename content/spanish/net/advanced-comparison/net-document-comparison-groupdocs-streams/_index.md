@@ -4,8 +4,8 @@
 "title": "Automatizar la comparación de documentos en .NET mediante flujos GroupDocs.Comparison"
 "url": "/es/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Automatizar la comparación de documentos en .NET mediante flujos GroupDocs.Comparison
 ## Introducción
 ¿Busca una forma eficiente de automatizar la comparación de documentos? Este tutorial muestra cómo comparar documentos mediante secuencias en un entorno .NET con GroupDocs.Comparison para .NET. Al utilizar secuencias de archivos, este enfoque ofrece flexibilidad y eficiencia, especialmente al trabajar con archivos grandes o recursos de red.

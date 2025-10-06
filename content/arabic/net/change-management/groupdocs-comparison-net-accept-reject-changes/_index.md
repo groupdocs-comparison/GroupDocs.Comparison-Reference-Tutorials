@@ -4,8 +4,8 @@
 "title": "إدارة تغيير المستندات الرئيسية - قبول ورفض التعديلات باستخدام GroupDocs.Comparison .NET"
 "url": "/ar/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # إدارة تغيير المستندات الرئيسية باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

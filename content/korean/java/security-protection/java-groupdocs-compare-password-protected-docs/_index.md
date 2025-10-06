@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 Java에서 암호로 보호된 문서 비교 마스터하기"
 "url": "/ko/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java에서 암호로 보호된 문서 비교 마스터하기
 
 ## 소개

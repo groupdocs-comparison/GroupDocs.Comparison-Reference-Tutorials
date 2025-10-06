@@ -5,8 +5,8 @@
 "title": "Documenten laden in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Documenten laden in GroupDocs Vergelijking voor .NET
 
 ## Invoering

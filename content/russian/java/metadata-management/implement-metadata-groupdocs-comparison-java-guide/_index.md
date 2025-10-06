@@ -4,8 +4,8 @@
 "title": "Реализация метаданных документа с помощью GroupDocs.Comparison в Java – полное руководство"
 "url": "/ru/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Реализация метаданных документа с помощью GroupDocs.Comparison в Java: полное руководство
 
 ## Введение

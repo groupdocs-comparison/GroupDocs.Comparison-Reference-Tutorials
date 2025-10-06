@@ -5,8 +5,8 @@
 "title": "Načítání a ukládání dokumentů"
 "url": "/cs/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Načítání a ukládání dokumentů
 
 ## Zavedení

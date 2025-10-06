@@ -4,8 +4,8 @@
 "title": "Cách bỏ qua tiêu đề và chân trang trong so sánh DOC bằng GroupDocs.Comparison .NET"
 "url": "/vi/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Cách bỏ qua tiêu đề và chân trang trong so sánh tài liệu với GroupDocs.Comparison .NET
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Wachtwoordbeveiligde Word-documenten vergelijken met GroupDocs.Comparison voor Java"
 "url": "/nl/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking onder de knie krijgen: een handleiding voor het vergelijken van wachtwoordbeveiligde Word-documenten met GroupDocs.Comparison voor Java
 
 ## Invoering

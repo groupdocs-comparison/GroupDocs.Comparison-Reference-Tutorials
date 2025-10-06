@@ -5,8 +5,8 @@
 "title": "Samouczki i przykłady GroupDocs.Comparison dla .NET"
 "url": "/pl/net/"
 "weight": 10
+type: docs
 ---
-
 # Samouczki i przykłady GroupDocs.Comparison dla .NET
 
 ## Wstęp

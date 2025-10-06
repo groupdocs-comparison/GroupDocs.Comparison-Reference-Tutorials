@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 기본 문서 비교 튜토리얼"
 "url": "/ko/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 기본 문서 비교 튜토리얼
 
 GroupDocs.Comparison의 상세한 Java 튜토리얼을 통해 기본 문서 비교를 마스터하세요. 이 단계별 가이드는 Word, PDF, Excel, 이미지 등 다양한 형식의 문서를 비교하는 방법을 보여줍니다. 각 튜토리얼에는 문서 간 차이점을 파악하고, 비교 보고서를 생성하고, 다양한 문서 유형에 대한 비교 작업을 구현하는 방법을 보여주는 Java 코드 예제가 포함되어 있습니다.

@@ -4,8 +4,8 @@
 "title": "Αυτοματοποίηση σύγκρισης πολλαπλών εγγράφων στο .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison"
 "url": "/el/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση πολλαπλών εγγράφων στο .NET με το GroupDocs.Comparison
 
 ## Εισαγωγή

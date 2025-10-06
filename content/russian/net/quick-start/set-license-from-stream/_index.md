@@ -5,8 +5,8 @@
 "title": "Установить лицензию из потока - Сравнение GroupDocs для .NET"
 "url": "/ru/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Установить лицензию из потока - Сравнение GroupDocs для .NET
 
 ## Введение

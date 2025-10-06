@@ -4,8 +4,8 @@
 "title": "Menerapkan Perbandingan Dokumen di Java Menggunakan GroupDocs&#58; Panduan Lengkap"
 "url": "/id/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Perbandingan Dokumen di Java dengan GroupDocs: Panduan Lengkap
 
 ## Perkenalan

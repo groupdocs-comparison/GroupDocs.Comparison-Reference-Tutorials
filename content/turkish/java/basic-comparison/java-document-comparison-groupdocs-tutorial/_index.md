@@ -4,8 +4,8 @@
 "title": "GroupDocs Kullanarak Java'da Belge Karşılaştırmasını Uygulama - Kapsamlı Bir Kılavuz"
 "url": "/tr/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs ile Java'da Belge Karşılaştırmasını Uygulama: Kapsamlı Bir Kılavuz
 
 ## giriiş

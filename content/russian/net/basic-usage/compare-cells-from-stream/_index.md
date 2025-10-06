@@ -5,8 +5,8 @@
 "title": "Сравнение ячеек из потока - GroupDocs.Comparison для .NET"
 "url": "/ru/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Сравнение ячеек из потока - GroupDocs.Comparison для .NET
 
 ## Введение

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Samouczki wprowadzające dla programistów .NET"
 "url": "/pl/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Samouczki wprowadzające dla programistów .NET
 
 Rozpocznij swoją podróż od tych niezbędnych samouczków GroupDocs.Comparison, które przeprowadzą Cię przez instalację, konfigurację licencjonowania i tworzenie pierwszych porównań dokumentów w .NET. Nasze przyjazne dla początkujących przewodniki pokazują, jak skonfigurować środowisko programistyczne, zainicjować bibliotekę GroupDocs.Comparison i wykonać podstawowe operacje porównania. Skorzystaj z tych samouczków, aby szybko opanować podstawy i przygotować się do bardziej zaawansowanych zadań porównywania dokumentów w aplikacjach .NET.

@@ -4,8 +4,8 @@
 "title": "Excel fájlok összehasonlítása .NET-ben a GroupDocs.Comparison könyvtár használatával"
 "url": "/hu/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Excel fájlok összehasonlítása .NET-ben a GroupDocs.Comparison könyvtár használatával
 
 ## Bevezetés

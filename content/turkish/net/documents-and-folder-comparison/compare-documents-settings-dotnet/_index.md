@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Belge Ayarlarını Karşılaştırın"
 "url": "/tr/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Belge Ayarlarını Karşılaştırın
 
 ## giriiş

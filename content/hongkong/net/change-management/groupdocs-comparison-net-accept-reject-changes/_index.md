@@ -4,8 +4,8 @@
 "title": "掌握文件變更管理&#58;使用 GroupDocs.Comparison .NET 接受與拒絕編輯"
 "url": "/zh-hant/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 掌握文件變更管理
 
 ## 介紹

@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में उपयोगकर्ता परिभाषित दस्तावेज़ मेटाडेटा सहेजना"
 "url": "/hi/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में उपयोगकर्ता परिभाषित दस्तावेज़ मेटाडेटा सहेजना
 
 ## परिचय

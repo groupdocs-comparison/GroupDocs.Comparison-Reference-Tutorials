@@ -4,8 +4,8 @@
 "title": "Como comparar pastas e salvar resultados como TXT/HTML usando GroupDocs.Comparison .NET"
 "url": "/pt/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Como implementar a comparação de pastas e salvar resultados como TXT/HTML com GroupDocs.Comparison .NET
 
 ## Introdução

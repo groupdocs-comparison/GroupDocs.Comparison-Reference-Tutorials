@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58;te Ölçülü Lisans Nasıl Kurulur Adım Adım Kılavuz"
 "url": "/tr/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET'te Ölçülü Lisans Nasıl Kurulur: Adım Adım Kılavuz
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "أتمتة مقارنة المستندات في .NET باستخدام GroupDocs.Comparison Streams"
 "url": "/ar/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # أتمتة مقارنة المستندات في .NET باستخدام GroupDocs.Comparison Streams
 ## مقدمة
 هل تبحث عن طريقة فعّالة لأتمتة مقارنة المستندات؟ يوضح هذا البرنامج التعليمي كيفية مقارنة المستندات باستخدام تدفقات الملفات في بيئة .NET باستخدام GroupDocs.Comparison لـ .NET. باستخدام تدفقات الملفات، يوفر هذا النهج مرونة وكفاءة، خاصةً عند التعامل مع الملفات الكبيرة أو موارد الشبكة.

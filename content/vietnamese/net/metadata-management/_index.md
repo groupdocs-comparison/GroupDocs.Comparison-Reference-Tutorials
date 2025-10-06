@@ -3,8 +3,8 @@
 "title": "Hướng dẫn quản lý siêu dữ liệu tài liệu cho GroupDocs.Comparison .NET"
 "url": "/vi/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Hướng dẫn quản lý siêu dữ liệu tài liệu cho GroupDocs.Comparison .NET
 
 Hướng dẫn quản lý siêu dữ liệu của chúng tôi sẽ chỉ cho bạn cách kiểm soát các thuộc tính tài liệu khi so sánh các tài liệu với GroupDocs.Comparison trong .NET. Các hướng dẫn từng bước này bao gồm thiết lập các nguồn siêu dữ liệu, xác định siêu dữ liệu tùy chỉnh cho các tài liệu kết quả và triển khai các chính sách lưu giữ siêu dữ liệu. Mỗi hướng dẫn đều bao gồm các ví dụ mã C# thực tế cho các tình huống quản lý siêu dữ liệu phổ biến, giúp bạn xây dựng các ứng dụng duy trì các thuộc tính tài liệu phù hợp trong suốt quá trình so sánh.

@@ -4,8 +4,8 @@
 "title": "So vergleichen Sie Bilder ohne Übersichtsseite mit GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # So implementieren Sie einen Bildvergleich ohne Übersichtsseite mit GroupDocs.Comparison für .NET
 
 ## Einführung

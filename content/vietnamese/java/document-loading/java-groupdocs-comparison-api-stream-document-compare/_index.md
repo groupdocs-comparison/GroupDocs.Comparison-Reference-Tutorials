@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu Java bằng API GroupDocs.Comparison - Một phương pháp tiếp cận dựa trên luồng"
 "url": "/vi/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ Java: So sánh tài liệu với API GroupDocs.Comparison
 
 Chào mừng bạn đến với hướng dẫn toàn diện này, nơi chúng ta khám phá việc so sánh tài liệu trong Java bằng API GroupDocs.Comparison mạnh mẽ. Cho dù bạn đang quản lý các tài liệu pháp lý, bài báo học thuật hay bất kỳ tệp văn bản nào khác, việc so sánh chúng một cách hiệu quả là rất quan trọng. Trong hướng dẫn này, chúng ta sẽ hướng dẫn cách chấp nhận hoặc từ chối các thay đổi được phát hiện giữa hai tài liệu bằng cách sử dụng luồng trong Java.

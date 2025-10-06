@@ -5,8 +5,8 @@
 "title": "Változtatások elfogadása és elutasítása a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Változtatások elfogadása és elutasítása a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

@@ -4,8 +4,8 @@
 "title": ".NET'te GroupDocs.Comparison Lisansı Nasıl Kurulur&#58; Adım Adım Kılavuz"
 "url": "/tr/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET'te GroupDocs.Comparison Lisansı Nasıl Kurulur
 
 ## giriiş

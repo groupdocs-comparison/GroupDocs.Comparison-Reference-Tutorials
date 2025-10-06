@@ -4,8 +4,8 @@
 "title": "Beszúrt elemek stílusainak testreszabása Java dokumentum-összehasonlításokban a GroupDocs.Comparison segítségével"
 "url": "/hu/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Beszúrt elemek stílusainak testreszabása Java dokumentum-összehasonlításokban a GroupDocs.Comparison használatával
 
 ## Bevezetés

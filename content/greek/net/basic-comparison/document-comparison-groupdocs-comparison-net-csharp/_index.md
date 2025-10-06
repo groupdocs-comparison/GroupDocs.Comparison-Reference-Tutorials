@@ -4,8 +4,8 @@
 "title": "Υλοποίηση σύγκρισης εγγράφων σε .NET χρησιμοποιώντας το GroupDocs.Comparison για αρχεία Word από ροές"
 "url": "/el/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση εγγράφων από τη ροή με το GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

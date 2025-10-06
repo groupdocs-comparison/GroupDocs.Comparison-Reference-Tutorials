@@ -5,8 +5,8 @@
 "title": "Αποκτήστε Υποστηριζόμενες Μορφές - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Αποκτήστε Υποστηριζόμενες Μορφές - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

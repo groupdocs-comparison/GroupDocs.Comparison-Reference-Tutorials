@@ -3,8 +3,8 @@
 "title": "Tutoriais básicos de comparação de documentos para GroupDocs.Comparison Java"
 "url": "/pt/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Tutoriais básicos de comparação de documentos para GroupDocs.Comparison Java
 
 Domine a comparação básica de documentos com nossos tutoriais detalhados de Java do GroupDocs.Comparison. Estes guias passo a passo demonstram como comparar documentos de vários formatos, incluindo Word, PDF, Excel e imagens. Cada tutorial inclui exemplos práticos de código Java que mostram como identificar diferenças entre documentos, gerar relatórios de comparação e implementar operações de comparação para diferentes tipos de documentos.

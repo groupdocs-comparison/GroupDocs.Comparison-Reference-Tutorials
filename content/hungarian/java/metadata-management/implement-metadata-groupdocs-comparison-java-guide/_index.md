@@ -4,8 +4,8 @@
 "title": "Dokumentum metaadatok implementálása GroupDocs.Comparison segítségével Java nyelven – Teljes körű útmutató"
 "url": "/hu/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentummetaadatok implementálása GroupDocs.Comparison segítségével Java-ban: Teljes körű útmutató
 
 ## Bevezetés

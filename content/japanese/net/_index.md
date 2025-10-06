@@ -5,8 +5,8 @@
 "title": "GroupDocs.Comparison for .NET のチュートリアルと例"
 "url": "/ja/net/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET のチュートリアルと例
 
 ## 導入

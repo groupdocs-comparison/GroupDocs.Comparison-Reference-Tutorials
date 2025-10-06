@@ -5,8 +5,8 @@
 "title": "การโหลดเอกสารใน GroupDocs การเปรียบเทียบสำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # การโหลดเอกสารใน GroupDocs การเปรียบเทียบสำหรับ .NET
 
 ## การแนะนำ

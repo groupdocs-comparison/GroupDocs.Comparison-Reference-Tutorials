@@ -4,8 +4,8 @@
 "title": "Hogyan állítsunk be egy felszámított licencet a GroupDocs.Comparison .NET-ben? Lépésről lépésre útmutató"
 "url": "/hu/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Mért licenc beállítása a GroupDocs.Comparison .NET-ben: lépésről lépésre útmutató
 
 ## Bevezetés

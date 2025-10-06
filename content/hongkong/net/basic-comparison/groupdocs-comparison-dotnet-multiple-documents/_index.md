@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison 在 .NET 中比較多個受密碼保護的文檔"
 "url": "/zh-hant/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison 在 .NET 中比較多個受密碼保護的文檔
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "Сравнение документов Java с помощью GroupDocs.Comparison&#58; Подробное руководство"
 "url": "/ru/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Сравнение документов Java с использованием GroupDocs.Comparison: подробное руководство
 
 ## Введение

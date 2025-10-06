@@ -4,8 +4,8 @@
 "title": "Jak porównywać foldery i zapisywać wyniki jako TXT/HTML za pomocą GroupDocs.Comparison .NET"
 "url": "/pl/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Jak wdrożyć porównanie folderów i zapisać wyniki jako TXT/HTML za pomocą GroupDocs.Comparison .NET
 
 ## Wstęp

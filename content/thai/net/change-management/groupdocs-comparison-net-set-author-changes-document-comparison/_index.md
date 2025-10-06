@@ -4,8 +4,8 @@
 "title": "กำหนดผู้เขียนการเปลี่ยนแปลงในการเปรียบเทียบเอกสารโดยใช้ GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # การนำชุดผู้เขียนการเปลี่ยนแปลงไปใช้งานในการเปรียบเทียบเอกสารโดยใช้ GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

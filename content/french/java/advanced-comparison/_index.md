@@ -3,8 +3,8 @@
 "title": "Tutoriels avancés de comparaison de documents pour GroupDocs.Comparison Java"
 "url": "/fr/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Tutoriels avancés de comparaison de documents pour GroupDocs.Comparison Java
 
 Nos tutoriels de comparaison avancée vous montrent comment exploiter les puissantes fonctionnalités de GroupDocs.Comparison dans les applications Java. Ces guides complets abordent la comparaison simultanée de plusieurs documents, la comparaison de fichiers protégés par mot de passe, la comparaison de dossiers entiers et la personnalisation des paramètres de comparaison pour différents scénarios. Chaque tutoriel inclut des exemples pratiques de code Java pour implémenter des opérations de comparaison de documents sophistiquées allant au-delà des fonctionnalités de base.

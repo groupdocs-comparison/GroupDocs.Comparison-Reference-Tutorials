@@ -5,8 +5,8 @@
 "title": "Lưu siêu dữ liệu tài liệu do người dùng xác định trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Lưu siêu dữ liệu tài liệu do người dùng xác định trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Gere visualizações de documentos de forma eficiente com o GroupDocs.Comparison para desenvolvedores .NET"
 "url": "/pt/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Gere visualizações de documentos de forma eficiente com GroupDocs.Comparison para .NET
 
 ## Introdução

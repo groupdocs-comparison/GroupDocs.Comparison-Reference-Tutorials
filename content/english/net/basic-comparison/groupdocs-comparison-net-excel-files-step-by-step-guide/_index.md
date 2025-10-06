@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["excel-comparison", "dotnet", "groupdocs", "file-comparison", "streams"]
+type: docs
 ---
-
 # Excel File Comparison .NET - Complete Developer Guide (2025)
 
 ## Introduction

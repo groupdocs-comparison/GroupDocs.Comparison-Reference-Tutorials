@@ -4,8 +4,8 @@
 "title": "Come impostare una licenza a consumo in GroupDocs.Comparison .NET&#58; una guida passo passo"
 "url": "/it/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Come impostare una licenza a consumo in GroupDocs.Comparison .NET: una guida passo passo
 
 ## Introduzione

@@ -4,8 +4,8 @@
 "title": "Manajemen Perubahan Dokumen Utama; Terima dan Tolak Suntingan dengan GroupDocs.Comparison .NET"
 "url": "/id/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Kelola Perubahan Dokumen Utama dengan GroupDocs.Comparison .NET
 
 ## Perkenalan

@@ -5,8 +5,8 @@
 "title": "Cellen uit stream vergelijken - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Cellen uit stream vergelijken - GroupDocs.Comparison voor .NET
 
 ## Invoering

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kütüphanesini Kullanarak .NET'te Ana Metin Dizesi Karşılaştırması"
 "url": "/tr/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kütüphanesini Kullanarak .NET'te Ana Metin Dizesi Karşılaştırması
 
 ## giriiş

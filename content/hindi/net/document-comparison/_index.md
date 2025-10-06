@@ -5,8 +5,8 @@
 "title": "दस्तावेज़ तुलना"
 "url": "/hi/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # दस्तावेज़ तुलना
 
 ## परिचय

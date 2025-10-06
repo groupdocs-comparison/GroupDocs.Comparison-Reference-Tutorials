@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison による Java ストリーム ドキュメント比較をマスターして効率的なワークフロー管理を実現"
 "url": "/ja/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison による Java ストリーム ドキュメント比較をマスターして効率的なワークフロー管理を実現
 
 今日の急速に変化するデジタル環境において、契約書、報告書、法務文書など、膨大な量の文書を管理・比較することは、一貫性と正確性を確保するために不可欠です。このチュートリアルでは、Javaの強力なGroupDocs.Comparisonライブラリを使用して、複数のWord文書をストリーム経由で効率的に比較し、スタイル設定によるカスタマイズを実現する方法を説明します。

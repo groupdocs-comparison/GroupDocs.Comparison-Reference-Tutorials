@@ -5,8 +5,8 @@
 "title": "Festlegen des Kennworts für das resultierende Dokument im GroupDocs-Vergleich für .NET"
 "url": "/de/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Festlegen des Kennworts für das resultierende Dokument im GroupDocs-Vergleich für .NET
 
 ## Einführung

@@ -4,8 +4,8 @@
 "title": "Jämför dokument från strömmar med GroupDocs.Comparison .NET - En komplett guide för utvecklare"
 "url": "/sv/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Hur man jämför flera dokument från strömmar med GroupDocs.Comparison .NET
 
 ## Introduktion

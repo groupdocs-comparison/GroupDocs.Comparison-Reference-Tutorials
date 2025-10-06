@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["groupdocs", "licensing", "net", "tutorial"]
+type: docs
 ---
-
 # GroupDocs Comparison License Setup in .NET: Complete Developer Guide
 
 ## Introduction

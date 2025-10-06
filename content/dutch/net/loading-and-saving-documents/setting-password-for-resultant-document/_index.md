@@ -5,8 +5,8 @@
 "title": "Wachtwoord instellen voor het resulterende document in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Wachtwoord instellen voor het resulterende document in GroupDocs Vergelijking voor .NET
 
 ## Invoering

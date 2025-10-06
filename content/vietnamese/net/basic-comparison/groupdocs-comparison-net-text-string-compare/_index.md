@@ -4,8 +4,8 @@
 "title": "So sánh chuỗi văn bản chính trong .NET bằng thư viện GroupDocs.Comparison"
 "url": "/vi/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # So sánh chuỗi văn bản chính trong .NET bằng thư viện GroupDocs.Comparison
 
 ## Giới thiệu

@@ -5,8 +5,8 @@
 "title": "Beveiligde documenten van pad vergelijken - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Beveiligde documenten van pad vergelijken - GroupDocs.Comparison voor .NET
 
 ## Invoering

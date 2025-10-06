@@ -5,8 +5,8 @@
 "title": "حفظ هدف بيانات تعريف المستندات في GroupDocs - مقارنة لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # حفظ هدف بيانات تعريف المستندات في GroupDocs - مقارنة لـ .NET
 
 ## مقدمة

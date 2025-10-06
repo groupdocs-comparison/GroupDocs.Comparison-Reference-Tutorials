@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong .NET&#58; Bảo tồn siêu dữ liệu bằng GroupDocs.Comparison"
 "url": "/vi/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong .NET: Bảo quản siêu dữ liệu với GroupDocs.Comparison
 ## Giới thiệu
 Bạn đã bao giờ gặp khó khăn khi so sánh các tài liệu trong khi cần bảo toàn siêu dữ liệu cụ thể chưa? GroupDocs.Comparison cho .NET chính là giải pháp! Hướng dẫn này sẽ hướng dẫn bạn cách thiết lập siêu dữ liệu của tài liệu mục tiêu trong quá trình so sánh, đảm bảo tài liệu cuối cùng của bạn giữ nguyên các thuộc tính mong muốn một cách liền mạch.

@@ -4,8 +4,8 @@
 "title": "Beheers documentrevisies efficiënt met GroupDocs.Comparison .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Documentrevisies onder de knie krijgen met GroupDocs.Comparison .NET: een stapsgewijze handleiding
 
 ## Invoering

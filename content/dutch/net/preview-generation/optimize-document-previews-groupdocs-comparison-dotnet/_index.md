@@ -4,8 +4,8 @@
 "title": "Genereer en optimaliseer documentvoorbeelden met GroupDocs.Comparison .NET API"
 "url": "/nl/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Genereer en optimaliseer documentvoorbeelden met GroupDocs.Comparison .NET
 
 ## Invoering

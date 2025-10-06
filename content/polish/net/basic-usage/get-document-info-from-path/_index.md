@@ -5,8 +5,8 @@
 "title": "Pobierz informacje o dokumencie ze ścieżki - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Pobierz informacje o dokumencie ze ścieżki - GroupDocs.Comparison dla .NET
 
 ## Wstęp

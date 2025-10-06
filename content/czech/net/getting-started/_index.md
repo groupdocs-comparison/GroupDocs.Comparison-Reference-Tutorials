@@ -3,8 +3,8 @@
 "title": "Výukové programy pro začátečníky s GroupDocs.Comparison pro vývojáře .NET"
 "url": "/cs/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # Výukové programy pro začátečníky s GroupDocs.Comparison pro vývojáře .NET
 
 Začněte svou cestu s těmito základními tutoriály o GroupDocs.Comparison, které vás provedou instalací, konfigurací licencování a vytvořením prvních porovnání dokumentů v .NET. Naše příručky pro začátečníky ukazují, jak nastavit vývojové prostředí, inicializovat knihovnu GroupDocs.Comparison a provádět základní porovnávací operace. Postupujte podle těchto tutoriálů, abyste si rychle osvojili základy a připravili se na pokročilejší úlohy porovnávání dokumentů ve vašich aplikacích .NET.

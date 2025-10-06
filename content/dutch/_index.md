@@ -6,8 +6,8 @@
 "title": "API-zelfstudie voor documentvergelijkingssoftware | GroupDocs.Comparison"
 "url": "/nl/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Tutorials & Ontwikkelaarshandleiding
 
 ![GroupDocs.Vergelijkingsbanner](./groupdocs-comparison-net.svg)

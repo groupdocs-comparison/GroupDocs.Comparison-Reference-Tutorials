@@ -5,8 +5,8 @@
 "title": "Jämför dokument från sökvägen - GroupDocs.Comparison för .NET"
 "url": "/sv/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Jämför dokument från sökvägen - GroupDocs.Comparison för .NET
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Java 完整教學指南"
 "url": "/zh-hant/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for Java – 逐步教學與程式碼範例
 
 ## 學習 Java 中的文件比較—快速、準確、強大

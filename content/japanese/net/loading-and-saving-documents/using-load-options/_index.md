@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET での読み込みオプションの使用"
 "url": "/ja/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # GroupDocs Comparison for .NET での読み込みオプションの使用
 
 ## 導入

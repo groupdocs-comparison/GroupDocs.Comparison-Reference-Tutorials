@@ -4,8 +4,8 @@
 "title": "การนำการเปรียบเทียบเอกสาร Word ไปใช้งานใน Java โดยใช้ GroupDocs.Comparison"
 "url": "/th/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # การนำการเปรียบเทียบเอกสาร Word ไปใช้งานใน Java ด้วย GroupDocs.Comparison
 
 ## การแนะนำ

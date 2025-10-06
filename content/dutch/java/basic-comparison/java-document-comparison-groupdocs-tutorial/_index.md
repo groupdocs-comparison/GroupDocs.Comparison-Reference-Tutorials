@@ -4,8 +4,8 @@
 "title": "Documentvergelijking implementeren in Java met behulp van GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking implementeren in Java met GroupDocs: een uitgebreide handleiding
 
 ## Invoering

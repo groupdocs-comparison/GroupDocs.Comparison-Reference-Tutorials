@@ -4,8 +4,8 @@
 "title": "Cara Melacak Konsumsi Kredit Menggunakan GroupDocs.Comparison untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Cara Melacak Konsumsi Kredit Menggunakan GroupDocs.Comparison untuk .NET: Panduan Lengkap
 
 ## Perkenalan

@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs.Comparison'ın Eğitimleri ve Örnekleri"
 "url": "/tr/net/"
 "weight": 10
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison'ın Eğitimleri ve Örnekleri
 
 ## giriiş

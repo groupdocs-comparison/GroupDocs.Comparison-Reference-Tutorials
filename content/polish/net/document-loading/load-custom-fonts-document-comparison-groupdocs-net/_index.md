@@ -4,8 +4,8 @@
 "title": "Jak załadować niestandardowe czcionki do porównania dokumentów za pomocą GroupDocs.Comparison .NET"
 "url": "/pl/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak załadować niestandardowe czcionki do porównania dokumentów za pomocą GroupDocs.Comparison .NET
 
 ## Wstęp

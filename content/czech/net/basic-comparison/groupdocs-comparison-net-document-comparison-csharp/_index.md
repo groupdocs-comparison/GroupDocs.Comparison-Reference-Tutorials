@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů v C# pomocí GroupDocs.Comparison .NET – Podrobný návod"
 "url": "/cs/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Implementace porovnávání dokumentů pomocí GroupDocs.Comparison .NET
 
 ## Jak používat GroupDocs.Comparison pro porovnávání dokumentů v C# 

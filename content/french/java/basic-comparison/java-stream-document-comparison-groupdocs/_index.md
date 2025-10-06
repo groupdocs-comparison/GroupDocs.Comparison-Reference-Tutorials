@@ -4,8 +4,8 @@
 "title": "Implémenter la comparaison de documents de flux Java à l'aide de GroupDocs.Comparer - Un guide complet"
 "url": "/fr/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Implémenter la comparaison de documents de flux Java à l'aide de GroupDocs.Comparer : guide complet
 
 ## Introduction

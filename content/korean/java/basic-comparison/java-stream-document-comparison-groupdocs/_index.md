@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparer&#58;를 사용하여 Java 스트림 문서 비교 구현하기 - 포괄적인 가이드"
 "url": "/ko/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparer를 사용하여 Java 스트림 문서 비교 구현: 포괄적인 가이드
 
 ## 소개

@@ -5,8 +5,8 @@
 "title": "Comparaison de documents et de dossiers"
 "url": "/fr/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Comparaison de documents et de dossiers
 
 ## Introduction

@@ -3,8 +3,8 @@
 "title": "Výukové programy pro licencování a konfiguraci GroupDocs.Comparison .NET"
 "url": "/cs/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Výukové programy pro licencování a konfiguraci GroupDocs.Comparison .NET
 
 Naše tutoriály o licencování a konfiguraci poskytují základní pokyny pro správné nastavení GroupDocs.Comparison v aplikacích .NET. Tyto podrobné návody vám ukážou, jak implementovat různé možnosti licencování, konfigurovat fakturaci podle měření, kontrolovat stav licence a optimalizovat nastavení knihovny pro vaše specifické požadavky. Každý tutoriál obsahuje podrobné příklady kódu C# pro správnou inicializaci a konfiguraci, které vám pomohou vytvořit správně licencovaná a optimalizovaná řešení pro porovnávání dokumentů.

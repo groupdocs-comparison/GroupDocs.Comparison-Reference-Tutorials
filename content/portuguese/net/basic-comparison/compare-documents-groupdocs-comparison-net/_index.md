@@ -4,8 +4,8 @@
 "title": "Comparar documentos de fluxos usando GroupDocs.Comparison .NET - Um guia completo para desenvolvedores"
 "url": "/pt/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Como comparar vários documentos de fluxos usando GroupDocs.Comparison .NET
 
 ## Introdução

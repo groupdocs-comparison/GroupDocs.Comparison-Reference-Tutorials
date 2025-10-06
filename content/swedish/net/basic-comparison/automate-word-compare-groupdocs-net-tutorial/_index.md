@@ -4,8 +4,8 @@
 "title": "Automatisera jämförelse av Word-dokument med GroupDocs.Comparison .NET – en komplett handledning"
 "url": "/sv/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Automatisera jämförelse av Word-dokument med GroupDocs.Comparison .NET: En komplett handledning
 
 ## Introduktion

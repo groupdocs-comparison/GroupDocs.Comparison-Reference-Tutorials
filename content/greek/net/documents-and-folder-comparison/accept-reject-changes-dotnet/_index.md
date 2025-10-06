@@ -5,8 +5,8 @@
 "title": "Αποδοχή και απόρριψη αλλαγών στη σύγκριση GroupDocs για .NET"
 "url": "/el/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Αποδοχή και απόρριψη αλλαγών στη σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

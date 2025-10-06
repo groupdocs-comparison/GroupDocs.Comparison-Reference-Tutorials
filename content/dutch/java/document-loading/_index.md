@@ -3,8 +3,8 @@
 "title": "Documentlaadhandleidingen voor GroupDocs.Comparison Java"
 "url": "/nl/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Documentlaadhandleidingen voor GroupDocs.Comparison Java
 
 Onze tutorials over het laden van documenten bieden uitgebreide begeleiding bij het voorbereiden van documenten voor vergelijking in Java-applicaties. Deze stapsgewijze handleidingen laten zien hoe u documenten laadt vanuit lokale opslag, geheugenstromen en stringinhoud, en hoe u laadopties configureert voor verschillende documenttypen. Elke tutorial bevat complete Java-codevoorbeelden om u te helpen bij het implementeren van robuuste functionaliteit voor het laden van documenten in uw vergelijkingsapplicaties.

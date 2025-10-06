@@ -5,8 +5,8 @@
 "title": "從串流設定許可證 - .NET 的 GroupDocs 比較"
 "url": "/zh-hant/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 從串流設定許可證 - .NET 的 GroupDocs 比較
 
 ## 介紹

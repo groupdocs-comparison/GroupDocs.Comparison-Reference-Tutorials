@@ -5,8 +5,8 @@
 "title": "Definir tamanhos de imagem específicos para visualizações"
 "url": "/pt/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Definir tamanhos de imagem específicos para visualizações
 
 ## Introdução

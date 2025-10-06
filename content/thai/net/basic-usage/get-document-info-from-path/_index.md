@@ -5,8 +5,8 @@
 "title": "รับข้อมูลเอกสารจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # รับข้อมูลเอกสารจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

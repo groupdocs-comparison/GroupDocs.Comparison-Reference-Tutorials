@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 문서 정보 튜토리얼"
 "url": "/ko/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 문서 정보 튜토리얼
 
 문서 정보 튜토리얼은 Java에서 GroupDocs.Comparison을 사용하여 문서 메타데이터에 액세스하는 방법을 안내합니다. 이 실용적인 가이드는 소스, 대상 및 결과 문서에 대한 정보를 검색하고, 파일 형식을 확인하고, 프로그래밍 방식으로 문서 속성에 액세스하는 방법을 보여줍니다. 각 튜토리얼에는 일반적인 문서 정보 시나리오에 대한 Java 코드 예제가 포함되어 있어 문서 데이터를 효과적으로 분석하고 처리할 수 있는 애플리케이션을 구축하는 데 도움이 됩니다.

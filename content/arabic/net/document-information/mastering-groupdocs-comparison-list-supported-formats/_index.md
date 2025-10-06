@@ -4,8 +4,8 @@
 "title": "كيفية إدراج جميع تنسيقات الملفات المدعومة في GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # كيفية إدراج جميع تنسيقات الملفات المدعومة في GroupDocs.Comparison لـ .NET
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET Kullanarak Kredi Tüketimini Nasıl Takip Edebilirsiniz? Kapsamlı Bir Kılavuz"
 "url": "/tr/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET Kullanılarak Kredi Tüketimi Nasıl Takip Edilir: Kapsamlı Bir Kılavuz
 
 ## giriiş

@@ -5,8 +5,8 @@
 "title": "Generuj podglądy stron dla dokumentu docelowego"
 "url": "/pl/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Generuj podglądy stron dla dokumentu docelowego
 
 ## Wstęp

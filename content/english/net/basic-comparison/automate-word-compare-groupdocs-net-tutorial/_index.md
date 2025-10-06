@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["word-comparison", "dotnet", "automation", "groupdocs"]
+type: docs
 ---
-
 # How to Compare Word Documents Automatically in .NET
 
 ## Introduction

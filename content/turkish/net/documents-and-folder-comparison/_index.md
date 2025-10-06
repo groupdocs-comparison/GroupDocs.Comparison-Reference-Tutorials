@@ -5,8 +5,8 @@
 "title": "Belgeler ve Klasör Karşılaştırması"
 "url": "/tr/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Belgeler ve Klasör Karşılaştırması
 
 ## giriiş

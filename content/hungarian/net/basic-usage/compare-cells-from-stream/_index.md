@@ -5,8 +5,8 @@
 "title": "Cellák összehasonlítása az adatfolyamból - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Cellák összehasonlítása az adatfolyamból - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

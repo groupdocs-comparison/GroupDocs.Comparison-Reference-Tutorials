@@ -4,8 +4,8 @@
 "title": "Java dokumentum-összehasonlítás implementálása a GroupDocs.Comparison használatával – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Hogyan implementáljunk Java dokumentum-összehasonlítást a metaadatforrás GroupDocs.Comparison segítségével történő beállításával?
 
 ## Bevezetés

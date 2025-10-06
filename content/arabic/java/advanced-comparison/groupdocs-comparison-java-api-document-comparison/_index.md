@@ -4,8 +4,8 @@
 "title": "مقارنة المستندات الرئيسية في Java - استخدام واجهة برمجة التطبيقات GroupDocs.Comparison لتحليل ملفات الخلايا بكفاءة"
 "url": "/ar/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات في Java باستخدام واجهة برمجة تطبيقات GroupDocs.Comparison
 
 ## مقدمة

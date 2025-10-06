@@ -4,8 +4,8 @@
 "title": "Documenten uit streams vergelijken met GroupDocs.Comparison .NET - Een complete gids voor ontwikkelaars"
 "url": "/nl/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Meerdere documenten uit streams vergelijken met GroupDocs.Comparison .NET
 
 ## Invoering

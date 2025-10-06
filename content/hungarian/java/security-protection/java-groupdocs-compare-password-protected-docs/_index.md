@@ -4,8 +4,8 @@
 "title": "Jelszóval védett dokumentumok összehasonlításának elsajátítása Java nyelven a GroupDocs.Comparison segítségével"
 "url": "/hu/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Jelszóval védett dokumentumok összehasonlításának elsajátítása Java nyelven a GroupDocs.Comparison segítségével
 
 ## Bevezetés

@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison 在 Java 中加载和比较受密码保护的 Word 文档"
 "url": "/zh/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison 在 Java 中加载和比较受密码保护的 Word 文档
 
 ## 介绍

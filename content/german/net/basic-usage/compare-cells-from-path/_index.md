@@ -5,8 +5,8 @@
 "title": "Zellen aus Pfad vergleichen - GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Zellen aus Pfad vergleichen - GroupDocs.Comparison für .NET
 
 ## Einführung

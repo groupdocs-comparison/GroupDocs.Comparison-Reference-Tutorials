@@ -4,8 +4,8 @@
 "title": "Pengaturan Lisensi GroupDocs.Comparison melalui URL di Java&#58; Menyederhanakan Otomatisasi Lisensi"
 "url": "/id/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai GroupDocs.Comparison Java: Mengatur Lisensi melalui URL
 
 ## Perkenalan

@@ -4,8 +4,8 @@
 "title": "เรียนรู้การเปรียบเทียบ GroupDocs สำหรับ Java และสร้างตัวอย่างเอกสารได้อย่างง่ายดาย"
 "url": "/th/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้ GroupDocs.Comparison สำหรับ Java: การสร้างตัวอย่างเอกสารอย่างง่ายดาย
 
 ## การแนะนำ

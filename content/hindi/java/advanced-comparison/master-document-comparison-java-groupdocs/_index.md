@@ -4,8 +4,8 @@
 "title": "जावा में मास्टर दस्तावेज़ तुलना&#58; ग्रुपडॉक्स का उपयोग करना.वर्ड, टेक्स्ट और ईमेल दस्तावेज़ों के लिए तुलना"
 "url": "/hi/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा में दस्तावेज़ तुलना में महारत हासिल करें
 
 **Java के लिए GroupDocs.Comparison का उपयोग करके एकाधिक Word, Text और Email दस्तावेज़ों की कुशलतापूर्वक तुलना करें**

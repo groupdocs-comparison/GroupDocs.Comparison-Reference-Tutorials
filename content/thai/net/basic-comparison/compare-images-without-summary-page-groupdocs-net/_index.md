@@ -4,8 +4,8 @@
 "title": "วิธีการเปรียบเทียบภาพโดยไม่มีหน้าสรุปโดยใช้ GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการใช้การเปรียบเทียบภาพโดยไม่ต้องใช้หน้าสรุปโดยใช้ GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบเอกสาร Java Multi-Stream โดยใช้ GroupDocs.Comparison&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การเปรียบเทียบเอกสาร Java Multi-Stream ด้วย GroupDocs.Comparison
 
 ## การแนะนำ

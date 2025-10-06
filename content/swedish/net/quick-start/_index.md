@@ -5,8 +5,8 @@
 "title": "Snabbstart"
 "url": "/sv/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Snabbstart
 
 

@@ -5,8 +5,8 @@
 "title": "Path से संरक्षित दस्तावेज़ों की तुलना करें - GroupDocs.तुलना .NET के लिए"
 "url": "/hi/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Path से संरक्षित दस्तावेज़ों की तुलना करें - GroupDocs.तुलना .NET के लिए
 
 ## परिचय

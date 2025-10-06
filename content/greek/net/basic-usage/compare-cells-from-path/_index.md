@@ -5,8 +5,8 @@
 "title": "Σύγκριση κελιών από τη διαδρομή - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Σύγκριση κελιών από τη διαδρομή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

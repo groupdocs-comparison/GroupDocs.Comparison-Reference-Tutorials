@@ -5,8 +5,8 @@
 "title": "Grundlegende Verwendung"
 "url": "/de/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Grundlegende Verwendung
 
 ## Einführung

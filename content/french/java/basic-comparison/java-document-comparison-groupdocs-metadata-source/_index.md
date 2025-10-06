@@ -4,8 +4,8 @@
 "title": "Implémenter la comparaison de documents Java à l'aide de GroupDocs.Comparison - Un guide complet"
 "url": "/fr/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Comment implémenter la comparaison de documents Java en définissant la source des métadonnées avec GroupDocs.Comparison
 
 ## Introduction

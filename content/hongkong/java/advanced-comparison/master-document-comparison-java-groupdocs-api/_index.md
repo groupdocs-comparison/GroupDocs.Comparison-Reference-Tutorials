@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison API 掌握 Java 中的文件比較"
 "url": "/zh-hant/java/advanced-comparison/master-document-comparison-java-groupdocs-api/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison API 掌握 Java 中的文件比較和信用管理
 
 在當今快節奏的商業環境中，高效管理文件和追蹤資源使用至關重要。無論您是比較法律合約、編輯技術手冊，還是僅僅追蹤軟體使用積分，合適的工具都能帶來顯著的幫助。在本教程中，我們將探索如何利用 GroupDocs.Comparison for Java 的強大功能，無縫比較文件並監控積分消耗。

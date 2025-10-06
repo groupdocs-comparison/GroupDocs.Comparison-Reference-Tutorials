@@ -5,8 +5,8 @@
 "title": "परिणामी दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # परिणामी दस्तावेज़ के लिए पृष्ठ पूर्वावलोकन उत्पन्न करें
 
 ## परिचय

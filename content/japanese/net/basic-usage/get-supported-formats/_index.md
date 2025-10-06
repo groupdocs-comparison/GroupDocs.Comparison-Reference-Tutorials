@@ -5,8 +5,8 @@
 "title": "サポートされている形式を取得する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # サポートされている形式を取得する - GroupDocs.Comparison for .NET
 
 ## 導入

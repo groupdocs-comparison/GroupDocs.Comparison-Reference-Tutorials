@@ -4,8 +4,8 @@
 "title": "Jak porównywać dokumenty chronione hasłem za pomocą GroupDocs.Comparison w Javie"
 "url": "/pl/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Jak porównać wiele chronionych dokumentów za pomocą GroupDocs.Comparison w Javie
 
 **Wstęp**

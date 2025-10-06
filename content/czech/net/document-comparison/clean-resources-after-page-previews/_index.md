@@ -5,8 +5,8 @@
 "title": "Vyčištění zdrojů po náhledu stránky"
 "url": "/cs/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Vyčištění zdrojů po náhledu stránky
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 활용한 Java 스트림 문서 비교 마스터링으로 효율적인 워크플로 관리"
 "url": "/ko/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 활용한 Java 스트림 문서 비교 마스터링으로 효율적인 워크플로 관리
 
 오늘날처럼 빠르게 변화하는 디지털 환경에서 계약서, 보고서 또는 법률 문서의 일관성과 정확성을 보장하기 위해서는 방대한 양의 문서를 관리하고 비교하는 것이 매우 중요합니다. 이 튜토리얼에서는 Java 기반의 강력한 GroupDocs.Comparison 라이브러리를 사용하여 스트림을 통해 여러 Word 문서를 효율적으로 비교하고 스타일 설정을 통해 사용자 정의하는 방법을 안내합니다.

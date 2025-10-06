@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 Java에서 마스터 디렉터리 비교를 통해 원활한 파일 감사 수행"
 "url": "/ko/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용한 Java의 마스터 디렉토리 비교
 
 ## 소개

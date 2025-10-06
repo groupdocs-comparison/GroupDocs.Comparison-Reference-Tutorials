@@ -4,8 +4,8 @@
 "title": "Főkönyvtár-összehasonlítás Java-ban a GroupDocs.Comparison használatával a zökkenőmentes fájlellenőrzésekhez"
 "url": "/hu/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Főkönyvtár-összehasonlítás Java-ban a GroupDocs.Comparison segítségével
 
 ## Bevezetés

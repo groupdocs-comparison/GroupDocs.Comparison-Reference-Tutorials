@@ -5,8 +5,8 @@
 "title": "Seitenvorschauen für Zieldokumente generieren"
 "url": "/de/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Seitenvorschauen für Zieldokumente generieren
 
 ## Einführung

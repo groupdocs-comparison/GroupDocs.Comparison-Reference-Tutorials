@@ -5,8 +5,8 @@
 "title": "パスからセルを比較する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # パスからセルを比較する - GroupDocs.Comparison for .NET
 
 ## 導入

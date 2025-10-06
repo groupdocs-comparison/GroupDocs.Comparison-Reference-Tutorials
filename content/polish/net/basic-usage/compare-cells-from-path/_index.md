@@ -5,8 +5,8 @@
 "title": "Porównaj komórki ze ścieżki - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Porównaj komórki ze ścieżki - GroupDocs.Comparison dla .NET
 
 ## Wstęp

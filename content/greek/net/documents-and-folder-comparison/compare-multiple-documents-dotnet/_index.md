@@ -5,8 +5,8 @@
 "title": "Σύγκριση πολλαπλών εγγράφων στο GroupDocs - Σύγκριση για .NET"
 "url": "/el/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # Σύγκριση πολλαπλών εγγράφων στο GroupDocs - Σύγκριση για .NET
 
 ## Εισαγωγή

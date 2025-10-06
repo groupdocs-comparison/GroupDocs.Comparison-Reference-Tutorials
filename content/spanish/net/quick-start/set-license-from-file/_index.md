@@ -5,8 +5,8 @@
 "title": "Establecer licencia desde archivo - Comparación de GroupDocs para .NET"
 "url": "/es/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Establecer licencia desde archivo - Comparación de GroupDocs para .NET
 
 ## Introducción

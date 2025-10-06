@@ -5,8 +5,8 @@
 "title": "Démarrage rapide"
 "url": "/fr/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Démarrage rapide
 
 

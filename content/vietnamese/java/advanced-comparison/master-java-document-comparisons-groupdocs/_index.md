@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong Java bằng cách sử dụng thư viện GroupDocs.Comparison"
 "url": "/vi/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong Java với GroupDocs.Comparison
 
 Khám phá quy trình hiệu quả để khởi tạo, so sánh và cập nhật các thay đổi trong tài liệu bằng thư viện GroupDocs.Comparison mạnh mẽ dành cho Java. Hướng dẫn này hướng dẫn bạn thiết lập môi trường, hiểu các tính năng chính và triển khai các giải pháp thực tế.

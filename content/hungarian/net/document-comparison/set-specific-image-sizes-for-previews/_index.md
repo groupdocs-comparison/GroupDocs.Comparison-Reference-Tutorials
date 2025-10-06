@@ -5,8 +5,8 @@
 "title": "Előnézetek képméreteinek beállítása"
 "url": "/hu/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Előnézetek képméreteinek beállítása
 
 ## Bevezetés

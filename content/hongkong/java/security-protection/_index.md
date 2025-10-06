@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 文件安全與保護教學課程"
 "url": "/zh-hant/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # GroupDocs.Comparison Java 文件安全與保護教學課程
 
 透過我們詳細的 GroupDocs.Comparison Java 教學課程，掌握文件安全功能。這些全面的指南示範如何比較受密碼保護的文件、為產生的文件設定密碼、實現安全的比較工作流程以及如何以程式設計方式管理文件保護。每個教學課程都提供了安全文件比較操作的 Java 程式碼範例，幫助您建立既能保護機密性又能有效進行文件比較的應用程式。

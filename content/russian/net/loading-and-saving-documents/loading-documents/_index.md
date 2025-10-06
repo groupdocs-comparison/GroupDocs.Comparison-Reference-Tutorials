@@ -5,8 +5,8 @@
 "title": "Загрузка документов в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Загрузка документов в GroupDocs Сравнение для .NET
 
 ## Введение

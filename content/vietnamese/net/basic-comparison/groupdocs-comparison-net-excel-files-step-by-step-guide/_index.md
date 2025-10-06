@@ -4,8 +4,8 @@
 "title": "So sánh các tệp Excel bằng GroupDocs.Comparison .NET&#58; Hướng dẫn từng bước toàn diện"
 "url": "/vi/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # So sánh các tệp Excel bằng GroupDocs.Comparison .NET: Hướng dẫn từng bước toàn diện
 ## Giới thiệu
 Trong một thế giới ngày càng phụ thuộc vào dữ liệu, việc so sánh các phiên bản khác nhau của các tệp Excel là điều cần thiết đối với cả doanh nghiệp và cá nhân. Cho dù bạn đang theo dõi các thay đổi trong báo cáo tài chính hay quản lý các bản cập nhật dự án, nhiệm vụ này có thể tốn nhiều thời gian nếu không có các công cụ phù hợp. Hãy sử dụng GroupDocs.Comparison for .NET—một thư viện mạnh mẽ giúp hợp lý hóa quy trình này một cách chính xác.

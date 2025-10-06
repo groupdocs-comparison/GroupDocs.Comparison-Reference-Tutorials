@@ -4,8 +4,8 @@
 "title": "Documentvergelijking implementeren in .NET met behulp van GroupDocs.Comparison&#58; een stapsgewijze handleiding"
 "url": "/nl/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking implementeren in .NET met behulp van GroupDocs.Comparison: een stapsgewijze handleiding
 
 ## Invoering

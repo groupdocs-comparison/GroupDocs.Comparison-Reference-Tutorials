@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java Eğitim Kılavuzunu Tamamlayın"
 "url": "/tr/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for Java – Adım Adım Eğitimler ve Kod Örnekleri
 
 ## Java'da Belge Karşılaştırmayı Öğrenin – Hızlı, Doğru ve Güçlü

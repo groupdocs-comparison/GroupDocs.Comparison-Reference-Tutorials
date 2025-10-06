@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET Kullanarak Akışlardan Belgeleri Karşılaştırın - Geliştiriciler İçin Eksiksiz Bir Kılavuz"
 "url": "/tr/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET'i kullanarak Akışlardan Birden Fazla Belgeyi Nasıl Karşılaştırabilirsiniz
 
 ## giriiş

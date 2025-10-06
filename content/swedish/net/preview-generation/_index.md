@@ -3,8 +3,8 @@
 "title": "Handledningar för förhandsvisningsgenerering för GroupDocs.Comparison .NET"
 "url": "/sv/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Handledningar för förhandsvisningsgenerering för GroupDocs.Comparison .NET
 
 Lär dig hur du skapar dokumentförhandsgranskningar med våra omfattande GroupDocs.Comparison-handledningar för .NET-utvecklare. Dessa praktiska guider visar hur du genererar sidförhandsgranskningar för källdokument, måldokument och jämförelseresultat, anpassar förhandsgranskningsbildstorlekar och implementerar resursrensning för optimal minnesanvändning. Varje handledning innehåller detaljerade C#-kodexempel för att effektivt implementera dokumentförhandsgranskningsfunktioner i dina jämförelseapplikationer.

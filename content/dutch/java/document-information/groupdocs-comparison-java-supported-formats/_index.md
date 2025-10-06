@@ -4,8 +4,8 @@
 "title": "Haal ondersteunde bestandsindelingen op met GroupDocs. Vergelijking voor Java&#58; een uitgebreide handleiding"
 "url": "/nl/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Haal ondersteunde bestandsindelingen op met GroupDocs.Comparison voor Java
 
 ## Invoering

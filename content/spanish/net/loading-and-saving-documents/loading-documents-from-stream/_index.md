@@ -5,8 +5,8 @@
 "title": "Comparación de la carga de documentos desde Stream en GroupDocs para .NET"
 "url": "/es/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Comparación de la carga de documentos desde Stream en GroupDocs para .NET
 
 ## Introducción

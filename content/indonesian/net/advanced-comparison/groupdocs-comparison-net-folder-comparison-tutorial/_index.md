@@ -4,8 +4,8 @@
 "title": "Cara Membandingkan Folder dan Menyimpan Hasilnya sebagai TXT/HTML Menggunakan GroupDocs.Comparison .NET"
 "url": "/id/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menerapkan Perbandingan Folder dan Menyimpan Hasilnya sebagai TXT/HTML dengan GroupDocs.Comparison .NET
 
 ## Perkenalan

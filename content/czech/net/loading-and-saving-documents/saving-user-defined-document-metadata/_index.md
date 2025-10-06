@@ -5,8 +5,8 @@
 "title": "Ukládání uživatelsky definovaných metadat dokumentů v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Ukládání uživatelsky definovaných metadat dokumentů v porovnání GroupDocs pro .NET
 
 ## Zavedení

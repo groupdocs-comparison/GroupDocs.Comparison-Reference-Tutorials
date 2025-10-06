@@ -4,8 +4,8 @@
 "title": "Komplett handledning för GroupDocs.Comparison för Java"
 "url": "/sv/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison för Java – Steg-för-steg-handledningar och kodexempel
 
 ## Lär dig dokumentjämförelse i Java – Snabbt, exakt och kraftfullt

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET API 生成和优化文档预览"
 "url": "/zh/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 生成和优化文档预览
 
 ## 介绍

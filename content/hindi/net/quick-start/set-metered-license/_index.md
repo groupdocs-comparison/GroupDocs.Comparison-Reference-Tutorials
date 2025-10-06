@@ -5,8 +5,8 @@
 "title": "मीटर्ड लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना"
 "url": "/hi/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # मीटर्ड लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना
 
 ## परिचय

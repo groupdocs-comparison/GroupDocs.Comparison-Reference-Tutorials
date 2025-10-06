@@ -4,8 +4,8 @@
 "title": "Dokumentuminformációk kinyerése a GroupDocs.Comparison for .NET használatával – Átfogó útmutató"
 "url": "/hu/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentuminformációk kinyerése a GroupDocs.Comparison for .NET használatával: lépésről lépésre útmutató
 
 ## Bevezetés

@@ -5,8 +5,8 @@
 "title": "Betöltési beállítások használata a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Betöltési beállítások használata a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

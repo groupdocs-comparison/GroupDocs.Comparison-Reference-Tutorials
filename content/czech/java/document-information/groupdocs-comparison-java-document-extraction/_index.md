@@ -4,8 +4,8 @@
 "title": "Extrakce metadat hlavního dokumentu pomocí GroupDocs v Javě"
 "url": "/cs/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí extrakce metadat dokumentů pomocí GroupDocs v Javě
 
 V dnešní digitální krajině je efektivní správa a extrakce informací z dokumentů klíčová pro firmy napříč odvětvími. Ať už pracujete s právními smlouvami, akademickými pracemi nebo finančními zprávami, pochopení metadat dokumentů, jako je typ souboru, počet stránek a velikost, může zefektivnit pracovní postupy a vylepšit analýzu dat. Tento tutoriál vás provede používáním GroupDocs.Comparison v Javě k extrakci cenných informací o dokumentech prostřednictvím vstupních proudů i cest k souborům.

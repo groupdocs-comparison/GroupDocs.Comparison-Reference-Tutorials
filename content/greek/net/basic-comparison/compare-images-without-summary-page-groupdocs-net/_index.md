@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε εικόνες χωρίς σελίδα σύνοψης χρησιμοποιώντας το GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση εικόνων χωρίς σελίδα σύνοψης χρησιμοποιώντας το GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

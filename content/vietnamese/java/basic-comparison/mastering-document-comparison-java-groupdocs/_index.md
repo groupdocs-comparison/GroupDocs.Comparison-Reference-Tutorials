@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong Java bằng API GroupDocs.Comparison"
 "url": "/vi/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong Java bằng API GroupDocs.Comparison
 
 ## Giới thiệu

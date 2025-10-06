@@ -6,8 +6,8 @@
 "title": "Учебное пособие по API программного обеспечения для сравнения документов | GroupDocs.Comparison"
 "url": "/ru/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Учебники и руководство разработчика
 
 ![Баннер сравнения GroupDocs](./groupdocs-comparison-net.svg)

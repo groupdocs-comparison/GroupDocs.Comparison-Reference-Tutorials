@@ -4,8 +4,8 @@
 "title": "Hogyan követhetjük nyomon a kreditfelhasználást a GroupDocs.Comparison for .NET használatával? Átfogó útmutató"
 "url": "/hu/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # A kreditfelhasználás nyomon követése a GroupDocs.Comparison for .NET használatával: Átfogó útmutató
 
 ## Bevezetés

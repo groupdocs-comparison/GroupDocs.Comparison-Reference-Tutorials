@@ -5,8 +5,8 @@
 "title": "Vergelijking van het opslaan van door de gebruiker gedefinieerde documentmetagegevens in GroupDocs voor .NET"
 "url": "/nl/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Vergelijking van het opslaan van door de gebruiker gedefinieerde documentmetagegevens in GroupDocs voor .NET
 
 ## Invoering

@@ -3,8 +3,8 @@
 "title": "Tutoriels de démarrage GroupDocs.Comparison pour les développeurs .NET"
 "url": "/fr/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # Tutoriels de démarrage GroupDocs.Comparison pour les développeurs .NET
 
 Commencez votre apprentissage avec ces tutoriels essentiels sur GroupDocs.Comparison qui vous guident à travers l'installation, la configuration des licences et la création de vos premières comparaisons de documents dans .NET. Nos guides, accessibles aux débutants, expliquent comment configurer votre environnement de développement, initialiser la bibliothèque GroupDocs.Comparison et effectuer des opérations de comparaison fondamentales. Suivez ces tutoriels pour maîtriser rapidement les bases et vous préparer à des tâches de comparaison de documents plus avancées dans vos applications .NET.

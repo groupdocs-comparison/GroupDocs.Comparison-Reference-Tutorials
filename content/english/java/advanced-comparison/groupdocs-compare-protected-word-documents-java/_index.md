@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development", "Document Processing"]
 tags: ["groupdocs", "java", "document-comparison", "password-protected", "word-documents"]
+type: docs
 ---
-
 # Compare Password Protected Word Documents in Java - Complete GroupDocs Guide
 
 ## Introduction

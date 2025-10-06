@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε αρχεία κελιών χρησιμοποιώντας το GroupDocs.Comparison σε Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε αρχεία κελιών χρησιμοποιώντας το GroupDocs.Comparison σε Java
 
 ## Εισαγωγή

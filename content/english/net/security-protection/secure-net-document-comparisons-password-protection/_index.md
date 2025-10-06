@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Security"]
 tags: ["dotnet-security", "document-comparison", "groupdocs", "password-protection"]
+type: docs
 ---
-
 # Document Comparison Password Protection in .NET: Your Complete Security Guide
 
 ## Why Document Comparison Security Matters (And How to Get It Right)

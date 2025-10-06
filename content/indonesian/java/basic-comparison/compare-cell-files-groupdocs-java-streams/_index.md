@@ -4,8 +4,8 @@
 "title": "Cara Membandingkan File Sel Menggunakan GroupDocs.Comparison di Java&#58; Panduan Lengkap"
 "url": "/id/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Cara Membandingkan File Sel Menggunakan GroupDocs.Comparison di Java
 
 ## Perkenalan

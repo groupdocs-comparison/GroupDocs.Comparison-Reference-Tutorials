@@ -4,8 +4,8 @@
 "title": "Porovnání dokumentů v Javě a náhledy stránek pomocí GroupDocs.Comparison"
 "url": "/cs/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v Javě pomocí GroupDocs.Comparison
 
 **Odemkněte efektivní správu dokumentů: Komplexní průvodce používáním GroupDocs.Comparison v Javě**

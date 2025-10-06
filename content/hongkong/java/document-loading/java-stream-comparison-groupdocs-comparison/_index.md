@@ -4,8 +4,8 @@
 "title": "掌握使用 GroupDocs.Comparison 進行 Java 流程文件比較，實現高效率的工作流程管理"
 "url": "/zh-hant/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 掌握使用 GroupDocs.Comparison 進行 Java 流程文件比較，實現高效率的工作流程管理
 
 在當今快節奏的數位環境中，管理和比較大量文件對於確保合約、報告或法律文件的一致性和準確性至關重要。本教學將指導您使用 Java 中強大的 GroupDocs.Comparison 庫，透過串流高效地比較多個 Word 文檔，並支援透過樣式設定進行自訂。

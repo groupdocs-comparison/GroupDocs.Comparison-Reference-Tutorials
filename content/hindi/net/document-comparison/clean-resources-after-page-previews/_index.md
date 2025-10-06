@@ -5,8 +5,8 @@
 "title": "पृष्ठ पूर्वावलोकन के बाद संसाधनों को साफ़ करें"
 "url": "/hi/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # पृष्ठ पूर्वावलोकन के बाद संसाधनों को साफ़ करें
 
 ## परिचय

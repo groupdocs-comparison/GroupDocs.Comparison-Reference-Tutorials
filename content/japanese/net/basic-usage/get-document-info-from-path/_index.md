@@ -5,8 +5,8 @@
 "title": "パスからドキュメント情報を取得する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # パスからドキュメント情報を取得する - GroupDocs.Comparison for .NET
 
 ## 導入

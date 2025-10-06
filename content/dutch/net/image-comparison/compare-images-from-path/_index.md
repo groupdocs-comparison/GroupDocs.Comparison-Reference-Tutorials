@@ -5,8 +5,8 @@
 "title": "Afbeeldingen vergelijken van Path - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Afbeeldingen vergelijken van Path - GroupDocs.Comparison voor .NET
 
 ## Invoering

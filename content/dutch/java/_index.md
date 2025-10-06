@@ -4,8 +4,8 @@
 "title": "Complete GroupDocs.Comparison voor Java-zelfstudiegids"
 "url": "/nl/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison voor Java – Stapsgewijze tutorials en codevoorbeelden
 
 ## Leer documenten vergelijken in Java – snel, nauwkeurig en krachtig

@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison for Java 比較受密碼保護的 Word 文件"
 "url": "/zh-hant/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # 掌握文件比較：使用 GroupDocs.Comparison for Java 比較受密碼保護的 Word 文件的指南
 
 ## 介紹

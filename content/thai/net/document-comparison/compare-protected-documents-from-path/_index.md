@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบเอกสารที่ได้รับการป้องกันจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # เปรียบเทียบเอกสารที่ได้รับการป้องกันจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

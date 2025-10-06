@@ -5,8 +5,8 @@
 "title": "Schnellstart"
 "url": "/de/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Schnellstart
 
 

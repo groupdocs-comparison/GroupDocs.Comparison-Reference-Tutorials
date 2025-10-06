@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的基本文档比较教程"
 "url": "/zh/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的基本文档比较教程
 
 通过我们详细的 GroupDocs.Comparison .NET 教程掌握基本的文档比较功能。这些分步指南演示了如何比较各种格式的文档，包括 Word、PDF、Excel 和图像。每个教程都包含可运行的 C# 代码示例，展示如何识别文档之间的差异、生成比较报告以及针对不同文档类型执行比较操作。

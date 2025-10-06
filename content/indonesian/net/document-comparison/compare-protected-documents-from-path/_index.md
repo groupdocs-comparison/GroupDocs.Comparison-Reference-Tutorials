@@ -5,8 +5,8 @@
 "title": "Bandingkan Dokumen Terproteksi dari Path - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Bandingkan Dokumen Terproteksi dari Path - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

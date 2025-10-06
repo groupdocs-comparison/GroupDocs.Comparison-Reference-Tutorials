@@ -4,8 +4,8 @@
 "title": "Comparação de diretórios mestres em Java usando GroupDocs.Comparison para auditorias de arquivos contínuas"
 "url": "/pt/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Comparação de diretórios mestres em Java com GroupDocs.Comparison
 
 ## Introdução

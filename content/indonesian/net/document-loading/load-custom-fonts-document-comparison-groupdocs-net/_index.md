@@ -4,8 +4,8 @@
 "title": "Cara Memuat Font Kustom untuk Perbandingan Dokumen Menggunakan GroupDocs.Comparison .NET"
 "url": "/id/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Memuat Font Kustom untuk Perbandingan Dokumen Menggunakan GroupDocs.Comparison .NET
 
 ## Perkenalan

@@ -4,8 +4,8 @@
 "title": "Gere e otimize visualizações de documentos com a API GroupDocs.Comparison .NET"
 "url": "/pt/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Gere e otimize visualizações de documentos com GroupDocs.Comparison .NET
 
 ## Introdução

@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε φακέλους και να αποθηκεύσετε αποτελέσματα ως TXT/HTML χρησιμοποιώντας το GroupDocs.Comparison .NET"
 "url": "/el/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση φακέλων και να αποθηκεύσετε τα αποτελέσματα ως TXT/HTML με το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

@@ -5,8 +5,8 @@
 "title": "Menerima dan Menolak Perubahan dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Menerima dan Menolak Perubahan dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

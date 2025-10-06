@@ -5,8 +5,8 @@
 "title": "Γρήγορη Έναρξη"
 "url": "/el/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Γρήγορη Έναρξη
 
 

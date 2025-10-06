@@ -4,8 +4,8 @@
 "title": "FileStream을 사용하여 .NET용 GroupDocs.Comparison에서 라이선스 설정"
 "url": "/ko/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # FileStream을 사용하여 .NET용 GroupDocs.Comparison에서 라이선스 설정
 
 **소개**

@@ -5,8 +5,8 @@
 "title": "Lấy thông tin tài liệu từ Path - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Lấy thông tin tài liệu từ Path - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

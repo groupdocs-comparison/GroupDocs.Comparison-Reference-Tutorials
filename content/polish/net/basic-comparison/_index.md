@@ -3,8 +3,8 @@
 "title": "Podstawowe samouczki porównywania dokumentów dla GroupDocs.Comparison .NET"
 "url": "/pl/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Podstawowe samouczki porównywania dokumentów dla GroupDocs.Comparison .NET
 
 Opanuj podstawowe porównywanie dokumentów dzięki naszym szczegółowym samouczkom GroupDocs.Comparison .NET. Te przewodniki krok po kroku pokazują, jak porównywać dokumenty w różnych formatach, w tym Word, PDF, Excel i obrazy. Każdy samouczek zawiera działające przykłady kodu C#, które pokazują, jak identyfikować różnice między dokumentami, generować raporty porównawcze i implementować operacje porównawcze dla różnych typów dokumentów.

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 的比較選項與設定教學課程"
 "url": "/zh-hant/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Java 的比較選項與設定教學課程
 
 使用我們的 GroupDocs.Comparison Java 選項教學課程，學習如何微調文件比較功能。這些詳細的指南示範如何配置比較敏感度、自訂變更偵測演算法、設定不同變更類型的顯示首選項以及實作專門的比較規則。每個教學課程都包含用於實作自訂比較選項的 Java 程式碼範例，可協助您建立能夠精確自訂以滿足特定文件分析需求的比較應用程式。

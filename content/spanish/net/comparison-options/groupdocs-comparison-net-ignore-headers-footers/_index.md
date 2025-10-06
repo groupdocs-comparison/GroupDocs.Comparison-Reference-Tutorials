@@ -4,8 +4,8 @@
 "title": "Cómo ignorar encabezados y pies de página en comparaciones de DOC usando GroupDocs.Comparison .NET"
 "url": "/es/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Cómo ignorar encabezados y pies de página en comparaciones de documentos con GroupDocs.Comparison .NET
 
 ## Introducción

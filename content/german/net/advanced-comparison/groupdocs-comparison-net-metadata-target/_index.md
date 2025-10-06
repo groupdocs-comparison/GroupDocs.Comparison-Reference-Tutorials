@@ -4,8 +4,8 @@
 "title": "Master-Dokumentvergleich in .NET&#58; Metadaten mit GroupDocs.Comparison beibehalten"
 "url": "/de/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentvergleich in .NET meistern: Metadaten mit GroupDocs.Comparison erhalten
 ## Einführung
 Hatten Sie schon einmal Probleme beim Vergleichen von Dokumenten, während bestimmte Metadaten erhalten bleiben mussten? GroupDocs.Comparison für .NET ist die Lösung! Dieses Tutorial führt Sie durch das Festlegen der Metadaten des Zieldokuments während eines Vergleichs und stellt sicher, dass Ihr endgültiges Dokument die gewünschten Attribute nahtlos beibehält.

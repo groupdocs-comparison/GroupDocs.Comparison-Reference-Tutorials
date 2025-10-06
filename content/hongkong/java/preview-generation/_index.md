@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 的預覽產生教學課程"
 "url": "/zh-hant/java/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # GroupDocs.Comparison Java 的預覽產生教學課程
 
 透過我們針對 Java 開發者的 GroupDocs.Comparison 綜合教程，學習如何建立文件預覽。這些實用指南示範如何產生來源文件、目標文件和比較結果的頁面預覽、自訂預覽影像大小以及實施資源清理以實現最佳記憶體利用率。每個教學課程都包含詳細的 Java 程式碼範例，可協助您在比較應用程式中有效地實現文件預覽功能。

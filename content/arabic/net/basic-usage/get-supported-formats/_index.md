@@ -5,8 +5,8 @@
 "title": "الحصول على التنسيقات المدعومة - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # الحصول على التنسيقات المدعومة - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

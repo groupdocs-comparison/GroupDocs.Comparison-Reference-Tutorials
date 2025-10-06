@@ -5,8 +5,8 @@
 "title": "Δημιουργία προεπισκοπήσεων σελίδας για το προκύπτον έγγραφο"
 "url": "/el/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Δημιουργία προεπισκοπήσεων σελίδας για το προκύπτον έγγραφο
 
 ## Εισαγωγή

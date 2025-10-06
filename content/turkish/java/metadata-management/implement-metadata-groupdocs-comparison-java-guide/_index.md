@@ -4,8 +4,8 @@
 "title": "Java'da GroupDocs.Comparison ile Belge Meta Verilerini Uygulayın&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Java'da GroupDocs.Comparison ile Belge Meta Verilerini Uygulama: Eksiksiz Bir Kılavuz
 
 ## giriiş

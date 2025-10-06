@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás elsajátítása .NET-ben – Átfogó útmutató a GroupDocs.Comparison használatához"
 "url": "/hu/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása .NET-ben a GroupDocs.Comparison segítségével
 
 Használja ki a GroupDocs.Comparison segítségével a .NET környezetekben automatizált dokumentum-összehasonlításokban rejlő lehetőségeket. Ez az útmutató segít egyszerűsíteni a munkafolyamatot és növelni a termelékenységet a dokumentumverziók hatékony kezelésével.

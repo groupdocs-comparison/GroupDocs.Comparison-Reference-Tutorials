@@ -5,8 +5,8 @@
 "title": "ストリームから保護されたドキュメントを比較する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # ストリームから保護されたドキュメントを比較する - GroupDocs.Comparison for .NET
 
 ## 導入

@@ -4,8 +4,8 @@
 "title": "เปรียบเทียบเอกสารจากสตรีมโดยใช้ GroupDocs.Comparison .NET - คู่มือฉบับสมบูรณ์สำหรับนักพัฒนา"
 "url": "/th/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการเปรียบเทียบเอกสารหลายฉบับจากสตรีมโดยใช้ GroupDocs.Comparison .NET
 
 ## การแนะนำ

@@ -4,8 +4,8 @@
 "title": "Efektywne generowanie podglądów dokumentów dzięki GroupDocs.Comparison dla programistów .NET"
 "url": "/pl/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Efektywne generowanie podglądów dokumentów dzięki GroupDocs.Comparison dla .NET
 
 ## Wstęp

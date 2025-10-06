@@ -4,8 +4,8 @@
 "title": "Porovnávání dokumentů v Javě pomocí GroupDocs.Comparison API – přístup založený na streamu"
 "url": "/cs/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí Javy: Porovnávání dokumentů s GroupDocs.Comparison API
 
 Vítejte v tomto komplexním průvodci, kde se zabýváme porovnáváním dokumentů v Javě pomocí výkonného rozhraní GroupDocs.Comparison API. Ať už spravujete právní dokumenty, akademické práce nebo jakékoli jiné textové soubory, jejich efektivní porovnávání je klíčové. V tomto tutoriálu si ukážeme, jak přijmout nebo odmítnout detekované změny mezi dvěma dokumenty pomocí streamů v Javě.

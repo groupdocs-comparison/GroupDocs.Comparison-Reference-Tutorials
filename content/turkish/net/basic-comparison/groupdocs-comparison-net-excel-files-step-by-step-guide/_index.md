@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58; Kullanarak Excel Dosyalarını Karşılaştırma Kapsamlı Adım Adım Kılavuz"
 "url": "/tr/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET Kullanarak Excel Dosyalarını Karşılaştırma: Kapsamlı Adım Adım Kılavuz
 ## giriiş
 Verilere giderek daha fazla bağımlı hale gelen bir dünyada, Excel dosyalarının farklı sürümlerini karşılaştırmak hem işletmeler hem de bireyler için önemlidir. İster finansal raporlardaki değişiklikleri takip ediyor olun, ister proje güncellemelerini yönetiyor olun, doğru araçlar olmadan bu görev zaman alıcı olabilir. GroupDocs.Comparison for .NET'e girin; bu süreci hassasiyetle kolaylaştıran güçlü bir kitaplık.

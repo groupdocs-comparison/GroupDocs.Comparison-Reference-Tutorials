@@ -5,8 +5,8 @@
 "title": "Définir une licence mesurée - Comparaison GroupDocs pour .NET"
 "url": "/fr/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Définir une licence mesurée - Comparaison GroupDocs pour .NET
 
 ## Introduction

@@ -5,8 +5,8 @@
 "title": "Memuat Dokumen dari Stream dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Memuat Dokumen dari Stream dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

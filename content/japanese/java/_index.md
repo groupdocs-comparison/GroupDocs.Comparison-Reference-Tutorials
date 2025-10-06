@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java の完全なチュートリアルガイド"
 "url": "/ja/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for Java – ステップバイステップのチュートリアルとコード例
 
 ## Javaでドキュメント比較を学ぶ - 高速、正確、そして強力

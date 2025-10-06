@@ -3,8 +3,8 @@
 "title": "Licencelési és konfigurációs oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Licencelési és konfigurációs oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Licencelési és konfigurációs oktatóanyagaink alapvető útmutatást nyújtanak a GroupDocs.Comparison megfelelő beállításához .NET alkalmazásokban. Ezek a lépésről lépésre bemutatják, hogyan valósíthat meg különböző licencelési lehetőségeket, konfigurálhatja a mért számlázást, ellenőrizheti a licenc állapotát, és optimalizálhatja a könyvtár beállításait az Ön igényei szerint. Minden oktatóanyag részletes C# kódpéldákat tartalmaz a megfelelő inicializáláshoz és konfiguráláshoz, segítve a megfelelően licencelt és optimalizált dokumentum-összehasonlító megoldások létrehozásában.

@@ -5,8 +5,8 @@
 "title": "Lisansı Dosyadan Ayarla - .NET için GroupDocs Karşılaştırması"
 "url": "/tr/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Lisansı Dosyadan Ayarla - .NET için GroupDocs Karşılaştırması
 
 ## giriiş

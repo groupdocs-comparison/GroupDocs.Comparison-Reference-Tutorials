@@ -4,8 +4,8 @@
 "title": "Genereer efficiënt documentvoorbeelden met GroupDocs.Comparison voor .NET-ontwikkelaars"
 "url": "/nl/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Genereer efficiënt documentvoorbeelden met GroupDocs.Comparison voor .NET
 
 ## Invoering

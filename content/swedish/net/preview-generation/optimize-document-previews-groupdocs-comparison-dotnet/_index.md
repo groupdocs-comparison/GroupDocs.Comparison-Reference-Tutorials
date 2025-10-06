@@ -4,8 +4,8 @@
 "title": "Generera och optimera dokumentförhandsvisningar med GroupDocs.Comparison .NET API"
 "url": "/sv/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Generera och optimera dokumentförhandsvisningar med GroupDocs.Comparison .NET
 
 ## Introduktion

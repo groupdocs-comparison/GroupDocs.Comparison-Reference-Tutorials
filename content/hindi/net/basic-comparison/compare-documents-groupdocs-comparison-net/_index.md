@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके स्ट्रीम्स से दस्तावेज़ों की तुलना करें .NET - डेवलपर्स के लिए एक संपूर्ण गाइड"
 "url": "/hi/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET का उपयोग करके स्ट्रीम से कई दस्तावेज़ों की तुलना कैसे करें
 
 ## परिचय

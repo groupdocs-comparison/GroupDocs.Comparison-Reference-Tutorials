@@ -4,8 +4,8 @@
 "title": "การนำการเปรียบเทียบเอกสารไปใช้ใน Java โดยใช้ GroupDocs คู่มือฉบับสมบูรณ์"
 "url": "/th/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # การนำการเปรียบเทียบเอกสารไปใช้ใน Java ด้วย GroupDocs: คู่มือฉบับสมบูรณ์
 
 ## การแนะนำ

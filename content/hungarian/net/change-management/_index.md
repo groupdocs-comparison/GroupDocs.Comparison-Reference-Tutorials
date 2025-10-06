@@ -3,8 +3,8 @@
 "title": "Változáskezelési oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Változáskezelési oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Fedezze fel, hogyan kezelheti hatékonyan a dokumentumokban végrehajtott módosításokat a GroupDocs.Comparison .NET oktatóanyagaink segítségével. Ezek a részletes útmutatók bemutatják, hogyan azonosíthatja a dokumentumok közötti konkrét különbségeket, hogyan fogadhatja el vagy utasíthatja el az egyes módosításokat, hogyan állíthatja be a szerzőket a követett változtatásokhoz, és hogyan kezelheti programozottan a módosításokat. Minden oktatóanyag lépésről lépésre bemutatja a C# kódpéldákkal ellátott utasításokat, amelyek segítenek átfogó változáskezelési funkciók megvalósításában a dokumentum-összehasonlítási munkafolyamatokban.

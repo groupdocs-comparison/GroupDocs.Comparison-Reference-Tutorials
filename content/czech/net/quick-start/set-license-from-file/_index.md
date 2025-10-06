@@ -5,8 +5,8 @@
 "title": "Nastavení licence ze souboru - porovnání GroupDocs pro .NET"
 "url": "/cs/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Nastavení licence ze souboru - porovnání GroupDocs pro .NET
 
 ## Zavedení

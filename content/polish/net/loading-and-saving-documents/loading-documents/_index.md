@@ -5,8 +5,8 @@
 "title": "Ładowanie dokumentów w porównaniu GroupDocs dla .NET"
 "url": "/pl/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Ładowanie dokumentów w porównaniu GroupDocs dla .NET
 
 ## Wstęp

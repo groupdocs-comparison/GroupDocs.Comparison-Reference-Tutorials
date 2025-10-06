@@ -5,8 +5,8 @@
 "title": "Načítání dokumentů v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Načítání dokumentů v porovnání GroupDocs pro .NET
 
 ## Zavedení

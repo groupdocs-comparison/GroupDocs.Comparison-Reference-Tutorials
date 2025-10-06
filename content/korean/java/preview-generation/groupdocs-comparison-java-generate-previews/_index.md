@@ -4,8 +4,8 @@
 "title": "Java를 위한 GroupDocs.Comparison의 간편한 문서 미리보기 생성 기능 마스터하기"
 "url": "/ko/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Java용 GroupDocs.Comparison 마스터하기: 간편한 문서 미리보기 생성
 
 ## 소개

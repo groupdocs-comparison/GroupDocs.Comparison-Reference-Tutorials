@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-tutorial", "file-processing", "api-integration"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial - Master Document Loading & Comparison
 
 Ever needed to compare two versions of a contract, track changes in a technical specification, or identify differences between software documentation? You're in the right place. This comprehensive guide walks you through everything you need to know about loading and comparing documents in Java using the GroupDocs.Comparison API.

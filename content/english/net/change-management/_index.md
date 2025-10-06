@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["change-management", "document-comparison", "dotnet", "csharp"]
+type: docs
 ---
-
 # Document Change Management .NET - Accept & Reject Changes Programmatically
 
 Managing document changes manually can be time-consuming and error-prone, especially when dealing with multiple reviewers and complex revision workflows. Whether you're building a document management system, automating legal document reviews, or streamlining collaborative editing processes, programmatic change management is essential for modern applications.

@@ -5,8 +5,8 @@
 "title": "Définir des tailles d'image spécifiques pour les aperçus"
 "url": "/fr/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Définir des tailles d'image spécifiques pour les aperçus
 
 ## Introduction

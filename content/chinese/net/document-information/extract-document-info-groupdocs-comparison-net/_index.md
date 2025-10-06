@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison for .NET 提取文档信息——综合指南"
 "url": "/zh/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison for .NET 提取文档信息：分步指南
 
 ## 介绍

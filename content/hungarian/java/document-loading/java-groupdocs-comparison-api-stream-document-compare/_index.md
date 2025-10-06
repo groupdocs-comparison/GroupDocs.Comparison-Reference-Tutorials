@@ -4,8 +4,8 @@
 "title": "Java dokumentum-összehasonlítás GroupDocs.Comparison API használatával – egy stream-alapú megközelítés"
 "url": "/hu/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Java elsajátítása: Dokumentum-összehasonlítás a GroupDocs.Comparison API-val
 
 Üdvözlünk ebben az átfogó útmutatóban, amelyben a hatékony GroupDocs.Comparison API segítségével megismerkedünk a Java nyelvű dokumentumok összehasonlításával. Akár jogi dokumentumokat, tudományos dolgozatokat vagy bármilyen más szöveges fájlt kezel, a hatékony összehasonlítás kulcsfontosságú. Ebben az oktatóanyagban bemutatjuk, hogyan fogadhatja el vagy utasíthatja el a két dokumentum között észlelt változásokat Java-folyamok használatával.

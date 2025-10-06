@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบเซลล์จากสตรีม - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # เปรียบเทียบเซลล์จากสตรีม - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;ı Kullanarak Java Çoklu Akışlı Belge Karşılaştırması Kapsamlı Bir Kılavuz"
 "url": "/tr/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java Çok Akışlı Belge Karşılaştırmasında Uzmanlaşma
 
 ## giriiş

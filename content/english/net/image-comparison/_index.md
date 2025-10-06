@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Image Processing"]
 tags: ["image-comparison", "dotnet", "csharp", "groupdocs"]
+type: docs
 ---
-
 # Image Comparison in .NET: Your Complete Guide
 
 ## Why Image Comparison Matters in Modern Development

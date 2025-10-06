@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh nhiều tài liệu trong .NET bằng GroupDocs.Comparison"
 "url": "/vi/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai so sánh nhiều tài liệu trong .NET bằng GroupDocs.Comparison: Hướng dẫn toàn diện
 
 ## Giới thiệu

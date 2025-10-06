@@ -4,8 +4,8 @@
 "title": "Otomatiskan Perbandingan Dokumen Word Menggunakan GroupDocs.Comparison .NET&#58; Tutorial Lengkap"
 "url": "/id/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Otomatiskan Perbandingan Dokumen Word Menggunakan GroupDocs.Comparison .NET: Tutorial Lengkap
 
 ## Perkenalan

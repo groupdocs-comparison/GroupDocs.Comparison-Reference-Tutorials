@@ -5,8 +5,8 @@
 "title": "स्ट्रीम से संरक्षित दस्तावेज़ों की तुलना करें - GroupDocs.तुलना .NET के लिए"
 "url": "/hi/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # स्ट्रीम से संरक्षित दस्तावेज़ों की तुलना करें - GroupDocs.तुलना .NET के लिए
 
 ## परिचय

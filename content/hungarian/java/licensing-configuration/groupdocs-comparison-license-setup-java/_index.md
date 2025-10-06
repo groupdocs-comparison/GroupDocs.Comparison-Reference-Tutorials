@@ -4,8 +4,8 @@
 "title": "Licenc beállítása fájlból a GroupDocs.Comparison programban Java-hoz – Átfogó útmutató"
 "url": "/hu/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Licenckészlet fájlból implementálása GroupDocs.Comparisonban Java-ban
 
 ## Bevezetés

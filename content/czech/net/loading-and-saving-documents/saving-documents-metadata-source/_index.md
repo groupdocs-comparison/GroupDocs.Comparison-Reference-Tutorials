@@ -5,8 +5,8 @@
 "title": "Ukládání zdroje metadat dokumentů v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Ukládání zdroje metadat dokumentů v porovnání GroupDocs pro .NET
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET Kullanılarak Belge Karşılaştırması İçin Özel Yazı Tipleri Nasıl Yüklenir"
 "url": "/tr/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET Kullanılarak Belge Karşılaştırması İçin Özel Yazı Tipleri Nasıl Yüklenir
 
 ## giriiş

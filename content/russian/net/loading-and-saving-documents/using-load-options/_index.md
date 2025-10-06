@@ -5,8 +5,8 @@
 "title": "Использование параметров загрузки в сравнении GroupDocs для .NET"
 "url": "/ru/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Использование параметров загрузки в сравнении GroupDocs для .NET
 
 ## Введение

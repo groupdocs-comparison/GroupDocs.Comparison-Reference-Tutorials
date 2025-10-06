@@ -3,8 +3,8 @@
 "title": "Documentinformatie-tutorials voor GroupDocs.Comparison .NET"
 "url": "/nl/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Documentinformatie-tutorials voor GroupDocs.Comparison .NET
 
 Onze tutorials over documentinformatie bieden begeleiding bij het openen van documentmetadata met behulp van GroupDocs.Comparison in .NET. Deze praktische handleidingen laten zien hoe u informatie over bron-, doel- en resultaatdocumenten kunt ophalen, bestandsindelingen kunt bepalen en programmatisch toegang kunt krijgen tot documenteigenschappen. Elke tutorial bevat werkende C#-codevoorbeelden voor veelvoorkomende scenario's met documentinformatie, waarmee u applicaties kunt bouwen die documentgegevens effectief kunnen analyseren en verwerken.

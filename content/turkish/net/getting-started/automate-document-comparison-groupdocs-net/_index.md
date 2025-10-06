@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET ile Belge Karşılaştırmasını Otomatikleştirin&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Karşılaştırmasını Otomatikleştirin
 ## Başlarken
 Günümüzün hızlı belge yönetimi dünyasında, belgelerin karşılaştırılmasının otomatikleştirilmesi, manuel yöntemlere kıyasla zamandan tasarruf sağlayabilir ve hataları azaltabilir. Bu kapsamlı kılavuz, bu süreci etkili bir şekilde otomatikleştirmek için GroupDocs.Comparison for .NET'i nasıl kullanacağınızı gösterecektir.

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58;i Kullanarak Word Belgesi Karşılaştırmasını Otomatikleştirin Tam Bir Eğitim"
 "url": "/tr/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET Kullanarak Word Belgesi Karşılaştırmasını Otomatikleştirin: Eksiksiz Bir Eğitim
 
 ## giriiş

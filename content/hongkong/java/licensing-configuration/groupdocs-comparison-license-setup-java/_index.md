@@ -4,8 +4,8 @@
 "title": "如何在 GroupDocs.Comparison for Java 中設定文件許可證－綜合指南"
 "url": "/zh-hant/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # 在 GroupDocs.Comparison for Java 中實作從文件設定許可證
 
 ## 介紹

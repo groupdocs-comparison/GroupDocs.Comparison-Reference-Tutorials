@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java でのパスワード保護されたドキュメントの比較をマスターする"
 "url": "/ja/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java でのパスワード保護されたドキュメントの比較をマスターする
 
 ## 導入

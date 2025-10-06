@@ -6,8 +6,8 @@
 "title": "Belge Karşılaştırma Yazılımı API Eğitimi | GroupDocs.Comparison"
 "url": "/tr/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Eğitimleri ve Geliştirici Kılavuzu
 
 ![GroupDocs.Karşılaştırma Banner'ı](./groupdocs-comparison-net.svg)

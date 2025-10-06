@@ -5,8 +5,8 @@
 "title": "從檔案設定許可證 - .NET 的 GroupDocs 比較"
 "url": "/zh-hant/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # 從檔案設定許可證 - .NET 的 GroupDocs 比較
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison で.NET 開発者向けにドキュメント プレビューを効率的に生成する"
 "url": "/ja/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET でドキュメントのプレビューを効率的に生成する
 
 ## 導入

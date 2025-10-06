@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET を使用して概要ページなしで画像を比較する方法"
 "url": "/ja/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET を使用して概要ページなしで画像比較を実装する方法
 
 ## 導入

@@ -4,8 +4,8 @@
 "title": "Zvládnutí porovnávání dokumentů chráněných heslem v Javě pomocí GroupDocs.Comparison"
 "url": "/cs/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů chráněných heslem v Javě pomocí GroupDocs.Comparison
 
 ## Zavedení

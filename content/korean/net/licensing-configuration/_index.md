@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET에 대한 라이선싱 및 구성 튜토리얼"
 "url": "/ko/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison .NET에 대한 라이선싱 및 구성 튜토리얼
 
 라이선스 및 구성 튜토리얼은 .NET 애플리케이션에서 GroupDocs.Comparison을 올바르게 설정하는 데 필요한 필수 지침을 제공합니다. 이 단계별 가이드는 다양한 라이선스 옵션을 구현하고, 종량제 요금제를 구성하고, 라이선스 상태를 확인하고, 특정 요구 사항에 맞게 라이브러리 설정을 최적화하는 방법을 보여줍니다. 각 튜토리얼에는 적절한 초기화 및 구성을 위한 자세한 C# 코드 예제가 포함되어 있어 라이선스가 제대로 적용되고 최적화된 문서 비교 솔루션을 구축하는 데 도움이 됩니다.

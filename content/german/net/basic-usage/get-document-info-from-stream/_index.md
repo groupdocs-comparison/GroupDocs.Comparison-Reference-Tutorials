@@ -5,8 +5,8 @@
 "title": "Dokumentinformationen aus Stream abrufen – GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Dokumentinformationen aus Stream abrufen – GroupDocs.Comparison für .NET
 
 ## Einführung

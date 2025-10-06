@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["net-tutorial", "document-loading", "groupdocs-comparison"]
+type: docs
 ---
-
 # Document Comparison .NET Tutorial - Loading and Saving Made Simple
 
 ## Introduction

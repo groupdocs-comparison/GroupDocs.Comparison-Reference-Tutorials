@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java için Gelişmiş Belge Karşılaştırma Eğitimleri"
 "url": "/tr/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # GroupDocs.Comparison Java için Gelişmiş Belge Karşılaştırma Eğitimleri
 
 Gelişmiş karşılaştırma eğitimlerimiz, GroupDocs.Comparison'ın güçlü özelliklerini Java uygulamalarında nasıl kullanacağınızı gösterir. Bu kapsamlı kılavuzlar, birden fazla belgeyi aynı anda karşılaştırmayı, parola korumalı dosyaları karşılaştırmayı, tüm klasörleri karşılaştırmayı ve farklı senaryolar için karşılaştırma ayarlarını özelleştirmeyi kapsar. Her eğitim, temel işlevselliğin ötesine geçen karmaşık belge karşılaştırma işlemlerini uygulamak için pratik Java kod örnekleri içerir.

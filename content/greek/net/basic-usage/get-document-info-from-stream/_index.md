@@ -5,8 +5,8 @@
 "title": "Λήψη πληροφοριών εγγράφου από τη ροή - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Λήψη πληροφοριών εγγράφου από τη ροή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

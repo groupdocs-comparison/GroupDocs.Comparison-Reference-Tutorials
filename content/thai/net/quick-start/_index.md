@@ -5,8 +5,8 @@
 "title": "เริ่มต้นอย่างรวดเร็ว"
 "url": "/th/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # เริ่มต้นอย่างรวดเร็ว
 
 

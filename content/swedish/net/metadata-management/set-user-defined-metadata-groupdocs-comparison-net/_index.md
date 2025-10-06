@@ -4,8 +4,8 @@
 "title": "Så här ställer du in användardefinierade metadata i dokument med GroupDocs.Comparison för .NET | Guide för dokumenthantering"
 "url": "/sv/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Så här ställer du in användardefinierade metadata i dokument med GroupDocs.Comparison för .NET
 
 ## Introduktion

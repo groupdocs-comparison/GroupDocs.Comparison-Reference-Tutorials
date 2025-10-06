@@ -5,8 +5,8 @@
 "title": "Documentinfo ophalen uit pad - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Documentinfo ophalen uit pad - GroupDocs.Comparison voor .NET
 
 ## Invoering

@@ -5,8 +5,8 @@
 "title": "Générer des aperçus de page pour le document cible"
 "url": "/fr/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Générer des aperçus de page pour le document cible
 
 ## Introduction

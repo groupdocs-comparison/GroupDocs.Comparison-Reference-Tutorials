@@ -5,8 +5,8 @@
 "title": "A GroupDocs.Comparison .NET-hez készült oktatóanyagai és példái"
 "url": "/hu/net/"
 "weight": 10
+type: docs
 ---
-
 # A GroupDocs.Comparison .NET-hez készült oktatóanyagai és példái
 
 ## Bevezetés

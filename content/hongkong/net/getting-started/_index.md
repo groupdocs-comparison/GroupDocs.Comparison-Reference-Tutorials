@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 開發人員入門教學"
 "url": "/zh-hant/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 開發人員入門教學
 
 從這些 GroupDocs.Comparison 的入門教學開始您的學習之旅，這些教學將引導您完成安裝、授權配置以及如何在 .NET 中建立您的首個文件比較任務。我們針對初學者的指南示範如何設定開發環境、初始化 GroupDocs.Comparison 函式庫以及執行基本的比較操作。遵循這些教程，您可以快速掌握基礎知識，並為在 .NET 應用程式中執行更高階的文件比較任務做好準備。

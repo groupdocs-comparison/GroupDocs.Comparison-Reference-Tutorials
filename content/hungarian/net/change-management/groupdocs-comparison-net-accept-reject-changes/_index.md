@@ -4,8 +4,8 @@
 "title": "Változáskezelés a törzsdokumentumokban – Szerkesztések elfogadása és elutasítása a GroupDocs.Comparison .NET segítségével"
 "url": "/hu/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Változáskezelés törzsdokumentumokban a GroupDocs.Comparison .NET segítségével
 
 ## Bevezetés

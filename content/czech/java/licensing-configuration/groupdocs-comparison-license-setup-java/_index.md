@@ -4,8 +4,8 @@
 "title": "Jak nastavit licenci ze souboru v GroupDocs.Comparison pro Javu – Komplexní průvodce"
 "url": "/cs/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementace nastavení licence ze souboru v GroupDocs.Comparison pro Javu
 
 ## Zavedení

@@ -5,8 +5,8 @@
 "title": "สร้างการแสดงตัวอย่างหน้าสำหรับเอกสารผลลัพธ์"
 "url": "/th/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # สร้างการแสดงตัวอย่างหน้าสำหรับเอกสารผลลัพธ์
 
 ## การแนะนำ

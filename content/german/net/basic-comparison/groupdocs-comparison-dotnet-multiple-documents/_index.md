@@ -4,8 +4,8 @@
 "title": "So vergleichen Sie mehrere kennwortgeschützte Dokumente in .NET mit GroupDocs.Comparison"
 "url": "/de/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # So vergleichen Sie mehrere kennwortgeschützte Dokumente in .NET mit GroupDocs.Comparison
 
 ## Einführung

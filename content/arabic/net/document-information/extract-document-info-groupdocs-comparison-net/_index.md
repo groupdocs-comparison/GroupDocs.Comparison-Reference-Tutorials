@@ -4,8 +4,8 @@
 "title": "كيفية استخراج معلومات المستند باستخدام GroupDocs.Comparison لـ .NET - دليل شامل"
 "url": "/ar/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية استخراج معلومات المستند باستخدام GroupDocs.Comparison لـ .NET: دليل خطوة بخطوة
 
 ## مقدمة

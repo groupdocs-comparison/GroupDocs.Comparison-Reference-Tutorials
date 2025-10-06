@@ -5,8 +5,8 @@
 "title": "الحصول على معلومات المستند من مستند النتيجة - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # الحصول على معلومات المستند من مستند النتيجة - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

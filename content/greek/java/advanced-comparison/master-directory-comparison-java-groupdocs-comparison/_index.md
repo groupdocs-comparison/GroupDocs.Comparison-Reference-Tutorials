@@ -4,8 +4,8 @@
 "title": "Σύγκριση κύριων καταλόγων σε Java χρησιμοποιώντας το GroupDocs.Comparison για απρόσκοπτους ελέγχους αρχείων"
 "url": "/el/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Σύγκριση κύριων καταλόγων σε Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

@@ -5,8 +5,8 @@
 "title": "Návody a příklady GroupDocs.Comparison pro .NET"
 "url": "/cs/net/"
 "weight": 10
+type: docs
 ---
-
 # Návody a příklady GroupDocs.Comparison pro .NET
 
 ## Zavedení

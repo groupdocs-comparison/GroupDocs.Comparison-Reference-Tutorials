@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中比较 .NET 的多个文档"
 "url": "/zh/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # 在 GroupDocs 比较中比较 .NET 的多个文档
 
 ## 介绍

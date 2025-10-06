@@ -5,8 +5,8 @@
 "title": "تنظيف الموارد بعد معاينات الصفحة"
 "url": "/ar/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # تنظيف الموارد بعد معاينات الصفحة
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "Dokumentum-előnézetek generálása és optimalizálása a GroupDocs.Comparison .NET API segítségével"
 "url": "/hu/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-előnézetek generálása és optimalizálása a GroupDocs.Comparison .NET segítségével
 
 ## Bevezetés

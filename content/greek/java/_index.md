@@ -4,8 +4,8 @@
 "title": "Πλήρης οδηγός εκμάθησης για το GroupDocs.Comparison για Java"
 "url": "/el/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison για Java – Οδηγοί βήμα προς βήμα και παραδείγματα κώδικα
 
 ## Μάθετε Σύγκριση Εγγράφων σε Java – Γρήγορη, Ακριβής και Ισχυρή

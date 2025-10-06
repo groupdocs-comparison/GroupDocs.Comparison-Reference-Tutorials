@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kütüphanesini Kullanarak Java'da Ana Belge Karşılaştırmaları"
 "url": "/tr/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java'da Belge Karşılaştırmalarında Ustalaşma
 
 Java için güçlü GroupDocs.Comparison kütüphanesini kullanarak belgelerdeki değişiklikleri başlatma, karşılaştırma ve güncelleme konusunda etkili süreci keşfedin. Bu eğitim, ortamınızı kurma, temel özellikleri anlama ve gerçek dünya çözümlerini uygulama konusunda size rehberlik eder.

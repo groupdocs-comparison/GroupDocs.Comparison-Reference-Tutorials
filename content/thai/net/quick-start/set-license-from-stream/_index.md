@@ -5,8 +5,8 @@
 "title": "ตั้งค่าใบอนุญาตจาก Stream - การเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # ตั้งค่าใบอนุญาตจาก Stream - การเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

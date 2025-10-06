@@ -5,8 +5,8 @@
 "title": "設定計量許可證 - GroupDocs .NET 比較"
 "url": "/zh-hant/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # 設定計量許可證 - GroupDocs .NET 比較
 
 ## 介紹

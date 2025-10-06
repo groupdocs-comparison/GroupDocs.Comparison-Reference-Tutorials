@@ -4,8 +4,8 @@
 "title": "كيفية تعيين ترخيص GroupDocs من Stream في Java - دليل خطوة بخطوة"
 "url": "/ar/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تعيين ترخيص GroupDocs من Stream في Java: دليل خطوة بخطوة
 
 ## مقدمة

@@ -3,8 +3,8 @@
 "title": "Zelfstudies over documentmetagegevensbeheer voor GroupDocs.Comparison .NET"
 "url": "/nl/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Zelfstudies over documentmetagegevensbeheer voor GroupDocs.Comparison .NET
 
 Onze tutorials over metadatabeheer laten zien hoe u documenteigenschappen kunt beheren bij het vergelijken van documenten met GroupDocs.Comparison in .NET. Deze stapsgewijze handleidingen behandelen het instellen van metadatabronnen, het definiëren van aangepaste metadata voor resulterende documenten en het implementeren van metadataretentiebeleid. Elke tutorial bevat praktische C#-codevoorbeelden voor veelvoorkomende scenario's voor metadatabeheer, waarmee u applicaties kunt bouwen die de juiste documenteigenschappen behouden gedurende het vergelijkingsproces.

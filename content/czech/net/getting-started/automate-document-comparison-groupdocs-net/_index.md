@@ -4,8 +4,8 @@
 "title": "Automatizujte porovnávání dokumentů pomocí GroupDocs.Comparison .NET – kompletní průvodce"
 "url": "/cs/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Automatizujte porovnávání dokumentů pomocí GroupDocs.Comparison .NET
 ## Začínáme
 V dnešním uspěchaném světě správy dokumentů může automatizace porovnávání dokumentů ušetřit čas a snížit počet chyb ve srovnání s manuálními metodami. Tato komplexní příručka vám ukáže, jak efektivně využít GroupDocs.Comparison for .NET k automatizaci tohoto procesu.

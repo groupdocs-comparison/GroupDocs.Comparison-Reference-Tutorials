@@ -5,8 +5,8 @@
 "title": "Tekst laden uit een tekenreeks in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Tekst laden uit een tekenreeks in GroupDocs Vergelijking voor .NET
 
 ## Invoering

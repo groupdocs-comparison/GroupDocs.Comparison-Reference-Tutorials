@@ -4,8 +4,8 @@
 "title": "Anpassa infogade objektstilar i Java-dokumentjämförelser med GroupDocs.Comparison"
 "url": "/sv/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Anpassa infogade objektstilar i Java-dokumentjämförelser med GroupDocs.Comparison
 
 ## Introduktion

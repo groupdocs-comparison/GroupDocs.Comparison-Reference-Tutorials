@@ -4,8 +4,8 @@
 "title": "JavaでGroupDocsを使用したマスタードキュメントのメタデータ抽出"
 "url": "/ja/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs を使用した Java でのドキュメント メタデータ抽出の習得
 
 今日のデジタル環境において、ドキュメントから情報を効率的に管理し、抽出することは、あらゆる業界の企業にとって不可欠です。法的契約書、学術論文、財務報告書など、扱う文書の種類、ページ数、サイズといったメタデータを理解することで、ワークフローを効率化し、データ分析を強化することができます。このチュートリアルでは、JavaでGroupDocs.Comparisonを使用し、入力ストリームとファイルパスの両方から貴重なドキュメント情報を抽出する方法を説明します。

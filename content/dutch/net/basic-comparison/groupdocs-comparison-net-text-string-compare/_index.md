@@ -4,8 +4,8 @@
 "title": "Vergelijking van hoofdtekstreeksen in .NET met behulp van de GroupDocs.Comparison-bibliotheek"
 "url": "/nl/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Vergelijking van hoofdtekstreeksen in .NET met behulp van de GroupDocs.Comparison-bibliotheek
 
 ## Invoering

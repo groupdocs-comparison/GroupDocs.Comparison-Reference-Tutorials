@@ -4,8 +4,8 @@
 "title": "Java dokumentumok összehasonlítása és előnézete a GroupDocs segítségével – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Java dokumentum-összehasonlítás és előnézet-generálás elsajátítása a GroupDocs.Comparison segítségével
 
 ## Bevezetés

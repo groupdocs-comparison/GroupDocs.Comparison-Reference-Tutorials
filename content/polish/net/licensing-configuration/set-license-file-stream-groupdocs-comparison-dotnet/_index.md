@@ -4,8 +4,8 @@
 "title": "Ustaw licencję w GroupDocs.Comparison dla .NET przy użyciu FileStream"
 "url": "/pl/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Ustaw licencję w GroupDocs.Comparison dla .NET przy użyciu FileStream
 
 **Wstęp**

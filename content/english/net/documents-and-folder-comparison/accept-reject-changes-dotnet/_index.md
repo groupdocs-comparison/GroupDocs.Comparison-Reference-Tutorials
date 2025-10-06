@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "net-api", "workflow-automation"]
+type: docs
 ---
-
 # Accept Reject Changes .NET Documents: Streamline Your Document Workflows
 
 ## Introduction

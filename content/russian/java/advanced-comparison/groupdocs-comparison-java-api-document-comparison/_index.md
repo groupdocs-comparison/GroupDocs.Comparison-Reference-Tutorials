@@ -4,8 +4,8 @@
 "title": "Сравнение основных документов в Java&#58; Использование API GroupDocs.Comparison для эффективного анализа файлов ячеек"
 "url": "/ru/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Освоение сравнения документов в Java с помощью API GroupDocs.Comparison
 
 ## Введение

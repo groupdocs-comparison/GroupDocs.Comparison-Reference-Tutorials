@@ -4,8 +4,8 @@
 "title": "Jämförelse av Java Multi-Stream-dokument med GroupDocs.Comparison – en omfattande guide"
 "url": "/sv/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Bemästra Java Multi-Stream Document Jämförelse med GroupDocs.Comparison
 
 ## Introduktion

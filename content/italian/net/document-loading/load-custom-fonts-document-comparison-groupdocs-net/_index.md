@@ -4,8 +4,8 @@
 "title": "Come caricare font personalizzati per il confronto di documenti utilizzando GroupDocs.Comparison .NET"
 "url": "/it/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Come caricare font personalizzati per il confronto di documenti utilizzando GroupDocs.Comparison .NET
 
 ## Introduzione

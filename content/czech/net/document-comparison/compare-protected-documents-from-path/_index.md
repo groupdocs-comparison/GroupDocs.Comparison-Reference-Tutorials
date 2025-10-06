@@ -5,8 +5,8 @@
 "title": "Porovnání chráněných dokumentů z cesty - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Porovnání chráněných dokumentů z cesty - GroupDocs.Comparison pro .NET
 
 ## Zavedení

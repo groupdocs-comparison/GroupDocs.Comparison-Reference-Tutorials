@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 比较文件夹并将结果保存为 TXT/HTML"
 "url": "/zh/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 实现文件夹比较并将结果保存为 TXT/HTML
 
 ## 介绍

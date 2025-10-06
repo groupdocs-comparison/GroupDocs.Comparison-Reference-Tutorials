@@ -5,8 +5,8 @@
 "title": "Vergelijking van laadopties in GroupDocs voor .NET"
 "url": "/nl/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Vergelijking van laadopties in GroupDocs voor .NET
 
 ## Invoering

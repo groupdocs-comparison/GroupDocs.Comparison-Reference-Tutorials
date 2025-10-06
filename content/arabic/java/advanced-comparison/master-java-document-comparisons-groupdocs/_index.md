@@ -4,8 +4,8 @@
 "title": "مقارنات المستندات الرئيسية في Java باستخدام مكتبة GroupDocs.Comparison"
 "url": "/ar/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنات المستندات في Java باستخدام GroupDocs.Comparison
 
 اكتشف العملية الفعّالة لتهيئة التغييرات ومقارنتها وتحديثها في المستندات باستخدام مكتبة GroupDocs.Comparison القوية لجافا. يرشدك هذا البرنامج التعليمي خلال إعداد بيئتك، وفهم الميزات الرئيسية، وتطبيق حلول عملية.

@@ -4,8 +4,8 @@
 "title": "Hur man jämför flera lösenordsskyddade dokument i .NET med GroupDocs.Comparison"
 "url": "/sv/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Hur man jämför flera lösenordsskyddade dokument i .NET med GroupDocs.Comparison
 
 ## Introduktion

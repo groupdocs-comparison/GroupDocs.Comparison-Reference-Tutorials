@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v .NET a zachování metadat pomocí GroupDocs.Comparison"
 "url": "/cs/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v .NET: Uchování metadat pomocí GroupDocs.Comparison
 ## Zavedení
 Už jste někdy měli potíže s porovnáváním dokumentů a potřebou zachovat specifická metadata? GroupDocs.Comparison for .NET je řešením! Tento tutoriál vás provede nastavením metadat cílového dokumentu během porovnávání a zajistí, že si váš výsledný dokument bez problémů zachová požadované atributy.

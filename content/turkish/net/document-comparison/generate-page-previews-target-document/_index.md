@@ -5,8 +5,8 @@
 "title": "Hedef Belge için Sayfa Önizlemeleri Oluştur"
 "url": "/tr/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Hedef Belge için Sayfa Önizlemeleri Oluştur
 
 ## giriiş

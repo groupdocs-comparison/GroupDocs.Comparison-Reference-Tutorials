@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET API を使用してドキュメント プレビューを生成および最適化する"
 "url": "/ja/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET でドキュメント プレビューを生成および最適化する
 
 ## 導入

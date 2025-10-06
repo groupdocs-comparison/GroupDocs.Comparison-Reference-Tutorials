@@ -4,8 +4,8 @@
 "title": "Java'da GroupDocs.Comparison Kullanarak Parola Korumalı Belgeler Nasıl Karşılaştırılır"
 "url": "/tr/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Java'da GroupDocs.Comparison Kullanarak Birden Fazla Korunan Belgeyi Nasıl Karşılaştırabilirsiniz
 
 **giriiş**

@@ -5,8 +5,8 @@
 "title": "Documentvergelijking"
 "url": "/nl/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Documentvergelijking
 
 ## Invoering

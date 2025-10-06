@@ -4,8 +4,8 @@
 "title": "Porównanie dokumentów Java i podgląd stron przy użyciu GroupDocs.Comparison"
 "url": "/pl/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów Java za pomocą GroupDocs.Comparison
 
 **Odblokuj wydajne zarządzanie dokumentami: kompleksowy przewodnik po korzystaniu z GroupDocs.Comparison w Javie**

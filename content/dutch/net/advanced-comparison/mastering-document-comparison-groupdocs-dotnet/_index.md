@@ -4,8 +4,8 @@
 "title": "Documentvergelijking in .NET onder de knie krijgen&#58; een uitgebreide handleiding voor het gebruik van GroupDocs.Comparison"
 "url": "/nl/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking in .NET onder de knie krijgen met GroupDocs.Comparison
 
 Benut de mogelijkheden van geautomatiseerde documentvergelijkingen in .NET-omgevingen met GroupDocs.Comparison. Deze handleiding helpt u uw workflow te stroomlijnen en uw productiviteit te verhogen door documentversies efficiënt te beheren.

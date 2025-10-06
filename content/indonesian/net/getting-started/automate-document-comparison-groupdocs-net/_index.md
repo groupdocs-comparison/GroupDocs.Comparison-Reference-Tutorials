@@ -4,8 +4,8 @@
 "title": "Otomatiskan Perbandingan Dokumen dengan GroupDocs.Comparison .NET&#58; Panduan Lengkap"
 "url": "/id/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Otomatiskan Perbandingan Dokumen dengan GroupDocs.Comparison .NET
 ## Memulai
 Dalam dunia manajemen dokumen yang serba cepat saat ini, mengotomatiskan perbandingan dokumen dapat menghemat waktu dan mengurangi kesalahan dibandingkan dengan metode manual. Panduan lengkap ini akan menunjukkan kepada Anda cara memanfaatkan GroupDocs.Comparison untuk .NET untuk mengotomatiskan proses ini secara efektif.

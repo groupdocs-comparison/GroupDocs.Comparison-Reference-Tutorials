@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["getting-started", "tutorial", "setup", "installation"]
+type: docs
 ---
-
 # Document Comparison .NET Tutorial - Complete GroupDocs Setup Guide
 
 Ever spent hours manually comparing documents, trying to spot every tiny change between versions? You're not alone. Whether you're building a content management system, legal document platform, or version control application, accurate document comparison is crucial—but incredibly time-consuming to implement from scratch.

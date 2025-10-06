@@ -4,8 +4,8 @@
 "title": "Nastavení autora změn v porovnání dokumentů pomocí GroupDocs.Comparison pro .NET"
 "url": "/cs/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Implementace nastavení autora změn v porovnání dokumentů pomocí GroupDocs.Comparison pro .NET
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "使用 Java 中的 GroupDocs 掌握文件元資料擷取"
 "url": "/zh-hant/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # 掌握使用 Java 中的 GroupDocs 進行文檔元資料擷取
 
 在當今的數位環境中，有效率地管理和提取文件資訊對於各行各業的企業都至關重要。無論您處理的是法律合約、學術論文或財務報告，了解文件元資料（例如文件類型、頁數和大小）都可以簡化工作流程並增強資料分析能力。本教學將指導您使用 Java 中的 GroupDocs.Comparison 透過輸入流和文件路徑提取有價值的文件資訊。

@@ -5,8 +5,8 @@
 "title": "Akıştan Görüntüleri Karşılaştırın - GroupDocs.Comparison for .NET"
 "url": "/tr/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Akıştan Görüntüleri Karşılaştırın - GroupDocs.Comparison for .NET
 
 ## giriiş

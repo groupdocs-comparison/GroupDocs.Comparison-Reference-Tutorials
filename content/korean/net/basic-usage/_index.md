@@ -5,8 +5,8 @@
 "title": "기본 사용법"
 "url": "/ko/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # 기본 사용법
 
 ## 소개

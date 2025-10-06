@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-api", "file-processing", "groupdocs"]
+type: docs
 ---
-
 # Java Document Comparison: Complete Guide with Practical Examples
 
 Ever had to manually compare two versions of a contract, only to miss a critical change buried in paragraph 47? Or spent hours tracking differences between software documentation versions? You're not alone. Document comparison is one of those tasks that seems simple until you actually need to do it at scale.

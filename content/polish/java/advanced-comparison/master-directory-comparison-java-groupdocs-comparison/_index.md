@@ -4,8 +4,8 @@
 "title": "Porównanie katalogów głównych w Javie przy użyciu GroupDocs.Comparison w celu bezproblemowego audytu plików"
 "url": "/pl/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Porównanie katalogu głównego w Javie z GroupDocs.Comparison
 
 ## Wstęp

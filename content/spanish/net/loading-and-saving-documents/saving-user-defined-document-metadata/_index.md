@@ -5,8 +5,8 @@
 "title": "Comparación de cómo guardar metadatos de documentos definidos por el usuario en GroupDocs para .NET"
 "url": "/es/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Comparación de cómo guardar metadatos de documentos definidos por el usuario en GroupDocs para .NET
 
 ## Introducción

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 掌握 Java 中的文件比較—綜合指南"
 "url": "/zh-hant/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # 使用 Java 中的 GroupDocs.Comparison 掌握文件比較
 
 在當今的數位時代，管理和比較文件對於企業和個人都至關重要。無論您是在進行專案協作，還是確保跨文件版本的資料一致性，擁有合適的工具都能帶來顯著的提升。本教學將探討如何使用 GroupDocs.Comparison for Java 透過串流無縫比較 Word 文件。完成本指南後，您將能夠在 Java 應用程式中實現強大的比較功能。

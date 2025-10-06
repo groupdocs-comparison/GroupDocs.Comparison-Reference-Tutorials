@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58;을 사용하여 효율적으로 문서 수정을 마스터하세요. 포괄적인 가이드"
 "url": "/ko/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용한 문서 수정 마스터링: 단계별 가이드
 
 ## 소개

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs Comparison"]
 tags: ["license-setup", "net-integration", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET License Setup - Complete Integration Guide
 
 ## Introduction

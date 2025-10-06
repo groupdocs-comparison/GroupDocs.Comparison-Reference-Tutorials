@@ -4,8 +4,8 @@
 "title": "Tự động so sánh tài liệu Word bằng GroupDocs.Comparison .NET&#58; Hướng dẫn đầy đủ"
 "url": "/vi/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Tự động so sánh tài liệu Word bằng GroupDocs.Comparison .NET: Hướng dẫn đầy đủ
 
 ## Giới thiệu

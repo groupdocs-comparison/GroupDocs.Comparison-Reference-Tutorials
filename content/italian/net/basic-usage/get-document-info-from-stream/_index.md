@@ -5,8 +5,8 @@
 "title": "Ottieni informazioni sul documento dal flusso - GroupDocs.Comparison per .NET"
 "url": "/it/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Ottieni informazioni sul documento dal flusso - GroupDocs.Comparison per .NET
 
 ## Introduzione

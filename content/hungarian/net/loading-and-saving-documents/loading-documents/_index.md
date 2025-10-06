@@ -5,8 +5,8 @@
 "title": "Dokumentumok betöltése a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Dokumentumok betöltése a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

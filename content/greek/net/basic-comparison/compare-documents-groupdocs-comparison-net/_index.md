@@ -4,8 +4,8 @@
 "title": "Σύγκριση εγγράφων από ροές χρησιμοποιώντας το GroupDocs.Comparison .NET - Ένας πλήρης οδηγός για προγραμματιστές"
 "url": "/el/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε πολλά έγγραφα από ροές χρησιμοποιώντας το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

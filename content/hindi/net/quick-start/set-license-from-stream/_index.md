@@ -5,8 +5,8 @@
 "title": "स्ट्रीम से लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना"
 "url": "/hi/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # स्ट्रीम से लाइसेंस सेट करें - .NET के लिए ग्रुपडॉक्स तुलना
 
 ## परिचय

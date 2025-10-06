@@ -4,8 +4,8 @@
 "title": ".NET でのドキュメント比較のマスター&#58; GroupDocs.Comparison の使用に関する包括的なガイド"
 "url": "/ja/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した .NET でのドキュメント比較の習得
 
 GroupDocs.Comparison を使えば、.NET 環境でのドキュメント比較を自動化する潜在能力を最大限に引き出すことができます。このガイドは、ドキュメントのバージョンを効率的に管理することで、ワークフローを合理化し、生産性を向上させるのに役立ちます。

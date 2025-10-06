@@ -4,8 +4,8 @@
 "title": "Master Document Change Management&#58; Änderungen akzeptieren und ablehnen mit GroupDocs.Comparison .NET"
 "url": "/de/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Beherrschen Sie das Dokumentänderungsmanagement mit GroupDocs.Comparison .NET
 
 ## Einführung

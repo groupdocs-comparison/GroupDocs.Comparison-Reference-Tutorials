@@ -4,8 +4,8 @@
 "title": ".NET'te GroupDocs.Comparison Kullanarak Akışlardan Word Dosyaları İçin Belge Karşılaştırmasını Uygulama"
 "url": "/tr/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison ile Stream'den Belge Karşılaştırması Nasıl Uygulanır
 
 ## giriiş

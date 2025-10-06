@@ -4,8 +4,8 @@
 "title": "Automatizzare il confronto multi-documento in .NET utilizzando la libreria GroupDocs.Comparison"
 "url": "/it/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # Come implementare il confronto multi-documento in .NET con GroupDocs.Comparison
 
 ## Introduzione

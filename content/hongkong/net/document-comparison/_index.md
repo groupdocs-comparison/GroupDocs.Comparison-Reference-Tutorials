@@ -5,8 +5,8 @@
 "title": "文件比較"
 "url": "/zh-hant/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # 文件比較
 
 ## 介紹

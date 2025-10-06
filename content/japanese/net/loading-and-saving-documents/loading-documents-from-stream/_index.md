@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET でストリームからドキュメントを読み込む"
 "url": "/ja/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs Comparison for .NET でストリームからドキュメントを読み込む
 
 ## 導入

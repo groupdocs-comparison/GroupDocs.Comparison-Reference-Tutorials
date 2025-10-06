@@ -4,8 +4,8 @@
 "title": "ดึงข้อมูลรูปแบบไฟล์ที่รองรับด้วย GroupDocs.Comparison สำหรับ Java - คู่มือฉบับสมบูรณ์"
 "url": "/th/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # ดึงข้อมูลรูปแบบไฟล์ที่รองรับด้วย GroupDocs.Comparison สำหรับ Java
 
 ## การแนะนำ

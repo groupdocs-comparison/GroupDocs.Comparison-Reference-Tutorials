@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58; ile C#'ta Belge Karşılaştırmasını Uygulama Adım Adım Kılavuz"
 "url": "/tr/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Karşılaştırmasını Uygulama
 
 ## C#'ta Belge Karşılaştırması İçin GroupDocs.Comparison Nasıl Kullanılır 

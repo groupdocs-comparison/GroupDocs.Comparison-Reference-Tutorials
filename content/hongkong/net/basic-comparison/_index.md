@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的基本文件比較教學"
 "url": "/zh-hant/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的基本文件比較教學
 
 透過我們詳細的 GroupDocs.Comparison .NET 教學掌握基本的文件比較功能。這些逐步指南示範如何比較各種格式的文檔，包括 Word、PDF、Excel 和圖像。每個教學課程都包含可運行的 C# 程式碼範例，展示如何識別文件之間的差異、產生比較報告以及針對不同文件類型執行比較操作。

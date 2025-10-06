@@ -5,8 +5,8 @@
 "title": "Documenten vergelijken van pad - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Documenten vergelijken van pad - GroupDocs.Comparison voor .NET
 
 ## Invoering

@@ -4,8 +4,8 @@
 "title": ".NET용 GroupDocs.Comparison을 사용하여 문서 비교에서 변경 사항 작성자 설정"
 "url": "/ko/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison을 사용하여 문서 비교에서 변경 사항의 작성자 설정 구현
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "ปรับปรุงเอกสารอย่างมีประสิทธิภาพด้วย GroupDocs.Comparison .NET คำแนะนำที่ครอบคลุม"
 "url": "/th/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การแก้ไขเอกสารด้วย GroupDocs.Comparison .NET: คำแนะนำทีละขั้นตอน
 
 ## การแนะนำ

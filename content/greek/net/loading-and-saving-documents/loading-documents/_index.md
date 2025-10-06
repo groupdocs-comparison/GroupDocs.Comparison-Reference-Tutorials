@@ -5,8 +5,8 @@
 "title": "Φόρτωση εγγράφων σε σύγκριση GroupDocs για .NET"
 "url": "/el/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Φόρτωση εγγράφων σε σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

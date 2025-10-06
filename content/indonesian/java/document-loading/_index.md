@@ -3,8 +3,8 @@
 "title": "Tutorial Memuat Dokumen untuk GroupDocs.Comparison Java"
 "url": "/id/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Tutorial Memuat Dokumen untuk GroupDocs.Comparison Java
 
 Tutorial pemuatan dokumen kami menyediakan panduan komprehensif untuk menyiapkan dokumen untuk perbandingan dalam aplikasi Java. Panduan langkah demi langkah ini menunjukkan cara memuat dokumen dari penyimpanan lokal, aliran memori, dan konten string, serta cara mengonfigurasi opsi pemuatan untuk berbagai jenis dokumen. Setiap tutorial menyertakan contoh kode Java lengkap untuk membantu Anda menerapkan fungsionalitas pemuatan dokumen yang kuat dalam aplikasi perbandingan Anda.

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 문서 보안 및 보호 튜토리얼"
 "url": "/ko/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 문서 보안 및 보호 튜토리얼
 
 Java용 GroupDocs.Comparison 튜토리얼을 통해 문서 보안 기능을 완벽하게 익혀보세요. 이 포괄적인 가이드는 암호로 보호된 문서를 비교하고, 결과 파일에 암호를 설정하고, 안전한 비교 워크플로를 구현하고, 프로그래밍 방식으로 문서 보호를 관리하는 방법을 보여줍니다. 각 튜토리얼은 안전한 문서 비교 작업을 위한 Java 코드 예제를 제공하여 기밀성을 유지하면서도 효과적인 문서 비교를 지원하는 애플리케이션을 구축하는 데 도움을 줍니다.

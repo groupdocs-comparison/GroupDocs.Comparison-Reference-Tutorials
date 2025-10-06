@@ -4,8 +4,8 @@
 "title": "Felhasználó által definiált metaadatok beállítása dokumentumokban a GroupDocs.Comparison for .NET használatával | Dokumentumkezelési útmutató"
 "url": "/hu/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Felhasználó által definiált metaadatok beállítása dokumentumokban a GroupDocs.Comparison for .NET segítségével
 
 ## Bevezetés

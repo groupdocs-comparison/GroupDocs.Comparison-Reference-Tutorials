@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 高级文档比较教程"
 "url": "/zh/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # GroupDocs.Comparison Java 高级文档比较教程
 
 我们的高级比较教程将向您展示如何在 Java 应用程序中充分利用 GroupDocs.Comparison 的强大功能。这些全面的指南涵盖了同时比较多个文档、比较受密码保护的文件、比较整个文件夹以及针对不同场景自定义比较设置等内容。每个教程都包含实用的 Java 代码示例，用于实现超越基本功能的复杂文档比较操作。

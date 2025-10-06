@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: [".NET Development"]
 tags: ["groupdocs", "document-comparison", "dotnet-tutorial", "csharp"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET Tutorial: Basic Usage Guide
 
 ## Getting Started with Document Comparison in .NET

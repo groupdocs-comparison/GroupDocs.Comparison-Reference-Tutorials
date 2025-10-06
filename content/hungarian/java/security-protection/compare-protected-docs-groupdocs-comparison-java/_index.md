@@ -4,8 +4,8 @@
 "title": "Jelszóval védett dokumentumok összehasonlítása a GroupDocs.Comparison használatával Java-ban"
 "url": "/hu/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Több védett dokumentum összehasonlítása a GroupDocs.Comparison használatával Java-ban
 
 **Bevezetés**

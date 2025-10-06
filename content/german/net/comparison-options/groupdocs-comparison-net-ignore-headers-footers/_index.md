@@ -4,8 +4,8 @@
 "title": "So ignorieren Sie Kopf- und Fußzeilen in DOC-Vergleichen mit GroupDocs.Comparison .NET"
 "url": "/de/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # So ignorieren Sie Kopf- und Fußzeilen bei Dokumentvergleichen mit GroupDocs.Comparison .NET
 
 ## Einführung

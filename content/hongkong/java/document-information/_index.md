@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 文件資訊教學課程"
 "url": "/zh-hant/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # GroupDocs.Comparison Java 文件資訊教學課程
 
 我們的文件資訊教學提供了使用 Java 中的 GroupDocs.Comparison 存取文件元資料的指導。這些實用指南將向您展示如何擷取來源文件、目標文件和結果文件的資訊、確定文件格式以及如何以程式設計方式存取文件屬性。每個教學課程都包含針對常見文件資訊場景的 Java 程式碼範例，可協助您建立能夠有效分析和處理文件資料的應用程式。

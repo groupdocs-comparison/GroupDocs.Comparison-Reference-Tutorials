@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące informacji o dokumencie dla GroupDocs.Comparison Java"
 "url": "/pl/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Samouczki dotyczące informacji o dokumencie dla GroupDocs.Comparison Java
 
 Nasze samouczki dotyczące informacji o dokumentach zapewniają wskazówki dotyczące uzyskiwania dostępu do metadanych dokumentu za pomocą GroupDocs.Comparison w Javie. Te praktyczne przewodniki pokazują, jak pobierać informacje o dokumentach źródłowych, docelowych i wynikowych, określać formaty plików i programowo uzyskiwać dostęp do właściwości dokumentu. Każdy samouczek zawiera działające przykłady kodu Java dla typowych scenariuszy informacji o dokumencie, pomagając w tworzeniu aplikacji, które mogą skutecznie analizować i przetwarzać dane dokumentu.

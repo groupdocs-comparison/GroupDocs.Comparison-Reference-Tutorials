@@ -4,8 +4,8 @@
 "title": "Hoofddocumentvergelijking in Java met behulp van GroupDocs. Vergelijking voor Word-, tekst- en e-maildocumenten"
 "url": "/nl/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking in Java onder de knie krijgen met GroupDocs.Comparison
 
 **Vergelijk efficiënt meerdere Word-, tekst- en e-maildocumenten met GroupDocs.Comparison voor Java**

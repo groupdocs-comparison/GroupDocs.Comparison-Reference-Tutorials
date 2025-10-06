@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET でのドキュメント メタデータ ターゲットの保存"
 "url": "/ja/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # GroupDocs Comparison for .NET でのドキュメント メタデータ ターゲットの保存
 
 ## 導入

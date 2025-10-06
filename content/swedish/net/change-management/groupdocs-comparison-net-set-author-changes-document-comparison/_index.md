@@ -4,8 +4,8 @@
 "title": "Ange författare till ändringar i dokumentjämförelse med GroupDocs.Comparison för .NET"
 "url": "/sv/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Implementera Set Author of Changes i dokumentjämförelse med GroupDocs.Comparison för .NET
 
 ## Introduktion

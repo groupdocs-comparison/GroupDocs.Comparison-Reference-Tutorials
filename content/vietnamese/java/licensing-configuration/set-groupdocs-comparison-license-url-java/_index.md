@@ -4,8 +4,8 @@
 "title": "Thiết lập Giấy phép GroupDocs.Comparison thông qua URL trong Java&#58; Đơn giản hóa Tự động hóa Giấy phép"
 "url": "/vi/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ GroupDocs.Comparison Java: Thiết lập giấy phép qua URL
 
 ## Giới thiệu

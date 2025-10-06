@@ -4,8 +4,8 @@
 "title": "Cách so sánh các tài liệu Word được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison cho Java"
 "url": "/vi/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu: Hướng dẫn so sánh các tài liệu Word được bảo vệ bằng mật khẩu với GroupDocs.Comparison cho Java
 
 ## Giới thiệu

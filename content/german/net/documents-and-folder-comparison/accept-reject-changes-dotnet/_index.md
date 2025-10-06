@@ -5,8 +5,8 @@
 "title": "Akzeptieren und Ablehnen von Änderungen im GroupDocs-Vergleich für .NET"
 "url": "/de/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Akzeptieren und Ablehnen von Änderungen im GroupDocs-Vergleich für .NET
 
 ## Einführung

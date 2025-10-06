@@ -5,8 +5,8 @@
 "title": "Lizenz aus Datei festlegen – GroupDocs-Vergleich für .NET"
 "url": "/de/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Lizenz aus Datei festlegen – GroupDocs-Vergleich für .NET
 
 ## Einführung

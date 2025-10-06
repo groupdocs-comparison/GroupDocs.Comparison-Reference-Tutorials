@@ -5,8 +5,8 @@
 "title": "Generar vistas previas de página para el documento fuente"
 "url": "/es/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Generar vistas previas de página para el documento fuente
 
 ## Introducción

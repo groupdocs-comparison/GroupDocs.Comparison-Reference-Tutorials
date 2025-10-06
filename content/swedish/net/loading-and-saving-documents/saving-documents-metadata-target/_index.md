@@ -5,8 +5,8 @@
 "title": "Spara dokumentmetadatamål i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Spara dokumentmetadatamål i GroupDocs-jämförelse för .NET
 
 ## Introduktion

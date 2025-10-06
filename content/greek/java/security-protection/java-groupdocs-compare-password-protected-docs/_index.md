@@ -4,8 +4,8 @@
 "title": "Εξοικείωση με τη σύγκριση εγγράφων που προστατεύονται με κωδικό πρόσβασης σε Java με το GroupDocs.Comparison"
 "url": "/el/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων που προστατεύονται με κωδικό πρόσβασης σε Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

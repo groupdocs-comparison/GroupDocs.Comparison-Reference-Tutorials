@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh Tài liệu Word trong Java Sử dụng GroupDocs.Comparison"
 "url": "/vi/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai So sánh Tài liệu Word trong Java với GroupDocs.Comparison
 
 ## Giới thiệu

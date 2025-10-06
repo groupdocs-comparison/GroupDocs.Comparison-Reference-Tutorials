@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás implementálása .NET-ben a GroupDocs.Comparison használatával Word-fájlokhoz streamekből"
 "url": "/hu/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Hogyan implementálható dokumentum-összehasonlítás Streamből a GroupDocs.Comparison for .NET segítségével?
 
 ## Bevezetés

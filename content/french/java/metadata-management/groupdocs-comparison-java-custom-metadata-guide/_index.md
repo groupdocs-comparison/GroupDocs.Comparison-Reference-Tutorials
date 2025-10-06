@@ -4,8 +4,8 @@
 "title": "Définir des métadonnées personnalisées dans les documents Java à l'aide de GroupDocs.Comparison - Guide étape par étape"
 "url": "/fr/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Définir des métadonnées personnalisées dans les documents Java à l'aide de GroupDocs.Comparison : guide étape par étape
 
 ## Introduction

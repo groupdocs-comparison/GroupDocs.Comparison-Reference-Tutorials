@@ -4,8 +4,8 @@
 "title": "Implementacja porównywania dokumentów w .NET przy użyciu GroupDocs.Comparison dla plików Word ze strumieni"
 "url": "/pl/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Jak wdrożyć porównywanie dokumentów ze strumienia za pomocą GroupDocs.Comparison dla .NET
 
 ## Wstęp

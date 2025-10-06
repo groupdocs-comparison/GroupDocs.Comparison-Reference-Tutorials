@@ -5,8 +5,8 @@
 "title": "Mendapatkan Info Dokumen dari Dokumen Hasil - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Mendapatkan Info Dokumen dari Dokumen Hasil - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

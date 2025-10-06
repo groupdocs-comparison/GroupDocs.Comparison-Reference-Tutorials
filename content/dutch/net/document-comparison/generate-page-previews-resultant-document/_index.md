@@ -5,8 +5,8 @@
 "title": "Genereer paginavoorbeelden voor het resulterende document"
 "url": "/nl/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Genereer paginavoorbeelden voor het resulterende document
 
 ## Invoering

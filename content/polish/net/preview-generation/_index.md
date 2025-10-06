@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące generowania podglądu dla GroupDocs.Comparison .NET"
 "url": "/pl/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Samouczki dotyczące generowania podglądu dla GroupDocs.Comparison .NET
 
 Dowiedz się, jak tworzyć podglądy dokumentów dzięki naszym kompleksowym samouczkom GroupDocs.Comparison dla deweloperów .NET. Te praktyczne przewodniki pokazują, jak generować podglądy stron dla dokumentów źródłowych, dokumentów docelowych i wyników porównania, dostosowywać rozmiary obrazów podglądu i wdrażać czyszczenie zasobów w celu optymalnego wykorzystania pamięci. Każdy samouczek zawiera szczegółowe przykłady kodu C# do efektywnego wdrażania funkcji podglądu dokumentów w aplikacjach porównawczych.

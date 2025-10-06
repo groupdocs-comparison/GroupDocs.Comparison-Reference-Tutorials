@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 결과 문서에 대한 비밀번호 설정"
 "url": "/ko/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 결과 문서에 대한 비밀번호 설정
 
 ## 소개

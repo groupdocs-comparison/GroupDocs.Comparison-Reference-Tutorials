@@ -4,8 +4,8 @@
 "title": "كيفية مقارنة المستندات المحمية بكلمة مرور باستخدام GroupDocs.Comparison في Java"
 "url": "/ar/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # كيفية مقارنة عدة مستندات محمية باستخدام GroupDocs.Comparison في Java
 
 **مقدمة**

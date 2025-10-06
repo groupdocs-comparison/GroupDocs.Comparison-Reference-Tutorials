@@ -4,8 +4,8 @@
 "title": "Σύγκριση κύριων εγγράφων σε Java χρησιμοποιώντας το GroupDocs.Comparison API για αποτελεσματική ανάλυση αρχείων κελιών"
 "url": "/el/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων σε Java με το GroupDocs.Comparison API
 
 ## Εισαγωγή

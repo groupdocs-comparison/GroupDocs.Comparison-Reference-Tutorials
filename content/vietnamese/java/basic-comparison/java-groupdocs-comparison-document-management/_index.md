@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu Java và xem trước trang bằng GroupDocs.Comparison"
 "url": "/vi/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu Java với GroupDocs.Comparison
 
 **Mở khóa Quản lý tài liệu hiệu quả: Hướng dẫn toàn diện về cách sử dụng GroupDocs.Comparison trong Java**

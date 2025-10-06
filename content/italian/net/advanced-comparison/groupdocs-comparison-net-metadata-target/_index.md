@@ -4,8 +4,8 @@
 "title": "Confronto dei documenti master in .NET&#58; preserva i metadati utilizzando GroupDocs.Comparison"
 "url": "/it/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Padroneggiare il confronto dei documenti in .NET: preservare i metadati con GroupDocs.Comparison
 ## Introduzione
 Hai mai avuto difficoltà a confrontare documenti pur dovendo preservare metadati specifici? GroupDocs.Comparison per .NET è la soluzione! Questo tutorial ti guiderà nell'impostazione dei metadati del documento di destinazione durante un confronto, assicurandoti che il documento finale mantenga perfettamente gli attributi desiderati.

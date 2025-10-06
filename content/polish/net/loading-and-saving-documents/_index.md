@@ -5,8 +5,8 @@
 "title": "Ładowanie i zapisywanie dokumentów"
 "url": "/pl/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Ładowanie i zapisywanie dokumentów
 
 ## Wstęp

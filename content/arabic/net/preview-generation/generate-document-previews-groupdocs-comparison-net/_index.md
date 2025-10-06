@@ -4,8 +4,8 @@
 "title": "إنشاء معاينات المستندات بكفاءة باستخدام GroupDocs.Comparison لمطوري .NET"
 "url": "/ar/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # إنشاء معاينات المستندات بكفاءة باستخدام GroupDocs.Comparison لـ .NET
 
 ## مقدمة

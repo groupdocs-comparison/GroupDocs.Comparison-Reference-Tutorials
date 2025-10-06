@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的授權與設定教學課程"
 "url": "/zh-hant/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的授權與設定教學課程
 
 我們的授權和配置教學提供了在 .NET 應用程式中正確設定 GroupDocs.Comparison 的基本指導。這些逐步指南將向您展示如何實現不同的授權選項、配置計量計費、檢查許可證狀態以及根據您的特定需求最佳化庫設定。每個教學課程都包含詳細的 C# 程式碼範例，用於正確的初始化和配置，幫助您建立正確授權並經過最佳化的文件比較解決方案。

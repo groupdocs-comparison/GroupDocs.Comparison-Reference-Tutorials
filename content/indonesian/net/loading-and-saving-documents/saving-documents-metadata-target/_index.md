@@ -5,8 +5,8 @@
 "title": "Perbandingan Menyimpan Target Metadata Dokumen di GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Perbandingan Menyimpan Target Metadata Dokumen di GroupDocs untuk .NET
 
 ## Perkenalan

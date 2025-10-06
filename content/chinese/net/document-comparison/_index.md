@@ -5,8 +5,8 @@
 "title": "文档比较"
 "url": "/zh/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # 文档比较
 
 ## 介绍

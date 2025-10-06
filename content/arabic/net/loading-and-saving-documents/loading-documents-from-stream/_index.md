@@ -5,8 +5,8 @@
 "title": "تحميل المستندات من Stream في مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # تحميل المستندات من Stream في مقارنة GroupDocs لـ .NET
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": ".NET के लिए GroupDocs.Comparison का उपयोग करके दस्तावेज़ तुलना में परिवर्तनों का लेखक सेट करें"
 "url": "/hi/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Comparison का उपयोग करके दस्तावेज़ तुलना में परिवर्तन के सेट लेखक को लागू करना
 
 ## परिचय

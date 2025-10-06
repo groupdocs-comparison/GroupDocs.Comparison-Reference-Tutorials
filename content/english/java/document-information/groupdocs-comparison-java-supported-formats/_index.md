@@ -9,8 +9,8 @@ weight: 1
 url: "/java/document-information/groupdocs-comparison-java-supported-formats/"
 categories: ["Java Development"]
 tags: ["java", "file-formats", "document-processing", "groupdocs"]
+type: docs
 ---
-
 # Java Supported File Formats - Complete Detection Guide
 
 ## Introduction

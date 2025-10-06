@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "document-comparison", "metadata-preservation", "dotnet-tutorial"]
+type: docs
 ---
-
 # Document Comparison .NET Tutorial - Preserve Metadata with GroupDocs
 
 ## Introduction

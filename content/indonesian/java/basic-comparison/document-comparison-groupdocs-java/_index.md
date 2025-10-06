@@ -4,8 +4,8 @@
 "title": "Menguasai Perbandingan Dokumen di Java dengan GroupDocs.Comparison&#58; Panduan Lengkap"
 "url": "/id/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen Menggunakan GroupDocs.Comparison di Java
 
 Di era digital saat ini, mengelola dan membandingkan dokumen sangat penting bagi bisnis dan individu. Baik Anda berkolaborasi dalam proyek atau memastikan konsistensi data di seluruh versi dokumen, memiliki alat yang tepat dapat membuat perbedaan yang signifikan. Tutorial ini membahas cara menggunakan GroupDocs.Comparison untuk Java guna membandingkan dokumen Word dengan lancar menggunakan aliran data. Di akhir panduan ini, Anda akan dapat menerapkan fitur perbandingan yang hebat dalam aplikasi Java Anda.

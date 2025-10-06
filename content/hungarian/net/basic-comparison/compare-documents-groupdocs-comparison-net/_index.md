@@ -4,8 +4,8 @@
 "title": "Dokumentumok összehasonlítása adatfolyamokból a GroupDocs.Comparison .NET használatával - Teljes körű útmutató fejlesztőknek"
 "url": "/hu/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Több dokumentum összehasonlítása adatfolyamokból a GroupDocs.Comparison .NET használatával
 
 ## Bevezetés

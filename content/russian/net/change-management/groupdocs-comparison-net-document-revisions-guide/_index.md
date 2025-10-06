@@ -4,8 +4,8 @@
 "title": "Эффективное изменение основных документов с помощью GroupDocs.Comparison .NET&#58; Полное руководство"
 "url": "/ru/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Освоение редакций документов с помощью GroupDocs.Comparison .NET: пошаговое руководство
 
 ## Введение

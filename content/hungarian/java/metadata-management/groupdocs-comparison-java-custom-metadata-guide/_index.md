@@ -4,8 +4,8 @@
 "title": "Egyéni metaadatok beállítása Java dokumentumokban a GroupDocs.Comparison használatával – lépésről lépésre útmutató"
 "url": "/hu/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Egyéni metaadatok beállítása Java dokumentumokban a GroupDocs.Comparison használatával: lépésről lépésre útmutató
 
 ## Bevezetés

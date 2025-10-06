@@ -5,8 +5,8 @@
 "title": "比较来自流的文档 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # 比较来自流的文档 - GroupDocs.Comparison for .NET
 
 ## 介绍

@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบสตริงข้อความหลักใน .NET โดยใช้ไลบรารี GroupDocs.Comparison"
 "url": "/th/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # การเปรียบเทียบสตริงข้อความหลักใน .NET โดยใช้ไลบรารี GroupDocs.Comparison
 
 ## การแนะนำ

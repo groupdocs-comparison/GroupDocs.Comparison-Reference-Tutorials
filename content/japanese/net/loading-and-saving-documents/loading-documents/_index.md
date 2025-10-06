@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET でのドキュメントの読み込み"
 "url": "/ja/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs Comparison for .NET でのドキュメントの読み込み
 
 ## 導入

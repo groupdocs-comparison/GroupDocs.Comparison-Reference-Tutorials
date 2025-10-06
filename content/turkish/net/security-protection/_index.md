@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Belge Güvenliği ve Koruma Eğitimleri"
 "url": "/tr/net/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Belge Güvenliği ve Koruma Eğitimleri
 
 .NET için ayrıntılı GroupDocs.Comparison eğitimlerimizle belge güvenliği özelliklerinde ustalaşın. Bu kapsamlı kılavuzlar, parola korumalı belgeleri nasıl karşılaştıracağınızı, sonuç dosyaları için parolalar nasıl ayarlayacağınızı, güvenli karşılaştırma iş akışlarını nasıl uygulayacağınızı ve belge korumasını programatik olarak nasıl yöneteceğinizi gösterir. Her eğitim, güvenli belge karşılaştırma işlemleri için çalışan C# kod örnekleri sunarak, etkili belge karşılaştırmasını etkinleştirirken gizliliği koruyan uygulamalar oluşturmanıza yardımcı olur.

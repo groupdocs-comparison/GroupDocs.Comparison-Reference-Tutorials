@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java için Lisanslama ve Yapılandırma Eğitimleri"
 "url": "/tr/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison Java için Lisanslama ve Yapılandırma Eğitimleri
 
 Lisanslama ve yapılandırma eğitimlerimiz, GroupDocs.Comparison'ı Java uygulamalarında düzgün bir şekilde kurmak için temel rehberlik sağlar. Bu adım adım kılavuzlar, farklı lisanslama seçeneklerini nasıl uygulayacağınızı, ölçülü faturalandırmayı nasıl yapılandıracağınızı, lisans durumunu nasıl kontrol edeceğinizi ve kütüphane ayarlarını özel gereksinimleriniz için nasıl optimize edeceğinizi gösterir. Her eğitim, düzgün başlatma ve yapılandırma için ayrıntılı Java kod örnekleri içerir ve düzgün lisanslı ve optimize edilmiş belge karşılaştırma çözümleri oluşturmanıza yardımcı olur.

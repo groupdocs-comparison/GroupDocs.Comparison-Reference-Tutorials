@@ -4,8 +4,8 @@
 "title": "Java&#58;da GroupDocs Kullanarak Ana Belge Karşılaştırması. Word, Metin ve E-posta Belgeleri için Karşılaştırma"
 "url": "/tr/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java'da Belge Karşılaştırmasında Ustalaşma
 
 **Java için GroupDocs.Comparison'ı Kullanarak Birden Fazla Kelime, Metin ve E-posta Belgesini Verimli Şekilde Karşılaştırın**

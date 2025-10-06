@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 스트림에서 문서 비교 - 개발자를 위한 완벽한 가이드"
 "url": "/ko/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 스트림에서 여러 문서를 비교하는 방법
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "Как сравнить папки и сохранить результаты в формате TXT/HTML с помощью GroupDocs.Comparison .NET"
 "url": "/ru/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Как реализовать сравнение папок и сохранить результаты в формате TXT/HTML с помощью GroupDocs.Comparison .NET
 
 ## Введение

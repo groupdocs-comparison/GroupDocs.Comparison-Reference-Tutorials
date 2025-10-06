@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用した Word 文書の比較の自動化 完全チュートリアル"
 "url": "/ja/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET を使用した Word 文書の比較の自動化: 完全チュートリアル
 
 ## 導入

@@ -4,8 +4,8 @@
 "title": ".NET에서 마스터 문서 비교&#58; GroupDocs.Comparison을 사용하여 메타데이터 보존"
 "url": "/ko/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # .NET에서 문서 비교 마스터하기: GroupDocs.Comparison을 사용하여 메타데이터 보존
 ## 소개
 특정 메타데이터를 보존해야 하는 상황에서 문서를 비교하는 데 어려움을 겪어 보신 적이 있으신가요? GroupDocs.Comparison for .NET이 해결책입니다! 이 튜토리얼에서는 비교 과정에서 대상 문서의 메타데이터를 설정하고 최종 문서에서 원하는 속성을 완벽하게 유지하는 방법을 안내합니다.

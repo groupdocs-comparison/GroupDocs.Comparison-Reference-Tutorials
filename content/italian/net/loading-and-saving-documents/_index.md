@@ -5,8 +5,8 @@
 "title": "Caricamento e salvataggio dei documenti"
 "url": "/it/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Caricamento e salvataggio dei documenti
 
 ## Introduzione

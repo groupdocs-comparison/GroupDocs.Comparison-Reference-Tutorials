@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में परिवर्तन स्वीकार करें और अस्वीकार करें"
 "url": "/hi/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में परिवर्तन स्वीकार करें और अस्वीकार करें
 
 ## परिचय

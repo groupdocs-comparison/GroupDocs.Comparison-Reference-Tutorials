@@ -4,8 +4,8 @@
 "title": "تعيين الترخيص في GroupDocs.Comparison لـ .NET باستخدام FileStream"
 "url": "/ar/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # تعيين الترخيص في GroupDocs.Comparison لـ .NET باستخدام FileStream
 
 **مقدمة**

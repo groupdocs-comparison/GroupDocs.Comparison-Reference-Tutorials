@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε πολλά έγγραφα που προστατεύονται με κωδικό πρόσβασης στο .NET χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε πολλά έγγραφα που προστατεύονται με κωδικό πρόσβασης στο .NET χρησιμοποιώντας το GroupDocs.Comparison
 
 ## Εισαγωγή

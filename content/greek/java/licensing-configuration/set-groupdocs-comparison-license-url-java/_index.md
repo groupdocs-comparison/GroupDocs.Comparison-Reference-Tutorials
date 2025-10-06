@@ -4,8 +4,8 @@
 "title": "Ρύθμιση άδειας GroupDocs.Comparison μέσω URL σε Java&#58; Απλοποίηση αυτοματισμού αδειοδότησης"
 "url": "/el/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # Mastering GroupDocs.Comparison Java: Ορισμός άδειας χρήσης μέσω URL
 
 ## Εισαγωγή

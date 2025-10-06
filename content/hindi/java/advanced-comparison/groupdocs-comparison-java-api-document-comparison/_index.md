@@ -4,8 +4,8 @@
 "title": "जावा में मास्टर दस्तावेज़ तुलना&#58; कुशल सेल फ़ाइल विश्लेषण के लिए GroupDocs.Comparison एपीआई का उपयोग करना"
 "url": "/hi/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API के साथ जावा में दस्तावेज़ तुलना में महारत हासिल करना
 
 ## परिचय

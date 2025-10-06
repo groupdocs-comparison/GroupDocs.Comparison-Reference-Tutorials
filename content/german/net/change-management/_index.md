@@ -3,8 +3,8 @@
 "title": "Änderungsverwaltungs-Tutorials für GroupDocs.Comparison .NET"
 "url": "/de/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Änderungsverwaltungs-Tutorials für GroupDocs.Comparison .NET
 
 Entdecken Sie mit unseren GroupDocs.Comparison .NET-Tutorials, wie Sie Dokumentänderungen effektiv verwalten. Diese ausführlichen Anleitungen zeigen Ihnen, wie Sie spezifische Unterschiede zwischen Dokumenten erkennen, einzelne Änderungen akzeptieren oder ablehnen, Autoren für nachverfolgte Änderungen festlegen und Revisionen programmgesteuert verwalten. Jedes Tutorial enthält Schritt-für-Schritt-Anleitungen mit C#-Codebeispielen, die Ihnen helfen, umfassende Änderungsmanagementfunktionen in Ihre Dokumentvergleichs-Workflows zu implementieren.

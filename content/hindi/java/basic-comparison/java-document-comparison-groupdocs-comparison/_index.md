@@ -4,8 +4,8 @@
 "title": "जावा दस्तावेज़ तुलना GroupDocs.Comparison&#58; का उपयोग करके एक व्यापक गाइड"
 "url": "/hi/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison का उपयोग करके जावा दस्तावेज़ तुलना: एक व्यापक गाइड
 
 ## परिचय

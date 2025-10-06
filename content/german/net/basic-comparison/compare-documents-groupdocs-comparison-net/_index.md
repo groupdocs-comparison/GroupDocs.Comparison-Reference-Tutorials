@@ -4,8 +4,8 @@
 "title": "Vergleichen Sie Dokumente aus Streams mit GroupDocs.Comparison .NET – Ein vollständiger Leitfaden für Entwickler"
 "url": "/de/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # So vergleichen Sie mehrere Dokumente aus Streams mit GroupDocs.Comparison .NET
 
 ## Einführung

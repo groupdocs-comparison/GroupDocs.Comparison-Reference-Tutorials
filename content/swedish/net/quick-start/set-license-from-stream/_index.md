@@ -5,8 +5,8 @@
 "title": "Ange licens från Stream - GroupDocs-jämförelse för .NET"
 "url": "/sv/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Ange licens från Stream - GroupDocs-jämförelse för .NET
 
 ## Introduktion

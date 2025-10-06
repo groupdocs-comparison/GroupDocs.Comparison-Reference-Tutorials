@@ -3,8 +3,8 @@
 "title": "Hướng dẫn tải tài liệu cho GroupDocs.Comparison Java"
 "url": "/vi/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Hướng dẫn tải tài liệu cho GroupDocs.Comparison Java
 
 Hướng dẫn tải tài liệu của chúng tôi cung cấp hướng dẫn toàn diện để chuẩn bị tài liệu để so sánh trong các ứng dụng Java. Các hướng dẫn từng bước này trình bày cách tải tài liệu từ bộ nhớ cục bộ, luồng bộ nhớ và nội dung chuỗi, cũng như cách cấu hình tùy chọn tải cho các loại tài liệu khác nhau. Mỗi hướng dẫn bao gồm các ví dụ mã Java hoàn chỉnh để giúp bạn triển khai chức năng tải tài liệu mạnh mẽ trong các ứng dụng so sánh của mình.

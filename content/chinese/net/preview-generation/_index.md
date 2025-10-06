@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的预览生成教程"
 "url": "/zh/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的预览生成教程
 
 通过我们面向 .NET 开发人员的全面 GroupDocs.Comparison 教程，学习如何创建文档预览。这些实用指南演示了如何生成源文档、目标文档和比较结果的页面预览、自定义预览图像大小以及实施资源清理以实现最佳内存利用率。每个教程都包含详细的 C# 代码示例，用于在比较应用程序中高效实现文档预览功能。

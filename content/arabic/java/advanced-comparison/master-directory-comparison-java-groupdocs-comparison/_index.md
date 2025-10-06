@@ -4,8 +4,8 @@
 "title": "مقارنة الدليل الرئيسي في Java باستخدام GroupDocs.Comparison لإجراء عمليات تدقيق ملفات سلسة"
 "url": "/ar/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # مقارنة الدليل الرئيسي في Java مع GroupDocs.Comparison
 
 ## مقدمة

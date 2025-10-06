@@ -3,8 +3,8 @@
 "title": "Jämförelsealternativ och inställningar Handledningar för GroupDocs.Comparison Java"
 "url": "/sv/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Jämförelsealternativ och inställningar Handledningar för GroupDocs.Comparison Java
 
 Lär dig finjustera dokumentjämförelser med våra handledningar om GroupDocs.Comparison-alternativ för Java. Dessa detaljerade guider visar hur du konfigurerar jämförelsekänslighet, anpassar algoritmer för ändringsdetektering, anger visningsinställningar för olika ändringstyper och implementerar specialiserade jämförelseregler. Varje handledning innehåller fungerande Java-kodexempel för att implementera anpassade jämförelsealternativ, vilket hjälper dig att bygga jämförelseapplikationer som kan anpassas exakt till dina specifika dokumentanalyskrav.

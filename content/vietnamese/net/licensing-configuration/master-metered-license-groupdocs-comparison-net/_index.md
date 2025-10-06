@@ -4,8 +4,8 @@
 "title": "Cách thiết lập giấy phép theo định mức trong GroupDocs.Comparison .NET&#58; Hướng dẫn từng bước"
 "url": "/vi/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách thiết lập giấy phép tính phí trong GroupDocs.Comparison .NET: Hướng dẫn từng bước
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Cómo cargar y comparar documentos de Word protegidos con contraseña en Java usando GroupDocs.Comparison"
 "url": "/es/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Cómo cargar y comparar documentos de Word protegidos con contraseña en Java usando GroupDocs.Comparison
 
 ## Introducción

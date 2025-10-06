@@ -5,8 +5,8 @@
 "title": "Stream에서 라이선스 설정 - .NET용 GroupDocs 비교"
 "url": "/ko/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Stream에서 라이선스 설정 - .NET용 GroupDocs 비교
 
 ## 소개

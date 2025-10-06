@@ -5,8 +5,8 @@
 "title": "مقارنة المستندات المحمية من Stream - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # مقارنة المستندات المحمية من Stream - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

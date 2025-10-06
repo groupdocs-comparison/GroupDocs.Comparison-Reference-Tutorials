@@ -4,8 +4,8 @@
 "title": "Jak skonfigurować licencję licznikową w GroupDocs.Comparison .NET&#58; Przewodnik krok po kroku"
 "url": "/pl/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak skonfigurować licencję licznikową w GroupDocs.Comparison .NET: przewodnik krok po kroku
 
 ## Wstęp

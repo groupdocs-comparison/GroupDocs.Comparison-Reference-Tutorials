@@ -4,8 +4,8 @@
 "title": "Σύγκριση κύριων εγγράφων και απόδοση HTML σε Java με το GroupDocs.Comparison"
 "url": "/el/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων και την απόδοση HTML σε Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

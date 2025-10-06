@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh Tài liệu trong C# với GroupDocs.Comparison .NET&#58; Hướng dẫn từng bước"
 "url": "/vi/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai So sánh Tài liệu với GroupDocs.Comparison .NET
 
 ## Cách sử dụng GroupDocs.Comparison để so sánh tài liệu trong C# 

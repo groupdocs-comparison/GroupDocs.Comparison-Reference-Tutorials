@@ -4,8 +4,8 @@
 "title": "透過 Java 中的 URL 設定 GroupDocs.Comparison 授權－簡化許可證自動化"
 "url": "/zh-hant/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # 掌握 GroupDocs.Comparison Java：透過 URL 設定許可證
 
 ## 介紹

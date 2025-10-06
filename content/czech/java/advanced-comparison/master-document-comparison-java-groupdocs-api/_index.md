@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v Javě s GroupDocs.Comparison API"
 "url": "/cs/java/advanced-comparison/master-document-comparison-java-groupdocs-api/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů a správy úvěrů v Javě s GroupDocs.Comparison API
 
 V dnešním rychle se měnícím obchodním prostředí je efektivní správa dokumentů a sledování využití zdrojů klíčové. Ať už porovnáváte právní smlouvy, upravujete technické manuály nebo jen sledujete své kredity za používání softwaru, správné nástroje mohou mít významný dopad. V tomto tutoriálu se podíváme na to, jak využít sílu GroupDocs.Comparison for Java k bezproblémovému porovnávání dokumentů a sledování spotřeby kreditů.

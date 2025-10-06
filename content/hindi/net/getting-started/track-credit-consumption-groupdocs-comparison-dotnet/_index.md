@@ -4,8 +4,8 @@
 "title": ".NET के लिए GroupDocs.Comparison का उपयोग करके क्रेडिट खपत को कैसे ट्रैक करें एक व्यापक गाइड"
 "url": "/hi/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Comparison का उपयोग करके क्रेडिट खपत को कैसे ट्रैक करें: एक व्यापक गाइड
 
 ## परिचय

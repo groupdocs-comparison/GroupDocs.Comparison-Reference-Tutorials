@@ -4,8 +4,8 @@
 "title": "Comment comparer plusieurs documents Word protégés par mot de passe dans .NET à l'aide de GroupDocs.Comparison"
 "url": "/fr/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Comment comparer plusieurs documents Word protégés par mot de passe dans .NET à l'aide de GroupDocs.Comparison
 
 ## Introduction

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 고급 문서 비교 튜토리얼"
 "url": "/ko/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 고급 문서 비교 튜토리얼
 
 고급 비교 튜토리얼은 Java 애플리케이션에서 GroupDocs.Comparison의 강력한 기능을 활용하는 방법을 보여줍니다. 이 포괄적인 가이드는 여러 문서를 동시에 비교하고, 암호로 보호된 파일을 비교하고, 전체 폴더를 비교하고, 다양한 시나리오에 맞게 비교 설정을 사용자 지정하는 방법을 다룹니다. 각 튜토리얼에는 기본 기능을 넘어 정교한 문서 비교 작업을 구현할 수 있는 실용적인 Java 코드 예제가 포함되어 있습니다.

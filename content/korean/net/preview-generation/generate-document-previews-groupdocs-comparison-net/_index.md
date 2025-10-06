@@ -4,8 +4,8 @@
 "title": ".NET 개발자를 위한 GroupDocs.Comparison을 사용하여 효율적으로 문서 미리보기 생성"
 "url": "/ko/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET을 사용하여 효율적으로 문서 미리보기 생성
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "Σύγκριση κύριων εγγράφων σε Java χρησιμοποιώντας το GroupDocs.Comparison για έγγραφα Word, κειμένου και email"
 "url": "/el/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων σε Java με το GroupDocs.Comparison
 
 **Αποτελεσματική σύγκριση πολλαπλών εγγράφων Word, κειμένου και email χρησιμοποιώντας το GroupDocs.Comparison για Java**

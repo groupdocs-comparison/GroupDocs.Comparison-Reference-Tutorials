@@ -5,8 +5,8 @@
 "title": "Basisgebruik"
 "url": "/nl/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Basisgebruik
 
 ## Invoering

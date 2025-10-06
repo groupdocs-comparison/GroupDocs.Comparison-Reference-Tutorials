@@ -4,8 +4,8 @@
 "title": "Maîtrisez efficacement les révisions de documents avec GroupDocs.Comparison .NET - Un guide complet"
 "url": "/fr/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser les révisions de documents avec GroupDocs.Comparison .NET : un guide étape par étape
 
 ## Introduction

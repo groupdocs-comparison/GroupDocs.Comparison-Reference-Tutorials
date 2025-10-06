@@ -4,8 +4,8 @@
 "title": "كيفية مقارنة عدة مستندات Word محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison"
 "url": "/ar/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # كيفية مقارنة عدة مستندات Word محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison
 
 ## مقدمة

@@ -5,8 +5,8 @@
 "title": "產生目標文件的頁面預覽"
 "url": "/zh-hant/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # 產生目標文件的頁面預覽
 
 ## 介紹

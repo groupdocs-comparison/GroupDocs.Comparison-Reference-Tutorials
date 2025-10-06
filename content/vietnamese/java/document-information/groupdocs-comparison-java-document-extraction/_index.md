@@ -4,8 +4,8 @@
 "title": "Trích xuất siêu dữ liệu tài liệu chính với GroupDocs trong Java"
 "url": "/vi/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ trích xuất siêu dữ liệu tài liệu với GroupDocs trong Java
 
 Trong bối cảnh kỹ thuật số ngày nay, việc quản lý và trích xuất thông tin hiệu quả từ các tài liệu là rất quan trọng đối với các doanh nghiệp trong nhiều ngành. Cho dù bạn đang xử lý các hợp đồng pháp lý, bài báo học thuật hay báo cáo tài chính, việc hiểu siêu dữ liệu tài liệu như loại tệp, số trang và kích thước có thể hợp lý hóa quy trình làm việc và nâng cao khả năng phân tích dữ liệu. Hướng dẫn này hướng dẫn bạn cách sử dụng GroupDocs.Comparison trong Java để trích xuất thông tin tài liệu có giá trị thông qua cả luồng đầu vào và đường dẫn tệp.

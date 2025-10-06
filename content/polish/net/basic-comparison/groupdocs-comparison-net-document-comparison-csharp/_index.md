@@ -4,8 +4,8 @@
 "title": "Wdrażanie porównywania dokumentów w języku C# za pomocą GroupDocs.Comparison .NET&#58; Przewodnik krok po kroku"
 "url": "/pl/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Implementacja porównywania dokumentów za pomocą GroupDocs.Comparison .NET
 
 ## Jak używać GroupDocs.Comparison do porównywania dokumentów w C# 

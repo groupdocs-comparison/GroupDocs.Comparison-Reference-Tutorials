@@ -5,8 +5,8 @@
 "title": "Comparer les documents protégés à partir du chemin d'accès - GroupDocs.Comparison pour .NET"
 "url": "/fr/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Comparer les documents protégés à partir du chemin d'accès - GroupDocs.Comparison pour .NET
 
 ## Introduction

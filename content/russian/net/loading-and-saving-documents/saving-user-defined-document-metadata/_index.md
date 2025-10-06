@@ -5,8 +5,8 @@
 "title": "Сохранение метаданных пользовательских документов в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Сохранение метаданных пользовательских документов в GroupDocs Сравнение для .NET
 
 ## Введение

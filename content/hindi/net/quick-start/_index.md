@@ -5,8 +5,8 @@
 "title": "त्वरित शुरुआत"
 "url": "/hi/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # त्वरित शुरुआत
 
 

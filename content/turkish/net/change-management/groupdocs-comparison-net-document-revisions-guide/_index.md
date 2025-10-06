@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET ile Belge Revizyonlarını Verimli Şekilde Yönetin Kapsamlı Bir Kılavuz"
 "url": "/tr/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Revizyonlarında Ustalaşma: Adım Adım Kılavuz
 
 ## giriiş

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["dotnet", "document-comparison", "groupdocs", "resource-management"]
+type: docs
 ---
-
 # Document Comparison .NET: Clean Resources After Page Previews
 
 ## Introduction

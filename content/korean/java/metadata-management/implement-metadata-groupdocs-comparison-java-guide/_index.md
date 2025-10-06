@@ -4,8 +4,8 @@
 "title": "Java에서 GroupDocs.Comparison을 사용하여 문서 메타데이터 구현하기&#58; 완벽한 가이드"
 "url": "/ko/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Java에서 GroupDocs.Comparison을 사용하여 문서 메타데이터 구현: 완전한 가이드
 
 ## 소개

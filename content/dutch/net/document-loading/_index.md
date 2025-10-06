@@ -3,8 +3,8 @@
 "title": "Zelfstudies voor het laden van documenten voor GroupDocs.Comparison .NET"
 "url": "/nl/net/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Zelfstudies voor het laden van documenten voor GroupDocs.Comparison .NET
 
 Onze tutorials over het laden van documenten bieden uitgebreide begeleiding bij het voorbereiden van documenten ter vergelijking in .NET-applicaties. Deze stapsgewijze handleidingen laten zien hoe u documenten laadt vanuit lokale opslag, geheugenstromen en tekenreeksinhoud, en hoe u laadopties configureert voor verschillende documenttypen. Elke tutorial bevat complete codevoorbeelden om u te helpen bij het implementeren van robuuste functionaliteit voor het laden van documenten in uw vergelijkingsapplicaties.

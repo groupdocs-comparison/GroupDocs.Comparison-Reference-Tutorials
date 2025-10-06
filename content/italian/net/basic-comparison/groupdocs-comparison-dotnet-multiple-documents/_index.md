@@ -4,8 +4,8 @@
 "title": "Come confrontare più documenti protetti da password in .NET utilizzando GroupDocs.Comparison"
 "url": "/it/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Come confrontare più documenti protetti da password in .NET utilizzando GroupDocs.Comparison
 
 ## Introduzione

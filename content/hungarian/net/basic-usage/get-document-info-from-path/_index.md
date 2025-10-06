@@ -5,8 +5,8 @@
 "title": "Dokumentuminformációk lekérése az elérési útból - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Dokumentuminformációk lekérése az elérési útból - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

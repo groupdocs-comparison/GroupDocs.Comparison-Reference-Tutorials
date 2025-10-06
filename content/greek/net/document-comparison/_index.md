@@ -5,8 +5,8 @@
 "title": "Σύγκριση εγγράφων"
 "url": "/el/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Σύγκριση εγγράφων
 
 ## Εισαγωγή

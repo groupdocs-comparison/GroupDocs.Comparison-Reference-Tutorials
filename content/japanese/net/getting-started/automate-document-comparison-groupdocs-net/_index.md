@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET でドキュメント比較を自動化する完全ガイド"
 "url": "/ja/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET でドキュメント比較を自動化
 ## はじめる
 今日の急速に変化するドキュメント管理の世界では、ドキュメントの比較を自動化することで、手作業に比べて時間を節約し、エラーを削減できます。この包括的なガイドでは、GroupDocs.Comparison for .NETを活用してこのプロセスを効果的に自動化する方法を説明します。

@@ -5,8 +5,8 @@
 "title": "Uso básico"
 "url": "/es/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Uso básico
 
 ## Introducción

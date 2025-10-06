@@ -4,8 +4,8 @@
 "title": "Padroneggiare il confronto dei documenti in .NET - Una guida completa all'utilizzo di GroupDocs.Comparison"
 "url": "/it/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Padroneggiare il confronto dei documenti in .NET con GroupDocs.Comparison
 
 Sfrutta il potenziale dell'automazione del confronto dei documenti in ambienti .NET utilizzando GroupDocs.Comparison. Questa guida ti aiuterà a semplificare il flusso di lavoro e ad aumentare la produttività gestendo in modo efficiente le versioni dei documenti.

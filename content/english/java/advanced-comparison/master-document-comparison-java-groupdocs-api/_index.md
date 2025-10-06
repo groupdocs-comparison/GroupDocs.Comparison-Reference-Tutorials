@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "java-api", "file-comparison"]
+type: docs
 ---
-
 # Java Document Comparison API: Master GroupDocs.Comparison
 
 Tired of manually comparing documents line by line? Whether you're tracking changes in legal contracts, comparing code files, or managing document versions in your Java application, there's a better way. The GroupDocs.Comparison API for Java transforms what used to be a tedious, error-prone process into a streamlined, automated solution.

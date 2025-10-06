@@ -4,8 +4,8 @@
 "title": "Effektiv dokumentrevision med GroupDocs.Comparison .NET – en omfattande guide"
 "url": "/sv/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Bemästra dokumentrevisioner med GroupDocs.Comparison .NET: En steg-för-steg-guide
 
 ## Introduktion

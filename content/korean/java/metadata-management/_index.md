@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 문서 메타데이터 관리 튜토리얼"
 "url": "/ko/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 문서 메타데이터 관리 튜토리얼
 
 저희 메타데이터 관리 튜토리얼은 Java에서 GroupDocs.Comparison을 사용하여 문서를 비교할 때 문서 속성을 제어하는 방법을 보여줍니다. 이 단계별 가이드는 메타데이터 소스 설정, 결과 문서에 대한 사용자 지정 메타데이터 정의, 그리고 메타데이터 보존 정책 구현을 다룹니다. 각 튜토리얼에는 일반적인 메타데이터 관리 시나리오에 대한 실용적인 Java 코드 예제가 포함되어 있어 비교 프로세스 전반에 걸쳐 적절한 문서 속성을 유지하는 애플리케이션을 구축하는 데 도움이 됩니다.

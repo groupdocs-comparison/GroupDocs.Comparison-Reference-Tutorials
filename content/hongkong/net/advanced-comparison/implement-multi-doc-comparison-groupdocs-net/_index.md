@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 在 .NET 中實作多文件比較"
 "url": "/zh-hant/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 在 .NET 中實作多文件比較：綜合指南
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "مقارنات المستندات الآمنة في .NET - نتائج حماية كلمة المرور باستخدام GroupDocs.Comparison"
 "url": "/ar/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # تأمين مقارنات المستندات الخاصة بك في .NET: حماية النتائج بكلمة مرور باستخدام GroupDocs.Comparison
 
 ## مقدمة

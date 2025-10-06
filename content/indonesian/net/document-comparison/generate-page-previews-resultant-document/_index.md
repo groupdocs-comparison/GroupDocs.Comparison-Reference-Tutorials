@@ -5,8 +5,8 @@
 "title": "Hasilkan Pratinjau Halaman untuk Dokumen yang Dihasilkan"
 "url": "/id/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Hasilkan Pratinjau Halaman untuk Dokumen yang Dihasilkan
 
 ## Perkenalan

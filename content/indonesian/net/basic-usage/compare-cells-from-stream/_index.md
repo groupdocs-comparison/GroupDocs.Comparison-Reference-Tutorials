@@ -5,8 +5,8 @@
 "title": "Bandingkan Sel dari Stream - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Bandingkan Sel dari Stream - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

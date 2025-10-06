@@ -4,8 +4,8 @@
 "title": "Πώς να εφαρμόσετε τη σύγκριση εγγράφων στο .NET χρησιμοποιώντας το GroupDocs.Comparison® - Ένας οδηγός βήμα προς βήμα"
 "url": "/el/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εφαρμόσετε τη σύγκριση εγγράφων στο .NET χρησιμοποιώντας το GroupDocs.Comparison: Ένας οδηγός βήμα προς βήμα
 
 ## Εισαγωγή

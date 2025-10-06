@@ -5,8 +5,8 @@
 "title": "Σύγκριση εικόνων"
 "url": "/el/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Σύγκριση εικόνων
 
 

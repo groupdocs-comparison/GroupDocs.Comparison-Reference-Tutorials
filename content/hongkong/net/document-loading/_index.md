@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 文件載入教學課程"
 "url": "/zh-hant/net/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 文件載入教學課程
 
 我們的文件載入教學提供了在 .NET 應用程式中準備用於比較的文件的全面指導。這些逐步指南示範如何從本機儲存、記憶體流和字串內容載入文檔，以及如何為不同類型的文檔配置載入選項。每個教學課程都包含完整的程式碼範例，可協助您在比較應用程式中實現強大的文件載入功能。

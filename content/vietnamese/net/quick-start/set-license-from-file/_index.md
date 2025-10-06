@@ -5,8 +5,8 @@
 "title": "Thiết lập Giấy phép từ Tệp - So sánh GroupDocs cho .NET"
 "url": "/vi/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Thiết lập Giấy phép từ Tệp - So sánh GroupDocs cho .NET
 
 ## Giới thiệu

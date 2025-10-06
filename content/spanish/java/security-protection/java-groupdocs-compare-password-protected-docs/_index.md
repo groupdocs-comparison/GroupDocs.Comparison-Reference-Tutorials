@@ -4,8 +4,8 @@
 "title": "Dominando la comparación de documentos protegidos por contraseña en Java con GroupDocs.Comparison"
 "url": "/es/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos protegidos por contraseña en Java con GroupDocs.Comparison
 
 ## Introducción

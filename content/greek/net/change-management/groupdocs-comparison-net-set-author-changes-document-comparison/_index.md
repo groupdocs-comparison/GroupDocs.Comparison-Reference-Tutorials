@@ -4,8 +4,8 @@
 "title": "Ορισμός συντάκτη αλλαγών στη σύγκριση εγγράφων χρησιμοποιώντας το GroupDocs.Comparison για .NET"
 "url": "/el/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση του Συγγραφέα Συνόλου Αλλαγών στη Σύγκριση Εγγράφων Χρησιμοποιώντας το GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

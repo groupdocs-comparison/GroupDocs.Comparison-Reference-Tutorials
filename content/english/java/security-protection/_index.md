@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-security", "password-protection", "java-comparison", "groupdocs"]
+type: docs
 ---
-
 # Compare Password Protected Documents Java: Complete Security Guide
 
 Working with sensitive documents that require password protection? You're not alone. Many developers struggle with comparing password-protected files while maintaining security standards. Whether you're building document management systems, compliance tools, or version control applications, secure document comparison is often a critical requirement.

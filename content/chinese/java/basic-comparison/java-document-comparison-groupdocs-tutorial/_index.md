@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs 在 Java 中实现文档比较的综合指南"
 "url": "/zh/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs 在 Java 中实现文档比较：综合指南
 
 ## 介绍

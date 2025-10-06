@@ -3,8 +3,8 @@
 "title": "Hướng dẫn cấp phép và cấu hình cho GroupDocs.Comparison .NET"
 "url": "/vi/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Hướng dẫn cấp phép và cấu hình cho GroupDocs.Comparison .NET
 
 Hướng dẫn cấp phép và cấu hình của chúng tôi cung cấp hướng dẫn thiết yếu để thiết lập GroupDocs.Comparison đúng cách trong các ứng dụng .NET. Các hướng dẫn từng bước này chỉ cho bạn cách triển khai các tùy chọn cấp phép khác nhau, cấu hình thanh toán theo đồng hồ đo, kiểm tra trạng thái cấp phép và tối ưu hóa cài đặt thư viện cho các yêu cầu cụ thể của bạn. Mỗi hướng dẫn bao gồm các ví dụ mã C# chi tiết để khởi tạo và cấu hình đúng cách, giúp bạn xây dựng các giải pháp so sánh tài liệu được cấp phép và tối ưu hóa đúng cách.

@@ -5,8 +5,8 @@
 "title": "Tải và lưu tài liệu"
 "url": "/vi/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Tải và lưu tài liệu
 
 ## Giới thiệu

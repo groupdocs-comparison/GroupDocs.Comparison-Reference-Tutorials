@@ -4,8 +4,8 @@
 "title": "Comparação de documentos mestre em Java - usando GroupDocs.Comparison para documentos do Word, texto e e-mail"
 "url": "/pt/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dominando a comparação de documentos em Java com GroupDocs.Comparison
 
 **Compare com eficiência vários documentos do Word, texto e e-mail usando GroupDocs.Comparison para Java**

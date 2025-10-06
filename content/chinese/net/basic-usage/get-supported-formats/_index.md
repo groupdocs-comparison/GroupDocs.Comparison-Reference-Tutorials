@@ -5,8 +5,8 @@
 "title": "获取支持的格式 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # 获取支持的格式 - GroupDocs.Comparison for .NET
 
 ## 介绍

@@ -3,8 +3,8 @@
 "title": "Összehasonlítási lehetőségek és beállítások – oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Összehasonlítási lehetőségek és beállítások – oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Tanulja meg a dokumentumok összehasonlításának finomhangolását a .NET-hez készült GroupDocs.Comparison beállításokat bemutató oktatóanyagaink segítségével. Ezek a részletes útmutatók bemutatják, hogyan konfigurálhatja az összehasonlítás érzékenységét, testreszabhatja a változásészlelési algoritmusokat, beállíthatja a megjelenítési beállításokat a különböző változástípusokhoz, és hogyan valósíthat meg speciális összehasonlítási szabályokat. Minden oktatóanyag működő C# kódpéldákat tartalmaz az egyéni összehasonlítási beállítások megvalósításához, segítve az összehasonlító alkalmazások létrehozását, amelyek pontosan az Ön konkrét dokumentumelemzési igényeihez igazíthatók.

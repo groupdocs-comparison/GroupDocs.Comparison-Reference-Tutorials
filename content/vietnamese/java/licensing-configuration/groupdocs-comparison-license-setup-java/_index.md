@@ -4,8 +4,8 @@
 "title": "Cách thiết lập giấy phép từ tệp trong GroupDocs.Comparison cho Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai Set License từ File trong GroupDocs.Comparison cho Java
 
 ## Giới thiệu

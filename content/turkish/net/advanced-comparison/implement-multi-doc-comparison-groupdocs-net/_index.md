@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kullanarak .NET'te Çoklu Belge Karşılaştırmasını Uygulama"
 "url": "/tr/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanarak .NET'te Çoklu Belge Karşılaştırmasını Uygulama: Kapsamlı Bir Kılavuz
 
 ## giriiş

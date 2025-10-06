@@ -5,8 +5,8 @@
 "title": "دروس تعليمية وأمثلة حول GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/"
 "weight": 10
+type: docs
 ---
-
 # دروس تعليمية وأمثلة حول GroupDocs.Comparison لـ .NET
 
 ## مقدمة

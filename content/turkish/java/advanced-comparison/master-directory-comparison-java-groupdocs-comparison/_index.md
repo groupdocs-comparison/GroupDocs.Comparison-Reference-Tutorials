@@ -4,8 +4,8 @@
 "title": "Sorunsuz Dosya Denetimleri için GroupDocs.Comparison Kullanarak Java'da Ana Dizin Karşılaştırması"
 "url": "/tr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java'da Ana Dizin Karşılaştırması
 
 ## giriiş

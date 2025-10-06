@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "document-processing", "metadata", "groupdocs", "api-tutorial"]
+type: docs
 ---
-
 # Java Document Metadata Extraction - Complete Developer Guide
 
 Ever found yourself needing to extract crucial information from documents programmatically in your Java applications? Whether you're building a document management system, implementing file validation, or creating automated workflows, understanding how to retrieve document metadata efficiently can save you countless hours of development time.

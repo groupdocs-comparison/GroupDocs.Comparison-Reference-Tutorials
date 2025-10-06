@@ -3,8 +3,8 @@
 "title": "Handledningar för ändringshantering för GroupDocs.Comparison .NET"
 "url": "/sv/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Handledningar för ändringshantering för GroupDocs.Comparison .NET
 
 Upptäck hur du effektivt hanterar dokumentändringar med våra GroupDocs.Comparison .NET-handledningar. Dessa detaljerade guider visar hur du identifierar specifika skillnader mellan dokument, accepterar eller avvisar enskilda ändringar, anger författare för spårade ändringar och hanterar revisioner programmatiskt. Varje handledning ger steg-för-steg-instruktioner med C#-kodexempel som hjälper dig att implementera omfattande ändringshanteringsfunktioner i dina dokumentjämförelsearbetsflöden.

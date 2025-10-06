@@ -5,8 +5,8 @@
 "title": "載入和儲存文檔"
 "url": "/zh-hant/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # 載入和儲存文檔
 
 ## 介紹

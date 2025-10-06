@@ -5,8 +5,8 @@
 "title": "Σύγκριση προστατευμένων εγγράφων από τη διαδρομή - GroupDocs.Comparison για .NET"
 "url": "/el/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Σύγκριση προστατευμένων εγγράφων από τη διαδρομή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

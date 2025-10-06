@@ -4,8 +4,8 @@
 "title": "Java többsávos dokumentum-összehasonlítás a GroupDocs.Comparison használatával – Átfogó útmutató"
 "url": "/hu/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Java többfolyamos dokumentum-összehasonlítás elsajátítása a GroupDocs.Comparison segítségével
 
 ## Bevezetés

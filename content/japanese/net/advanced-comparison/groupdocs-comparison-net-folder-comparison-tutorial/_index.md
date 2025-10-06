@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用してフォルダーを比較し、結果を TXT/HTML として保存する方法"
 "url": "/ja/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET を使用してフォルダー比較を実装し、結果を TXT/HTML として保存する方法
 
 ## 導入

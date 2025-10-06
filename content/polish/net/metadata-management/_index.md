@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące zarządzania metadanymi dokumentów dla GroupDocs.Comparison .NET"
 "url": "/pl/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Samouczki dotyczące zarządzania metadanymi dokumentów dla GroupDocs.Comparison .NET
 
 Nasze samouczki dotyczące zarządzania metadanymi pokazują, jak kontrolować właściwości dokumentu podczas porównywania dokumentów za pomocą GroupDocs.Comparison w .NET. Te przewodniki krok po kroku obejmują ustawianie źródeł metadanych, definiowanie niestandardowych metadanych dla wynikowych dokumentów i wdrażanie zasad przechowywania metadanych. Każdy samouczek zawiera praktyczne przykłady kodu C# dla typowych scenariuszy zarządzania metadanymi, pomagając w tworzeniu aplikacji, które utrzymują odpowiednie właściwości dokumentu w całym procesie porównywania.

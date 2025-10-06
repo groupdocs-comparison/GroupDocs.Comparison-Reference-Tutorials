@@ -4,8 +4,8 @@
 "title": "วิธีตั้งค่าใบอนุญาตจากไฟล์ใน GroupDocs.Comparison สำหรับ Java&#58; คำแนะนำที่ครอบคลุม"
 "url": "/th/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # การนำชุดใบอนุญาตจากไฟล์ไปใช้งานใน GroupDocs.Comparison สำหรับ Java
 
 ## การแนะนำ

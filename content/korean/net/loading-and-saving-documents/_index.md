@@ -5,8 +5,8 @@
 "title": "문서 로드 및 저장"
 "url": "/ko/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # 문서 로드 및 저장
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API を使用した Java でのマスター ドキュメントの比較"
 "url": "/ja/java/advanced-comparison/master-document-comparison-java-groupdocs-api/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API を使用した Java でのドキュメント比較とクレジット管理の習得
 
 今日のめまぐるしく変化するビジネス環境において、ドキュメントの効率的な管理とリソース使用状況の追跡は不可欠です。法的契約書の比較、技術マニュアルの編集、あるいはソフトウェア使用クレジットの追跡など、どのような作業であっても、適切なツールは大きな違いを生み出します。このチュートリアルでは、GroupDocs.Comparison for Javaの機能を活用して、ドキュメントをシームレスに比較し、クレジットの消費量を監視する方法を説明します。

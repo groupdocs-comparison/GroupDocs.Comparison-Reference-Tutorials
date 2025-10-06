@@ -4,8 +4,8 @@
 "title": "Så här konfigurerar du en uppmätt licens i GroupDocs.Comparison .NET - En steg-för-steg-guide"
 "url": "/sv/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Så här konfigurerar du en uppmätt licens i GroupDocs.Comparison .NET: En steg-för-steg-guide
 
 ## Introduktion

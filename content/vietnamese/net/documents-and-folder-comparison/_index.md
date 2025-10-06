@@ -5,8 +5,8 @@
 "title": "So sánh tài liệu và thư mục"
 "url": "/vi/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # So sánh tài liệu và thư mục
 
 ## Giới thiệu

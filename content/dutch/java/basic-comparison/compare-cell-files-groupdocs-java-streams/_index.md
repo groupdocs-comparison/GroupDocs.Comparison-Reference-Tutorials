@@ -4,8 +4,8 @@
 "title": "Hoe celbestanden te vergelijken met GroupDocs.Comparison in Java&#58; een uitgebreide handleiding"
 "url": "/nl/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Celbestanden vergelijken met GroupDocs.Comparison in Java
 
 ## Invoering

@@ -3,8 +3,8 @@
 "title": "GroupDocs için Belge Güvenliği ve Koruma Eğitimleri.Karşılaştırma Java"
 "url": "/tr/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # GroupDocs için Belge Güvenliği ve Koruma Eğitimleri.Karşılaştırma Java
 
 Java için ayrıntılı GroupDocs.Comparison eğitimlerimizle belge güvenliği özelliklerinde ustalaşın. Bu kapsamlı kılavuzlar, parola korumalı belgeleri nasıl karşılaştıracağınızı, sonuç dosyaları için parolalar nasıl ayarlayacağınızı, güvenli karşılaştırma iş akışlarını nasıl uygulayacağınızı ve belge korumasını programatik olarak nasıl yöneteceğinizi gösterir. Her eğitim, güvenli belge karşılaştırma işlemleri için çalışan Java kod örnekleri sunarak, etkili belge karşılaştırmasını etkinleştirirken gizliliği koruyan uygulamalar oluşturmanıza yardımcı olur.

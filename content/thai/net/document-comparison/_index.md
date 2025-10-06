@@ -5,8 +5,8 @@
 "title": "การเปรียบเทียบเอกสาร"
 "url": "/th/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # การเปรียบเทียบเอกสาร
 
 ## การแนะนำ

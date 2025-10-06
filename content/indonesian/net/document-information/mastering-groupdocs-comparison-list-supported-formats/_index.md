@@ -4,8 +4,8 @@
 "title": "Cara Mencantumkan Semua Format File yang Didukung di GroupDocs.Comparison untuk .NET"
 "url": "/id/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mencantumkan Semua Format File yang Didukung di GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

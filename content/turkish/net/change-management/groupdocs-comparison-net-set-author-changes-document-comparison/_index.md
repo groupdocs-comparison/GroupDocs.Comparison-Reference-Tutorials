@@ -4,8 +4,8 @@
 "title": ".NET için GroupDocs.Comparison Kullanarak Belge Karşılaştırmasında Değişikliklerin Yazarını Ayarlama"
 "url": "/tr/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison Kullanılarak Belge Karşılaştırmasında Değişikliklerin Yazarını Belirleme
 
 ## giriiş

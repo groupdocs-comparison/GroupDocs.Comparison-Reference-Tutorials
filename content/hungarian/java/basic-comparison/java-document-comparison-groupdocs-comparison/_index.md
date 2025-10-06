@@ -4,8 +4,8 @@
 "title": "Java dokumentum-összehasonlítás a GroupDocs.Comparison használatával – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Java dokumentum-összehasonlítás GroupDocs.Comparison használatával: Átfogó útmutató
 
 ## Bevezetés

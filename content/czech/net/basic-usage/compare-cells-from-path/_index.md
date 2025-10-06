@@ -5,8 +5,8 @@
 "title": "Porovnání buněk z cesty - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Porovnání buněk z cesty - GroupDocs.Comparison pro .NET
 
 ## Zavedení

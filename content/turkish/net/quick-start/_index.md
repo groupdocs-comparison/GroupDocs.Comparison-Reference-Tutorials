@@ -5,8 +5,8 @@
 "title": "Hızlı Başlangıç"
 "url": "/tr/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Hızlı Başlangıç
 
 

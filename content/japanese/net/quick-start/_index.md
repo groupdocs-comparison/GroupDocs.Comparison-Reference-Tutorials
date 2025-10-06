@@ -5,8 +5,8 @@
 "title": "クイックスタート"
 "url": "/ja/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # クイックスタート
 
 

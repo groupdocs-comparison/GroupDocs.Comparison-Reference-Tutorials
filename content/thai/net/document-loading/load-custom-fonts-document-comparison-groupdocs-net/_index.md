@@ -4,8 +4,8 @@
 "title": "วิธีการโหลดแบบอักษรที่กำหนดเองสำหรับการเปรียบเทียบเอกสารโดยใช้ GroupDocs.Comparison .NET"
 "url": "/th/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการโหลดแบบอักษรที่กำหนดเองสำหรับการเปรียบเทียบเอกสารโดยใช้ GroupDocs.Comparison .NET
 
 ## การแนะนำ

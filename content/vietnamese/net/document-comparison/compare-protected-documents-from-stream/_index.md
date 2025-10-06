@@ -5,8 +5,8 @@
 "title": "So sánh các tài liệu được bảo vệ từ Stream - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # So sánh các tài liệu được bảo vệ từ Stream - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

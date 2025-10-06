@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Configuration"]
 tags: ["licensing", "setup", "configuration", "metered-license", "file-stream"]
+type: docs
 ---
-
 # GroupDocs Comparison NET Licensing Setup - Complete 2025 Guide
 
 Getting your GroupDocs.Comparison for .NET licensing right from the start saves you headaches down the road. Whether you're building a document comparison feature for a client project or integrating comparison capabilities into your existing application, proper license configuration is crucial for both legal compliance and optimal performance.

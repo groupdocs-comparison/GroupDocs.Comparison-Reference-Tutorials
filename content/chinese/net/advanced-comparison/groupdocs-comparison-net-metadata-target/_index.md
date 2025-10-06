@@ -4,8 +4,8 @@
 "title": ".NET 中的主文档比较 - 使用 GroupDocs.Comparison 保留元数据"
 "url": "/zh/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # 掌握 .NET 中的文档比较：使用 GroupDocs.Comparison 保存元数据
 ## 介绍
 您是否曾在比较文档时遇到需要保留特定元数据的问题？GroupDocs.Comparison for .NET 正是您的解决方案！本教程将指导您在比较过程中设置目标文档的元数据，确保最终文档无缝保留所需属性。

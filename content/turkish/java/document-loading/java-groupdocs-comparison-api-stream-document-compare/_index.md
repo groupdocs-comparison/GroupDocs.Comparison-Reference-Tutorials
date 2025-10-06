@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API'sini Kullanarak Java Belge Karşılaştırması&#58; Akış Tabanlı Bir Yaklaşım"
 "url": "/tr/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Java'da Ustalaşma: GroupDocs.Comparison API ile Belge Karşılaştırması
 
 Java'da güçlü GroupDocs.Comparison API'sini kullanarak belge karşılaştırmasını incelediğimiz bu kapsamlı kılavuza hoş geldiniz. İster yasal belgeleri, ister akademik makaleleri veya başka herhangi bir metin dosyasını yönetiyor olun, bunları verimli bir şekilde karşılaştırmak çok önemlidir. Bu eğitimde, Java'da akışları kullanarak iki belge arasında algılanan değişiklikleri nasıl kabul edeceğinizi veya reddedeceğinizi ele alacağız.

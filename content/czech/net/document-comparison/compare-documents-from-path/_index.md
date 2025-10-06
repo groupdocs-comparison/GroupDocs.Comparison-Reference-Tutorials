@@ -5,8 +5,8 @@
 "title": "Porovnání dokumentů z cesty - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Porovnání dokumentů z cesty - GroupDocs.Comparison pro .NET
 
 ## Zavedení

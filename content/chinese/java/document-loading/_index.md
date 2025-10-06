@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 文档加载教程"
 "url": "/zh/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # GroupDocs.Comparison Java 文档加载教程
 
 我们的文档加载教程提供了全面的指导，帮助您在 Java 应用程序中准备用于比较的文档。这些分步指南演示了如何从本地存储、内存流和字符串内容加载文档，以及如何为不同的文档类型配置加载选项。每个教程都包含完整的 Java 代码示例，帮助您在比较应用程序中实现强大的文档加载功能。

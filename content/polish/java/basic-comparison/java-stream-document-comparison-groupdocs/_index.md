@@ -4,8 +4,8 @@
 "title": "Implementacja porównania dokumentów strumieniowych Java przy użyciu GroupDocs.Comparer&#58; Kompleksowy przewodnik"
 "url": "/pl/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Implementacja porównania dokumentów strumienia Java przy użyciu GroupDocs.Comparer: kompleksowy przewodnik
 
 ## Wstęp

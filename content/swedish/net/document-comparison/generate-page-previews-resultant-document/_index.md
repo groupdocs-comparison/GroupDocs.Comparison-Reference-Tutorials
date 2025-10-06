@@ -5,8 +5,8 @@
 "title": "Generera sidförhandsvisningar för det resulterande dokumentet"
 "url": "/sv/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Generera sidförhandsvisningar för det resulterande dokumentet
 
 ## Introduktion

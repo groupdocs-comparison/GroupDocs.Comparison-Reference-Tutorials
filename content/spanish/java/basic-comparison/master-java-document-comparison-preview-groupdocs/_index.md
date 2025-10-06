@@ -4,8 +4,8 @@
 "title": "Comparación y vista previa de documentos Java con GroupDocs&#58; una guía completa"
 "url": "/es/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dominar la comparación y la generación de vistas previas de documentos Java con GroupDocs.Comparison
 
 ## Introducción

@@ -4,8 +4,8 @@
 "title": ".NET での安全なドキュメント比較&#58; GroupDocs.Comparison を使用して結果をパスワードで保護する"
 "url": "/ja/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # .NET でのドキュメント比較を安全に行う: GroupDocs.Comparison で結果をパスワード保護する
 
 ## 導入

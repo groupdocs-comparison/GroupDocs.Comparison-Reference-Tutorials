@@ -5,8 +5,8 @@
 "title": "Menggunakan Opsi Muat dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Menggunakan Opsi Muat dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

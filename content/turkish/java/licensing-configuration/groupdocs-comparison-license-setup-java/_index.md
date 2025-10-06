@@ -4,8 +4,8 @@
 "title": "GroupDocs'ta Dosyadan Lisans Nasıl Ayarlanır? Java için Karşılaştırma Kapsamlı Bir Kılavuz"
 "url": "/tr/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Java için GroupDocs.Comparison'da Dosyadan Lisans Ayarlamayı Uygulama
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Triển khai so sánh tài liệu trong Java bằng GroupDocs&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai so sánh tài liệu trong Java với GroupDocs: Hướng dẫn toàn diện
 
 ## Giới thiệu

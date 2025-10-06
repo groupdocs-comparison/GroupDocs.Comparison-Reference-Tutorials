@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET を使用してドキュメント情報を抽出する方法 包括的なガイド"
 "url": "/ja/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET を使用してドキュメント情報を抽出する方法: ステップバイステップガイド
 
 ## 導入

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-api", "spreadsheet-processing", "groupdocs"]
+type: docs
 ---
-
 # Java Document Comparison API: The Complete Developer's Guide
 
 ## Introduction

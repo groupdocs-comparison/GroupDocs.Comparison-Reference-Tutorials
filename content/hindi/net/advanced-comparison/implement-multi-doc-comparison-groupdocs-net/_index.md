@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके .NET में बहु-दस्तावेज़ तुलना लागू करें"
 "url": "/hi/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison का उपयोग करके .NET में बहु-दस्तावेज़ तुलना लागू करें: एक व्यापक गाइड
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Handledningar och exempel på GroupDocs.Comparison för .NET"
 "url": "/sv/net/"
 "weight": 10
+type: docs
 ---
-
 # Handledningar och exempel på GroupDocs.Comparison för .NET
 
 ## Introduktion

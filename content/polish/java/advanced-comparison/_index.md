@@ -3,8 +3,8 @@
 "title": "Zaawansowane samouczki porównywania dokumentów dla GroupDocs.Comparison Java"
 "url": "/pl/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Zaawansowane samouczki porównywania dokumentów dla GroupDocs.Comparison Java
 
 Nasze zaawansowane samouczki porównawcze pokazują, jak wykorzystać potężne funkcje GroupDocs.Comparison w aplikacjach Java. Te kompleksowe przewodniki obejmują porównywanie wielu dokumentów jednocześnie, porównywanie plików chronionych hasłem, porównywanie całych folderów i dostosowywanie ustawień porównania do różnych scenariuszy. Każdy samouczek zawiera praktyczne przykłady kodu Java do wdrażania zaawansowanych operacji porównywania dokumentów wykraczających poza podstawową funkcjonalność.

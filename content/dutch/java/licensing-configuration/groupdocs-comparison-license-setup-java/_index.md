@@ -4,8 +4,8 @@
 "title": "Hoe u een licentie instelt vanuit een bestand in GroupDocs. Vergelijking voor Java&#58; een uitgebreide handleiding"
 "url": "/nl/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementatie van Set License from File in GroupDocs.Comparison voor Java
 
 ## Invoering

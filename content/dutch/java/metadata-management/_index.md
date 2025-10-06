@@ -3,8 +3,8 @@
 "title": "Tutorials voor documentmetadatabeheer voor GroupDocs.Comparison Java"
 "url": "/nl/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutorials voor documentmetadatabeheer voor GroupDocs.Comparison Java
 
 Onze tutorials over metadatabeheer laten zien hoe u documenteigenschappen kunt beheren bij het vergelijken van documenten met GroupDocs.Comparison in Java. Deze stapsgewijze handleidingen behandelen het instellen van metadatabronnen, het definiëren van aangepaste metadata voor resulterende documenten en het implementeren van metadataretentiebeleid. Elke tutorial bevat praktische Java-codevoorbeelden voor veelvoorkomende scenario's voor metadatabeheer, waarmee u applicaties kunt bouwen die de juiste documenteigenschappen behouden gedurende het vergelijkingsproces.

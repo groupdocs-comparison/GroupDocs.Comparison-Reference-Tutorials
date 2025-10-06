@@ -4,8 +4,8 @@
 "title": "Dokumentummetaadatok beállítása a GroupDocs.Comparison .NET segítségével a hatékony dokumentumkezelés érdekében"
 "url": "/hu/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum metaadatok beállítása a GroupDocs.Comparison .NET segítségével: Átfogó útmutató
 
 mai digitális korban a hatékony dokumentumkezelés kulcsfontosságú mind a vállalkozások, mind a magánszemélyek számára. Ennek a folyamatnak az egyik kritikus aspektusa a dokumentumok hatékony összehasonlítása. Akár dokumentumkezelő rendszert fejleszt, akár gyakran kezel több dokumentumverziót, a GroupDocs.Comparison könyvtár használata egyszerűsítheti a munkafolyamatot azáltal, hogy lehetővé teszi a precíz metaadat-kezelést az összehasonlítások során.

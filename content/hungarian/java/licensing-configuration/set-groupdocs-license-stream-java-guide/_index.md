@@ -4,8 +4,8 @@
 "title": "GroupDocs licenc beállítása Streamből Java-ban – lépésről lépésre útmutató"
 "url": "/hu/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs licenc beállítása Streamből Java-ban: lépésről lépésre útmutató
 
 ## Bevezetés

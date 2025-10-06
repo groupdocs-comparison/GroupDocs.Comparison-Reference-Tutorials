@@ -5,8 +5,8 @@
 "title": "Dokumentumok metaadatainak célpontjának mentése a GroupDocs Comparison for .NET szolgáltatásban"
 "url": "/hu/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Dokumentumok metaadatainak célpontjának mentése a GroupDocs Comparison for .NET szolgáltatásban
 
 ## Bevezetés

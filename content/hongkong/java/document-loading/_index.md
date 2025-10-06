@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 文件載入教學課程"
 "url": "/zh-hant/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # GroupDocs.Comparison Java 文件載入教學課程
 
 我們的文件載入教學提供了全面的指導，幫助您在 Java 應用程式中準備用於比較的文件。這些逐步指南示範如何從本機儲存、記憶體流和字串內容載入文檔，以及如何為不同的文檔類型配置載入選項。每個教學課程都包含完整的 Java 程式碼範例，可協助您在比較應用程式中實現強大的文件載入功能。

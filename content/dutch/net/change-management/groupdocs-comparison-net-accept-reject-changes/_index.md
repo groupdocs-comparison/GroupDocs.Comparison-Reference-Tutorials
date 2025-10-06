@@ -4,8 +4,8 @@
 "title": "Beheer van hoofddocumentwijzigingen&#58; wijzigingen accepteren en afwijzen met GroupDocs.Comparison .NET"
 "url": "/nl/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Beheer van hoofddocumentwijzigingen met GroupDocs.Comparison .NET
 
 ## Invoering

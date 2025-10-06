@@ -9,8 +9,8 @@ weight: 1
 url: "/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-tutorial", "groupdocs", "document-styling"]
+type: docs
 ---
-
 # Java Document Comparison Customization: Style Inserted Items Like a Pro
 
 ## Introduction

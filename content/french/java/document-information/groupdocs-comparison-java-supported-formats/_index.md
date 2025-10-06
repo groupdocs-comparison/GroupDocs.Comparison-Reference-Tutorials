@@ -4,8 +4,8 @@
 "title": "Récupérer les formats de fichiers pris en charge avec GroupDocs.Comparison pour Java - Un guide complet"
 "url": "/fr/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Récupérer les formats de fichiers pris en charge avec GroupDocs.Comparison pour Java
 
 ## Introduction

@@ -5,8 +5,8 @@
 "title": "Thiết lập giấy phép theo định mức - So sánh GroupDocs cho .NET"
 "url": "/vi/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Thiết lập giấy phép theo định mức - So sánh GroupDocs cho .NET
 
 ## Giới thiệu

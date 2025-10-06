@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 在 Java 文件中設定自訂元資料－逐步指南"
 "url": "/zh-hant/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 在 Java 文件中設定自訂元資料：逐步指南
 
 ## 介紹

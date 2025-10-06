@@ -5,8 +5,8 @@
 "title": "Ορισμός Άδειας Ογκοχρέωσης - Σύγκριση GroupDocs για .NET"
 "url": "/el/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Ορισμός Άδειας Ογκοχρέωσης - Σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

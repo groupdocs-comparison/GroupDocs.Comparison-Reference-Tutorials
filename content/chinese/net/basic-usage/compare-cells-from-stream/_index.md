@@ -5,8 +5,8 @@
 "title": "比较流中的单元格 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 比较流中的单元格 - GroupDocs.Comparison for .NET
 
 ## 介绍

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 進行 Java 多流文件比較－綜合指南"
 "url": "/zh-hant/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 多流文件比較
 
 ## 介紹

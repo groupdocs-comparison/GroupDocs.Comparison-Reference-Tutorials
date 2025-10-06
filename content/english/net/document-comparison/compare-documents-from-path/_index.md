@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "dotnet", "csharp", "pdf-comparison", "word-comparison"]
+type: docs
 ---
-
 # Document Comparison .NET - Complete C# Tutorial (2025 Guide)
 
 ## Why Document Comparison Matters in Modern Development

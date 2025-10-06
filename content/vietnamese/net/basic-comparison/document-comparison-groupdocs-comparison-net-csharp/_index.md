@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh Tài liệu trong .NET Sử dụng GroupDocs.Comparison cho Tệp Word từ Streams"
 "url": "/vi/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Cách triển khai so sánh tài liệu từ Stream với GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

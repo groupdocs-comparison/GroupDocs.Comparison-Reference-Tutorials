@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java를 사용하여 지원되는 파일 형식을 검색하는 포괄적인 가이드"
 "url": "/ko/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Java용 GroupDocs.Comparison을 사용하여 지원되는 파일 형식 검색
 
 ## 소개

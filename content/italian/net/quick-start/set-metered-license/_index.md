@@ -5,8 +5,8 @@
 "title": "Imposta licenza a consumo - Confronto GroupDocs per .NET"
 "url": "/it/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Imposta licenza a consumo - Confronto GroupDocs per .NET
 
 ## Introduzione

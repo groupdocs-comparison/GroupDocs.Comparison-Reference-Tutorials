@@ -4,8 +4,8 @@
 "title": "การนำการเปรียบเทียบเอกสาร Java Stream ไปใช้งานโดยใช้ GroupDocs.Comparer คู่มือฉบับสมบูรณ์"
 "url": "/th/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # การนำการเปรียบเทียบเอกสาร Java Stream ไปใช้งานโดยใช้ GroupDocs.Comparer: คู่มือฉบับสมบูรณ์
 
 ## การแนะนำ

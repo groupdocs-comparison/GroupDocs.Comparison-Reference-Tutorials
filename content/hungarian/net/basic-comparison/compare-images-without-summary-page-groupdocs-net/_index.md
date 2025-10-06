@@ -4,8 +4,8 @@
 "title": "Képek összehasonlítása összefoglaló oldal nélkül a GroupDocs.Comparison for .NET használatával"
 "url": "/hu/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Hogyan valósítsunk meg képösszehasonlítást összefoglaló oldal nélkül a GroupDocs.Comparison for .NET használatával?
 
 ## Bevezetés

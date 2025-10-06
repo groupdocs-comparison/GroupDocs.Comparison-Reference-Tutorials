@@ -4,8 +4,8 @@
 "title": "تنفيذ بيانات تعريف المستندات باستخدام GroupDocs.Comparison في Java - دليل شامل"
 "url": "/ar/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ بيانات تعريف المستندات باستخدام GroupDocs.Comparison في Java: دليل شامل
 
 ## مقدمة

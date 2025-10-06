@@ -4,8 +4,8 @@
 "title": ".NET용 GroupDocs.Comparison에서 지원되는 모든 파일 형식을 나열하는 방법"
 "url": "/ko/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison에서 지원되는 모든 파일 형식을 나열하는 방법
 
 ## 소개

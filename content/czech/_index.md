@@ -6,8 +6,8 @@
 "title": "Výukový program API softwaru pro porovnávání dokumentů | GroupDocs.Comparison"
 "url": "/cs/"
 "weight": 11
+type: docs
 ---
-
 # Výukové programy a průvodce pro vývojáře GroupDocs.Comparison
 
 ![Banner pro porovnání dokumentů skupiny](./groupdocs-comparison-net.svg)

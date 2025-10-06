@@ -4,8 +4,8 @@
 "title": "Hoofddocumentvergelijking in Java met behulp van de GroupDocs.Comparison API"
 "url": "/nl/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking in Java onder de knie krijgen met de GroupDocs.Comparison API
 
 ## Invoering

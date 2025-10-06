@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh Tài liệu Java Stream bằng GroupDocs.Comparer&#58; Hướng dẫn Toàn diện"
 "url": "/vi/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai So sánh Tài liệu Java Stream bằng GroupDocs.Comparer: Hướng dẫn Toàn diện
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Word-dokumentum-összehasonlítás implementálása Java-ban a GroupDocs.Comparison használatával"
 "url": "/hu/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Word dokumentum-összehasonlítás implementálása Java-ban a GroupDocs.Comparison segítségével
 
 ## Bevezetés

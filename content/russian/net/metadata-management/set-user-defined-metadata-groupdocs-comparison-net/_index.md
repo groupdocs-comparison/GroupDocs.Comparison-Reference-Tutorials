@@ -4,8 +4,8 @@
 "title": "Как задать определяемые пользователем метаданные в документах с помощью GroupDocs.Comparison для .NET | Руководство по управлению документами"
 "url": "/ru/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Как задать определяемые пользователем метаданные в документах с помощью GroupDocs.Comparison для .NET
 
 ## Введение

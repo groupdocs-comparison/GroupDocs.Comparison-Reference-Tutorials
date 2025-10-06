@@ -3,8 +3,8 @@
 "title": "Zelfstudies voor wijzigingsbeheer voor GroupDocs.Comparison .NET"
 "url": "/nl/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Zelfstudies voor wijzigingsbeheer voor GroupDocs.Comparison .NET
 
 Ontdek hoe u documentwijzigingen effectief kunt beheren met onze GroupDocs.Comparison .NET-tutorials. Deze gedetailleerde handleidingen laten zien hoe u specifieke verschillen tussen documenten kunt identificeren, individuele wijzigingen kunt accepteren of afwijzen, auteurs kunt instellen voor bijgehouden wijzigingen en revisies programmatisch kunt beheren. Elke tutorial biedt stapsgewijze instructies met C#-codevoorbeelden om u te helpen bij het implementeren van uitgebreide functionaliteit voor wijzigingsbeheer in uw workflows voor documentvergelijking.

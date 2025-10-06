@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用して .NET でパスワード保護された複数のドキュメントを比較する方法"
 "url": "/ja/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用して .NET でパスワード保護された複数のドキュメントを比較する方法
 
 ## 導入

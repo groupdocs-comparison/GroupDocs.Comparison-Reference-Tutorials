@@ -5,8 +5,8 @@
 "title": "Chấp nhận và từ chối thay đổi trong So sánh GroupDocs cho .NET"
 "url": "/vi/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Chấp nhận và từ chối thay đổi trong So sánh GroupDocs cho .NET
 
 ## Giới thiệu

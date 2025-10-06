@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs .NET"]
 tags: ["metered-license", "document-comparison", "dotnet-api", "licensing"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET Metered License Setup - Complete Tutorial
 
 ## Why Metered Licensing Matters for Your .NET Document Comparison Project

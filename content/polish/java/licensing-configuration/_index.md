@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące licencjonowania i konfiguracji dla GroupDocs.Comparison Java"
 "url": "/pl/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Samouczki dotyczące licencjonowania i konfiguracji dla GroupDocs.Comparison Java
 
 Nasze samouczki dotyczące licencjonowania i konfiguracji zapewniają niezbędne wskazówki dotyczące prawidłowego skonfigurowania GroupDocs.Comparison w aplikacjach Java. Te przewodniki krok po kroku pokazują, jak wdrożyć różne opcje licencjonowania, skonfigurować rozliczanie według licznika, sprawdzić status licencji i zoptymalizować ustawienia biblioteki pod kątem konkretnych wymagań. Każdy samouczek zawiera szczegółowe przykłady kodu Java dotyczące prawidłowej inicjalizacji i konfiguracji, pomagając w budowaniu prawidłowo licencjonowanych i zoptymalizowanych rozwiązań do porównywania dokumentów.

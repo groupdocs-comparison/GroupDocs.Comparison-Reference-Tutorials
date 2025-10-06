@@ -4,8 +4,8 @@
 "title": "Come ignorare intestazioni e piè di pagina nei confronti DOC utilizzando GroupDocs.Comparison .NET"
 "url": "/it/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Come ignorare intestazioni e piè di pagina nei confronti di documenti con GroupDocs.Comparison .NET
 
 ## Introduzione

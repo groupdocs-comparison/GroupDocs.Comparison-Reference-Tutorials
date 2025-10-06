@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में स्ट्रिंग से टेक्स्ट लोड करना"
 "url": "/hi/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में स्ट्रिंग से टेक्स्ट लोड करना
 
 ## परिचय

@@ -4,8 +4,8 @@
 "title": "Verimli İş Akışı Yönetimi için GroupDocs.Comparison ile Java Stream Belge Karşılaştırmasında Uzmanlaşma"
 "url": "/tr/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Verimli İş Akışı Yönetimi için GroupDocs.Comparison ile Java Stream Belge Karşılaştırmasında Uzmanlaşma
 
 Günümüzün hızlı dijital ortamında, sözleşmeler, raporlar veya yasal belgeler arasında tutarlılık ve doğruluk sağlamak için büyük hacimli belgeleri yönetmek ve karşılaştırmak çok önemlidir. Bu eğitim, akışlar aracılığıyla birden fazla Word belgesini verimli bir şekilde karşılaştırmak ve stil ayarlarıyla özelleştirmeye olanak tanımak için Java'daki güçlü GroupDocs.Comparison kitaplığını kullanmanızda size rehberlik edecektir.

@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में लोड विकल्प का उपयोग करना"
 "url": "/hi/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में लोड विकल्प का उपयोग करना
 
 ## परिचय

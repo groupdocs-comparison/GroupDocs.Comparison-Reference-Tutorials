@@ -5,8 +5,8 @@
 "title": "पथ से छवियों की तुलना करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # पथ से छवियों की तुलना करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

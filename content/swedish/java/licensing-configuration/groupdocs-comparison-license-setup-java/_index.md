@@ -4,8 +4,8 @@
 "title": "Hur man ställer in licens från fil i GroupDocs. Jämförelse för Java - En omfattande guide"
 "url": "/sv/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementera Set License from File i GroupDocs.Comparison för Java
 
 ## Introduktion

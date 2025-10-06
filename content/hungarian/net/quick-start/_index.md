@@ -5,8 +5,8 @@
 "title": "Gyorsindítás"
 "url": "/hu/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Gyorsindítás
 
 

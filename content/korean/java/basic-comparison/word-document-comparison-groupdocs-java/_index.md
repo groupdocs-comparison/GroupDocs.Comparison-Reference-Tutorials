@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 Java로 Word 문서 비교 구현"
 "url": "/ko/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java로 Word 문서 비교 구현
 
 ## 소개

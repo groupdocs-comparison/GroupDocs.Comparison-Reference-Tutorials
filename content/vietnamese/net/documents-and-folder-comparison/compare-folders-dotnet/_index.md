@@ -5,8 +5,8 @@
 "title": "So sánh các thư mục trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # So sánh các thư mục trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

@@ -6,8 +6,8 @@
 "title": "दस्तावेज़ तुलना सॉफ्टवेयर API ट्यूटोरियल | GroupDocs.Comparison"
 "url": "/hi/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.तुलना ट्यूटोरियल और डेवलपर गाइड
 
 ![ग्रुपडॉक्स.तुलना बैनर](./groupdocs-comparison-net.svg)

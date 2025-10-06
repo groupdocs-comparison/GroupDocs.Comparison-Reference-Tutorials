@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 在 Java 中進行主目錄比較，實現無縫文件審計"
 "url": "/zh-hant/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 在 Java 中掌握目錄比較
 
 ## 介紹

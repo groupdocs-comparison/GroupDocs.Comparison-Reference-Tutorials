@@ -4,8 +4,8 @@
 "title": "Πώς να ρυθμίσετε μια άδεια χρήσης με ογκοχρέωση στο GroupDocs.Comparison .NET™ - Οδηγός βήμα προς βήμα"
 "url": "/el/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να ρυθμίσετε μια άδεια χρήσης με ογκοχρέωση στο GroupDocs.Comparison .NET: Οδηγός βήμα προς βήμα
 
 ## Εισαγωγή

@@ -4,8 +4,8 @@
 "title": "Hur man laddar och jämför lösenordsskyddade Word-dokument i Java med GroupDocs.Comparison"
 "url": "/sv/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Hur man laddar och jämför lösenordsskyddade Word-dokument i Java med GroupDocs.Comparison
 
 ## Introduktion

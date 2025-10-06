@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "groupdocs", "dotnet", "batch-processing"]
+type: docs
 ---
-
 # Compare Multiple Documents in .NET - Complete Developer Guide
 
 ## Introduction

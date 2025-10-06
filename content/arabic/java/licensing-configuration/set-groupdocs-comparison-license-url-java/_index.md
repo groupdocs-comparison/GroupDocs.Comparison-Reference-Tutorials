@@ -4,8 +4,8 @@
 "title": "إعداد ترخيص GroupDocs.Comparison عبر عنوان URL في Java - تبسيط أتمتة التراخيص"
 "url": "/ar/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # إتقان GroupDocs.Comparison Java: إعداد الترخيص عبر عنوان URL
 
 ## مقدمة

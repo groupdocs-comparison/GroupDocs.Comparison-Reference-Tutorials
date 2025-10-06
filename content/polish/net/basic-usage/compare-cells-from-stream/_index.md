@@ -5,8 +5,8 @@
 "title": "Porównaj komórki ze strumienia - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Porównaj komórki ze strumienia - GroupDocs.Comparison dla .NET
 
 ## Wstęp

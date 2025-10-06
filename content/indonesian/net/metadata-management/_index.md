@@ -3,8 +3,8 @@
 "title": "Tutorial Manajemen Metadata Dokumen untuk GroupDocs.Comparison .NET"
 "url": "/id/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutorial Manajemen Metadata Dokumen untuk GroupDocs.Comparison .NET
 
 Tutorial manajemen metadata kami menunjukkan kepada Anda cara mengontrol properti dokumen saat membandingkan dokumen dengan GroupDocs.Comparison di .NET. Panduan langkah demi langkah ini mencakup pengaturan sumber metadata, mendefinisikan metadata khusus untuk dokumen yang dihasilkan, dan menerapkan kebijakan penyimpanan metadata. Setiap tutorial mencakup contoh kode C# praktis untuk skenario manajemen metadata umum, membantu Anda membangun aplikasi yang mempertahankan properti dokumen yang sesuai selama proses perbandingan.

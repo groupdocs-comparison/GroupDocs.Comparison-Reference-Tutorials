@@ -5,8 +5,8 @@
 "title": "กำหนดขนาดภาพเฉพาะสำหรับการดูตัวอย่าง"
 "url": "/th/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # กำหนดขนาดภาพเฉพาะสำหรับการดูตัวอย่าง
 
 ## การแนะนำ

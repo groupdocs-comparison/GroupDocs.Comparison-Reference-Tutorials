@@ -5,8 +5,8 @@
 "title": "Acceptera och avvisa ändringar i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Acceptera och avvisa ändringar i GroupDocs-jämförelse för .NET
 
 ## Introduktion

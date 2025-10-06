@@ -4,8 +4,8 @@
 "title": ".NET için GroupDocs.Comparison'da FileStream Kullanarak Lisans Ayarlama"
 "url": "/tr/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison'da FileStream Kullanarak Lisans Ayarlama
 
 **giriiş**

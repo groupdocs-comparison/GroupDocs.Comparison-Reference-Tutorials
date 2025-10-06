@@ -5,8 +5,8 @@
 "title": "Mendapatkan Info Dokumen dari Path - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Mendapatkan Info Dokumen dari Path - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

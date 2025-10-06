@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε αρχεία Excel στο .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison"
 "url": "/el/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε αρχεία Excel στο .NET χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison
 
 ## Εισαγωγή

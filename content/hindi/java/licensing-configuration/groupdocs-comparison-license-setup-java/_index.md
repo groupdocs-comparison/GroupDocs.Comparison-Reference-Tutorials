@@ -4,8 +4,8 @@
 "title": "GroupDocs में फ़ाइल से लाइसेंस कैसे सेट करें.Java के लिए तुलना एक व्यापक गाइड"
 "url": "/hi/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # जावा के लिए GroupDocs.Comparison में फ़ाइल से लाइसेंस सेट करना लागू करना
 
 ## परिचय

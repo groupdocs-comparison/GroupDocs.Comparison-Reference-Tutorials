@@ -5,8 +5,8 @@
 "title": "Documenten laden en opslaan"
 "url": "/nl/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Documenten laden en opslaan
 
 ## Invoering

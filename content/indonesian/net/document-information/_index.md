@@ -3,8 +3,8 @@
 "title": "Tutorial Informasi Dokumen untuk GroupDocs.Comparison .NET"
 "url": "/id/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Tutorial Informasi Dokumen untuk GroupDocs.Comparison .NET
 
 Tutorial informasi dokumen kami menyediakan panduan untuk mengakses metadata dokumen menggunakan GroupDocs.Comparison di .NET. Panduan praktis ini menunjukkan kepada Anda cara mengambil informasi tentang dokumen sumber, target, dan hasil, menentukan format file, dan mengakses properti dokumen secara terprogram. Setiap tutorial menyertakan contoh kode C# yang berfungsi untuk skenario informasi dokumen umum, membantu Anda membangun aplikasi yang dapat menganalisis dan memproses data dokumen secara efektif.

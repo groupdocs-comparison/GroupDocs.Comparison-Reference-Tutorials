@@ -4,8 +4,8 @@
 "title": "Javaでのマスタードキュメント比較 - GroupDocs.Comparison APIを使用した効率的なセルファイル分析"
 "url": "/ja/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API を使用した Java でのドキュメント比較の習得
 
 ## 導入

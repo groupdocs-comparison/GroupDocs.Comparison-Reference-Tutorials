@@ -4,8 +4,8 @@
 "title": "Comment charger des polices personnalisées pour comparer des documents à l'aide de GroupDocs.Comparison .NET"
 "url": "/fr/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Comment charger des polices personnalisées pour comparer des documents à l'aide de GroupDocs.Comparison .NET
 
 ## Introduction

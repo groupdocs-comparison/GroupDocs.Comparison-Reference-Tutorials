@@ -5,8 +5,8 @@
 "title": "Obtener información del documento desde la ruta - GroupDocs.Comparison para .NET"
 "url": "/es/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Obtener información del documento desde la ruta - GroupDocs.Comparison para .NET
 
 ## Introducción

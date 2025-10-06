@@ -5,8 +5,8 @@
 "title": "ファイルからライセンスを設定する - GroupDocs Comparison for .NET"
 "url": "/ja/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # ファイルからライセンスを設定する - GroupDocs Comparison for .NET
 
 ## 導入

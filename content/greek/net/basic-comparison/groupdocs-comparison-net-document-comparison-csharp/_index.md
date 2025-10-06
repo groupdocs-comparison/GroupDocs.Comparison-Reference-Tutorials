@@ -4,8 +4,8 @@
 "title": "Υλοποίηση Σύγκρισης Εγγράφων σε C# με το GroupDocs.Comparison .NET™ - Οδηγός Βήμα προς Βήμα"
 "url": "/el/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση Σύγκρισης Εγγράφων με το GroupDocs.Comparison .NET
 
 ## Πώς να χρησιμοποιήσετε το GroupDocs.Comparison για σύγκριση εγγράφων σε C# 

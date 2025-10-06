@@ -5,8 +5,8 @@
 "title": "Beveiligde documenten uit Stream vergelijken - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Beveiligde documenten uit Stream vergelijken - GroupDocs.Comparison voor .NET
 
 ## Invoering

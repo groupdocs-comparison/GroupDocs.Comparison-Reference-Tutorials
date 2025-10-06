@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["document-preview", "groupdocs-comparison", "dotnet-library", "c-sharp-tutorial"]
+type: docs
 ---
-
 # Document Preview Generator .NET - Complete C# Tutorial
 
 ## Why You Need Document Previews (And How to Build Them Right)

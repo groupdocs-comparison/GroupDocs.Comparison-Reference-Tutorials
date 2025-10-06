@@ -4,8 +4,8 @@
 "title": "Pas ingevoegde itemstijlen aan in Java-documentvergelijkingen met GroupDocs.Comparison"
 "url": "/nl/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Ingevoegde itemstijlen aanpassen in Java-documentvergelijkingen met behulp van GroupDocs.Comparison
 
 ## Invoering

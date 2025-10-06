@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET में मीटर्ड लाइसेंस कैसे सेट करें एक चरण-दर-चरण गाइड"
 "url": "/hi/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET में मीटर्ड लाइसेंस कैसे सेट करें: एक चरण-दर-चरण मार्गदर्शिका
 
 ## परिचय

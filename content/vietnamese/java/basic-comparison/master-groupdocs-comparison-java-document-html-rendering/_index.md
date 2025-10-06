@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính và kết xuất HTML trong Java với GroupDocs.Comparison"
 "url": "/vi/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu và kết xuất HTML trong Java với GroupDocs.Comparison
 
 ## Giới thiệu

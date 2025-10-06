@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["dotnet", "document-comparison", "csharp", "groupdocs"]
+type: docs
 ---
-
 # Document Comparison .NET Tutorial - Generate Custom Preview Images
 
 ## Introduction

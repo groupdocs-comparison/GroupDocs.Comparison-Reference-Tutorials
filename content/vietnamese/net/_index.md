@@ -5,8 +5,8 @@
 "title": "Hướng dẫn và ví dụ về GroupDocs.Comparison cho .NET"
 "url": "/vi/net/"
 "weight": 10
+type: docs
 ---
-
 # Hướng dẫn và ví dụ về GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

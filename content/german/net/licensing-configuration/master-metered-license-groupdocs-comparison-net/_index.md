@@ -4,8 +4,8 @@
 "title": "So richten Sie eine gebührenpflichtige Lizenz in GroupDocs.Comparison .NET ein – Eine Schritt-für-Schritt-Anleitung"
 "url": "/de/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # So richten Sie eine gebührenpflichtige Lizenz in GroupDocs.Comparison .NET ein: Eine Schritt-für-Schritt-Anleitung
 
 ## Einführung

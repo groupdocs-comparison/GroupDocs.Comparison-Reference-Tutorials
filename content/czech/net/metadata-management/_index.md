@@ -3,8 +3,8 @@
 "title": "Výukové programy pro správu metadat dokumentů pro GroupDocs.Comparison .NET"
 "url": "/cs/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Výukové programy pro správu metadat dokumentů pro GroupDocs.Comparison .NET
 
 Naše tutoriály pro správu metadat vám ukážou, jak spravovat vlastnosti dokumentů při porovnávání dokumentů pomocí GroupDocs.Comparison v .NET. Tyto podrobné návody pokrývají nastavení zdrojů metadat, definování vlastních metadat pro výsledné dokumenty a implementaci zásad uchovávání metadat. Každý tutoriál obsahuje praktické příklady kódu C# pro běžné scénáře správy metadat, které vám pomohou vytvářet aplikace, které udržují vhodné vlastnosti dokumentů v průběhu celého procesu porovnávání.

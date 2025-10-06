@@ -5,8 +5,8 @@
 "title": "Bandingkan Dokumen dari Stream - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # Bandingkan Dokumen dari Stream - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

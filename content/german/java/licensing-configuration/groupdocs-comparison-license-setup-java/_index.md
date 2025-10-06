@@ -4,8 +4,8 @@
 "title": "So legen Sie die Lizenz aus einer Datei in GroupDocs.Comparison für Java fest&#58; Ein umfassender Leitfaden"
 "url": "/de/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementieren von „Lizenz aus Datei festlegen“ in GroupDocs.Comparison für Java
 
 ## Einführung

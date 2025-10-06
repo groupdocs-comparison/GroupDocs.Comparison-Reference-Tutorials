@@ -4,8 +4,8 @@
 "title": "Cara Mengatur Lisensi dari File di GroupDocs.Comparison untuk Java&#58; Panduan Lengkap"
 "url": "/id/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Lisensi Set dari File di GroupDocs.Perbandingan untuk Java
 
 ## Perkenalan

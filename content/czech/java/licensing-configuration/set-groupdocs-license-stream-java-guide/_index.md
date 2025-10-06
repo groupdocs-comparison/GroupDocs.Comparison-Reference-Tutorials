@@ -4,8 +4,8 @@
 "title": "Jak nastavit licenci GroupDocs ze Streamu v Javě – podrobný návod"
 "url": "/cs/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Jak nastavit licenci GroupDocs ze streamu v Javě: Podrobný návod
 
 ## Zavedení

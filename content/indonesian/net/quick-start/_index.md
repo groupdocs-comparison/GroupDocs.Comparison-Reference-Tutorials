@@ -5,8 +5,8 @@
 "title": "Mulai Cepat"
 "url": "/id/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Mulai Cepat
 
 

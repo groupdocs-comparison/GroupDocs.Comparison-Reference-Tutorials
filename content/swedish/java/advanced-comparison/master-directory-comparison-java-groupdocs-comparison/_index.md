@@ -4,8 +4,8 @@
 "title": "Jämförelse av huvudkataloger i Java med GroupDocs.Comparison för sömlösa filgranskningar"
 "url": "/sv/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Jämförelse av huvudkataloger i Java med GroupDocs.Comparison
 
 ## Introduktion

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs", "java-licensing", "document-processing", "stream-api"]
+type: docs
 ---
-
 # GroupDocs License Java Tutorial: Stream-Based Setup Guide (2025)
 
 ## Introduction

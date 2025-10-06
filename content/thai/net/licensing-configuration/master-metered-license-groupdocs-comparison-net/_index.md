@@ -4,8 +4,8 @@
 "title": "วิธีตั้งค่าใบอนุญาตแบบมิเตอร์ใน GroupDocs.Comparison .NET คำแนะนำทีละขั้นตอน"
 "url": "/th/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีตั้งค่าใบอนุญาตแบบมิเตอร์ใน GroupDocs.Comparison .NET: คำแนะนำทีละขั้นตอน
 
 ## การแนะนำ

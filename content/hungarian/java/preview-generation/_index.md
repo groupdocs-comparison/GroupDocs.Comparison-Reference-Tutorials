@@ -3,8 +3,8 @@
 "title": "Előnézeti generálási oktatóanyagok a GroupDocs.Comparison Java-hoz"
 "url": "/hu/java/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Előnézeti generálási oktatóanyagok a GroupDocs.Comparison Java-hoz
 
 Tanulja meg, hogyan hozhat létre dokumentumok előnézeteit átfogó GroupDocs.Comparison oktatóanyagainkkal Java-fejlesztőknek. Ezek a gyakorlati útmutatók bemutatják, hogyan hozhat létre oldal előnézeteket forrásdokumentumokhoz, céldokumentumokhoz és összehasonlítási eredményekhez, hogyan szabhatja testre az előnézeti kép méretét, és hogyan valósíthat meg erőforrás-tisztítást az optimális memóriahasználat érdekében. Minden oktatóanyag részletes Java kódpéldákat tartalmaz a dokumentum-előnézeti funkciók hatékony megvalósításához az összehasonlító alkalmazásokban.

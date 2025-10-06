@@ -5,8 +5,8 @@
 "title": "Ondersteunde formaten verkrijgen - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Ondersteunde formaten verkrijgen - GroupDocs.Comparison voor .NET
 
 ## Invoering

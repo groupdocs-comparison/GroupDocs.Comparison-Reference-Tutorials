@@ -4,8 +4,8 @@
 "title": "Maîtriser la comparaison de documents Java avec GroupDocs.Comparison"
 "url": "/fr/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser la comparaison de documents Java avec GroupDocs.Comparison
 
 ## Introduction

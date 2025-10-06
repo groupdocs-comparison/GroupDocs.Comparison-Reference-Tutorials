@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET でドキュメントメタデータを設定し、効率的なドキュメント管理を行う方法"
 "url": "/ja/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET でドキュメントのメタデータを設定する方法: 包括的なガイド
 
 今日のデジタル時代において、効率的なドキュメント管理は企業にとっても個人にとっても不可欠です。このプロセスにおいて重要な要素の一つは、ドキュメントを効果的に比較することです。ドキュメント管理システムを開発する場合でも、複数のバージョンのドキュメントを頻繁に扱う場合でも、GroupDocs.Comparisonライブラリを使用することで、比較時に正確なメタデータ管理が可能になり、ワークフローを効率化できます。

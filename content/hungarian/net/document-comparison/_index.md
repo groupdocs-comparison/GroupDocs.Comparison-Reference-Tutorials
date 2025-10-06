@@ -5,8 +5,8 @@
 "title": "Dokumentum-összehasonlítás"
 "url": "/hu/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Dokumentum-összehasonlítás
 
 ## Bevezetés

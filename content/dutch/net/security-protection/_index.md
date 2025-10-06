@@ -3,8 +3,8 @@
 "title": "Zelfstudies over documentbeveiliging en -bescherming voor GroupDocs.Comparison .NET"
 "url": "/nl/net/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Zelfstudies over documentbeveiliging en -bescherming voor GroupDocs.Comparison .NET
 
 Leer de beveiligingsfuncties voor documenten kennen met onze gedetailleerde GroupDocs.Comparison-tutorials voor .NET. Deze uitgebreide handleidingen laten zien hoe u wachtwoordbeveiligde documenten kunt vergelijken, wachtwoorden kunt instellen voor resulterende bestanden, veilige vergelijkingsworkflows kunt implementeren en documentbeveiliging programmatisch kunt beheren. Elke tutorial biedt werkende C#-codevoorbeelden voor veilige documentvergelijkingen, waarmee u applicaties kunt bouwen die vertrouwelijkheid behouden en tegelijkertijd effectieve documentvergelijking mogelijk maken.

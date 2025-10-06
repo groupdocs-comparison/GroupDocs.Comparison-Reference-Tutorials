@@ -5,8 +5,8 @@
 "title": "Gerar visualizações de página para o documento de origem"
 "url": "/pt/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Gerar visualizações de página para o documento de origem
 
 ## Introdução

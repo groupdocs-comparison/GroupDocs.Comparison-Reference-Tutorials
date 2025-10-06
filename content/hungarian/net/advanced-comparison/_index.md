@@ -3,8 +3,8 @@
 "title": "Speciális dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Speciális dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Összehasonlító oktatóanyagaink bemutatják, hogyan használhatja ki a GroupDocs.Comparison hatékony funkcióit a .NET alkalmazásokban. Ezek az átfogó útmutatók több dokumentum egyidejű összehasonlítását, jelszóval védett fájlok összehasonlítását, teljes mappák összehasonlítását, valamint az összehasonlítási beállítások testreszabását különböző forgatókönyvekhez tartalmazzák. Minden oktatóanyag gyakorlati C# kódpéldákat tartalmaz a kifinomult dokumentum-összehasonlítási műveletek megvalósításához, amelyek túlmutatnak az alapvető funkciókon.

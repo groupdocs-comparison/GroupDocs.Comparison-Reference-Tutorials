@@ -5,8 +5,8 @@
 "title": "문서 및 폴더 비교"
 "url": "/ko/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # 문서 및 폴더 비교
 
 ## 소개

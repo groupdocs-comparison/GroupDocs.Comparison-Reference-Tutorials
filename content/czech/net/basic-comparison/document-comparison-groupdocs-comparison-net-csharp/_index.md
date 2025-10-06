@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů v .NET pomocí GroupDocs.Comparison pro soubory Word z streamů"
 "url": "/cs/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnávání dokumentů ze streamu pomocí GroupDocs.Comparison pro .NET
 
 ## Zavedení

@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerinin Kullanımı"
 "url": "/tr/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Yükleme Seçeneklerinin Kullanımı
 
 ## giriiş

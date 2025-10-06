@@ -4,8 +4,8 @@
 "title": "Tùy chỉnh các kiểu mục được chèn trong So sánh tài liệu Java với GroupDocs.Comparison"
 "url": "/vi/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Tùy chỉnh các kiểu mục được chèn trong So sánh tài liệu Java bằng GroupDocs.Comparison
 
 ## Giới thiệu

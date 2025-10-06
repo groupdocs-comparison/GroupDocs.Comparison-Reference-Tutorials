@@ -4,8 +4,8 @@
 "title": "Comment ignorer les en-têtes et les pieds de page dans les comparaisons DOC avec GroupDocs.Comparison .NET"
 "url": "/fr/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Comment ignorer les en-têtes et les pieds de page dans les comparaisons de documents avec GroupDocs.Comparison .NET
 
 ## Introduction

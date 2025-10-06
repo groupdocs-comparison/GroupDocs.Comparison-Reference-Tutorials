@@ -3,8 +3,8 @@
 "title": "Tutoriais de informações de documentos para GroupDocs.Comparison .NET"
 "url": "/pt/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Tutoriais de informações de documentos para GroupDocs.Comparison .NET
 
 Nossos tutoriais de informações sobre documentos fornecem orientações para acessar metadados de documentos usando GroupDocs.Comparison em .NET. Esses guias práticos mostram como recuperar informações sobre documentos de origem, destino e resultado, determinar formatos de arquivo e acessar propriedades de documentos programaticamente. Cada tutorial inclui exemplos práticos de código C# para cenários comuns de informações de documentos, ajudando você a criar aplicativos que podem analisar e processar dados de documentos com eficácia.

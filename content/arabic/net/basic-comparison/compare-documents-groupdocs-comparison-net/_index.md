@@ -4,8 +4,8 @@
 "title": "مقارنة المستندات من التدفقات باستخدام GroupDocs.Comparison .NET - دليل كامل للمطورين"
 "url": "/ar/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية مقارنة مستندات متعددة من التدفقات باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

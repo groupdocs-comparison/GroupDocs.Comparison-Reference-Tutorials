@@ -4,8 +4,8 @@
 "title": "使用 FileStream 在 GroupDocs.Comparison for .NET 中设置许可证"
 "url": "/zh/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 使用 FileStream 在 GroupDocs.Comparison for .NET 中设置许可证
 
 **介绍**

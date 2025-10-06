@@ -5,8 +5,8 @@
 "title": "Utilizzo delle opzioni di caricamento nel confronto di GroupDocs per .NET"
 "url": "/it/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Utilizzo delle opzioni di caricamento nel confronto di GroupDocs per .NET
 
 ## Introduzione

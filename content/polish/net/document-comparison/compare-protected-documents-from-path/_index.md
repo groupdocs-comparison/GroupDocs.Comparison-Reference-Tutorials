@@ -5,8 +5,8 @@
 "title": "Porównaj chronione dokumenty ze ścieżki - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Porównaj chronione dokumenty ze ścieżki - GroupDocs.Comparison dla .NET
 
 ## Wstęp

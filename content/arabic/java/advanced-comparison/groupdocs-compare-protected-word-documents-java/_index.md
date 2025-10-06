@@ -4,8 +4,8 @@
 "title": "كيفية تحميل ومقارنة مستندات Word المحمية بكلمة مرور في Java باستخدام GroupDocs.Comparison"
 "url": "/ar/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تحميل ومقارنة مستندات Word المحمية بكلمة مرور في Java باستخدام GroupDocs.Comparison
 
 ## مقدمة

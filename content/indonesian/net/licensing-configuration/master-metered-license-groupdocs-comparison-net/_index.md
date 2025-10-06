@@ -4,8 +4,8 @@
 "title": "Cara Menyiapkan Lisensi Terukur di GroupDocs.Comparison .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menyiapkan Lisensi Terukur di GroupDocs.Comparison .NET: Panduan Langkah demi Langkah
 
 ## Perkenalan

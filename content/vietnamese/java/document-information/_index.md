@@ -3,8 +3,8 @@
 "title": "Hướng dẫn thông tin tài liệu cho GroupDocs.Comparison Java"
 "url": "/vi/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Hướng dẫn thông tin tài liệu cho GroupDocs.Comparison Java
 
 Hướng dẫn về thông tin tài liệu của chúng tôi cung cấp hướng dẫn truy cập siêu dữ liệu tài liệu bằng GroupDocs.Comparison trong Java. Các hướng dẫn thực tế này chỉ cho bạn cách truy xuất thông tin về tài liệu nguồn, đích và kết quả, xác định định dạng tệp và truy cập thuộc tính tài liệu theo chương trình. Mỗi hướng dẫn bao gồm các ví dụ mã Java đang hoạt động cho các tình huống thông tin tài liệu phổ biến, giúp bạn xây dựng các ứng dụng có thể phân tích và xử lý dữ liệu tài liệu hiệu quả.

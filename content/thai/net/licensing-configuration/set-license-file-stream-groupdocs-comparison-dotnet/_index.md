@@ -4,8 +4,8 @@
 "title": "ตั้งค่าใบอนุญาตใน GroupDocs.Comparison สำหรับ .NET โดยใช้ FileStream"
 "url": "/th/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # ตั้งค่าใบอนุญาตใน GroupDocs.Comparison สำหรับ .NET โดยใช้ FileStream
 
 **การแนะนำ**

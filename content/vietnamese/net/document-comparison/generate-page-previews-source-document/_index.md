@@ -5,8 +5,8 @@
 "title": "Tạo bản xem trước trang cho tài liệu nguồn"
 "url": "/vi/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Tạo bản xem trước trang cho tài liệu nguồn
 
 ## Giới thiệu

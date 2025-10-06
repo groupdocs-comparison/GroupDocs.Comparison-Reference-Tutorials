@@ -4,8 +4,8 @@
 "title": "जावा में यूआरएल के माध्यम से ग्रुपडॉक्स.तुलना लाइसेंस सेट करना&#58; लाइसेंसिंग स्वचालन को सरल बनाना"
 "url": "/hi/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # मास्टरिंग ग्रुपडॉक्स.तुलना जावा: यूआरएल के माध्यम से लाइसेंस सेट करना
 
 ## परिचय

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "protected-documents", "dotnet", "groupdocs"]
+type: docs
 ---
-
 # Compare Password Protected Documents .NET - Complete Developer Guide
 
 ## Introduction

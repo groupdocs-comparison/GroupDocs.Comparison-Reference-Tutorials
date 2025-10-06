@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的比較選項與設定教學課程"
 "url": "/zh-hant/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的比較選項與設定教學課程
 
 使用我們適用於 .NET 的 GroupDocs.Comparison 選項教學課程，學習如何微調文件比較。這些詳細的指南示範如何配置比較敏感度、自訂變更偵測演算法、設定不同變更類型的顯示首選項以及實作專門的比較規則。每個教學課程都包含用於實現自訂比較選項的 C# 程式碼範例，可協助您建立能夠精確自訂以滿足特定文件分析需求的比較應用程式。

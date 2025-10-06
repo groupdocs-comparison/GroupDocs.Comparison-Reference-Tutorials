@@ -3,8 +3,8 @@
 "title": "Tutorial Lisensi dan Konfigurasi untuk GroupDocs.Comparison Java"
 "url": "/id/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Tutorial Lisensi dan Konfigurasi untuk GroupDocs.Comparison Java
 
 Tutorial lisensi dan konfigurasi kami menyediakan panduan penting untuk menyiapkan GroupDocs.Comparison dengan benar dalam aplikasi Java. Panduan langkah demi langkah ini menunjukkan kepada Anda cara menerapkan berbagai opsi lisensi, mengonfigurasi penagihan terukur, memeriksa status lisensi, dan mengoptimalkan pengaturan pustaka untuk kebutuhan spesifik Anda. Setiap tutorial menyertakan contoh kode Java terperinci untuk inisialisasi dan konfigurasi yang tepat, membantu Anda membangun solusi perbandingan dokumen yang dilisensikan dan dioptimalkan dengan benar.

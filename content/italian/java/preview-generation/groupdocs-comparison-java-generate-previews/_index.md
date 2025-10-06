@@ -4,8 +4,8 @@
 "title": "Padroneggiare GroupDocs.Comparison per Java&#58; generazione di anteprime di documenti senza sforzo"
 "url": "/it/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Padroneggiare GroupDocs.Comparison per Java: Generazione di anteprime di documenti senza sforzo
 
 ## Introduzione

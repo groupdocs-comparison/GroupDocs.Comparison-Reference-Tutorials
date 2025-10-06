@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 设置文档元数据以实现高效的文档管理"
 "url": "/zh/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 设置文档元数据：综合指南
 
 在当今的数字时代，高效的文档管理对企业和个人都至关重要。其中，一个关键环节是有效地比较文档。无论您是开发文档管理系统，还是经常处理多个文档版本，使用 GroupDocs.Comparison 库都可以简化您的工作流程，在比较过程中实现精确的元数据管理。

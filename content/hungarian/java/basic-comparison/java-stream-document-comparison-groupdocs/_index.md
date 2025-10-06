@@ -4,8 +4,8 @@
 "title": "Java Stream dokumentum-összehasonlítás implementálása a GroupDocs.Comparer használatával – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Java Stream dokumentum-összehasonlítás implementálása GroupDocs.Comparer használatával: Átfogó útmutató
 
 ## Bevezetés

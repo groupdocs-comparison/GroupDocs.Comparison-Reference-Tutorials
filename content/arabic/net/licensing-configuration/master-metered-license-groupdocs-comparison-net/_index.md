@@ -4,8 +4,8 @@
 "title": "كيفية إعداد ترخيص مُقاس في GroupDocs.Comparison .NET - دليل خطوة بخطوة"
 "url": "/ar/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية إعداد ترخيص مُقاس في GroupDocs.Comparison .NET: دليل خطوة بخطوة
 
 ## مقدمة

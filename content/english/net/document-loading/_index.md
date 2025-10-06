@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-loading", "dotnet", "csharp", "tutorial", "api"]
+type: docs
 ---
-
 # Document Loading .NET Tutorial - Complete Developer Guide
 
 Loading documents programmatically is a fundamental skill every .NET developer needs when building document processing applications. Whether you're creating a document comparison tool, a content management system, or any application that handles files, understanding how to efficiently load documents from various sources can save you countless hours of debugging and performance issues.

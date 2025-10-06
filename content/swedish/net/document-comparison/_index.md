@@ -5,8 +5,8 @@
 "title": "Dokumentjämförelse"
 "url": "/sv/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Dokumentjämförelse
 
 ## Introduktion

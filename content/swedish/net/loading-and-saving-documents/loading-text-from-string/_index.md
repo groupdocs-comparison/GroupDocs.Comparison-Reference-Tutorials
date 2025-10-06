@@ -5,8 +5,8 @@
 "title": "Läser in text från sträng i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Läser in text från sträng i GroupDocs-jämförelse för .NET
 
 ## Introduktion

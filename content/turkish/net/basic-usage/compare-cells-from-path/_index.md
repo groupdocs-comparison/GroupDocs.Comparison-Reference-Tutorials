@@ -5,8 +5,8 @@
 "title": "Yoldan Hücreleri Karşılaştır - .NET için GroupDocs.Comparison"
 "url": "/tr/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Yoldan Hücreleri Karşılaştır - .NET için GroupDocs.Comparison
 
 ## giriiş

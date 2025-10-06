@@ -9,8 +9,8 @@ weight: 1
 url: "/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 categories: ["GroupDocs.Comparison"]
 tags: ["custom-fonts", "document-comparison", "dotnet", "troubleshooting"]
+type: docs
 ---
-
 # GroupDocs.Comparison Custom Fonts .NET - Load & Compare Documents
 
 ## Why Custom Fonts Matter in Document Comparison

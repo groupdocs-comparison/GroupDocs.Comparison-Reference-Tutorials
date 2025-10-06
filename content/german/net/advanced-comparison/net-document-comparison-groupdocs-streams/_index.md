@@ -4,8 +4,8 @@
 "title": "Automatisieren Sie den Dokumentvergleich in .NET mithilfe von GroupDocs.Comparison-Streams"
 "url": "/de/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Automatisieren Sie den Dokumentvergleich in .NET mithilfe von GroupDocs.Comparison-Streams
 ## Einführung
 Suchen Sie nach einer effizienten Möglichkeit, den Dokumentenvergleich zu automatisieren? Dieses Tutorial zeigt, wie Sie Dokumente mithilfe von Streams in einer .NET-Umgebung mit GroupDocs.Comparison für .NET vergleichen. Durch die Verwendung von Dateistreams bietet dieser Ansatz Flexibilität und Effizienz, insbesondere bei großen Dateien oder netzwerkbasierten Ressourcen.

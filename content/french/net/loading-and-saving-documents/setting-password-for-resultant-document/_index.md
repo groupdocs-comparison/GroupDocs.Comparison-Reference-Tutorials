@@ -5,8 +5,8 @@
 "title": "Définition du mot de passe pour le document résultant dans la comparaison GroupDocs pour .NET"
 "url": "/fr/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Définition du mot de passe pour le document résultant dans la comparaison GroupDocs pour .NET
 
 ## Introduction

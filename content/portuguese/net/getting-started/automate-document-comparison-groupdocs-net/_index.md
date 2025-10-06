@@ -4,8 +4,8 @@
 "title": "Automatize a comparação de documentos com o GroupDocs.Comparison .NET - Um guia completo"
 "url": "/pt/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Automatize a comparação de documentos com o GroupDocs.Comparison .NET
 ## Começando
 No mundo acelerado da gestão de documentos atual, automatizar a comparação de documentos pode economizar tempo e reduzir erros em comparação com métodos manuais. Este guia completo mostrará como utilizar o GroupDocs.Comparison para .NET para automatizar esse processo de forma eficaz.

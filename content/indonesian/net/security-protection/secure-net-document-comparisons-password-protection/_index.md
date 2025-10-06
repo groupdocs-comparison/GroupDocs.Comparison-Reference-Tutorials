@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Aman di .NET dengan Kata Sandi Melindungi Hasil Menggunakan GroupDocs.Comparison"
 "url": "/id/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Amankan Perbandingan Dokumen Anda di .NET: Lindungi Hasil dengan Kata Sandi dengan GroupDocs.Comparison
 
 ## Perkenalan

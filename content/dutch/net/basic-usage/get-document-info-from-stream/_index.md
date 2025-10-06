@@ -5,8 +5,8 @@
 "title": "Documentinfo ophalen uit stream - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Documentinfo ophalen uit stream - GroupDocs.Comparison voor .NET
 
 ## Invoering

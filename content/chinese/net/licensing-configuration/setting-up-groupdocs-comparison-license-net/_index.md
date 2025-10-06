@@ -4,8 +4,8 @@
 "title": "如何在 .NET 中设置 GroupDocs.Comparison 许可证——分步指南"
 "url": "/zh/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 .NET 中设置 GroupDocs.Comparison 许可证
 
 ## 介绍

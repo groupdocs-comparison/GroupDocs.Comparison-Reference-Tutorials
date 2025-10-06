@@ -5,8 +5,8 @@
 "title": "Comparación de carga de texto desde una cadena en GroupDocs para .NET"
 "url": "/es/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Comparación de carga de texto desde una cadena en GroupDocs para .NET
 
 ## Introducción

@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs.Comparison 튜토리얼 및 예제"
 "url": "/ko/net/"
 "weight": 10
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison 튜토리얼 및 예제
 
 ## 소개

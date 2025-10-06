@@ -4,8 +4,8 @@
 "title": "Jak sledovat spotřebu kreditů pomocí GroupDocs.Comparison pro .NET – Komplexní průvodce"
 "url": "/cs/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Jak sledovat spotřebu kreditů pomocí GroupDocs.Comparison pro .NET: Komplexní průvodce
 
 ## Zavedení

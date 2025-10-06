@@ -4,8 +4,8 @@
 "title": "Cách theo dõi mức tiêu thụ tín dụng bằng GroupDocs.Comparison cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Cách theo dõi mức tiêu thụ tín dụng bằng GroupDocs.Comparison cho .NET: Hướng dẫn toàn diện
 
 ## Giới thiệu

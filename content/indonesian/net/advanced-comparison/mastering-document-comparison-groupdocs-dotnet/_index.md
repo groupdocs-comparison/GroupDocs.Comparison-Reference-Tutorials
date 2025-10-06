@@ -4,8 +4,8 @@
 "title": "Menguasai Perbandingan Dokumen di .NET&#58; Panduan Lengkap untuk Menggunakan GroupDocs.Comparison"
 "url": "/id/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen di .NET dengan GroupDocs.Comparison
 
 Manfaatkan potensi mengotomatiskan perbandingan dokumen di lingkungan .NET menggunakan GroupDocs.Comparison. Panduan ini akan membantu Anda menyederhanakan alur kerja dan meningkatkan produktivitas dengan mengelola versi dokumen secara efisien.

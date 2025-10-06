@@ -5,8 +5,8 @@
 "title": "การใช้งานพื้นฐาน"
 "url": "/th/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # การใช้งานพื้นฐาน
 
 ## การแนะนำ

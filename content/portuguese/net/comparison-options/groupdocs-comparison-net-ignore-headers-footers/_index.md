@@ -4,8 +4,8 @@
 "title": "Como ignorar cabeçalhos e rodapés em comparações de DOC usando GroupDocs.Comparison .NET"
 "url": "/pt/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Como ignorar cabeçalhos e rodapés em comparações de documentos com GroupDocs.Comparison .NET
 
 ## Introdução

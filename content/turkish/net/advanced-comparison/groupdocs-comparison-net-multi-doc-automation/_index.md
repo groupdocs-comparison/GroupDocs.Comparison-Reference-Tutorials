@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kütüphanesini Kullanarak .NET'te Çoklu Belge Karşılaştırmasını Otomatikleştirin"
 "url": "/tr/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile .NET'te Çoklu Belge Karşılaştırması Nasıl Uygulanır
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Több jelszóval védett dokumentum összehasonlítása .NET-ben a GroupDocs.Comparison használatával"
 "url": "/hu/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Több jelszóval védett dokumentum összehasonlítása .NET-ben a GroupDocs.Comparison használatával
 
 ## Bevezetés

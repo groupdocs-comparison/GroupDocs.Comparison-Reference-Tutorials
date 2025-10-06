@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "folder-comparison", "dotnet-api", "workflow-automation"]
+type: docs
 ---
-
 # Document Comparison .NET - Complete Developer Guide
 
 ## Why Document Comparison Matters in Modern Development

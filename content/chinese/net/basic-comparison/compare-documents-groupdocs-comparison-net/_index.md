@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET 比较来自流的文档 - 开发人员完整指南"
 "url": "/zh/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 比较来自流的多个文档
 
 ## 介绍

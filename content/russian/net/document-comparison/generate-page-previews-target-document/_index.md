@@ -5,8 +5,8 @@
 "title": "Создание предпросмотров страниц для целевого документа"
 "url": "/ru/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Создание предпросмотров страниц для целевого документа
 
 ## Введение

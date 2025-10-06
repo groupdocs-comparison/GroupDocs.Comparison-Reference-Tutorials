@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET'te Desteklenen Tüm Dosya Biçimlerini Listeleme"
 "url": "/tr/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET'te Desteklenen Tüm Dosya Biçimlerini Listeleme
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Dominar la comparación de documentos en .NET&#58; una guía completa para usar GroupDocs.Comparison"
 "url": "/es/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos en .NET con GroupDocs.Comparison
 
 Descubra el potencial de automatizar la comparación de documentos en entornos .NET con GroupDocs.Comparison. Esta guía le ayudará a optimizar su flujo de trabajo y a aumentar la productividad mediante la gestión eficiente de las versiones de los documentos.

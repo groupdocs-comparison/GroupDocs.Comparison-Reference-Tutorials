@@ -5,8 +5,8 @@
 "title": "比較來自流的圖像 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 比較來自流的圖像 - GroupDocs.Comparison for .NET
 
 ## 介紹

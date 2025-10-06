@@ -4,8 +4,8 @@
 "title": "Dominando la comparación de documentos de flujo de Java con GroupDocs. Comparación para una gestión eficiente del flujo de trabajo"
 "url": "/es/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos de flujo de Java con GroupDocs. Comparación para una gestión eficiente del flujo de trabajo
 
 En el acelerado entorno digital actual, gestionar y comparar grandes volúmenes de documentos es crucial para garantizar la coherencia y la precisión en contratos, informes o documentos legales. Este tutorial le guiará en el uso de la potente biblioteca GroupDocs.Comparison en Java para comparar eficientemente varios documentos de Word mediante secuencias, lo que permite la personalización con ajustes de estilo.

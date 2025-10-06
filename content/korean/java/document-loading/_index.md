@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java를 위한 문서 로딩 튜토리얼"
 "url": "/ko/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # GroupDocs.Comparison Java를 위한 문서 로딩 튜토리얼
 
 문서 로딩 튜토리얼은 Java 애플리케이션에서 비교를 위한 문서 준비에 대한 포괄적인 지침을 제공합니다. 이 단계별 가이드는 로컬 저장소, 메모리 스트림 및 문자열 콘텐츠에서 문서를 로드하는 방법과 다양한 문서 유형에 대한 로딩 옵션을 구성하는 방법을 보여줍니다. 각 튜토리얼에는 비교 애플리케이션에서 강력한 문서 로딩 기능을 구현하는 데 도움이 되는 완전한 Java 코드 예제가 포함되어 있습니다.

@@ -5,8 +5,8 @@
 "title": "Thiết lập mật khẩu cho tài liệu kết quả trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Thiết lập mật khẩu cho tài liệu kết quả trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

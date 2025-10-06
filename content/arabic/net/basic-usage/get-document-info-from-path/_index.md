@@ -5,8 +5,8 @@
 "title": "الحصول على معلومات المستند من المسار - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # الحصول على معلومات المستند من المسار - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

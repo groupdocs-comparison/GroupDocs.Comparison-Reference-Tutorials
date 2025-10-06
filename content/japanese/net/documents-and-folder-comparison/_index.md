@@ -5,8 +5,8 @@
 "title": "ドキュメントとフォルダの比較"
 "url": "/ja/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # ドキュメントとフォルダの比較
 
 ## 導入

@@ -4,8 +4,8 @@
 "title": "Как отслеживать потребление кредита с помощью GroupDocs.Comparison для .NET? Подробное руководство"
 "url": "/ru/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Как отслеживать потребление кредита с помощью GroupDocs.Comparison для .NET: подробное руководство
 
 ## Введение

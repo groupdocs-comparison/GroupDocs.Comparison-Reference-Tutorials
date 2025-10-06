@@ -3,8 +3,8 @@
 "title": "Tutorials zur Dokumentensicherheit und zum Schutz für GroupDocs.Comparison Java"
 "url": "/de/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Tutorials zur Dokumentensicherheit und zum Schutz für GroupDocs.Comparison Java
 
 Lernen Sie die Funktionen zur Dokumentensicherheit mit unseren ausführlichen GroupDocs.Comparison-Tutorials für Java. Diese umfassenden Anleitungen zeigen Ihnen, wie Sie passwortgeschützte Dokumente vergleichen, Passwörter für Ergebnisdateien festlegen, sichere Vergleichs-Workflows implementieren und den Dokumentenschutz programmatisch verwalten. Jedes Tutorial enthält funktionierende Java-Codebeispiele für sichere Dokumentvergleiche. So erstellen Sie Anwendungen, die Vertraulichkeit wahren und gleichzeitig einen effektiven Dokumentenvergleich ermöglichen.

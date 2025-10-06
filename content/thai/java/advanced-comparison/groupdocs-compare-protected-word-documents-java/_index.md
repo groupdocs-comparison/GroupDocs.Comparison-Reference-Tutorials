@@ -4,8 +4,8 @@
 "title": "วิธีการโหลดและเปรียบเทียบเอกสาร Word ที่ได้รับการป้องกันด้วยรหัสผ่านใน Java โดยใช้ GroupDocs.Comparison"
 "url": "/th/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการโหลดและเปรียบเทียบเอกสาร Word ที่ได้รับการป้องกันด้วยรหัสผ่านใน Java โดยใช้ GroupDocs.Comparison
 
 ## การแนะนำ

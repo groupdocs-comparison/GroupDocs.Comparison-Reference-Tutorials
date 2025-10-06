@@ -4,8 +4,8 @@
 "title": "Сравнение основных каталогов в Java с использованием GroupDocs.Comparison для бесшовного аудита файлов"
 "url": "/ru/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Сравнение основных каталогов в Java с помощью GroupDocs.Comparison
 
 ## Введение

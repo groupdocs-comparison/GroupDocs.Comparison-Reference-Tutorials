@@ -5,8 +5,8 @@
 "title": "Сохранение источника метаданных документов в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Сохранение источника метаданных документов в GroupDocs Сравнение для .NET
 
 ## Введение

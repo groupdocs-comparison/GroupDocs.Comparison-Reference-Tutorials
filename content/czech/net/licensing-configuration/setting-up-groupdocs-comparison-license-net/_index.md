@@ -4,8 +4,8 @@
 "title": "Jak nastavit licenci GroupDocs.Comparison v .NET – podrobný návod"
 "url": "/cs/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak nastavit licenci GroupDocs.Comparison v .NET
 
 ## Zavedení

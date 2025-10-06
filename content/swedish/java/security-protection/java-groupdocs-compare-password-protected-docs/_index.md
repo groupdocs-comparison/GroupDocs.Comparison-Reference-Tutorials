@@ -4,8 +4,8 @@
 "title": "Bemästra lösenordsskyddade dokumentjämförelser i Java med GroupDocs.Comparison"
 "url": "/sv/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Bemästra lösenordsskyddade dokumentjämförelser i Java med GroupDocs.Comparison
 
 ## Introduktion

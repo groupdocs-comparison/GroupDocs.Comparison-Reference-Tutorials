@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparer का उपयोग करके जावा स्ट्रीम दस्तावेज़ तुलना लागू करें एक व्यापक गाइड"
 "url": "/hi/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparer का उपयोग करके Java स्ट्रीम दस्तावेज़ तुलना लागू करें: एक व्यापक गाइड
 
 ## परिचय

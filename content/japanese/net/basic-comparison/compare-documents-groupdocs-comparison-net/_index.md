@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用してストリームからドキュメントを比較する - 開発者向け完全ガイド"
 "url": "/ja/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET を使用してストリームから複数のドキュメントを比較する方法
 
 ## 導入

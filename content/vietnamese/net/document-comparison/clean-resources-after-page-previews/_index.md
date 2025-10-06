@@ -5,8 +5,8 @@
 "title": "Làm sạch tài nguyên sau khi xem trước trang"
 "url": "/vi/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Làm sạch tài nguyên sau khi xem trước trang
 
 ## Giới thiệu

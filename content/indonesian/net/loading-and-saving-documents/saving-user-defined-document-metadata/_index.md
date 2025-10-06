@@ -5,8 +5,8 @@
 "title": "Menyimpan Metadata Dokumen yang Ditentukan Pengguna dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Menyimpan Metadata Dokumen yang Ditentukan Pengguna dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

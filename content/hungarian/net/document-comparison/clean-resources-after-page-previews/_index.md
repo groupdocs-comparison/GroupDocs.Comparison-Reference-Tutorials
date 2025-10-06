@@ -5,8 +5,8 @@
 "title": "Erőforrások tisztítása az oldal előnézete után"
 "url": "/hu/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Erőforrások tisztítása az oldal előnézete után
 
 ## Bevezetés

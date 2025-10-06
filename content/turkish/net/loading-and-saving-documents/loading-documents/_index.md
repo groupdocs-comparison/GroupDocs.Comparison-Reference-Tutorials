@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Belgeleri Yükleme"
 "url": "/tr/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Belgeleri Yükleme
 
 ## giriiş

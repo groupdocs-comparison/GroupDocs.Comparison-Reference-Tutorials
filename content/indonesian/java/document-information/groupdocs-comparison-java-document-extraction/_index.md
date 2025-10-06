@@ -4,8 +4,8 @@
 "title": "Ekstraksi Metadata Dokumen Master dengan GroupDocs di Java"
 "url": "/id/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Ekstraksi Metadata Dokumen dengan GroupDocs di Java
 
 Dalam lanskap digital saat ini, mengelola dan mengekstrak informasi dari dokumen secara efisien sangat penting bagi bisnis di berbagai industri. Baik Anda menangani kontrak hukum, makalah akademis, atau laporan keuangan, memahami metadata dokumen seperti jenis file, jumlah halaman, dan ukuran dapat memperlancar alur kerja dan meningkatkan analisis data. Tutorial ini memandu Anda menggunakan GroupDocs.Comparison di Java untuk mengekstrak informasi dokumen yang berharga melalui aliran input dan jalur file.

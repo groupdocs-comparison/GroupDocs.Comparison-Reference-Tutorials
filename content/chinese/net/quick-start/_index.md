@@ -5,8 +5,8 @@
 "title": "快速入门"
 "url": "/zh/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # 快速入门
 
 

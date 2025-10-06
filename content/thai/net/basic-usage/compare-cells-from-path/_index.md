@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบเซลล์จากเส้นทาง - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # เปรียบเทียบเซลล์จากเส้นทาง - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

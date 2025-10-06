@@ -4,8 +4,8 @@
 "title": "Como definir metadados de documentos com GroupDocs.Comparison .NET para gerenciamento eficiente de documentos"
 "url": "/pt/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Como definir metadados de documentos com GroupDocs.Comparison .NET: um guia completo
 
 Na era digital atual, a gestão eficiente de documentos é crucial tanto para empresas quanto para indivíduos. Um aspecto crucial desse processo é a comparação eficaz de documentos. Seja desenvolvendo um sistema de gestão de documentos ou lidando frequentemente com múltiplas versões de documentos, o uso da biblioteca GroupDocs.Comparison pode otimizar seu fluxo de trabalho, permitindo o gerenciamento preciso de metadados durante as comparações.

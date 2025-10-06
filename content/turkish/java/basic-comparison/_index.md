@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java için Temel Belge Karşılaştırma Eğitimleri"
 "url": "/tr/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison Java için Temel Belge Karşılaştırma Eğitimleri
 
 Ayrıntılı GroupDocs.Comparison Java eğitimlerimizle temel belge karşılaştırmasında ustalaşın. Bu adım adım kılavuzlar, Word, PDF, Excel ve resimler dahil olmak üzere çeşitli formatlardaki belgelerin nasıl karşılaştırılacağını gösterir. Her eğitim, belgeler arasındaki farkların nasıl belirleneceğini, karşılaştırma raporlarının nasıl oluşturulacağını ve farklı belge türleri için karşılaştırma işlemlerinin nasıl uygulanacağını gösteren çalışan Java kod örnekleri içerir.

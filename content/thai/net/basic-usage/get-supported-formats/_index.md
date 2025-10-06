@@ -5,8 +5,8 @@
 "title": "รับรูปแบบที่รองรับ - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # รับรูปแบบที่รองรับ - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

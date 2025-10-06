@@ -4,8 +4,8 @@
 "title": "Cách thiết lập siêu dữ liệu tài liệu với GroupDocs.Comparison .NET để quản lý tài liệu hiệu quả"
 "url": "/vi/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Cách thiết lập siêu dữ liệu tài liệu với GroupDocs.Comparison .NET: Hướng dẫn toàn diện
 
 Trong thời đại kỹ thuật số ngày nay, quản lý tài liệu hiệu quả là điều tối quan trọng đối với cả doanh nghiệp và cá nhân. Một khía cạnh quan trọng của quy trình này là so sánh tài liệu hiệu quả. Cho dù bạn đang phát triển hệ thống quản lý tài liệu hay thường xuyên xử lý nhiều phiên bản tài liệu, việc sử dụng thư viện GroupDocs.Comparison có thể hợp lý hóa quy trình làm việc của bạn bằng cách cho phép quản lý siêu dữ liệu chính xác trong quá trình so sánh.

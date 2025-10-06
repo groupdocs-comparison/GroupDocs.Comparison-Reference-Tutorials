@@ -5,8 +5,8 @@
 "title": "पूर्वावलोकन के लिए विशिष्ट छवि आकार सेट करें"
 "url": "/hi/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # पूर्वावलोकन के लिए विशिष्ट छवि आकार सेट करें
 
 ## परिचय

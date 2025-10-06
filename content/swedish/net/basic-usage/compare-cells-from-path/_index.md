@@ -5,8 +5,8 @@
 "title": "Jämför celler från sökväg - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Jämför celler från sökväg - GroupDocs.Comparison för .NET
 
 ## Introduktion

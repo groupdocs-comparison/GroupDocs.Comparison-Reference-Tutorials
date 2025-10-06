@@ -4,8 +4,8 @@
 "title": "أتمتة مقارنة المستندات المتعددة في .NET باستخدام مكتبة GroupDocs.Comparison"
 "url": "/ar/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة المستندات المتعددة في .NET باستخدام GroupDocs.Comparison
 
 ## مقدمة

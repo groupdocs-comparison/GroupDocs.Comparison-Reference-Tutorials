@@ -4,8 +4,8 @@
 "title": "Ana Belge Değişiklik Yönetimi&#58; GroupDocs.Comparison .NET ile Düzenlemeleri Kabul Edin ve Reddedin"
 "url": "/tr/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Değişiklik Yönetiminde Ustalaşın
 
 ## giriiş

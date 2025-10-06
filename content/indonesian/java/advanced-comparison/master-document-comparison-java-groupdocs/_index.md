@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Utama di Java Menggunakan GroupDocs.Comparison untuk Dokumen Word, Teks, dan Email"
 "url": "/id/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen di Java dengan GroupDocs.Comparison
 
 **Bandingkan Beberapa Dokumen Word, Teks, dan Email Secara Efisien Menggunakan GroupDocs.Comparison untuk Java**

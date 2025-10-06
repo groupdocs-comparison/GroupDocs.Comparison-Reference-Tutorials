@@ -5,8 +5,8 @@
 "title": "Rychlý start"
 "url": "/cs/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Rychlý start
 
 

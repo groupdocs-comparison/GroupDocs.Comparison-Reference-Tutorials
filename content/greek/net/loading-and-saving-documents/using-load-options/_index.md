@@ -5,8 +5,8 @@
 "title": "Χρήση επιλογών φόρτωσης στο GroupDocs Σύγκριση για .NET"
 "url": "/el/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Χρήση επιλογών φόρτωσης στο GroupDocs Σύγκριση για .NET
 
 ## Εισαγωγή

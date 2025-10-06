@@ -5,8 +5,8 @@
 "title": "Obtener información del documento del documento de resultados - GroupDocs.Comparison para .NET"
 "url": "/es/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Obtener información del documento del documento de resultados - GroupDocs.Comparison para .NET
 
 ## Introducción

@@ -4,8 +4,8 @@
 "title": "Ορισμός άδειας χρήσης στο GroupDocs.Comparison για .NET χρησιμοποιώντας το FileStream"
 "url": "/el/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Ορισμός άδειας χρήσης στο GroupDocs.Comparison για .NET χρησιμοποιώντας το FileStream
 
 **Εισαγωγή**

@@ -5,8 +5,8 @@
 "title": "Védett dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison for .NET"
 "url": "/hu/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Védett dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison for .NET
 
 ## Bevezetés

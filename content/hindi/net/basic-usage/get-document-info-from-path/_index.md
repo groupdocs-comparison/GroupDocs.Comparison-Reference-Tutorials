@@ -5,8 +5,8 @@
 "title": "पथ से दस्तावेज़ जानकारी प्राप्त करें - .NET के लिए GroupDocs.तुलना"
 "url": "/hi/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # पथ से दस्तावेज़ जानकारी प्राप्त करें - .NET के लिए GroupDocs.तुलना
 
 ## परिचय

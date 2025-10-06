@@ -4,8 +4,8 @@
 "title": "Master-Textzeichenfolgenvergleich in .NET mithilfe der GroupDocs.Comparison-Bibliothek"
 "url": "/de/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Master-Textzeichenfolgenvergleich in .NET mithilfe der GroupDocs.Comparison-Bibliothek
 
 ## Einführung

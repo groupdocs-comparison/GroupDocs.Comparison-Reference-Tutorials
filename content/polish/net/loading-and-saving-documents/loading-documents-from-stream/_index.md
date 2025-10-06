@@ -5,8 +5,8 @@
 "title": "Ładowanie dokumentów ze strumienia w porównaniu GroupDocs dla .NET"
 "url": "/pl/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Ładowanie dokumentów ze strumienia w porównaniu GroupDocs dla .NET
 
 ## Wstęp

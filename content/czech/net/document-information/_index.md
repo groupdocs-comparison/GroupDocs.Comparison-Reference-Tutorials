@@ -3,8 +3,8 @@
 "title": "Výukové programy k informacím o dokumentech pro GroupDocs.Comparison .NET"
 "url": "/cs/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Výukové programy k informacím o dokumentech pro GroupDocs.Comparison .NET
 
 Naše tutoriály o informacích o dokumentech poskytují pokyny pro přístup k metadatům dokumentů pomocí GroupDocs.Comparison v .NET. Tyto praktické průvodce vám ukážou, jak načíst informace o zdrojových, cílových a výsledných dokumentech, určit formáty souborů a programově přistupovat k vlastnostem dokumentů. Každý tutoriál obsahuje funkční příklady kódu C# pro běžné scénáře informací o dokumentech, které vám pomohou vytvářet aplikace, které dokáží efektivně analyzovat a zpracovávat data dokumentů.

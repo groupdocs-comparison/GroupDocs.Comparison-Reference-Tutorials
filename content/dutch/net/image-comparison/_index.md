@@ -5,8 +5,8 @@
 "title": "Beeldvergelijking"
 "url": "/nl/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Beeldvergelijking
 
 

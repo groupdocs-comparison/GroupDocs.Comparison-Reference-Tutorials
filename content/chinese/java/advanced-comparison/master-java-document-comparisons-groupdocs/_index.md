@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 库在 Java 中掌握文档比较"
 "url": "/zh/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 中的文档比较
 
 探索如何使用强大的 GroupDocs.Comparison Java 库高效地初始化、比较和更新文档中的更改。本教程将指导您设置环境、了解主要功能并实施实际解决方案。

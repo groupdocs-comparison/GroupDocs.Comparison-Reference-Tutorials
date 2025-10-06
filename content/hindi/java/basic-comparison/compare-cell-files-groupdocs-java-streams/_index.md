@@ -4,8 +4,8 @@
 "title": "जावा में GroupDocs.Comparison का उपयोग करके सेल फ़ाइलों की तुलना कैसे करें&#58; एक व्यापक गाइड"
 "url": "/hi/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # जावा में GroupDocs.Comparison का उपयोग करके सेल फ़ाइलों की तुलना कैसे करें
 
 ## परिचय

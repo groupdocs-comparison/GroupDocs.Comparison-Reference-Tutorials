@@ -4,8 +4,8 @@
 "title": "Jak porovnat dokumenty Wordu chráněné heslem pomocí GroupDocs.Comparison pro Javu"
 "url": "/cs/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů: Průvodce porovnáváním dokumentů Word chráněných heslem pomocí GroupDocs.Comparison pro Javu
 
 ## Zavedení

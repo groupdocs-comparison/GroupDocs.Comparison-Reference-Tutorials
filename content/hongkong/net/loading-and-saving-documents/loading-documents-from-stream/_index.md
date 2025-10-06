@@ -5,8 +5,8 @@
 "title": "在 .NET 的 GroupDocs 比較中從流加載文檔"
 "url": "/zh-hant/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 在 .NET 的 GroupDocs 比較中從流加載文檔
 
 ## 介紹

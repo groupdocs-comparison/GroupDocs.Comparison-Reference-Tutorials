@@ -3,8 +3,8 @@
 "title": "Hướng dẫn so sánh tài liệu nâng cao cho GroupDocs.Comparison Java"
 "url": "/vi/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Hướng dẫn so sánh tài liệu nâng cao cho GroupDocs.Comparison Java
 
 Hướng dẫn so sánh nâng cao của chúng tôi sẽ chỉ cho bạn cách tận dụng các tính năng mạnh mẽ của GroupDocs.Comparison trong các ứng dụng Java. Các hướng dẫn toàn diện này bao gồm so sánh nhiều tài liệu cùng lúc, so sánh các tệp được bảo vệ bằng mật khẩu, so sánh toàn bộ thư mục và tùy chỉnh cài đặt so sánh cho các tình huống khác nhau. Mỗi hướng dẫn đều bao gồm các ví dụ mã Java thực tế để triển khai các hoạt động so sánh tài liệu phức tạp vượt xa chức năng cơ bản.

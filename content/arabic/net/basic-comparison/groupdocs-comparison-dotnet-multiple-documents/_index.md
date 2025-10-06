@@ -4,8 +4,8 @@
 "title": "كيفية مقارنة عدة مستندات محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison"
 "url": "/ar/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # كيفية مقارنة عدة مستندات محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison
 
 ## مقدمة

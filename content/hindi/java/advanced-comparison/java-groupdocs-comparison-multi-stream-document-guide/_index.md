@@ -4,8 +4,8 @@
 "title": "जावा मल्टी-स्ट्रीम दस्तावेज़ तुलना GroupDocs.Comparison&#58; का उपयोग करके एक व्यापक गाइड"
 "url": "/hi/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # ग्रुपडॉक्स.तुलना के साथ जावा मल्टी-स्ट्रीम दस्तावेज़ तुलना में महारत हासिल करना
 
 ## परिचय

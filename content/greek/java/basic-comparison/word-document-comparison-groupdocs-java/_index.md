@@ -4,8 +4,8 @@
 "title": "Υλοποίηση σύγκρισης εγγράφων Word σε Java χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση της σύγκρισης εγγράφων Word σε Java με το GroupDocs.Comparison
 
 ## Εισαγωγή

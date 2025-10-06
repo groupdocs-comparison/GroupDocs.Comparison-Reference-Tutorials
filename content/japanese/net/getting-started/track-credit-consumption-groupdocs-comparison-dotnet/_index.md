@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET を使用してクレジット消費を追跡する方法 - 包括的なガイド"
 "url": "/ja/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET を使用してクレジット消費を追跡する方法: 包括的なガイド
 
 ## 導入

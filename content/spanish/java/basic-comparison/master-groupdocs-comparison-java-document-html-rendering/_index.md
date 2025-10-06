@@ -4,8 +4,8 @@
 "title": "Comparación de documentos maestros y renderizado HTML en Java con GroupDocs.Comparison"
 "url": "/es/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos y la representación HTML en Java con GroupDocs.Comparison
 
 ## Introducción

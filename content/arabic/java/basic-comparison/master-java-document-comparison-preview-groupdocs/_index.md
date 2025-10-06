@@ -4,8 +4,8 @@
 "title": "مقارنة مستندات Java ومعاينتها باستخدام GroupDocs - دليل شامل"
 "url": "/ar/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة مستندات Java وإنشاء المعاينة باستخدام GroupDocs.Comparison
 
 ## مقدمة

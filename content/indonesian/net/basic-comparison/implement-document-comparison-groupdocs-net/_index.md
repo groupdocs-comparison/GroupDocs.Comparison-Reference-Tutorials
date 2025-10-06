@@ -4,8 +4,8 @@
 "title": "Cara Menerapkan Perbandingan Dokumen di .NET Menggunakan GroupDocs.Comparison&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menerapkan Perbandingan Dokumen di .NET Menggunakan GroupDocs.Comparison: Panduan Langkah demi Langkah
 
 ## Perkenalan

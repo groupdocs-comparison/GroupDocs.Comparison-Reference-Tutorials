@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["metadata", "document-comparison", "dotnet", "groupdocs"]
+type: docs
 ---
-
 # Document Metadata Management .NET - Complete Guide for GroupDocs.Comparison
 
 When you're building .NET applications that handle document comparisons, managing metadata properly can make the difference between a basic tool and a professional-grade solution. This comprehensive guide shows you exactly how to control document properties, set custom metadata, and implement smart retention policies using GroupDocs.Comparison for .NET.

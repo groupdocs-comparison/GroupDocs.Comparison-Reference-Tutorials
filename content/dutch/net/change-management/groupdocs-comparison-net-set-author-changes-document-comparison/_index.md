@@ -4,8 +4,8 @@
 "title": "Auteur van wijzigingen in documentvergelijking instellen met GroupDocs.Comparison voor .NET"
 "url": "/nl/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Implementatie van Set Author of Changes in Document Comparison met behulp van GroupDocs.Comparison voor .NET
 
 ## Invoering

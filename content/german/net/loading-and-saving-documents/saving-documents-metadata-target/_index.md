@@ -5,8 +5,8 @@
 "title": "Speichern des Metadatenziels für Dokumente im GroupDocs-Vergleich für .NET"
 "url": "/de/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Speichern des Metadatenziels für Dokumente im GroupDocs-Vergleich für .NET
 
 ## Einführung

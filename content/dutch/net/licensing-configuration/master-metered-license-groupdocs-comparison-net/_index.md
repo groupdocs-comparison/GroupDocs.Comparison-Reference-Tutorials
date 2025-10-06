@@ -4,8 +4,8 @@
 "title": "Hoe u een gemeten licentie instelt in GroupDocs.Comparison .NET&#58; een stapsgewijze handleiding"
 "url": "/nl/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Een gemeten licentie instellen in GroupDocs.Comparison .NET: een stapsgewijze handleiding
 
 ## Invoering

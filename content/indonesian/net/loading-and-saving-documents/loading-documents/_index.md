@@ -5,8 +5,8 @@
 "title": "Memuat Dokumen dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Memuat Dokumen dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

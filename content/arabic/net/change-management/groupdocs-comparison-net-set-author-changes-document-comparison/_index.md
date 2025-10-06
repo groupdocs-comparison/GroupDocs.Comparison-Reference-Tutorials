@@ -4,8 +4,8 @@
 "title": "تعيين مؤلف التغييرات في مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ تعيين مؤلف التغييرات في مقارنة المستندات باستخدام GroupDocs.Comparison لـ .NET
 
 ## مقدمة

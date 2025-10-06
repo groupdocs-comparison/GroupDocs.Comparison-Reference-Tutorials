@@ -5,8 +5,8 @@
 "title": "경로에서 문서 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # 경로에서 문서 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

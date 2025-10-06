@@ -5,8 +5,8 @@
 "title": "تحميل المستندات وحفظها"
 "url": "/ar/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # تحميل المستندات وحفظها
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kullanarak .NET'te Birden Fazla Parola Korumalı Word Belgesini Karşılaştırma"
 "url": "/tr/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanarak .NET'te Birden Fazla Parola Korumalı Word Belgesini Karşılaştırma
 
 ## giriiş

@@ -5,8 +5,8 @@
 "title": "Carregando texto de string em comparação com GroupDocs para .NET"
 "url": "/pt/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Carregando texto de string em comparação com GroupDocs para .NET
 
 ## Introdução

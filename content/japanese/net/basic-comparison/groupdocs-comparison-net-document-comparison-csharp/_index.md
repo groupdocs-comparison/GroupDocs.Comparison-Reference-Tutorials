@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用して C# でドキュメント比較を実装するステップバイステップガイド"
 "url": "/ja/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET によるドキュメント比較の実装
 
 ## C# でドキュメント比較を行うために GroupDocs.Comparison を使用する方法 

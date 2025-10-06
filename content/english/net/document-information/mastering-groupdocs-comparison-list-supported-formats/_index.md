@@ -9,8 +9,8 @@ weight: 1
 url: "/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 categories: ["Document Processing"]
 tags: ["groupdocs-comparison", "file-formats", "net-development", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs.Comparison Supported File Formats
 
 ## Introduction

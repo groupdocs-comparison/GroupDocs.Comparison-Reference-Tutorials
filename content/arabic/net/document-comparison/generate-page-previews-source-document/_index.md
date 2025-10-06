@@ -5,8 +5,8 @@
 "title": "إنشاء معاينات الصفحة للوثيقة المصدر"
 "url": "/ar/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # إنشاء معاينات الصفحة للوثيقة المصدر
 
 ## مقدمة

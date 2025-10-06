@@ -4,8 +4,8 @@
 "title": "วิธีตั้งค่าสิทธิ์การใช้งาน GroupDocs.Comparison ใน .NET พร้อมคำแนะนำทีละขั้นตอน"
 "url": "/th/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการตั้งค่าสิทธิ์การใช้งาน GroupDocs.Comparison ใน .NET
 
 ## การแนะนำ

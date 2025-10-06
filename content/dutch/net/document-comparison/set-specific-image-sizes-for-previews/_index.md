@@ -5,8 +5,8 @@
 "title": "Specifieke afbeeldingsgrootten instellen voor voorvertoningen"
 "url": "/nl/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Specifieke afbeeldingsgrootten instellen voor voorvertoningen
 
 ## Invoering

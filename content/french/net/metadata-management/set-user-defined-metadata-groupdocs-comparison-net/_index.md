@@ -4,8 +4,8 @@
 "title": "Comment définir des métadonnées personnalisées dans les documents avec GroupDocs.Comparison pour .NET | Guide de gestion des documents"
 "url": "/fr/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Comment définir des métadonnées personnalisées dans les documents avec GroupDocs.Comparison pour .NET
 
 ## Introduction

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;을 사용한 Java 문서 비교 종합 가이드"
 "url": "/ko/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용한 Java 문서 비교: 포괄적인 가이드
 
 ## 소개

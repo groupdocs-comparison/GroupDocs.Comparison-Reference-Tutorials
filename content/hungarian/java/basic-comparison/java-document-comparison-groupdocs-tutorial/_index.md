@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás implementálása Java-ban GroupDocs használatával – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás implementálása Java-ban a GroupDocs segítségével: Átfogó útmutató
 
 ## Bevezetés

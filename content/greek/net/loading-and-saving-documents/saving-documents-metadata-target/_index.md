@@ -5,8 +5,8 @@
 "title": "Αποθήκευση στόχου μεταδεδομένων εγγράφων σε σύγκριση GroupDocs για .NET"
 "url": "/el/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Αποθήκευση στόχου μεταδεδομένων εγγράφων σε σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

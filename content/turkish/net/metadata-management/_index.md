@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Belge Meta Veri Yönetimi Eğitimleri"
 "url": "/tr/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Belge Meta Veri Yönetimi Eğitimleri
 
 Meta veri yönetimi eğitimlerimiz, .NET'te GroupDocs.Comparison ile belgeleri karşılaştırırken belge özelliklerini nasıl kontrol edeceğinizi gösterir. Bu adım adım kılavuzlar, meta veri kaynaklarını ayarlamayı, ortaya çıkan belgeler için özel meta verileri tanımlamayı ve meta veri saklama politikalarını uygulamayı kapsar. Her eğitim, karşılaştırma süreci boyunca uygun belge özelliklerini koruyan uygulamalar oluşturmanıza yardımcı olan yaygın meta veri yönetimi senaryoları için pratik C# kod örnekleri içerir.

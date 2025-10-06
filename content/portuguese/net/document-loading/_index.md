@@ -3,8 +3,8 @@
 "title": "Tutoriais de carregamento de documentos para GroupDocs.Comparison .NET"
 "url": "/pt/net/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Tutoriais de carregamento de documentos para GroupDocs.Comparison .NET
 
 Nossos tutoriais de carregamento de documentos oferecem orientações abrangentes para a preparação de documentos para comparação em aplicativos .NET. Estes guias passo a passo demonstram como carregar documentos do armazenamento local, fluxos de memória e conteúdo de strings, bem como configurar opções de carregamento para diferentes tipos de documentos. Cada tutorial inclui exemplos de código completos para ajudar você a implementar uma funcionalidade robusta de carregamento de documentos em seus aplicativos de comparação.

@@ -3,8 +3,8 @@
 "title": "Základní tutoriály pro porovnávání dokumentů pro GroupDocs.Comparison v Javě"
 "url": "/cs/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Základní tutoriály pro porovnávání dokumentů pro GroupDocs.Comparison v Javě
 
 Zvládněte základní porovnávání dokumentů s našimi podrobnými tutoriály GroupDocs.Comparison v Javě. Tyto podrobné návody ukazují, jak porovnávat dokumenty různých formátů, včetně Wordu, PDF, Excelu a obrázků. Každý tutoriál obsahuje funkční příklady kódu v Javě, které ukazují, jak identifikovat rozdíly mezi dokumenty, generovat porovnávací zprávy a implementovat porovnávací operace pro různé typy dokumentů.

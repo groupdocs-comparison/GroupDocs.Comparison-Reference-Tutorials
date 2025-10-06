@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "document-comparison", "groupdocs", "file-comparison", "version-control"]
+type: docs
 ---
-
 # How to Compare Documents in Java Programmatically: Complete 2025 Guide
 
 ## Introduction

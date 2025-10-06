@@ -4,8 +4,8 @@
 "title": "Festlegen des Autors von Änderungen im Dokumentvergleich mithilfe von GroupDocs.Comparison für .NET"
 "url": "/de/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Implementieren des Festlegens des Autors von Änderungen im Dokumentvergleich mithilfe von GroupDocs.Comparison für .NET
 
 ## Einführung

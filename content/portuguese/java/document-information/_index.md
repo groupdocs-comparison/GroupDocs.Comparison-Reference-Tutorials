@@ -3,8 +3,8 @@
 "title": "Tutoriais de informações de documentos para GroupDocs.Comparison Java"
 "url": "/pt/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Tutoriais de informações de documentos para GroupDocs.Comparison Java
 
 Nossos tutoriais de informações sobre documentos fornecem orientações para acessar metadados de documentos usando GroupDocs.Comparison em Java. Esses guias práticos mostram como recuperar informações sobre documentos de origem, destino e resultado, determinar formatos de arquivo e acessar propriedades de documentos programaticamente. Cada tutorial inclui exemplos práticos de código Java para cenários comuns de informações sobre documentos, ajudando você a criar aplicativos que podem analisar e processar dados de documentos com eficácia.

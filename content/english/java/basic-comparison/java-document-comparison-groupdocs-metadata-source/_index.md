@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "java-tutorial", "api-integration"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial: Complete Guide with GroupDocs API
 
 ## Introduction

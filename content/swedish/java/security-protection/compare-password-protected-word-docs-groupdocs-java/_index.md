@@ -4,8 +4,8 @@
 "title": "Hur man jämför lösenordsskyddade Word-dokument med GroupDocs.Comparison för Java"
 "url": "/sv/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Mastering Document Comparison: En guide till att jämföra lösenordsskyddade Word-dokument med GroupDocs.Comparison för Java
 
 ## Introduktion

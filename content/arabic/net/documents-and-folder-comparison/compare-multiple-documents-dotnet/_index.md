@@ -5,8 +5,8 @@
 "title": "مقارنة مستندات متعددة في GroupDocs مقارنة لـ .NET"
 "url": "/ar/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # مقارنة مستندات متعددة في GroupDocs مقارنة لـ .NET
 
 ## مقدمة

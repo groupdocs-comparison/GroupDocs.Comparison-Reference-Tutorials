@@ -4,8 +4,8 @@
 "title": "كيفية مقارنة الصور بدون صفحة ملخص باستخدام GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة الصور بدون صفحة ملخص باستخدام GroupDocs.Comparison لـ .NET
 
 ## مقدمة

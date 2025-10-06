@@ -4,8 +4,8 @@
 "title": ".NET में ग्रुपडॉक्स.तुलना लाइब्रेरी का उपयोग करके मास्टर टेक्स्ट स्ट्रिंग तुलना"
 "url": "/hi/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # .NET में ग्रुपडॉक्स.तुलना लाइब्रेरी का उपयोग करके मास्टर टेक्स्ट स्ट्रिंग तुलना
 
 ## परिचय

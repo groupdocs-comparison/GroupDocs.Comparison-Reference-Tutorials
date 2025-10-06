@@ -4,8 +4,8 @@
 "title": "Mengatur Lisensi di GroupDocs.Perbandingan untuk .NET Menggunakan FileStream"
 "url": "/id/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Mengatur Lisensi di GroupDocs.Perbandingan untuk .NET Menggunakan FileStream
 
 **Perkenalan**

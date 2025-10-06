@@ -9,8 +9,8 @@ weight: 1
 url: "/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 categories: ["Java Development"]
 tags: ["java", "document-management", "metadata", "groupdocs", "tutorial"]
+type: docs
 ---
-
 # Java Document Metadata Management - Complete GroupDocs Tutorial (2025)
 
 ## Why Java Document Metadata Matters (And How to Get It Right)

@@ -4,8 +4,8 @@
 "title": "Implementieren Sie einen Dokumentvergleich in Java mit GroupDocs – Ein umfassender Leitfaden"
 "url": "/de/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Implementieren Sie den Dokumentvergleich in Java mit GroupDocs: Ein umfassender Leitfaden
 
 ## Einführung

@@ -5,8 +5,8 @@
 "title": "Φόρτωση και αποθήκευση εγγράφων"
 "url": "/el/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Φόρτωση και αποθήκευση εγγράφων
 
 ## Εισαγωγή

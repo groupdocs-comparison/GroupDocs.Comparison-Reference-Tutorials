@@ -4,8 +4,8 @@
 "title": "Cara Menyiapkan Lisensi GroupDocs.Comparison di .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menyiapkan Lisensi GroupDocs.Comparison di .NET
 
 ## Perkenalan

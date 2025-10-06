@@ -5,8 +5,8 @@
 "title": "設定預覽的特定圖像大小"
 "url": "/zh-hant/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # 設定預覽的特定圖像大小
 
 ## 介紹

@@ -3,8 +3,8 @@
 "title": "Výukové programy pro zabezpečení a ochranu dokumentů pro GroupDocs.Comparison .NET"
 "url": "/cs/net/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Výukové programy pro zabezpečení a ochranu dokumentů pro GroupDocs.Comparison .NET
 
 Zvládněte funkce zabezpečení dokumentů s našimi podrobnými tutoriály GroupDocs.Comparison pro .NET. Tyto komplexní průvodce ukazují, jak porovnávat dokumenty chráněné heslem, nastavovat hesla pro výsledné soubory, implementovat pracovní postupy zabezpečeného porovnávání a programově spravovat ochranu dokumentů. Každý tutoriál poskytuje funkční příklady kódu C# pro zabezpečené operace porovnávání dokumentů, což vám pomůže vytvářet aplikace, které zachovávají důvěrnost a zároveň umožňují efektivní porovnávání dokumentů.

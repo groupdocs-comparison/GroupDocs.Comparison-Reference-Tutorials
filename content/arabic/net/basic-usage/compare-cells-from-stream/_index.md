@@ -5,8 +5,8 @@
 "title": "مقارنة الخلايا من Stream - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # مقارنة الخلايا من Stream - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

@@ -5,8 +5,8 @@
 "title": "Unterstützte Formate abrufen – GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Unterstützte Formate abrufen – GroupDocs.Comparison für .NET
 
 ## Einführung

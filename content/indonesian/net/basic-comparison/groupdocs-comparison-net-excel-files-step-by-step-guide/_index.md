@@ -4,8 +4,8 @@
 "title": "Membandingkan File Excel Menggunakan GroupDocs.Comparison .NET&#58; Panduan Lengkap Langkah demi Langkah"
 "url": "/id/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # Membandingkan File Excel Menggunakan GroupDocs.Comparison .NET: Panduan Lengkap Langkah demi Langkah
 ## Perkenalan
 Dalam dunia yang semakin bergantung pada data, membandingkan berbagai versi file Excel sangat penting bagi bisnis dan individu. Baik Anda melacak perubahan dalam laporan keuangan atau mengelola pembaruan proyek, tugas tersebut dapat memakan waktu tanpa alat yang tepat. Gunakan GroupDocs.Comparison untuk .NET—pustaka canggih yang menyederhanakan proses ini dengan presisi.

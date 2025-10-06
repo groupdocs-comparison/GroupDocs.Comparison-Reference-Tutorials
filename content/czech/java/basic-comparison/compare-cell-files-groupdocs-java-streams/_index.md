@@ -4,8 +4,8 @@
 "title": "Jak porovnávat soubory buněk pomocí GroupDocs.Comparison v Javě – Komplexní průvodce"
 "url": "/cs/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnat soubory buněk pomocí GroupDocs.Comparison v Javě
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "掌握文档变更管理&#58;使用 GroupDocs.Comparison .NET 接受和拒绝编辑"
 "url": "/zh/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 掌握文档变更管理
 
 ## 介绍

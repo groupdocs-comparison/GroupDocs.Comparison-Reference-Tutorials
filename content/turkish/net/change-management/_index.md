@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Değişim Yönetimi Eğitimleri"
 "url": "/tr/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Değişim Yönetimi Eğitimleri
 
 GroupDocs.Comparison .NET eğitimlerimizle belge değişikliklerini etkili bir şekilde nasıl yöneteceğinizi keşfedin. Bu ayrıntılı kılavuzlar, belgeler arasındaki belirli farklılıkları nasıl belirleyeceğinizi, bireysel değişiklikleri nasıl kabul edeceğinizi veya reddedeceğinizi, izlenen değişiklikler için yazarları nasıl ayarlayacağınızı ve revizyonları programlı olarak nasıl yöneteceğinizi gösterir. Her eğitim, belge karşılaştırma iş akışlarınızda kapsamlı değişiklik yönetimi işlevselliğini uygulamanıza yardımcı olmak için C# kod örnekleriyle adım adım talimatlar sağlar.

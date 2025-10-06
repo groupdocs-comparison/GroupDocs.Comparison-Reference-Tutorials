@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 实现 Java 文档比较——综合指南"
 "url": "/zh/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # 如何通过使用 GroupDocs.Comparison 设置元数据源来实现 Java 文档比较
 
 ## 介绍

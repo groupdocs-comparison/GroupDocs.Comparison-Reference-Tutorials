@@ -9,8 +9,8 @@ weight: 1
 url: "/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 categories: ["Document Management"]
 tags: ["dotnet", "document-comparison", "groupdocs", "workflow-automation"]
+type: docs
 ---
-
 # Document Comparison .NET: Accept & Reject Changes Programmatically
 
 ## Why Document Comparison Matters (And Why You're Probably Doing It Wrong)

@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong Java&#58; Sử dụng GroupDocs.Comparison cho tài liệu Word, Text và Email"
 "url": "/vi/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong Java với GroupDocs.Comparison
 
 **So sánh hiệu quả nhiều tài liệu Word, Text và Email bằng GroupDocs.Comparison cho Java**

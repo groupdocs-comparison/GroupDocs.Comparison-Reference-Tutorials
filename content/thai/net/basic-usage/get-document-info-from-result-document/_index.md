@@ -5,8 +5,8 @@
 "title": "รับข้อมูลเอกสารจากเอกสารผลลัพธ์ - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # รับข้อมูลเอกสารจากเอกสารผลลัพธ์ - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

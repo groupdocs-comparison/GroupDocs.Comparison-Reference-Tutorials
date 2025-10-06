@@ -5,8 +5,8 @@
 "title": "소스 문서에 대한 페이지 미리보기 생성"
 "url": "/ko/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # 소스 문서에 대한 페이지 미리보기 생성
 
 ## 소개

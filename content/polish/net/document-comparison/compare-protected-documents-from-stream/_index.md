@@ -5,8 +5,8 @@
 "title": "Porównaj chronione dokumenty ze strumienia - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Porównaj chronione dokumenty ze strumienia - GroupDocs.Comparison dla .NET
 
 ## Wstęp

@@ -5,8 +5,8 @@
 "title": "So sánh hình ảnh"
 "url": "/vi/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # So sánh hình ảnh
 
 

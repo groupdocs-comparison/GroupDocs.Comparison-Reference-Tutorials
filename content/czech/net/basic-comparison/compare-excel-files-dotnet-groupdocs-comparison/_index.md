@@ -4,8 +4,8 @@
 "title": "Jak porovnávat soubory aplikace Excel v .NET pomocí knihovny GroupDocs.Comparison"
 "url": "/cs/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnávat soubory aplikace Excel v .NET pomocí knihovny GroupDocs.Comparison
 
 ## Zavedení

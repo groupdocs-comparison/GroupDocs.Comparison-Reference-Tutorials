@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 加载自定义字体进行文档比较"
 "url": "/zh/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 加载自定义字体进行文档比较
 
 ## 介绍

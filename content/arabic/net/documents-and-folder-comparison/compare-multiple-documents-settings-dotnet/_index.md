@@ -5,8 +5,8 @@
 "title": "مقارنة إعدادات المستندات المتعددة في GroupDocs مقارنة لـ .NET"
 "url": "/ar/net/documents-and-folder-comparison/compare-multiple-documents-settings-dotnet/"
 "weight": 14
+type: docs
 ---
-
 # مقارنة إعدادات المستندات المتعددة في GroupDocs مقارنة لـ .NET
 
 ## مقدمة

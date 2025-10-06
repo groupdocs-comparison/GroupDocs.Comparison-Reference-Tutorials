@@ -5,8 +5,8 @@
 "title": "การบันทึกข้อมูลเมตาของเอกสารที่ผู้ใช้กำหนดในการเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # การบันทึกข้อมูลเมตาของเอกสารที่ผู้ใช้กำหนดในการเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

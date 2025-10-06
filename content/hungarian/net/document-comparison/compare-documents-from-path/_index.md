@@ -5,8 +5,8 @@
 "title": "Dokumentumok összehasonlítása az elérési útból - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Dokumentumok összehasonlítása az elérési útból - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

@@ -5,8 +5,8 @@
 "title": "إنشاء معاينات الصفحة للمستند المستهدف"
 "url": "/ar/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # إنشاء معاينات الصفحة للمستند المستهدف
 
 ## مقدمة

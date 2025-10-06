@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 文档元数据管理教程"
 "url": "/zh/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 文档元数据管理教程
 
 我们的元数据管理教程将向您展示如何在 .NET 中使用 GroupDocs.Comparison 比较文档时控制文档属性。这些分步指南涵盖了设置元数据源、为结果文档定义自定义元数据以及实施元数据保留策略。每个教程都包含针对常见元数据管理场景的实用 C# 代码示例，帮助您构建在整个比较过程中保持适当文档属性的应用程序。

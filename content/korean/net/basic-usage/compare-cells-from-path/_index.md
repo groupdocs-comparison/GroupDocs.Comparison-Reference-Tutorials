@@ -5,8 +5,8 @@
 "title": "경로에서 셀 비교 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # 경로에서 셀 비교 - .NET용 GroupDocs.Comparison
 
 ## 소개

@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů v Javě pomocí GroupDocs.Comparison – Komplexní průvodce"
 "url": "/cs/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnávání dokumentů v Javě nastavením zdroje metadat pomocí GroupDocs.Comparison
 
 ## Zavedení

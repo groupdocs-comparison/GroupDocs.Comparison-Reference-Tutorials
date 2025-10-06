@@ -5,8 +5,8 @@
 "title": "結果ドキュメントからドキュメント情報を取得する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # 結果ドキュメントからドキュメント情報を取得する - GroupDocs.Comparison for .NET
 
 ## 導入

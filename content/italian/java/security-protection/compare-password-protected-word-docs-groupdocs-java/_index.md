@@ -4,8 +4,8 @@
 "title": "Come confrontare documenti Word protetti da password utilizzando GroupDocs.Comparison per Java"
 "url": "/it/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Padroneggiare il confronto dei documenti: una guida al confronto di documenti Word protetti da password con GroupDocs.Comparison per Java
 
 ## Introduzione

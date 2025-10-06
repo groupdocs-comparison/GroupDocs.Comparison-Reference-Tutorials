@@ -4,8 +4,8 @@
 "title": "Jak ignorować nagłówki i stopki w porównaniach dokumentów przy użyciu GroupDocs.Comparison .NET"
 "url": "/pl/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Jak ignorować nagłówki i stopki w porównaniach dokumentów za pomocą GroupDocs.Comparison .NET
 
 ## Wstęp

@@ -5,8 +5,8 @@
 "title": "Dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # Dokumentumok összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

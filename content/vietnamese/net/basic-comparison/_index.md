@@ -3,8 +3,8 @@
 "title": "Hướng dẫn so sánh tài liệu cơ bản cho GroupDocs.Comparison .NET"
 "url": "/vi/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Hướng dẫn so sánh tài liệu cơ bản cho GroupDocs.Comparison .NET
 
 Nắm vững cách so sánh tài liệu cơ bản với hướng dẫn GroupDocs.Comparison .NET chi tiết của chúng tôi. Các hướng dẫn từng bước này trình bày cách so sánh các tài liệu ở nhiều định dạng khác nhau bao gồm Word, PDF, Excel và hình ảnh. Mỗi hướng dẫn bao gồm các ví dụ mã C# hoạt động cho thấy cách xác định sự khác biệt giữa các tài liệu, tạo báo cáo so sánh và triển khai các hoạt động so sánh cho các loại tài liệu khác nhau.

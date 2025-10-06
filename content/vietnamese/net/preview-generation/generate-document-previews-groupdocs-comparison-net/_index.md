@@ -4,8 +4,8 @@
 "title": "Tạo bản xem trước tài liệu hiệu quả với GroupDocs.Comparison dành cho nhà phát triển .NET"
 "url": "/vi/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Tạo bản xem trước tài liệu hiệu quả với GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

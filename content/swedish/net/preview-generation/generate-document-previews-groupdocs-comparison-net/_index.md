@@ -4,8 +4,8 @@
 "title": "Generera dokumentförhandsvisningar effektivt med GroupDocs.Comparison för .NET-utvecklare"
 "url": "/sv/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Generera dokumentförhandsvisningar effektivt med GroupDocs.Comparison för .NET
 
 ## Introduktion

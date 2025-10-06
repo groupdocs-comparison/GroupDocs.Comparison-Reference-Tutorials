@@ -4,8 +4,8 @@
 "title": "Jak wyodrębnić informacje o dokumencie za pomocą biblioteki GroupDocs.Comparison .NET"
 "url": "/pl/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Jak wyodrębnić informacje o dokumencie za pomocą biblioteki GroupDocs.Comparison .NET
 
 ## Wstęp

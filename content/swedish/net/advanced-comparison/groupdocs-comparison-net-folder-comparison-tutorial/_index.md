@@ -4,8 +4,8 @@
 "title": "Hur man jämför mappar och sparar resultat som TXT/HTML med GroupDocs.Comparison .NET"
 "url": "/sv/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Hur man implementerar mappjämförelse och sparar resultat som TXT/HTML med GroupDocs.Comparison .NET
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "Como configurar uma licença medida no GroupDocs.Comparison .NET - Um guia passo a passo"
 "url": "/pt/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Como configurar uma licença medida no GroupDocs.Comparison .NET: um guia passo a passo
 
 ## Introdução

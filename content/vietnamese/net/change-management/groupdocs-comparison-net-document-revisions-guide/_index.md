@@ -4,8 +4,8 @@
 "title": "Sửa đổi tài liệu chính hiệu quả với GroupDocs.Comparison .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc sửa đổi tài liệu với GroupDocs.Comparison .NET: Hướng dẫn từng bước
 
 ## Giới thiệu

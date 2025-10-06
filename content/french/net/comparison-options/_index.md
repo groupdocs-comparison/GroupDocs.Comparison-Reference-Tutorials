@@ -3,8 +3,8 @@
 "title": "Tutoriels sur les options et paramètres de comparaison pour GroupDocs.Comparison .NET"
 "url": "/fr/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Tutoriels sur les options et paramètres de comparaison pour GroupDocs.Comparison .NET
 
 Apprenez à affiner la comparaison de documents grâce à nos tutoriels sur les options GroupDocs.Comparison pour .NET. Ces guides détaillés expliquent comment configurer la sensibilité de comparaison, personnaliser les algorithmes de détection des modifications, définir les préférences d'affichage pour différents types de modifications et implémenter des règles de comparaison spécialisées. Chaque tutoriel inclut des exemples de code C# fonctionnels pour implémenter des options de comparaison personnalisées, vous aidant ainsi à créer des applications de comparaison parfaitement adaptées à vos besoins spécifiques en matière d'analyse de documents.

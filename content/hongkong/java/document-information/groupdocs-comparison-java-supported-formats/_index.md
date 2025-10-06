@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison for Java 擷取支援的文件格式－綜合指南"
 "url": "/zh-hant/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for Java 擷取支援的文件格式
 
 ## 介紹

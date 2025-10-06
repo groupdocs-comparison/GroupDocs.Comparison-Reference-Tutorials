@@ -4,8 +4,8 @@
 "title": "Ορισμός προσαρμοσμένων μεταδεδομένων σε έγγραφα Java χρησιμοποιώντας το GroupDocs.Comparison®&#58; Ένας οδηγός βήμα προς βήμα"
 "url": "/el/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Ορισμός προσαρμοσμένων μεταδεδομένων σε έγγραφα Java χρησιμοποιώντας το GroupDocs.Comparison: Ένας οδηγός βήμα προς βήμα
 
 ## Εισαγωγή

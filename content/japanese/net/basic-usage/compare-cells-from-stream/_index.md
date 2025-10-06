@@ -5,8 +5,8 @@
 "title": "ストリームからのセルの比較 - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # ストリームからのセルの比較 - GroupDocs.Comparison for .NET
 
 ## 導入

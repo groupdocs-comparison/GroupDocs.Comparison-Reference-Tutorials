@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: [".NET Development"]
 tags: ["document-comparison", "groupdocs", "automation", "version-control"]
+type: docs
 ---
-
 # Document Comparison .NET Tutorial: Complete GroupDocs.Comparison Guide
 
 Ever found yourself manually comparing document versions line by line? You're not alone – and there's a much better way. This comprehensive tutorial shows you exactly how to automate document comparison in .NET using GroupDocs.Comparison, saving hours of tedious work while catching changes you might have missed.

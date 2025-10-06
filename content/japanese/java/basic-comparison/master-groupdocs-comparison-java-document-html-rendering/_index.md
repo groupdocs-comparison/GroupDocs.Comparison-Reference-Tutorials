@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java でのマスタードキュメントの比較と HTML レンダリング"
 "url": "/ja/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java でのドキュメント比較と HTML レンダリングの習得
 
 ## 導入

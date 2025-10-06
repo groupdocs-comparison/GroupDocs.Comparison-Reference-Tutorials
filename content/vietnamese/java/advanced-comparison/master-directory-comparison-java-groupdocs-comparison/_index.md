@@ -4,8 +4,8 @@
 "title": "So sánh thư mục chính trong Java bằng GroupDocs.Comparison để kiểm tra tệp liền mạch"
 "url": "/vi/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # So sánh thư mục chính trong Java với GroupDocs.Comparison
 
 ## Giới thiệu

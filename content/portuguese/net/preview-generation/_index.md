@@ -3,8 +3,8 @@
 "title": "Tutoriais de geração de visualização para GroupDocs.Comparison .NET"
 "url": "/pt/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Tutoriais de geração de visualização para GroupDocs.Comparison .NET
 
 Aprenda a criar pré-visualizações de documentos com nossos tutoriais abrangentes do GroupDocs.Comparison para desenvolvedores .NET. Estes guias práticos demonstram como gerar pré-visualizações de páginas para documentos de origem, documentos de destino e resultados de comparação, personalizar os tamanhos das imagens de pré-visualização e implementar a limpeza de recursos para otimizar o uso da memória. Cada tutorial inclui exemplos detalhados de código C# para implementar com eficiência a funcionalidade de pré-visualização de documentos em seus aplicativos de comparação.

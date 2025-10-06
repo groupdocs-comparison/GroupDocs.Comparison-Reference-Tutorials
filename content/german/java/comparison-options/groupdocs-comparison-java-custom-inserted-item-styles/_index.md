@@ -4,8 +4,8 @@
 "title": "Passen Sie eingefügte Elementstile in Java-Dokumentvergleichen mit GroupDocs.Comparison an"
 "url": "/de/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Anpassen eingefügter Elementstile in Java-Dokumentvergleichen mithilfe von GroupDocs.Comparison
 
 ## Einführung

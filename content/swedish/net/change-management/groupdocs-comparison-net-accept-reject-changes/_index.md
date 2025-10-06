@@ -4,8 +4,8 @@
 "title": "Hantering av ändringar i huvuddokument – acceptera och avvisa redigeringar med GroupDocs.Comparison .NET"
 "url": "/sv/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Hantering av dokumentändringar med GroupDocs.Comparison .NET
 
 ## Introduktion

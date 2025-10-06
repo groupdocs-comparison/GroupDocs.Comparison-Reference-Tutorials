@@ -4,8 +4,8 @@
 "title": "Quản lý thay đổi tài liệu chính&#58; Chấp nhận và từ chối chỉnh sửa với GroupDocs.Comparison .NET"
 "url": "/vi/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Quản lý thay đổi tài liệu chính với GroupDocs.Comparison .NET
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Triển khai siêu dữ liệu tài liệu với GroupDocs.Comparison trong Java&#58; Hướng dẫn đầy đủ"
 "url": "/vi/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai siêu dữ liệu tài liệu với GroupDocs.Comparison trong Java: Hướng dẫn đầy đủ
 
 ## Giới thiệu

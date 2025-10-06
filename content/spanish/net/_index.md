@@ -5,8 +5,8 @@
 "title": "Tutoriales y ejemplos de GroupDocs.Comparison para .NET"
 "url": "/es/net/"
 "weight": 10
+type: docs
 ---
-
 # Tutoriales y ejemplos de GroupDocs.Comparison para .NET
 
 ## Introducción

@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 忽略 DOC 比较中的页眉和页脚"
 "url": "/zh/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 忽略文档比较中的页眉和页脚
 
 ## 介绍

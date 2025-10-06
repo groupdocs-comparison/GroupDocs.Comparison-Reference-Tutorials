@@ -5,8 +5,8 @@
 "title": "Получить информацию о документе из пути - GroupDocs.Comparison для .NET"
 "url": "/ru/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Получить информацию о документе из пути - GroupDocs.Comparison для .NET
 
 ## Введение

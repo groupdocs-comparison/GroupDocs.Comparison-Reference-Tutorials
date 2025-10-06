@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison ile Java Belge Karşılaştırmalarında Eklenen Öğe Stillerini Özelleştirin"
 "url": "/tr/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanılarak Java Belge Karşılaştırmalarında Eklenen Öğe Stillerinin Özelleştirilmesi
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Jämförelse av huvuddokument i Java med GroupDocs.Comparison för Word-, text- och e-postdokument"
 "url": "/sv/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Bemästra dokumentjämförelse i Java med GroupDocs.Comparison
 
 **Jämför effektivt flera Word-, text- och e-postdokument med GroupDocs.Comparison för Java**

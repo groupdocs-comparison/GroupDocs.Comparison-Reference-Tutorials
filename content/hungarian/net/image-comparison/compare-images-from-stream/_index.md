@@ -5,8 +5,8 @@
 "title": "Képek összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Képek összehasonlítása a Streamből - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

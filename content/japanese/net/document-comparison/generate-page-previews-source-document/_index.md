@@ -5,8 +5,8 @@
 "title": "ソースドキュメントのページプレビューを生成する"
 "url": "/ja/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # ソースドキュメントのページプレビューを生成する
 
 ## 導入

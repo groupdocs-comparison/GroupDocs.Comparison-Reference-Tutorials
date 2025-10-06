@@ -4,8 +4,8 @@
 "title": "Как настроить измеренную лицензию в GroupDocs.Comparison .NET&#58; Пошаговое руководство"
 "url": "/ru/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Как настроить измеренную лицензию в GroupDocs.Comparison .NET: пошаговое руководство
 
 ## Введение

@@ -4,8 +4,8 @@
 "title": "مقارنة مستندات Java الرئيسية باستخدام GroupDocs.Comparison"
 "url": "/ar/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة مستندات Java باستخدام GroupDocs.Comparison
 
 ## مقدمة

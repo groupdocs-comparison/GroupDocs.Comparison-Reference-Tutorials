@@ -4,8 +4,8 @@
 "title": "Extraction de métadonnées de documents maîtres avec GroupDocs en Java"
 "url": "/fr/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser l'extraction des métadonnées de documents avec GroupDocs en Java
 
 Dans le paysage numérique actuel, gérer et extraire efficacement les informations des documents est crucial pour les entreprises de tous secteurs. Qu'il s'agisse de contrats juridiques, d'articles universitaires ou de rapports financiers, la compréhension des métadonnées des documents, telles que le type de fichier, le nombre de pages et la taille, peut optimiser les flux de travail et améliorer l'analyse des données. Ce tutoriel vous guide dans l'utilisation de GroupDocs.Comparison en Java pour extraire des informations précieuses des documents via les flux d'entrée et les chemins d'accès aux fichiers.

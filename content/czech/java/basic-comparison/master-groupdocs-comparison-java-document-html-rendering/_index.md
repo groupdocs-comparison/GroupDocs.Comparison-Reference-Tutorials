@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů a vykreslování HTML v Javě s GroupDocs.Comparison"
 "url": "/cs/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů a vykreslování HTML v Javě s GroupDocs.Comparison
 
 ## Zavedení

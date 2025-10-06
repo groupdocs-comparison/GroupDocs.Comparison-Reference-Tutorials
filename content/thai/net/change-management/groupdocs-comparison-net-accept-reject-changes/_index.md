@@ -4,8 +4,8 @@
 "title": "การจัดการการเปลี่ยนแปลงเอกสารหลัก &#58; ยอมรับและปฏิเสธการแก้ไขด้วย GroupDocs.Comparison .NET"
 "url": "/th/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # การจัดการการเปลี่ยนแปลงเอกสารหลักด้วย GroupDocs.Comparison .NET
 
 ## การแนะนำ

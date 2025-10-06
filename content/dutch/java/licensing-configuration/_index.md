@@ -3,8 +3,8 @@
 "title": "Licentie- en configuratiehandleidingen voor GroupDocs.Comparison Java"
 "url": "/nl/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Licentie- en configuratiehandleidingen voor GroupDocs.Comparison Java
 
 Onze licentie- en configuratiehandleidingen bieden essentiële begeleiding voor het correct installeren van GroupDocs.Comparison in Java-applicaties. Deze stapsgewijze handleidingen laten zien hoe u verschillende licentieopties implementeert, gefactureerde facturering configureert, de licentiestatus controleert en bibliotheekinstellingen optimaliseert voor uw specifieke vereisten. Elke handleiding bevat gedetailleerde Java-codevoorbeelden voor een correcte initialisatie en configuratie, waarmee u correct gelicentieerde en geoptimaliseerde oplossingen voor documentvergelijking kunt bouwen.

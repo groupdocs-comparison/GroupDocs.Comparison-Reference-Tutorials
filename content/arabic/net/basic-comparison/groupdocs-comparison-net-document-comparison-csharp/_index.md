@@ -4,8 +4,8 @@
 "title": "تنفيذ مقارنة المستندات في C# باستخدام GroupDocs.Comparison .NET - دليل خطوة بخطوة"
 "url": "/ar/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ مقارنة المستندات باستخدام GroupDocs.Comparison .NET
 
 ## كيفية استخدام GroupDocs.Comparison لمقارنة المستندات في C# 

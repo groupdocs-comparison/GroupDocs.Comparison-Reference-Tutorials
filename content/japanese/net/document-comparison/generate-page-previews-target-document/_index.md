@@ -5,8 +5,8 @@
 "title": "対象ドキュメントのページプレビューを生成する"
 "url": "/ja/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # 対象ドキュメントのページプレビューを生成する
 
 ## 導入

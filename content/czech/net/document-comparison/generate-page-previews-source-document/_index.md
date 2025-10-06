@@ -5,8 +5,8 @@
 "title": "Generování náhledů stránek pro zdrojový dokument"
 "url": "/cs/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Generování náhledů stránek pro zdrojový dokument
 
 ## Zavedení

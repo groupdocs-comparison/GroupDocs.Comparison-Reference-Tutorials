@@ -5,8 +5,8 @@
 "title": "接受和拒绝 .NET GroupDocs 比较中的更改"
 "url": "/zh/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # 接受和拒绝 .NET GroupDocs 比较中的更改
 
 ## 介绍

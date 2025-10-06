@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 Excel 파일 비교하기 - 포괄적인 단계별 가이드"
 "url": "/ko/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 Excel 파일 비교: 포괄적인 단계별 가이드
 ## 소개
 데이터 의존도가 점점 높아지는 세상에서, 여러 버전의 Excel 파일을 비교하는 것은 기업과 개인 모두에게 필수적입니다. 재무 보고서의 변경 사항을 추적하거나 프로젝트 업데이트를 관리하는 등 적절한 도구가 없다면 이 작업은 시간이 많이 걸릴 수 있습니다. .NET용 GroupDocs.Comparison은 이 프로세스를 정밀하게 간소화하는 강력한 라이브러리입니다.

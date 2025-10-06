@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET Kullanılarak Belgelerde Kullanıcı Tanımlı Meta Veri Nasıl Ayarlanır | Belge Yönetim Kılavuzu"
 "url": "/tr/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET için GroupDocs.Comparison ile Belgelerde Kullanıcı Tanımlı Meta Veriler Nasıl Ayarlanır
 
 ## giriiş

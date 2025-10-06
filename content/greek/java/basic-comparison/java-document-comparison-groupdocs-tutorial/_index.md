@@ -4,8 +4,8 @@
 "title": "Υλοποίηση Σύγκρισης Εγγράφων σε Java Χρησιμοποιώντας το GroupDocs® Ένας Πλήρης Οδηγός"
 "url": "/el/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση Σύγκρισης Εγγράφων σε Java με το GroupDocs: Ένας Πλήρης Οδηγός
 
 ## Εισαγωγή

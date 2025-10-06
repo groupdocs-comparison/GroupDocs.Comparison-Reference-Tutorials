@@ -5,8 +5,8 @@
 "title": "Obtenir les formats pris en charge – Comparaison GroupDocs pour .NET"
 "url": "/fr/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Obtenir les formats pris en charge – Comparaison GroupDocs pour .NET
 
 ## Introduction

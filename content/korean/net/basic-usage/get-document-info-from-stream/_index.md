@@ -5,8 +5,8 @@
 "title": "Stream에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Stream에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 
 ## 소개

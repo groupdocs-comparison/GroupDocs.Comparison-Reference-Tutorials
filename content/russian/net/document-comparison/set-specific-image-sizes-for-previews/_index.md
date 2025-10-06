@@ -5,8 +5,8 @@
 "title": "Установите определенные размеры изображений для предпросмотра"
 "url": "/ru/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Установите определенные размеры изображений для предпросмотра
 
 ## Введение

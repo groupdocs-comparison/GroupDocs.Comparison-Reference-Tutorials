@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Master & Rendering HTML di Java dengan GroupDocs.Comparison"
 "url": "/id/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen dan Rendering HTML di Java dengan GroupDocs.Comparison
 
 ## Perkenalan

@@ -4,8 +4,8 @@
 "title": "Πώς να καταχωρίσετε όλες τις υποστηριζόμενες μορφές αρχείων στο GroupDocs.Comparison για .NET"
 "url": "/el/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να καταχωρίσετε όλες τις υποστηριζόμενες μορφές αρχείων στο GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

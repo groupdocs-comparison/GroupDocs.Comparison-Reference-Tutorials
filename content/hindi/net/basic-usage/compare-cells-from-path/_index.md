@@ -5,8 +5,8 @@
 "title": "पथ से कोशिकाओं की तुलना करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # पथ से कोशिकाओं की तुलना करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

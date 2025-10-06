@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java マルチストリーム ドキュメント比較の総合ガイド"
 "url": "/ja/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java マルチストリーム ドキュメント比較の習得
 
 ## 導入

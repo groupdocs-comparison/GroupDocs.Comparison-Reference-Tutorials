@@ -4,8 +4,8 @@
 "title": "Truy xuất các định dạng tệp được hỗ trợ với GroupDocs.So sánh cho Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Truy xuất các định dạng tệp được hỗ trợ với GroupDocs.Comparison cho Java
 
 ## Giới thiệu

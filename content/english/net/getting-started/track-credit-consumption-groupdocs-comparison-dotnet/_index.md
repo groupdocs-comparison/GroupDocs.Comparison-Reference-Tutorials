@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Credit Tracking", "NET", "API Usage", "Resource Management"]
+type: docs
 ---
-
 # GroupDocs.Comparison Credit Tracking - Master Usage Monitoring
 
 ## Why Credit Tracking Matters for Your Document Comparison Projects

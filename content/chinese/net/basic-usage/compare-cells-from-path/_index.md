@@ -5,8 +5,8 @@
 "title": "比较路径中的单元格 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # 比较路径中的单元格 - GroupDocs.Comparison for .NET
 
 ## 介绍

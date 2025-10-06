@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["licensing", "configuration", "groupdocs", "java", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial
 
 Setting up proper licensing for GroupDocs.Comparison in your Java applications doesn't have to be complicated, but getting it wrong can cause headaches down the road. Whether you're dealing with file-based licenses, stream configurations, or URL automation, this comprehensive guide walks you through every licensing scenario you'll encounter.

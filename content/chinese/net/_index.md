@@ -5,8 +5,8 @@
 "title": "GroupDocs.Comparison for .NET 的教程和示例"
 "url": "/zh/net/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET 的教程和示例
 
 ## 介绍

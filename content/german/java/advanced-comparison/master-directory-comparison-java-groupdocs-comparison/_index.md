@@ -4,8 +4,8 @@
 "title": "Masterverzeichnisvergleich in Java mit GroupDocs.Comparison für nahtlose Dateiprüfungen"
 "url": "/de/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Masterverzeichnisvergleich in Java mit GroupDocs.Comparison
 
 ## Einführung

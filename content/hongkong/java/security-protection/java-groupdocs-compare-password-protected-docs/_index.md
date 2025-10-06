@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 掌握 Java 中受密碼保護的文件比較"
 "url": "/zh-hant/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 中受密碼保護的文件比較
 
 ## 介紹

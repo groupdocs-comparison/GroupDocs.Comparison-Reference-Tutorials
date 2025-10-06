@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparer 實作 Java 流文檔比較－綜合指南"
 "url": "/zh-hant/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparer 實作 Java 流文件比較：綜合指南
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "Hoe u meerdere wachtwoordbeveiligde Word-documenten in .NET kunt vergelijken met behulp van GroupDocs.Comparison"
 "url": "/nl/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Hoe u meerdere wachtwoordbeveiligde Word-documenten in .NET kunt vergelijken met behulp van GroupDocs.Comparison
 
 ## Invoering

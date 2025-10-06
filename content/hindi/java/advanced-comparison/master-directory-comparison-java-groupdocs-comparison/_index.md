@@ -4,8 +4,8 @@
 "title": "सहज फ़ाइल ऑडिट के लिए GroupDocs.Comparison का उपयोग करके जावा में मास्टर निर्देशिका तुलना"
 "url": "/hi/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा में मास्टर डायरेक्टरी तुलना
 
 ## परिचय

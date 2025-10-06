@@ -4,8 +4,8 @@
 "title": "Сравнение документов из потоков с помощью GroupDocs.Comparison .NET — полное руководство для разработчиков"
 "url": "/ru/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Как сравнить несколько документов из потоков с помощью GroupDocs.Comparison .NET
 
 ## Введение

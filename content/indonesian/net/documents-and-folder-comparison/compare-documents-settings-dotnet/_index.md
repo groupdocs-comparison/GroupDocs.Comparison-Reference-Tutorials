@@ -5,8 +5,8 @@
 "title": "Bandingkan Pengaturan Dokumen di GroupDocs Perbandingan untuk .NET"
 "url": "/id/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # Bandingkan Pengaturan Dokumen di GroupDocs Perbandingan untuk .NET
 
 ## Perkenalan

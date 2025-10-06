@@ -4,8 +4,8 @@
 "title": "Zvládnutí GroupDocs.Comparison pro snadné generování náhledů dokumentů v Javě"
 "url": "/cs/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí GroupDocs.Comparison pro Javu: Snadné generování náhledů dokumentů
 
 ## Zavedení

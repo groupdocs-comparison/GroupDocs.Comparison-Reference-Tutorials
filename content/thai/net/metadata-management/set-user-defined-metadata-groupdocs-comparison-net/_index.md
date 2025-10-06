@@ -4,8 +4,8 @@
 "title": "วิธีตั้งค่าข้อมูลเมตาที่ผู้ใช้กำหนดในเอกสารโดยใช้ GroupDocs.Comparison สำหรับ .NET | คู่มือการจัดการเอกสาร"
 "url": "/th/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # วิธีตั้งค่าข้อมูลเมตาที่ผู้ใช้กำหนดในเอกสารด้วย GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

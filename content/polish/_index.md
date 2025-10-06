@@ -6,8 +6,8 @@
 "title": "Samouczek dotyczący interfejsu API oprogramowania do porównywania dokumentów | GroupDocs.Comparison"
 "url": "/pl/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Samouczki i przewodnik dla programistów
 
 ![Baner GroupDocs.Comparison](./groupdocs-comparison-net.svg)

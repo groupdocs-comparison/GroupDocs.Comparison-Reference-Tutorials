@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Java 的基本文档比较教程"
 "url": "/zh/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison Java 的基本文档比较教程
 
 通过我们详细的 GroupDocs.Comparison Java 教程掌握基本的文档比较功能。这些分步指南演示了如何比较各种格式的文档，包括 Word、PDF、Excel 和图像。每个教程都包含可运行的 Java 代码示例，展示如何识别文档之间的差异、生成比较报告以及针对不同文档类型实现比较操作。

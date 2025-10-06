@@ -5,8 +5,8 @@
 "title": "Ορισμός συγκεκριμένων μεγεθών εικόνων για προεπισκοπήσεις"
 "url": "/el/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Ορισμός συγκεκριμένων μεγεθών εικόνων για προεπισκοπήσεις
 
 ## Εισαγωγή

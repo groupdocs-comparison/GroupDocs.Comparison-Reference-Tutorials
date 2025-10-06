@@ -5,8 +5,8 @@
 "title": "比較路徑中的儲存格 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # 比較路徑中的儲存格 - GroupDocs.Comparison for .NET
 
 ## 介紹

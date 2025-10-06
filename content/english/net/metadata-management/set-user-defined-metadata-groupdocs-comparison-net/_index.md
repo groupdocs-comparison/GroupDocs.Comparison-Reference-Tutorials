@@ -9,8 +9,8 @@ weight: 1
 url: "/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 categories: ["Document Management"]
 tags: ["metadata", "document-processing", "dotnet", "enterprise-solutions"]
+type: docs
 ---
-
 # Document Metadata Management .NET: The Complete Guide to Custom Metadata
 
 ## Why Document Metadata Management Matters More Than Ever

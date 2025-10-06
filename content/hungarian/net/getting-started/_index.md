@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison – Első lépések – Oktatóanyagok .NET fejlesztőknek"
 "url": "/hu/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison – Első lépések – Oktatóanyagok .NET fejlesztőknek
 
 Kezdje el utazását ezekkel a nélkülözhetetlen GroupDocs.Comparison oktatóanyagokkal, amelyek végigvezetik a telepítésen, a licencelési konfiguráción és az első dokumentum-összehasonlítások létrehozásán .NET-ben. Kezdőknek szóló útmutatóink bemutatják, hogyan állíthatja be fejlesztői környezetét, hogyan inicializálhatja a GroupDocs.Comparison könyvtárat, és hogyan végezheti el az alapvető összehasonlítási műveleteket. Kövesse ezeket az oktatóanyagokat az alapok gyors elsajátításához, és felkészüljön a .NET-alkalmazásokban végrehajtandó haladóbb dokumentum-összehasonlítási feladatokra.

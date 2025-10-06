@@ -5,8 +5,8 @@
 "title": "स्ट्रीम से कोशिकाओं की तुलना करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # स्ट्रीम से कोशिकाओं की तुलना करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

@@ -4,8 +4,8 @@
 "title": "Hur man ställer in dokumentmetadata med GroupDocs.Comparison .NET för effektiv dokumenthantering"
 "url": "/sv/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Så här ställer du in dokumentmetadata med GroupDocs.Comparison .NET: En omfattande guide
 
 dagens digitala tidsålder är effektiv dokumenthantering avgörande för både företag och privatpersoner. En viktig aspekt av denna process är att jämföra dokument effektivt. Oavsett om du utvecklar ett dokumenthanteringssystem eller ofta hanterar flera dokumentversioner kan användningen av GroupDocs.Comparison-biblioteket effektivisera ditt arbetsflöde genom att möjliggöra exakt metadatahantering under jämförelser.

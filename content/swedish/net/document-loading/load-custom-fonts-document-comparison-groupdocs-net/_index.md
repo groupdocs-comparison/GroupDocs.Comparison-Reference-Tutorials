@@ -4,8 +4,8 @@
 "title": "Så här laddar du anpassade teckensnitt för dokumentjämförelse med GroupDocs.Comparison .NET"
 "url": "/sv/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Så här laddar du anpassade teckensnitt för dokumentjämförelse med GroupDocs.Comparison .NET
 
 ## Introduktion

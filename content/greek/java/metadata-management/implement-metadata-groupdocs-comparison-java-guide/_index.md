@@ -4,8 +4,8 @@
 "title": "Υλοποίηση μεταδεδομένων εγγράφου με το GroupDocs.Comparison σε Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση μεταδεδομένων εγγράφου με το GroupDocs.Comparison σε Java: Ένας πλήρης οδηγός
 
 ## Εισαγωγή

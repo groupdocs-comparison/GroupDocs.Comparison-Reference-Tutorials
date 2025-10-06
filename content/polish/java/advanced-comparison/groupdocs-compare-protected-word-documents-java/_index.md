@@ -4,8 +4,8 @@
 "title": "Jak ładować i porównywać dokumenty Word chronione hasłem w Javie za pomocą GroupDocs.Comparison"
 "url": "/pl/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Jak ładować i porównywać dokumenty Word chronione hasłem w Javie za pomocą GroupDocs.Comparison
 
 ## Wstęp

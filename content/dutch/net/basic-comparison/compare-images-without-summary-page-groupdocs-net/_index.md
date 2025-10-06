@@ -4,8 +4,8 @@
 "title": "Afbeeldingen vergelijken zonder samenvattingspagina met GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Afbeeldingsvergelijking implementeren zonder samenvattingspagina met GroupDocs.Comparison voor .NET
 
 ## Invoering

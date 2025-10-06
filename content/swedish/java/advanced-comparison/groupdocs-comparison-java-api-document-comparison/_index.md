@@ -4,8 +4,8 @@
 "title": "Jämförelse av huvuddokument i Java med hjälp av GroupDocs.Comparison API för effektiv cellfilsanalys"
 "url": "/sv/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Bemästra dokumentjämförelse i Java med GroupDocs.Comparison API
 
 ## Introduktion

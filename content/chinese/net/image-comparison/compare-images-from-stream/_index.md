@@ -5,8 +5,8 @@
 "title": "比较来自流的图像 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 比较来自流的图像 - GroupDocs.Comparison for .NET
 
 ## 介绍

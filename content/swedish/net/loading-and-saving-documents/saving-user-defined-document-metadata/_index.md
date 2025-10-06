@@ -5,8 +5,8 @@
 "title": "Spara användardefinierade dokumentmetadata i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Spara användardefinierade dokumentmetadata i GroupDocs-jämförelse för .NET
 
 ## Introduktion

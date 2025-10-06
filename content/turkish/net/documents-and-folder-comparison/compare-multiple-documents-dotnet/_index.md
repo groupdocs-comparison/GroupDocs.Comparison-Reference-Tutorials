@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Birden Fazla Belgeyi Karşılaştırın"
 "url": "/tr/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Birden Fazla Belgeyi Karşılaştırın
 
 ## giriiş

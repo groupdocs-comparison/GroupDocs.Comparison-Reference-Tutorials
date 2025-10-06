@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบและดูตัวอย่างเอกสาร Java ด้วย GroupDocs คำแนะนำที่ครอบคลุม"
 "url": "/th/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การเปรียบเทียบเอกสาร Java และการสร้างตัวอย่างด้วย GroupDocs.Comparison
 
 ## การแนะนำ

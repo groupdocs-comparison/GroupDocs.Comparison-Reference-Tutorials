@@ -4,8 +4,8 @@
 "title": "Porovnávání souborů aplikace Excel pomocí GroupDocs.Comparison .NET – Komplexní podrobný průvodce"
 "url": "/cs/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # Porovnávání souborů aplikace Excel pomocí GroupDocs.Comparison .NET: Komplexní podrobný průvodce
 ## Zavedení
 Ve světě, který je stále více závislý na datech, je porovnávání různých verzí souborů aplikace Excel nezbytné pro firmy i jednotlivce. Ať už sledujete změny ve finančních výkazech nebo spravujete aktualizace projektů, tento úkol může být bez správných nástrojů časově náročný. Představujeme GroupDocs.Comparison pro .NET – výkonnou knihovnu, která tento proces s přesností zefektivňuje.

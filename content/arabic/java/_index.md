@@ -4,8 +4,8 @@
 "title": "دليل تعليمي شامل لـ GroupDocs.Comparison لـ Java"
 "url": "/ar/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison لـ Java - دروس تعليمية وأمثلة برمجية خطوة بخطوة
 
 ## تعلم مقارنة المستندات في جافا - سريعة ودقيقة وقوية

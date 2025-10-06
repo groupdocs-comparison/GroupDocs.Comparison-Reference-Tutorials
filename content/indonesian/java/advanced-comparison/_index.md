@@ -3,8 +3,8 @@
 "title": "Tutorial Perbandingan Dokumen Lanjutan untuk GroupDocs.Comparison Java"
 "url": "/id/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Tutorial Perbandingan Dokumen Lanjutan untuk GroupDocs.Comparison Java
 
 Tutorial perbandingan tingkat lanjut kami menunjukkan kepada Anda cara memanfaatkan fitur-fitur GroupDocs.Comparison yang canggih dalam aplikasi Java. Panduan komprehensif ini mencakup cara membandingkan beberapa dokumen secara bersamaan, membandingkan file yang dilindungi kata sandi, membandingkan seluruh folder, dan menyesuaikan pengaturan perbandingan untuk berbagai skenario. Setiap tutorial mencakup contoh kode Java praktis untuk menerapkan operasi perbandingan dokumen canggih yang melampaui fungsionalitas dasar.

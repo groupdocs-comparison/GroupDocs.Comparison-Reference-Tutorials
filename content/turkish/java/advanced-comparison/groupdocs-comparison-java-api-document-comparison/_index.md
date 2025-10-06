@@ -4,8 +4,8 @@
 "title": "Java&#58;da Ana Belge Karşılaştırması&#58; Verimli Hücre Dosyası Analizi için GroupDocs.Comparison API'sini Kullanma"
 "url": "/tr/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API ile Java'da Belge Karşılaştırmasında Ustalaşma
 
 ## giriiş

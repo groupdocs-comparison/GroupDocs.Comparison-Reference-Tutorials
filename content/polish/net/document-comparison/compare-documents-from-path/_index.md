@@ -5,8 +5,8 @@
 "title": "Porównaj dokumenty ze ścieżki - GroupDocs.Comparison dla .NET"
 "url": "/pl/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Porównaj dokumenty ze ścieżki - GroupDocs.Comparison dla .NET
 
 ## Wstęp

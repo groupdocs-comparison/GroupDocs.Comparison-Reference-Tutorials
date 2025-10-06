@@ -4,8 +4,8 @@
 "title": "जावा दस्तावेज़ तुलना और ग्रुपडॉक्स के साथ पूर्वावलोकन एक व्यापक गाइड"
 "url": "/hi/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा दस्तावेज़ तुलना और पूर्वावलोकन निर्माण में महारत हासिल करें
 
 ## परिचय

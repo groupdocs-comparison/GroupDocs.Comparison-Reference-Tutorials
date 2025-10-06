@@ -3,8 +3,8 @@
 "title": "Tutorial sulla gestione dei metadati dei documenti per GroupDocs.Comparison .NET"
 "url": "/it/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutorial sulla gestione dei metadati dei documenti per GroupDocs.Comparison .NET
 
 nostri tutorial sulla gestione dei metadati mostrano come controllare le proprietà dei documenti durante il confronto con GroupDocs.Comparison in .NET. Queste guide dettagliate illustrano l'impostazione delle fonti di metadati, la definizione di metadati personalizzati per i documenti risultanti e l'implementazione di policy di conservazione dei metadati. Ogni tutorial include esempi pratici di codice C# per scenari comuni di gestione dei metadati, aiutandoti a creare applicazioni che mantengano le proprietà appropriate dei documenti durante l'intero processo di confronto.

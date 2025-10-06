@@ -4,8 +4,8 @@
 "title": "掌握 Java 中的文件比較－使用 GroupDocs.Comparison API 進行高效率的單元文件分析"
 "url": "/zh-hant/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison API 掌握 Java 中的文件比較
 
 ## 介紹

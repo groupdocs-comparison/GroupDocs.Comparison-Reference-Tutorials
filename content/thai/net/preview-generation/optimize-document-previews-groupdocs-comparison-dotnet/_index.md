@@ -4,8 +4,8 @@
 "title": "สร้างและเพิ่มประสิทธิภาพการแสดงตัวอย่างเอกสารด้วย GroupDocs.Comparison .NET API"
 "url": "/th/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # สร้างและเพิ่มประสิทธิภาพการแสดงตัวอย่างเอกสารด้วย GroupDocs.Comparison .NET
 
 ## การแนะนำ

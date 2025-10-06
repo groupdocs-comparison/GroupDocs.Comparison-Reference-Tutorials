@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 文件元資料管理教學課程"
 "url": "/zh-hant/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 文件元資料管理教學課程
 
 我們的元資料管理教學將向您展示如何在 .NET 中使用 GroupDocs.Comparison 比較文件時控製文件屬性。這些逐步指南涵蓋了設定元資料來源、為結果文件定義自訂元資料以及實施元資料保留策略。每個教學課程都包含針對常見元資料管理場景的實用 C# 程式碼範例，可協助您建立在整個比較過程中保持適當文件屬性的應用程式。

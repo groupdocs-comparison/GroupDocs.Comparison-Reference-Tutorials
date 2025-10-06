@@ -5,8 +5,8 @@
 "title": "Documentmetagegevensbron opslaan in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Documentmetagegevensbron opslaan in GroupDocs Vergelijking voor .NET
 
 ## Invoering

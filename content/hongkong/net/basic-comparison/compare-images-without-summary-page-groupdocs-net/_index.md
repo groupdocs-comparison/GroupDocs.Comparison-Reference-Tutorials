@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison for .NET 比較沒有摘要頁面的圖片"
 "url": "/zh-hant/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison for .NET 實作沒有摘要頁面的圖片比較
 
 ## 介紹

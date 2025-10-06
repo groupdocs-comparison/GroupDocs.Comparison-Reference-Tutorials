@@ -4,8 +4,8 @@
 "title": "Cara Mengekstrak Informasi Dokumen Menggunakan Pustaka GroupDocs.Comparison .NET"
 "url": "/id/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mengekstrak Informasi Dokumen Menggunakan Pustaka GroupDocs.Comparison .NET
 
 ## Perkenalan

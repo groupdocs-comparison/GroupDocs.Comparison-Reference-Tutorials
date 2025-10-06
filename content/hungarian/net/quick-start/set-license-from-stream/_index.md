@@ -5,8 +5,8 @@
 "title": "Licenc beállítása Streamből - GroupDocs Comparison for .NET"
 "url": "/hu/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Licenc beállítása Streamből - GroupDocs Comparison for .NET
 
 ## Bevezetés

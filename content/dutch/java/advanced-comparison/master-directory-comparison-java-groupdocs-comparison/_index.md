@@ -4,8 +4,8 @@
 "title": "Vergelijking van hoofddirectory's in Java met GroupDocs.Comparison voor naadloze bestandscontroles"
 "url": "/nl/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Vergelijking van hoofddirectory's in Java met GroupDocs.Comparison
 
 ## Invoering

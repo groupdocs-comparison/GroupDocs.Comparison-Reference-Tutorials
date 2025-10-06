@@ -4,8 +4,8 @@
 "title": "Comment définir une licence GroupDocs à partir d'un flux en Java ? Guide étape par étape"
 "url": "/fr/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Comment définir une licence GroupDocs à partir d'un flux en Java : guide étape par étape
 
 ## Introduction

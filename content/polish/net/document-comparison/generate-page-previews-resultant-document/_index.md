@@ -5,8 +5,8 @@
 "title": "Generuj podglądy stron dla wynikowego dokumentu"
 "url": "/pl/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Generuj podglądy stron dla wynikowego dokumentu
 
 ## Wstęp

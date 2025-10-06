@@ -4,8 +4,8 @@
 "title": "การนำข้อมูลเมตาของเอกสารไปใช้งานกับ GroupDocs.Comparison ใน Java - คู่มือฉบับสมบูรณ์"
 "url": "/th/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # การนำข้อมูลเมตาของเอกสารไปใช้งานกับ GroupDocs.Comparison ใน Java: คู่มือฉบับสมบูรณ์
 
 ## การแนะนำ

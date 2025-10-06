@@ -4,8 +4,8 @@
 "title": "Java dokumentum-összehasonlítás és oldalelőnézetek a GroupDocs.Comparison használatával"
 "url": "/hu/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # Java dokumentum-összehasonlítás elsajátítása a GroupDocs.Comparison segítségével
 
 **Hatékony dokumentumkezelés feloldása: Átfogó útmutató a GroupDocs.Comparison használatához Java nyelven**

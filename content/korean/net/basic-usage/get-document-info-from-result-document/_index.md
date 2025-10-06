@@ -5,8 +5,8 @@
 "title": "결과 문서에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # 결과 문서에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 
 ## 소개

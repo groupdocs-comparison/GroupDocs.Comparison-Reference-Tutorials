@@ -5,8 +5,8 @@
 "title": "Comparación de destinos de metadatos para guardar documentos en GroupDocs para .NET"
 "url": "/es/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Comparación de destinos de metadatos para guardar documentos en GroupDocs para .NET
 
 ## Introducción

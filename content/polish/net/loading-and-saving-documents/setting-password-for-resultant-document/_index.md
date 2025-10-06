@@ -5,8 +5,8 @@
 "title": "Ustawianie hasła dla dokumentu wynikowego w GroupDocs Comparison dla .NET"
 "url": "/pl/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Ustawianie hasła dla dokumentu wynikowego w GroupDocs Comparison dla .NET
 
 ## Wstęp

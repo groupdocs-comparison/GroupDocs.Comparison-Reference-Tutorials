@@ -4,8 +4,8 @@
 "title": "Thiết lập siêu dữ liệu tùy chỉnh trong tài liệu Java bằng GroupDocs.Comparison&#58; Hướng dẫn từng bước"
 "url": "/vi/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Thiết lập siêu dữ liệu tùy chỉnh trong tài liệu Java bằng GroupDocs.Comparison: Hướng dẫn từng bước
 
 ## Giới thiệu

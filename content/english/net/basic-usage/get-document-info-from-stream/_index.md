@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["dotnet", "csharp", "document-comparison", "metadata-extraction"]
+type: docs
 ---
-
 # Extract Document Information from Streams in .NET - Complete Developer Guide
 
 ## Introduction

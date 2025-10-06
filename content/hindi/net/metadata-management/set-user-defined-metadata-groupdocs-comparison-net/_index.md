@@ -4,8 +4,8 @@
 "title": ".NET के लिए GroupDocs.Comparison का उपयोग करके दस्तावेज़ों में उपयोगकर्ता-परिभाषित मेटाडेटा कैसे सेट करें | दस्तावेज़ प्रबंधन गाइड"
 "url": "/hi/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Comparison के साथ दस्तावेज़ों में उपयोगकर्ता-परिभाषित मेटाडेटा कैसे सेट करें
 
 ## परिचय

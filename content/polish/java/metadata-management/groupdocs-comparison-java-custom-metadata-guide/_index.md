@@ -4,8 +4,8 @@
 "title": "Ustawianie niestandardowych metadanych w dokumentach Java przy użyciu GroupDocs.Comparison — przewodnik krok po kroku"
 "url": "/pl/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Ustawianie niestandardowych metadanych w dokumentach Java za pomocą GroupDocs.Comparison: przewodnik krok po kroku
 
 ## Wstęp

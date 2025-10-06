@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 函式庫在 Java 中掌握文件比較"
 "url": "/zh-hant/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 中的文件比較
 
 探索如何使用強大的 GroupDocs.Comparison Java 程式庫有效地初始化、比較和更新文件中的變更。本教學將指導您設定環境、了解主要功能並實施實際解決方案。

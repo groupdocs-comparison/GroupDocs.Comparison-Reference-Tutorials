@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET 라이브러리를 사용하여 문서 정보를 추출하는 방법"
 "url": "/ko/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 라이브러리를 사용하여 문서 정보를 추출하는 방법
 
 ## 소개

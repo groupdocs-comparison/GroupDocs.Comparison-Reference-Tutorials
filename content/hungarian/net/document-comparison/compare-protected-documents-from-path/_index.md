@@ -5,8 +5,8 @@
 "title": "Védett dokumentumok összehasonlítása az elérési út alapján - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Védett dokumentumok összehasonlítása az elérési út alapján - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

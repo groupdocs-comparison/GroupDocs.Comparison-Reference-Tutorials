@@ -4,8 +4,8 @@
 "title": "Ανάκτηση υποστηριζόμενων μορφών αρχείων με το GroupDocs.Comparison for Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Ανάκτηση υποστηριζόμενων μορφών αρχείων με το GroupDocs.Comparison για Java
 
 ## Εισαγωγή

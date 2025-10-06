@@ -4,8 +4,8 @@
 "title": "Sichere Dokumentvergleiche in .NET&#58; Ergebnisse mit einem Kennwort schützen, indem GroupDocs.Comparison verwendet wird"
 "url": "/de/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Sichern Sie Ihre Dokumentvergleiche in .NET: Schützen Sie die Ergebnisse mit GroupDocs.Comparison durch ein Kennwort
 
 ## Einführung

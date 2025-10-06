@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "document-comparison", "metadata", "groupdocs", "tutorial"]
+type: docs
 ---
-
 # Java Document Metadata Management with GroupDocs.Comparison
 
 ## Why Document Metadata Matters in Java Applications

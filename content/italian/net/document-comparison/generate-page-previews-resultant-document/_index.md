@@ -5,8 +5,8 @@
 "title": "Genera anteprime di pagina per il documento risultante"
 "url": "/it/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Genera anteprime di pagina per il documento risultante
 
 ## Introduzione

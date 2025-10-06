@@ -5,8 +5,8 @@
 "title": "Сравнение документов из Path - GroupDocs.Comparison для .NET"
 "url": "/ru/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Сравнение документов из Path - GroupDocs.Comparison для .NET
 
 ## Введение

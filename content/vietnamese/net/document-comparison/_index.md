@@ -5,8 +5,8 @@
 "title": "So sánh tài liệu"
 "url": "/vi/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # So sánh tài liệu
 
 ## Giới thiệu

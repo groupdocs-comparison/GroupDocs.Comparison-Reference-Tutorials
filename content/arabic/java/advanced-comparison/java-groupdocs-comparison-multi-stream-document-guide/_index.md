@@ -4,8 +4,8 @@
 "title": "مقارنة مستندات Java متعددة التدفقات باستخدام GroupDocs.Comparison - دليل شامل"
 "url": "/ar/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة مستندات Java متعددة التدفقات باستخدام GroupDocs.Comparison
 
 ## مقدمة

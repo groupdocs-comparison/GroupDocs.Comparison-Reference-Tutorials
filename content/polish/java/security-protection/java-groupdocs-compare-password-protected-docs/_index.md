@@ -4,8 +4,8 @@
 "title": "Opanowanie porównywania dokumentów chronionych hasłem w Javie za pomocą GroupDocs.Comparison"
 "url": "/pl/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów chronionych hasłem w Javie za pomocą GroupDocs.Comparison
 
 ## Wstęp

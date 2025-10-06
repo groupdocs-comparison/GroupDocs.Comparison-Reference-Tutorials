@@ -6,8 +6,8 @@
 "title": "Handledning för API för dokumentjämförelseprogramvara | GroupDocs.Comparison"
 "url": "/sv/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Handledningar och utvecklarguide
 
 ![Jämförelsebanner för GroupDocs](./groupdocs-comparison-net.svg)

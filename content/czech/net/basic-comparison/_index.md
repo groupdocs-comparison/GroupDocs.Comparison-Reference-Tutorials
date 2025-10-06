@@ -3,8 +3,8 @@
 "title": "Základní tutoriály pro porovnávání dokumentů pro GroupDocs.Comparison .NET"
 "url": "/cs/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Základní tutoriály pro porovnávání dokumentů pro GroupDocs.Comparison .NET
 
 Zvládněte základní porovnávání dokumentů s našimi podrobnými tutoriály GroupDocs.Comparison .NET. Tyto podrobné návody ukazují, jak porovnávat dokumenty různých formátů, včetně Wordu, PDF, Excelu a obrázků. Každý tutoriál obsahuje funkční příklady kódu C#, které ukazují, jak identifikovat rozdíly mezi dokumenty, generovat porovnávací zprávy a implementovat porovnávací operace pro různé typy dokumentů.

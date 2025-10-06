@@ -4,8 +4,8 @@
 "title": "Menerapkan Perbandingan Dokumen Java Menggunakan GroupDocs.Comparison&#58; Panduan Lengkap"
 "url": "/id/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menerapkan Perbandingan Dokumen Java dengan Mengatur Sumber Metadata dengan GroupDocs.Comparison
 
 ## Perkenalan

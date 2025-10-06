@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison ile Java'da Parola Korumalı Belge Karşılaştırmasında Ustalaşma"
 "url": "/tr/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Java'da Parola Korumalı Belge Karşılaştırmasında Ustalaşma
 
 ## giriiş

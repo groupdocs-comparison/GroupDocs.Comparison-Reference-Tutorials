@@ -4,8 +4,8 @@
 "title": "Menyesuaikan Gaya Item yang Disisipkan dalam Perbandingan Dokumen Java dengan GroupDocs.Comparison"
 "url": "/id/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Menyesuaikan Gaya Item yang Disisipkan dalam Perbandingan Dokumen Java Menggunakan GroupDocs.Comparison
 
 ## Perkenalan

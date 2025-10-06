@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison 라이브러리를 사용한 Java에서의 마스터 문서 비교"
 "url": "/ko/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java에서 문서 비교 마스터하기
 
 강력한 Java용 GroupDocs.Comparison 라이브러리를 사용하여 문서의 변경 사항을 초기화, 비교 및 업데이트하는 효율적인 프로세스를 알아보세요. 이 튜토리얼은 환경 설정, 주요 기능 이해, 그리고 실제 솔루션 구현 과정을 안내합니다.

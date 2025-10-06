@@ -4,8 +4,8 @@
 "title": "Perbandingan & Pratinjau Dokumen Java dengan GroupDocs&#58; Panduan Lengkap"
 "url": "/id/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen Java dan Pembuatan Pratinjau dengan GroupDocs.Comparison
 
 ## Perkenalan

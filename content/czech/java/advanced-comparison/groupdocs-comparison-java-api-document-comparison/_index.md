@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v Javě s využitím GroupDocs.Comparison API pro efektivní analýzu souborů buněk"
 "url": "/cs/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v Javě pomocí GroupDocs.Comparison API
 
 ## Zavedení

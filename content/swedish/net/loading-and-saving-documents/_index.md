@@ -5,8 +5,8 @@
 "title": "Läser in och sparar dokument"
 "url": "/sv/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Läser in och sparar dokument
 
 ## Introduktion

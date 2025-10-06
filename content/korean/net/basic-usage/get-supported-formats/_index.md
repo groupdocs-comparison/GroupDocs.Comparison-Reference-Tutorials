@@ -5,8 +5,8 @@
 "title": "지원되는 형식 가져오기 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # 지원되는 형식 가져오기 - .NET용 GroupDocs.Comparison
 
 ## 소개

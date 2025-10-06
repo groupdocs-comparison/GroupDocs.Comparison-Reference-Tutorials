@@ -4,8 +4,8 @@
 "title": "Πώς να ορίσετε άδεια χρήσης από αρχείο στο GroupDocs.Comparison για Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Υλοποίηση του Set License from File στο GroupDocs.Comparison για Java
 
 ## Εισαγωγή

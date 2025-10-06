@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET का उपयोग करके DOC तुलना में हेडर और फ़ुटर को कैसे अनदेखा करें"
 "url": "/hi/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET के साथ दस्तावेज़ तुलना में हेडर और फ़ुटर को कैसे अनदेखा करें
 
 ## परिचय

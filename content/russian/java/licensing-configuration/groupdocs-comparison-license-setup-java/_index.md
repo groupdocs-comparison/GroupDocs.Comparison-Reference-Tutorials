@@ -4,8 +4,8 @@
 "title": "Как установить лицензию из файла в GroupDocs.Comparison для Java&#58; Полное руководство"
 "url": "/ru/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Реализация установки лицензии из файла в GroupDocs.Comparison для Java
 
 ## Введение

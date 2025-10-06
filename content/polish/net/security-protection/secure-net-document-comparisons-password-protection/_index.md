@@ -4,8 +4,8 @@
 "title": "Bezpieczne porównania dokumentów w .NET&#58; Zabezpieczanie wyników hasłem za pomocą GroupDocs.Comparison"
 "url": "/pl/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Zabezpiecz swoje porównania dokumentów w .NET: Chroń wyniki hasłem za pomocą GroupDocs.Comparison
 
 ## Wstęp

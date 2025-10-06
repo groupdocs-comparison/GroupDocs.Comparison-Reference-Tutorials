@@ -5,8 +5,8 @@
 "title": "Bandingkan Dokumen dari Path - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # Bandingkan Dokumen dari Path - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

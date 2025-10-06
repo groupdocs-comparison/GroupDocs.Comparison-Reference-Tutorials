@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Javaでサポートされているファイル形式を取得する包括的なガイド"
 "url": "/ja/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for Java でサポートされているファイル形式を取得する
 
 ## 導入

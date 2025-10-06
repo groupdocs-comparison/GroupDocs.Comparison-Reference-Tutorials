@@ -4,8 +4,8 @@
 "title": "Cách triển khai so sánh tài liệu trong .NET bằng GroupDocs.Comparison&#58; Hướng dẫn từng bước"
 "url": "/vi/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách triển khai so sánh tài liệu trong .NET bằng GroupDocs.Comparison: Hướng dẫn từng bước
 
 ## Giới thiệu

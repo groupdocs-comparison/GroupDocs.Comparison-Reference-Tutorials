@@ -4,8 +4,8 @@
 "title": "Porównanie dokumentów Java Multi-Stream przy użyciu GroupDocs.Comparison&#58; Kompleksowy przewodnik"
 "url": "/pl/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów wielostrumieniowych w języku Java za pomocą GroupDocs.Comparison
 
 ## Wstęp

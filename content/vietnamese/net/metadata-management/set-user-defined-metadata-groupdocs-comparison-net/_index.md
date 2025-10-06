@@ -4,8 +4,8 @@
 "title": "Cách thiết lập siêu dữ liệu do người dùng xác định trong tài liệu bằng GroupDocs.Comparison cho .NET | Hướng dẫn quản lý tài liệu"
 "url": "/vi/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách thiết lập siêu dữ liệu do người dùng xác định trong tài liệu với GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

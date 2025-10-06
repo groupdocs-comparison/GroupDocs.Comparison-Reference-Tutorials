@@ -5,8 +5,8 @@
 "title": "Memuat dan Menyimpan Dokumen"
 "url": "/id/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Memuat dan Menyimpan Dokumen
 
 ## Perkenalan

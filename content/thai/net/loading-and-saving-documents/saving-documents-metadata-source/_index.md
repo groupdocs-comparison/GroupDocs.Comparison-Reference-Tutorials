@@ -5,8 +5,8 @@
 "title": "การบันทึกแหล่งข้อมูลเมตาของเอกสารในการเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # การบันทึกแหล่งข้อมูลเมตาของเอกสารในการเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

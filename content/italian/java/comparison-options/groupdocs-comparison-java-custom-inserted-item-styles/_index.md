@@ -4,8 +4,8 @@
 "title": "Personalizza gli stili degli elementi inseriti nei confronti dei documenti Java con GroupDocs.Comparison"
 "url": "/it/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Personalizzazione degli stili degli elementi inseriti nei confronti dei documenti Java tramite GroupDocs.Comparison
 
 ## Introduzione

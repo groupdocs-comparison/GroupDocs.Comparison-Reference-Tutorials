@@ -5,8 +5,8 @@
 "title": "การเปรียบเทียบเอกสารและโฟลเดอร์"
 "url": "/th/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # การเปรียบเทียบเอกสารและโฟลเดอร์
 
 ## การแนะนำ

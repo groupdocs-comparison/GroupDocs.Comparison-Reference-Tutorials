@@ -3,8 +3,8 @@
 "title": "Licens- och konfigurationshandledning för GroupDocs.Comparison .NET"
 "url": "/sv/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Licens- och konfigurationshandledning för GroupDocs.Comparison .NET
 
 Våra handledningar för licensering och konfiguration ger viktig vägledning för att korrekt konfigurera GroupDocs.Comparison i .NET-applikationer. Dessa steg-för-steg-guider visar hur du implementerar olika licensalternativ, konfigurerar mätad fakturering, kontrollerar licensstatus och optimerar biblioteksinställningar för dina specifika behov. Varje handledning innehåller detaljerade C#-kodexempel för korrekt initialisering och konfiguration, vilket hjälper dig att bygga korrekt licensierade och optimerade lösningar för dokumentjämförelse.

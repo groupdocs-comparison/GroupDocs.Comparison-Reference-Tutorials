@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 폴더 비교"
 "url": "/ko/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 폴더 비교
 
 ## 소개

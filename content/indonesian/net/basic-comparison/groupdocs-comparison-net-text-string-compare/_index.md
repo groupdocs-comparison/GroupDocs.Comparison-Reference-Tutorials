@@ -4,8 +4,8 @@
 "title": "Perbandingan String Teks Master di .NET Menggunakan Pustaka GroupDocs.Comparison"
 "url": "/id/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Perbandingan String Teks Master di .NET Menggunakan Pustaka GroupDocs.Comparison
 
 ## Perkenalan

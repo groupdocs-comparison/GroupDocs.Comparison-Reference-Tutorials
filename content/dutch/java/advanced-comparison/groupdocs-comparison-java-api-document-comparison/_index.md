@@ -4,8 +4,8 @@
 "title": "Hoofddocumentvergelijking in Java&#58; gebruik de GroupDocs.Comparison API voor efficiënte celbestandsanalyse"
 "url": "/nl/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Documentvergelijking in Java onder de knie krijgen met de GroupDocs.Comparison API
 
 ## Invoering

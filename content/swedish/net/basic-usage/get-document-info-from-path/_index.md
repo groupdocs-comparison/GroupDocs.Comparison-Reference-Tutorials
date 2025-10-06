@@ -5,8 +5,8 @@
 "title": "Hämta dokumentinformation från sökvägen - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Hämta dokumentinformation från sökvägen - GroupDocs.Comparison för .NET
 
 ## Introduktion

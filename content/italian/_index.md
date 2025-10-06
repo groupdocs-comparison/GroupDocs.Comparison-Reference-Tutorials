@@ -6,8 +6,8 @@
 "title": "Tutorial API del software di confronto documenti | GroupDocs.Comparison"
 "url": "/it/"
 "weight": 11
+type: docs
 ---
-
 # Tutorial e guida per sviluppatori di GroupDocs.Comparison
 
 ![Banner GroupDocs.Comparison](./groupdocs-comparison-net.svg)

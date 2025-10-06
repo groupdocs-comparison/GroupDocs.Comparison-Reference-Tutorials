@@ -4,8 +4,8 @@
 "title": "Jak porovnávat složky a ukládat výsledky jako TXT/HTML pomocí GroupDocs.Comparison .NET"
 "url": "/cs/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnávání složek a ukládat výsledky jako TXT/HTML pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama"
 "url": "/tr/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Sonuç Belgesi için Parola Ayarlama
 
 ## giriiş

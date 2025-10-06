@@ -4,8 +4,8 @@
 "title": "Comment définir une licence à partir d'un fichier dans GroupDocs.Comparaison pour Java – Guide complet"
 "url": "/fr/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # Implémentation de la fonction Définir une licence à partir d'un fichier dans GroupDocs.Comparison pour Java
 
 ## Introduction

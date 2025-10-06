@@ -5,8 +5,8 @@
 "title": "Speichern der Metadatenquelle von Dokumenten im GroupDocs-Vergleich für .NET"
 "url": "/de/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Speichern der Metadatenquelle von Dokumenten im GroupDocs-Vergleich für .NET
 
 ## Einführung

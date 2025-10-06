@@ -9,8 +9,8 @@ weight: 1
 url: "/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 categories: ["Java Security"]
 tags: ["document-security", "java-api", "enterprise-security", "document-comparison"]
+type: docs
 ---
-
 # Secure Document Comparison in Java: The Complete Guide to Password-Protected Word Files
 
 ## Introduction

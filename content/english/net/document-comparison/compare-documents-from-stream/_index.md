@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-comparison", "dotnet", "streams", "automation"]
+type: docs
 ---
-
 # Compare Documents Programmatically - Stream-Based .NET Solution
 
 ## Introduction

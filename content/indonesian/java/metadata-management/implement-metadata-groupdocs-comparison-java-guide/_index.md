@@ -4,8 +4,8 @@
 "title": "Menerapkan Metadata Dokumen dengan GroupDocs.Comparison di Java; Panduan Lengkap"
 "url": "/id/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Metadata Dokumen dengan GroupDocs.Comparison di Java: Panduan Lengkap
 
 ## Perkenalan

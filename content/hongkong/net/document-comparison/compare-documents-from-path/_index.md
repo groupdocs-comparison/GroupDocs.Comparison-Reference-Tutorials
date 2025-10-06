@@ -5,8 +5,8 @@
 "title": "比較路徑中的文件 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # 比較路徑中的文件 - GroupDocs.Comparison for .NET
 
 ## 介紹

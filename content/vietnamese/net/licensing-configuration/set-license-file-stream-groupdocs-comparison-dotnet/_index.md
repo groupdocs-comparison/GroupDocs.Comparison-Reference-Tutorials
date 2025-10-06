@@ -4,8 +4,8 @@
 "title": "Thiết lập Giấy phép trong GroupDocs.Comparison cho .NET Sử dụng FileStream"
 "url": "/vi/net/licensing-configuration/set-license-file-stream-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Thiết lập Giấy phép trong GroupDocs.Comparison cho .NET Sử dụng FileStream
 
 **Giới thiệu**

@@ -4,8 +4,8 @@
 "title": "Jak extrahovat informace o dokumentu pomocí knihovny GroupDocs.Comparison .NET"
 "url": "/cs/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Jak extrahovat informace o dokumentu pomocí knihovny GroupDocs.Comparison .NET
 
 ## Zavedení

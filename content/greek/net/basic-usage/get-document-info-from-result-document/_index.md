@@ -5,8 +5,8 @@
 "title": "Λήψη πληροφοριών εγγράφου από το έγγραφο αποτελεσμάτων - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Λήψη πληροφοριών εγγράφου από το έγγραφο αποτελεσμάτων - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

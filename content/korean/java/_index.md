@@ -4,8 +4,8 @@
 "title": "Java 튜토리얼 가이드를 위한 GroupDocs.Comparison 전체"
 "url": "/ko/java/"
 "weight": 10
+type: docs
 ---
-
 # Java용 GroupDocs.Comparison – 단계별 튜토리얼 및 코드 예제
 
 ## Java로 문서 비교 배우기 – 빠르고 정확하며 강력함

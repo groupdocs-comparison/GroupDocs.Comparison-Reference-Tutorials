@@ -4,8 +4,8 @@
 "title": "วิธีการแยกข้อมูลเอกสารโดยใช้ไลบรารี GroupDocs.Comparison .NET"
 "url": "/th/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการแยกข้อมูลเอกสารโดยใช้ไลบรารี GroupDocs.Comparison .NET
 
 ## การแนะนำ

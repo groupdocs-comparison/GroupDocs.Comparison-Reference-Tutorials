@@ -5,8 +5,8 @@
 "title": "Φόρτωση εγγράφων από το Stream στο GroupDocs Σύγκριση για .NET"
 "url": "/el/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Φόρτωση εγγράφων από το Stream στο GroupDocs Σύγκριση για .NET
 
 ## Εισαγωγή

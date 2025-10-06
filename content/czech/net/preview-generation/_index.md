@@ -3,8 +3,8 @@
 "title": "Návody na generování náhledů pro GroupDocs.Comparison .NET"
 "url": "/cs/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Návody na generování náhledů pro GroupDocs.Comparison .NET
 
 Naučte se, jak vytvářet náhledy dokumentů, s našimi komplexními tutoriály GroupDocs.Comparison pro vývojáře .NET. Tyto praktické průvodce ukazují, jak generovat náhledy stránek pro zdrojové dokumenty, cílové dokumenty a výsledky porovnání, jak přizpůsobit velikosti obrázků náhledu a jak implementovat čištění zdrojů pro optimální využití paměti. Každý tutoriál obsahuje podrobné příklady kódu C# pro efektivní implementaci funkce náhledu dokumentů ve vašich porovnávacích aplikacích.

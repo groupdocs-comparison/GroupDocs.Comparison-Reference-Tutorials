@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące opcji i ustawień porównywania dla GroupDocs.Comparison .NET"
 "url": "/pl/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Samouczki dotyczące opcji i ustawień porównywania dla GroupDocs.Comparison .NET
 
 Naucz się dostrajać porównanie dokumentów dzięki naszym samouczkom opcji GroupDocs.Comparison dla .NET. Te szczegółowe przewodniki pokazują, jak skonfigurować czułość porównania, dostosować algorytmy wykrywania zmian, ustawić preferencje wyświetlania dla różnych typów zmian i wdrożyć specjalistyczne reguły porównania. Każdy samouczek zawiera działające przykłady kodu C# do implementacji niestandardowych opcji porównania, pomagając Ci tworzyć aplikacje porównawcze, które można precyzyjnie dostosować do Twoich konkretnych wymagań analizy dokumentów.

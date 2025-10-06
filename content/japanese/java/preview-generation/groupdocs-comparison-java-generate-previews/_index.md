@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison をマスターして Java でドキュメントのプレビューを簡単に生成"
 "url": "/ja/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for Java をマスターする: ドキュメントプレビューを簡単に生成
 
 ## 導入

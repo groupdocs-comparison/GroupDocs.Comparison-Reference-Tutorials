@@ -4,8 +4,8 @@
 "title": "Comparación de documentos maestros en Java&#58; uso de la API GroupDocs.Comparison para un análisis eficiente de archivos de celda"
 "url": "/es/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos en Java con la API GroupDocs.Comparison
 
 ## Introducción

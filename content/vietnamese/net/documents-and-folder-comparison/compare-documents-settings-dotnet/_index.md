@@ -5,8 +5,8 @@
 "title": "So sánh các thiết lập tài liệu trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # So sánh các thiết lập tài liệu trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

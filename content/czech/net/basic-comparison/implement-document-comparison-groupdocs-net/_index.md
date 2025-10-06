@@ -4,8 +4,8 @@
 "title": "Jak implementovat porovnávání dokumentů v .NET pomocí GroupDocs.Comparison – Podrobný návod"
 "url": "/cs/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak implementovat porovnávání dokumentů v .NET pomocí GroupDocs.Comparison: Podrobný návod
 
 ## Zavedení

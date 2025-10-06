@@ -5,8 +5,8 @@
 "title": "Βασική χρήση"
 "url": "/el/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Βασική χρήση
 
 ## Εισαγωγή

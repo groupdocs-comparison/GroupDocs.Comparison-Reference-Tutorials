@@ -5,8 +5,8 @@
 "title": "So sánh các ô từ Path - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # So sánh các ô từ Path - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

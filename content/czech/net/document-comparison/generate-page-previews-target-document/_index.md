@@ -5,8 +5,8 @@
 "title": "Generování náhledů stránek pro cílový dokument"
 "url": "/cs/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Generování náhledů stránek pro cílový dokument
 
 ## Zavedení

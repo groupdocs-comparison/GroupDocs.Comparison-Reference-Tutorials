@@ -4,8 +4,8 @@
 "title": "Làm chủ GroupDocs.Comparison cho Java&#58; Tạo bản xem trước tài liệu dễ dàng"
 "url": "/vi/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ GroupDocs.Comparison cho Java: Tạo bản xem trước tài liệu dễ dàng
 
 ## Giới thiệu

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Comparison", "document-comparison", "dotnet", "headers-footers"]
+type: docs
 ---
-
 # Document Comparison Ignore Headers Footers .NET
 
 ## Why This Matters (And You're Probably Here Because...)

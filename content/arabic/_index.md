@@ -6,8 +6,8 @@
 "title": "برنامج مقارنة المستندات - دليل واجهة برمجة التطبيقات | GroupDocs.Comparison"
 "url": "/ar/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison دروس تعليمية ودليل للمطورين
 
 ![لافتة مقارنة GroupDocs](./groupdocs-comparison-net.svg)

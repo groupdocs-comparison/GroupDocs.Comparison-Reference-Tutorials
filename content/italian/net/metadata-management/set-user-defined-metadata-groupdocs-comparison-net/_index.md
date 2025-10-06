@@ -4,8 +4,8 @@
 "title": "Come impostare metadati definiti dall'utente nei documenti utilizzando GroupDocs.Comparison per .NET | Guida alla gestione dei documenti"
 "url": "/it/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Come impostare metadati definiti dall'utente nei documenti con GroupDocs.Comparison per .NET
 
 ## Introduzione

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET を使用してドキュメント比較用のカスタムフォントを読み込む方法"
 "url": "/ja/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET を使用してドキュメント比較用のカスタムフォントを読み込む方法
 
 ## 導入

@@ -4,8 +4,8 @@
 "title": "Cara Membandingkan Beberapa Dokumen yang Dilindungi Kata Sandi di .NET Menggunakan GroupDocs.Comparison"
 "url": "/id/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Cara Membandingkan Beberapa Dokumen yang Dilindungi Kata Sandi di .NET Menggunakan GroupDocs.Comparison
 
 ## Perkenalan

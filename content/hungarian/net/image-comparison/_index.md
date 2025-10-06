@@ -5,8 +5,8 @@
 "title": "Képösszehasonlítás"
 "url": "/hu/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Képösszehasonlítás
 
 

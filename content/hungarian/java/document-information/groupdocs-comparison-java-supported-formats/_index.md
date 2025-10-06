@@ -4,8 +4,8 @@
 "title": "Támogatott fájlformátumok lekérése a GroupDocs segítségével. Comparison for Java – Átfogó útmutató"
 "url": "/hu/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Támogatott fájlformátumok lekérése a GroupDocs.Comparison for Java segítségével
 
 ## Bevezetés

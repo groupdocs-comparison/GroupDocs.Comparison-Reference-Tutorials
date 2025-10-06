@@ -5,8 +5,8 @@
 "title": "รับข้อมูลเอกสารจาก Stream - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # รับข้อมูลเอกสารจาก Stream - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["C#", "NET", "GroupDocs", "Document Metadata", "File Properties"]
+type: docs
 ---
-
 # How to Extract Document Metadata in C# .NET: Complete Developer Guide
 
 ## Introduction

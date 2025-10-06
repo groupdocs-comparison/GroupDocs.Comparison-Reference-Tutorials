@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中使用 .NET 的加载选项"
 "url": "/zh/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # 在 GroupDocs 比较中使用 .NET 的加载选项
 
 ## 介绍

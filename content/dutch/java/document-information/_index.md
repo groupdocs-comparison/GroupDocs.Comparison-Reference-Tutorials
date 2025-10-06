@@ -3,8 +3,8 @@
 "title": "Documentinformatiehandleidingen voor GroupDocs.Comparison Java"
 "url": "/nl/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Documentinformatiehandleidingen voor GroupDocs.Comparison Java
 
 Onze tutorials over documentinformatie bieden begeleiding bij het openen van documentmetadata met behulp van GroupDocs.Comparison in Java. Deze praktische handleidingen laten zien hoe u informatie over bron-, doel- en resultaatdocumenten kunt ophalen, bestandsindelingen kunt bepalen en programmatisch toegang kunt krijgen tot documenteigenschappen. Elke tutorial bevat werkende Java-codevoorbeelden voor veelvoorkomende scenario's met documentinformatie, waarmee u applicaties kunt bouwen die documentgegevens effectief kunnen analyseren en verwerken.

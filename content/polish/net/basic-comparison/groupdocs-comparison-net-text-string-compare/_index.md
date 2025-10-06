@@ -4,8 +4,8 @@
 "title": "Porównanie głównych ciągów tekstowych w .NET przy użyciu biblioteki GroupDocs.Comparison"
 "url": "/pl/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Porównanie głównych ciągów tekstowych w .NET przy użyciu biblioteki GroupDocs.Comparison
 
 ## Wstęp

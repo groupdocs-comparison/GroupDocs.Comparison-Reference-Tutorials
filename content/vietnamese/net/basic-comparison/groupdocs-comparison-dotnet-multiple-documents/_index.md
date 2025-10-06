@@ -4,8 +4,8 @@
 "title": "Cách so sánh nhiều tài liệu được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison"
 "url": "/vi/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh nhiều tài liệu được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison
 
 ## Giới thiệu

@@ -5,8 +5,8 @@
 "title": "مقارنة الخلايا من المسار - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # مقارنة الخلايا من المسار - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

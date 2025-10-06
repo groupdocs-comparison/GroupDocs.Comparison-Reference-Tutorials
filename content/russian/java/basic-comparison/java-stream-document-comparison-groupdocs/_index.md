@@ -4,8 +4,8 @@
 "title": "Реализация сравнения документов Java Stream с помощью GroupDocs.Comparer&#58; Подробное руководство"
 "url": "/ru/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Реализация сравнения документов Java Stream с помощью GroupDocs.Comparer: подробное руководство
 
 ## Введение

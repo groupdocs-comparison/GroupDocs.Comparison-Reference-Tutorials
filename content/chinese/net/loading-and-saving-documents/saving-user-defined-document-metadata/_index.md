@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中保存 .NET 的用户定义文档元数据"
 "url": "/zh/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # 在 GroupDocs 比较中保存 .NET 的用户定义文档元数据
 
 ## 介绍

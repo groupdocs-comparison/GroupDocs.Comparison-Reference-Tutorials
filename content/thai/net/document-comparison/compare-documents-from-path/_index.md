@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบเอกสารจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # เปรียบเทียบเอกสารจากเส้นทาง - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

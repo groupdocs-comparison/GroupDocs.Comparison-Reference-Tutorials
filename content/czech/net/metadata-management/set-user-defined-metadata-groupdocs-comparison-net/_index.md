@@ -4,8 +4,8 @@
 "title": "Jak nastavit uživatelem definovaná metadata v dokumentech pomocí GroupDocs.Comparison pro .NET | Průvodce správou dokumentů"
 "url": "/cs/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak nastavit uživatelem definovaná metadata v dokumentech pomocí GroupDocs.Comparison pro .NET
 
 ## Zavedení

@@ -3,8 +3,8 @@
 "title": "Dokumentum metaadat-kezelési oktatóanyagok GroupDocs.Comparison Java-hoz"
 "url": "/hu/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Dokumentum metaadat-kezelési oktatóanyagok GroupDocs.Comparison Java-hoz
 
 Metaadat-kezelési oktatóanyagaink bemutatják, hogyan szabályozhatja a dokumentumok tulajdonságait a GroupDocs.Comparison segítségével Java nyelven végzett dokumentumok összehasonlításakor. Ezek a lépésről lépésre bemutatott útmutatók a metaadat-források beállítását, az eredményül kapott dokumentumok egyéni metaadatainak definiálását és a metaadat-megőrzési szabályzatok megvalósítását ismertetik. Minden oktatóanyag gyakorlati Java kódpéldákat tartalmaz a gyakori metaadat-kezelési forgatókönyvekhez, segítve olyan alkalmazások létrehozását, amelyek a teljes összehasonlítási folyamat során fenntartják a megfelelő dokumentumtulajdonságokat.

@@ -5,8 +5,8 @@
 "title": "Perbandingan Dokumen"
 "url": "/id/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Perbandingan Dokumen
 
 ## Perkenalan

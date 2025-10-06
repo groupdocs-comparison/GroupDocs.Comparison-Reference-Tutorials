@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu an toàn trong .NET&#58; Bảo vệ kết quả bằng mật khẩu bằng GroupDocs.Comparison"
 "url": "/vi/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Bảo mật so sánh tài liệu của bạn trong .NET: Bảo vệ kết quả bằng mật khẩu với GroupDocs.Comparison
 
 ## Giới thiệu

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison Tutorial Memulai untuk Pengembang .NET"
 "url": "/id/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Tutorial Memulai untuk Pengembang .NET
 
 Mulailah perjalanan Anda dengan tutorial GroupDocs.Comparison penting ini yang memandu Anda melalui penginstalan, konfigurasi lisensi, dan pembuatan perbandingan dokumen pertama Anda di .NET. Panduan yang mudah dipahami bagi pemula kami menunjukkan cara menyiapkan lingkungan pengembangan Anda, menginisialisasi pustaka GroupDocs.Comparison, dan melakukan operasi perbandingan mendasar. Ikuti tutorial ini untuk menguasai dasar-dasar dengan cepat dan mempersiapkan diri untuk tugas perbandingan dokumen yang lebih canggih di aplikasi .NET Anda.

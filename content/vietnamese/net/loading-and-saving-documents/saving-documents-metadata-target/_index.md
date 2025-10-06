@@ -5,8 +5,8 @@
 "title": "Lưu mục tiêu siêu dữ liệu tài liệu trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Lưu mục tiêu siêu dữ liệu tài liệu trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

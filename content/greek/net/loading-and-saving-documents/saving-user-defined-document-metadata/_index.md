@@ -5,8 +5,8 @@
 "title": "Αποθήκευση μεταδεδομένων εγγράφου που ορίζονται από τον χρήστη στο GroupDocs Comparison για .NET"
 "url": "/el/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Αποθήκευση μεταδεδομένων εγγράφου που ορίζονται από τον χρήστη στο GroupDocs Comparison για .NET
 
 ## Εισαγωγή

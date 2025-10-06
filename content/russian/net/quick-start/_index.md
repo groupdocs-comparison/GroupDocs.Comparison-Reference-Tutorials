@@ -5,8 +5,8 @@
 "title": "Быстрый старт"
 "url": "/ru/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Быстрый старт
 
 

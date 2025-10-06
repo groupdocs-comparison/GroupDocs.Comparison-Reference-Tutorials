@@ -3,8 +3,8 @@
 "title": "Tutorial Opsi dan Pengaturan Perbandingan untuk GroupDocs.Comparison .NET"
 "url": "/id/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Tutorial Opsi dan Pengaturan Perbandingan untuk GroupDocs.Comparison .NET
 
 Pelajari cara menyempurnakan perbandingan dokumen dengan tutorial opsi GroupDocs.Comparison kami untuk .NET. Panduan terperinci ini menunjukkan cara mengonfigurasi sensitivitas perbandingan, menyesuaikan algoritma deteksi perubahan, mengatur preferensi tampilan untuk berbagai jenis perubahan, dan menerapkan aturan perbandingan khusus. Setiap tutorial mencakup contoh kode C# yang berfungsi untuk menerapkan opsi perbandingan khusus, membantu Anda membangun aplikasi perbandingan yang dapat disesuaikan secara tepat dengan persyaratan analisis dokumen spesifik Anda.

@@ -3,8 +3,8 @@
 "title": "Zaawansowane samouczki porównywania dokumentów dla GroupDocs.Comparison .NET"
 "url": "/pl/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Zaawansowane samouczki porównywania dokumentów dla GroupDocs.Comparison .NET
 
 Nasze zaawansowane samouczki porównawcze pokazują, jak wykorzystać potężne funkcje GroupDocs.Comparison w aplikacjach .NET. Te kompleksowe przewodniki obejmują porównywanie wielu dokumentów jednocześnie, porównywanie plików chronionych hasłem, porównywanie całych folderów i dostosowywanie ustawień porównania do różnych scenariuszy. Każdy samouczek zawiera praktyczne przykłady kodu C# do implementacji zaawansowanych operacji porównywania dokumentów wykraczających poza podstawową funkcjonalność.

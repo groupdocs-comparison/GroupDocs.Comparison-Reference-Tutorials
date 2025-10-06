@@ -3,8 +3,8 @@
 "title": "Tutorial sulla sicurezza e la protezione dei documenti per GroupDocs.Comparison .NET"
 "url": "/it/net/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Tutorial sulla sicurezza e la protezione dei documenti per GroupDocs.Comparison .NET
 
 Padroneggia le funzionalità di sicurezza dei documenti con i nostri tutorial dettagliati di GroupDocs.Comparison per .NET. Queste guide complete illustrano come confrontare documenti protetti da password, impostare password per i file risultanti, implementare flussi di lavoro di confronto sicuri e gestire la protezione dei documenti a livello di codice. Ogni tutorial fornisce esempi di codice C# funzionante per operazioni di confronto sicuro dei documenti, aiutandoti a creare applicazioni che mantengono la riservatezza e consentono al contempo un confronto efficace dei documenti.

@@ -5,8 +5,8 @@
 "title": "미리보기에 대한 특정 이미지 크기 설정"
 "url": "/ko/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # 미리보기에 대한 특정 이미지 크기 설정
 
 ## 소개

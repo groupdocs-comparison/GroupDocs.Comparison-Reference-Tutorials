@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Streams'i Kullanarak .NET'te Belge Karşılaştırmasını Otomatikleştirin"
 "url": "/tr/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Streams'i Kullanarak .NET'te Belge Karşılaştırmasını Otomatikleştirin
 ## giriiş
 Belge karşılaştırmasını otomatikleştirmenin etkili bir yolunu mu arıyorsunuz? Bu eğitim, .NET ortamında GroupDocs.Comparison for .NET ile akışları kullanarak belgelerin nasıl karşılaştırılacağını gösterir. Dosya akışlarını kullanarak, bu yaklaşım özellikle büyük dosyalarla veya ağ tabanlı kaynaklarla uğraşırken esneklik ve verimlilik sunar.

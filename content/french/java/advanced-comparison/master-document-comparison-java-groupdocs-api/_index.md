@@ -4,8 +4,8 @@
 "title": "Comparaison de documents maîtres en Java avec l'API GroupDocs.Comparison"
 "url": "/fr/java/advanced-comparison/master-document-comparison-java-groupdocs-api/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser la comparaison de documents et la gestion du crédit en Java avec l'API GroupDocs.Comparison
 
 Dans le contexte économique actuel, où tout évolue rapidement, il est crucial de gérer efficacement les documents et de suivre l'utilisation des ressources. Que vous compariez des contrats juridiques, éditiez des manuels techniques ou que vous suiviez simplement vos crédits d'utilisation de logiciels, des outils adaptés peuvent faire toute la différence. Dans ce tutoriel, nous découvrirons comment exploiter la puissance de GroupDocs.Comparison pour Java pour comparer des documents de manière fluide et surveiller la consommation de crédits.

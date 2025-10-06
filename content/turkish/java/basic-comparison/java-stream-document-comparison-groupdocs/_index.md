@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparer&#58;ı Kullanarak Java Stream Belge Karşılaştırmasını Uygulayın Kapsamlı Bir Kılavuz"
 "url": "/tr/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparer Kullanarak Java Stream Belge Karşılaştırmasını Uygulama: Kapsamlı Bir Kılavuz
 
 ## giriiş

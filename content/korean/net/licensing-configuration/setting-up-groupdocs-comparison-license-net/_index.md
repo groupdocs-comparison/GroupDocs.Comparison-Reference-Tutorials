@@ -4,8 +4,8 @@
 "title": ".NET에서 GroupDocs.Comparison 라이선스를 설정하는 방법&#58; 단계별 가이드"
 "url": "/ko/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET에서 GroupDocs.Comparison 라이선스를 설정하는 방법
 
 ## 소개

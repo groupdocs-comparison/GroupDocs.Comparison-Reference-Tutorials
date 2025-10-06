@@ -3,8 +3,8 @@
 "title": "Tutorial Keamanan dan Perlindungan Dokumen untuk GroupDocs.Comparison Java"
 "url": "/id/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Tutorial Keamanan dan Perlindungan Dokumen untuk GroupDocs.Comparison Java
 
 Kuasai fitur keamanan dokumen dengan tutorial GroupDocs.Comparison terperinci kami untuk Java. Panduan komprehensif ini menunjukkan cara membandingkan dokumen yang dilindungi kata sandi, menetapkan kata sandi untuk file yang dihasilkan, menerapkan alur kerja perbandingan yang aman, dan mengelola perlindungan dokumen secara terprogram. Setiap tutorial menyediakan contoh kode Java yang berfungsi untuk operasi perbandingan dokumen yang aman, membantu Anda membangun aplikasi yang menjaga kerahasiaan sekaligus memungkinkan perbandingan dokumen yang efektif.

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 自定义 Java 文档比较中的插入项目样式"
 "url": "/zh/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 自定义 Java 文档比较中的插入项目样式
 
 ## 介绍

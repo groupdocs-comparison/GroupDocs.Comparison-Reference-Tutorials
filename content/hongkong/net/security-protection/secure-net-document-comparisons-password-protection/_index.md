@@ -4,8 +4,8 @@
 "title": ".NET 中的安全性文件比較&#58;使用 GroupDocs.Comparison 密碼保護結果"
 "url": "/zh-hant/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # 在 .NET 中保護文件比較：使用 GroupDocs.Comparison 對結果進行密碼保護
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "Veilige documentvergelijkingen in .NET&#58; resultaten met wachtwoordbeveiliging met GroupDocs.Comparison"
 "url": "/nl/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Beveilig uw documentvergelijkingen in .NET: beveilig uw resultaten met een wachtwoord met GroupDocs.Comparison
 
 ## Invoering

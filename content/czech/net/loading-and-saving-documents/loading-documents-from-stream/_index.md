@@ -5,8 +5,8 @@
 "title": "Načítání dokumentů ze streamu v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Načítání dokumentů ze streamu v porovnání GroupDocs pro .NET
 
 ## Zavedení

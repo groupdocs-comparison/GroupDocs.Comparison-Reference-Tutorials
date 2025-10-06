@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 流在 .NET 中自動執行文件比較"
 "url": "/zh-hant/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 流在 .NET 中自動執行文件比較
 ## 介紹
 您是否正在尋找一種高效的自動化文件比較方法？本教學課程示範如何在 .NET 環境中使用 GroupDocs.Comparison for .NET 來比較文件。透過利用文件流，這種方法提供了靈活性和效率，尤其是在處理大型文件或基於網路的資源時。

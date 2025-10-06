@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET 自動執行文件比較－完整指南"
 "url": "/zh-hant/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 自動進行文件比較
 ## 入門
 在當今快節奏的文件管理領域，與手動方法相比，自動化文件比較可以節省時間並減少錯誤。本指南將向您展示如何利用 GroupDocs.Comparison for .NET 有效地自動化此流程。

@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás automatizálása a GroupDocs.Comparison .NET segítségével – Teljes körű útmutató"
 "url": "/hu/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás automatizálása a GroupDocs.Comparison .NET segítségével
 ## Első lépések
 A dokumentumkezelés mai gyors tempójú világában a dokumentumok összehasonlításának automatizálása időt takaríthat meg és csökkentheti a hibákat a manuális módszerekkel összehasonlítva. Ez az átfogó útmutató bemutatja, hogyan használhatja a GroupDocs.Comparison for .NET-et a folyamat hatékony automatizálására.

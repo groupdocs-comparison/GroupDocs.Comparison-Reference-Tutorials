@@ -4,8 +4,8 @@
 "title": "Как игнорировать верхние и нижние колонтитулы при сравнении документов с помощью GroupDocs.Comparison .NET"
 "url": "/ru/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Как игнорировать верхние и нижние колонтитулы при сравнении документов с помощью GroupDocs.Comparison .NET
 
 ## Введение

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["csharp", "document-comparison", "groupdocs", "multi-file-comparison"]
+type: docs
 ---
-
 # Multi Document Comparison .NET - Compare Multiple Files with C# (2025 Guide)
 
 ## Introduction

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "document-comparison", "java-library", "licensing"]
+type: docs
 ---
-
 # GroupDocs Comparison Java License Setup: Your Complete Developer Guide
 
 ## Why You Need This Guide (And What's Inside)

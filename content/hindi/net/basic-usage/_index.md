@@ -5,8 +5,8 @@
 "title": "मूल उपयोग"
 "url": "/hi/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # मूल उपयोग
 
 ## परिचय

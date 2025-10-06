@@ -4,8 +4,8 @@
 "title": "Gestión de cambios en documentos maestros&#58; aceptar y rechazar ediciones con GroupDocs.Comparison .NET"
 "url": "/es/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Gestión de cambios de documentos maestros con GroupDocs.Comparison .NET
 
 ## Introducción

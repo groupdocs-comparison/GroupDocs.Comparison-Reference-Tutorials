@@ -4,8 +4,8 @@
 "title": "Automatizace porovnávání dokumentů Wordu pomocí GroupDocs.Comparison .NET – kompletní tutoriál"
 "url": "/cs/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Automatizace porovnávání dokumentů Wordu pomocí GroupDocs.Comparison .NET: Kompletní tutoriál
 
 ## Zavedení

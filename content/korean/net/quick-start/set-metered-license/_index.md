@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교 - 미터링된 라이선스 설정"
 "url": "/ko/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # .NET용 GroupDocs 비교 - 미터링된 라이선스 설정
 
 ## 소개

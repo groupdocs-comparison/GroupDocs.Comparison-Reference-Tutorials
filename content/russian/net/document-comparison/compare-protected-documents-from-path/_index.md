@@ -5,8 +5,8 @@
 "title": "Сравнение защищенных документов из Path - GroupDocs.Comparison для .NET"
 "url": "/ru/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Сравнение защищенных документов из Path - GroupDocs.Comparison для .NET
 
 ## Введение

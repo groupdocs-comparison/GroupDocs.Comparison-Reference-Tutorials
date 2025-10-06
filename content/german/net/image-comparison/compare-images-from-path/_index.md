@@ -5,8 +5,8 @@
 "title": "Bilder vom Pfad vergleichen – GroupDocs.Comparison für .NET"
 "url": "/de/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Bilder vom Pfad vergleichen – GroupDocs.Comparison für .NET
 
 ## Einführung

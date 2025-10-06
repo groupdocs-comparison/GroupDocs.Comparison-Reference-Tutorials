@@ -5,8 +5,8 @@
 "title": "Belgeleri Yükleme ve Kaydetme"
 "url": "/tr/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Belgeleri Yükleme ve Kaydetme
 
 ## giriiş

@@ -6,8 +6,8 @@
 "title": "ドキュメント比較ソフトウェア API チュートリアル | GroupDocs.Comparison"
 "url": "/ja/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison チュートリアルと開発者ガイド
 
 ![GroupDocs.比較バナー](./groupdocs-comparison-net.svg)

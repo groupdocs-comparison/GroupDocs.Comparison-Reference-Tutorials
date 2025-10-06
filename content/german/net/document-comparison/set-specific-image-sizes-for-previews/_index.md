@@ -5,8 +5,8 @@
 "title": "Festlegen bestimmter Bildgrößen für Vorschauen"
 "url": "/de/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Festlegen bestimmter Bildgrößen für Vorschauen
 
 ## Einführung

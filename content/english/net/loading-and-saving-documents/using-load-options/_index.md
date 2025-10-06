@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["groupdocs", "load-options", "custom-fonts", "net-api", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs Comparison Load Options - Handle Custom Fonts in .NET
 
 ## Introduction

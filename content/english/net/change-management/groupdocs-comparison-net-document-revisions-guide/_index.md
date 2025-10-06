@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Word Documents", "NET", "Document Revisions", "C#"]
+type: docs
 ---
-
 # Accept Reject Changes Word Documents .NET: The Complete Developer's Guide
 
 ## Why This Matters for Developers

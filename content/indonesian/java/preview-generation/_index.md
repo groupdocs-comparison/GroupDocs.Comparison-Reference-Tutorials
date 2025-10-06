@@ -3,8 +3,8 @@
 "title": "Tutorial Pembuatan Pratinjau untuk GroupDocs.Comparison Java"
 "url": "/id/java/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Tutorial Pembuatan Pratinjau untuk GroupDocs.Comparison Java
 
 Pelajari cara membuat pratinjau dokumen dengan tutorial GroupDocs.Comparison kami yang komprehensif untuk pengembang Java. Panduan praktis ini menunjukkan cara membuat pratinjau halaman untuk dokumen sumber, dokumen target, dan hasil perbandingan, menyesuaikan ukuran gambar pratinjau, dan menerapkan pembersihan sumber daya untuk penggunaan memori yang optimal. Setiap tutorial menyertakan contoh kode Java terperinci untuk menerapkan fungsionalitas pratinjau dokumen secara efisien dalam aplikasi perbandingan Anda.

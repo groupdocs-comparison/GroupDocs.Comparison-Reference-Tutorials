@@ -5,8 +5,8 @@
 "title": "So sánh hình ảnh từ Stream - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # So sánh hình ảnh từ Stream - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

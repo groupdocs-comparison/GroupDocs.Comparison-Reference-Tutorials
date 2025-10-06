@@ -3,8 +3,8 @@
 "title": "Tutorial Informasi Dokumen untuk GroupDocs.Comparison Java"
 "url": "/id/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Tutorial Informasi Dokumen untuk GroupDocs.Comparison Java
 
 Tutorial informasi dokumen kami menyediakan panduan untuk mengakses metadata dokumen menggunakan GroupDocs.Comparison di Java. Panduan praktis ini menunjukkan kepada Anda cara mengambil informasi tentang dokumen sumber, target, dan hasil, menentukan format file, dan mengakses properti dokumen secara terprogram. Setiap tutorial menyertakan contoh kode Java yang berfungsi untuk skenario informasi dokumen umum, membantu Anda membangun aplikasi yang dapat menganalisis dan memproses data dokumen secara efektif.

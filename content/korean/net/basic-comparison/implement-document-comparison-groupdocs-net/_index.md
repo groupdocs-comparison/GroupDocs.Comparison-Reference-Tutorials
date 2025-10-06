@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 .NET에서 문서 비교를 구현하는 방법 - 단계별 가이드"
 "url": "/ko/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 .NET에서 문서 비교를 구현하는 방법: 단계별 가이드
 
 ## 소개

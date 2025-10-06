@@ -4,8 +4,8 @@
 "title": "JavaのStreamからGroupDocsライセンスを設定する方法 - ステップバイステップガイド"
 "url": "/ja/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # JavaでStreamからGroupDocsライセンスを設定する方法：ステップバイステップガイド
 
 ## 導入

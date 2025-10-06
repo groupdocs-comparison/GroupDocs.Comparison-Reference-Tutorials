@@ -5,8 +5,8 @@
 "title": "ストリームからのドキュメントの比較 - GroupDocs.Comparison for .NET"
 "url": "/ja/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # ストリームからのドキュメントの比較 - GroupDocs.Comparison for .NET
 
 ## 導入

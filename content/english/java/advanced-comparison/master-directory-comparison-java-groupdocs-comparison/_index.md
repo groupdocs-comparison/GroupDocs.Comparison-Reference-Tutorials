@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["directory-comparison", "file-audits", "groupdocs", "java-tutorial"]
+type: docs
 ---
-
 # Java Directory Comparison Tool - Complete Guide with GroupDocs.Comparison
 
 ## Introduction

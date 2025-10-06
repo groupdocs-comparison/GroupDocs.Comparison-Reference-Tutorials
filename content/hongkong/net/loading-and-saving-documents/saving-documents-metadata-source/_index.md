@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比較中儲存 .NET 文件元資料來源"
 "url": "/zh-hant/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # 在 GroupDocs 比較中儲存 .NET 文件元資料來源
 
 ## 介紹

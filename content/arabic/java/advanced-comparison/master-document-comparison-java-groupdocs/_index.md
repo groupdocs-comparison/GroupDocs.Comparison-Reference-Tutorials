@@ -4,8 +4,8 @@
 "title": "مقارنة المستندات الرئيسية في Java - باستخدام GroupDocs. مقارنة لمستندات Word والنصوص والبريد الإلكتروني"
 "url": "/ar/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات في Java باستخدام GroupDocs.Comparison
 
 **مقارنة مستندات Word وText وEmail المتعددة بكفاءة باستخدام GroupDocs.Comparison لـ Java**

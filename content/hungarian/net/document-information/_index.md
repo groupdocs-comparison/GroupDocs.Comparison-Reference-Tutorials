@@ -3,8 +3,8 @@
 "title": "Dokumentuminformációs oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Dokumentuminformációs oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Dokumentuminformációs oktatóanyagaink útmutatást nyújtanak a dokumentumok metaadatainak eléréséhez a GroupDocs.Comparison használatával .NET-ben. Ezek a gyakorlati útmutatók bemutatják, hogyan kérhet le információkat a forrás-, cél- és eredménydokumentumokról, hogyan határozhatja meg a fájlformátumokat, és hogyan érheti el a dokumentumok tulajdonságait programozottan. Minden oktatóanyag működő C# kódpéldákat tartalmaz a gyakori dokumentuminformációs forgatókönyvekhez, segítve olyan alkalmazások létrehozását, amelyek hatékonyan képesek elemezni és feldolgozni a dokumentumadatokat.

@@ -5,8 +5,8 @@
 "title": "Ustaw licencję licznikową - porównanie GroupDocs dla .NET"
 "url": "/pl/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Ustaw licencję licznikową - porównanie GroupDocs dla .NET
 
 ## Wstęp

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "metadata", "document-analysis", "csharp"]
+type: docs
 ---
-
 # Extract Document Metadata .NET - Complete Developer Guide
 
 ## Why Document Metadata Extraction Matters (And How to Do It Right)

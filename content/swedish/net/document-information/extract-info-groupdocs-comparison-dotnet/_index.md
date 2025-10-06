@@ -4,8 +4,8 @@
 "title": "Hur man extraherar dokumentinformation med GroupDocs.Comparison .NET-biblioteket"
 "url": "/sv/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Hur man extraherar dokumentinformation med GroupDocs.Comparison .NET-biblioteket
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "Tự động so sánh tài liệu với GroupDocs.Comparison .NET&#58; Hướng dẫn đầy đủ"
 "url": "/vi/net/getting-started/automate-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Tự động so sánh tài liệu với GroupDocs.Comparison .NET
 ## Bắt đầu
 Trong thế giới quản lý tài liệu phát triển nhanh như hiện nay, việc tự động so sánh tài liệu có thể tiết kiệm thời gian và giảm lỗi so với phương pháp thủ công. Hướng dẫn toàn diện này sẽ chỉ cho bạn cách sử dụng GroupDocs.Comparison cho .NET để tự động hóa quy trình này một cách hiệu quả.

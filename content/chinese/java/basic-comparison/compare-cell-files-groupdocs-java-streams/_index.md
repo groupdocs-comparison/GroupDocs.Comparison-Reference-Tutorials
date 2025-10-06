@@ -4,8 +4,8 @@
 "title": "如何使用 Java 中的 GroupDocs.Comparison 比较单元格文件——综合指南"
 "url": "/zh/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 Java 中使用 GroupDocs.Comparison 比较单元格文件
 
 ## 介绍

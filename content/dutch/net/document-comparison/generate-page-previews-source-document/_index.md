@@ -5,8 +5,8 @@
 "title": "Genereer paginavoorbeelden voor brondocument"
 "url": "/nl/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Genereer paginavoorbeelden voor brondocument
 
 ## Invoering

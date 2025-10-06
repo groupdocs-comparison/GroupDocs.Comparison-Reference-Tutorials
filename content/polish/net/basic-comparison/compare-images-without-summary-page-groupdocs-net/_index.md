@@ -4,8 +4,8 @@
 "title": "Jak porównywać obrazy bez strony podsumowania za pomocą GroupDocs.Comparison dla .NET"
 "url": "/pl/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak wdrożyć porównanie obrazów bez strony podsumowania za pomocą GroupDocs.Comparison dla .NET
 
 ## Wstęp

@@ -4,8 +4,8 @@
 "title": "Comparaison de documents Java à l'aide de l'API GroupDocs.Comparison &#58; une approche basée sur les flux"
 "url": "/fr/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser Java : Comparaison de documents avec l'API GroupDocs.Comparison
 
 Bienvenue dans ce guide complet où nous explorons la comparaison de documents en Java grâce à la puissante API GroupDocs.Comparison. Que vous gériez des documents juridiques, des articles universitaires ou tout autre fichier texte, une comparaison efficace est essentielle. Dans ce tutoriel, nous vous expliquerons comment accepter ou rejeter les modifications détectées entre deux documents à l'aide de flux en Java.

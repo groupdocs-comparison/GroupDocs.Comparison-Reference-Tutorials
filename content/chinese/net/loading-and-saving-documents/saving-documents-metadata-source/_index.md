@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中保存 .NET 文档元数据源"
 "url": "/zh/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # 在 GroupDocs 比较中保存 .NET 文档元数据源
 
 ## 介绍

@@ -4,8 +4,8 @@
 "title": "مقارنة المستندات الرئيسية في Java باستخدام واجهة برمجة التطبيقات GroupDocs.Comparison"
 "url": "/ar/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات في Java باستخدام واجهة برمجة التطبيقات GroupDocs.Comparison
 
 ## مقدمة

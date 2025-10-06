@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中保存文档元数据目标（适用于 .NET）"
 "url": "/zh/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # 在 GroupDocs 比较中保存文档元数据目标（适用于 .NET）
 
 ## 介绍

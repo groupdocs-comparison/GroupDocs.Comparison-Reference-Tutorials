@@ -5,8 +5,8 @@
 "title": "Licenc beállítása fájlból - GroupDocs Comparison for .NET"
 "url": "/hu/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Licenc beállítása fájlból - GroupDocs Comparison for .NET
 
 ## Bevezetés

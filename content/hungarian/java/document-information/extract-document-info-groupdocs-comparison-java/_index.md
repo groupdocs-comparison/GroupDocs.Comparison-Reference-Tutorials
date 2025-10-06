@@ -4,8 +4,8 @@
 "title": "Dokumentum metaadatok kinyerése a GroupDocs.Comparison for Java használatával – Átfogó útmutató"
 "url": "/hu/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum metaadatok kinyerése a GroupDocs.Comparison segítségével Java-ban
 
 A digitális korban a dokumentumok tulajdonságainak kezelése és elemzése elengedhetetlen számos szektorban, például jogi, adminisztratív vagy vállalati környezetben. A dokumentumok metaadatainak megértése jelentősen növelheti a termelékenységet. Ez az átfogó útmutató végigvezeti Önt a GroupDocs.Comparison könyvtár használatán, hogy könnyedén kinyerhesse a dokumentumokból a létfontosságú információkat, például a fájltípust, az oldalszámot és a méretet.

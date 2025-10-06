@@ -5,8 +5,8 @@
 "title": "従量制ライセンスの設定 - GroupDocs .NET の比較"
 "url": "/ja/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # 従量制ライセンスの設定 - GroupDocs .NET の比較
 
 ## 導入

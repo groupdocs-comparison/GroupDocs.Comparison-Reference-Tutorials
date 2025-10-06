@@ -5,8 +5,8 @@
 "title": "Vergelijking van wijzigingen accepteren en afwijzen in GroupDocs voor .NET"
 "url": "/nl/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Vergelijking van wijzigingen accepteren en afwijzen in GroupDocs voor .NET
 
 ## Invoering

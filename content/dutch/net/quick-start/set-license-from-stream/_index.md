@@ -5,8 +5,8 @@
 "title": "Licentie instellen vanuit stream - GroupDocs-vergelijking voor .NET"
 "url": "/nl/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Licentie instellen vanuit stream - GroupDocs-vergelijking voor .NET
 
 ## Invoering

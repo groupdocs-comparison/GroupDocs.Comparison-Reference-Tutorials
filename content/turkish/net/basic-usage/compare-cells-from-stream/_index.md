@@ -5,8 +5,8 @@
 "title": "Akıştan Hücreleri Karşılaştırın - GroupDocs.Comparison for .NET"
 "url": "/tr/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Akıştan Hücreleri Karşılaştırın - GroupDocs.Comparison for .NET
 
 ## giriiş

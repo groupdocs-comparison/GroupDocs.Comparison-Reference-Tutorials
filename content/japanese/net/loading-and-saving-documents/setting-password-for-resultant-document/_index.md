@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET で結果ドキュメントにパスワードを設定する"
 "url": "/ja/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # GroupDocs Comparison for .NET で結果ドキュメントにパスワードを設定する
 
 ## 導入

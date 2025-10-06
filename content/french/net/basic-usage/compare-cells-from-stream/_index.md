@@ -5,8 +5,8 @@
 "title": "Comparer les cellules du flux - GroupDocs.Comparison pour .NET"
 "url": "/fr/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Comparer les cellules du flux - GroupDocs.Comparison pour .NET
 
 ## Introduction

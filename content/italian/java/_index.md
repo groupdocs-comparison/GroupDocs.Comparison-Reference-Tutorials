@@ -4,8 +4,8 @@
 "title": "Guida completa al tutorial di GroupDocs.Comparison per Java"
 "url": "/it/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison per Java: tutorial passo passo ed esempi di codice
 
 ## Impara a confrontare i documenti in Java: veloce, preciso e potente

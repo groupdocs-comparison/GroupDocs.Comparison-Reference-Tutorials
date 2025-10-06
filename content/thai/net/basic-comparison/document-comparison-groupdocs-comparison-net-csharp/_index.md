@@ -4,8 +4,8 @@
 "title": "นำการเปรียบเทียบเอกสารไปใช้ใน .NET โดยใช้ GroupDocs.Comparison สำหรับไฟล์ Word จาก Streams"
 "url": "/th/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการใช้การเปรียบเทียบเอกสารจาก Stream ด้วย GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

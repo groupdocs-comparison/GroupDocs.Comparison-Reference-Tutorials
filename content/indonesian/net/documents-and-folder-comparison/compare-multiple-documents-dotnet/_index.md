@@ -5,8 +5,8 @@
 "title": "Bandingkan Beberapa Dokumen dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # Bandingkan Beberapa Dokumen dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

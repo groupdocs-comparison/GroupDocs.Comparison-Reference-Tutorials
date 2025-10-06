@@ -5,8 +5,8 @@
 "title": "Schone bronnen na paginavoorbeelden"
 "url": "/nl/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Schone bronnen na paginavoorbeelden
 
 ## Invoering

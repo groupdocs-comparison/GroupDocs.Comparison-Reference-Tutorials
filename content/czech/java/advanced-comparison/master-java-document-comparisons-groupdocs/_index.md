@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v Javě pomocí knihovny GroupDocs.Comparison"
 "url": "/cs/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v Javě pomocí GroupDocs.Comparison
 
 Objevte efektivní proces inicializace, porovnávání a aktualizace změn v dokumentech pomocí výkonné knihovny GroupDocs.Comparison pro Javu. Tento tutoriál vás provede nastavením prostředí, pochopením klíčových funkcí a implementací reálných řešení.

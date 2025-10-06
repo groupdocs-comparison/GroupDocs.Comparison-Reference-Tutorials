@@ -5,8 +5,8 @@
 "title": "สร้างตัวอย่างหน้าสำหรับเอกสารต้นฉบับ"
 "url": "/th/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # สร้างตัวอย่างหน้าสำหรับเอกสารต้นฉบับ
 
 ## การแนะนำ

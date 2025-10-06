@@ -4,8 +4,8 @@
 "title": "如何在 GroupDocs.Comparison for Java 中设置文件许可证——综合指南"
 "url": "/zh/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # 在 GroupDocs.Comparison for Java 中实现从文件设置许可证
 
 ## 介绍

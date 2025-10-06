@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Licensing", ".NET Development"]
 tags: ["groupdocs", "filestream", "license-configuration", "dotnet", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET License Setup - Complete FileStream Guide
 
 **Setting up licensing properly can make or break your document comparison application.** If you've ever struggled with GroupDocs.Comparison for .NET licensing (and let's be honest, who hasn't?), you're in the right place.

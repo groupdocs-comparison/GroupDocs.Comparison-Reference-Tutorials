@@ -3,8 +3,8 @@
 "title": "Licentie- en configuratiehandleidingen voor GroupDocs.Comparison .NET"
 "url": "/nl/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Licentie- en configuratiehandleidingen voor GroupDocs.Comparison .NET
 
 Onze licentie- en configuratiehandleidingen bieden essentiële begeleiding voor het correct installeren van GroupDocs.Comparison in .NET-applicaties. Deze stapsgewijze handleidingen laten zien hoe u verschillende licentieopties implementeert, gefactureerde dataverbruik configureert, de licentiestatus controleert en bibliotheekinstellingen optimaliseert voor uw specifieke vereisten. Elke handleiding bevat gedetailleerde C#-codevoorbeelden voor een correcte initialisatie en configuratie, zodat u correct gelicentieerde en geoptimaliseerde oplossingen voor documentvergelijking kunt bouwen.

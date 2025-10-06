@@ -4,8 +4,8 @@
 "title": "Δημιουργήστε προεπισκοπήσεις εγγράφων αποτελεσματικά με το GroupDocs.Comparison για προγραμματιστές .NET"
 "url": "/el/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Δημιουργήστε προεπισκοπήσεις εγγράφων αποτελεσματικά με το GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

@@ -4,8 +4,8 @@
 "title": "مقارنة المستندات الرئيسية وعرض HTML في Java باستخدام GroupDocs.Comparison"
 "url": "/ar/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات وعرض HTML في Java باستخدام GroupDocs.Comparison
 
 ## مقدمة

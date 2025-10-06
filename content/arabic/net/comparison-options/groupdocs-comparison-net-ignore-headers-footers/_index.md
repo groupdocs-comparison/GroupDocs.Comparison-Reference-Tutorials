@@ -4,8 +4,8 @@
 "title": "كيفية تجاهل الرؤوس والتذييلات في مقارنات المستندات باستخدام GroupDocs.Comparison .NET"
 "url": "/ar/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تجاهل الرؤوس والتذييلات في مقارنات المستندات باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

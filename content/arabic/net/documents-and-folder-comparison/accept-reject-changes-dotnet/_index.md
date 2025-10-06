@@ -5,8 +5,8 @@
 "title": "قبول ورفض التغييرات في مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # قبول ورفض التغييرات في مقارنة GroupDocs لـ .NET
 
 ## مقدمة

@@ -5,8 +5,8 @@
 "title": "Documenten laden vanuit stream in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Documenten laden vanuit stream in GroupDocs Vergelijking voor .NET
 
 ## Invoering

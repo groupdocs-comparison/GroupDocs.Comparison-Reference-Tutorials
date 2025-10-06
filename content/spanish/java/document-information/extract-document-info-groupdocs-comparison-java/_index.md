@@ -4,8 +4,8 @@
 "title": "Extraer metadatos de documentos con GroupDocs.Comparison para Java&#58; una guía completa"
 "url": "/es/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Extraer metadatos de documentos con GroupDocs.Comparison para Java
 
 En la era digital, gestionar y analizar las propiedades de los documentos es esencial en diversos sectores, como el legal, el administrativo o el corporativo. Comprender los metadatos de sus documentos puede aumentar significativamente la productividad. Esta guía completa le guiará en el uso de la biblioteca GroupDocs.Comparison para extraer fácilmente información vital, como el tipo de archivo, el número de páginas y el tamaño de los documentos.

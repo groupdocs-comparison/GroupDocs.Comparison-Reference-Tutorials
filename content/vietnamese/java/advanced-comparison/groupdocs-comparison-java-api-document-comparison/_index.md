@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu chính trong Java&#58; Sử dụng API GroupDocs.Comparison để phân tích tệp ô hiệu quả"
 "url": "/vi/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong Java với API GroupDocs.Comparison
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Kullanarak .NET'te Birden Fazla Parola Korumalı Belgeyi Karşılaştırma"
 "url": "/tr/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Kullanarak .NET'te Birden Fazla Parola Korumalı Belgeyi Karşılaştırma
 
 ## giriiş

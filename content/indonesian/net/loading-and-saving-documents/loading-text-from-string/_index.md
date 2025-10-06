@@ -5,8 +5,8 @@
 "title": "Memuat Teks dari String dalam Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Memuat Teks dari String dalam Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

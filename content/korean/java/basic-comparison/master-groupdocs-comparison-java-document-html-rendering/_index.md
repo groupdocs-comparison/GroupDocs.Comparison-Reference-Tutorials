@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용한 Java에서의 문서 비교 및 HTML 렌더링 마스터하기"
 "url": "/ko/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java에서 문서 비교 및 HTML 렌더링 마스터하기
 
 ## 소개

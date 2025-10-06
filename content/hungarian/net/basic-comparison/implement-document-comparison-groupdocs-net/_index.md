@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás implementálása .NET-ben a GroupDocs.Comparison használatával – lépésről lépésre útmutató"
 "url": "/hu/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás implementálása .NET-ben a GroupDocs.Comparison használatával: lépésről lépésre útmutató
 
 ## Bevezetés

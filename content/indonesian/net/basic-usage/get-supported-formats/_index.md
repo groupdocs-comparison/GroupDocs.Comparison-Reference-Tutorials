@@ -5,8 +5,8 @@
 "title": "Dapatkan Format yang Didukung - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Dapatkan Format yang Didukung - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

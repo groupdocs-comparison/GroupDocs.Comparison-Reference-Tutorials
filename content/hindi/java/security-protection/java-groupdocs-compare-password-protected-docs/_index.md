@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison के साथ जावा में पासवर्ड-संरक्षित दस्तावेज़ तुलना में महारत हासिल करना"
 "url": "/hi/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा में पासवर्ड-संरक्षित दस्तावेज़ तुलना में महारत हासिल करना
 
 ## परिचय

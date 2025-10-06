@@ -4,8 +4,8 @@
 "title": "使用 Java 中的 GroupDocs.Comparison 实现文档元数据——完整指南"
 "url": "/zh/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 Java 中的 GroupDocs.Comparison 实现文档元数据：完整指南
 
 ## 介绍

@@ -3,8 +3,8 @@
 "title": "GroupDocs için Karşılaştırma Seçenekleri ve Ayarlar Eğitimleri.Comparison Java"
 "url": "/tr/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs için Karşılaştırma Seçenekleri ve Ayarlar Eğitimleri.Comparison Java
 
 Java için GroupDocs.Comparison seçenekleri eğitimlerimizle belge karşılaştırmasını ince ayarlamayı öğrenin. Bu ayrıntılı kılavuzlar, karşılaştırma duyarlılığını nasıl yapılandıracağınızı, değişiklik algılama algoritmalarını nasıl özelleştireceğinizi, farklı değişiklik türleri için görüntüleme tercihlerini nasıl ayarlayacağınızı ve özel karşılaştırma kurallarını nasıl uygulayacağınızı gösterir. Her eğitim, özel karşılaştırma seçeneklerini uygulamak için çalışan Java kod örnekleri içerir ve belirli belge analizi gereksinimlerinize tam olarak uyarlanabilen karşılaştırma uygulamaları oluşturmanıza yardımcı olur.

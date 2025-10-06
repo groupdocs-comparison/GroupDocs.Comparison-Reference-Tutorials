@@ -5,8 +5,8 @@
 "title": "比較 GroupDocs .NET 中的資料夾"
 "url": "/zh-hant/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # 比較 GroupDocs .NET 中的資料夾
 
 ## 介紹

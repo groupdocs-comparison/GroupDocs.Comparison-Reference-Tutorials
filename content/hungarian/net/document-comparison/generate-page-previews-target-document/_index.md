@@ -5,8 +5,8 @@
 "title": "Oldal előnézetek generálása a céldokumentumhoz"
 "url": "/hu/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Oldal előnézetek generálása a céldokumentumhoz
 
 ## Bevezetés

@@ -4,8 +4,8 @@
 "title": "Implémenter la comparaison de documents dans .NET à l'aide de GroupDocs.Comparison pour les fichiers Word à partir de flux"
 "url": "/fr/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Comment implémenter la comparaison de documents à partir de flux avec GroupDocs.Comparison pour .NET
 
 ## Introduction

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET で従量制ライセンスを設定する方法 - ステップバイステップガイド"
 "url": "/ja/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET で従量制ライセンスを設定する方法: ステップバイステップガイド
 
 ## 導入

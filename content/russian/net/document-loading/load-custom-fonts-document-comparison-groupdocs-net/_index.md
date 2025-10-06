@@ -4,8 +4,8 @@
 "title": "Как загрузить пользовательские шрифты для сравнения документов с помощью GroupDocs.Comparison .NET"
 "url": "/ru/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Как загрузить пользовательские шрифты для сравнения документов с помощью GroupDocs.Comparison .NET
 
 ## Введение

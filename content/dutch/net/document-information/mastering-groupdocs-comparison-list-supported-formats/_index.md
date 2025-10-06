@@ -4,8 +4,8 @@
 "title": "Hoe u alle ondersteunde bestandsindelingen in GroupDocs.Comparison voor .NET kunt weergeven"
 "url": "/nl/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Hoe u alle ondersteunde bestandsindelingen in GroupDocs.Comparison voor .NET kunt weergeven
 
 ## Invoering

@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET における変更の承認と拒否"
 "url": "/ja/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs Comparison for .NET における変更の承認と拒否
 
 ## 導入

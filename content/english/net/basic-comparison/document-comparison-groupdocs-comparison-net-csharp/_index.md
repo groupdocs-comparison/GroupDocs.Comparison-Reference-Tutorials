@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Comparison", "C# streams", "document comparison", "NET development"]
+type: docs
 ---
-
 # Stream Document Comparison in .NET
 
 ## Introduction

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["groupdocs", "net-api", "document-loading", "comparison-tutorial"]
+type: docs
 ---
-
 # GroupDocs Comparison .NET Document Loading - Complete 2025 Guide
 
 ## Introduction

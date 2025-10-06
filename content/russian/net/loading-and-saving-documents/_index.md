@@ -5,8 +5,8 @@
 "title": "Загрузка и сохранение документов"
 "url": "/ru/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Загрузка и сохранение документов
 
 ## Введение

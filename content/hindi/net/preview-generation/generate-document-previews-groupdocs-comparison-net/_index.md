@@ -4,8 +4,8 @@
 "title": ".NET डेवलपर्स के लिए GroupDocs.तुलना के साथ कुशलतापूर्वक दस्तावेज़ पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.तुलना के साथ कुशलतापूर्वक दस्तावेज़ पूर्वावलोकन उत्पन्न करें
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Perbandingan Menyimpan Sumber Metadata Dokumen di GroupDocs untuk .NET"
 "url": "/id/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Perbandingan Menyimpan Sumber Metadata Dokumen di GroupDocs untuk .NET
 
 ## Perkenalan

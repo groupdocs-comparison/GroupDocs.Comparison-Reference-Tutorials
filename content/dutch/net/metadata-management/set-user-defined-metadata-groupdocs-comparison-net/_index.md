@@ -4,8 +4,8 @@
 "title": "Gebruikersgedefinieerde metagegevens instellen in documenten met GroupDocs.Comparison voor .NET | Handleiding voor documentbeheer"
 "url": "/nl/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Gebruikersgedefinieerde metagegevens instellen in documenten met GroupDocs.Comparison voor .NET
 
 ## Invoering

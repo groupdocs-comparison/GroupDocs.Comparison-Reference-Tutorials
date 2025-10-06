@@ -4,8 +4,8 @@
 "title": "जावा में स्ट्रीम से ग्रुपडॉक्स लाइसेंस कैसे सेट करें&#58; एक चरण-दर-चरण गाइड"
 "url": "/hi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # जावा में स्ट्रीम से ग्रुपडॉक्स लाइसेंस कैसे सेट करें: एक चरण-दर-चरण मार्गदर्शिका
 
 ## परिचय

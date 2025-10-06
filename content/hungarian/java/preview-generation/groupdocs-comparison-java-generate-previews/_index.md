@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison elsajátítása Java-ban – Könnyed dokumentum előnézet generálás"
 "url": "/hu/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison elsajátítása Java-ban: Dokumentum előnézet generálása könnyedén
 
 ## Bevezetés

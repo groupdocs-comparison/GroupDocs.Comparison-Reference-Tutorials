@@ -5,8 +5,8 @@
 "title": "基本用法"
 "url": "/zh/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # 基本用法
 
 ## 介绍

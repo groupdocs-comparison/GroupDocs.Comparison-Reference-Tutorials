@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Dizeden Metin Yükleme"
 "url": "/tr/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Dizeden Metin Yükleme
 
 ## giriiş

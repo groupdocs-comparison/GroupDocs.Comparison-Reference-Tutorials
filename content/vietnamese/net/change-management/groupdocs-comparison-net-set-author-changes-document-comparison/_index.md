@@ -4,8 +4,8 @@
 "title": "Thiết lập Tác giả của Thay đổi trong So sánh Tài liệu Sử dụng GroupDocs.Comparison cho .NET"
 "url": "/vi/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Triển khai Bộ tác giả của những thay đổi trong So sánh tài liệu bằng GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

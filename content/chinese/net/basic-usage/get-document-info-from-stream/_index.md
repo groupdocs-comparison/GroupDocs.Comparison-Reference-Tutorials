@@ -5,8 +5,8 @@
 "title": "从流中获取文档信息 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # 从流中获取文档信息 - GroupDocs.Comparison for .NET
 
 ## 介绍

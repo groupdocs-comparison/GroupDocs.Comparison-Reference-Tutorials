@@ -5,8 +5,8 @@
 "title": "Tải tài liệu trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # Tải tài liệu trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

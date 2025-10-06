@@ -3,8 +3,8 @@
 "title": "Výukové programy pro načítání dokumentů pro GroupDocs.Comparison .NET"
 "url": "/cs/net/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Výukové programy pro načítání dokumentů pro GroupDocs.Comparison .NET
 
 Naše návody na načítání dokumentů poskytují komplexní pokyny pro přípravu dokumentů k porovnání v aplikacích .NET. Tyto podrobné návody ukazují, jak načítat dokumenty z lokálního úložiště, paměťových streamů a řetězcového obsahu a také jak konfigurovat možnosti načítání pro různé typy dokumentů. Každý návod obsahuje kompletní příklady kódu, které vám pomohou implementovat robustní funkce načítání dokumentů ve vašich porovnávacích aplikacích.

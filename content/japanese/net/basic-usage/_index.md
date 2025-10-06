@@ -5,8 +5,8 @@
 "title": "基本的な使い方"
 "url": "/ja/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # 基本的な使い方
 
 ## 導入

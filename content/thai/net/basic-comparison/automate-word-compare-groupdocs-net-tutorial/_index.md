@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบเอกสาร Word แบบอัตโนมัติโดยใช้ GroupDocs.Comparison .NET - บทช่วยสอนฉบับสมบูรณ์"
 "url": "/th/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # การเปรียบเทียบเอกสาร Word แบบอัตโนมัติโดยใช้ GroupDocs.Comparison .NET: บทช่วยสอนฉบับสมบูรณ์
 
 ## การแนะนำ

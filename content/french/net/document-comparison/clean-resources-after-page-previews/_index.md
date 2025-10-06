@@ -5,8 +5,8 @@
 "title": "Nettoyer les ressources après les aperçus de page"
 "url": "/fr/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Nettoyer les ressources après les aperçus de page
 
 ## Introduction

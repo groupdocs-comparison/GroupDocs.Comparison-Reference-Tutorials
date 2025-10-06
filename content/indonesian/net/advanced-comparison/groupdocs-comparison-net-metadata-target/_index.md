@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Utama di .NET; Pertahankan Metadata Menggunakan GroupDocs.Comparison"
 "url": "/id/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen di .NET: Mempertahankan Metadata dengan GroupDocs.Comparison
 ## Perkenalan
 Pernahkah Anda kesulitan membandingkan dokumen saat perlu menyimpan metadata tertentu? GroupDocs.Comparison untuk .NET adalah solusinya! Tutorial ini akan memandu Anda mengatur metadata dokumen target selama perbandingan, memastikan dokumen akhir Anda mempertahankan atribut yang diinginkan dengan lancar.

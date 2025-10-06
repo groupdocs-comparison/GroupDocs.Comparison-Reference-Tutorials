@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Lisanslama ve Yapılandırma Eğitimleri"
 "url": "/tr/net/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Lisanslama ve Yapılandırma Eğitimleri
 
 Lisanslama ve yapılandırma eğitimlerimiz, .NET uygulamalarında GroupDocs.Comparison'ı düzgün bir şekilde kurmak için temel rehberlik sağlar. Bu adım adım kılavuzlar, farklı lisanslama seçeneklerini nasıl uygulayacağınızı, ölçülü faturalandırmayı nasıl yapılandıracağınızı, lisans durumunu nasıl kontrol edeceğinizi ve kütüphane ayarlarını özel gereksinimleriniz için nasıl optimize edeceğinizi gösterir. Her eğitim, düzgün başlatma ve yapılandırma için ayrıntılı C# kod örnekleri içerir ve düzgün lisanslı ve optimize edilmiş belge karşılaştırma çözümleri oluşturmanıza yardımcı olur.

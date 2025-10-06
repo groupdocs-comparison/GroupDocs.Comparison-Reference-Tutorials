@@ -4,8 +4,8 @@
 "title": "Configuración de la licencia de GroupDocs.Comparison mediante URL en Java&#58; simplificación de la automatización de licencias"
 "url": "/es/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # Dominando GroupDocs.Comparison Java: Configuración de licencia mediante URL
 
 ## Introducción

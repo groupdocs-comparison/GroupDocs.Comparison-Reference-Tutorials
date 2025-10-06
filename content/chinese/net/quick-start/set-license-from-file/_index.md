@@ -5,8 +5,8 @@
 "title": "从文件设置许可证 - .NET 的 GroupDocs 比较"
 "url": "/zh/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # 从文件设置许可证 - .NET 的 GroupDocs 比较
 
 ## 介绍

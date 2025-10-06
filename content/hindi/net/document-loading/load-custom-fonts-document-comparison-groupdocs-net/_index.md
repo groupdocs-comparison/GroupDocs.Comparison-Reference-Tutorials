@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET का उपयोग करके दस्तावेज़ तुलना के लिए कस्टम फ़ॉन्ट कैसे लोड करें"
 "url": "/hi/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET का उपयोग करके दस्तावेज़ तुलना के लिए कस्टम फ़ॉन्ट कैसे लोड करें
 
 ## परिचय

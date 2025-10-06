@@ -5,8 +5,8 @@
 "title": "Alapvető használat"
 "url": "/hu/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Alapvető használat
 
 ## Bevezetés

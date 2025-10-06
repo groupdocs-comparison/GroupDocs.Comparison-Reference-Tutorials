@@ -4,8 +4,8 @@
 "title": "掌握 .NET 中的文档比较——GroupDocs.Comparison 使用综合指南"
 "url": "/zh/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 .NET 中的文档比较
 
 使用 GroupDocs.Comparison 释放 .NET 环境中自动化文档比较的潜力。本指南将帮助您高效管理文档版本，从而简化工作流程并提高生产力。

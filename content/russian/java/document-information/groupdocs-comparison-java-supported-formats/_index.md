@@ -4,8 +4,8 @@
 "title": "Извлечение поддерживаемых форматов файлов с помощью GroupDocs.Comparison для Java&#58; Полное руководство"
 "url": "/ru/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Получение поддерживаемых форматов файлов с помощью GroupDocs.Comparison для Java
 
 ## Введение

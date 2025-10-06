@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET で文字列からテキストを読み込む"
 "url": "/ja/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # GroupDocs Comparison for .NET で文字列からテキストを読み込む
 
 ## 導入

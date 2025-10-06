@@ -6,8 +6,8 @@
 "title": "Hướng dẫn sử dụng API phần mềm so sánh tài liệu | GroupDocs.Comparison"
 "url": "/vi/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison Hướng dẫn & Hướng dẫn dành cho nhà phát triển
 
 ![Biểu ngữ GroupDocs.Comparison](./groupdocs-comparison-net.svg)

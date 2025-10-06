@@ -4,8 +4,8 @@
 "title": "Hatékonyan végezzen mesterdokumentum-javításokat a GroupDocs.Comparison .NET segítségével – Átfogó útmutató"
 "url": "/hu/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentumjavítások elsajátítása a GroupDocs.Comparison .NET segítségével: lépésről lépésre útmutató
 
 ## Bevezetés

@@ -4,8 +4,8 @@
 "title": "كيفية تحميل الخطوط المخصصة لمقارنة المستندات باستخدام GroupDocs.Comparison .NET"
 "url": "/ar/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تحميل الخطوط المخصصة لمقارنة المستندات باستخدام GroupDocs.Comparison .NET
 
 ## مقدمة

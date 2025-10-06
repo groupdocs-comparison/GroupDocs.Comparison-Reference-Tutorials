@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;을 사용하여 Java 문서에 사용자 정의 메타데이터 설정하기 - 단계별 가이드"
 "url": "/ko/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java 문서에 사용자 정의 메타데이터 설정: 단계별 가이드
 
 ## 소개

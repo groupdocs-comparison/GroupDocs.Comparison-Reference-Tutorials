@@ -4,8 +4,8 @@
 "title": "Porównanie dokumentów głównych i renderowanie HTML w Javie z GroupDocs.Comparison"
 "url": "/pl/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów i renderowania HTML w Javie za pomocą GroupDocs.Comparison
 
 ## Wstęp

@@ -5,8 +5,8 @@
 "title": "So sánh các ô từ luồng - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # So sánh các ô từ luồng - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

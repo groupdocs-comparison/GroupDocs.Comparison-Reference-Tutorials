@@ -4,8 +4,8 @@
 "title": "Mengotomatiskan Perbandingan Multi-Dokumen di .NET Menggunakan Pustaka GroupDocs.Comparison"
 "url": "/id/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menerapkan Perbandingan Multi-Dokumen di .NET dengan GroupDocs.Comparison
 
 ## Perkenalan

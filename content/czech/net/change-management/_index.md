@@ -3,8 +3,8 @@
 "title": "Výukové programy pro správu změn v GroupDocs.Comparison .NET"
 "url": "/cs/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Výukové programy pro správu změn v GroupDocs.Comparison .NET
 
 Objevte, jak efektivně spravovat změny dokumentů, s našimi tutoriály GroupDocs.Comparison .NET. Tyto podrobné návody ukazují, jak identifikovat specifické rozdíly mezi dokumenty, přijmout nebo odmítnout jednotlivé změny, nastavit autory sledovaných změn a programově spravovat revize. Každý tutoriál poskytuje podrobné pokyny s příklady kódu C#, které vám pomohou implementovat komplexní funkce správy změn ve vašich pracovních postupech porovnávání dokumentů.

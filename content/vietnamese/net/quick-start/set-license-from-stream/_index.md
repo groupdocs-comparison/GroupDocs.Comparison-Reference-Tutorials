@@ -5,8 +5,8 @@
 "title": "Thiết lập giấy phép từ Stream - So sánh GroupDocs cho .NET"
 "url": "/vi/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Thiết lập giấy phép từ Stream - So sánh GroupDocs cho .NET
 
 ## Giới thiệu

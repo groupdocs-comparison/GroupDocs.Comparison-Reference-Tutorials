@@ -4,8 +4,8 @@
 "title": "Dapatkan Format File yang Didukung dengan GroupDocs.Comparison untuk Java; Panduan Lengkap"
 "url": "/id/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Ambil Format File yang Didukung dengan GroupDocs.Perbandingan untuk Java
 
 ## Perkenalan

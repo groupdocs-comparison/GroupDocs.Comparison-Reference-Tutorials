@@ -4,8 +4,8 @@
 "title": ".NET&#58;te Güvenli Belge Karşılaştırmaları GroupDocs.Comparison Kullanarak Sonuçları Parola ile Koruyun"
 "url": "/tr/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # .NET'te Belge Karşılaştırmalarınızı Güvence Altına Alın: GroupDocs.Comparison ile Sonuçları Parolayla Koruyun
 
 ## giriiş

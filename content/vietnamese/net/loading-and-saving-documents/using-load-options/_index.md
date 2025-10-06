@@ -5,8 +5,8 @@
 "title": "Sử dụng tùy chọn tải trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Sử dụng tùy chọn tải trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

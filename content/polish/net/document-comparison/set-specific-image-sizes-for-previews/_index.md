@@ -5,8 +5,8 @@
 "title": "Ustaw określone rozmiary obrazów dla podglądów"
 "url": "/pl/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Ustaw określone rozmiary obrazów dla podglądów
 
 ## Wstęp

@@ -4,8 +4,8 @@
 "title": "掌握 GroupDocs.Comparison for Java 輕鬆產生文件預覽"
 "url": "/zh-hant/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # 掌握 Java 版 GroupDocs.Comparison：輕鬆產生文件預覽
 
 ## 介紹

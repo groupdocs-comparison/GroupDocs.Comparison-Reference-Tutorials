@@ -4,8 +4,8 @@
 "title": "掌握 Java 中的文件比較－使用 GroupDocs.Comparison 比較 Word、文字和電子郵件文檔"
 "url": "/zh-hant/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 中的文件比較
 
 **使用 GroupDocs.Comparison for Java 有效率地比較多個 Word、文字和電子郵件文檔**

@@ -4,8 +4,8 @@
 "title": "GroupDocs.तुलना लाइब्रेरी का उपयोग करके .NET में बहु-दस्तावेज़ तुलना को स्वचालित करें"
 "url": "/hi/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # .NET में GroupDocs.Comparison के साथ मल्टी-डॉक तुलना कैसे लागू करें
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "Comparação de documentos"
 "url": "/pt/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Comparação de documentos
 
 ## Introdução

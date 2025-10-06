@@ -4,8 +4,8 @@
 "title": "So sánh các tài liệu từ các luồng bằng GroupDocs.Comparison .NET - Hướng dẫn đầy đủ cho các nhà phát triển"
 "url": "/vi/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh nhiều tài liệu từ các luồng bằng GroupDocs.Comparison .NET
 
 ## Giới thiệu

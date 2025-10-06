@@ -3,8 +3,8 @@
 "title": "Alapvető dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Alapvető dokumentum-összehasonlító oktatóanyagok a GroupDocs.Comparison .NET-hez
 
 Sajátítsa el az alapvető dokumentum-összehasonlítást részletes GroupDocs.Comparison .NET oktatóanyagainkkal. Ezek a lépésről lépésre bemutatják, hogyan hasonlíthatja össze a különböző formátumú dokumentumokat, beleértve a Word, PDF, Excel és képeket. Minden oktatóanyag működő C# kódpéldákat tartalmaz, amelyek bemutatják, hogyan azonosíthatja a dokumentumok közötti különbségeket, hogyan hozhat létre összehasonlító jelentéseket, és hogyan valósíthat meg összehasonlítási műveleteket különböző dokumentumtípusok esetén.

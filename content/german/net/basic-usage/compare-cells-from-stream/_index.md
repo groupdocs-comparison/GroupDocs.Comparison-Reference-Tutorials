@@ -5,8 +5,8 @@
 "title": "Zellen aus Stream vergleichen - GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-usage/compare-cells-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Zellen aus Stream vergleichen - GroupDocs.Comparison für .NET
 
 ## Einführung

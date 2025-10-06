@@ -5,8 +5,8 @@
 "title": "Jämför skyddade dokument från sökväg - GroupDocs.Comparison för .NET"
 "url": "/sv/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Jämför skyddade dokument från sökväg - GroupDocs.Comparison för .NET
 
 ## Introduktion

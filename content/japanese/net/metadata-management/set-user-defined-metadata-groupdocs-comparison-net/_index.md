@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET を使用してドキュメントにユーザー定義メタデータを設定する方法 | ドキュメント管理ガイド"
 "url": "/ja/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET を使用してドキュメントにユーザー定義メタデータを設定する方法
 
 ## 導入

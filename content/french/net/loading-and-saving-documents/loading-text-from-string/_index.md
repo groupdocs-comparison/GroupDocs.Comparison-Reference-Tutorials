@@ -5,8 +5,8 @@
 "title": "Chargement de texte à partir d'une chaîne dans la comparaison GroupDocs pour .NET"
 "url": "/fr/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Chargement de texte à partir d'une chaîne dans la comparaison GroupDocs pour .NET
 
 ## Introduction

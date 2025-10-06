@@ -3,8 +3,8 @@
 "title": "Tutoriels sur les licences et la configuration de GroupDocs.Comparison Java"
 "url": "/fr/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Tutoriels sur les licences et la configuration de GroupDocs.Comparison Java
 
 Nos tutoriels sur les licences et la configuration vous fournissent des conseils essentiels pour configurer correctement GroupDocs.Comparison dans les applications Java. Ces guides étape par étape vous expliquent comment implémenter différentes options de licence, configurer la facturation au compteur, vérifier l'état des licences et optimiser les paramètres de la bibliothèque en fonction de vos besoins spécifiques. Chaque tutoriel inclut des exemples de code Java détaillés pour une initialisation et une configuration correctes, vous aidant ainsi à créer des solutions de comparaison de documents optimisées et sous licence.

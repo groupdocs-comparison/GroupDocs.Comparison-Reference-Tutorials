@@ -5,8 +5,8 @@
 "title": "Získejte podporované formáty - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Získejte podporované formáty - GroupDocs.Comparison pro .NET
 
 ## Zavedení

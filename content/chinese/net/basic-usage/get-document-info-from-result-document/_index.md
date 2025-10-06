@@ -5,8 +5,8 @@
 "title": "从结果文档中获取文档信息 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # 从结果文档中获取文档信息 - GroupDocs.Comparison for .NET
 
 ## 介绍

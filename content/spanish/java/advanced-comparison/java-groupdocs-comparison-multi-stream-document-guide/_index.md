@@ -4,8 +4,8 @@
 "title": "Comparación de documentos multisecuencia de Java con GroupDocs.Comparison&#58; una guía completa"
 "url": "/es/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Dominando la comparación de documentos multi-secuencia de Java con GroupDocs.Comparison
 
 ## Introducción

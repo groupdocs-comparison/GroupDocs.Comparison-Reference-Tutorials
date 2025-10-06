@@ -5,8 +5,8 @@
 "title": "Grundläggande användning"
 "url": "/sv/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Grundläggande användning
 
 ## Introduktion

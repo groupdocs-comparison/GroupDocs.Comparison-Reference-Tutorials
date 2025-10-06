@@ -4,8 +4,8 @@
 "title": "Perbandingan Direktori Utama di Java Menggunakan GroupDocs.Comparison untuk Audit File yang Mulus"
 "url": "/id/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Perbandingan Direktori Utama di Java dengan GroupDocs.Comparison
 
 ## Perkenalan

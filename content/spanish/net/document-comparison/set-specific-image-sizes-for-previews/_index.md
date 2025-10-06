@@ -5,8 +5,8 @@
 "title": "Establecer tamaños de imagen específicos para las vistas previas"
 "url": "/es/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Establecer tamaños de imagen específicos para las vistas previas
 
 ## Introducción

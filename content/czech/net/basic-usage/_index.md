@@ -5,8 +5,8 @@
 "title": "Základní použití"
 "url": "/cs/net/basic-usage/"
 "weight": 24
+type: docs
 ---
-
 # Základní použití
 
 ## Zavedení

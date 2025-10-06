@@ -5,8 +5,8 @@
 "title": "比较来自流的受保护文档 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # 比较来自流的受保护文档 - GroupDocs.Comparison for .NET
 
 ## 介绍

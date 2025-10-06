@@ -4,8 +4,8 @@
 "title": "Cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison"
 "url": "/vi/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison
 
 ## Giới thiệu

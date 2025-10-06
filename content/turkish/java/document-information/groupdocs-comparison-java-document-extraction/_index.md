@@ -4,8 +4,8 @@
 "title": "Java'da GroupDocs ile Ana Belge Meta Verilerinin Çıkarılması"
 "url": "/tr/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Java'da GroupDocs ile Belge Meta Verisi Çıkarımında Ustalaşma
 
 Günümüzün dijital ortamında, belgelerden bilgileri etkin bir şekilde yönetmek ve çıkarmak, sektörler arası işletmeler için hayati önem taşır. İster yasal sözleşmelerle, ister akademik makalelerle veya finansal raporlarla uğraşıyor olun, dosya türü, sayfa sayısı ve boyut gibi belge meta verilerini anlamak iş akışlarını kolaylaştırabilir ve veri analizini geliştirebilir. Bu eğitim, hem girdi akışları hem de dosya yolları aracılığıyla değerli belge bilgilerini çıkarmak için Java'da GroupDocs.Comparison'ı kullanma konusunda size rehberlik eder.

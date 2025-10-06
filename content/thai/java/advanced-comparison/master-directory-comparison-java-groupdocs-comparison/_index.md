@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบไดเรกทอรีหลักใน Java โดยใช้ GroupDocs.Comparison เพื่อการตรวจสอบไฟล์อย่างราบรื่น"
 "url": "/th/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # การเปรียบเทียบไดเรกทอรีหลักใน Java ด้วย GroupDocs.Comparison
 
 ## การแนะนำ

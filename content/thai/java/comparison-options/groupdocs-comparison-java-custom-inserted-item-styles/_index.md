@@ -4,8 +4,8 @@
 "title": "ปรับแต่งรูปแบบรายการที่แทรกในการเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison"
 "url": "/th/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # การปรับแต่งรูปแบบรายการที่แทรกในการเปรียบเทียบเอกสาร Java โดยใช้ GroupDocs.Comparison
 
 ## การแนะนำ

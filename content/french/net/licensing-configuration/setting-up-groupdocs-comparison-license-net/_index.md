@@ -4,8 +4,8 @@
 "title": "Comment configurer la licence GroupDocs.Comparison dans .NET ? Guide étape par étape"
 "url": "/fr/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # Comment configurer la licence GroupDocs.Comparison dans .NET
 
 ## Introduction

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-library", "password-protection", "groupdocs", "secure-documents"]
+type: docs
 ---
-
 # Compare Password Protected Documents Java - Complete Developer Guide
 
 Ever found yourself juggling multiple versions of password-protected documents, trying to spot the differences manually? If you're a Java developer dealing with secure document workflows, you've probably experienced this headache firsthand. 

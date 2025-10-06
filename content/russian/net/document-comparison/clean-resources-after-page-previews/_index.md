@@ -5,8 +5,8 @@
 "title": "Очистите ресурсы после предварительного просмотра страниц"
 "url": "/ru/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Очистите ресурсы после предварительного просмотра страниц
 
 ## Введение

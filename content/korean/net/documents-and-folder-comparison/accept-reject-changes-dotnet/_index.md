@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 변경 사항 수락 및 거부"
 "url": "/ko/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 변경 사항 수락 및 거부
 
 ## 소개

@@ -5,8 +5,8 @@
 "title": "GroupDocs Comparison for .NET でユーザー定義のドキュメント メタデータを保存する"
 "url": "/ja/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # GroupDocs Comparison for .NET でユーザー定義のドキュメント メタデータを保存する
 
 ## 導入

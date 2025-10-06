@@ -4,8 +4,8 @@
 "title": "Установить автора изменений в сравнении документов с помощью GroupDocs.Comparison для .NET"
 "url": "/ru/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Реализация установки автора изменений в сравнении документов с использованием GroupDocs.Comparison для .NET
 
 ## Введение

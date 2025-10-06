@@ -8,8 +8,8 @@ url: "/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 keywords: "document comparison .NET, compare documents programmatically, automated document comparison, GroupDocs comparison tutorial, compare Word documents C#, document diff tool .NET"
 categories: ["Document Processing"]
 tags: ["dotnet", "csharp", "document-comparison", "groupdocs", "automation"]
+type: docs
 ---
-
 # Document Comparison .NET - Complete GroupDocs Implementation Guide
 
 ## Why You Need Automated Document Comparison (And How It Saves You Hours)

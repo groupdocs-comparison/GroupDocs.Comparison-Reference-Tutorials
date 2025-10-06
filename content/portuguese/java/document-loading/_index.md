@@ -3,8 +3,8 @@
 "title": "Tutoriais de carregamento de documentos para GroupDocs.Comparison Java"
 "url": "/pt/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Tutoriais de carregamento de documentos para GroupDocs.Comparison Java
 
 Nossos tutoriais de carregamento de documentos oferecem orientações abrangentes para a preparação de documentos para comparação em aplicativos Java. Estes guias passo a passo demonstram como carregar documentos do armazenamento local, fluxos de memória e conteúdo de strings, bem como configurar opções de carregamento para diferentes tipos de documentos. Cada tutorial inclui exemplos completos de código Java para ajudar você a implementar uma funcionalidade robusta de carregamento de documentos em seus aplicativos de comparação.

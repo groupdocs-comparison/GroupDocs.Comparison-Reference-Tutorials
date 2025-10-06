@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;을 사용하여 Java 문서 비교 구현하기 - 포괄적인 가이드"
 "url": "/ko/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 메타데이터 소스를 설정하여 Java 문서 비교를 구현하는 방법
 
 ## 소개

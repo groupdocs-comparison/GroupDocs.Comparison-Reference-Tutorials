@@ -4,8 +4,8 @@
 "title": "Porównywanie dokumentów Java przy użyciu interfejsu API GroupDocs.Comparison — podejście oparte na strumieniu"
 "url": "/pl/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie języka Java: porównywanie dokumentów za pomocą interfejsu API GroupDocs.Comparison
 
 Witamy w tym kompleksowym przewodniku, w którym badamy porównywanie dokumentów w Javie przy użyciu potężnego API GroupDocs.Comparison. Niezależnie od tego, czy zarządzasz dokumentami prawnymi, pracami naukowymi czy innymi plikami tekstowymi, ich efektywne porównywanie jest kluczowe. W tym samouczku pokażemy, jak akceptować lub odrzucać wykryte zmiany między dwoma dokumentami przy użyciu strumieni w Javie.

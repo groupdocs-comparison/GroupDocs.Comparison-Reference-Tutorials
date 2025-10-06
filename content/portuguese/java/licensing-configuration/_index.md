@@ -3,8 +3,8 @@
 "title": "Tutoriais de Licenciamento e Configuração para GroupDocs.Comparison Java"
 "url": "/pt/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Tutoriais de Licenciamento e Configuração para GroupDocs.Comparison Java
 
 Nossos tutoriais de licenciamento e configuração fornecem orientações essenciais para a configuração correta do GroupDocs.Comparison em aplicativos Java. Estes guias passo a passo mostram como implementar diferentes opções de licenciamento, configurar o faturamento medido, verificar o status da licença e otimizar as configurações da biblioteca de acordo com suas necessidades específicas. Cada tutorial inclui exemplos detalhados de código Java para inicialização e configuração adequadas, ajudando você a criar soluções de comparação de documentos devidamente licenciadas e otimizadas.

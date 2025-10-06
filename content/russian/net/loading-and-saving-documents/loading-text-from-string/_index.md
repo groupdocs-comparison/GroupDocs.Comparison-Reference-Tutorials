@@ -5,8 +5,8 @@
 "title": "Загрузка текста из строки в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Загрузка текста из строки в GroupDocs Сравнение для .NET
 
 ## Введение

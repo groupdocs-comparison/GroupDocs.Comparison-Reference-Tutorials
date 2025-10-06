@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 DOC 비교에서 머리글과 바닥글을 무시하는 방법"
 "url": "/ko/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 문서 비교에서 머리글과 바닥글을 무시하는 방법
 
 ## 소개

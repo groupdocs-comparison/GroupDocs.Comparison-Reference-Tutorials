@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java Kullanılarak Parola Korumalı Word Belgeleri Nasıl Karşılaştırılır"
 "url": "/tr/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Belge Karşılaştırmasında Ustalaşma: Parola Korumalı Word Belgelerini GroupDocs ile Karşılaştırmaya Yönelik Bir Kılavuz. Java için Karşılaştırma
 
 ## giriiş

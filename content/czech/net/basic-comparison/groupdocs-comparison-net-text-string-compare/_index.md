@@ -4,8 +4,8 @@
 "title": "Porovnávání textových řetězců v .NET pomocí knihovny GroupDocs.Comparison"
 "url": "/cs/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Porovnávání textových řetězců v .NET pomocí knihovny GroupDocs.Comparison
 
 ## Zavedení

@@ -3,8 +3,8 @@
 "title": "Hướng dẫn bảo mật và bảo vệ tài liệu cho GroupDocs.Comparison Java"
 "url": "/vi/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Hướng dẫn bảo mật và bảo vệ tài liệu cho GroupDocs.Comparison Java
 
 Nắm vững các tính năng bảo mật tài liệu với hướng dẫn GroupDocs.Comparison chi tiết của chúng tôi dành cho Java. Các hướng dẫn toàn diện này trình bày cách so sánh các tài liệu được bảo vệ bằng mật khẩu, đặt mật khẩu cho các tệp kết quả, triển khai quy trình so sánh an toàn và quản lý bảo vệ tài liệu theo chương trình. Mỗi hướng dẫn cung cấp các ví dụ mã Java hoạt động cho các hoạt động so sánh tài liệu an toàn, giúp bạn xây dựng các ứng dụng duy trì tính bảo mật trong khi vẫn cho phép so sánh tài liệu hiệu quả.

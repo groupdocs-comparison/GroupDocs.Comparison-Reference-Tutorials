@@ -4,8 +4,8 @@
 "title": "Ασφαλείς συγκρίσεις εγγράφων σε .NET® με προστασία κωδικού πρόσβασης για αποτελέσματα χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Ασφαλίστε τις συγκρίσεις εγγράφων σας στο .NET: Προστατέψτε τα αποτελέσματα με κωδικό πρόσβασης με το GroupDocs.Comparison
 
 ## Εισαγωγή

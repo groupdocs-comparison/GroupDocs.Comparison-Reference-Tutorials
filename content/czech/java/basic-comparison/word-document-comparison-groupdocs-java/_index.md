@@ -4,8 +4,8 @@
 "title": "Implementace porovnávání dokumentů Word v Javě pomocí GroupDocs.Comparison"
 "url": "/cs/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Implementace porovnávání dokumentů Word v Javě pomocí GroupDocs.Comparison
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v Javě pomocí GroupDocs.Comparison API"
 "url": "/cs/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v Javě pomocí GroupDocs.Comparison API
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "Cách so sánh các thư mục và lưu kết quả dưới dạng TXT/HTML bằng GroupDocs.Comparison .NET"
 "url": "/vi/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Cách triển khai so sánh thư mục và lưu kết quả dưới dạng TXT/HTML với GroupDocs.Comparison .NET
 
 ## Giới thiệu

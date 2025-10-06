@@ -5,8 +5,8 @@
 "title": "比較來自流的文件 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # 比較來自流的文件 - GroupDocs.Comparison for .NET
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "Mappen vergelijken en resultaten opslaan als TXT/HTML met behulp van GroupDocs.Comparison .NET"
 "url": "/nl/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Mappen vergelijken en resultaten opslaan als TXT/HTML met GroupDocs.Comparison .NET
 
 ## Invoering

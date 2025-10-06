@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Java Menggunakan API GroupDocs.Comparison; Pendekatan Berbasis Aliran"
 "url": "/id/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Java: Perbandingan Dokumen dengan API GroupDocs.Comparison
 
 Selamat datang di panduan lengkap ini, tempat kami menjelajahi perbandingan dokumen di Java menggunakan GroupDocs.Comparison API yang canggih. Baik Anda mengelola dokumen hukum, makalah akademis, atau berkas teks lainnya, membandingkannya secara efisien sangatlah penting. Dalam tutorial ini, kami akan membahas cara menerima atau menolak perubahan yang terdeteksi antara dua dokumen menggunakan aliran di Java.

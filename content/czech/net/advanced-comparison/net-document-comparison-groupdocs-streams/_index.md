@@ -4,8 +4,8 @@
 "title": "Automatizace porovnávání dokumentů v .NET pomocí streamů GroupDocs.Comparison"
 "url": "/cs/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Automatizace porovnávání dokumentů v .NET pomocí streamů GroupDocs.Comparison
 ## Zavedení
 Hledáte efektivní způsob automatizace porovnávání dokumentů? Tento tutoriál ukazuje, jak porovnávat dokumenty pomocí streamů v prostředí .NET s GroupDocs.Comparison for .NET. Využitím souborových streamů tento přístup nabízí flexibilitu a efektivitu, zejména při práci s velkými soubory nebo síťovými zdroji.

@@ -4,8 +4,8 @@
 "title": "Πώς να ορίσετε την άδεια χρήσης GroupDocs από το Stream σε Java&#58; Οδηγός βήμα προς βήμα"
 "url": "/el/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να ορίσετε την άδεια χρήσης GroupDocs από το Stream σε Java: Οδηγός βήμα προς βήμα
 
 ## Εισαγωγή

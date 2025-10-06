@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 在 .NET 中實作來自流的 Word 文件的文件比較"
 "url": "/zh-hant/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison for .NET 從串流實作文件比較
 
 ## 介紹

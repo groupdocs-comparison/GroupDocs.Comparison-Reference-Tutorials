@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["password-protected", "streams", "document-comparison", "security"]
+type: docs
 ---
-
 # Compare Password Protected Documents .NET - Complete Stream Guide
 
 ## Introduction

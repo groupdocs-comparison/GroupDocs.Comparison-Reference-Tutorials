@@ -4,8 +4,8 @@
 "title": ".NET Geliştiricileri için GroupDocs.Comparison ile Belge Önizlemelerini Verimli Şekilde Oluşturun"
 "url": "/tr/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET ile Belge Önizlemelerini Verimli Şekilde Oluşturun
 
 ## giriiş

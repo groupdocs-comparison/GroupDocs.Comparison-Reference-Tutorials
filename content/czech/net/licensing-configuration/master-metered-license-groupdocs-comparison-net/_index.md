@@ -4,8 +4,8 @@
 "title": "Jak nastavit měřenou licenci v GroupDocs.Comparison .NET – Podrobný návod"
 "url": "/cs/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak nastavit měřenou licenci v GroupDocs.Comparison .NET: Podrobný návod
 
 ## Zavedení

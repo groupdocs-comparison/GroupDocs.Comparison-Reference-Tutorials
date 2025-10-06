@@ -4,8 +4,8 @@
 "title": "Σύγκριση και προεπισκόπηση εγγράφων Java με το GroupDocs™ Ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη Σύγκριση Εγγράφων Java και τη Δημιουργία Προεπισκόπησης με το GroupDocs.Comparison
 
 ## Εισαγωγή

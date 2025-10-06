@@ -5,8 +5,8 @@
 "title": "Lưu nguồn siêu dữ liệu tài liệu trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Lưu nguồn siêu dữ liệu tài liệu trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

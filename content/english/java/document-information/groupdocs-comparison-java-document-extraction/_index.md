@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "document-processing", "metadata-extraction", "java-tutorial"]
+type: docs
 ---
-
 # How to Extract Document Metadata in Java Using GroupDocs (Complete 2025 Guide)
 
 Ever found yourself staring at a folder full of documents, wondering which ones are PDFs, how many pages they contain, or their file sizes? If you're working with document processing in Java, you've probably faced this challenge. Whether you're building a content management system, automating document workflows, or just need to organize files programmatically, extracting document metadata is a game-changer.

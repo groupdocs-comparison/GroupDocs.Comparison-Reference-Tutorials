@@ -4,8 +4,8 @@
 "title": "Jak nastavit metadata dokumentu pomocí GroupDocs.Comparison .NET pro efektivní správu dokumentů"
 "url": "/cs/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Jak nastavit metadata dokumentu pomocí GroupDocs.Comparison .NET: Komplexní průvodce
 
 dnešní digitální době je efektivní správa dokumentů klíčová jak pro firmy, tak pro jednotlivce. Jedním z klíčových aspektů tohoto procesu je efektivní porovnávání dokumentů. Ať už vyvíjíte systém správy dokumentů nebo často pracujete s více verzemi dokumentů, knihovna GroupDocs.Comparison může zefektivnit váš pracovní postup tím, že umožňuje přesnou správu metadat během porovnávání.

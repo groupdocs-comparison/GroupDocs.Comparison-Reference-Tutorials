@@ -5,8 +5,8 @@
 "title": "ストリームからドキュメント情報を取得する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # ストリームからドキュメント情報を取得する - GroupDocs.Comparison for .NET
 
 ## 導入

@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Akıştan Belgeleri Yükleme"
 "url": "/tr/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Akıştan Belgeleri Yükleme
 
 ## giriiş

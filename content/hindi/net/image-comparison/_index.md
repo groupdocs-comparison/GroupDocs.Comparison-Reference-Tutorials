@@ -5,8 +5,8 @@
 "title": "छवि तुलना"
 "url": "/hi/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # छवि तुलना
 
 

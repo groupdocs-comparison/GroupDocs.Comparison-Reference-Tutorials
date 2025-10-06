@@ -4,8 +4,8 @@
 "title": "Реализация сравнения документов в .NET с использованием GroupDocs.Comparison для файлов Word из потоков"
 "url": "/ru/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Как реализовать сравнение документов из потока с помощью GroupDocs.Comparison для .NET
 
 ## Введение

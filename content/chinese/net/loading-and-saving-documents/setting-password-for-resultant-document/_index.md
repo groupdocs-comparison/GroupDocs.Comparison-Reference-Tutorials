@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较 (.NET) 中设置结果文档的密码"
 "url": "/zh/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # 在 GroupDocs 比较 (.NET) 中设置结果文档的密码
 
 ## 介绍

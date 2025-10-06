@@ -4,8 +4,8 @@
 "title": "Πώς να εξαγάγετε πληροφορίες εγγράφου χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison .NET"
 "url": "/el/net/document-information/extract-info-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να εξαγάγετε πληροφορίες εγγράφου χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Comparison .NET
 
 ## Εισαγωγή

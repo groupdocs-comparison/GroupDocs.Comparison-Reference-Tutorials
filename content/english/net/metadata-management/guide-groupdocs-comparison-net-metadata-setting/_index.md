@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["GroupDocs", "NET", "Document Comparison", "C#", "Metadata"]
+type: docs
 ---
-
 # GroupDocs Comparison NET Tutorial: How to Compare Documents While Preserving Metadata
 
 Ever struggled with comparing multiple versions of Word documents while keeping track of who made changes and when? If you're building a document management system or just need to handle document comparisons in your .NET application, you've probably faced the frustrating challenge of losing important metadata during the process.

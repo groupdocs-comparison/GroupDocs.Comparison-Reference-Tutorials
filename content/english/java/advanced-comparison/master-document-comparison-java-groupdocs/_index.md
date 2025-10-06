@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-libraries", "groupdocs", "file-processing"]
+type: docs
 ---
-
 # Java Document Comparison Library: Compare Multiple Files Efficiently
 
 **Struggling with manual document reviews? Here's how to automate document comparison in Java and save hours of tedious work.**

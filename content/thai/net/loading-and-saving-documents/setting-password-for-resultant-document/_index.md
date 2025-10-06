@@ -5,8 +5,8 @@
 "title": "การตั้งรหัสผ่านสำหรับเอกสารผลลัพธ์ในการเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # การตั้งรหัสผ่านสำหรับเอกสารผลลัพธ์ในการเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

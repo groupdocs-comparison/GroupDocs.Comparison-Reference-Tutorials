@@ -4,8 +4,8 @@
 "title": "Pobierz obsługiwane formaty plików za pomocą GroupDocs.Comparison dla Java&#58; Kompleksowy przewodnik"
 "url": "/pl/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Pobierz obsługiwane formaty plików za pomocą GroupDocs.Comparison dla Java
 
 ## Wstęp

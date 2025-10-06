@@ -4,8 +4,8 @@
 "title": "Documentinformatie extraheren met GroupDocs.Comparison voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Documentinformatie extraheren met GroupDocs.Comparison voor .NET: een stapsgewijze handleiding
 
 ## Invoering

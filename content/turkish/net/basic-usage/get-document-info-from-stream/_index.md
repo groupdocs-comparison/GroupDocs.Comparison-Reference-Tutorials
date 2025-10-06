@@ -5,8 +5,8 @@
 "title": "Stream'den Belge Bilgisi Alın - .NET için GroupDocs.Comparison"
 "url": "/tr/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Stream'den Belge Bilgisi Alın - .NET için GroupDocs.Comparison
 
 ## giriiş

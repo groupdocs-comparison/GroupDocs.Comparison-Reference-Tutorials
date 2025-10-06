@@ -5,8 +5,8 @@
 "title": "Imposta licenza da file - Confronto GroupDocs per .NET"
 "url": "/it/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Imposta licenza da file - Confronto GroupDocs per .NET
 
 ## Introduzione

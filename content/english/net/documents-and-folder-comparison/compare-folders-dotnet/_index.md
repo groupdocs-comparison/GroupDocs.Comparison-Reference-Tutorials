@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["folder-comparison", "directory-comparison", "net-tutorial", "groupdocs"]
+type: docs
 ---
-
 # Folder Comparison .NET Tutorial
 
 ## Introduction

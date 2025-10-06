@@ -5,8 +5,8 @@
 "title": "Porovnání obrázků"
 "url": "/cs/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Porovnání obrázků
 
 

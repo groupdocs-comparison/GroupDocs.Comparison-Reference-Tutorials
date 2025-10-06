@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for .NET Kullanılarak Belge Bilgileri Nasıl Çıkarılır? Kapsamlı Bir Kılavuz"
 "url": "/tr/net/document-information/extract-document-info-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET Kullanılarak Belge Bilgileri Nasıl Çıkarılır: Adım Adım Kılavuz
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Освоение сравнения защищенных паролем документов в Java с помощью GroupDocs.Comparison"
 "url": "/ru/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # Освоение сравнения защищенных паролем документов в Java с помощью GroupDocs.Comparison
 
 ## Введение

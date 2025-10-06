@@ -4,8 +4,8 @@
 "title": "如何使用 GroupDocs.Comparison .NET 忽略 DOC 比較中的頁首和頁尾"
 "url": "/zh-hant/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # 如何使用 GroupDocs.Comparison .NET 忽略文件比較中的頁首和頁尾
 
 ## 介紹

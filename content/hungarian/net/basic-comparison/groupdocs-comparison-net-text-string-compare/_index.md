@@ -4,8 +4,8 @@
 "title": "Master Text String összehasonlítás .NET-ben a GroupDocs.Comparison Library használatával"
 "url": "/hu/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Master Text String összehasonlítás .NET-ben a GroupDocs.Comparison Library használatával
 
 ## Bevezetés

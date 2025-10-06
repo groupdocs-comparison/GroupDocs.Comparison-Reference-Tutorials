@@ -4,8 +4,8 @@
 "title": "Κατανόηση του GroupDocs.Comparison για Java - Δημιουργία προεπισκόπησης εγγράφων χωρίς κόπο"
 "url": "/el/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Mastering GroupDocs.Comparison για Java: Εύκολη δημιουργία προεπισκόπησης εγγράφων
 
 ## Εισαγωγή

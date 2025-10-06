@@ -4,8 +4,8 @@
 "title": "Maîtriser la comparaison de documents Java Stream avec GroupDocs.Comparison pour une gestion efficace des flux de travail"
 "url": "/fr/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser la comparaison de documents Java Stream avec GroupDocs.Comparison pour une gestion efficace des flux de travail
 
 Dans l'environnement numérique actuel en constante évolution, la gestion et la comparaison de grands volumes de documents sont essentielles pour garantir la cohérence et l'exactitude des contrats, rapports et documents juridiques. Ce tutoriel vous guidera dans l'utilisation de la puissante bibliothèque GroupDocs.Comparison en Java pour comparer efficacement plusieurs documents Word via des flux, en permettant la personnalisation grâce aux paramètres de style.

@@ -5,8 +5,8 @@
 "title": "Hämta dokumentinformation från resultatdokument - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Hämta dokumentinformation från resultatdokument - GroupDocs.Comparison för .NET
 
 ## Introduktion

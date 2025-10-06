@@ -5,8 +5,8 @@
 "title": "مقارنة المستندات"
 "url": "/ar/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # مقارنة المستندات
 
 ## مقدمة

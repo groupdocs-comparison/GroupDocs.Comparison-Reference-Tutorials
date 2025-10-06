@@ -5,8 +5,8 @@
 "title": "Tetapkan Ukuran Gambar Tertentu untuk Pratinjau"
 "url": "/id/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Tetapkan Ukuran Gambar Tertentu untuk Pratinjau
 
 ## Perkenalan

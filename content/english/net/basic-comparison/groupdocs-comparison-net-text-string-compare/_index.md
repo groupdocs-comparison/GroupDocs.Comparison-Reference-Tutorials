@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["String Manipulation"]
 tags: ["csharp", "dotnet", "text-comparison", "groupdocs"]
+type: docs
 ---
-
 # How to Compare Strings in C# Without Files - GroupDocs Tutorial (2025)
 
 Ever found yourself needing to compare two text strings in your .NET app, but dreading the complexity of traditional comparison methods? You're not alone. Whether you're building a version control system, validating user input, or just need to spot the differences between two chunks of text, string comparison can quickly become a headache.

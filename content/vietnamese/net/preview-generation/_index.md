@@ -3,8 +3,8 @@
 "title": "Hướng dẫn tạo bản xem trước cho GroupDocs.Comparison .NET"
 "url": "/vi/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Hướng dẫn tạo bản xem trước cho GroupDocs.Comparison .NET
 
 Tìm hiểu cách tạo bản xem trước tài liệu với hướng dẫn toàn diện GroupDocs.Comparison dành cho các nhà phát triển .NET. Các hướng dẫn thực tế này trình bày cách tạo bản xem trước trang cho tài liệu nguồn, tài liệu đích và kết quả so sánh, tùy chỉnh kích thước hình ảnh xem trước và triển khai dọn dẹp tài nguyên để sử dụng bộ nhớ tối ưu. Mỗi hướng dẫn bao gồm các ví dụ mã C# chi tiết để triển khai hiệu quả chức năng xem trước tài liệu trong các ứng dụng so sánh của bạn.

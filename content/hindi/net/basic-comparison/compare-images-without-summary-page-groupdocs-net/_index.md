@@ -4,8 +4,8 @@
 "title": ".NET के लिए GroupDocs.तुलना का उपयोग करके सारांश पृष्ठ के बिना छवियों की तुलना कैसे करें"
 "url": "/hi/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET के लिए GroupDocs.Comparison का उपयोग करके सारांश पृष्ठ के बिना छवि तुलना कैसे लागू करें
 
 ## परिचय

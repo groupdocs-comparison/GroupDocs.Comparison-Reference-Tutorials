@@ -4,8 +4,8 @@
 "title": "Automatyzacja porównywania dokumentów w .NET przy użyciu strumieni GroupDocs.Comparison"
 "url": "/pl/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Automatyzacja porównywania dokumentów w .NET przy użyciu strumieni GroupDocs.Comparison
 ## Wstęp
 Szukasz wydajnego sposobu na automatyzację porównywania dokumentów? Ten samouczek pokazuje, jak porównywać dokumenty za pomocą strumieni w środowisku .NET z GroupDocs.Comparison dla .NET. Dzięki wykorzystaniu strumieni plików podejście to oferuje elastyczność i wydajność, szczególnie w przypadku dużych plików lub zasobów sieciowych.

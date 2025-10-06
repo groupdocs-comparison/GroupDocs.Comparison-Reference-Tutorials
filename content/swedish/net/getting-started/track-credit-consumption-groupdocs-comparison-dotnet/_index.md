@@ -4,8 +4,8 @@
 "title": "Hur man spårar kreditförbrukning med GroupDocs.Comparison för .NET – en omfattande guide"
 "url": "/sv/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Hur man spårar kreditförbrukning med GroupDocs.Comparison för .NET: En omfattande guide
 
 ## Introduktion

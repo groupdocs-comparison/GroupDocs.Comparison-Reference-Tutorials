@@ -3,8 +3,8 @@
 "title": "Tutoriales avanzados de comparación de documentos para GroupDocs.Comparison .NET"
 "url": "/es/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Tutoriales avanzados de comparación de documentos para GroupDocs.Comparison .NET
 
 Nuestros tutoriales avanzados de comparación le muestran cómo aprovechar las potentes funciones de GroupDocs.Comparison en aplicaciones .NET. Estas guías completas abarcan la comparación simultánea de varios documentos, la comparación de archivos protegidos por contraseña, la comparación de carpetas completas y la personalización de la configuración de comparación para diferentes escenarios. Cada tutorial incluye ejemplos prácticos de código C# para implementar operaciones sofisticadas de comparación de documentos que van más allá de la funcionalidad básica.

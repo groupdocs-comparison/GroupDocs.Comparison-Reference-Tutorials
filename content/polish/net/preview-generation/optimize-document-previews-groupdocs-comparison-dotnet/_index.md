@@ -4,8 +4,8 @@
 "title": "Generuj i optymalizuj podglądy dokumentów za pomocą GroupDocs.Comparison .NET API"
 "url": "/pl/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Generuj i optymalizuj podglądy dokumentów za pomocą GroupDocs.Comparison .NET
 
 ## Wstęp

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-preview", "groupdocs-comparison", "csharp", "net-api"]
+type: docs
 ---
-
 # How to Generate Document Page Previews in .NET - Complete Developer Guide
 
 ## Introduction

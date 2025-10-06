@@ -6,8 +6,8 @@
 "title": "Dokumentum-összehasonlító szoftver API oktatóanyag | GroupDocs.Comparison"
 "url": "/hu/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison oktatóanyagok és fejlesztői útmutató
 
 ![GroupDocs.Comparison banner](./groupdocs-comparison-net.svg)

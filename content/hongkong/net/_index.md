@@ -5,8 +5,8 @@
 "title": "GroupDocs.Comparison for .NET 的教學與範例"
 "url": "/zh-hant/net/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison for .NET 的教學與範例
 
 ## 介紹

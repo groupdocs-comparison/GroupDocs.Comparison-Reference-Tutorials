@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比较中比较 .NET 的文档设置"
 "url": "/zh/net/documents-and-folder-comparison/compare-documents-settings-dotnet/"
 "weight": 11
+type: docs
 ---
-
 # 在 GroupDocs 比较中比较 .NET 的文档设置
 
 ## 介绍

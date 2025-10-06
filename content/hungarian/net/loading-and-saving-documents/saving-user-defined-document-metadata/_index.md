@@ -5,8 +5,8 @@
 "title": "Felhasználó által definiált dokumentummetaadatok mentése a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Felhasználó által definiált dokumentummetaadatok mentése a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

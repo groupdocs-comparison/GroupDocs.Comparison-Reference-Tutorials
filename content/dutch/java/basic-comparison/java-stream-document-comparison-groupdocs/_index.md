@@ -4,8 +4,8 @@
 "title": "Implementeer Java Stream Document Comparison met behulp van GroupDocs.Comparer&#58; een uitgebreide handleiding"
 "url": "/nl/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Implementeer Java Stream Document Comparison met behulp van GroupDocs.Comparer: een uitgebreide handleiding
 
 ## Invoering

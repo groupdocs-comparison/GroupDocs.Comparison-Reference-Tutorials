@@ -5,8 +5,8 @@
 "title": "ストリームからライセンスを設定する - GroupDocs Comparison for .NET"
 "url": "/ja/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # ストリームからライセンスを設定する - GroupDocs Comparison for .NET
 
 ## 導入

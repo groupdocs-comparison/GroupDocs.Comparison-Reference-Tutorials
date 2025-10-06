@@ -4,8 +4,8 @@
 "title": "Cách thiết lập giấy phép GroupDocs.Comparison trong .NET&#58; Hướng dẫn từng bước"
 "url": "/vi/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách thiết lập giấy phép GroupDocs.Comparison trong .NET
 
 ## Giới thiệu

@@ -4,8 +4,8 @@
 "title": "Mastering GroupDocs.Comparison voor Java&#58; moeiteloos genereren van documentvoorbeelden"
 "url": "/nl/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison voor Java onder de knie krijgen: moeiteloos documentvoorbeelden genereren
 
 ## Invoering

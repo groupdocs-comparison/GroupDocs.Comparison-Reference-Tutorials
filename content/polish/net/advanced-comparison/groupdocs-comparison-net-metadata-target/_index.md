@@ -4,8 +4,8 @@
 "title": "Porównanie dokumentów głównych w .NET&#58; Zachowaj metadane za pomocą GroupDocs.Comparison"
 "url": "/pl/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów w .NET: zachowywanie metadanych za pomocą GroupDocs.Comparison
 ## Wstęp
 Czy kiedykolwiek miałeś problemy z porównywaniem dokumentów, podczas gdy musiałeś zachować określone metadane? GroupDocs.Comparison dla .NET jest rozwiązaniem! Ten samouczek przeprowadzi Cię przez ustawianie metadanych dokumentu docelowego podczas porównywania, zapewniając, że Twój dokument końcowy zachowa pożądane atrybuty bezproblemowo.

@@ -5,8 +5,8 @@
 "title": "Získání informací o dokumentu ze streamu - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Získání informací o dokumentu ze streamu - GroupDocs.Comparison pro .NET
 
 ## Zavedení

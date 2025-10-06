@@ -4,8 +4,8 @@
 "title": "Σύγκριση εγγράφων Java και προεπισκοπήσεις σελίδων χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τη σύγκριση εγγράφων Java με το GroupDocs.Comparison
 
 **Ξεκλειδώστε την Αποδοτική Διαχείριση Εγγράφων: Ένας Πλήρης Οδηγός για τη Χρήση του GroupDocs.Comparison σε Java**

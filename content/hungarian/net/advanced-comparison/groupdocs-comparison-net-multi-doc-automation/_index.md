@@ -4,8 +4,8 @@
 "title": "Több dokumentum összehasonlításának automatizálása .NET-ben a GroupDocs.Comparison könyvtár használatával"
 "url": "/hu/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # Több dokumentum összehasonlításának megvalósítása .NET-ben a GroupDocs.Comparison segítségével
 
 ## Bevezetés

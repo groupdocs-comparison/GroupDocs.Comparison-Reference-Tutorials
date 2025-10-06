@@ -5,8 +5,8 @@
 "title": "图像比较"
 "url": "/zh/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # 图像比较
 
 

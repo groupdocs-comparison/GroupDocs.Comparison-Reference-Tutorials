@@ -5,8 +5,8 @@
 "title": "Görüntü Karşılaştırması"
 "url": "/tr/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # Görüntü Karşılaştırması
 
 

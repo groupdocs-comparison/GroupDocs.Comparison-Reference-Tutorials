@@ -4,8 +4,8 @@
 "title": "So laden Sie benutzerdefinierte Schriftarten für den Dokumentvergleich mit GroupDocs.Comparison .NET"
 "url": "/de/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # So laden Sie benutzerdefinierte Schriftarten für den Dokumentvergleich mit GroupDocs.Comparison .NET
 
 ## Einführung

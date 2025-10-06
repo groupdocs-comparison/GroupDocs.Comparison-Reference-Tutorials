@@ -4,8 +4,8 @@
 "title": "สร้างตัวอย่างเอกสารอย่างมีประสิทธิภาพด้วย GroupDocs.Comparison สำหรับนักพัฒนา .NET"
 "url": "/th/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # สร้างตัวอย่างเอกสารอย่างมีประสิทธิภาพด้วย GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

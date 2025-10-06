@@ -4,8 +4,8 @@
 "title": "การนำการเปรียบเทียบเอกสาร Java ไปใช้งานโดยใช้ GroupDocs.Comparison คู่มือฉบับสมบูรณ์"
 "url": "/th/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการใช้การเปรียบเทียบเอกสาร Java โดยการตั้งค่าแหล่งที่มาของข้อมูลเมตาด้วย GroupDocs.Comparison
 
 ## การแนะนำ

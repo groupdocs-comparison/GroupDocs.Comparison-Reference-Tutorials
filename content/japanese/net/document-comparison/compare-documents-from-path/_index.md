@@ -5,8 +5,8 @@
 "title": "パスからドキュメントを比較 - GroupDocs.Comparison for .NET"
 "url": "/ja/net/document-comparison/compare-documents-from-path/"
 "weight": 15
+type: docs
 ---
-
 # パスからドキュメントを比較 - GroupDocs.Comparison for .NET
 
 ## 導入

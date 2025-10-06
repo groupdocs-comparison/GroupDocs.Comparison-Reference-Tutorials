@@ -5,8 +5,8 @@
 "title": "Set Metered License - Perbandingan GroupDocs untuk .NET"
 "url": "/id/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Set Metered License - Perbandingan GroupDocs untuk .NET
 
 ## Perkenalan

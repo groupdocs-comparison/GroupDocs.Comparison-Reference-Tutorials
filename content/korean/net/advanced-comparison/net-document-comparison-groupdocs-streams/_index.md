@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison Streams를 사용하여 .NET에서 문서 비교 자동화"
 "url": "/ko/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison Streams를 사용하여 .NET에서 문서 비교 자동화
 ## 소개
 문서 비교를 자동화하는 효율적인 방법을 찾고 계신가요? 이 튜토리얼에서는 GroupDocs.Comparison for .NET을 사용하여 .NET 환경에서 스트림을 사용하여 문서를 비교하는 방법을 보여줍니다. 파일 스트림을 활용함으로써, 특히 대용량 파일이나 네트워크 기반 리소스를 처리할 때 유연성과 효율성을 제공합니다.

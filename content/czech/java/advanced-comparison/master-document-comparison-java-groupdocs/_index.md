@@ -4,8 +4,8 @@
 "title": "Porovnání hlavních dokumentů v Javě pomocí GroupDocs.Comparison pro dokumenty Word, Text a E-mail"
 "url": "/cs/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v Javě pomocí GroupDocs.Comparison
 
 **Efektivní porovnávání více dokumentů Word, Text a E-mail pomocí GroupDocs.Comparison pro Javu**

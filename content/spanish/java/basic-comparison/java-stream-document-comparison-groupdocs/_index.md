@@ -4,8 +4,8 @@
 "title": "Implementar la comparación de documentos de flujo de Java con GroupDocs.Comparer&#58; una guía completa"
 "url": "/es/java/basic-comparison/java-stream-document-comparison-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Implementar la comparación de documentos de flujo de Java con GroupDocs.Comparer: una guía completa
 
 ## Introducción

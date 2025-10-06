@@ -5,8 +5,8 @@
 "title": "ตั้งค่าใบอนุญาตจากไฟล์ - การเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # ตั้งค่าใบอนุญาตจากไฟล์ - การเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

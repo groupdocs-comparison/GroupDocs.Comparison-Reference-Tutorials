@@ -5,8 +5,8 @@
 "title": "Akıştan Lisans Ayarla - .NET için GroupDocs Karşılaştırması"
 "url": "/tr/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Akıştan Lisans Ayarla - .NET için GroupDocs Karşılaştırması
 
 ## giriiş

@@ -5,8 +5,8 @@
 "title": "페이지 미리보기 후 리소스 정리"
 "url": "/ko/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # 페이지 미리보기 후 리소스 정리
 
 ## 소개

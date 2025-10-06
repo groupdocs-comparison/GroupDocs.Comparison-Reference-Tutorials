@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 효율적인 문서 관리를 위한 문서 메타데이터 설정 방법"
 "url": "/ko/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 사용하여 문서 메타데이터를 설정하는 방법: 포괄적인 가이드
 
 오늘날의 디지털 시대에 효율적인 문서 관리는 기업과 개인 모두에게 매우 중요합니다. 이 과정에서 중요한 측면 중 하나는 문서를 효과적으로 비교하는 것입니다. 문서 관리 시스템을 개발하든 여러 문서 버전을 자주 처리하든, GroupDocs.Comparison 라이브러리를 사용하면 비교 과정에서 정확한 메타데이터 관리를 통해 워크플로를 간소화할 수 있습니다.

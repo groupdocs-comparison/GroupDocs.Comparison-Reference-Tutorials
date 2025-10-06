@@ -5,8 +5,8 @@
 "title": "Ορισμός Άδειας Χρήσης από Αρχείο - Σύγκριση GroupDocs για .NET"
 "url": "/el/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Ορισμός Άδειας Χρήσης από Αρχείο - Σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

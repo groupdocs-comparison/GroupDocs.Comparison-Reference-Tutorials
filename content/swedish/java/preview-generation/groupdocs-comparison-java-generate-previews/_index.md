@@ -4,8 +4,8 @@
 "title": "Mastering GroupDocs.Comparison för Java - Enkel generering av dokumentförhandsgranskning"
 "url": "/sv/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Mastering GroupDocs.Comparison för Java: Enkel generering av dokumentförhandsgranskning
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": "Mengotomatiskan Perbandingan Dokumen di .NET Menggunakan GroupDocs.Comparison Streams"
 "url": "/id/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Mengotomatiskan Perbandingan Dokumen di .NET Menggunakan GroupDocs.Comparison Streams
 ## Perkenalan
 Apakah Anda mencari cara yang efisien untuk mengotomatiskan perbandingan dokumen? Tutorial ini menunjukkan cara membandingkan dokumen menggunakan aliran dalam lingkungan .NET dengan GroupDocs.Comparison untuk .NET. Dengan memanfaatkan aliran file, pendekatan ini menawarkan fleksibilitas dan efisiensi, terutama saat menangani file besar atau sumber daya berbasis jaringan.

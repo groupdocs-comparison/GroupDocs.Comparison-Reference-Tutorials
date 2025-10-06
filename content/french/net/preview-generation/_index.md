@@ -3,8 +3,8 @@
 "title": "Tutoriels de génération d'aperçus pour GroupDocs.Comparison .NET"
 "url": "/fr/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Tutoriels de génération d'aperçus pour GroupDocs.Comparison .NET
 
 Apprenez à créer des aperçus de documents grâce à nos tutoriels complets GroupDocs.Comparison destinés aux développeurs .NET. Ces guides pratiques expliquent comment générer des aperçus de page pour les documents sources, les documents cibles et les résultats de comparaison, personnaliser la taille des images d'aperçu et mettre en œuvre le nettoyage des ressources pour une utilisation optimale de la mémoire. Chaque tutoriel inclut des exemples de code C# détaillés pour une implémentation efficace de la fonctionnalité d'aperçu de documents dans vos applications de comparaison.

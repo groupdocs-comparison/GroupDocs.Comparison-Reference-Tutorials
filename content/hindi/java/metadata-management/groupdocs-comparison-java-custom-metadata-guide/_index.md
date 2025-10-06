@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके जावा दस्तावेज़ों में कस्टम मेटाडेटा सेट करें&#58; एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs का उपयोग करके जावा दस्तावेज़ों में कस्टम मेटाडेटा सेट करें.तुलना: एक चरण-दर-चरण मार्गदर्शिका
 
 ## परिचय

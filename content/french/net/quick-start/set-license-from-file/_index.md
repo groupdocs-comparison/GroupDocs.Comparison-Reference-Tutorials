@@ -5,8 +5,8 @@
 "title": "Définir une licence à partir d'un fichier - Comparaison GroupDocs pour .NET"
 "url": "/fr/net/quick-start/set-license-from-file/"
 "weight": 10
+type: docs
 ---
-
 # Définir une licence à partir d'un fichier - Comparaison GroupDocs pour .NET
 
 ## Introduction

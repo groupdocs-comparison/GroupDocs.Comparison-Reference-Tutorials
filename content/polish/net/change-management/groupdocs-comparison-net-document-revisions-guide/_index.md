@@ -4,8 +4,8 @@
 "title": "Efektywne wprowadzanie zmian w dokumentach głównych dzięki GroupDocs.Comparison .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie rewizji dokumentów za pomocą GroupDocs.Comparison .NET: przewodnik krok po kroku
 
 ## Wstęp

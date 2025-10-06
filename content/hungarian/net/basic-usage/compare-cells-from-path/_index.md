@@ -5,8 +5,8 @@
 "title": "Cellák összehasonlítása elérési út alapján - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Cellák összehasonlítása elérési út alapján - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

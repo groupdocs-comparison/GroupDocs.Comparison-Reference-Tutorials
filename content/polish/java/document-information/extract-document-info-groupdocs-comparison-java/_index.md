@@ -4,8 +4,8 @@
 "title": "Wyodrębnij metadane dokumentu za pomocą GroupDocs.Comparison dla Java&#58; Kompleksowy przewodnik"
 "url": "/pl/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Wyodrębnij metadane dokumentu za pomocą GroupDocs.Comparison dla Java
 
 W erze cyfrowej zarządzanie i analizowanie właściwości dokumentów jest niezbędne w różnych sektorach, takich jak środowisko prawne, administracyjne lub korporacyjne. Zrozumienie metadanych dokumentów może znacznie zwiększyć produktywność. Ten kompleksowy przewodnik przeprowadzi Cię przez korzystanie z biblioteki GroupDocs.Comparison, aby bez wysiłku wyodrębnić z dokumentów istotne informacje, takie jak typ pliku, liczba stron i rozmiar.

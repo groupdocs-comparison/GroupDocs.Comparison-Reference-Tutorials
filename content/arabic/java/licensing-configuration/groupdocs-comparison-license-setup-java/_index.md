@@ -4,8 +4,8 @@
 "title": "كيفية تعيين ترخيص من ملف في GroupDocs. مقارنة لـ Java - دليل شامل"
 "url": "/ar/java/licensing-configuration/groupdocs-comparison-license-setup-java/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ مجموعة الترخيص من الملف في GroupDocs.Comparison لـ Java
 
 ## مقدمة

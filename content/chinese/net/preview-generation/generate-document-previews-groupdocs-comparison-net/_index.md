@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 为 .NET 开发人员高效生成文档预览"
 "url": "/zh/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for .NET 高效生成文档预览
 
 ## 介绍

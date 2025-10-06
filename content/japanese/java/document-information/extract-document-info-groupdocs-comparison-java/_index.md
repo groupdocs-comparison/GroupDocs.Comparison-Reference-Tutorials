@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java を使用してドキュメントのメタデータを抽出する包括的なガイド"
 "url": "/ja/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison for Java を使用してドキュメントのメタデータを抽出する
 
 デジタル時代において、法務、行政、企業など、様々な分野で文書のプロパティの管理と分析は不可欠です。文書のメタデータを理解することで、生産性を大幅に向上させることができます。この包括的なガイドでは、GroupDocs.Comparisonライブラリを使用して、ファイルの種類、ページ数、サイズなどの重要な情報を文書から簡単に抽出する方法を解説します。

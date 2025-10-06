@@ -4,8 +4,8 @@
 "title": "Bezpečné porovnávání dokumentů v .NET a ochrana výsledků heslem pomocí GroupDocs.Comparison"
 "url": "/cs/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Zabezpečení porovnávání dokumentů v .NET: Ochrana výsledků heslem pomocí GroupDocs.Comparison
 
 ## Zavedení

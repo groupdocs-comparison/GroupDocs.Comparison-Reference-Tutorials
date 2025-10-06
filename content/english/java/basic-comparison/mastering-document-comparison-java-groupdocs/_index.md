@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-api", "automation", "groupdocs"]
+type: docs
 ---
-
 # Java Document Comparison API
 
 ## Introduction

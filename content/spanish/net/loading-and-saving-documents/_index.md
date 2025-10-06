@@ -5,8 +5,8 @@
 "title": "Cargar y guardar documentos"
 "url": "/es/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Cargar y guardar documentos
 
 ## Introducción

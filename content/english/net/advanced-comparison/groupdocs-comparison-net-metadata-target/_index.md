@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["GroupDocs.Comparison", "metadata-preservation", "dotnet-tutorial", "document-management"]
+type: docs
 ---
-
 # GroupDocs.Comparison Metadata Preservation
 
 ## Introduction

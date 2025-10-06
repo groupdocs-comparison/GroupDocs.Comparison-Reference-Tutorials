@@ -3,8 +3,8 @@
 "title": "Preview-generatietutorials voor GroupDocs.Comparison .NET"
 "url": "/nl/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Preview-generatietutorials voor GroupDocs.Comparison .NET
 
 Leer hoe u documentvoorbeelden kunt maken met onze uitgebreide GroupDocs.Comparison-tutorials voor .NET-ontwikkelaars. Deze praktische handleidingen laten zien hoe u paginavoorbeelden kunt genereren voor brondocumenten, doeldocumenten en vergelijkingsresultaten, de grootte van voorbeeldafbeeldingen kunt aanpassen en resourceopschoning kunt implementeren voor optimaal geheugengebruik. Elke tutorial bevat gedetailleerde C#-codevoorbeelden voor het efficiënt implementeren van documentvoorbeeldfunctionaliteit in uw vergelijkingsapplicaties.

@@ -4,8 +4,8 @@
 "title": "जावा के सरल दस्तावेज़ पूर्वावलोकन निर्माण के लिए GroupDocs.Comparison में महारत हासिल करना"
 "url": "/hi/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Java के लिए GroupDocs.Comparison में महारत हासिल करना: सरल दस्तावेज़ पूर्वावलोकन निर्माण
 
 ## परिचय

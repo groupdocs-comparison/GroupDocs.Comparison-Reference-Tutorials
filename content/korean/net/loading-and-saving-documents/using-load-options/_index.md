@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 로드 옵션 사용"
 "url": "/ko/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 로드 옵션 사용
 
 ## 소개

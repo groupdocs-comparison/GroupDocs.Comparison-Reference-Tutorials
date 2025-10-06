@@ -5,8 +5,8 @@
 "title": "Tải văn bản từ chuỗi trong So sánh GroupDocs cho .NET"
 "url": "/vi/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Tải văn bản từ chuỗi trong So sánh GroupDocs cho .NET
 
 ## Giới thiệu

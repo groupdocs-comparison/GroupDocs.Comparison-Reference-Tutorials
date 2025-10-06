@@ -5,8 +5,8 @@
 "title": "Zapisywanie metadanych dokumentu zdefiniowanego przez użytkownika w porównaniu GroupDocs dla platformy .NET"
 "url": "/pl/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Zapisywanie metadanych dokumentu zdefiniowanego przez użytkownika w porównaniu GroupDocs dla platformy .NET
 
 ## Wstęp

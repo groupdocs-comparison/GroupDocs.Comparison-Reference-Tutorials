@@ -4,8 +4,8 @@
 "title": "Java용 GroupDocs.Comparison을 사용하여 문서 메타데이터 추출하기&#58; 종합 가이드"
 "url": "/ko/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Java용 GroupDocs.Comparison을 사용하여 문서 메타데이터 추출
 
 디지털 시대에는 법률, 행정, 기업 환경 등 다양한 분야에서 문서 속성을 관리하고 분석하는 것이 필수적입니다. 문서의 메타데이터를 이해하면 생산성을 크게 향상시킬 수 있습니다. 이 종합 가이드에서는 GroupDocs.Comparison 라이브러리를 사용하여 문서에서 파일 유형, 페이지 수, 크기와 같은 중요한 정보를 손쉽게 추출하는 방법을 안내합니다.

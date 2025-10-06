@@ -3,8 +3,8 @@
 "title": "Dokumentumbetöltési oktatóanyagok a GroupDocs.Comparison Java-hoz"
 "url": "/hu/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Dokumentumbetöltési oktatóanyagok a GroupDocs.Comparison Java-hoz
 
 Dokumentumbetöltési oktatóanyagaink átfogó útmutatást nyújtanak a dokumentumok összehasonlításra való előkészítéséhez Java alkalmazásokban. Ezek a lépésről lépésre bemutatják, hogyan tölthetők be dokumentumok helyi tárolóból, memóriafolyamokból és karakterlánc-tartalomból, valamint hogyan konfigurálhatók a betöltési beállítások a különböző dokumentumtípusokhoz. Minden oktatóanyag teljes Java kódpéldákat tartalmaz, amelyek segítenek robusztus dokumentumbetöltési funkciók megvalósításában az összehasonlító alkalmazásokban.

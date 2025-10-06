@@ -5,8 +5,8 @@
 "title": "경로에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison"
 "url": "/ko/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # 경로에서 문서 정보 가져오기 - .NET용 GroupDocs.Comparison
 
 ## 소개

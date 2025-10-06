@@ -4,8 +4,8 @@
 "title": "Java'da GroupDocs.Comparison Kullanarak Hücre Dosyalarını Nasıl Karşılaştırabilirsiniz? Kapsamlı Bir Kılavuz"
 "url": "/tr/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Java'da GroupDocs.Comparison Kullanılarak Hücre Dosyaları Nasıl Karşılaştırılır
 
 ## giriiş

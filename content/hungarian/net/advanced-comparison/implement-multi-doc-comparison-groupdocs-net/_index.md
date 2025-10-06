@@ -4,8 +4,8 @@
 "title": "Több dokumentum összehasonlításának megvalósítása .NET-ben a GroupDocs.Comparison használatával"
 "url": "/hu/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Több dokumentum összehasonlításának megvalósítása .NET-ben a GroupDocs.Comparison használatával: Átfogó útmutató
 
 ## Bevezetés

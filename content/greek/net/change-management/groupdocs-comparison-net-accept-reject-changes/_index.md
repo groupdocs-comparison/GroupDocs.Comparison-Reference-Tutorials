@@ -4,8 +4,8 @@
 "title": "Διαχείριση αλλαγών κύριου εγγράφου &#58; Αποδοχή και απόρριψη επεξεργασιών με το GroupDocs.Comparison .NET"
 "url": "/el/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # Διαχείριση αλλαγών κύριων εγγράφων με το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

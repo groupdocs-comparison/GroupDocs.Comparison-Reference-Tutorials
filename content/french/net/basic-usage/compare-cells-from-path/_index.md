@@ -5,8 +5,8 @@
 "title": "Comparer les cellules du chemin - GroupDocs.Comparison pour .NET"
 "url": "/fr/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Comparer les cellules du chemin - GroupDocs.Comparison pour .NET
 
 ## Introduction

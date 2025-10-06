@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 掌握 Java 中的文档比较和 HTML 渲染"
 "url": "/zh/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 中的文档比较和 HTML 渲染
 
 ## 介绍

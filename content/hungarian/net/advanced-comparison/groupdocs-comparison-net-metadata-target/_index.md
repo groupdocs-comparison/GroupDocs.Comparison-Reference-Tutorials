@@ -4,8 +4,8 @@
 "title": "Fődokumentum-összehasonlítás .NET-ben – Metaadatok megőrzése a GroupDocs.Comparison használatával"
 "url": "/hu/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása .NET-ben: Metaadatok megőrzése a GroupDocs.Comparison segítségével
 ## Bevezetés
 Nehezen tudott dokumentumokat összehasonlítani, miközben meg kellett őriznie bizonyos metaadatokat? A GroupDocs.Comparison for .NET a megoldás! Ez az oktatóanyag végigvezeti Önt a céldokumentum metaadatainak beállításán az összehasonlítás során, biztosítva, hogy a végső dokumentum zökkenőmentesen megőrizze a kívánt attribútumokat.

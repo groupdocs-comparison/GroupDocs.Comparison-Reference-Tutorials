@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में परिणामी दस्तावेज़ के लिए पासवर्ड सेट करना"
 "url": "/hi/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में परिणामी दस्तावेज़ के लिए पासवर्ड सेट करना
 
 ## परिचय

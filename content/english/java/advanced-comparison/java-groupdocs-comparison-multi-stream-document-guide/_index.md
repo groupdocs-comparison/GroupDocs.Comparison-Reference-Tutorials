@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-streams", "groupdocs", "file-processing"]
+type: docs
 ---
-
 # Java Document Comparison Streams: The Complete Developer's Guide
 
 ## Introduction

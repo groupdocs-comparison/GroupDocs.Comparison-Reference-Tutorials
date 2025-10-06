@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना कैसे लागू करें एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना कैसे लागू करें: एक चरण-दर-चरण मार्गदर्शिका
 
 ## परिचय

@@ -5,8 +5,8 @@
 "title": "تحميل المستندات في GroupDocs مقارنة لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # تحميل المستندات في GroupDocs مقارنة لـ .NET
 
 ## مقدمة

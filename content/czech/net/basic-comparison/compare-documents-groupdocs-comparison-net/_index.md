@@ -4,8 +4,8 @@
 "title": "Porovnávání dokumentů ze streamů pomocí GroupDocs.Comparison .NET – kompletní průvodce pro vývojáře"
 "url": "/cs/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnat více dokumentů z streamů pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "Verimli Belge Yönetimi için GroupDocs.Comparison .NET ile Belge Meta Verilerinin Nasıl Ayarlanacağı"
 "url": "/tr/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Meta Verilerinin Nasıl Ayarlanacağı: Kapsamlı Bir Kılavuz
 
 Günümüzün dijital çağında, etkili belge yönetimi hem işletmeler hem de bireyler için hayati önem taşır. Bu sürecin kritik bir yönü, belgeleri etkili bir şekilde karşılaştırmaktır. İster bir belge yönetim sistemi geliştiriyor olun, ister sık sık birden fazla belge sürümünü işliyor olun, GroupDocs.Comparison kitaplığını kullanmak, karşılaştırmalar sırasında hassas meta veri yönetimine izin vererek iş akışınızı kolaylaştırabilir.

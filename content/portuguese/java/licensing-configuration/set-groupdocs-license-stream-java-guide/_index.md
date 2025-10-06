@@ -4,8 +4,8 @@
 "title": "Como definir a licença do GroupDocs a partir do Stream em Java - um guia passo a passo"
 "url": "/pt/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Como definir a licença do GroupDocs a partir do Stream em Java: um guia passo a passo
 
 ## Introdução

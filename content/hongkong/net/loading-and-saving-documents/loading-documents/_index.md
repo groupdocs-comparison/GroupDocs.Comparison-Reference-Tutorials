@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比較中載入 .NET 文檔"
 "url": "/zh-hant/net/loading-and-saving-documents/loading-documents/"
 "weight": 10
+type: docs
 ---
-
 # 在 GroupDocs 比較中載入 .NET 文檔
 
 ## 介紹

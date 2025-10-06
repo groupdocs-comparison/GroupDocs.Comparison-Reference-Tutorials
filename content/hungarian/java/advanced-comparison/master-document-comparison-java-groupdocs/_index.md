@@ -4,8 +4,8 @@
 "title": "Fődokumentum-összehasonlítás Java nyelven&#58; GroupDocs.Comparison használata Word-, szöveg- és e-mail-dokumentumokhoz"
 "url": "/hu/java/advanced-comparison/master-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása Java nyelven a GroupDocs.Comparison segítségével
 
 **Több Word-, szöveg- és e-mail-dokumentum hatékony összehasonlítása a GroupDocs.Comparison for Java segítségével**

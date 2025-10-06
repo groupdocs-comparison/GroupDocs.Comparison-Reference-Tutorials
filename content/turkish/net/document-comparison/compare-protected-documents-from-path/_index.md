@@ -5,8 +5,8 @@
 "title": "Yoldan Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET"
 "url": "/tr/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Yoldan Korunan Belgeleri Karşılaştırın - GroupDocs.Comparison for .NET
 
 ## giriiş

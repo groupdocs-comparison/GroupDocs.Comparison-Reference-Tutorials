@@ -4,8 +4,8 @@
 "title": "JavaでGroupDocs.Comparisonを使用してドキュメントメタデータを実装する完全ガイド"
 "url": "/ja/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # JavaでGroupDocs.Comparisonを使用してドキュメントメタデータを実装する：完全ガイド
 
 ## 導入

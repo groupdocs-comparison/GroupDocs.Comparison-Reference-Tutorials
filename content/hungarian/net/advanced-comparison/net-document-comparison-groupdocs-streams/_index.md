@@ -4,8 +4,8 @@
 "title": "Dokumentum-összehasonlítás automatizálása .NET-ben GroupDocs.Comparison adatfolyamok használatával"
 "url": "/hu/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás automatizálása .NET-ben GroupDocs.Comparison adatfolyamok használatával
 ## Bevezetés
 Hatékony módszert keres a dokumentumok összehasonlításának automatizálására? Ez az oktatóanyag bemutatja, hogyan hasonlítható össze a dokumentumok streamek használatával egy .NET környezetben a GroupDocs.Comparison for .NET segítségével. A fájlstreamek használatával ez a megközelítés rugalmasságot és hatékonyságot kínál, különösen nagy fájlok vagy hálózati erőforrások kezelésekor.

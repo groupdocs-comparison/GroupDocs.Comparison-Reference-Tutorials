@@ -5,8 +5,8 @@
 "title": "Pulisci le risorse dopo le anteprime delle pagine"
 "url": "/it/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Pulisci le risorse dopo le anteprime delle pagine
 
 ## Introduzione

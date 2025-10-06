@@ -4,8 +4,8 @@
 "title": "Cách so sánh các tệp ô bằng GroupDocs.Comparison trong Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh các tệp ô bằng GroupDocs.Comparison trong Java
 
 ## Giới thiệu

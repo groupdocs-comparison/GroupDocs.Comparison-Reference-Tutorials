@@ -4,8 +4,8 @@
 "title": "Σύγκριση κύριων εγγράφων σε Java χρησιμοποιώντας το GroupDocs.Comparison API"
 "url": "/el/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Mastering Σύγκριση Εγγράφων σε Java Χρησιμοποιώντας το GroupDocs.Comparison API
 
 ## Εισαγωγή

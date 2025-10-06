@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके जावा में वर्ड दस्तावेज़ तुलना लागू करें"
 "url": "/hi/java/basic-comparison/word-document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा में वर्ड दस्तावेज़ तुलना को क्रियान्वित करना
 
 ## परिचय

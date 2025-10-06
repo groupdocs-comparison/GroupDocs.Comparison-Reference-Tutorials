@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-security", "java-api", "groupdocs", "document-comparison"]
+type: docs
 ---
-
 # How to Compare Password Protected Documents in Java - Complete Security Guide
 
 ## Introduction

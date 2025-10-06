@@ -5,8 +5,8 @@
 "title": "حفظ بيانات تعريف المستند المحددة من قبل المستخدم في GroupDocs - مقارنة لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # حفظ بيانات تعريف المستند المحددة من قبل المستخدم في GroupDocs - مقارنة لـ .NET
 
 ## مقدمة

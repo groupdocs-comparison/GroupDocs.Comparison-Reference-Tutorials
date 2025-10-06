@@ -9,8 +9,8 @@ weight: 1
 url: "/java/basic-comparison/java-groupdocs-comparison-document-management/"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-api", "groupdocs", "document-management"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial: Master GroupDocs.Comparison API
 
 **Struggling with document version control in your Java application?** You're not alone. Managing multiple document versions, tracking changes, and generating visual previews can quickly become a nightmare without the right tools.

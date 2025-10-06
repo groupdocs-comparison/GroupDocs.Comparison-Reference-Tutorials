@@ -5,8 +5,8 @@
 "title": "Cellen vergelijken van pad - GroupDocs.Comparison voor .NET"
 "url": "/nl/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Cellen vergelijken van pad - GroupDocs.Comparison voor .NET
 
 ## Invoering

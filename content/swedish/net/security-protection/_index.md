@@ -3,8 +3,8 @@
 "title": "Handledningar om dokumentsäkerhet och skydd för GroupDocs.Comparison .NET"
 "url": "/sv/net/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Handledningar om dokumentsäkerhet och skydd för GroupDocs.Comparison .NET
 
 Bemästra dokumentsäkerhetsfunktioner med våra detaljerade GroupDocs.Comparison-handledningar för .NET. Dessa omfattande guider visar hur du jämför lösenordsskyddade dokument, ställer in lösenord för resulterande filer, implementerar säkra jämförelsearbetsflöden och hanterar dokumentskydd programmatiskt. Varje handledning ger fungerande C#-kodexempel för säkra dokumentjämförelseoperationer, vilket hjälper dig att bygga applikationer som upprätthåller sekretessen samtidigt som de möjliggör effektiv dokumentjämförelse.

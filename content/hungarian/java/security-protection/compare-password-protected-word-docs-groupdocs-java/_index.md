@@ -4,8 +4,8 @@
 "title": "Jelszóval védett Word-dokumentumok összehasonlítása a GroupDocs.Comparison for Java használatával"
 "url": "/hu/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása: Útmutató a jelszóval védett Word-dokumentumok összehasonlításához a GroupDocs.Comparison for Java segítségével
 
 ## Bevezetés

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Comparison"]
 tags: ["document-preview", "dotnet", "csharp", "comparison", "tutorial"]
+type: docs
 ---
-
 # Document Preview Generation .NET - Complete Developer Guide
 
 Working with document comparison in your .NET applications? You're probably facing the challenge of letting users see what they're comparing before diving into the full comparison process. That's where document preview generation becomes absolutely crucial for creating a smooth user experience.

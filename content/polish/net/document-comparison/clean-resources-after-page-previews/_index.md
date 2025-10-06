@@ -5,8 +5,8 @@
 "title": "Wyczyść zasoby po podglądzie stron"
 "url": "/pl/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Wyczyść zasoby po podglądzie stron
 
 ## Wstęp

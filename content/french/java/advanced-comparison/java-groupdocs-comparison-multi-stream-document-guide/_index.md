@@ -4,8 +4,8 @@
 "title": "Comparaison de documents multi-flux Java à l'aide de GroupDocs.Comparison - Un guide complet"
 "url": "/fr/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser la comparaison de documents multi-flux Java avec GroupDocs.Comparison
 
 ## Introduction

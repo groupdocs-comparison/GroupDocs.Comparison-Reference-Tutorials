@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API를 사용한 Java 문서 비교&#58; 스트림 기반 접근 방식"
 "url": "/ko/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Java 마스터하기: GroupDocs.Comparison API를 사용한 문서 비교
 
 강력한 GroupDocs.Comparison API를 사용하여 Java에서 문서를 비교하는 방법을 살펴보는 종합 가이드에 오신 것을 환영합니다. 법률 문서, 학술 논문 또는 기타 텍스트 파일을 관리하든 효율적으로 비교하는 것은 매우 중요합니다. 이 튜토리얼에서는 Java에서 스트림을 사용하여 두 문서 간에 감지된 변경 사항을 허용하거나 거부하는 방법을 살펴보겠습니다.

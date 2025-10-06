@@ -5,8 +5,8 @@
 "title": "대상 문서에 대한 페이지 미리보기 생성"
 "url": "/ko/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # 대상 문서에 대한 페이지 미리보기 생성
 
 ## 소개

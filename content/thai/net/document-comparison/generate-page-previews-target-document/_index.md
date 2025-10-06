@@ -5,8 +5,8 @@
 "title": "สร้างตัวอย่างหน้าสำหรับเอกสารเป้าหมาย"
 "url": "/th/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # สร้างตัวอย่างหน้าสำหรับเอกสารเป้าหมาย
 
 ## การแนะนำ

@@ -4,8 +4,8 @@
 "title": "Cách so sánh các tài liệu được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison trong Java"
 "url": "/vi/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh nhiều tài liệu được bảo vệ bằng GroupDocs.Comparison trong Java
 
 **Giới thiệu**

@@ -4,8 +4,8 @@
 "title": "Προσαρμόστε τα στυλ εισαγόμενων στοιχείων σε συγκρίσεις εγγράφων Java με το GroupDocs.Comparison"
 "url": "/el/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Προσαρμογή στυλ εισαγόμενων στοιχείων σε συγκρίσεις εγγράφων Java χρησιμοποιώντας το GroupDocs.Comparison
 
 ## Εισαγωγή

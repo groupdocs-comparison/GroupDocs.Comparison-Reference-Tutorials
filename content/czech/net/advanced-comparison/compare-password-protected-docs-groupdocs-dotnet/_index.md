@@ -4,8 +4,8 @@
 "title": "Jak porovnat více dokumentů Wordu chráněných heslem v .NET pomocí GroupDocs.Comparison"
 "url": "/cs/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Jak porovnat více dokumentů Wordu chráněných heslem v .NET pomocí GroupDocs.Comparison
 
 ## Zavedení

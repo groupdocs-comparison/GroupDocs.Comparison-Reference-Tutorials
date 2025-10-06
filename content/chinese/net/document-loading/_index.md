@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 文档加载教程"
 "url": "/zh/net/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 文档加载教程
 
 我们的文档加载教程提供了在 .NET 应用程序中准备用于比较的文档的全面指导。这些分步指南演示了如何从本地存储、内存流和字符串内容加载文档，以及如何为不同类型的文档配置加载选项。每个教程都包含完整的代码示例，可帮助您在比较应用程序中实现强大的文档加载功能。

@@ -5,8 +5,8 @@
 "title": ".NET के लिए GroupDocs तुलना में दस्तावेज़ मेटाडेटा लक्ष्य सहेजना"
 "url": "/hi/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # .NET के लिए GroupDocs तुलना में दस्तावेज़ मेटाडेटा लक्ष्य सहेजना
 
 ## परिचय

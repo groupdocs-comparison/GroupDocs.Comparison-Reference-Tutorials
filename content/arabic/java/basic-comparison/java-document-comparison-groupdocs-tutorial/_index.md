@@ -4,8 +4,8 @@
 "title": "تنفيذ مقارنة المستندات في Java باستخدام GroupDocs - دليل شامل"
 "url": "/ar/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # تنفيذ مقارنة المستندات في Java باستخدام GroupDocs: دليل شامل
 
 ## مقدمة

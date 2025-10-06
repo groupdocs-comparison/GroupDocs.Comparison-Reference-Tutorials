@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące informacji o dokumentach dla GroupDocs.Comparison .NET"
 "url": "/pl/net/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Samouczki dotyczące informacji o dokumentach dla GroupDocs.Comparison .NET
 
 Nasze samouczki dotyczące informacji o dokumentach zapewniają wskazówki dotyczące uzyskiwania dostępu do metadanych dokumentu za pomocą GroupDocs.Comparison w .NET. Te praktyczne przewodniki pokazują, jak pobierać informacje o dokumentach źródłowych, docelowych i wynikowych, określać formaty plików i programowo uzyskiwać dostęp do właściwości dokumentu. Każdy samouczek zawiera działające przykłady kodu C# dla typowych scenariuszy dotyczących informacji o dokumentach, pomagając w tworzeniu aplikacji, które mogą skutecznie analizować i przetwarzać dane dokumentu.

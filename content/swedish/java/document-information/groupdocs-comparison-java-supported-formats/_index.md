@@ -4,8 +4,8 @@
 "title": "Hämta stödda filformat med GroupDocs.Comparison för Java – en omfattande guide"
 "url": "/sv/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Hämta stödda filformat med GroupDocs.Comparison för Java
 
 ## Introduktion

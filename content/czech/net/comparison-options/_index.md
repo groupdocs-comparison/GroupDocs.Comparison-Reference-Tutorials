@@ -3,8 +3,8 @@
 "title": "Možnosti a nastavení porovnání – tutoriály pro GroupDocs.Comparison .NET"
 "url": "/cs/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Možnosti a nastavení porovnání – tutoriály pro GroupDocs.Comparison .NET
 
 Naučte se jemně doladit porovnávání dokumentů s našimi tutoriály o možnostech GroupDocs.Comparison pro .NET. Tyto podrobné návody ukazují, jak konfigurovat citlivost porovnávání, přizpůsobit algoritmy detekce změn, nastavit předvolby zobrazení pro různé typy změn a implementovat specializovaná pravidla porovnávání. Každý tutoriál obsahuje funkční příklady kódu C# pro implementaci vlastních možností porovnávání, které vám pomohou vytvářet porovnávací aplikace, které lze přesně přizpůsobit vašim specifickým požadavkům na analýzu dokumentů.

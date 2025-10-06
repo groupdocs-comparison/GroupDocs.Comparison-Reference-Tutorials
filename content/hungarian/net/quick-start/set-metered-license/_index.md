@@ -5,8 +5,8 @@
 "title": "Mért licenc beállítása - GroupDocs összehasonlítás .NET-hez"
 "url": "/hu/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Mért licenc beállítása - GroupDocs összehasonlítás .NET-hez
 
 ## Bevezetés

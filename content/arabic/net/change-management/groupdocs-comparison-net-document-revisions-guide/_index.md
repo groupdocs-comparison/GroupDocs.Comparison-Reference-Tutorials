@@ -4,8 +4,8 @@
 "title": "مراجعة المستندات الرئيسية بكفاءة باستخدام GroupDocs.Comparison .NET - دليل شامل"
 "url": "/ar/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مراجعة المستندات باستخدام GroupDocs.Comparison .NET: دليل خطوة بخطوة
 
 ## مقدمة

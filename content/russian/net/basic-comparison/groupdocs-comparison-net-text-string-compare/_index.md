@@ -4,8 +4,8 @@
 "title": "Мастер сравнения текстовых строк в .NET с использованием библиотеки GroupDocs.Comparison"
 "url": "/ru/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Мастер сравнения текстовых строк в .NET с использованием библиотеки GroupDocs.Comparison
 
 ## Введение

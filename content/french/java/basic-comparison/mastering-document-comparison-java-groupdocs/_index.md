@@ -4,8 +4,8 @@
 "title": "Comparaison de documents maîtres en Java à l'aide de l'API GroupDocs.Comparison"
 "url": "/fr/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # Maîtriser la comparaison de documents en Java à l'aide de l'API GroupDocs.Comparison
 
 ## Introduction

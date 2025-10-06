@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["File Comparison"]
 tags: ["groupdocs", "folder-comparison", "dotnet", "csharp", "file-management"]
+type: docs
 ---
-
 # Folder Comparison .NET Tutorial - Complete Guide to Compare Directories with GroupDocs
 
 ## Why Folder Comparison Matters for .NET Developers

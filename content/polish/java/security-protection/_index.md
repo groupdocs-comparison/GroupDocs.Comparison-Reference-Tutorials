@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące bezpieczeństwa i ochrony dokumentów dla GroupDocs.Comparison Java"
 "url": "/pl/java/security-protection/"
 "weight": 9
+type: docs
 ---
-
 # Samouczki dotyczące bezpieczeństwa i ochrony dokumentów dla GroupDocs.Comparison Java
 
 Poznaj funkcje bezpieczeństwa dokumentów dzięki naszym szczegółowym samouczkom GroupDocs.Comparison dla języka Java. Te kompleksowe przewodniki pokazują, jak porównywać dokumenty chronione hasłem, ustawiać hasła dla plików wynikowych, wdrażać bezpieczne przepływy pracy porównawcze i programowo zarządzać ochroną dokumentów. Każdy samouczek zawiera działające przykłady kodu Java dla bezpiecznych operacji porównywania dokumentów, pomagając w tworzeniu aplikacji, które zachowują poufność, umożliwiając jednocześnie skuteczne porównywanie dokumentów.

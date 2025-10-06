@@ -5,8 +5,8 @@
 "title": "Comparación de Aceptar y Rechazar Cambios en GroupDocs para .NET"
 "url": "/es/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # Comparación de Aceptar y Rechazar Cambios en GroupDocs para .NET
 
 ## Introducción

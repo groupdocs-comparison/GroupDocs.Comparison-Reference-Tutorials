@@ -4,8 +4,8 @@
 "title": "تنفيذ مقارنة المستندات في .NET باستخدام GroupDocs.Comparison لملفات Word من التدفقات"
 "url": "/ar/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تنفيذ مقارنة المستندات من Stream باستخدام GroupDocs.Comparison لـ .NET
 
 ## مقدمة

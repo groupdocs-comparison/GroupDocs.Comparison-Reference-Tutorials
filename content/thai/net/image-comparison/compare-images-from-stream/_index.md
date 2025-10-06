@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบภาพจาก Stream - GroupDocs.Comparison สำหรับ .NET"
 "url": "/th/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # เปรียบเทียบภาพจาก Stream - GroupDocs.Comparison สำหรับ .NET
 
 ## การแนะนำ

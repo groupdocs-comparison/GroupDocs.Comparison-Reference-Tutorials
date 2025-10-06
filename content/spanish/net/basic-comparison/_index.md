@@ -3,8 +3,8 @@
 "title": "Tutoriales básicos de comparación de documentos para GroupDocs.Comparison .NET"
 "url": "/es/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Tutoriales básicos de comparación de documentos para GroupDocs.Comparison .NET
 
 Domine la comparación básica de documentos con nuestros detallados tutoriales de GroupDocs.Comparison .NET. Estas guías paso a paso muestran cómo comparar documentos de diversos formatos, como Word, PDF, Excel e imágenes. Cada tutorial incluye ejemplos de código C# que muestran cómo identificar diferencias entre documentos, generar informes de comparación e implementar operaciones de comparación para diferentes tipos de documentos.

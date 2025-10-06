@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["groupdocs-comparison", "document-metadata", "dotnet-api", "document-properties"]
+type: docs
 ---
-
 # Extract Document Info from .NET Comparison Results - Complete Guide
 
 ## Introduction

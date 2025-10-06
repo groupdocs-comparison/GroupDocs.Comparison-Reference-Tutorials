@@ -4,8 +4,8 @@
 "title": "Cara Mengatur Metadata Dokumen dengan GroupDocs.Comparison .NET untuk Manajemen Dokumen yang Efisien"
 "url": "/id/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mengatur Metadata Dokumen dengan GroupDocs.Comparison .NET: Panduan Lengkap
 
 Di era digital saat ini, manajemen dokumen yang efisien sangat penting bagi bisnis dan individu. Salah satu aspek penting dari proses ini adalah membandingkan dokumen secara efektif. Baik Anda sedang mengembangkan sistem manajemen dokumen atau sering menangani beberapa versi dokumen, penggunaan pustaka GroupDocs.Comparison dapat memperlancar alur kerja Anda dengan memungkinkan manajemen metadata yang tepat selama perbandingan.

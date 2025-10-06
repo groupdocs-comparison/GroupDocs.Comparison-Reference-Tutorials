@@ -4,8 +4,8 @@
 "title": "Java için GroupDocs.Comparison'da Ustalaşma; Zahmetsiz Belge Önizleme Oluşturma"
 "url": "/tr/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Java için GroupDocs.Comparison'da Ustalaşma: Zahmetsiz Belge Önizleme Oluşturma
 
 ## giriiş

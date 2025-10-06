@@ -5,8 +5,8 @@
 "title": ".NET के लिए ग्रुपडॉक्स तुलना में दस्तावेज़ मेटाडेटा स्रोत को सहेजना"
 "url": "/hi/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # .NET के लिए ग्रुपडॉक्स तुलना में दस्तावेज़ मेटाडेटा स्रोत को सहेजना
 
 ## परिचय

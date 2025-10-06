@@ -4,8 +4,8 @@
 "title": "إتقان مقارنة المستندات في .NET - دليل شامل لاستخدام GroupDocs.Comparison"
 "url": "/ar/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات في .NET باستخدام GroupDocs.Comparison
 
 أطلق العنان لإمكانات أتمتة مقارنات المستندات في بيئات .NET باستخدام GroupDocs.Comparison. سيساعدك هذا الدليل على تبسيط سير عملك وزيادة إنتاجيتك من خلال إدارة إصدارات المستندات بكفاءة.

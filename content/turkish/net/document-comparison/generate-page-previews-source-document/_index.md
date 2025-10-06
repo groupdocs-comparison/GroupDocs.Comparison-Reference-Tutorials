@@ -5,8 +5,8 @@
 "title": "Kaynak Belge için Sayfa Önizlemeleri Oluştur"
 "url": "/tr/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # Kaynak Belge için Sayfa Önizlemeleri Oluştur
 
 ## giriiş

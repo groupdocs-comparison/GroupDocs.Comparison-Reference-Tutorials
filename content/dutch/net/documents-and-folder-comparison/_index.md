@@ -5,8 +5,8 @@
 "title": "Vergelijking van documenten en mappen"
 "url": "/nl/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Vergelijking van documenten en mappen
 
 ## Invoering

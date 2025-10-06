@@ -4,8 +4,8 @@
 "title": "Nastavení licence GroupDocs.Comparison pomocí URL v Javě – zjednodušení automatizace licencování"
 "url": "/cs/java/licensing-configuration/set-groupdocs-comparison-license-url-java/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí GroupDocs.Comparison Java: Nastavení licence pomocí URL
 
 ## Zavedení

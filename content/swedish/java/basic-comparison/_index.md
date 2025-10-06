@@ -3,8 +3,8 @@
 "title": "Grundläggande dokumentjämförelsehandledningar för GroupDocs.Comparison Java"
 "url": "/sv/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Grundläggande dokumentjämförelsehandledningar för GroupDocs.Comparison Java
 
 Bemästra grundläggande dokumentjämförelse med våra detaljerade GroupDocs.Comparison Java-handledningar. Dessa steg-för-steg-guider visar hur man jämför dokument i olika format, inklusive Word, PDF, Excel och bilder. Varje handledning innehåller exempel på fungerande Java-kod som visar hur man identifierar skillnader mellan dokument, genererar jämförelserapporter och implementerar jämförelseoperationer för olika dokumenttyper.

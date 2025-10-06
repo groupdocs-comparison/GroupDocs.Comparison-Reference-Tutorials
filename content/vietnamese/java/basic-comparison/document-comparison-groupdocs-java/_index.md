@@ -4,8 +4,8 @@
 "title": "Làm chủ việc so sánh tài liệu trong Java với GroupDocs.Comparison&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu bằng GroupDocs.Comparison trong Java
 
 Trong thời đại kỹ thuật số ngày nay, việc quản lý và so sánh tài liệu là điều cần thiết đối với cả doanh nghiệp và cá nhân. Cho dù bạn đang cộng tác trong các dự án hay đảm bảo tính nhất quán của dữ liệu trên các phiên bản tài liệu, việc có đúng công cụ có thể tạo ra sự khác biệt đáng kể. Hướng dẫn này khám phá cách sử dụng GroupDocs.Comparison cho Java để so sánh liền mạch các tài liệu Word bằng luồng. Đến cuối hướng dẫn này, bạn sẽ có thể triển khai một tính năng so sánh mạnh mẽ trong các ứng dụng Java của mình.

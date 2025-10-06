@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET에 대한 미리보기 생성 튜토리얼"
 "url": "/ko/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # GroupDocs.Comparison .NET에 대한 미리보기 생성 튜토리얼
 
 .NET 개발자를 위한 GroupDocs.Comparison의 포괄적인 튜토리얼을 통해 문서 미리보기를 만드는 방법을 알아보세요. 이 실용적인 가이드는 소스 문서, 대상 문서 및 비교 결과에 대한 페이지 미리보기를 생성하고, 미리보기 이미지 크기를 사용자 지정하고, 최적의 메모리 사용을 위해 리소스 정리를 구현하는 방법을 보여줍니다. 각 튜토리얼에는 비교 애플리케이션에서 문서 미리보기 기능을 효율적으로 구현하는 데 필요한 자세한 C# 코드 예제가 포함되어 있습니다.

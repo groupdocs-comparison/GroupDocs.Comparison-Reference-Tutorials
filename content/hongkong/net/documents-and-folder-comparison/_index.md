@@ -5,8 +5,8 @@
 "title": "文件和資料夾比較"
 "url": "/zh-hant/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # 文件和資料夾比較
 
 ## 介紹

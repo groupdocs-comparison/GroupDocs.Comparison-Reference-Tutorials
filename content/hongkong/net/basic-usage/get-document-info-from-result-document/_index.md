@@ -5,8 +5,8 @@
 "title": "從結果文件中取得文件資訊 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # 從結果文件中取得文件資訊 - GroupDocs.Comparison for .NET
 
 ## 介紹

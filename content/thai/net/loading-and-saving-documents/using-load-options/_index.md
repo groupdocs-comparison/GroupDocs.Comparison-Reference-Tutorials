@@ -5,8 +5,8 @@
 "title": "การใช้ตัวเลือกการโหลดในการเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # การใช้ตัวเลือกการโหลดในการเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

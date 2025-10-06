@@ -3,8 +3,8 @@
 "title": "Tutorial sulla generazione di anteprime per GroupDocs.Comparison .NET"
 "url": "/it/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Tutorial sulla generazione di anteprime per GroupDocs.Comparison .NET
 
 Scopri come creare anteprime di documenti con i nostri tutorial completi su GroupDocs.Comparison per sviluppatori .NET. Queste guide pratiche illustrano come generare anteprime di pagina per documenti sorgente, documenti di destinazione e risultati di confronto, personalizzare le dimensioni delle immagini di anteprima e implementare la pulizia delle risorse per un utilizzo ottimale della memoria. Ogni tutorial include esempi dettagliati di codice C# per implementare in modo efficiente la funzionalità di anteprima dei documenti nelle tue applicazioni di confronto.

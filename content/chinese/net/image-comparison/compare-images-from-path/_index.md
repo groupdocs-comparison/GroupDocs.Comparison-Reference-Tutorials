@@ -5,8 +5,8 @@
 "title": "比较路径中的图像 - GroupDocs.Comparison for .NET"
 "url": "/zh/net/image-comparison/compare-images-from-path/"
 "weight": 10
+type: docs
 ---
-
 # 比较路径中的图像 - GroupDocs.Comparison for .NET
 
 ## 介绍

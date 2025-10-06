@@ -4,8 +4,8 @@
 "title": "Comment répertorier tous les formats de fichiers pris en charge dans GroupDocs.Comparison pour .NET"
 "url": "/fr/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Comment répertorier tous les formats de fichiers pris en charge dans GroupDocs.Comparison pour .NET
 
 ## Introduction

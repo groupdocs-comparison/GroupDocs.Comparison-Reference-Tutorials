@@ -4,8 +4,8 @@
 "title": "Teljes GroupDocs.Comparison Java-hoz oktatóanyag"
 "url": "/hu/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison Java-hoz – Lépésről lépésre oktatóanyagok és kódpéldák
 
 ## Tanuljon dokumentum-összehasonlítást Java nyelven – gyorsan, pontosan és hatékonyan

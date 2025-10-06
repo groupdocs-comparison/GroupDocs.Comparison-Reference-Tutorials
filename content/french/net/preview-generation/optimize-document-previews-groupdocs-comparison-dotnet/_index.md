@@ -4,8 +4,8 @@
 "title": "Générer et optimiser les aperçus de documents avec l'API .NET GroupDocs.Comparison"
 "url": "/fr/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Générer et optimiser les aperçus de documents avec GroupDocs.Comparison .NET
 
 ## Introduction

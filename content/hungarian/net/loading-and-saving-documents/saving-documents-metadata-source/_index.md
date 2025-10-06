@@ -5,8 +5,8 @@
 "title": "Dokumentumok metaadatforrásának mentése a GroupDocs Comparison for .NET alkalmazásban"
 "url": "/hu/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Dokumentumok metaadatforrásának mentése a GroupDocs Comparison for .NET alkalmazásban
 
 ## Bevezetés

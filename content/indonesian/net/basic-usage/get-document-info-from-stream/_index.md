@@ -5,8 +5,8 @@
 "title": "Mendapatkan Info Dokumen dari Stream - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Mendapatkan Info Dokumen dari Stream - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

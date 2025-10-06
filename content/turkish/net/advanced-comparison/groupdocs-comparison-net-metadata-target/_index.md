@@ -4,8 +4,8 @@
 "title": ".NET'te Ana Belge Karşılaştırması&#58; GroupDocs.Comparison Kullanarak Meta Verileri Koruyun"
 "url": "/tr/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
 "weight": 1
+type: docs
 ---
-
 # .NET'te Belge Karşılaştırmasında Ustalaşma: GroupDocs.Comparison ile Meta Verileri Koruma
 ## giriiş
 Belirli meta verileri korumanız gerekirken belgeleri karşılaştırmakta hiç zorluk çektiniz mi? .NET için GroupDocs.Comparison çözümdür! Bu eğitim, karşılaştırma sırasında hedef belgenin meta verilerini ayarlamanıza rehberlik edecek ve nihai belgenizin istenen öznitelikleri sorunsuz bir şekilde korumasını sağlayacaktır.

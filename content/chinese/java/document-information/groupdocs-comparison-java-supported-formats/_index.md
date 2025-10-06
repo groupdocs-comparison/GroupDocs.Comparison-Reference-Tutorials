@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison for Java 检索支持的文件格式——综合指南"
 "url": "/zh/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for Java 检索支持的文件格式
 
 ## 介绍

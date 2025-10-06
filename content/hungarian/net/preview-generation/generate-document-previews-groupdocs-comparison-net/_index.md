@@ -4,8 +4,8 @@
 "title": "Dokumentum-előnézetek hatékony generálása a GroupDocs.Comparison segítségével .NET-fejlesztőknek"
 "url": "/hu/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-előnézetek hatékony generálása a GroupDocs.Comparison for .NET segítségével
 
 ## Bevezetés

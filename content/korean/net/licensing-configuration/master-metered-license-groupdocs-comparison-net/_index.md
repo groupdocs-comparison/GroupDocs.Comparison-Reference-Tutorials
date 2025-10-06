@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET에서 미터링 라이선스를 설정하는 방법 - 단계별 가이드"
 "url": "/ko/net/licensing-configuration/master-metered-license-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET에서 미터링 라이선스를 설정하는 방법: 단계별 가이드
 
 ## 소개

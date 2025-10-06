@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "java-api", "file-processing"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial - Advanced GroupDocs.Comparison Guide
 
 If you've ever needed to compare hundreds of documents, handle password-protected files, or analyze entire directories for changes, you know that basic document comparison just doesn't cut it. That's where GroupDocs.Comparison's advanced features shine.

@@ -3,8 +3,8 @@
 "title": "Samouczki dotyczące zarządzania zmianami dla GroupDocs.Comparison .NET"
 "url": "/pl/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Samouczki dotyczące zarządzania zmianami dla GroupDocs.Comparison .NET
 
 Dowiedz się, jak skutecznie zarządzać zmianami w dokumentach dzięki naszym samouczkom GroupDocs.Comparison .NET. Te szczegółowe przewodniki pokazują, jak identyfikować konkretne różnice między dokumentami, akceptować lub odrzucać poszczególne zmiany, ustawiać autorów śledzonych zmian i programowo zarządzać wersjami. Każdy samouczek zawiera instrukcje krok po kroku z przykładami kodu C#, które pomogą Ci wdrożyć kompleksową funkcjonalność zarządzania zmianami w przepływach pracy porównywania dokumentów.

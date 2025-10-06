@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 문서 메타데이터 대상 저장"
 "url": "/ko/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 문서 메타데이터 대상 저장
 
 ## 소개

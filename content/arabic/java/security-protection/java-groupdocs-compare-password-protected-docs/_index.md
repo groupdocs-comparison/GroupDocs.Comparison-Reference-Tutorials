@@ -4,8 +4,8 @@
 "title": "إتقان مقارنة المستندات المحمية بكلمة مرور في Java باستخدام GroupDocs.Comparison"
 "url": "/ar/java/security-protection/java-groupdocs-compare-password-protected-docs/"
 "weight": 1
+type: docs
 ---
-
 # إتقان مقارنة المستندات المحمية بكلمة مرور في Java باستخدام GroupDocs.Comparison
 
 ## مقدمة

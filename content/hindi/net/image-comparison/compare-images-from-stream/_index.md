@@ -5,8 +5,8 @@
 "title": "स्ट्रीम से छवियों की तुलना करें - GroupDocs.तुलना के लिए .NET"
 "url": "/hi/net/image-comparison/compare-images-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # स्ट्रीम से छवियों की तुलना करें - GroupDocs.तुलना के लिए .NET
 
 ## परिचय

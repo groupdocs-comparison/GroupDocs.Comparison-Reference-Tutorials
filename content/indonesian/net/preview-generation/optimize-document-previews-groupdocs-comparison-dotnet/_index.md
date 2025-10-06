@@ -4,8 +4,8 @@
 "title": "Hasilkan dan Optimalkan Pratinjau Dokumen dengan GroupDocs.Comparison .NET API"
 "url": "/id/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Hasilkan dan Optimalkan Pratinjau Dokumen dengan GroupDocs.Comparison .NET
 
 ## Perkenalan

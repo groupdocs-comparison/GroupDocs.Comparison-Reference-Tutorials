@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 库掌握 .NET 中的文本字符串比较"
 "url": "/zh/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 库掌握 .NET 中的文本字符串比较
 
 ## 介绍

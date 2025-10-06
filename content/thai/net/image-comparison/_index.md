@@ -5,8 +5,8 @@
 "title": "การเปรียบเทียบภาพ"
 "url": "/th/net/image-comparison/"
 "weight": 23
+type: docs
 ---
-
 # การเปรียบเทียบภาพ
 
 

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison 라이브러리를 사용하여 .NET에서 다중 문서 비교 자동화"
 "url": "/ko/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 .NET에서 다중 문서 비교를 구현하는 방법
 
 ## 소개

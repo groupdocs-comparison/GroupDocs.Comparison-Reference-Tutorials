@@ -4,8 +4,8 @@
 "title": "Cara Mengatur Lisensi GroupDocs dari Stream di Java&#58; Panduan Langkah demi Langkah"
 "url": "/id/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mengatur Lisensi GroupDocs dari Stream di Java: Panduan Langkah demi Langkah
 
 ## Perkenalan

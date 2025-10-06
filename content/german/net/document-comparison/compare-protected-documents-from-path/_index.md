@@ -5,8 +5,8 @@
 "title": "Vergleichen Sie geschützte Dokumente vom Pfad - GroupDocs.Comparison für .NET"
 "url": "/de/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Vergleichen Sie geschützte Dokumente vom Pfad - GroupDocs.Comparison für .NET
 
 ## Einführung

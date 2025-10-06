@@ -4,8 +4,8 @@
 "title": "Πώς να φορτώσετε και να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης σε Java χρησιμοποιώντας το GroupDocs.Comparison"
 "url": "/el/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να φορτώσετε και να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης σε Java χρησιμοποιώντας το GroupDocs.Comparison
 
 ## Εισαγωγή

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET Kullanarak DOC Karşılaştırmalarında Başlıklar ve Altbilgiler Nasıl Göz Ardı Edilir"
 "url": "/tr/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET ile Belge Karşılaştırmalarında Başlıklar ve Altbilgiler Nasıl Göz Ardı Edilir
 
 ## giriiş

@@ -4,8 +4,8 @@
 "title": "Triển khai So sánh Tài liệu Java Sử dụng GroupDocs.Comparison&#58; Hướng dẫn Toàn diện"
 "url": "/vi/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # Cách triển khai so sánh tài liệu Java bằng cách thiết lập nguồn siêu dữ liệu với GroupDocs.Comparison
 
 ## Giới thiệu

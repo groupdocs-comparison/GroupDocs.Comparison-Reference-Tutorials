@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["metadata-management", "document-comparison", "java-tutorial", "groupdocs"]
+type: docs
 ---
-
 # Java Document Metadata Management - Complete Tutorial Guide
 
 Managing document metadata effectively is crucial when you're building document comparison applications in Java. Whether you're dealing with version control systems, content management platforms, or collaborative editing tools, understanding how to preserve, modify, and control document properties can make or break your application's usability.

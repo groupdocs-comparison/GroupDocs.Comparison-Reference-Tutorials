@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET&#58; के साथ कुशलतापूर्वक दस्तावेज़ संशोधन मास्टर करें एक व्यापक गाइड"
 "url": "/hi/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET के साथ दस्तावेज़ संशोधन में महारत हासिल करना: एक चरण-दर-चरण मार्गदर्शिका
 
 ## परिचय

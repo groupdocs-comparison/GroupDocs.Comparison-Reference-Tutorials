@@ -5,8 +5,8 @@
 "title": "Zapisywanie źródła metadanych dokumentów w porównaniu GroupDocs dla .NET"
 "url": "/pl/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Zapisywanie źródła metadanych dokumentów w porównaniu GroupDocs dla .NET
 
 ## Wstęp

@@ -5,8 +5,8 @@
 "title": "تعيين كلمة المرور للمستند الناتج في مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # تعيين كلمة المرور للمستند الناتج في مقارنة GroupDocs لـ .NET
 
 ## مقدمة

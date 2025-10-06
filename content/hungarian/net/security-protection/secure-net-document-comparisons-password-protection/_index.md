@@ -4,8 +4,8 @@
 "title": "Biztonságos dokumentum-összehasonlítások .NET-ben, jelszóval védett eredmények a GroupDocs.Comparison használatával"
 "url": "/hu/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítások védelme .NET-ben: Jelszóval védett eredmények a GroupDocs.Comparison segítségével
 
 ## Bevezetés

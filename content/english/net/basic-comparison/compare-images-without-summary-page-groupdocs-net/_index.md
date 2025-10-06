@@ -9,8 +9,8 @@ weight: 1
 url: "/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 categories: ["Image Processing"]
 tags: ["dotnet", "image-comparison", "groupdocs", "csharp"]
+type: docs
 ---
-
 # Image Comparison .NET - Compare Images Programmatically Without Summary Page
 
 ## Introduction

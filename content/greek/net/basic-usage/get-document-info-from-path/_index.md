@@ -5,8 +5,8 @@
 "title": "Λήψη πληροφοριών εγγράφου από τη διαδρομή - GroupDocs.Comparison για .NET"
 "url": "/el/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Λήψη πληροφοριών εγγράφου από τη διαδρομή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

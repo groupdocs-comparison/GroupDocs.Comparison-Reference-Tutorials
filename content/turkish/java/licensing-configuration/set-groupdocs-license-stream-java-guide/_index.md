@@ -4,8 +4,8 @@
 "title": "Java'da Stream'den GroupDocs Lisansı Nasıl Ayarlanır? Adım Adım Kılavuz"
 "url": "/tr/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Java'da Stream'den GroupDocs Lisansı Nasıl Ayarlanır: Adım Adım Kılavuz
 
 ## giriiş

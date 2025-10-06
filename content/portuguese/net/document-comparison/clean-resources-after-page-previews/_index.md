@@ -5,8 +5,8 @@
 "title": "Limpar recursos após as visualizações de página"
 "url": "/pt/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Limpar recursos após as visualizações de página
 
 ## Introdução

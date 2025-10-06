@@ -5,8 +5,8 @@
 "title": "Φόρτωση κειμένου από συμβολοσειρά σε σύγκριση GroupDocs για .NET"
 "url": "/el/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Φόρτωση κειμένου από συμβολοσειρά σε σύγκριση GroupDocs για .NET
 
 ## Εισαγωγή

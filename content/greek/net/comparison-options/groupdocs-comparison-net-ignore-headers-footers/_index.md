@@ -4,8 +4,8 @@
 "title": "Πώς να αγνοήσετε κεφαλίδες και υποσέλιδα σε συγκρίσεις DOC χρησιμοποιώντας το GroupDocs.Comparison .NET"
 "url": "/el/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να αγνοήσετε τις κεφαλίδες και τα υποσέλιδα σε συγκρίσεις εγγράφων με το GroupDocs.Comparison .NET
 
 ## Εισαγωγή

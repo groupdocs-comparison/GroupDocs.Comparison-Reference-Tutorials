@@ -4,8 +4,8 @@
 "title": "كيفية إعداد ترخيص GroupDocs.Comparison في .NET - دليل خطوة بخطوة"
 "url": "/ar/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # كيفية إعداد ترخيص GroupDocs.Comparison في .NET
 
 ## مقدمة

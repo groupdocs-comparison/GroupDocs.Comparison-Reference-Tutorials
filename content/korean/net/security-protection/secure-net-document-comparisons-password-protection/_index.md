@@ -4,8 +4,8 @@
 "title": ".NET에서 안전한 문서 비교&#58; GroupDocs.Comparison을 사용하여 암호로 결과 보호"
 "url": "/ko/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # .NET에서 문서 비교 보안: GroupDocs.Comparison을 사용하여 암호로 결과 보호
 
 ## 소개

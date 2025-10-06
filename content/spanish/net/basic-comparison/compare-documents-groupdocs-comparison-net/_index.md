@@ -4,8 +4,8 @@
 "title": "Comparar documentos de secuencias con GroupDocs.Comparison .NET&#58; una guía completa para desarrolladores"
 "url": "/es/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cómo comparar varios documentos de Streams usando GroupDocs.Comparison .NET
 
 ## Introducción

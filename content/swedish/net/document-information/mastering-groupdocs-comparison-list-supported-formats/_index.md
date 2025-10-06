@@ -4,8 +4,8 @@
 "title": "Hur man listar alla filformat som stöds i GroupDocs.Comparison för .NET"
 "url": "/sv/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Hur man listar alla filformat som stöds i GroupDocs.Comparison för .NET
 
 ## Introduktion

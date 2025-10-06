@@ -4,8 +4,8 @@
 "title": "Aangepaste lettertypen laden voor documentvergelijking met behulp van GroupDocs.Comparison .NET"
 "url": "/nl/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Aangepaste lettertypen laden voor documentvergelijking met behulp van GroupDocs.Comparison .NET
 
 ## Invoering

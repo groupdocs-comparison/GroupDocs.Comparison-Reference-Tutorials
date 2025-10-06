@@ -5,8 +5,8 @@
 "title": "Támogatott formátumok beszerzése - GroupDocs.Comparison .NET-hez"
 "url": "/hu/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Támogatott formátumok beszerzése - GroupDocs.Comparison .NET-hez
 
 ## Bevezetés

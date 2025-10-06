@@ -5,8 +5,8 @@
 "title": "Bandingkan Dokumen Terproteksi dari Stream - GroupDocs.Comparison untuk .NET"
 "url": "/id/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Bandingkan Dokumen Terproteksi dari Stream - GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

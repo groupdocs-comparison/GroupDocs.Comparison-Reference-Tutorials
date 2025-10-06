@@ -4,8 +4,8 @@
 "title": "Přizpůsobení stylů vložených položek v porovnávání dokumentů Java pomocí GroupDocs.Comparison"
 "url": "/cs/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # Přizpůsobení stylů vložených položek v porovnávání dokumentů Java pomocí GroupDocs.Comparison
 
 ## Zavedení

@@ -4,8 +4,8 @@
 "title": "Säkra dokumentjämförelser i .NET - Lösenordsskydda resultat med GroupDocs.Comparison"
 "url": "/sv/net/security-protection/secure-net-document-comparisons-password-protection/"
 "weight": 1
+type: docs
 ---
-
 # Säkra dina dokumentjämförelser i .NET: Lösenordsskydda resultat med GroupDocs.Comparison
 
 ## Introduktion

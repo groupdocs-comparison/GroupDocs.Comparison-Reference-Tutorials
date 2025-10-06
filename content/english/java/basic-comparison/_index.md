@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-comparison", "java-tutorial", "groupdocs", "pdf-comparison", "word-comparison"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial - Complete Developer Guide
 
 Are you tired of manually checking document differences or dealing with inconsistent version control? You're not alone. Many Java developers struggle with implementing reliable document comparison functionality, especially when dealing with different file formats like Word, PDF, and Excel.

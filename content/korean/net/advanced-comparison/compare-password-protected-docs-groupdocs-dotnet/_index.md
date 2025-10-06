@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 .NET에서 암호로 보호된 여러 Word 문서를 비교하는 방법"
 "url": "/ko/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 .NET에서 암호로 보호된 여러 Word 문서를 비교하는 방법
 
 ## 소개

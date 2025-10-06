@@ -5,8 +5,8 @@
 "title": "ページプレビュー後のリソースのクリーンアップ"
 "url": "/ja/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # ページプレビュー後のリソースのクリーンアップ
 
 ## 導入

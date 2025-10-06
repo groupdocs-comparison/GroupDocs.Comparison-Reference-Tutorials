@@ -4,8 +4,8 @@
 "title": "Fődokumentum-összehasonlítás Java nyelven&#58; GroupDocs.Comparison API használata a hatékony cellafájl-elemzéshez"
 "url": "/hu/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Dokumentum-összehasonlítás elsajátítása Java nyelven a GroupDocs.Comparison API segítségével
 
 ## Bevezetés

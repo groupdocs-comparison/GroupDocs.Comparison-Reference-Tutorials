@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET을 사용하여 마스터 문서 변경 관리&#58; 편집 수락 및 거부"
 "url": "/ko/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET을 활용한 마스터 문서 변경 관리
 
 ## 소개

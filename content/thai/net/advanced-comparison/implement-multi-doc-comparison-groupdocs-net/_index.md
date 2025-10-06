@@ -4,8 +4,8 @@
 "title": "ใช้งานการเปรียบเทียบเอกสารหลายฉบับใน .NET โดยใช้ GroupDocs.Comparison"
 "url": "/th/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # การนำการเปรียบเทียบเอกสารหลายฉบับไปใช้ใน .NET โดยใช้ GroupDocs.Comparison: คู่มือฉบับสมบูรณ์
 
 ## การแนะนำ

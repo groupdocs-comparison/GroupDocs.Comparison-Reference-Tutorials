@@ -4,8 +4,8 @@
 "title": "أتمتة مقارنة مستندات Word باستخدام GroupDocs.Comparison .NET - برنامج تعليمي كامل"
 "url": "/ar/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # أتمتة مقارنة مستندات Word باستخدام GroupDocs.Comparison .NET: برنامج تعليمي كامل
 
 ## مقدمة

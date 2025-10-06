@@ -5,8 +5,8 @@
 "title": "Dokumentinformationen aus dem Pfad abrufen – GroupDocs.Comparison für .NET"
 "url": "/de/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Dokumentinformationen aus dem Pfad abrufen – GroupDocs.Comparison für .NET
 
 ## Einführung

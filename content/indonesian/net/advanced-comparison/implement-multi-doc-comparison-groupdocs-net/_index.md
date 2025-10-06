@@ -4,8 +4,8 @@
 "title": "Menerapkan Perbandingan Multi-Dokumen di .NET Menggunakan GroupDocs.Comparison"
 "url": "/id/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Menerapkan Perbandingan Multi-Dokumen di .NET Menggunakan GroupDocs.Comparison: Panduan Lengkap
 
 ## Perkenalan

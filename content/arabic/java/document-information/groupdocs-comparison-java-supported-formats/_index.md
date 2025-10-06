@@ -4,8 +4,8 @@
 "title": "استرداد تنسيقات الملفات المدعومة باستخدام GroupDocs. مقارنة لـ Java - دليل شامل"
 "url": "/ar/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # استرداد تنسيقات الملفات المدعومة باستخدام GroupDocs.Comparison لـ Java
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "Comment comparer des dossiers et enregistrer les résultats au format TXT/HTML avec GroupDocs.Comparison .NET"
 "url": "/fr/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Comment implémenter la comparaison de dossiers et enregistrer les résultats au format TXT/HTML avec GroupDocs.Comparison .NET
 
 ## Introduction

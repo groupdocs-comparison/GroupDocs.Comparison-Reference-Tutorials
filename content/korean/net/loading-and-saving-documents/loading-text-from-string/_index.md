@@ -5,8 +5,8 @@
 "title": ".NET용 GroupDocs 비교에서 문자열에서 텍스트 로드"
 "url": "/ko/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # .NET용 GroupDocs 비교에서 문자열에서 텍스트 로드
 
 ## 소개

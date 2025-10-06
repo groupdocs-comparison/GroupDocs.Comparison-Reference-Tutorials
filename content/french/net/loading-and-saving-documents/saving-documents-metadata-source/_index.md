@@ -5,8 +5,8 @@
 "title": "Enregistrement des métadonnées des documents dans GroupDocs &#58; comparaison des sources pour .NET"
 "url": "/fr/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Enregistrement des métadonnées des documents dans GroupDocs : comparaison des sources pour .NET
 
 ## Introduction

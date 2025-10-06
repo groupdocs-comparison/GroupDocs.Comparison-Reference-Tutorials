@@ -5,8 +5,8 @@
 "title": "Σύγκριση εγγράφων και φακέλων"
 "url": "/el/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Σύγκριση εγγράφων και φακέλων
 
 ## Εισαγωγή

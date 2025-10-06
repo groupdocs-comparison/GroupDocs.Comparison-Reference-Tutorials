@@ -4,8 +4,8 @@
 "title": "Làm chủ Java Stream So sánh tài liệu với GroupDocs.Comparison để quản lý quy trình làm việc hiệu quả"
 "url": "/vi/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ Java Stream So sánh tài liệu với GroupDocs.Comparison để quản lý quy trình làm việc hiệu quả
 
 Trong môi trường kỹ thuật số phát triển nhanh như hiện nay, việc quản lý và so sánh khối lượng lớn tài liệu là rất quan trọng để đảm bảo tính nhất quán và chính xác trong các hợp đồng, báo cáo hoặc tài liệu pháp lý. Hướng dẫn này sẽ hướng dẫn bạn sử dụng thư viện GroupDocs.Comparison mạnh mẽ trong Java để so sánh hiệu quả nhiều tài liệu Word qua luồng, cho phép tùy chỉnh với cài đặt kiểu.

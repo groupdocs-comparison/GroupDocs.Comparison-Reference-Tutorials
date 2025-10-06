@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Text Comparison"]
 tags: ["csharp", "dotnet", "string-comparison", "groupdocs"]
+type: docs
 ---
-
 # How to Compare Text Strings in C# .NET
 
 ## Why Every .NET Developer Needs Reliable String Comparison

@@ -5,8 +5,8 @@
 "title": "Comparar celdas desde una ruta - GroupDocs.Comparison para .NET"
 "url": "/es/net/basic-usage/compare-cells-from-path/"
 "weight": 10
+type: docs
 ---
-
 # Comparar celdas desde una ruta - GroupDocs.Comparison para .NET
 
 ## Introducción

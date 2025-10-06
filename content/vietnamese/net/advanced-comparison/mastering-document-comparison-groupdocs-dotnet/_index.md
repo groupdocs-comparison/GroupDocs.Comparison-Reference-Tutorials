@@ -4,8 +4,8 @@
 "title": "Làm chủ việc so sánh tài liệu trong .NET&#58; Hướng dẫn toàn diện về cách sử dụng GroupDocs.Comparison"
 "url": "/vi/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ việc so sánh tài liệu trong .NET với GroupDocs.Comparison
 
 Mở khóa tiềm năng tự động so sánh tài liệu trong môi trường .NET bằng GroupDocs.Comparison. Hướng dẫn này sẽ giúp bạn hợp lý hóa quy trình làm việc và tăng năng suất bằng cách quản lý hiệu quả các phiên bản tài liệu.

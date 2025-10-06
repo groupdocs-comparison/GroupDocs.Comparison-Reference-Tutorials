@@ -4,8 +4,8 @@
 "title": "Panduan Tutorial GroupDocs.Comparison Lengkap untuk Java"
 "url": "/id/java/"
 "weight": 10
+type: docs
 ---
-
 # GroupDocs.Comparison untuk Java – Tutorial Langkah demi Langkah dan Contoh Kode
 
 ## Pelajari Perbandingan Dokumen di Java – Cepat, Akurat, dan Kuat

@@ -4,8 +4,8 @@
 "title": "Como implementar comparação de documentos no .NET usando GroupDocs.Comparison&#58; um guia passo a passo"
 "url": "/pt/net/basic-comparison/implement-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Como implementar comparação de documentos no .NET usando GroupDocs.Comparison: um guia passo a passo
 
 ## Introdução

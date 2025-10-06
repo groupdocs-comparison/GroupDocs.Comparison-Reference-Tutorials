@@ -4,8 +4,8 @@
 "title": "GroupDocs ile Desteklenen Dosya Biçimlerini Alın. Java için Karşılaştırma Kapsamlı Bir Kılavuz"
 "url": "/tr/java/document-information/groupdocs-comparison-java-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Java için GroupDocs.Comparison ile Desteklenen Dosya Biçimlerini Alın
 
 ## giriiş

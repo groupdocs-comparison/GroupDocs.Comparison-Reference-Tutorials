@@ -5,8 +5,8 @@
 "title": "مقارنة المستندات المحمية من المسار - GroupDocs.Comparison لـ .NET"
 "url": "/ar/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # مقارنة المستندات المحمية من المسار - GroupDocs.Comparison لـ .NET
 
 ## مقدمة

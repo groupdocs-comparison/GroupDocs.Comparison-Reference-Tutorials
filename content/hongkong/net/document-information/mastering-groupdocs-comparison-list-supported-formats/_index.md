@@ -4,8 +4,8 @@
 "title": "如何在 GroupDocs.Comparison for .NET 中列出所有支援的文件格式"
 "url": "/zh-hant/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # 如何在 GroupDocs.Comparison for .NET 中列出所有支援的文件格式
 
 ## 介紹

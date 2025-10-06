@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "stream-processing", "document-comparison", "dotnet"]
+type: docs
 ---
-
 # How to Load Documents from Stream in .NET - Complete GroupDocs Guide
 
 ## Introduction

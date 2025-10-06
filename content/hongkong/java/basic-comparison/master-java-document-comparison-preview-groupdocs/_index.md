@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs 比較和預覽 Java 文件的綜合指南"
 "url": "/zh-hant/java/basic-comparison/master-java-document-comparison-preview-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison 掌握 Java 文件比較和預覽生成
 
 ## 介紹

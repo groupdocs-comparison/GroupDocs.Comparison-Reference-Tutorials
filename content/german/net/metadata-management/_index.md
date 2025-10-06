@@ -3,8 +3,8 @@
 "title": "Tutorials zur Dokumentmetadatenverwaltung für GroupDocs.Comparison .NET"
 "url": "/de/net/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutorials zur Dokumentmetadatenverwaltung für GroupDocs.Comparison .NET
 
 Unsere Tutorials zur Metadatenverwaltung zeigen Ihnen, wie Sie Dokumenteigenschaften beim Vergleichen von Dokumenten mit GroupDocs.Comparison in .NET steuern. Diese Schritt-für-Schritt-Anleitungen behandeln das Festlegen von Metadatenquellen, das Definieren benutzerdefinierter Metadaten für resultierende Dokumente und das Implementieren von Richtlinien zur Metadatenaufbewahrung. Jedes Tutorial enthält praktische C#-Codebeispiele für gängige Szenarien der Metadatenverwaltung und unterstützt Sie beim Erstellen von Anwendungen, die während des gesamten Vergleichsprozesses die entsprechenden Dokumenteigenschaften beibehalten.

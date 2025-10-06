@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison을 사용하여 Java 문서 비교에서 삽입된 항목 스타일 사용자 지정"
 "url": "/ko/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 사용하여 Java 문서 비교에서 삽입된 항목 스타일 사용자 지정
 
 ## 소개

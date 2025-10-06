@@ -4,8 +4,8 @@
 "title": "Αποτελεσματικές Αναθεωρήσεις Κύριων Εγγράφων με το GroupDocs.Comparison .NET™ Ένας Πλήρης Οδηγός"
 "url": "/el/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # Εξοικείωση με τις αναθεωρήσεις εγγράφων με το GroupDocs.Comparison .NET: Οδηγός βήμα προς βήμα
 
 ## Εισαγωγή

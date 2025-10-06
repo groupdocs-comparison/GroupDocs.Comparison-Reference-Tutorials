@@ -4,8 +4,8 @@
 "title": ".NET용 GroupDocs.Comparison을 사용하여 요약 페이지 없이 이미지를 비교하는 방법"
 "url": "/ko/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # .NET용 GroupDocs.Comparison을 사용하여 요약 페이지 없이 이미지 비교를 구현하는 방법
 
 ## 소개

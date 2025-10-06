@@ -5,8 +5,8 @@
 "title": "Comparaison des métadonnées des documents et de la cible dans GroupDocs pour .NET"
 "url": "/fr/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Comparaison des métadonnées des documents et de la cible dans GroupDocs pour .NET
 
 ## Introduction

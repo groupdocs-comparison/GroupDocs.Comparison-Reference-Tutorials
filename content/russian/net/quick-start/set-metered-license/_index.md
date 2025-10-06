@@ -5,8 +5,8 @@
 "title": "Установить измеренную лицензию — сравнение GroupDocs для .NET"
 "url": "/ru/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # Установить измеренную лицензию — сравнение GroupDocs для .NET
 
 ## Введение

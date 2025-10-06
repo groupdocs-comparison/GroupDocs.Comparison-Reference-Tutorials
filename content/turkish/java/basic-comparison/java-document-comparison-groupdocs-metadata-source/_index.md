@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;ı Kullanarak Java Belge Karşılaştırmasını Uygulayın Kapsamlı Bir Kılavuz"
 "url": "/tr/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ile Meta Veri Kaynağını Ayarlayarak Java Belge Karşılaştırması Nasıl Uygulanır
 
 ## giriiş

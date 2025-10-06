@@ -5,8 +5,8 @@
 "title": "حفظ مصدر بيانات التعريف للمستندات في GroupDocs - مقارنة لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # حفظ مصدر بيانات التعريف للمستندات في GroupDocs - مقارنة لـ .NET
 
 ## مقدمة

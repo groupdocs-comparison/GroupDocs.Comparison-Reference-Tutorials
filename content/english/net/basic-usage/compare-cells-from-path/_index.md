@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["GroupDocs", "Excel", "Cells", "Comparison", "NET"]
+type: docs
 ---
-
 # How to Compare Excel Cells in .NET - Complete Developer Tutorial
 
 ## Introduction

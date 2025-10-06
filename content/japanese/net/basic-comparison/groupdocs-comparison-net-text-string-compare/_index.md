@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison ライブラリを使用した .NET でのテキスト文字列比較のマスター"
 "url": "/ja/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison ライブラリを使用した .NET でのテキスト文字列比較のマスター
 
 ## 導入

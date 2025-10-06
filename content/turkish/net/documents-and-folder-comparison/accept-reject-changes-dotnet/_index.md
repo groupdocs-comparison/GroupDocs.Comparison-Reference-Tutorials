@@ -5,8 +5,8 @@
 "title": ".NET için GroupDocs Karşılaştırmasında Değişiklikleri Kabul Etme ve Reddetme"
 "url": "/tr/net/documents-and-folder-comparison/accept-reject-changes-dotnet/"
 "weight": 10
+type: docs
 ---
-
 # .NET için GroupDocs Karşılaştırmasında Değişiklikleri Kabul Etme ve Reddetme
 
 ## giriiş

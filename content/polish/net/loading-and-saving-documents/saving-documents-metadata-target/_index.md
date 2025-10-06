@@ -5,8 +5,8 @@
 "title": "Zapisywanie docelowych metadanych dokumentów w porównaniu GroupDocs dla .NET"
 "url": "/pl/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Zapisywanie docelowych metadanych dokumentów w porównaniu GroupDocs dla .NET
 
 ## Wstęp

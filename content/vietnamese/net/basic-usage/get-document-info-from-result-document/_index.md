@@ -5,8 +5,8 @@
 "title": "Lấy thông tin tài liệu từ tài liệu kết quả - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/get-document-info-from-result-document/"
 "weight": 12
+type: docs
 ---
-
 # Lấy thông tin tài liệu từ tài liệu kết quả - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

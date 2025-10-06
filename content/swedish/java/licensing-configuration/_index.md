@@ -3,8 +3,8 @@
 "title": "Licensierings- och konfigurationshandledningar för GroupDocs.Comparison Java"
 "url": "/sv/java/licensing-configuration/"
 "weight": 10
+type: docs
 ---
-
 # Licensierings- och konfigurationshandledningar för GroupDocs.Comparison Java
 
 Våra handledningar för licensering och konfiguration ger viktig vägledning för att korrekt konfigurera GroupDocs.Comparison i Java-applikationer. Dessa steg-för-steg-guider visar hur du implementerar olika licensalternativ, konfigurerar mätad fakturering, kontrollerar licensstatus och optimerar biblioteksinställningar för dina specifika behov. Varje handledning innehåller detaljerade Java-kodexempel för korrekt initialisering och konfiguration, vilket hjälper dig att bygga korrekt licensierade och optimerade dokumentjämförelselösningar.

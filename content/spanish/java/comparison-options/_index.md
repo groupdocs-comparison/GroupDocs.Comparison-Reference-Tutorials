@@ -3,8 +3,8 @@
 "title": "Tutoriales de opciones y configuraciones de comparación para GroupDocs.Comparison Java"
 "url": "/es/java/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Tutoriales de opciones y configuraciones de comparación para GroupDocs.Comparison Java
 
 Aprenda a optimizar la comparación de documentos con nuestros tutoriales de opciones de GroupDocs.Comparison para Java. Estas guías detalladas muestran cómo configurar la sensibilidad de la comparación, personalizar algoritmos de detección de cambios, establecer preferencias de visualización para diferentes tipos de cambios e implementar reglas de comparación especializadas. Cada tutorial incluye ejemplos de código Java funcionales para implementar opciones de comparación personalizadas, lo que le ayudará a crear aplicaciones de comparación que se adapten con precisión a sus necesidades específicas de análisis de documentos.

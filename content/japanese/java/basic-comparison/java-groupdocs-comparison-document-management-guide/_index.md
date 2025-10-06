@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java ドキュメント比較のマスター"
 "url": "/ja/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用した Java ドキュメント比較の習得
 
 ## 導入

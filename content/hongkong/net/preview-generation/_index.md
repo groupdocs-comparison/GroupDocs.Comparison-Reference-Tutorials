@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 的預覽產生教學課程"
 "url": "/zh-hant/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 的預覽產生教學課程
 
 透過我們針對 .NET 開發人員的全面 GroupDocs.Comparison 教學課程，學習如何建立文件預覽。這些實用指南示範如何產生來源文件、目標文件和比較結果的頁面預覽、自訂預覽影像大小以及實施資源清理以實現最佳記憶體利用率。每個教學課程都包含詳細的 C# 程式碼範例，用於在比較應用程式中高效實現文件預覽功能。

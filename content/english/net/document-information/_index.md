@@ -8,8 +8,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Comparison"]
 tags: ["document-information", "metadata", "dotnet", "csharp"]
+type: docs
 ---
-
 # GroupDocs.Comparison .NET Document Information - Complete Developer Guide
 
 Ever found yourself staring at a pile of documents wondering what formats you're dealing with, how many pages they contain, or what metadata they're hiding? If you're building document processing applications with .NET, you've probably faced this challenge more times than you'd like to admit.

@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison for Java Kullanarak Belge Meta Verilerini Çıkarın&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Java için GroupDocs.Comparison ile Belge Meta Verilerini Çıkarın
 
 Dijital çağda, belge özelliklerini yönetmek ve analiz etmek yasal, idari veya kurumsal ortamlar gibi çeşitli sektörlerde önemlidir. Belgelerinizin meta verilerini anlamak üretkenliği önemli ölçüde artırabilir. Bu kapsamlı kılavuz, GroupDocs.Comparison kitaplığını kullanarak dosya türü, sayfa sayısı ve boyut gibi hayati bilgileri belgelerden zahmetsizce çıkarmanıza yardımcı olacaktır.

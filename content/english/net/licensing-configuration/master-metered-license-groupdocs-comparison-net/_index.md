@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Licensing"]
 tags: ["GroupDocs", "metered-licensing", "dotnet", "document-comparison"]
+type: docs
 ---
-
 # GroupDocs.Comparison Metered License Setup
 
 ## Why You Need This Guide (And What You'll Gain From It)

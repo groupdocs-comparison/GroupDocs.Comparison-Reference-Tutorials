@@ -3,8 +3,8 @@
 "title": "Handledningar om dokumentinformation för GroupDocs.Comparison Java"
 "url": "/sv/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Handledningar om dokumentinformation för GroupDocs.Comparison Java
 
 Våra handledningar om dokumentinformation ger vägledning för att komma åt dokumentmetadata med GroupDocs.Comparison i Java. Dessa praktiska guider visar hur du hämtar information om käll-, mål- och resultatdokument, bestämmer filformat och får åtkomst till dokumentegenskaper programmatiskt. Varje handledning innehåller exempel på fungerande Java-kod för vanliga dokumentinformationsscenarier, vilket hjälper dig att bygga applikationer som effektivt kan analysera och bearbeta dokumentdata.

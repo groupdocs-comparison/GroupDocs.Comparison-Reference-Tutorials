@@ -5,8 +5,8 @@
 "title": "تحميل النص من السلسلة في مقارنة GroupDocs لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # تحميل النص من السلسلة في مقارنة GroupDocs لـ .NET
 
 ## مقدمة

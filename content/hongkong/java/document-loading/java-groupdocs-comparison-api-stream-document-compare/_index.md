@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison API 進行 Java 文件比較 — 一種基於流的方法"
 "url": "/zh-hant/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # 掌握 Java：使用 GroupDocs.Comparison API 進行文件比較
 
 歡迎閱讀本指南，我們將學習如何使用強大的 GroupDocs.Comparison API 在 Java 中進行文件比較。無論您管理的是法律文件、學術論文或其他任何文本文件，高效地比較它們都至關重要。在本教程中，我們將示範如何使用 Java 中的流來接受或拒絕偵測到的兩個文件之間的變更。

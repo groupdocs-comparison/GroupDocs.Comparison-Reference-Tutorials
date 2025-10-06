@@ -4,8 +4,8 @@
 "title": "Πώς να ορίσετε μεταδεδομένα που ορίζονται από τον χρήστη σε έγγραφα χρησιμοποιώντας το GroupDocs.Comparison για .NET | Οδηγός διαχείρισης εγγράφων"
 "url": "/el/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να ορίσετε μεταδεδομένα που ορίζονται από τον χρήστη σε έγγραφα με το GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

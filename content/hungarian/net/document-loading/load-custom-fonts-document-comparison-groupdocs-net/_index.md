@@ -4,8 +4,8 @@
 "title": "Egyéni betűtípusok betöltése dokumentum-összehasonlításhoz a GroupDocs.Comparison .NET használatával"
 "url": "/hu/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Egyéni betűtípusok betöltése dokumentum-összehasonlításhoz a GroupDocs.Comparison .NET használatával
 
 ## Bevezetés

@@ -6,8 +6,8 @@
 "title": "文档比较软件 API 教程 | GroupDocs.Comparison"
 "url": "/zh/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Comparison 教程和开发者指南
 
 ![GroupDocs.Comparison 横幅](./groupdocs-comparison-net.svg)

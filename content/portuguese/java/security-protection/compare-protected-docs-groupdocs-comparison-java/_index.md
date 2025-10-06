@@ -4,8 +4,8 @@
 "title": "Como comparar documentos protegidos por senha usando GroupDocs.Comparison em Java"
 "url": "/pt/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Como comparar vários documentos protegidos usando GroupDocs.Comparison em Java
 
 **Introdução**

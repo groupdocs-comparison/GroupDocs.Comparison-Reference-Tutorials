@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET 高效掌握文档修订——综合指南"
 "url": "/zh/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 掌握文档修订：分步指南
 
 ## 介绍

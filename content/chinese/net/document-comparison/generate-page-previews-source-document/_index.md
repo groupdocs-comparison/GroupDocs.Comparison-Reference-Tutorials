@@ -5,8 +5,8 @@
 "title": "生成源文档的页面预览"
 "url": "/zh/net/document-comparison/generate-page-previews-source-document/"
 "weight": 11
+type: docs
 ---
-
 # 生成源文档的页面预览
 
 ## 介绍

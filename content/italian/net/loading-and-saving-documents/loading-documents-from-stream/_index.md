@@ -5,8 +5,8 @@
 "title": "Caricamento di documenti dal flusso nel confronto di GroupDocs per .NET"
 "url": "/it/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Caricamento di documenti dal flusso nel confronto di GroupDocs per .NET
 
 ## Introduzione

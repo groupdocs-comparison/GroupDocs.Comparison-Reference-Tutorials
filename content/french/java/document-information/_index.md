@@ -3,8 +3,8 @@
 "title": "Tutoriels d'information sur les documents pour GroupDocs.Comparison Java"
 "url": "/fr/java/document-information/"
 "weight": 6
+type: docs
 ---
-
 # Tutoriels d'information sur les documents pour GroupDocs.Comparison Java
 
 Nos tutoriels d'information documentaire vous guident pour accéder aux métadonnées des documents avec GroupDocs.Comparison en Java. Ces guides pratiques vous expliquent comment récupérer des informations sur les documents source, cible et résultat, déterminer les formats de fichier et accéder aux propriétés des documents par programmation. Chaque tutoriel inclut des exemples de code Java fonctionnels pour des scénarios courants d'information documentaire, vous aidant à créer des applications capables d'analyser et de traiter efficacement les données des documents.

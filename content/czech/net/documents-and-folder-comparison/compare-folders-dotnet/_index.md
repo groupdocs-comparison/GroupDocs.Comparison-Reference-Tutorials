@@ -5,8 +5,8 @@
 "title": "Porovnání složek v GroupDocs pro .NET"
 "url": "/cs/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # Porovnání složek v GroupDocs pro .NET
 
 ## Zavedení

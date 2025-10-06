@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison 為 .NET 開發人員有效地產生文件預覽"
 "url": "/zh-hant/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for .NET 有效率地產生文件預覽
 
 ## 介紹

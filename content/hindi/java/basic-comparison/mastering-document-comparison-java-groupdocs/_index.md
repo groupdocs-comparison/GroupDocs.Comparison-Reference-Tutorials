@@ -4,8 +4,8 @@
 "title": "जावा में GroupDocs.Comparison एपीआई का उपयोग करके मास्टर दस्तावेज़ तुलना"
 "url": "/hi/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API का उपयोग करके Java में दस्तावेज़ तुलना में महारत हासिल करना
 
 ## परिचय

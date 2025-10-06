@@ -4,8 +4,8 @@
 "title": "การเปรียบเทียบเอกสาร Java ขั้นพื้นฐานโดยใช้ GroupDocs.Comparison"
 "url": "/th/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
 "weight": 1
+type: docs
 ---
-
 # เรียนรู้การเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison
 
 ## การแนะนำ

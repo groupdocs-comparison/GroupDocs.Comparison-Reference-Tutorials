@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison&#58;을 사용한 Java 다중 스트림 문서 비교 종합 가이드"
 "url": "/ko/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison을 활용한 Java 다중 스트림 문서 비교 마스터하기
 
 ## 소개

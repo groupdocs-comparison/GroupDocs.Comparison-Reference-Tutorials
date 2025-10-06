@@ -5,8 +5,8 @@
 "title": "Mappen vergelijken in GroupDocs Vergelijking voor .NET"
 "url": "/nl/net/documents-and-folder-comparison/compare-folders-dotnet/"
 "weight": 12
+type: docs
 ---
-
 # Mappen vergelijken in GroupDocs Vergelijking voor .NET
 
 ## Invoering

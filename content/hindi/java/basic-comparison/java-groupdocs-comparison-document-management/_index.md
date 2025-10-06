@@ -4,8 +4,8 @@
 "title": "जावा दस्तावेज़ तुलना और पृष्ठ पूर्वावलोकन GroupDocs.Comparison का उपयोग करना"
 "url": "/hi/java/basic-comparison/java-groupdocs-comparison-document-management/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ Java दस्तावेज़ तुलना में महारत हासिल करना
 
 **कुशल दस्तावेज़ प्रबंधन अनलॉक करें: जावा में GroupDocs.Comparison का उपयोग करने के लिए एक व्यापक गाइड**

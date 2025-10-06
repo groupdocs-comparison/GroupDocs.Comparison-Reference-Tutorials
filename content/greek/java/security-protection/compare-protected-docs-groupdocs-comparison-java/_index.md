@@ -4,8 +4,8 @@
 "title": "Πώς να συγκρίνετε έγγραφα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Comparison σε Java"
 "url": "/el/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να συγκρίνετε πολλά προστατευμένα έγγραφα χρησιμοποιώντας το GroupDocs.Comparison σε Java
 
 **Εισαγωγή**

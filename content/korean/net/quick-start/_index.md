@@ -5,8 +5,8 @@
 "title": "빠른 시작"
 "url": "/ko/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # 빠른 시작
 
 

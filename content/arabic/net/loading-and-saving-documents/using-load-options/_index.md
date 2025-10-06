@@ -5,8 +5,8 @@
 "title": "استخدام خيارات التحميل في GroupDocs مقارنة لـ .NET"
 "url": "/ar/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # استخدام خيارات التحميل في GroupDocs مقارنة لـ .NET
 
 ## مقدمة

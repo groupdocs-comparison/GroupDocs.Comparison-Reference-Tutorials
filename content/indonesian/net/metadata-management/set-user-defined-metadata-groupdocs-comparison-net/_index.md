@@ -4,8 +4,8 @@
 "title": "Cara Mengatur Metadata yang Ditentukan Pengguna dalam Dokumen Menggunakan GroupDocs.Comparison untuk .NET | Panduan Manajemen Dokumen"
 "url": "/id/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Mengatur Metadata yang Ditentukan Pengguna dalam Dokumen dengan GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

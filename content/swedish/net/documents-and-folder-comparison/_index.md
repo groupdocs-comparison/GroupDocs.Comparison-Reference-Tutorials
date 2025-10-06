@@ -5,8 +5,8 @@
 "title": "Dokument- och mappjämförelse"
 "url": "/sv/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Dokument- och mappjämförelse
 
 ## Introduktion

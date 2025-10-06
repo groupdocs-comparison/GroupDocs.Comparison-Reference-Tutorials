@@ -5,8 +5,8 @@
 "title": "Εκπαιδευτικά βίντεο και παραδείγματα του GroupDocs.Comparison για .NET"
 "url": "/el/net/"
 "weight": 10
+type: docs
 ---
-
 # Εκπαιδευτικά βίντεο και παραδείγματα του GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

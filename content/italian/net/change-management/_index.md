@@ -3,8 +3,8 @@
 "title": "Tutorial sulla gestione del cambiamento per GroupDocs.Comparison .NET"
 "url": "/it/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Tutorial sulla gestione del cambiamento per GroupDocs.Comparison .NET
 
 Scopri come gestire efficacemente le modifiche ai documenti con i nostri tutorial GroupDocs.Comparison .NET. Queste guide dettagliate illustrano come identificare differenze specifiche tra i documenti, accettare o rifiutare singole modifiche, impostare gli autori per le modifiche tracciate e gestire le revisioni a livello di codice. Ogni tutorial fornisce istruzioni dettagliate con esempi di codice C# per aiutarti a implementare funzionalità complete di gestione delle modifiche nei tuoi flussi di lavoro di confronto dei documenti.

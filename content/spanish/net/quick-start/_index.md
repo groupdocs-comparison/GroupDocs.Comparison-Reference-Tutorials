@@ -5,8 +5,8 @@
 "title": "Inicio rápido"
 "url": "/es/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Inicio rápido
 
 

@@ -4,8 +4,8 @@
 "title": "Implémenter la comparaison multi-documents dans .NET à l'aide de GroupDocs.Comparison"
 "url": "/fr/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Implémenter la comparaison multi-documents dans .NET à l'aide de GroupDocs.Comparison : un guide complet
 
 ## Introduction

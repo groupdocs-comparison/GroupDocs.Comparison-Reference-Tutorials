@@ -5,8 +5,8 @@
 "title": "Dokumentumok betöltése és mentése"
 "url": "/hu/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Dokumentumok betöltése és mentése
 
 ## Bevezetés

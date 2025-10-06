@@ -5,8 +5,8 @@
 "title": "Nhận định dạng được hỗ trợ - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Nhận định dạng được hỗ trợ - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

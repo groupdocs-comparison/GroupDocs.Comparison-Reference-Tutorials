@@ -4,8 +4,8 @@
 "title": "Cách tải và so sánh các tài liệu Word được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Comparison"
 "url": "/vi/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Cách tải và so sánh các tài liệu Word được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Comparison
 
 ## Giới thiệu

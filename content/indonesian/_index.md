@@ -6,8 +6,8 @@
 "title": "Tutorial API Perangkat Lunak Perbandingan Dokumen | GroupDocs.Comparison"
 "url": "/id/"
 "weight": 11
+type: docs
 ---
-
 # GroupDocs.Tutorial Perbandingan & Panduan Pengembang
 
 ![GroupDocs.Banner Perbandingan](./groupdocs-comparison-net.svg)

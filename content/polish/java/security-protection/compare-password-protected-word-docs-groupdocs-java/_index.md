@@ -4,8 +4,8 @@
 "title": "Jak porównywać dokumenty Word chronione hasłem za pomocą GroupDocs.Comparison dla Java"
 "url": "/pl/java/security-protection/compare-password-protected-word-docs-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie porównywania dokumentów: przewodnik po porównywaniu dokumentów Word chronionych hasłem z GroupDocs.Comparison dla języka Java
 
 ## Wstęp

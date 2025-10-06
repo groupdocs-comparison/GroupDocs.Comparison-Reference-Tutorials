@@ -3,8 +3,8 @@
 "title": "Hướng dẫn quản lý thay đổi cho GroupDocs.Comparison .NET"
 "url": "/vi/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Hướng dẫn quản lý thay đổi cho GroupDocs.Comparison .NET
 
 Khám phá cách quản lý hiệu quả các thay đổi tài liệu với hướng dẫn GroupDocs.Comparison .NET của chúng tôi. Các hướng dẫn chi tiết này trình bày cách xác định các khác biệt cụ thể giữa các tài liệu, chấp nhận hoặc từ chối các thay đổi riêng lẻ, thiết lập tác giả cho các thay đổi được theo dõi và quản lý các bản sửa đổi theo chương trình. Mỗi hướng dẫn cung cấp hướng dẫn từng bước với các ví dụ mã C# để giúp bạn triển khai chức năng quản lý thay đổi toàn diện trong quy trình làm việc so sánh tài liệu của mình.

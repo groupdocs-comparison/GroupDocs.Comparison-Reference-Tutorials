@@ -3,8 +3,8 @@
 "title": "Tutoriales de gestión de metadatos de documentos para GroupDocs.Comparison Java"
 "url": "/es/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutoriales de gestión de metadatos de documentos para GroupDocs.Comparison Java
 
 Nuestros tutoriales de gestión de metadatos le muestran cómo controlar las propiedades de los documentos al compararlos con GroupDocs.Comparison en Java. Estas guías paso a paso abarcan la configuración de fuentes de metadatos, la definición de metadatos personalizados para los documentos resultantes y la implementación de políticas de retención de metadatos. Cada tutorial incluye ejemplos prácticos de código Java para escenarios comunes de gestión de metadatos, lo que le ayudará a crear aplicaciones que mantengan las propiedades adecuadas de los documentos durante todo el proceso de comparación.

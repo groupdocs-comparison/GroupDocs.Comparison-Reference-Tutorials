@@ -5,8 +5,8 @@
 "title": "Σύγκριση προστατευμένων εγγράφων από τη ροή - GroupDocs.Comparison για .NET"
 "url": "/el/net/document-comparison/compare-protected-documents-from-stream/"
 "weight": 18
+type: docs
 ---
-
 # Σύγκριση προστατευμένων εγγράφων από τη ροή - GroupDocs.Comparison για .NET
 
 ## Εισαγωγή

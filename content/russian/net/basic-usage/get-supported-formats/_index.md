@@ -5,8 +5,8 @@
 "title": "Получить поддерживаемые форматы - GroupDocs.Comparison для .NET"
 "url": "/ru/net/basic-usage/get-supported-formats/"
 "weight": 15
+type: docs
 ---
-
 # Получить поддерживаемые форматы - GroupDocs.Comparison для .NET
 
 ## Введение

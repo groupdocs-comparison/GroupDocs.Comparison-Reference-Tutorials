@@ -4,8 +4,8 @@
 "title": "Ekstrakcja metadanych dokumentu głównego za pomocą GroupDocs w Javie"
 "url": "/pl/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # Opanowanie ekstrakcji metadanych dokumentu za pomocą GroupDocs w Javie
 
 W dzisiejszym cyfrowym krajobrazie efektywne zarządzanie i wyodrębnianie informacji z dokumentów ma kluczowe znaczenie dla firm z różnych branż. Niezależnie od tego, czy masz do czynienia z umowami prawnymi, pracami naukowymi czy raportami finansowymi, zrozumienie metadanych dokumentu, takich jak typ pliku, liczba stron i rozmiar, może usprawnić przepływy pracy i ulepszyć analizę danych. Ten samouczek przeprowadzi Cię przez proces korzystania z GroupDocs.Comparison w Javie w celu wyodrębnienia cennych informacji z dokumentu zarówno za pośrednictwem strumieni wejściowych, jak i ścieżek plików.

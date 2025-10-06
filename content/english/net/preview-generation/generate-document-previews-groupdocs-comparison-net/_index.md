@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "NET", "document-comparison", "preview-generation"]
+type: docs
 ---
-
 # How to Generate Document Previews in .NET Using GroupDocs.Comparison
 
 ## Introduction

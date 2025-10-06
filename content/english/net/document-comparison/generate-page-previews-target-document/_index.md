@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["dotnet", "document-preview", "groupdocs", "api-tutorial"]
+type: docs
 ---
-
 # Generate Document Previews .NET - Complete Developer Guide
 
 ## Introduction

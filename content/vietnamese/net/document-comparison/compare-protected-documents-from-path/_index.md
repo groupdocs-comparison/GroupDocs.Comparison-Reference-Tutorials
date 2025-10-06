@@ -5,8 +5,8 @@
 "title": "So sánh các tài liệu được bảo vệ từ Path - GroupDocs.Comparison cho .NET"
 "url": "/vi/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # So sánh các tài liệu được bảo vệ từ Path - GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

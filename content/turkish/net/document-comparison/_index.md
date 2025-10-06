@@ -5,8 +5,8 @@
 "title": "Belge Karşılaştırması"
 "url": "/tr/net/document-comparison/"
 "weight": 21
+type: docs
 ---
-
 # Belge Karşılaştırması
 
 ## giriiş

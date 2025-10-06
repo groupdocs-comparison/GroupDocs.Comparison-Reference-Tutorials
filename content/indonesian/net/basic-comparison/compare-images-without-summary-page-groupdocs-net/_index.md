@@ -4,8 +4,8 @@
 "title": "Cara Membandingkan Gambar Tanpa Halaman Ringkasan Menggunakan GroupDocs.Comparison untuk .NET"
 "url": "/id/net/basic-comparison/compare-images-without-summary-page-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cara Menerapkan Perbandingan Gambar Tanpa Halaman Ringkasan Menggunakan GroupDocs.Comparison untuk .NET
 
 ## Perkenalan

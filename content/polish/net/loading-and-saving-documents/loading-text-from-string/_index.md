@@ -5,8 +5,8 @@
 "title": "Ładowanie tekstu z ciągu w porównaniu GroupDocs dla .NET"
 "url": "/pl/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Ładowanie tekstu z ciągu w porównaniu GroupDocs dla .NET
 
 ## Wstęp

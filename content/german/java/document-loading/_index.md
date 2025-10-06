@@ -3,8 +3,8 @@
 "title": "Tutorials zum Laden von Dokumenten für GroupDocs.Comparison Java"
 "url": "/de/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Tutorials zum Laden von Dokumenten für GroupDocs.Comparison Java
 
 Unsere Tutorials zum Laden von Dokumenten bieten umfassende Anleitungen zur Vorbereitung von Dokumenten für Vergleiche in Java-Anwendungen. Diese Schritt-für-Schritt-Anleitungen zeigen, wie Sie Dokumente aus dem lokalen Speicher, aus Memory Streams und aus String-Inhalten laden und wie Sie Ladeoptionen für verschiedene Dokumenttypen konfigurieren. Jedes Tutorial enthält vollständige Java-Codebeispiele, die Ihnen helfen, robuste Dokumentladefunktionen in Ihren Vergleichsanwendungen zu implementieren.

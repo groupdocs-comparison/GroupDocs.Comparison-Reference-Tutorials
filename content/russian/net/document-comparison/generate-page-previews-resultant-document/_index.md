@@ -5,8 +5,8 @@
 "title": "Создание предпросмотров страниц для итогового документа"
 "url": "/ru/net/document-comparison/generate-page-previews-resultant-document/"
 "weight": 10
+type: docs
 ---
-
 # Создание предпросмотров страниц для итогового документа
 
 ## Введение

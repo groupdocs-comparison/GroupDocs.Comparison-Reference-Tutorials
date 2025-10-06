@@ -4,8 +4,8 @@
 "title": "วิธีการเปรียบเทียบเอกสารที่ป้องกันด้วยรหัสผ่านหลายฉบับใน .NET โดยใช้ GroupDocs.Comparison"
 "url": "/th/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # วิธีการเปรียบเทียบเอกสารที่ป้องกันด้วยรหัสผ่านหลายฉบับใน .NET โดยใช้ GroupDocs.Comparison
 
 ## การแนะนำ

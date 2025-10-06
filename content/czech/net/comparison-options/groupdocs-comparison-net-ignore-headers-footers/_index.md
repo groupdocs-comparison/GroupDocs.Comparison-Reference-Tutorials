@@ -4,8 +4,8 @@
 "title": "Jak ignorovat záhlaví a zápatí v porovnávání dokumentů DOC pomocí GroupDocs.Comparison .NET"
 "url": "/cs/net/comparison-options/groupdocs-comparison-net-ignore-headers-footers/"
 "weight": 1
+type: docs
 ---
-
 # Jak ignorovat záhlaví a zápatí v porovnávání dokumentů pomocí GroupDocs.Comparison .NET
 
 ## Zavedení

@@ -5,8 +5,8 @@
 "title": "从流设置许可证 - .NET 的 GroupDocs 比较"
 "url": "/zh/net/quick-start/set-license-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 从流设置许可证 - .NET 的 GroupDocs 比较
 
 ## 介绍

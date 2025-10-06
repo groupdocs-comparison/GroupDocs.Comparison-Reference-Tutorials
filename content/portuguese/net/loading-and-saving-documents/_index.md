@@ -5,8 +5,8 @@
 "title": "Carregando e salvando documentos"
 "url": "/pt/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # Carregando e salvando documentos
 
 ## Introdução

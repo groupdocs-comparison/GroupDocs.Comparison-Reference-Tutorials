@@ -4,8 +4,8 @@
 "title": "Automatize a comparação de documentos do Word usando GroupDocs.Comparison .NET - Um tutorial completo"
 "url": "/pt/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Automatize a comparação de documentos do Word usando GroupDocs.Comparison .NET: um tutorial completo
 
 ## Introdução

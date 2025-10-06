@@ -4,8 +4,8 @@
 "title": "Как установить лицензию GroupDocs из потока в Java? Пошаговое руководство"
 "url": "/ru/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # Как установить лицензию GroupDocs из Stream в Java: пошаговое руководство
 
 ## Введение

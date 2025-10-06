@@ -4,8 +4,8 @@
 "title": "Genera e ottimizza le anteprime dei documenti con l'API .NET GroupDocs.Comparison"
 "url": "/it/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Genera e ottimizza le anteprime dei documenti con GroupDocs.Comparison .NET
 
 ## Introduzione

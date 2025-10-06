@@ -4,8 +4,8 @@
 "title": "जावा में GroupDocs.Comparison का उपयोग करके पासवर्ड-संरक्षित दस्तावेज़ों की तुलना कैसे करें"
 "url": "/hi/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # जावा में GroupDocs.Comparison का उपयोग करके एकाधिक संरक्षित दस्तावेज़ों की तुलना कैसे करें
 
 **परिचय**

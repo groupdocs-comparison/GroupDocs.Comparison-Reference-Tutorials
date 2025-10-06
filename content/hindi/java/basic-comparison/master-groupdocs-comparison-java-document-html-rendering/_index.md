@@ -4,8 +4,8 @@
 "title": "मास्टर दस्तावेज़ तुलना और जावा में HTML रेंडरिंग GroupDocs.Comparison के साथ"
 "url": "/hi/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison के साथ जावा में दस्तावेज़ तुलना और HTML रेंडरिंग में महारत हासिल करना
 
 ## परिचय

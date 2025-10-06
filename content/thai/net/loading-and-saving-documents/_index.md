@@ -5,8 +5,8 @@
 "title": "การโหลดและการบันทึกเอกสาร"
 "url": "/th/net/loading-and-saving-documents/"
 "weight": 22
+type: docs
 ---
-
 # การโหลดและการบันทึกเอกสาร
 
 ## การแนะนำ

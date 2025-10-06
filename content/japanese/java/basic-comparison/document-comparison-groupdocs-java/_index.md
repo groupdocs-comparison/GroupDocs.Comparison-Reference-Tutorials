@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用した Java でのドキュメント比較のマスター - 総合ガイド"
 "url": "/ja/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # JavaでGroupDocs.Comparisonを使用してドキュメント比較をマスターする
 
 今日のデジタル時代において、文書の管理と比較は企業にとっても個人にとっても不可欠です。プロジェクトでの共同作業でも、文書のバージョン間でデータの一貫性を確保する場合でも、適切なツールを使用することで大きな違いが生まれます。このチュートリアルでは、GroupDocs.Comparison for Javaを使用して、ストリームを介してWord文書をシームレスに比較する方法を説明します。このガイドを最後まで読み進めれば、Javaアプリケーションに強力な比較機能を実装できるようになります。

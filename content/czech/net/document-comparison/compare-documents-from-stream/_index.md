@@ -5,8 +5,8 @@
 "title": "Porovnání dokumentů ze streamu - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/document-comparison/compare-documents-from-stream/"
 "weight": 16
+type: docs
 ---
-
 # Porovnání dokumentů ze streamu - GroupDocs.Comparison pro .NET
 
 ## Zavedení

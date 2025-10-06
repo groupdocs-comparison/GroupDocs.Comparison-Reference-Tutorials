@@ -4,8 +4,8 @@
 "title": "Perbandingan Dokumen Utama di Java&#58; Menggunakan API GroupDocs.Comparison untuk Analisis File Sel yang Efisien"
 "url": "/id/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Menguasai Perbandingan Dokumen di Java dengan GroupDocs.Comparison API
 
 ## Perkenalan

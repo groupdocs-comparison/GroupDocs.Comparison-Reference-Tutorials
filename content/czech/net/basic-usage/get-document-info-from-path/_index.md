@@ -5,8 +5,8 @@
 "title": "Získání informací o dokumentu z cesty - GroupDocs.Comparison pro .NET"
 "url": "/cs/net/basic-usage/get-document-info-from-path/"
 "weight": 13
+type: docs
 ---
-
 # Získání informací o dokumentu z cesty - GroupDocs.Comparison pro .NET
 
 ## Zavedení

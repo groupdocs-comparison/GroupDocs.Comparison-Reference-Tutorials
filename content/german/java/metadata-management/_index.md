@@ -3,8 +3,8 @@
 "title": "Tutorials zur Dokumentmetadatenverwaltung für GroupDocs.Comparison Java"
 "url": "/de/java/metadata-management/"
 "weight": 8
+type: docs
 ---
-
 # Tutorials zur Dokumentmetadatenverwaltung für GroupDocs.Comparison Java
 
 Unsere Tutorials zur Metadatenverwaltung zeigen Ihnen, wie Sie Dokumenteigenschaften beim Dokumentenvergleich mit GroupDocs.Comparison in Java steuern. Diese Schritt-für-Schritt-Anleitungen behandeln das Festlegen von Metadatenquellen, das Definieren benutzerdefinierter Metadaten für Ergebnisdokumente und das Implementieren von Richtlinien zur Metadatenaufbewahrung. Jedes Tutorial enthält praktische Java-Codebeispiele für gängige Szenarien der Metadatenverwaltung und unterstützt Sie beim Erstellen von Anwendungen, die während des gesamten Vergleichsprozesses die entsprechenden Dokumenteigenschaften beibehalten.

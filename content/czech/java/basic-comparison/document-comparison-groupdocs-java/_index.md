@@ -4,8 +4,8 @@
 "title": "Zvládnutí porovnávání dokumentů v Javě s GroupDocs.Comparison – Komplexní průvodce"
 "url": "/cs/java/basic-comparison/document-comparison-groupdocs-java/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů pomocí GroupDocs.Comparison v Javě
 
 V dnešní digitální době je správa a porovnávání dokumentů zásadní jak pro firmy, tak pro jednotlivce. Ať už spolupracujete na projektech nebo zajišťujete konzistenci dat napříč verzemi dokumentů, správné nástroje mohou mít zásadní význam. Tento tutoriál se zabývá tím, jak používat GroupDocs.Comparison pro Javu k bezproblémovému porovnávání dokumentů Wordu pomocí streamů. Po dokončení tohoto průvodce budete schopni implementovat výkonnou funkci porovnávání ve svých aplikacích v Javě.

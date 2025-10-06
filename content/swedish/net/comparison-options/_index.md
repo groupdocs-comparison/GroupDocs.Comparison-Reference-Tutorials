@@ -3,8 +3,8 @@
 "title": "Jämförelsealternativ och inställningar Handledningar för GroupDocs.Comparison .NET"
 "url": "/sv/net/comparison-options/"
 "weight": 11
+type: docs
 ---
-
 # Jämförelsealternativ och inställningar Handledningar för GroupDocs.Comparison .NET
 
 Lär dig finjustera dokumentjämförelser med våra handledningar om GroupDocs.Comparison-alternativ för .NET. Dessa detaljerade guider visar hur du konfigurerar jämförelsekänslighet, anpassar algoritmer för ändringsdetektering, anger visningsinställningar för olika ändringstyper och implementerar specialiserade jämförelseregler. Varje handledning innehåller fungerande C#-kodexempel för att implementera anpassade jämförelsealternativ, vilket hjälper dig att bygga jämförelseapplikationer som kan anpassas exakt till dina specifika dokumentanalyskrav.

@@ -3,8 +3,8 @@
 "title": "Tutoriales de generación de vistas previas para GroupDocs.Comparison .NET"
 "url": "/es/net/preview-generation/"
 "weight": 7
+type: docs
 ---
-
 # Tutoriales de generación de vistas previas para GroupDocs.Comparison .NET
 
 Aprenda a crear vistas previas de documentos con nuestros completos tutoriales de GroupDocs.Comparison para desarrolladores .NET. Estas guías prácticas muestran cómo generar vistas previas de página para documentos de origen, documentos de destino y resultados de comparación, personalizar el tamaño de las imágenes de vista previa e implementar la limpieza de recursos para optimizar el uso de la memoria. Cada tutorial incluye ejemplos detallados de código C# para implementar eficientemente la función de vista previa de documentos en sus aplicaciones de comparación.

@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison for Java 提取文档元数据——综合指南"
 "url": "/zh/java/document-information/extract-document-info-groupdocs-comparison-java/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison for Java 提取文档元数据
 
 在数字时代，管理和分析文档属性在法律、行政或企业等各个领域都至关重要。了解文档的元数据可以显著提高生产力。本指南将指导您使用 GroupDocs.Comparison 库轻松地从文档中提取文件类型、页数和大小等重要信息。

@@ -9,8 +9,8 @@ weight: 1
 url: "/net/basic-comparison/groupdocs-comparison-net-document-comparison-csharp/"
 categories: ["C# Development"]
 tags: ["document-comparison", "groupdocs", "dotnet", "file-processing"]
+type: docs
 ---
-
 # Document Comparison C# Tutorial: Master GroupDocs.Comparison .NET
 
 ## Why Document Comparison Matters (And How C# Makes It Simple)

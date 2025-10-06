@@ -4,8 +4,8 @@
 "title": "Tạo và tối ưu hóa bản xem trước tài liệu với GroupDocs.Comparison .NET API"
 "url": "/vi/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Tạo và tối ưu hóa bản xem trước tài liệu với GroupDocs.Comparison .NET
 
 ## Giới thiệu

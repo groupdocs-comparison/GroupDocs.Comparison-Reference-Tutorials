@@ -4,8 +4,8 @@
 "title": "So sánh tài liệu Java Multi-Stream bằng GroupDocs.Comparison&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Làm chủ Java Multi-Stream Document So sánh với GroupDocs.Comparison
 
 ## Giới thiệu

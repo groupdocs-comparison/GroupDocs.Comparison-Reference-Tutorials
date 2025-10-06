@@ -4,8 +4,8 @@
 "title": "So legen Sie benutzerdefinierte Metadaten in Dokumenten mit GroupDocs.Comparison für .NET fest | Leitfaden zur Dokumentenverwaltung"
 "url": "/de/net/metadata-management/set-user-defined-metadata-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # So legen Sie benutzerdefinierte Metadaten in Dokumenten mit GroupDocs.Comparison für .NET fest
 
 ## Einführung

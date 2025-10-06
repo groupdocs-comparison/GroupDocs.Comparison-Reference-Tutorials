@@ -4,8 +4,8 @@
 "title": "Java Stream dokumentum-összehasonlítás elsajátítása a GroupDocs.Comparison segítségével a hatékony munkafolyamat-kezelés érdekében"
 "url": "/hu/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Java Stream dokumentum-összehasonlítás elsajátítása a GroupDocs.Comparison segítségével a hatékony munkafolyamat-kezelés érdekében
 
 A mai gyorsan változó digitális környezetben a nagy mennyiségű dokumentum kezelése és összehasonlítása kulcsfontosságú a szerződések, jelentések vagy jogi dokumentumok egységességének és pontosságának biztosítása érdekében. Ez az oktatóanyag végigvezeti Önt a hatékony Java GroupDocs.Comparison könyvtár használatán, amellyel hatékonyan hasonlíthat össze több Word-dokumentumot adatfolyamokon keresztül, lehetővé téve a testreszabást a stílusbeállításokkal.

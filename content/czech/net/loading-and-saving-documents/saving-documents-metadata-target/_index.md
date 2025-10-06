@@ -5,8 +5,8 @@
 "title": "Ukládání cílových metadat dokumentů v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Ukládání cílových metadat dokumentů v porovnání GroupDocs pro .NET
 
 ## Zavedení

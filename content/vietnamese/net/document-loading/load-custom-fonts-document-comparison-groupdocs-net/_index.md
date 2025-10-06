@@ -4,8 +4,8 @@
 "title": "Cách tải phông chữ tùy chỉnh để so sánh tài liệu bằng GroupDocs.Comparison .NET"
 "url": "/vi/net/document-loading/load-custom-fonts-document-comparison-groupdocs-net/"
 "weight": 1
+type: docs
 ---
-
 # Cách tải phông chữ tùy chỉnh để so sánh tài liệu bằng GroupDocs.Comparison .NET
 
 ## Giới thiệu

@@ -5,8 +5,8 @@
 "title": "Szöveg betöltése karakterláncból a GroupDocs Comparison for .NET-ben"
 "url": "/hu/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Szöveg betöltése karakterláncból a GroupDocs Comparison for .NET-ben
 
 ## Bevezetés

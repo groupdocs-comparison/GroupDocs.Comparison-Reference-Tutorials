@@ -4,8 +4,8 @@
 "title": "Implementera dokumentjämförelse i .NET med GroupDocs.Comparison för Word-filer från strömmar"
 "url": "/sv/net/basic-comparison/document-comparison-groupdocs-comparison-net-csharp/"
 "weight": 1
+type: docs
 ---
-
 # Hur man implementerar dokumentjämförelse från Stream med GroupDocs.Comparison för .NET
 
 ## Introduktion

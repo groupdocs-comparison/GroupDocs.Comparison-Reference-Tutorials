@@ -4,8 +4,8 @@
 "title": "Mengatur Metadata Kustom dalam Dokumen Java Menggunakan GroupDocs.Comparison&#58; Panduan Langkah demi Langkah"
 "url": "/id/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
 "weight": 1
+type: docs
 ---
-
 # Mengatur Metadata Kustom dalam Dokumen Java Menggunakan GroupDocs.Comparison: Panduan Langkah demi Langkah
 
 ## Perkenalan

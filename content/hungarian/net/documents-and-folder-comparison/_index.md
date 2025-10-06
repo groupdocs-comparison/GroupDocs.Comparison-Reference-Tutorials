@@ -5,8 +5,8 @@
 "title": "Dokumentumok és mappák összehasonlítása"
 "url": "/hu/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # Dokumentumok és mappák összehasonlítása
 
 ## Bevezetés

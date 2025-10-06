@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Comparison"]
 tags: ["groupdocs-comparison", "net-tutorial", "comparison-options", "document-processing"]
+type: docs
 ---
-
 # Document Comparison Options .NET - Complete Configuration Guide
 
 When you're building document comparison functionality into your .NET applications, the default comparison settings often won't meet your specific needs. Whether you're processing legal contracts, technical documentation, or financial reports, having precise control over how documents are compared can make the difference between useful results and information overload.

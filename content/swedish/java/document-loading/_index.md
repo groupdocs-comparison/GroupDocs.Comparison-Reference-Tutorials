@@ -3,8 +3,8 @@
 "title": "Handledningar för dokumentinläsning för GroupDocs.Comparison Java"
 "url": "/sv/java/document-loading/"
 "weight": 2
+type: docs
 ---
-
 # Handledningar för dokumentinläsning för GroupDocs.Comparison Java
 
 Våra handledningar för dokumentinläsning ger omfattande vägledning för att förbereda dokument för jämförelse i Java-applikationer. Dessa steg-för-steg-guider visar hur man laddar dokument från lokal lagring, minnesströmmar och stränginnehåll, samt hur man konfigurerar inläsningsalternativ för olika dokumenttyper. Varje handledning innehåller kompletta Java-kodexempel som hjälper dig att implementera robust dokumentinläsningsfunktionalitet i dina jämförelseapplikationer.

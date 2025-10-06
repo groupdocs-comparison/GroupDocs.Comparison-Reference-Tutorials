@@ -5,8 +5,8 @@
 "title": "So sánh nhiều tài liệu trong GroupDocs So sánh cho .NET"
 "url": "/vi/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # So sánh nhiều tài liệu trong GroupDocs So sánh cho .NET
 
 ## Giới thiệu

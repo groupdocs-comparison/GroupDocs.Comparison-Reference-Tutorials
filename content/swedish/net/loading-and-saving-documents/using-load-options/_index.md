@@ -5,8 +5,8 @@
 "title": "Använda laddningsalternativ i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/using-load-options/"
 "weight": 13
+type: docs
 ---
-
 # Använda laddningsalternativ i GroupDocs-jämförelse för .NET
 
 ## Introduktion

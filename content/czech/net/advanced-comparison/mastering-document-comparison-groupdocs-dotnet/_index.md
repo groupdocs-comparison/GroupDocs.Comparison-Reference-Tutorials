@@ -4,8 +4,8 @@
 "title": "Zvládnutí porovnávání dokumentů v .NET&#58; Komplexní průvodce používáním GroupDocs.Comparison"
 "url": "/cs/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání dokumentů v .NET pomocí GroupDocs.Comparison
 
 Odemkněte potenciál automatizace porovnávání dokumentů v prostředích .NET pomocí GroupDocs.Comparison. Tato příručka vám pomůže zefektivnit pracovní postup a zvýšit produktivitu efektivní správou verzí dokumentů.

@@ -4,8 +4,8 @@
 "title": "使用 Java 中的 GroupDocs 掌握文档元数据提取"
 "url": "/zh/java/document-information/groupdocs-comparison-java-document-extraction/"
 "weight": 1
+type: docs
 ---
-
 # 掌握使用 Java 中的 GroupDocs 进行文档元数据提取
 
 在当今的数字环境中，高效地管理和提取文档信息对于各行各业的企业都至关重要。无论您处理的是法律合同、学术论文还是财务报告，了解文档元数据（例如文件类型、页数和大小）都可以简化工作流程并增强数据分析能力。本教程将指导您使用 Java 中的 GroupDocs.Comparison 通过输入流和文件路径提取有价值的文档信息。

@@ -4,8 +4,8 @@
 "title": "كيفية تتبع استهلاك الائتمان باستخدام GroupDocs.Comparison لـ .NET - دليل شامل"
 "url": "/ar/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # كيفية تتبع استهلاك الائتمان باستخدام GroupDocs.Comparison لـ .NET: دليل شامل
 
 ## مقدمة

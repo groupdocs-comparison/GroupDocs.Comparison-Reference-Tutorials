@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET API 產生和最佳化文件預覽"
 "url": "/zh-hant/net/preview-generation/optimize-document-previews-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 產生和最佳化文件預覽
 
 ## 介紹

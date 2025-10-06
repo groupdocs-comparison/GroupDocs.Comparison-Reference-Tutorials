@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison API를 사용한 Java에서의 마스터 문서 비교"
 "url": "/ko/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison API를 사용하여 Java에서 문서 비교 마스터하기
 
 ## 소개

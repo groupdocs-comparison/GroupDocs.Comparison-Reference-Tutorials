@@ -5,8 +5,8 @@
 "title": "比較路徑中的受保護文件 - GroupDocs.Comparison for .NET"
 "url": "/zh-hant/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # 比較路徑中的受保護文件 - GroupDocs.Comparison for .NET
 
 ## 介紹

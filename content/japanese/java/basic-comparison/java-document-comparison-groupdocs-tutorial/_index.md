@@ -4,8 +4,8 @@
 "title": "GroupDocs を使用して Java でドキュメント比較を実装する包括的なガイド"
 "url": "/ja/java/basic-comparison/java-document-comparison-groupdocs-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs を使って Java でドキュメント比較を実装する: 総合ガイド
 
 ## 導入

@@ -5,8 +5,8 @@
 "title": "Bersihkan Sumber Daya Setelah Pratinjau Halaman"
 "url": "/id/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Bersihkan Sumber Daya Setelah Pratinjau Halaman
 
 ## Perkenalan

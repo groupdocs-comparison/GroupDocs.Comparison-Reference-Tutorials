@@ -5,8 +5,8 @@
 "title": "เปรียบเทียบเอกสารหลายฉบับใน GroupDocs การเปรียบเทียบสำหรับ .NET"
 "url": "/th/net/documents-and-folder-comparison/compare-multiple-documents-dotnet/"
 "weight": 13
+type: docs
 ---
-
 # เปรียบเทียบเอกสารหลายฉบับใน GroupDocs การเปรียบเทียบสำหรับ .NET
 
 ## การแนะนำ

@@ -5,8 +5,8 @@
 "title": "Hämta dokumentinformation från Stream - GroupDocs.Comparison för .NET"
 "url": "/sv/net/basic-usage/get-document-info-from-stream/"
 "weight": 14
+type: docs
 ---
-
 # Hämta dokumentinformation från Stream - GroupDocs.Comparison för .NET
 
 ## Introduktion

@@ -4,8 +4,8 @@
 "title": ".NETでGroupDocs.Comparisonライセンスを設定する方法 - ステップバイステップガイド"
 "url": "/ja/net/licensing-configuration/setting-up-groupdocs-comparison-license-net/"
 "weight": 1
+type: docs
 ---
-
 # .NETでGroupDocs.Comparisonライセンスを設定する方法
 
 ## 導入

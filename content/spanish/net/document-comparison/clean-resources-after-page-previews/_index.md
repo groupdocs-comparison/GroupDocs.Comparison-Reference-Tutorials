@@ -5,8 +5,8 @@
 "title": "Recursos limpios después de las vistas previas de página"
 "url": "/es/net/document-comparison/clean-resources-after-page-previews/"
 "weight": 13
+type: docs
 ---
-
 # Recursos limpios después de las vistas previas de página
 
 ## Introducción

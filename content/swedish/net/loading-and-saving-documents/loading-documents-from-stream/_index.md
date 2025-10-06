@@ -5,8 +5,8 @@
 "title": "Läser in dokument från Stream i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Läser in dokument från Stream i GroupDocs-jämförelse för .NET
 
 ## Introduktion

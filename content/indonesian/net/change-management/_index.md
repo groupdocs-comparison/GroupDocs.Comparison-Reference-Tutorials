@@ -3,8 +3,8 @@
 "title": "Tutorial Manajemen Perubahan untuk GroupDocs.Comparison .NET"
 "url": "/id/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # Tutorial Manajemen Perubahan untuk GroupDocs.Comparison .NET
 
 Temukan cara mengelola perubahan dokumen secara efektif dengan tutorial GroupDocs.Comparison .NET kami. Panduan terperinci ini menunjukkan cara mengidentifikasi perbedaan tertentu antara dokumen, menerima atau menolak perubahan individual, menetapkan penulis untuk perubahan yang dilacak, dan mengelola revisi secara terprogram. Setiap tutorial menyediakan petunjuk langkah demi langkah dengan contoh kode C# untuk membantu Anda menerapkan fungsionalitas manajemen perubahan yang komprehensif dalam alur kerja perbandingan dokumen Anda.

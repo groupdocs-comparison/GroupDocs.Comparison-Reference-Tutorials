@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison を使用して Java ドキュメント比較で挿入されたアイテムのスタイルをカスタマイズする"
 "url": "/ja/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison を使用して Java ドキュメント比較で挿入されたアイテムのスタイルをカスタマイズする
 
 ## 導入

@@ -5,8 +5,8 @@
 "title": "البدء السريع"
 "url": "/ar/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # البدء السريع
 
 

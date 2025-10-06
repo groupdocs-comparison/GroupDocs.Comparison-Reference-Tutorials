@@ -5,8 +5,8 @@
 "title": "ตั้งค่าใบอนุญาตแบบมิเตอร์ - การเปรียบเทียบ GroupDocs สำหรับ .NET"
 "url": "/th/net/quick-start/set-metered-license/"
 "weight": 12
+type: docs
 ---
-
 # ตั้งค่าใบอนุญาตแบบมิเตอร์ - การเปรียบเทียบ GroupDocs สำหรับ .NET
 
 ## การแนะนำ

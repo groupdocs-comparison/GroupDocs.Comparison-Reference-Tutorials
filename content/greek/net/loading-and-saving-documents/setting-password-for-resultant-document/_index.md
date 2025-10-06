@@ -5,8 +5,8 @@
 "title": "Ορισμός κωδικού πρόσβασης για το προκύπτον έγγραφο στο GroupDocs Comparison για .NET"
 "url": "/el/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Ορισμός κωδικού πρόσβασης για το προκύπτον έγγραφο στο GroupDocs Comparison για .NET
 
 ## Εισαγωγή

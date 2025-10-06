@@ -5,8 +5,8 @@
 "title": "Speichern benutzerdefinierter Dokumentmetadaten im GroupDocs-Vergleich für .NET"
 "url": "/de/net/loading-and-saving-documents/saving-user-defined-document-metadata/"
 "weight": 16
+type: docs
 ---
-
 # Speichern benutzerdefinierter Dokumentmetadaten im GroupDocs-Vergleich für .NET
 
 ## Einführung

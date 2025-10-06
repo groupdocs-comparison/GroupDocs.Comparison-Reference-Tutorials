@@ -4,8 +4,8 @@
 "title": "Comparação de strings de texto mestre em .NET usando a biblioteca GroupDocs.Comparison"
 "url": "/pt/net/basic-comparison/groupdocs-comparison-net-text-string-compare/"
 "weight": 1
+type: docs
 ---
-
 # Comparação de strings de texto mestre em .NET usando a biblioteca GroupDocs.Comparison
 
 ## Introdução

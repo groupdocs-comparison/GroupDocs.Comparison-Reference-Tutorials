@@ -5,8 +5,8 @@
 "title": "在 .NET 的 GroupDocs 比较中从流加载文档"
 "url": "/zh/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # 在 .NET 的 GroupDocs 比较中从流加载文档
 
 ## 介绍

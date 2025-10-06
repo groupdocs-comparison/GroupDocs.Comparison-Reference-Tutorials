@@ -5,8 +5,8 @@
 "title": "Genereer paginavoorbeelden voor het doeldocument"
 "url": "/nl/net/document-comparison/generate-page-previews-target-document/"
 "weight": 12
+type: docs
 ---
-
 # Genereer paginavoorbeelden voor het doeldocument
 
 ## Invoering

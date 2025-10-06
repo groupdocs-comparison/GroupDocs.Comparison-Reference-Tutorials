@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison .NET でマスタードキュメントのリビジョンを効率的に管理する包括的なガイド"
 "url": "/ja/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET でドキュメントのリビジョン管理をマスターする: ステップバイステップガイド
 
 ## 導入

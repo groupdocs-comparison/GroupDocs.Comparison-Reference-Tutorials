@@ -4,8 +4,8 @@
 "title": "Jak načíst a porovnat dokumenty Wordu chráněné heslem v Javě pomocí GroupDocs.Comparison"
 "url": "/cs/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
 "weight": 1
+type: docs
 ---
-
 # Jak načíst a porovnat dokumenty Wordu chráněné heslem v Javě pomocí GroupDocs.Comparison
 
 ## Zavedení

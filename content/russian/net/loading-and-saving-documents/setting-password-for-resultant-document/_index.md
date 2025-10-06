@@ -5,8 +5,8 @@
 "title": "Установка пароля для результирующего документа в сравнении GroupDocs для .NET"
 "url": "/ru/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # Установка пароля для результирующего документа в сравнении GroupDocs для .NET
 
 ## Введение

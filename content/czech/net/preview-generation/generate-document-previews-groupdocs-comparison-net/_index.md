@@ -4,8 +4,8 @@
 "title": "Efektivní generování náhledů dokumentů s GroupDocs.Comparison pro vývojáře .NET"
 "url": "/cs/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Efektivní generování náhledů dokumentů s GroupDocs.Comparison pro .NET
 
 ## Zavedení

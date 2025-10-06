@@ -6,8 +6,8 @@
 "title": "Εκμάθηση API Λογισμικού Σύγκρισης Εγγράφων | GroupDocs.Comparison"
 "url": "/el/"
 "weight": 11
+type: docs
 ---
-
 # Εκπαιδευτικά βίντεο και οδηγός για προγραμματιστές του GroupDocs.Comparison
 
 ![GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)

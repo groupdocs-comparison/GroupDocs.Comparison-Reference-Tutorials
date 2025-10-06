@@ -5,8 +5,8 @@
 "title": "Αποθήκευση πηγής μεταδεδομένων εγγράφων στο GroupDocs Σύγκριση για .NET"
 "url": "/el/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Αποθήκευση πηγής μεταδεδομένων εγγράφων στο GroupDocs Σύγκριση για .NET
 
 ## Εισαγωγή

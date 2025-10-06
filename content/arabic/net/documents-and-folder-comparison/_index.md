@@ -5,8 +5,8 @@
 "title": "مقارنة المستندات والمجلدات"
 "url": "/ar/net/documents-and-folder-comparison/"
 "weight": 20
+type: docs
 ---
-
 # مقارنة المستندات والمجلدات
 
 ## مقدمة

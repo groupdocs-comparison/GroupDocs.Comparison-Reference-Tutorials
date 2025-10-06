@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison API 在 Java 中掌握文件比較"
 "url": "/zh-hant/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison API 掌握 Java 中的文件比較
 
 ## 介紹

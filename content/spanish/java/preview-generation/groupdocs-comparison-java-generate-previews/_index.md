@@ -4,8 +4,8 @@
 "title": "Dominando GroupDocs.Comparison para Java&#58; Generación sencilla de vistas previas de documentos"
 "url": "/es/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Dominando GroupDocs.Comparison para Java: Generación sencilla de vistas previas de documentos
 
 ## Introducción

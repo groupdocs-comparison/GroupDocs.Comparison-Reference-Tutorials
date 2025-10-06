@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET の基本的なドキュメント比較チュートリアル"
 "url": "/ja/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # GroupDocs.Comparison .NET の基本的なドキュメント比較チュートリアル
 
 GroupDocs.Comparison .NETの詳細なチュートリアルで、基本的なドキュメント比較をマスターしましょう。これらのステップバイステップガイドでは、Word、PDF、Excel、画像など、様々な形式のドキュメントを比較する方法を解説します。各チュートリアルには、ドキュメント間の差異の特定、比較レポートの生成、そして様々なドキュメントタイプに対する比較操作の実装方法を示すC#のコード例が含まれています。

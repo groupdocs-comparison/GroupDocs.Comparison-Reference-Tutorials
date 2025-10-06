@@ -4,8 +4,8 @@
 "title": "Porovnávání vícestreamových dokumentů v Javě pomocí GroupDocs.Comparison – Komplexní průvodce"
 "url": "/cs/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/"
 "weight": 1
+type: docs
 ---
-
 # Zvládnutí porovnávání vícestreamových dokumentů v Javě pomocí GroupDocs.Comparison
 
 ## Zavedení

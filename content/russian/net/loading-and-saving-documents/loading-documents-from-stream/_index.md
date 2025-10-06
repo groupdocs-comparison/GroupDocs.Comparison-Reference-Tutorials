@@ -5,8 +5,8 @@
 "title": "Загрузка документов из потока в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/loading-documents-from-stream/"
 "weight": 11
+type: docs
 ---
-
 # Загрузка документов из потока в GroupDocs Сравнение для .NET
 
 ## Введение

@@ -4,8 +4,8 @@
 "title": "Comment comparer des fichiers de cellules à l'aide de GroupDocs.Comparison en Java ? Un guide complet"
 "url": "/fr/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Comment comparer des fichiers de cellules avec GroupDocs.Comparison en Java
 
 ## Introduction

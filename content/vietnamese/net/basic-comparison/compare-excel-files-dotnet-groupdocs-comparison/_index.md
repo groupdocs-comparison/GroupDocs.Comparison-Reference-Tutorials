@@ -4,8 +4,8 @@
 "title": "Cách so sánh các tệp Excel trong .NET bằng thư viện GroupDocs.Comparison"
 "url": "/vi/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
 "weight": 1
+type: docs
 ---
-
 # Cách so sánh các tệp Excel trong .NET bằng thư viện GroupDocs.Comparison
 
 ## Giới thiệu

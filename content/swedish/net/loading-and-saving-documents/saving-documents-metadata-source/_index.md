@@ -5,8 +5,8 @@
 "title": "Spara dokumentmetadatakälla i GroupDocs-jämförelse för .NET"
 "url": "/sv/net/loading-and-saving-documents/saving-documents-metadata-source/"
 "weight": 14
+type: docs
 ---
-
 # Spara dokumentmetadatakälla i GroupDocs-jämförelse för .NET
 
 ## Introduktion

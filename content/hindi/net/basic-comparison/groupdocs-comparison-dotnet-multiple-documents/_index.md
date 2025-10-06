@@ -4,8 +4,8 @@
 "title": "GroupDocs.Comparison का उपयोग करके .NET में एकाधिक पासवर्ड-संरक्षित दस्तावेज़ों की तुलना कैसे करें"
 "url": "/hi/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison का उपयोग करके .NET में एकाधिक पासवर्ड-संरक्षित दस्तावेज़ों की तुलना कैसे करें
 
 ## परिचय

@@ -3,8 +3,8 @@
 "title": "Grundläggande dokumentjämförelsehandledningar för GroupDocs.Comparison .NET"
 "url": "/sv/net/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Grundläggande dokumentjämförelsehandledningar för GroupDocs.Comparison .NET
 
 Bemästra grundläggande dokumentjämförelse med våra detaljerade GroupDocs.Comparison .NET-handledningar. Dessa steg-för-steg-guider visar hur man jämför dokument i olika format, inklusive Word, PDF, Excel och bilder. Varje handledning innehåller exempel på fungerande C#-kod som visar hur man identifierar skillnader mellan dokument, genererar jämförelserapporter och implementerar jämförelseåtgärder för olika dokumenttyper.

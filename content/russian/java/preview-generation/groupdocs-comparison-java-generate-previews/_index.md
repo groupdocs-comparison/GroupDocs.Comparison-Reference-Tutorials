@@ -4,8 +4,8 @@
 "title": "Освоение GroupDocs.Comparison для Java – простая генерация предварительного просмотра документов"
 "url": "/ru/java/preview-generation/groupdocs-comparison-java-generate-previews/"
 "weight": 1
+type: docs
 ---
-
 # Освоение GroupDocs.Comparison для Java: простая генерация предварительного просмотра документов
 
 ## Введение

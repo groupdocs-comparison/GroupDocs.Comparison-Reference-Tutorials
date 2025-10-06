@@ -5,8 +5,8 @@
 "title": "在 GroupDocs 比較 (.NET) 中設定結果文件的密碼"
 "url": "/zh-hant/net/loading-and-saving-documents/setting-password-for-resultant-document/"
 "weight": 17
+type: docs
 ---
-
 # 在 GroupDocs 比較 (.NET) 中設定結果文件的密碼
 
 ## 介紹

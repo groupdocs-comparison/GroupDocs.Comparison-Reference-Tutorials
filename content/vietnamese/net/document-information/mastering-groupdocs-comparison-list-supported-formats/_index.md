@@ -4,8 +4,8 @@
 "title": "Cách liệt kê tất cả các định dạng tệp được hỗ trợ trong GroupDocs.Comparison cho .NET"
 "url": "/vi/net/document-information/mastering-groupdocs-comparison-list-supported-formats/"
 "weight": 1
+type: docs
 ---
-
 # Cách liệt kê tất cả các định dạng tệp được hỗ trợ trong GroupDocs.Comparison cho .NET
 
 ## Giới thiệu

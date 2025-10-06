@@ -3,8 +3,8 @@
 "title": "Tutorial Perbandingan Dokumen Dasar untuk GroupDocs.Comparison Java"
 "url": "/id/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Tutorial Perbandingan Dokumen Dasar untuk GroupDocs.Comparison Java
 
 Kuasai perbandingan dokumen dasar dengan tutorial Java GroupDocs.Comparison kami yang terperinci. Panduan langkah demi langkah ini menunjukkan cara membandingkan dokumen dalam berbagai format termasuk Word, PDF, Excel, dan gambar. Setiap tutorial menyertakan contoh kode Java yang berfungsi yang menunjukkan cara mengidentifikasi perbedaan antara dokumen, membuat laporan perbandingan, dan menerapkan operasi perbandingan untuk berbagai jenis dokumen.

@@ -5,8 +5,8 @@
 "title": "Đặt kích thước hình ảnh cụ thể cho bản xem trước"
 "url": "/vi/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # Đặt kích thước hình ảnh cụ thể cho bản xem trước
 
 ## Giới thiệu

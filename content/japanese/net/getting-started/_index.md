@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 開発者向け入門チュートリアル"
 "url": "/ja/net/getting-started/"
 "weight": 1
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 開発者向け入門チュートリアル
 
 GroupDocs.Comparison の基本的なチュートリアルから始めましょう。インストール、ライセンス設定、そして.NET での最初のドキュメント比較の作成方法を詳しく説明します。初心者向けのガイドでは、開発環境の設定方法、GroupDocs.Comparison ライブラリの初期化方法、そして基本的な比較操作の実行方法を解説しています。これらのチュートリアルに沿って、基本を素早く習得し、.NET アプリケーションでより高度なドキュメント比較タスクを実行する準備をしましょう。

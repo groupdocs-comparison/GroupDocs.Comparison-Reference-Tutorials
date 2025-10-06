@@ -5,8 +5,8 @@
 "title": "Comparar documentos protegidos desde la ruta - GroupDocs.Comparison para .NET"
 "url": "/es/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # Comparar documentos protegidos desde la ruta - GroupDocs.Comparison para .NET
 
 ## Introducción

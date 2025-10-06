@@ -5,8 +5,8 @@
 "title": "パスから保護されたドキュメントを比較する - GroupDocs.Comparison for .NET"
 "url": "/ja/net/document-comparison/compare-protected-documents-from-path/"
 "weight": 17
+type: docs
 ---
-
 # パスから保護されたドキュメントを比較する - GroupDocs.Comparison for .NET
 
 ## 導入

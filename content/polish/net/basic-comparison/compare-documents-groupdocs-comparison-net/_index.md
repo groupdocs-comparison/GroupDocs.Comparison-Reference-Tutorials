@@ -4,8 +4,8 @@
 "title": "Porównaj dokumenty ze strumieni za pomocą GroupDocs.Comparison .NET — kompletny przewodnik dla programistów"
 "url": "/pl/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Jak porównać wiele dokumentów ze strumieni przy użyciu GroupDocs.Comparison .NET
 
 ## Wstęp

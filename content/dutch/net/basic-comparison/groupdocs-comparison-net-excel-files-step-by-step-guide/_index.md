@@ -4,8 +4,8 @@
 "title": "Excel-bestanden vergelijken met GroupDocs.Comparison.NET&#58; een uitgebreide stapsgewijze handleiding"
 "url": "/nl/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # Excel-bestanden vergelijken met GroupDocs.Comparison .NET: een uitgebreide stapsgewijze handleiding
 ## Invoering
 In een wereld die steeds afhankelijker wordt van data, is het vergelijken van verschillende versies van Excel-bestanden essentieel voor zowel bedrijven als particulieren. Of u nu wijzigingen in financiële rapporten bijhoudt of projectupdates beheert, zonder de juiste tools kan dit een tijdrovende klus zijn. Maak kennis met GroupDocs.Comparison voor .NET: een krachtige bibliotheek die dit proces nauwkeurig stroomlijnt.

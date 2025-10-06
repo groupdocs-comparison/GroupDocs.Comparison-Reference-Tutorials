@@ -3,8 +3,8 @@
 "title": "Avancerade handledningar för dokumentjämförelse för GroupDocs.Comparison .NET"
 "url": "/sv/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Avancerade handledningar för dokumentjämförelse för GroupDocs.Comparison .NET
 
 Våra avancerade jämförelsehandledningar visar hur du utnyttjar GroupDocs.Comparisons kraftfulla funktioner i .NET-applikationer. Dessa omfattande guider täcker jämförelse av flera dokument samtidigt, jämförelse av lösenordsskyddade filer, jämförelse av hela mappar och anpassning av jämförelseinställningar för olika scenarier. Varje handledning innehåller praktiska C#-kodexempel för att implementera sofistikerade dokumentjämförelseoperationer som går utöver grundläggande funktioner.

@@ -5,8 +5,8 @@
 "title": "Načítání textu z řetězce v porovnání GroupDocs pro .NET"
 "url": "/cs/net/loading-and-saving-documents/loading-text-from-string/"
 "weight": 12
+type: docs
 ---
-
 # Načítání textu z řetězce v porovnání GroupDocs pro .NET
 
 ## Zavedení

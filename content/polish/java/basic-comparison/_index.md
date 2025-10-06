@@ -3,8 +3,8 @@
 "title": "Podstawowe samouczki porównywania dokumentów dla GroupDocs.Comparison Java"
 "url": "/pl/java/basic-comparison/"
 "weight": 3
+type: docs
 ---
-
 # Podstawowe samouczki porównywania dokumentów dla GroupDocs.Comparison Java
 
 Opanuj podstawowe porównywanie dokumentów dzięki naszym szczegółowym samouczkom GroupDocs.Comparison Java. Te przewodniki krok po kroku pokazują, jak porównywać dokumenty w różnych formatach, w tym Word, PDF, Excel i obrazy. Każdy samouczek zawiera działające przykłady kodu Java, które pokazują, jak identyfikować różnice między dokumentami, generować raporty porównawcze i wdrażać operacje porównawcze dla różnych typów dokumentów.

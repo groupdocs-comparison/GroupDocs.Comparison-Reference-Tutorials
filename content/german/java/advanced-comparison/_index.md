@@ -3,8 +3,8 @@
 "title": "Erweiterte Tutorials zum Dokumentvergleich für GroupDocs.Comparison Java"
 "url": "/de/java/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # Erweiterte Tutorials zum Dokumentvergleich für GroupDocs.Comparison Java
 
 Unsere erweiterten Vergleichstutorials zeigen Ihnen, wie Sie die leistungsstarken Funktionen von GroupDocs.Comparison in Java-Anwendungen nutzen. Diese umfassenden Anleitungen behandeln den gleichzeitigen Vergleich mehrerer Dokumente, den Vergleich passwortgeschützter Dateien, den Vergleich ganzer Ordner und die Anpassung der Vergleichseinstellungen für verschiedene Szenarien. Jedes Tutorial enthält praktische Java-Codebeispiele zur Implementierung anspruchsvoller Dokumentvergleichsoperationen, die über die Grundfunktionen hinausgehen.

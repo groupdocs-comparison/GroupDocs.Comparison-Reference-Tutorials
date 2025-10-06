@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "document-comparison", "metadata", "dotnet"]
+type: docs
 ---
-
 # Document Comparison .NET: How to Save Metadata Target with GroupDocs
 
 When you're building .NET applications that handle document workflows, you've probably run into the challenge of comparing documents while preserving specific metadata. Whether you're working on a content management system, legal document review platform, or collaborative editing tool, maintaining the right metadata during document comparison is crucial for audit trails and version control.

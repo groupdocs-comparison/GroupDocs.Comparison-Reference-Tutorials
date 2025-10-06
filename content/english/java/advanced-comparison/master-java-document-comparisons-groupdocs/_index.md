@@ -9,8 +9,8 @@ weight: 1
 url: "/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "java-tutorial", "file-diff", "document-management"]
+type: docs
 ---
-
 # Java Document Comparison Tutorial - Complete GroupDocs Guide
 
 Ever found yourself manually comparing documents line by line, hunting for changes between contract versions or tracking edits in collaborative projects? You're not alone. Document comparison is one of those tedious tasks that can eat up hours of your development time - but it doesn't have to.

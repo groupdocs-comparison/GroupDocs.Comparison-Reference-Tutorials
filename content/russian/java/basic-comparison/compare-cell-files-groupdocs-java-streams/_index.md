@@ -4,8 +4,8 @@
 "title": "Как сравнивать файлы ячеек с помощью GroupDocs.Comparison в Java&#58; Подробное руководство"
 "url": "/ru/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Как сравнить файлы ячеек с помощью GroupDocs.Comparison в Java
 
 ## Введение

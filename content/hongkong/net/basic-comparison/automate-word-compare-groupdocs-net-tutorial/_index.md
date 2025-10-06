@@ -4,8 +4,8 @@
 "title": "使用 GroupDocs.Comparison .NET 自動比較 Word 文件－完整教學課程"
 "url": "/zh-hant/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # 使用 GroupDocs.Comparison .NET 自動比較 Word 文件：完整教學課程
 
 ## 介紹

@@ -4,8 +4,8 @@
 "title": "Erstellen Sie effizient Dokumentvorschauen mit GroupDocs.Comparison für .NET-Entwickler"
 "url": "/de/net/preview-generation/generate-document-previews-groupdocs-comparison-net/"
 "weight": 1
+type: docs
 ---
-
 # Erstellen Sie effizient Dokumentvorschauen mit GroupDocs.Comparison für .NET
 
 ## Einführung

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["document-preview", "java-api", "groupdocs-comparison", "pdf-preview"]
+type: docs
 ---
-
 # Java Document Preview Generation - Complete Tutorial Guide
 
 Generate professional document previews effortlessly with GroupDocs.Comparison for Java. Whether you're building a document management system, creating a file comparison tool, or enhancing your application's user experience, this comprehensive guide provides everything you need to implement robust preview functionality.

@@ -4,8 +4,8 @@
 "title": "Java-documentvergelijking met behulp van GroupDocs.Comparison API&#58; een stream-gebaseerde benadering"
 "url": "/nl/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
 "weight": 1
+type: docs
 ---
-
 # Java onder de knie krijgen: Documentvergelijking met GroupDocs.Comparison API
 
 Welkom bij deze uitgebreide handleiding waarin we documentvergelijking in Java verkennen met behulp van de krachtige GroupDocs.Comparison API. Of u nu juridische documenten, academische papers of andere tekstbestanden beheert, het is cruciaal om ze efficiënt te vergelijken. In deze tutorial laten we zien hoe u gedetecteerde wijzigingen tussen twee documenten kunt accepteren of afwijzen met behulp van streams in Java.

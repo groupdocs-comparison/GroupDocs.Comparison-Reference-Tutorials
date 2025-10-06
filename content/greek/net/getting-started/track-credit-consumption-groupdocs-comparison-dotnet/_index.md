@@ -4,8 +4,8 @@
 "title": "Πώς να παρακολουθείτε την κατανάλωση πίστωσης χρησιμοποιώντας το GroupDocs.Comparison για .NET™; Ένας πλήρης οδηγός"
 "url": "/el/net/getting-started/track-credit-consumption-groupdocs-comparison-dotnet/"
 "weight": 1
+type: docs
 ---
-
 # Πώς να παρακολουθείτε την κατανάλωση πίστωσης χρησιμοποιώντας το GroupDocs.Comparison για .NET: Ένας πλήρης οδηγός
 
 ## Εισαγωγή

@@ -5,8 +5,8 @@
 "title": "تعيين أحجام صور محددة للمعاينات"
 "url": "/ar/net/document-comparison/set-specific-image-sizes-for-previews/"
 "weight": 14
+type: docs
 ---
-
 # تعيين أحجام صور محددة للمعاينات
 
 ## مقدمة

@@ -4,8 +4,8 @@
 "title": "Как сравнить несколько защищенных паролем документов в .NET с помощью GroupDocs.Comparison"
 "url": "/ru/net/basic-comparison/groupdocs-comparison-dotnet-multiple-documents/"
 "weight": 1
+type: docs
 ---
-
 # Как сравнить несколько защищенных паролем документов в .NET с помощью GroupDocs.Comparison
 
 ## Введение

@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET için Gelişmiş Belge Karşılaştırma Eğitimleri"
 "url": "/tr/net/advanced-comparison/"
 "weight": 4
+type: docs
 ---
-
 # GroupDocs.Comparison .NET için Gelişmiş Belge Karşılaştırma Eğitimleri
 
 Gelişmiş karşılaştırma eğitimlerimiz, GroupDocs.Comparison'ın .NET uygulamalarındaki güçlü özelliklerini nasıl kullanacağınızı gösterir. Bu kapsamlı kılavuzlar, birden fazla belgeyi aynı anda karşılaştırmayı, parola korumalı dosyaları karşılaştırmayı, tüm klasörleri karşılaştırmayı ve farklı senaryolar için karşılaştırma ayarlarını özelleştirmeyi kapsar. Her eğitim, temel işlevselliğin ötesine geçen karmaşık belge karşılaştırma işlemlerini uygulamak için pratik C# kod örnekleri içerir.

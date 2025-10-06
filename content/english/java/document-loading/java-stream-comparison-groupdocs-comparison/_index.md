@@ -9,8 +9,8 @@ weight: 1
 url: "/java/document-loading/java-stream-comparison-groupdocs-comparison/"
 categories: ["Java Development"]
 tags: ["java", "document-comparison", "streams", "groupdocs", "tutorial"]
+type: docs
 ---
-
 # Java Document Comparison Stream Tutorial - Complete Guide with GroupDocs
 
 Ever found yourself drowning in document versions, trying to figure out what changed between different drafts? You're not alone. Whether you're dealing with contracts, reports, or collaborative documents, comparing multiple files manually is a nightmare that eats up valuable time.

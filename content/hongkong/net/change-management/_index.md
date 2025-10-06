@@ -3,8 +3,8 @@
 "title": "GroupDocs.Comparison .NET 變更管理教學課程"
 "url": "/zh-hant/net/change-management/"
 "weight": 5
+type: docs
 ---
-
 # GroupDocs.Comparison .NET 變更管理教學課程
 
 透過我們的 GroupDocs.Comparison .NET 教學課程，了解如何有效管理文件變更。這些詳細的指南演示瞭如何識別文件之間的具體差異、接受或拒絕單一變更、設定追蹤變更的作者以及如何以程式設計方式管理修訂。每個教學課程都提供逐步說明和 C# 程式碼範例，幫助您在文件比較工作流程中實現全面的變更管理功能。

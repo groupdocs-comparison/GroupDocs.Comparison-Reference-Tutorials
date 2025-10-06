@@ -4,8 +4,8 @@
 "title": "Cellfájlok összehasonlítása GroupDocs.Comparison használatával Java-ban – Átfogó útmutató"
 "url": "/hu/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
 "weight": 1
+type: docs
 ---
-
 # Cell fájlok összehasonlítása a GroupDocs.Comparison használatával Java-ban
 
 ## Bevezetés

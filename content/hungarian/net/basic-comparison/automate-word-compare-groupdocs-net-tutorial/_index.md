@@ -4,8 +4,8 @@
 "title": "Word-dokumentumok összehasonlításának automatizálása a GroupDocs.Comparison .NET használatával – Teljes körű útmutató"
 "url": "/hu/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/"
 "weight": 1
+type: docs
 ---
-
 # Word-dokumentumok összehasonlításának automatizálása a GroupDocs.Comparison .NET használatával: Teljes körű oktatóanyag
 
 ## Bevezetés

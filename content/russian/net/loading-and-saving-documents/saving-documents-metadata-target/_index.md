@@ -5,8 +5,8 @@
 "title": "Сохранение целевых метаданных документов в GroupDocs Сравнение для .NET"
 "url": "/ru/net/loading-and-saving-documents/saving-documents-metadata-target/"
 "weight": 15
+type: docs
 ---
-
 # Сохранение целевых метаданных документов в GroupDocs Сравнение для .NET
 
 ## Введение

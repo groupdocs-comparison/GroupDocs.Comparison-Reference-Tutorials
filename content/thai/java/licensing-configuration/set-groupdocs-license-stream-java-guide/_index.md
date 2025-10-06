@@ -4,8 +4,8 @@
 "title": "วิธีตั้งค่าใบอนุญาต GroupDocs จาก Stream ใน Java พร้อมคำแนะนำทีละขั้นตอน"
 "url": "/th/java/licensing-configuration/set-groupdocs-license-stream-java-guide/"
 "weight": 1
+type: docs
 ---
-
 # วิธีตั้งค่าใบอนุญาต GroupDocs จาก Stream ใน Java: คำแนะนำทีละขั้นตอน
 
 ## การแนะนำ

@@ -4,8 +4,8 @@
 "title": "Comparando arquivos do Excel usando GroupDocs.Comparison .NET - Um guia passo a passo abrangente"
 "url": "/pt/net/basic-comparison/groupdocs-comparison-net-excel-files-step-by-step-guide/"
 "weight": 1
+type: docs
 ---
-
 # Comparando arquivos do Excel usando GroupDocs.Comparison .NET: um guia passo a passo abrangente
 ## Introdução
 Em um mundo cada vez mais dependente de dados, comparar diferentes versões de arquivos do Excel é essencial para empresas e indivíduos. Seja acompanhando alterações em relatórios financeiros ou gerenciando atualizações de projetos, a tarefa pode ser demorada sem as ferramentas certas. Conheça o GroupDocs.Comparison para .NET — uma biblioteca poderosa que agiliza esse processo com precisão.

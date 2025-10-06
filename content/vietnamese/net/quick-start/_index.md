@@ -5,8 +5,8 @@
 "title": "Bắt đầu nhanh"
 "url": "/vi/net/quick-start/"
 "weight": 25
+type: docs
 ---
-
 # Bắt đầu nhanh
 
 

@@ -1,35 +1,85 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison ile Java'da parola korumalı Word belgelerini nasıl verimli bir şekilde yükleyeceğinizi ve karşılaştıracağınızı öğrenin. Belge yönetimi süreçlerinizi kolaylaştırın."
-"title": "GroupDocs.Comparison Kullanarak Java'da Parola Korumalı Word Belgeleri Nasıl Yüklenir ve Karşılaştırılır"
-"url": "/tr/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
-"weight": 1
+categories:
+- Java Development
+- Document Processing
+date: '2025-12-17'
+description: Java'da GroupDocs.Comparison kullanarak şifre korumalı Word belgelerini
+  nasıl karşılaştıracağınızı öğrenin. Kod örnekleri, sorun giderme ve en iyi uygulamalarla
+  tam rehber.
+keywords: compare password protected Word documents Java, GroupDocs comparison tutorial,
+  Java document comparison library, protected Word file comparison, GroupDocs comparison
+  password protected files, how to compare word, batch compare word files
+lastmod: '2025-12-17'
+linktitle: How to Compare Word Docs Java
+tags:
+- groupdocs
+- java
+- document-comparison
+- password-protected
+- word-documents
+title: Java'da Parola Koruması Olan Word Belgelerini Nasıl Karşılaştırılır
 type: docs
+url: /tr/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/
+weight: 1
 ---
-# GroupDocs.Comparison Kullanarak Java'da Parola Korumalı Word Belgeleri Nasıl Yüklenir ve Karşılaştırılır
 
-## giriiş
+# Word Belgelerini (Şifre Korumalı) Java'da Nasıl Karşılaştırılır
 
-Günümüzün dijital dünyasında, hassas belgeleri yönetmek ve karşılaştırmak hem işletmeler hem de bireyler için hayati önem taşımaktadır. Birden fazla parola korumalı Word belgesini karşılaştırmakta zorluk mu çekiyorsunuz? Bu eğitim, bunları kullanma konusunda size rehberlik eder **GroupDocs.Java için Karşılaştırma** Bu belgeleri akışlardan zahmetsizce yüklemek ve karşılaştırmak için. GroupDocs'un belge yönetimi süreçlerinizi nasıl kolaylaştırabileceğini keşfedin.
+## Giriş
 
-### Ne Öğreneceksiniz
+Şifre‑korumalı **Word belgelerini nasıl karşılaştırılır** diye bir şey denediniz ve bir duvara çarptınız mı? Yalnız değilsiniz. Çoğu geliştirici, belge yönetim sistemleri veya denetim iş akışları oluştururken bu aynı zorlukla karşılaşıyor.
 
-- Bir Java projesinde GroupDocs.Comparison'ı kurun ve yapılandırın.
-- InputStreams'i LoadOptions ile kullanarak korumalı Word belgelerini yükleyin.
-- Birden fazla belgeyi karşılaştırın ve sonuçları çıktı olarak alın.
-- GroupDocs.Comparison'ı kullanırken pratik uygulamaları ve performans değerlendirmelerini anlayın.
+Şöyle bir şey var: normal belgeleri karşılaştırmak basittir, ancak şifreler devreye girdiğinde her şey karmaşıklaşır. İşte bu noktada **GroupDocs.Comparison for Java** devreye girer. Bu güçlü kütüphane, şifreli belgeleri normal belgeler gibi kolayca karşılaştırmanıza olanak tanıyan ağır işi üstlenir.
 
-Ortamınızı doğru bir şekilde ayarlayarak başlayalım.
+Bu kapsamlı rehberde, GroupDocs.Comparison kullanarak şifre‑korumalı Word belgelerini sorunsuz bir şekilde nasıl yükleyip karşılaştıracağınızı öğreneceksiniz. Hukuki belge inceleme sistemi mi inşa ediyorsunuz yoksa uyumluluk kontrollerini otomatikleştiriyor musunuz, bu öğretici ihtiyacınızı karşılayacak.
 
-## Ön koşullar
+## Hızlı Yanıtlar
+- **Şifre‑korumalı Word karşılaştırmasını hangi kütüphane yapar?** GroupDocs.Comparison for Java  
+- **Üretim için lisansa ihtiyacım var mı?** Evet, tam lisans su işaretlerini ve sınırlamaları kaldırır  
+- **Birden fazla korumalı dosyayı aynı anda karşılaştırabilir miyim?** Kesinlikle – her hedef için `comparer.add()` kullanın  
+- **Dosya boyutu konusunda bir limit var mı?** JVM yığınına bağlı; büyük dosyalar için `-Xmx` artırın  
+- **Şifreleri kod içinde yazmaktan nasıl kaçınırım?** Şifreleri güvenli bir şekilde saklayın (örn. ortam değişkenleri) ve `LoadOptions`a geçirin
 
-Devam etmeden önce şunlara sahip olduğunuzdan emin olun:
+## “Şifre korumalı olarak how to compare word” nedir?
+Word belgelerini karşılaştırmak, iki veya daha fazla sürüm arasındaki eklemeler, silmeler, biçimlendirme değişiklikleri ve diğer düzenlemeleri tespit etmek anlamına gelir. Bu dosyalar şifreli olduğunda, kütüphane önce her belgeyi kimlik doğrulamalı, ardından farkı (diff) hesaplamalıdır. GroupDocs.Comparison bu adımı soyutlayarak, siz sadece karşılaştırma mantığına odaklanırsınız, manuel şifre çözmeye gerek kalmaz.
 
-### Gerekli Kitaplıklar, Sürümler ve Bağımlılıklar
+## Neden Şifreli Belge Karşılaştırması için GroupDocs seçilmeli?
 
-GroupDocs.Comparison'ı Java projenize kullanmak için gerekli kütüphaneleri ekleyin. Bunu Maven üzerinden şu yapılandırmayla entegre edin:
+Koda dalmadan önce, odadaki fili ele alalım: Neden belgeleri manuel olarak şifre çözmeyelim ya da başka kütüphaneler kullanmayalım?
 
-**Maven Yapılandırması:**
+**GroupDocs.Comparison şu nedenlerle öne çıkar:**
+- Şifre kimlik doğrulamasını dahili olarak yönetir (manuel şifre çözme gerekmez)  
+- Word dışındaki birden çok belge formatını destekler  
+- Vurgulamalı detaylı karşılaştırma raporları sunar  
+- Mevcut Java uygulamalarıyla sorunsuz entegrasyon sağlar  
+- Hassas belgeler için kurumsal‑düzey güvenlik sunar  
+
+**Alternatiflere göre GroupDocs ne zaman tercih edilmeli:**
+- Birden çok korumalı belge formatıyla çalışıyorsanız  
+- Güvenlik öncelikse (belgeler diske şifre çözülmeden kalır)  
+- Detaylı karşılaştırma analizlerine ihtiyacınız varsa  
+- Projeniz kurumsal destek gerektiriyorsa  
+
+## Önkoşullar ve Ortam Kurulumu
+
+### Gerekenler
+
+Kodlamaya başlamadan önce şunların kurulu olduğundan emin olun:
+
+**Temel Gereksinimler:**
+- Java Development Kit (JDK) 8 veya üzeri  
+- Maven veya Gradle yapı sistemi  
+- IDE (IntelliJ IDEA, Eclipse veya VS Code harika çalışır)  
+- Java akışları ve dosya işlemleri hakkında temel bilgi  
+
+**İsteğe Bağlı ama Faydalı:**
+- Maven bağımlılık yönetimi konusunda deneyim  
+- try‑with‑resources kalıplarını anlama  
+
+### Maven Yapılandırma Kurulumu
+
+En kolay yol Maven üzerinden başlamaktır. `pom.xml` dosyanıza aşağıdakini ekleyin:
+
 ```xml
 <repositories>
    <repository>
@@ -47,166 +97,309 @@ GroupDocs.Comparison'ı Java projenize kullanmak için gerekli kütüphaneleri e
 </dependencies>
 ```
 
-### Çevre Kurulum Gereksinimleri
+**İpucu:** Projeye başlamadan önce en yeni sürüm için her zaman [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) adresini kontrol edin.
 
-- Java Development Kit (JDK) 8 veya üzeri sürümün yüklü olduğundan emin olun.
-- Java uygulamalarını çalıştırmak için IntelliJ IDEA, Eclipse veya NetBeans gibi bir IDE kullanın.
+### Lisans Yapılandırması
 
-### Bilgi Önkoşulları
+Değerlendirme amaçlı GroupDocs’u lisanssız kullanabilirsiniz, ancak su işaretleri ve özellik sınırlamalarıyla karşılaşırsınız. Üretim kullanımı için:
 
-Java programlama ve dosya akışlarını yönetme konusunda bilgi sahibi olmak faydalıdır. Bu kavramlara yeniyseniz, devam etmeden önce bunları gözden geçirmeyi düşünün.
+1. **Ücretsiz Deneme** – test ve küçük projeler için ideal  
+2. **Geçici Lisans** – geliştirme aşamaları için uygun  
+3. **Tam Lisans** – üretim dağıtımı için zorunlu  
 
-## Java için GroupDocs.Comparison Kurulumu
+Lisansınızı [GroupDocs purchase page](https://purchase.groupdocs.com/buy) adresinden alın.
 
-Kullanmak için **GroupDocs.Java için Karşılaştırma**, şu adımları izleyin:
+## Çekirdek Uygulama Kılavuzu
 
-1. **Maven Bağımlılığını Ekleyin**Projenizin GroupDocs.Comparison kütüphanesini ekleyin `pom.xml` Yukarıda gösterildiği gibi.
-2. **Lisans Edinimi**: Ücretsiz deneme sürümünü edinin, geçici bir lisans talep edin veya tam sürümü satın alın [GroupDocs web sitesi](https://purchase.groupdocs.com/buy) Geliştirme sırasında tüm özelliklerin sınırsız olarak kullanılması.
+### İlk Korunan Belgenizi Yükleme
 
-### Temel Başlatma
-
-Projenizi nasıl başlatacağınız ve kuracağınız aşağıda açıklanmıştır:
+Temel ile başlayalım – tek bir şifre‑korumalı belgeyi yükleme:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.io.FileInputStream;
-
-public class InitializeComparer {
-    public static void main(String[] args) throws Exception {
-        // FileInputStream kullanarak parola ile korunan bir belgeyi yükleyin
-        try (FileInputStream sourceStream = new FileInputStream("source_protected.docx")) {
-            Comparer comparer = new Comparer(sourceStream, new LoadOptions("1234"));
-            // Artık daha fazla işlem için 'comparer'ı kullanabilirsiniz
-        }
-    }
-}
-```
-
-## Uygulama Kılavuzu
-
-Korunan belgeleri yükleme ve karşılaştırmanın temel özelliklerini inceleyelim.
-
-### Akışlardan Korunan Belgeleri Yükleme
-
-#### Genel bakış
-
-Bu özellik, InputStreams'i kullanarak parola korumalı Word belgelerini yüklemenize ve dosya işleme iş akışlarınızla sorunsuz bir şekilde bütünleşmenize olanak tanır.
-
-##### Adım Adım Uygulama
-
-**Adım 1:** Bir tane oluştur `Comparer` Örneğin kaynak belgeyi şifresiyle yükleyerek.
-
-```java
-import com.groupdocs.comparison.Comparer;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import com.groupdocs.comparison.options.load.LoadOptions;
 
-public class Feature_LoadProtectedDocuments {
+public class BasicProtectedDocumentLoad {
     public static void main(String[] args) throws Exception {
+        // Replace with your actual document path
         String sourcePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
-        // Kaynak belgeyi parola ile yükleyin
-        try (InputStream sourceStream = new FileInputStream(sourcePath)) {
-            Comparer comparer = new Comparer(sourceStream, new LoadOptions("1234"));
-```
-
-**Adım 2:** Hedef belgeleri InputStreams aracılığıyla yükleyerek ve parolalarını belirterek ekleyin.
-
-```java
-            String target1Path = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
-            try (InputStream target1Stream = new FileInputStream(target1Path)) {
-                comparer.add(target1Stream, new LoadOptions("5678"));
-            }
-```
-
-**Adım 3:** Gerektiğinde ek belgeler için işlemi tekrarlayın.
-
-```java
-            String target2Path = "YOUR_DOCUMENT_DIRECTORY/target2_protected.docx";
-            try (InputStream target2Stream = new FileInputStream(target2Path)) {
-                comparer.add(target2Stream, new LoadOptions("5678"));
-            }
+        
+        try (FileInputStream sourceStream = new FileInputStream(sourcePath)) {
+            // The magic happens here - LoadOptions handles the password
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("your_password_here"));
+            
+            // Your comparer is now ready to use
+            System.out.println("Document loaded successfully!");
         }
     }
 }
 ```
 
-#### Anahtar Yapılandırma Seçenekleri
+**Burada ne oluyor?**
+- Korunan belgemiz için bir `FileInputStream` oluşturuyoruz  
+- `LoadOptions` şifre kimlik doğrulamasını hallediyor  
+- `Comparer` örneği işlemler için hazır  
 
-- **Yükleme Seçenekleri**: Güvenli erişimi sağlamak için her belge için bir parola belirleyin.
-- **Karşılaştırıcı.add()**: Karşılaştırma sürecine birden fazla belge eklemek için bu yöntemi kullanın.
+### Tam Belge Karşılaştırma İş Akışı
 
-### Belgeleri Karşılaştırma ve Çıktı Akışına Yazma
-
-#### Genel bakış
-
-Belgeleri yükledikten sonra bunları karşılaştırabilir ve sonucu doğrudan bir OutputStream kullanarak bir dosyaya çıktı olarak gönderebilirsiniz.
-
-##### Adım Adım Uygulama
-
-**Adım 1:** Sonuçların kaydedileceği çıktı akışınızı başlatın.
+Şimdi asıl olay – birden çok korumalı belgeyi karşılaştırma:
 
 ```java
+import com.groupdocs.comparison.Comparer;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
+import com.groupdocs.comparison.options.load.LoadOptions;
 
-public class Feature_CompareDocuments {
+public class CompleteDocumentComparison {
     public static void main(String[] args) throws Exception {
-        String outputPath = "YOUR_OUTPUT_DIRECTORY/result.docx";
-        try (OutputStream resultStream = new FileOutputStream(outputPath)) {
-```
-
-**Adım 2:** Karşılaştırmayı yapın ve çıktıyı kaydedin.
-
-```java
-            // 'Comparer'ın kaynak ve hedef akışlarıyla zaten başlatıldığını varsayarak
-            comparer.compare(resultStream);
+        // Define your file paths
+        String sourcePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
+        String target1Path = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
+        String target2Path = "YOUR_DOCUMENT_DIRECTORY/target2_protected.docx";
+        String outputPath = "YOUR_OUTPUT_DIRECTORY/comparison_result.docx";
+        
+        // Step 1: Load the source document
+        try (InputStream sourceStream = new FileInputStream(sourcePath)) {
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("source_password"));
+            
+            // Step 2: Add first target document
+            try (InputStream target1Stream = new FileInputStream(target1Path)) {
+                comparer.add(target1Stream, new LoadOptions("target1_password"));
+            }
+            
+            // Step 3: Add second target document (if needed)
+            try (InputStream target2Stream = new FileInputStream(target2Path)) {
+                comparer.add(target2Stream, new LoadOptions("target2_password"));
+            }
+            
+            // Step 4: Perform comparison and save results
+            try (OutputStream resultStream = new FileOutputStream(outputPath)) {
+                comparer.compare(resultStream);
+                System.out.println("Comparison completed! Check: " + outputPath);
+            }
         }
     }
 }
 ```
 
-#### Sorun Giderme İpuçları
+**Unutulmaması gereken ana noktalar:**
+- Her belge farklı bir şifreye sahip olabilir  
+- Karşılaştırma için birden çok hedef belge ekleyebilirsiniz  
+- Sonuç belgesi tüm farkları vurgular şekilde gösterilir  
+- Kaynakları doğru yönetmek için her zaman try‑with‑resources kullanın  
 
-- Tüm belge yollarının doğru olduğundan emin olun ve böylece `FileNotFoundException`.
-- Verilen parolaların doğrulandığını doğrulayın `LoadOptions` belgelerinkiyle uyuşmaktadır.
+## Java’da Word Dosyalarını Toplu Olarak Karşılaştırma
 
-## Pratik Uygulamalar
+Birçok belge çiftini otomatik olarak işlemek istiyorsanız, yukarıdaki mantığı bir döngü içinde sarabilirsiniz. Aynı `Comparer` sınıfı her çift için çalışır ve **Tam Belge Karşılaştırma İş Akışı**nda gösterilen deseni yeniden kullanabilirsiniz. Bellek kullanımını düşük tutmak için her yinelemeden sonra kaynakları serbest bırakmayı unutmayın.
 
-Bu özelliklerin uygulanabileceği bazı gerçek dünya senaryoları şunlardır:
+## Yaygın Tuzaklar ve Çözümler
 
-1. **Yasal Belge Yönetimi**: Sözleşmelerin veya anlaşmaların farklı versiyonlarını karşılaştırın.
-2. **Akademik Araştırma**: Birden fazla araştırma makalesini intihal tespiti açısından değerlendirin.
-3. **Mali Denetimler**: Çeşitli departmanlardan gelen mali raporları çapraz kontrol edin.
+### Kimlik Doğrulama Hataları
 
-## Performans Hususları
+**Sorun:** `InvalidPasswordException` veya benzeri kimlik doğrulama hataları.  
 
-Java uygulamalarında GroupDocs.Comparison kullanırken aşağıdakileri göz önünde bulundurun:
+**Çözümler:**  
+- Şifre yazımını iki kez kontrol edin (büyük/küçük harf duyarlı!)  
+- Belgenin gerçekten şifre‑korumalı olduğundan emin olun  
+- Doğru `LoadOptions` yapıcıyı kullandığınızı doğrulayın  
 
-- **Bellek Kullanımını Optimize Et**:Akışları verimli bir şekilde yönetmek için try-with-resources'ı kullanın.
-- **Paralel İşleme**: Büyük belgeleri işlerken mümkün olduğunca çoklu iş parçacığından yararlanın.
-- **Kaynak Yönetimi**: Sistem kaynaklarını serbest bırakmak için akışları derhal kapatın.
+```java
+// Wrong way
+new LoadOptions(); // No password provided
 
-## Çözüm
+// Right way  
+new LoadOptions("correct_password");
+```
 
-Artık, Java'da GroupDocs.Comparison kullanarak parola korumalı Word belgelerini yüklemek ve karşılaştırmak için iyi donanımlı olmalısınız. Bu güçlü özellik, belge yönetimi görevlerini kolaylaştırır ve karşılaştırma süreçlerini otomatikleştirerek üretkenliği artırır.
+### Büyük Belgelerde Bellek Sorunları
 
-### Sonraki Adımlar
+**Sorun:** Büyük dosyalar işlenirken `OutOfMemoryError`.  
 
-Karşılaştırma ayarlarını özelleştirme veya gelişmiş ölçeklenebilirlik için bulut depolama çözümleriyle bütünleştirme gibi GroupDocs.Comparison'ın ek özelliklerini keşfedin.
+**Çözümler:**  
+- JVM yığın boyutunu artırın: `-Xmx4g`  
+- Mümkünse belgeleri parçalara bölerek işleyin  
+- Akışları hemen kapatın  
 
-## SSS Bölümü
+```java
+// Good practice - explicit resource management
+try (FileInputStream stream = new FileInputStream(path)) {
+    // Use stream
+} // Automatically closed here
+```
 
-1. **İkiden fazla belgeyi karşılaştırabilir miyim?**
-   - Evet, kullanarak birden fazla hedef belge ekleyebilirsiniz. `comparer.add()`.
-2. **LoadOptions'da hatalı şifrelerle nasıl başa çıkabilirim?**
-   - Parolanın tam olarak eşleştiğinden emin olun; aksi takdirde bir istisna atılacaktır.
-3. **Java projem Maven kullanmıyorsa ne olur?**
-   - JAR dosyasını GroupDocs web sitesinden indirin ve projenizin kütüphane yoluna ekleyin.
-4. **Karşılaştırma sonuçlarını özelleştirmenin bir yolu var mı?**
-   - Evet, GroupDocs.Comparison çıktı özelleştirmek için stil ayarları gibi çeşitli seçenekler sunar.
+### Dosya Yolu Problemleri
 
-### Anahtar Kelime Önerileri
-- "şifre korumalı Word belgelerini Java ile karşılaştır"
-- "GroupDocs.Comparison Java kurulumu"
-- "Korunan Word belgeleri yükleniyor Java"
+**Sorun:** Görünüşte doğru yollar olmasına rağmen `FileNotFoundException`.  
+
+**Çözümler:**  
+- Geliştirme sırasında mutlak yollar kullanın  
+- Dosya izinlerini kontrol edin  
+- Belge formatlarının desteklendiğini doğrulayın  
+
+```java
+// Use File.exists() to debug path issues
+File sourceFile = new File(sourcePath);
+if (!sourceFile.exists()) {
+    throw new RuntimeException("Source file not found: " + sourcePath);
+}
+```
+
+## Performans Optimizasyonu En İyi Uygulamaları
+
+### Bellek Yönetimi
+
+Birden çok büyük belgeyle çalışırken bellek yönetimi kritik hâle gelir:
+
+```java
+public class OptimizedComparison {
+    public static void compareDocuments(String source, String target, String output) {
+        try (FileInputStream sourceStream = new FileInputStream(source);
+             FileInputStream targetStream = new FileInputStream(target);
+             FileOutputStream outputStream = new FileOutputStream(output)) {
+            
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("password"));
+            comparer.add(targetStream, new LoadOptions("password"));
+            comparer.compare(outputStream);
+            
+        } catch (Exception e) {
+            System.err.println("Comparison failed: " + e.getMessage());
+            // Add proper logging here
+        }
+    }
+}
+```
+
+### Toplu İşleme Dikkat Edilmesi Gerekenler
+
+- **Sıralı işleyin**; bellek dalgalanmalarını önler  
+- **Her belge çifti için uygun hata yönetimi uygulayın**  
+- **Yeterli bellek varsa** iş parçacığı havuzları kullanın  
+- **Toplu işlemler sırasında yığın kullanımını izleyin**  
+
+### Önbellekleme Stratejileri
+
+Aynı belgeleri tekrar tekrar karşılaştırıyorsanız:  
+- `Comparer` örneklerini önbelleğe alın (ancak bellek tüketimine dikkat edin)  
+- Sık erişilen belge çiftleri için karşılaştırma sonuçlarını saklayın  
+- Gereksiz karşılaştırmalardan kaçınmak için belge kontrol toplamlarını (checksum) kullanın  
+
+## Gerçek Dünya Kullanım Senaryoları
+
+### Hukuki Belge İncelemesi
+
+```java
+public class LegalDocumentComparison {
+    public void compareContracts(String originalContract, String revisedContract) {
+        // Compare two versions of a legal contract
+        // Highlight changes for legal review
+        // Generate detailed change report
+    }
+}
+```
+
+**Mükemmel kullanım:** sözleşme revizyon takibi, hukuki uyumluluk denetimleri, düzenleyici belge güncellemeleri.
+
+### Finansal Denetim İş Akışları
+
+```java
+public class FinancialAuditComparison {
+    public void auditFinancialReports(List<String> reportPaths) {
+        // Compare multiple quarterly reports
+        // Identify discrepancies across departments
+        // Generate audit trail documentation
+    }
+}
+```
+
+**İdeal kullanım:** çeyrek rapor doğrulama, departmanlar arası tutarlılık kontrolleri, düzenleyici uyumluluk teyidi.
+
+### Akademik Araştırma Uygulamaları
+
+```java
+public class AcademicResearchComparison {
+    public void checkPlagiarism(String studentPaper, List<String> referencePapers) {
+        // Compare student submission against reference materials
+        // Generate similarity reports
+        // Flag potential plagiarism issues
+    }
+}
+```
+
+**Harika kullanım:** intihal tespit sistemleri, araştırma makalesi doğrulama, akademik bütünlük iş akışları.
+
+## Gelişmiş Yapılandırma Seçenekleri
+
+### Karşılaştırma Ayarlarını Özelleştirme
+
+GroupDocs.Comparison geniş özelleştirme seçenekleri sunar:
+
+```java
+import com.groupdocs.comparison.options.CompareOptions;
+
+// Example of advanced comparison settings
+CompareOptions options = new CompareOptions();
+options.setShowDeletedContent(true);
+options.setShowInsertedContent(true);
+options.setGenerateSummaryPage(true);
+
+comparer.compare(outputStream, options);
+```
+
+### Çıktı Formatı Seçenekleri
+
+Karşılaştırma sonuçlarının nasıl gösterileceğini özelleştirebilirsiniz:  
+- Farklı değişiklik türleri için **vurgulama stilleri**  
+- **Değişiklik istatistikleri** içeren özet sayfalar  
+- Karmaşık belgeler için **detaylı açıklamalar**  
+
+## Sorun Giderme Kılavuzu
+
+### Yaygın Hata Mesajları ve Çözümleri
+
+- **"Document format is not supported"** – Dosyanın geçerli bir `.docx` veya `.doc` olduğundan emin olun.  
+- **"Password is incorrect"** – Şifreyi manuel olarak test edin; özel karakterlere dikkat edin.  
+- **"Comparison failed with unknown error"** – Disk alanı, yazma izinleri ve kullanılabilir bellek kontrol edin.  
+
+### Performans Sorunları
+
+- **Yavaş karşılaştırma süreleri** – Büyük dosyalar doğal olarak daha uzun sürer; bölümlere ayırmayı düşünün.  
+- **Yüksek bellek kullanımı** – Yığın boyutunu izleyin, kaynakları hızlıca kapatın ve belgeleri sıralı işleyin.  
+
+## Sonuç
+
+Artık **şifre‑korumalı Word belgelerini Java’da GroupDocs.Comparison** kullanarak nasıl karşılaştıracağınızı biliyorsunuz. Bu güçlü yaklaşım, otomatik belge iş akışları, uyumluluk kontrolü ve denetim süreçleri için yeni olasılıklar açıyor.
+
+## Sık Sorulan Sorular
+
+**S: Aynı anda iki’den fazla şifre‑korumalı belgeyi karşılaştırabilir miyim?**  
+C: Kesinlikle! `comparer.add()` metodunu birden çok kez kullanın; her hedef kendi şifresine sahip olabilir.
+
+**S: Yanlış bir şifre verirsem ne olur?**  
+C: GroupDocs bir kimlik doğrulama istisnası fırlatır. Özellikle otomatik hat hatlarında şifreleri işlemden önce doğrulayın.
+
+**S: Farklı şifreleri olan belgelerle çalışabilir mi?**  
+C: Evet, her belge kendi `LoadOptions` içinde belirtilen benzersiz şifreyi kullanabilir.
+
+**S: Sonucu diske kaydetmeden karşılaştırma yapabilir miyim?**  
+C: Evet, karşılaştırma sonucunu herhangi bir `OutputStream`e, örneğin bellek akışı veya ağ akışı gibi, yazabilirsiniz.
+
+**S: Şifresini bilmediğim belgelerle ne yapmalıyım?**  
+C: Doğru şifreyi temin etmeniz gerekir; otomatik iş akışları için güvenli bir şifre kasası entegrasyonu düşünün.
+
+**S: GroupDocs hangi maksimum dosya boyutunu destekler?**  
+C: Kullanılabilir JVM yığınına bağlıdır. 100 MB üzerindeki dosyalar için yığını (`-Xmx`) artırın ve mümkünse parçalar halinde işleyin.
+
+**S: Karşılaştırma sonuçları hakkında detaylı istatistik alabilir miyim?**  
+C: Evet, `CompareOptions` içinde `GenerateSummaryPage` özelliğini etkinleştirerek değişiklik istatistikleri ve özetler elde edebilirsiniz.
+
+**S: Belgeleri bulut depolamadan karşılaştırabilir miyim?**  
+C: Evet, bulut sağlayıcınızdan bir `InputStream` sağlayabildiğiniz sürece GroupDocs bunu işleyebilir.
+
+---
+
+**Son Güncelleme:** 2025-12-17  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs

@@ -1,33 +1,67 @@
 ---
-"date": "2025-05-05"
-"description": "Tanulja meg, hogyan hasonlíthatja össze hatékonyan és kezelheti a dokumentumok változásait Java nyelven a GroupDocs.Comparison segítségével. Ez az útmutató a beállítást, a használatot és a gyakorlati alkalmazásokat ismerteti."
-"title": "Fődokumentumok összehasonlítása Java nyelven a GroupDocs.Comparison könyvtár használatával"
-"url": "/hu/java/advanced-comparison/master-java-document-comparisons-groupdocs/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-19'
+description: Tanulja meg, hogyan hasonlítsa össze a PDF-fájlokat Java-ban a GroupDocs.Comparison
+  segítségével. Szerezzen mesteri tudást a dokumentumok összehasonlításában Java-ban
+  lépésről lépésre történő beállítással, összehasonlítással, változásfelismeréssel
+  és valós példákkal.
+keywords: Java document comparison tutorial, GroupDocs comparison Java guide, document
+  diff Java, Java file comparison library, compare documents Java programming, GroupDocs.Comparison
+  tutorial 2025
+lastmod: '2025-12-19'
+linktitle: Java Document Comparison Tutorial
+tags:
+- document-comparison
+- groupdocs
+- java-tutorial
+- file-diff
+- document-management
+title: PDF fájlok összehasonlítása Java – Java dokumentum összehasonlítási útmutató
+  – Teljes GroupDocs útmutató
 type: docs
+url: /hu/java/advanced-comparison/master-java-document-comparisons-groupdocs/
+weight: 1
 ---
-# Dokumentum-összehasonlítás elsajátítása Java nyelven a GroupDocs.Comparison segítségével
 
-Fedezze fel a dokumentumokban végrehajtott módosítások inicializálásának, összehasonlításának és frissítésének hatékony folyamatát a hatékony GroupDocs.Comparison Java könyvtár segítségével. Ez az oktatóanyag végigvezeti Önt a környezet beállításán, a főbb funkciók megértésén és a valós megoldások megvalósításán.
+# compare pdf files java - Java Dokumentumösszehasonlítási Bemutató - Teljes GroupDocs Útmutató
 
-## Bevezetés
+Valaha is előfordult, hogy manuálisan hasonlította össze a dokumentumokat soronként, a szerződés verziók közötti változásokat kereste, vagy a közös projektekben a szerkesztéseket követte? Nem vagy egyedül. A dokumentumösszehasonlítás az egyik olyan fárasztó feladat, amely órákat vehet el a fejlesztési idődből — de nem kell így lennie. A **GroupDocs.Comparison for Java** segítségével **compare PDF files Java** (és számos más formátum) néhány sor tiszta, hatékony kóddal összehasonlítható. Akár dokumentumkezelő rendszert építesz, akár verziókezelést valósítasz meg jogi szerződésekhez, vagy egyszerűen csak a fájlverziók közti különbségeket kell megtalálnod, ez a bemutató gyorsan elindít.
 
-Nehézségei vannak a dokumentum-összehasonlítási feladatokkal Java-alkalmazásaiban? Legyen szó jogi szerződések összehasonlításáról, tudományos dolgozatok szerkesztéséről vagy pénzügyi nyilvántartások kezeléséről, a dokumentumváltozások hatékony kezelése ijesztő feladat lehet. A GroupDocs.Comparison for Java leegyszerűsíti ezt a folyamatot azáltal, hogy robusztus funkciókat biztosít a dokumentumok zökkenőmentes összehasonlításához és a módosítások kezeléséhez. Ebben az oktatóanyagban végigvezetjük az összehasonlító inicializálásának, az összehasonlítások elvégzésének és az észlelt változások frissítésének alapjain.
+## Gyors válaszok
+- **Mi jelentése a “compare pdf files java” kifejezésnek?** Ez egy Java könyvtár (itt a GroupDocs.Comparison) használatára utal, amely a PDF dokumentumok közti különbségeket észleli.  
+- **Mennyi időt vesz igénybe a kezdeti beállítás?** Körülbelül 5 perc a Maven függőség és egy licenc hozzáadásához.  
+- **Szükségem van kereskedelmi licencre?** Az ideiglenes, 30‑napos licenc fejlesztéshez ingyenes; a termeléshez vásárolt licenc szükséges.  
+- **Össze tudok-e hasonlítani más formátumokat is a PDF-en kívül?** Igen – a Word, Excel, PowerPoint és több mint 50 további formátum támogatott.  
+- **A könyvtár szálbiztos webalkalmazásokhoz?** Igen, ha minden kéréshez új `Comparer` példányt hozol létre, és a erőforrásokat try‑with‑resources-szel kezeled.
 
-**Amit tanulni fogsz:**
-- A GroupDocs.Comparison beállítása Java környezetben
-- Lépésről lépésre útmutató a Comparer osztály inicializálásához és használatához
-- Dokumentummódosítások lekérésének és frissítésének technikái
+## Mi a “compare pdf files java”?
+Egyszerűen fogalmazva ez a folyamat a két PDF dokumentum programozott elemzése egy Java alkalmazásban, és egy olyan eredmény előállítása, amely kiemeli a beszúrásokat, törléseket és formázási változásokat. A GroupDocs.Comparison elvégzi a nehéz munkát, egy kész‑használatra kész API-t biztosítva, amely tucatnyi fájltípuson működik.
 
-Nézzük meg, milyen előfeltételeknek kell megfelelned ezen funkciók megvalósítása előtt.
+## Miért válasszuk a GroupDocs.Comparison-t Java-hoz?
 
-## Előfeltételek
+Mielőtt a kódba merülnénk, beszéljünk arról, miért emelkedik ki a GroupDocs.Comparison a többi dokumentumösszehasonlító megoldás közül:
 
-Kezdés előtt győződjön meg arról, hogy a következőkkel rendelkezik:
+**Átfogó formátumtámogatás** – A Word, PDF, Excel, PowerPoint és még sok más formátummal működik egyetlen, konzisztens API-n keresztül.  
 
-### Szükséges könyvtárak és függőségek
+**Részletes változásdetektálás** – Pontosan azonosítja, mi lett hozzáadva, törölve vagy módosítva, akár egyes szavakra és formázásra is.  
 
-GroupDocs.Comparison Java-projektben való használatához adja hozzá a következő függőséget a Maven-hez: `pom.xml` fájl:
+**Termelés‑kész** – Vállalati használatra építve megfelelő memória kezelés, hibakezelés és teljesítményoptimalizálások beépítésével.  
+
+**Könnyű integráció** – Úgy tervezték, hogy meglévő Java alkalmazásokba egyszerűen beilleszthető legyen, jelentős architekturális változtatás nélkül.
+
+## Előkövetelmények és környezet beállítása
+
+### Amire szükséged lesz
+
+- **Java Development Kit (JDK)** 8 vagy újabb.  
+- **Maven vagy Gradle** – a példákban Maven-t használunk.  
+- **Kedvenc IDE** – IntelliJ IDEA, Eclipse vagy VS Code.  
+- **Minta dokumentumok** – két *.docx* vagy *.pdf* fájl apró különbségekkel a teszteléshez.
+
+### A GroupDocs.Comparison hozzáadása a projekthez
+
+Itt a Maven kódrészlet, amely a könyvtárat a classpath-ra helyezi:
 
 ```xml
 <repositories>
@@ -46,68 +80,45 @@ GroupDocs.Comparison Java-projektben való használatához adja hozzá a követk
 </dependencies>
 ```
 
-### Környezet beállítása
+**Pro tipp**: Mindig ellenőrizd a legújabb verziót a GroupDocs weboldalán. Az új kiadások gyakran hoznak teljesítményjavulást és hibajavításokat.
 
-Győződjön meg róla, hogy telepítve van a Java fejlesztői készlet (JDK) a rendszerén, lehetőleg a JDK 8-as vagy újabb verziója.
+### Licenckezelés (Fontos!)
 
-### Ismereti előfeltételek
+A GroupDocs.Comparison nem ingyenes kereskedelmi használatra, de az értékelés egyszerű:
 
-A Java programozás alapvető ismerete és a Maven projektstruktúrák ismerete hasznos lesz a tutoriál végrehajtása során.
+- **Fejlesztés/tesztelés** – Szerezz be egy ideiglenes licencet a [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/) oldalról. Teljes funkcionalitást biztosít 30 napra.  
+- **Termelés** – Vásárolj kereskedelmi licencet a [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) oldalon.  
+- **Licenc nélkül** – A könyvtár továbbra is működik, de vízjelet ad a kimeneti dokumentumokhoz, ami megfelelő a koncepció bizonyításához.
 
-## GroupDocs.Comparison beállítása Java-hoz
+## Alapvető megvalósítás: Lépés‑ről‑lépésre útmutató
 
-A GroupDocs.Comparison Java-alkalmazásokban való használatának megkezdéséhez kövesse az alábbi lépéseket:
+Az alábbiakban a megvalósítást kisebb, másolható és futtatható funkciókra bontjuk.
 
-1. **Maven-függőség hozzáadása**: Ahogy korábban látható, add meg a szükséges repository-t és függőségeket a `pom.xml`.
-2. **Licencszerzés**:
-   - Szerezzen be ideiglenes licencet az összes funkció korlátozás nélküli felfedezéséhez a következő weboldalon: [GroupDocs ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/).
-   - Éles használatra érdemes licencet vásárolni a következő címen: [GroupDocs vásárlási oldal](https://purchase.groupdocs.com/buy).
-3. **Alapvető inicializálás**:
-   - Inicializálja a `Comparer` osztály a forrásdokumentummal a fájlok összehasonlításának megkezdéséhez.
+### 1. funkció: Comparer inicializálása és cél dokumentum hozzáadása
 
-## Megvalósítási útmutató
+Ez az alap – egy `Comparer` példány létrehozása és a forrás- és célfájlokra mutatása.
 
-Az áttekinthetőség kedvéért a megvalósítást különálló funkciókra bontjuk.
-
-### 1. funkció: Az összehasonlító inicializálása és a céldokumentum hozzáadása
-
-#### Áttekintés
-Ez a funkció bemutatja a GroupDocs.Comparison könyvtár inicializálását és egy céldokumentum hozzáadását az összehasonlításhoz.
-
-#### Lépések
-
-**Összehasonlító inicializálása**
-- Kezdje egy példány létrehozásával a `Comparer` osztály a forrásdokumentum elérési útját használva.
-  
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
 
 public class FeatureInitializeComparer {
     public static void run() throws Exception {
-        // Az összehasonlító inicializálása a forrásdokumentum elérési útjával
+        // Initialize comparer with the source document path
         try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
-            // Céldokumentum hozzáadása összehasonlításhoz
+            // Add target document for comparison
             comparer.add(SampleFiles.TARGET1_WORD);
         }
     }
 }
 ```
-- **Magyarázat**A `try-with-resources` Az utasítás biztosítja, hogy az erőforrások a művelet után lezárásra kerüljenek. `Comparer` az objektum inicializálása egy forrásdokumentum-útvonallal történik, a céldokumentum pedig a `add()` módszer.
 
-**Céldokumentum hozzáadása**
-- Használd a `add()` módszer további dokumentumok összehasonlítás céljából történő hozzáadására.
+**Miért a try‑with‑resources?** Garantálja, hogy a fájlkezelők és a natív memória automatikusan felszabadul, megelőzve a fájlzárolási problémákat Windows-on.
 
-### 2. funkció: Összehasonlítás végrehajtása és a módosítások lekérése
+### 2. funkció: Összehasonlítás végrehajtása és változások lekérése
 
-#### Áttekintés
-Ismerje meg, hogyan végezhet dokumentum-összehasonlításokat, és hogyan kérheti le a folyamat során észlelt változtatásokat.
+Most ténylegesen futtatjuk az összehasonlítást, és kinyerjük a felismert különbségek listáját.
 
-#### Lépések
-
-**Összehasonlítás végrehajtása**
-- Végezze el az összehasonlítást a `compare()` metódus, amely visszaadja az eredmény elérési útját.
-  
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.result.ChangeInfo;
@@ -117,27 +128,22 @@ public class FeaturePerformComparison {
         try (Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             comparer.add(SampleFiles.TARGET1_WORD);
             
-            // Végezzen összehasonlítást és kapja meg az eredményútvonalat
+            // Perform comparison and get the result path
             final Path resultPath = comparer.compare();
             
-            // Észlelt változások lekérése
+            // Retrieve detected changes
             ChangeInfo[] changes = comparer.getChanges();
         }
     }
 }
 ```
-- **Magyarázat**A `compare()` A metódus elvégzi az összehasonlítást, és visszaadja az eredménydokumentum elérési útját. `getChanges()` az észlelt változások tömbjének lekéréséhez.
 
-### 3. funkció: Az összehasonlítás eredményének módosításainak frissítése
+`compare()` új dokumentumot generál, amely vizuálisan jelöli az összes változást, míg a `getChanges()` programozott hozzáférést biztosít minden egyes `ChangeInfo` objektumhoz.
 
-#### Áttekintés
-Ez a funkció bemutatja, hogyan frissíthetők bizonyos módosítások az összehasonlítás eredményeiben azok elfogadásával vagy elutasításával.
+### 3. funkció: Változások frissítése az összehasonlítás eredményében
 
-#### Lépések
+Elfogadhatsz vagy elutasíthatsz egyedi változásokat a végső dokumentum előállítása előtt.
 
-**Észlelt változások frissítése**
-- Fogadja el vagy utasítsa el a módosításokat a `ComparisonAction` enumerálja, és alkalmazza ezeket a módosításokat.
-  
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.ApplyChangeOptions;
@@ -146,59 +152,136 @@ import com.groupdocs.comparison.result.ComparisonAction;
 
 public class FeatureUpdateChanges {
     public static void run() throws Exception {
-        // Kimeneti fájl elérési útjának meghatározása helykitöltő használatával
+        // Define the output file path using placeholder
         String outputFileName = SampleFiles.RESULT_WORD + "_UpdatedChanges";  
         
         try (OutputStream resultStream = new FileOutputStream(outputFileName);
              Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD)) {
             comparer.add(SampleFiles.TARGET1_WORD);
             
-            // Összehasonlítás végrehajtása
+            // Perform comparison
             final Path _ = comparer.compare();
             
-            // Változások lekérése az összehasonlítás eredményéből
+            // Retrieve changes from the comparison result
             ChangeInfo[] changes = comparer.getChanges();
             
-            // Egy adott módosítás elutasítása (pl. az első módosítás elutasítása)
+            // Reject a specific change (e.g., reject the first change)
             if (changes.length > 0) {
                 changes[0].setComparisonAction(ComparisonAction.REJECT);
             }
             
-            // Frissített módosítások alkalmazása a kimeneti adatfolyamra
+            // Apply updated changes to the output stream
             comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
         }
     }
 }
 ```
-- **Magyarázat**Használat `setComparisonAction()` annak meghatározására, hogy egy módosítást el kell-e fogadni vagy el kell-e utasítani. `applyChanges()` metódus frissíti a dokumentumot a megadott műveletek alapján.
 
-## Gyakorlati alkalmazások
+Ez a munkafolyamat tökéletes automatizált pipeline-okhoz, ahol a formázási módosításokat automatikusan elfogadhatod, de a tartalmi szerkesztéseket manuális felülvizsgálatra jelölheted.
 
-Íme néhány valós felhasználási eset, ahol a GroupDocs.Comparison for Java remekelhet:
+## Hogyan hasonlítsuk össze a PDF fájlokat Java‑ban – Valós példák
 
-1. **Jogi dokumentumkezelés**Jogi szerződések összehasonlításának és módosításainak nyomon követésének automatizálása.
-2. **Akadémiai kutatás**: Hasonlítsa össze a kutatási dolgozatok több verzióját a változások és frissítések nyomon követése érdekében.
-3. **Pénzügyi auditok**Hatékonyan hasonlítsa össze a különböző időszakok pénzügyi kimutatásait.
+### Jogi dokumentumkezelés
+A jogi irodák pontos változáskövetésre támaszkodnak a szerződések esetén. A `compare pdf files java` használatával automatikusan elfogadhatod a szabványos záradékfrissítéseket, miközben kiemeli a lényeges szövegváltozásokat.
 
-## Teljesítménybeli szempontok
+### Tartalomkezelő rendszerek
+A kiadók beépítik az összehasonlítást a szerkesztői munkafolyamatokba, vizuális diffet mutatva a szerzőknek a cikkváltozatokhoz.
 
-A GroupDocs.Comparison teljesítményének optimalizálásához Java-alkalmazásaiban vegye figyelembe az alábbi tippeket:
+### Pénzügyi audit
+A könyvelők összehasonlítják a módosított pénzügyi kimutatásokat, biztosítva, hogy minden számváltozás rögzítésre és naplózásra kerüljön.
 
-- Használjon hatékony memóriakezelési gyakorlatokat, például a streamek azonnali lezárását.
-- Optimalizálja a dokumentum méretét a fájlok tömörítésével az összehasonlítás előtt, ha lehetséges.
-- Kövesd a szemétgyűjtés és az erőforrás-elosztás legjobb gyakorlatait.
+### Tudományos kutatás
+Az egyetemek plagizmust észlelnek vagy nyomon követik a szakdolgozat változtatásait több vázlatban.
+
+## Gyakori problémák hibaelhárítása
+
+| Probléma | Tünetek | Megoldás |
+|----------|----------|----------|
+| **OutOfMemoryError** nagy PDF-ek esetén | JVM összeomlik > 50 MB fájloknál | Növeld a heap méretét (`-Xmx2g`) vagy streameld a dokumentumokat darabokban |
+| **File locking** az összehasonlítás után | A fájlok nem törölhetők vagy felülírhatók | Mindig használd a try‑with‑resources‑t; Windows-on adj egy rövid szünetet a törlés előtt |
+| **Unsupported format** hiba | Kivétel egy adott fájltípus betöltésekor | Ellenőrizd a formátumtámogatási listát; konvertáld támogatott típusra (pl. DOCX → PDF) az összehasonlítás előtt |
+| **Slow performance** összetett PDF-eknél | Az összehasonlítás > 30 másodpercet vesz igénybe | Előfeldolgozás a képek eltávolításához, ha csak a szöveg számít; SSD tároló engedélyezése az ideiglenes fájlokhoz |
+
+## Legjobb gyakorlatok termeléshez
+
+### Memóriakezelés
+
+```java
+// Good: Explicit resource management
+try (Comparer comparer = new Comparer(sourcePath)) {
+    // Comparison logic
+}
+
+// Bad: Manual disposal (easy to forget)
+Comparer comparer = new Comparer(sourcePath);
+// ... comparison logic
+// comparer.dispose(); // may be omitted → leak
+```
+
+### Hiba kezelés
+
+Tekerj be I/O és összehasonlítási hívásokat try‑catch blokkokba, naplózz értelmes üzeneteket, és opcionálisan próbáld újra a átmeneti hibákat.
+
+### Teljesítményoptimalizálás
+
+- **Előfeldolgozás** a dokumentumokból a nem lényeges elemek (pl. nagy beágyazott képek) eltávolításához.  
+- **Gyorsítótár** az eredményekhez gyakran összehasonlított párok esetén.  
+- **Aszinkron futtatás** az összehasonlításokat webalkalmazásokban a UI válaszkészségének megőrzéséhez.
+
+### Biztonsági megfontolások
+
+- Érvényesítsd a fájl méretét és típusát a feldolgozás előtt.  
+- Tisztítsd meg az ideiglenes fájlokat időben.  
+- Alkalmazz megfelelő hozzáférés-ellenőrzést a tárolt dokumentumokon.
+
+## Haladó használati minták
+
+### Kötetes dokumentum összehasonlítás
+Ha sok dokumentumpárt kell összehasonlítani, egy egyszerű ciklus megfelelő erőforrás-kezeléssel megoldja a feladatot:
+
+```java
+// Process multiple comparisons efficiently
+public void processBatch(List<DocumentPair> pairs) {
+    for (DocumentPair pair : pairs) {
+        try (Comparer comparer = new Comparer(pair.getSource())) {
+            comparer.add(pair.getTarget());
+            Path result = comparer.compare();
+            // Process result...
+        }
+    }
+}
+```
+
+### Integráció webalkalmazásokkal
+Hozz létre egy REST végpontot, amely két feltöltött PDF-et fogad, futtatja a `compare pdf files java`-t, és visszaadja a diff dokumentumot. Használj aszinkron feldolgozást (pl. CompletableFuture) a kérés szálak blokkolásának elkerüléséhez.
+
+## Gyakran Ismételt Kérdések
+
+**Q: Milyen fájlformátumokat támogat a GroupDocs.Comparison?**  
+A: Több mint 50 formátum, beleértve a PDF, DOCX, XLSX, PPTX, TXT és még sok más. Lásd a hivatalos dokumentációt a teljes listáért.
+
+**Q: Hogyan hasonlíthatok össze egyszerre több mint két dokumentumot?**  
+A: Hívd meg többször a `comparer.add()`-t további célfájlok hozzáadásához. Az eredmény a forrás és minden cél közti különbségeket mutatja.
+
+**Q: Figyelmen kívül hagyhatom a formázási változásokat vagy a szóközöket?**  
+A: Igen. Használd a `ComparisonOptions`-t a motor által változásnak tekintett elemek finomhangolásához (pl. `ignoreFormatting`, `ignoreWhitespace`).
+
+**Q: Van méretkorlát a dokumentumoknál?**  
+A: Nincs szigorú korlát, de nagyon nagy fájlok (> 100 MB) extra heap memóriát és hosszabb feldolgozási időt igényelhetnek. Fontold meg a fájlok felosztását vagy előfeldolgozását.
+
+**Q: Használhatom ezt a könyvtárat egy Spring Boot webszolgáltatásban?**  
+A: Teljesen. Hozz létre egy új `Comparer` példányt kérésenként, kezeld try‑with‑resources-szel, és a generált diff-et `byte[]`-ként vagy streamelt válaszként add vissza.
 
 ## Következtetés
 
-Most már szilárd alapokkal rendelkezik a dokumentum-összehasonlítások megvalósításához a GroupDocs.Comparison for Java használatával. Az összehasonlítók inicializálásának, az összehasonlítások végrehajtásának és a változtatások frissítésének képességével egyszerűsítheti a dokumentumkezelési feladatokat az alkalmazásaiban. 
+Most már egy teljes, termelés‑kész útitervvel rendelkezel a **compare PDF files Java** használatához a GroupDocs.Comparison segítségével. A Maven függőség beállításától és a licenckezeléstől, a comparer inicializálásán, a változások lekérdezésén, egészen a programozott elfogadásukig vagy elutasításukig, a könyvtár teljes irányítást ad a dokumentum diff munkafolyamatok felett. Alkalmazd a legjobb gyakorlat tippeket – megfelelő erőforrás-kezelés, hiba-kezelés és teljesítményhangolás – hogy alkalmazásod robusztus és skálázható maradjon.
 
-További információkért tekintse meg a további fejlett funkciókat és testreszabási lehetőségeket a [GroupDocs dokumentáció](https://docs.groupdocs.com/comparison/java/).
+Készen állsz a dokumentum‑feldolgozási pipeline-od fejlesztésére? Kezdd az alap összehasonlítási példával, majd fedezd fel a kötegelt feldolgozást, a webes integrációt és az egyedi változás‑szűrési logikát. Az API úgy lett tervezve, hogy a szükségleteiddel együtt növekedjen.
 
-## GYIK szekció
+A mélyebb testreszabáshoz tekintsd meg a hivatalos dokumentációt: [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/).
 
-1. **Mi az a GroupDocs.Comparison?**
-   - Ez egy hatékony könyvtár Java alkalmazásokban található dokumentumok összehasonlításához.
-2. **Hogyan kezdhetem el használni a GroupDocs.Comparisont?**
-   - Kövesse a mellékelt telepítési útmutatót, és tekintse meg a hivatalos dokumentációt.
-3. **Össze tudom hasonlítani a különböző fájlformátumokat?**
-   - Igen, a GroupDocs.Comparison a dokumentumformátumok széles skáláját támogatja.
+---
+
+**Utoljára frissítve:** 2025-12-19  
+**Tesztelve:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs

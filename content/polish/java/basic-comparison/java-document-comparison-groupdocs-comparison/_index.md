@@ -1,45 +1,73 @@
 ---
-"date": "2025-05-05"
-"description": "Dowiedz się, jak wdrożyć porównanie dokumentów Java za pomocą GroupDocs.Comparison. Ten przewodnik obejmuje konfigurację, funkcje porównania i wskazówki dotyczące wydajności w celu wydajnej kontroli wersji."
-"title": "Porównanie dokumentów Java przy użyciu GroupDocs.Comparison&#58; Kompleksowy przewodnik"
-"url": "/pl/java/basic-comparison/java-document-comparison-groupdocs-comparison/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-20'
+description: Dowiedz się, jak porównywać pliki PDF w Javie za pomocą GroupDocs.Comparison.
+  Ten krok po kroku poradnik obejmuje najlepsze praktyki porównywania dokumentów,
+  przykłady kodu, wskazówki dotyczące wydajności oraz rozwiązywanie problemów.
+keywords: java compare documents programmatically, java document diff library, compare
+  two files java, java text comparison, groupdocs comparison java, document version
+  control java, compare pdf files java, document comparison best practices
+lastmod: '2025-12-20'
+linktitle: Java Document Comparison Guide
+tags:
+- java
+- document-comparison
+- groupdocs
+- file-comparison
+- version-control
+title: Jak porównać pliki PDF w Javie programowo
 type: docs
+url: /pl/java/basic-comparison/java-document-comparison-groupdocs-comparison/
+weight: 1
 ---
-# Porównanie dokumentów Java przy użyciu GroupDocs.Comparison: kompleksowy przewodnik
+
+# Jak porównywać pliki PDF w Javie programowo
 
 ## Wstęp
 
-Efektywne zarządzanie dokumentami jest kluczowe w środowiskach profesjonalnych, w których wykrywanie różnic między wersjami może zaoszczędzić czas i zapobiec błędom. Niezależnie od tego, czy jesteś programistą współpracującym przy projektach, czy administratorem zapewniającym zgodność rekordów, możliwość porównywania dokumentów przy użyciu precyzyjnych narzędzi, takich jak GroupDocs.Comparison dla Java, jest nieoceniona. Ten samouczek przeprowadzi Cię przez proces konfigurowania i używania GroupDocs.Comparison w celu uzyskania współrzędnych zmian między dwoma dokumentami.
+Czy kiedykolwiek ręcznie porównywałeś dwie wersje dokumentu, mrużąc oczy przy ekranie, aby dostrzec różnice? Jeśli jesteś programistą Javy, prawdopodobnie spotkałeś się z tym wyzwaniem częściej, niż chciałbyś przyznać. Niezależnie od tego, czy tworzysz system zarządzania treścią, wdrażasz kontrolę wersji, czy po prostu musisz śledzić zmiany w dokumentach prawnych, **compare pdf files java** może zaoszczędzić Ci godziny żmudnej pracy.
 
-**Czego się nauczysz:**
-- Konfigurowanie i konfigurowanie GroupDocs.Comparison dla Java
-- Wdrażanie funkcji porównywania dokumentów: pobieranie współrzędnych zmian, listowanie zmian, wyodrębnianie tekstu docelowego
-- Zastosowania tych funkcji w świecie rzeczywistym
-- Wskazówki dotyczące optymalizacji wydajności
+Dobre wieści? Dzięki GroupDocs.Comparison for Java możesz zautomatyzować cały ten proces. Ten kompleksowy przewodnik przeprowadzi Cię przez wszystko, co musisz wiedzieć o implementacji porównywania dokumentów w aplikacjach Java. Dowiesz się, jak wykrywać zmiany, wyodrębniać współrzędne i obsługiwać różne formaty plików – wszystko przy użyciu czystego, wydajnego kodu.
 
-Zacznijmy od wymagań wstępnych, jakie są niezbędne do rozpoczęcia tego samouczka.
+Po zakończeniu tego samouczka będziesz mieć solidne zrozumienie technik porównywania dokumentów i będziesz gotowy wdrożyć je w własnych projektach. Zanurzmy się!
 
-## Wymagania wstępne
+## Szybkie odpowiedzi
+- **Jaką bibliotekę użyć do porównywania plików PDF w Javie?** GroupDocs.Comparison for Java.  
+- **Czy potrzebna jest licencja?** Bezpłatna wersja próbna wystarczy do nauki; pełna licencja jest wymagana w środowisku produkcyjnym.  
+- **Jaka wersja Javy jest wymagana?** Minimum Java 8, zalecane Java 11+.  
+- **Czy mogę porównywać dokumenty bez zapisywania ich na dysku?** Tak, użyj strumieni do porównywania w pamięci.  
+- **Jak uzyskać współrzędne zmian?** Włącz `setCalculateCoordinates(true)` w `CompareOptions`.
 
-Przed wdrożeniem funkcji porównywania dokumentów upewnij się, że masz:
+## Co to jest „compare pdf files java”?
+Porównywanie plików PDF w Javie oznacza programowe analizowanie dwóch dokumentów PDF (lub innych) w celu zidentyfikowania dodatków, usunięć i modyfikacji. Proces zwraca ustrukturyzowaną listę zmian, którą można wykorzystać do raportowania, wizualnego podświetlania lub automatyzacji przepływów pracy.
 
-### Wymagane biblioteki i zależności:
-- **GroupDocs.Comparison dla Java** wersja 25.2 lub nowsza.
+## Dlaczego warto używać GroupDocs.Comparison for Java?
+- **Szybkość i dokładność:** Obsługuje ponad 60 formatów z wysoką wiernością.  
+- **Najlepsze praktyki porównywania dokumentów** wbudowane, takie jak ignorowanie zmian stylu czy wykrywanie przeniesionej treści.  
+- **Skalowalność:** Działa z dużymi plikami, strumieniami i przechowywaniem w chmurze.  
+- **Rozszerzalność:** Dostosuj opcje porównywania do dowolnych reguł biznesowych.
 
-### Wymagania dotyczące konfiguracji środowiska:
-- Pakiet Java Development Kit (JDK) zainstalowany na Twoim komputerze.
-- Środowisko IDE, np. IntelliJ IDEA lub Eclipse.
+## Wymagania wstępne i co będzie potrzebne
 
-### Wymagania wstępne dotyczące wiedzy:
-- Podstawowa znajomość programowania w Javie.
-- Znajomość Maven do zarządzania zależnościami.
+### Wymagania techniczne
+- **Java Development Kit (JDK)** – wersja 8 lub wyższa (Java 11+ zalecane dla lepszej wydajności)  
+- **IDE** – IntelliJ IDEA, Eclipse lub ulubione środowisko Java  
+- **Maven** – do zarządzania zależnościami (większość IDE go zawiera)
 
-## Konfigurowanie GroupDocs.Comparison dla Java
+### Wymagania wiedzy
+- Podstawowa znajomość Javy (klasy, metody, try‑with‑resources)  
+- Znajomość zależności Maven (i tak przeprowadzimy Cię przez konfigurację)  
+- Rozumienie operacji I/O na plikach (przydatne, ale nieobowiązkowe)
 
-Aby zintegrować bibliotekę GroupDocs.Comparison ze swoim projektem za pomocą Maven, wykonaj następujące kroki:
+### Dokumenty do testów
+Przygotuj kilka przykładowych dokumentów – pliki Word, PDF lub tekstowe sprawdzą się doskonale. Jeśli ich nie masz, utwórz dwa proste pliki tekstowe z niewielkimi różnicami do testów.
 
-**Konfiguracja Maven:**
+## Konfiguracja GroupDocs.Comparison for Java
+
+### Konfiguracja Maven
+
+Najpierw dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. Zachowaj blok dokładnie tak, jak pokazano:
 
 ```xml
 <repositories>
@@ -59,39 +87,54 @@ Aby zintegrować bibliotekę GroupDocs.Comparison ze swoim projektem za pomocą 
 </dependencies>
 ```
 
-### Etapy uzyskania licencji:
-1. **Bezpłatna wersja próbna**: Zacznij od bezpłatnego okresu próbnego, aby poznać podstawowe funkcje.
-2. **Licencja tymczasowa**Złóż wniosek o tymczasową licencję, jeśli potrzebujesz szerszych możliwości testowania.
-3. **Zakup**:W przypadku długotrwałego stosowania należy rozważyć zakup pełnej wersji.
+**Wskazówka:** Zawsze sprawdzaj najnowszą wersję na stronie GroupDocs. W momencie pisania najnowsza wersja to 25.2, ale nowsze wersje mogą zawierać dodatkowe funkcje lub poprawki błędów.
 
-**Podstawowa inicjalizacja i konfiguracja:**
+### Typowe problemy z konfiguracją i rozwiązania
+- **„Repository not found”** – upewnij się, że blok `<repositories>` znajduje się *przed* `<dependencies>`.  
+- **„ClassNotFoundException”** – odśwież zależności Maven (IntelliJ: *Maven → Reload project*).
 
-Aby zainicjować GroupDocs.Comparison w projekcie Java, upewnij się, że ścieżka kompilacji projektu zawiera niezbędne biblioteki z Maven. Oto jak skonfigurować podstawowe porównanie:
+### Wyjaśnienie opcji licencjonowania
+1. **Free Trial** – idealny do nauki i małych projektów.  
+2. **Temporary License** – poproś o klucz na 30 dni do rozszerzonej oceny.  
+3. **Full License** – wymagana w środowiskach produkcyjnych.
+
+### Podstawowa struktura projektu
+```
+your-project/
+├── src/main/java/
+│   └── com/yourcompany/comparison/
+│       └── DocumentComparison.java
+├── src/test/resources/
+│   ├── source.docx
+│   └── target.docx
+└── pom.xml
+```
+
+## Główna implementacja: przewodnik krok po kroku
+
+### Zrozumienie klasy Comparer
+Klasa `Comparer` jest Twoim głównym interfejsem do porównywania dokumentów:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 
 try (Comparer comparer = new Comparer("sourceFilePath")) {
     comparer.add("targetFilePath");
-    // Kontynuuj operacje porównania...
+    // Your comparison logic goes here
 }
 ```
 
-## Przewodnik wdrażania
+**Dlaczego używać try‑with‑resources?** `Comparer` implementuje `AutoCloseable`, więc ten wzorzec zapewnia prawidłowe zwolnienie pamięci i uchwytów plików – co jest nieocenione przy dużych PDF‑ach.
 
-### Funkcja 1: Pobierz współrzędne zmian
+### Funkcja 1: Pobieranie współrzędnych zmian
+Ta funkcja podaje dokładnie, gdzie wystąpiła każda zmiana – pomyśl o współrzędnych GPS dla edycji dokumentu.
 
-Funkcja ta umożliwia ustalenie dokładnych współrzędnych zmian pomiędzy dwoma dokumentami, co jest niezwykle cenne przy szczegółowym śledzeniu modyfikacji.
+#### Kiedy używać
+- Budowanie wizualnego podglądu różnic  
+- Implementacja precyzyjnych raportów audytowych  
+- Podświetlanie zmian w przeglądarce PDF podczas przeglądu prawnego
 
-#### Przegląd
-Obliczanie współrzędnych zmian umożliwia określenie, gdzie tekst lub inna treść została dodana, usunięta lub zmieniona w dokumencie. Informacje te mogą być kluczowe dla celów kontroli wersji i audytu.
-
-#### Kroki do wdrożenia
-
-##### 1. Skonfiguruj instancję porównującą
-
-Zacznij od skonfigurowania instancji `Comparer` z dokumentem źródłowym:
-
+#### Szczegóły implementacji
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.result.ChangeInfo;
@@ -100,13 +143,11 @@ String sourceFilePath = "path/to/source.docx";
 String targetFilePath = "path/to/target.docx";
 
 try (Comparer comparer = new Comparer(sourceFilePath)) {
-    // Dodaj dokument docelowy w celu porównania.
+    // Add the target document for comparison.
     comparer.add(targetFilePath);
 ```
 
-##### 2. Skonfiguruj opcje porównania
-
-Aby obliczyć współrzędne, skonfiguruj `CompareOptions` odpowiednio:
+Włącz obliczanie współrzędnych:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -117,9 +158,7 @@ final Path resultPath = comparer.compare(
                 .build());
 ```
 
-##### 3. Pobierz i wydrukuj szczegóły zmian
-
-Wyodrębnij zmiany i wydrukuj ich współrzędne wraz z innymi szczegółami:
+Wyodrębnij i przetwarzaj informacje o zmianach:
 
 ```java
 ChangeInfo[] changes = comparer.getChanges();
@@ -129,20 +168,23 @@ for (ChangeInfo change : changes) {
 }
 ```
 
-### Funkcja 2: Pobierz listę zmian ze ścieżki
+**Uwaga dotycząca wydajności:** Obliczanie współrzędnych zwiększa obciążenie, więc włączaj je tylko wtedy, gdy naprawdę potrzebujesz tych danych.
 
-Funkcja ta umożliwia pobranie pełnej listy zmian poprzez proste podanie ścieżek plików.
+### Funkcja 2: Pobieranie zmian z ścieżek plików
+Jeśli potrzebujesz po prostu prostej listy zmian, to metoda, której szukasz.
 
-#### Kroki do wdrożenia
+#### Idealne zastosowanie
+- Szybkie podsumowania zmian  
+- Proste raporty różnic  
+- Przetwarzanie wsadowe wielu par dokumentów
 
-##### Skonfiguruj program porównujący i dodaj dokument docelowy
-
+#### Implementacja
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-##### Wykonaj porównanie i pobierz zmiany
+Uruchom porównanie bez dodatkowych opcji:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -151,14 +193,17 @@ System.out.println("\nCount of changes: " + changes.length);
 }
 ```
 
-### Funkcja 3: Pobierz listę zmian ze strumienia
+**Dobra praktyka:** Zawsze sprawdzaj długość tablicy `changes` – pusta tablica oznacza, że dokumenty są identyczne.
 
-Funkcja ta jest szczególnie użyteczna w scenariuszach, w których dokumenty są ładowane za pośrednictwem strumieni (np. w aplikacjach internetowych).
+### Funkcja 3: Praca ze strumieniami
+Idealne dla aplikacji webowych, mikro‑serwisów lub każdego scenariusza, w którym pliki znajdują się w pamięci lub w chmurze.
 
-#### Kroki do wdrożenia
+#### Typowe przypadki użycia
+- Obsługa przesyłania plików w kontrolerze Spring Boot  
+- Pobieranie dokumentów z AWS S3 lub Azure Blob Storage  
+- Przetwarzanie PDF‑ów przechowywanych w kolumnie BLOB bazy danych
 
-##### Użyj InputStream dla dokumentów źródłowych i docelowych
-
+#### Implementacja strumieni
 ```java
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -169,7 +214,7 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
     comparer.add(targetStream);
 ```
 
-##### Wykonaj porównanie za pomocą strumieni
+Kontynuuj wywołanie porównania w ten sam sposób:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -178,14 +223,17 @@ System.out.println("\nCount of changes: " + Arrays.toString(changes).length);
 }
 ```
 
-### Funkcja 4: Pobierz tekst docelowy
+**Wskazówka pamięciowa:** Blok try‑with‑resources zapewnia automatyczne zamykanie strumieni, co zapobiega wyciekom przy dużych PDF‑ach.
 
-Wyodrębnij tekst powiązany z każdą zmianą, co może być istotne dla ścieżek audytu lub przeglądów treści.
+### Funkcja 4: Wyodrębnianie docelowego tekstu
+Czasami potrzebny jest dokładny tekst, który uległ zmianie – idealny do logów zmian lub powiadomień.
 
-#### Kroki do wdrożenia
+#### Praktyczne zastosowania
+- Budowanie interfejsu logu zmian  
+- Wysyłanie powiadomień e‑mail z wstawionym/usuniętym tekstem  
+- Audyt treści pod kątem zgodności
 
-##### Pobierz i wydrukuj tekst każdej zmiany
-
+#### Implementacja
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
@@ -200,44 +248,252 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
 }
 ```
 
-## Zastosowania praktyczne
+**Wskazówka filtrowania:** Skup się na konkretnych typach zmian:
 
-1. **Systemy kontroli wersji**:Śledź zmiany w różnych wersjach dokumentu.
-2. **Platformy do wspólnej edycji**:Podświetlaj w czasie rzeczywistym zmiany wprowadzane przez różnych użytkowników.
-3. **Audyty zgodności**: Upewnij się, że wszystkie niezbędne modyfikacje są śledzone i dokumentowane.
+```java
+for (ChangeInfo change : changes) {
+    if (change.getType() == ComparisonAction.INSERT) {
+        System.out.println("Added: " + change.getText());
+    }
+}
+```
 
-## Rozważania dotyczące wydajności
+## Typowe pułapki i jak ich unikać
 
-Aby zoptymalizować wydajność:
-- Ogranicz zakres porównania do odpowiednich sekcji, korzystając z `CompareOptions`.
-- Zarządzaj pamięcią efektywnie, prawidłowo nią zarządzając, zwłaszcza w przypadku dużych dokumentów.
+### 1. Problemy ze ścieżkami plików
+**Problem:** „File not found” mimo że plik istnieje.  
+**Rozwiązanie:** Używaj ścieżek bezwzględnych podczas rozwoju lub sprawdzaj katalog roboczy. W systemie Windows unikaj niepoprawnego formatowania backslashy – używaj podwójnych `\\` lub ukośników `/`.
 
-## Wniosek
+```java
+// Good
+String path = "C:/Users/yourname/documents/test.docx";
+// Or
+String path = "C:\\Users\\yourname\\documents\\test.docx";
+```
 
-W tym samouczku dowiedziałeś się, jak wykorzystać GroupDocs.Comparison dla Java do skutecznego wykrywania zmian między dokumentami. Od skonfigurowania środowiska i zainstalowania niezbędnych zależności po wdrożenie funkcji, takich jak pobieranie współrzędnych zmian, listowanie zmian i wyodrębnianie tekstu, jesteś teraz wyposażony, aby ulepszyć procesy zarządzania dokumentami w swoich aplikacjach.
+### 2. Wycieki pamięci przy dużych plikach
+**Problem:** `OutOfMemoryError` przy dużych PDF‑ach.  
+**Rozwiązanie:** Zawsze używaj try‑with‑resources i rozważ API strumieniowe lub przetwarzanie dokumentów w partiach.
 
-### Następne kroki
-- Poznaj zaawansowane ustawienia porównania.
-- Zintegruj się z innymi produktami GroupDocs, aby uzyskać kompleksowe rozwiązania w zakresie zarządzania dokumentacją.
+### 3. Nieobsługiwane formaty plików
+**Problem:** Wyjątki dla niektórych formatów.  
+**Rozwiązanie:** Najpierw sprawdź listę obsługiwanych formatów. GroupDocs obsługuje ponad 60 formatów – zweryfikuj przed implementacją.
 
-## Sekcja FAQ
+### 4. Problemy z wydajnością
+**Problem:** Porównania trwają zbyt długo.  
+**Rozwiązanie:**  
+- Wyłącz obliczanie współrzędnych, jeśli nie jest potrzebne.  
+- Użyj odpowiednich `CompareOptions`.  
+- Tam, gdzie to możliwe, równolegle przetwarzaj zadania wsadowe.
 
-1. **Jaka jest minimalna wymagana wersja Java?**
-   - Aby zapewnić kompatybilność i wydajność, zaleca się korzystanie z wersji Java 8 lub nowszej.
+## Wskazówki optymalizacji wydajności
 
-2. **Czy mogę porównać więcej niż dwa dokumenty jednocześnie?**
-   - Tak, użyj `add()` metoda obejmująca wiele dokumentów docelowych.
+### Wybór odpowiednich opcji
+```java
+CompareOptions options = new CompareOptions.Builder()
+    .setCalculateCoordinates(false) // Only enable when needed
+    .setDetectStyleChanges(false)   // Skip formatting if you only care about content
+    .build();
+```
 
-3. **Jak radzić sobie z dużymi dokumentami?**
-   - Zoptymalizuj porównanie, ograniczając sekcje za pomocą `CompareOptions`.
+### Zarządzanie pamięcią
+- Przetwarzaj dokumenty w partiach zamiast ładować wszystko naraz.  
+- Korzystaj z API strumieniowych przy dużych plikach.  
+- Zapewnij prawidłowe czyszczenie w blokach `finally` lub polegaj na try‑with‑resources.
 
-4. **Jakie formaty plików są obsługiwane w celu porównania?**
-   - GroupDocs.Comparison obsługuje ponad 60 formatów dokumentów, w tym DOCX, PDF i XLSX.
+### Strategie buforowania
+Dla często porównywanych dokumentów warto buforować wyniki:
 
-5. **Czy istnieje sposób na wizualne wyróżnienie zmian w dokumencie wyjściowym?**
-   - Tak, skonfiguruj `CompareOptions` aby wygenerować różnice wizualne.
+```java
+// Pseudo-code for caching concept
+String cacheKey = generateCacheKey(sourceFile, targetFile);
+if (cache.contains(cacheKey)) {
+    return cache.get(cacheKey);
+}
+```
 
-## Zasoby
+## Real‑World scenariusze i rozwiązania
 
-- [Dokumentacja GroupDocs](https://docs.groupdocs.com/comparison/java/)
-- [Odniesienie do API](https://reference.gro
+### Scenariusz 1: System zarządzania treścią
+```java
+public class ArticleVersionComparison {
+    public List<ChangeInfo> compareVersions(String oldVersion, String newVersion) {
+        try (Comparer comparer = new Comparer(oldVersion)) {
+            comparer.add(newVersion);
+            final Path result = comparer.compare();
+            return Arrays.asList(comparer.getChanges());
+        } catch (Exception e) {
+            log.error("Failed to compare article versions", e);
+            return Collections.emptyList();
+        }
+    }
+}
+```
+
+### Scenariusz 2: Zautomatyzowana kontrola jakości
+```java
+public boolean validateReportAgainstTemplate(InputStream report, InputStream template) {
+    try (Comparer comparer = new Comparer(template)) {
+        comparer.add(report);
+        comparer.compare();
+        ChangeInfo[] changes = comparer.getChanges();
+        
+        // Only allow certain types of changes
+        return Arrays.stream(changes)
+                .allMatch(change -> isAllowedChange(change));
+    } catch (Exception e) {
+        return false;
+    }
+}
+```
+
+### Scenariusz 3: Przetwarzanie wsadowe dokumentów
+```java
+public void processBatchComparison(List<DocumentPair> documents) {
+    documents.parallelStream().forEach(pair -> {
+        try (Comparer comparer = new Comparer(pair.getSource())) {
+            comparer.add(pair.getTarget());
+            Path result = comparer.compare();
+            // Process results...
+        } catch (Exception e) {
+            log.error("Failed to process document pair: " + pair, e);
+        }
+    });
+}
+```
+
+## Rozwiązywanie typowych problemów
+
+### Wyniki porównania wydają się niepoprawne
+- Zweryfikuj kodowanie dokumentu (UTF‑8 vs inne).  
+- Sprawdź ukryte znaki lub różnice w formatowaniu.
+
+### Spadek wydajności
+- Profiluj aplikację, aby zlokalizować wąskie gardła.  
+- Dostosuj `CompareOptions`, aby pominąć niepotrzebne funkcje.
+
+### Problemy z integracją w środowisku produkcyjnym
+- Sprawdź wersje classpath i zależności.  
+- Upewnij się, że pliki licencyjne są prawidłowo umieszczone na serwerze.  
+- Zweryfikuj uprawnienia do plików oraz dostęp sieciowy.
+
+## Zaawansowane funkcje i najlepsze praktyki
+
+### Praca z różnymi formatami plików
+```java
+public boolean isFormatSupported(String filePath) {
+    String extension = getFileExtension(filePath);
+    List<String> supportedFormats = Arrays.asList(
+        ".docx", ".pdf", ".txt", ".rtf", ".odt", // Add more as needed
+    );
+    return supportedFormats.contains(extension.toLowerCase());
+}
+```
+
+### Obsługa dużych dokumentów
+```java
+CompareOptions largeDocOptions = new CompareOptions.Builder()
+    .setCalculateCoordinates(false)  // Saves memory
+    .setDetectStyleChanges(false)    // Focuses on content only
+    .setWordsLimit(1000)             // Limits processing scope
+    .build();
+```
+
+### Wzorce obsługi błędów
+```java
+public ComparisonResult compareDocuments(String source, String target) {
+    try (Comparer comparer = new Comparer(source)) {
+        comparer.add(target);
+        Path result = comparer.compare();
+        
+        return ComparisonResult.success(comparer.getChanges());
+        
+    } catch (SecurityException e) {
+        log.error("Access denied when comparing documents", e);
+        return ComparisonResult.failure("Access denied");
+    } catch (IOException e) {
+        log.error("IO error during document comparison", e);
+        return ComparisonResult.failure("File access error");
+    } catch (Exception e) {
+        log.error("Unexpected error during comparison", e);
+        return ComparisonResult.failure("Comparison failed");
+    }
+}
+```
+
+## Najczęściej zadawane pytania
+
+**P:** Jaka jest minimalna wersja Javy wymagana dla GroupDocs.Comparison?  
+**O:** Java 8 jest minimalna, ale Java 11+ jest zalecana dla lepszej wydajności i bezpieczeństwa.
+
+**P:** Czy mogę porównywać więcej niż dwa dokumenty jednocześnie?  
+**O:**  
+```java
+try (Comparer comparer = new Comparer(sourceDocument)) {
+    comparer.add(targetDocument1);
+    comparer.add(targetDocument2);
+    comparer.add(targetDocument3);
+    // Now compare against all targets
+}
+```
+
+**P:** Jak postępować z bardzo dużymi dokumentami (100 MB+)?**  
+**O:**  
+- Wyłącz obliczanie współrzędnych, jeśli nie jest potrzebne.  
+- Korzystaj z API strumieniowych.  
+- Przetwarzaj dokumenty w partiach lub stronach.  
+- Monitoruj zużycie pamięci.
+
+**P:** Czy istnieje sposób na wizualne podświetlenie zmian w wyniku?**  
+**O:**  
+```java
+CompareOptions options = new CompareOptions.Builder()
+    .setShowInsertedContent(true)
+    .setShowDeletedContent(true)
+    .setGenerateOutputDocument(true)
+    .build();
+```
+
+**P:** Jak obsłużyć dokumenty chronione hasłem?**  
+**O:**  
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+
+try (Comparer comparer = new Comparer(protectedDocument, loadOptions)) {
+    // Comparison logic here
+}
+```
+
+**P:** Czy mogę dostosować sposób wykrywania zmian?**  
+**O:**  
+```java
+CompareOptions options = new CompareOptions.Builder()
+    .setDetectStyleChanges(false)     // Ignore formatting changes
+    .setSensitivityOfComparison(100)  // Adjust sensitivity (0‑100)
+    .build();
+```
+
+**P:** Jaki jest najlepszy sposób integracji tego rozwiązania ze Spring Boot?**  
+**O:**  
+```java
+@Service
+public class DocumentComparisonService {
+    
+    public ComparisonResult compare(MultipartFile source, MultipartFile target) {
+        // Implementation using the techniques from this guide
+    }
+}
+```
+
+## Dodatkowe zasoby
+
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
+- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)
+- [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-20  
+**Testowano z:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs

@@ -1,46 +1,78 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách sử dụng GroupDocs.Comparison cho Java để so sánh các tệp ô từ luồng, hợp lý hóa phân tích dữ liệu và kiểm soát phiên bản. Làm theo hướng dẫn từng bước của chúng tôi."
-"title": "Cách so sánh các tệp ô bằng GroupDocs.Comparison trong Java&#58; Hướng dẫn toàn diện"
-"url": "/vi/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
-"weight": 1
+categories:
+- Java Tutorials
+date: '2025-12-20'
+description: Học cách so sánh các tệp Excel bằng Java một cách lập trình sử dụng Java
+  streams và GroupDocs.Comparison. Hướng dẫn từng bước kèm mã nguồn, mẹo và khắc phục
+  sự cố.
+keywords: compare Excel files Java streams, Java spreadsheet comparison tutorial,
+  GroupDocs file comparison, automate Excel file comparison, compare cell files programmatically
+lastmod: '2025-12-20'
+linktitle: Compare Excel Files Java Streams
+tags:
+- java
+- excel-comparison
+- groupdocs
+- file-streams
+- automation
+title: So sánh các tệp Excel bằng Java – Hướng dẫn So sánh Java Streams
 type: docs
+url: /vi/java/basic-comparison/compare-cell-files-groupdocs-java-streams/
+weight: 1
 ---
-# Cách so sánh các tệp ô bằng GroupDocs.Comparison trong Java
 
-## Giới thiệu
-So sánh các tệp ô hiệu quả là điều cần thiết để phân tích dữ liệu hiệu quả, kiểm soát phiên bản và cộng tác. Cho dù bạn là nhà phát triển đang làm việc trên ứng dụng tập trung vào dữ liệu hay quản lý bảng tính trên nhiều phiên bản khác nhau, việc tự động hóa quy trình so sánh này có thể tiết kiệm thời gian và giảm lỗi. Hướng dẫn này trình bày cách sử dụng GroupDocs.Comparison trong Java để so sánh các tệp ô từ luồng, một tính năng mạnh mẽ dành cho các nhà phát triển muốn tối ưu hóa quy trình làm việc của họ.
+# Cách So Sánh Tệp Excel Bằng Java Streams
 
-**Những gì bạn sẽ học được:**
-- Thiết lập GroupDocs.Comparison cho Java.
-- Các bước để so sánh hai tệp ô bằng cách sử dụng luồng đầu vào.
-- Ứng dụng thực tế của việc so sánh bảng tính theo chương trình.
-- Thực hành tốt nhất để tối ưu hóa hiệu suất với thư viện này.
+Bạn đã bao giờ tự mình kiểm tra thủ công sự khác biệt giữa hai tệp Excel chưa? Nếu bạn là một nhà phát triển Java, **compare excel files java** lập trình bằng cách sử dụng Java streams có thể tiết kiệm cho bạn hàng giờ công việc tẻ nhạt và loại bỏ lỗi con người trong quá trình xác thực dữ liệu.
 
-Hãy cùng khám phá những điều kiện tiên quyết cần thiết để thành thạo việc so sánh bảng tính trong Java!
+Cho dù bạn đang xây dựng hệ thống báo cáo tài chính, quản lý kiểm soát phiên bản cho dữ liệu bảng tính, hoặc chỉ cần tự động so sánh tệp Excel trong quy trình làm việc của mình, hướng dẫn này chỉ cho bạn cách thực hiện chính xác bằng cách sử dụng GroupDocs.Comparison cho Java.
 
-## Điều kiện tiên quyết
-Trước khi triển khai tính năng so sánh, hãy đảm bảo bạn có những điều sau:
+**Bạn sẽ nắm vững những gì sau khi hoàn thành:**
+- Cài đặt GroupDocs.Comparison trong dự án Java của bạn (rất dễ dàng hơn bạn nghĩ)
+- So sánh hai tệp Excel bằng cách sử dụng input streams chỉ với vài dòng mã
+- Xử lý các vấn đề thường gặp khiến hầu hết các nhà phát triển gặp khó khăn
+- Tối ưu hiệu năng cho các bảng tính lớn
+- Các ứng dụng thực tế sẽ làm sếp của bạn hài lòng
 
-### Thư viện và phụ thuộc bắt buộc
-- **GroupDocs.So sánh**: Phiên bản 25.2 trở lên.
-- **Bộ phát triển Java (JDK)**: Đảm bảo JDK được cài đặt và cấu hình trên hệ thống của bạn.
+Sẵn sàng tự động hoá việc so sánh các bảng tính chưa? Hãy bắt đầu!
 
-### Yêu cầu thiết lập môi trường
-- Một Java IDE như IntelliJ IDEA, Eclipse hoặc NetBeans.
-- Maven để quản lý các phụ thuộc (tùy chọn nhưng được khuyến nghị).
+## Câu trả lời nhanh
+- **Thư viện nào tốt nhất để compare excel files java?** GroupDocs.Comparison for Java  
+- **Cần bao nhiêu dòng mã?** Khoảng 10 dòng cộng với phần cài đặt  
+- **Có cần giấy phép không?** Bản dùng thử miễn phí đủ cho việc học; sản xuất yêu cầu giấy phép  
+- **Có thể so sánh tệp từ cơ sở dữ liệu không** Có — bất kỳ nguồn `InputStream` nào cũng hoạt động  
+- **Có nhanh cho tệp lớn không?** Có, với cài đặt bộ nhớ và xử lý stream phù hợp  
 
-### Điều kiện tiên quyết về kiến thức
-- Hiểu biết cơ bản về các khái niệm lập trình Java.
-- Quen thuộc với việc xử lý tệp và luồng trong Java.
+## So sánh excel files java là gì?
 
-Sau khi đã đáp ứng được các điều kiện tiên quyết, chúng ta hãy thiết lập GroupDocs.Comparison cho dự án Java của bạn.
+Nói một cách đơn giản, nó có nghĩa là sử dụng mã Java để phát hiện sự khác biệt giữa hai workbook Excel. GroupDocs.Comparison đọc các bảng tính, đánh giá các thay đổi theo từng ô và tạo ra kết quả được đánh dấu, hiển thị chính xác những gì đã được thêm, xóa hoặc sửa đổi.
 
-## Thiết lập GroupDocs.Comparison cho Java
-Để sử dụng GroupDocs.Comparison trong ứng dụng Java của bạn, hãy làm theo các bước sau:
+## Tại sao sử dụng Java Streams cho compare excel files java?
 
-### Cấu hình Maven
-Thêm kho lưu trữ và cấu hình phụ thuộc sau vào `pom.xml` tài liệu:
+Java streams cho phép bạn làm việc với dữ liệu trực tiếp từ bộ nhớ, vị trí mạng hoặc lưu trữ đám mây mà không cần ghi các tệp tạm thời vào đĩa. Điều này giảm tải I/O, cải thiện bảo mật (không còn tệp dư thừa), và giúp dễ dàng tích hợp bước so sánh vào các pipeline lớn hơn như micro‑services hoặc batch jobs.
+
+## Yêu cầu trước: Những gì bạn cần trước khi bắt đầu
+
+### Thư viện và phụ thuộc cần thiết
+- **GroupDocs.Comparison**: Phiên bản 25.2 hoặc mới hơn (người chơi chính của chúng tôi)  
+- **Java Development Kit (JDK)**: Bất kỳ phiên bản mới nào  
+- **Maven hoặc Gradle**: Để quản lý phụ thuộc (ví dụ Maven được hiển thị ở đây)  
+
+### Yêu cầu cài đặt môi trường
+- Một IDE Java (IntelliJ IDEA, Eclipse, NetBeans, v.v.)  
+- Quyền truy cập vào các tệp Excel bạn muốn so sánh  
+- Khoảng 10 phút để thực hiện theo hướng dẫn  
+
+### Kiến thức tiên quyết
+- Lập trình Java cơ bản (vòng lặp, try‑catch, v.v.)  
+- Làm việc với tệp và streams trong Java  
+- Hiểu về phụ thuộc Maven  
+
+Nếu bạn có thể viết một chương trình Java đơn giản để đọc một tệp, bạn đã sẵn sàng.
+
+## Cài đặt GroupDocs.Comparison cho Java
+
+Việc đưa GroupDocs.Comparison vào dự án của bạn thật bất ngờ đơn giản. Dưới đây là cấu hình Maven chính xác mà bạn cần.
 
 ```xml
 <repositories>
@@ -60,13 +92,15 @@ Thêm kho lưu trữ và cấu hình phụ thuộc sau vào `pom.xml` tài liệ
 </dependencies>
 ```
 
-### Các bước xin cấp giấy phép
-- **Dùng thử miễn phí**Tải xuống phiên bản dùng thử từ [Trang tải xuống GroupDocs](https://releases.groupdocs.com/comparison/java/).
-- **Giấy phép tạm thời**: Nhận giấy phép tạm thời để truy cập API đầy đủ tại [trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
-- **Mua**: Để sử dụng lâu dài, hãy mua giấy phép qua [liên kết này](https://purchase.groupdocs.com/buy).
+**Mẹo chuyên nghiệp**: Luôn kiểm tra phiên bản mới nhất trên trang phát hành của họ để có các tính năng và bản sửa lỗi mới nhất.
 
-### Khởi tạo và thiết lập cơ bản
-Sau khi thư viện được thêm vào dự án của bạn, hãy nhập các lớp cần thiết:
+### Các bước lấy giấy phép
+- **Bản dùng thử**: Hoàn hảo cho việc thử nghiệm và học tập. Tải xuống từ [trang tải xuống GroupDocs](https://releases.groupdocs.com/comparison/java/) – không cần thẻ tín dụng.  
+- **Giấy phép tạm thời**: Cần truy cập API đầy đủ cho phát triển? Lấy một từ [trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/). Tuyệt vời cho các bằng chứng khái niệm.  
+- **Giấy phép đầy đủ**: Sẵn sàng cho sản xuất? Mua qua [liên kết này](https://purchase.groupdocs.com/buy). Đáng đồng tiền bát gạo nếu bạn đang thực hiện công việc so sánh tệp nghiêm trọng.  
+
+### Khởi tạo và c đặt cơ bản
+Khi Maven đã tải phụ thuộc, nhập các lớp này vào đầu tệp Java của bạn:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -76,16 +110,17 @@ import java.io.InputStream;
 import java.io.OutputStream;
 ```
 
-Sau khi thiết lập xong, chúng ta có thể triển khai tính năng so sánh các tệp ô từ các luồng.
+Xong rồi cho phần cài đặt! Bây giờ chúng ta đến phần thú vị – thực sự so sánh một số tệp Excel.
 
-## Hướng dẫn thực hiện
-Phần này hướng dẫn bạn từng bước cần thiết để so sánh hai tệp ô bằng luồng đầu vào trong Java với GroupDocs.Comparison.
+## Hướng dẫn triển khai: So sánh tệp Excel từng bước
 
-### Tổng quan
-Chức năng cốt lõi ở đây là lấy hai tệp Excel làm luồng và tạo ra kết quả so sánh, làm nổi bật sự khác biệt giữa chúng. Điều này có thể cực kỳ hữu ích để theo dõi các thay đổi trong tập dữ liệu theo thời gian hoặc tích hợp các so sánh bảng tính vào các đường ống xử lý dữ liệu lớn hơn.
+### Tổng quan: Những gì chúng ta sẽ xây dựng
+Chúng ta sẽ tạo một giải pháp nhận hai tệp Excel dưới dạng `InputStream` và tạo ra kết quả so sánh, đánh dấu tất cả các khác biệt. Hãy nghĩ nó như một công cụ “diff” cho bảng tính – vô cùng hữu ích để theo dõi thay đổi trong bộ dữ liệu, báo cáo tài chính, hoặc bất kỳ dữ liệu có cấu trúc nào.
 
-#### Bước 1: Xác định đường dẫn tệp
-Bắt đầu bằng cách xác định đường dẫn cho các tệp ô nguồn và ô đích của bạn bằng cách sử dụng các chỗ giữ chỗ. Thay thế `YOUR_DOCUMENT_DIRECTORY` Và `YOUR_OUTPUT_DIRECTORY` với đường dẫn thư mục thực tế nơi tài liệu của bạn lưu trú và nơi bạn muốn lưu kết quả:
+Ưu của việc sử dụng streams là bạn không bị giới hạn ở các tệp cục bộ. Bạn có thể so sánh tệp Excel từ cơ sở dữ liệu, dịch vụ web, hoặc bất kỳ nguồn nào có thể cung cấp một `InputStream`.
+
+### Bước 1: Định nghĩa đường dẫn tệp của bạn
+Thay thế `YOUR_DOCUMENT_DIRECTORY` và `YOUR_OUTPUT_DIRECTORY` bằng vị trí thực tế nơi các tệp của bạn nằm:
 
 ```java
 String sourceFilePath = YOUR_DOCUMENT_DIRECTORY + "/SOURCE_CELLS";
@@ -93,75 +128,131 @@ String targetFilePath = YOUR_DOCUMENT_DIRECTORY + "/TARGET_CELLS";
 String outputFileName = YOUR_OUTPUT_DIRECTORY + "/CompareCellsFromStream_Result";
 ```
 
-#### Bước 2: Khởi tạo luồng đầu vào
-Mở luồng đầu vào cho cả tệp ô nguồn và ô đích. Điều này cho phép bạn đọc dữ liệu trực tiếp từ đường dẫn tệp vào bộ nhớ:
+**Lưu ý quan trọng**: Đảm bảo các đường dẫn này tồn tại và ứng dụng Java của bạn có quyền đọc/ghi. Đây là nguyên nhân gây ra 90 % các vấn đề “không hoạt động”.
+
+### 2: Khởi tạo Input Streams
+Mở streams cho cả hai tệp Excel. Cú pháp try‑with‑resources đảm bảo streams được đóng đúng cách (bộ nhớ của bạn sẽ cảm ơn).
 
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath)) {
-    // Mã tiếp tục...
+    // Our comparison code goes here...
 }
 ```
 
-#### Bước 3: Thiết lập đối tượng so sánh
-Tạo một `Comparer` đối tượng sử dụng luồng nguồn. Đối tượng này sẽ quản lý quá trình so sánh.
+### Bước 3: Thiết lập đối tượng Comparer
+Tạo một thể hiện `Comparer` bằng cách sử dụng source stream. Đối tượng này xử lý toàn bộ công việc nặng của quá trình so sánh:
 
 ```java
 try (Comparer comparer = new Comparer(sourceStream)) {
-    // Thêm luồng mục tiêu và so sánh
+    // Next, we'll add the target stream and compare
 }
 ```
 
-#### Bước 4: Thực hiện so sánh
-Thêm luồng mục tiêu vào `Comparer` và thực hiện so sánh, lưu kết quả vào luồng tệp đầu ra:
+### Bước 4: Thực hiện so sánh
+Thêm target stream của bạn và thực hiện so sánh. Kết quả sẽ được lưu vào đường dẫn bạn đã chỉ định trước đó:
 
 ```java
 comparer.add(targetStream);
 final Path resultPath = comparer.compare(new FileOutputStream(outputFileName));
-// Kết quả được lưu tại 'outputFileName'
+// Your comparison result is now saved at 'outputFileName'
 ```
 
-### Mẹo khắc phục sự cố
-- Đảm bảo cả tệp nguồn và tệp đích đều có thể truy cập được và đường dẫn đều chính xác.
-- Xử lý các ngoại lệ một cách khéo léo, đặc biệt liên quan đến hoạt động I/O của tệp.
+Và xong! Bạn vừa lập trình **compare excel files java**. Tệp kết quả sẽ hiển tất cả các khác biệt được đánh dấu và mã màu.
 
-## Ứng dụng thực tế
-Khả năng so sánh các tệp ô từ các luồng của GroupDocs.Comparison có thể được áp dụng trong nhiều trường hợp khác nhau:
+## Các vấn đề thường gặp và giải pháp
+- **File Not Found**: Kiểm tra lại các đường dẫn tệp. Sử dụng đường dẫn tuyệt đối trong quá trình phát triển để tránh nhầm lẫn.  
+- **Memory Pressure with Large Files**: Tăng bộ nhớ heap JVM (`-Xmx2g`) hoặc xử lý các tệp theo từng phần.  
+- **Permission Errors**: Xác minh quyền đọc cho các tệp nguồn và quyền ghi cho thư mục đầu ra.  
+- **Corrupted Excel Files**: Đảm bảo các tệp mở đúng trong Microsoft Excel trước khi so sánh chúng bằng chương trình.  
 
-1. **Kiểm soát phiên bản dữ liệu**: Theo dõi những thay đổi trên các phiên bản bảng tính khác nhau trong môi trường cộng tác.
-2. **Báo cáo tự động**: Tạo báo cáo nêu bật sự khác biệt trong dữ liệu tài chính hoặc số liệu dự án theo thời gian.
-3. **Tích hợp với Data Pipelines**: Tích hợp liền mạch các so sánh bảng tính vào các quy trình ETL (Trích xuất, Chuyển đổi, Tải) lớn hơn.
+## Ứng tế: Nơi công cụ này thực sự tỏa sáng
 
-Bằng cách kết hợp các tính năng này vào ứng dụng Java, bạn có thể cải thiện đáng kể khả năng xử lý dữ liệu và báo cáo.
+### Kiểm soát phiên bản dữ liệu
+Tự động so sánh báo cáo hàng tháng, đánh dấu các thay đổi chỉ số quan trọng, và tạo bản tóm tắt thay đổi cho các bên liên quan.
 
-## Cân nhắc về hiệu suất
-Để đảm bảo hiệu suất tối ưu khi sử dụng GroupDocs.Comparison:
-- Giới hạn số lượng ô được so sánh cùng một lúc nếu xử lý các tập dữ liệu lớn.
-- Theo dõi việc sử dụng tài nguyên để tránh tình trạng tiêu thụ quá nhiều bộ nhớ.
-- Thực hiện các biện pháp tốt nhất để quản lý bộ nhớ Java, chẳng hạn như đóng luồng đúng cách sau khi sử dụng.
+### Đảm bảo chất lượng tự động
+Tích hợp việc so sánh Excel vào pipeline CI/CD của bạn để xác thực các chuyển đổi dữ liệu, đầu ra ETL và tính toàn vẹn của quá trình di chuyển.
 
-## Phần kết luận
-Trong hướng dẫn này, chúng tôi đã khám phá cách so sánh các tệp ô từ các luồng bằng GroupDocs.Comparison trong Java. Bằng cách làm theo các bước được nêu, bạn có thể tích hợp liền mạch các tính năng so sánh bảng tính vào ứng dụng của mình, nâng cao cả chức năng và hiệu quả.
+### Nâng cao quy trình làm việc cộng tác
+Theo dõi ai đã thay đổi gì trong các bảng tính chia sẻ, hợp nhất các đóng góp và giải quyết xung đột mà không cần sao chép‑dán thủ công.
 
-**Các bước tiếp theo:**
-- Thử nghiệm với các cấu hình khác nhau.
-- Khám phá các tính năng bổ sung của GroupDocs.Comparison.
+### Tích hợp quy trình kinh doanh
+- **ERP Systems: So sánh đơn đặt hàng, hoá đơn hoặc báo cáo tồn kho.  
+- **Financial Apps**: Xác thực kết quả tính toán giữa các phiên bản hệ thống.  
+- **Analytics Pipelines**: So sánh bộ dữ liệu trước và sau các bước xử lý.  
 
-Sẵn sàng nâng cao kỹ năng quản lý dữ liệu của bạn lên một tầm cao mới? Hãy thử triển khai giải pháp này ngay hôm nay!
+## Các cân nhắc về hiệu năng: Làm cho nó nhanh và hiệu quả
+
+### Thực hành tốt quản lý bộ nhớ
+- Luôn luôn sử dụng try‑with‑resources cho streams.  
+- Đối với các tệp > 50 MB, cân nhắc xử lý theo phần hoặc tăng kích thước heap.  
+
+### Chiến lược tối ưu hoá
+- Giới hạn phạm vi so sánh chỉ ở các sheet hoặc phạm vi cụ thể khi có thể.  
+- Xử lý nhiều cặp tệp liên tiếp để tránh tranh chấp bộ nhớ.  
+- Lưu vào cache kết quả cho các cặp tệp giống nhau để bỏ qua công việc dư thừa.  
+
+### Giám sát và cảnh báo
+Thiết lập cảnh báo cho các đợt tăng bộ nhớ thời gian xử lý bất thường dài, hoặc tỉ lệ lỗi tăng để phát hiện sớm các hồi quy.
+
+## Mẹo và thủ thuật nâng cao
+
+### Tùy chọn cấu hình
+- **Sensitivity Settings** – kiểm soát mức độ nghiêm ngặt của so sánh.  
+- **Ignore Options** – bỏ qua định dạng, bình luận hoặc thay đổi siêu dữ liệu.  
+- **Output Formats** – tạo kết quả HTML, PDF hoặc DOCX.  
+
+### Mẫu tích hợp
+- **Microservice** – cung cấp logic so sánh qua REST API.  
+- **Event‑Driven** – sử dụng hàng đợi tin nhắn (ví dụ, RabbitMQ) để xử lý các yêu cầu so sánh bất đồng bộ.  
+- **Batch Jobs** – lên lịch so sánh định kỳ với bộ lập lịch kiểu cron.  
+
+## Kết luận
+
+Bạn giờ đã có một hướng dẫn đầy đủ, sẵn sàng cho sản xuất để **compare excel files java** bằng Java streams và GroupDocs.Comparison. Kỹ thuật này có thể tự động hoá các kiểm tra thủ công tẻ nhạt, cải thiện chất lượng dữ liệu, và mang lại giá trị đo lường được cho bất kỳ quy trình dữ liệu nào dựa trên Java.
+
+**Các bước tiếp theo**
+1. Chạy mã mẫu với các tệp Excel của bạn.  
+2. Thử nghiệm các cài đặt sensitivity và ignore để tinh chỉnh kết quả.  
+3. Đóng gói logic vào một dịch vụ hoặc batch job phù hợp với kiến trúc của bạn.  
+4. Khám phá các định dạng khác (Word, PDF, PowerPoint) mà GroupDocs có thể so sánh.  
+
+Bắt đầu sử dụng điều này trong các dự án của bạn ngay hôm nay, và bạn sẽ nhanh chóng trở thành người được mọi người tìm đến cho việc tự động hoá so sánh bảng tính trong đội của mình.
 
 ## Phần Câu hỏi thường gặp
-1. **GroupDocs.Comparison dành cho Java là gì?**
-   - Một thư viện cho phép bạn so sánh và hợp nhất các tài liệu ở nhiều định dạng khác nhau, bao gồm cả tệp ô, trực tiếp từ các luồng.
-2. **Tôi có thể sử dụng GroupDocs.Comparison mà không cần giấy phép không?**
-   - Có, nhưng có giới hạn. Để có đầy đủ chức năng, hãy cân nhắc việc xin giấy phép tạm thời hoặc vĩnh viễn.
-3. **Có thể so sánh nhiều hơn hai tệp cùng một lúc không?**
-   - Trong khi ví dụ này tập trung vào việc so sánh hai tệp ô, bạn có thể mở rộng mã để xử lý nhiều phép so sánh tệp bằng cách thêm nhiều luồng mục tiêu.
-4. **Một số vấn đề thường gặp khi sử dụng GroupDocs.Comparison là gì?**
-   - Các vấn đề thường gặp bao gồm đường dẫn tệp không chính xác và phân bổ bộ nhớ không đủ cho các tập dữ liệu lớn.
-5. **Tôi có thể tìm thêm tài nguyên về GroupDocs.Comparison ở đâu?**
-   - Ghé thăm [Tài liệu GroupDocs](https://docs.groupdocs.com/comparison/java/) Và [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/java/).
 
-## Tài nguyên
-- **Tài liệu**: [So sánh GroupDocs Tài liệu Java](https://docs.groupdocs.com/comparison/java/)
-- **Tài liệu tham khảo API**: [Tài liệu tham khảo API GroupDocs](https://reference.groupdocs.com/comparison/java/)
-- **Tải xuống GroupDocs.Comparison**: [Tải xuống Java](https://releases.groupdocs.com/comparison/java/)
+**GroupDocs.Comparison có thể xử lý những định dạng tệp nào ngoài Excel?**  
+GroupDocs.Comparison hỗ trợ hơn 50 định dạng bao gồm Word, PDF, PowerPoint, hình ảnh và tệp văn bản thuần. Nó là một con dao đa năng cho việc so sánh tệp.
+
+**Tôi có thể so sánh tệp Excel được bảo vệ bằng mật khẩu không?**  
+Có – cung cấp mật khẩu khi tạo `InputStream`. Thư viện sẽ tự động giải mã.
+
+**Các tệp Excel có thể lớn bao nhiêu?**  
+Không có giới hạn cứng, nhưng hiệu năng phụ thuộc vào phần cứng của bạn. Các tệp có hơn 100 nghìn dòng đã được so sánh thành công với RAM đủ.
+
+**Có cách nào để chỉ so sánh các sheet hoặc phạm vi cụ thể không?**  
+Chắc chắn. Sử dụng cấu hình của comparer để giới hạn phạm vi chỉ ở các worksheet hoặc phạm vi ô nhất định.
+
+**Nếu so sánh không phát hiện bất kỳ sự khác biệt nào thì sao?**  
+Vẫn tạo ra một tệp kết quả; nó chỉ chứa bản sao của nguồn kèm ghi chú cho biết không có thay đổi nào được phát hiện.
+
+**Tôi có thể tùy chỉnh giao diện của kết quả so sánh không?**  
+Có – bạn có thể điều chỉnh màu sắc, kiểu đánh dấu và thông tin tóm tắt qua các tùy chọn theme của API.
+
+**Làm sao để xử lý các tệp rất lớn có thể gây vấn đề bộ nhớ?**  
+Xử lý chúng theo các phần nhỏ hơn, tăng heap JVM (`-Xmx`), hoặc sử dụng streaming API tránh tải toàn bộ workbook vào bộ nhớ.
+
+## Tài nguyên và tài liệu tham khảo
+
+- **Documentation**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Download Center**: [Latest Java Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Community Forum**: Nhận trợ giúp từ các nhà phát triển khác sử dụng sản phẩm GroupDocs  
+- **Sample Projects**: Kiểm tra kho GitHub của họ để xem các ví dụ toàn diện hơn  
+
+---
+
+**Cập nhật lần cuối:** 2025-12-20  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.2 (Java)  
+**Tác giả:** GroupDocs

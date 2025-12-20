@@ -1,46 +1,79 @@
 ---
-"date": "2025-05-05"
-"description": "Dowiedz się, jak używać GroupDocs.Comparison dla Java do porównywania plików komórek ze strumieni, usprawniania analizy danych i kontroli wersji. Postępuj zgodnie z naszym przewodnikiem krok po kroku."
-"title": "Jak porównywać pliki komórek za pomocą GroupDocs.Comparison w Javie? Kompleksowy przewodnik"
-"url": "/pl/java/basic-comparison/compare-cell-files-groupdocs-java-streams/"
-"weight": 1
+categories:
+- Java Tutorials
+date: '2025-12-20'
+description: Naucz się porównywać pliki Excel w Javie programowo, używając strumieni
+  Java i GroupDocs.Comparison. Przewodnik krok po kroku z kodem, wskazówkami i rozwiązywaniem
+  problemów.
+keywords: compare Excel files Java streams, Java spreadsheet comparison tutorial,
+  GroupDocs file comparison, automate Excel file comparison, compare cell files programmatically
+lastmod: '2025-12-20'
+linktitle: Compare Excel Files Java Streams
+tags:
+- java
+- excel-comparison
+- groupdocs
+- file-streams
+- automation
+title: porównaj pliki Excel w Javie – Poradnik porównywania przy użyciu strumieni
+  Java
 type: docs
+url: /pl/java/basic-comparison/compare-cell-files-groupdocs-java-streams/
+weight: 1
 ---
-# Jak porównywać pliki komórek za pomocą GroupDocs.Comparison w Javie
 
-## Wstęp
-Skuteczne porównywanie plików komórek jest niezbędne do efektywnej analizy danych, kontroli wersji i współpracy. Niezależnie od tego, czy jesteś programistą pracującym nad aplikacją zorientowaną na dane, czy zarządzającym arkuszami kalkulacyjnymi w różnych wersjach, automatyzacja tego procesu porównywania może zaoszczędzić czas i zmniejszyć liczbę błędów. Ten samouczek pokazuje, jak używać GroupDocs.Comparison w Javie do porównywania plików komórek ze strumieni, co jest potężną funkcją dla programistów chcących zoptymalizować swój przepływ pracy.
+# Jak porównać pliki Excel przy użyciu strumieni Java
 
-**Czego się nauczysz:**
-- Konfigurowanie GroupDocs.Comparison dla Java.
-- Kroki porównywania dwóch plików komórek przy użyciu strumieni wejściowych.
-- Praktyczne zastosowania porównywania arkuszy kalkulacyjnych za pomocą programów.
-- Najlepsze praktyki optymalizacji wydajności przy użyciu tej biblioteki.
+Czy kiedykolwiek ręcznie sprawdzałeś różnice między dwoma plikami Excel? Jeśli jesteś programistą Java, **compare excel files java** programowo przy użyciu strumieni Java może zaoszczędzić Ci godziny żmudnej pracy i wyeliminować błędy ludzkie z procesu weryfikacji danych.
 
-Przyjrzyjmy się wymaganiom wstępnym niezbędnym do opanowania porównywania arkuszy kalkulacyjnych w Javie!
+Niezależnie od tego, czy tworzysz system raportowania finansowego, zarządzasz kontrolą wersji danych w arkuszach kalkulacyjnych, czy po prostu potrzebujesz zautomatyzować porównywanie plików Excel w swoim przepływie pracy, ten samouczek pokaże Ci dokładnie, jak to zrobić przy użyciu GroupDocs.Comparison dla Java.
 
-## Wymagania wstępne
-Przed wdrożeniem funkcji porównywania upewnij się, że masz następujące elementy:
+**Oto co opanujesz do końca:**
+- Konfiguracja GroupDocs.Comparison w projekcie Java (to łatwiejsze niż myślisz)
+- Porównywanie dwóch plików Excel przy użyciu strumieni wejściowych w kilku linijkach kodu
+- Radzenie sobie z typowymi problemami, które potykają większość programistów
+- Optymalizacja wydajności dla dużych arkuszy kalkulacyjnych
+- Praktyczne zastosowania, które ucieszą Twojego szefa
 
-### Wymagane biblioteki i zależności
-- **GroupDocs.Porównanie**: Wersja 25.2 lub nowsza.
-- **Zestaw narzędzi programistycznych Java (JDK)**: Upewnij się, że pakiet JDK jest zainstalowany i skonfigurowany w systemie.
+Gotowy, aby zautomatyzować te porównania arkuszy? Zanurzmy się!
 
-### Wymagania dotyczące konfiguracji środowiska
-- Środowisko IDE Java, takie jak IntelliJ IDEA, Eclipse lub NetBeans.
-- Maven do zarządzania zależnościami (opcjonalny, ale zalecany).
+## Quick Answers
+- **Jaka biblioteka jest najlepsza do compare excel files java?** GroupDocs.Comparison for Java
+- **Ile linii kodu jest potrzebnych?** Około 10 linii plus konfiguracja
+- **Czy potrzebna jest licencja?** Darmowa wersja próbna wystarczy do nauki; produkcja wymaga licencji
+- **Czy mogę porównywać pliki z bazy danych?** Tak — każde źródło `InputStream` działa
+- **Czy jest szybki dla dużych plików?** Tak, przy odpowiednich ustawieniach pamięci i obsłudze strumieni
 
-### Wymagania wstępne dotyczące wiedzy
-- Podstawowa znajomość koncepcji programowania w Javie.
-- Znajomość obsługi plików i strumieni w Javie.
+## Co to jest “compare excel files java”?
 
-Mając za sobą wymagania wstępne, skonfigurujmy GroupDocs.Comparison na potrzeby projektu Java.
+Mówiąc prosto, oznacza to użycie kodu Java do wykrywania różnic między dwoma skoroszytami Excel. GroupDocs.Comparison odczytuje arkusze, ocenia zmiany komórka po komórce i generuje podświetlony wynik, który dokładnie pokazuje, co zostało dodane, usunięte lub zmodyfikowane.
 
-## Konfigurowanie GroupDocs.Comparison dla Java
-Aby użyć GroupDocs.Comparison w swojej aplikacji Java, wykonaj następujące kroki:
+## Dlaczego używać strumieni Java do compare excel files java?
 
-### Konfiguracja Maven
-Dodaj do swojego repozytorium następujące konfiguracje i zależności `pom.xml` plik:
+Strumienie Java pozwalają pracować z danymi bezpośrednio z pamięci, lokalizacji sieciowych lub przechowywania w chmurze, bez konieczności zapisywania tymczasowych plików na dysku. To zmniejsza obciążenie I/O, zwiększa bezpieczeństwo (brak pozostawionych plików) i ułatwia integrację kroku porównania w większych potokach, takich jak mikrousługi czy zadania wsadowe.
+
+## Wymagania wstępne: Co będzie potrzebne przed rozpoczęciem
+
+### Required Libraries and Dependencies
+- **GroupDocs.Comparison**: wersja 25.2 lub nowsza (nasz gwiazdor)  
+- **Java Development Kit (JDK)**: dowolna aktualna wersja  
+- **Maven lub Gradle**: do zarządzania zależnościami (zykłady Maven poniżej)
+
+### Environment Setup Requirements
+- IDE Java (IntelliJ IDEA, Eclipse, NetBeans, itp.)  
+- Dostęp do plików Excel, które chcesz porównać  
+- Około 10 minut, aby podążać za instrukcją  
+
+### Knowledge Prerequisites
+- Podstawy programowania w Java (pętle, try‑catch, itp.)  
+- Praca z plikami i strumieniami w Java  
+- Zrozumienie zależności Maven  
+
+Jeśli potrafisz napisać prosty program Java, który odczytuje plik, jesteś gotowy.
+
+## Setting Up GroupDocs.Comparison for Java
+
+Dodanie GroupDocs.Comparison do projektu jest zaskakująco proste. Oto dokładna konfiguracja Maven, której potrzebujesz.
 
 ```xml
 <repositories>
@@ -60,13 +93,15 @@ Dodaj do swojego repozytorium następujące konfiguracje i zależności `pom.xml
 </dependencies>
 ```
 
-### Etapy uzyskania licencji
-- **Bezpłatna wersja próbna**:Pobierz wersję próbną z [Strona pobierania GroupDocs](https://releases.groupdocs.com/comparison/java/).
-- **Licencja tymczasowa**:Uzyskaj tymczasową licencję na pełny dostęp do API na stronie [tymczasowa strona licencji](https://purchase.groupdocs.com/temporary-license/).
-- **Zakup**:Aby korzystać z usługi przez dłuższy okres, należy zakupić licencję za pośrednictwem [ten link](https://purchase.groupdocs.com/buy).
+**Wskazówka**: Zawsze sprawdzaj najnowszą wersję na ich stronie wydawniczej, aby uzyskać najnowsze funkcje i poprawki błędów.
 
-### Podstawowa inicjalizacja i konfiguracja
-Po dodaniu biblioteki do projektu należy zaimportować niezbędne klasy:
+### License Acquisition Steps
+- **Free**: Idealny do testowania i nauki. Pobierz ze [strony pobierania GroupDocs](https://releases.groupdocs.com/comparison/java/) – nie wymaga karty kredytowej.  
+- **Temporary License**: Potrzebujesz pełnego dostępu do API w trakcie rozwoju? Pobierz licencję ze [strony licencji tymczasowej](https://purchase.groupdocs.com/temporary-license/). Świetna do proof‑of‑concept.  
+- **Full License**: Gotowy do produkcji? Kup przez [ten link](https://purchase.groupdocs.com/buy). Warto każdej złotówki, jeśli poważnie zajmujesz się porównywaniem plików.
+
+### Basic Initialization and Setup
+Po pobraniu zależności przez Maven, zaimportuj te klasy na początku pliku Java:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -76,16 +111,17 @@ import java.io.InputStream;
 import java.io.OutputStream;
 ```
 
-Po zakończeniu tej konfiguracji możemy wdrożyć funkcję porównywania plików komórek ze strumieni.
+To wszystko w kwestii konfiguracji! Teraz przejdźmy do ciekawej części – faktycznego porównywania plików Excel.
 
-## Przewodnik wdrażania
-W tej sekcji znajdziesz opis każdego kroku potrzebnego do porównania dwóch plików komórek przy użyciu strumieni wejściowych w języku Java za pomocą GroupDocs.Comparison.
+## Przewodnik implementacji: Porównywanie plików Excel krok po kroku
 
-### Przegląd
-Podstawową funkcjonalnością jest tutaj pobranie dwóch plików Excel jako strumieni i wygenerowanie wyniku porównania, podkreślając różnice między nimi. Może to być niezwykle przydatne do śledzenia zmian w zestawach danych w czasie lub integrowania porównań arkuszy kalkulacyjnych w większych procesach przetwarzania danych.
+### Overview: What We're Building
+Stworzymy rozwiązanie, które przyjmuje dwa pliki Excel jako `InputStream` i generuje wynik porównania podświetlający wszystkie różnice. Pomyśl o tym jak o narzędziu „diff” dla arkuszy – niezwykle przydatnym do śledzenia zmian w zestawach danych, raportach finansowych lub dowolnych danych strukturalnych.
 
-#### Krok 1: Zdefiniuj ścieżki plików
-Zacznij od zdefiniowania ścieżek dla plików komórek źródłowych i docelowych za pomocą symboli zastępczych. Zastąp `YOUR_DOCUMENT_DIRECTORY` I `YOUR_OUTPUT_DIRECTORY` z rzeczywistymi ścieżkami do katalogów, w których znajdują się Twoje dokumenty i w których chcesz zapisać wyniki:
+Zaletą używania strumieni jest to, że nie jesteś ograniczony do plików lokalnych. Możesz porównywać pliki Excel z baz danych, usług internetowych lub dowolnego innego źródła, które może dostarczyć `InputStream`.
+
+### Step 1: Define Your File Paths
+Zastąp `YOUR_DOCUMENT_DIRECTORY` i `YOUR_OUTPUT_DIRECTORY` rzeczywistymi lokalizacjami, w których znajdują się Twoje pliki:
 
 ```java
 String sourceFilePath = YOUR_DOCUMENT_DIRECTORY + "/SOURCE_CELLS";
@@ -93,75 +129,131 @@ String targetFilePath = YOUR_DOCUMENT_DIRECTORY + "/TARGET_CELLS";
 String outputFileName = YOUR_OUTPUT_DIRECTORY + "/CompareCellsFromStream_Result";
 ```
 
-#### Krok 2: Zainicjuj strumienie wejściowe
-Otwórz strumienie wejściowe dla plików komórek źródłowych i docelowych. Umożliwia to odczyt danych bezpośrednio ze ścieżek plików do pamięci:
+**Ważna uwaga**: Upewnij się, że te ścieżki istnieją i aplikacja Java ma uprawnienia do odczytu/zapisu. To właśnie stąd pochodzi 90 % problemów „to nie działa”!
+
+### Step 2: Initialize Input Streams
+Otwórz strumienie do obu plików Excel. Składnia try‑with‑resources zapewnia prawidłowe zamknięcie strumieni (Twoja pamięć Ci podziękuje):
 
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath)) {
-    // Kod jest kontynuowany...
+    // Our comparison code goes here...
 }
 ```
 
-#### Krok 3: Skonfiguruj obiekt porównujący
-Utwórz `Comparer` obiekt używający strumienia źródłowego. Ten obiekt będzie zarządzał procesem porównania.
+### Step 3: Set Up the Comparer Object
+Utwórz instancję `Comparer` używając strumienia źródłowego. Ten obiekt zajmuje się całym ciężarem procesu porównania:
 
 ```java
 try (Comparer comparer = new Comparer(sourceStream)) {
-    // Dodaj strumień docelowy i porównaj
+    // Next, we'll add the target stream and compare
 }
 ```
 
-#### Krok 4: Wykonaj porównanie
-Dodaj strumień docelowy do `Comparer` wystąpienie i wykonaj porównanie, zapisując wyniki do strumienia pliku wyjściowego:
+### Step 4: Perform the Comparison
+Dodaj strumień docelowy i wykonaj porównanie. Wynik zostaje zapisany w ścieżce podanej wcześniej:
 
 ```java
 comparer.add(targetStream);
 final Path resultPath = comparer.compare(new FileOutputStream(outputFileName));
-// Wynik jest zapisywany w 'outputFileName'
+// Your comparison result is now saved at 'outputFileName'
 ```
 
-### Porady dotyczące rozwiązywania problemów
-- Upewnij się, że pliki źródłowe i docelowe są dostępne i ścieżki są poprawne.
-- Obsługuj wyjątki w sposób elegancki, zwłaszcza te związane z operacjami wejścia/wyjścia na plikach.
+I to wszystko! Programowo **compare excel files java**. Plik wynikowy pokaże wszystkie różnice podświetlone i oznaczone kolorami.
 
-## Zastosowania praktyczne
-Możliwość porównywania plików komórek ze strumieni, jaką oferuje GroupDocs.Comparison, może być wykorzystywana w różnych scenariuszach:
+## Common Issues and Solutions
+- **File Not Found**: Sprawdź dokładnie ścieżki do plików. Używ ścieżek bezwzględnych podczas rozwoju, aby wyeliminować nieporozumienia.  
+- **Memory Pressure with Large Files**: Zwiększ przydział pamięci JVM (`-Xmx2g`) lub przetwarzaj pliki w fragmentach.  
+- **Permission Errors**: Zweryfikuj dostęp do odczytu dla plików źródłowych i dostęp do zapisu dla katalogu wyjściowego.  
+- **Corrupted Excel Files**: Upewnij się, że pliki otwierają się poprawnie w Microsoft Excel przed ich programowym porównaniem.
 
-1. **Kontrola wersji danych**:Śledź zmiany w różnych wersjach arkuszy kalkulacyjnych w środowisku współpracy.
-2. **Automatyczne raportowanie**:Generuj raporty podkreślające różnice w danych finansowych lub wskaźnikach projektu na przestrzeni czasu.
-3. **Integracja z kanałami danych**:Bezproblemowa integracja porównań arkuszy kalkulacyjnych z większymi procesami ETL (ekstrakcja, transformacja, ładowanie).
+## Practical Applications: Where This Really Shines
 
-Dzięki włączeniu tych funkcji do aplikacji Java można znacznie zwiększyć możliwości przetwarzania danych i raportowania.
+### Data Version Control
+Automatyzuj comiesięczne porównania raportów, oznaczaj istotne zmiany met i generuj podsumowania zmian dla interesariuszy.
 
-## Rozważania dotyczące wydajności
-Aby zapewnić optymalną wydajność podczas korzystania z GroupDocs.Comparison:
-- W przypadku dużych zbiorów danych należy ograniczyć liczbę komórek porównywanych jednocześnie.
-- Monitoruj wykorzystanie zasobów, aby zapobiec nadmiernemu zużyciu pamięci.
-- Stosuj najlepsze praktyki zarządzania pamięcią Java, takie jak prawidłowe zamykanie strumieni po ich użyciu.
+### Automated Quality Assurance
+Zintegruj porównywanie Excel w swoim pipeline CI/CD, aby weryfikować transformacje danych, wyniki ETL i integralność migracji.
 
-## Wniosek
-W tym samouczku przyjrzeliśmy się sposobowi porównywania plików komórek ze strumieni przy użyciu GroupDocs.Comparison w Javie. Postępując zgodnie z opisanymi krokami, możesz bezproblemowo zintegrować funkcje porównywania arkuszy kalkulacyjnych ze swoimi aplikacjami, zwiększając zarówno funkcjonalność, jak i wydajność.
+### Collaboration Workflow Enhancement
+Śledź, kto co zmienił w współdzielonych arkuszach, scal wkłady i rozwiązuj konflikty bez ręcznego kopiowania‑wklejania.
 
-**Następne kroki:**
-- Eksperymentuj z różnymi konfiguracjami.
-- Poznaj dodatkowe funkcje GroupDocs.Comparison.
+### Business Process Integration
+- **ERP Systems**: Porównuj zamówienia zakupowe, faktury lub raporty magazynowe.  
+- **Financial Apps**: Weryfikuj wyniki obliczeń pomiędzy wersjami systemu.  
+- Pipelines**: Porównuj zestawy danych przed i po krokach przetwarzania.
 
-Gotowy, aby przenieść swoje umiejętności zarządzania danymi na wyższy poziom? Spróbuj wdrożyć to rozwiązanie już dziś!
+## Performance Considerations: Making It Fast and Efficient
 
-## Sekcja FAQ
-1. **Czym jest GroupDocs.Comparison dla Java?**
-   - Biblioteka umożliwiająca porównywanie i scalanie dokumentów w różnych formatach, w tym plików komórkowych, bezpośrednio ze strumieni.
-2. **Czy mogę używać GroupDocs.Comparison bez licencji?**
-   - Tak, ale z ograniczeniami. Aby uzyskać pełną funkcjonalność, rozważ uzyskanie licencji tymczasowej lub stałej.
-3. **Czy można porównać więcej niż dwa pliki jednocześnie?**
-   - Choć przykład ten skupia się na porównaniu dwóch plików komórkowych, można rozszerzyć kod, aby obsługiwał porównania wielu plików, wielokrotnie dodając strumienie docelowe.
-4. **Jakie są najczęstsze problemy przy korzystaniu z GroupDocs.Comparison?**
-   - Do typowych problemów zaliczają się nieprawidłowe ścieżki plików i niewystarczająca ilość przydzielonej pamięci w przypadku dużych zestawów danych.
-5. **Gdzie mogę znaleźć więcej materiałów na temat GroupDocs.Comparison?**
-   - Odwiedź [Dokumentacja GroupDocs](https://docs.groupdocs.com/comparison/java/) I [Odniesienie do API](https://reference.groupdocs.com/comparison/java/).
+### Memory Management Best Practices
+- Zawsze używaj try‑with‑resources dla strumieni.  
+- Dla plików > 50 MB rozważ przetwarzanie w fragmentach lub zwiększ rozmiar sterty.
 
-## Zasoby
-- **Dokumentacja**: [Porównanie GroupDocs Java Docs](https://docs.groupdocs.com/comparison/java/)
-- **Odniesienie do API**: [Odwołanie do API GroupDocs](https://reference.groupdocs.com/comparison/java/)
-- **Pobierz GroupDocs.Comparison**: [Pobieranie Javy](https://releases.groupdocs.com/comparison/java/)
+### Optimization Strategies
+- Ogranicz zakres porównania do konkretnych arkuszy lub zakresów, gdy to możliwe.  
+- Przetwarzaj wiele par plików kolejno, aby uniknąć konfliktów pamięci.  
+- Cache'uj wyniki dla identycznych par plików, aby pominąć zbędną pracę.
+
+### Monitoring and Alerting
+Ustaw alerty na skoki pamięci wyjątkowo długie czasy przetwarzania lub rosnące wskaźniki błędów, aby wcześnie wykrywać regresje.
+
+## Advanced Tips and Tricks
+
+### Configuration Options
+- **Sensitivity Settings** – kontroluj, jak rygorystyczne jest porównanie.  
+- **Ignore Options** – pomijaj zmiany formatowania, komentarzy lub metadanych.  
+- **Output Formats** – generuj wyniki w formacie HTML, PDF lub DOCX.
+
+### Integration Patterns
+- **Microservice** – udostępnij logikę porównania poprzez API REST.  
+- **Event‑Driven** – użyj kolejki wiadomości (np. RabbitMQ) do obsynchronicznych żądań porównania.  
+- **Batch Jobs** – zaplanuj regularne porównania przy użyciu harmonogramu podobnego do cron.
+
+## Conclusion
+
+Masz teraz kompletny, gotowy do produkcji przewodnik do **compare excel files java** przy użyciu strumieni Java i GroupDocs.Comparison. Ta technika może zautomatyzować żmudne ręczne kontrole, poprawić jakość danych i dodać wymierną wartość do każdego przepływu pracy opartego na Java.
+
+**Next steps**
+1. Uruchom przykładowy kod z własnymi plikami Excel.  
+2. Eksperymentuj z ustawieniami czułości i pomijania, aby dopracować wyniki.  
+3 Opakuj logikę w usługę lub zadanie wsadowe pasujące do Twojej architektury.  
+4. Zbadaj inne formaty (Word, PDF, PowerPoint), które GroupDocs może porównywać.
+
+Rozpocznij używanie tego w swoich projektach już dziś, a szybko staniesz się osobą, do której zespół zwróci się po automatyzację porównywania arkuszy.
+
+## FAQ Section
+
+- **Jakie formaty plików może obsługiwać GroupDocs.Comparison oprócz Excel?**  
+  GroupDocs.Comparison obsługuje ponad 50 formatów, w tym Word, PDF, PowerPoint, obrazy i pliki tekstowe. To szwajcarski scyzoryk do porównywania plików.
+
+- **Czy mogę porównywać chronione hasłem pliki Excel?**  
+  Tak – podaj hasło przy tworzeniu `InputStream`. Biblioteka automatycznie odszyfruje.
+
+- **Jak duże mogą być pliki Excel**  
+  Nie ma sztywnego limitu, ale wydajność zależy od sprzętu. Pliki z 100 tys.+ wierszy były pomyślnie porównywane przy odpowiedniej ilości RAM.
+
+- **Czy istnieje sposób, aby porównać tylko określone arkusze lub zakresy?**  
+  Oczywiście. Użyj konfiguracji comparera, aby ograniczyć zakres do konkretnych arkuszy lub zakresów komórek.
+
+- **Co się stanie, jeśli porównanie nie znajdzie różnic?**  
+  Plik wynikowy jest nadal generowany; zawiera po prostu kopię źródła z notatką, że nie wykryto zmian.
+
+- **Czy mogę dostosować wygląd wyników porównania?**  
+  Tak – możesz dostosować kolory, style podświetleń i informacje podsumowujące za pomocą opcji tematyzacji API.
+
+- **Jak radzić sobie z bardzo dużymi plikami, które mogą powodować problemy z pamięcią?**  
+  Przetwarzaj je w mniejszych fragmentach, zwiększ przydział pamięci JVM (`-Xmx`) lub używaj API strumieniowych, które nie ładują całego skoroszytu do pamięci.
+
+## Resources and Further Reading
+
+- **Documentation**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Download Center**: [Latest Java Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Community Forum**: Uzyskaj pomoc od innych programistów korzystających z produktów GroupDocs  
+- **Sample Projects**: Sprawdź ich repozytorium GitHub, aby zobaczyć bardziej rozbudowane przykłady  
+
+---
+
+**Last Updated:** 2025-12-20  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs

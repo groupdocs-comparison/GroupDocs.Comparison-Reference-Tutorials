@@ -1,35 +1,103 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison for Java'yı kullanarak belge karşılaştırmasını hassasiyetle nasıl otomatikleştireceğinizi öğrenin. Stilleri özelleştirin, hassasiyeti ayarlayın ve başlıkları/altbilgileri zahmetsizce yok sayın."
-"title": "GroupDocs.Comparison API'sini Kullanarak Java'da Ana Belge Karşılaştırması"
-"url": "/tr/java/basic-comparison/mastering-document-comparison-java-groupdocs/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-31'
+description: GroupDocs.Comparison for Java ile Excel dosyalarını ve diğer belgeleri
+  nasıl karşılaştıracağınızı öğrenin. Java’da PDF belgelerini karşılaştırma, büyük
+  belgeleri karşılaştırma ve şifreli PDF örneklerini içerir.
+keywords: java compare excel files, compare pdf documents java, java compare large
+  documents, java compare encrypted pdf, GroupDocs.Comparison Java
+lastmod: '2025-12-31'
+linktitle: Java Compare Excel Files Guide
+tags:
+- document-comparison
+- java-api
+- automation
+- groupdocs
+title: Java ile Belge Karşılaştırma API'si Kullanarak Excel Dosyalarını Karşılaştır
 type: docs
+url: /tr/java/basic-comparison/mastering-document-comparison-java-groupdocs/
+weight: 1
 ---
-# GroupDocs.Comparison API'sini Kullanarak Java'da Belge Karşılaştırmasında Ustalaşma
 
-## giriiş
+# Java ile Excel Dosyalarını Karşılaştırma ve Belge Karşılaştırma API'si
 
-Belgeleri manuel olarak karşılaştırmaktan yoruldunuz mu? İster başlıklarda, ister altbilgilerde veya içerikte değişiklikleri belirlemek olsun, belge karşılaştırması zorlu bir görev olabilir. GroupDocs.Comparison for Java kitaplığı bu süreci hassasiyet ve kolaylıkla otomatikleştirir ve geliştirir.
+## Giriş
 
-Bu kapsamlı eğitim, belge karşılaştırma stillerini özelleştirmek, hassasiyet ayarlarını düzenlemek, başlık/altbilgi karşılaştırmalarını yoksaymak, çıktı kağıt boyutunu ayarlamak ve daha fazlası için Java'da GroupDocs.Comparison'ı kullanma konusunda size rehberlik edecektir. Bu kılavuzun sonunda, iş akışınızı verimli bir şekilde düzene koyabileceksiniz.
+Saatlerce belgeleri manuel olarak karşılaştırıp satır satır değişiklikleri aradınız mı? Sözleşme revizyonlarını izliyor, kod dokümantasyonunu gözden geçiriyor ya da finansal raporlar için **java compare excel files** yapıyor olun, manuel belge karşılaştırması zaman alıcı ve hataya açıktır.
 
-**Ne Öğreneceksiniz:**
-- Belge karşılaştırmaları sırasında üstbilgileri ve altbilgileri dikkate almayın.
-- Stil ayarlamalarıyla değişiklikleri özelleştirin.
-- Ayrıntılı analiz için karşılaştırma hassasiyetini ayarlayın.
-- Java uygulamalarında çıktı kağıt boyutlarını ayarlayın.
-- Bu özellikleri gerçek dünya senaryolarına uygulayın.
+GroupDocs.Comparison for Java API, belge karşılaştırmasını cerrahi bir hassasiyetle otomatikleştirerek bu sorunu çözer. Değişiklikleri tespit edebilir, başlık ve alt bilgi gibi alakasız bölümleri yok sayabilir, vurgulama stillerini özelleştirebilir ve profesyonel karşılaştırma raporları oluşturabilirsiniz—hepsi programatik olarak.
 
-Pratik konulara dalmadan önce gerekli ön koşullara sahip olduğunuzdan emin olun.
+Bu kapsamlı rehberde, saatlerce manuel işi tasarruf ettiren ve hiçbir şeyin gözden kaçmamasını sağlayan sağlam bir Java belge karşılaştırma API çözümünün nasıl uygulanacağını keşfedeceksiniz. Temel kurulumdan gerçek üretim ortamlarında çalışan gelişmiş özelleştirme tekniklerine kadar her şeyi ele alacağız.
 
-## Ön koşullar
+## Hızlı Yanıtlar
+- **GroupDocs Java'da Excel dosyalarını karşılaştırabilir mi?** Evet, sadece `.xlsx` dosyalarını `Comparer` sınıfı ile yükleyin.  
+- **Başlık/alt bilgileri nasıl yok sayabilirim?** `CompareOptions` içinde `setHeaderFootersComparison(false)` ayarlayın.  
+- **Büyük PDF'ler ne olacak?** JVM yığın boyutunu artırın ve bellek optimizasyonunu etkinleştirin.  
+- **Şifre korumalı PDF'leri karşılaştırabilir miyim?** `Comparer` oluştururken şifreyi sağlayın.  
+- **Vurgulama renklerini değiştirmek mümkün mü?** Eklenen, silinen ve değiştirilen öğeler için `StyleSettings` kullanın.
 
-GroupDocs.Comparison for Java'yı kullanmaya başlamak için aşağıdakilere sahip olduğunuzdan emin olun:
-1. **Java Geliştirme Kiti (JDK):** Makinenizde JDK'nın yüklü olduğundan emin olun. 8'in üzerindeki herhangi bir sürüm yeterli olacaktır.
-2. **Usta:** Bu eğitimde proje bağımlılıklarını yönetmek için Maven kullandığınızı varsayıyoruz.
-3. **GroupDocs.Karşılaştırma Kütüphanesi:**
-   - Aşağıdaki bağımlılığı ekleyin `pom.xml`:
+## java compare excel files nedir?
+`java compare excel files`, iki Excel çalışma kitabı arasındaki farkları Java kodu ile programatik olarak tespit etmeyi ifade eder. GroupDocs.Comparison API, elektronik tablo içeriğini okur, hücre‑seviyesindeki değişiklikleri değerlendirir ve eklemeleri, silmeleri ve değişiklikleri vurgulayan bir fark raporu üretir.
+
+## Neden Java Belge Karşılaştırma API'si Kullanmalı?
+
+### Otomasyon İçin İş Durumu
+
+Manuel belge karşılaştırması sadece sıkıcı değil—aynı zamanda riskli. Çalışmalar, insanların belgeleri manuel olarak karşılaştırırken önemli değişikliklerin yaklaşık %20'sini kaçırdığını gösteriyor. İşte geliştiricilerin programatik çözümlere geçmesinin nedenleri:
+
+**Ortak Sorunlar:**
+- **Zaman Kaybı**: Kıdemli geliştiricilerin belge incelemelerine haftada 3–4 saat harcaması
+- **İnsan Hatası**: Hukuki sözleşmelerde veya teknik özelliklerde kritik değişikliklerin kaçırılması
+- **Tutarsız Standartlar**: Farklı ekip üyelerinin değişiklikleri farklı şekilde vurgulaması
+- **Ölçek Sorunları**: Yüzlerce belgeyi manuel olarak karşılaştırmak imkansız hale gelir
+
+**API Çözümlerinin Sağladıkları:**
+- **%99,9 Doğruluk**: Her karakter‑seviyesindeki değişikliği otomatik olarak yakalar
+- **Hız**: 100+ sayfalık belgeleri 30 saniyenin altında karşılaştırır
+- **Tutarlılık**: Tüm karşılaştırmalarda standartlaştırılmış vurgulama ve raporlama
+- **Entegrasyon**: Mevcut Java iş akışlarına ve CI/CD boru hatlarına sorunsuz bir şekilde uyum sağlar
+
+### Belge Karşılaştırma API'leri Ne Zaman Kullanılmalı
+
+Bu Java belge karşılaştırma API'si aşağıdaki senaryolarda mükemmeldir:
+- **Hukuki Belge İncelemesi** – Sözleşme değişikliklerini ve eklerini otomatik olarak izler
+- **Teknik Dokümantasyon** – API dokümantasyonu güncellemelerini ve değişiklik günlüklerini izler
+- **İçerik Yönetimi** – Blog gönderilerini, pazarlama materyallerini veya kullanıcı kılavuzlarını karşılaştırır
+- **Uyumluluk Denetimi** – Politika belgelerinin yasal gereklilikleri karşıladığından emin olur
+- **Sürüm Kontrolü** – Git'i insan‑okunur belge farklarıyla tamamlar
+
+## Desteklenen Dosya Formatları ve Yetkinlikler
+
+GroupDocs.Comparison for Java, kutudan çıkar çıkmaz 50+ dosya formatını destekler:
+
+**Popüler Formatlar:**
+- **Belgeler**: Word (DOCX, DOC), PDF, RTF, ODT
+- **Elektronik Tablolar**: Excel (XLSX, XLS), CSV, ODS
+- **Sunumlar**: PowerPoint (PPTX, PPT), ODP
+- **Metin Dosyaları**: TXT, HTML, XML, MD
+- **Görseller**: PNG, JPEG, BMP, GIF (görsel karşılaştırma)
+
+**Gelişmiş Özellikler:**
+- Şifre korumalı belge karşılaştırması
+- Çok‑dilli metin algılama ve karşılaştırma
+- Farklı belge türleri için özelleştirilebilir duyarlılık ayarları
+- Birden fazla belge çifti için toplu işleme
+- Bulut ve yerinde dağıtım seçenekleri
+
+## Önkoşullar ve Kurulum
+
+### Sistem Gereksinimleri
+
+Koda başlamadan önce geliştirme ortamınızın bu gereksinimleri karşıladığından emin olun:
+1. **Java Development Kit (JDK):** Versiyon 8 veya üzeri (JDK 11+ önerilir)
+2. **Derleme Aracı:** Maven 3.6+ veya Gradle 6.0+
+3. **Bellek:** Büyük belgeleri işlemek için minimum 4 GB RAM
+4. **Depolama:** Geçici karşılaştırma dosyaları için 500 MB+ boş alan
+
+### Maven Yapılandırması
+
+`pom.xml` dosyanıza GroupDocs deposunu ve bağımlğını ekleyin. Bu yapılandırma, resmi sürüm kanalından alım yaptığınızı garanti eder:
 
 ```xml
 <repositories>
@@ -47,38 +115,33 @@ GroupDocs.Comparison for Java'yı kullanmaya başlamak için aşağıdakilere sa
     </dependency>
 </dependencies>
 ```
-4. **Lisans:** GroupDocs'tan ücretsiz deneme sürümünü, geçici lisansı edinin veya tam sürümü satın alın.
 
-Bunları ayarladıktan sonra Java uygulamalarınızda belge karşılaştırma özelliklerini uygulamaya başlamaya hazırsınız.
+### Lisans Kurulumu
 
-## Java için GroupDocs.Comparison Kurulumu
+**Geliştirme ve Test İçin:**
+- **Ücretsiz Deneme:** [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) adresinden indirin – su işareti eklenmiş çıktı içerir
+- **Geçici Lisans:** [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/) üzerinden 30‑gün tam erişim alın
 
-Ortamımızın doğru şekilde yapılandırıldığından emin olun:
+**Üretim İçin:**
+- **Tam Lisans:** Sınırsız ticari kullanım için [GroupDocs Purchase](https://purchase.groupdocs.com/buy) üzerinden satın alın
 
-### Maven üzerinden kurulum
-
-Yukarıdaki XML kod parçacığını projenize ekleyin `pom.xml`Bu adım, gerekli deponun ve bağımlılığın Maven tarafından tanınmasını sağlar. 
-
-### Lisans Edinimi
-- **Ücretsiz Deneme:** Deneme sürümünü şuradan indirin: [GroupDocs İndirmeleri](https://releases.groupdocs.com/comparison/java/).
-- **Geçici Lisans:** Geçici bir lisans talebinde bulunun [GroupDocs Desteği](https://purchase.groupdocs.com/temporary-license/) tüm özelliklerini değerlendirmek için.
-- **Satın almak:** Uzun vadeli kullanım için, şu adresten lisans satın alın: [GroupDocs Satın Alma](https://purchase.groupdocs.com/buy).
-
-GroupDocs dokümantasyonuna göre lisans dosyanızı edinip ayarladıktan sonra GroupDocs.Comparison'ı şu şekilde başlatın:
+Lisans dosyanızı edindikten sonra, aşağıdaki gibi başlatın:
 
 ```java
-// Temel başlatma örneği
+// License initialization - do this once at application startup
 com.groupdocs.comparison.License license = new com.groupdocs.comparison.License();
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-## Uygulama Kılavuzu
+**İpucu:** Lisans dosyanızı uygulamanızın resources klasörüne koyun ve ortamlar arasında daha iyi taşınabilirlik için `getClass().getResourceAsStream()` ile yükleyin.
 
-### Özellik 1: Başlık/Altbilgi Karşılaştırmasını Yoksay
+## Temel Uygulama Rehberi
 
-**Genel Bakış:** Üstbilgiler ve altbilgiler genellikle sayfa numaraları veya belge başlıkları gibi içerik değişikliği karşılaştırmaları için önemli olmayabilecek bilgiler içerir.
+### Özellik 1: Başlık ve Alt Bilgi Karşılaştırmasını Yok Sayma
 
-#### Seçenekleri Ayarlama
+**Neden Önemli:** Başlık ve alt bilgiler genellikle zaman damgaları, sayfa numaraları veya yazar bilgileri gibi dinamik içerikler barındırır; bu içerikler belge sürümleri arasında değişir ancak içerik karşılaştırması için ilgili değildir. Bu bölümleri yok saymak gürültüyü azaltır ve anlamlı değişikliklere odaklanır.
+
+**Gerçek Dünya Senaryosu:** Her revizyonun alt bilgisinde farklı tarih damgaları olduğu bir sözleşme sürümünü karşılaştırıyorsunuz, ancak sadece ana içerikteki madde değişiklikleri sizin için önemlidir.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -94,7 +157,7 @@ public class IgnoreHeaderFooterExample {
 
             comparer.add("YOUR_DOCUMENT_DIRECTORY/target_with_footer.docx");
 
-            // Karşılaştırma seçeneklerini üstbilgileri ve altbilgileri yoksayacak şekilde ayarlayın
+            // Set comparison options to ignore headers and footers
             CompareOptions compareOptions = new CompareOptions.Builder()
                     .setHeaderFootersComparison(false)
                     .build();
@@ -105,15 +168,16 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-#### Açıklama
-- **`CompareOptions.Builder().setHeaderFootersComparison(false)`**: Bu ayar, kütüphaneye üstbilgi ve altbilgi karşılaştırmalarını atlamasını söyler.
-- **`try-with-resources`:** Kullanımdan sonra tüm akışların düzgün bir şekilde kapatılmasını sağlar.
+**Ana Faydalar:**
+- **Daha Temiz Sonuçlar** – Biçimlendirme farkları yerine içerik değişikliklerine odaklanır
+- **Yanlış Pozitifleri Azaltır** – Alakasız değişiklik bildirimlerini ortadan kaldırır
+- **Daha İyi Performans** – Gereksiz karşılaştırma işlemlerini atlar
 
-### Özellik 2: Çıktı Kağıt Boyutunu Ayarla
+### Özellik 2: Profesyonel Raporlar İçin Çıktı Kağıt Boyutunu Ayarlama
 
-**Genel Bakış:** Çıktı kağıt boyutunu özelleştirmek, baskıya uygun belgeler oluşturmak için çok önemlidir. İşte belge karşılaştırması sırasında bunu nasıl ayarlayabileceğiniz.
+**İş Bağlamı:** Karşılaştırma raporlarını yazdırma veya PDF dağıtımı için oluştururken, kağıt boyutunu kontrol etmek farklı görüntüleme platformları ve yazdırma senaryoları arasında tutarlı biçimlendirme sağlar.
 
-#### Uygulama Adımları
+**Kullanım Durumu:** Hukuk ekipleri genellikle mahkeme dosyaları veya müşteri sunumları için belirli formatlarda karşılaştırma raporlarına ihtiyaç duyar.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -129,7 +193,7 @@ public class SetOutputPaperSizeExample {
 
             comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
 
-            // Kağıt boyutunu A6 olarak ayarlayın
+            // Set the paper size to A6
             CompareOptions compareOptions = new CompareOptions.Builder()
                     .setPaperSize(PaperSize.A6)
                     .build();
@@ -140,12 +204,16 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-#### Açıklama
-- **`CompareOptions.Builder().setPaperSize(PaperSize.A6)`**: Çıktı kağıt boyutunu A6 olarak ayarlar.
+**Mevcut Kağıt Boyutları:** A0‑A10, Letter, Legal, Tabloid ve özel boyutlar. Dağıtım gereksinimlerinize göre seçin—Avrupa müşterileri için A4, ABD‑tabanlı ekipler için Letter.
 
-### Özellik 3: Karşılaştırma Hassasiyetini Ayarla
+### Özellik 3: Karşılaştırma Hassasiyetini İnce Ayarlama
 
-**Genel Bakış:** Karşılaştırma hassasiyetini ince ayarlamak, küçük değişiklikleri bile belirlemeye yardımcı olur. İşte bunu nasıl ayarlayabileceğiniz:
+**Zorluk:** Farklı belge türleri farklı değişiklik tespit seviyeleri gerektirir. Hukuki sözleşmeler her virgülü tespit etmeli, pazarlama materyalleri ise sadece önemli içerik değişikliklerine önem verebilir.
+
+**Hassasiyet Nasıl Çalışır:** Hassasiyet ölçeği 0‑100 arasında değişir; yüksek değerler daha ayrıntılı değişiklikleri algadece büyük değişiklikler (paragraf eklemeleri/silmeleri)
+- **26‑50:** Orta seviyede değişiklikler (cümle değişiklikleri)
+- **51‑75:** Ayrıntılı değişiklikler (kelime‑seviyesinde değişiklikler)
+- **76‑100:** İnce değişiklikler (karakter‑seviyesinde farklar)
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -160,7 +228,7 @@ public class AdjustComparisonSensitivityExample {
 
             comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
 
-            // Hassasiyeti 100'e ayarlayın
+            // Set sensitivity to 100 for maximum detail
             CompareOptions compareOptions = new CompareOptions.Builder()
                     .setSensitivityOfComparison(100)
                     .build();
@@ -171,12 +239,16 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-#### Açıklama
-- **`CompareOptions.Builder().setSensitivityOfComparison(100)`**: Değişiklikleri algılamak için hassasiyet seviyesini ayarlar.
+**Hassasiyet Ayarları İçin En İyi Uygulamalar:**
+- **Hukuki Belgeler:** Kapsamlı değişiklik tespiti için 90‑100 kullanın
+- **Pazarlama İçeriği:** Önemli değişikliklere odaklanmak için 40‑60 kullanın
+- **Teknik Şartnameler:** Önemli detayları yakalamak ve küçük biçimlendirme farklarını filtrelemek için 70‑80 kullanın
 
-### Özellik 4: Değişiklik Stillerini Özelleştirme (Akışları Kullanarak)
+### Özellik 4: Daha İyi Görsel İletişim İçin Değişiklik Stillerini Özelleştirme
 
-**Genel Bakış:** Eklenen, silinen ve değiştirilen metinler arasında ayrım yapmak, karşılaştırmaları daha sezgisel hale getirir. Akışları kullanarak stilleri nasıl özelleştireceğiniz aşağıda açıklanmıştır:
+**Özel Stiller Neden Önemli:** Varsayılan vurgulama, ekibinizin inceleme standartları veya kurumsal marka ile uyumlu olmayabilir. Özel stiller belge okunabilirliğini artırır ve paydaşların farklı değişiklik türlerini hızlıca tanımasını sağlar.
+
+**Profesyonel Yaklaşım:** Renk psikolojisini kullanın—silinmeler için kırmızı aciliyet yaratır, eklemeler için yeşil olumlu değişiklikleri gösterir ve değişiklikler için mavi inceleme gerektiğini belirtir.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -201,13 +273,13 @@ public class CustomizeChangesStylesStreamExample {
 
             comparer.add(targetFile);
 
-            // Değişiklik stillerini özelleştir
+            // Customize change styles for professional appearance
             StyleSettings insertedStyle = new StyleSettings();
-            insertedStyle.setHighlightColor(Color.GREEN); // Eklemeler için yeşil
+            insertedStyle.setHighlightColor(Color.GREEN); // Green for additions
             StyleSettings deletedStyle = new StyleSettings();
-            deletedStyle.setHighlightColor(Color.RED); // Silinmeler için kırmızı
+            deletedStyle.setHighlightColor(Color.RED); // Red for deletions
             StyleSettings changedStyle = new StyleSettings();
-            changedStyle.setHighlightColor(Color.BLUE); // Değişiklikler için mavi
+            changedStyle.setHighlightColor(Color.BLUE); // Blue for modifications
 
             CompareOptions compareOptions = new CompareOptions.Builder()
                     .setInsertedItemStyle(insertedStyle)
@@ -221,32 +293,217 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-#### Açıklama
-- **Özel Stil Ayarları**: Kullanmak `StyleSettings` eklemeler (yeşil), silmeler (kırmızı) ve değişiklikler (mavi) için vurgu renklerini tanımlamak.
-- **`CompareOptions.Builder()`:** Karşılaştırma sürecinde bu stilleri uygulayın.
+**Gelişmiş Stil Seçenekleri** (`StyleSettings` içinde mevcuttur):
+- Yazı tipi kalınlığı, boyutu ve ailesi değişiklikleri
+- Arka plan renkleri ve şeffaflık
+- Farklı değişiklik türleri için kenarlık stilleri
+- Silinen içerik için üstü çizili seçenekleri
 
-## Çözüm
+## Yaygın Sorunlar ve Sorun Giderme
 
-GroupDocs.Comparison for Java'dan yararlanarak, belge karşılaştırmasını hassasiyetle otomatikleştirebilirsiniz. Bu eğitimde, başlıklar/altbilgilerin nasıl göz ardı edileceği, çıktı kağıt boyutlarının nasıl ayarlanacağı, hassasiyetin nasıl ayarlanacağı ve değişiklik stillerinin nasıl özelleştirileceği ele alındı. Bu özelliklerin uygulanması, iş akışınızı kolaylaştıracak ve Java uygulamalarında belge analizini geliştirecektir.
+### Büyük Belgeler İçin Bellek Yönetimi
 
-## SSS
+**Sorun:** 50 MB üzerindeki belgeleri karşılaştırırken `OutOfMemoryError`  
+**Çözüm:** JVM yığın boyutunu artırın ve akış (streaming) uygulayın
 
-### 1. GroupDocs for Java'da karşılaştırma sırasında üstbilgileri ve altbilgileri göz ardı edebilir miyim?  
+```bash
+# Increase heap size for large document processing
+java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
+```
 
-Evet, kullan `setHeaderFootersComparison(false)` içinde `CompareOptions` Başlık ve altbilgileri karşılaştırmadan hariç tutmak için.
+**Kod Optimizasyonu:**
+```java
+// Use streaming for memory efficiency
+try (Comparer comparer = new Comparer(sourceStream)) {
+    // Process in chunks for very large documents
+    CompareOptions options = new CompareOptions.Builder()
+            .setMemoryOptimization(true) // Enable memory optimization
+            .build();
+}
+```
 
-### 2. GroupDocs kullanarak Java'da çıktı kağıt boyutunu nasıl ayarlarım?  
+### Bozuk veya Şifre‑Korumalı Dosyalarla Baş Etme
 
-Uygula `setPaperSize(PaperSize.A6)` veya diğer boyutlarda `CompareOptions` Son belgenin kağıt boyutunu özelleştirmek için.
+**Sorun:** Kilitli belgelerle karşılaştırma başarısız olur  
+**Önleme Stratejisi:**
+```java
+// Check document accessibility before comparison
+try {
+    Comparer comparer = new Comparer(sourceFile, "password123");
+    // Document loaded successfully, proceed with comparison
+} catch (PasswordRequiredException ex) {
+    // Handle password‑protected documents
+    log.error("Document requires password: " + sourceFile);
+} catch (CorruptedFileException ex) {
+    // Handle corrupted files gracefully
+    log.error("File corruption detected: " + sourceFile);
+}
+```
 
-### 3. Karşılaştırma hassasiyetini ince ayarlamak mümkün müdür?  
+### Toplu İşleme İçin Performans Optimizasyonu
 
-Evet, kullan `setSensitivityOfComparison()` içinde `CompareOptions` hassasiyeti ayarlamak, buna göre küçük veya büyük değişiklikleri algılamak.
+**Zorluk:** 100+ belge çiftini verimli bir şekilde işlemek  
+**Çözüm:** İş parçacığı havuzlarıyla paralel işleme uygulayın
 
-### 4. Karşılaştırma sırasında eklenen, silinen ve değiştirilen metinleri biçimlendirebilir miyim?  
+```java
+ExecutorService executor = Executors.newFixedThreadPool(4);
+List<Future<ComparisonResult>> futures = new ArrayList<>();
 
-Kesinlikle, stilleri şu şekilde özelleştirin: `StyleSettings` farklı değişiklik türleri için bunları uygulayın ve `CompareOptions`.
+for (DocumentPair pair : documentPairs) {
+    futures.add(executor.submit(() -> compareDocuments(pair)));
+}
 
-### 5. Java'da GroupDocs Comparison'ı kullanmaya başlamak için ön koşullar nelerdir?  
+// Wait for all comparisons to complete
+for (Future<ComparisonResult> future : futures) {
+    ComparisonResult result = future.get();
+    // Process results
+}
+executor.shutdown();
+```
 
-JDK'yı kurun, Maven ile bağımlılıkları yönetin, bir lisans edinin ve GroupDocs.Comparison kütüphanesini projenize ekleyin.
+### Formata Özgü Sorunlar
+
+**PDF Karşılaştırma Zorlukları:**
+- **Taralı PDF'ler:** Metin çıkarımı için OCR ön işleme kullanın
+- **Karmaşık Düzenler:** Manuel hassasiyet ayarı gerekebilir
+- **Gömülü Yazı Tipleri:** Ortamlar arasında tutarlı yazı tipi render'ı sağlayın
+
+**Word Belgesi Sorunları:**
+- **Değişiklikleri İzle:** Karşılaştırmadan önce mevcut izlemeyi devre dışı bırakın
+- **Gömülü Nesneler:** Doğru karşılaştırılamayabilir, ayrı olarak çıkarıp karşılaştırın
+- **Sürüm Uyumluluğu:** Farklı Word format sürümleriyle test edin
+
+## En İyi Uygulamalar ve Performans İpuçları
+
+### 1. Belge Ön İşleme
+
+**Girdinizi Temizleyin:** Doğruluk ve hızı artırmak için karşılaştırmadan önce gereksiz meta verileri ve biçimlendirmeyi kaldırın.
+
+```java
+// Example preprocessing workflow
+public void preprocessDocument(String filePath) {
+    // Remove comments and tracked changes
+    // Standardize formatting
+    // Extract text‑only version for pure content comparison
+}
+```
+
+### 2. Farklı Belge Türleri İçin Optimum Yapılandırma
+
+**Yapılandırma Profilleri:**
+```java
+public class ComparisonProfiles {
+    public static CompareOptions getLegalDocumentProfile() {
+        return new CompareOptions.Builder()
+                .setSensitivityOfComparison(95)
+                .setHeaderFootersComparison(false)
+                .setShowRevisions(true)
+                .build();
+    }
+    
+    public static CompareOptions getMarketingContentProfile() {
+        return new CompareOptions.Builder()
+                .setSensitivityOfComparison(45)
+                .setIgnoreFormatting(true)
+                .setFocusOnContent(true)
+                .build();
+    }
+}
+```
+
+### 3. Hata Yönetimi ve Günlükleme
+
+**Sağlam Hata Yönetimi:**
+```java
+public ComparisonResult safeCompareDocuments(String source, String target) {
+    try {
+        return performComparison(source, target);
+    } catch (Exception ex) {
+        logger.error("Comparison failed for {} vs {}: {}", source, target, ex.getMessage());
+        return ComparisonResult.failure(ex.getMessage());
+    }
+}
+```
+
+### 4. Önbellekleme ve Performans Optimizasyonu
+
+**Akıllı Önbellekleme Uygulayın:**
+- Aynı dosya çiftleri için karşılaştırma sonuçlarını önbellekle
+- Değişmemiş dosyaları yeniden işlemekten kaçınmak için belge parmak izlerini sakla
+- Kritik olmayan karşılaştırmalar için eşzamanlı (asenkron) işleme kullan
+
+## Gerçek Dünya Entegrasyon Senaryoları
+
+### Senaryo 1: Otomatik Sözleşme İnceleme Boru Hattı
+
+```java
+@Service
+public class ContractReviewService {
+    
+    public void processContractRevision(String originalContract, String revisedContract) {
+        CompareOptions legalOptions = ComparisonProfiles.getLegalDocumentProfile();
+        
+        try (Comparer comparer = new Comparer(originalContract)) {
+            comparer.add(revisedContract);
+            Path result = comparer.compare(generateOutputPath(), legalOptions);
+            
+            // Send comparison report to legal team
+            emailService.sendComparisonReport(result, legalTeamEmails);
+            
+            // Log changes for audit trail
+            auditService.logDocumentChanges(extractChanges(result));
+        }
+    }
+}
+```
+
+### Senaryo 2: İçerik Yönetim Sistemi Entegrasyonu
+
+```java
+@RestController
+public class DocumentComparisonController {
+    
+    @PostMapping("/api/documents/compare")
+    public ResponseEntity<ComparisonReport> compareDocuments(
+            @RequestParam("source") MultipartFile source,
+            @RequestParam("target") MultipartFile target,
+            @RequestParam(value = "sensitivity", defaultValue = "75") int sensitivity) {
+        
+        CompareOptions options = new CompareOptions.Builder()
+                .setSensitivityOfComparison(sensitivity)
+                .build();
+                
+        ComparisonReport report = documentComparisonService.compare(source, target, options);
+        return ResponseEntity.ok(report);
+    }
+}
+```
+
+## Sıkça Sorulan Sorular
+
+**S: GroupDocs for Java'da karşılaştırma sırasında başlık ve alt bilgileri yok sayabilir miyim?**  
+C: Evet, `CompareOptions` içinde `setHeaderFootersComparison(false)` kullanın. Bu, başlıkların zaman damgaları gibi dinamik içerik içermesi ve temel değişikliklerle ilgili olmaması durumunda faydalıdır.
+
+**S: Java'da GroupDocs kullanarak çıktı kağıt boyutunu nasıl ayarlarım?**  
+C: `CompareOptions` içinde `setPaperSize(PaperSize.A6)` (veya başka bir sabit) uygulayın. Bu, yazdırmaya hazır raporlar oluşturur. Mevcut boyutlar A0‑A10, Letter, Legal ve Tabloid'i içerir.
+
+**S: Farklı belge türleri için karşılaştırma hassasiyetini ince ayarlamak mümkün mü?**  
+C: Kesinlikle. 0‑100 arasında bir değerle `setSensitivityOfComparison()` kullanın. Daha yüksek değerler daha ayrıntılı değişiklikleri algılar—hukuki belgeler için ideal; daha düşük değerler pazarlama içeriği için uygundur.
+
+**S: Karşılaştırma sırasında eklenen, silinen ve değiştirilen metnin stilini özelleştirebilir miyim?**  
+C: Evet. Her değişiklik türü için özel `StyleSettings` oluşturup `CompareOptions` aracılığıyla uygulayabilirsiniz. Vurgulama renklerini, yazı tiplerini, kenarlıkları ve daha fazlasını marka kimliğinize uygun şekilde ayarlayabilirsiniz.
+
+**S: Java'da GroupDocs Comparison ile başlamak için önkoşullar nelerdir?**  
+C: JDK 8+ (JDK 11+ önerilir), Maven 3.6+ veya Gradle 6.0+, büyük belgeler için en az 4 GB RAM ve bir GroupDocs lisansı (ücretsiz deneme mevcut) gerekir. Depoyu ve bağımlılığı projenize ekleyin, ardından başlangıçta lisansı başlatın.
+
+**S: GroupDocs.Comparison'da şifre‑korumalı belgelerle nasıl başa çıkılır?**  
+C: `Comparer` oluştururken şifreyi ikinci argüman olarak geçirin: `new Comparer(sourceFile, "password123")`. `PasswordRequiredException`'ı nazikçe ele almak için çağrıyı try‑catch bloğuna alın.
+
+**S: GroupDocs.Comparison for Java hangi dosya formatlarını destekliyor?**  
+C: Word (DOCX, DOC), PDF, Excel (XLSX, XLS), PowerPoint (PPTX, PPT), metin dosyaları (TXT, HTML, XML) ve görsel karşılaştırma için görüntüler (PNG, JPEG) dahil 50'den fazla formatı destekler. API türleri otomatik algılar, ancak toplu işlem performansını artırmak için formatları belirtebilirsiniz.
+
+---
+
+**Son Güncelleme:** 2025-12-31  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs

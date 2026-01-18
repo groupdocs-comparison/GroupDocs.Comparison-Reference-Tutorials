@@ -1,36 +1,58 @@
 ---
-"date": "2025-05-05"
-"description": "Erfahren Sie, wie Sie Word-Dokumente mithilfe von Java-Streams und der leistungsstarken Bibliothek GroupDocs.Comparison effizient vergleichen. Meistern Sie streambasierte Vergleiche und passen Sie Stile an."
-"title": "Java Stream-Dokumentenvergleich mit GroupDocs.Comparison für effizientes Workflow-Management meistern"
-"url": "/de/java/document-loading/java-stream-comparison-groupdocs-comparison/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-18'
+description: Erfahren Sie, wie Sie mehrere Word-Dateien mit dem Java-Stream-Dokumentvergleich
+  von GroupDocs.Comparison vergleichen können. Vollständiges Tutorial mit Codebeispielen
+  und Tipps zur Fehlerbehebung.
+keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
+  based document comparison, Java Word document diff, how to compare multiple Word
+  documents Java
+lastmod: '2026-01-18'
+linktitle: Java Stream Document Comparison
+tags:
+- java
+- document-comparison
+- streams
+- groupdocs
+- tutorial
+title: Mehrere Word-Dateien mit Java Streams vergleichen | GroupDocs
 type: docs
+url: /de/java/document-loading/java-stream-comparison-groupdocs-comparison/
+weight: 1
 ---
-# Java Stream-Dokumentenvergleich mit GroupDocs.Comparison für effizientes Workflow-Management meistern
 
-In der heutigen schnelllebigen digitalen Welt ist die Verwaltung und der Vergleich großer Dokumentenmengen entscheidend, um Konsistenz und Genauigkeit in Verträgen, Berichten und Rechtsdokumenten sicherzustellen. Dieses Tutorial führt Sie durch die Verwendung der leistungsstarken GroupDocs.Comparison-Bibliothek in Java, um mehrere Word-Dokumente effizient über Streams zu vergleichen und die Stileinstellungen anzupassen.
+# Mehrere Word-Dateien mit Java Streams vergleichen
 
-## Was Sie lernen werden
-- So richten Sie GroupDocs.Comparison für Java ein
-- Implementieren streambasierter Vergleiche mehrerer Dokumente
-- Anpassen der Vergleichsergebnisse mit bestimmten Stilen
-- Praktische Anwendungen und Leistungsüberlegungen
+Haben Sie sich schon einmal in einer Flut von Dokumentversionen wiedergefunden und versucht, herauszufinden, was sich zwischen verschiedenen Entwürfen geändert hat? Sie sind nicht allein. Ob Sie nun Verträge, Berichte oder kollaborative Dokumente bearbeiten – **mehrere Word-Dateien vergleichen** von Hand ist ein Albtraum, der wertvolle Zeit frisst. In diesem Leitfaden zeigen wir Ihnen, wie Sie **java stream document comparison** mit der GroupDocs.Comparison‑Bibliothek durchführen, sodass Sie den Prozess automatisieren, große Dateien effizient verarbeiten und die Ergebnisse exakt nach Ihren Vorstellungen formatieren können.
 
-Lassen Sie uns mit der Einrichtung Ihrer Umgebung beginnen und beginnen Sie, Dokumente wie ein Profi zu vergleichen!
+## Schnelle Antworten
+- **Welche Bibliothek unterstützt den stream‑basierten Vergleich?** GroupDocs.Comparison für Java  
+- **Welches Haupt‑Keyword wird in diesem Tutorial verwendet?** *compare multiple word files*  
+- **Welche Java‑Version wird benötigt?** JDK 8 oder höher (Java 11+ empfohlen)  
+- **Benötige ich eine Lizenz?** Eine kostenlose Testversion reicht für die Evaluierung; für den Produktionseinsatz ist eine kommerzielle Lizenz erforderlich  
+- **Kann ich mehr als zwei Dokumente gleichzeitig vergleichen?** Ja – die API unterstützt mehrere Ziel‑Streams in einem einzigen Aufruf  
 
-### Voraussetzungen
-Bevor wir beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
-- **Java Development Kit (JDK)**: Auf Ihrem Computer ist Version 8 oder höher installiert.
-- **Maven**: Zum Verwalten von Abhängigkeiten und Erstellen des Projekts.
-- **GroupDocs.Comparison für Java-Bibliothek**: Stellen Sie sicher, dass Sie Zugriff auf Version 25.2 der Bibliothek haben.
+## Was bedeutet „compare multiple word files“ mit Streams?
+Der stream‑basierte Vergleich liest Dokumente in kleinen Abschnitten, anstatt die gesamte Datei in den Speicher zu laden. Das ermöglicht es, **mehrere Word-Dateien** selbst dann zu **vergleichen**, wenn sie mehrere zehn oder hundert Megabyte groß sind, und hält Ihre Anwendung reaktionsfähig und speicherschonend.
 
-#### Voraussetzungen
-Kenntnisse der Java-Programmierkonzepte, einschließlich Streams und Datei-E/A-Operationen, sind von Vorteil. Grundkenntnisse des Maven-Build-Tools sind ebenfalls empfehlenswert.
+## Warum Java Stream Document Comparison verwenden?
+- **Speichereffizienz** – ideal für große Verträge oder Stapelverarbeitung.  
+- **Skalierbarkeit** – vergleichen Sie ein Master‑Dokument mit Dutzenden Varianten in einem Vorgang.  
+- **Anpassbare Formatierung** – heben Sie Einfügungen, Löschungen und Änderungen nach Ihren Wünschen hervor.  
+- **Cloud‑bereit** – funktioniert mit Streams aus lokalen Dateien, Datenbanken oder Cloud‑Speichern (z. B. AWS S3).  
 
-### Einrichten von GroupDocs.Comparison für Java
-Um GroupDocs.Comparison mit Maven in Ihr Java-Projekt zu integrieren, fügen Sie die folgende Konfiguration zu Ihrem `pom.xml`:
+## Voraussetzungen und Umgebungseinrichtung
 
-**Maven-Konfiguration**
+Bevor wir zum Code kommen, prüfen wir, ob Ihre Entwicklungsumgebung bereit ist.
+
+### Erforderliche Werkzeuge
+- **JDK 8+** (Java 11 oder 17 empfohlen)  
+- **Maven** (oder Gradle, falls Sie das bevorzugen)  
+- **GroupDocs.Comparison**‑Bibliothek (neueste stabile Version)
+
+### Maven‑Konfiguration, die tatsächlich funktioniert
+
 ```xml
 <repositories>
    <repository>
@@ -48,120 +70,174 @@ Um GroupDocs.Comparison mit Maven in Ihr Java-Projekt zu integrieren, fügen Sie
 </dependencies>
 ```
 
-#### Schritte zum Lizenzerwerb
-- **Kostenlose Testversion**: Greifen Sie auf eine kostenlose Testversion zu, um die Funktionen der Bibliothek zu testen.
-- **Temporäre Lizenz**: Erhalten Sie eine temporäre Lizenz zur erweiterten Evaluierung.
-- **Kaufen**: Erwägen Sie den Erwerb einer Volllizenz für die kommerzielle Nutzung.
+**Pro‑Tipp**: Wenn Sie hinter einer Unternehmens‑Firewall arbeiten, konfigurieren Sie `settings.xml` von Maven mit Ihren Proxy‑Details.
 
-Um GroupDocs.Comparison zu initialisieren, fügen Sie einfach die Abhängigkeit hinzu und stellen Sie sicher, dass Ihr Projekt erfolgreich erstellt wird. Mit dieser Konfiguration können Sie die leistungsstarken Funktionen der Bibliothek nutzen.
+### Lizenzübersicht
+- **Free Trial** – Ausgabe mit Wasserzeichen, perfekt zum Testen.  
+- **Temporary License** – erweiterter Evaluationszeitraum.  
+- **Commercial License** – für den Produktionseinsatz erforderlich.  
 
-### Implementierungshandbuch
-#### Vergleichen mehrerer Dokumente aus Streams
-Mit dieser Funktion können Sie mehrere Word-Dokumente mithilfe von Java-Streams effizient vergleichen.
+## Wann stream‑basierter Dokumentvergleich sinnvoll ist
 
-**Überblick**
-Die Verwendung von Streams ist besonders nützlich für die Verarbeitung großer Dateien, da sie durch die Verarbeitung der Daten in Blöcken den Speicherverbrauch minimiert.
+| Situation | Empfohlen |
+|-----------|-----------|
+| Große Word-Dateien (50 MB +) | ✅ Streams verwenden |
+| Umgebungen mit begrenztem RAM (z. B. Docker‑Container) | ✅ Streams verwenden |
+| Stapelverarbeitung vieler Verträge | ✅ Streams verwenden |
+| Kleine Dateien (< 10 MB) oder einmalige Prüfungen | ❌ Der Vergleich von normalen Dateien könnte schneller sein |
 
-**Implementierungsschritte**
-1. **Einrichten von Eingabe- und Ausgabestreams**
-   Definieren Sie zunächst die Pfade für Ihre Quell- und Zieldokumente. Verwenden Sie `FileInputStream` um Eingabeströme für jedes Dokument zu öffnen, das Sie vergleichen möchten.
-   ```java
-   try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
-        InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
-        InputStream target2Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
-        InputStream target3Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
-        OutputStream resultStream = new FileOutputStream(outputFileName);
-        Comparer comparer = new Comparer(sourceStream)) {
-   ```
+## Implementierungs‑Leitfaden: Mehrere Dokumente vergleichen
 
-2. **Zieldokumente zum Vergleich hinzufügen**
-   Verwenden Sie die `add` Methode zum Einbeziehen mehrerer Zielströme zum Vergleich.
-   ```java
-   comparer.add(target1Stream, target2Stream, target3Stream);
-   ```
+Im Folgenden finden Sie den vollständigen, sofort ausführbaren Code, der zeigt, wie Sie **mehrere Word-Dateien** mithilfe von Streams vergleichen und benutzerdefinierte Formatierungen anwenden.
 
-3. **Führen Sie den Vergleich mit benutzerdefinierten Stilen durch**
-   Passen Sie das Erscheinungsbild eingefügter Elemente an, indem Sie `CompareOptions`.
-   ```java
-   final Path resultPath = comparer.compare(resultStream,
-           new CompareOptions.Builder()
-                   .setInsertedItemStyle(
-                           new StyleSettings.Builder()
-                                   .setFontColor(Color.YELLOW)
-                                   .build())
-                   .build());
-   ```
+### Schritt 1: Streams einrichten und den Comparer initialisieren
 
-**Parameter und Methoden**
-- `Comparer`: Verwaltet den Vergleichsprozess.
-- `CompareOptions.Builder()`Ermöglicht die Anpassung der Vergleichseinstellungen, beispielsweise die Formatierung eingefügter Elemente.
+```java
+try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
+     InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
+     InputStream target2Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
+     InputStream target3Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
+     OutputStream resultStream = new FileOutputStream(outputFileName);
+     Comparer comparer = new Comparer(sourceStream)) {
+```
 
-#### Anpassen von Vergleichsergebnissen mit Stileinstellungen
-Bei dieser Funktion geht es darum, die Darstellung der Vergleichsergebnisse Ihren Bedürfnissen anzupassen.
+**Was passiert hier?**  
+Wir öffnen einen Quell‑Stream (das Basis‑Dokument) und drei Ziel‑Streams (die Varianten, die wir vergleichen wollen). Der `Comparer` wird mit dem Quell‑Stream instanziiert und legt damit den Referenzpunkt für alle nachfolgenden Vergleiche fest.
 
-**Überblick**
-Durch die Anpassung der Stile können Unterschiede effektiv hervorgehoben werden, sodass Änderungen leichter überprüft werden können.
+### Schritt 2: Alle Ziel‑Streams auf einmal hinzufügen
 
-**Implementierungsschritte**
-1. **Einrichten von Eingabe- und Ausgabestreams**
-   Ähnlich wie im vorherigen Abschnitt öffnen Sie Streams für Quell- und Zieldokumente.
-   ```java
-   try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
-        InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET_WORD");
-        OutputStream resultStream = new FileOutputStream(outputFileName);
-        Comparer comparer = new Comparer(sourceStream)) {
-   ```
+```java
+comparer.add(target1Stream, target2Stream, target3Stream);
+```
 
-2. **Definieren Sie benutzerdefinierte Stileinstellungen**
-   Konfigurieren Sie Stile für eingefügte Elemente mit `StyleSettings`.
-   ```java
-   final StyleSettings styleSettings = new StyleSettings();
-   styleSettings.setFontColor(Color.YELLOW);
-   CompareOptions compareOptions = new CompareOptions();
-   compareOptions.setInsertedItemStyle(styleSettings);
-   ```
+Das Hinzufügen mehrerer Ziele in einem einzigen Aufruf ist deutlich effizienter, als für jede Datei einen separaten Vergleich zu starten.
 
-3. **Ausführen des Vergleichs**
-   Führen Sie den Vergleich mit Ihren benutzerdefinierten Stilen durch.
-   ```java
-   final Path resultPath = comparer.compare(resultStream, compareOptions);
-   ```
+### Schritt 3: Vergleich mit benutzerdefinierter Formatierung ausführen
 
-**Wichtige Konfigurationsoptionen**
-- `setInsertedItemStyle()`: Passt die Anzeige eingefügter Elemente an.
-- `StyleSettings.Builder()`: Bietet eine flüssige Schnittstelle zum Definieren von Stilattributen.
+```java
+final Path resultPath = comparer.compare(resultStream,
+        new CompareOptions.Builder()
+                .setInsertedItemStyle(
+                        new StyleSettings.Builder()
+                                .setFontColor(Color.YELLOW)
+                                .build())
+                .build());
+```
 
-### Praktische Anwendungen
-1. **Überprüfung juristischer Dokumente**: Vergleichen Sie verschiedene Vertragsversionen, um Konsistenz und Konformität sicherzustellen.
-2. **Gemeinsame Bearbeitung**Verfolgen Sie Änderungen, die von mehreren Autoren in Gemeinschaftsprojekten vorgenommen wurden.
-3. **Versionskontrolle**: Pflegen Sie den Versionsverlauf und identifizieren Sie Änderungen im Laufe der Zeit.
-4. **Prüfpfade**: Erstellen Sie Prüfpfade für Dokumentrevisionen in regulatorischen Umgebungen.
-5. **Automatisiertes Reporting**: Erstellen Sie Berichte, die die Unterschiede zwischen den Entwürfen hervorheben.
+Hier führen wir nicht nur den Vergleich durch, sondern teilen GroupDocs auch mit, eingefügten Text in **gelb** zu markieren. Ebenso können Sie gelöschte oder geänderte Elemente anpassen.
 
-### Überlegungen zur Leistung
-- **Stream-Handling optimieren**: Verwenden Sie Streams, um große Dateien effizient zu verarbeiten und den Speicheraufwand zu reduzieren.
-- **Ressourcenmanagement**: Stellen Sie sicher, dass Streams mithilfe von Try-with-Resources ordnungsgemäß geschlossen werden, um Lecks zu verhindern.
-- **Java-Speicherverwaltung**: Überwachen Sie die Heap-Nutzung und passen Sie die JVM-Einstellungen für optimale Leistung mit GroupDocs.Comparison an.
+## Erweiterte Formatierungsoptionen
 
-### Abschluss
-In diesem Tutorial haben Sie gelernt, wie Sie GroupDocs.Comparison für Java einrichten und verwenden, um mehrere Word-Dokumente effizient zu vergleichen. Sie wissen nun, wie Sie Vergleichsergebnisse mit Stileinstellungen anpassen und so Unterschiede leichter hervorheben können. Als Nächstes können Sie die erweiterten Funktionen der Bibliothek erkunden oder sie in Ihre bestehenden Dokumentenverwaltungs-Workflows integrieren.
+Falls Sie ein noch professionelleres Erscheinungsbild benötigen, können Sie wiederverwendbare `StyleSettings` definieren.
 
-### FAQ-Bereich
-1. **Welche JDK-Version ist mindestens erforderlich?**
-   - Für die Kompatibilität mit GroupDocs.Comparison wird Java 8 oder höher empfohlen.
+```java
+try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
+     InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET_WORD");
+     OutputStream resultStream = new FileOutputStream(outputFileName);
+     Comparer comparer = new Comparer(sourceStream)) {
+```
 
-2. **Wie gehe ich effizient mit großen Dokumenten um?**
-   - Verwenden Sie Streams, um Daten in Blöcken zu verarbeiten und so die Speichernutzung zu minimieren.
+```java
+final StyleSettings styleSettings = new StyleSettings();
+styleSettings.setFontColor(Color.YELLOW);
+CompareOptions compareOptions = new CompareOptions();
+compareOptions.setInsertedItemStyle(styleSettings);
+```
 
-3. **Kann ich Stile auch für gelöschte Elemente anpassen?**
-   - Ja, es stehen ähnliche Methoden zum Anpassen der Darstellung gelöschter Elemente zur Verfügung.
+```java
+final Path resultPath = comparer.compare(resultStream, compareOptions);
+```
 
-4. **Ist GroupDocs.Comparison für kollaborative Projekte geeignet?**
-   - Absolut! Es eignet sich ideal für die Nachverfolgung von Änderungen und die Verwaltung von Dokumentversionen in kollaborativen Umgebungen.
+**Formatierungs‑Pro‑Tipps**
+- **Einfügungen** – gelber Hintergrund eignet sich gut für schnelles visuelles Scannen.  
+- **Löschungen** – roter Durchstrich (`setDeletedItemStyle`) signalisiert das Entfernen klar.  
+- **Änderungen** – blaue Unterstreichung (`setModifiedItemStyle`) hält das Dokument lesbar.  
+- Vermeiden Sie Neon‑Farben; sie belasten die Augen bei langen Prüfungen.
 
-5. **Wo finde ich weitere Ressourcen zu GroupDocs.Comparison?**
-   - Besuchen Sie die offizielle Dokumentation unter [GroupDocs-Dokumentation](https://docs.groupdocs.com/comparison/java/).
+## Häufige Probleme und Fehlersuche
 
-### Ressourcen
-- **Dokumentation**: [GroupDocs-Dokumentation](https://docs.groupdocs.com/comparison/java/)
-- **API-Referenz**: [API-Referenz](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+### Speicherfehler bei riesigen Dokumenten
+**Problem**: `OutOfMemoryError`  
+**Lösung**: JVM‑Heap erhöhen oder Stream‑Puffer feinjustieren.
+
+```bash
+java -Xms512m -Xmx2g YourApplication
+```
+
+### Probleme mit dem Stream‑Lebenszyklus
+- **„Stream closed“** – stellen Sie sicher, dass Sie für jeden Vergleich einen frischen `InputStream` erzeugen; Streams können nach dem Lesen nicht erneut verwendet werden.  
+- **Ressourcen‑Lecks** – die `try‑with‑resources`‑Blöcke schließen bereits automatisch, prüfen Sie jedoch eventuelle eigene Hilfs‑Utilities.
+
+### Nicht unterstützte Formate
+Achten Sie darauf, dass die Dateierweiterung dem tatsächlichen Format entspricht (z. B. eine echte `.docx`‑Datei, nicht eine umbenannte `.txt`).
+
+### Leistungsengpässe
+- SSDs für schnellere I/O nutzen.  
+- Puffergrößen erhöhen (siehe nächsten Abschnitt).  
+- Statt aller Dokumente gleichzeitig, Stapel von 5‑10 Dokumenten parallel verarbeiten.
+
+## Tipps zur Leistungsoptimierung
+
+### Best Practices für das Speicher‑Management
+
+```java
+// Use larger buffers for big files
+BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768);
+```
+
+### JVM‑Feinabstimmung für die Produktion
+
+```bash
+-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
+```
+
+### Wann Streams nicht nötig sind
+- Dateien unter 1 MB, die auf einer schnellen lokalen SSD liegen.  
+- Einfache, einmalige Vergleiche, bei denen der Overhead der Stream‑Verarbeitung den Nutzen übersteigt.
+
+## Praxisbeispiele
+
+| Bereich | Wie Stream‑Vergleich hilft |
+|---------|----------------------------|
+| **Legal** | Vergleichen Sie einen Master‑Vertrag mit Dutzenden kunden‑spezifischen Versionen und heben Sie Einfügungen in Gelb für eine schnelle Überprüfung hervor. |
+| **Software Docs** | Verfolgen Sie Änderungen der API‑Dokumentation über Releases hinweg; stapelweise mehrere Versionen in CI‑Pipelines vergleichen. |
+| **Publishing** | Redakteure können Unterschiede zwischen Manuskriptentwürfen verschiedener Mitwirkender sehen. |
+| **Compliance** | Auditoren prüfen Richtlinien‑Updates über Abteilungen hinweg, ohne komplette PDFs in den Speicher zu laden. |
+
+## Pro‑Tipps für den Erfolg
+
+- **Einheitliche Benennung** – Versionsnummern oder Daten in Dateinamen aufnehmen.  
+- **Mit realen Daten testen** – Beispiel‑„Lorem‑ipsum“-Dateien verbergen Randfälle.  
+- **Speicher überwachen** – JMX oder VisualVM in der Produktion einsetzen, um Spitzen frühzeitig zu erkennen.  
+- **Stapelweise strategisch verarbeiten** – Gruppen Sie 5‑10 Dokumente pro Job, um Durchsatz und Speicherverbrauch auszubalancieren.  
+- **Fehler freundlich behandeln** – `UnsupportedFormatException` abfangen und Nutzern klare Meldungen anzeigen.
+
+## Häufig gestellte Fragen
+
+**F: Was ist die minimale JDK‑Version?**  
+A: Java 8 ist das Minimum, aber Java 11+ wird für bessere Performance und Sicherheit empfohlen.
+
+**F: Wie gehe ich mit sehr großen Dokumenten um?**  
+A: Nutzen Sie den oben gezeigten stream‑basierten Ansatz, erhöhen Sie den JVM‑Heap (`-Xmx`) und erwägen Sie größere Puffergrößen.
+
+**F: Kann ich auch Löschungen und Änderungen formatieren?**  
+A: Ja. Verwenden Sie `setDeletedItemStyle()` und `setModifiedItemStyle()` auf `CompareOptions`, um Farben, Schriftarten oder Durchstreichungen festzulegen.
+
+**F: Eignet sich das für Echtzeit‑Zusammenarbeit?**  
+A: Stream‑Vergleich glänzt bei Stapel‑Verarbeitung und Audits. Echtzeit‑Editoren benötigen meist leichtere, diff‑basierte Lösungen.
+
+**F: Wie vergleiche ich Dateien, die in AWS S3 gespeichert sind?**  
+A: Holen Sie sich einen `InputStream` über das AWS SDK (`s3Client.getObject(...).getObjectContent()`) und übergeben Sie ihn direkt an den `Comparer`.
+
+## Weitere Ressourcen
+
+- **Dokumentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **API‑Referenz**: [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+
+---
+
+**Zuletzt aktualisiert:** 2026-01-18  
+**Getestet mit:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  
+
+---

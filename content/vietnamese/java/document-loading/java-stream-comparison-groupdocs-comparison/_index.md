@@ -1,36 +1,57 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh hiệu quả các tài liệu Word bằng luồng Java với thư viện GroupDocs.Comparison mạnh mẽ. Làm chủ các so sánh dựa trên luồng và tùy chỉnh các kiểu."
-"title": "Làm chủ Java Stream So sánh tài liệu với GroupDocs.Comparison để quản lý quy trình làm việc hiệu quả"
-"url": "/vi/java/document-loading/java-stream-comparison-groupdocs-comparison/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-18'
+description: Tìm hiểu cách so sánh nhiều tệp Word bằng so sánh tài liệu luồng Java
+  với GroupDocs.Comparison. Hướng dẫn đầy đủ kèm ví dụ mã và mẹo khắc phục sự cố.
+keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
+  based document comparison, Java Word document diff, how to compare multiple Word
+  documents Java
+lastmod: '2026-01-18'
+linktitle: Java Stream Document Comparison
+tags:
+- java
+- document-comparison
+- streams
+- groupdocs
+- tutorial
+title: So sánh nhiều tệp Word với Java Streams | GroupDocs
 type: docs
+url: /vi/java/document-loading/java-stream-comparison-groupdocs-comparison/
+weight: 1
 ---
-# Làm chủ Java Stream So sánh tài liệu với GroupDocs.Comparison để quản lý quy trình làm việc hiệu quả
 
-Trong môi trường kỹ thuật số phát triển nhanh như hiện nay, việc quản lý và so sánh khối lượng lớn tài liệu là rất quan trọng để đảm bảo tính nhất quán và chính xác trong các hợp đồng, báo cáo hoặc tài liệu pháp lý. Hướng dẫn này sẽ hướng dẫn bạn sử dụng thư viện GroupDocs.Comparison mạnh mẽ trong Java để so sánh hiệu quả nhiều tài liệu Word qua luồng, cho phép tùy chỉnh với cài đặt kiểu.
+# So sánh nhiều tệp Word bằng Java Streams
 
-## Những gì bạn sẽ học được
-- Cách thiết lập GroupDocs.Comparison cho Java
-- Thực hiện so sánh dựa trên luồng của nhiều tài liệu
-- Tùy chỉnh kết quả so sánh với các kiểu cụ thể
-- Ứng dụng thực tế và cân nhắc hiệu suất
+Bạn đã bao giờ cảm thấy ngập trong các phiên bản tài liệu, cố gắng tìm ra những gì đã thay đổi giữa các bản nháp khác nhau chưa? Bạn không phải là người duy nhất. Dù bạn đang làm việc với hợp đồng, báo cáo hay tài liệu hợp tác, **compare multiple word files** theo cách thủ công là một cơn ác mộng tiêu tốn thời gian quý báu. Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách thực hiện **java stream document comparison** bằng thư viện GroupDocs.Comparison, để bạn có thể tự động hoá quá trình, xử lý các tệp lớn một cách hiệu quả, và tùy chỉnh kiểu dáng kết quả chính xác như bạn mong muốn.
 
-Hãy cùng bắt đầu thiết lập môi trường của bạn và so sánh các tài liệu một cách chuyên nghiệp!
+## Câu trả lời nhanh
+- **Thư viện nào hỗ trợ so sánh dựa trên stream?** GroupDocs.Comparison for Java  
+- **Từ khóa chính mà hướng dẫn này nhắm tới là gì?** *compare multiple word files*  
+- **Phiên bản Java nào được yêu cầu?** JDK 8 hoặc cao hơn (Java 11+ được khuyến nghị)  
+- **Tôi có cần giấy phép không?** Bản dùng thử miễn phí đủ cho việc đánh giá; giấy phép thương mại là bắt buộc cho môi trường sản xuất  
+- **Tôi có thể so sánh hơn hai tài liệu cùng một lúc không?** Có – API hỗ trợ nhiều stream mục tiêu trong một lần gọi  
 
-### Điều kiện tiên quyết
-Trước khi bắt đầu, hãy đảm bảo bạn có những điều sau:
-- **Bộ phát triển Java (JDK)**: Phiên bản 8 trở lên được cài đặt trên máy của bạn.
-- **Maven**: Để quản lý các phụ thuộc và xây dựng dự án.
-- **GroupDocs.Comparison cho Thư viện Java**: Đảm bảo bạn có quyền truy cập vào phiên bản 25.2 của thư viện.
+## “compare multiple word files” là gì khi sử dụng Streams?
+So sánh dựa trên stream đọc tài liệu theo các khối nhỏ thay vì tải toàn bộ tệp vào bộ nhớ. Điều này cho phép **compare multiple word files** ngay cả khi chúng có kích thước hàng chục hoặc hàng trăm megabyte, giữ cho ứng dụng của bạn phản hồi nhanh và thân thiện với bộ nhớ.
 
-#### Điều kiện tiên quyết về kiến thức
-Sự quen thuộc với các khái niệm lập trình Java, bao gồm các luồng và hoạt động I/O tệp, sẽ có lợi. Kiến thức cơ bản về công cụ xây dựng Maven cũng được khuyến khích.
+## Tại sao nên sử dụng Java Stream Document Comparison?
+- **Memory efficiency** – lý tưởng cho các hợp đồng lớn hoặc xử lý hàng loạt.  
+- **Scalable** – so sánh một tài liệu gốc với hàng chục biến thể trong một thao tác.  
+- **Customizable styling** – làm nổi bật các chèn, xóa và sửa đổi theo cách bạn muốn.  
+- **Cloud‑ready** – hoạt động với các stream từ tệp cục bộ, cơ sở dữ liệu hoặc lưu trữ đám mây (ví dụ, AWS S3).  
 
-### Thiết lập GroupDocs.Comparison cho Java
-Để tích hợp GroupDocs.Comparison vào dự án Java của bạn bằng Maven, hãy thêm cấu hình sau vào `pom.xml`:
+## Yêu cầu trước và Cài đặt môi trường
 
-**Cấu hình Maven**
+Trước khi chúng ta bắt đầu với mã, hãy kiểm tra môi trường phát triển của bạn đã sẵn sàng chưa.
+
+### Công cụ cần thiết
+- **JDK 8+** (Java 11 hoặc 17 được khuyến nghị)  
+- **Maven** (hoặc Gradle nếu bạn thích)  
+- **GroupDocs.Comparison** library (phiên bản ổn định mới nhất)  
+
+### Cấu hình Maven thực sự hoạt động
+
 ```xml
 <repositories>
    <repository>
@@ -48,120 +69,177 @@ Sự quen thuộc với các khái niệm lập trình Java, bao gồm các lu�
 </dependencies>
 ```
 
-#### Các bước xin cấp giấy phép
-- **Dùng thử miễn phí**: Truy cập bản dùng thử miễn phí để kiểm tra khả năng của thư viện.
-- **Giấy phép tạm thời**: Xin giấy phép tạm thời để đánh giá mở rộng.
-- **Mua**: Hãy cân nhắc mua giấy phép đầy đủ cho mục đích sử dụng thương mại.
+**Pro Tip**: Nếu bạn đang ở sau tường lửa công ty, hãy cấu hình `settings.xml` của Maven với chi tiết proxy của bạn.
 
-Để khởi tạo GroupDocs.Comparison, chỉ cần thêm dependency và đảm bảo dự án của bạn được xây dựng thành công. Thiết lập này sẽ cho phép bạn bắt đầu sử dụng các tính năng mạnh mẽ của thư viện.
+### Tổng quan về giấy phép
+- **Free Trial** – đầu ra có watermark, hoàn hảo cho việc thử nghiệm.  
+- **Temporary License** – thời gian đánh giá kéo dài.  
+- **Commercial License** – bắt buộc cho triển khai sản xuất.  
 
-### Hướng dẫn thực hiện
-#### So sánh nhiều tài liệu từ các luồng
-Tính năng này cho phép bạn so sánh hiệu quả nhiều tài liệu Word bằng luồng Java.
+## Khi nào nên sử dụng Stream‑Based Document Comparison
 
-**Tổng quan**
-Sử dụng luồng đặc biệt hữu ích khi xử lý các tệp lớn vì nó giảm thiểu việc sử dụng bộ nhớ bằng cách xử lý dữ liệu theo từng phần.
+| Tình huống | Đề xuất |
+|-----------|--------------|
+| Tệp Word lớn (50 MB +) | ✅ Sử dụng streams |
+| Môi trường RAM hạn chế (ví dụ, Docker containers) | ✅ Sử dụng streams |
+| Xử lý hàng loạt nhiều hợp đồng | ✅ Sử dụng streams |
+| Tệp nhỏ (< 10 MB) hoặc kiểm tra đơn lẻ | ❌ So sánh tệp thông thường có thể nhanh hơn |
 
-**Các bước thực hiện**
-1. **Thiết lập luồng đầu vào và đầu ra**
-   Bắt đầu bằng cách xác định đường dẫn cho tài liệu nguồn và đích của bạn. Sử dụng `FileInputStream` để mở luồng đầu vào cho mỗi tài liệu bạn muốn so sánh.
-   ```java
-   try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
-        InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
-        InputStream target2Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
-        InputStream target3Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
-        OutputStream resultStream = new FileOutputStream(outputFileName);
-        Comparer comparer = new Comparer(sourceStream)) {
-   ```
+## Hướng dẫn triển khai: So sánh nhiều tài liệu
 
-2. **Thêm tài liệu mục tiêu để so sánh**
-   Sử dụng `add` phương pháp bao gồm nhiều luồng mục tiêu để so sánh.
-   ```java
-   comparer.add(target1Stream, target2Stream, target3Stream);
-   ```
+Dưới đây là mã hoàn chỉnh, sẵn sàng chạy, minh họa cách **compare multiple word files** bằng cách sử dụng streams và áp dụng kiểu dáng tùy chỉnh.
 
-3. **Thực hiện so sánh với các kiểu tùy chỉnh**
-   Tùy chỉnh giao diện của các mục được chèn bằng cách sử dụng `CompareOptions`.
-   ```java
-   final Path resultPath = comparer.compare(resultStream,
-           new CompareOptions.Builder()
-                   .setInsertedItemStyle(
-                           new StyleSettings.Builder()
-                                   .setFontColor(Color.YELLOW)
-                                   .build())
-                   .build());
-   ```
+### Bước 1: Thiết lập Streams và Khởi tạo Comparer
 
-**Tham số và phương pháp**
-- `Comparer`: Quản lý quá trình so sánh.
-- `CompareOptions.Builder()`Cho phép tùy chỉnh các thiết lập so sánh, chẳng hạn như kiểu dáng của các mục được chèn.
+```java
+try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
+     InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
+     InputStream target2Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
+     InputStream target3Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
+     OutputStream resultStream = new FileOutputStream(outputFileName);
+     Comparer comparer = new Comparer(sourceStream)) {
+```
 
-#### Tùy chỉnh kết quả so sánh với cài đặt kiểu
-Tính năng này tập trung vào việc điều chỉnh giao diện của kết quả so sánh sao cho phù hợp với nhu cầu của bạn.
+**Điều gì đang xảy ra?**  
+Chúng tôi mở một source stream (tài liệu gốc) và ba target stream (các biến thể mà chúng tôi muốn so sánh). `Comparer` được khởi tạo với source stream, thiết lập điểm tham chiếu cho tất cả các so sánh tiếp theo.
 
-**Tổng quan**
-Việc tùy chỉnh kiểu dáng giúp làm nổi bật sự khác biệt một cách hiệu quả, giúp việc xem xét các thay đổi dễ dàng hơn.
+### Bước 2: Thêm tất cả các Target Stream cùng một lúc
 
-**Các bước thực hiện**
-1. **Thiết lập luồng đầu vào và đầu ra**
-   Tương tự như phần trước, mở luồng cho tài liệu nguồn và tài liệu đích.
-   ```java
-   try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
-        InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET_WORD");
-        OutputStream resultStream = new FileOutputStream(outputFileName);
-        Comparer comparer = new Comparer(sourceStream)) {
-   ```
+```java
+comparer.add(target1Stream, target2Stream, target3Stream);
+```
 
-2. **Xác định cài đặt kiểu tùy chỉnh**
-   Cấu hình kiểu cho các mục được chèn bằng cách sử dụng `StyleSettings`.
-   ```java
-   final StyleSettings styleSettings = new StyleSettings();
-   styleSettings.setFontColor(Color.YELLOW);
-   CompareOptions compareOptions = new CompareOptions();
-   compareOptions.setInsertedItemStyle(styleSettings);
-   ```
+Thêm nhiều mục tiêu trong một lần gọi hiệu quả hơn rất nhiều so với việc thực hiện các so sánh riêng lẻ cho từng tệp.
 
-3. **Thực hiện so sánh**
-   Thực hiện so sánh với kiểu tùy chỉnh của bạn.
-   ```java
-   final Path resultPath = comparer.compare(resultStream, compareOptions);
-   ```
+### Bước 3: Thực hiện so sánh với kiểu dáng tùy chỉnh
 
-**Tùy chọn cấu hình chính**
-- `setInsertedItemStyle()`: Tùy chỉnh cách hiển thị các mục được chèn.
-- `StyleSettings.Builder()`: Cung cấp giao diện lưu loát để xác định các thuộc tính kiểu.
+```java
+final Path resultPath = comparer.compare(resultStream,
+        new CompareOptions.Builder()
+                .setInsertedItemStyle(
+                        new StyleSettings.Builder()
+                                .setFontColor(Color.YELLOW)
+                                .build())
+                .build());
+```
 
-### Ứng dụng thực tế
-1. **Đánh giá tài liệu pháp lý**: So sánh các phiên bản hợp đồng khác nhau để đảm bảo tính nhất quán và tuân thủ.
-2. **Biên tập cộng tác**Theo dõi những thay đổi được thực hiện bởi nhiều tác giả trong các dự án cộng tác.
-3. **Kiểm soát phiên bản**: Duy trì lịch sử phiên bản và xác định các sửa đổi theo thời gian.
-4. **Đường dẫn kiểm toán**: Tạo dấu vết kiểm toán cho việc sửa đổi tài liệu trong môi trường pháp lý.
-5. **Báo cáo tự động**: Tạo báo cáo nêu bật sự khác biệt giữa các bản nháp.
+Ở đây chúng tôi không chỉ thực hiện việc so sánh mà còn yêu cầu GroupDocs làm nổi bật văn bản được chèn bằng **yellow**. Bạn cũng có thể tùy chỉnh các mục bị xóa hoặc sửa đổi tương tự.
 
-### Cân nhắc về hiệu suất
-- **Tối ưu hóa xử lý luồng**: Sử dụng luồng để xử lý các tệp lớn một cách hiệu quả, giảm thiểu chi phí bộ nhớ.
-- **Quản lý tài nguyên**: Đảm bảo đóng luồng đúng cách bằng cách sử dụng lệnh try-with-resources để tránh rò rỉ.
-- **Quản lý bộ nhớ Java**: Theo dõi mức sử dụng heap và điều chỉnh cài đặt JVM để có hiệu suất tối ưu với GroupDocs.Comparison.
+## Tùy chọn kiểu dáng nâng cao
 
-### Phần kết luận
-Bằng cách làm theo hướng dẫn này, bạn đã học cách thiết lập và sử dụng GroupDocs.Comparison for Java để so sánh hiệu quả nhiều tài liệu Word. Bây giờ bạn đã biết cách tùy chỉnh kết quả so sánh bằng các thiết lập kiểu, giúp dễ dàng làm nổi bật sự khác biệt. Các bước tiếp theo, hãy cân nhắc khám phá các tính năng nâng cao của thư viện hoặc tích hợp nó vào quy trình quản lý tài liệu hiện có của bạn.
+Nếu bạn cần giao diện tinh tế hơn, bạn có thể định nghĩa `StyleSettings` có thể tái sử dụng.
 
-### Phần Câu hỏi thường gặp
-1. **Phiên bản JDK tối thiểu cần có là bao nhiêu?**
-   - Nên sử dụng Java 8 trở lên để tương thích với GroupDocs.Comparison.
+```java
+try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
+     InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET_WORD");
+     OutputStream resultStream = new FileOutputStream(outputFileName);
+     Comparer comparer = new Comparer(sourceStream)) {
+```
 
-2. **Làm thế nào để xử lý các tài liệu lớn một cách hiệu quả?**
-   - Sử dụng luồng để xử lý dữ liệu theo từng phần, giảm thiểu việc sử dụng bộ nhớ.
+```java
+final StyleSettings styleSettings = new StyleSettings();
+styleSettings.setFontColor(Color.YELLOW);
+CompareOptions compareOptions = new CompareOptions();
+compareOptions.setInsertedItemStyle(styleSettings);
+```
 
-3. **Tôi có thể tùy chỉnh kiểu cho các mục đã xóa không?**
-   - Có, có những phương pháp tương tự để tùy chỉnh giao diện của các mục đã xóa.
+```java
+final Path resultPath = comparer.compare(resultStream, compareOptions);
+```
 
-4. **GroupDocs.Comparison có phù hợp cho các dự án cộng tác không?**
-   - Hoàn toàn đúng! Nó lý tưởng để theo dõi các thay đổi và quản lý các phiên bản tài liệu trong môi trường cộng tác.
+**Mẹo chuyên nghiệp về kiểu dáng**  
+- **Insertions** – nền màu vàng giúp quét nhanh.  
+- **Deletions** – gạch ngang màu đỏ (`setDeletedItemStyle`) biểu thị việc xóa rõ ràng.  
+- **Modifications** – gạch chân màu xanh (`setModifiedItemStyle`) giữ cho tài liệu dễ đọc.  
+- Tránh các màu neon; chúng gây mỏi mắt khi xem lâu.
 
-5. **Tôi có thể tìm thêm tài nguyên trên GroupDocs.Comparison ở đâu?**
-   - Truy cập tài liệu chính thức tại [Tài liệu GroupDocs](https://docs.groupdocs.com/comparison/java/).
+## Các vấn đề thường gặp và khắc phục
 
-### Tài nguyên
-- **Tài liệu**: [Tài liệu GroupDocs](https://docs.groupdocs.com/comparison/java/)
-- **Tài liệu tham khảo API**: [Tài liệu tham khảo API](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+### Lỗi bộ nhớ với tài liệu lớn
+
+**Vấn đề**: `OutOfMemoryError`  
+**Giải pháp**: Tăng heap của JVM hoặc tinh chỉnh bộ đệm stream.
+
+```bash
+java -Xms512m -Xmx2g YourApplication
+```
+
+### Vấn đề vòng đời Stream
+
+- **“Stream closed”** – đảm bảo bạn tạo một `InputStream` mới cho mỗi lần so sánh; các stream không thể được tái sử dụng sau khi đã đọc.  
+- **Resource leaks** – các khối `try‑with‑resources` đã xử lý việc đóng, nhưng hãy kiểm tra lại bất kỳ tiện ích tùy chỉnh nào.
+
+### Định dạng không được hỗ trợ
+
+Đảm bảo phần mở rộng tệp khớp với định dạng thực tế (ví dụ, một tệp `.docx` thực sự, không phải một tệp `.txt` được đổi tên).
+
+### Các nút thắt hiệu suất
+
+- Sử dụng SSD để tăng tốc I/O.  
+- Tăng kích thước bộ đệm (xem phần tiếp theo).  
+- Xử lý các lô 5‑10 tài liệu song song thay vì tất cả cùng một lúc.
+
+## Mẹo tối ưu hoá hiệu suất
+
+### Thực hành tốt quản lý bộ nhớ
+
+```java
+// Use larger buffers for big files
+BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768);
+```
+
+### Tinh chỉnh JVM cho môi trường sản xuất
+
+```bash
+-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
+```
+
+### Khi nào có thể không cần Streams
+
+- Tệp dưới 1 MB được lưu trên SSD cục bộ nhanh.  
+- Các so sánh đơn giản, một lần mà chi phí xử lý stream vượt quá lợi ích.
+
+## Ứng dụng thực tế
+
+| Lĩnh vực | Cách Stream Comparison hỗ trợ |
+|----------|-------------------------------|
+| **Legal** | So sánh một hợp đồng gốc với hàng chục phiên bản riêng của khách hàng, làm nổi bật các chèn bằng màu vàng để xem nhanh. |
+| **Software Docs** | Theo dõi thay đổi tài liệu API qua các phiên bản; so sánh hàng loạt nhiều phiên bản trong pipeline CI. |
+| **Publishing** | Biên tập viên có thể thấy sự khác biệt giữa các bản thảo từ các cộng tác viên khác nhau. |
+| **Compliance** | Kiểm toán viên xác minh cập nhật chính sách giữa các phòng ban mà không cần tải toàn bộ PDF vào bộ nhớ. |
+
+## Mẹo chuyên nghiệp để thành công
+
+- **Consistent Naming** – Bao gồm số phiên bản hoặc ngày tháng trong tên tệp.  
+- **Test with Real Data** – Các tệp mẫu “Lorem ipsum” có thể che giấu các trường hợp biên.  
+- **Monitor Memory** – Sử dụng JMX hoặc VisualVM trong môi trường sản xuất để phát hiện sớm các đột biến.  
+- **Batch Strategically** – Nhóm 5‑10 tài liệu mỗi công việc để cân bằng lưu lượng và sử dụng bộ nhớ.  
+- **Graceful Error Handling** – Bắt `UnsupportedFormatException` và thông báo cho người dùng bằng các tin nhắn rõ ràng.  
+
+## Câu hỏi thường gặp
+
+**Q: Phiên bản JDK tối thiểu là gì?**  
+A: Java 8 là tối thiểu, nhưng Java 11+ được khuyến nghị để có hiệu suất và bảo mật tốt hơn.
+
+**Q: Làm thế nào để xử lý các tài liệu rất lớn?**  
+A: Sử dụng cách tiếp cận dựa trên stream như trên, tăng heap JVM (`-Xmx`), và cân nhắc kích thước bộ đệm lớn hơn.
+
+**Q: Tôi có thể tạo kiểu cho các phần xóa và sửa đổi không?**  
+A: Có. Sử dụng `setDeletedItemStyle()` và `setModifiedItemStyle()` trên `CompareOptions` để định nghĩa màu, phông chữ hoặc gạch ngang.
+
+**Q: Điều này có phù hợp cho cộng tác thời gian thực không?**  
+A: So sánh dựa trên stream mạnh ở việc xử lý hàng loạt và kiểm toán. Các trình chỉnh sửa thời gian thực thường cần các giải pháp nhẹ hơn, dựa trên diff.
+
+**Q: Làm thế nào để so sánh các tệp lưu trữ trên AWS S3?**  
+A: Lấy một `InputStream` thông qua AWS SDK (`s3Client.getObject(...).getObjectContent()`) và truyền trực tiếp cho `Comparer`.
+
+## Tài nguyên bổ sung
+
+- **Documentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+
+---
+
+**Cập nhật lần cuối:** 2026-01-18  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs

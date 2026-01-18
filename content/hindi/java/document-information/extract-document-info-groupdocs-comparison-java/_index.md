@@ -1,48 +1,87 @@
 ---
-"date": "2025-05-05"
-"description": "Java के लिए GroupDocs.Comparison का उपयोग करके फ़ाइल प्रकार, पृष्ठ संख्या और आकार जैसे दस्तावेज़ मेटाडेटा को कुशलतापूर्वक निकालने का तरीका जानें। अपने वर्कफ़्लो को बेहतर बनाने के लिए इस विस्तृत गाइड का पालन करें।"
-"title": "GroupDocs का उपयोग करके दस्तावेज़ मेटाडेटा निकालें.Java के लिए तुलना एक व्यापक गाइड"
-"url": "/hi/java/document-information/extract-document-info-groupdocs-comparison-java/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-18'
+description: GroupDocs.Comparison का उपयोग करके जावा में फ़ाइल प्रकार कैसे प्राप्त
+  करें और दस्तावेज़ मेटाडेटा निकालें, सीखें। सरल कोड उदाहरणों और समस्या निवारण टिप्स
+  के साथ पृष्ठ संख्या, आकार और अधिक प्राप्त करें।
+keywords: java document metadata extraction, groupdocs comparison tutorial, extract
+  file properties java, document info java api, how to get document metadata in java
+lastmod: '2026-01-18'
+linktitle: Java Document Metadata Extraction
+tags:
+- groupdocs
+- document-processing
+- metadata-extraction
+- java-tutorial
+title: जावा फ़ाइल प्रकार प्राप्त करें – दस्तावेज़ मेटाडेटा निकालने की गाइड
 type: docs
+url: /hi/java/document-information/extract-document-info-groupdocs-comparison-java/
+weight: 1
 ---
-# Java के लिए GroupDocs.Comparison के साथ दस्तावेज़ मेटाडेटा निकालें
 
-डिजिटल युग में, कानूनी, प्रशासनिक या कॉर्पोरेट सेटिंग्स जैसे विभिन्न क्षेत्रों में दस्तावेज़ गुणों का प्रबंधन और विश्लेषण करना आवश्यक है। अपने दस्तावेज़ों के मेटाडेटा को समझना उत्पादकता को काफी बढ़ा सकता है। यह व्यापक मार्गदर्शिका आपको दस्तावेज़ों से फ़ाइल प्रकार, पृष्ठ संख्या और आकार जैसी महत्वपूर्ण जानकारी को आसानी से निकालने के लिए GroupDocs.Comparison लाइब्रेरी का उपयोग करने में मार्गदर्शन करेगी।
+# जावा फ़ाइल प्रकार प्राप्त करें – दस्तावेज़ मेटाडेटा निकालने का गाइड
 
-## आप क्या सीखेंगे
+क्या आपने कभी बिना दस्तावेज़ खोलें फ़ाइल की जानकारी जल्दी से प्राप्त करने की ज़रूरत महसूस की है? आप अकेले नहीं हैं। चाहे आप एक दस्तावेज़ प्रबंधन प्रणाली बना रहे हों, फ़ाइल अपलोड को मान्य करने की आवश्यकता हो, या दस्तावेज़ प्रोसेसिंग वर्कफ़्लो को स्वचालित करना चाहते हों, **java get file type** प्रोग्रामेटिकली आपके बहुत समय की बचत कर सकता है।
 
-- Java के लिए GroupDocs.Comparison सेट अप करना
-- दस्तावेज़ जानकारी निष्कर्षण का चरण-दर-चरण कार्यान्वयन
-- इन सुविधाओं का वास्तविक दुनिया में अनुप्रयोग
-- प्रदर्शन अनुकूलन युक्तियाँ
+इस गाइड में, हम बिल्कुल वही दिखाएंगे कि GroupDocs.Comparison for Java का उपयोग करके दस्तावेज़ मेटाडेटा (जैसे फ़ाइल प्रकार, पेज काउंट, और आकार) कैसे निकाला जाए। यदि आप इस लाइब्रेरी में नए हैं तो चिंता न करें – हम सब कुछ चरण‑दर‑चरण कवर करेंगे, सामान्य समस्याओं और उन्हें कैसे टालें, इस पर भी चर्चा करेंगे।
 
-इस गाइड के साथ, आप अपने वर्कफ़्लो में दस्तावेज़ मेटाडेटा निष्कर्षण को एकीकृत करने के लिए अच्छी तरह से सुसज्जित होंगे। आइए यह सुनिश्चित करके शुरू करें कि आपके पास सभी आवश्यक पूर्वापेक्षाएँ मौजूद हैं।
+## त्वरित उत्तर
+- **मैं java get file type के लिए कौन सी लाइब्रेरी उपयोग कर सकता हूँ?** GroupDocs.Comparison for Java.  
+- **क्या मैं java extract pdf metadata भी कर सकता हूँ?** हाँ – वही API PDFs और कई अन्य फ़ॉर्मेट्स के लिए काम करता है।  
+- **क्या मुझे लाइसेंस चाहिए?** विकास के लिए ट्रायल या टेम्पररी लाइसेंस काम करता है; उत्पादन के लिए पूर्ण लाइसेंस आवश्यक है।  
+- **कौन सा Java संस्करण आवश्यक है?** JDK 8+ (JDK 11+ की सलाह दी जाती है)।  
+- **क्या कोड थ्रेड‑सेफ़ है?** प्रत्येक थ्रेड के लिए एक अलग `Comparer` इंस्टेंस बनाएँ।
 
-## आवश्यक शर्तें
+## दस्तावेज़ मेटाडेटा क्यों निकालें?
 
-कोड में आगे बढ़ने से पहले, सुनिश्चित करें कि आपके पास निम्नलिखित हैं:
+कोड में डुबने से पहले, आइए देखें कि वास्तविक‑दुनिया के अनुप्रयोगों में यह क्यों महत्वपूर्ण है:
 
-### आवश्यक लाइब्रेरी और निर्भरताएँ
+- **डॉक्यूमेंट मैनेजमेंट सिस्टम** – फ़ाइलों को उनके गुणों के आधार पर स्वचालित रूप से वर्गीकृत और इंडेक्स करें।  
+- **फ़ाइल अपलोड वैधता** – प्रोसेसिंग से पहले फ़ाइल प्रकार और आकार जांचें।  
+- **कंटेंट एनालिसिस** – लंबाई, फ़ॉर्मेट या अन्य मानदंडों के आधार पर दस्तावेज़ फ़िल्टर और सॉर्ट करें।  
+- **लीगल & कंप्लायंस** – सुनिश्चित करें कि दस्तावेज़ विशिष्ट आवश्यकताओं को पूरा करते हैं।  
+- **परफ़ॉर्मेंस ऑप्टिमाइज़ेशन** – केवल उन फ़ाइलों को प्री‑प्रोसेस करें जो कुछ मानदंडों को पूरा करती हैं।
 
-शुरू करने के लिए, सुनिश्चित करें कि आपके सिस्टम पर जावा इंस्टॉल है। निर्भरता प्रबंधन के लिए आपको मावेन की भी आवश्यकता होगी। इस ट्यूटोरियल के लिए GroupDocs.Comparison लाइब्रेरी महत्वपूर्ण है, इसलिए हम इसे अपने में निर्भरता के रूप में शामिल करेंगे। `pom.xml` फ़ाइल।
+सारांश? मेटाडेटा एक्सट्रैक्शन आपको अपने दस्तावेज़ों को कैसे हैंडल करना है, इस बारे में smarter निर्णय लेने में मदद करता है।
 
-### पर्यावरण सेटअप आवश्यकताएँ
+## इस गाइड में आप क्या सीखेंगे
 
-- **जावा डेवलपमेंट किट (JDK):** संस्करण 8 या उच्चतर.
-- **मावेन:** निर्भरताओं के प्रबंधन और अपनी परियोजना के निर्माण के लिए।
+इस ट्यूटोरियल के अंत तक, आप सक्षम होंगे:
 
-### ज्ञान पूर्वापेक्षाएँ
+- अपने प्रोजेक्ट में GroupDocs.Comparison for Java सेट‑अप करना।  
+- **java get file type** और अन्य आवश्यक दस्तावेज़ गुण कुछ ही लाइनों के कोड से प्राप्त करना।  
+- विभिन्न फ़ाइल फ़ॉर्मेट्स और एज केसों को हैंडल करना।  
+- सामान्य समस्याओं का ट्रबलशूट करना।  
+- प्रोडक्शन एनवायरनमेंट्स के लिए बेस्ट प्रैक्टिसेज लागू करना।
 
-जावा प्रोग्रामिंग की बुनियादी समझ की सिफारिश की जाती है। मावेन से परिचित होना भी फायदेमंद होगा, लेकिन ज़रूरी नहीं है, क्योंकि हम इस गाइड में ज़रूरी बातों को कवर करेंगे।
+## पूर्वापेक्षाएँ: शुरू करने से पहले क्या चाहिए
 
-## Java के लिए GroupDocs.Comparison सेट अप करना
+### आवश्यक सॉफ़्टवेयर और टूल्स
 
-अब जब आप सेट हो गए हैं तो आइए अपने प्रोजेक्ट में GroupDocs.Comparison को एकीकृत करने पर ध्यान केंद्रित करें।
+- **Java Development Kit (JDK)** – संस्करण 8 या उससे ऊपर (बेहतर परफ़ॉर्मेंस के लिए हम JDK 11+ की सलाह देते हैं)।  
+- **Maven** – डिपेंडेंसी मैनेजमेंट और प्रोजेक्ट बिल्ड के लिए।  
+- **IDE** – कोई भी Java IDE जैसे IntelliJ IDEA, Eclipse, या VS Code।
 
-### मावेन के माध्यम से स्थापना
+### ज्ञान की पूर्वापेक्षाएँ
 
-अपने Java प्रोजेक्ट में GroupDocs.Comparison को शामिल करने के लिए, अपने में निम्नलिखित जोड़ें `pom.xml` फ़ाइल:
+आपको Java विशेषज्ञ होने की ज़रूरत नहीं, लेकिन निम्न बुनियादी बातें जानना उपयोगी होगा:
+
+- Java सिंटैक्स और ऑब्जेक्ट‑ओरिएंटेड कॉन्सेप्ट्स।  
+- Maven डिपेंडेंसी मैनेजमेंट (हम इसको भी गाइड करेंगे)।  
+- Try‑with‑resources स्टेटमेंट्स (सही रिसोर्स मैनेजमेंट के लिए)।
+
+### GroupDocs.Comparison क्यों?
+
+आप सोच रहे होंगे – मेटाडेटा एक्सट्रैक्शन के लिए GroupDocs.Comparison क्यों? जबकि यह मुख्यतः दस्तावेज़ तुलना के लिए जाना जाता है, यह उत्कृष्ट दस्तावेज़ जानकारी निकालने की क्षमताएँ भी प्रदान करता है। साथ ही, यदि बाद में आपको तुलना फीचर चाहिए, तो आप पहले से ही तैयार हैं!
+
+## GroupDocs.Comparison for Java सेट‑अप करना
+
+आइए आपका प्रोजेक्ट सही तरीके से कॉन्फ़िगर करें। यह चरण बहुत महत्वपूर्ण है – डिपेंडेंसीज़ गलत होने से सबसे आम समस्याओं में से एक आती है।
+
+### चरण 1: Maven कॉन्फ़िगरेशन
+
+अपने `pom.xml` फ़ाइल में यह जोड़ें (सही सेक्शन में रखें):
 
 ```xml
 <repositories>
@@ -61,127 +100,354 @@ type: docs
 </dependencies>
 ```
 
-### लाइसेंस अधिग्रहण
+**Pro tip**: हमेशा GroupDocs वेबसाइट पर नवीनतम संस्करण संख्या जांचें – पुरानी संस्करणों से संगतता समस्याएँ हो सकती हैं।
 
-GroupDocs.Comparison एक निःशुल्क परीक्षण प्रदान करता है जिसका उपयोग आप इसकी सुविधाओं का परीक्षण करने के लिए कर सकते हैं। यदि आपकी ज़रूरतें जारी हैं तो आप एक अस्थायी लाइसेंस के लिए आवेदन भी कर सकते हैं या खरीद सकते हैं।
+### चरण 2: लाइसेंस सेट‑अप (इसे न छोड़ें!)
 
-1. **मुफ्त परीक्षण:** तक पहुंच [मुफ्त डाउनलोड](https://releases.groupdocs.com/comparison/java/) और बुनियादी कार्यात्मकता का पता लगाएं.
-2. **अस्थायी लाइसेंस:** अधिक व्यापक परीक्षण के लिए उनकी वेबसाइट पर अस्थायी लाइसेंस के लिए आवेदन करें।
-3. **खरीदना:** पूर्ण पहुँच के लिए, इस माध्यम से खरीदारी करने पर विचार करें [खरीद लिंक](https://purchase.groupdocs.com/buy).
+GroupDocs.Comparison मुफ्त लाइब्रेरी नहीं है, लेकिन आपके पास विकल्प हैं:
 
-### मूल आरंभीकरण
+1. **Free Trial**: परीक्षण और छोटे प्रोजेक्ट्स के लिए परफेक्ट। डाउनलोड करें [free trial page](https://releases.groupdocs.com/comparison/java/) से।  
+2. **Temporary License**: विकास और मूल्यांकन के लिए बढ़िया। आवेदन करें [here](https://purchase.groupdocs.com/temporary-license/)।  
+3. **Full License**: प्रोडक्शन उपयोग के लिए। [Purchase here](https://purchase.groupdocs.com/buy)।
 
-एक बार जब आपका प्रोजेक्ट Maven के साथ सेट हो जाता है, तो आप प्रारंभ करके शुरू कर सकते हैं `Comparer` ऑब्जेक्ट. यह वर्ग दस्तावेज़ जानकारी निकालने के लिए केंद्रीय होगा.
+### चरण 3: सेट‑अप वैरिफ़ाई करें
 
-## कार्यान्वयन मार्गदर्शिका
+सब कुछ ठीक काम कर रहा है, यह सुनिश्चित करने के लिए एक सरल टेस्ट क्लास बनाएँ:
 
-आइए स्पष्ट चरणों में GroupDocs.Comparison for Java का उपयोग करके दस्तावेज़ जानकारी निकालने की प्रक्रिया को तोड़ते हैं।
+```java
+import com.groupdocs.comparison.Comparer;
 
-### तुलनित्र ऑब्जेक्ट को आरंभ करना
+public class SetupTest {
+    public static void main(String[] args) {
+        System.out.println("GroupDocs.Comparison is ready to use!");
+        // We'll add actual functionality next
+    }
+}
+```
 
-इसका एक उदाहरण बनाकर शुरू करें `Comparer` क्लास, जो आपके दस्तावेज़ों तक पहुँचने और उन्हें प्रबंधित करने के लिए ज़िम्मेदार है:
+## इम्प्लीमेंटेशन गाइड: दस्तावेज़ मेटाडेटा चरण‑दर‑चरण निकालना
+
+अब मज़े का हिस्सा – चलिए कुछ ऐसा कोड लिखते हैं जो वास्तव में उपयोगी हो!
+
+### java get file type – Comparer ऑब्जेक्ट इनिशियलाइज़ करें
+
+`Comparer` क्लास आपके दस्तावेज़ जानकारी का गेटवे है। इसे सही तरीके से सेट‑अप करने का तरीका नीचे दिया गया है:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.io.IOException;
 
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
-    // दस्तावेज़ जानकारी निष्कर्षण के साथ जारी रखें
+    // We'll extract info here
+} catch (Exception e) {
+    System.err.println("Error initializing comparer: " + e.getMessage());
 }
 ```
 
-#### यह क्या करता है?
+**यहाँ क्या हो रहा है?**  
+- हम try‑with‑resources का उपयोग कर रहे हैं ताकि सही क्लीन‑अप सुनिश्चित हो (मेमोरी लीक्स रोकने के लिए बहुत ज़रूरी)।  
+- पाथ आपके वास्तविक दस्तावेज़ की ओर इशारा करना चाहिए।  
+- एरर हैंडलिंग फ़ाइल न मिलने या एक्सेस समस्याओं जैसी समस्याओं को पकड़ती है।
 
-- **आरंभीकरण:** बनाता है `Comparer` अपने स्रोत दस्तावेज़ के पथ का उपयोग करके ऑब्जेक्ट को सहेजें.
-- **संसाधन प्रबंधन:** Try-with-resources कथन यह सुनिश्चित करता है कि उपयोग के बाद संसाधन उचित रूप से जारी किये जाएं।
+### डॉक्यूमेंट इन्फॉर्मेशन ऑब्जेक्ट प्राप्त करें
 
-### दस्तावेज़ जानकारी प्राप्त करना
-
-इसके बाद, हम दस्तावेज़ से मेटाडेटा निकालते हैं:
+अब हम वह डॉक्यूमेंट इन्फो ऑब्जेक्ट लाते हैं जिसमें सभी मेटाडेटा होते हैं:
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
 
-try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
-    // प्रासंगिक विवरण निकालें और प्रिंट करें
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract metadata here
+    }
+} catch (Exception e) {
+    System.err.println("Error retrieving document info: " + e.getMessage());
 }
 ```
 
-#### यह कदम क्यों?
+**मुख्य बिंदु:**  
+- `getSource()` स्रोत दस्तावेज़ देता है।  
+- `getDocumentInfo()` वह इंटरफ़ेस लौटाता है जिसमें सभी मेटाडेटा होते हैं।  
+- एक और try‑with‑resources सुनिश्चित करता है कि हम सही ढंग से क्लीन‑अप करें।
 
-- **मेटाडेटा तक पहुंच:** The `getIDocumentInfo()` विधि दस्तावेज़ के बारे में विस्तृत मेटाडेटा युक्त ऑब्जेक्ट को पुनः प्राप्त करती है।
-- **संसाधन प्रबंधन:** जैसा कि `Comparer` ऑब्जेक्ट में, try-with-resources का उपयोग कुशल संसाधन प्रबंधन सुनिश्चित करता है।
+### उपयोगी डेटा निकालें
 
-### दस्तावेज़ विवरण निकालना और प्रदर्शित करना
-
-अब आइए फ़ाइल प्रकार, पृष्ठ संख्या और आकार जैसी विशिष्ट जानकारी निकालें:
+अब वास्तविक मेटाडेटा प्राप्त करते हैं:
 
 ```java
-String fileType = info.getFileType().getFileFormat();
-int pageCount = info.getPageCount();
-long fileSize = info.getSize();
-
-System.out.printf("File type: %s\nNumber of pages: %d\nDocument size: %d bytes%n", 
-                   fileType, pageCount, fileSize);
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract key information
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        // Display the results
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Number of pages: %d\n", pageCount);
+        System.out.printf("Document size: %d bytes (%.2f KB)\n", 
+                         fileSize, fileSize / 1024.0);
+    }
+} catch (Exception e) {
+    System.err.println("Error extracting document info: " + e.getMessage());
+}
 ```
 
-#### कोड स्पष्टीकरण
+**प्रत्येक मेथड क्या रिटर्न करता है:**  
+- `getFileType().getFileFormat()`: फ़ाइल फ़ॉर्मेट (DOCX, PDF, TXT, आदि)।  
+- `getPageCount()`: कुल पेजों की संख्या।  
+- `getSize()`: बाइट्स में फ़ाइल आकार।
 
-- **`fileType`:** दस्तावेज़ का प्रारूप प्राप्त करता है (जैसे, DOCX).
-- **`pageCount`:** दस्तावेज़ में पृष्ठों की कुल संख्या पुनर्प्राप्त करता है.
-- **`fileSize`:** दस्तावेज़ का आकार बाइट्स में प्राप्त करता है.
+## रियल‑वर्ल्ड उदाहरण: पूर्ण इम्प्लीमेंटेशन
 
-## व्यावहारिक अनुप्रयोगों
+यहाँ एक अधिक मजबूत उदाहरण है जिसे आप अपने प्रोजेक्ट्स में सीधे उपयोग कर सकते हैं:
 
-दस्तावेज़ जानकारी निकालने का तरीका समझना विभिन्न परिदृश्यों में लाभदायक हो सकता है:
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.interfaces.IDocumentInfo;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-1. **दस्तावेज़ प्रबंधन प्रणालियाँ:** दस्तावेजों को सूचीबद्ध करने के लिए मेटाडेटा निष्कर्षण को स्वचालित करें।
-2. **कानूनी और अनुपालन:** सुनिश्चित करें कि दस्तावेज़ अपने गुणों के आधार पर विशिष्ट मानदंडों को पूरा करते हैं।
-3. **सामग्री विश्लेषण:** आकार, प्रकार या लंबाई के आधार पर दस्तावेजों का त्वरित मूल्यांकन और फ़िल्टर करें।
+public class DocumentMetadataExtractor {
+    
+    public static void extractDocumentInfo(String filePath) {
+        // First, check if file exists
+        Path path = Paths.get(filePath);
+        if (!Files.exists(path)) {
+            System.err.println("File not found: " + filePath);
+            return;
+        }
+        
+        try (Comparer comparer = new Comparer(filePath)) {
+            try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+                displayDocumentInfo(info, filePath);
+            }
+        } catch (Exception e) {
+            System.err.println("Error processing file " + filePath + ": " + e.getMessage());
+        }
+    }
+    
+    private static void displayDocumentInfo(IDocumentInfo info, String filePath) {
+        String fileName = Paths.get(filePath).getFileName().toString();
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        System.out.println("=== Document Information ===");
+        System.out.printf("File name: %s\n", fileName);
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Pages: %d\n", pageCount);
+        System.out.printf("Size: %d bytes (%.2f KB)\n", fileSize, fileSize / 1024.0);
+        System.out.println("============================\n");
+    }
+    
+    public static void main(String[] args) {
+        // Test with different file types
+        extractDocumentInfo("path/to/your/document.docx");
+        extractDocumentInfo("path/to/your/document.pdf");
+    }
+}
+```
 
-## प्रदर्शन संबंधी विचार
+## सामान्य समस्याएँ और समाधान
 
-GroupDocs.Comparison का उपयोग करते समय इष्टतम प्रदर्शन सुनिश्चित करने के लिए:
+### समस्या 1: "File Not Found" एरर
 
-- **स्मृति प्रबंधन:** लीक को रोकने के लिए जावा मेमोरी प्रबंधन प्रथाओं का ध्यान रखें।
-- **संसाधन प्रबंधन:** संसाधनों को हमेशा try-with-resources या स्पष्ट बंद कॉल का उपयोग करके जारी करें।
-- **दस्तावेज़ प्रसंस्करण अनुकूलित करें:** यदि आपको प्रदर्शन संबंधी समस्याएं आती हैं तो एक साथ दस्तावेज़ तुलनाओं की संख्या सीमित करें।
+**लक्षण**: Comparer इनिशियलाइज़ करते समय एक्सेप्शन फेंका जाता है  
+**समाधान**: हमेशा फ़ाइल पाथ और अस्तित्व की वैधता जांचें:
 
-## निष्कर्ष
+```java
+Path filePath = Paths.get(documentPath);
+if (!Files.exists(filePath)) {
+    throw new IllegalArgumentException("File does not exist: " + documentPath);
+}
+if (!Files.isReadable(filePath)) {
+    throw new IllegalArgumentException("File is not readable: " + documentPath);
+}
+```
 
-इस ट्यूटोरियल ने आपको Java के लिए GroupDocs.Comparison सेट अप करने और आवश्यक दस्तावेज़ जानकारी निकालने के बारे में बताया। आपने अपने वातावरण को कॉन्फ़िगर करना, कुंजी ऑब्जेक्ट्स को इनिशियलाइज़ करना और मेटाडेटा को कुशलतापूर्वक प्राप्त करना सीखा है। 
+### समस्या 2: बड़े फ़ाइलों के साथ मेमोरी समस्याएँ
 
-### अगले कदम
+**लक्षण**: OutOfMemoryError या धीमी परफ़ॉर्मेंस  
+**समाधान**: फ़ाइलों को एक‑एक करके प्रोसेस करें और सही रिसोर्स क्लीन‑अप सुनिश्चित करें:
 
-GroupDocs.Comparison की अतिरिक्त सुविधाओं को लागू करके या इस कार्यक्षमता को सामग्री प्रबंधन प्लेटफ़ॉर्म जैसी बड़ी प्रणालियों में एकीकृत करके आगे की खोज करें।
+```java
+// Always use try-with-resources
+try (Comparer comparer = new Comparer(filePath)) {
+    // Process immediately and don't store large objects
+    processDocumentInfo(comparer.getSource().getDocumentInfo());
+} // Resources automatically cleaned up here
+```
 
-इसे आज़माने के लिए तैयार हैं? दस्तावेज़ों को और गहराई से पढ़ें [GroupDocs.तुलना जावा](https://docs.groupdocs.com/comparison/java/) और अपने स्वयं के दस्तावेज़ों के साथ प्रयोग करना शुरू करें!
+### समस्या 3: असमर्थित फ़ाइल फ़ॉर्मेट्स
 
-## अक्सर पूछे जाने वाले प्रश्न अनुभाग
+**लक्षण**: कुछ फ़ाइलों को प्रोसेस करने पर एक्सेप्शन  
+**समाधान**: पहले सपोर्टेड फ़ॉर्मेट्स की जाँच करें:
 
-1. **GroupDocs.Comparison for Java का उपयोग किस लिए किया जाता है?**
-   - इसका उपयोग मुख्यतः दस्तावेज़ अंतरों की तुलना करने के लिए किया जाता है, लेकिन यह दस्तावेज़ मेटाडेटा निकालने में भी सहायता करता है।
+```java
+public static boolean isSupportedFormat(String filePath) {
+    String extension = FilenameUtils.getExtension(filePath).toLowerCase();
+    return Arrays.asList("docx", "doc", "pdf", "txt", "rtf", "odt").contains(extension);
+}
+```
 
-2. **क्या GroupDocs.Comparison की पूर्ण सुविधाओं का उपयोग करने के लिए लाइसेंस की आवश्यकता है?**
-   - यद्यपि आप निःशुल्क परीक्षण के साथ शुरुआत कर सकते हैं, लेकिन उन्नत कार्यक्षमताओं तक पहुंचने के लिए लाइसेंस खरीदना या अस्थायी लाइसेंस प्राप्त करना आवश्यक होता है।
+### समस्या 4: प्रोडक्शन में लाइसेंस समस्याएँ
 
-3. **क्या मैं गैर-कार्यालय दस्तावेजों से जानकारी निकाल सकता हूँ?**
-   - हां, GroupDocs.Comparison पीडीएफ और उनके दस्तावेज़ों में सूचीबद्ध अन्य सहित विभिन्न प्रारूपों का समर्थन करता है।
+**लक्षण**: वॉटरमार्क या फ़ंक्शनलिटी लिमिटेशन  
+**समाधान**: सुनिश्चित करें कि आपका लाइसेंस सही ढंग से लागू किया गया है:
 
-4. **यदि मेरे दस्तावेज़ में मेटाडेटा नहीं है तो क्या होगा?**
-   - लाइब्रेरी अभी भी कार्य करेगी, लेकिन कुछ फ़ील्ड शून्य या डिफ़ॉल्ट मान लौटा सकते हैं.
+```java
+// Apply license at application startup
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
 
-5. **मैं GroupDocs.Comparison के साथ सामान्य समस्याओं का निवारण कैसे कर सकता हूँ?**
-   - देखें [सहयता मंच](https://forum.groupdocs.com/c/comparison) समाधान और सामुदायिक सलाह के लिए.
+## प्रोडक्शन उपयोग के लिए बेस्ट प्रैक्टिसेज
 
-## संसाधन
+### 1. रिसोर्स मैनेजमेंट
 
-- **दस्तावेज़ीकरण:** [GroupDocs.तुलना जावा दस्तावेज़](https://docs.groupdocs.com/comparison/java/)
-- **एपीआई संदर्भ:** [ग्रुपडॉक्स एपीआई संदर्भ](https://reference.groupdocs.com/comparison/java/)
-- **डाउनलोड करना:** [ग्रुपडॉक्स डाउनलोड](https://releases.groupdocs.com/comparison/java/)
-- **खरीदना:** [ग्रुपडॉक्स लाइसेंस खरीदें](https://purchase.groupdocs.com/buy)
-- **मुफ्त परीक्षण:** [निःशुल्क डाउनलोड का प्रयास करें](https://releases.groupdocs.com/comparison/java/)
-- **अस्थायी लाइसेंस:** [अस्थायी लाइसेंस का अनुरोध करें](https://purchase.groupdocs.com/temporary-license/)
-- **सहायता:** [ग्रुपडॉक्स सहायता फ़ोरम](https://forum.groupdocs.com/c/comparison)
+ऑटोमैटिक क्लीन‑अप के लिए हमेशा try‑with‑resources का उपयोग करें:
 
-इस गाइड का पालन करके, आपने Java के लिए GroupDocs.Comparison का उपयोग करके शक्तिशाली दस्तावेज़ मेटाडेटा निष्कर्षण क्षमताओं को अनलॉक कर लिया है। हैप्पी कोडिंग!
+```java
+// Good - resources cleaned up automatically
+try (Comparer comparer = new Comparer(filePath);
+     IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+    // Process info
+}
+
+// Bad - potential memory leaks
+Comparer comparer = new Comparer(filePath);
+IDocumentInfo info = comparer.getSource().getDocumentInfo();
+// Processing code
+// Resources might not be cleaned up properly
+```
+
+### 2. एरर हैंडलिंग स्ट्रेटेजी
+
+व्यापक एरर हैंडलिंग लागू करें:
+
+```java
+public DocumentInfo extractSafely(String filePath) {
+    try {
+        return extractDocumentInfo(filePath);
+    } catch (SecurityException e) {
+        log.warn("Access denied for file: " + filePath, e);
+        return null;
+    } catch (IOException e) {
+        log.error("I/O error processing file: " + filePath, e);
+        return null;
+    } catch (Exception e) {
+        log.error("Unexpected error processing file: " + filePath, e);
+        return null;
+    }
+}
+```
+
+### 3. परफ़ॉर्मेंस ऑप्टिमाइज़ेशन
+
+कई फ़ाइलों को प्रोसेस करने के लिए बैचिंग पर विचार करें:
+
+```java
+public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
+    return filePaths.parallelStream()
+                   .map(this::extractSafely)
+                   .filter(Objects::nonNull)
+                   .collect(Collectors.toList());
+}
+```
+
+## कब इस विधि का उपयोग करें बनाम अन्य अप्रोचेज़
+
+**GroupDocs.Comparison का उपयोग तब करें जब:**  
+- आपको विभिन्न Office फ़ॉर्मेट्स से भरोसेमंद मेटाडेटा एक्सट्रैक्शन चाहिए।  
+- बाद में दस्तावेज़ तुलना फीचर की आवश्यकता हो सकती है।  
+- आप जटिल दस्तावेज़ों के साथ काम कर रहे हैं जिन्हें सटीक पेज काउंट चाहिए।
+
+**विकल्पों पर विचार करें जब:**  
+- आपको केवल बेसिक फ़ाइल जानकारी चाहिए (फ़ाइल आकार, डेट्स के लिए `java.nio.file.Files` उपयोग करें)।  
+- आप साधारण टेक्स्ट फ़ाइलों के साथ काम कर रहे हैं (बिल्ट‑इन Java API पर्याप्त है)।  
+- बजट एक बड़ी बाधा है (पहले ओपन‑सोर्स विकल्प देखें)।
+
+## ट्रबलशूटिंग गाइड
+
+### इश्यू: कोड कंपाइल होता है लेकिन रन‑टाइम एक्सेप्शन फेंकता है
+
+**जाँचें:**  
+1. क्या आपका लाइसेंस सही ढंग से कॉन्फ़िगर है?  
+2. क्या आप सही फ़ाइल पाथ उपयोग कर रहे हैं?  
+3. क्या फ़ाइलों पर पढ़ने की अनुमति है?  
+4. क्या फ़ाइल फ़ॉर्मेट वास्तव में सपोर्टेड है?
+
+### इश्यू: मेमोरी उपयोग लगातार बढ़ रहा है
+
+**समाधान:**  
+1. सुनिश्चित करें कि आप try‑with‑resources उपयोग कर रहे हैं।  
+2. एक बार में कई फ़ाइलें लोड करने के बजाय एक‑एक करके प्रोसेस करें।  
+3. किसी भी स्टैटिक रेफ़रेंस की जाँच करें जो ऑब्जेक्ट्स को रखे हुए हो सकते हैं।
+
+### इश्यू: कुछ मेटाडेटा फ़ील्ड्स null रिटर्न कर रहे हैं
+
+**यह सामान्य है जब:**  
+- फ़ाइल में वह प्रकार का मेटाडेटा नहीं होता।  
+- फ़ाइल करप्ट या अधूरी हो।  
+- फ़ॉर्मेट का वह वेरिएंट सपोर्टेड नहीं है।  
+
+मेटाडेटा उपयोग करने से पहले हमेशा null वैल्यू की जाँच करें।
+
+## निष्कर्ष और अगले कदम
+
+आपके पास अब GroupDocs.Comparison for Java का उपयोग करके दस्तावेज़ मेटाडेटा निकालने की ठोस नींव है! हमने कवर किया:
+
+✅ लाइब्रेरी और डिपेंडेंसीज़ को सही तरीके से सेट‑अप करना  
+✅ **java get file type** और अन्य प्रमुख दस्तावेज़ गुण  
+✅ सामान्य एरर और एज केसों को हैंडल करना  
+✅ प्रोडक्शन एनवायरनमेंट्स के लिए बेस्ट प्रैक्टिसेज  
+✅ सामान्य समस्याओं के लिए ट्रबलशूटिंग गाइड  
+
+### आगे क्या करें?
+
+अब जब आपके पास मेटाडेटा एक्सट्रैक्शन है, तो आप विचार कर सकते हैं:
+
+- **डॉक्यूमेंट तुलना फीचर** का उपयोग करके बदलाव ट्रैक करना।  
+- **Spring Boot** के साथ इंटीग्रेशन करके वेब एप्लिकेशन बनाना।  
+- **बैच प्रोसेसिंग** के ज़रिए कई फ़ाइलों को कुशलता से हैंडल करना।  
+- **कस्टम मेटाडेटा एक्सट्रैक्शन** विशेष फ़ाइल प्रकारों के लिए।
+
+और गहराई में जाना चाहते हैं? उन्नत फीचर्स और उदाहरणों के लिए आधिकारिक [GroupDocs दस्तावेज़ीकरण](https://docs.groupdocs.com/comparison/java/) देखें।
+
+## अक्सर पूछे जाने वाले प्रश्न
+
+**प्र: क्या मैं पासवर्ड‑प्रोटेक्टेड दस्तावेज़ों से मेटाडेटा निकाल सकता हूँ?**  
+उ: हाँ, लेकिन `Comparer` ऑब्जेक्ट इनिशियलाइज़ करते समय पासवर्ड प्रदान करना होगा। लोड ऑप्शन्स को स्वीकार करने वाले ओवरलोडेड कंस्ट्रक्टर का उपयोग करें।
+
+**प्र: मेटाडेटा एक्सट्रैक्शन के लिए कौन‑से फ़ाइल फ़ॉर्मेट सपोर्टेड हैं?**  
+उ: GroupDocs.Comparison अधिकांश सामान्य दस्तावेज़ फ़ॉर्मेट्स को सपोर्ट करता है जैसे DOCX, PDF, XLSX, PPTX, TXT, RTF, और कई अन्य। पूरी लिस्ट के लिए उनकी डॉक्यूमेंटेशन देखें।
+
+**प्र: क्या Office दस्तावेज़ों से कस्टम प्रॉपर्टीज़ निकालना संभव है?**  
+उ: बेसिक डॉक्यूमेंट इन्फो मुख्यतः स्टैंडर्ड प्रॉपर्टीज़ को कवर करता है। कस्टम प्रॉपर्टीज़ के लिए आपको अतिरिक्त GroupDocs लाइब्रेरीज़ या अन्य टूल्स का उपयोग करना पड़ सकता है।
+
+**प्र: बहुत बड़ी फ़ाइलों को मेमोरी खत्म हुए बिना कैसे हैंडल करें?**  
+उ: हमेशा try‑with‑resources उपयोग करें, फ़ाइलों को एक‑एक करके प्रोसेस करें, और बैच प्रोसेसिंग के लिए स्ट्रीम‑बेस्ड अप्रोच अपनाएँ। साथ ही अपने JVM में पर्याप्त हीप स्पेस सुनिश्चित करें।
+
+**प्र: क्या यह क्लाउड स्टोरेज में रखी फ़ाइलों के साथ काम कर सकता है?**  
+उ: हाँ, लेकिन आपको फ़ाइल को पहले लोकली डाउनलोड करना होगा या स्ट्रीम‑बेस्ड अप्रोच अपनाना होगा। GroupDocs लोकल फ़ाइलों और स्ट्रीम्स दोनों के साथ काम करता है।
+
+**प्र: लाइसेंस एरर मिलने पर क्या करें?**  
+उ: सुनिश्चित करें कि आपने एप्लिकेशन स्टार्टअप पर लाइसेंस सही ढंग से लागू किया है और लाइसेंस एक्सपायर नहीं हुआ है। यदि समस्या बनी रहे तो GroupDocs सपोर्ट से संपर्क करें।
+
+**प्र: क्या यह मल्टी‑थ्रेडेड एप्लिकेशन में सुरक्षित है?**  
+उ: हाँ, लेकिन प्रत्येक थ्रेड के लिए अलग `Comparer` इंस्टेंस बनाएँ। इंस्टेंस को थ्रेड्स के बीच शेयर न करें।
+
+---
+
+**Last Updated:** 2026-01-18  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+**Additional Resources**  
+- **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)

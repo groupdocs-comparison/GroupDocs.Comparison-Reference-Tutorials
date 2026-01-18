@@ -1,48 +1,88 @@
 ---
-"date": "2025-05-05"
-"description": "Ismerje meg, hogyan kinyerheti hatékonyan a dokumentumok metaadatait, például a fájltípust, az oldalszámot és a méretet a GroupDocs.Comparison for Java segítségével. Kövesse ezt a részletes útmutatót a munkafolyamat fejlesztéséhez."
-"title": "Dokumentum metaadatok kinyerése a GroupDocs.Comparison for Java használatával – Átfogó útmutató"
-"url": "/hu/java/document-information/extract-document-info-groupdocs-comparison-java/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-18'
+description: Ismerje meg, hogyan lehet Java-ban meghatározni a fájl típusát és kinyerni
+  a dokumentum metaadatait a GroupDocs.Comparison segítségével. Szerezzen információt
+  az oldalszámról, a méretről és egyebekről egyszerű kódrészletekkel és hibaelhárítási
+  tippekkel.
+keywords: java document metadata extraction, groupdocs comparison tutorial, extract
+  file properties java, document info java api, how to get document metadata in java
+lastmod: '2026-01-18'
+linktitle: Java Document Metadata Extraction
+tags:
+- groupdocs
+- document-processing
+- metadata-extraction
+- java-tutorial
+title: Java – Fájltípus lekérése – Dokumentum metaadatok kinyerése útmutató
 type: docs
+url: /hu/java/document-information/extract-document-info-groupdocs-comparison-java/
+weight: 1
 ---
-# Dokumentum metaadatok kinyerése a GroupDocs.Comparison segítségével Java-ban
 
-A digitális korban a dokumentumok tulajdonságainak kezelése és elemzése elengedhetetlen számos szektorban, például jogi, adminisztratív vagy vállalati környezetben. A dokumentumok metaadatainak megértése jelentősen növelheti a termelékenységet. Ez az átfogó útmutató végigvezeti Önt a GroupDocs.Comparison könyvtár használatán, hogy könnyedén kinyerhesse a dokumentumokból a létfontosságú információkat, például a fájltípust, az oldalszámot és a méretet.
+# Java fájltípus lekérése – Dokumentum metaadatok kinyerése útmutató
 
-## Amit tanulni fogsz
+Valaha is szükséged volt gyorsan megkapni a fájl információkat a dokumentumokból anélkül, hogy megnyitnád őket? Nem vagy egyedül. Akár dokumentumkezelő rendszert építesz, fájlfeltöltések érvényesítésére van szükséged, vagy automatizálni szeretnéd a dokumentumfeldolgozási munkafolyamatokat, a **java get file type** programozottan rengeteg időt takaríthat meg.
 
-- GroupDocs.Comparison beállítása Java-hoz
-- A dokumentuminformációk kinyerésének lépésről lépésre történő megvalósítása
-- Ezen funkciók valós alkalmazásai
-- Teljesítményoptimalizálási tippek
+Ebben az útmutatóban pontosan bemutatjuk, hogyan nyerheted ki a dokumentum metaadatait (például fájltípus, oldalszám és méret) a GroupDocs.Comparison for Java segítségével. Ne aggódj, ha újonc vagy ebben a könyvtárban – lépésről lépésre mindent átbeszélünk, beleértve a gyakori buktatókat és azok elkerülését.
 
-Ezzel az útmutatóval felkészülhetsz arra, hogy a dokumentumok metaadatainak kinyerését integráld a munkafolyamataidba. Kezdjük azzal, hogy minden szükséges előfeltételnek meg kell felelned.
+## Gyors válaszok
+- **Melyik könyvtárat használhatom a java get file type-hoz?** GroupDocs.Comparison for Java.
+- **Kivonhatok-e pdf metaadatokat is java‑val?** Igen – ugyanaz az API működik PDF-ekkel és sok más formátummal.
+- **Szükségem van licencre?** Fejlesztéshez egy próba vagy ideiglenes licenc elegendő; termeléshez teljes licenc szükséges.
+- **Milyen Java verzióra van szükség?** JDK 8+ (JDK 11+ ajánlott).
+- **A kód szálbiztos?** Hozz létre egy külön `Comparer` példányt szálanként.
 
-## Előfeltételek
+## Miért érdemes dokumentum metaadatokat kinyerni?
 
-Mielőtt belemerülnénk a kódba, győződjünk meg arról, hogy a következőkkel rendelkezünk:
+Mielőtt a kódba merülnénk, nézzük meg, miért fontos ez a valós alkalmazásokban:
 
-### Szükséges könyvtárak és függőségek
+- **Dokumentumkezelő rendszerek** – automatikusan kategorizálják és indexelik a fájlokat tulajdonságaik alapján.  
+- **Fájl feltöltés ellenőrzése** – ellenőrizd a fájltípusokat és méreteket a feldolgozás előtt.  
+- **Tartalomelemzés** – szűrd és rendezd a dokumentumokat hossz, formátum vagy egyéb kritériumok szerint.  
+- **Jogszabályi megfelelés** – biztosítsd, hogy a dokumentumok megfelelnek a specifikus követelményeknek.  
+- **Teljesítményoptimalizálás** – előfeldolgozd csak azokat a fájlokat, amelyek megfelelnek bizonyos kritériumoknak.
 
-Kezdésként győződjön meg arról, hogy telepítve van a Java a rendszerén. A függőségek kezeléséhez Mavenre is szüksége lesz. A GroupDocs.Comparison könyvtár elengedhetetlen ehhez az oktatóanyaghoz, ezért függőségként fogjuk belefoglalni a ...-ba. `pom.xml` fájl.
+Összefoglalva: a metaadatok kinyerése segít okosabb döntéseket hozni a dokumentumok kezeléséről.
 
-### Környezeti beállítási követelmények
+## Mit tanulhatsz meg ebben az útmutatóban
 
-- **Java fejlesztőkészlet (JDK):** 8-as vagy újabb verzió.
-- **Szakértő:** Függőségek kezeléséhez és a projekt felépítéséhez.
+A tutorial végére képes leszel:
 
-### Ismereti előfeltételek
+- Beállítani a GroupDocs.Comparison for Java-t a projektedben.  
+- **java get file type** és más alapvető dokumentumtulajdonságok lekérésére néhány kódsorral.  
+- Különböző fájlformátumok és szélsőséges esetek kezelésére.  
+- Gyakori problémák hibakeresésére.  
+- Legjobb gyakorlatok alkalmazására termelési környezetben.
 
-Ajánlott a Java programozás alapvető ismerete. A Maven ismerete is előnyös, de nem kötelező, mivel ebben az útmutatóban a lényeget tárgyaljuk.
+## Előfeltételek: Mire lesz szükséged a kezdéshez
 
-## GroupDocs.Comparison beállítása Java-hoz
+### Szükséges szoftverek és eszközök
 
-Most, hogy készen vagy, összpontosítsunk a GroupDocs.Comparison integrálására a projektedbe.
+- **Java Development Kit (JDK)** – 8-as vagy újabb verzió (ajánlott a JDK 11+ a jobb teljesítményért).  
+- **Maven** – a függőségek kezelése és a projekt felépítése miatt.  
+- **IDE** – bármely Java IDE, például IntelliJ IDEA, Eclipse vagy VS Code.
 
-### Telepítés Maven-en keresztül
+### Tudásbeli előfeltételek
 
-A GroupDocs.Comparison Java-projektbe való felvételéhez adja hozzá a következőket a `pom.xml` fájl:
+Nem kell Java szakértőnek lenned, de hasznos, ha van némi tapasztalatod:
+
+- Java szintaxis és objektum‑orientált koncepciók.  
+- Maven függőségkezelés (ezt mindenképp bemutatjuk).  
+- Try‑with‑resources használata (a megfelelő erőforrás‑kezeléshez).
+
+### Miért a GroupDocs.Comparison?
+
+Talán kérdezed, miért a GroupDocs.Comparison a metaadat‑kinyeréshez? Bár elsősorban dokumentum‑összehasonlításra ismert, kiváló dokumentuminformáció‑kinyerő képességekkel is rendelkezik. Ráadásul, ha később összehasonlítási funkciókra lesz szükséged, már készen állsz!
+
+## A GroupDocs.Comparison for Java beállítása
+
+Állítsuk be a projektet megfelelően. Ez a lépés kritikus – a függőségek hibás megadása a leggyakoribb fejlesztői problémák egyike.
+
+### 1. lépés: Maven konfiguráció
+
+Add hozzá a következőt a `pom.xml` fájlodhoz (győződj meg róla, hogy a megfelelő szekcióba helyezed):
 
 ```xml
 <repositories>
@@ -61,127 +101,354 @@ A GroupDocs.Comparison Java-projektbe való felvételéhez adja hozzá a követk
 </dependencies>
 ```
 
-### Licencszerzés
+**Pro tipp**: Mindig ellenőrizd a legújabb verziószámot a GroupDocs weboldalán – a régi verziók kompatibilitási problémákat okozhatnak.
 
-GroupDocs.Comparison ingyenes próbaverziót kínál, amellyel tesztelheti a funkcióit. Ideiglenes licencet is igényelhet, vagy vásárolhat egyet, ha folyamatos igényei vannak.
+### 2. lépés: Licenc beállítása (Ne hagyd ki!)
 
-1. **Ingyenes próbaverzió:** Hozzáférés a [ingyenes letöltés](https://releases.groupdocs.com/comparison/java/) és ismerkedjen meg az alapvető funkciókkal.
-2. **Ideiglenes engedély:** Igényeljen ideiglenes engedélyt a weboldalukon a szélesebb körű teszteléshez.
-3. **Vásárlás:** A teljes hozzáférés érdekében érdemes lehet ezen a címen keresztül vásárolni. [vásárlási link](https://purchase.groupdocs.com/buy).
+A GroupDocs.Comparison nem ingyenes könyvtár, de több lehetőség közül választhatsz:
 
-### Alapvető inicializálás
+1. **Ingyenes próba**: Ideális teszteléshez és kisebb projektekhez. Töltsd le a [free trial page](https://releases.groupdocs.com/comparison/java/) oldalról.  
+2. **Ideiglenes licenc**: Fejlesztéshez és értékeléshez tökéletes. Jelentkezz [ide](https://purchase.groupdocs.com/temporary-license/).  
+3. **Teljes licenc**: Termelési használathoz. [Vásárolj itt](https://purchase.groupdocs.com/buy).
 
-Miután a projekted beállítottad a Mavennel, elkezdheted inicializálni a `Comparer` objektum. Ez az osztály központi szerepet játszik majd a dokumentuminformációk kinyerésében.
+### 3. lépés: A beállítás ellenőrzése
 
-## Megvalósítási útmutató
+Hozz létre egy egyszerű tesztosztályt, hogy megbizonyosodj a működésről:
 
-Bontsuk le lépésekre a GroupDocs.Comparison for Java használatával történő dokumentuminformációk kinyerésének folyamatát.
+```java
+import com.groupdocs.comparison.Comparer;
 
-### A Comparer objektum inicializálása
+public class SetupTest {
+    public static void main(String[] args) {
+        System.out.println("GroupDocs.Comparison is ready to use!");
+        // We'll add actual functionality next
+    }
+}
+```
 
-Kezdje egy példány létrehozásával a `Comparer` osztály, amely a dokumentumok eléréséért és kezeléséért felelős:
+## Implementációs útmutató: Dokumentum metaadatok kinyerése lépésről lépésre
+
+Most jön a szórakoztató rész – írjunk olyan kódot, ami tényleg hasznos!
+
+### java get file type – A Comparer objektum inicializálása
+
+A `Comparer` osztály a dokumentuminformációk kapuja. Így állíthatod be helyesen:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.io.IOException;
 
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
-    // Folytassa a dokumentuminformációk kinyerését
+    // We'll extract info here
+} catch (Exception e) {
+    System.err.println("Error initializing comparer: " + e.getMessage());
 }
 ```
 
-#### Mit csinál ez?
+**Mi történik itt?**  
+- Try‑with‑resources‑t használunk a megfelelő takarítás biztosításához (nagyon fontos a memória‑szivárgások elkerülése érdekében!).  
+- Az útvonalnak a saját dokumentumodra kell mutatnia.  
+- A hibakezelés elkapja a például „file not found” vagy hozzáférési problémákat.
 
-- **Inicializálás:** Létrehoz egy `Comparer` objektum a forrásdokumentum elérési útját használva.
-- **Erőforrás-gazdálkodás:** A try-with-resources utasítás biztosítja, hogy az erőforrások használat után megfelelően felszabaduljanak.
+### Dokumentuminformáció objektum lekérése
 
-### Dokumentuminformációk lekérése
-
-Ezután kinyerjük a metaadatokat a dokumentumból:
+Ezután lekérjük a dokumentuminformáció objektumot, amely minden metaadatot tartalmaz:
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
 
-try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
-    // Releváns részletek kinyerése és nyomtatása
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract metadata here
+    }
+} catch (Exception e) {
+    System.err.println("Error retrieving document info: " + e.getMessage());
 }
 ```
 
-#### Miért ez a lépés?
+**Fontos pontok:**  
+- `getSource()` adja vissza a forrásdokumentumot.  
+- `getDocumentInfo()` egy interfészt ad, amely tartalmazza az összes metaadatot.  
+- Egy újabb try‑with‑resources gondoskodik a megfelelő tisztításról.
 
-- **Hozzáférési metaadatok:** A `getIDocumentInfo()` A metódus egy objektumot kér le, amely részletes metaadatokat tartalmaz a dokumentumról.
-- **Erőforrás-gazdálkodás:** Mint a `Comparer` objektum esetén a try-with-resources használata hatékony erőforrás-kezelést biztosít.
+### A hasznos adatok kinyerése
 
-### Dokumentumadatok kinyerése és megjelenítése
-
-Most pedig kinyerjünk olyan konkrét információkat, mint a fájltípus, az oldalszám és a méret:
+Most jöjjön a tényleges metaadat:
 
 ```java
-String fileType = info.getFileType().getFileFormat();
-int pageCount = info.getPageCount();
-long fileSize = info.getSize();
-
-System.out.printf("File type: %s\nNumber of pages: %d\nDocument size: %d bytes%n", 
-                   fileType, pageCount, fileSize);
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract key information
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        // Display the results
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Number of pages: %d\n", pageCount);
+        System.out.printf("Document size: %d bytes (%.2f KB)\n", 
+                         fileSize, fileSize / 1024.0);
+    }
+} catch (Exception e) {
+    System.err.println("Error extracting document info: " + e.getMessage());
+}
 ```
 
-#### Kód Magyarázat
+**Minden metódus visszatérési értéke:**  
+- `getFileType().getFileFormat()`: Fájlformátum (DOCX, PDF, TXT stb.).  
+- `getPageCount()`: Oldalak teljes száma.  
+- `getSize()`: Fájlméret bájtokban.
 
-- **`fileType`:** Lekéri a dokumentum formátumát (pl. DOCX).
-- **`pageCount`:** Lekéri a dokumentumban található oldalak teljes számát.
-- **`fileSize`:** Lekéri a dokumentum méretét bájtban.
+## Valós példák: Teljes implementáció
 
-## Gyakorlati alkalmazások
+Itt egy robusztusabb példa, amelyet közvetlenül felhasználhatsz a projektjeidben:
 
-dokumentuminformációk kinyerésének megértése számos esetben hasznos lehet:
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.interfaces.IDocumentInfo;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-1. **Dokumentumkezelő rendszerek:** Automatizálja a metaadatok kinyerését a dokumentumok katalogizálásához.
-2. **Jogi és megfelelőségi kérdések:** Győződjön meg arról, hogy a dokumentumok megfelelnek a tulajdonságaikon alapuló meghatározott kritériumoknak.
-3. **Tartalomelemzés:** Gyorsan értékelheti és szűrheti a dokumentumokat méret, típus vagy hosszúság szerint.
+public class DocumentMetadataExtractor {
+    
+    public static void extractDocumentInfo(String filePath) {
+        // First, check if file exists
+        Path path = Paths.get(filePath);
+        if (!Files.exists(path)) {
+            System.err.println("File not found: " + filePath);
+            return;
+        }
+        
+        try (Comparer comparer = new Comparer(filePath)) {
+            try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+                displayDocumentInfo(info, filePath);
+            }
+        } catch (Exception e) {
+            System.err.println("Error processing file " + filePath + ": " + e.getMessage());
+        }
+    }
+    
+    private static void displayDocumentInfo(IDocumentInfo info, String filePath) {
+        String fileName = Paths.get(filePath).getFileName().toString();
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        System.out.println("=== Document Information ===");
+        System.out.printf("File name: %s\n", fileName);
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Pages: %d\n", pageCount);
+        System.out.printf("Size: %d bytes (%.2f KB)\n", fileSize, fileSize / 1024.0);
+        System.out.println("============================\n");
+    }
+    
+    public static void main(String[] args) {
+        // Test with different file types
+        extractDocumentInfo("path/to/your/document.docx");
+        extractDocumentInfo("path/to/your/document.pdf");
+    }
+}
+```
 
-## Teljesítménybeli szempontok
+## Gyakori problémák és megoldások
 
-Az optimális teljesítmény biztosítása érdekében a GroupDocs.Comparison használatakor:
+### Probléma 1: „File Not Found” hibák
 
-- **Memóriakezelés:** A szivárgások megelőzése érdekében ügyeljen a Java memóriakezelési gyakorlatára.
-- **Erőforrás-kezelés:** Mindig próbáld ki az erőforrásokat, vagy add meg a „lezárás” opciót.
-- **Dokumentumfeldolgozás optimalizálása:** Korlátozza az egyidejű dokumentum-összehasonlítások számát, ha teljesítményproblémákba ütközik.
+**Tünetek**: Kivétel dobódik a Comparer inicializálásakor  
+**Megoldás**: Mindig ellenőrizd a fájlútvonalakat és a létezést:
 
-## Következtetés
+```java
+Path filePath = Paths.get(documentPath);
+if (!Files.exists(filePath)) {
+    throw new IllegalArgumentException("File does not exist: " + documentPath);
+}
+if (!Files.isReadable(filePath)) {
+    throw new IllegalArgumentException("File is not readable: " + documentPath);
+}
+```
 
-Ez az oktatóanyag végigvezette Önt a GroupDocs.Comparison Java-alapú beállításán és a lényeges dokumentuminformációk kinyerésén. Megtanulta, hogyan konfigurálja a környezetét, hogyan inicializálja a kulcsfontosságú objektumokat, és hogyan kérje le hatékonyan a metaadatokat. 
+### Probléma 2: Memória‑problémák nagy fájlok esetén
 
-### Következő lépések
+**Tünetek**: OutOfMemoryError vagy lassú teljesítmény  
+**Megoldás**: Fájlokat egyenként dolgozd fel, és biztosítsd a megfelelő erőforrás‑takarítást:
 
-Fedezze fel a további lehetőségeket a GroupDocs.Comparison további funkcióinak megvalósításával, vagy integrálja ezt a funkciót nagyobb rendszerekbe, például tartalomkezelő platformokba.
+```java
+// Always use try-with-resources
+try (Comparer comparer = new Comparer(filePath)) {
+    // Process immediately and don't store large objects
+    processDocumentInfo(comparer.getSource().getDocumentInfo());
+} // Resources automatically cleaned up here
+```
 
-Készen állsz kipróbálni? Merülj el mélyebben a dokumentációban itt: [GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/) és kezdj el kísérletezni a saját dokumentumaiddal!
+### Probléma 3: Nem támogatott fájlformátumok
 
-## GYIK szekció
+**Tünetek**: Kivétel a bizonyos fájlok feldolgozása közben  
+**Megoldás**: Először ellenőrizd a támogatott formátumokat:
 
-1. **Mire használják a GroupDocs.Comparison for Java függvényt?**
-   - Elsősorban dokumentumok közötti különbségek összehasonlítására használják, de támogatja a dokumentumok metaadatainak kinyerését is.
+```java
+public static boolean isSupportedFormat(String filePath) {
+    String extension = FilenameUtils.getExtension(filePath).toLowerCase();
+    return Arrays.asList("docx", "doc", "pdf", "txt", "rtf", "odt").contains(extension);
+}
+```
 
-2. **Szükséges licenc a GroupDocs.Comparison összes funkciójának használatához?**
-   - Bár ingyenes próbaverzióval is elkezdheted, a haladó funkciók eléréséhez licencet kell vásárolni vagy ideiglenes licencet kell beszerezni.
+### Probléma 4: Licencproblémák termelésben
 
-3. **Kivonhatok információkat nem Office dokumentumokból?**
-   - Igen, a GroupDocs.Comparison különféle formátumokat támogat, beleértve a PDF-eket és a dokumentációjukban felsorolt egyéb fájlokat.
+**Tünetek**: Vízjelek vagy funkciókorlátozások  
+**Megoldás**: Győződj meg róla, hogy a licenc helyesen van alkalmazva:
 
-4. **Mi van, ha a dokumentumom nem tartalmaz metaadatokat?**
-   - A könyvtár továbbra is működni fog, de egyes mezők null vagy alapértelmezett értékeket adhatnak vissza.
+```java
+// Apply license at application startup
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
 
-5. **Hogyan oldhatom meg a GroupDocs.Comparison gyakori problémáit?**
-   - Lásd a [támogató fórum](https://forum.groupdocs.com/c/comparison) megoldásokért és közösségi tanácsokért.
+## Legjobb gyakorlatok termelési környezetben
 
-## Erőforrás
+### 1. Erőforrás‑kezelés
 
-- **Dokumentáció:** [GroupDocs.Comparison Java dokumentáció](https://docs.groupdocs.com/comparison/java/)
-- **API-hivatkozás:** [GroupDocs API-referencia](https://reference.groupdocs.com/comparison/java/)
-- **Letöltés:** [GroupDocs letöltések](https://releases.groupdocs.com/comparison/java/)
-- **Vásárlás:** [GroupDocs licenc vásárlása](https://purchase.groupdocs.com/buy)
-- **Ingyenes próbaverzió:** [Próbálja ki az ingyenes letöltést](https://releases.groupdocs.com/comparison/java/)
-- **Ideiglenes engedély:** [Ideiglenes engedély igénylése](https://purchase.groupdocs.com/temporary-license/)
-- **Támogatás:** [GroupDocs támogatási fórum](https://forum.groupdocs.com/c/comparison)
+Mindig használj try‑with‑resources‑t az automatikus takarításért:
 
-Az útmutató követésével hatékony dokumentummeta-kinyerési lehetőségeket oldottál fel a GroupDocs.Comparison for Java használatával. Jó kódolást!
+```java
+// Good - resources cleaned up automatically
+try (Comparer comparer = new Comparer(filePath);
+     IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+    // Process info
+}
+
+// Bad - potential memory leaks
+Comparer comparer = new Comparer(filePath);
+IDocumentInfo info = comparer.getSource().getDocumentInfo();
+// Processing code
+// Resources might not be cleaned up properly
+```
+
+### 2. Hibakezelési stratégia
+
+Alkalmazz átfogó hibakezelést:
+
+```java
+public DocumentInfo extractSafely(String filePath) {
+    try {
+        return extractDocumentInfo(filePath);
+    } catch (SecurityException e) {
+        log.warn("Access denied for file: " + filePath, e);
+        return null;
+    } catch (IOException e) {
+        log.error("I/O error processing file: " + filePath, e);
+        return null;
+    } catch (Exception e) {
+        log.error("Unexpected error processing file: " + filePath, e);
+        return null;
+    }
+}
+```
+
+### 3. Teljesítményoptimalizálás
+
+Több fájl feldolgozásához fontold meg a kötegelt feldolgozást:
+
+```java
+public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
+    return filePaths.parallelStream()
+                   .map(this::extractSafely)
+                   .filter(Objects::nonNull)
+                   .collect(Collectors.toList());
+}
+```
+
+## Mikor érdemes ezt használni más megközelítésekkel szemben
+
+**Használd a GroupDocs.Comparison‑t, ha:**  
+- Megbízható metaadat‑kinyerésre van szükséged különböző Office formátumokból.  
+- Később dokumentum‑összehasonlítási funkciókra is szükséged lehet.  
+- Összetett dokumentumokkal dolgozol, amelyek pontos oldalszámlálást igényelnek.
+
+**Alternatívákat érdemes mérlegelni, ha:**  
+- Csak alapvető fájlinformációra van szükséged (használd a `java.nio.file.Files`‑t a méret és dátumok lekéréséhez).  
+- Egyszerű szöveges fájlokkal dolgozol (a beépített Java API‑k elegendőek).  
+- A költségkritikus (először nyílt forráskódú megoldásokat nézz meg).
+
+## Hibakeresési útmutató
+
+### Probléma: A kód lefordul, de futásidőben kivételt dob
+
+**Ellenőrizd a következőket:**  
+1. A licenc megfelelően van konfigurálva?  
+2. Helyes fájlútvonalakat használsz?  
+3. Van‑e olvasási jogosultságod a fájlokra?  
+4. Támogatott formátumú‑e a fájl?
+
+### Probléma: A memóriahasználat folyamatosan nő
+
+**Megoldások:**  
+1. Használj try‑with‑resources‑t.  
+2. Fájlokat egyenként dolgozz fel, ne tölts be több fájlt egyszerre.  
+3. Ellenőrizd, hogy nincs‑e statikus referencia, amely objektumokat tart vissza.
+
+### Probléma: Egyes metaadat‑mezők null értéket adnak vissza
+
+**Ez normális a következők esetén:**  
+- Olyan fájlok, amelyek nem tartalmazzák az adott metaadatot.  
+- Sérült vagy hiányos fájlok.  
+- Nem támogatott formátum‑variációk.  
+
+Mindig ellenőrizd a null értékeket, mielőtt felhasználnád a metaadatot.
+
+## Következtetés és további lépések
+
+Most már szilárd alapokkal rendelkezel a dokumentum metaadatok kinyeréséhez a GroupDocs.Comparison for Java segítségével! Összefoglalva:
+
+✅ A könyvtár és a függőségek helyes beállítása  
+✅ **java get file type** és más kulcsfontosságú dokumentumtulajdonságok lekérése  
+✅ Gyakori hibák és szélsőséges esetek kezelése  
+✅ Legjobb gyakorlatok termelési környezetben  
+✅ Tipikus problémák hibakeresése  
+
+### Mi a következő lépés?
+
+Miután a metaadat‑kinyerés már a zsebedben van, érdemes megvizsgálni:
+
+- **Dokumentum‑összehasonlítási funkciók** a változások nyomon követéséhez.  
+- **Integráció Spring Boot‑tal** webalkalmazásokhoz.  
+- **Kötegelt feldolgozás** több fájl hatékony kezeléséhez.  
+- **Egyedi metaadat‑kinyerés** specifikus fájltípusokhoz.
+
+Szeretnél még mélyebben elmerülni? Tekintsd meg a [hivatalos GroupDocs dokumentációt](https://docs.groupdocs.com/comparison/java/) a haladó funkciók és példák miatt.
+
+## Gyakran ismételt kérdések
+
+**K: Kinyerhetek metaadatot jelszóval védett dokumentumokból?**  
+A: Igen, de ilyenkor meg kell adnod a jelszót a `Comparer` objektum inicializálásakor. Használd a betöltési opciókat elfogadó konstruktor változatot.
+
+**K: Milyen fájlformátumok támogatottak a metaadat‑kinyeréshez?**  
+A: A GroupDocs.Comparison a legtöbb elterjedt formátumot támogatja, többek között DOCX, PDF, XLSX, PPTX, TXT, RTF és sok más. A teljes listáért lásd a dokumentációt.
+
+**K: Van‑e mód a saját tulajdonságok kinyerésére Office dokumentumokból?**  
+A: Az alapvető dokumentuminformáció a szabványos tulajdonságokra korlátozódik. Egyedi tulajdonságokhoz érdemes lehet más GroupDocs könyvtárakat vagy kiegészítő eszközöket használni.
+
+**K: Hogyan kezeljem a nagyon nagy fájlokat memória‑kifogyás nélkül?**  
+A: Mindig használj try‑with‑resources‑t, dolgozz egyes fájlokkal, és fontold meg a streaming megközelítést kötegelt feldolgozásnál. Emellett győződj meg róla, hogy a JVM‑nek elegendő heap‑memóriája van.
+
+**K: Működik ez felhőben tárolt dokumentumokkal is?**  
+A: Igen, de előbb le kell tölteni a fájlt helyi tárolóba vagy stream‑al kell dolgozni. A GroupDocs helyi fájlokkal és stream‑ekkel egyaránt működik.
+
+**K: Mit tegyek, ha licenchibát kapok?**  
+A: Ellenőrizd, hogy a licenc helyesen van‑e alkalmazva az alkalmazás indításakor, és hogy a licenc nem járt le. Ha a probléma továbbra is fennáll, vedd fel a kapcsolatot a GroupDocs támogatással.
+
+**K: Biztonságos a használat több szálon?**  
+A: Igen, de minden szálnak külön `Comparer` példányt kell létrehoznia. Ne ossz meg példányokat szálak között.
+
+---
+
+**Utolsó frissítés:** 2026-01-18  
+**Tesztelt verzió:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs  
+
+**További források**  
+- **Dokumentáció:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API referencia:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Közösségi támogatás:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Ingyenes próba:** [Download and Test](https://releases.groupdocs.com/comparison/java/)

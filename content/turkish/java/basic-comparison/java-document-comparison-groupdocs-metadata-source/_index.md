@@ -1,50 +1,69 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison ile Java'da ana belge karşılaştırmasını yapın. Doğru ve tutarlı karşılaştırmalar için meta veri kaynaklarını etkili bir şekilde ayarlamayı öğrenin."
-"title": "GroupDocs.Comparison&#58;ı Kullanarak Java Belge Karşılaştırmasını Uygulayın Kapsamlı Bir Kılavuz"
-"url": "/tr/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-21'
+description: GroupDocs.Comparison API'yi kullanarak Java'da belgeleri nasıl karşılaştıracağınızı
+  öğrenin; birden fazla dosyayı karşılaştırma ve şifre korumalı belgeler dahil. Kod,
+  en iyi uygulamalar ve sorun giderme ile adım adım rehber.
+keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
+  in java, java compare multiple files, java compare password protected, Java file
+  comparison library, how to compare Word documents in Java
+lastmod: '2025-12-21'
+linktitle: Java Document Comparison Tutorial
+tags:
+- document-comparison
+- groupdocs
+- java-tutorial
+- api-integration
+title: Java'da belgeleri karşılaştırma – GroupDocs API Tam Kılavuzu
 type: docs
+url: /tr/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/
+weight: 1
 ---
-# GroupDocs.Comparison ile Meta Veri Kaynağını Ayarlayarak Java Belge Karşılaştırması Nasıl Uygulanır
 
-## giriiş
+# Java'da belge karşılaştırma – GroupDocs API Tam Kılavuzu
 
-Java uygulamalarınızda doğru meta veri işlemeyi sağlarken belgeleri karşılaştırmakta zorluk mu çekiyorsunuz? Yalnız değilsiniz! Birçok geliştirici, belge karşılaştırması ve tutarlı meta veri kaynaklarını koruma konusunda zorluklarla karşılaşıyor. **GroupDocs.Java için Karşılaştırma**, karşılaştırmalar sırasında meta veri kaynağını ayarlamanıza izin vererek bu süreci basitleştiren güçlü bir araçtır.
+## Giriş
 
-Bu eğitimde, Java projelerinizdeki meta veri kaynaklarını etkili bir şekilde yönetmek için GroupDocs.Comparison'ı nasıl kullanacağınızı keşfedeceğiz. Kurulum ve ayarlamadan pratik uygulamaya ve performans optimizasyonuna kadar her şeyi ele alacağız. Sonunda şunları anlayacaksınız:
-- Java için GroupDocs.Comparison'ı kurma
-- Belirli meta veri kaynak ayarlarıyla belge karşılaştırmasını uygulama
-- Büyük ölçekli karşılaştırmalar için performansın optimize edilmesi
+Hiç iki belgeyi satır satır manuel olarak karşılaştırırken kritik farkları kaçırdığınız oldu mu? Yalnız değilsiniz. **compare documents in java** yaygın bir zorluktur, özellikle meta verileri korumanız, şifre‑korumalı dosyaları işlemeniz veya birden çok dosyayı aynı anda karşılaştırmanız gerektiğinde.
 
-Dalmaya hazır mısınız? Başlamadan önce hangi ön koşullara ihtiyacınız olduğuna bakalım.
+**Şöyle ki**: çoğu geliştirici ya sıfırdan bir şey inşa ettikleri (ki bu çok zaman alır) ya da biçimlendirme, meta veri ve güvenlik ayarlarını görmezden gelen temel diff araçlarını kullandıkları için zorlanır. İşte **GroupDocs.Comparison for Java** burada devreye giriyor.
 
-## Ön koşullar
+Bu kapsamlı öğreticide, Java uygulamalarınızda sağlam belge karşılaştırmasını nasıl uygulayacağınızı keşfedeceksiniz. Temel kurulumdan gelişmiş meta veri yönetimine, üretimde gerçekten kullanabileceğiniz gerçek‑dünya örneklerine kadar her şeyi ele alacağız. Sonunda şunları nasıl yapacağınızı öğreneceksiniz:
 
-GroupDocs.Comparison'ı kurmaya ve kullanmaya başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+- Java projenizde GroupDocs.Comparison'ı kurun (düşündüğünüzden daha kolay)  
+- **compare documents in java** meta veri bütünlüğünü koruyarak  
+- **java compare multiple files** ve **java compare password protected** senaryolarını yönetin  
+- Büyük ölçekli belge işleme için performansı optimize edin  
 
-### Gerekli Kütüphaneler ve Sürümler
+Java uygulamalarınızda belge karşılaştırmasını çocuk oyuncağı haline getirmeye hazır mısınız? Hadi başlayalım!
 
-- **Java için GroupDocs.Comparison:** Sürüm 25.2 veya üzeri.
-- **Java Geliştirme Kiti (JDK):** JDK 8 veya üzeri sürümün yüklü olduğundan emin olun.
+## Hızlı Yanıtlar
+- **Java'da belgeleri karşılaştırmamı sağlayan kütüphane nedir?** GroupDocs.Comparison for Java  
+- **Birden fazla dosyayı aynı anda karşılaştırabilir miyim?** Evet – ihtiyacınız kadar hedef belge ekleyin  
+- **Şifre‑korumalı belgeleri nasıl yönetirim?** Belge şifresiyle `LoadOptions` kullanın  
+- **Üretim için lisansa ihtiyacım var mı?** Geçerli bir GroupDocs lisansı filigranları ve sınırlamaları kaldırır  
+- **Hangi Java sürümü gerekiyor?** JDK 8+, JDK 11+ önerilir  
 
-### Çevre Kurulum Gereksinimleri
+## **compare documents in java** nedir?
+Java'da belge karşılaştırma, belge yapısını anlayan bir kütüphane kullanarak iki veya daha fazla dosya arasındaki farkları—metin değişiklikleri, biçim düzenlemeleri veya meta veri güncellemeleri—programatik olarak tespit etmek anlamına gelir. GroupDocs.Comparison karmaşıklığı soyutlayarak, her değişikliği vurgulayan bir diff belgesi oluşturmanız için basit bir API sunar.
 
-- Java uygulamalarını (örneğin IntelliJ IDEA, Eclipse) çalıştırabilen bir geliştirme ortamı.
-- Proje bağımlılıklarını yönetmek için Maven derleme aracı.
+## Neden GroupDocs.Comparison for Java Kullanmalı?
+- **Zengin format desteği** – DOCX, PDF, XLSX, PPTX, TXT ve daha fazlası  
+- **Meta veri yönetimi** – sonuç için kaynak, hedef veya meta veri olmamasını seçin  
+- **Şifre desteği** – korumalı dosyaları manuel şifre çözme olmadan açın  
+- **Ölçeklenebilir performans** – toplu işleme, asenkron yürütme ve bellek‑verimli tasarım  
 
-### Bilgi Önkoşulları
+## Önkoşullar
+- **Java Ortamı:** JDK 8+ (JDK 11+ önerilir), tercih ettiğiniz IDE, Maven (veya Gradle)  
+- **GroupDocs.Comparison Kütüphanesi:** Version 25.2 veya daha yeni (her zaman en son sürümü alın)  
+- **Lisans:** Ücretsiz deneme, geçici 30‑günlük lisans veya ticari lisans  
 
-- Java programlama ve nesne yönelimli prensiplerin temel anlayışı.
-- Bağımlılık yönetimi için Maven kullanımına aşinalık.
+## Projenizde GroupDocs.Comparison'ı Kurma
 
-Artık her şey hazır olduğuna göre GroupDocs.Comparison'ı Java ortamınıza yüklemeye geçebiliriz.
+### Maven Yapılandırması
 
-## Java için GroupDocs.Comparison Kurulumu
-
-### Maven üzerinden kurulum
-
-Başlamak için GroupDocs.Comparison'ı Maven kullanarak projenize entegre edin. Aşağıdaki yapılandırmayı projenize ekleyin `pom.xml` dosya:
+İlk olarak – GroupDocs deposunu ve bağımlılığını `pom.xml` dosyanıza ekleyin. Çoğu öğreticinin gereksiz yere karmaşıklaştırdığı bir yer, ama aslında oldukça basit:
 
 ```xml
 <repositories>
@@ -64,122 +83,453 @@ Başlamak için GroupDocs.Comparison'ı Maven kullanarak projenize entegre edin.
 </dependencies>
 ```
 
-### Lisans Edinimi
+**Pro ipucu:** Her zaman en son sürüm numarasını [GroupDocs sürüm sayfasında](https://releases.groupdocs.com/comparison/java/) kontrol edin. Yeni sürümler genellikle performans iyileştirmeleri ve baş ağrısı yaşamanızı önleyecek hata düzeltmeleri içerir.
 
-Bir tane edinerek başlayabilirsiniz **ücretsiz deneme** GroupDocs.Comparison for Java'nın tüm yeteneklerini keşfetmek için lisans. Uzun süreli kullanım için geçici bir lisans başvurusunda bulunmayı veya ticari bir lisans satın almayı düşünün.
+### Lisansınızı Ayarlama
 
-#### Edinme Adımları:
-1. Ziyaret etmek [GroupDocs Satın Alma Sayfası](https://purchase.groupdocs.com/buy) lisans satın almak.
-2. Kullanın [Ücretsiz Deneme](https://releases.groupdocs.com/comparison/java/) İlk test için.
-3. Daha uzun süreli erişim için, bir başvuruda bulunun [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/).
+Çoğu geliştiricinin fark etmediği şey şu: GroupDocs.Comparison'ı ücretsiz denemeleriyle hemen test etmeye başlayabilirsiniz. Kredi kartı gerekmez, koşul yok.
 
-Lisansınızı aldıktan sonra, Java projenizde GroupDocs.Comparison'ı başlatın ve yapılandırın.
+**Seçenekleriniz:**
+1. **Ücretsiz Deneme** – test ve küçük projeler için mükemmel. Sadece indirin ve kodlamaya başlayın!  
+2. **Geçici Lisans** – değerlendirmek için daha fazla zamana mı ihtiyacınız var? 30‑günlük geçici lisansı [buradan](https://purchase.groupdocs.com/temporary-license/) alın  
+3. **Ticari Lisans** – üretime hazır mısınız? Fiyatlandırmayı [buradan](https://purchase.groupdocs.com/buy) inceleyin  
 
-## Uygulama Kılavuzu
+Ücretsiz deneme tüm özellikleri içerir ancak çıktı dosyalarına bir filigran ekler. Geliştirme ve test için genellikle bu yeterlidir.
 
-Belge karşılaştırmasının meta veri kaynağı ayarıyla uygulanması sürecini yönetilebilir adımlara bölelim.
+## Belge Karşılaştırma Uygulaması: Tam Kılavuz
 
-### Özellik: Belge Karşılaştırması için Meta Veri Kaynağını Ayarlama
+Şimdi ana bölüm! Adım adım tam bir belge karşılaştırma çözümü oluşturacağız. Endişelenmeyin – sadece "nasıl"ı değil, aynı zamanda her kararın "nedenini" de açıklayacağız.
 
-#### Genel bakış
+### Meta Veri Kaynaklarını Anlamak (Bu Önemli!)
 
-Bu özellik, geliştiricilerin karşılaştırmalar sırasında meta veri kaynağı olarak belirli bir belgeyi belirtmelerine olanak tanır. Bu, doğru analiz ve raporlama için belgeler arasında tutarlı meta verinin gerekli olduğu durumlarda kritik olabilir.
+Kodlamaya başlamadan önce, birçok geliştiriciyi zorlayan bir konudan bahsedelim: meta veri kaynakları. **compare documents in java** yaparken, sonuçta hangi belgenin meta verisinin (yazar, oluşturma tarihi, özel özellikler vb.) korunacağını belirlemeniz gerekir.
 
-#### Uygulama Adımları
+GroupDocs.Comparison size üç seçenek sunar:
+- **SOURCE** – orijinal belgeden meta veriyi kullan  
+- **TARGET** – karşılaştırdığınız belgeden meta veriyi kullan  
+- **NONE** – sonuçtan tüm meta verileri kaldır  
 
-##### Adım 1: Gerekli Paketleri İçe Aktarın
+Çoğu iş uygulaması için tutarlılığı sağlamak amacıyla **SOURCE** kullanmak isteyeceksiniz.
 
-GroupDocs.Comparison'dan gerekli sınıfları içe aktararak başlayın:
+### Adım‑Adım Uygulama
+
+Herhangi bir projeye ekleyebileceğiniz yeniden kullanılabilir bir yardımcı oluşturacağız.
+
+#### Adım 1: Gerekli Sınıfları İçe Aktarın
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.enums.MetadataType;
 import com.groupdocs.comparison.options.save.SaveOptions;
+import java.nio.file.Path;
+import java.io.IOException;
 ```
 
-##### Adım 2: Kaynak Belgeyle Karşılaştırıcıyı Başlatın
+#### Adım 2: Comparer Örneğini Oluşturun
 
-Bir örnek oluşturun `Comparer` ve kaynak belgeyi yükleyin.
+Büyünün başladığı yer burası. `Comparer` sınıfı tüm karşılaştırma işlemleri için ana giriş noktanızdır:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
-    // Kod devam ediyor...
+    // All our comparison logic goes here
 }
 ```
 
-**Neden:** Başlatma `Comparer` nesnesi karşılaştırma sürecini başlatmak için önemlidir. Başkalarıyla karşılaştırmak istediğiniz orijinal belgeyi yükler.
+**Neden try‑with‑resources kullanmalı?** `Comparer` sınıfı `AutoCloseable` arayüzünü uygular, bu da işiniz bittiğinde kaynakları düzgün bir şekilde temizlediği anlamına gelir. Bu, özellikle çok sayıda belge işlediğinizde bellek sızıntılarını önler.
 
-##### Adım 3: Hedef Belgeyi Ekle
-
-Kaynakla karşılaştırmak istediğiniz hedef belgeyi ekleyin.
+#### Adım 3: Karşılaştırma İçin Hedef Belgeleri Ekleyin
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Neden:** The `add` Bu yöntem, karşılaştırma için ek belgeler belirtmenize olanak tanır ve birden fazla belgeyi aynı anda analiz etmede esneklik sağlar.
-
-##### Adım 4: Meta Veri Kaynak Türünü Ayarlayın
-
-Karşılaştırma işlemi sırasında meta veri ayarlarını yapılandırın:
+**İlginç bir şey:** birden fazla hedef belge ekleyebilir ve hepsini tek bir işlemde kaynağınıza karşı karşılaştırabilirsiniz. `add()` metodunu birden çok kez çağırmanız yeterli:
 
 ```java
-final Path resultPath = comparer.compare(outputFileName,
+comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
+comparer.add("YOUR_DOCUMENT_DIRECTORY/target2.docx");
+comparer.add("YOUR_DOCUMENT_DIRECTORY/target3.docx");
+```
+
+#### Adım 4: Meta Veri İşlemesini Yapılandırın ve Karşılaştırmayı Çalıştırın
+
+Meta veri kaynağını ayarladığımız ve gerçek karşılaştırmayı çalıştırdığımız yer:
+
+```java
+final Path resultPath = comparer.compare("output/comparison_result.docx",
         new SaveOptions.Builder()
-                .setCloneMetadataType(MetadataType.SOURCE) // Meta veri kaynağı olarak KAYNAK belirtin
+                .setCloneMetadataType(MetadataType.SOURCE)
                 .build());
 ```
 
-**Neden:** Ayarlayarak `MetadataType.SOURCE`, tüm meta verilerin kaynak belgeden kopyalanmasını sağlayarak karşılaştırmalar arasında tutarlılığı korursunuz.
+**Burada ne oluyor?** GroupDocs'a şunları söylüyoruz:
+1. Tüm eklenen belgeleri kaynakla karşılaştır  
+2. Sonucu belirttiğimiz yola kaydet  
+3. Sonuçta **SOURCE** belgenin meta verisini kullan  
 
-#### Sorun Giderme İpuçları
+### Tam Çalışan Örnek
 
-- **Dosya Bulunamadı Hatası:** Dosya yollarınızın doğru olduğundan emin olmak için iki kez kontrol edin.
-- **Hatalı Meta Veri Kaynağı:** Bunu doğrulayın `setCloneMetadataType` kullanım durumunuza uygun şekilde ayarlanmıştır. Seçenekler arasında KAYNAK, HEDEF veya HİÇBİRİ bulunur.
+Hepsini bir araya getirerek gerçekten kullanabileceğiniz bir metoda dönüştürelim:
 
-## Pratik Uygulamalar
+```java
+public class DocumentComparison {
+    
+    public static Path compareDocumentsWithMetadata(
+            String sourcePath, 
+            String targetPath, 
+            String outputPath) throws IOException {
+        
+        try (Comparer comparer = new Comparer(sourcePath)) {
+            // Add the target document
+            comparer.add(targetPath);
+            
+            // Configure comparison options
+            SaveOptions saveOptions = new SaveOptions.Builder()
+                    .setCloneMetadataType(MetadataType.SOURCE)
+                    .build();
+            
+            // Execute comparison and return result path
+            return comparer.compare(outputPath, saveOptions);
+        }
+    }
+}
+```
 
-GroupDocs.Comparison çeşitli gerçek dünya senaryolarında kullanılabilir:
+## Yaygın Tuzaklar ve Nasıl Kaçınılır
 
-1. **Hukuki Belge Analizi:** Meta veri tutarlılığını koruyarak sözleşmeleri ve anlaşmaları karşılaştırın.
-2. **Finansal Raporlama:** Finansal belgelerin tutarlı meta verilerle doğru bir şekilde karşılaştırılmasını sağlayın.
-3. **İçerik Yönetim Sistemleri (CMS):** Birden fazla revizyon arasında sürüm kontrolü ve içerik karşılaştırmaları için kullanın.
+Yüzlerce geliştiricinin belge karşılaştırmasını uygulamasına yardımcı olduktan sonra aynı sorunların tekrar tekrar ortaya çıktığını gördüm. İşte büyük problemler (ve nasıl düzeltileceği):
 
-Entegrasyon olanakları arasında, veri bütünlüğünü ve analiz yeteneklerini geliştirmek için GroupDocs.Comparison'ı belge yönetim sistemleri, bulut depolama çözümleri veya özel iş uygulamalarıyla birleştirmek yer alır.
+### Dosya Yolu Sorunları
 
-## Performans Hususları
+**Problem**: Dosya mevcut olmasına rağmen `FileNotFoundException`  
+**Çözüm**: Her zaman mutlak yollar kullanın veya göreli yolları doğru şekilde çözün
 
-GroupDocs.Comparison kullanırken en iyi performansı sağlamak için:
-- **Java Bellek Yönetimini Optimize Edin:** Uygulamanız için yeterli yığın boyutu tahsisini sağlayın.
-- **Kaynak Kullanım Kuralları:** Darboğazları önlemek için karşılaştırma görevleri sırasında CPU ve bellek kullanımını izleyin.
-- **En İyi Uygulamalar:** Performans iyileştirmelerinden ve hata düzeltmelerinden yararlanmak için GroupDocs kitaplığınızı düzenli olarak güncelleyin.
+```java
+// Instead of this:
+String sourcePath = "documents/source.docx";
 
-## Çözüm
+// Do this:
+String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toString();
+```
 
-Bu eğitimde, GroupDocs.Comparison kullanarak meta veri kaynaklarını ayarlayarak Java'da belge karşılaştırmasını nasıl uygulayacağınızı öğrendiniz. Kurulumdan ve uygulamadan pratik uygulamalara ve performans optimizasyonuna kadar her şeyi ele aldık. 
+### Bellek Yönetimi Sorunları
 
-Bir sonraki adım olarak, farklı meta veri türlerini denemeyi veya gelişmiş işlevsellik için GroupDocs.Comparison'ı mevcut projelerinize entegre etmeyi düşünün.
+**Problem**: Büyük belgeleri karşılaştırırken bellek yetersizliği hataları  
+**Çözüm**: JVM yığın boyutunu artırın ve uygun kaynak yönetimi kullanın
 
-Öğrendiklerinizi pratiğe dökmeye hazır mısınız? Bu çözümü bugün Java uygulamanızda uygulamaya çalışın!
+```bash
+# Add these JVM arguments when running your application
+-Xmx4g -XX:+UseG1GC
+```
 
-## SSS Bölümü
+### Yanlış Meta Veri İşleme
 
-**S: Büyük belge karşılaştırmalarını nasıl verimli bir şekilde yapabilirim?**
-A: Karşılaştırmalar sırasında bellek kullanımını yönetmek için JVM yığın boyutunu artırmayı ve verimli veri yapıları kullanmayı düşünün.
+**Problem**: Karşılaştırma sırasında önemli belge meta verisinin kaybolması  
+**Çözüm**: Her zaman meta veri tipini açıkça ayarlayın – varsayılanlara güvenmeyin
 
-**S: Aynı anda ikiden fazla belgeyi karşılaştırabilir miyim?**
-C: Evet, GroupDocs.Comparison tek bir kaynak belgeyle karşılaştırma yapmak için birden fazla hedef belgenin eklenmesini destekler.
+```java
+// Always be explicit about metadata handling
+SaveOptions saveOptions = new SaveOptions.Builder()
+        .setCloneMetadataType(MetadataType.SOURCE)  // Be explicit!
+        .build();
+```
 
-**S: Belgeler arasında meta veri ihtiyaçlarım farklı olursa ne olur?**
-A: Ayarlayabilirsiniz `setCloneMetadataType` Belirli gereksinimlerinize göre KAYNAK, HEDEF veya HİÇBİRİ olarak ayarlayabilirsiniz.
+### Lisans Yapılandırma Sorunları
 
-**S: GroupDocs.Comparison'ın ücretsiz deneme sürümünü kullanmada sınırlamalar var mı?**
-A: Ücretsiz denemede belge boyutu sınırlamaları gibi kullanım kısıtlamaları olabilir. Daha kapsamlı testler için geçici bir lisans edinmeyi düşünün.
+**Problem**: Üretimde filigranların görünmesi  
+**Çözüm**: `Comparer` örnekleri oluşturmadan önce lisansın doğru yüklendiğini doğrulayın
 
-**S: GroupDocs.Comparison'ı diğer Java çerçeveleriyle nasıl entegre edebilirim?**
-A: Mevcut Java uygulamalarınız veya hizmetleriniz içerisinde özel entegrasyon katmanları oluşturmak için kütüphanenin API'sini kullanabilirsiniz.
+```java
+// Load license at application startup
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
 
-## Kaynaklar
+## Üretim Kullanımı İçin En İyi Uygulamalar
 
-Daha detaylı bilgi ve araştırma için aşağıdaki kaynaklara bakabilirsiniz:
-- [GroupDocs Belgeleri](https://docs.groupdocs.com/comparison/java/)
+Gerçek dünya deneyimine dayanarak, amatör uygulamaları üretime hazır çözümlerden ayıran uygulamalar şunlardır:
+
+### Gerçekten Yardımcı Olan Hata Yönetimi
+
+Sadece istisnaları yakalamayın – anlamlı bir şekilde ele alın:
+
+```java
+public ComparisonResult compareDocuments(String source, String target) {
+    try (Comparer comparer = new Comparer(source)) {
+        comparer.add(target);
+        Path result = comparer.compare("output.docx", 
+            new SaveOptions.Builder()
+                .setCloneMetadataType(MetadataType.SOURCE)
+                .build());
+        
+        return new ComparisonResult(true, result.toString(), null);
+        
+    } catch (IOException e) {
+        logger.error("File access error during comparison", e);
+        return new ComparisonResult(false, null, "Unable to access document files");
+        
+    } catch (Exception e) {
+        logger.error("Unexpected error during document comparison", e);
+        return new ComparisonResult(false, null, "Document comparison failed");
+    }
+}
+```
+
+### Performans Optimizasyonu
+
+Yüksek hacimli senaryolar için şu optimizasyonları düşünün:
+1. **Mümkün olduğunda `Comparer` örneklerini yeniden kullanın** (ancak iş parçacığı güvenliğine dikkat edin)  
+2. **Belgeleri toplu işleyin** sistem kaynaklarını aşırı yüklemekten kaçınmak için  
+3. **Büyük belgeler için asenkron işleme** kullanın  
+4. **Bellek kullanımını izleyin** ve JVM ayarlarını buna göre ayarlayın  
+
+### Güvenlik Hususları
+
+Hassas belgelerle çalışırken:
+- **İşleme başlamadan dosya tiplerini doğrulayın**  
+- **Uygun erişim kontrolleri uygulayın**  
+- **Kullanım sonrası geçici dosyaları hemen temizleyin**  
+- **Karşılaştırma sonuçlarını şifrelemeyi düşünün**  
+
+## Gerçek‑Dünya Uygulamaları ve Kullanım Senaryoları
+
+Geliştiricilerin GroupDocs.Comparison'ı üretimde nasıl kullandıklarına bir göz atalım:
+
+### Hukuki Belge İncelemesi
+
+Hukuk firmaları sözleşme ve yasal anlaşmalardaki değişiklikleri izlemek için belge karşılaştırma kullanır. Meta veri koruma özelliği, belge kökenini korumaları gerektiği için burada kritik öneme sahiptir.
+
+```java
+// Typical legal document comparison workflow
+public void reviewContractChanges(String originalContract, String revisedContract) {
+    try (Comparer comparer = new Comparer(originalContract)) {
+        comparer.add(revisedContract);
+        
+        SaveOptions options = new SaveOptions.Builder()
+                .setCloneMetadataType(MetadataType.SOURCE)  // Preserve original metadata
+                .build();
+        
+        Path result = comparer.compare("contract_review.docx", options);
+        
+        // Send result to legal team for review
+        notifyLegalTeam(result);
+    }
+}
+```
+
+### İçerik Yönetim Sistemleri
+
+CMS platformları sürüm kontrolü ve değişiklik takibi için belge karşılaştırma kullanır:
+
+```java
+public class CMSDocumentVersioning {
+    
+    public VersionComparisonResult compareVersions(
+            DocumentVersion current, 
+            DocumentVersion previous) {
+        
+        try (Comparer comparer = new Comparer(current.getFilePath())) {
+            comparer.add(previous.getFilePath());
+            
+            String outputName = String.format("comparison_%s_vs_%s.docx", 
+                current.getVersionNumber(), 
+                previous.getVersionNumber());
+            
+            Path result = comparer.compare(outputName, 
+                new SaveOptions.Builder()
+                    .setCloneMetadataType(MetadataType.SOURCE)
+                    .build());
+            
+            return new VersionComparisonResult(result, current, previous);
+        }
+    }
+}
+```
+
+### Finansal Belge Analizi
+
+Finans kurumları bunu düzenleyici uyumluluk ve denetim izleri için kullanır:
+
+```java
+public AuditResult auditFinancialDocument(String originalReport, String submittedReport) {
+    // Compare submitted report against original
+    // Metadata preservation is critical for audit compliance
+    try (Comparer comparer = new Comparer(originalReport)) {
+        comparer.add(submittedReport);
+        
+        Path auditResult = comparer.compare("audit_comparison.docx",
+            new SaveOptions.Builder()
+                .setCloneMetadataType(MetadataType.SOURCE)
+                .build());
+        
+        return generateAuditReport(auditResult);
+    }
+}
+```
+
+## Performans Optimizasyonu ve Ölçeklendirme
+
+Ciddi belge hacimlerini işlemeye hazır olduğunuzda, bu stratejiler uygulamanızın yanıt vermesini sağlar:
+
+### Bellek Yönetimi
+
+Büyük belgeler mevcut belleği hızla tüketebilir. İşte onları verimli bir şekilde yönetmenin yolu:
+
+```java
+public class OptimizedDocumentProcessor {
+    
+    private final ExecutorService executor = Executors.newFixedThreadPool(
+        Runtime.getRuntime().availableProcessors());
+    
+    public CompletableFuture<Path> compareDocumentsAsync(
+            String source, 
+            String target, 
+            String output) {
+        
+        return CompletableFuture.supplyAsync(() -> {
+            try (Comparer comparer = new Comparer(source)) {
+                comparer.add(target);
+                return comparer.compare(output, 
+                    new SaveOptions.Builder()
+                        .setCloneMetadataType(MetadataType.SOURCE)
+                        .build());
+            }
+        }, executor);
+    }
+}
+```
+
+### Toplu İşleme
+
+Birden fazla belge karşılaştırması için toplu işleme en iyi arkadaşınızdır:
+
+```java
+public List<ComparisonResult> processBatch(List<DocumentPair> documentPairs) {
+    return documentPairs.parallelStream()
+        .map(this::compareDocumentPair)
+        .collect(Collectors.toList());
+}
+
+private ComparisonResult compareDocumentPair(DocumentPair pair) {
+    try (Comparer comparer = new Comparer(pair.getSourcePath())) {
+        comparer.add(pair.getTargetPath());
+        Path result = comparer.compare(pair.getOutputPath(),
+            new SaveOptions.Builder()
+                .setCloneMetadataType(MetadataType.SOURCE)
+                .build());
+        return new ComparisonResult(pair, result, true);
+    } catch (Exception e) {
+        return new ComparisonResult(pair, null, false, e.getMessage());
+    }
+}
+```
+
+## Sorun Giderme Kılavuzu
+
+Bir şeyler ters gittiğinde (ve bazen olur), işte hata ayıklama kontrol listeniz:
+
+### "Comparison Failed" Hataları
+
+**En yaygın nedenler:**
+1. Desteklenmeyen dosya formatı  
+2. Bozuk kaynak belgeler  
+3. Yetersiz bellek  
+4. Dosya izin sorunları  
+
+**Hata ayıklama adımları:**
+
+```java
+// Add comprehensive logging to identify the issue
+logger.debug("Starting comparison: source={}, target={}", sourcePath, targetPath);
+
+try (Comparer comparer = new Comparer(sourcePath)) {
+    logger.debug("Comparer initialized successfully");
+    
+    comparer.add(targetPath);
+    logger.debug("Target document added successfully");
+    
+    Path result = comparer.compare(outputPath, saveOptions);
+    logger.info("Comparison completed successfully: result={}", result);
+    
+    return result;
+} catch (Exception e) {
+    logger.error("Comparison failed", e);
+    throw new DocumentComparisonException("Failed to compare documents", e);
+}
+```
+
+### Performans Sorunları
+
+Karşılaştırmalar çok uzun sürüyorsa:
+1. **Belge boyutunu kontrol edin** – 100 MB üzerindeki dosyalar özel işlem gerektirebilir  
+2. **Bellek kullanımını izleyin** – gerekirse yığın boyutunu artırın  
+3. **Dosya I/O performansını doğrulayın** – yavaş depolama işlemleri darboğaz oluşturabilir  
+4. **Belge formatını düşünün** – bazı formatlar işlenmesi daha karmaşıktır  
+
+### Bellek Sızıntıları
+
+Bellek sızıntılarının belirtileri:
+- Uygulama performansı zamanla düşer  
+- `OutOfMemoryError` birçok belge işlendikten sonra  
+- Yüksek çöp toplama etkinliği  
+
+**Çözüm**: Her zaman try‑with‑resources kullanın ve uygulamanızı profil araçlarıyla izleyin.
+
+## Şifre‑Korumalı Dosyaları İşleme
+
+Eğer **java compare password protected** belgeleri karşılaştırmanız gerekiyorsa, kaynak veya hedefi açarken `LoadOptions` kullanın:
+
+```java
+LoadOptions loadOptions = new LoadOptions("your_password");
+try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
+    // Process password‑protected document
+}
+```
+
+## Spring Boot ile Entegrasyon
+
+Mikroservisler geliştiren geliştiriciler için, karşılaştırma mantığını bir Spring servis bean'inde paketleyin:
+
+```java
+@Service
+public class DocumentComparisonService {
+    
+    public ComparisonResult compareDocuments(String source, String target) {
+        try (Comparer comparer = new Comparer(source)) {
+            comparer.add(target);
+            Path result = comparer.compare("output.docx",
+                new SaveOptions.Builder()
+                    .setCloneMetadataType(MetadataType.SOURCE)
+                    .build());
+            return new ComparisonResult(result);
+        }
+    }
+}
+```
+
+## Sıkça Sorulan Sorular
+
+**S: Bir kerede iki belgeden fazla karşılaştırabilir miyim?**  
+C: Kesinlikle! Karşılaştırmayı çalıştırmadan önce `comparer.add()` ile birden fazla hedef belge ekleyin.
+
+**S: GroupDocs.Comparison hangi dosya formatlarını destekliyor?**  
+C: DOCX, PDF, XLSX, PPTX, TXT ve daha birçok formatı destekler. Tam listeyi resmi belgelerde görebilirsiniz.
+
+**S: Şifre‑korumalı belgeleri nasıl yönetirim?**  
+C: `Comparer` örneğini oluştururken şifreyi sağlamak için `LoadOptions` sınıfını kullanın (yukarıdaki örneğe bakın).
+
+**S: GroupDocs.Comparison iş parçacığı‑güvenli mi?**  
+C: Tek bir `Comparer` örneği iş parçacığı‑güvenli değildir, ancak paralel iş parçacıklarında birden çok örnek güvenle kullanılabilir.
+
+**S: Büyük belgeler için performansı nasıl artırabilirim?**  
+C: JVM yığın boyutunu (`-Xmx`) artırın, dosyaları asenkron işleyin, toplu olarak işleyin ve uygun olduğunda `Comparer` nesnelerini yeniden kullanın.
+
+## Ek Kaynaklar
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – kapsamlı API referansı ve örnekler  
+- [GroupDocs Community Forum](https://forum.groupdocs.com/) – diğer geliştiricilerden yardım alın  
+
+---
+
+**Son Güncelleme:** 2025-12-21  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs

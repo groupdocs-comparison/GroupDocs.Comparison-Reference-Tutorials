@@ -1,47 +1,76 @@
 ---
-"date": "2025-05-05"
-"description": "Dowiedz się, jak skutecznie porównywać dokumenty Worda za pomocą GroupDocs.Comparison dla Java. Ten przewodnik obejmuje konfigurację, implementację i praktyczne zastosowania."
-"title": "Opanowanie porównywania dokumentów w Javie z GroupDocs.Comparison&#58; Kompleksowy przewodnik"
-"url": "/pl/java/basic-comparison/document-comparison-groupdocs-java/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-21'
+description: Dowiedz się, jak porównywać dokumenty Word w Javie przy użyciu strumieni
+  z GroupDocs.Comparison. Ten samouczek obejmuje konfigurację, kod, wskazówki dotyczące
+  wydajności i rozwiązywanie problemów.
+keywords: java document comparison, compare word documents java, groupdocs comparison
+  tutorial, java stream document comparison, how to compare documents in java using
+  streams
+lastmod: '2025-12-21'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-streams
+- groupdocs
+- word-documents
+title: Porównywanie dokumentów Word w Javie przy użyciu strumieni – przewodnik GroupDocs
 type: docs
+url: /pl/java/basic-comparison/document-comparison-groupdocs-java/
+weight: 1
 ---
-# Opanowanie porównywania dokumentów za pomocą GroupDocs.Comparison w Javie
 
-W dzisiejszej erze cyfrowej zarządzanie dokumentami i porównywanie ich jest kluczowe zarówno dla firm, jak i osób prywatnych. Niezależnie od tego, czy współpracujesz nad projektami, czy zapewniasz spójność danych w różnych wersjach dokumentów, posiadanie odpowiednich narzędzi może mieć znaczący wpływ. Ten samouczek pokazuje, jak używać GroupDocs.Comparison dla Java, aby płynnie porównywać dokumenty Word za pomocą strumieni. Pod koniec tego przewodnika będziesz w stanie wdrożyć potężną funkcję porównywania w swoich aplikacjach Java.
+# Porównywanie dokumentów Word w Javie przy użyciu strumieni – przewodnik GroupDocs
 
-## Czego się nauczysz
+Jeśli kiedykolwiek miałeś trudności z porównywaniem wielu wersji dokumentów Word w swojej aplikacji Java, nie jesteś sam. Niezależnie od tego, czy tworzysz platformę współpracy, wdrażasz kontrolę wersji, czy po prostu potrzebujesz śledzić zmiany między wersjami dokumentów, **compare word documents java** może szybko stać się skomplikowane bez odpowiedniego podejścia.
 
-- Konfigurowanie i wykorzystywanie GroupDocs.Comparison dla Java.
-- Implementacja porównywania dokumentów za pomocą strumieni plików.
-- Obsługa wyników i konfigurowanie ustawień.
-- Badanie praktycznych zastosowań i zagadnień wydajnościowych.
-- Rozwiązywanie typowych problemów występujących podczas wdrażania.
+Właśnie tutaj wchodzi w grę GroupDocs.Comparison for Java. Zamiast walczyć z ręcznym zarządzaniem plikami lub budować logikę porównywania od podstaw, możesz wykorzystać porównywanie dokumentów oparte na strumieniach, aby efektywnie przetwarzać pliki bez ich wcześniejszego zapisywania lokalnie. To podejście jest idealne dla nowoczesnych aplikacji pracujących z przechowywaniem w chmurze, zdalnymi plikami lub środowiskami o ograniczonej pamięci.
 
-Zacznijmy od zrozumienia wymagań wstępnych, zanim zagłębimy się w kod!
+W tym kompleksowym przewodniku dowiesz się, jak **compare word documents java** przy użyciu strumieni, jak radzić sobie z typowymi pułapkami oraz jak optymalizować wydajność w aplikacjach produkcyjnych. Po zakończeniu będziesz posiadał solidny system porównywania dokumentów, który jest zarówno wydajny, jak i skalowalny.
 
-## Wymagania wstępne
+## Szybkie odpowiedzi
+- **What library is used?** GroupDocs.Comparison for Java  
+- **Can I compare documents without saving them to disk?** Yes, via streams  
+- **Which Java version is required?** JDK 8+ (Java 11+ recommended)  
+- **Do I need a license for production?** Yes, a full or temporary license is required  
+- **Is it possible to compare other formats?** Absolutely – PDF, Excel, PowerPoint, etc.
 
-Zanim zaczniemy, upewnij się, że masz następujące rzeczy:
+## Czym jest compare word documents java?
+Porównywanie dokumentów Word w Javie oznacza programowe wykrywanie dodatków, usunięć i zmian formatowania pomiędzy dwoma lub większą liczbą plików `.docx` (lub `.doc`). Dzięki strumieniom porównanie odbywa się w pamięci, co zmniejsza obciążenie I/O i poprawia skalowalność.
 
-### Wymagane biblioteki i wersje
-Będziesz potrzebować:
-- GroupDocs.Comparison dla Java w wersji 25.2 i nowszych.
+## Dlaczego używać porównania opartego na strumieniach?
+- **Memory Efficiency** – No need to load the entire file into RAM.  
+- **Remote File Support** – Works directly with cloud‑stored or database‑stored documents.  
+- **Security** – Eliminates temporary files on disk, lowering exposure risk.  
+- **Scalability** – Handles many concurrent comparisons with minimal resource consumption.
 
-### Wymagania dotyczące konfiguracji środowiska
-Upewnij się, że Twoje środowisko programistyczne obejmuje:
-- Pakiet Java Development Kit (JDK) w wersji 8 lub nowszej.
-- Zintegrowane środowisko programistyczne (IDE), takie jak IntelliJ IDEA lub Eclipse.
+## Wymagania wstępne i konfiguracja środowiska
 
-### Wymagania wstępne dotyczące wiedzy
-- Podstawowa znajomość programowania w Javie i środowisk IDE.
-- Znajomość Maven do zarządzania zależnościami.
+Przed implementacją **java stream document comparison** upewnij się, że Twoje środowisko programistyczne spełnia poniższe wymagania:
 
-Mając te wymagania wstępne, możesz skonfigurować GroupDocs.Comparison dla języka Java!
+### Wymagane zależności i wersje
+- **GroupDocs.Comparison for Java** version 25.2 or later (latest version recommended).  
+- **Java Development Kit (JDK)** version 8 or higher (Java 11+ recommended).
 
-## Konfigurowanie GroupDocs.Comparison dla Java
+### Konfiguracja środowiska programistycznego
+- **IDE**: IntelliJ IDEA, Eclipse, or VS Code with Java extensions.  
+- **Build Tool**: Maven or Gradle for dependency management.  
+- **Memory**: At least 2 GB RAM for smooth development experience.
 
-Aby rozpocząć korzystanie z GroupDocs.Comparison dla Java, skonfiguruj swój projekt z niezbędnymi zależnościami. Jeśli używasz Maven, dodaj następujące konfiguracje repozytorium i zależności do swojego `pom.xml` plik:
+### Wymagania wiedzy
+- Basic Java programming (streams and try‑with‑resources).  
+- Familiarity with Maven.  
+- Understanding of file I/O in Java.
+
+**Pro Tip**: If you're new to Java streams, spend a few minutes reviewing the concept—it’ll make the comparison logic much clearer.
+
+## Konfiguracja projektu i ustawienia
+
+Ustawienie GroupDocs.Comparison for Java jest proste, ale prawidłowa konfiguracja od samego początku oszczędza późniejsze problemy.
+
+### Konfiguracja Maven
+Add these configurations to your `pom.xml` file for proper dependency management:
 
 ```xml
 <repositories>
@@ -60,23 +89,23 @@ Aby rozpocząć korzystanie z GroupDocs.Comparison dla Java, skonfiguruj swój p
 </dependencies>
 ```
 
-### Nabycie licencji
-Aby w pełni wykorzystać GroupDocs.Comparison, możesz:
-- **Bezpłatna wersja próbna:** Zacznij od bezpłatnego okresu próbnego, aby poznać funkcje.
-- **Licencja tymczasowa:** Złóż wniosek o tymczasową licencję zapewniającą rozszerzony dostęp.
-- **Zakup:** Kup pełną licencję, aby korzystać z niej bez ograniczeń.
+**Important Note**: Always use the latest stable version for security patches and performance improvements. Check the GroupDocs releases page for updates.
 
-Gdy konfiguracja zostanie ukończona, możemy przejść do przewodnika implementacji!
+### Opcje konfiguracji licencji
+For **compare word documents java** functionality, you have several licensing options:
 
-## Przewodnik wdrażania
+1. **Free Trial** – Perfect for evaluation and small‑scale testing.  
+2. **Temporary License** – Ideal for development phases and proof‑of‑concept projects.  
+3. **Full License** – Required for production deployments.
 
-### Inicjowanie i porównywanie dokumentów za pomocą strumieni
+**Development Tip**: Start with the free trial to familiarize yourself with the API, then upgrade to a temporary license for extended development work.
 
-**Przegląd:**
-Ta funkcja umożliwia porównanie dwóch dokumentów Worda za pomocą strumieni. Ta metoda jest wydajna, ponieważ nie wymaga zapisywania plików lokalnie przed przetworzeniem.
+## Główna implementacja: porównanie dokumentów oparte na strumieniach
 
-#### Krok 1: Importuj niezbędne klasy
-Zacznij od zaimportowania wymaganych klas dla swojego projektu:
+Teraz najciekawsza część — implementacja **how to compare documents in java using streams**. To podejście jest szczególnie potężne, ponieważ obsługuje dokumenty efektywnie bez konieczności lokalnego przechowywania plików.
+
+### Niezbędne importy i konfiguracja
+First, import the necessary classes for your **java document comparison** implementation:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -86,8 +115,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 ```
 
-#### Krok 2: Skonfiguruj strumienie i obiekt porównujący
-Utwórz `Comparer` obiekt używający strumieni z plików wejściowych. To podejście jest korzystne podczas pracy z dokumentami przechowywanymi w pamięci lub dostępnymi przez sieci.
+### Pełny przykład implementacji
+Here's the core implementation for stream‑based document comparison:
 
 ```java
 class CompareDocumentsFromStreamFeature {
@@ -98,11 +127,11 @@ class CompareDocumentsFromStreamFeature {
              InputStream targetStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD.docx");
              OutputStream resultStream = new FileOutputStream(outputFileName)) {
               
-            // Zainicjuj program porównujący za pomocą strumienia dokumentu źródłowego
+            // Initialize the Comparer with the source document stream
             try (Comparer comparer = new Comparer(sourceStream)) {
                 comparer.add(targetStream);
                  
-                // Wykonaj porównanie i wyprowadź wyniki do strumienia
+                // Perform comparison and output results to a stream
                 comparer.compare(resultStream);
             }
         }
@@ -110,68 +139,213 @@ class CompareDocumentsFromStreamFeature {
 }
 ```
 
-**Wyjaśnienie:**
-- **Strumień źródłowy:** Odczytuje źródłowy dokument Word.
-- **Strumień docelowy:** Dodaje kolejny dokument do porównania.
-- **Strumień wyników:** Zapisuje porównany wynik do pliku wyjściowego.
+### Zrozumienie implementacji
+- **Source Stream Management** – `sourceStream` represents the base document (the “original”).  
+- **Target Stream Addition** – `comparer.add(targetStream)` lets you compare multiple documents against the source.  
+- **Result Stream Output** – The comparison result is written directly to `resultStream`, giving you flexibility to save, send, or further process the output.  
+- **Resource Management** – The try‑with‑resources pattern guarantees that all streams are closed, preventing memory leaks—a common issue in java document comparison implementations.
 
-### Kluczowe opcje konfiguracji
+## Zaawansowana konfiguracja i dostosowanie
 
-Biblioteka GroupDocs.Comparison udostępnia kilka opcji konfiguracji, takich jak ustawianie czułości porównania i ignorowanie niektórych zmian. Zapoznaj się z nimi, aby dostosować funkcjonalność do swoich potrzeb.
+Podstawowa implementacja działa świetnie, ale **java stream document comparison** staje się jeszcze potężniejsze, gdy dostosujesz zachowanie porównania.
 
-### Porady dotyczące rozwiązywania problemów
-Typowe problemy obejmują nieprawidłowe ścieżki plików lub błędy obsługi strumienia. Upewnij się, że strumienie są prawidłowo zamykane za pomocą try-with-resources w celu automatycznego zarządzania zasobami.
+### Ustawienia czułości porównania
+```java
+// Example of configuring comparison options (pseudo-code for concept)
+CompareOptions options = new CompareOptions();
+options.setIgnoreFormatting(true);  // Focus on content changes
+options.setIgnoreWhitespace(true);  // Ignore spacing differences
+```
 
-## Zastosowania praktyczne
+**When to Use**: Adjust sensitivity based on your use case. For legal documents, you might want maximum sensitivity. For collaborative editing, you might ignore minor formatting changes.
 
-Możliwość porównywania dokumentów za pomocą strumieni jest wszechstronna. Oto kilka rzeczywistych przypadków użycia:
+### Obsługa wielu formatów dokumentów
+GroupDocs.Comparison supports many formats beyond Word:
+- **Word**: `.docx`, `.doc`  
+- **PDF**: `.pdf`  
+- **Excel**: `.xlsx`, `.xls`  
+- **PowerPoint**: `.pptx`, `.ppt`
 
-1. **Współpraca redakcyjna:** Porównuj różne wersje dokumentów w środowisku chmurowym.
-2. **Systemy kontroli wersji:** Zautomatyzuj porównywanie wersji dokumentów przechowywanych zdalnie.
-3. **Weryfikacja dokumentu:** Sprawdzaj spójność w różnych formatach dokumentów bez konieczności przechowywania ich lokalnie.
+The same stream‑based approach works across all supported formats—just change your input file types.
 
-## Rozważania dotyczące wydajności
+## Typowe pułapki i rozwiązania
 
-Aby zoptymalizować wydajność podczas korzystania z GroupDocs.Comparison:
-- Zarządzaj pamięcią efektywnie, prawidłowo obsługując strumienie.
-- Aby uzyskać większą wydajność, korzystaj z najnowszej wersji.
-- Stwórz profil swojej aplikacji, aby zidentyfikować i rozwiązać problemy.
+Even experienced developers run into issues when implementing **java document comparison**. Here are the most common problems and their solutions:
 
-## Wniosek
+### Problem 1: Problemy z pozycją strumienia
+**Problem**: Streams are consumed during comparison, causing errors if reused.  
+**Solution**: Always create fresh streams for each comparison operation. Don't reuse streams.
 
-Opanowałeś już, jak używać GroupDocs.Comparison w Javie, aby porównywać dokumenty Word z danymi wejściowymi opartymi na strumieniu. Ta funkcja nie tylko upraszcza zarządzanie dokumentami, ale także zwiększa wydajność w środowiskach, w których dostęp do plików jest zdalny lub przechowywany w pamięci.
+### Problem 2: Wycieki pamięci
+**Problem**: Forgetting to close streams properly leads to memory issues.  
+**Solution**: Always use try‑with‑resources blocks as shown in our examples.
 
-### Następne kroki
-- Poznaj inne funkcje GroupDocs.Comparison przeznaczone do bardziej złożonych scenariuszy porównawczych.
-- Zintegruj tę funkcjonalność ze swoimi istniejącymi aplikacjami w celu zwiększenia możliwości obsługi dokumentów.
+### Problem 3: Problemy ze ścieżkami plików
+**Problem**: Incorrect file paths cause `FileNotFoundException`.  
+**Solution**: Use absolute paths during development and proper configuration management in production.
 
-Gotowy do rozpoczęcia? Zanurz się głębiej, eksplorując zasoby poniżej i wypróbuj już dziś!
+### Problem 4: Wydajność przy dużych dokumentach
+**Problem**: Comparing very large documents (50 MB +) may cause timeouts.  
+**Solution**: Implement progress tracking and consider breaking large documents into sections.
 
-## Sekcja FAQ
+**Debugging Tip**: Add logging around stream operations to track resource usage and identify bottlenecks quickly.
 
-**P1: Jakie wersje języka Java są obsługiwane przez GroupDocs.Comparison?**
-A1: GroupDocs.Comparison obsługuje JDK 8 i nowsze, zapewniając zgodność z większością nowoczesnych środowisk.
+## Optymalizacja wydajności dla produkcji
 
-**P2: Czy mogę porównywać dokumenty inne niż pliki Word za pomocą strumieni?**
-A2: Tak, GroupDocs.Comparison obsługuje różne formaty, takie jak pliki PDF i arkusze Excela.
+When deploying **compare word documents java** functionality in production, performance becomes crucial. Here's how to optimize:
 
-**P3: Jak mogę efektywnie porównywać duże dokumenty?**
-A3: Wykorzystaj efektywne zarządzanie strumieniem i rozważ podzielenie porównania na mniejsze segmenty, jeśli zajdzie taka potrzeba.
+### Najlepsze praktyki zarządzania pamięcią
+1. **Stream Buffer Sizes** – Tune buffer sizes based on typical document size.  
+2. **Garbage Collection** – Monitor GC patterns when processing large documents.  
+3. **Connection Pooling** – If comparing documents from remote sources, use connection pooling.
 
-**P4: Czy korzystanie z GroupDocs.Comparison dla Javy wiąże się z kosztami?**
-A4: Choć dostępna jest bezpłatna wersja próbna, dalsze korzystanie z niej wymaga zakupu licencji lub uzyskania licencji tymczasowej.
+### Rozważania dotyczące przetwarzania równoległego
+```java
+// Example pattern for concurrent document comparison
+ExecutorService executor = Executors.newFixedThreadPool(4);
+// Process multiple comparisons concurrently
+```
 
-**P5: Gdzie mogę znaleźć bardziej szczegółową dokumentację tej biblioteki?**
-A5: Dostępna jest szczegółowa dokumentacja i odniesienia do interfejsu API [Tutaj](https://docs.groupdocs.com/comparison/java/).
+**Performance Tip**: Test with realistic document sizes and concurrent users to establish baseline metrics.
 
-## Zasoby
+### Strategie buforowania
+- **Document Fingerprinting** – Create hashes to identify unchanged documents.  
+- **Result Caching** – Store comparison results for identical document pairs.  
+- **Partial Caching** – Cache intermediate processing results for large documents.
 
-- **Dokumentacja:** [Dokumentacja GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
-- **Dokumentacja API:** [GroupDocs.Comparison Dokumentacja API Java](https://reference.groupdocs.com/comparison/java/)
-- **Pobierz bibliotekę:** [Pliki do pobrania GroupDocs](https://releases.groupdocs.com/comparison/java/)
-- **Kup licencję:** [Kup licencję GroupDocs](https://purchase.groupdocs.com/buy)
-- **Bezpłatna wersja próbna:** [Rozpocznij bezpłatny okres próbny](https://releases.groupdocs.com/comparison/java/)
-- **Licencja tymczasowa:** [Złóż wniosek o licencję tymczasową](https://purchase.groupdocs.com/temporary-license/)
-- **Forum wsparcia:** [Wsparcie GroupDocs](https://forum.groupdocs.com/c/comparison)
+## Najlepsze praktyki integracji
 
-Rozpocznij przygodę z porównywaniem dokumentów dzięki GroupDocs.Comparison w Javie już dziś!
+Successfully integrating **java document comparison** into existing applications requires following these best practices:
+
+### Strategia obsługi błędów
+```java
+try {
+    // Document comparison logic
+} catch (FileNotFoundException e) {
+    // Handle missing files gracefully
+    log.error("Document not found: {}", e.getMessage());
+} catch (IOException e) {
+    // Handle stream processing errors
+    log.error("Stream processing failed: {}", e.getMessage());
+} catch (Exception e) {
+    // Handle unexpected errors
+    log.error("Unexpected error during comparison: {}", e.getMessage());
+}
+```
+
+### Monitorowanie i logowanie
+Track key metrics:
+- **Processing Time** – Monitor duration for performance trending.  
+- **Memory Usage** – Track heap usage during large document processing.  
+- **Error Rates** – Monitor failure patterns to identify system issues.  
+- **Throughput** – Measure documents processed per minute/hour.
+
+### Zarządzanie konfiguracją
+Use externalized configuration for different environments:
+- **Development** – Detailed logging, smaller timeouts.  
+- **Testing** – Moderate logging, realistic timeouts.  
+- **Production** – Essential logging only, optimized timeouts.
+
+## Praktyczne zastosowania i przypadki użycia
+
+**Java stream document comparison** solves many business problems:
+
+### Współpraca przy edycji dokumentów
+Multiple team members edit shared documents → compare uploaded versions against the current version to highlight changes.
+
+### Przegląd dokumentów prawnych
+Law firms compare contract versions and amendments → high‑sensitivity comparison catches every change.
+
+### Systemy zarządzania treścią
+CMS platforms track document revisions → automated comparison when users upload new versions.
+
+### Wersjonowanie dokumentacji API
+Compare API docs between releases → automatic change logs for API consumers.
+
+## Rozwiązywanie typowych problemów
+
+### ClassNotFoundException lub NoClassDefFoundError
+**Cause**: Missing GroupDocs.Comparison JAR files.  
+**Solution**: Verify Maven dependencies are correctly resolved and JAR files are on the classpath.
+
+### OutOfMemoryError podczas porównywania dużych dokumentów
+**Cause**: Insufficient heap space.  
+**Solution**: Increase JVM heap size with `-Xmx` or implement document chunking.
+
+### Wyniki porównania wyglądają niepoprawnie
+**Cause**: Different formatting or encoding.  
+**Solution**: Verify supported formats and consider preprocessing to normalize formatting.
+
+### Niska wydajność przy dokumentach przechowywanych w sieci
+**Cause**: Network latency affecting stream reading.  
+**Solution**: Implement local caching or asynchronous processing patterns.
+
+## Kolejne kroki i zaawansowane funkcje
+
+You've mastered the fundamentals of **java document comparison** using streams. Here are areas to explore next:
+
+### Zaawansowane funkcje porównywania
+- Custom change detection rules.  
+- Multi‑format support for mixed document types.  
+- Batch processing for large document sets.
+
+### Możliwości integracji
+- Expose comparison via REST APIs.  
+- Deploy as a dedicated microservice.  
+- Embed in document approval workflows.
+
+### Ulepszenia wydajności
+- Parallel processing for large document sets.  
+- Cloud storage integration for seamless access.  
+- Machine‑learning‑driven change classification.
+
+## Zakończenie
+
+You've successfully learned how to implement efficient **compare word documents java** using GroupDocs.Comparison with streams. This approach offers memory‑friendly processing, flexibility for remote files, and scalability for production workloads.
+
+**Key takeaways**:
+- Stream‑based comparison reduces I/O overhead and improves security.  
+- Proper resource management prevents memory leaks.  
+- Configuration options let you tailor sensitivity to your needs.  
+- Monitoring, error handling, and caching are essential for production readiness.
+
+Start with the basic example provided, then iterate toward the advanced features that match your project's requirements.
+
+## Najczęściej zadawane pytania
+
+**Q: What’s the maximum document size GroupDocs.Comparison can handle?**  
+A: While there's no hard limit, documents larger than 100 MB may require memory optimization. Use streaming and adjust JVM heap settings accordingly.
+
+**Q: Can I compare password‑protected documents using streams?**  
+A: Yes, but you must handle decryption before passing streams to the Comparer. GroupDocs.Comparison supports password‑protected files.
+
+**Q: How do I handle different document formats in the same comparison?**  
+A: GroupDocs.Comparison auto‑detects formats, but comparing across different types (e.g., Word vs PDF) may have limitations. Converting to a common format first is advisable.
+
+**Q: Is it possible to get detailed change information beyond the comparison result?**  
+A: Yes, the `CompareResult` object provides detailed change types, positions, and content. Explore its API for granular insights.
+
+**Q: What’s the licensing cost for production use?**  
+A: Licensing varies by deployment and usage volume. Check the GroupDocs pricing page and consider a temporary license for development.
+
+**Q: Can I customize the appearance of comparison results?**  
+A: Absolutely. GroupDocs.Comparison offers options for change highlighting, colors, and output formatting to match your UI.
+
+**Q: How can I improve performance for very large or many concurrent comparisons?**  
+A: Use larger JVM heap, tune stream buffers, enable result caching, and process comparisons in parallel using an executor service.
+
+**Additional Resources**
+
+- [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
+- [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)
+- [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)
+- [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)
+- [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
+- [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

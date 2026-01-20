@@ -1,40 +1,71 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh tài liệu hiệu quả bằng GroupDocs.Comparison trong Java. Hướng dẫn này bao gồm thiết lập, triển khai và tối ưu hóa hiệu suất."
-"title": "So sánh tài liệu Java chính bằng GroupDocs.Comparison"
-"url": "/vi/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-21'
+description: Tìm hiểu cách so sánh tài liệu Word bằng Java sử dụng GroupDocs.Comparison,
+  cũng như cách so sánh PDF bằng Java, với hướng dẫn cài đặt, triển khai và khắc phục
+  sự cố từng bước dành cho nhà phát triển.
+keywords: compare word documents java, how to compare pdf java, java document comparison
+  tutorial, groupdocs comparison java setup, compare documents programmatically java,
+  java file difference detection, how to compare word documents in java
+lastmod: '2025-12-21'
+linktitle: Compare Word Documents Java
+tags:
+- document-comparison
+- groupdocs
+- java-tutorial
+- file-management
+title: So sánh tài liệu Word bằng Java – Hướng dẫn đầy đủ GroupDocs.Comparison
 type: docs
+url: /vi/java/basic-comparison/java-groupdocs-comparison-document-management-guide/
+weight: 1
 ---
-# Làm chủ việc so sánh tài liệu Java với GroupDocs.Comparison
+
+# So sánh tài liệu Word Java – Hướng dẫn toàn diện GroupDocs.Comparison
 
 ## Giới thiệu
 
-Trong thế giới phát triển nhanh như hiện nay, việc quản lý và so sánh tài liệu hiệu quả là rất quan trọng đối với cả doanh nghiệp và cá nhân. Cho dù đó là theo dõi các thay đổi trong hợp đồng hay đảm bảo tính nhất quán giữa các tệp dự án, so sánh tài liệu có thể tiết kiệm thời gian và giảm lỗi. Hướng dẫn này sẽ hướng dẫn bạn sử dụng thư viện GroupDocs.Comparison để so sánh liền mạch các tài liệu trên đĩa cục bộ bằng Java.
+Bạn đã bao giờ dành hàng giờ để kiểm tra thủ công các thay đổi trong tài liệu từng dòng một? Bạn không phải là người duy nhất. Nếu bạn cần **compare word documents java**, bạn sẽ nhanh chóng nhận ra rằng việc xem xét thủ công là công thức cho thời gian lãng phí và lỗi ẩn. Dù bạn đang theo dõi các sửa đổi hợp đồng, quản lý tài liệu mã nguồn, hay đảm bảo tuân thủ các tệp quy định, việc so sánh tự động sẽ tiết kiệm thời gian và sức khỏe tinh thần.
 
-**Những gì bạn sẽ học được:**
-- Cách thiết lập môi trường để so sánh tài liệu.
-- Triển khai từng bước để so sánh hai tài liệu bằng GroupDocs.Comparison.
-- Ứng dụng thực tế và cơ hội tích hợp.
-- Mẹo cải thiện hiệu suất để tối ưu hóa tác vụ so sánh tài liệu của bạn.
+Trong hướng dẫn toàn diện này, chúng ta sẽ đi qua cách triển khai so sánh tài liệu trong Java bằng GroupDocs.Comparison. Bạn sẽ học “cách làm” và “tại sao”, xem các rủi ro thực tế, và thậm chí có cái nhìn về **how to compare pdf java** khi cần.
 
-Trước khi đi sâu vào các chi tiết kỹ thuật, chúng ta hãy cùng tìm hiểu một số điều kiện tiên quyết để đảm bảo bạn đã sẵn sàng cho chuyến hành trình này.
+**Những gì bạn sẽ thành thạo sau khi hoàn thành:**
+- Cài đặt đầy đủ GroupDocs.Comparison (không còn lo lắng về phụ thuộc)  
+- Triển khai so sánh tài liệu vững chắc cho các tệp Word và PDF  
+- Kỹ thuật tối ưu hiệu năng thực sự hiệu quả  
+- Xử lý sự cố thường gặp (vì chúng sẽ xảy ra)  
+- Mẫu tích hợp thực tế mà bạn có thể sử dụng ngay  
 
-## Điều kiện tiên quyết
+Hãy bắt đầu và biến bạn thành một chuyên gia so sánh tài liệu.
 
-Để thực hiện theo hướng dẫn này, bạn sẽ cần:
+## Câu trả lời nhanh
+- **Thư viện nào cho phép tôi so sánh tài liệu Word trong Java?** GroupDocs.Comparison  
+- **Tôi có thể so sánh cả PDF không?** Có – sử dụng cùng API với hướng dẫn `how to compare pdf java`  
+- **Tôi có cần giấy phép không?** Dùng thử miễn phí đủ cho việc kiểm tra; giấy phép đầy đủ cần cho môi trường sản xuất  
+- **Phiên bản Java nào được yêu cầu?** JDK 8+ (khuyến nghị JDK 11+)  
+- **So sánh nhanh như thế nào?** Thông thường chỉ vài giây cho các tệp Word tiêu chuẩn, ngay cả khi có hàng trăm trang  
 
-- **Bộ phát triển Java (JDK):** Đảm bảo máy của bạn đã cài đặt JDK 8 trở lên.
-- **Chuyên gia:** Dự án này sử dụng Maven để quản lý các phụ thuộc. Đảm bảo Maven được cài đặt và cấu hình đúng.
-- **Kiến thức Java cơ bản:** Sự quen thuộc với các khái niệm lập trình Java sẽ có lợi.
+## “compare word documents java” là gì?
+So sánh tài liệu Word trong Java có nghĩa là phân tích chương trình hai tệp `.docx`, phát hiện các khác biệt về nội dung, định dạng và cấu trúc, và tạo ra một tài liệu kết quả làm nổi bật các thay đổi đó. GroupDocs.Comparison thực hiện phần lớn công việc, cung cấp API sẵn sàng sử dụng.
 
-## Thiết lập GroupDocs.Comparison cho Java
+## Tại sao nên sử dụng GroupDocs.Comparison cho việc so sánh tài liệu?
+- **Độ chính xác:** Phát hiện các thay đổi ở mức ký tự, từ và định dạng.  
+- **Hỗ trợ đa định dạng:** Hoạt động với Word, PDF, Excel, PowerPoint và văn bản thuần.  
+- **Hiệu năng:** Mã gốc được tối ưu giữ thời gian xử lý thấp ngay cả với các tệp lớn.  
+- **Mở rộng:** Tùy chỉnh việc đánh dấu, độ nhạy và định dạng đầu ra.  
 
-Bắt đầu với GroupDocs.Comparison trong môi trường Java liên quan đến việc thiết lập dự án của bạn để bao gồm các thư viện cần thiết. Sau đây là cách bạn có thể thực hiện bằng Maven:
+## Yêu cầu trước và Cài đặt môi trường
+- **JDK:** Phiên bản 8 trở lên (khuyến nghị JDK 11+).  
+- **Maven:** Để quản lý phụ thuộc.  
+- **Kiến thức Java cơ bản:** try‑with‑resources, I/O tệp.  
+- **Tài liệu mẫu:** Một cặp tệp `.docx` để so sánh (bạn cũng có thể thử PDF sau này).  
 
-### Thiết lập Maven
+> 🔹 **Mẹo chuyên nghiệp:** Trong môi trường doanh nghiệp, cấu hình cài đặt proxy cho Maven nếu bạn đang ở sau tường lửa.
 
-Thêm cấu hình sau vào `pom.xml` tài liệu:
+## Cài đặt GroupDocs.Comparison cho Java
+
+### Cấu hình Maven thực sự hoạt động
+Thêm repository và dependency vào `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -53,21 +84,23 @@ Thêm cấu hình sau vào `pom.xml` tài liệu:
 </dependencies>
 ```
 
-### Mua lại giấy phép
+**Các vấn đề cài đặt thường gặp và cách khắc phục**
+- **Không tìm thấy repository?** Kiểm tra URL và kết nối internet của bạn.  
+- **Giải quyết phụ thuộc thất bại?** Chạy `mvn clean compile` để buộc tải lại.  
+- **Xung đột phiên bản?** Sử dụng `mvn dependency:tree` để xác định và giải quyết.  
 
-- **Dùng thử miễn phí:** Bạn có thể bắt đầu bằng bản dùng thử miễn phí để khám phá các tính năng cơ bản.
-- **Giấy phép tạm thời:** Để thử nghiệm rộng rãi hơn, hãy đăng ký giấy phép tạm thời thông qua trang web GroupDocs.
-- **Mua:** Nếu bạn hài lòng và muốn có quyền truy cập đầy đủ, hãy cân nhắc mua giấy phép.
+### Cấu hình giấy phép (Phần mọi người thường hỏi)
+Chọn một trong các tùy chọn sau:
+1. **Dùng thử miễn phí** – hoàn hảo cho việc đánh giá, không cần thẻ tín dụng.  
+2. **Giấy phép tạm thời** – lý tưởng cho phát triển và thử nghiệm.  
+3. **Giấy phép đầy đủ** – cần thiết cho triển khai sản xuất.  
 
-Sau khi môi trường của bạn được thiết lập, chúng ta sẽ chuyển sang triển khai so sánh tài liệu bằng GroupDocs.Comparison.
+> 🔹 **Kiểm tra thực tế:** Bản dùng thử có giới hạn nhưng đủ để xác nhận API đáp ứng nhu cầu của bạn.
 
-## Hướng dẫn thực hiện
+## Hướng dẫn triển khai từng bước
 
-Chúng ta hãy chia nhỏ quá trình thực hiện thành các bước dễ quản lý hơn:
-
-### Bước 1: Xác định đường dẫn tài liệu của bạn
-
-Đầu tiên, hãy chỉ định vị trí tài liệu của bạn và nơi bạn muốn lưu kết quả. Thiết lập này bao gồm việc xác định đường dẫn thư mục cho tài liệu nguồn và đích.
+### Bước 1: Cấu hình đường dẫn tài liệu
+Thiết lập đường dẫn tệp sớm để tránh lỗi “file not found” phổ biến nhất:
 
 ```java
 String YOUR_DOCUMENT_DIRECTORY = "YOUR_DOCUMENT_DIRECTORY";
@@ -78,86 +111,138 @@ String sourcePath = YOUR_DOCUMENT_DIRECTORY + "/source_document.docx";
 String targetPath = YOUR_DOCUMENT_DIRECTORY + "/target_document1.docx";
 ```
 
-### Bước 2: Khởi tạo đối tượng Comparer
+**Các thực tiễn tốt nhất**
+- Sử dụng đường dẫn tuyệt đối khi phát triển, sau đó chuyển sang đường dẫn tương đối cho môi trường sản xuất.  
+- Kiểm tra tồn tại tệp bằng `Files.exists(Paths.get(sourcePath))`.  
+- Ưu tiên `Paths.get()` để tương thích đa nền tảng.  
 
-Tạo một `Comparer` đối tượng có đường dẫn đến tài liệu nguồn của bạn. Đối tượng này sẽ xử lý tất cả các hoạt động so sánh.
+### Bước 2: Khởi tạo đối tượng Comparer
+Tạo một `Comparer` trong khối try‑with‑resources để tài nguyên được giải phóng tự động:
 
 ```java
 try (Comparer comparer = new Comparer(sourcePath)) {
-    // Tiến hành thêm và so sánh tài liệu.
+    // All comparison logic goes here
 }
 ```
 
-### Bước 3: Thêm tài liệu mục tiêu để so sánh
+**Tại sao dùng try‑with‑resources?** API mở các luồng tệp nội bộ; việc dọn dẹp đúng cách ngăn ngừa rò rỉ bộ nhớ có thể làm sập các dịch vụ chạy lâu.
 
-Sử dụng `add` phương pháp của `Comparer` lớp để bao gồm tài liệu mục tiêu mà bạn muốn so sánh với tài liệu nguồn.
+### Bước 3: Thêm tài liệu mục tiêu
+Thêm tài liệu (các) bạn muốn so sánh với tài liệu nguồn:
 
 ```java
 comparer.add(targetPath);
 ```
 
-### Bước 4: Thực hiện so sánh
+*Lưu ý linh hoạt:* Bạn có thể thêm nhiều mục tiêu để so sánh một tài liệu gốc với nhiều phiên bản trong một lần chạy.
 
-Thực hiện so sánh và lưu kết quả. `compare` phương pháp này sẽ tạo ra một tập tin nêu bật sự khác biệt giữa hai tài liệu.
+### Bước 4: Thực hiện so sánh
+Chạy so sánh và ghi kết quả ra đĩa:
 
 ```java
 final Path resultPath = comparer.compare(outputFileName);
-// Kết quả được lưu tại 'outputFileName'
+// Your comparison result is now saved at 'outputFileName'
 ```
 
-## Ứng dụng thực tế
+**Ở phía sau:** Thư viện phân tích cả hai tệp, tính toán sự khác biệt và tạo ra một tài liệu mới với các thay đổi được đánh dấu (thường là màu đỏ/xanh lá).
 
-Việc so sánh tài liệu rất đa dạng, với các ứng dụng từ:
+### Bước 5: Quản lý tài nguyên (Nhắc nhở)
+Luôn bao bọc việc sử dụng `Comparer` trong khối try‑with‑resources, như đã chỉ ra ở trên. Điều này đảm bảo các handle tệp được đóng kịp thời:
 
-1. **Đánh giá tài liệu pháp lý:** Luật sư có thể so sánh các phiên bản hợp đồng để theo dõi những thay đổi.
-2. **Kiểm soát phiên bản trong phát triển phần mềm:** Các nhà phát triển sử dụng nó để quản lý các thay đổi trong cơ sở mã một cách hiệu quả.
-3. **Kiểm toán tài chính:** Kế toán viên so sánh các báo cáo tài chính để tìm ra sự khác biệt.
+```java
+// Always use try-with-resources
+try (Comparer comparer = new Comparer(sourcePath)) {
+    // Your comparison logic
+} // Automatic resource cleanup happens here
+```
 
-Các khả năng tích hợp bao gồm tự động hóa quy trình làm việc tài liệu hoặc tích hợp với các giải pháp lưu trữ đám mây để truy cập và cộng tác liền mạch.
+## Các lỗi thường gặp và cách tránh chúng
 
-## Cân nhắc về hiệu suất
+| Issue | Symptom | Fix |
+|-------|----------|-----|
+| **Xung đột truy cập tệp** | “File is being used by another process” | Đóng tệp trong Word/Office trước khi chạy mã. |
+| **OutOfMemoryError** | Crash on large documents | Tăng heap JVM (`-Xmx4g`) hoặc bật chế độ streaming nếu có. |
+| **Unsupported format** | `Unsupported file format` exception | Xác minh loại tệp nằm trong danh sách định dạng được GroupDocs hỗ trợ. |
+| **Path resolution errors** | `FileNotFoundException` despite file existence | Sử dụng đường dẫn tuyệt đối khi gỡ lỗi; kiểm tra độ nhạy chữ hoa/thường của hệ điều hành. |
+| **License not loaded** | “License not found” runtime error | Đảm bảo tệp giấy phép nằm trong classpath hoặc thiết lập qua lời gọi `License.setLicense()`. |
 
-Để đảm bảo hoạt động trơn tru, hãy cân nhắc những điều sau:
+## Ứng dụng thực tế và mẫu tích hợp
 
-- **Tối ưu hóa việc sử dụng bộ nhớ:** GroupDocs.Comparison được thiết kế để xử lý các tài liệu lớn một cách hiệu quả. Tuy nhiên, việc quản lý cài đặt bộ nhớ Java có thể nâng cao hiệu suất hơn nữa.
-- **Xử lý song song:** Nếu so sánh nhiều cặp tài liệu, hãy tận dụng xử lý song song để tăng tốc hoạt động.
-- **Cập nhật thường xuyên:** Hãy cập nhật phiên bản thư viện của bạn để tận dụng những tính năng và tối ưu hóa mới nhất.
+### Quản lý tài liệu pháp lý
+- **Trường hợp sử dụng:** Theo dõi mọi thay đổi điều khoản trong hợp đồng.  
+- **Mẫu:** Xử lý hàng loạt một thư mục các phiên bản hợp đồng mỗi đêm, lưu kết quả vào kho lưu trữ an toàn.  
 
-## Phần kết luận
+### Kiểm soát phiên bản cho tài liệu
+- **Trường hợp sử dụng:** Phát hiện các thay đổi không mong muốn trong tài liệu API được lưu cùng mã nguồn.  
+- **Mẫu:** Gắn hook vào Git pre‑commit để so sánh tài liệu mới với phiên bản trước và chặn các commit có thay đổi chưa được ghi chú.  
 
-Bằng cách làm theo hướng dẫn này, bạn đã học cách triển khai so sánh tài liệu trong Java bằng GroupDocs.Comparison. Công cụ mạnh mẽ này không chỉ đơn giản hóa các tác vụ quản lý tài liệu mà còn mở ra một thế giới khả năng tích hợp các tính năng so sánh nâng cao vào ứng dụng của bạn.
+### Dịch vụ tài chính
+- **Trường hợp sử dụng:** So sánh các báo cáo quy định để tạo dấu vết kiểm toán.  
+- **Mẫu:** Tích hợp với dịch vụ chuyển tệp an toàn (SFTP) để lấy báo cáo, so sánh, sau đó lưu trữ báo cáo diff có mã hoá.  
 
-**Các bước tiếp theo:**
-- Thử nghiệm với các định dạng tài liệu khác nhau được GroupDocs.Comparison hỗ trợ.
-- Khám phá các tùy chọn cấu hình bổ sung để tùy chỉnh kết quả so sánh.
+> 🔹 **Mẹo bảo mật:** Luôn xử lý các tài liệu nhạy cảm trong môi trường sandbox và áp dụng quyền truy cập tệp nghiêm ngặt cho đầu ra.
 
-Chúng tôi khuyến khích bạn tìm hiểu sâu hơn về tài liệu và khám phá các trường hợp sử dụng phức tạp hơn. Chúc bạn viết mã vui vẻ!
+## Chiến lược tối ưu hiệu năng
 
-## Phần Câu hỏi thường gặp
+1. **Quản lý bộ nhớ** – Đặt heap JVM phù hợp (`-Xmx2g` đủ cho hầu hết các trường hợp).  
+2. **Xử lý song song** – Sử dụng `ExecutorService` để so sánh đồng thời nhiều cặp tài liệu, nhưng giám sát việc sử dụng heap.  
+3. **Thực thi bất đồng bộ** – Đưa việc so sánh sang worker nền (ví dụ, Spring `@Async`) để giao diện người dùng phản hồi tốt.  
+4. **Lưu trữ kết quả** – Cache kết quả so sánh khi cùng một cặp tài liệu được so sánh nhiều lần.  
 
-1. **Tôi có thể so sánh các tài liệu ở định dạng khác ngoài Word không?**  
-   Có, GroupDocs.Comparison hỗ trợ nhiều định dạng tài liệu bao gồm PDF, Excel và PowerPoint.
+## Các tùy chọn cấu hình nâng cao
 
-2. **Tôi phải xử lý các tập tin lớn như thế nào?**  
-   Đảm bảo môi trường Java của bạn được cấu hình với cài đặt bộ nhớ phù hợp để xử lý các tệp lớn một cách hiệu quả.
+- **Độ nhạy so sánh:** Điều chỉnh độ chịu lỗi của thuật toán đối với thay đổi định dạng so với nội dung.  
+- **Định dạng đầu ra:** Chọn giữa đánh dấu, gạch ngang, hoặc kiểu tùy chỉnh cho các khác biệt.  
+- **Xử lý siêu dữ liệu:** Bao gồm hoặc bỏ qua siêu dữ liệu tài liệu (tác giả, thời gian) trong quá trình so sánh.  
 
-3. **Có thể so sánh các tài liệu được lưu trữ trên đám mây không?**  
-   Trong khi hướng dẫn này tập trung vào việc so sánh đĩa cục bộ, GroupDocs.Comparison cũng hỗ trợ tích hợp lưu trữ đám mây.
+## Hướng dẫn khắc phục sự cố
 
-4. **Các bước khắc phục sự cố phổ biến nếu so sánh không thành công là gì?**  
-   Kiểm tra đường dẫn tệp, đảm bảo cả hai tài liệu đều có thể truy cập được và xác minh rằng bạn đang sử dụng phiên bản GroupDocs.Comparison tương thích.
+1. **Xác minh quyền truy cập tệp** – Đảm bảo quyền đọc/ghi và tệp không bị khóa.  
+2. **Kiểm tra phụ thuộc** – Xác nhận thư viện GroupDocs có trong classpath và không có xung đột phiên bản.  
+3. **Xác thực tệp đầu vào** – Đảm bảo chúng không bị hỏng hoặc được bảo vệ bằng mật khẩu (trừ khi bạn cung cấp mật khẩu).  
+4. **Xem lại cài đặt giấy phép** – Giấy phép thiếu hoặc hết hạn sẽ ngừng xử lý.  
 
-5. **Làm thế nào để tùy chỉnh kết quả so sánh?**  
-   Khám phá các tùy chọn cấu hình của thư viện để điều chỉnh cách đánh dấu hoặc định dạng các điểm khác biệt trong tài liệu kết quả.
+## Câu hỏi thường gặp
 
-## Tài nguyên
+**Q: Tôi có thể so sánh PDF cũng như tài liệu Word không?**  
+A: Có – cùng API hỗ trợ PDF, và bạn có thể áp dụng cùng phương thức `compare`; chỉ cần chỉ `sourcePath` và `targetPath` tới các tệp `.pdf`.
 
-- [Tài liệu](https://docs.groupdocs.com/comparison/java/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/java/)
-- [Tải xuống GroupDocs.Comparison cho Java](https://releases.groupdocs.com/comparison/java/)
-- [Mua giấy phép](https://purchase.groupdocs.com/buy)
-- [Phiên bản dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)
-- [Đơn xin cấp giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- [Diễn đàn hỗ trợ](https://forum.groupdocs.com/c/comparison)
+**Q: Làm sao để xử lý các tệp rất lớn mà không hết bộ nhớ?**  
+A: Tăng heap JVM (`-Xmx4g`), bật chế độ streaming nếu thư viện cung cấp, và cân nhắc xử lý tệp theo từng phần.
 
-Bằng cách tận dụng GroupDocs.Comparison for Java, bạn được trang bị để xử lý các tác vụ so sánh tài liệu một cách dễ dàng và chính xác. Cho dù là ứng dụng kinh doanh hay dự án cá nhân, công cụ này được thiết kế để đáp ứng nhiều nhu cầu khác nhau.
+**Q: Có thể so sánh tài liệu lưu trên AWS S3 không?**  
+A: Hướng dẫn tập trung vào tệp cục bộ, nhưng bạn có thể tải các đối tượng S3 về vị trí tạm thời, so sánh, sau đó tải kết quả lên lại S3.
+
+**Q: Nếu quá trình so sánh mất quá nhiều thời gian thì sao?**  
+A: Kiểm tra kích thước tệp, tăng thời gian chờ, và cân nhắc chạy so sánh vào giờ ngoài cao điểm hoặc dùng xử lý song song cho các công việc batch.
+
+**Q: Làm sao để tùy chỉnh màu sắc đánh dấu trong tài liệu kết quả?**  
+A: Sử dụng lớp `ComparisonOptions` để thiết lập `setInsertedItemColor` và `setDeletedItemColor` trước khi gọi `compare`.  
+
+## Kết luận và các bước tiếp theo
+
+Bạn hiện đã có nền tảng vững chắc để **compare word documents java** bằng GroupDocs.Comparison. Bạn đã thấy cách thiết lập môi trường, chạy so sánh, khắc phục các vấn đề thường gặp, và tích hợp chức năng vào quy trình thực tế.
+
+**Các hành động tiếp theo:**
+1. Thử nghiệm so sánh PDF (`how to compare pdf java`).  
+2. Xây dựng bộ xử lý batch để xử lý nhiều cặp tài liệu.  
+3. Khám phá các tùy chọn nâng cao như kiểu dáng tùy chỉnh và xử lý siêu dữ liệu.  
+4. Tích hợp dịch vụ so sánh vào kiến trúc ứng dụng hiện có (REST endpoint, message queue, v.v.).  
+
+Nhớ: bắt đầu với một dự án thí điểm nhỏ, thu thập các chỉ số hiệu năng và lặp lại. Chúc lập trình vui vẻ, và hy vọng tài liệu của bạn luôn so sánh một cách suôn sẻ!
+
+## Tài nguyên và đọc thêm
+
+- [Tài liệu GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
+- [Tham khảo API đầy đủ](https://reference.groupdocs.com/comparison/java/)
+- [Tải phiên bản mới nhất](https://releases.groupdocs.com/comparison/java/)
+- [Các tùy chọn mua giấy phép](https://purchase.groupdocs.com/buy)
+- [Truy cập dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)
+- [Đăng ký giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
+- [Diễn đàn hỗ trợ cộng đồng](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs

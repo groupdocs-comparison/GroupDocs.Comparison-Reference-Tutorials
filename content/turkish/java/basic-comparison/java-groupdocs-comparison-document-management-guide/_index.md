@@ -1,40 +1,71 @@
 ---
-"date": "2025-05-05"
-"description": "Java'da GroupDocs.Comparison kullanarak belgeleri etkili bir şekilde nasıl karşılaştıracağınızı öğrenin. Bu kılavuz, kurulum, uygulama ve performans optimizasyonunu kapsar."
-"title": "GroupDocs.Comparison Kullanarak Ana Java Belge Karşılaştırması"
-"url": "/tr/java/basic-comparison/java-groupdocs-comparison-document-management-guide/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-21'
+description: GroupDocs.Comparison kullanarak Java ile Word belgelerini nasıl karşılaştıracağınızı,
+  ayrıca Java ile PDF'yi nasıl karşılaştıracağınızı, adım adım kurulum, uygulama ve
+  geliştiriciler için sorun giderme ile öğrenin.
+keywords: compare word documents java, how to compare pdf java, java document comparison
+  tutorial, groupdocs comparison java setup, compare documents programmatically java,
+  java file difference detection, how to compare word documents in java
+lastmod: '2025-12-21'
+linktitle: Compare Word Documents Java
+tags:
+- document-comparison
+- groupdocs
+- java-tutorial
+- file-management
+title: Word Belgelerini Java ile Karşılaştırma – Tam GroupDocs.Comparison Rehberi
 type: docs
+url: /tr/java/basic-comparison/java-groupdocs-comparison-document-management-guide/
+weight: 1
 ---
-# GroupDocs.Comparison ile Java Belge Karşılaştırmasında Uzmanlaşma
 
-## giriiş
+# Word Belgelerini Java’da Karşılaştırma – Tam GroupDocs.Comparison Kılavuzu
 
-Günümüzün hızlı dünyasında, belgeleri etkili bir şekilde yönetmek ve karşılaştırmak hem işletmeler hem de bireyler için hayati önem taşır. İster sözleşmelerdeki değişiklikleri izlemek ister proje dosyaları arasında tutarlılığı sağlamak olsun, belge karşılaştırması zamandan tasarruf sağlayabilir ve hataları azaltabilir. Bu eğitim, GroupDocs.Comparison kitaplığını kullanarak yerel bir diskteki belgeleri Java ile sorunsuz bir şekilde karşılaştırmanızda size rehberlik edecektir.
+## Giriş
 
-**Ne Öğreneceksiniz:**
-- Belge karşılaştırması için ortamınızı nasıl kurabilirsiniz?
-- GroupDocs.Comparison kullanılarak iki belgenin adım adım karşılaştırılması.
-- Pratik uygulamalar ve entegrasyon olanakları.
-- Belge karşılaştırma görevlerinizi optimize etmek için performans ipuçları.
+Saatlerce belge değişikliklerini satır satır manuel olarak kontrol ettiniz mi? Yalnız değilsiniz. **compare word documents java** ifadesini (bu bir arama terimidir) kullanmanız durumunda, manuel incelemenin zaman kaybı ve gizli hatalarla dolu bir tarif olduğunu çabucak fark edeceksiniz. Sözleşme revizyonlarını izliyor, kod belgelerini yönetiyor ya da düzenleyici dosyalar arasında uyumu sağlıyor olun, otomatik karşılaştırma hem zaman hem de akıl sağlığını kurtarır.
 
-Teknik detaylara dalmadan önce, bu yolculuğa hazır olmanızı sağlayacak bazı ön koşullardan bahsedelim.
+Bu kapsamlı öğreticide, Java’da GroupDocs.Comparison ile belge karşılaştırmasını nasıl uygulayacağınızı adım adım göstereceğiz. “Nasıl” ve “Neden” sorularını öğrenecek, gerçek dünya tuzaklarını görecek ve ihtiyaç doğduğunda **how to compare pdf java** ifadesine bir bakış elde edeceksiniz.
 
-## Ön koşullar
+**Sonunda kazanacaklarınız:**
+- Tam GroupDocs.Comparison kurulumu (bağımlılık sorunları artık yok)  
+- Word ve PDF dosyaları için sağlam belge karşılaştırma uygulaması  
+- Gerçekten işe yarayan performans optimizasyon teknikleri  
+- Yaygın sorunların giderilmesi (çünkü sorunlar ortaya çıkacak)  
+- Hemen kullanabileceğiniz gerçek dünya entegrasyon desenleri  
 
-Bu eğitimi takip etmek için şunlara ihtiyacınız olacak:
+Hadi başlayalım ve sizi bir belge karşılaştırma sihirbazına dönüştürelim.
 
-- **Java Geliştirme Kiti (JDK):** Makinenizde JDK 8 veya üzeri sürümün yüklü olduğundan emin olun.
-- **Usta:** Bu proje bağımlılıkları yönetmek için Maven'ı kullanır. Maven'ın doğru şekilde yüklendiğinden ve yapılandırıldığından emin olun.
-- **Temel Java Bilgisi:** Java programlama kavramlarına aşinalık faydalı olacaktır.
+## Hızlı Yanıtlar
+- **Java’da Word belgelerini karşılaştırmamı sağlayan kütüphane nedir?** GroupDocs.Comparison  
+- **PDF’leri de karşılaştırabilir miyim?** Evet – aynı API’yi `how to compare pdf java` rehberiyle kullanın  
+- **Lisans gerekli mi?** Test için ücretsiz deneme çalışır; üretim için tam lisans gerekir  
+- **Hangi Java sürümü gerekiyor?** JDK 8+ (JDK 11+ tavsiye edilir)  
+- **Karşılaştırma ne kadar hızlı?** Standart Word dosyaları için genellikle saniyeler, hatta yüzlerce sayfa olsa bile  
+
+## “compare word documents java” nedir?
+Java’da Word belgelerini karşılaştırmak, iki `.docx` dosyasını programlı olarak analiz etmek, metin, biçimlendirme ve yapısal farkları tespit etmek ve bu değişiklikleri vurgulayan bir sonuç belgesi üretmek anlamına gelir. GroupDocs.Comparison ağır işi halleder ve size kullanıma hazır bir API sunar.
+
+## Neden Document Comparison için GroupDocs.Comparison Kullanmalısınız?
+- **Doğruluk:** Karakter, kelime ve biçimlendirme seviyesinde değişiklikleri algılar.  
+- **Çoklu format desteği:** Word, PDF, Excel, PowerPoint ve düz metin ile çalışır.  
+- **Performans:** Optimize edilmiş yerel kod, büyük dosyalarda bile işleme süresini düşük tutar.  
+- **Genişletilebilirlik:** Vurgulamayı, hassasiyeti ve çıktı formatını özelleştirebilirsiniz.  
+
+## Önkoşullar ve Ortam Kurulumu
+- **JDK:** Versiyon 8 veya üzeri (JDK 11+ tavsiye edilir).  
+- **Maven:** Bağımlılık yönetimi için.  
+- **Temel Java bilgisi:** try‑with‑resources, dosya I/O.  
+- **Örnek belgeler:** Karşılaştırmak için bir çift `.docx` dosyası (daha sonra PDF’leri de test edebilirsiniz).  
+
+> **Pro ipucu:** Kurumsal ortamlarda, bir güvenlik duvarının arkasındaysanız Maven proxy ayarlarını yapılandırın.
 
 ## Java için GroupDocs.Comparison Kurulumu
 
-GroupDocs.Comparison'ı bir Java ortamında kullanmaya başlamak, projenizi gerekli kütüphaneleri içerecek şekilde ayarlamayı içerir. Maven kullanarak bunu nasıl yapabileceğiniz aşağıda açıklanmıştır:
-
-### Maven Kurulumu
-
-Aşağıdaki yapılandırmayı şuraya ekleyin: `pom.xml` dosya:
+### Gerçekten Çalışan Maven Konfigürasyonu
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -53,21 +84,23 @@ Aşağıdaki yapılandırmayı şuraya ekleyin: `pom.xml` dosya:
 </dependencies>
 ```
 
-### Lisans Edinimi
+**Yaygın kurulum sorunları ve çözümleri**
+- **Depo bulunamadı?** URL'yi ve internet bağlantınızı kontrol edin.  
+- **Bağımlılık çözümlemesi başarısız?** `mvn clean compile` komutunu çalıştırarak yeni bir indirme zorlayın.  
+- **Versiyon çakışmaları?** `mvn dependency:tree` komutunu kullanarak çakışmaları bulun ve çözün.  
 
-- **Ücretsiz Deneme:** Temel özellikleri keşfetmek için ücretsiz denemeyle başlayabilirsiniz.
-- **Geçici Lisans:** Daha kapsamlı testler için GroupDocs web sitesi üzerinden geçici lisans başvurusunda bulunabilirsiniz.
-- **Satın almak:** Eğer memnunsanız ve tam erişime ihtiyacınız varsa, lisans satın almayı düşünebilirsiniz.
+### Lisans Konfigürasyonu (Herkesin Sorduğu Kısım)
+Choose one of the following:
+1. **Ücretsiz Deneme** – değerlendirme için mükemmel, kredi kartı gerekmez.  
+2. **Geçici Lisans** – geliştirme ve test için ideal.  
+3. **Tam Lisans** – üretim dağıtımları için gereklidir.  
 
-Ortamınız kurulduktan sonra GroupDocs.Comparison kullanarak belge karşılaştırmasını uygulamaya geçeceğiz.
+> **Gerçek kontrol:** Denemenin sınırlamaları vardır ancak API'nin ihtiyaçlarınızı karşıladığını doğrulamak için yeterlidir.
 
-## Uygulama Kılavuzu
+## Adım Adım Uygulama Kılavuzu
 
-Uygulamayı yönetilebilir adımlara bölelim:
-
-### Adım 1: Belge Yollarınızı Tanımlayın
-
-Öncelikle belgelerinizin nerede bulunduğunu ve sonuçları nereye kaydetmek istediğinizi belirtin. Bu kurulum, kaynak ve hedef belgeler için dizin yollarını tanımlamayı içerir.
+### Adım 1: Belge Yolu Konfigürasyonu
+Set up file paths early to avoid the most common “file not found” errors:
 
 ```java
 String YOUR_DOCUMENT_DIRECTORY = "YOUR_DOCUMENT_DIRECTORY";
@@ -78,86 +111,133 @@ String sourcePath = YOUR_DOCUMENT_DIRECTORY + "/source_document.docx";
 String targetPath = YOUR_DOCUMENT_DIRECTORY + "/target_document1.docx";
 ```
 
-### Adım 2: Karşılaştırıcı Nesnesini Başlatın
+**En iyi uygulamalar**
+- Geliştirme sırasında mutlak yollar kullanın, ardından üretim için göreli yollara geçin.  
+- `Files.exists(Paths.get(sourcePath))` ile dosyanın varlığını doğrulayın.  
+- Platformlar arası uyumluluk için `Paths.get()` tercih edin.  
 
-Bir tane oluştur `Comparer` kaynak belgenize giden yolu olan nesne. Bu nesne tüm karşılaştırma işlemlerini yönetecektir.
+### Adım 2: Comparer Nesnesini Başlatma
+Create a `Comparer` inside a try‑with‑resources block so resources are released automatically:
 
 ```java
 try (Comparer comparer = new Comparer(sourcePath)) {
-    // Belgeleri ekleme ve karşılaştırma işlemine devam edin.
+    // All comparison logic goes here
 }
 ```
 
-### Adım 3: Karşılaştırma için Hedef Belgeyi Ekleyin
+**Neden try‑with‑resources?** API dahili olarak dosya akışları açar; uygun temizlik uzun süren hizmetlerin çökmesine neden olabilecek bellek sızıntılarını önler.  
 
-Kullanın `add` yöntemi `Comparer` Kaynak belgeyle karşılaştırmak istediğiniz hedef belgeyi içeren sınıf.
+### Adım 3: Hedef Belgeleri Ekleme
+Add the document(s) you want to compare against the source:
 
 ```java
 comparer.add(targetPath);
 ```
 
-### Adım 4: Karşılaştırmayı Gerçekleştirin
+*Esneklik notu:* Tek bir çalıştırmada bir ana belgeyi birkaç revizyonla karşılaştırmak için birden fazla hedef ekleyebilirsiniz.  
 
-Karşılaştırmayı yürütün ve sonucu kaydedin. `compare` yöntemi iki belge arasındaki farkları vurgulayan bir dosya oluşturacaktır.
+### Adım 4: Karşılaştırmayı Çalıştırma
+Run the comparison and write the result to disk:
 
 ```java
 final Path resultPath = comparer.compare(outputFileName);
-// Sonuç 'outputFileName' konumunda kaydedildi
+// Your comparison result is now saved at 'outputFileName'
 ```
 
-## Pratik Uygulamalar
+**Sahne arkası:** Kütüphane her iki dosyayı da ayrıştırır, farkları hesaplar ve genellikle kırmızı/yeşil renklerde vurgulanmış yeni bir belge üretir.  
 
-Belge karşılaştırma çok yönlüdür ve uygulama alanları şunlardır:
+### Adım 5: Kaynak Yönetimi (Hatırlatma)
+Always wrap the `Comparer` usage in a try‑with‑resources block, as shown earlier. This guarantees that file handles are closed promptly:
 
-1. **Hukuki Belge İncelemesi:** Avukatlar, değişiklikleri takip etmek için sözleşme versiyonlarını karşılaştırabilirler.
-2. **Yazılım Geliştirmede Sürüm Kontrolü:** Geliştiriciler bunu kod tabanındaki değişiklikleri etkin bir şekilde yönetmek için kullanırlar.
-3. **Mali Denetimler:** Muhasebeciler finansal tabloları tutarsızlıklar açısından karşılaştırırlar.
+```java
+// Always use try-with-resources
+try (Comparer comparer = new Comparer(sourcePath)) {
+    // Your comparison logic
+} // Automatic resource cleanup happens here
+```
 
-Entegrasyon olanakları arasında belge iş akışlarının otomatikleştirilmesi veya sorunsuz erişim ve işbirliği için bulut depolama çözümleriyle entegrasyon yer alır.
+## Yaygın Tuzaklar ve Nasıl Önlenir
 
-## Performans Hususları
+| Sorun | Belirti | Çözüm |
+|-------|----------|-----|
+| **Dosya erişim çakışması** | “Dosya başka bir işlem tarafından kullanılıyor” | Kodu çalıştırmadan önce dosyayı Word/Office programında kapatın. |
+| **OutOfMemoryError** | Büyük belgelerde çökme | JVM yığın boyutunu (`-Xmx4g`) artırın veya mevcutsa akış modunu etkinleştirin. |
+| **Desteklenmeyen format** | `Unsupported file format` istisnası | Dosya türünün GroupDocs desteklenen formatları arasında olduğundan emin olun. |
+| **Yol çözümleme hataları** | `FileNotFoundException` dosya mevcut olmasına rağmen | Hata ayıklama sırasında mutlak yollar kullanın; işletim sisteminin büyük/küçük harf duyarlılığını kontrol edin. |
+| **Lisans yüklenmedi** | “License not found” çalışma zamanı hatası | Lisans dosyasının sınıf yolunda bulunduğundan emin olun veya `License.setLicense()` çağrısı ile ayarlayın. |
 
-Sorunsuz bir çalışma sağlamak için aşağıdakileri göz önünde bulundurun:
+## Gerçek Dünya Uygulamaları ve Entegrasyon Desenleri
 
-- **Bellek Kullanımını Optimize Edin:** GroupDocs.Comparison büyük belgeleri verimli bir şekilde işlemek için tasarlanmıştır. Ancak, Java bellek ayarlarını yönetmek performansı daha da artırabilir.
-- **Paralel İşleme:** Birden fazla belge çiftini karşılaştırıyorsanız, işlemleri hızlandırmak için paralel işlemeyi kullanın.
-- **Düzenli Güncellemeler:** En son iyileştirmelerden ve özelliklerden faydalanmak için kütüphane sürümünüzü güncel tutun.
+### Hukuki Belge Yönetimi
+- **Kullanım durumu:** Sözleşmelerdeki her madde değişikliğini izleyin.  
+- **Desen:** Sözleşme sürümlerinin bulunduğu klasörü gecelik toplu iş olarak işleyin, sonuçları güvenli bir depoda saklayın.  
 
-## Çözüm
+### Dokümantasyon için Versiyon Kontrolü
+- **Kullanım durumu:** Kodu ile birlikte saklanan API belgelerindeki istenmeyen değişiklikleri tespit edin.  
+- **Desen:** Git pre‑commit hook’u ekleyerek yeni belgeyi önceki sürümle karşılaştırın ve belgelendirilmemiş değişiklik içeren commit’leri engelleyin.  
 
-Bu kılavuzu takip ederek, GroupDocs.Comparison kullanarak Java'da belge karşılaştırmasını nasıl uygulayacağınızı öğrendiniz. Bu güçlü araç yalnızca belge yönetimi görevlerini basitleştirmekle kalmaz, aynı zamanda gelişmiş karşılaştırma özelliklerini uygulamalarınıza entegre etmek için bir olasılıklar dünyasının kapılarını açar.
+### Finansal Hizmetler
+- **Kullanım durumu:** Denetim izleri için düzenleyici raporları karşılaştırın.  
+- **Desen:** Raporları çekmek için güvenli bir dosya transfer servisi (SFTP) ile entegre olun, karşılaştırın ve ardından fark raporunu şifreleyerek arşivleyin.  
 
-**Sonraki Adımlar:**
-- GroupDocs.Comparison tarafından desteklenen farklı belge biçimlerini deneyin.
-- Karşılaştırma sonuçlarını özelleştirmek için ek yapılandırma seçeneklerini keşfedin.
+> **Güvenlik ipucu:** Hassas belgeleri her zaman izole bir ortamda işleyin ve çıktı üzerinde sıkı dosya izinleri uygulayın.  
 
-Belgelere daha derinlemesine dalmanız ve daha karmaşık kullanım durumlarını keşfetmeniz için sizi teşvik ediyoruz. İyi kodlamalar!
+## Performans Optimizasyon Stratejileri
+1. **Bellek Yönetimi** – Uygun JVM yığını (`-Xmx2g`) ayarlayın (çoğu durum için yeterlidir).  
+2. **Paralel İşleme** – Birden fazla belge çiftini aynı anda karşılaştırmak için `ExecutorService` kullanın, ancak yığın kullanımını izleyin.  
+3. **Asenkron Çalıştırma** – Karşılaştırmayı arka plan çalışanına (ör. Spring `@Async`) devredin, böylece UI yanıt verir.  
+4. **Sonuç Önbellekleme** – Aynı çift tekrar karşılaştırıldığında sonuçları önbelleğe alın.  
 
-## SSS Bölümü
+## Gelişmiş Konfigürasyon Seçenekleri
+- **Karşılaştırma Hassasiyeti:** Algoritmanın biçim değişiklikleri ile içerik değişikliklerine toleransını ayarlayın.  
+- **Çıktı Biçimlendirme:** Farklar için vurgulama, üstü çizili veya özel stiller arasından seçim yapın.  
+- **Meta Veri İşleme:** Karşılaştırma sırasında belge meta verilerini (yazar, zaman damgaları) dahil edin veya yok sayın.  
 
-1. **Word dışındaki formatlardaki belgeleri karşılaştırabilir miyim?**  
-   Evet, GroupDocs.Comparison PDF, Excel ve PowerPoint dahil olmak üzere çok çeşitli belge formatlarını destekler.
+## Sorun Giderme Kılavuzu
+1. **Dosya Erişimini Doğrulayın** – Okuma/yazma izinlerinin olduğundan ve dosyaların kilitli olmadığından emin olun.  
+2. **Bağımlılıkları Kontrol Edin** – GroupDocs kütüphanesinin sınıf yolunda olduğundan ve versiyon çakışması bulunmadığından emin olun.  
+3. **Girdi Dosyalarını Doğrulayın** – Bozuk veya parola korumalı olmadıklarından emin olun (parola sağlamıyorsanız).  
+4. **Lisans Ayarlarını Gözden Geçirin** – Eksik veya süresi dolmuş bir lisans işleme durdurur.  
 
-2. **Büyük dosyaları nasıl idare edebilirim?**  
-   Daha büyük dosyaları verimli bir şekilde işleyebilmek için Java ortamınızın yeterli bellek ayarlarıyla yapılandırıldığından emin olun.
+## Sık Sorulan Sorular
 
-3. **Bulutta saklanan belgeleri karşılaştırmak mümkün müdür?**  
-   Bu eğitim yerel disk karşılaştırmalarına odaklanırken, GroupDocs.Comparison bulut depolama entegrasyonlarını da destekler.
+**S: PDF’leri de Word belgeleri gibi karşılaştırabilir miyim?**  
+C: Evet – aynı API PDF’yi destekler ve aynı `compare` metodunu uygulayabilirsiniz; sadece `sourcePath` ve `targetPath`’i `.pdf` dosyalarına yönlendirin.
 
-4. **Karşılaştırma başarısız olursa yaygın sorun giderme adımları nelerdir?**  
-   Dosya yollarını kontrol edin, her iki belgenin de erişilebilir olduğundan emin olun ve GroupDocs.Comparison'ın uyumlu bir sürümünü kullandığınızı doğrulayın.
+**S: Çok büyük dosyaları bellek tükenmeden nasıl yönetebilirim?**  
+C: JVM yığın boyutunu (`-Xmx4g`) artırın, kütüphane sunuyorsa akış modunu etkinleştirin ve dosyayı parçalar halinde işlemeyi düşünün.
 
-5. **Bir karşılaştırmanın çıktısını nasıl özelleştirebilirim?**  
-   Sonuç belgesinde farklılıkların nasıl vurgulanacağını veya biçimlendirileceğini ayarlamak için kitaplığın yapılandırma seçeneklerini inceleyin.
+**S: AWS S3’te depolanan belgeleri karşılaştırmak mümkün mü?**  
+C: Eğitim yerel dosyalara odaklanıyor, ancak S3 nesnelerini geçici bir konuma indirip karşılaştırabilir, ardından sonucu tekrar S3’e yükleyebilirsiniz.
 
-## Kaynaklar
+**S: Karşılaştırma çok uzun sürerse ne yapmalıyım?**  
+C: Dosya boyutlarını kontrol edin, zaman aşımı ayarlarını artırın ve karşılaştırmayı düşük yoğunluklu saatlerde çalıştırmayı veya toplu işler için paralel işleme kullanmayı düşünün.
 
-- [Belgeleme](https://docs.groupdocs.com/comparison/java/)
-- [API Referansı](https://reference.groupdocs.com/comparison/java/)
-- [Java için GroupDocs.Comparison'ı indirin](https://releases.groupdocs.com/comparison/java/)
-- [Lisans Satın Alın](https://purchase.groupdocs.com/buy)
-- [Ücretsiz Deneme Sürümü](https://releases.groupdocs.com/comparison/java/)
-- [Geçici Lisans Başvurusu](https://purchase.groupdocs.com/temporary-license/)
-- [Destek Forumu](https://forum.groupdocs.com/c/comparison)
+**S: Sonuç belgesindeki vurgulama renklerini nasıl özelleştirebilirim?**  
+C: `compare` metodunu çağırmadan önce `ComparisonOptions` sınıfını kullanarak `setInsertedItemColor` ve `setDeletedItemColor` ayarlarını yapın.
 
-GroupDocs.Comparison for Java'yı kullanarak, belge karşılaştırma görevlerini kolaylıkla ve hassasiyetle halletmek için donanımlı olursunuz. İster iş uygulamaları ister kişisel projeler için olsun, bu araç çok çeşitli ihtiyaçları karşılamak üzere tasarlanmıştır.
+## Sonuç ve Sonraki Adımlar
+
+Artık GroupDocs.Comparison kullanarak **compare word documents java** için sağlam bir temele sahipsiniz. Ortamı nasıl kuracağınızı, karşılaştırmaları nasıl çalıştıracağınızı, yaygın sorunları nasıl giderip işlevi gerçek dünya iş akışlarına nasıl entegre edeceğinizi gördünüz.
+
+**Sonraki adımlar:**
+1. PDF karşılaştırmasını dene (`how to compare pdf java`).  
+2. Birden fazla belge çiftini işlemek için toplu iş işlemcisi oluştur.  
+3. Özel stil ve meta veri işleme gibi gelişmiş seçenekleri keşfet.  
+4. Karşılaştırma hizmetini mevcut uygulama mimarinizle entegre et (REST uç noktası, mesaj kuyruğu vb.).  
+
+Unutmayın: Küçük bir pilot projeyle başlayın, performans ölçümlerini toplayın ve yineleyin. Kodlamaktan keyif alın ve belgelerinizin her zaman sorunsuz karşılaştırılmasını dileyin!
+
+## Kaynaklar ve İleri Okuma
+
+- [GroupDocs.Comparison Dokümantasyonu](https://docs.groupdocs.com/comparison/java/)  
+- [Tam API Referansı](https://reference.groupdocs.com/comparison/java/)  
+- [En Son Sürümü İndir](https://releases.groupdocs.com/comparison/java/)  
+- [Lisans Satın Alma Seçenekleri](https://purchase.groupdocs.com/buy)  
+- [Ücretsiz Deneme Erişimi](https://releases.groupdocs.com/comparison/java/)  
+- [Geçici Lisans Başvurusu](https://purchase.groupdocs.com/temporary-license/)  
+- [Topluluk Destek Forumu](https://forum.groupdocs.com/c/comparison)  
+
+**Son Güncelleme:** 2025-12-21  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs

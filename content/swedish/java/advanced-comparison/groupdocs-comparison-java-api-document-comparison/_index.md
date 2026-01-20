@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'GroupDocs Comparison Java: Komplett guide för jämförelse av kalkylblad'
+title: 'GroupDocs Comparison Java - Komplett guide för jämförelse av kalkylblad'
 type: docs
 url: /sv/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs perbandingan java: Panduan Lengkap Perbandingan Spreadsheet'
+title: 'groupdocs perbandingan java - Panduan Lengkap Perbandingan Spreadsheet'
 type: docs
 url: /id/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

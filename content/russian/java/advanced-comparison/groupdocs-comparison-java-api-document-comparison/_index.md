@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'GroupDocs Comparison Java: Полное руководство по сравнению электронных таблиц'
+title: 'GroupDocs Comparison Java - Полное руководство по сравнению электронных таблиц'
 type: docs
 url: /ru/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

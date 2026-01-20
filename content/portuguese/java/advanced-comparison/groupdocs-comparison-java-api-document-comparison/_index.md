@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Guia Completo de Comparação de Planilhas'
+title: 'groupdocs comparison java - Guia Completo de Comparação de Planilhas'
 type: docs
 url: /pt/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

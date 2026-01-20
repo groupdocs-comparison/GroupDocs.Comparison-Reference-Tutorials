@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'GroupDocs Comparison Java: Teljes táblázat-összehasonlítási útmutató'
+title: 'GroupDocs Comparison Java - Teljes táblázat-összehasonlítási útmutató'
 type: docs
 url: /hu/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

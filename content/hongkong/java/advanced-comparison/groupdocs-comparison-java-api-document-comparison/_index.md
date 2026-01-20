@@ -12,7 +12,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: GroupDocs Comparison Java：完整試算表比較指南
+title: GroupDocs Comparison Java - 完整試算表比較指南
 type: docs
 url: /zh-hant/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

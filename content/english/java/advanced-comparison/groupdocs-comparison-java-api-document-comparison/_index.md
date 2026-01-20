@@ -1,5 +1,5 @@
 ---
-title: "groupdocs comparison java: Complete Spreadsheet Comparison Guide"
+title: "groupdocs comparison java - Complete Spreadsheet Comparison Guide"
 linktitle: "Java Document Comparison API Guide"
 description: "Master groupdocs comparison java API to compare spreadsheet files, detect changes automatically, and integrate document version control in your apps."
 keywords: "Java document comparison API, compare spreadsheet files Java, cell file comparison tutorial, GroupDocs Java integration, automated document comparison"
@@ -351,12 +351,6 @@ You've now built a comprehensive document comparison system using **groupdocs co
 
 **Take Action:** Start with a small proof‑of‑concept in your current project. Even a simple before/after comparison can provide immediate value and demonstrate the power of automated document comparison.
 
----
-
-**Last Updated:** 2025-12-16  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Additional Resources**
 
 - **Documentation:** [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -366,5 +360,11 @@ You've now built a comprehensive document comparison system using **groupdocs co
 - **Free Trial:** [Try GroupDocs Free](https://releases.groupdocs.com/comparison/java/)  
 - **Temporary License:** [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
 - **Community Support:** [GroupDocs Developer Forum](https://forum.groupdocs.com/c/comparison)  
+
+---
+
+**Last Updated:** 2025-12-16  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
 
 ---

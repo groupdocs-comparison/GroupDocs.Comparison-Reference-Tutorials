@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Hướng dẫn so sánh bảng tính toàn diện'
+title: 'groupdocs comparison java - Hướng dẫn so sánh bảng tính toàn diện'
 type: docs
 url: /vi/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

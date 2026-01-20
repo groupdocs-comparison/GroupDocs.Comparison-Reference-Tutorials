@@ -13,7 +13,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: คู่มือการเปรียบเทียบสเปรดชีตอย่างสมบูรณ์'
+title: 'groupdocs comparison java - คู่มือการเปรียบเทียบสเปรดชีตอย่างสมบูรณ์'
 type: docs
 url: /th/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

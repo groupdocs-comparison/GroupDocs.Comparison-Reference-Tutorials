@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Guía completa de comparación de hojas de cálculo'
+title: 'groupdocs comparison java - Guía completa de comparación de hojas de cálculo'
 type: docs
 url: /es/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

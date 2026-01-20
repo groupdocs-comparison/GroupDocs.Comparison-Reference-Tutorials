@@ -13,7 +13,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Kompletní průvodce porovnáním tabulek'
+title: 'groupdocs comparison java - Kompletní průvodce porovnáním tabulek'
 type: docs
 url: /cs/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

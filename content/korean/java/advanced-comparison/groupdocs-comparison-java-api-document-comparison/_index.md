@@ -13,7 +13,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: 완전한 스프레드시트 비교 가이드'
+title: 'groupdocs comparison java - 완전한 스프레드시트 비교 가이드'
 type: docs
 url: /ko/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

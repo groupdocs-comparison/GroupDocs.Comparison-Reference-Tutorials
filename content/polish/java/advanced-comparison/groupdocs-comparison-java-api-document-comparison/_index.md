@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'GroupDocs Comparison Java: Kompletny przewodnik porównywania arkuszy kalkulacyjnych'
+title: 'GroupDocs Comparison Java - Kompletny przewodnik porównywania arkuszy kalkulacyjnych'
 type: docs
 url: /pl/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

@@ -13,7 +13,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: دليل كامل لمقارنة جداول البيانات'
+title: 'groupdocs comparison java - دليل كامل لمقارنة جداول البيانات'
 type: docs
 url: /ar/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

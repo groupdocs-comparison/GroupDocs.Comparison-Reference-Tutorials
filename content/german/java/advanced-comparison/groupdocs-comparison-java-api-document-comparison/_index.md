@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Vollständiger Leitfaden für den Vergleich von Tabellenkalkulationen'
+title: 'groupdocs comparison java - Vollständiger Leitfaden für den Vergleich von Tabellenkalkulationen'
 type: docs
 url: /de/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1

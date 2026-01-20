@@ -14,7 +14,7 @@ tags:
 - java-api
 - spreadsheet-processing
 - groupdocs
-title: 'groupdocs comparison java: Guida completa al confronto dei fogli di calcolo'
+title: 'groupdocs comparison java - Guida completa al confronto dei fogli di calcolo'
 type: docs
 url: /it/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
 weight: 1
@@ -376,12 +376,6 @@ Hai ora costruito un sistema completo di confronto documenti usando **groupdocs 
 
 **Agisci:** Inizia con un piccolo proof‑of‑concept nel tuo progetto attuale. Anche un semplice confronto prima/dopo può fornire valore immediato e dimostrare la potenza del confronto documenti automatizzato.
 
----
-
-**Last Updated:** 2025-12-16  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Risorse Aggiuntive**
 
 - **Documentation:** [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -391,3 +385,9 @@ Hai ora costruito un sistema completo di confronto documenti usando **groupdocs 
 - **Free Trial:** [Try GroupDocs Free](https://releases.groupdocs.com/comparison/java/)  
 - **Temporary License:** [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
 - **Community Support:** [GroupDocs Developer Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-16  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

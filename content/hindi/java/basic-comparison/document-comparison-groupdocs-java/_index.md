@@ -323,12 +323,6 @@ A: बिल्कुल। GroupDocs.Comparison परिवर्तन हा
 **Q: बहुत बड़े या कई समवर्ती तुलना के लिए प्रदर्शन कैसे सुधारूँ?**  
 A: बड़े JVM हीप का उपयोग करें, स्ट्रीम बफ़र्स को ट्यून करें, परिणाम कैशिंग सक्षम करें, और एक्ज़ीक्यूटर सर्विस का उपयोग करके समानांतर में तुलना प्रोसेस करें।
 
----
-
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -338,3 +332,9 @@ A: बड़े JVM हीप का उपयोग करें, स्ट्�
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

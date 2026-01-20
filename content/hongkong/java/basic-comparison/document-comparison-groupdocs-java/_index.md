@@ -322,12 +322,6 @@ A: 完全可以。GroupDocs.Comparison 提供變更標示、顏色與輸出格�
 **Q: 如何提升極大或大量同時比較的效能？**  
 A: 使用更大的 JVM 堆積、調整串流緩衝區、啟用結果快取，並使用 executor service 進行平行處理。
 
----
-
-**最後更新**：2025-12-21  
-**測試環境**：GroupDocs.Comparison 25.2 for Java  
-**作者**：GroupDocs  
-
 **其他資源**
 - [GroupDocs.Comparison Java 文件說明](https://docs.groupdocs.com/comparison/java/)
 - [完整 Java API 參考](https://reference.groupdocs.com/comparison/java/)
@@ -336,3 +330,9 @@ A: 使用更大的 JVM 堆積、調整串流緩衝區、啟用結果快取，並
 - [開始免費試用](https://releases.groupdocs.com/comparison/java/)
 - [取得臨時授權](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs 論壇](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**最後更新**：2025-12-21  
+**測試環境**：GroupDocs.Comparison 25.2 for Java  
+**作者**：GroupDocs  

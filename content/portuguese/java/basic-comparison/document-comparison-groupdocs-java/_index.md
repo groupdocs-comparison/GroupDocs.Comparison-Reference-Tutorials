@@ -357,12 +357,6 @@ A: Absolutamente. O GroupDocs.Comparison oferece opções para realce de altera�
 **Q: Como melhorar o desempenho para comparações muito grandes ou muitas simultâneas?**  
 A: Use um heap JVM maior, ajuste os buffers de stream, habilite cache de resultados e processe comparações em paralelo usando um serviço executor.
 
----
-
-**Última Atualização:** 2025-12-21  
-**Testado Com:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Recursos Adicionais**
 
 - [Documentação Java do GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
@@ -372,3 +366,9 @@ A: Use um heap JVM maior, ajuste os buffers de stream, habilite cache de resulta
 - [Iniciar Teste Gratuito](https://releases.groupdocs.com/comparison/java/)
 - [Obter Licença Temporária](https://purchase.groupdocs.com/temporary-license/)
 - [Fórum GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Última Atualização:** 2025-12-21  
+**Testado Com:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

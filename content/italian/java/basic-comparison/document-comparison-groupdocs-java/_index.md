@@ -336,12 +336,6 @@ R: Assolutamente. GroupDocs.Comparison offre opzioni per evidenziare le modifich
 **D: Come migliorare le performance per confronti molto grandi o numerosi concorrenti?**  
 R: Usa un heap JVM più grande, regola i buffer degli stream, abilita il caching dei risultati e processa i confronti in parallelo tramite un executor service.
 
----
-
-**Ultimo aggiornamento:** 2025-12-21  
-**Testato con:** GroupDocs.Comparison 25.2 per Java  
-**Autore:** GroupDocs  
-
 **Risorse aggiuntive**
 
 - [Documentazione GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -351,3 +345,9 @@ R: Usa un heap JVM più grande, regola i buffer degli stream, abilita il caching
 - [Inizia la prova gratuita](https://releases.groupdocs.com/comparison/java/)  
 - [Ottieni licenza temporanea](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ultimo aggiornamento:** 2025-12-21  
+**Testato con:** GroupDocs.Comparison 25.2 per Java  
+**Autore:** GroupDocs  

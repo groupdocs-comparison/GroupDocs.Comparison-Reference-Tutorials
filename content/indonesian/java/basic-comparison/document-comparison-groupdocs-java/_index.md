@@ -336,12 +336,6 @@ J: Tentu. GroupDocs.Comparison menawarkan opsi penyorotan perubahan, warna, dan 
 **T: Bagaimana cara meningkatkan kinerja untuk dokumen sangat besar atau banyak perbandingan bersamaan?**  
 J: Gunakan heap JVM yang lebih besar, sesuaikan buffer stream, aktifkan caching hasil, dan proses perbandingan secara paralel menggunakan executor service.
 
----
-
-**Terakhir Diperbarui:** 2025-12-21  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
-**Penulis:** GroupDocs  
-
 **Sumber Daya Tambahan**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -351,3 +345,9 @@ J: Gunakan heap JVM yang lebih besar, sesuaikan buffer stream, aktifkan caching 
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-21  
+**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
+**Penulis:** GroupDocs  

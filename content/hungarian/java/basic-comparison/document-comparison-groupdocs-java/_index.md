@@ -334,10 +334,6 @@ A: Természetesen. A GroupDocs.Comparison lehetőséget biztosít a változások
 **Q: Hogyan javítható a teljesítmény nagyon nagy vagy sok egyidejű összehasonlítás esetén?**  
 A: Használj nagyobb JVM heap‑et, állítsd be a pufferméreteket, engedélyezd a gyorsítótárazást, és párhuzamosan dolgozz egy executor service‑sel.
 
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -347,3 +343,7 @@ A: Használj nagyobb JVM heap‑et, állítsd be a pufferméreteket, engedélyez
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

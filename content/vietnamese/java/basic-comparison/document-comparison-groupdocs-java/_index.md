@@ -334,12 +334,6 @@ A: Chắc chắn. GroupDocs.Comparison cung cấp các tùy chọn để làm n�
 **Q: Làm thế nào tôi có thể cải thiện hiệu suất cho các so sánh rất lớn hoặc đồng thời nhiều?**  
 A: Sử dụng heap JVM lớn hơn, điều chỉnh bộ đệm stream, bật caching kết quả, và xử lý các so sánh song song bằng executor service.
 
----
-
-**Cập nhật lần cuối:** 2025-12-21  
-**Kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
-**Tác giả:** GroupDocs  
-
 **Tài nguyên bổ sung**
 
 - [Tài liệu GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/)
@@ -349,3 +343,9 @@ A: Sử dụng heap JVM lớn hơn, điều chỉnh bộ đệm stream, bật ca
 - [Bắt đầu dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)
 - [Nhận giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
 - [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Cập nhật lần cuối:** 2025-12-21  
+**Kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
+**Tác giả:** GroupDocs  

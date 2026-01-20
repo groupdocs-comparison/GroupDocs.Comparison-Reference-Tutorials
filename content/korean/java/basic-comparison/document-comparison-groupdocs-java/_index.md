@@ -335,12 +335,6 @@ A: 물론입니다. GroupDocs.Comparison은 변경 강조 색상, 스타일 및 
 **Q: 매우 크거나 동시 비교가 많은 경우 성능을 어떻게 개선하나요?**  
 A: JVM 힙을 확대하고, 스트림 버퍼를 조정하며, 결과 캐싱을 활성화하고, ExecutorService를 사용해 병렬 처리하도록 설계하세요.
 
----
-
-**마지막 업데이트:** 2025-12-21  
-**테스트 환경:** GroupDocs.Comparison 25.2 for Java  
-**작성자:** GroupDocs  
-
 **추가 리소스**
 
 - [GroupDocs.Comparison Java 문서](https://docs.groupdocs.com/comparison/java/)  
@@ -350,3 +344,9 @@ A: JVM 힙을 확대하고, 스트림 버퍼를 조정하며, 결과 캐싱을 �
 - [무료 체험 시작](https://releases.groupdocs.com/comparison/java/)  
 - [임시 라이선스 받기](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs 포럼](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**마지막 업데이트:** 2025-12-21  
+**테스트 환경:** GroupDocs.Comparison 25.2 for Java  
+**작성자:** GroupDocs  

@@ -325,12 +325,6 @@ A: Naprosto. GroupDocs.Comparison nabízí možnosti zvýraznění změn, barvy 
 **Q: Jak mohu zlepšit výkon při velmi velkých nebo mnoha souběžných porovnáních?**  
 A: Použijte větší haldu JVM, laděte buffer streamů, povolte cachování výsledků a zpracovávejte porovnání paralelně pomocí executor služby.
 
----
-
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**
 
 - [Dokumentace GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -340,3 +334,9 @@ A: Použijte větší haldu JVM, laděte buffer streamů, povolte cachování v�
 - [Začít zdarma trial](https://releases.groupdocs.com/comparison/java/)  
 - [Získat dočasnou licenci](https://purchase.groupdocs.com/temporary-license/)  
 - [Fórum GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

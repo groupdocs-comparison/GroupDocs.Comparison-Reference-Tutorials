@@ -325,12 +325,6 @@ A: Absolut. GroupDocs.Comparison erbjuder alternativ för markering av förändr
 **Q: Hur kan jag förbättra prestanda för mycket stora eller många samtidiga jämförelser?**  
 A: Använd större JVM‑heap, justera strömbuffertar, aktivera resultatcachning och bearbeta jämförelser parallellt med en executor‑service.
 
----
-
-**Senast uppdaterad:** 2025-12-21  
-**Testat med:** GroupDocs.Comparison 25.2 för Java  
-**Författare:** GroupDocs  
-
 **Ytterligare resurser**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -340,3 +334,9 @@ A: Använd större JVM‑heap, justera strömbuffertar, aktivera resultatcachnin
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Senast uppdaterad:** 2025-12-21  
+**Testat med:** GroupDocs.Comparison 25.2 för Java  
+**Författare:** GroupDocs  

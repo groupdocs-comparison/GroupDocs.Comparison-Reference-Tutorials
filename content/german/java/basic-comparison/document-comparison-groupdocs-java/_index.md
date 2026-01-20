@@ -339,10 +339,6 @@ A: Absolut. GroupDocs.Comparison bietet Optionen für die Hervorhebung von Ände
 **Q: Wie kann ich die Leistung für sehr große oder viele gleichzeitige Vergleiche verbessern?**  
 A: Verwenden Sie einen größeren JVM‑Heap, passen Sie Stream‑Puffer an, aktivieren Sie Ergebnis‑Caching und verarbeiten Sie Vergleiche parallel mithilfe eines Executor‑Service.
 
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Zusätzliche Ressourcen**
 
 - [GroupDocs.Comparison Java Dokumentation](https://docs.groupdocs.com/comparison/java/)
@@ -352,3 +348,7 @@ A: Verwenden Sie einen größeren JVM‑Heap, passen Sie Stream‑Puffer an, akt
 - [Kostenlose Testversion starten](https://releases.groupdocs.com/comparison/java/)
 - [Temporäre Lizenz erhalten](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

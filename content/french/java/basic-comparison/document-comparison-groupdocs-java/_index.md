@@ -347,12 +347,6 @@ R : Absolument. GroupDocs.Comparison propose des options de mise en évidence 
 **Q : Comment améliorer les performances pour des comparaisons très volumineuses ou de nombreuses comparaisons simultanées ?**  
 R : Utilisez un tas JVM plus grand, ajustez les tampons de flux, activez la mise en cache des résultats et traitez les comparaisons en parallèle à l'aide d'un service d'exécution.
 
----
-
-**Dernière mise à jour :** 2025-12-21  
-**Testé avec :** GroupDocs.Comparison 25.2 for Java  
-**Auteur :** GroupDocs  
-
 ## Ressources supplémentaires
 - [Documentation Java de GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [Référence complète de l'API Java](https://reference.groupdocs.com/comparison/java/)  
@@ -361,3 +355,9 @@ R : Utilisez un tas JVM plus grand, ajustez les tampons de flux, activez la mi
 - [Commencer l'essai gratuit](https://releases.groupdocs.com/comparison/java/)  
 - [Obtenir une licence temporaire](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Dernière mise à jour :** 2025-12-21  
+**Testé avec :** GroupDocs.Comparison 25.2 for Java  
+**Auteur :** GroupDocs  

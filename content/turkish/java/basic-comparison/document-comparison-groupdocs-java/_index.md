@@ -336,12 +336,6 @@ C: Kesinlikle. GroupDocs.Comparison, değişiklik vurgulama, renkler ve çıktı
 **S: Çok büyük veya çok sayıda eşzamanlı karşılaştırma için performansı nasıl artırabilirim?**  
 C: Daha büyük JVM heap, akış tamponlarını ayarlama, sonuç önbellekleme ve karşılaştırmaları bir executor service ile paralel işleme alarak performansı artırabilirsiniz.
 
----
-
-**Son Güncelleme:** 2025-12-21  
-**Test Edilen Sürüm:** GroupDocs.Comparison 25.2 for Java  
-**Yazar:** GroupDocs  
-
 **Ek Kaynaklar**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -351,3 +345,9 @@ C: Daha büyük JVM heap, akış tamponlarını ayarlama, sonuç önbellekleme v
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Son Güncelleme:** 2025-12-21  
+**Test Edilen Sürüm:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs  

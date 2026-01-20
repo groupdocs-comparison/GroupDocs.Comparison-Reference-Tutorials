@@ -323,12 +323,6 @@ try {
 **س: كيف يمكن تحسين الأداء لمقارنات كبيرة جدًا أو متعددة متزامنة؟**  
 **ج**: استخدم heap أكبر للـ JVM، اضبط مخازن التدفق، فعّل التخزين المؤقت للنتائج، وعالج المقارنات بشكل متوازي باستخدام خدمة تنفيذ (executor service).
 
----
-
-**آخر تحديث:** 2025-12-21  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
-**المؤلف:** GroupDocs  
-
 **موارد إضافية**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -338,3 +332,9 @@ try {
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**آخر تحديث:** 2025-12-21  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
+**المؤلف:** GroupDocs  

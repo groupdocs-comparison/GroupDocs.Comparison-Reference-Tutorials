@@ -334,12 +334,6 @@ A: 完全可以。GroupDocs.Comparison 提供更改高亮、颜色和输出格�
 **Q: 如何提升对非常大或大量并发比较的性能？**  
 A: 使用更大的 JVM 堆，调优流缓冲区，启用结果缓存，并使用执行器服务并行处理比较。
 
----
-
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -349,3 +343,9 @@ A: 使用更大的 JVM 堆，调优流缓冲区，启用结果缓存，并使用
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

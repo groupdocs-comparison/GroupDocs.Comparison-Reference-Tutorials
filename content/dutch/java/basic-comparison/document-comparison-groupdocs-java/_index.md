@@ -336,12 +336,6 @@ A: Absoluut. GroupDocs.Comparison biedt opties voor wijzigingsmarkering, kleuren
 **Q: Hoe kan ik de prestaties verbeteren voor zeer grote of veel gelijktijdige vergelijkingen?**  
 A: Gebruik een grotere JVM‑heap, stem stream‑buffers af, schakel result‑caching in en verwerk vergelijkingen parallel met een executor‑service.
 
----
-
-**Laatst bijgewerkt:** 2025-12-21  
-**Getest met:** GroupDocs.Comparison 25.2 for Java  
-**Auteur:** GroupDocs  
-
 **Aanvullende bronnen**
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -351,3 +345,9 @@ A: Gebruik een grotere JVM‑heap, stem stream‑buffers af, schakel result‑ca
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Laatst bijgewerkt:** 2025-12-21  
+**Getest met:** GroupDocs.Comparison 25.2 for Java  
+**Auteur:** GroupDocs  

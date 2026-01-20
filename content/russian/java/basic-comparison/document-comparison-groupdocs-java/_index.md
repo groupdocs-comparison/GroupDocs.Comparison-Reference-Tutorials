@@ -336,12 +336,6 @@ A: Абсолютно. GroupDocs.Comparison предлагает парамет�
 **Q: Как улучшить производительность при работе с очень большими или множеством одновременных сравнений?**  
 A: Увеличьте размер кучи JVM, настройте буферы потоков, включите кэширование результатов и обрабатывайте сравнения параллельно, используя ExecutorService.
 
----
-
-**Last Updated:** 2025-12-21  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## Additional Resources
 
 - [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -351,3 +345,9 @@ A: Увеличьте размер кучи JVM, настройте буферы
 - [Start Free Trial](https://releases.groupdocs.com/comparison/java/)
 - [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

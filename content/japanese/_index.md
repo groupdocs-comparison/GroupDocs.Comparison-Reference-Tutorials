@@ -1,123 +1,179 @@
 ---
-"additionalTitle": "GroupDocs API References"
-"description": "GroupDocs.Comparison APIを使って、Word、PDF、Excelなどのドキュメント形式を比較する方法を学びましょう。.NETおよびJava開発者向けのステップバイステップのチュートリアルとコード例をご覧ください。"
-"is_root": true
-"linktitle": "GroupDocs.Comparison チュートリアルと例"
-"title": "ドキュメント比較ソフトウェア API チュートリアル | GroupDocs.Comparison"
-"url": "/ja/"
-"weight": 11
+additionalTitle: GroupDocs API References
+date: 2025-12-17
+description: GroupDocs.Comparison API を使用して、Word、PDF、Excel などのドキュメント形式を比較する方法を学びましょう。コード例付きの
+  .NET および Java 開発者向けステップバイステップチュートリアル。
+is_root: true
+keywords:
+- document comparison
+- file comparison
+- diff documents
+- compare PDF
+- compare Word
+- GroupDocs
+- .NET API
+- Java API
+- document diff
+linktitle: GroupDocs.Comparison Tutorials & Examples
+title: GroupDocs.Comparison API チュートリアルと開発者ガイド
 type: docs
+url: /ja/
+weight: 11
 ---
-# GroupDocs.Comparison チュートリアルと開発者ガイド
 
-![GroupDocs.比較バナー](./groupdocs-comparison-net.svg)
+# GroupDocs.Comparison API チュートリアル & 開発者ガイド
 
-ようこそ **文書比較の完全ガイド** GroupDocs.Comparisonで！包括的なチュートリアルでは、さまざまな形式の文書間の違いを効率的に識別する方法を紹介します。 **Word、PDF、Excel、PowerPoint、画像など**。
+![GroupDocs.Comparison バナー](./groupdocs-comparison-net.svg)
 
-## GroupDocs.Comparison を使用する理由
+Welcome to the **complete guide to document comparison** with the **GroupDocs.Comparison API**! Our comprehensive tutorials show you how to efficiently identify differences between documents in various formats including **Word, PDF, Excel, PowerPoint, images, and more**. Whether you’re building a .NET web service or a Java desktop application, this guide gives you the practical steps you need to integrate powerful document comparison features quickly.
 
-- **マルチフォーマットサポート** 異なる形式の文書を比較する
-- **詳細な変更検出** 挿入、削除、書式変更、スタイル変更を識別する
-- **変更管理** 特定の変更をプログラムで承認または拒否する
-- **安全な比較** パスワードで保護されたドキュメントを操作する
-- **高性能** 最適化されたアルゴリズムで大規模なドキュメントを効率的に比較
+## Quick Answers
+- **What does GroupDocs.Comparison API do?** It detects and highlights changes between two documents of the same or different formats.  
+- **Which platforms are supported?** .NET (Framework, .NET Core, .NET 5/6) and Java (8+).  
+- **Do I need a license for development?** A free trial works for evaluation; a commercial license is required for production.  
+- **Can I compare password‑protected files?** Yes – the API accepts passwords for opening secured documents.  
+- **Is there a way to generate visual previews?** Absolutely, the API can create side‑by‑side or overlay preview images of the comparison result.
 
-## GroupDocs.Comparison for .NET チュートリアル
+## What is GroupDocs.Comparison API?
+The **GroupDocs.Comparison API** is a set of libraries that let developers programmatically compare the content, layout, and formatting of documents. It supports over 100 file types, delivers detailed change logs, and provides options to accept or reject modifications through code.
+
+## Why Use GroupDocs.Comparison API?
+- **Multi‑format Support** – Compare Word, PDF, Excel, PowerPoint, images, emails, and many more without converting files first.  
+- **Rich Change Detection** – See insertions, deletions, formatting tweaks, and style changes highlighted automatically.  
+- **Programmatic Change Management** – Accept or reject specific changes in your workflow, perfect for review systems.  
+- **Secure Handling** – Work with encrypted or password‑protected documents safely.  
+- **High Performance** – Optimized algorithms handle large files and bulk folder comparisons efficiently.
+
+## Why Use GroupDocs.Comparison?
+- **Multi-format Support** - Compare documents across different formats
+- **Detailed Change Detection** - Identify insertions, deletions, formatting changes, and style modifications
+- **Change Management** - Accept or reject specific changes programmatically
+- **Secure Comparison** - Work with password-protected documents
+- **High Performance** - Efficiently compare large documents with optimized algorithms
+
+## GroupDocs.Comparison for .NET Tutorials
 
 {{% alert color="primary" %}}
-ステップバイステップのチュートリアルで、.NETアプリケーションにおけるドキュメント比較をマスターしましょう。C#を使用して、Word、PDF、Excelなどのフォーマットに対応したプロフェッショナルなドキュメント比較機能を実装する方法を学びましょう。開発者向けのガイドでは、基本的な設定から高度な統合シナリオまで、あらゆる内容を網羅しています。
-
+Master document comparison in your .NET applications with our step-by-step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer-focused guides cover everything from basic setup to advanced integration scenarios.
 {{% /alert %}}
 
-### 必須の .NET チュートリアル
+### Essential .NET Tutorials
 
 <div class="row">
 <div class="col-md-6">
 
-#### はじめる
-- [クイックスタートガイド](./net/quick-start/) 数分で最初の比較を設定して実行できます
-- [インストールとセットアップ](./net/getting-started/) 開発環境を構成する
-- [ライセンスオプション](./net/licensing-configuration/) ライセンスと展開オプションを理解する
+#### Getting Started
+- [Quick Start Guide](./net/quick-start/) - Set up and run your first comparison in minutes
+- [Installation & Setup](./net/getting-started/) - Configure your development environment
+- [Licensing Options](./net/licensing-configuration/) - Understand licensing and deployment options
 
-#### コア機能
-- [ドキュメントの読み込み](./net/document-loading/) ドキュメントを読み込むさまざまな方法を学ぶ
-- [基本的な比較](./net/basic-comparison/) 単純な比較演算を実装する
-- [高度な比較](./net/advanced-comparison/) 複雑な比較シナリオをマスターする
-- [変更管理](./net/change-management/) 特定の変更を承認または拒否する
+#### Core Functionality
+- [Document Loading](./net/document-loading/) - Learn different ways to load documents
+- [Basic Comparison](./net/basic-comparison/) - Implement simple comparison operations
+- [Advanced Comparison](./net/advanced-comparison/) - Master complex comparison scenarios
+- [Change Management](./net/change-management/) - Accept or reject specific changes
 
 </div>
 <div class="col-md-6">
 
-#### 高度な機能
-- [プレビュー生成](./net/preview-generation/) 比較結果の視覚的なプレビューを作成する
-- [メタデータ管理](./net/metadata-management/) ドキュメントのプロパティを制御する
-- [セキュリティと保護](./net/security-protection/) 保護されたドキュメントの操作
-- [比較オプション](./net/comparison-options/) 比較動作をカスタマイズする
+#### Advanced Features
+- [Preview Generation](./net/preview-generation/) - Create visual previews of comparison results
+- [Metadata Management](./net/metadata-management/) - Control document properties
+- [Security & Protection](./net/security-protection/) - Work with protected documents
+- [Comparison Options](./net/comparison-options/) - Customize comparison behavior
 
-#### 専門的な比較
-- [画像比較](./net/image-comparison/) ピクセル単位の精度で画像を比較
-- [ドキュメントとフォルダの比較](./net/documents-and-folder-comparison/) ディレクトリ全体を比較する
-- [文書情報](./net/document-information/) ドキュメントのメタデータを抽出して分析する
+#### Specialized Comparisons
+- [Image Comparison](./net/image-comparison/) - Compare images with pixel-perfect accuracy
+- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) - Compare entire directories
+- [Document Information](./net/document-information/) - Extract and analyze document metadata
 
 </div>
 </div>
 
-## GroupDocs.Comparison for Java チュートリアル
+## GroupDocs.Comparison for Java Tutorials
 
 {{% alert color="primary" %}}
-包括的なチュートリアルを活用して、Javaアプリケーションに強力なドキュメント比較機能を実装しましょう。明確で実用的な例を用いて、GroupDocs.Comparison for Javaをエンタープライズシステム、Webアプリケーション、デスクトップソフトウェアに統合する方法を学びます。
-
+Implement powerful document comparison capabilities in your Java applications with our comprehensive tutorials. Learn to integrate GroupDocs.Comparison for Java into enterprise systems, web applications, and desktop software with clear, practical examples.
 {{% /alert %}}
 
-### 必須のJavaチュートリアル
+### Essential Java Tutorials
 
 <div class="row">
 <div class="col-md-6">
 
-#### はじめる
-- [ライセンスオプション](./java/licensing-configuration) 展開ライセンスを理解する
+#### Getting Started
+- [Licensing Options](./java/licensing-configuration) - Understand deployment licensing
 
-#### コア機能
-- [ドキュメントの読み込み](./java/document-loading/) さまざまなソースからドキュメントを読み込む
-- [基本的な比較](./java/basic-comparison/) 基本的な比較を実装する
-- [高度な比較](./java/advanced-comparison/) 複雑な比較シナリオを処理する
+#### Core Functionality
+- [Document Loading](./java/document-loading/) - Load documents from various sources
+- [Basic Comparison](./java/basic-comparison/) - Implement fundamental comparison
+- [Advanced Comparison](./java/advanced-comparison/) - Handle complex comparison scenarios
 
 </div>
 <div class="col-md-6">
 
-#### 高度な機能
-- [プレビュー生成](./java/preview-generation/) 視覚的な比較プレビューを生成する
-- [メタデータ管理](./java/metadata-management/) ドキュメントのメタデータを制御する
-- [セキュリティと保護](./java/security-protection/) 保護された文書を比較する
-- [比較オプション](./java/comparison-options/) 比較設定を微調整する
-- [文書情報](./java/document-information) メタデータを抽出して表示する
+#### Advanced Features
+- [Preview Generation](./java/preview-generation/) - Generate visual comparison previews
+- [Metadata Management](./java/metadata-management/) - Control document metadata
+- [Security & Protection](./java/security-protection/) - Compare protected documents
+- [Comparison Options](./java/comparison-options/) - Fine-tune comparison settings
+- [Document Information](./java/document-information) - Extract and display metadata
 
 </div>
 </div>
 
-## サポートされているドキュメント形式
+## Supported Document Formats
 
-GroupDocs.Comparison は幅広いドキュメント形式をサポートしています。
+GroupDocs.Comparison supports a wide range of document formats:
 
-| カテゴリ | フォーマット |
-|----------|----------|
-| **ワードプロセッシング** DOCX、DOC、ODT、RTF、TXT |
-| **スプレッドシート** XLSX、XLS、ODS、CSV |
-| **プレゼンテーション** PPTX、PPT、ODP |
-| **PDFドキュメント** PDF、PDF/A |
-| **画像** JPG、PNG、BMP、GIF、TIFF |
-| **メール** EML、MSG |
-| **その他にも多数...** | HTML、EPUB、DJVU |
+| カテゴリ | 形式 |
+|----------|---------|
+| **Word Processing** | DOCX, DOC, ODT, RTF, TXT |
+| **Spreadsheets** | XLSX, XLS, ODS, CSV |
+| **Presentations** | PPTX, PPT, ODP |
+| **PDF Documents** | PDF, PDF/A |
+| **Images** | JPG, PNG, BMP, GIF, TIFF |
+| **Email** | EML, MSG |
+| **And many more...** | HTML, EPUB, DJVU |
 
-## 開発者リソース
+## Developer Resources
 
-- [APIドキュメント](https://reference.groupdocs.com/comparison/) 詳細なAPIリファレンス
-- [GitHubの例](https://github.com/groupdocs-comparison/) コード例のリポジトリ
-- [開発者ブログ](https://blog.groupdocs.com/category/comparison/) 最新のアップデートとチュートリアル
-- [無料サポートフォーラム](https://forum.groupdocs.com/c/comparison/) 専門家からのサポートを受ける
+- [API Documentation](https://reference.groupdocs.com/comparison/) - Detailed API references
+- [GitHub Examples](https://github.com/groupdocs-comparison/) - Repository of code examples
+- [Developer Blog](https://blog.groupdocs.com/category/comparison/) - Latest updates and tutorials
+- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) - Get help from our experts
 
-## 今すぐ始めましょう
+## Common Use Cases for the GroupDocs.Comparison API
+- **Legal document review** – Quickly highlight changes between contract revisions.  
+- **Financial reporting** – Detect alterations in Excel or PDF statements before publishing.  
+- **Content management systems** – Provide end‑users with visual diff tools for Word or PowerPoint files.  
+- **Automated QA** – Compare generated PDFs against baseline templates in CI pipelines.  
 
-チュートリアルを参考に、アプリケーションにプロフェッショナルなドキュメント比較機能を実装しましょう。GroupDocs.Comparison は、.NET および Java プロジェクトにシームレスに統合できる強力で柔軟な API を提供します。
+## Getting Started Today
 
-[無料トライアルをダウンロード](https://releases.groupdocs.com/comparison) | [一時ライセンスを取得する](https://purchase.groupdocs.com/temporary-license)
+Explore our tutorials to start implementing professional document comparison features in your applications. GroupDocs.Comparison provides a powerful, flexible API that seamlessly integrates with your .NET and Java projects.
+
+[Download Free Trial](https://releases.groupdocs.com/comparison) | [Get Temporary License](https://purchase.groupdocs.com/temporary-license)
+
+## Frequently Asked Questions
+
+**Q: Can I use the GroupDocs.Comparison API in a commercial product?**  
+A: Yes, a valid commercial license is required for production deployments. A free trial is available for evaluation.
+
+**Q: Does the API support password‑protected files?**  
+A: Absolutely. You can supply the document password when loading the source files.
+
+**Q: Which .NET versions are compatible?**  
+A: The API works with .NET Framework 4.5+, .NET Core 3.1+, .NET 5, and .NET 6+.
+
+**Q: How does the API handle large documents or bulk folder comparisons?**  
+A: It uses streaming and optimized algorithms to keep memory usage low, and you can compare entire directories with the folder comparison feature.
+
+**Q: Is there a way to customize the visual style of the comparison output?**  
+A: Yes, the Comparison Options allow you to define colors, markup styles, and output formats for the generated diff.
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 23.11 (latest stable)  
+**Author:** GroupDocs

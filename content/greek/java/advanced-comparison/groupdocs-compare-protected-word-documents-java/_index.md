@@ -1,35 +1,84 @@
 ---
-"date": "2025-05-05"
-"description": "Μάθετε πώς να φορτώνετε και να συγκρίνετε αποτελεσματικά έγγραφα Word που προστατεύονται με κωδικό πρόσβασης σε Java με το GroupDocs.Comparison. Βελτιστοποιήστε τις διαδικασίες διαχείρισης εγγράφων σας."
-"title": "Πώς να φορτώσετε και να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης σε Java χρησιμοποιώντας το GroupDocs.Comparison"
-"url": "/el/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/"
-"weight": 1
+categories:
+- Java Development
+- Document Processing
+date: '2025-12-17'
+description: Μάθετε πώς να συγκρίνετε έγγραφα Word με προστασία κωδικού πρόσβασης
+  σε Java χρησιμοποιώντας το GroupDocs.Comparison. Πλήρης οδηγός με παραδείγματα κώδικα,
+  αντιμετώπιση προβλημάτων και βέλτιστες πρακτικές.
+keywords: compare password protected Word documents Java, GroupDocs comparison tutorial,
+  Java document comparison library, protected Word file comparison, GroupDocs comparison
+  password protected files, how to compare word, batch compare word files
+lastmod: '2025-12-17'
+linktitle: How to Compare Word Docs Java
+tags:
+- groupdocs
+- java
+- document-comparison
+- password-protected
+- word-documents
+title: Πώς να συγκρίνετε έγγραφα Word (προστατευμένα με κωδικό) σε Java
 type: docs
+url: /el/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/
+weight: 1
 ---
-# Πώς να φορτώσετε και να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης σε Java χρησιμοποιώντας το GroupDocs.Comparison
+
+# Πώς να Συγκρίνετε Έγγραφα Word (Προστατευμένα με Κωδικό) σε Java
 
 ## Εισαγωγή
 
-Στον σημερινό ψηφιακό κόσμο, η διαχείριση και η σύγκριση ευαίσθητων εγγράφων είναι ζωτικής σημασίας τόσο για τις επιχειρήσεις όσο και για τα άτομα. Δυσκολεύεστε να συγκρίνετε πολλά έγγραφα του Word που προστατεύονται με κωδικό πρόσβασης; Αυτό το σεμινάριο σας καθοδηγεί στη χρήση... **GroupDocs.Σύγκριση για Java** για να φορτώνετε και να συγκρίνετε εύκολα αυτά τα έγγραφα από ροές. Ανακαλύψτε πώς το GroupDocs μπορεί να βελτιστοποιήσει τις διαδικασίες διαχείρισης εγγράφων σας.
+Ποτέ προσπαθήσατε **πώς να συγκρίνετε word** έγγραφα που είναι προστατευμένα με κωδικό και αντιμετωπίσατε εμπόδια; Δεν είστε μόνοι. Οι περισσότεροι προγραμματιστές αντιμετωπίζουν αυτήν την ακριβή πρόκληση όταν δημιουργούν συστήματα διαχείρισης εγγράφων ή διαδικασίες ελέγχου.
 
-### Τι θα μάθετε
+Το θέμα είναι: η σύγκριση κανονικών εγγράφων είναι απλή, αλλά μόλις εισαχθούν οι κωδικοί, όλα γίνονται πολύπλοκα. Εδώ έρχεται στο προσκήνιο το **GroupDocs.Comparison for Java**. Αυτή η ισχυρή βιβλιοθήκη αναλαμβάνει το δύσκολο μέρος, επιτρέποντάς σας να συγκρίνετε κρυπτογραφημένα έγγραφα τόσο εύκολα όσο τα κανονικά.
 
-- Ρύθμιση και ρύθμιση παραμέτρων του GroupDocs.Comparison σε ένα έργο Java.
-- Φόρτωση προστατευμένων εγγράφων Word χρησιμοποιώντας το InputStreams με το LoadOptions.
-- Συγκρίνετε πολλά έγγραφα και εξαγάγετε τα αποτελέσματα.
-- Κατανοήστε πρακτικές εφαρμογές και ζητήματα απόδοσης κατά τη χρήση του GroupDocs.Comparison.
+Σε αυτόν τον ολοκληρωμένο οδηγό, θα μάθετε πώς να φορτώνετε και να συγκρίνετε απρόσκοπτα έγγραφα Word προστατευμένα με κωδικό χρησιμοποιώντας το GroupDocs.Comparison. Είτε δημιουργείτε σύστημα νομικής ανασκόπησης εγγράφων είτε αυτοματοποιείτε ελέγχους συμμόρφωσης, αυτό το σεμινάριο σας καλύπτει.
 
-Ας ξεκινήσουμε ρυθμίζοντας σωστά το περιβάλλον σας.
+## Γρήγορες Απαντήσεις
+- **Ποια βιβλιοθήκη διαχειρίζεται τη σύγκριση Word προστατευμένων με κωδικό;** GroupDocs.Comparison for Java  
+- **Χρειάζομαι άδεια για παραγωγή;** Ναι, μια πλήρης άδεια αφαιρεί υδατογραφήματα και περιορισμούς  
+- **Μπορώ να συγκρίνω πολλαπλά προστατευμένα αρχεία ταυτόχρονα;** Απόλυτα – χρησιμοποιήστε `comparer.add()` για κάθε στόχο  
+- **Υπάρχει όριο στο μέγεθος του αρχείου;** Εξαρτάται από τη μνήμη heap της JVM· αυξήστε το `-Xmx` για μεγάλα αρχεία  
+- **Πώς να αποφύγω την καταγραφή κωδικών στον κώδικα;** Αποθηκεύστε τους με ασφάλεια (π.χ., μεταβλητές περιβάλλοντος) και περάστε τους στο `LoadOptions## Τι είναι το “πώς να συγκρίνετε word” με προστασία κωδικού;
 
-## Προαπαιτούμενα
+Η σύγκριση εγγράφων Word σημαίνει εντοπισμό προσθηκών, διαγραφών, αλλαγών μορφοποίησης και άλλων επεξεργασιών μεταξύ δύο ή περισσότερων εκδόσεων. Όταν αυτά τα αρχεία είναι κρυπτογραφημένα, η βιβλιοθήκη πρέπει πρώτα να πιστοποιήσει κάθε έγγραφο πριν εκτελέσει τη διαφορά. Το GroupDocs.Comparison αφαιρεί αυτό το βήμα, ώστε να εστιάσετε στη λογική σύγκρισης αντί για χειροκίνητη αποκρυπτογράφηση.
 
-Πριν προχωρήσετε, βεβαιωθείτε ότι έχετε:
+## Γιατί να Επιλέξετε το GroupDocs για Σύγκριση Προστατευμένων Εγγράφων;
 
-### Απαιτούμενες βιβλιοθήκες, εκδόσεις και εξαρτήσεις
+Πριν βυθιστούμε στον κώδικα, ας αντιμετωπίσουμε το κύριο ζήτημα: γιατί να μην αποκρυπτογραφήσουμε χειροκίνητα τα έγγραφα ή να χρησιμοποιήσουμε άλλες βιβλιοθήκες;
 
-Συμπεριλάβετε τις απαραίτητες βιβλιοθήκες για τη χρήση του GroupDocs.Comparison στο έργο Java σας. Ενσωματώστε το μέσω του Maven με αυτήν τη διαμόρφωση:
+**Το GroupDocs.Comparison διαπρέπει επειδή:**
+- Διαχειρίζεται την πιστοποίηση κωδικού εσωτερικά (δεν απαιτείται χειροκίνητη αποκρυπτογράφηση)  
+- Υποστηρίζει πολλαπλές μορφές εγγράφων πέρα από το Word  
+- Παρέχει λεπτομερείς αναφορές σύγκρισης με επισήμανση  
+- Ενσωματώνεται απρόσκοπτα με υπάρχουσες εφαρμογές Java  
+- Προσφέρει ασφάλεια επιπέδου επιχειρήσεων για ευαίσθητα έγγραφα  
 
-**Διαμόρφωση Maven:**
+**Πότε να επιλέξετε το GroupDocs αντί για εναλλακτικές λύσεις:**
+- Αντιμετωπίζετε πολλαπλές μορφές προστατευμένων εγγράφων  
+- Η ασφάλεια είναι υψίστης σημασίας (τα έγγραφα δεν αποκρυπτογραφούνται ποτέ στο δίσκο)  
+- Χρειάζεστε λεπτομερή αναλυτικά στοιχεία σύγκρισης  
+- Το έργο σας απαιτεί υποστήριξη επιχειρησιακού επιπέδου  
+
+## Προαπαιτούμενα και Ρύθμιση Περιβάλλοντος
+
+### Τι Θα Χρειαστείτε
+
+Πριν ξεκινήσουμε τον κώδικα, βεβαιωθείτε ότι έχετε:
+
+**Απαραίτητα Απαιτούμενα:**
+- Java Development Kit (JDK) 8 ή νεότερο  
+- Σύστημα κατασκευής Maven ή Gradle  
+- IDE (IntelliJ IDEA, Eclipse ή VS Code λειτουργούν άψογα)  
+- Βασική κατανόηση των ροών Java και της διαχείρισης αρχείων  
+
+**Προαιρετικό αλλά Χρήσιμο:**
+- Εξοικείωση με τη διαχείριση εξαρτήσεων του Maven  
+- Κατανόηση των προτύπων try‑with‑resources  
+
+### Ρύθμιση Παραμετροποίησης Maven
+
+Ο πιο εύκολος τρόπος για να ξεκινήσετε είναι μέσω Maven. Προσθέστε αυτό στο `pom.xml` σας:
+
 ```xml
 <repositories>
    <repository>
@@ -47,166 +96,308 @@ type: docs
 </dependencies>
 ```
 
-### Απαιτήσεις Ρύθμισης Περιβάλλοντος
+**Συμβουλή:** Ελέγχετε πάντα τη [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) για την τελευταία έκδοση πριν ξεκινήσετε το έργο σας.
 
-- Βεβαιωθείτε ότι είναι εγκατεστημένο το Java Development Kit (JDK) 8 ή νεότερη έκδοση.
-- Χρησιμοποιήστε ένα IDE όπως το IntelliJ IDEA, το Eclipse ή το NetBeans για την εκτέλεση εφαρμογών Java.
+### Ρύθμιση Άδειας
 
-### Προαπαιτούμενα Γνώσεων
+Αν και μπορείτε να χρησιμοποιήσετε το GroupDocs χωρίς άδεια για αξιολόγηση, θα αντιμετωπίσετε υδατογραφήματα και περιορισμούς λειτουργιών. Για χρήση σε παραγωγή:
+1. **Δωρεάν Δοκιμή** – ιδανική για δοκιμές και μικρά έργα  
+2. **Προσωρινή Άδεια** – εξαιρετική για φάσεις ανάπτυξης  
+3. **Πλήρης Άδεια** – απαιτείται για ανάπτυξη σε παραγωγή  
 
-Η εξοικείωση με τον προγραμματισμό Java και τη διαχείριση ροών αρχείων είναι ωφέλιμη. Εάν είστε αρχάριοι σε αυτές τις έννοιες, σκεφτείτε να τις επανεξετάσετε πριν προχωρήσετε.
+Αποκτήστε την άδειά σας από τη [GroupDocs purchase page](https://purchase.groupdocs.com/buy).
 
-## Ρύθμιση του GroupDocs.Comparison για Java
+## Οδηγός Κύριας Υλοποίησης
 
-Για χρήση **GroupDocs.Σύγκριση για Java**, ακολουθήστε τα εξής βήματα:
+### Φόρτωση του Πρώτου Προστατευμένου Εγγράφου
 
-1. **Προσθέστε την εξάρτηση Maven**Συμπεριλάβετε τη βιβλιοθήκη GroupDocs.Comparison στο έργο σας `pom.xml` όπως φαίνεται παραπάνω.
-2. **Απόκτηση Άδειας**Αποκτήστε μια δωρεάν δοκιμαστική περίοδο, ζητήστε μια προσωρινή άδεια χρήσης ή αγοράστε μια πλήρη έκδοση από το [Ιστότοπος GroupDocs](https://purchase.groupdocs.com/buy) να χρησιμοποιήσετε όλες τις λειτουργίες χωρίς περιορισμούς κατά την ανάπτυξη.
-
-### Βασική Αρχικοποίηση
-
-Δείτε πώς μπορείτε να αρχικοποιήσετε και να ρυθμίσετε το έργο σας:
+Ας ξεκινήσουμε με τα βασικά – τη φόρτωση ενός μόνο εγγράφου προστατευμένου με κωδικό:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.io.FileInputStream;
-
-public class InitializeComparer {
-    public static void main(String[] args) throws Exception {
-        // Φόρτωση προστατευμένου εγγράφου με κωδικό πρόσβασης χρησιμοποιώντας το FileInputStream
-        try (FileInputStream sourceStream = new FileInputStream("source_protected.docx")) {
-            Comparer comparer = new Comparer(sourceStream, new LoadOptions("1234"));
-            // Μπορείτε πλέον να χρησιμοποιήσετε το 'companer' για περαιτέρω λειτουργίες
-        }
-    }
-}
-```
-
-## Οδηγός Εφαρμογής
-
-Ας εξερευνήσουμε τα βασικά χαρακτηριστικά της φόρτωσης και σύγκρισης προστατευμένων εγγράφων.
-
-### Φόρτωση προστατευμένων εγγράφων από ροές
-
-#### Επισκόπηση
-
-Αυτή η λειτουργία σάς επιτρέπει να φορτώνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το InputStreams, ενσωματώνοντας απρόσκοπτα τις ροές εργασίας διαχείρισης αρχείων σας.
-
-##### Βήμα προς βήμα εφαρμογή
-
-**Βήμα 1:** Δημιουργήστε ένα `Comparer` για παράδειγμα, φορτώνοντας το έγγραφο προέλευσης με τον κωδικό πρόσβασής του.
-
-```java
-import com.groupdocs.comparison.Comparer;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import com.groupdocs.comparison.options.load.LoadOptions;
 
-public class Feature_LoadProtectedDocuments {
+public class BasicProtectedDocumentLoad {
     public static void main(String[] args) throws Exception {
+        // Replace with your actual document path
         String sourcePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
-        // Φόρτωση του εγγράφου προέλευσης με κωδικό πρόσβασης
-        try (InputStream sourceStream = new FileInputStream(sourcePath)) {
-            Comparer comparer = new Comparer(sourceStream, new LoadOptions("1234"));
-```
-
-**Βήμα 2:** Προσθέστε έγγραφα-στόχους φορτώνοντάς τα μέσω του InputStreams και καθορίζοντας τους κωδικούς πρόσβασής τους.
-
-```java
-            String target1Path = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
-            try (InputStream target1Stream = new FileInputStream(target1Path)) {
-                comparer.add(target1Stream, new LoadOptions("5678"));
-            }
-```
-
-**Βήμα 3:** Επαναλάβετε για πρόσθετα έγγραφα, όπως απαιτείται.
-
-```java
-            String target2Path = "YOUR_DOCUMENT_DIRECTORY/target2_protected.docx";
-            try (InputStream target2Stream = new FileInputStream(target2Path)) {
-                comparer.add(target2Stream, new LoadOptions("5678"));
-            }
+        
+        try (FileInputStream sourceStream = new FileInputStream(sourcePath)) {
+            // The magic happens here - LoadOptions handles the password
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("your_password_here"));
+            
+            // Your comparer is now ready to use
+            System.out.println("Document loaded successfully!");
         }
     }
 }
 ```
 
-#### Βασικές επιλογές διαμόρφωσης
+**Τι συμβαίνει εδώ;**
+- Δημιουργούμε ένα `FileInputStream` για το προστατευμένο έγγραφό μας  
+- Το `LoadOptions` αναλαμβάνει την πιστοποίηση κωδικού  
+- Η παρουσία `Comparer` είναι έτοιμη για λειτουργίες  
 
-- **Επιλογές Φόρτωσης**Καθορίστε τον κωδικό πρόσβασης για κάθε έγγραφο για να διασφαλίσετε την ασφαλή πρόσβαση.
-- **Comparer.add()**Χρησιμοποιήστε αυτήν τη μέθοδο για να προσθέσετε πολλά έγγραφα στη διαδικασία σύγκρισης.
+### Πλήρης Ροή Εργασίας Σύγκρισης Εγγράφων
 
-### Σύγκριση εγγράφων και εγγραφής με ροή εξόδου
-
-#### Επισκόπηση
-
-Αφού φορτώσετε τα έγγραφα, μπορείτε να τα συγκρίνετε και να εξαγάγετε το αποτέλεσμα απευθείας σε ένα αρχείο χρησιμοποιώντας ένα OutputStream.
-
-##### Βήμα προς βήμα εφαρμογή
-
-**Βήμα 1:** Αρχικοποιήστε τη ροή εξόδου σας όπου θα αποθηκευτούν τα αποτελέσματα.
+Τώρα το κύριο γεγονός – σύγκριση πολλαπλών προστατευμένων εγγράφων:
 
 ```java
+import com.groupdocs.comparison.Comparer;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.io.OutputStream;
+import com.groupdocs.comparison.options.load.LoadOptions;
 
-public class Feature_CompareDocuments {
+public class CompleteDocumentComparison {
     public static void main(String[] args) throws Exception {
-        String outputPath = "YOUR_OUTPUT_DIRECTORY/result.docx";
-        try (OutputStream resultStream = new FileOutputStream(outputPath)) {
-```
-
-**Βήμα 2:** Εκτελέστε τη σύγκριση και αποθηκεύστε το αποτέλεσμα.
-
-```java
-            // Υποθέτοντας ότι ο «συγκριτής» έχει ήδη αρχικοποιηθεί με τις ροές πηγής και προορισμού
-            comparer.compare(resultStream);
+        // Define your file paths
+        String sourcePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
+        String target1Path = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
+        String target2Path = "YOUR_DOCUMENT_DIRECTORY/target2_protected.docx";
+        String outputPath = "YOUR_OUTPUT_DIRECTORY/comparison_result.docx";
+        
+        // Step 1: Load the source document
+        try (InputStream sourceStream = new FileInputStream(sourcePath)) {
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("source_password"));
+            
+            // Step 2: Add first target document
+            try (InputStream target1Stream = new FileInputStream(target1Path)) {
+                comparer.add(target1Stream, new LoadOptions("target1_password"));
+            }
+            
+            // Step 3: Add second target document (if needed)
+            try (InputStream target2Stream = new FileInputStream(target2Path)) {
+                comparer.add(target2Stream, new LoadOptions("target2_password"));
+            }
+            
+            // Step 4: Perform comparison and save results
+            try (OutputStream resultStream = new FileOutputStream(outputPath)) {
+                comparer.compare(resultStream);
+                System.out.println("Comparison completed! Check: " + outputPath);
+            }
         }
     }
 }
 ```
 
-#### Συμβουλές αντιμετώπισης προβλημάτων
+**Βασικά σημεία που πρέπει να θυμάστε:**
+- Κάθε έγγραφο μπορεί να έχει διαφορετικό κωδικό  
+- Μπορείτε να προσθέσετε πολλαπλά έγγραφα-στόχους για σύγκριση  
+- Το έγγραφο αποτελέσματος εμφανίζει όλες τις διαφορές επισημασμένες  
+- Χρησιμοποιείτε πάντα try‑with‑resources για σωστή διαχείριση ροών  
 
-- Βεβαιωθείτε ότι όλες οι διαδρομές εγγράφων είναι σωστές για να αποτρέψετε `FileNotFoundException`.
-- Επαληθεύστε τους κωδικούς πρόσβασης που παρέχονται στο `LoadOptions` ταιριάζουν με εκείνα των εγγράφων.
+## Μαζική Σύγκριση Αρχείων Word σε Java
 
-## Πρακτικές Εφαρμογές
+Αν χρειάζεται να επεξεργαστείτε αυτόματα πολλά ζεύγη εγγράφων, μπορείτε να περιβάλλετε τη λογική που παρουσιάστηκε σε έναν βρόχο. Η ίδια κλάση `Comparer` λειτουργεί για κάθε ζεύγος, και μπορείτε να επαναχρησιμοποιήσετε το πρότυπο που φαίνεται στην **Complete Document Comparison Workflow**. Θυμηθείτε να απελευθερώνετε τους πόρους μετά από κάθε επανάληψη για να διατηρείτε τη χρήση μνήμης χαμηλή.
 
-Ακολουθούν ορισμένα σενάρια πραγματικού κόσμου όπου μπορούν να εφαρμοστούν αυτά τα χαρακτηριστικά:
+## Συνηθισμένα Πιθανά Προβλήματα και Λύσεις
 
-1. **Διαχείριση Νομικών Εγγράφων**: Συγκρίνετε διαφορετικές εκδοχές συμβάσεων ή συμφωνιών.
-2. **Ακαδημαϊκή Έρευνα**Αξιολόγηση πολλαπλών ερευνητικών εργασιών για την ανίχνευση λογοκλοπής.
-3. **Οικονομικοί Έλεγχοι**Διασταύρωση οικονομικών εκθέσεων από διάφορα τμήματα.
+### Αποτυχίες Πιστοποίησης
 
-## Παράγοντες Απόδοσης
+**Πρόβλημα:** `InvalidPasswordException` ή παρόμοια σφάλματα πιστοποίησης.  
 
-Όταν χρησιμοποιείτε το GroupDocs.Comparison σε εφαρμογές Java, λάβετε υπόψη τα εξής:
+**Λύσεις:**  
+- Ελέγξτε ξανά την ορθογραφία του κωδικού (διάκριση πεζών/κεφαλαίων!)  
+- Επαληθεύστε ότι το έγγραφο είναι πράγματι προστατευμένο με κωδικό  
+- Βεβαιωθείτε ότι χρησιμοποιείτε τον σωστό κατασκευαστή του `LoadOptions`  
 
-- **Βελτιστοποίηση χρήσης μνήμης**Χρησιμοποιήστε την try-with-resources για αποτελεσματική διαχείριση ροών.
-- **Παράλληλη επεξεργασία**Αξιοποιήστε την πολυνηματική τεχνολογία όπου είναι δυνατόν για τον χειρισμό μεγάλων εγγράφων.
-- **Διαχείριση Πόρων**: Κλείστε άμεσα τις ροές για να ελευθερώσετε πόρους συστήματος.
+```java
+// Wrong way
+new LoadOptions(); // No password provided
 
-## Σύναψη
+// Right way  
+new LoadOptions("correct_password");
+```
 
-Μέχρι τώρα, θα πρέπει να είστε καλά εξοπλισμένοι για να φορτώνετε και να συγκρίνετε έγγραφα Word που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Comparison σε Java. Αυτή η ισχυρή λειτουργία βελτιστοποιεί τις εργασίες διαχείρισης εγγράφων και βελτιώνει την παραγωγικότητα αυτοματοποιώντας τις διαδικασίες σύγκρισης.
+### Προβλήματα Μνήμης με Μεγάλα Έγγραφα
 
-### Επόμενα βήματα
+**Πρόβλημα:** `OutOfMemoryError` κατά την επεξεργασία μεγάλων αρχείων.  
 
-Εξερευνήστε πρόσθετες λειτουργίες του GroupDocs.Comparison, όπως η προσαρμογή των ρυθμίσεων σύγκρισης ή η ενσωμάτωση με λύσεις αποθήκευσης cloud για βελτιωμένη επεκτασιμότητα.
+**Λύσεις:**  
+- Αυξήστε το μέγεθος heap της JVM: `-Xmx4g`  
+- Επεξεργαστείτε τα έγγραφα σε τμήματα αν είναι δυνατόν  
+- Κλείστε τις ροές αμέσως μετά τη χρήση  
 
-## Ενότητα Συχνών Ερωτήσεων
+```java
+// Good practice - explicit resource management
+try (FileInputStream stream = new FileInputStream(path)) {
+    // Use stream
+} // Automatically closed here
+```
 
-1. **Μπορώ να συγκρίνω περισσότερα από δύο έγγραφα;**
-   - Ναι, μπορείτε να προσθέσετε πολλά έγγραφα-στόχους χρησιμοποιώντας `comparer.add()`.
-2. **Πώς μπορώ να χειριστώ λανθασμένους κωδικούς πρόσβασης στο LoadOptions;**
-   - Βεβαιωθείτε ότι ο κωδικός πρόσβασης ταιριάζει ακριβώς. Διαφορετικά, θα δημιουργηθεί μια εξαίρεση.
-3. **Τι γίνεται αν το έργο μου σε Java δεν χρησιμοποιεί το Maven;**
-   - Κατεβάστε το αρχείο JAR από τον ιστότοπο GroupDocs και συμπεριλάβετέ το στη διαδρομή βιβλιοθήκης του έργου σας.
-4. **Υπάρχει τρόπος να προσαρμόσω τα αποτελέσματα σύγκρισης;**
-   - Ναι, το GroupDocs.Comparison προσφέρει αρκετές επιλογές για την προσαρμογή της εξόδου, όπως ρυθμίσεις στυλ.
+### Προβλήματα Διαδρομής Αρχείου
 
-### Προτάσεις λέξεων-κλειδιών
-- "Σύγκριση εγγράφων Word με προστασία κωδικού πρόσβασης σε Java"
-- "Ρύθμιση Java του GroupDocs.Comparison"
-- "φόρτωση προστατευμένων εγγράφων Word Java"
+**Πρόβλημα:** `FileNotFoundException` παρά τις φαινομενικά σωστές διαδρομές.  
+
+**Λύσεις:**  
+- Χρησιμοποιήστε απόλυτες διαδρομές κατά την ανάπτυξη  
+- Ελέγξτε τα δικαιώματα του αρχείου  
+- Επαληθεύστε ότι οι μορφές εγγράφων υποστηρίζονται  
+
+```java
+// Use File.exists() to debug path issues
+File sourceFile = new File(sourcePath);
+if (!sourceFile.exists()) {
+    throw new RuntimeException("Source file not found: " + sourcePath);
+}
+```
+
+## Βέλτιστες Πρακτικές Βελτιστοποίησης Απόδοσης
+
+### Διαχείριση Μνήμης
+
+Όταν εργάζεστε με πολλαπλά μεγάλα έγγραφα, η διαχείριση μνήμης γίνεται κρίσιμη:
+
+```java
+public class OptimizedComparison {
+    public static void compareDocuments(String source, String target, String output) {
+        try (FileInputStream sourceStream = new FileInputStream(source);
+             FileInputStream targetStream = new FileInputStream(target);
+             FileOutputStream outputStream = new FileOutputStream(output)) {
+            
+            Comparer comparer = new Comparer(sourceStream, new LoadOptions("password"));
+            comparer.add(targetStream, new LoadOptions("password"));
+            comparer.compare(outputStream);
+            
+        } catch (Exception e) {
+            System.err.println("Comparison failed: " + e.getMessage());
+            // Add proper logging here
+        }
+    }
+}
+```
+
+### Σκέψεις για Μαζική Επεξεργασία
+
+- **Επεξεργασία διαδοχικά** για αποφυγή αιχμών μνήμης  
+- **Εφαρμογή σωστής διαχείρισης σφαλμάτων** για κάθε ζεύγος εγγράφων  
+- **Χρήση ομάδων νημάτων** μόνο αν έχετε επαρκή μνήμη  
+- **Παρακολούθηση χρήσης heap** κατά τις μαζικές λειτουργίες  
+
+### Στρατηγικές Caching
+
+Αν συγκρίνετε τα ίδια έγγραφα επανειλημμένα:  
+- Αποθηκεύστε σε cache τις παρουσίες `Comparer` (αλλά προσέξτε τη μνήμη)  
+- Αποθηκεύστε τα αποτελέσματα σύγκρισης για συχνά προσπελάσιμα ζεύγη εγγράφων  
+- Σκεφτείτε τη χρήση αθροισμάτων ελέγχου εγγράφων για αποφυγή περιττών συγκρίσεων  
+
+## Πραγματικές Περιπτώσεις Χρήσης
+
+### Νομική Ανασκόπηση Εγγράφων
+
+```java
+public class LegalDocumentComparison {
+    public void compareContracts(String originalContract, String revisedContract) {
+        // Compare two versions of a legal contract
+        // Highlight changes for legal review
+        // Generate detailed change report
+    }
+}
+```
+
+**Ιδανικό για:** παρακολούθηση αναθεώρησης συμβάσεων, ελέγχους νομικής συμμόρφωσης, ενημερώσεις κανονιστικών εγγράφων.
+
+### Οικονομικές Ροές Ελέγχου
+
+```java
+public class FinancialAuditComparison {
+    public void auditFinancialReports(List<String> reportPaths) {
+        // Compare multiple quarterly reports
+        // Identify discrepancies across departments
+        // Generate audit trail documentation
+    }
+}
+```
+
+**Ιδανικό για:** επικύρωση τριμηνιαίων αναφορών, έλεγχο συνέπειας μεταξύ τμημάτων, επαλήθευση κανονιστικής συμμόρφωσης.
+
+### Εφαρμογές Ακαδημαϊκής Έρευνας
+
+```java
+public class AcademicResearchComparison {
+    public void checkPlagiarism(String studentPaper, List<String> referencePapers) {
+        // Compare student submission against reference materials
+        // Generate similarity reports
+        // Flag potential plagiarism issues
+    }
+}
+```
+
+**Ιδανικό για:** συστήματα ανίχνευσης λογοκλοπής, επικύρωση ερευνητικών εργασιών, ροές εργασίας ακαδημαϊκής ακεραιότητας.
+
+## Προηγμένες Επιλογές Διαμόρφωσης
+
+### Προσαρμογή Ρυθμίσεων Σύγκρισης
+
+Το GroupDocs.Comparison προσφέρει εκτενείς επιλογές προσαρμογής:
+
+```java
+import com.groupdocs.comparison.options.CompareOptions;
+
+// Example of advanced comparison settings
+CompareOptions options = new CompareOptions();
+options.setShowDeletedContent(true);
+options.setShowInsertedContent(true);
+options.setGenerateSummaryPage(true);
+
+comparer.compare(outputStream, options);
+```
+
+### Επιλογές Μορφής Εξόδου
+
+Μπορείτε να προσαρμόσετε τον τρόπο εμφάνισης των αποτελεσμάτων σύγκρισης:
+- **Στυλ επισήμανσης** για διαφορετικούς τύπους αλλαγών  
+- **Σελίδες σύνοψης** με στατιστικά αλλαγών  
+- **Λεπτομερείς σημειώσεις** για σύνθετα έγγραφα  
+
+## Οδηγός Επίλυσης Προβλημάτων
+
+### Συνηθισμένα Μηνύματα Σφάλματος και Λύσεις
+
+- **"Document format is not supported"** – Επαληθεύστε ότι το αρχείο είναι έγκυρο `.docx` ή `.doc`.  
+- **"Password is incorrect"** – Δοκιμάστε τον κωδικό χειροκίνητα· προσέξτε ειδικούς χαρακτήρες.  
+- **"Comparison failed with unknown error"** – Ελέγξτε τον ελεύθερο χώρο δίσκου, τα δικαιώματα εγγραφής και τη διαθέσιμη μνήμη.  
+
+### Προβλήματα Απόδοσης
+
+- **Αργοί χρόνοι σύγκρισης** – Τα μεγάλα αρχεία φυσικά απαιτούν περισσότερο χρόνο· σκεφτείτε τη διάσπασή τους σε ενότητες.  
+- **Υψηλή χρήση μνήμης** – Παρακολουθείτε το μέγεθος του heap, κλείστε τους πόρους άμεσα και επεξεργαστείτε τα έγγραφα διαδοχικά.  
+
+## Συμπέρασμα
+
+Τώρα έχετε όλα όσα χρειάζεστε για να **how to compare word** έγγραφα που είναι προστατευμένα με κωδικό σε Java χρησιμοποιώντας το GroupDocs.Comparison. Αυτή η ισχυρή προσέγγιση ανοίγει δυνατότητες για αυτοματοποιημένες ροές εργασίας εγγράφων, έλεγχο συμμόρφωσης και διαδικασίες ελέγχου.
+
+## Συχνές Ερωτήσεις
+
+**Q: Μπορώ να συγκρίνω περισσότερα από δύο έγγραφα προστατευμένα με κωδικό ταυτόχρονα;**  
+A: Απόλυτα! Χρησιμοποιήστε το `comparer.add()` πολλές φορές· κάθε στόχος μπορεί να έχει τον δικό του κωδικό.
+
+**Q: Τι συμβαίνει αν παρέχω λανθασμένο κωδικό**  
+A: Το GroupDocs ρίχνει εξαίρεση πιστοποίησης. Επαληθεύστε τους κωδικούς πριν την επεξεργασία, ειδικά σε αυτοματοποιημένες αλυσίδες.
+
+**Q: Λειτουργεί το GroupDocs με έγγραφα που έχουν διαφορετικούς κωδικούς;**  
+A: Ναι, κάθε έγγραφο μπορεί να έχει τον δικό του μοναδικό κωδικό που καθορίζεται στο αντίστοιχο `LoadOptions`.
+
+**Q: Μπορώ να συγκρίνω έγγραφα χωρίς να αποθηκεύσω το αποτέλεσμα στο δίσκο;**  
+A: Ναι, γράψτε το αποτέλεσμα σύγκρισης σε οποιοδήποτε `OutputStream`, όπως σε μνήμης ή ροή δικτύου.
+
+**Q: Πώς να χειριστώ έγγραφα όπου δεν γνωρίζω τον κωδικό;**  
+A: Πρέπει να αποκτήσετε τον σωστό κωδικό· σκεφτείτε την ενσωμάτωση ασφαλούς θυρίδας κωδικών για αυτοματοποιημένες ροές εργασίας.
+
+**Q: Ποιο είναι το μέγιστο μέγεθος αρχείου που μπορεί να διαχειριστεί το GroupDocs;**  
+A: Εξαρτάται από τη διαθέσιμη μνήμη heap της JVM. Για αρχεία >100 MB, αυξήστε τη μνήμη (`-Xmx`) και σκεφτείτε επεξεργασία σε τμήματα.
+
+**Q: Μπορώ να λάβω λεπτομερή στατιστικά για τα αποτελέσματα σύγκρισης;**  
+A: Ναι, ενεργοποιήστε το `GenerateSummaryPage` στο `CompareOptions` για να λάβετε στατιστικά αλλαγών και σύνοψη.
+
+**Q: Είναι δυνατόν να συγκρίνετε έγγραφα από αποθήκευση στο σύννεφο;**  
+A: Ναι, εφόσον μπορείτε να παρέχετε ένα `InputStream` από τον πάροχο cloud, το GroupDocs μπορεί να το επεξεργαστεί.
+
+---
+
+**Τελευταία Ενημέρωση:** 2025-12-17  
+**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2  
+**Συγγραφέας:** GroupDocs

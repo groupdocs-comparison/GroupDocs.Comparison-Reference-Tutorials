@@ -1,32 +1,61 @@
 ---
-"additionalTitle": "GroupDocs API References"
-"description": "Tanulja meg, hogyan hasonlíthatja össze a Word, PDF, Excel és más dokumentumformátumokat a GroupDocs.Comparison API segítségével. Lépésről lépésre bemutatott oktatóanyagok .NET és Java fejlesztőknek kódpéldákkal."
-"is_root": true
-"linktitle": "GroupDocs.Comparison oktatóanyagok és példák"
-"title": "Dokumentum-összehasonlító szoftver API oktatóanyag | GroupDocs.Comparison"
-"url": "/hu/"
-"weight": 11
+additionalTitle: GroupDocs API References
+date: 2025-12-17
+description: Ismerje meg, hogyan hasonlíthatja össze a Word, PDF, Excel és egyéb dokumentumformátumokat
+  a GroupDocs.Comparison API-val a dokumentumok összehasonlításához. Lépésről lépésre
+  útmutatók .NET és Java fejlesztőknek kódrészletekkel.
+is_root: true
+keywords:
+- document comparison
+- file comparison
+- diff documents
+- compare PDF
+- compare Word
+- GroupDocs
+- .NET API
+- Java API
+- document diff
+linktitle: GroupDocs.Comparison Tutorials & Examples
+title: GroupDocs.Comparison API oktatóanyagok és fejlesztői útmutató
 type: docs
+url: /hu/
+weight: 11
 ---
-# GroupDocs.Comparison oktatóanyagok és fejlesztői útmutató
+
+# GroupDocs.Comparison API oktatóanyagok és fejlesztői útmutató
 
 ![GroupDocs.Comparison banner](./groupdocs-comparison-net.svg)
 
-Üdvözöljük a **Teljes útmutató a dokumentumok összehasonlításához** A GroupDocs.Comparison segítségével! Átfogó oktatóanyagaink megmutatják, hogyan azonosíthatja hatékonyan a különbségeket a különböző formátumú dokumentumok között, beleértve a következőket: **Word, PDF, Excel, PowerPoint, képek és egyebek**.
+Üdvözöljük a **teljes útmutatót a dokumentumok összehasonlításához** a **GroupDocs.Comparison API** segítségével! Átfogó oktatóanyagaink megmutatják, hogyan azonosíthatja hatékonyan a különbségeket a különböző formátumú dokumentumok között, beleértve a **Word, PDF, Excel, PowerPoint, képek és egyebek** formátumait. Akár .NET webszolgáltatást, akár Java asztali alkalmazást épít, ez az útmutató gyakorlati lépéseket ad a hatékony dokumentum-összehasonlítási funkciók gyors integrálásához.
 
-## Miért érdemes a GroupDocs.Comparisont használni?
+## Gyors válaszok
+- **Mit csinál a GroupDocs.Comparison API?** Detektálja és kiemeli a változásokat két, azonos vagy különböző formátumú dokumentum között.  
+- **Mely platformok támogatottak?** .NET (Framework, .NET Core, .NET 5/6) és Java (8+).  
+- **Szükségem van licencre a fejlesztéshez?** Egy ingyenes próba a kiértékeléshez elegendő; a termeléshez kereskedelmi licenc szükséges.  
+- **Össze tudok-e hasonlítani jelszóval védett fájlokat?** Igen – az API elfogadja a jelszavakat a védett dokumentumok megnyitásához.  
+- **Van mód vizuális előnézetek generálására?** Természetesen, az API képes oldalról‑oldalra vagy átfedő előnézeti képeket létrehozni az összehasonlítás eredményéről.
 
-- **Többformátumú támogatás** - Különböző formátumú dokumentumok összehasonlítása
-- **Részletes változásészlelés** - Beszúrások, törlések, formázási változtatások és stílusmódosítások azonosítása
-- **Változásmenedzsment** - Programozottan fogadjon el vagy utasítson el bizonyos módosításokat
-- **Biztonságos összehasonlítás** Jelszóval védett dokumentumokkal dolgozhat
-- **Nagy teljesítményű** - Nagyméretű dokumentumok hatékony összehasonlítása optimalizált algoritmusokkal
+## Mi a GroupDocs.Comparison API?
+A **GroupDocs.Comparison API** egy könyvtárkészlet, amely lehetővé teszi a fejlesztők számára, hogy programozottan összehasonlítsák a dokumentumok tartalmát, elrendezését és formázását. Több mint 100 fájltípust támogat, részletes változásnaplókat biztosít, és lehetőséget ad a módosítások elfogadására vagy elutasítására kódból.
 
-## GroupDocs.Comparison .NET oktatóanyagokhoz
+## Miért használja a GroupDocs.Comparison API-t?
+- **Multi‑format Support** – Összehasonlíthatja a Word, PDF, Excel, PowerPoint, képek, e‑mail és sok más formátumot anélkül, hogy előbb konvertálná a fájlokat.  
+- **Rich Change Detection** – Látja az insertálásokat, törléseket, formázási módosításokat és a stílusváltozásokat automatikusan kiemelve.  
+- **Programmatic Change Management** – Elfogadhat vagy elutasíthat konkrét változásokat a munkafolyamatában, tökéletes a felülvizsgálati rendszerekhez.  
+- **Secure Handling** – Biztonságosan dolgozhat titkosított vagy jelszóval védett dokumentumokkal.  
+- **High Performance** – Optimalizált algoritmusok hatékonyan kezelik a nagy fájlokat és a tömeges mappák összehasonlítását.
+
+## Miért használja a GroupDocs.Comparison-t?
+- **Multi-format Support** - Dokumentumok összehasonlítása különböző formátumok között  
+- **Detailed Change Detection** - Insertálások, törlések, formázási változások és stílusmódosítások azonosítása  
+- **Change Management** - Konkrét változások elfogadása vagy elutasítása programozottan  
+- **Secure Comparison** - Jelszóval védett dokumentumok kezelése  
+- **High Performance** - Nagy dokumentumok hatékony összehasonlítása optimalizált algoritmusokkal  
+
+## GroupDocs.Comparison .NET oktatóanyagok
 
 {{% alert color="primary" %}}
-Sajátítsa el a dokumentum-összehasonlítás mesteri szintjét .NET alkalmazásaiban lépésről lépésre bemutató oktatóanyagaink segítségével. Ismerje meg, hogyan valósíthat meg professzionális dokumentum-összehasonlító funkciókat Word, PDF, Excel és más formátumokhoz C# használatával. Fejlesztőkre összpontosító útmutatóink mindent lefednek az alapvető beállításoktól a haladó integrációs forgatókönyvekig.
-
+Mesteri dokumentum-összehasonlítás .NET alkalmazásaiban lépésről‑lépésre oktatóanyagainkkal. Tanulja meg, hogyan valósíthat meg professzionális dokumentum-összehasonlítási funkciókat Word, PDF, Excel és egyéb formátumokhoz C# használatával. Fejlesztői fókuszú útmutatóink mindent lefednek az alapbeállítástól a fejlett integrációs forgatókönyvekig.
 {{% /alert %}}
 
 ### Alapvető .NET oktatóanyagok
@@ -34,39 +63,38 @@ Sajátítsa el a dokumentum-összehasonlítás mesteri szintjét .NET alkalmazá
 <div class="row">
 <div class="col-md-6">
 
-#### Első lépések
-- [Gyors üzembe helyezési útmutató](./net/quick-start/) - Állítsa be és futtassa első összehasonlítását perceken belül
-- [Telepítés és beállítás](./net/getting-started/) - Konfigurálja a fejlesztői környezetét
-- [Licencelési lehetőségek](./net/licensing-configuration/) - Ismerje meg a licencelési és telepítési lehetőségeket
+#### Kezdő lépések
+- [Gyors kezdő útmutató](./net/quick-start/) - Állítsa be és futtassa első összehasonlítását percek alatt
+- [Telepítés és beállítás](./net/getting-started/) - Konfigurálja fejlesztői környezetét
+- [Licencelési lehetőségek](./net/licensing-configuration/) - Ismerje meg a licencelés és telepítési lehetőségeket
 
-#### Alapvető funkciók
+#### Alapfunkciók
 - [Dokumentum betöltése](./net/document-loading/) - Ismerje meg a dokumentumok betöltésének különböző módjait
-- [Alapvető összehasonlítás](./net/basic-comparison/) - Egyszerű összehasonlítási műveletek végrehajtása
-- [Speciális összehasonlítás](./net/advanced-comparison/) - Komplex összehasonlítási forgatókönyvek elsajátítása
-- [Változásmenedzsment](./net/change-management/) - Elfogadhat vagy elutasíthat bizonyos módosításokat
+- [Alap összehasonlítás](./net/basic-comparison/) - Egyszerű összehasonlítási műveletek megvalósítása
+- [Haladó összehasonlítás](./net/advanced-comparison/) - Komplex összehasonlítási forgatókönyvek elsajátítása
+- [Változáskezelés](./net/change-management/) - Konkrét változások elfogadása vagy elutasítása
 
 </div>
 <div class="col-md-6">
 
-#### Speciális funkciók
-- [Előnézet generálása](./net/preview-generation/) - Vizuális előnézetek létrehozása az összehasonlítási eredményekről
-- [Metaadat-kezelés](./net/metadata-management/) - Dokumentumtulajdonságok vezérlése
-- [Biztonság és védelem](./net/security-protection/) - Védett dokumentumokkal dolgozhat
-- [Összehasonlítási lehetőségek](./net/comparison-options/) - Összehasonlítási viselkedés testreszabása
+#### Haladó funkciók
+- [Előnézet generálás](./net/preview-generation/) - Vizuális előnézetek létrehozása az összehasonlítás eredményeiről
+- [Metaadat-kezelés](./net/metadata-management/) - Dokumentum tulajdonságok kezelése
+- [Biztonság és védelem](./net/security-protection/) - Védett dokumentumok kezelése
+- [Összehasonlítási beállítások](./net/comparison-options/) - Az összehasonlítás viselkedésének testreszabása
 
 #### Specializált összehasonlítások
-- [Képösszehasonlítás](./net/image-comparison/) - Képek összehasonlítása pixelpontos pontossággal
-- [Dokumentumok és mappák összehasonlítása](./net/documents-and-folder-comparison/) - Hasonlítsa össze a teljes könyvtárakat
-- [Dokumentuminformációk](./net/document-information/) - Dokumentum metaadatok kinyerése és elemzése
+- [Kép összehasonlítás](./net/image-comparison/) - Képek összehasonlítása pixel‑pontos pontossággal
+- [Dokumentum és mappa összehasonlítás](./net/documents-and-folder-comparison/) - Teljes könyvtárak összehasonlítása
+- [Dokumentum információk](./net/document-information/) - Dokumentum metaadatok kinyerése és elemzése
 
 </div>
 </div>
 
-## GroupDocs.Comparison Java oktatóanyagokhoz
+## GroupDocs.Comparison Java oktatóanyagok
 
 {{% alert color="primary" %}}
-Átfogó oktatóanyagaink segítségével hatékony dokumentum-összehasonlító funkciókat valósíthat meg Java-alkalmazásaiban. Tanulja meg, hogyan integrálhatja a GroupDocs.Comparison for Java-t vállalati rendszerekbe, webes alkalmazásokba és asztali szoftverekbe világos, gyakorlati példák segítségével.
-
+Erőteljes dokumentum-összehasonlítási képességek megvalósítása Java alkalmazásaiban átfogó oktatóanyagainkkal. Tanulja meg, hogyan integrálja a GroupDocs.Comparison for Java-t vállalati rendszerekbe, webalkalmazásokba és asztali szoftverekbe világos, gyakorlati példákkal.
 {{% /alert %}}
 
 ### Alapvető Java oktatóanyagok
@@ -74,23 +102,23 @@ Sajátítsa el a dokumentum-összehasonlítás mesteri szintjét .NET alkalmazá
 <div class="row">
 <div class="col-md-6">
 
-#### Első lépések
-- [Licencelési lehetőségek](./java/licensing-configuration) Ismerje meg a telepítési licencelést
+#### Kezdő lépések
+- [Licencelési lehetőségek](./java/licensing-configuration) - Telepítési licencelés megértése
 
-#### Alapvető funkciók
+#### Alapfunkciók
 - [Dokumentum betöltése](./java/document-loading/) - Dokumentumok betöltése különböző forrásokból
-- [Alapvető összehasonlítás](./java/basic-comparison/) - Alapvető összehasonlítás végrehajtása
-- [Speciális összehasonlítás](./java/advanced-comparison/) - Komplex összehasonlítási forgatókönyvek kezelése
+- [Alap összehasonlítás](./java/basic-comparison/) - Alapvető összehasonlítás megvalósítása
+- [Haladó összehasonlítás](./java/advanced-comparison/) - Komplex összehasonlítási forgatókönyvek kezelése
 
 </div>
 <div class="col-md-6">
 
-#### Speciális funkciók
-- [Előnézet generálása](./java/preview-generation/) - Vizuális összehasonlító előnézetek generálása
-- [Metaadat-kezelés](./java/metadata-management/) - Dokumentum metaadatainak kezelése
+#### Haladó funkciók
+- [Előnézet generálás](./java/preview-generation/) - Vizuális összehasonlítási előnézetek generálása
+- [Metaadat-kezelés](./java/metadata-management/) - Dokumentum metaadatok kezelése
 - [Biztonság és védelem](./java/security-protection/) - Védett dokumentumok összehasonlítása
-- [Összehasonlítási lehetőségek](./java/comparison-options/) - Finomhangolja az összehasonlítási beállításokat
-- [Dokumentuminformációk](./java/document-information) - Metaadatok kinyerése és megjelenítése
+- [Összehasonlítási beállítások](./java/comparison-options/) - Az összehasonlítás beállításainak finomhangolása
+- [Dokumentum információk](./java/document-information) - Metaadatok kinyerése és megjelenítése
 
 </div>
 </div>
@@ -99,25 +127,54 @@ Sajátítsa el a dokumentum-összehasonlítás mesteri szintjét .NET alkalmazá
 
 A GroupDocs.Comparison számos dokumentumformátumot támogat:
 
-| Kategória | Formátumok |
-|-----------|----------|
+| **Kategória** | **Formátumok** |
+|----------|---------|
 | **Szövegszerkesztés** | DOCX, DOC, ODT, RTF, TXT |
 | **Táblázatok** | XLSX, XLS, ODS, CSV |
 | **Prezentációk** | PPTX, PPT, ODP |
-| **PDF-dokumentumok** | PDF, PDF/A |
-| **Képek** JPG, PNG, BMP, GIF, TIFF |
-| **Email** | EML, nátrium-glutamát |
+| **PDF dokumentumok** | PDF, PDF/A |
+| **Képek** | JPG, PNG, BMP, GIF, TIFF |
+| **E‑mail** | EML, MSG |
 | **És még sok más...** | HTML, EPUB, DJVU |
 
-## Fejlesztői források
+## Fejlesztői erőforrások
 
-- [API dokumentáció](https://reference.groupdocs.com/comparison/) - Részletes API-referenciák
-- [GitHub példák](https://github.com/groupdocs-comparison/) - Kódpéldák tárháza
-- [Fejlesztői blog](https://blog.groupdocs.com/category/comparison/) - Legfrissebb frissítések és oktatóanyagok
-- [Ingyenes Támogatási Fórum](https://forum.groupdocs.com/c/comparison/) - Kérjen segítséget szakértőinktől
+- [API dokumentáció](https://reference.groupdocs.com/comparison/) - Részletes API hivatkozások
+- [GitHub példák](https://github.com/groupdocs-comparison/) - Kódpéldák tárolója
+- [Fejlesztői blog](https://blog.groupdocs.com/category/comparison/) - Legújabb frissítések és oktatóanyagok
+- [Ingyenes támogatási fórum](https://forum.groupdocs.com/c/comparison/) - Kérjen segítséget szakértőinktől
+
+## Gyakori felhasználási esetek a GroupDocs.Comparison API-hoz
+- **Jogi dokumentum felülvizsgálat** – Gyorsan kiemeli a változásokat a szerződés revíziói között.  
+- **Pénzügyi jelentés** – Észleli a módosításokat Excel vagy PDF kimutatásokban a közzététel előtt.  
+- **Tartalomkezelő rendszerek** – Vizuális diff eszközöket biztosít a végfelhasználóknak Word vagy PowerPoint fájlokhoz.  
+- **Automatizált QA** – Összehasonlítja a generált PDF-eket az alap sablonokkal CI pipeline-okban.  
 
 ## Kezdje el még ma
 
-Tekintse meg oktatóanyagainkat, hogy elkezdhesse professzionális dokumentum-összehasonlító funkciók megvalósítását alkalmazásaiban. A GroupDocs.Comparison egy hatékony és rugalmas API-t biztosít, amely zökkenőmentesen integrálható .NET és Java projektjeibe.
+Fedezze fel oktatóanyagainkat, hogy elkezdje a professzionális dokumentum-összehasonlítási funkciók bevezetését alkalmazásaiban. A GroupDocs.Comparison egy erőteljes, rugalmas API-t biztosít, amely zökkenőmentesen integrálódik .NET és Java projektjeibe.
 
-[Ingyenes próbaverzió letöltése](https://releases.groupdocs.com/comparison) | [Ideiglenes engedély beszerzése](https://purchase.groupdocs.com/temporary-license)
+[Ingyenes próba letöltése](https://releases.groupdocs.com/comparison) | [Ideiglenes licenc beszerzése](https://purchase.groupdocs.com/temporary-license)
+
+## Gyakran ismételt kérdések
+
+**Q: Használhatom a GroupDocs.Comparison API-t kereskedelmi termékben?**  
+A: Igen, egy érvényes kereskedelmi licenc szükséges a termelési telepítésekhez. Egy ingyenes próba elérhető kiértékeléshez.
+
+**Q: Támogatja-e az API a jelszóval védett fájlokat?**  
+A: Absolút. A dokumentum jelszavát megadhatja a forrásfájlok betöltésekor.
+
+**Q: Mely .NET verziók kompatibilisek?**  
+A: Az API működik .NET Framework 4.5+, .NET Core 3.1+, .NET 5 és .NET 6+ verziókkal.
+
+**Q: Hogyan kezeli az API a nagy dokumentumokat vagy a tömeges mappa-összehasonlításokat?**  
+A: Streaminget és optimalizált algoritmusokat használ a memóriahasználat alacsonyan tartásához, és a mappa-összehasonlítási funkcióval teljes könyvtárakat is összehasonlíthat.
+
+**Q: Van mód a vizuális stílus testreszabására az összehasonlítás kimenetében?**  
+A: Igen, az összehasonlítási beállítások lehetővé teszik színek, jelölésstílusok és kimeneti formátumok meghatározását a generált diffhez.
+
+---
+
+**Legutóbb frissítve:** 2025-12-17  
+**Tesztelve ezzel:** GroupDocs.Comparison 23.11 (latest stable)  
+**Szerző:** GroupDocs

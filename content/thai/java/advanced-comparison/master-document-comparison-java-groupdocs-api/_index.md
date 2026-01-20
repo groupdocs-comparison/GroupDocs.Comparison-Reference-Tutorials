@@ -244,12 +244,6 @@ A: แน่นอน – มันเป็น `java file comparison library` �
 **Q: วิธีที่ดีที่สุดในการตรวจสอบการใช้เครดิตใน production คืออะไร?**  
 A: เรียก `Metered.getConsumptionQuantity()` อย่างสม่ำเสมอ, เก็บค่าในระบบมอนิเตอร์, ตั้งการแจ้งเตือนเมื่อถึงเกณฑ์ที่กำหนด.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## แหล่งข้อมูลเพิ่มเติม
 
 - **Documentation:** [เอกสาร GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -257,3 +251,9 @@ A: เรียก `Metered.getConsumptionQuantity()` อย่างสม่�
 - **Latest Downloads:** [ดาวน์โหลดเวอร์ชันล่าสุด](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [เลือกใบอนุญาตของคุณ](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [ฟอรั่มนักพัฒนาและการสนับสนุน](https://forum.groupdocs.com/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

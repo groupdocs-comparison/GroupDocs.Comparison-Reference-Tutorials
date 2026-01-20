@@ -245,12 +245,6 @@ A: Tentu – ini adalah `java file comparison library` lengkap yang mencakup ban
 **Q: Apa cara terbaik untuk memantau penggunaan kredit di produksi?**  
 A: Secara periodik panggil `Metered.getConsumptionQuantity()` dan simpan nilai-nilai tersebut di sistem pemantauan Anda; atur peringatan saat ambang batas tercapai.
 
----
-
-**Terakhir Diperbarui:** 2025-12-17  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
-**Penulis:** GroupDocs  
-
 ## Sumber Daya Tambahan
 
 - **Dokumentasi:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -258,3 +252,9 @@ A: Secara periodik panggil `Metered.getConsumptionQuantity()` dan simpan nilai-n
 - **Unduhan Terbaru:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Opsi Lisensi:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Dukungan Komunitas:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-17  
+**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
+**Penulis:** GroupDocs  

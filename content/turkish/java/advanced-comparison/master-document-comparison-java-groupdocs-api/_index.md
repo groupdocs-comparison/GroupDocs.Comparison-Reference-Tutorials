@@ -246,12 +246,6 @@ C: Kesinlikle – birçok belge türünü kapsayan tam özellikli bir `java file
 **S: Üretimde kredi kullanımını izlemek için en iyi yöntem nedir?**  
 C: Periyodik olarak `Metered.getConsumptionQuantity()` çağırın, değerleri izleme sisteminize kaydedin ve eşiklere ulaşıldığında uyarı verin.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## Additional Resources
 
 - **Documentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -259,3 +253,9 @@ C: Periyodik olarak `Metered.getConsumptionQuantity()` çağırın, değerleri i
 - **Latest Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

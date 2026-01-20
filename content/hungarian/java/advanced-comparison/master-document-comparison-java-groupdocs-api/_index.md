@@ -248,12 +248,6 @@ A: Teljes mértékben – egy komplett `java file comparison library`, amely sz�
 **Q: Mi a legjobb módja a kreditfogyasztás monitorozásának termelésben?**  
 A: Időnként hívja a `Metered.getConsumptionQuantity()`‑t, tárolja azékeket a felügyeleti rendszerben, és állítson be riasztásokat a küszöbök elérésekor.
 
----
-
-**Utoljára frissítve:** 2025-12-17  
-**Tesztelt verzió:** GroupDocs.Comparison 25.2 for Java  
-**Szerző:** GroupDocs  
-
 ## További források
 
 - **Dokumentáció:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -261,3 +255,9 @@ A: Időnként hívja a `Metered.getConsumptionQuantity()`‑t, tárolja azékeke
 - **Legújabb letöltések:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licencelési lehetőségek:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Közösségi támogatás:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Utoljára frissítve:** 2025-12-17  
+**Tesztelt verzió:** GroupDocs.Comparison 25.2 for Java  
+**Szerző:** GroupDocs  

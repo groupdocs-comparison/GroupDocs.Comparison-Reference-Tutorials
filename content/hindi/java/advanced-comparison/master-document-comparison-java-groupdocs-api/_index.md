@@ -26,33 +26,33 @@ weight: 1
 
 इस व्यापक ट्यूटोरियल में आप जानेंगे कि API को कैसे सेट‑अप करें, क्रेडिट‑ट्रैकिंग को लागू करें, विश्वसनीय दस्तावेज़ तुलना कैसे करें, और सामान्य समस्याओं का समाधान कैसे करें। अंत तक, आपके पास एक प्रोडक्शन‑रेडी इम्प्लीमेंटेशन होगा जो लगभग किसी भी दस्तावेज़ फ़ॉर्मेट—PDF, Word, Excel, और अधिक—की तुलना कुछ ही जावा कोड लाइनों से कर सकता है।
 
-## Quick Answers
-- **What library lets me java compare pdf files?** GroupDocs.Comparison for Java.  
-- **Do I need a special license?** A free trial works for testing; a full license is required for production.  
-- **How are credits consumed?** Each comparison uses 1‑5 credits depending on file size and complexity.  
-- **Can I compare Excel sheets too?** Yes – the same API also supports `java compare excel sheets`.  
-- **Is there a Java file comparison library?** GroupDocs.Comparison is a robust `java file comparison library` that covers many formats.
+## जल्दी जवाब
+- **कौन सी लाइब्रेरी मुझे जावा से PDF फ़ाइलों की तुलना करने देती है?** जावा के लिए GroupDocs.Comparison.
+- **क्या मुझे किसी खास लाइसेंस की ज़रूरत है?** टेस्टिंग के लिए फ़्री ट्रायल काम करता है; प्रोडक्शन के लिए पूरा लाइसेंस ज़रूरी है.
+- **क्रेडिट कैसे इस्तेमाल होते हैं?** हर तुलना में फ़ाइल साइज़ और मुश्किल के हिसाब से 1-5 क्रेडिट लगते हैं.
+- **क्या मैं एक्सेल शीट भी तुलना कर सकता हूँ?** हाँ – वही API `जावा एक्सेल शीट तुलना` को भी सपोर्ट करता है.
+- **क्या कोई जावा फ़ाइल तुलना लाइब्रेरी है?** GroupDocs.Comparison एक मज़बूत `जावा फ़ाइल तुलना लाइब्रेरी` है जो कई फ़ॉर्मैट को कवर करती है.
 
 ## What is **java compare pdf files**?
 यह वाक्यांश दो PDF दस्तावेज़ों के बीच पाठ्य, दृश्य, और संरचनात्मक अंतर का पता लगाने के लिए जावा‑आधारित API के उपयोग को दर्शाता है। GroupDocs.Comparison प्रत्येक PDF को मेमोरी में लोड करता है, सामग्री का विश्लेषण करता है, और एक परिणाम दस्तावेज़ बनाता है जो सम्मिलन, विलोपन, और फ़ॉर्मेटिंग परिवर्तन को हाइलाइट करता है।
 
-## Why Use GroupDocs.Comparison for Java?
-- **Format‑agnostic** – PDF, DOCX, XLSX, PPTX, और इमेज़ के काम करता है।  
-- **High accuracy** – जटिल लेआउट, टेबल, और एम्बेडेड इमेज़ को संभालता है।  
-- **Built‑in credit tracking** – उपयोग की निगरानी और लागत नियंत्रण में मदद करता है।  
-- **Easy integration** – Maven/Gradle के लिए तैयार, स्पष्ट जावा क्लासेस के साथ।
+## Java के लिए GroupDocs.Comparison का इस्तेमाल क्यों करें?
+- **Format‑agnostic** – PDF, DOCX, XLSX, PPTX, और इमेज के काम करता है।
+- **High accuracy** – complex layout, table, और blended image को संभालता है।
+- **Built‑in credit tracking** – इस्तेमाल की निगरानी और लागत कंट्रोल में मदद करता है।
+- **Easy integration** – Maven/Gradle के लिए तैयार, साफ़ Java क्लासेस के साथ।
 
-## Prerequisites
-- JDK 8 या नया (JDK 11+ की सलाह दी जाती है)  
-- Maven या Gradle (उदाहरण Maven का उपयोग करता है)  
-- बेसिक जावा ज्ञान (try‑with‑resources, file I/O)  
-- परीक्षण के लिए कुछ सैंपल दस्तावेज़ (PDF, DOCX, या Excel फ़ाइलें)  
+## ज़रूरी शर्तें
+- JDK8या नया (JDK11+ की सलाह दी जाती है)
+- Maven या Gradle (उदाहरण Maven का इस्तेमाल करता है)
+- बेसिक जावा ज्ञान (try‑with‑resources, फ़ाइल I/O)
+- टेस्ट के लिए कुछ सैंपल डॉक्यूमेंट (PDF, DOCX, या Excel फ़ाइलें)
 
-> **Pro tip:** सरल टेक्स्ट‑आधारित PDF से शुरू करें ताकि फ्लो सत्यापित हो सके, फिर अधिक जटिल दस्तावेज़ों की ओर बढ़ें।
+> **प्रो टिप:** सरल टेक्स्ट-बेस्ड PDF से शुरू करें ताकि फ़्लो टेस्ट हो सके, फिर ज़्यादा कॉम्प्लेक्स डॉक्यूमेंट्स की ओर बढ़ें।
 
-## Setting Up GroupDocs.Comparison for Java
+## Java के लिए GroupDocs.Comparison सेट अप करना
 
-### Maven Configuration
+### Maven कॉन्फ़िगरेशन
 अपने `pom.xml` में GroupDocs रिपॉजिटरी और डिपेंडेंसी जोड़ें:
 
 ```xml
@@ -72,22 +72,22 @@ weight: 1
 </dependencies>
 ```
 
-> **Common mistake:** रिपॉजिटरी एंट्री को भूल जाने से Maven को आर्टिफैक्ट खोजने में विफलता मिलती है।
+> **आम गलती:** रिपॉजिटरी एंट्री को भूल जाने से Maven को आर्टिफैक्ट खोजने में फेलियर मिलता है।
 
-## Implementing Credit Consumption Tracking
+## क्रेडिट कंजम्पशन ट्रैकिंग लागू करना
 
-### Understanding the Credit System
-हर API कॉल क्रेडिट खर्च करती है – सामान्यतः 1‑5 क्रेडिट प्रति तुलना। बड़ी PDF जिसमें इमेज़ हों, साधारण टेक्स्ट फ़ाइलों की तुलना में अधिक क्रेडिट उपयोग करती हैं।
+### क्रेडिट सिस्टम को समझना
+हर API कॉल क्रेडिट खर्च करती है – सामान्यतः 1‑5 क्रेडिट प्रति तुलना। बड़ी PDF जिसमें इमेज हों, साधारण टेक्स्ट सेक्शन की तुलना में ज़्यादा क्रेडिट इस्तेमाल करती हैं।
 
-### Step‑by‑Step Credit Tracking
+### स्टेप-बाय-स्टेप क्रेडिट ट्रैकिंग
 
-**Step 1: Import the Metered class**
+**स्टेप1: मीटर्ड क्लास इंपोर्ट करें**
 
 ```java
 import com.groupdocs.comparison.license.Metered;
 ```
 
-**Step 2: Create a small utility to log usage**
+**स्टेप2: इस्तेमाल लॉग करने के लिए एक छोटी यूटिलिटी बनाएं**
 
 ```java
 public class GetCreditConsumption {
@@ -105,20 +105,20 @@ public class GetCreditConsumption {
 }
 ```
 
-**Why this matters:** प्रोडक्शन में आप इन मानों को लॉग करना चाहेंगे, जब कोटा के करीब पहुँचें तो अलर्ट सेट करेंगे, और संभवतः उपयोगकर्ता‑प्रति थ्रॉटल करेंगे।
+**यह क्यों मायने रखता है:** प्रोडक्शन में आप इन मानों को लॉग करना चाहेंगे, जब कोटा के करीब पहुँचें तो अलर्ट सेट करेंगे, और संभवतः उपयोगकर्ता-प्रति थ्रॉटल करेंगे।
 
-## Mastering Document Comparison Implementation
+## मास्टरिंग डॉक्यूमेंट कम्पेरिजन इम्प्लीमेंटेशन
 
-### Core Comparison Workflow
-1. **source** दस्तावेज़ (बेसलाइन) लोड करें।  
-2. तुलना के लिए एक या अधिक **target** दस्तावेज़ जोड़ें।  
-3. (वैकल्पिक) संवेदनशीलता के लिए `CompareOptions` कॉन्फ़िगर करें।  
-4. तुलना निष्पादित करें और परिणाम फ़ाइल जनरेट करें।  
+### कोर कम्पेरिजन वर्कफ़्लो
+1. **सोर्स** डॉक्यूमेंट (बेसलाइन) लोड करें।
+2. तुलना के लिए एक या ज़्यादा **टारगेट** डॉक्यूमेंट जोड़ें।
+3. (वैकल्पिक) संवेदनशीलता के लिए `CompareOptions` चुनें।
+4. तुलना निष्पादित करें और परिणाम फ़ाइल जेनरेट करें।
 5. हाइलाइटेड अंतर को सेव या आगे प्रोसेस करें।
 
-### Step‑by‑Step Comparison Code
+### स्टेप-बाय-स्टेप कम्पेरिजन कोड
 
-**Step 1: Import required classes**
+**स्टेप1: ज़रूरी क्लास इम्पोर्ट करें**
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -129,7 +129,7 @@ import java.io.OutputStream;
 import java.nio.file.Path;
 ```
 
-**Step 2: Define file paths**
+**स्टेप 2: फ़ाइल पाथ तय करें**
 
 ```java
 String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
@@ -137,7 +137,7 @@ String targetFilePath1 = "YOUR_DOCUMENT_DIRECTORY/target1.docx";
 String resultFilePath = "YOUR_OUTPUT_DIRECTORY/result.docx";
 ```
 
-**Step 3: Execute the comparison**
+**स्टेप 3: तुलना करें**
 
 ```java
 public class CompareDocuments {
@@ -155,20 +155,23 @@ public class CompareDocuments {
 }
 ```
 
-> **What’s happening:** `try‑with‑resources` ब्लॉक स्वचालित रूप से स्ट्रीम्स को बंद कर देता है, जिससे मेमोरी लीक्स नहीं होते।
+> **क्या हो रहा है:** `try‑with‑resources` ब्लॉक ऑटोमैटिक रूप से स्ट्रीम्स को बंद कर देता है, जिससे मेमोरी लीक्स नहीं होते।
 
-## Advanced Tips & Best Practices
+## एडवांस्ड टिप्स और बेस्ट प्रैक्टिस
 
-### Performance Optimization
-- **Memory:** 10 MB से बड़ी फ़ाइलों के लिए JVM हीप बढ़ाएँ (`-Xmx2g`) या चंक्स में प्रोसेस करें।  
-- **Batching:** कई जोड़ों की तुलना करते समय एक ही `Comparer` इंस्टेंस पुनः उपयोग करें।  
-- **Format choice:** कई इमेज़ वाली PDF, साधारण DOCX की तुलना में धीमी होती हैं।
+### परफॉर्मेंस ऑप्टिमाइजेशन
+- **मेमोरी:** 10MB से बड़ी मेमोरी के लिए JVM हीप बढ़ाएँ (`-Xmx2g`) या चंक्स में प्रोसेस करें।
 
-### Configuration Tweaks
-- **Sensitivity:** केवल टेक्स्ट परिवर्तन में रुचि होने पर फ़ॉर्मेटिंग या व्हाइटस्पेस को अनदेखा करने के लिए `CompareOptions` समायोजित करें।  
-- **Output styling:** `SaveOptions` का उपयोग करके हाइलाइट रंग कस्टमाइज़ करें, जिससे परिणाम अंतिम उपयोगकर्ता के लिए पढ़ना आसान हो।
+- **बैचिंग:** कई जोड़ों की तुलना करते समय एक ही `Comparer` इंस्टेंस पुनः उपयोग करें।
 
-### Robust Error Handling
+- **फॉर्मेट चॉइस:** कई इमेज वाली PDF, साधारण DOCX की तुलना में धीमी होती हैं।
+
+### कॉन्फ़िगरेशन ट्वीक्स
+- **सेंसिटिविटी:** केवल टेक्स्ट बदलने में रुचि होने पर फॉर्मेटिंग या व्हाइटस्पेस को अनदेखा करने के लिए `CompareOptions` एडजस्ट करें।
+
+- **Output styling:** `SaveOptions` का इस्तेमाल करके हाइलाइट कलर कस्टमाइज़ करें, जिससे नतीजे आखिरी इस्तेमाल के लिए पढ़ना आसान हो।
+
+### मजबूत त्रुटि प्रबंधन
 
 ```java
 try {
@@ -180,18 +183,18 @@ try {
 }
 ```
 
-## Troubleshooting Common Issues
+## आम दिक्कतों की ट्रबलशूटिंग
 
-| Issue | Typical Cause | Quick Fix |
+| दिक्कत | आम वजह | क्विक फिक्स |
 |-------|---------------|-----------|
-| **File not found / Access denied** | गलत पाथ या अपर्याप्त अनुमतियाँ | विकास के दौरान एब्सोल्यूट पाथ उपयोग करें; पढ़ने/लिखने के अधिकार जाँचें |
-| **OutOfMemoryError** | बड़े दस्तावेज़ हीप सीमा से अधिक | `-Xmx` बढ़ाएँ या दस्तावेज़ को विभाजित करें |
-| **License/credit errors** | लाइसेंस सेट नहीं या क्रेडिट समाप्त | लाइसेंस फ़ाइल सत्यापित करें; `Metered` से उपयोग मॉनिटर करें |
-| **Unexpected format differences** | कुछ लेआउट के लिए API सीमाएँ | GroupDocs फ़ॉर्मेट सपोर्ट मैट्रिक्स देखें; प्री‑प्रोसेसिंग पर विचार करें |
+| **फ़ाइल नहीं मिली / एक्सेस नहीं मिला** | गलत रास्ता या अपर्याप्त अनुमतियाँ | डेवलपमेंट के दौरान एब्सोल्यूट रास्ता इस्तेमाल करें; पढ़ने/लिखने के अधिकार की जाँच करें |
+| **OutOfMemoryError** | बड़े डॉक्यूमेंट हीप सीमा से ज़्यादा | `-Xmx` बढ़ाएँ या डॉक्यूमेंट को बाँटें |
+| **लाइसेंस/क्रेडिट एरर** | लाइसेंस सेट नहीं या क्रेडिट खत्म | लाइसेंस फ़ाइल देखें; `Metered` से इस्तेमाल मॉनिटर करें |
+| **अनएक्सपेक्टेड फ़ॉर्मेट अंतर** | कुछ लेआउट के लिए API सीमाएँ | GroupDocs फ़ॉर्मेट सपोर्ट मैट्रिक्स देखें; प्री-प्रोसेसिंग पर विचार करें |
 
-## Real‑World Implementation Examples
+## रियल-वर्ल्ड इम्प्लीमेंटेशन उदाहरण
 
-### Legal Contract Comparison System
+### लीगल कॉन्ट्रैक्ट कम्पेरिजन सिस्टम
 ```java
 // Example: Comparing contract versions for a law firm
 public class ContractComparison {
@@ -203,60 +206,65 @@ public class ContractComparison {
 ```
 
 ### Content Management Integration
-प्रकाशन से पहले लेख या दस्तावेज़ में अनधिकृत संपादन का पता लगाने के लिए API का उपयोग करें।
+प्रकाशन से पहले लेख या डॉक्यूमेंट में इंटीग्रेटेड एडिटिंग का पता लगाने के लिए API का इस्तेमाल करें।
 
 ### Financial Document Auditing
-त्रैमासिक स्टेटमेंट या नियामक फ़ाइलों की तुलना करके डेटा इंटीग्रिटी सुनिश्चित करें।
+त्रैमासिक सत्यापन या रेगुलेटरी असाइनमेंट की तुलना करके डेटा इंटीग्रिटी सुनिश्चित करें।
 
 ## Supported File Formats
-- **Text:** DOC, DOCX, RTF, TXT, PDF  
-- **Spreadsheets:** XLS, XLSX, CSV, ODS  
-- **Presentations:** PPT, PPTX, ODP  
-- **Images:** PNG, JPG, BMP (visual diff)  
-- **Others:** HTML, XML, source code files  
+- **Text:** DOC, DOCX, RTF, TXT, PDF
+- **Spreadsheets:** XLS, XLSX, CSV, ODS
+- **Presentations:** PPT, PPTX, ODP
+- **Images:** PNG, JPG, BMP (visual diff)
+- **Others:** HTML, XML, source code files
 
-> **Tip:** क्रॉस‑फ़ॉर्मेट तुलना (जैसे DOCX बनाम PDF) काम करती है, लेकिन फ़ॉर्मेटिंग अंतर को परिवर्तन के रूप में दिखाया जाएगा।
+> **Tip:** क्रॉस-फॉर्मेट तुलना (जैसे DOCX बनाम PDF) काम करती है, लेकिन फॉर्मेटिंग अंतर को बदलाव के रूप में दिखाया जाएगा।
 
-## Scaling & Performance Considerations
+## स्केलिंग और परफॉर्मेंस से जुड़ी बातें
 
-- **CPU:** तुलना CPU‑गहन होती है; उच्च‑थ्रूपुट परिदृश्यों के लिए पर्याप्त कोर प्रदान करें।  
-- **Memory:** हीप उपयोग मॉनिटर करें `Comparer` इंस्टेंस को तुरंत साफ़ करें।  
-- **Concurrency:** कंटेंशन से बचने के लिए सीमित आकार के थ्रेड‑पूल का उपयोग करें।  
-- **Horizontal scaling:** भारी वर्कलोड के लिए तुलना लॉजिक को लोड बैलेंसर के पीछे माइक्रोसर्विस के रूप में डिप्लॉय करें।  
+- **CPU:** CPU‑गहन होती है; हाई-थ्रूपुट लैंडस्केप्स के लिए काफी कोर दें।
 
-## Next Steps & Advanced Integration
+- **Memory:** हीप का इस्तेमाल करके मॉनिटर करें `Comparer` इंस्टेंस को तुरंत क्लियर करें।
 
-1. **Expose as a REST microservice** – जावा कोड को Spring Boot कंट्रोलर में रैप करें।  
-2. **Queue‑driven processing** – बड़े बैच को असिंक्रोनस रूप से संभालने के लिए RabbitMQ या Kafka का उपयोग करें।  
-3. **Analytics** – प्रोसेसिंग टाइम, क्रेडिट उपयोग, और एरर रेट को लॉग करें ताकि निरंतर सुधार हो सके।  
+- **Concurrency:** कंटेंशन से बचने के लिए लिमिटेड साइज़ के थ्रेड-पूल का इस्तेमाल करें।
 
-## Frequently Asked Questions
+- **Horizontal scaling:** भारी वर्कलोड के लिए तुलना लॉजिक को लोड बैलेंसर के पीछे माइक्रोसर्विस के रूप में डिप्लॉय करें।
 
-**Q: How accurate is the API for complex PDFs?**  
-A: यह टेबल, इमेज़, और लेयरड कंटेंट को उच्च फ़िडेलिटी के साथ संभालता है; छोटे लेआउट अंतर को परिवर्तन के रूप में दिखाया जा सकता है।
+## अगले स्टेप्स और एडवांस्ड इंटीग्रेशन
 
-**Q: Can I compare a PDF with an Excel**  
-A: हाँ – API क्रॉस‑फ़ॉर्मेट तुलना का समर्थन करता है, हालांकि लेआउट‑विशिष्ट अंतर को हाइलाइट किया जाएगा।
+1. **Expose as a REST माइक्रोसर्विस** – Java कोड को Spring Boot Controller में रैप करें।
 
-**Q: How do I ignore formatting changes?**  
-A: `CompareOptions` में `ignoreFormatting = true` सेट करके फ़ॉर्मेटिंग परिवर्तन को अनदेखा करें।
+2. **Queue‑driven processing** – बड़े बैच को असिंक्रोनस रूप से ऑपरेशन के लिए RabbitMQ या Kafka का इस्तेमाल करें।
 
-**Q: Does the API count as a java file comparison library?**  
-A: बिल्कुल – यह एक पूर्ण‑फ़ीचर `java file comparison library` है जो कई दस्तावेज़ प्रकारों को कवर करता है।
+3. **Analytics** – प्रोसेसिंग टाइम, क्रेडिट यूसेज, और एरर रेट को लॉग करें ताकि लगातार सुधार हो सके।
 
-**Q: What’s the best way to monitor credit usage in production?**  
-A: समय‑समय पर `Metered.getConsumptionQuantity()` कॉल करें और मानों को अपने मॉनिटरिंग सिस्टम में स्टोर करें; थ्रेशहोल्ड पहुँचने पर अलर्ट सेट करें।
+## अक्सर पूछे जाने वाले सवाल
 
----
+**Q: कॉम्प्लेक्स PDF के लिए API कितना सही है?**
+A: यह टेबल, इमेज, और लेयर्ड सामग्री को हाई फ़िडेलिटी के साथ संभालता है; छोटे लेआउट अंतर को बदलने के रूप में दिखाया जा सकता है।
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
+**Q: क्या मैं PDF को Excel से कम्पेयर कर सकता हूँ**
+A: हाँ – API क्रॉस-फ़ॉर्मेट तुलना का सपोर्ट करता है, हालांकि लेआउट-विशिष्ट अंतर को हाइलाइट किया जाएगा।
 
-## Additional Resources
+**Q: मैं फ़ॉर्मेटिंग बदलावों को कैसे इग्नोर करूँ?**
+A: `CompareOptions` में `ignoreFormatting = true` सेट करके फ़ॉर्मेटिंग बदलाव को अनदेखा करें।
+
+**सवाल: क्या API को जावा फ़ाइल कम्पेरिजन लाइब्रेरी माना जाता है?**
+जवाब: बिल्कुल – यह एक पूरी तरह से `java फ़ाइल कम्पेरिजन लाइब्रेरी` है जो कई डॉक्यूमेंट स्टोरेज को कवर करता है।
+
+**सवाल: प्रोडक्शन में क्रेडिट इस्तेमाल को मॉनिटर करने का सबसे अच्छा तरीका क्या है?**
+जवाब: टाइम-टाइम पर `Metered.getConsumptionQuantity()` कॉल करें और मानों को अपने मॉनिटरिंग सिस्टम में स्टोर करें; थ्रेशहोल्ड पहुंचने पर अलर्ट सेट करें।
+
+## अतिरिक्त रिसोर्स
 
 - **Documentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference:** [Complete Reference Guide](https://reference.groupdocs.com/comparison/java/)  
 - **Latest Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**पिछला अपडेट:** 2025-12-17
+**इसके साथ टेस्ट किया गया:** GroupDocs.Comparison 25.2 for Java
+**लेखक:** GroupDocs

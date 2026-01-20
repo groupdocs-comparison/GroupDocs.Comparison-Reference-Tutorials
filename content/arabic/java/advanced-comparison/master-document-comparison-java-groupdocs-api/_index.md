@@ -248,12 +248,6 @@ public class ContractComparison {
 **س: ما هي أفضل طريقة لمراقبة استهلاك الائتمانات في الإنتاج؟**  
 ج: استدعِ دوريًا `Metered.getConsumptionQuantity()` واحفظ القيم في نظام المراقبة الخاص بك؛ اضبط تنبيهات عند بلوغ حدود معينة.
 
----
-
-**آخر تحديث:** 2025-12-17  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2 للـ Java  
-**المؤلف:** GroupDocs  
-
 ## موارد إضافية
 
 - **التوثيق:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -261,3 +255,9 @@ public class ContractComparison {
 - **أحدث الإصدارات:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **خيارات الترخيص:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **دعم المجتمع:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**آخر تحديث:** 2025-12-17  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 للـ Java  
+**المؤلف:** GroupDocs  

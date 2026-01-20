@@ -247,12 +247,6 @@ A: Absolutamente – é uma `java file comparison library` completa que cobre mu
 **Q: Qual a melhor forma de monitorar o uso de créditos em produção?**  
 Chame periodicamente `Metered.getConsumptionQuantity()` e armazene os valores no seu sistema de monitoramento; configure alertas ao atingir limites.
 
----
-
-**Última atualização:** 2025-12-17  
-**Testado com:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 ## Recursos Adicionais
 
 - **Documentação:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -260,3 +254,9 @@ Chame periodicamente `Metered.getConsumptionQuantity()` e armazene os valores no
 - **Downloads mais recentes:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Opções de Licenciamento:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Suporte da Comunidade:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Última atualização:** 2025-12-17  
+**Testado com:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

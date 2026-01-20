@@ -248,12 +248,6 @@ A: Rozhodně – je to plnohodnotná `java file comparison library` pokrývajíc
 **Q: Jaký je nejlepší způsob monitorování spotřeby kreditů v produkci?**  
 A: Periodicky zavolejte `Metered.getConsumptionQuantity()` a uložte hodnoty do vašeho monitorovacího systému; nastavte upozornění při dosažení prahových hodnot.
 
----
-
-**Poslední aktualizace:** 2025-12-17  
-**Testováno s:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 ## Další zdroje
 
 - **Documentation:** [GroupDocs.Comparison Java dokumentace](https://docs.groupdocs.com/comparison/java/)  
@@ -261,5 +255,11 @@ A: Periodicky zavolejte `Metered.getConsumptionQuantity()` a uložte hodnoty do 
 - **Latest Downloads:** [Získat nejnovější verzi](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Vyberte si licenci](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Fóra vývojářů a podpora](https://forum.groupdocs.com/)
+
+---
+
+**Poslední aktualizace:** 2025-12-17  
+**Testováno s:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  
 
 ---

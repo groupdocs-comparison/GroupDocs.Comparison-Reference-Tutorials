@@ -256,12 +256,6 @@ A: もちろんです – 多くのドキュメントタイプをカバーする
 **Q: 本番環境でクレジット使用量を監視する最適な方法は何ですか？**  
 A: 定期的に `Metered.getConsumptionQuantity()` を呼び出し、監視システムに値を保存します。しきい値に達したらアラートを設定してください。
 
----
-
-**最終更新日:** 2025-12-17  
-**テスト環境:** GroupDocs.Comparison 25.2 for Java  
-**作者:** GroupDocs  
-
 ## 追加リソース
 
 - **ドキュメント:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -269,3 +263,9 @@ A: 定期的に `Metered.getConsumptionQuantity()` を呼び出し、監視シ�
 - **Latest Downloads:** [Get the Latest Version](https://re.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**最終更新日:** 2025-12-17  
+**テスト環境:** GroupDocs.Comparison 25.2 for Java  
+**作者:** GroupDocs  

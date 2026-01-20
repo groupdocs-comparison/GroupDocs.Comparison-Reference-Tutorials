@@ -245,12 +245,6 @@ A: Chắc chắn – nó là một `java file comparison library` đầy đủ t
 **Q: Cách tốt nhất để giám sát việc sử dụng credit trong môi trường sản xuất là gì?**  
 A: Thường xuyên gọi `Metered.getConsumptionQuantity()` và lưu các giá trị vào hệ thống giám sát của bạn; thiết lập cảnh báo khi đạt ngưỡng.
 
----
-
-**Cập nhật lần cuối:** 2025-12-17  
-**Kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
-**Tác giả:** GroupDocs  
-
 ## Tài nguyên bổ sung
 
 - **Tài liệu:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -258,5 +252,11 @@ A: Thường xuyên gọi `Metered.getConsumptionQuantity()` và lưu các giá 
 - **Bản tải mới nhất:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Tùy chọn giấy phép:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Hỗ trợ cộng đồng:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Cập nhật lần cuối:** 2025-12-17  
+**Kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
+**Tác giả:** GroupDocs  
 
 ---

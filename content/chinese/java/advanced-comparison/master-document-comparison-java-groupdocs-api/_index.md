@@ -246,12 +246,6 @@ A: 绝对算——它是功能完整的 `java file comparison library`，覆盖�
 **Q: 在生产环境中监控信用使用的最佳方式是什么？**  
 A: 定期调用 `Metered.getConsumptionQuantity()` 并将数值存入监控系统；当达到阈值时设置警报。
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## 其他资源
 
 - **Documentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -259,3 +253,9 @@ A: 定期调用 `Metered.getConsumptionQuantity()` 并将数值存入监控系�
 - **Latest Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

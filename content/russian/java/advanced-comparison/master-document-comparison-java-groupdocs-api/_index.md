@@ -246,12 +246,6 @@ A: Абсолютно — это полнофункциональная `java fi
 **Q: Как лучше всего мониторить использование кредитов в продакшене?**  
 A: Периодически вызывайте `Metered.getConsumptionQuantity()` и сохраняйте значения в системе мониторинга; устанавливайте оповещения при достижении порогов.
 
----
-
-**Последнее обновление:** 2025-12-17  
-**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
-**Автор:** GroupDocs  
-
 ## Дополнительные ресурсы
 
 - **Документация:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -259,3 +253,9 @@ A: Периодически вызывайте `Metered.getConsumptionQuantity()
 - **Последние загрузки:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Варианты лицензирования:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Поддержка сообщества:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Последнее обновление:** 2025-12-17  
+**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
+**Автор:** GroupDocs  

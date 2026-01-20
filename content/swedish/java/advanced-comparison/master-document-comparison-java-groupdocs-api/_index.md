@@ -245,12 +245,6 @@ A: Absolut – det är ett fullständigt `java file comparison library` som täc
 **Q: Vad är det bästa sättet att övervaka kreditförbrukning i produktion?**  
 A: Anropa periodiskt `Metered.getConsumptionQuantity()` och lagra värdena i ditt övervakningssystem; sätt varningar när trösklar nås.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## Ytterligare resurser
 
 - **Documentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -258,3 +252,9 @@ A: Anropa periodiskt `Metered.getConsumptionQuantity()` och lagra värdena i dit
 - **Latest Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licensing Options:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

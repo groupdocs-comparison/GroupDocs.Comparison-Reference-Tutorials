@@ -245,12 +245,6 @@ A: Απόλυτα – είναι μια πλήρης `java file comparison libra
 **Q: Ποιος είναι ο καλύτερος τρόπος για την παρακολούθηση της χρήσης πίστωσης στην παραγωγή;**  
 A: Καλέστε περιοδικά το `Metered.getConsumptionQuantity()` και αποθηκεύστε τις τιμές στο σύστημα παρακολούθησής σας· ορίστε ειδοποιήσεις όταν φτάσετε τα όρια.
 
----
-
-**Τελευταία Ενημέρωση:** 2025-12-17  
-**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java  
-**Συγγραφέας:** GroupDocs  
-
 ## Πρόσθετοι Πόροι
 
 - **Τεκμηρίωση:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -258,3 +252,9 @@ A: Καλέστε περιοδικά το `Metered.getConsumptionQuantity()` κ�
 - **Τελευταίες Λήψεις:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Επιλογές Άδειας:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Υποστήριξη Κοινότητας:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2025-12-17  
+**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java  
+**Συγγραφέας:** GroupDocs  

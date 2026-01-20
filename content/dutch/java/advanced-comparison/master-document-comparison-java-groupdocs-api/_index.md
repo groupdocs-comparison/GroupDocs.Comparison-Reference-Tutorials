@@ -246,12 +246,6 @@ A: Absoluut – het is een volledig uitgeruste `java file comparison library` di
 **Q: Wat is de beste manier om creditverbruik in productie te monitoren?**  
 A: Roep periodiek `Metered.getConsumptionQuantity()` aan en sla de waarden op in je monitoringsysteem; stel waarschuwingen in wanneer drempels worden bereikt.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 ## Aanvullende bronnen
 
 - **Documentatie:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -259,5 +253,11 @@ A: Roep periodiek `Metered.getConsumptionQuantity()` aan en sla de waarden op in
 - **Laatste downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licentieopties:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community‑ondersteuning:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  
 
 ---

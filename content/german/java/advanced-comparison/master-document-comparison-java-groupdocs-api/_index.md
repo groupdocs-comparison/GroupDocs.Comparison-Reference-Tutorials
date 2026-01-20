@@ -245,15 +245,15 @@ A: Absolut – sie ist eine vollwertige `java file comparison library`, die viel
 **F: Was ist der beste Weg, den Kreditverbrauch in der Produktion zu überwachen?**  
 A: Rufen Sie periodisch `.getConsumptionQuantity()` auf und speichern Sie die Werte in Ihrem Monitoring‑System; setzen Sie Alarme, wenn Schwellenwerte erreicht werden.
 
----
-
-**Zuletzt aktualisiert:** 2025-12-17  
-**Getestet mit:** GroupDocs.Comparison 25.2 für Java  
-**Autor:** GroupDocs  
-
 ## Zusätzliche Ressourcen
 - **Dokumentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API‑Referenz:** [Complete Reference Guide](https://reference.groupdocs.com/comparison/java/)  
 - **Neueste Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Lizenzoptionen:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Community‑Support:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Zuletzt aktualisiert:** 2025-12-17  
+**Getestet mit:** GroupDocs.Comparison 25.2 für Java  
+**Autor:** GroupDocs  

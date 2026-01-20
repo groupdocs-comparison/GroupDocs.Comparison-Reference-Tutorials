@@ -248,12 +248,6 @@ A: Zdecydowanie – jest to pełnoprawna `java file comparison library` obejmuj�
 **Q: Jaki jest najlepszy sposób monitorowania zużycia kredytów w produkcji?**  
 A: Okresowo wywołuj `Metered.getConsumptionQuantity()` i zapisuj wyniki w systemie monitoringu; ustaw alerty przy przekroczeniu progów.
 
----
-
-**Ostatnia aktualizacja:** 2025-12-17  
-**Testowane z:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 ## Dodatkowe zasoby
 
 - **Dokumentacja:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
@@ -261,3 +255,9 @@ A: Okresowo wywołuj `Metered.getConsumptionQuantity()` i zapisuj wyniki w syste
 - **Najnowsze pobrania:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
 - **Opcje licencjonowania:** [Choose Your License](https://purchase.groupdocs.com/buy)  
 - **Wsparcie społeczności:** [Developer Forums and Support](https://forum.groupdocs.com/)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-17  
+**Testowane z:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

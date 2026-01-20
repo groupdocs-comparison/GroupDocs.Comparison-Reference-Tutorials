@@ -13,7 +13,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs مقارنة جافا: أداة مقارنة الدلائل في جافا - دليل كامل'
+title: 'groupdocs مقارنة جافا - أداة مقارنة الدلائل في جافا - دليل كامل'
 type: docs
 url: /ar/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

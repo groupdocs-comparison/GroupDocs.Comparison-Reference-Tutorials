@@ -13,7 +13,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: Công cụ so sánh thư mục Java - Hướng dẫn đầy đủ'
+title: 'groupdocs comparison java - Công cụ so sánh thư mục Java - Hướng dẫn đầy đủ'
 type: docs
 url: /vi/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

@@ -12,7 +12,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: GroupDocs 比较 Java：Java 目录比较工具 - 完整指南
+title: GroupDocs 比较 Java - Java 目录比较工具 - 完整指南
 type: docs
 url: /zh/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

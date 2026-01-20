@@ -13,7 +13,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs vergelijking java: Java Mapvergelijkingshulpmiddel - Complete gids'
+title: 'groupdocs vergelijking java - Java Mapvergelijkingshulpmiddel - Complete gids'
 type: docs
 url: /nl/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

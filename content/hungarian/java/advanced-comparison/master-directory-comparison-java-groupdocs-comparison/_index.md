@@ -14,7 +14,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: Java könyvtár-összehasonlító eszköz – Teljes útmutató'
+title: 'groupdocs comparison java - Java könyvtár-összehasonlító eszköz – Teljes útmutató'
 type: docs
 url: /hu/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

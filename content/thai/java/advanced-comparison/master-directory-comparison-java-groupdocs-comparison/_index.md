@@ -13,7 +13,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: เครื่องมือเปรียบเทียบไดเรกทอรี Java - คู่มือฉบับสมบูรณ์'
+title: 'groupdocs comparison java - เครื่องมือเปรียบเทียบไดเรกทอรี Java - คู่มือฉบับสมบูรณ์'
 type: docs
 url: /th/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

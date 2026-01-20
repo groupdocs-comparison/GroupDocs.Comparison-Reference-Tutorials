@@ -14,7 +14,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java : Outil de comparaison de répertoires Java - Guide
+title: 'groupdocs comparison java - Outil de comparaison de répertoires Java - Guide
   complet'
 type: docs
 url: /fr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/

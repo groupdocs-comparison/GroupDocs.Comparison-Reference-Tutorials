@@ -14,7 +14,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'ग्रुपडॉक्स तुलना जावा: जावा डायरेक्टरी तुलना टूल - पूर्ण गाइड'
+title: 'ग्रुपडॉक्स तुलना जावा - जावा डायरेक्टरी तुलना टूल - पूर्ण गाइड'
 type: docs
 url: /hi/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

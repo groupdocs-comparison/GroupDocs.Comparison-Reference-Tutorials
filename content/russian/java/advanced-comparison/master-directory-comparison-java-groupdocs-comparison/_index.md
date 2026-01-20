@@ -14,7 +14,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: Инструмент сравнения каталогов Java — Полное руководство'
+title: 'groupdocs comparison java - Инструмент сравнения каталогов Java — Полное руководство'
 type: docs
 url: /ru/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

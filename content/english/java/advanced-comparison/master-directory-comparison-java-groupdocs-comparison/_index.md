@@ -1,5 +1,5 @@
 ---
-title: "groupdocs comparison java: Java Directory Comparison Tool - Complete Guide"
+title: "groupdocs comparison java - Java Directory Comparison Tool - Complete Guide"
 linktitle: "Java Directory Comparison Guide"
 description: "Learn how to use groupdocs comparison java for directory comparison in Java. Master file audits, version control automation, and performance optimization."
 keywords: "java directory comparison tool, groupdocs comparison tutorial, java file audit automation, directory sync java, how to compare folders in java programming"

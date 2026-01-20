@@ -14,7 +14,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: Java Dizin Karşılaştırma Aracı - Tam Kılavuz'
+title: 'groupdocs comparison java - Java Dizin Karşılaştırma Aracı - Tam Kılavuz'
 type: docs
 url: /tr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1

@@ -13,7 +13,7 @@ tags:
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java: Java nástroj pro porovnání adresářů – kompletní
+title: 'groupdocs comparison java - Java nástroj pro porovnání adresářů – kompletní
   průvodce'
 type: docs
 url: /cs/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/

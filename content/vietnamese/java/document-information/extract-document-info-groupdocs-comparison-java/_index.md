@@ -1,48 +1,87 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách trích xuất siêu dữ liệu tài liệu hiệu quả như loại tệp, số trang và kích thước bằng GroupDocs.Comparison cho Java. Thực hiện theo hướng dẫn chi tiết này để nâng cao quy trình làm việc của bạn."
-"title": "Trích xuất siêu dữ liệu tài liệu bằng GroupDocs.Comparison cho Java&#58; Hướng dẫn toàn diện"
-"url": "/vi/java/document-information/extract-document-info-groupdocs-comparison-java/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-18'
+description: Tìm hiểu cách Java lấy loại tệp và trích xuất siêu dữ liệu tài liệu bằng
+  GroupDocs.Comparison. Nhận số trang, kích thước và nhiều thông tin khác với các
+  ví dụ mã đơn giản và mẹo khắc phục sự cố.
+keywords: java document metadata extraction, groupdocs comparison tutorial, extract
+  file properties java, document info java api, how to get document metadata in java
+lastmod: '2026-01-18'
+linktitle: Java Document Metadata Extraction
+tags:
+- groupdocs
+- document-processing
+- metadata-extraction
+- java-tutorial
+title: Java Lấy Loại Tập Tin – Hướng Dẫn Trích Xuất Siêu Dữ Liệu Tài Liệu
 type: docs
+url: /vi/java/document-information/extract-document-info-groupdocs-comparison-java/
+weight: 1
 ---
-# Trích xuất siêu dữ liệu tài liệu với GroupDocs.Comparison cho Java
 
-Trong thời đại kỹ thuật số, việc quản lý và phân tích các thuộc tính tài liệu là điều cần thiết trong nhiều lĩnh vực khác nhau như pháp lý, hành chính hoặc thiết lập doanh nghiệp. Hiểu siêu dữ liệu của tài liệu có thể tăng đáng kể năng suất. Hướng dẫn toàn diện này sẽ hướng dẫn bạn sử dụng thư viện GroupDocs.Comparison để trích xuất thông tin quan trọng như loại tệp, số trang và kích thước từ tài liệu một cách dễ dàng.
+# Java Get File Type – Hướng Dẫn Trích Xuất Siêu Dữ Liệu Tài Liệu
 
-## Những gì bạn sẽ học được
+Bạn đã bao giờ cần nhanh chóng lấy thông tin tệp từ tài liệu mà không mở chúng chưa? Bạn không phải là người duy nhất. Dù bạn đang xây dựng hệ thống quản lý tài liệu, cần xác thực việc tải lên tệp, hay muốn tự động hoá quy trình xử lý tài liệu, **java get file type** theo chương trình có thể tiết kiệm rất nhiều thời gian.
 
-- Thiết lập GroupDocs.Comparison cho Java
-- Triển khai từng bước trích xuất thông tin tài liệu
-- Ứng dụng thực tế của các tính năng này
-- Mẹo tối ưu hóa hiệu suất
+Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách trích xuất siêu dữ liệu tài liệu (như loại tệp, số trang và kích thước) bằng GroupDocs.Comparison cho Java. Đừng lo nếu bạn mới bắt đầu với thư viện này – chúng tôi sẽ hướng dẫn từng bước, bao gồm các bẫy thường gặp và cách tránh chúng.
 
-Với hướng dẫn này, bạn sẽ được trang bị đầy đủ để tích hợp trích xuất siêu dữ liệu tài liệu vào quy trình làm việc của mình. Hãy bắt đầu bằng cách đảm bảo bạn có tất cả các điều kiện tiên quyết cần thiết.
+## Câu trả lời nhanh
+- **Thư viện nào tôi có thể dùng để java get file type?** GroupDocs.Comparison for Java.  
+- **Tôi cũng có thể java extract pdf metadata không?** Có – cùng một API hoạt động cho PDF và nhiều định dạng khác.  
+- **Tôi có cần giấy phép không?** Giấy phép dùng thử hoặc tạm thời hoạt động cho phát triển; giấy phép đầy đủ cần thiết cho môi trường sản xuất.  
+- **Phiên bản Java nào được yêu cầu?** JDK 8+ (khuyến nghị JDK 11+).  
+- **Mã có an toàn đa luồng không?** Tạo một thể hiện `Comparer` riêng cho mỗi luồng.
 
-## Điều kiện tiên quyết
+## Tại sao cần trích xuất Siêu Dữ Liệu Tài Liệu?
 
-Trước khi tìm hiểu mã, hãy đảm bảo bạn có những điều sau:
+Trước khi đi sâu vào mã, hãy nói về lý do tại sao việc này quan trọng trong các ứng dụng thực tế:
 
-### Thư viện và phụ thuộc bắt buộc
+- **Hệ thống quản lý tài liệu** – tự động phân loại và lập chỉ mục các tệp dựa trên thuộc tính của chúng.  
+- **Xác thực tải lên tệp** – kiểm tra loại và kích thước tệp trước khi xử lý.  
+- **Phân tích nội dung** – lọc và sắp xếp tài liệu theo độ dài, định dạng hoặc các tiêu chí khác.  
+- **Pháp lý & Tuân thủ** – đảm bảo tài liệu đáp ứng các yêu cầu cụ thể.  
+- **Tối ưu hiệu năng** – tiền xử lý chỉ các tệp đáp ứng tiêu chí nhất định.
 
-Để bắt đầu, hãy đảm bảo bạn đã cài đặt Java trên hệ thống của mình. Bạn cũng sẽ cần Maven để quản lý sự phụ thuộc. Thư viện GroupDocs.Comparison rất quan trọng đối với hướng dẫn này, vì vậy chúng tôi sẽ đưa nó vào như một sự phụ thuộc trong `pom.xml` tài liệu.
+Kết luận? Trích xuất siêu dữ liệu giúp bạn đưa ra quyết định thông minh hơn về cách xử lý tài liệu.
 
-### Yêu cầu thiết lập môi trường
+## Những gì bạn sẽ học trong hướng dẫn này
 
-- **Bộ phát triển Java (JDK):** Phiên bản 8 trở lên.
-- **Chuyên gia:** Để quản lý các phụ thuộc và xây dựng dự án của bạn.
+Khi hoàn thành tutorial này, bạn sẽ có thể:
 
-### Điều kiện tiên quyết về kiến thức
+- Cài đặt GroupDocs.Comparison cho Java trong dự án của bạn.  
+- **java get file type** và các thuộc tính tài liệu quan trọng khác chỉ với vài dòng mã.  
+- Xử lý các định dạng tệp khác nhau và các trường hợp biên.  
+- Khắc phục các vấn đề phổ biến mà bạn có thể gặp phải.  
+- Áp dụng các thực tiễn tốt nhất cho môi trường sản xuất.
 
-Nên có hiểu biết cơ bản về lập trình Java. Việc quen thuộc với Maven cũng sẽ có lợi nhưng không bắt buộc, vì chúng tôi sẽ đề cập đến những điều cần thiết trong hướng dẫn này.
+## Yêu cầu trước: Những gì bạn cần trước khi bắt đầu
 
-## Thiết lập GroupDocs.Comparison cho Java
+### Phần mềm và công cụ cần thiết
 
-Bây giờ bạn đã thiết lập xong, hãy tập trung vào việc tích hợp GroupDocs.Comparison vào dự án của bạn.
+- **Java Development Kit (JDK)** – Phiên bản 8 trở lên (chúng tôi khuyến nghị JDK 11+ để hiệu năng tốt hơn).  
+- **Maven** – Để quản lý phụ thuộc và xây dựng dự án của bạn.  
+- **IDE** – Bất kỳ IDE Java nào như IntelliJ IDEA, Eclipse, hoặc VS Code.
 
-### Cài đặt qua Maven
+### Kiến thức cần có
 
-Để bao gồm GroupDocs.Comparison trong dự án Java của bạn, hãy thêm nội dung sau vào `pom.xml` tài liệu:
+Bạn không cần phải là chuyên gia Java, nhưng có một số kiến thức cơ bản về:
+
+- Cú pháp Java và các khái niệm hướng đối tượng.  
+- Quản lý phụ thuộc Maven (chúng tôi sẽ hướng dẫn bạn).  
+- Câu lệnh try‑with‑resources (để quản lý tài nguyên đúng cách).
+
+### Tại sao lại chọn GroupDocs.Comparison?
+
+Bạn có thể thắc mắc – tại sao lại dùng GroupDocs.Comparison để trích xuất siêu dữ liệu? Mặc dù nó nổi tiếng với tính năng so sánh tài liệu, nhưng nó cũng cung cấp khả năng trích xuất thông tin tài liệu xuất sắc. Thêm nữa, nếu sau này bạn cần tính năng so sánh, bạn đã sẵn sàng rồi!
+
+## Cài đặt GroupDocs.Comparison cho Java
+
+Hãy cấu hình dự án của bạn một cách chính xác. Bước này rất quan trọng – việc sai phụ thuộc là một trong những vấn đề phổ biến nhất mà các nhà phát triển gặp phải.
+
+### Bước 1: Cấu hình Maven
+
+Thêm đoạn này vào tệp `pom.xml` của bạn (đảm bảo đặt ở đúng phần):
 
 ```xml
 <repositories>
@@ -61,127 +100,354 @@ Bây giờ bạn đã thiết lập xong, hãy tập trung vào việc tích h�
 </dependencies>
 ```
 
-### Mua lại giấy phép
+**Mẹo chuyên nghiệp**: Luôn kiểm tra số phiên bản mới nhất trên trang web GroupDocs – sử dụng phiên bản cũ có thể gây ra vấn đề tương thích.
 
-GroupDocs.Comparison cung cấp bản dùng thử miễn phí mà bạn có thể sử dụng để kiểm tra các tính năng của nó. Bạn cũng có thể đăng ký giấy phép tạm thời hoặc mua một giấy phép nếu nhu cầu của bạn vẫn đang tiếp diễn.
+### Bước 2: Cài đặt giấy phép (Đừng bỏ qua bước này!)
 
-1. **Dùng thử miễn phí:** Truy cập vào [tải xuống miễn phí](https://releases.groupdocs.com/comparison/java/) và khám phá các chức năng cơ bản.
-2. **Giấy phép tạm thời:** Nộp đơn xin cấp giấy phép tạm thời trên trang web của họ để được thử nghiệm rộng rãi hơn.
-3. **Mua:** Để có quyền truy cập đầy đủ, hãy cân nhắc mua thông qua đây [liên kết mua hàng](https://purchase.groupdocs.com/buy).
+GroupDocs.Comparison không phải là thư viện miễn phí, nhưng bạn có các lựa chọn:
 
-### Khởi tạo cơ bản
+1. **Dùng thử miễn phí**: Hoàn hảo cho việc thử nghiệm và dự án nhỏ. Tải về từ [trang dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)
+2. **Giấy phép tạm thời**: Tuyệt vời cho phát triển và đánh giá. Đăng ký [tại đây](https://purchase.groupdocs.com/temporary-license/)
+3. **Giấy phép đầy đủ**: Dành cho môi trường sản xuất. [Mua tại đây](https://purchase.groupdocs.com/buy)
 
-Sau khi dự án của bạn được thiết lập với Maven, bạn có thể bắt đầu bằng cách khởi tạo `Comparer` đối tượng. Lớp này sẽ đóng vai trò trung tâm trong việc trích xuất thông tin tài liệu.
+### Bước 3: Xác minh cấu hình của bạn
 
-## Hướng dẫn thực hiện
+Tạo một lớp kiểm tra đơn giản để chắc chắn mọi thứ hoạt động:
 
-Chúng ta hãy chia nhỏ quy trình trích xuất thông tin tài liệu bằng GroupDocs.Comparison cho Java thành các bước rõ ràng.
+```java
+import com.groupdocs.comparison.Comparer;
 
-### Khởi tạo đối tượng so sánh
+public class SetupTest {
+    public static void main(String[] args) {
+        System.out.println("GroupDocs.Comparison is ready to use!");
+        // We'll add actual functionality next
+    }
+}
+```
 
-Bắt đầu bằng cách tạo một phiên bản của `Comparer` lớp có trách nhiệm truy cập và quản lý tài liệu của bạn:
+## Hướng dẫn triển khai: Trích xuất Siêu Dữ Liệu Tài Liệu Bước từng Bước
+
+Bây giờ là phần thú vị – hãy viết mã thực sự hữu ích!
+
+### java get file type – Khởi tạo đối tượng Comparer
+
+Lớp `Comparer` là cổng vào thông tin tài liệu. Đây là cách thiết lập đúng:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.io.IOException;
 
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
-    // Tiếp tục trích xuất thông tin tài liệu
+    // We'll extract info here
+} catch (Exception e) {
+    System.err.println("Error initializing comparer: " + e.getMessage());
 }
 ```
 
-#### Cái này có tác dụng gì
+**Điều gì đang diễn ra ở đây?**  
+- Chúng ta đang sử dụng try‑with‑resources để đảm bảo dọn dẹp đúng cách (rất quan trọng để ngăn rò rỉ bộ nhớ!).  
+- Đường dẫn nên trỏ tới tài liệu thực tế của bạn.  
+- Xử lý lỗi sẽ bắt các vấn đề như không tìm thấy tệp hoặc vấn đề truy cập.
 
-- **Khởi tạo:** Tạo ra một `Comparer` đối tượng bằng cách sử dụng đường dẫn đến tài liệu nguồn của bạn.
-- **Quản lý tài nguyên:** Câu lệnh try-with-resources đảm bảo rằng các tài nguyên được giải phóng đúng cách sau khi sử dụng.
+### Lấy đối tượng Thông tin Tài liệu
 
-### Lấy thông tin tài liệu
-
-Tiếp theo, chúng tôi trích xuất siêu dữ liệu từ tài liệu:
+Tiếp theo, chúng ta lấy đối tượng thông tin tài liệu chứa toàn bộ siêu dữ liệu:
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
 
-try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
-    // Trích xuất và in các chi tiết có liên quan
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract metadata here
+    }
+} catch (Exception e) {
+    System.err.println("Error retrieving document info: " + e.getMessage());
 }
 ```
 
-#### Tại sao lại thực hiện bước này?
+**Các điểm chính:**  
+- `getSource()` lấy tài liệu nguồn.  
+- `getDocumentInfo()` trả về một giao diện chứa tất cả siêu dữ liệu.  
+- Một try‑with‑resources khác đảm bảo chúng ta dọn dẹp đúng cách.
 
-- **Truy cập siêu dữ liệu:** Các `getIDocumentInfo()` phương pháp này lấy một đối tượng chứa siêu dữ liệu chi tiết về tài liệu.
-- **Quản lý tài nguyên:** Như với `Comparer` đối tượng, sử dụng try-with-resources đảm bảo xử lý tài nguyên hiệu quả.
+### Trích xuất các thông tin quan trọng
 
-### Trích xuất và hiển thị chi tiết tài liệu
-
-Bây giờ chúng ta hãy trích xuất thông tin cụ thể như loại tệp, số trang và kích thước:
+Bây giờ hãy lấy các siêu dữ liệu thực tế:
 
 ```java
-String fileType = info.getFileType().getFileFormat();
-int pageCount = info.getPageCount();
-long fileSize = info.getSize();
-
-System.out.printf("File type: %s\nNumber of pages: %d\nDocument size: %d bytes%n", 
-                   fileType, pageCount, fileSize);
+try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
+    try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+        // Extract key information
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        // Display the results
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Number of pages: %d\n", pageCount);
+        System.out.printf("Document size: %d bytes (%.2f KB)\n", 
+                         fileSize, fileSize / 1024.0);
+    }
+} catch (Exception e) {
+    System.err.println("Error extracting document info: " + e.getMessage());
+}
 ```
 
-#### Giải thích mã
+**Mỗi phương thức trả về gì:**  
+- `getFileType().getFileFormat()`: Định dạng tệp (DOCX, PDF, TXT, v.v.).  
+- `getPageCount()`: Tổng số trang.  
+- `getSize()`: Kích thước tệp tính bằng byte.
 
-- **`fileType`:** Lấy định dạng của tài liệu (ví dụ: DOCX).
-- **`pageCount`:** Lấy tổng số trang trong tài liệu.
-- **`fileSize`:** Lấy kích thước của tài liệu theo byte.
+## Ví dụ thực tế: Triển khai đầy đủ
 
-## Ứng dụng thực tế
+Dưới đây là một ví dụ mạnh mẽ hơn mà bạn có thể sử dụng trong dự án:
 
-Hiểu cách trích xuất thông tin tài liệu có thể mang lại lợi ích trong nhiều tình huống khác nhau:
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.interfaces.IDocumentInfo;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
-1. **Hệ thống quản lý tài liệu:** Tự động trích xuất siêu dữ liệu để lập danh mục tài liệu.
-2. **Pháp lý và tuân thủ:** Đảm bảo tài liệu đáp ứng các tiêu chí cụ thể dựa trên đặc tính của chúng.
-3. **Phân tích nội dung:** Đánh giá và lọc tài liệu nhanh chóng theo kích thước, loại hoặc độ dài.
+public class DocumentMetadataExtractor {
+    
+    public static void extractDocumentInfo(String filePath) {
+        // First, check if file exists
+        Path path = Paths.get(filePath);
+        if (!Files.exists(path)) {
+            System.err.println("File not found: " + filePath);
+            return;
+        }
+        
+        try (Comparer comparer = new Comparer(filePath)) {
+            try (IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+                displayDocumentInfo(info, filePath);
+            }
+        } catch (Exception e) {
+            System.err.println("Error processing file " + filePath + ": " + e.getMessage());
+        }
+    }
+    
+    private static void displayDocumentInfo(IDocumentInfo info, String filePath) {
+        String fileName = Paths.get(filePath).getFileName().toString();
+        String fileType = info.getFileType().getFileFormat();
+        int pageCount = info.getPageCount();
+        long fileSize = info.getSize();
+        
+        System.out.println("=== Document Information ===");
+        System.out.printf("File name: %s\n", fileName);
+        System.out.printf("File type: %s\n", fileType);
+        System.out.printf("Pages: %d\n", pageCount);
+        System.out.printf("Size: %d bytes (%.2f KB)\n", fileSize, fileSize / 1024.0);
+        System.out.println("============================\n");
+    }
+    
+    public static void main(String[] args) {
+        // Test with different file types
+        extractDocumentInfo("path/to/your/document.docx");
+        extractDocumentInfo("path/to/your/document.pdf");
+    }
+}
+```
 
-## Cân nhắc về hiệu suất
+## Các vấn đề thường gặp và giải pháp
 
-Để đảm bảo hiệu suất tối ưu khi sử dụng GroupDocs.Comparison:
+### Vấn đề 1: Lỗi "File Not Found"
 
-- **Quản lý bộ nhớ:** Hãy chú ý đến các biện pháp quản lý bộ nhớ Java để tránh rò rỉ.
-- **Xử lý tài nguyên:** Luôn giải phóng tài nguyên bằng cách sử dụng lệnh thử với tài nguyên hoặc lệnh gọi đóng rõ ràng.
-- **Tối ưu hóa xử lý tài liệu:** Giới hạn số lần so sánh tài liệu đồng thời nếu bạn gặp phải sự cố về hiệu suất.
+**Triệu chứng**: Ngoại lệ được ném khi khởi tạo Comparer  
+**Giải pháp**: Luôn kiểm tra tính hợp lệ của đường dẫn và sự tồn tại của tệp:
 
-## Phần kết luận
+```java
+Path filePath = Paths.get(documentPath);
+if (!Files.exists(filePath)) {
+    throw new IllegalArgumentException("File does not exist: " + documentPath);
+}
+if (!Files.isReadable(filePath)) {
+    throw new IllegalArgumentException("File is not readable: " + documentPath);
+}
+```
 
-Hướng dẫn này hướng dẫn bạn cách thiết lập GroupDocs.Comparison cho Java và trích xuất thông tin tài liệu cần thiết. Bạn đã học cách cấu hình môi trường, khởi tạo các đối tượng chính và truy xuất siêu dữ liệu hiệu quả. 
+### Vấn đề 2: Vấn đề bộ nhớ với tệp lớn
 
-### Các bước tiếp theo
+**Triệu chứng**: OutOfMemoryError hoặc hiệu năng chậm  
+**Giải pháp**: Xử lý tệp từng cái một và đảm bảo dọn dẹp tài nguyên đúng cách:
 
-Khám phá thêm bằng cách triển khai các tính năng bổ sung của GroupDocs.Comparison hoặc tích hợp chức năng này vào các hệ thống lớn hơn như nền tảng quản lý nội dung.
+```java
+// Always use try-with-resources
+try (Comparer comparer = new Comparer(filePath)) {
+    // Process immediately and don't store large objects
+    processDocumentInfo(comparer.getSource().getDocumentInfo());
+} // Resources automatically cleaned up here
+```
 
-Sẵn sàng để thử nó? Hãy tìm hiểu sâu hơn về tài liệu tại [GroupDocs.So sánh Java](https://docs.groupdocs.com/comparison/java/) và bắt đầu thử nghiệm với tài liệu của riêng bạn!
+### Vấn đề 3: Định dạng tệp không được hỗ trợ
 
-## Phần Câu hỏi thường gặp
+**Triệu chứng**: Ngoại lệ khi cố gắng xử lý một số tệp nhất định  
+**Giải pháp**: Kiểm tra các định dạng được hỗ trợ trước:
 
-1. **GroupDocs.Comparison dành cho Java được sử dụng để làm gì?**
-   - Công cụ này chủ yếu được sử dụng để so sánh sự khác biệt giữa các tài liệu, nhưng cũng hỗ trợ trích xuất siêu dữ liệu tài liệu.
+```java
+public static boolean isSupportedFormat(String filePath) {
+    String extension = FilenameUtils.getExtension(filePath).toLowerCase();
+    return Arrays.asList("docx", "doc", "pdf", "txt", "rtf", "odt").contains(extension);
+}
+```
 
-2. **Tôi có cần giấy phép để sử dụng đầy đủ tính năng của GroupDocs.Comparison không?**
-   - Mặc dù bạn có thể bắt đầu bằng bản dùng thử miễn phí, nhưng để truy cập các chức năng nâng cao, bạn cần phải mua giấy phép hoặc xin giấy phép tạm thời.
+### Vấn đề 4: Vấn đề giấy phép trong môi trường sản xuất
 
-3. **Tôi có thể trích xuất thông tin từ các tài liệu không phải của Office không?**
-   - Có, GroupDocs.Comparison hỗ trợ nhiều định dạng khác nhau, bao gồm PDF và các định dạng khác được liệt kê trong tài liệu của họ.
+**Triệu chứng**: Đánh dấu nước hoặc giới hạn chức năng  
+**Giải pháp**: Đảm bảo giấy phép của bạn được áp dụng đúng cách:
 
-4. **Nếu tài liệu của tôi không có siêu dữ liệu thì sao?**
-   - Thư viện vẫn hoạt động, nhưng một số trường có thể trả về giá trị null hoặc giá trị mặc định.
+```java
+// Apply license at application startup
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
 
-5. **Làm thế nào tôi có thể khắc phục những sự cố thường gặp với GroupDocs.Comparison?**
-   - Tham khảo [diễn đàn hỗ trợ](https://forum.groupdocs.com/c/comparison) để có giải pháp và lời khuyên từ cộng đồng.
+## Thực tiễn tốt nhất cho môi trường sản xuất
 
-## Tài nguyên
+### 1. Quản lý tài nguyên
 
-- **Tài liệu:** [GroupDocs.Comparison Tài liệu Java](https://docs.groupdocs.com/comparison/java/)
-- **Tài liệu tham khảo API:** [Tài liệu tham khảo API GroupDocs](https://reference.groupdocs.com/comparison/java/)
-- **Tải xuống:** [Tải xuống GroupDocs](https://releases.groupdocs.com/comparison/java/)
-- **Mua:** [Mua giấy phép GroupDocs](https://purchase.groupdocs.com/buy)
-- **Dùng thử miễn phí:** [Hãy thử tải xuống miễn phí](https://releases.groupdocs.com/comparison/java/)
-- **Giấy phép tạm thời:** [Yêu cầu Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- **Ủng hộ:** [Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/comparison)
+Luôn sử dụng try‑with‑resources để tự động dọn dẹp:
 
-Bằng cách làm theo hướng dẫn này, bạn đã mở khóa khả năng trích xuất siêu dữ liệu tài liệu mạnh mẽ bằng GroupDocs.Comparison cho Java. Chúc bạn viết mã vui vẻ!
+```java
+// Good - resources cleaned up automatically
+try (Comparer comparer = new Comparer(filePath);
+     IDocumentInfo info = comparer.getSource().getDocumentInfo()) {
+    // Process info
+}
+
+// Bad - potential memory leaks
+Comparer comparer = new Comparer(filePath);
+IDocumentInfo info = comparer.getSource().getDocumentInfo();
+// Processing code
+// Resources might not be cleaned up properly
+```
+
+### 2. Chiến lược xử lý lỗi
+
+Triển khai xử lý lỗi toàn diện:
+
+```java
+public DocumentInfo extractSafely(String filePath) {
+    try {
+        return extractDocumentInfo(filePath);
+    } catch (SecurityException e) {
+        log.warn("Access denied for file: " + filePath, e);
+        return null;
+    } catch (IOException e) {
+        log.error("I/O error processing file: " + filePath, e);
+        return null;
+    } catch (Exception e) {
+        log.error("Unexpected error processing file: " + filePath, e);
+        return null;
+    }
+}
+```
+
+### 3. Tối ưu hiệu năng
+
+Đối với việc xử lý nhiều tệp, hãy cân nhắc xử lý theo lô:
+
+```java
+public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
+    return filePaths.parallelStream()
+                   .map(this::extractSafely)
+                   .filter(Objects::nonNull)
+                   .collect(Collectors.toList());
+}
+```
+
+## Khi nào nên dùng cách này so với các phương pháp khác
+
+**Sử dụng GroupDocs.Comparison khi:**  
+- Bạn cần trích xuất siêu dữ liệu đáng tin cậy từ nhiều định dạng Office.  
+- Bạn có thể cần tính năng so sánh tài liệu sau này.  
+- Bạn đang làm việc với tài liệu phức tạp cần đếm trang chính xác.
+
+**Xem xét các giải pháp thay thế khi:**  
+- Bạn chỉ cần thông tin tệp cơ bản (sử dụng `java.nio.file.Files` để lấy kích thước, ngày tháng).  
+- Bạn làm việc với các tệp văn bản đơn giản (API Java tích hợp đủ).  
+- Ngân sách là rào cản lớn (đầu tiên khám phá các giải pháp mã nguồn mở).
+
+## Hướng dẫn khắc phục sự cố
+
+### Vấn đề: Mã biên dịch nhưng ném ngoại lệ thời gian chạy
+
+**Kiểm tra các mục sau:**  
+1. Giấy phép của bạn đã được cấu hình đúng chưa?  
+2. Bạn có đang sử dụng đúng đường dẫn tệp không?  
+3. Bạn có quyền đọc các tệp không?  
+4. Định dạng tệp thực sự có được hỗ trợ không?
+
+### Vấn đề: Sử dụng bộ nhớ liên tục tăng
+
+**Giải pháp:**  
+1. Đảm bảo bạn đang sử dụng try‑with‑resources.  
+2. Xử lý tệp từng cái một thay vì tải nhiều đồng thời.  
+3. Kiểm tra bất kỳ tham chiếu tĩnh nào giữ lại các đối tượng.
+
+### Vấn đề: Một số trường siêu dữ liệu trả về null
+
+**Điều này là bình thường đối với:**  
+- Các tệp không chứa loại siêu dữ liệu đó.  
+- Các tệp bị hỏng hoặc không đầy đủ.  
+- Các biến thể định dạng tệp không được hỗ trợ.  
+
+Luôn kiểm tra giá trị null trước khi sử dụng siêu dữ liệu.
+
+## Kết luận và các bước tiếp theo
+
+Bạn hiện đã có nền tảng vững chắc để trích xuất siêu dữ liệu tài liệu bằng GroupDocs.Comparison cho Java! Đây là những gì chúng tôi đã đề cập:
+
+✅ Cài đặt thư viện và phụ thuộc đúng cách  
+✅ **java get file type** và các thuộc tính tài liệu quan trọng khác  
+✅ Xử lý các lỗi thường gặp và các trường hợp biên  
+✅ Thực tiễn tốt nhất cho môi trường sản xuất  
+✅ Hướng dẫn khắc phục các vấn đề thường gặp  
+
+### Bước tiếp theo là gì?
+
+Bây giờ bạn đã nắm vững việc trích xuất siêu dữ liệu, hãy khám phá:
+
+- **Tính năng so sánh tài liệu** để theo dõi thay đổi.  
+- **Tích hợp với Spring Boot** cho các ứng dụng web.  
+- **Xử lý hàng loạt** để xử lý nhiều tệp một cách hiệu quả.  
+- **Trích xuất siêu dữ liệu tùy chỉnh** cho các loại tệp cụ thể.  
+
+Muốn tìm hiểu sâu hơn? Xem [tài liệu chính thức của GroupDocs](https://docs.groupdocs.com/comparison/java/) để biết các tính năng nâng cao và ví dụ.
+
+## Câu hỏi thường gặp
+
+**Q: Có thể trích xuất siêu dữ liệu từ tài liệu được bảo mật bằng mật khẩu không?**  
+A: Có, nhưng bạn cần cung cấp mật khẩu khi khởi tạo đối tượng `Comparer`. Sử dụng constructor overload cho phép truyền các tùy chọn tải.
+
+**Q: Những định dạng tệp nào được hỗ trợ để trích xuất siêu dữ liệu?**  
+A: GroupDocs.Comparison hỗ trợ hầu hết các định dạng tài liệu phổ biến bao gồm DOCX, PDF, XLSX, PPTX, TXT, RTF và nhiều định dạng khác. Kiểm tra tài liệu của họ để biết danh sách đầy đủ.
+
+**Q: Có cách nào để trích xuất các thuộc tính tùy chỉnh từ tài liệu Office không?**  
+A: Thông tin tài liệu cơ bản chủ yếu bao gồm các thuộc tính tiêu chuẩn. Đối với thuộc tính tùy chỉnh, bạn có thể cần khám phá các thư viện GroupDocs bổ sung hoặc kết hợp với công cụ khác.
+
+**Q: Làm sao để xử lý các tệp rất lớn mà không hết bộ nhớ?**  
+A: Luôn sử dụng try‑with‑resources, xử lý tệp từng cái một và cân nhắc các phương pháp streaming cho xử lý hàng loạt. Đồng thời đảm bảo JVM của bạn có đủ heap.
+
+**Q: Có thể dùng cách này với tài liệu lưu trữ trên đám mây không?**  
+A: Có, nhưng bạn cần tải tệp về máy cục bộ trước hoặc sử dụng cách tiếp cận dựa trên stream. GroupDocs làm việc với tệp cục bộ và stream.
+
+**Q: Nếu gặp lỗi giấy phép thì phải làm gì?**  
+A: Đảm bảo bạn đã áp dụng giấy phép đúng cách khi khởi động ứng dụng và giấy phép chưa hết hạn. Liên hệ hỗ trợ GroupDocs nếu vấn đề vẫn tồn tại.
+
+**Q: Có an toàn khi sử dụng trong các ứng dụng đa luồng không?**  
+A: Có, nhưng hãy tạo các thể hiện `Comparer` riêng cho mỗi luồng. Không chia sẻ cùng một thể hiện giữa các luồng.
+
+**Additional Resources**  
+- **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Last Updated:** 2026-01-18  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

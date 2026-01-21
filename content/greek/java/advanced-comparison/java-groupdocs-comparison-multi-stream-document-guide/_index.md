@@ -425,12 +425,6 @@ try {
 
 **Ξεκινήστε την Κατασκευή Σήμερα**: Προσαρμόστε τα παραδείγματα κώδικα στο έργο σας, δοκιμάστε με πραγματικά έγγραφα και βελτιώστε. Ο καλύτερος τρόπος για να κυριαρχήσετε τη σύγκριση εγγράφων είναι εφαρμόζοντας αυτές τις πρακτικές στις δικές σας προκλήσεις.
 
----
-
-**Τελευταία Ενημέρωση:** 2025-12-23  
-**Δοκιμασμένο Με:** GroupDocs.Comparison 25.2  
-**Συγγραφέας:** GroupDocs  
-
 **Σχετικοί Πόροι:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -439,3 +433,9 @@ try {
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2025-12-23  
+**Δοκιμασμένο Με:** GroupDocs.Comparison 25.2  
+**Συγγραφέας:** GroupDocs  

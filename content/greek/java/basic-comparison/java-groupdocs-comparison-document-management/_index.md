@@ -14,7 +14,7 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'groupdocs comparison java: Οδηγός Σύγκρισης Εγγράφων'
+title: 'groupdocs comparison java - Οδηγός Σύγκρισης Εγγράφων'
 type: docs
 url: /el/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1

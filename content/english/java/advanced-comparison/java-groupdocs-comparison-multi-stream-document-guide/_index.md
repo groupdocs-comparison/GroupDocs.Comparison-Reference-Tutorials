@@ -1,5 +1,5 @@
 ---
-title: "How to Use GroupDocs: Java Document Comparison Streams – Complete Guide"
+title: "How to Use GroupDocs - Java Document Comparison Streams – Complete Guide"
 linktitle: "Java Document Comparison Streams Guide"
 description: "Learn how to use GroupDocs for Java document comparison streams, compare multiple documents java, and follow document comparison best practices."
 keywords: "Java document comparison streams, GroupDocs comparison Java tutorial, multi document comparison Java, Java stream document processing, how to use groupdocs"
@@ -416,12 +416,6 @@ You've now got a solid foundation for implementing **how to use GroupDocs** for 
 
 **Start Building Today**: Adapt the code samples to your project, test with real documents, and iterate. The best way to master document comparison is by applying these patterns to the challenges you face.
 
----
-
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Related Resources:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -430,5 +424,11 @@ You've now got a solid foundation for implementing **how to use GroupDocs** for 
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Last Updated:** 2025-12-23  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
 
 ---

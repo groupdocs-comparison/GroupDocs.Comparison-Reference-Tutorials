@@ -13,7 +13,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: مقارنة المستندات بسهولة'
+title: 'GroupDocs Comparison Java - مقارنة المستندات بسهولة'
 type: docs
 url: /ar/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -446,12 +446,6 @@ try (Comparer comparer = new Comparer("source.docx")) {
 **س: كيف أحصل على الدعم إذا واجهت مشاكل؟**  
 ج: منتدى [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) مصدر ممتاز للمجتمع، ويحصل حاملو الترخيص التجاري على دعم ذو أولوية.
 
----
-
-**آخر تحديث:** 2025-12-23  
-**تم الاختبار باستخدام:** GroupDocs.Comparison 25.2 for Java  
-**المؤلف:** GroupDocs  
-
 **موارد إضافية**  
 - **الوثائق:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **مرجع API:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -459,3 +453,9 @@ try (Comparer comparer = new Comparer("source.docx")) {
 - **تحميل أحدث إصدار:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **خيارات الشراء:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **تجربة مجانية:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**آخر تحديث:** 2025-12-23  
+**تم الاختبار باستخدام:** GroupDocs.Comparison 25.2 for Java  
+**المؤلف:** GroupDocs  

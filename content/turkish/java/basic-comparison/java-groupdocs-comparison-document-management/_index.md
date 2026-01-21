@@ -14,53 +14,60 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'groupdocs comparison java: Belge Karşılaştırma Öğreticisi'
+title: 'groupdocs comparison java - Belge Karşılaştırma Öğreticisi'
 type: docs
 url: /tr/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1
 ---
 
-# groupdocs comparison java: Master GroupDocs.Comparison API
+# groupdocs karşılaştırma java: Master GroupDocs.Comparison API'si
 
-**Java uygulamanızda belge sürüm kontrolüyle mi mücadele ediyorsunuz?** Yalnız değilsiniz. Birden fazla belge sürümünü yönetmek, değişiklikleri izlemek ve görsel ön izlemeler oluşturmak, doğru araçlar olmadan kısa sürede bir kabusa dönüşebilir.
+**Java uygulamanızda belge sürüm kontrolüyle mi mücadele ediliyordu?** Yalnız yoktu. Birden fazla belge yapılandırması, düzenlenmiş izleme ve görsel ön izlemeler oluşturur, doğru araçlar olmadan kısa sürede bir kabusa dönüşebilir.
 
-İşte **GroupDocs.Comparison for Java** devreye giriyor. Bu güçlü API, belgeleri karşılaştırmanıza, farkları vurgulamanıza ve sadece birkaç satır kodla sayfa ön izlemeleri oluşturmanıza olanak tanır. İçerik yönetim sistemi geliştiriyor, **java compare word files** yapmanız gerekiyor ya da **java compare pdf documents** istiyorsanız, bu öğretici sizi hızlıca çalışır duruma getirecek.
+İşte **GroupDocs.Comparison for Java** devreye giriyor. Bu güçlü API, grafiklerinizi karşılaştırmanıza, farklarınızı vurgulamanıza ve yalnızca birkaç satır kodla sayfa ön izlemeleri oluşturmanıza olanak tanır. İçerik yönetim sistemi gelişiyor, **java word dosyalarını karşılaştırma** yapmanız gerekiyor ya da **java pdf belgelerini karşılaştırma** istiyorsanız, bu eğitimi sizi hızlı bir şekilde çalışmaya başlayacak.
 
-## Quick Answers
-- **What does groupdocs comparison java do?** It compares two or more documents, highlights changes, and can produce visual previews.  
-- **Which file formats are supported?** Word, PDF, Excel, PowerPoint, images, HTML, and many more.  
-- **Do I need a license for production?** Yes – a valid GroupDocs license removes watermarks and unlocks full features.  
-- **Can I handle large documents?** Yes, with proper memory management and preview pagination.  
-- **Where can I find the latest Maven dependency?** On the GroupDocs repository – check the latest version before adding it.
+## Hızlı Yanıtlar
+- **Grup belgeleri karşılaştırma java'sı ne işe yarar?** İki veya daha fazla belgeyi karşılaştırır, değişiklikleri vurgular ve görsel önizlemeler oluşturabilir.
+- **Hangi dosya biçimleri destekleniyor?** Word, PDF, Excel, PowerPoint, resimler, HTML ve çok daha fazlası.
+- **Üretim için lisansa ihtiyacım var mı?** Evet – geçerli bir GroupDocs lisansı filigranları kaldırır ve tüm özelliklerin kilidini açar.
 
-## What is groupdocs comparison java?
-GroupDocs.Comparison for Java is a library that programmatically compares documents, identifies text, formatting, and image differences, and optionally creates a result document that visualizes those changes.
+- **Büyük belgeleri işleyebilir miyim?** Evet, uygun bellek yönetimi ve önizleme sayfalama ile.
 
-## Why use GroupDocs.Comparison in Java projects?
-- **Accurate change detection** across many file types.  
-- **Easy integration** with Maven or Gradle.  
-- **Built‑in preview generation** for quick visual reviews.  
-- **Scalable performance** when you follow the recommended best practices for handling large documents.
+- **En son Maven bağımlılığını nerede bulabilirim?** GroupDocs deposunda – eklemeden önce en son sürümü kontrol edin.
 
-## Prerequisites: What You Need to Get Started
+## Java için GroupDocs karşılaştırma nedir?
 
-### Essential Requirements
+Java için GroupDocs.Comparison, belgeleri programatik olarak karşılaştıran, metin, biçimlendirme ve görüntü farklılıklarını belirleyen ve isteğe bağlı olarak bu değişiklikleri görselleştiren bir sonuç belgesi oluşturan bir kütüphanedir.
 
-Before we jump into the code, make sure you have these basics covered:
+## Java projelerinde GroupDocs.Comparison neden kullanılır?
 
-**Development Environment:**
-- Java Development Kit (JDK) 8 or later (JDK 11+ recommended for better performance)
-- Maven or Gradle for dependency management
-- Your favorite IDE (IntelliJ IDEA, Eclipse, or VS Code work great)
+- Birçok dosya türünde **doğru değişiklik tespiti**.
 
-**Knowledge Prerequisites:**
-- Basic Java programming skills (you should be comfortable with classes and methods)
-- Understanding of file I/O operations in Java
-- Familiarity with Maven dependencies (don’t worry—we’ll walk through this)
+- Maven veya Gradle ile **kolay entegrasyon**.
 
-### Adding GroupDocs.Comparison to Your Project
+- Hızlı görsel incelemeler için **yerleşik önizleme oluşturma**.
 
-Getting started is straightforward. Add this dependency to your `pom.xml`:
+- Büyük belgeleri işlemek için önerilen en iyi uygulamaları izlediğinizde **ölçeklenebilir performans** elde edersiniz.
+
+## Önkoşullar: Başlamak İçin İhtiyacınız Olanlar
+
+### Temel Gereksinimler
+
+Koda geçmeden önce, şu temel bilgilere sahip olduğunuzdan emin olun:
+
+**Geliştirme Ortamı:**
+- Java Geliştirme Kiti (JDK) 8 veya üstü (daha iyi performans için JDK11+ önerilir)
+- Bağımlılık yönetimi için Maven veya Gradle
+- Favori IDE'niz (IntelliJ IDEA, Eclipse veya VSCode harika çalışır)
+
+**Bilgi Önkoşulları:**
+- Temel Java programlama becerileri (sınıflar ve metotlarla rahat olmalısınız)
+- Java'da dosya G/Ç işlemlerinin anlaşılması
+- Maven bağımlılıklarına aşinalık (endişelenmeyin, bunu adım adım ele alacağız)
+
+### GroupDocs.Comparison'ı Projenize Ekleme
+
+Başlamak oldukça kolaydır. Bu bağımlılığı `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -79,21 +86,21 @@ Getting started is straightforward. Add this dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**Pro Tip:** Always check for the latest version on the GroupDocs website to ensure you get the newest features and bug fixes.
+**Profesyonel İpucu:** En yeni özelliklere ve hata düzeltmelerine sahip olduğunuzdan emin olmak için her zaman GroupDocs web sitesinde en son sürümü kontrol edin.
 
-## Licensing (Don't Skip This!)
+## Lisanslama (Bunu Atlamayın!)
 
-While you can start with a free trial, you'll want to set up proper licensing for production use:
+Ücretsiz deneme sürümüyle başlayabilirsiniz, ancak üretim kullanımı için uygun lisanslamayı ayarlamanız gerekecektir:
 
-1. **Free Trial**: Download from [GroupDocs](https://releases.groupdocs.com/comparison/java/)
-2. **Temporary License**: Get one [here](https://purchase.groupdocs.com/temporary-license/) for extended testing
-3. **Full License**: Purchase from [GroupDocs Store](https://purchase.groupdocs.com/buy)
+1. **Ücretsiz Deneme Sürümü**: [GroupDocs](https://releases.groupdocs.com/comparison/java/) adresinden indirin
+2. **Geçici Lisans**: Daha uzun süreli test için [buradan](https://purchase.groupdocs.com/temporary-license/) edinin
+3. **Tam Lisans**: [GroupDocs Mağazasından](https://purchase.groupdocs.com/buy) satın alın
 
-## Initial Setup: Getting GroupDocs.Comparison Ready
+## İlk Kurulum: GroupDocs.Comparison'ı Hazırlama
 
-### Basic Initialization
+### Temel Başlatma
 
-Here's how you get started with your first comparison:
+İlk karşılaştırmanıza şu şekilde başlayabilirsiniz:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -103,37 +110,37 @@ import com.groupdocs.comparison.examples.SampleFiles;
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**What's happening here?** We're creating a `Comparer` object that will handle all our document comparison operations. Think of it as your document comparison workspace.
+**Burada neler oluyor?** Tüm belge karşılaştırma işlemlerimizi yönetecek bir `Karşılaştırıcı` nesnesi oluşturuyoruz. Bunu belge karşılaştırma çalışma alanınız olarak düşünün.
 
-## Step-by-Step Implementation Guide
+## Adım Adım Uygulama Kılavuzu
 
-### Part 1: Setting Up Document Comparison
+### Bölüm 1: Belge Karşılaştırmasını Kurma
 
-Let's build a robust document comparison system that you can actually use in production.
+Gerçekten üretimde kullanabileceğiniz sağlam bir belge karşılaştırma sistemi oluşturalım.
 
-#### Step 1: Initialize Your Comparer
+#### Adım 1: Karşılaştırıcıyı Başlatma
 
 ```java
 // Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Why this matters:** The source document serves as your baseline. All comparisons will show what changed relative to this document.
+**Bu neden önemli:** Kaynak belge, temel referans noktanız olarak görev yapar. Tüm karşılaştırmalar, bu belgeye göre nelerin değiştiğini gösterecektir.
 
-#### Step 2: Add Target Documents
+#### Adım 2: Hedef Belgeleri Ekleyin
 
 ```java
 // Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**Real‑world scenario:** In a contract management system, your source might be the original contract, and the target could be the revised version from the legal team.
+**Gerçek dünya senaryosu:** Bir sözleşme yönetim sisteminde, kaynağınız orijinal sözleşme, hedefiniz ise hukuk ekibinden gelen revize edilmiş versiyon olabilir.
 
-### Part 2: Generating Page Previews
+### Bölüm 2: Sayfa Önizlemeleri Oluşturma
 
-Sometimes you need visual previews of your documents. Here's how to generate them efficiently:
+Bazen belgelerinizin görsel önizlemelerine ihtiyacınız olur. İşte bunları verimli bir şekilde nasıl oluşturacağınız:
 
-#### Step 1: Set Up Output Stream Creation
+#### Adım 1: Çıktı Akışı Oluşturmayı Ayarlayın
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -154,9 +161,9 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**Key insight:** This delegate pattern gives you complete control over where and how your preview images are saved. You could easily modify this to save to cloud storage or a database.
+**Önemli nokta:** Bu delege modeli, önizleme resimlerinizin nereye ve nasıl kaydedileceği konusunda size tam kontrol sağlar. Bunu kolayca bulut depolama alanına veya bir veritabanına kaydetmek üzere değiştirebilirsiniz.
 
-#### Step 2: Configure Preview Options
+#### Adım 2: Önizleme Seçeneklerini Yapılandırma
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -169,36 +176,36 @@ PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
     .build();
 ```
 
-**Performance tip:** Only generate previews for the pages you actually need. This saves processing time and storage space.
+**Performans ipucu:** Yalnızca gerçekten ihtiyacınız olan sayfalar için önizleme oluşturun. Bu, işlem süresini ve depolama alanını azaltır.
 
-#### Step 3: Generate the Previews
+#### Adım 3: Önizlemeleri Oluşturma
 
 ```java
 // Generate page previews
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**What's happening:** This creates PNG images of the specified pages from your target document. Perfect for creating thumbnails or quick visual reviews.
+**Neler oluyor:** Bu, hedef belgenizdeki belirtilen sayfaların PNG resimlerini oluşturur. Küçük önizlemeler veya hızlı görsel incelemeler oluşturmak için mükemmeldir.
 
-## Supported File Formats
+## Desteklenen Dosya Biçimleri
 
-GroupDocs.Comparison supports a wide range of document formats, making it versatile for different use cases:
+GroupDocs.Comparison, çok çeşitli belge biçimlerini destekleyerek farklı kullanım durumları için çok yönlü bir çözüm sunar:
 
-**Popular Formats:**
+**Popüler Biçimler:**
 - **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
-- **PDF Documents**: All versions of PDF files
-- **Text Files**: Plain text (.txt), Rich Text (.rtf)
-- **Images**: JPEG, PNG, BMP, GIF
-- **Web Formats**: HTML, MHTML
-- **Other**: ODT, ODS, ODP (OpenDocument formats)
+- **PDF Belgeleri**: Tüm PDF dosya sürümleri
+- **Metin Dosyaları**: Düz metin (.txt), Zengin Metin (.rtf)
+- **Resimler**: JPEG, PNG, BMP, GIF
+- **Web Biçimleri**: HTML, MHTML
+- **Diğer**: ODT, ODS, ODP (OpenDocument biçimleri)
 
-## Common Issues and Solutions
+## Sık Karşılaşılan Sorunlar ve Çözümler
 
-### Problem 1: FileNotFoundException During Preview Generation
+### Sorun 1: Önizleme Oluşturma Sırasında FileNotFoundException Hatası
 
-**Symptoms:** Your code throws exceptions when trying to create output streams.
+**Belirtiler:** Kodunuz, çıktı akışları oluşturmaya çalışırken istisnalar fırlatıyor.
 
-**Solution:**
+**Çözüm:**
 
 ```java
 Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
@@ -221,11 +228,11 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-### Problem 2: Memory Issues with Large Documents
+### Problem 2: Büyük Belgelerle İlgili Bellek Sorunları
 
-**Symptoms:** `OutOfMemoryError` when processing large files or many pages.
+**Belirtiler:** Büyük dosyaları veya çok sayıda sayfayı işlerken `OutOfMemoryError` hatası.
 
-**Solution:** Process documents in chunks and dispose of objects properly:
+**Çözüm:** Belgeleri parçalar halinde işleyin ve nesneleri düzgün bir şekilde atın:
 
 ```java
 // Process fewer pages at a time
@@ -241,11 +248,11 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 } // Automatic cleanup
 ```
 
-### Problem 3: Licensing Issues
+### Problem 3: Lisanslama Sorunları
 
-**Symptoms:** Watermarks on output or limited functionality.
+**Belirtiler:** Çıktıda filigran veya sınırlı işlevsellik.
 
-**Solution:** Ensure your license is properly applied:
+**Çözüm:** Lisansınızın doğru şekilde uygulandığından emin olun:
 
 ```java
 // Apply license at the start of your application
@@ -253,15 +260,19 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Performance Tips and Best Practices (java comparison best practices)
+## Performans İpuçları ve En İyi Uygulamalar (Java karşılaştırma en iyi uygulamaları)
 
-1. **Limit Preview Generation** – Only create previews for pages you actually need.  
-2. **Choose the Right Image Format** – PNG for loss‑less quality, JPEG for smaller files.  
-3. **Implement Caching** – Store comparison results to avoid re‑processing identical documents.  
-4. **Manage Memory** – Use try‑with‑resources and process large files in smaller batches.  
-5. **Dispose of Comparer Objects** – Always close the `Comparer` when finished.
+1. **Önizleme Oluşturmayı Sınırlayın** – Yalnızca gerçekten ihtiyacınız olan sayfalar için önizleme oluşturun.
 
-### Production‑Ready Code Pattern
+2. **Doğru Görüntü Formatını Seçin** – Kayıpsız kalite için PNG, daha küçük dosyalar için JPEG.
+
+3. **Önbellekleme Uygulayın** – Aynı belgelerin yeniden işlenmesini önlemek için karşılaştırma sonuçlarını saklayın.
+
+4. **Belleği Yönetin** – try-with-resources kullanın ve büyük dosyaları daha küçük gruplar halinde işleyin.
+
+5. **Karşılaştırıcı Nesnelerini Atın** – İşlem bittiğinde her zaman `Karşılaştırıcı`yı kapatın.
+
+### Üretime Hazır Kod Kalıbı
 
 ```java
 public class DocumentComparisonService {
@@ -291,9 +302,9 @@ public class DocumentComparisonService {
 }
 ```
 
-## Real‑World Implementation Examples
+## Gerçek Dünya Uygulama Örnekleri
 
-### Example 1: Contract Management System
+### Örnek 1: Sözleşme Yönetim Sistemi
 
 ```java
 public class ContractVersionManager {
@@ -312,7 +323,7 @@ public class ContractVersionManager {
 }
 ```
 
-### Example 2: Academic Paper Review
+### Örnek 2: Akademik Makale İncelemesi
 
 ```java
 public class AcademicDocumentReview {
@@ -332,10 +343,10 @@ public class AcademicDocumentReview {
 }
 ```
 
-## Frequently Asked Questions
+## Sıkça Sorulan Sorular
 
-**Q: How do I handle password‑protected documents?**  
-A: GroupDocs.Comparison can open encrypted files. Provide the password via `LoadOptions`:
+**S: Şifre korumalı belgeleri nasıl ele alabilirim?**
+C: GroupDocs.Comparison şifrelenmiş dosyaları açabilir. Şifreyi `LoadOptions` aracılığıyla sağlayın:
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -343,8 +354,8 @@ loadOptions.setPassword("your-password");
 Comparer comparer = new Comparer("protected-document.docx", loadOptions);
 ```
 
-**Q: Can I compare documents stored in cloud storage?**  
-A: Absolutely! Use input streams instead of file paths:
+**S: Bulut depolamada saklanan belgeleri karşılaştırabilir miyim?**
+C: Kesinlikle! Dosya yolları yerine giriş akışlarını kullanın:
 
 ```java
 InputStream sourceStream = getDocumentFromCloud("source-doc-id");
@@ -353,23 +364,23 @@ Comparer comparer = new Comparer(sourceStream);
 comparer.add(targetStream);
 ```
 
-**Q: What's the maximum file size GroupDocs.Comparison can handle?**  
-A: There’s no hard limit, but performance depends on available memory. For files larger than 100 MB, increase the JVM heap size or process in chunks.
+**S: GroupDocs.Comparison'ın işleyebileceği maksimum dosya boyutu nedir?**
+C: Kesin bir sınır yok, ancak performans mevcut belleğe bağlıdır. 100 MB'tan büyük dosyalar için JVM yığın boyutunu artırın veya dosyaları parçalar halinde işleyin.
 
-**Q: How accurate is the comparison algorithm?**  
-A: The library uses advanced diff algorithms that detect changes in text, formatting, images, and even embedded objects—ideal for legal or compliance use cases.
+**S: Karşılaştırma algoritması ne kadar doğrudur?**
+C: Kütüphane, metin, biçimlendirme, resimler ve hatta gömülü nesnelerdeki değişiklikleri algılayan gelişmiş fark algoritmaları kullanır; bu da yasal veya uyumluluk kullanım durumları için idealdir.
 
-**Q: Can I customize which types of changes are detected?**  
-A: Yes. Use `CompareOptions` to enable or disable detection of text, formatting, images, tables, etc.
+**S: Hangi değişiklik türlerinin algılanacağını özelleştirebilir miyim?**
+C: Evet. Metin, biçimlendirme, resimler, tablolar vb. algılamayı etkinleştirmek veya devre dışı bırakmak için `CompareOptions` kullanın.
 
-## Conclusion
+## Sonuç
 
-You now have a complete, production‑ready guide to **groupdocs comparison java**. By following the steps, best practices, and example patterns above, you can integrate powerful document comparison and preview capabilities into any Java application—whether you’re handling contract revisions, academic drafts, or large PDF archives.
+Artık **grup belgeleri karşılaştırma Java** için eksiksiz, üretime hazır bir kılavuzunuz var. Yukarıdaki adımları, en iyi uygulamaları ve örnek kalıpları izleyerek, sözleşme revizyonları, akademik taslaklar veya büyük PDF arşivleri ile ilgileniyor olsanız da, herhangi bir Java uygulamasına güçlü belge karşılaştırma ve önizleme yetenekleri entegre edebilirsiniz.
 
 ---
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
+**Son Güncelleme:** 2025-12-23
+**Test Edilen Sürüm:** GroupDocs.Comparison 25.2
+**Yazar:** GroupDocs
 
 ---

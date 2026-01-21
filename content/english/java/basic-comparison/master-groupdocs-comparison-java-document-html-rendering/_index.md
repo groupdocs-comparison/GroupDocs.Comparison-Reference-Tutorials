@@ -1,5 +1,5 @@
 ---
-title: "GroupDocs Comparison Java: Document Comparison Made Easy"
+title: "GroupDocs Comparison Java - Document Comparison Made Easy"
 linktitle: "Java Document Comparison Tutorial"
 description: "Learn how to use groupdocs comparison java to compare documents in Java. This step-by-step guide covers code examples, HTML rendering, and performance tips."
 keywords: "Java document comparison, compare documents Java, GroupDocs.Comparison tutorial, Java HTML document rendering, document diff Java"
@@ -440,12 +440,6 @@ A: Most common formats—including Word, PDF, Excel, and PowerPoint—can be ren
 **Q: How do I get support if I run into issues?**  
 A: The [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) is a great community resource, and commercial license holders receive priority support.
 
----
-
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - **Documentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -453,3 +447,9 @@ A: The [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) is a great co
 - **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Purchase Options:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Free Trial:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Last Updated:** 2025-12-23  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

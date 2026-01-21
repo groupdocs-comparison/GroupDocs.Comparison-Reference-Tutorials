@@ -307,12 +307,6 @@ J: Perpustakaan menangani konten Unicode dengan baik, termasuk bahasa yang ditul
 **T: Apa yang terjadi jika dokumen memiliki tata letak halaman yang berbeda?**  
 J: GroupDocs secara cerdas menangani perbedaan tata letak, fokus pada perubahan konten daripada variasi format. Anda dapat mengatur sensitivitas untuk mengontrol perilaku ini.
 
----
-
-**Terakhir Diperbarui:** 2025-12-23  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
-**Penulis:** GroupDocs  
-
 **Sumber Daya dan Pembelajaran Lanjutan**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -321,3 +315,9 @@ J: GroupDocs secara cerdas menangani perbedaan tata letak, fokus pada perubahan 
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-23  
+**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
+**Penulis:** GroupDocs  

@@ -307,12 +307,6 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 **Вопрос:** Что происходит, если у документов разные макеты страниц?  
 **Ответ:** GroupDocs интеллектуально учитывает различия в макете, фокусируясь на изменениях содержания, а не на визуальных различиях форматирования. Чувствительность можно настроить для управления этим поведением.
 
----
-
-**Последнее обновление:** 2025-12-23  
-**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
-**Автор:** GroupDocs  
-
 **Ресурсы и дальнейшее обучение**
 - [Документация GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [Полный справочник API](https://reference.groupdocs.com/comparison/java/)  
@@ -321,3 +315,9 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 - [Бесплатный пробный доступ](https://releases.groupdocs.com/comparison/java/)  
 - [Временная лицензия для тестирования](https://purchase.groupdocs.com/temporary-license/)  
 - [Форум поддержки сообщества](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Последнее обновление:** 2025-12-23  
+**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
+**Автор:** GroupDocs  

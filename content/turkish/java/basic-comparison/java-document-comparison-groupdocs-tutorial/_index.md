@@ -307,12 +307,6 @@ C: Kütüphane Unicode içeriği doğru şekilde işler, sağ‑to‑sol diller 
 **S: Belgeler farklı sayfa düzenlerine sahipse ne olur?**  
 C: GroupDocs, düzen farklarını akıllıca yönetir, içerik değişikliklerine odaklanır, biçimlendirme varyasyonlarını göz ardı eder. Hassasiyet ayarlarıyla bu davranışı kontrol edebilirsiniz.
 
----
-
-**Son Güncelleme:** 2025-12-23  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
-**Yazar:** GroupDocs  
-
 **Kaynaklar ve İleri Okuma**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -321,3 +315,9 @@ C: GroupDocs, düzen farklarını akıllıca yönetir, içerik değişikliklerin
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Son Güncelleme:** 2025-12-23  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs  

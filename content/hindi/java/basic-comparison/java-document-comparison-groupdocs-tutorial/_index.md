@@ -307,12 +307,6 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 **प्रश्न: यदि दस्तावेज़ों के पेज लेआउट अलग‑अलग हैं तो क्या होता है?**  
 उत्तर: GroupDocs लेआउट अंतर को समझदारी से संभालता है, कंटेंट बदलावों पर फोकस करता है न कि फ़ॉर्मेटिंग वैरिएशन पर। आप सेंसिटिविटी सेटिंग्स को समायोजित करके इस व्यवहार को नियंत्रित कर सकते हैं।
 
----
-
-**अंतिम अपडेट:** 2025-12-23  
-**टेस्टेड वर्ज़न:** GroupDocs.Comparison 25.2 for Java  
-**लेखक:** GroupDocs  
-
 **संसाधन और आगे की सीख**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -321,3 +315,9 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)  
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**अंतिम अपडेट:** 2025-12-23  
+**टेस्टेड वर्ज़न:** GroupDocs.Comparison 25.2 for Java  
+**लेखक:** GroupDocs  

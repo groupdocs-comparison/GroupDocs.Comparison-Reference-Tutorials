@@ -21,62 +21,64 @@ url: /el/java/basic-comparison/java-document-comparison-groupdocs-tutorial/
 weight: 1
 ---
 
-# Java Document Comparison Tutorial - Complete GroupDocs Guide
+# Java Document Comparison Tutorial - Πλήρης οδηγός GroupDocs
 
-## Introduction
+## Εισαγωγή
 
-Αν χρειάζεστε **σύγκριση PDF και Word** εγγράφων, το GroupDocs.Comparison το κάνει εύκολο.  
-Έχετε βρεθεί ποτέ να συγκρίνετε χειροκίνητα πολλές εκδόσεις εγγράφων, τεντώνοντας τα μάτια σας στην οθόνη για να εντοπίσετε τι άλλαξε μεταξύ `Draft_v1.docx` και `Draft_final_FINAL_v2.docx`; Δεν είστε μόνοι. Η σύγκριση εγγράφων είναι μία από εκείνες τις εργασίες που φαίνονται απλές μέχρι να τις κάνετε πραγματικά – ειδικά όταν δουλεύετε με πολύπλοκα έγγραφα ή πρέπει να παρακολουθείτε αλλαγές σε πολλές εκδόσεις ταυτόχρονα.
+Αν χρειάζεστε **σύγκριση PDF και Word** εγγράφων, το GroupDocs.Comparison το κάνει εύκολο.
+Μπορείτε να βρείτε ποτέ να συγκρίνετε χειροκίνητα πολλές εκδόσεις εγγράφων, τεντώνοντας τα μάτια σας στην οθόνη για να εντοπίσετε τι άλλαξε μεταξύ `Draft_v1.docx` και `Draft_final_FINAL_v2.docx`; Δεν είστε μόνοι. Η σύγκριση εγγράφων είναι μία από εκείνες τις εργασίες που φαίνονται απλές μέχρι να τις κάνετε πραγματικά – ειδικά όταν δουλεύετε με πολύπλοκα έγγραφα ή πρέπει να παρακολουθείτε τις αλλαγές σε πολλές εκδόσεις ταυτόχρονα.
 
 Αυτή είναι η στιγμή που έρχεται το **GroupDocs.Comparison for Java**. Αυτή η ισχυρή βιβλιοθήκη μετατρέπει μια κουραστική χειροκίνητη διαδικασία σε μια απλοποιημένη, αυτοματοποιημένη ροή εργασίας που πραγματικά εξοικονομεί χρόνο και μειώνει τα σφάλματα.
 
-### Why This Tutorial Matters
+### Γιατί έχει σημασία αυτό το σεμινάριο
 
-Σε αυτόν τον ολοκληρωμένο οδηγό, θα ανακαλύψετε πώς να υλοποιήσετε αξιόπιστη λειτουργία σύγκρισης εγγράφων στις εφαρμογές Java. Θα περάσουμε από την βασική εγκατάσταση μέχρι την προχωρημένη προσαρμογή, διασφαλίζοντας ότι μπορείτε να αντιμετωπίσετε πραγματικά σενάρια με σιγουριά.
+Σε αυτόν τον ολοκληρωμένο οδηγό, θα ανακαλύψετε πώς να κάνετε χρήση αξιοπιστίας σύγκρισης εγγράφων στις εφαρμογές Java. Θα κάνουμε από τη βασική εγκατάσταση μέχρι την προχωρημένη προσαρμογή, διασφαλίζοντας ότι μπορείτε να περάσετε πραγματικά σενάρια με σιγουριά.
 
 **Τι θα μάθετε:**
-- Ρύθμιση του GroupDocs.Comparison στο έργο Java (με τον σωστό τρόπο)  
-- Σύγκριση πολλαπλών εγγράφων ταυτόχρονα  
-- Προσαρμογή του αποτελέσματος σύγκρισης με επαγγελματικό στυλ  
-- Αντιμετώπιση κοινών προβλημάτων και βελτιστοποίηση απόδοσης  
-- Πραγματικές εφαρμογές που θα κάνουν τους συναδέλφους σας ζηλιάρηδες  
+- Ρύθμιση του GroupDocs.Comparison στο έργο Java (με τον σωστό τρόπο)
+- Σύγκριση πολλαπλών εγγράφων ταυτόχρονα
+- Προσαρμογή του αποτελέσματος σύγκρισης με επαγγελματικά στυλ
+- Αντιμετώπιση κοινών προβλημάτων και βελτιστοποίηση απόδοσης
+- Πραγματικές εφαρμογές που θα κάνουν τους συναδέλφους σας ζηλιάρηδες
 
-Ας ξεκινήσουμε και ας σας μετατρέψουμε σε ειδικό σύγκρισης εγγράφων!
+Ας ξεκινήσουμε και ας μετατρέψουμε σε ειδική σύγκριση εγγράφων!
 
-## Quick Answers
-- **What can I compare?** PDF, Word, Excel, PowerPoint and many other formats.  
-- **Can I compare PDF and Word together?** Yes – GroupDocs intelligently handles cross‑format comparisons.  
-- **Do I need a license?** A temporary license is free for testing; a paid license removes watermarks for production.  
-- **How many documents can I compare at once?** Any number, limited only by memory and CPU resources.  
-- **Is it thread‑safe?** Each `Comparer` instance is single‑threaded; run separate instances in parallel for concurrency.
+## Γρήγορες απαντήσεις
+- **Τι μπορώ να συγκρίνω;** PDF, Word, Excel, PowerPoint και πολλές άλλες μορφές.
+- **Μπορώ να συγκρίνω PDF και Word μαζί;** Ναι – Το GroupDocs χειρίζεται έξυπνα τις συγκρίσεις πολλαπλών μορφών.
+- **Χρειάζομαι άδεια;** Μια προσωρινή άδεια είναι δωρεάν για δοκιμή. μια πληρωμένη άδεια αφαιρεί τα υδατογραφήματα για παραγωγή.
+- **Πόσα έγγραφα μπορώ να συγκρίνω ταυτόχρονα;** Οποιοσδήποτε αριθμός, περιορισμένος μόνο από τη μνήμη και τους πόρους της CPU.
+- **Είναι ασφαλές για νήματα;** Κάθε περίπτωση «Σύγκρισης» είναι μονής κλωστή. εκτέλεση ξεχωριστών παρουσιών παράλληλα για ταυτόχρονη λειτουργία.
 
-## Why Choose GroupDocs.Comparison for Java?
+## Γιατί να επιλέξετε GroupDocs.Comparison για Java;
 
-Πριν βουτήξουμε στον κώδικα, ας μιλήσουμε για το γιατί αυτή η βιβλιοθήκη ξεχωρίζει. Σε αντίθεση με τα βασικά εργαλεία diff αρχείων, το GroupDocs.Comparison κατανοεί τη δομή του εγγράφου – δεν συγκρίνει μόνο αλφαριθμητικά, αλλά αναλύει στοιχεία εγγράφου, μορφοποίηση και αλλαγές διάταξης με τρόπο που έχει νόημα για επιχειρηματικά έγγραφα.
+Πριν βουτήξουμε στον κώδικα, ας μιλήσουμε για το γιατί αυτή η βιβλιοθήκη ξεχωρίζει. Σε αντίθεση με τα βασικά εργαλεία διαφορετικών αρχείων, στο GroupDocs.
 
-**Key advantages:**
-- **Format Intelligence** – Works with Word docs, PDFs, Excel files, and more.  
-- **Visual Clarity** – Highlights changes with customizable styles.  
-- **Multi‑document Support** – Compare several versions at once (game changer!).  
-- **Production Ready** – Battle‑tested in enterprise environments.
+**Βασικά πλεονεκτήματα:**
+- **Format Intelligence** – Λειτουργεί με έγγραφα Word, PDF, αρχεία Excel και άλλα.
+- **Οπτική Ευκρίνεια** – Επισημαίνει τις αλλαγές με προσαρμόσιμα στυλ.
 
-## Prerequisites and Setup
+- **Υποστήριξη πολλαπλών εγγράφων** – Συγκρίνετε πολλές εκδόσεις ταυτόχρονα (αλλαγή των όρων!).
 
-### What You'll Need
+- **Έτοιμο για παραγωγή** – Δοκιμασμένο σε εταιρικά περιβάλλοντα.
 
-**Required Tools:**
-- Java 8 or higher (Java 11+ recommended for best performance)  
-- Maven or Gradle for dependency management  
-- Your favorite IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)  
-- Basic familiarity with Java file handling  
+## Προαπαιτούμενα και Ρύθμιση
 
-**Skill Level**: This tutorial assumes you're comfortable with basic Java concepts, but don't worry – we'll explain the GroupDocs‑specific parts thoroughly.
+### Τι θα χρειαστείτε
 
-### Setting Up GroupDocs.Comparison for Java
+**Απαιτούμενα εργαλεία:**
+- Java 8 ή νεότερη έκδοση (συνιστάται Java11+ για βέλτιστη απόδοση)
+- Maven ή Gradle για διαχείριση εξαρτήσεων
+- Το αγαπημένο σας IDE (IntelliJ IDEA, Eclipse, VSCode, κ.λπ.)
+- Βασική εξοικείωση με τον χειρισμό αρχείων Java
 
-Here's the part where most tutorials just dump a Maven snippet and move on. But let's actually talk about what's happening here.
+**Επίπεδο δεξιοτήτων**: Αυτό το σεμινάριο προϋποθέτει ότι είστε εξοικειωμένοι με τις βασικές έννοιες της Java, αλλά μην ανησυχείτε – θα εξηγήσουμε διεξοδικά τα μέρη που αφορούν συγκεκριμένα το GroupDocs.
 
-When you add GroupDocs.Comparison to your project, you're pulling in a sophisticated document processing engine. The Maven configuration connects to GroupDocs' repository (not Maven Central) because they maintain their own artifact hosting.
+### Ρύθμιση του GroupDocs.Comparison για Java
+
+Εδώ είναι το μέρος όπου τα περισσότερα σεμινάρια απλώς κατεβάζουν ένα απόσπασμα Maven και προχωρούν. Αλλά ας μιλήσουμε πραγματικά για το τι συμβαίνει εδώ.
+
+Όταν προσθέτετε το GroupDocs.Comparison στο έργο σας, ενσωματώνετε μια εξελιγμένη μηχανή επεξεργασίας εγγράφων. Η διαμόρφωση του Maven συνδέεται με το αποθετήριο του GroupDocs (όχι το Maven Central) επειδή διατηρούν τη δική τους φιλοξενία τεχνουργημάτων.
 
 ```xml
 <repositories>
@@ -95,27 +97,27 @@ When you add GroupDocs.Comparison to your project, you're pulling in a sophistic
 </dependencies>
 ```
 
-**Pro Tip**: Always check for the latest version number on the GroupDocs releases page – they push updates regularly with bug fixes and new features.
+**Συμβουλή επαγγελματία**: Ελέγχετε πάντα τον τελευταίο αριθμό έκδοσης στη σελίδα κυκλοφοριών του GroupDocs – προωθούν τακτικά ενημερώσεις με διορθώσεις σφαλμάτων και νέες δυνατότητες.
 
-### License Setup (Don't Skip This!)
+### Ρύθμιση άδειας χρήσης (Μην το παραλείψετε!)
 
-Here's something that trips up a lot of developers: GroupDocs.Comparison requires a license for production use. For development and testing, grab a temporary license – it's free and removes all the evaluation watermarks that'll otherwise appear in your output.
+Να κάτι που μπερδεύει πολλούς προγραμματιστές: Το GroupDocs.Comparison απαιτεί άδεια χρήσης για χρήση παραγωγής. Για ανάπτυξη και δοκιμές, αποκτήστε μια προσωρινή άδεια χρήσης – είναι δωρεάν και αφαιρεί όλα τα υδατογραφήματα αξιολόγησης που διαφορετικά θα εμφανίζονταν στην έξοδο σας.
 
-**When to Use This Approach**: Perfect for applications that need to track document changes, merge workflows, or provide visual diff capabilities to end users.
+**Πότε να χρησιμοποιήσετε αυτήν την προσέγγιση**: Ιδανικό για εφαρμογές που πρέπει να παρακολουθούν αλλαγές εγγράφων, να συγχωνεύουν ροές εργασίας ή να παρέχουν δυνατότητες οπτικών διαφορών στους τελικούς χρήστες.
 
-## Core Implementation Guide
+## Οδηγός βασικής υλοποίησης
 
-Now for the fun part – let's build something that actually works! We'll tackle this in two main sections: basic multi‑document comparison and advanced styling customization.
+Τώρα για το διασκεδαστικό μέρος – ας δημιουργήσουμε κάτι που πραγματικά λειτουργεί! Θα το αντιμετωπίσουμε σε δύο κύριες ενότητες: βασική σύγκριση πολλαπλών εγγράφων και προηγμένη προσαρμογή στυλ.
 
-### Feature 1: Comparing Multiple Documents
+### Χαρακτηριστικό 1: Σύγκριση πολλαπλών εγγράφων
 
-This is where GroupDocs.Comparison really shines. Instead of comparing documents one‑by‑one, you can load up multiple targets and compare them all against a source document in a single operation.
+Εδώ είναι που το GroupDocs.Comparison πραγματικά λάμπει. Αντί να συγκρίνετε έγγραφα ένα προς ένα, μπορείτε να φορτώσετε πολλαπλούς στόχους και να τους συγκρίνετε όλους με ένα έγγραφο προέλευσης σε μία μόνο λειτουργία.
 
-**Real‑world scenario**: Imagine you're managing a project proposal that's gone through multiple review rounds. You have the original draft plus feedback versions from legal, technical, and business teams. Rather than opening four different Word documents and playing spot‑the‑difference, you can process them all at once.
+**Σενάριο πραγματικού κόσμου**: Φανταστείτε ότι διαχειρίζεστε μια πρόταση έργου που έχει περάσει από πολλαπλούς γύρους αξιολόγησης. Έχετε το αρχικό προσχέδιο συν τις εκδόσεις σχολίων από νομικές, τεχνικές και επιχειρηματικές ομάδες. Αντί να ανοίγετε τέσσερα διαφορετικά έγγραφα του Word και να παίζετε με την αναζήτηση της διαφοράς, μπορείτε να τα επεξεργαστείτε όλα ταυτόχρονα.
 
-#### Step 1: Initialize the Comparer
+#### Βήμα 1: Αρχικοποίηση του Συγκριτή
 
-Think of the `Comparer` class as your document comparison engine. When you create a new instance, you're essentially loading your "baseline" document – the one everything else gets compared against.
+Σκεφτείτε την κλάση `Συγκριτή` ως τη μηχανή σύγκρισης εγγράφων. Όταν δημιουργείτε μια νέα παρουσία, ουσιαστικά φορτώνετε το έγγραφο "βασικής γραμμής" σας - αυτό με το οποίο συγκρίνονται όλα τα άλλα.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD")) {
@@ -123,13 +125,13 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD")) {
 }
 ```
 
-**What's happening here**: The try‑with‑resources block ensures proper cleanup of file handles and memory resources. GroupDocs loads the source document into memory and analyzes its structure – paragraphs, formatting, embedded objects, everything.
+**Τι συμβαίνει εδώ**: Το μπλοκ try‑with‑resources διασφαλίζει τον σωστό καθαρισμό των λαβών αρχείων και των πόρων μνήμης. Το GroupDocs φορτώνει το έγγραφο προέλευσης στη μνήμη και αναλύει τη δομή του – παραγράφους, μορφοποίηση, ενσωματωμένα αντικείμενα, τα πάντα.
 
-**Common Pitfall**: Make sure your file paths are absolute or properly relative to your working directory. A `FileNotFoundException` here will stop everything cold.
+**Συνηθισμένο σφάλμα**: Βεβαιωθείτε ότι οι διαδρομές των αρχείων σας είναι απόλυτες ή σωστά σχετικές με τον κατάλογο εργασίας σας. Ένα `FileNotFoundException` εδώ θα σταματήσει τα πάντα.
 
-#### Step 2: Add Target Documents
+#### Βήμα 2: Προσθήκη εγγράφων προορισμού
 
-This is where the magic happens. Each call to `add()` loads another document for comparison. The library maintains all these documents in memory and will compare them simultaneously.
+Εδώ συμβαίνει η μαγεία. Κάθε κλήση του `add()` φορτώνει ένα άλλο έγγραφο για σύγκριση. Η βιβλιοθήκη διατηρεί όλα αυτά τα έγγραφα στη μνήμη και θα τα συγκρίνει ταυτόχρονα.
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
@@ -137,13 +139,13 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
 ```
 
-**Behind the scenes**: GroupDocs is building a comprehensive change map – tracking insertions, deletions, modifications, and formatting changes across all target documents. It's doing the heavy lifting so you don't have to.
+**Παρακάτω**: Το GroupDocs δημιουργεί έναν ολοκληρωμένο χάρτη αλλαγών – παρακολουθώντας τις εισαγωγές, τις διαγραφές, τις τροποποιήσεις και τις αλλαγές μορφοποίησης σε όλα τα έγγραφα-στόχους. Κάνει τη δύσκολη δουλειά, ώστε να μην χρειάζεται εσείς.
 
-**Performance Note**: Each additional document increases memory usage and processing time. For production applications with large documents, consider processing in batches if you're hitting memory limits.
+**Σημείωση απόδοσης**: Κάθε επιπλέον έγγραφο αυξάνει τη χρήση μνήμης και τον χρόνο επεξεργασίας. Για εφαρμογές παραγωγής με μεγάλα έγγραφα, σκεφτείτε να το επεξεργαστείτε σε παρτίδες εάν πλησιάζετε τα όρια μνήμης.
 
-#### Step 3: Configure Comparison Options
+#### Βήμα 3: Διαμόρφωση επιλογών σύγκρισης
 
-Here's where you start customizing the output to match your needs. The `CompareOptions` class gives you control over how changes are displayed and styled.
+Εδώ ξεκινάτε να προσαρμόζετε την έξοδο ώστε να ταιριάζει στις ανάγκες σας. Η κλάση `CompareOptions` σας δίνει τον έλεγχο του τρόπου εμφάνισης και διαμόρφωσης των αλλαγών.
 
 ```java
 final Path resultPath = comparer.compare(new FileOutputStream("YOUR_OUTPUT_DIRECTORY/CompareMultipleDocumentsSettingsPath"),
@@ -153,30 +155,30 @@ final Path resultPath = comparer.compare(new FileOutputStream("YOUR_OUTPUT_DIREC
                 .build());
 ```
 
-**What's happening**: This code is telling GroupDocs to highlight all inserted content (new text, paragraphs, etc.) in yellow. The builder pattern makes it easy to chain multiple style settings together.
+**Τι συμβαίνει**: Αυτός ο κώδικας λέει στο GroupDocs να επισημάνει όλο το εισαγόμενο περιεχόμενο (νέο κείμενο, παραγράφους κ.λπ.) με κίτρινο χρώμα. Το μοτίβο δημιουργίας διευκολύνει την αλυσίδα πολλαπλών ρυθμίσεων στυλ.
 
-**Practical tip**: Choose colors that make sense for your use case. Yellow might be perfect for review documents, but consider red for deletions, green for additions if you're building a change‑tracking system.
+**Πρακτική συμβουλή**: Επιλέξτε χρώματα που έχουν νόημα για την περίπτωση χρήσης σας. Το κίτρινο μπορεί να είναι ιδανικό για έγγραφα αναθεώρησης, αλλά σκεφτείτε το κόκκινο για διαγραφές και το πράσινο για προσθήκες εάν δημιουργείτε ένα σύστημα παρακολούθησης αλλαγών.
 
-### Feature 2: Customizing Comparison Styles
+### Χαρακτηριστικό 2: Προσαρμογή Στυλ Σύγκρισης
 
-Default styling is fine for basic comparisons, but when you're building professional applications or need to meet specific visual requirements, customization becomes essential.
+Το προεπιλεγμένο στυλ είναι καλό για βασικές συγκρίσεις, αλλά όταν δημιουργείτε επαγγελματικές εφαρμογές ή χρειάζεται να ικανοποιήσετε συγκεκριμένες οπτικές απαιτήσεις, η προσαρμογή καθίσταται απαραίτητη.
 
-#### Step 1: Advanced Style Configuration
+#### Βήμα 1: Προηγμένη διαμόρφωση στυλ
 
-The `StyleSettings` class is your toolkit for visual customization. Beyond just font colors, you can control highlighting, text decoration, and more.
+Η κλάση `StyleSettings` είναι το κιτ εργαλείων σας για οπτική προσαρμογή. Πέρα από τα χρώματα γραμματοσειράς, μπορείτε να ελέγξετε την επισήμανση, τη διακόσμηση κειμένου και πολλά άλλα.
 
 ```java
 final StyleSettings styleSettings = new StyleSettings();
 styleSettings.setFontColor(java.awt.Color.YELLOW);
 ```
 
-**Why this matters**: Consistent, professional‑looking comparison output builds user trust. When stakeholders can quickly scan a document and understand what changed, your application becomes more valuable.
+**Γιατί αυτό έχει σημασία**: Η συνεπής, επαγγελματικής εμφάνισης συγκριτική έξοδος ενισχύει την εμπιστοσύνη των χρηστών. Όταν τα ενδιαφερόμενα μέρη μπορούν να σαρώσουν γρήγορα ένα έγγραφο και να κατανοήσουν τι άλλαξε, η εφαρμογή σας αποκτά μεγαλύτερη αξία.
 
-**Customization options**: While we're showing font color here, `StyleSettings` supports background colors, bold/italic formatting, and highlighting effects. Experiment to find what works best for your users.
+**Επιλογές προσαρμογής**: Ενώ εδώ δείχνουμε χρώμα γραμματοσειράς, το `StyleSettings` υποστηρίζει χρώματα φόντου, έντονη/πλάγια μορφοποίηση και εφέ επισήμανσης. Πειραματιστείτε για να βρείτε τι λειτουργεί καλύτερα για τους χρήστες σας.
 
-#### Step 2: Applying Styles to Comparison Output
+#### Βήμα 2: Εφαρμογή στυλ στην έξοδο σύγκρισης
 
-This is where you bring together all your style settings and generate the final comparison document.
+Εδώ συγκεντρώνετε όλες τις ρυθμίσεις στυλ σας και δημιουργείτε το τελικό έγγραφο σύγκρισης.
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/CompareMultipleDocumentsStyles")) {
@@ -187,19 +189,19 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/Com
 }
 ```
 
-**Key insight**: The `compare()` method is doing a lot more than just finding differences. It's creating a new document that merges content from all your source files, applies your styling rules, and outputs a professional‑quality result.
+**Βασική πληροφορία**: Η μέθοδος `compare()` κάνει πολύ περισσότερα από το να βρίσκει απλώς διαφορές. Δημιουργεί ένα νέο έγγραφο που συγχωνεύει περιεχόμενο από όλα τα αρχεία προέλευσης, εφαρμόζει τους κανόνες στυλ σας και εξάγει ένα αποτέλεσμα επαγγελματικής ποιότητας.
 
-**File handling best practice**: Notice how we're using try‑with‑resources for the `OutputStream` too. This ensures files get closed properly even if something goes wrong during processing.
+**Βέλτιστη πρακτική χειρισμού αρχείων**: Παρατηρήστε πώς χρησιμοποιούμε τη μέθοδο try-with-resources και για το `OutputStream`. Αυτό διασφαλίζει ότι τα αρχεία κλείνουν σωστά, ακόμη και αν κάτι πάει στραβά κατά την επεξεργασία.
 
-## Troubleshooting Common Issues
+## Αντιμετώπιση συνηθισμένων προβλημάτων
 
-Let's talk about the problems you're likely to encounter and how to solve them quickly.
+Ας μιλήσουμε για τα προβλήματα που είναι πιθανό να αντιμετωπίσετε και πώς να τα λύσετε γρήγορα.
 
-### File Path Problems
-**Symptom**: `FileNotFoundException` or `IllegalArgumentException`  
-**Solution**: Use absolute paths during development, then switch to configurable paths for production. Always validate file existence before processing.
+### Προβλήματα διαδρομής αρχείου
+**Σύμπτωμα**: `FileNotFoundException` ή `IllegalArgumentException`
+**Λύση**: Χρησιμοποιήστε απόλυτες διαδρομές κατά την ανάπτυξη και, στη συνέχεια, μεταβείτε σε διαμορφώσιμες διαδρομές για παραγωγή. Να επικυρώνετε πάντα την ύπαρξη αρχείου πριν από την επεξεργασία.
 
-**Quick fix**:
+**Γρήγορη διόρθωση**:
 ```java
 File sourceFile = new File("path/to/document.docx");
 if (!sourceFile.exists()) {
@@ -207,49 +209,49 @@ if (!sourceFile.exists()) {
 }
 ```
 
-### Memory Issues with Large Documents
-**Symptom**: `OutOfMemoryError` during comparison  
-**Solution**: Increase JVM heap size or process documents in smaller batches. For huge files (50 MB+), consider breaking them into sections.
+### Προβλήματα μνήμης με μεγάλα έγγραφα
+**Σύμπτωμα**: `OutOfMemoryError` κατά τη σύγκριση
+**Λύση**: Αυξήστε το μέγεθος του σωρού JVM ή επεξεργαστείτε έγγραφα σε μικρότερες παρτίδες. Για μεγάλα αρχεία (50MB+), σκεφτείτε να τα χωρίσετε σε ενότητες.
 
-### License Errors
-**Symptom**: Evaluation watermarks appearing in output  
-**Solution**: Ensure your license file is in the classpath and properly loaded before creating the `Comparer` instance.
+### Σφάλματα άδειας χρήσης
+**Σύμπτωμα**: Εμφανίζονται υδατογραφήματα αξιολόγησης στην έξοδο
+**Λύση**: Βεβαιωθείτε ότι το αρχείο άδειας χρήσης βρίσκεται στη διαδρομή κλάσης και έχει φορτωθεί σωστά πριν δημιουργήσετε την παρουσία `Comparer`.
 
-### Performance Optimization Tips
+### Συμβουλές Βελτιστοποίησης Απόδοσης
 
-**For better speed**:
-- Process similar document types together (all Word docs, then all PDFs)  
-- Use SSD storage for temporary files if processing large batches  
-- Consider multithreading for independent comparison operations  
+**Για καλύτερη ταχύτητα**:
+- Επεξεργαστείτε παρόμοιους τύπους εγγράφων μαζί (όλα τα έγγραφα του Word και στη συνέχεια όλα τα PDF)
+- Χρησιμοποιήστε χώρο αποθήκευσης SSD για προσωρινά αρχεία εάν επεξεργάζεστε μεγάλες παρτίδες
+- Εξετάστε το ενδεχόμενο πολυνηματοποίησης για ανεξάρτητες λειτουργίες σύγκρισης
 
-**For memory efficiency**:
-- Dispose of `Comparer` instances promptly using try‑with‑resources  
-- Avoid keeping large documents in memory after comparison  
-- Monitor heap usage in production environments  
+**Για αποδοτικότητα μνήμης**:
+- Απορρίψτε άμεσα τις παρουσίες `Comparer` χρησιμοποιώντας try-with-resources
+- Αποφύγετε τη διατήρηση μεγάλων εγγράφων στη μνήμη μετά τη σύγκριση
+- Παρακολουθήστε τη χρήση σωρού σε περιβάλλοντα παραγωγής
 
-## Real‑World Applications
+## Εφαρμογές Πραγματικού Κόσμου
 
-Here's where this technology really pays off:
+Εδώ είναι που αυτή η τεχνολογία αποδίδει πραγματικά:
 
-### Legal Document Review
-Law firms use document comparison to track contract changes through negotiation rounds. The ability to see exactly what clauses were modified, added, or removed is crucial for legal accuracy.
+### Αναθεώρηση Νομικών Εγγράφων
+Οι δικηγορικές εταιρείες χρησιμοποιούν τη σύγκριση εγγράφων για την παρακολούθηση των αλλαγών στις συμβάσεις μέσω γύρων διαπραγμάτευσης. Η δυνατότητα να δείτε ακριβώς ποιες ρήτρες τροποποιήθηκαν, προστέθηκαν ή αφαιρέθηκαν είναι ζωτικής σημασίας για τη νομική ακρίβεια.
 
-### Software Documentation
-Development teams comparing API documentation versions to ensure accuracy across releases. The visual highlighting makes it easy to spot breaking changes or new features.
+### Τεκμηρίωση Λογισμικού
+Ομάδες ανάπτυξης συγκρίνουν εκδόσεις τεκμηρίωσης API για να διασφαλίσουν την ακρίβεια σε όλες τις εκδόσεις. Η οπτική επισήμανση διευκολύνει τον εντοπισμό αλλαγών που προκαλούν προβλήματα ή νέων λειτουργιών.
 
-### Academic Research
-Researchers tracking manuscript changes through peer‑review processes. The multi‑document comparison feature is perfect for incorporating feedback from multiple reviewers.
+### Ακαδημαϊκή Έρευνα
+Ερευνητές παρακολουθούν αλλαγές σε χειρόγραφα μέσω διαδικασιών αξιολόγησης από ομοτίμους. Η λειτουργία σύγκρισης πολλαπλών εγγράφων είναι ιδανική για την ενσωμάτωση σχολίων από πολλούς κριτές.
 
-### Compliance and Audit
-Financial services comparing policy documents to ensure regulatory compliance. The detailed change tracking provides audit trails for document modifications.
+### Συμμόρφωση και Έλεγχος
+Χρηματοοικονομικές υπηρεσίες που συγκρίνουν έγγραφα πολιτικής για να διασφαλίσουν τη συμμόρφωση με τους κανονισμούς. Η λεπτομερής παρακολούθηση αλλαγών παρέχει ίχνη ελέγχου για τροποποιήσεις εγγράφων.
 
-## Performance Considerations
+## Παράγοντες Απόδοσης
 
-### Memory Management Best Practices
+### Βέλτιστες Πρακτικές Διαχείρισης Μνήμης
 
-**Monitor your memory usage** – Document comparison can be memory‑intensive, especially with large files or multiple documents. Use profiling tools to understand your application's memory patterns.
+**Παρακολουθήστε τη χρήση μνήμης** – Η σύγκριση εγγράφων μπορεί να απαιτεί μεγάλη ποσότητα μνήμης, ειδικά με μεγάλα αρχεία ή πολλά έγγραφα. Χρησιμοποιήστε εργαλεία δημιουργίας προφίλ για να κατανοήσετε τα μοτίβα μνήμης της εφαρμογής σας.
 
-**Optimize for your use case** – If you're processing many small documents, batch processing might help. For occasional large document comparisons, focus on having sufficient heap space.
+**Βελτιστοποιήστε την περίπτωση χρήσης σας** – Εάν επεξεργάζεστε πολλά μικρά έγγραφα, η μαζική επεξεργασία μπορεί να βοηθήσει. Για περιστασιακές συγκρίσεις μεγάλων εγγράφων, επικεντρωθείτε στο να έχετε επαρκή χώρο στοίβας.
 
 ```java
 // Good practice: explicitly manage resources
@@ -259,65 +261,65 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 }
 ```
 
-### Scalability Considerations
+### Ζητήματα Επεκτασιμότητας
 
-**Concurrent processing**: `Comparer` instances are not thread‑safe, but you can run multiple comparisons in parallel using separate instances.
+**Ταυτόχρονη επεξεργασία**: Οι παρουσίες `Συγκριτή` δεν είναι ασφαλείς για νήματα, αλλά μπορείτε να εκτελέσετε πολλαπλές συγκρίσεις παράλληλα χρησιμοποιώντας ξεχωριστές παρουσίες.
 
-**File system optimization**: Use fast storage (SSD) for temporary files and output documents. Network storage can significantly slow down processing.
+**Βελτιστοποίηση συστήματος αρχείων**: Χρησιμοποιήστε γρήγορη αποθήκευση (SSD) για προσωρινά αρχεία και έγγραφα εξόδου. Η αποθήκευση δικτύου μπορεί να επιβραδύνει σημαντικά την επεξεργασία.
 
-**Batch processing strategy**: For high‑volume scenarios, consider processing documents in batches rather than one‑by‑one to optimize resource usage.
+**Στρατηγική μαζικής επεξεργασίας**: Για σενάρια μεγάλου όγκου, σκεφτείτε να επεξεργαστείτε έγγραφα σε παρτίδες αντί για ένα προς ένα για να βελτιστοποιήσετε τη χρήση πόρων.
 
-## Advanced Configuration Options
+## Επιλογές Προηγμένης Διαμόρφωσης
 
-While we've covered the basics, GroupDocs.Comparison offers extensive customization options:
+Ενώ καλύψαμε τα βασικά, το GroupDocs.Comparison προσφέρει εκτεταμένες επιλογές προσαρμογής:
 
-### Sensitivity Settings
-Control how sensitive the comparison algorithm is to changes. Useful when you want to ignore minor formatting differences but catch content changes.
+### Ρυθμίσεις Ευαισθησίας
+Ελέγξτε πόσο ευαίσθητος είναι ο αλγόριθμος σύγκρισης στις αλλαγές. Χρήσιμο όταν θέλετε να αγνοήσετε μικρές διαφορές μορφοποίησης αλλά να εντοπίσετε αλλαγές περιεχομένου.
 
-### Content‑Type Specific Settings
-Different settings for text content vs. images vs. tables. This granular control helps generate more meaningful comparisons for complex documents.
+### Ρυθμίσεις Συγκεκριμένου Τύπου Περιεχομένου
+Διαφορετικές ρυθμίσεις για περιεχόμενο κειμένου έναντι εικόνων έναντι πινάκων. Αυτός ο λεπτομερής έλεγχος βοηθά στη δημιουργία πιο ουσιαστικών συγκρίσεων για σύνθετα έγγραφα.
 
-### Output Format Options
-Beyond styling, you can control the structure of the output document – whether to show changes inline, in separate sections, or with summary reports.
+### Επιλογές Μορφής Εξόδου
+Πέρα από το στυλ, μπορείτε να ελέγξετε τη δομή του εγγράφου εξόδου – είτε για να εμφανίζονται οι αλλαγές ενσωματωμένες, σε ξεχωριστές ενότητες είτε με συνοπτικές αναφορές.
 
-## Conclusion
+## Συμπέρασμα
 
-You've now got the complete toolkit for implementing professional document comparison in Java. From basic multi‑document comparisons to advanced styling customization, you can handle everything from simple change tracking to complex document workflow systems.
+Έχετε πλέον το πλήρες κιτ εργαλείων για την εφαρμογή επαγγελματικής σύγκρισης εγγράφων σε Java. Από βασικές συγκρίσεις πολλαπλών εγγράφων έως προηγμένη προσαρμογή στυλ, μπορείτε να χειριστείτε τα πάντα, από απλή παρακολούθηση αλλαγών έως σύνθετα συστήματα ροής εργασίας εγγράφων.
 
-## Frequently Asked Questions
+## Συχνές Ερωτήσεις
 
-**Q: Can GroupDocs.Comparison handle different file formats in a single comparison?**  
-A: Yes! You can compare a Word document against a PDF, for example. The library handles format conversion internally, though results work best when comparing similar document types.
+**Ε: Μπορεί το GroupDocs.Comparison να χειριστεί διαφορετικές μορφές αρχείων σε μία μόνο σύγκριση;**
+Α: Ναι! Μπορείτε να συγκρίνετε ένα έγγραφο Word με ένα PDF, για παράδειγμα. Η βιβλιοθήκη χειρίζεται τη μετατροπή μορφής εσωτερικά, αν και τα αποτελέσματα λειτουργούν καλύτερα όταν συγκρίνονται παρόμοιοι τύποι εγγράφων.
 
-**Q: What's the file size limit for document comparison?**  
-A: There's no hard limit, but performance and memory usage scale with file size. Documents over 100 MB should be tested thoroughly in your environment to ensure acceptable performance.
+**Ε: Ποιο είναι το όριο μεγέθους αρχείου για τη σύγκριση εγγράφων;**
+Α: Δεν υπάρχει αυστηρό όριο, αλλά η απόδοση και η χρήση μνήμης κλιμακώνονται με το μέγεθος του αρχείου. Τα έγγραφα άνω των 100MB θα πρέπει να ελέγχονται διεξοδικά στο περιβάλλον σας για να διασφαλιστεί η αποδεκτή απόδοση.
 
-**Q: How accurate is the comparison algorithm?**  
-A: GroupDocs uses sophisticated algorithms that understand document structure, not just text content. It accurately identifies moved paragraphs, formatting changes, and embedded object modifications.
+**Ε: Πόσο ακριβής είναι ο αλγόριθμος σύγκρισης;**
+Α: Το GroupDocs χρησιμοποιεί εξελιγμένους αλγόριθμους που κατανοούν τη δομή των εγγράφων, όχι μόνο το περιεχόμενο κειμένου. Προσδιορίζει με ακρίβεια τις μετακινημένες παραγράφους, τις αλλαγές μορφοποίησης και τις τροποποιήσεις των ενσωματωμένων αντικειμένων.
 
-**Q: Can I compare documents programmatically without creating output files?**  
-A: Yes, you can access comparison results programmatically through the API to build custom workflows or integrate with other systems.
+**Ε: Μπορώ να συγκρίνω έγγραφα μέσω προγραμματισμού χωρίς να δημιουργήσω αρχεία εξόδου;**
+Α: Ναι, μπορείτε να αποκτήσετε πρόσβαση στα αποτελέσματα σύγκρισης μέσω προγραμματισμού μέσω του API για να δημιουργήσετε προσαρμοσμένες ροές εργασίας ή να ενσωματώσετε άλλα συστήματα.
 
-**Q: Is there support for custom document formats?**  
-A: GroupDocs supports most common business document formats out of the box. For proprietary formats, check their documentation or contact support for specific requirements.
+**Ε: Υπάρχει υποστήριξη για προσαρμοσμένες μορφές εγγράφων;**
+Α: Το GroupDocs υποστηρίζει τις περισσότερες κοινές μορφές επιχειρηματικών εγγράφων αμέσως. Για ιδιόκτητες μορφές, ελέγξτε την τεκμηρίωσή τους ή επικοινωνήστε με την υποστήριξη για συγκεκριμένες απαιτήσεις.
 
-**Q: How do I handle documents with different languages or character sets?**  
-A: The library handles Unicode content properly, including right‑to‑left languages and special characters. Make sure your input documents are properly encoded.
+**Ε: Πώς χειρίζομαι έγγραφα με διαφορετικές γλώσσες ή σύνολα χαρακτήρων;**
+Α: Η βιβλιοθήκη χειρίζεται σωστά το περιεχόμενο Unicode, συμπεριλαμβανομένων των γλωσσών με γραφή από δεξιά προς τα αριστερά και των ειδικών χαρακτήρων. Βεβαιωθείτε ότι τα έγγραφα εισόδου σας είναι σωστά κωδικοποιημένα.
 
-**Q: What happens if documents have different page layouts?**  
-A: GroupDocs intelligently handles layout differences, focusing on content changes rather than formatting variations. You can configure sensitivity settings to control this behavior.
+**Ε: Τι συμβαίνει εάν τα έγγραφα έχουν διαφορετικές διατάξεις σελίδας;**
+Α: Το GroupDocs χειρίζεται έξυπνα τις διαφορές διάταξης, εστιάζοντας στις αλλαγές περιεχομένου παρά στις παραλλαγές μορφοποίησης. Μπορείτε να διαμορφώσετε ρυθμίσεις ευαισθησίας για να ελέγξετε αυτήν τη συμπεριφορά.
+
+**Πόροι και Περαιτέρω Μάθηση**
+- [Τεκμηρίωση GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
+- [Πλήρης Αναφορά API](https://reference.groupdocs.com/comparison/java/)
+- [Λήψη Τελευταίας Έκδοσης](https://releases.groupdocs.com/comparison/java/)
+- [Αποκτήστε την Άδειά σας](https://purchase.groupdocs.com/buy)
+- [Δωρεάν Δοκιμαστική Πρόσβαση](https://releases.groupdocs.com/comparison/java/)
+- [Προσωρινή Άδεια για Δοκιμές](https://purchase.groupdocs.com/temporary-license/)
+- [Φόρουμ Υποστήριξης Κοινότητας](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
-**Resources and Further Learning**
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
-- [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
-- [Download Latest Version](https://releases.groupdocs.com/comparison/java/)
-- [Get Your License](https://purchase.groupdocs.com/buy)
-- [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
-- [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
-- [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+**Τελευταία Ενημέρωση:** 2025-12-23
+**Δοκιμάστηκε με:** GroupDocs.Comparison 25.2 για Java
+**Συγγραφέας:** GroupDocs  

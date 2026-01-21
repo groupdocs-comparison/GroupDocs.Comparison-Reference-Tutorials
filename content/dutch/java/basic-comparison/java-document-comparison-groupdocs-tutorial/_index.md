@@ -300,12 +300,6 @@ Je beschikt nu over de volledige toolkit om professionele documentvergelijking i
 **V: Wat gebeurt er als documenten verschillende paginalay‑outs hebben?**  
 **A:** GroupDocs handelt lay‑outverschillen intelligent af, waarbij de focus ligt op inhoudelijke wijzigingen in plaats van opmaakvariaties. Je kunt gevoeligheidsinstellingen configureren om dit gedrag te sturen.
 
----
-
-**Laatst bijgewerkt:** 2025-12-23  
-**Getest met:** GroupDocs.Comparison 25.2 for Java  
-**Auteur:** GroupDocs  
-
 **Resources en verdere leermaterialen**
 - [GroupDocs.Comparison Documentatie](https://docs.groupdocs.com/comparison/java/)
 - [Complete API‑referentie](https://reference.groupdocs.com/comparison/java/)
@@ -314,3 +308,9 @@ Je beschikt nu over de volledige toolkit om professionele documentvergelijking i
 - [Gratis proefversie toegang](https://releases.groupdocs.com/comparison/java/)
 - [Tijdelijke licentie voor testen](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Laatst bijgewerkt:** 2025-12-23  
+**Getest met:** GroupDocs.Comparison 25.2 for Java  
+**Auteur:** GroupDocs  

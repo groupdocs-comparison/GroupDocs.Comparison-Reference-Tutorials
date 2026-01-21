@@ -14,7 +14,7 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'GroupDocs Comparison Java: Documentvergelijkingstutorial'
+title: 'GroupDocs Comparison Java - Documentvergelijkingstutorial'
 type: docs
 url: /nl/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1

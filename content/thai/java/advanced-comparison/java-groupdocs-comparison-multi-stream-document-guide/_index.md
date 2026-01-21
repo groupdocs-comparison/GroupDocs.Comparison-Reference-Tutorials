@@ -13,7 +13,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'วิธีใช้ GroupDocs: สตรีมการเปรียบเทียบเอกสาร Java – คู่มือฉบับสมบูรณ์'
+title: 'วิธีใช้ GroupDocs - สตรีมการเปรียบเทียบเอกสาร Java – คู่มือฉบับสมบูรณ์'
 type: docs
 url: /th/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -423,12 +423,6 @@ try {
 
 **เริ่มสร้างวันนี้**: ปรับตัวอย่างโค้ดให้เข้ากับโปรเจกต์ของคุณ, ทดสอบด้วยเอกสารจริง, และทำซ้ำ. วิธีที่ดีที่สุดในการเชี่ยวชาญการเปรียบเทียบเอกสารคือการนำรูปแบบเหล่านี้ไปใช้กับความท้าทายที่คุณเผชิญ
 
----
-
-**อัปเดตล่าสุด:** 2025-12-23  
-**ทดสอบกับ:** GroupDocs.Comparison 25.2  
-**ผู้เขียน:** GroupDocs  
-
 **แหล่งข้อมูลที่เกี่ยวข้อง:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -437,3 +431,9 @@ try {
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**อัปเดตล่าสุด:** 2025-12-23  
+**ทดสอบกับ:** GroupDocs.Comparison 25.2  
+**ผู้เขียน:** GroupDocs  

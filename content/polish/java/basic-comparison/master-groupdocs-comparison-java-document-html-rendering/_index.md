@@ -14,7 +14,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: Łatwe porównywanie dokumentów'
+title: 'GroupDocs Comparison Java - Łatwe porównywanie dokumentów'
 type: docs
 url: /pl/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -449,10 +449,6 @@ A: Większość popularnych formatów — w tym Word, PDF, Excel i PowerPoint �
 **Q: Jak uzyskać wsparcie, jeśli napotkam problemy?**  
 A: [Forum GroupDocs](https://forum.groupdocs.com/c/comparison) jest świetnym zasobem społecznościowym, a posiadacze licencji komercyjnych otrzymują wsparcie priorytetowe.
 
-**Ostatnia aktualizacja:** 2025-12-23  
-**Testowano z:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Dodatkowe zasoby**  
 - **Dokumentacja:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **Referencja API:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -460,3 +456,7 @@ A: [Forum GroupDocs](https://forum.groupdocs.com/c/comparison) jest świetnym za
 - **Pobierz najnowszą wersję:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Opcje zakupu:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Bezpłatna wersja próbna:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+**Ostatnia aktualizacja:** 2025-12-23  
+**Testowano z:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

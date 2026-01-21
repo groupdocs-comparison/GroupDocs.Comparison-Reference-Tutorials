@@ -317,12 +317,6 @@ A: Biblioteka prawidłowo obsługuje treść Unicode, w tym języki pisane od pr
 **Q: Co się stanie, jeśli dokumenty mają różne układy stron?**  
 A: GroupDocs inteligentnie radzi sobie z różnicami układu, koncentrując się na zmianach treści, a nie na wariacjach formatowania. Możesz skonfigurować ustawienia czułości, aby kontrolować to zachowanie.
 
----
-
-**Ostatnia aktualizacja:** 2025-12-23  
-**Testowano z:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Zasoby i dalsza nauka**
 - [Dokumentacja GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
 - [Kompletny odnośnik API](https://reference.groupdocs.com/comparison/java/)
@@ -331,3 +325,9 @@ A: GroupDocs inteligentnie radzi sobie z różnicami układu, koncentrując się
 - [Dostęp do darmowej wersji próbnej](https://releases.groupdocs.com/comparison/java/)
 - [Tymczasowa licencja do testów](https://purchase.groupdocs.com/temporary-license/)
 - [Forum wsparcia społeczności](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-23  
+**Testowano z:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

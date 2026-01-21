@@ -314,10 +314,6 @@ A: Biblioteket hanterar Unicode‑innehåll korrekt, inklusive språk som skrivs
 **Q: Vad händer om dokument har olika sidlayouter?**  
 A: GroupDocs hanterar intelligent layout‑skillnader, fokuserar på innehållsförändringar snarare än formateringsvariationer. Du kan konfigurera känslighetsinställningarna för att styra detta beteende.
 
-**Senast uppdaterad:** 2025-12-23  
-**Testat med:** GroupDocs.Comparison 25.2 för Java  
-**Författare:** GroupDocs  
-
 **Resurser och vidare läsning**
 - [GroupDocs.Comparison-dokumentation](https://docs.groupdocs.com/comparison/java/)
 - [Fullständig API‑referens](https://reference.groupdocs.com/comparison/java/)
@@ -326,3 +322,7 @@ A: GroupDocs hanterar intelligent layout‑skillnader, fokuserar på innehållsf
 - [Gratis provåtkomst](https://releases.groupdocs.com/comparison/java/)
 - [Tillfällig licens för testning](https://purchase.groupdocs.com/temporary-license/)
 - [Community‑supportforum](https://forum.groupdocs.com/c/comparison)
+
+**Senast uppdaterad:** 2025-12-23  
+**Testat med:** GroupDocs.Comparison 25.2 för Java  
+**Författare:** GroupDocs  

@@ -305,12 +305,6 @@ A: 函式庫完整支援 Unicode，包括從右至左語言與特殊字元。只
 **Q: 若文件的頁面版面不同，會發生什麼情況？**  
 A: GroupDocs 會智慧地聚焦於內容變更，而非版面差異。您也可以透過敏感度設定調整此行為。
 
----
-
-**最後更新日期：** 2025-12-23  
-**測試環境：** GroupDocs.Comparison 25.2 for Java  
-**作者：** GroupDocs  
-
 ### 資源與進一步學習
 - [GroupDocs.Comparison 文件說明](https://docs.groupdocs.com/comparison/java/)  
 - [完整 API 參考文件](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ A: GroupDocs 會智慧地聚焦於內容變更，而非版面差異。您也可�
 - [免費試用版存取](https://releases.groupdocs.com/comparison/java/)  
 - [測試用臨時授權](https://purchase.groupdocs.com/temporary-license/)  
 - [社群支援論壇](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**最後更新日期：** 2025-12-23  
+**測試環境：** GroupDocs.Comparison 25.2 for Java  
+**作者：** GroupDocs  

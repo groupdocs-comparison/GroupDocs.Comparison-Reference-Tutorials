@@ -14,62 +14,62 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: Perbandingan Dokumen Jadi Mudah'
+title: 'GroupDocs Comparison Java - Perbandingan Dokumen Jadi Mudah'
 type: docs
 url: /id/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
 ---
 
-# GroupDocs Comparison Java: Perbandingan Dokumen Menjadi Mudah
+# GroupDocs Perbandingan Java: Perbandingan Dokumen Menjadi Mudah
 
-## Introduction
+## Perkenalan
 
-Pernahkah Anda secara manual membandingkan dua versi dokumen, baris demi baris, mencoba menemukan perbedaannya? Jika Anda seorang pengembang Java yang menangani manajemen dokumen, Anda tahu betapa melelahkannya hal ini. **Dengan groupdocs comparison java Anda dapat mengotomatisasi seluruh proses** dan bahkan mengonversi dokumen Anda ke HTML untuk berbagi dengan mudah.  
+Pernahkah Anda secara manual membandingkan dua versi dokumen, baris demi baris, mencoba menemukan perbedaannya? Jika Anda seorang pengembang Java yang menangani manajemen dokumen, Anda tahu betapa melelahkannya hal ini. **Dengan perbandingan groupdocs java Anda dapat mengotomatisasi seluruh proses** dan bahkan mengonversi dokumen Anda ke HTML untuk berbagi dengan mudah.
 
 Apakah Anda sedang membangun sistem manajemen konten, mengelola kontrol versi untuk dokumen hukum, atau hanya perlu mengidentifikasi perubahan antara versi file, tutorial ini akan membantu Anda.
 
 **Apa yang akan Anda kuasai pada akhir tutorial ini:**
 - Menyiapkan GroupDocs.Comparison dalam proyek Java Anda (dengan cara yang tepat)
-- Membandingkan dokumen secara programatis dengan hanya beberapa baris kode
-- Mengonversi dokumen ke HTML untuk tampilan web‑friendly
-- Menangani jebakan umum dan mengoptimalkan kinerja
+- Membandingkan dokumen secara terprogram hanya dengan beberapa baris kode
+- Mengonversi dokumen ke HTML untuk tampilan ramah web
+- Mencapai jebakan umum dan mengoptimalkan kinerja
 - Pola integrasi dunia nyata yang benar‑benar berfungsi
 
-### Quick Answers
-- **Perpustakaan apa yang memungkinkan perbandingan dokumen di Java?** GroupDocs.Comparison (groupdocs comparison java)  
-- **Apakah saya dapat merender dokumen ke HTML?** Ya, dengan menggunakan metode `compare()` yang sama tanpa file target.  
-- **Apakah saya memerlukan lisensi untuk produksi?** Ya, lisensi komersial diperlukan.  
-- **Versi Java mana yang didukung?** JDK 8+ (JDK 11+ direkomendasikan).  
+### Jawaban Cepat
+- **Perpustakaan apa yang memungkinkan perbandingan dokumen di Java?** GroupDocs.Comparison (perbandingan groupdocs java)
+- **Apakah saya dapat merender dokumen ke HTML?** Ya, dengan menggunakan metode `compare()` yang sama tanpa file target.
+- **Apakah saya memerlukan lisensi untuk produksi?** Ya, lisensi komersial diperlukan.
+- **Versi Java mana yang didukung?** JDK8+ (direkomendasikan JDK11+).
 - **Bagaimana cara menangani file besar?** Tingkatkan ukuran heap JVM dan ikuti tips manajemen memori di bawah ini.
 
-## What is groupdocs comparison java?
-`groupdocs comparison java` adalah perpustakaan Java yang secara programatis mengidentifikasi penyisipan, penghapusan, dan modifikasi antara dua atau lebih dokumen. Ia mendukung banyak format—termasuk Word, PDF, Excel, dan PowerPoint—dan dapat menghasilkan hasil sebagai dokumen baru atau sebagai HTML untuk tampilan web.
+## Apa itu java perbandingan groupdocs?
+`groupdocs perbandingan java` adalah perpustakaan Java yang secara terprogram mengidentifikasi penyisipan, penghapusan, dan modifikasi antara dua atau lebih dokumen. Ia mendukung banyak format—termasuk Word, PDF, Excel, dan PowerPoint—dan dapat menghasilkan hasil sebagai dokumen baru atau sebagai HTML untuk tampilan web.
 
-## Why use GroupDocs.Comparison for Java?
-- **Kecepatan:** Algoritma yang dioptimalkan menangani file besar dengan cepat.  
-- **Akurasi:** Mendeteksi perubahan pada level teks, gaya, dan tata letak.  
-- **Fleksibilitas:** Membandingkan banyak dokumen, merender ke HTML, dan menyesuaikan styling.  
-- **Siap Integrasi:** Bekerja mulus dengan Spring Boot, REST API, dan pipeline pemrosesan batch.
+## Mengapa menggunakan GroupDocs.Comparison untuk Java?
+- **Kecepatan:** Algoritma yang dioptimalkan menangani file besar dengan cepat.
+- **Akurasi:** Mendeteksi perubahan pada level teks, gaya, dan tata letak.
+- **Fleksibilitas:** Membandingkan banyak dokumen, merender ke HTML, dan menyesuaikan gaya.
+- **Siap Integrasi:** Bekerja mulus dengan Spring Boot, REST API, dan pemrosesan batch pipeline.
 
-## Prerequisites and Setup Requirements
+## Prasyarat dan Persyaratan Penyiapan
 
 Sebelum kita mulai menulis kode, pastikan Anda memiliki semua yang diperlukan. Jangan khawatir – proses penyiapan cukup sederhana, namun melakukannya dengan benar sejak awal akan menghemat waktu debugging Anda nanti.
 
-### What You'll Need
+### Apa yang Anda Butuhkan
 
 **Lingkungan Pengembangan:**
 - Java Development Kit (JDK) 8 atau lebih tinggi (JDK 11+ direkomendasikan untuk kinerja lebih baik)
 - IDE seperti IntelliJ IDEA, Eclipse, atau VS Code dengan ekstensi Java
 - Maven atau Gradle untuk manajemen dependensi (kami akan menggunakan Maven dalam contoh)
 
-**Persyaratan GroupDocs.Comparison:**
-- GroupDocs.Comparison untuk Java versi 25.2 atau lebih baru
-- Minimal 2 GB RAM yang tersedia (lebih banyak untuk dokumen besar)
+**Persyaratan GroupDocs.Perbandingan:**
+- GroupDocs.Perbandingan untuk Java versi 25.2 atau lebih baru
+- Minimal RAM 2GB yang tersedia (lebih banyak untuk dokumen besar)
 - Pemahaman dasar tentang Java dan Maven (tidak terlalu rumit, saya janji!)
 
-### Maven Configuration Setup
+### Pengaturan Konfigurasi Maven
 
-Berikut cara menambahkan GroupDocs.Comparison ke proyek Anda. Tambahkan konfigurasi ini ke `pom.xml` Anda:
+Berikut cara menambahkan GroupDocs.Perbandingan ke proyek Anda. Tambahkan konfigurasi ini ke `pom.xml` Anda:
 
 ```xml
 <repositories>
@@ -88,18 +88,18 @@ Berikut cara menambahkan GroupDocs.Comparison ke proyek Anda. Tambahkan konfigur
 </dependencies>
 ```
 
-**Pro Tip:** Jika Anda menggunakan Gradle, deklarasi dependensi yang setara adalah:
-```gradle
-implementation 'com.groupdocs:groupdocs-comparison:25.2'
+**Tip Pro:** Jika Anda menggunakan Gradle, deklarasi dependensi yang setara adalah:
+``` kelas
+implementasi 'com.groupdocs:groupdocs-comparison:25.2'
 ```
 
-### License Setup (Don't Skip This!)
+### Penyiapan Lisensi (Jangan Lewatkan Ini!)
 
 GroupDocs.Comparison tidak gratis untuk penggunaan komersial, tetapi mereka mempermudah proses memulai:
 
-1. **Free Trial**: Sempurna untuk pengujian – memberikan fungsionalitas penuh dengan beberapa batasan  
-2. **Temporary License**: Cocok untuk pengembangan dan fase pengujian yang diperpanjang  
-3. **Commercial License**: Diperlukan untuk penggunaan produksi – tersedia di [GroupDocs Purchase](https://purchase.groupdocs.com/buy)
+1. **Uji Coba Gratis**: Sempurna untuk pengujian – memberikan fungsionalitas penuh dengan beberapa batasan
+2. **Lisensi Sementara**: Cocok untuk pengembangan dan fase pengujian yang diperpanjang
+3. **Lisensi Komersial**: Diperlukan untuk penggunaan produksi – tersedia di [Pembelian GroupDocs](https://purchase.groupdocs.com/buy)
 
 Setelah dependensi Anda terpasang, mari verifikasi semuanya berjalan:
 
@@ -117,26 +117,26 @@ public class InitializeComparison {
 }
 ```
 
-Jika Anda melihat pesan sukses tanpa pengecualian, semuanya sudah siap. Jika tidak, periksa kembali konfigurasi Maven Anda dan pastikan jalur dokumen uji Anda benar.
+Jika Anda melihat pesan sukses tanpa membicarakannya, semuanya sudah siap. Jika tidak, periksa kembali konfigurasi Maven Anda dan pastikan jalur dokumen uji Anda benar.
 
-## Document Comparison: The Complete Guide
+## Perbandingan Dokumen: Panduan Lengkap
 
-Sekarang saatnya bagian utama – membandingkan dokumen di Java. Inilah saat GroupDocs.Comparison bersinar, mengubah tugas yang dulu kompleks menjadi sangat sederhana.
+Sekarang saatnya bagian utama – membandingkan dokumen di Java. Inilah saat GroupDocs.Comparison cemerlang, mengubah tugas yang dulu kompleks menjadi sangat sederhana.
 
-### Understanding Document Comparison
+### Memahami Perbandingan Dokumen
 
-Saat membicarakan perbandingan dokumen, kita mencari tiga jenis perubahan:
-- **Insertions**: Konten yang ditambahkan ke dokumen target  
-- **Deletions**: Konten yang dihapus dari dokumen asli  
-- **Modifications**: Teks atau format yang diubah  
+Saat membicarakan diskusi dokumen, kami mencari tiga jenis perubahan:
+- **Sisipkan**: Konten yang ditambahkan ke dokumen target
+- **Penghapusan**: Konten yang dihapus dari dokumen asli
+- **Modifikasi**: Teks atau format yang diubah
 
-GroupDocs.Comparison menangani semua ini secara otomatis dan menyajikan hasil dalam format yang mudah Anda gunakan.
+GroupDocs.Perbandingan menangani semua ini secara otomatis dan menyajikan hasil dalam format yang mudah Anda gunakan.
 
-### Step‑by‑Step Implementation
+### Penerapan Langkah demi Langkah
 
 Kami akan menelusuri solusi perbandingan lengkap, menjelaskan setiap baris kode.
 
-#### Step 1: Initialize the Comparer
+#### Langkah 1: Inisialisasi Pembanding
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -151,7 +151,7 @@ public class DocumentComparison {
 
 Blok `try‑with‑resources` memastikan `Comparer` ditutup secara otomatis, yang penting untuk file besar.
 
-#### Step 2: Add the Target Document
+#### Langkah 2: Tambahkan Dokumen Target
 
 ```java
             // Add the document we want to compare against
@@ -161,7 +161,7 @@ Blok `try‑with‑resources` memastikan `Comparer` ditutup secara otomatis, yan
 
 Anda dapat **compare multiple documents java** dengan memanggil `comparer.add()` berulang kali.
 
-#### Step 3: Execute the Comparison
+#### Langkah 3: Jalankan Perbandingan
 
 ```java
             // Perform the comparison and get the result path
@@ -175,7 +175,7 @@ Anda dapat **compare multiple documents java** dengan memanggil `comparer.add()`
 
 Metode `compare()` melakukan semua pekerjaan berat, menganalisis kedua dokumen dan menghasilkan file hasil yang menyoroti setiap perbedaan.
 
-### When to Use Document Comparison
+### Kapan Menggunakan Perbandingan Dokumen
 
 Berikut beberapa skenario dunia nyata di mana pendekatan ini sangat berguna:
 
@@ -184,19 +184,19 @@ Berikut beberapa skenario dunia nyata di mana pendekatan ini sangat berguna:
 - **Content Management** – Melacak perubahan konten seiring waktu dalam CMS.  
 - **Quality Assurance** – Membandingkan laporan yang dihasilkan dengan template untuk memastikan konsistensi.  
 
-## HTML Rendering: Making Documents Web‑Ready
+## Rendering HTML: Membuat Dokumen Siap Web
 
-Kadang Anda tidak hanya ingin membandingkan dokumen – Anda ingin mengonversinya ke format yang mudah dibagikan dan dilihat di berbagai platform. Rendering ke HTML adalah solusi yang tepat.
+Terkadang Anda tidak hanya ingin membandingkan dokumen – Anda ingin mengonversinya ke format yang mudah dibagikan dan dilihat di berbagai platform. Rendering ke HTML adalah solusi yang tepat.
 
-### Why Render to HTML?
+### Mengapa Render ke HTML?
 
 Dokumen HTML bersifat:
-- **Universal** – Dapat dibuka di browser apa pun tanpa perangkat lunak khusus  
-- **Responsive** – Menyesuaikan diri dengan berbagai ukuran layar  
-- **Searchable** – Konten dapat diindeks dan dicari  
-- **Embeddable** – Mudah diintegrasikan ke aplikasi web  
+- **Universal** – Dapat dibuka di browser apa pun tanpa perangkat lunak khusus
+- **Responsif** – Menyesuaikan diri dengan berbagai ukuran layar
+- **Dapat Dicari** – Konten dapat diindeks dan dicari
+- **Embeddable** – Mudah berinteraksi ke aplikasi web
 
-### Implementation Guide
+### Panduan Penerapan
 
 Prosesnya sangat mirip dengan perbandingan dokumen:
 
@@ -219,61 +219,61 @@ public class RenderDocumentToHTML {
 }
 ```
 
-**Important Note:** Saat Anda menghilangkan `comparer.add()`, metode `compare()` merender dokumen sumber ke format yang ditunjukkan oleh ekstensi file output (misalnya, `.html`).
+**Catatan Penting:** Saat Anda menghapus `comparer.add()`, metode `compare()` merender dokumen sumber ke format yang dikelola oleh ekstensi file output (misalnya, `.html`).
 
-### Practical HTML Rendering Use Cases
+### Kasus Penggunaan Rendering HTML Praktis
 
-- **Report Distribution** – Mengonversi laporan internal ke HTML untuk berbagi lewat email dengan mudah.  
-- **Document Archives** – Membuat versi yang dapat diakses via web untuk penyimpanan jangka panjang.  
-- **Mobile‑Friendly Viewing** – HTML bekerja baik di tablet dan ponsel.  
-- **Integration with Web Apps** – Menyematkan konten dokumen langsung ke portal tanpa plugin.  
+- **Distribusi Laporan** – Mengonversi laporan internal ke HTML untuk dibagikan melalui email dengan mudah.
+- **Arsip Dokumen** – Membuat versi yang dapat diakses melalui web untuk penyimpanan jangka panjang.
+- **Tampilan Ramah Seluler** – HTML bekerja dengan baik di tablet dan ponsel.
+- **Integrasi dengan Web Apps** – Menyematkan konten dokumen langsung ke portal tanpa plugin.
 
-## Common Issues and How to Solve Them
+## Masalah Umum dan Cara Mengatasinya
 
 Mari bahas masalah yang mungkin Anda temui (karena jujur, tidak semua berjalan mulus pada percobaan pertama).
 
-### Memory Issues with Large Documents
+### Masalah Memori pada Dokumen Besar
 
-**Problem**: `OutOfMemoryError` saat memproses file besar (>50 MB).  
+**Masalah**: `OutOfMemoryError` saat memproses file besar (>50MB).
 
-**Solution**: Tingkatkan ukuran heap JVM dan gunakan streaming bila memungkinkan:
+**Solusi**: Tingkatkan ukuran heap JVM dan gunakan streaming bila memungkinkan:
 
-```bash
-java -Xmx4g -Xms2g YourApplication
+``` pesta
+java -Xmx4g -Xms2g Aplikasi Anda
 ```
 
-**Pro Tip**: Proses dokumen besar dalam potongan bila memungkinkan, atau pertimbangkan meningkatkan sumber daya server untuk penggunaan produksi.
+**Tips Pro**: Proses dokumen besar dalam potongan bila memungkinkan, atau mengurangi meningkatkan sumber daya server untuk penggunaan produksi.
 
-### File Path Problems
+### Masalah Jalur File
 
-**Problem**: `FileNotFoundException` meskipun file memang ada.  
+**Masalah**: `FileNotFoundException` meskipun file memang ada.
 
-**Solutions**:  
-- Gunakan jalur absolut selama pengembangan (`"C:\\Documents\\file.docx"` di Windows atau `"/home/user/Documents/file.pdf"` di Linux/macOS).  
-- Periksa izin file – proses Java harus memiliki akses baca.  
-- Escape backslash dengan benar pada jalur Windows atau gunakan slash maju.
+**Solusi**:
+- Gunakan jalur absolut selama pengembangan (`"C:\\Documents\\file.docx"` di Windows atau `"/home/user/Documents/file.pdf"` di Linux/macOS).
+- Periksa izin file – proses Java harus memiliki akses baca.
+- Escape backslash dengan benar pada jalur Windows atau gunakan garis miring maju.
 
-### Unsupported File Format Errors
+### Kesalahan Format File Tidak Didukung
 
-**Problem**: `UnsupportedFileTypeException` untuk tipe dokumen tertentu.  
+**Masalah**: `UnsupportedFileTypeException` untuk tipe dokumen tertentu.
 
-**Solution**: GroupDocs.Comparison mendukung banyak format, namun tidak semuanya. Format yang didukung meliputi:
-- Microsoft Office: Word, Excel, PowerPoint  
-- PDF  
-- File teks biasa  
-- Berbagai format gambar  
+**Solusi**: GroupDocs.Comparison mendukung banyak format, namun tidak semuanya. Format yang didukung meliputi:
+-Microsoft Office: Word, Excel, PowerPoint
+- PDF
+- File teks biasa
+- Berbagai format gambar
 
 Lihat [dokumentasi resmi](https://docs.groupdocs.com/comparison/java/) untuk daftar lengkap.
 
-### Performance Optimization
+### Optimasi Kinerja
 
-- **Waktu Perbandingan Lambat**: Aktifkan multi‑threading (perpustakaan bersifat thread‑safe).  
-- **Kecepatan I/O**: Gunakan penyimpanan SSD untuk performa baca/tulis yang lebih baik.  
-- **Pembersihan Sumber Daya**: Tutup instance `Comparer` yang tidak terpakai dengan segera.
+- **Waktu Perbandingan Lambat**: Mengaktifkan multi‑threading (perpustakaan bersifat thread‑safe).
+- **Kecepatan I/O**: Gunakan penyimpanan SSD untuk performa baca/tulis yang lebih baik.
+- **Pembersihan Sumber Daya**: Tutup instance `Comparer` yang tidak segera terpakai.
 
-## Best Practices for Production Use
+## Praktik Terbaik untuk Penggunaan Produksi
 
-### Error Handling
+### Penanganan Kesalahan
 
 Selalu bungkus operasi perbandingan Anda dalam penanganan pengecualian yang tepat:
 
@@ -292,7 +292,7 @@ public boolean compareDocumentsWithErrorHandling(String source, String target, S
 }
 ```
 
-### Resource Management
+### Manajemen Sumber Daya
 
 Gunakan dependency injection atau pola factory untuk mengelola instance `Comparer` dalam aplikasi berskala besar:
 
@@ -310,7 +310,7 @@ public class DocumentComparisonService {
 }
 ```
 
-### Configuration Management
+### Manajemen Konfigurasi
 
 Eksternalisasikan konfigurasi Anda untuk fleksibilitas:
 
@@ -325,9 +325,9 @@ public class ComparisonConfig {
 }
 ```
 
-## Real‑World Integration Examples
+## Contoh Integrasi di Dunia Nyata
 
-### Spring Boot Integration
+### Integrasi Spring Boot
 
 Buat REST API untuk perbandingan dokumen:
 
@@ -362,7 +362,7 @@ public class DocumentComparisonController {
 }
 ```
 
-### Batch Processing
+### Pemrosesan Batch
 
 Proses banyak pasangan dokumen secara paralel:
 
@@ -382,15 +382,15 @@ public class BatchDocumentProcessor {
 }
 ```
 
-## Performance Tips for Large‑Scale Usage
+## Kiat Kinerja untuk Penggunaan Skala Besar
 
-### Memory Management
+### Manajemen Memori
 
 - **Flag JVM**: `-Xmx4g -XX:+UseG1GC` untuk garbage collection yang lebih baik.  
 - **Monitoring**: Gunakan VisualVM atau JProfiler untuk menemukan kebocoran memori.  
 - **Pooling**: Gunakan kembali instance `Comparer` bila memungkinkan.
 
-### Scaling Strategies
+### Strategi Penskalaan
 
 - **Horizontal Scaling**: Deploy beberapa instance di belakang load balancer.  
 - **Async Processing**: Gunakan antrian pesan (RabbitMQ, AWS SQS) untuk beban kerja non‑blocking:
@@ -403,9 +403,9 @@ public void processComparisonRequest(ComparisonRequest request) {
 }
 ```
 
-## Advanced Features and Customization
+## Fitur Lanjutan dan Kustomisasi
 
-### Comparison Settings
+### Pengaturan Perbandingan
 
 Sesuaikan cara perbedaan ditandai:
 
@@ -421,43 +421,43 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-### Format‑Specific Options
+### Format‑Opsi Spesifik
 
-Berbagai tipe dokumen mendukung fitur perbandingan yang berbeda. Untuk spreadsheet Anda dapat memilih membandingkan formula vs nilai yang ditampilkan, untuk PDF Anda dapat mengontrol perbandingan gambar, dll.
+Berbagai jenis dokumen mendukung fitur perbandingan yang berbeda-beda. Untuk spreadsheet Anda dapat memilih membandingkan rumus vs nilai yang ditampilkan, untuk PDF Anda dapat mengontrol perbandingan gambar, dll.
 
-## Frequently Asked Questions
+## Pertanyaan yang Sering Diajukan
 
-**T: Bisakah saya membandingkan beberapa dokumen java sekaligus?**  
+**T: Bisakah saya membandingkan beberapa dokumen java sekaligus?**
 J: Ya! Panggil `comparer.add()` beberapa kali untuk membandingkan dokumen sumber dengan beberapa versi target dalam satu proses.
 
-**T: Berapa ukuran file maksimum yang dapat ditangani GroupDocs.Comparison?**  
-J: Tidak ada batas keras, namun kinerja tergantung pada memori yang tersedia. Untuk file lebih besar dari 100 MB, tingkatkan ukuran heap JVM dan pastikan sumber daya sistem mencukupi.
+**T: Berapa ukuran file maksimum yang dapat ditangani GroupDocs.Comparison?**
+J: Tidak ada batasan keras, namun kinerja tergantung pada memori yang tersedia. Untuk file lebih besar dari 100MB, tingkatkan ukuran heap JVM dan pastikan sumber daya sistem mencukupi.
 
-**T: Bagaimana cara menangani dokumen yang dilindungi password?**  
+**T: Bagaimana cara menangani dokumen yang dilindungi kata sandi?**
 J: Berikan password saat menginisialisasi `Comparer` atau saat menambahkan dokumen target. Perpustakaan akan mendekripsi file secara internal.
 
-**T: Bisakah saya menyesuaikan cara perbedaan ditandai dalam output?**  
+**T: Bisakah saya menyesuaikan cara perbedaan yang ditandai dalam output?**
 J: Tentu. Gunakan `CompareOptions` untuk mengatur warna, font, dan gaya highlight khusus untuk penyisipan, penghapusan, dan modifikasi.
 
-**T: Apakah GroupDocs.Comparison thread‑safe?**  
-J: Ya, tetapi sebaiknya gunakan instance `Comparer` terpisah per thread daripada berbagi satu instance.
+**T: Apakah GroupDocs.Comparison thread-safe?**
+J: Ya, tapi sebaiknya gunakan instance `Comparer` secara terpisah per thread daripada berbagi satu instance.
 
-**T: Format apa saja yang dapat dikonversi ke HTML?**  
-J: Sebagian besar format umum—termasuk Word, PDF, Excel, dan PowerPoint—dapat dirender ke HTML.
+**T: Format apa saja yang dapat dikonversi ke HTML?**
+J: Sebagian besar format umum—termasuk Word, PDF, Excel, dan PowerPoint—dapat diubah ke HTML.
 
-**T: Bagaimana cara mendapatkan dukungan jika saya mengalami masalah?**  
+**T: Bagaimana cara mendapatkan dukungan jika saya mengalami masalah?**
 J: Forum [GroupDocs](https://forum.groupdocs.com/c/comparison) merupakan sumber komunitas yang bagus, dan pemegang lisensi komersial mendapatkan dukungan prioritas.
+
+**Sumber Daya Tambahan**
+- **Dokumentasi:** [Dokumentasi Java GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
+- **Referensi API:** [Referensi API Java Lengkap](https://reference.groupdocs.com/comparison/java/)
+- **Proyek Contoh:** [Repositori Contoh GitHub](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)
+- **Unduh Versi Terbaru:** [Rilis GroupDocs](https://releases.groupdocs.com/comparison/java/)
+- **Opsi Pembelian:** [Lisensi dan Pembelian](https://purchase.groupdocs.com/buy)
+- **Uji Coba Gratis:** [Coba] [GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
-**Additional Resources**  
-- **Documentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Sample Projects:** [GitHub Examples Repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)  
-- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Purchase Options:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
-- **Free Trial:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+**Terakhir Diperbarui:** 2025-12-23
+**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java
+**Penulis:** GroupDocs 

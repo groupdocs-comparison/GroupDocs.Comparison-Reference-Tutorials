@@ -14,7 +14,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'Jak používat GroupDocs: Java porovnání dokumentů pomocí streamů – kompletní
+title: 'Jak používat GroupDocs - Java porovnání dokumentů pomocí streamů – kompletní
   průvodce'
 type: docs
 url: /cs/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
@@ -425,12 +425,6 @@ Nyní máte pevný základ pro implementaci **how to use GroupDocs** pro porovn�
 
 **Začněte tvořit ještě dnes**: Přizpůsobte ukázkové kódy svému projektu, otestujte s reálnými dokumenty a iterujte. Nejlepší způsob, jak zvládnout porovnání dokumentů, je aplikovat tyto vzory na konkrétní výzvy, které před vámi stojí.
 
----
-
-**Poslední aktualizace:** 2025-1223  
-**Testováno s:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Související zdroje:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -439,3 +433,9 @@ Nyní máte pevný základ pro implementaci **how to use GroupDocs** pro porovn�
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Poslední aktualizace:** 2025-1223  
+**Testováno s:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

@@ -14,7 +14,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: Dokumentum-összehasonlítás egyszerűen'
+title: 'GroupDocs Comparison Java - Dokumentum-összehasonlítás egyszerűen'
 type: docs
 url: /hu/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -448,12 +448,6 @@ A: A legtöbb elterjedt formátum – beleértve a Word‑et, PDF‑et, Excel‑
 **Q: Hol kaphatok támogatást, ha problémába ütközöm?**  
 A: A [GroupDocs Fórum](https://forum.groupdocs.com/c/comparison) nagyszerű közösségi forrás, a kereskedelmi licenc tulajdonosok pedig prioritásos támogatást kapnak.
 
----
-
-**Utolsó frissítés:** 2025-12-23  
-**Tesztelve:** GroupDocs.Comparison 25.2 for Java  
-**Szerző:** GroupDocs  
-
 **További források**  
 - **Dokumentáció:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API referencia:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -461,3 +455,9 @@ A: A [GroupDocs Fórum](https://forum.groupdocs.com/c/comparison) nagyszerű kö
 - **Legújabb verzió letöltése:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Licenc és vásárlás:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Ingyenes próba:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Utolsó frissítés:** 2025-12-23  
+**Tesztelve:** GroupDocs.Comparison 25.2 for Java  
+**Szerző:** GroupDocs  

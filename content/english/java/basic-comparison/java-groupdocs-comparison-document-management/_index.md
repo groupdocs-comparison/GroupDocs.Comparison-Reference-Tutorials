@@ -1,5 +1,5 @@
 ---
-title: "groupdocs comparison java: Document Comparison Tutorial"
+title: "groupdocs comparison java - Document Comparison Tutorial"
 linktitle: "Java Document Comparison Guide"
 description: "Learn how to use groupdocs comparison java API to compare documents, handle large files, generate previews, and follow best practices."
 keywords: "Java document comparison, GroupDocs Comparison Java, document version control Java, Java PDF comparison library, document management Java"

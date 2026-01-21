@@ -12,7 +12,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 如何使用 GroupDocs：Java 文档比较流 – 完整指南
+title: 如何使用 GroupDocs - Java 文档比较流 – 完整指南
 type: docs
 url: /zh/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -421,12 +421,6 @@ try {
 
 **今天开始构建**：将代码示例适配到你的项目，使用真实文档进行测试并迭代。掌握文档比较的最佳方式是将这些模式应用到你所面临的挑战中。
 
----
-
-**最后更新：** 2025-12-23  
-**测试版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **相关资源：**
 - [GroupDocs.Comparison 文档](https://docs.groupdocs.com/comparison/java/)  
 - [API 参考](https://reference.groupdocs.com/comparison/java/)  
@@ -435,3 +429,9 @@ try {
 - [购买选项](https://purchase.groupdocs.com/buy)  
 - [免费试用](https://releases.groupdocs.com/comparison/java/)  
 - [临时许可证](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**最后更新：** 2025-12-23  
+**测试版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

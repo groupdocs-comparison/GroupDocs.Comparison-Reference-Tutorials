@@ -12,7 +12,7 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'GroupDocs Comparison Java: ドキュメント比較チュートリアル'
+title: 'GroupDocs Comparison Java - ドキュメント比較チュートリアル'
 type: docs
 url: /ja/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1

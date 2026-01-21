@@ -307,12 +307,6 @@ R: La biblioteca maneja correctamente contenido Unicode, incluidos idiomas de de
 **P: ¿Qué ocurre si los documentos tienen diferentes diseños de página?**  
 R: GroupDocs maneja inteligentemente las diferencias de diseño, enfocándose en cambios de contenido más que en variaciones de formato. Puedes configurar la sensibilidad para controlar este comportamiento.
 
----
-
-**Última actualización:** 2025-12-23  
-**Probado con:** GroupDocs.Comparison 25.2 para Java  
-**Autor:** GroupDocs  
-
 **Recursos y Aprendizaje Adicional**
 - [Documentación de GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)
 - [Referencia Completa de la API](https://reference.groupdocs.com/comparison/java/)
@@ -321,3 +315,9 @@ R: GroupDocs maneja inteligentemente las diferencias de diseño, enfocándose en
 - [Acceso a Prueba Gratuita](https://releases.groupdocs.com/comparison/java/)
 - [Licencia Temporal para Pruebas](https://purchase.groupdocs.com/temporary-license/)
 - [Foro de Soporte Comunitario](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Última actualización:** 2025-12-23  
+**Probado con:** GroupDocs.Comparison 25.2 para Java  
+**Autor:** GroupDocs  

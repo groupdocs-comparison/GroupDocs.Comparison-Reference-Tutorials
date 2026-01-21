@@ -312,10 +312,6 @@ A: A biblioteca lida corretamente com conteúdo Unicode, incluindo idiomas da di
 **Q: O que acontece se os documentos tiverem layouts de página diferentes?**  
 A: O GroupDocs lida inteligentemente com diferenças de layout, focando nas mudanças de conteúdo ao invés de variações de formatação. Você pode configurar as opções de sensibilidade para controlar esse comportamento.
 
-**Última atualização:** 2025-12-23  
-**Testado com:** GroupDocs.Comparison 25.2 para Java  
-**Autor:** GroupDocs  
-
 **Recursos e Aprendizado Adicional**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -324,3 +320,7 @@ A: O GroupDocs lida inteligentemente com diferenças de layout, focando nas muda
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+**Última atualização:** 2025-12-23  
+**Testado com:** GroupDocs.Comparison 25.2 para Java  
+**Autor:** GroupDocs  

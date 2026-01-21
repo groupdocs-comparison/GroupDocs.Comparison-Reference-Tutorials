@@ -14,7 +14,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: So sánh tài liệu dễ dàng'
+title: 'GroupDocs Comparison Java - So sánh tài liệu dễ dàng'
 type: docs
 url: /vi/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -447,12 +447,6 @@ A: Hầu hết các định dạng phổ biến — bao gồm Word, PDF, Excel v
 **Q: Làm sao để nhận được hỗ trợ nếu gặp vấn đề?**  
 A: [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/comparison) là nguồn tài nguyên cộng đồng tuyệt vời, và những người có giấy phép thương mại nhận được hỗ trợ ưu tiên.
 
----
-
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Tài nguyên bổ sung**  
 - **Tài liệu:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **Tham chiếu API:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -460,3 +454,9 @@ A: [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/comparison) là nguồ
 - **Tải phiên bản mới nhất:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Các tùy chọn mua:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Dùng thử miễn phí:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Last Updated:** 2025-12-23  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

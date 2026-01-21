@@ -12,7 +12,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: GroupDocs Comparison Java：文档比较轻松实现
+title: GroupDocs Comparison Java - 文档比较轻松实现
 type: docs
 url: /zh/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -449,12 +449,6 @@ A：大多数常见格式——包括 Word、PDF、Excel、PowerPoint——均�
 **Q：如果遇到问题，如何获取支持？**  
 A：[GroupDocs 论坛](https://forum.groupdocs.com/c/comparison) 是活跃的社区资源，商业许可证持有者还能获得优先技术支持。
 
----
-
-**最后更新：** 2025-12-23  
-**测试环境：** GroupDocs.Comparison 25.2 for Java  
-**作者：** GroupDocs  
-
 **其他资源**  
 - **文档：** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API 参考：** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -462,3 +456,9 @@ A：[GroupDocs 论坛](https://forum.groupdocs.com/c/comparison) 是活跃的社
 - **下载最新版本：** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **购买选项：** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **免费试用：** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**最后更新：** 2025-12-23  
+**测试环境：** GroupDocs.Comparison 25.2 for Java  
+**作者：** GroupDocs  

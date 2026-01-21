@@ -298,12 +298,6 @@ A: The library handles Unicode content properly, including right‑to‑left lan
 **Q: What happens if documents have different page layouts?**  
 A: GroupDocs intelligently handles layout differences, focusing on content changes rather than formatting variations. You can configure sensitivity settings to control this behavior.
 
----
-
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Resources and Further Learning**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -312,5 +306,11 @@ A: GroupDocs intelligently handles layout differences, focusing on content chang
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-23  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  
 
 ---

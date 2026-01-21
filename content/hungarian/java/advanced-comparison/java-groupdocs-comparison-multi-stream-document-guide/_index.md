@@ -14,7 +14,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'Hogyan használjuk a GroupDocs-ot: Java dokumentum-összehasonlítási adatfolyamok
+title: 'Hogyan használjuk a GroupDocs-ot - Java dokumentum-összehasonlítási adatfolyamok
   – Teljes útmutató'
 type: docs
 url: /hu/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
@@ -425,12 +425,6 @@ Most már szilárd alapokkal rendelkezik a **hogyan használjuk a GroupDocs** Ja
 
 **Kezdje el még ma**: Alkalmazza a kódmintákat a saját projektjében, tesztelje valós dokumentumokkal, és iteráljon. A dokumentum‑összehasonlítás legjobb módja a gyakorlati alkalmazás a tanult mintákra.
 
----
-
-**Utolsó frissítés:** 2025-12-23  
-**Tesztelt verzió:** GroupDocs.Comparison 25.2  
-**Szerző:** GroupDocs  
-
 **Kapcsolódó források:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -439,3 +433,9 @@ Most már szilárd alapokkal rendelkezik a **hogyan használjuk a GroupDocs** Ja
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Utolsó frissítés:** 2025-12-23  
+**Tesztelt verzió:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs  

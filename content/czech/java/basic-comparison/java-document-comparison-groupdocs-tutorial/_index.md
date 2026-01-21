@@ -307,12 +307,6 @@ A: Knihovna správně pracuje s Unicode obsahem, včetně right‑to‑left jazy
 **Q: Co se stane, pokud mají dokumenty odlišné rozložení stránek?**  
 A: GroupDocs inteligentně zvládá rozdíly v rozložení a soustředí se na změny obsahu místo čistých formátovacích odchylek. Citlivost můžete nastavit podle potřeby.
 
----
-
-**Poslední aktualizace:** 2025-12-23  
-**Testováno s:** GroupDocs.Comparison 25.2 pro Java  
-**Autor:** GroupDocs  
-
 **Zdroje a další vzdělávání**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -321,3 +315,9 @@ A: GroupDocs inteligentně zvládá rozdíly v rozložení a soustředí se na z
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Poslední aktualizace:** 2025-12-23  
+**Testováno s:** GroupDocs.Comparison 25.2 pro Java  
+**Autor:** GroupDocs  

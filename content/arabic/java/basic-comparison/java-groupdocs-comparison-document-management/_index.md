@@ -13,7 +13,7 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'groupdocs مقارنة جافا: دليل مقارنة المستندات'
+title: 'groupdocs مقارنة جافا - دليل مقارنة المستندات'
 type: docs
 url: /ar/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1

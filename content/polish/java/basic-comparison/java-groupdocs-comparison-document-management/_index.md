@@ -14,53 +14,53 @@ tags:
 - java-api
 - groupdocs
 - document-management
-title: 'groupdocs comparison java: Poradnik porównywania dokumentów'
+title: 'groupdocs comparison java - Poradnik porównywania dokumentów'
 type: docs
 url: /pl/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1
 ---
 
-# groupdocs comparison java: Mistrz GroupDocs.Comparison API
+# porównanie groupdocs Java: Mistrz GroupDocs.Comparison API
 
-**Masz problem z kontrolą wersji dokumentów w swojej aplikacji Java?** Nie jesteś sam. Zarządzanie wieloma wersjami dokumentów, śledzenie zmian i generowanie podglądów wizualnych może szybko stać się koszmarem bez odpowiednich narzędzi.
+**Masz problem z kontrolą wersji dokumentów w swojej aplikacji Java?** Nie jesteś sam. Zarządzanie wieloma wersjami dokumentów, pojawienie się zmian i generowanie podglądów kontrolnych może szybko stać się problemem bez użycia narzędzia.
 
-Właśnie tutaj wkracza **GroupDocs.Comparison for Java**. To potężne API pozwala porównywać dokumenty, podświetlać różnice i generować podglądy stron przy użyciu kilku linii kodu. Niezależnie od tego, czy budujesz system zarządzania treścią, potrzebujesz **java compare word files**, czy chcesz **java compare pdf documents**, ten samouczek szybko uruchomi Cię w działaniu.
+Właśnie tutaj wkracza **GroupDocs.Comparison for Java**. Aby uruchomić API, możesz porównywać dokumenty, podświetlać różnicę i generować podgląd przy użyciu kilku linii kodu. wersja tego, czy tworzysz system zarządzania treścią, **java Compare Word Files**, czy chcesz **java porównaj dokumenty pdf**, dziesięć samouczek szybkiego uruchomienia Cię w urządzeniu.
 
-## Quick Answers
-- **What does groupdocs comparison java do?** Porównuje dwa lub więcej dokumentów, podświetla zmiany i może generować podglądy wizualne.  
-- **Which file formats are supported?** Word, PDF, Excel, PowerPoint, obrazy, HTML i wiele innych.  
-- **Do I need a license for production?** Tak – ważna licencja GroupDocs usuwa znaki wodne i odblokowuje pełne funkcje.  
-- **Can I handle large documents?** Tak, przy odpowiednim zarządzaniu pamięcią i paginacją podglądów.  
-- **Where can I find the latest Maven dependency?** W repozytorium GroupDocs – sprawdź najnowszą wersję przed dodaniem.
+## Szybkie odpowiedzi
+- **Do czego służy porównanie groupdocs w Javie?** Porównuje dwa lub więcej dokumentów, podświetla zmiany i może generować podglądy wizualne.
+- **Jakie formaty plików są obsługiwane?** Word, PDF, Excel, PowerPoint, obrazy, HTML i wiele innych.
+- **Czy potrzebuję licencji na produkcję?** Tak – ważny licencja GroupDocs wyświetla znaki wodne i odblokowuje pełne funkcje.
+- **Czy mogę obsługiwać duże dokumenty?** Tak, przy zarządzaniu zarządzaniem pamięcią i paginacją podglądów.
+- **Gdzie mogę znaleźć najnowszą zależność Mavena?** W repozytorium GroupDocs – sprawdź badanie kontrolne przed sprawdzeniem.
 
-## What is groupdocs comparison java?
-GroupDocs.Comparison for Java to biblioteka, która programowo porównuje dokumenty, identyfikuje różnice w tekście, formatowaniu i obrazach oraz opcjonalnie tworzy dokument wynikowy wizualizujący te zmiany.
+## Co to jest Java — porównywanie dokumentów groupdocs?
+GroupDocs.Comparison for Java to biblioteka, która programowo udostępnia dokumenty, identyfikuje różnicę w tekście, formatowaniu i obrazach oraz opcję tworzywowego dokumentu wynikowego wizualizującego te zmiany.
 
-## Why use GroupDocs.Comparison in Java projects?
-- **Accurate change detection** across many file types.  
-- **Easy integration** with Maven or Gradle.  
-- **Built‑in preview generation** for quick visual reviews.  
-- **Scalable performance** when you follow the recommended best practices for handling large documents.
+## Dlaczego warto używać GroupDocs.Comparison w projektach Java?
+- **Dokładne wykrywanie zmian** w wielu typach plików.
+- **Łatwa integracja** z Mavenem lub Gradle.
+- **Wbudowane generowanie podglądu** do szybkich przeglądów wizualnych.
+- **Skalowalna wydajność** przy przestrzeganiu zalecanych najlepszych praktyk dotyczących obsługi dużych dokumentów.
 
-## Prerequisites: What You Need to Get Started
+## Wymagania wstępne: Czego potrzebujesz, aby zacząć
 
-### Essential Requirements
+### Wymagania podstawowe
 
-Before we jump into the code, make sure you have these basics covered:
+Zanim przejdziemy do kodu, upewnij się, że znasz już te podstawy:
 
-**Development Environment:**
-- Java Development Kit (JDK) 8 or later (JDK 11+ recommended for better performance)
-- Maven or Gradle for dependency management
-- Your favorite IDE (IntelliJ IDEA, Eclipse, or VS Code work great)
+**Środowisko programistyczne:**
+- Java Development Kit (JDK) 8 lub nowszy (zalecany JDK11+ dla lepszej wydajności)
+- Maven lub Gradle do zarządzania zależnościami
+- Twoje ulubione IDE (IntelliJ IDEA, Eclipse lub VSCode sprawdzą się świetnie)
 
-**Knowledge Prerequisites:**
-- Basic Java programming skills (you should be comfortable with classes and methods)
-- Understanding of file I/O operations in Java
-- Familiarity with Maven dependencies (don’t worry—we’ll walk through this)
+**Wymagania wstępne:**
+- Podstawowe umiejętności programowania w Javie (powinieneś/powinnaś swobodnie posługiwać się klasami i metodami)
+- Zrozumienie operacji wejścia/wyjścia na plikach w Javie
+- Znajomość zależności Mavena (bez obaw – omówimy to z Tobą)
 
-### Adding GroupDocs.Comparison to Your Project
+### Dodawanie GroupDocs.Comparison do projektu
 
-Getting started is straightforward. Add this dependency to your `pom.xml`:
+Rozpoczęcie jest proste. Dodaj tę zależność do pliku `pom.xml`:
 
 ```xml
 <repositories>
@@ -79,21 +79,21 @@ Getting started is straightforward. Add this dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**Pro Tip:** Always check for the latest version on the GroupDocs website to ensure you get the newest features and bug fixes.
+**Wskazówka:** Zawsze sprawdzaj, czy na stronie GroupDocs jest dostępna najnowsza wersja, aby mieć pewność, że korzystasz z najnowszych funkcji i poprawek błędów.
 
-## Licensing (Don't Skip This!)
+## Licencjonowanie (nie pomijaj tego!)
 
-While you can start with a free trial, you'll want to set up proper licensing for production use:
+Możesz zacząć od bezpłatnego okresu próbnego, ale warto skonfigurować odpowiednie licencjonowanie do użytku produkcyjnego:
 
-1. **Free Trial**: Download from [GroupDocs](https://releases.groupdocs.com/comparison/java/)
-2. **Temporary License**: Get one [here](https://purchase.groupdocs.com/temporary-license/) for extended testing
-3. **Full License**: Purchase from [GroupDocs Store](https://purchase.groupdocs.com/buy)
+1. **Bezpłatna wersja próbna**: Pobierz z [GroupDocs](https://releases.groupdocs.com/comparison/java/)
+2. **Licencja tymczasowa**: Pobierz [tutaj](https://purchase.groupdocs.com/temporary-license/) do rozszerzonego testowania
+3. **Pełna licencja**: Kup w [sklepie GroupDocs](https://purchase.groupdocs.com/buy)
 
-## Initial Setup: Getting GroupDocs.Comparison Ready
+## Konfiguracja początkowa: Przygotowanie GroupDocs.Comparison
 
-### Basic Initialization
+### Podstawowa inicjalizacja
 
-Here's how you get started with your first comparison:
+Oto jak rozpocząć pierwsze porównanie:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -103,37 +103,37 @@ import com.groupdocs.comparison.examples.SampleFiles;
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**What's happening here?** We're creating a `Comparer` object that will handle all our document comparison operations. Think of it as your document comparison workspace.
+**Co tu się dzieje?** Tworzymy obiekt „Comparer”, który będzie obsługiwał wszystkie operacje porównywania dokumentów. Wyobraź sobie go jako obszar roboczy porównywania dokumentów.
 
-## Step-by-Step Implementation Guide
+## Przewodnik implementacji krok po kroku
 
-### Part 1: Setting Up Document Comparison
+### Część 1: Konfigurowanie porównywania dokumentów
 
-Let's build a robust document comparison system that you can actually use in production.
+Zbudujmy solidny system porównywania dokumentów, z którego będziesz mógł korzystać w środowisku produkcyjnym.
 
-#### Step 1: Initialize Your Comparer
+#### Krok 1: Zainicjuj obiekt Comparer
 
 ```java
 // Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Why this matters:** The source document serves as your baseline. All comparisons will show what changed relative to this document.
+**Dlaczego to ważne:** Dokument źródłowy służy jako punkt odniesienia. Wszystkie porównania pokażą zmiany w stosunku do tego dokumentu.
 
-#### Step 2: Add Target Documents
+#### Krok 2: Dodaj dokumenty docelowe
 
 ```java
 // Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**Real‑world scenario:** In a contract management system, your source might be the original contract, and the target could be the revised version from the legal team.
+**Scenariusz z życia wzięty:** W systemie zarządzania umowami źródłem może być umowa oryginalna, a celem jej poprawiona wersja opracowana przez zespół prawny.
 
-### Part 2: Generating Page Previews
+### Część 2: Generowanie podglądów stron
 
-Sometimes you need visual previews of your documents. Here's how to generate them efficiently:
+Czasami potrzebujesz wizualnych podglądów dokumentów. Oto jak je efektywnie generować:
 
-#### Step 1: Set Up Output Stream Creation
+#### Krok 1: Konfiguracja tworzenia strumienia wyjściowego
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -154,9 +154,9 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**Key insight:** This delegate pattern gives you complete control over where and how your preview images are saved. You could easily modify this to save to cloud storage or a database.
+**Kluczowa informacja:** Ten wzorzec delegowania daje Ci pełną kontrolę nad miejscem i sposobem zapisywania obrazów podglądu. Możesz go łatwo zmodyfikować, aby zapisywać w chmurze lub bazie danych.
 
-#### Step 2: Configure Preview Options
+#### Krok 2: Skonfiguruj opcje podglądu
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -169,36 +169,36 @@ PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
     .build();
 ```
 
-**Performance tip:** Only generate previews for the pages you actually need. This saves processing time and storage space.
+**Wskazówka dotycząca wydajności:** Generuj podglądy tylko dla stron, których faktycznie potrzebujesz. Oszczędza to czas przetwarzania i miejsce na dysku.
 
-#### Step 3: Generate the Previews
+#### Krok 3: Wygeneruj podglądy
 
 ```java
 // Generate page previews
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**What's happening:** This creates PNG images of the specified pages from your target document. Perfect for creating thumbnails or quick visual reviews.
+**Co się dzieje:** Ta funkcja tworzy obrazy PNG określonych stron z dokumentu docelowego. Idealne do tworzenia miniatur lub szybkich przeglądów wizualnych.
 
-## Supported File Formats
+## Obsługiwane formaty plików
 
-GroupDocs.Comparison supports a wide range of document formats, making it versatile for different use cases:
+GroupDocs.Comparison obsługuje szeroką gamę formatów dokumentów, co czyni go wszechstronnym w różnych zastosowaniach:
 
-**Popular Formats:**
+**Popularne formaty:**
 - **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
-- **PDF Documents**: All versions of PDF files
-- **Text Files**: Plain text (.txt), Rich Text (.rtf)
-- **Images**: JPEG, PNG, BMP, GIF
-- **Web Formats**: HTML, MHTML
-- **Other**: ODT, ODS, ODP (OpenDocument formats)
+- **Dokumenty PDF**: Wszystkie wersje plików PDF
+- **Pliki tekstowe**: Zwykły tekst (.txt), Tekst sformatowany (.rtf)
+- **Obrazy**: JPEG, PNG, BMP, GIF
+- **Formaty internetowe**: HTML, MHTML
+- **Inne**: ODT, ODS, ODP (formaty OpenDocument)
 
-## Common Issues and Solutions
+## Typowe problemy i rozwiązania
 
-### Problem 1: FileNotFoundException During Preview Generation
+### Problem 1: Wyjątek FileNotFoundException podczas generowania podglądu
 
-**Symptoms:** Your code throws exceptions when trying to create output streams.
+**Objawy:** Kod zgłasza wyjątki podczas próby utworzenia strumieni wyjściowych.
 
-**Solution:**
+**Rozwiązanie:**
 
 ```java
 Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
@@ -221,11 +221,11 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-### Problem 2: Memory Issues with Large Documents
+### Problem 2: Problemy z pamięcią w przypadku dużych dokumentów
 
-**Symptoms:** `OutOfMemoryError` when processing large files or many pages.
+**Objawy:** Błąd „OutOfMemoryError” podczas przetwarzania dużych plików lub wielu stron.
 
-**Solution:** Process documents in chunks and dispose of objects properly:
+**Rozwiązanie:** Przetwarzaj dokumenty w częściach i usuwaj obiekty prawidłowo:
 
 ```java
 // Process fewer pages at a time
@@ -241,11 +241,11 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 } // Automatic cleanup
 ```
 
-### Problem 3: Licensing Issues
+### Problem 3: Problemy z licencją
 
-**Symptoms:** Watermarks on output or limited functionality.
+**Objawy:** Znaki wodne na wydruku lub ograniczona funkcjonalność.
 
-**Solution:** Ensure your license is properly applied:
+**Rozwiązanie:** Upewnij się, że licencja jest poprawnie zastosowana:
 
 ```java
 // Apply license at the start of your application
@@ -253,15 +253,19 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Performance Tips and Best Practices (java comparison best practices)
+## Wskazówki dotyczące wydajności i najlepsze praktyki (najlepsze praktyki porównywania w Javie)
 
-1. **Limit Preview Generation** – Only create previews for pages you actually need.  
-2. **Choose the Right Image Format** – PNG for loss‑less quality, JPEG for smaller files.  
-3. **Implement Caching** – Store comparison results to avoid re‑processing identical documents.  
-4. **Manage Memory** – Use try‑with‑resources and process large files in smaller batches.  
-5. **Dispose of Comparer Objects** – Always close the `Comparer` when finished.
+1. **Ogranicz generowanie podglądu** – Twórz podglądy tylko dla stron, których faktycznie potrzebujesz.
 
-### Production‑Ready Code Pattern
+2. **Wybierz odpowiedni format obrazu** – PNG dla jakości bezstratnej, JPEG dla mniejszych plików.
+
+3. **Zaimplementuj buforowanie** – Przechowuj wyniki porównania, aby uniknąć ponownego przetwarzania identycznych dokumentów.
+
+4. **Zarządzaj pamięcią** – Używaj zasobów typu „try‑with” i przetwarzaj duże pliki w mniejszych partiach.
+
+5. **Usuwaj obiekty Comparer** – Zawsze zamykaj obiekt „Comparer” po zakończeniu.
+
+### Wzorzec kodu gotowego do produkcji
 
 ```java
 public class DocumentComparisonService {
@@ -291,9 +295,9 @@ public class DocumentComparisonService {
 }
 ```
 
-## Real‑World Implementation Examples
+## Przykłady wdrożeń w świecie rzeczywistym
 
-### Example 1: Contract Management System
+### Przykład 1: System zarządzania umowami
 
 ```java
 public class ContractVersionManager {
@@ -312,7 +316,7 @@ public class ContractVersionManager {
 }
 ```
 
-### Example 2: Academic Paper Review
+### Przykład 2: Recenzja pracy naukowej
 
 ```java
 public class AcademicDocumentReview {
@@ -332,10 +336,10 @@ public class AcademicDocumentReview {
 }
 ```
 
-## Frequently Asked Questions
+## Często zadawane pytania
 
-**Q: How do I handle password‑protected documents?**  
-A: GroupDocs.Comparison can open encrypted files. Provide the password via `LoadOptions`:
+**P: Jak obsługiwać dokumenty chronione hasłem?**
+O: GroupDocs.Comparison może otwierać zaszyfrowane pliki. Podaj hasło za pomocą `LoadOptions`:
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -343,8 +347,8 @@ loadOptions.setPassword("your-password");
 Comparer comparer = new Comparer("protected-document.docx", loadOptions);
 ```
 
-**Q: Can I compare documents stored in cloud storage?**  
-A: Absolutely! Use input streams instead of file paths:
+**P: Czy mogę porównywać dokumenty przechowywane w chmurze?**
+O: Oczywiście! Użyj strumieni wejściowych zamiast ścieżek do plików:
 
 ```java
 InputStream sourceStream = getDocumentFromCloud("source-doc-id");
@@ -353,23 +357,23 @@ Comparer comparer = new Comparer(sourceStream);
 comparer.add(targetStream);
 ```
 
-**Q: What's the maximum file size GroupDocs.Comparison can handle?**  
-A: There’s no hard limit, but performance depends on available memory. For files larger than 100 MB, increase the JVM heap size or process in chunks.
+**P: Jaki jest maksymalny rozmiar pliku obsługiwany przez GroupDocs.Comparison?**
+O: Nie ma sztywnego limitu, ale wydajność zależy od dostępnej pamięci. W przypadku plików większych niż 100 MB należy zwiększyć rozmiar sterty JVM lub przetwarzać pliki partiami.
 
-**Q: How accurate is the comparison algorithm?**  
-A: The library uses advanced diff algorithms that detect changes in text, formatting, images, and even embedded objects—ideal for legal or compliance use cases.
+**P: Jak dokładny jest algorytm porównywania?**
+O: Biblioteka korzysta z zaawansowanych algorytmów porównywania, które wykrywają zmiany w tekście, formatowaniu, obrazach, a nawet obiektach osadzonych — idealne w przypadkach prawnych lub związanych z przestrzeganiem przepisów.
 
-**Q: Can I customize which types of changes are detected?**  
-A: Yes. Use `CompareOptions` to enable or disable detection of text, formatting, images, tables, etc.
+**P: Czy mogę dostosować typy wykrywanych zmian?**
+O: Tak. Użyj `CompareOptions`, aby włączyć lub wyłączyć wykrywanie tekstu, formatowania, obrazów, tabel itp.
 
-## Conclusion
+## Wnioski
 
-You now have a complete, production‑ready guide to **groupdocs comparison java**. By following the steps, best practices, and example patterns above, you can integrate powerful document comparison and preview capabilities into any Java application—whether you’re handling contract revisions, academic drafts, or large PDF archives.
+Masz teraz kompletny, gotowy do użycia w środowisku produkcyjnym przewodnik po **porównaniu groupdocs w Javie**. Postępując zgodnie z powyższymi krokami, najlepszymi praktykami i przykładowymi wzorcami, możesz zintegrować zaawansowane funkcje porównywania i podglądu dokumentów z dowolną aplikacją Java — niezależnie od tego, czy obsługujesz poprawki umów, wersje robocze dokumentów akademickich, czy duże archiwa PDF.
 
 ---
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
+**Ostatnia aktualizacja:** 2025-12-23
+**Testowano z:** GroupDocs.Comparison 25.2
+**Autor:** GroupDocs
 
 ---

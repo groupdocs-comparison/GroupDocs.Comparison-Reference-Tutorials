@@ -317,12 +317,6 @@ Sie haben nun das komplette Werkzeugset, um professionellen Dokumentvergleich in
 **F: Was passiert, wenn Dokumente unterschiedliche Seitenlayouts haben?**  
 **A:** GroupDocs behandelt Layout‑Unterschiede intelligent und konzentriert sich auf Inhaltsänderungen statt auf Formatierungsvariationen. Sie können Empfindlichkeitseinstellungen konfigurieren, um dieses Verhalten zu steuern.
 
----
-
-**Zuletzt aktualisiert:** 2025-12-23  
-**Getestet mit:** GroupDocs.Comparison 25.2 für Java  
-**Autor:** GroupDocs  
-
 **Ressourcen und weiterführendes Lernen**
 - [GroupDocs.Comparison Dokumentation](https://docs.groupdocs.com/comparison/java/)
 - [Vollständige API-Referenz](https://reference.groupdocs.com/comparison/java/)
@@ -331,3 +325,9 @@ Sie haben nun das komplette Werkzeugset, um professionellen Dokumentvergleich in
 - [Kostenlosen Testzugriff](https://releases.groupdocs.com/comparison/java/)
 - [Temporäre Lizenz für Tests](https://purchase.groupdocs.com/temporary-license/)
 - [Community‑Support‑Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Zuletzt aktualisiert:** 2025-12-23  
+**Getestet mit:** GroupDocs.Comparison 25.2 für Java  
+**Autor:** GroupDocs  

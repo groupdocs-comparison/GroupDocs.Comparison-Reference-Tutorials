@@ -13,7 +13,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'Cara Menggunakan GroupDocs: Alur Perbandingan Dokumen Java – Panduan Lengkap'
+title: 'Cara Menggunakan GroupDocs - Alur Perbandingan Dokumen Java – Panduan Lengkap'
 type: docs
 url: /id/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -421,10 +421,6 @@ Anda kini memiliki fondasi yang kuat untuk mengimplementasikan **cara menggunaka
 
 **Mulai Membangun Hari Ini**: Sesuaikan contoh kode dengan proyek Anda, uji dengan dokumen nyata, dan iterasi. Cara terbaik menguasai perbandingan dokumen adalah dengan menerapkan pola ini pada tantangan yang Anda hadapi.
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Sumber Daya Terkait:**  
 - [Dokumentasi GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [Referensi API](https://reference.groupdocs.com/comparison/java/)  
@@ -433,3 +429,7 @@ Anda kini memiliki fondasi yang kuat untuk mengimplementasikan **cara menggunaka
  [Opsi Pembelian](https://purchase.groupdocs.com/buy)  
 - [Uji Coba Gratis](https://releases.groupdocs.com/comparison/java/)  
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
+
+**Last Updated:** 2025-12-23  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

@@ -14,7 +14,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'GroupDocs Nasıl Kullanılır: Java Belge Karşılaştırma Akışları – Tam Rehber'
+title: 'GroupDocs Nasıl Kullanılır - Java Belge Karşılaştırma Akışları – Tam Rehber'
 type: docs
 url: /tr/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -424,12 +424,6 @@ Artık **how to use GroupDocs**’ı Java belge karşılaştırma akışlarıyla
 
 **Bugün Başlayın**: Kod örneklerini projenize uyarlayın, gerçek belgelerle test edin ve yineleyin. Belge karşılaştırma konusunda ustalaşmanın en iyi yolu, bu kalıpları karşılaştığınız zorluklara uygulamaktır.
 
----
-
-**Son Güncelleme:** 2025-12-23  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
-**Yazar:** GroupDocs  
-
 **İlgili Kaynaklar:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -438,3 +432,9 @@ Artık **how to use GroupDocs**’ı Java belge karşılaştırma akışlarıyla
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Son Güncelleme:** 2025-12-23  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs  

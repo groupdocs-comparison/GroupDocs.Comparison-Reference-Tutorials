@@ -21,60 +21,60 @@ weight: 1
 
 # Java ドキュメント比較チュートリアル - 完全な GroupDocs ガイド
 
-## Introduction
+## はじめに
 
-If you need to **compare PDF and Word** documents, GroupDocs.Comparison makes it effortless.  
-Ever found yourself manually comparing multiple document versions, squinting at screens trying to spot what changed between `Draft_v1.docx` and `Draft_final_FINAL_v2.docx`? You're not alone. Document comparison is one of those tasks that seems simple until you're actually doing it – especially when you're dealing with complex documents or need to track changes across multiple versions simultaneously.
+**PDF 文書と Word 文書を比較** する必要がある場合、GroupDocs.Comparison を使えば簡単です。
+複数のバージョンの文書を手動で比較し、`Draft_v1.docx` と `Draft_final_FINAL_v2.docx` の違いを探るために画面を凝視した経験はありませんか？ そんな経験はありませんか？ 文書の比較は、実際にやってみるまでは簡単そうに思える作業の一つです。特に複雑な文書を扱っている場合や、複数のバージョンの変更を同時に追跡する必要がある場合はなおさらです。
 
-That's where **GroupDocs.Comparison for Java** comes in. This powerful library transforms what used to be a tedious manual process into a streamlined, automated workflow that actually saves you time and reduces errors.
+そこで **GroupDocs.Comparison for Java** の出番です。この強力なライブラリは、これまで面倒な手作業を、合理化された自動化されたワークフローへと変革し、時間の節約とエラーの削減を実現します。
 
-### Why This Tutorial Matters
+### このチュートリアルの重要性
 
-In this comprehensive guide, you'll discover how to implement robust document comparison functionality in your Java applications. We'll walk through everything from basic setup to advanced customization, ensuring you can handle real‑world scenarios with confidence.
+この包括的なガイドでは、Java アプリケーションに堅牢な文書比較機能を実装する方法を学びます。基本的な設定から高度なカスタマイズまで、すべてを順を追って説明し、実際のシナリオに自信を持って対応できるようにします。
 
-**What you'll master:**
-- Setting up GroupDocs.Comparison in your Java project (the right way)  
-- Comparing multiple documents simultaneously  
-- Customizing comparison output with professional styling  
-- Handling common issues and performance optimization  
-- Real‑world applications that'll make your colleagues jealous  
+**習得内容:**
+- Java プロジェクトで GroupDocs.Comparison を設定する (正しい方法)
+- 複数のドキュメントを同時に比較する
+- プロフェッショナルなスタイルで比較出力をカスタマイズする
+- よくある問題への対処とパフォーマンスの最適化
+- 同僚が羨むような、実践的なアプリケーション
 
-Let's jump in and turn you into a document comparison expert!
+さあ、始めましょう！ドキュメント比較のエキスパートになりましょう！
 
-## Quick Answers
-- **What can I compare?** PDF, Word, Excel, PowerPoint and many other formats.  
-- **Can I compare PDF and Word together?** Yes – GroupDocs intelligently handles cross‑format comparisons.  
-- **Do I need a license?** A temporary license is free for testing; a paid license removes watermarks for production.  
-- **How many documents can I compare at once?** Any number, limited only by memory and CPU resources.  
-- **Is it thread‑safe?** Each `Comparer` instance is single‑threaded; run separate instances in parallel for concurrency.
+## クイックアンサー
+- **何を比較できますか？** PDF、Word、Excel、PowerPoint など、その他多くの形式です。
+- **PDF と Word を同時に比較できますか？** はい。GroupDocs は、異なる形式間の比較をインテリジェントに処理します。
+- **ライセンスは必要ですか？** 一時ライセンスはテスト用に無料でご利用いただけます。有料ライセンスでは、本番環境で透かしが削除されます。
+- **一度にいくつのドキュメントを比較できますか？** メモリと CPU リソースによって制限される限り、任意の数を比較できます。
+- **スレッドセーフですか？** 各 `Comparer` インスタンスはシングルスレッドです。同時実行性を高めるために、別々のインスタンスを並列に実行します。
 
-## Why Choose GroupDocs.Comparison for Java?
+## GroupDocs.Comparison for Java を選ぶ理由
 
-Before we dive into the code, let's talk about why this library stands out. Unlike basic file diff tools, GroupDocs.Comparison understands document structure – it's not just comparing text strings, it's analyzing document elements, formatting, and layout changes in a way that makes sense for business documents.
+コードの説明に入る前に、このライブラリが優れている理由について説明しましょう。基本的なファイル比較ツールとは異なり、GroupDocs.Comparison はドキュメント構造を理解します。つまり、単にテキスト文字列を比較するだけでなく、ビジネスドキュメントに適した方法でドキュメントの要素、書式、レイアウトの変更を分析します。
 
-**Key advantages:**
-- **Format Intelligence** – Works with Word docs, PDFs, Excel files, and more.  
-- **Visual Clarity** – Highlights changes with customizable styles.  
-- **Multi‑document Support** – Compare several versions at once (game changer!).  
-- **Production Ready** – Battle‑tested in enterprise environments.
+**主な利点:**
+- **フォーマットインテリジェンス** – Word 文書、PDF、Excel ファイルなどに対応しています。
+- **視覚的な明瞭性** – カスタマイズ可能なスタイルで変更点を強調表示します。
+- **複数ドキュメントのサポート** – 複数のバージョンを一度に比較できます（画期的な機能です！）。
+- **本番環境対応** – エンタープライズ環境で実証済み。
 
-## Prerequisites and Setup
+## 前提条件とセットアップ
 
-### What You'll Need
+### 必要なもの
 
-**Required Tools:**
-- Java 8 or higher (Java 11+ recommended for best performance)  
-- Maven or Gradle for dependency management  
-- Your favorite IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)  
-- Basic familiarity with Java file handling  
+**必須ツール:**
+- Java 8 以上 (最高のパフォーマンスを得るには Java 11 以上を推奨)
+- 依存関係管理用の Maven または Gradle
+- お好みの IDE (IntelliJ IDEA、Eclipse、VSCode など)
+- Java ファイル処理に関する基本的な知識
 
-**Skill Level**: This tutorial assumes you're comfortable with basic Java concepts, but don't worry – we'll explain the GroupDocs‑specific parts thoroughly.
+**スキルレベル**: このチュートリアルでは、Java の基本的な概念を理解していることを前提としていますが、GroupDocs 固有の部分については詳しく説明しますのでご安心ください。
 
-### Setting Up GroupDocs.Comparison for Java
+### Java 用 GroupDocs.Comparison のセットアップ
 
-Here's the part where most tutorials just dump a Maven snippet and move on. But let's actually talk about what's happening here.
+ほとんどのチュートリアルでは、この部分で Maven スニペットをそのまま記述して先へ進みますが、ここでは実際に何が行われているのかを見ていきましょう。
 
-When you add GroupDocs.Comparison to your project, you're pulling in a sophisticated document processing engine. The Maven configuration connects to GroupDocs' repository (not Maven Central) because they maintain their own artifact hosting.
+GroupDocs.Comparison をプロジェクトに追加すると、高度なドキュメント処理エンジンが取り込まれます。GroupDocs は独自のアーティファクトホスティングを管理しているため、Maven 設定は GroupDocs のリポジトリ (Maven Central ではありません) に接続します。
 
 ```xml
 <repositories>
@@ -93,27 +93,27 @@ When you add GroupDocs.Comparison to your project, you're pulling in a sophistic
 </dependencies>
 ```
 
-**Pro Tip**: Always check for the latest version number on the GroupDocs releases page – they push updates regularly with bug fixes and new features.
+**プロのヒント**: GroupDocs リリースページで最新バージョンを必ず確認してください。バグ修正や新機能を含むアップデートが定期的にリリースされます。
 
-### License Setup (Don't Skip This!)
+### ライセンス設定（必ず確認してください！）
 
-Here's something that trips up a lot of developers: GroupDocs.Comparison requires a license for production use. For development and testing, grab a temporary license – it's free and removes all the evaluation watermarks that'll otherwise appear in your output.
+多くの開発者がつまずく点があります。GroupDocs.Comparison を本番環境で使用する場合、ライセンスが必要です。開発およびテストには、一時ライセンスを取得してください。これは無料で、出力に表示される評価用の透かしがすべて削除されます。
 
-**When to Use This Approach**: Perfect for applications that need to track document changes, merge workflows, or provide visual diff capabilities to end users.
+**このアプローチを使用する場合**: ドキュメントの変更を追跡したり、ワークフローを統合したり、エンドユーザーに視覚的な差分機能を提供したりする必要があるアプリケーションに最適です。
 
-## Core Implementation Guide
+## コア実装ガイド
 
-Now for the fun part – let's build something that actually works! We'll tackle this in two main sections: basic multi‑document comparison and advanced styling customization.
+さあ、いよいよ楽しい部分です。実際に動作するものを構築してみましょう！基本的な複数ドキュメントの比較と、高度なスタイルカスタマイズという2つのセクションで説明します。
 
-### Feature 1: Comparing Multiple Documents
+### 機能 1: 複数ドキュメントの比較
 
-This is where GroupDocs.Comparison really shines. Instead of comparing documents one‑by‑one, you can load up multiple targets and compare them all against a source document in a single operation.
+GroupDocs.Comparison が真価を発揮するのはここです。ドキュメントを1つずつ比較する代わりに、複数の対象ドキュメントを読み込んで、1回の操作ですべてのドキュメントをソースドキュメントと比較できます。
 
-**Real‑world scenario**: Imagine you're managing a project proposal that's gone through multiple review rounds. You have the original draft plus feedback versions from legal, technical, and business teams. Rather than opening four different Word documents and playing spot‑the‑difference, you can process them all at once.
+**実際のシナリオ**: 複数回のレビューラウンドを経たプロジェクト提案書を管理していると想像してください。オリジナルの草稿に加え、法務、技術、ビジネスの各チームからのフィードバック版があります。4つの異なるWord文書を開いて違いを見つけるゲームをする代わりに、これらすべてを一度に処理できます。
 
-#### Step 1: Initialize the Comparer
+#### ステップ1: Comparerの初期化
 
-Think of the `Comparer` class as your document comparison engine. When you create a new instance, you're essentially loading your "baseline" document – the one everything else gets compared against.
+`Comparer`クラスはドキュメント比較エンジンと考えてください。新しいインスタンスを作成すると、基本的には「ベースライン」ドキュメント、つまり他のすべてのドキュメントと比較されるドキュメントを読み込みます。
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD")) {
@@ -121,13 +121,13 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD")) {
 }
 ```
 
-**What's happening here**: The try‑with‑resources block ensures proper cleanup of file handles and memory resources. GroupDocs loads the source document into memory and analyzes its structure – paragraphs, formatting, embedded objects, everything.
+**ここで何が起こっているか**: try‑with‑resources ブロックは、ファイルハンドルとメモリリソースの適切なクリーンアップを保証します。GroupDocs はソースドキュメントをメモリに読み込み、その構造（段落、書式、埋め込みオブジェクトなど）をすべて解析します。
 
-**Common Pitfall**: Make sure your file paths are absolute or properly relative to your working directory. A `FileNotFoundException` here will stop everything cold.
+**よくある落とし穴**: ファイルパスが絶対パスか、作業ディレクトリからの相対パスになっていることを確認してください。ここで `FileNotFoundException` が発生すると、すべてが停止してしまいます。
 
-#### Step 2: Add Target Documents
+#### ステップ 2: 対象ドキュメントの追加
 
-This is where the magic happens. Each call to `add()` loads another document for comparison. The library maintains all these documents in memory and will compare them simultaneously.
+ここで魔法が起こります。`add()` を呼び出すたびに、比較のために別のドキュメントが読み込まれます。ライブラリはこれらのドキュメントをすべてメモリに保持し、同時に比較します。
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD");
@@ -135,13 +135,13 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET2_WORD");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET3_WORD");
 ```
 
-**Behind the scenes**: GroupDocs is building a comprehensive change map – tracking insertions, deletions, modifications, and formatting changes across all target documents. It's doing the heavy lifting so you don't have to.
+**舞台裏で**: GroupDocs は包括的な変更マップを構築しています。これは、すべての対象ドキュメントにおける挿入、削除、変更、書式変更を追跡するものです。この面倒な作業は GroupDocs が代わりに行ってくれるので、ユーザーは何もする必要はありません。
 
-**Performance Note**: Each additional document increases memory usage and processing time. For production applications with large documents, consider processing in batches if you're hitting memory limits.
+**パフォーマンスに関する注意**: ドキュメントを追加するごとに、メモリ使用量と処理時間が増加します。大規模なドキュメントを扱う本番環境アプリケーションでメモリ制限に達している場合は、バッチ処理を検討してください。
 
-#### Step 3: Configure Comparison Options
+#### ステップ 3: 比較オプションの設定
 
-Here's where you start customizing the output to match your needs. The `CompareOptions` class gives you control over how changes are displayed and styled.
+ここから、ニーズに合わせて出力をカスタマイズします。`CompareOptions` クラスを使用すると、変更の表示方法とスタイルを制御できます。
 
 ```java
 final Path resultPath = comparer.compare(new FileOutputStream("YOUR_OUTPUT_DIRECTORY/CompareMultipleDocumentsSettingsPath"),
@@ -151,30 +151,30 @@ final Path resultPath = comparer.compare(new FileOutputStream("YOUR_OUTPUT_DIREC
                 .build());
 ```
 
-**What's happening**: This code is telling GroupDocs to highlight all inserted content (new text, paragraphs, etc.) in yellow. The builder pattern makes it easy to chain multiple style settings together.
+**動作内容**: このコードは、GroupDocs に挿入されたすべてのコンテンツ（新しいテキスト、段落など）を黄色で強調表示するように指示しています。ビルダーパターンを使用すると、複数のスタイル設定を簡単に連結できます。
 
-**Practical tip**: Choose colors that make sense for your use case. Yellow might be perfect for review documents, but consider red for deletions, green for additions if you're building a change‑tracking system.
+**実用的なヒント**: ユースケースに適した色を選択してください。黄色はレビュー文書に最適ですが、変更追跡システムを構築する場合は、削除には赤、追加には緑を検討してください。
 
-### Feature 2: Customizing Comparison Styles
+### 機能 2: 比較スタイルのカスタマイズ
 
-Default styling is fine for basic comparisons, but when you're building professional applications or need to meet specific visual requirements, customization becomes essential.
+基本的な比較にはデフォルトのスタイルで十分ですが、プロフェッショナルなアプリケーションを構築する場合や、特定のビジュアル要件を満たす必要がある場合は、カスタマイズが不可欠になります。
 
-#### Step 1: Advanced Style Configuration
+#### ステップ 1: 高度なスタイル設定
 
-The `StyleSettings` class is your toolkit for visual customization. Beyond just font colors, you can control highlighting, text decoration, and more.
+`StyleSettings` クラスは、ビジュアルカスタマイズのためのツールキットです。フォント色だけでなく、ハイライト表示やテキスト装飾などを制御できます。
 
 ```java
 final StyleSettings styleSettings = new StyleSettings();
 styleSettings.setFontColor(java.awt.Color.YELLOW);
 ```
 
-**Why this matters**: Consistent, professional‑looking comparison output builds user trust. When stakeholders can quickly scan a document and understand what changed, your application becomes more valuable.
+**これが重要な理由**: 一貫性があり、プロフェッショナルな外観の比較出力は、ユーザーの信頼を築きます。関係者がドキュメントをざっと見て変更点を理解できれば、アプリケーションの価値は高まります。
 
-**Customization options**: While we're showing font color here, `StyleSettings` supports background colors, bold/italic formatting, and highlighting effects. Experiment to find what works best for your users.
+**カスタマイズオプション**: ここではフォント色を示していますが、`StyleSettings` は背景色、太字/斜体、強調表示効果をサポートしています。ユーザーにとって最適な設定を見つけるために、いろいろ試してみてください。
 
-#### Step 2: Applying Styles to Comparison Output
+#### ステップ 2: 比較出力へのスタイルの適用
 
-This is where you bring together all your style settings and generate the final comparison document.
+ここで、すべてのスタイル設定をまとめて、最終的な比較ドキュメントを生成します。
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/CompareMultipleDocumentsStyles")) {
@@ -185,19 +185,19 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/Com
 }
 ```
 
-**Key insight**: The `compare()` method is doing a lot more than just finding differences. It's creating a new document that merges content from all your source files, applies your styling rules, and outputs a professional‑quality result.
+**重要なポイント**: `compare()` メソッドは、単に差異を見つける以上の多くの処理を行います。すべてのソースファイルのコンテンツをマージし、スタイルルールを適用して、プロ品質の結果を出力した新しいドキュメントを作成します。
 
-**File handling best practice**: Notice how we're using try‑with‑resources for the `OutputStream` too. This ensures files get closed properly even if something goes wrong during processing.
+**ファイル処理のベストプラクティス**: `OutputStream` でも try-with-resources を使用していることに注目してください。これにより、処理中に問題が発生した場合でも、ファイルが適切に閉じられるようになります。
 
-## Troubleshooting Common Issues
+## よくある問題のトラブルシューティング
 
-Let's talk about the problems you're likely to encounter and how to solve them quickly.
+発生する可能性のある問題と、それらを迅速に解決する方法について説明します。
 
-### File Path Problems
-**Symptom**: `FileNotFoundException` or `IllegalArgumentException`  
-**Solution**: Use absolute paths during development, then switch to configurable paths for production. Always validate file existence before processing.
+### ファイルパスの問題
+**症状**: `FileNotFoundException` または `IllegalArgumentException`
+**解決策**: 開発中は絶対パスを使用し、本番環境では設定可能なパスに切り替えます。処理前に必ずファイルの存在を検証してください。
 
-**Quick fix**:
+**クイックフィックス**:
 ```java
 File sourceFile = new File("path/to/document.docx");
 if (!sourceFile.exists()) {
@@ -205,49 +205,49 @@ if (!sourceFile.exists()) {
 }
 ```
 
-### Memory Issues with Large Documents
-**Symptom**: `OutOfMemoryError` during comparison  
-**Solution**: Increase JVM heap size or process documents in smaller batches. For huge files (50 MB+), consider breaking them into sections.
+### 大きなドキュメントのメモリ問題
+**症状**: 比較中に `OutOfMemoryError` が発生する
+**解決策**: JVM ヒープサイズを増やすか、ドキュメントを小さなバッチで処理してください。巨大なファイル (50MB 以上) の場合は、セクションに分割することを検討してください。
 
-### License Errors
-**Symptom**: Evaluation watermarks appearing in output  
-**Solution**: Ensure your license file is in the classpath and properly loaded before creating the `Comparer` instance.
+### ライセンスエラー
+**症状**: 出力に評価ウォーターマークが表示される
+**解決策**: `Comparer` インスタンスを作成する前に、ライセンスファイルがクラスパス内に存在し、正しくロードされていることを確認してください。
 
-### Performance Optimization Tips
+### パフォーマンス最適化のヒント
 
-**For better speed**:
-- Process similar document types together (all Word docs, then all PDFs)  
-- Use SSD storage for temporary files if processing large batches  
-- Consider multithreading for independent comparison operations  
+**速度向上のため**:
+- 類似したドキュメントタイプをまとめて処理する（すべてのWord文書、次にすべてのPDF）
+- 大規模なバッチ処理の場合は、一時ファイルにSSDストレージを使用する
+- 独立した比較操作にはマルチスレッド化を検討する
 
-**For memory efficiency**:
-- Dispose of `Comparer` instances promptly using try‑with‑resources  
-- Avoid keeping large documents in memory after comparison  
-- Monitor heap usage in production environments  
+**メモリ効率向上のため**:
+- try-with-resourcesを使用して、`Comparer`インスタンスを速やかに破棄する
+- 比較後に大きなドキュメントをメモリ内に保持しないようにする
+- 本番環境でのヒープ使用量を監視する
 
-## Real‑World Applications
+## 実世界のアプリケーション
 
-Here's where this technology really pays off:
+このテクノロジーが真に効果を発揮するケース:
 
-### Legal Document Review
-Law firms use document comparison to track contract changes through negotiation rounds. The ability to see exactly what clauses were modified, added, or removed is crucial for legal accuracy.
+### 法務文書レビュー
+法律事務所は、契約の変更を交渉ラウンドを通じて追跡するために文書比較を使用しています。変更、追加、または削除された条項を正確に把握できることは、法的正確性にとって非常に重要です。
 
-### Software Documentation
-Development teams comparing API documentation versions to ensure accuracy across releases. The visual highlighting makes it easy to spot breaking changes or new features.
+### ソフトウェアドキュメント
+開発チームは、APIドキュメントのバージョンを比較することで、リリース間の正確性を確保しています。視覚的なハイライト表示により、互換性を破る変更や新機能を簡単に見つけることができます。
 
-### Academic Research
-Researchers tracking manuscript changes through peer‑review processes. The multi‑document comparison feature is perfect for incorporating feedback from multiple reviewers.
+### 学術研究
+研究者は、査読プロセスを通じて論文の変更を追跡しています。複数ドキュメントの比較機能は、複数のレビュー担当者からのフィードバックを取り入れるのに最適です。
 
-### Compliance and Audit
-Financial services comparing policy documents to ensure regulatory compliance. The detailed change tracking provides audit trails for document modifications.
+### コンプライアンスと監査
+金融サービスでは、規制遵守を確保するためにポリシー文書を比較します。詳細な変更追跡により、ドキュメントの変更に関する監査証跡が提供されます。
 
-## Performance Considerations
+## パフォーマンスに関する考慮事項
 
-### Memory Management Best Practices
+### メモリ管理のベストプラクティス
 
-**Monitor your memory usage** – Document comparison can be memory‑intensive, especially with large files or multiple documents. Use profiling tools to understand your application's memory patterns.
+**メモリ使用量を監視する** – ドキュメントの比較は、特に大きなファイルや複数のドキュメントの場合、メモリを大量に消費する可能性があります。プロファイリングツールを使用して、アプリケーションのメモリパターンを把握してください。
 
-**Optimize for your use case** – If you're processing many small documents, batch processing might help. For occasional large document comparisons, focus on having sufficient heap space.
+**ユースケースに合わせて最適化する** – 多数の小さなドキュメントを処理する場合は、バッチ処理が効果的です。時々大きなドキュメントを比較する場合は、十分なヒープスペースを確保することに重点を置いてください。
 
 ```java
 // Good practice: explicitly manage resources
@@ -257,65 +257,65 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 }
 ```
 
-### Scalability Considerations
+### スケーラビリティに関する考慮事項
 
-**Concurrent processing**: `Comparer` instances are not thread‑safe, but you can run multiple comparisons in parallel using separate instances.
+**同時処理**: `Comparer` インスタンスはスレッドセーフではありませんが、別々のインスタンスを使用して複数の比較を並列実行できます。
 
-**File system optimization**: Use fast storage (SSD) for temporary files and output documents. Network storage can significantly slow down processing.
+**ファイルシステムの最適化**: 一時ファイルと出力ドキュメントには高速ストレージ (SSD) を使用してください。ネットワークストレージは処理速度を大幅に低下させる可能性があります。
 
-**Batch processing strategy**: For high‑volume scenarios, consider processing documents in batches rather than one‑by‑one to optimize resource usage.
+**バッチ処理戦略**: 大量のデータを処理するシナリオでは、リソース使用を最適化するために、ドキュメントを個別に処理するのではなく、バッチで処理することを検討してください。
 
-## Advanced Configuration Options
+## 詳細設定オプション
 
-While we've covered the basics, GroupDocs.Comparison offers extensive customization options:
+基本的な設定については説明しましたが、GroupDocs.Comparison には幅広いカスタマイズオプションが用意されています。
 
-### Sensitivity Settings
-Control how sensitive the comparison algorithm is to changes. Useful when you want to ignore minor formatting differences but catch content changes.
+### 感度設定
+比較アルゴリズムの変更に対する感度を制御します。軽微な書式の違いは無視しながら、コンテンツの変更は検出したい場合に便利です。
 
-### Content‑Type Specific Settings
-Different settings for text content vs. images vs. tables. This granular control helps generate more meaningful comparisons for complex documents.
+### コンテンツタイプ固有の設定
+テキストコンテンツ、画像、表ごとに異なる設定が可能です。このきめ細かな制御により、複雑なドキュメントでもより意味のある比較を生成できます。
 
-### Output Format Options
-Beyond styling, you can control the structure of the output document – whether to show changes inline, in separate sections, or with summary reports.
+### 出力形式オプション
+スタイル設定に加えて、出力ドキュメントの構造も制御できます。変更内容をインラインで表示するか、個別のセクションに表示するか、サマリーレポートと併せて表示するかを選択できます。
 
-## Conclusion
+## まとめ
 
-You've now got the complete toolkit for implementing professional document comparison in Java. From basic multi‑document comparisons to advanced styling customization, you can handle everything from simple change tracking to complex document workflow systems.
+これで、Java でプロフェッショナルなドキュメント比較を実装するための完全なツールキットが手に入りました。基本的な複数ドキュメントの比較から高度なスタイル設定のカスタマイズまで、シンプルな変更追跡から複雑なドキュメントワークフローシステムまで、あらゆる処理が可能です。
 
-## Frequently Asked Questions
+## よくある質問
 
-**Q: Can GroupDocs.Comparison handle different file formats in a single comparison?**  
-A: Yes! You can compare a Word document against a PDF, for example. The library handles format conversion internally, though results work best when comparing similar document types.
+**Q: GroupDocs.Comparison は、1 回の比較で異なるファイル形式を処理できますか？**
+A: はい！例えば、Word 文書と PDF を比較できます。ライブラリは内部で形式変換を処理しますが、類似したドキュメント形式を比較する場合に最も効果的な結果が得られます。
 
-**Q: What's the file size limit for document comparison?**  
-A: There's no hard limit, but performance and memory usage scale with file size. Documents over 100 MB should be tested thoroughly in your environment to ensure acceptable performance.
+**Q: ドキュメント比較のファイルサイズ制限は？**
+A: 厳密な制限はありませんが、パフォーマンスとメモリ使用量はファイルサイズに応じて変化します。100MB を超えるドキュメントは、適切なパフォーマンスを確保するために、ご自身の環境で十分にテストする必要があります。
 
-**Q: How accurate is the comparison algorithm?**  
-A: GroupDocs uses sophisticated algorithms that understand document structure, not just text content. It accurately identifies moved paragraphs, formatting changes, and embedded object modifications.
+**Q: 比較アルゴリズムの精度はどの程度ですか？**
+A: GroupDocs は、テキストコンテンツだけでなくドキュメント構造も理解する高度なアルゴリズムを使用しています。段落の移動、書式の変更、埋め込みオブジェクトの変更を正確に識別します。
 
-**Q: Can I compare documents programmatically without creating output files?**  
-A: Yes, you can access comparison results programmatically through the API to build custom workflows or integrate with other systems.
+**Q: 出力ファイルを作成せずにプログラムでドキュメントを比較できますか？**
+A: はい。API を介してプログラムで比較結果にアクセスし、カスタムワークフローを構築したり、他のシステムと統合したりできます。
 
-**Q: Is there support for custom document formats?**  
-A: GroupDocs supports most common business document formats out of the box. For proprietary formats, check their documentation or contact support for specific requirements.
+**Q: カスタムドキュメント形式はサポートされていますか？**
+A: GroupDocs は、ほとんどの一般的なビジネスドキュメント形式を標準でサポートしています。独自の形式については、ドキュメントをご確認いただくか、サポートにお問い合わせの上、具体的な要件をご確認ください。
 
-**Q: How do I handle documents with different languages or character sets?**  
-A: The library handles Unicode content properly, including right‑to‑left languages and special characters. Make sure your input documents are properly encoded.
+**Q: 異なる言語や文字セットのドキュメントはどのように処理すればよいですか？**
+A: ライブラリは、右から左に記述する言語や特殊文字を含む Unicode コンテンツを適切に処理します。入力ドキュメントが適切にエンコードされていることを確認してください。
 
-**Q: What happens if documents have different page layouts?**  
-A: GroupDocs intelligently handles layout differences, focusing on content changes rather than formatting variations. You can configure sensitivity settings to control this behavior.
+**Q: ドキュメントのページレイアウトが異なる場合はどうなりますか？**
+A: GroupDocs は、書式の違いではなくコンテンツの変更に重点を置き、レイアウトの違いをインテリジェントに処理します。この動作を制御するために、感度設定を構成することができます。
+
+**リソースとさらなる学習**
+- [GroupDocs.Comparison ドキュメント](https://docs.groupdocs.com/comparison/java/)
+- [完全な API リファレンス](https://reference.groupdocs.com/comparison/java/)
+- [最新バージョンのダウンロード](https://releases.groupdocs.com/comparison/java/)
+- [ライセンスの取得](https://purchase.groupdocs.com/buy)
+- [無料トライアルアクセス](https://releases.groupdocs.com/comparison/java/)
+- [テスト用一時ライセンス](https://purchase.groupdocs.com/temporary-license/)
+- [コミュニティサポートフォーラム](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2025-12-23  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
-**Resources and Further Learning**
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
-- [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
-- [Download Latest Version](https://releases.groupdocs.com/comparison/java/)
-- [Get Your License](https://purchase.groupdocs.com/buy)
-- [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
-- [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
-- [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+**最終更新日:** 2025年12月23日
+**テスト環境:** GroupDocs.Comparison Java 版 25.2
+**作成者:** GroupDocs  

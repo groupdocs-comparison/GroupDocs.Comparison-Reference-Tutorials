@@ -14,7 +14,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'Cách sử dụng GroupDocs: Luồng so sánh tài liệu Java – Hướng dẫn toàn diện'
+title: 'Cách sử dụng GroupDocs - Luồng so sánh tài liệu Java – Hướng dẫn toàn diện'
 type: docs
 url: /vi/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -424,12 +424,6 @@ Bạn đã nắm vững nền tảng để triển khai **cách sử dụng Grou
 
 **Bắt đầu xây dựng ngay hôm nay**: Điều chỉnh các mẫu code cho dự án của bạn, thử nghiệm với tài liệu thực tế, và lặp lại. Cách tốt nhất để thành thạo so sánh tài liệu là áp dụng những mẫu này vào những thách thức bạn đang gặp phải.
 
----
-
-**Cập nhật lần cuối:** 2025-12-23  
-**Đã kiểm thử với:** GroupDocs.Comparison 25.2  
-**Tác giả:** GroupDocs  
-
 **Tài nguyên liên quan:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -438,3 +432,9 @@ Bạn đã nắm vững nền tảng để triển khai **cách sử dụng Grou
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Cập nhật lần cuối:** 2025-12-23  
+**Đã kiểm thử với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs  

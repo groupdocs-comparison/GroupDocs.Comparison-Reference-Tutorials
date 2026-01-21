@@ -307,12 +307,6 @@ R: La libreria gestisce correttamente contenuti Unicode, incluse lingue da destr
 **D: Cosa succede se i documenti hanno layout di pagina diversi?**  
 R: GroupDocs gestisce intelligentemente le differenze di layout, concentrandosi sui cambi di contenuto piuttosto che sulle variazioni di formattazione. Puoi configurare le impostazioni di sensibilità per controllare questo comportamento.
 
----
-
-**Ultimo Aggiornamento:** 2025-12-23  
-**Testato Con:** GroupDocs.Comparison 25.2 per Java  
-**Autore:** GroupDocs  
-
 **Risorse e Approfondimenti**
 - [Documentazione GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [Riferimento API Completo](https://reference.groupdocs.com/comparison/java/)  
@@ -321,3 +315,9 @@ R: GroupDocs gestisce intelligentemente le differenze di layout, concentrandosi 
 - [Accesso alla Prova Gratuita](https://releases.groupdocs.com/comparison/java/)  
 - [Licenza Temporanea per Test](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum di Supporto della Community](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ultimo Aggiornamento:** 2025-12-23  
+**Testato Con:** GroupDocs.Comparison 25.2 per Java  
+**Autore:** GroupDocs  

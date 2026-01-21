@@ -306,12 +306,6 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 **س: ماذا يحدث إذا كان للمستندات تخطيطات صفحات مختلفة؟**  
 ج: يتعامل GroupDocs بذكاء مع اختلافات التخطيط، مركزًا على تغييرات المحتوى بدلاً من الاختلافات التنسيقية. يمكنك ضبط إعدادات الحساسية للتحكم في هذا السلوك.
 
----
-
-**آخر تحديث:** 2025-12-23  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
-**المؤلف:** GroupDocs  
-
 ### الموارد والتعلم الإضافي
 - [توثيق GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [مرجع API الكامل](https://reference.groupdocs.com/comparison/java/)  
@@ -320,3 +314,9 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 - [الوصول إلى النسخة التجريبية المجانية](https://releases.groupdocs.com/comparison/java/)  
 - [ترخيص مؤقت للاختبار](https://purchase.groupdocs.com/temporary-license/)  
 - [منتدى الدعم المجتمعي](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**آخر تحديث:** 2025-12-23  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
+**المؤلف:** GroupDocs  

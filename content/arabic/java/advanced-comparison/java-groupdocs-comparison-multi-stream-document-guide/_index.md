@@ -423,12 +423,6 @@ try {
 
 **ابدأ البناء اليوم**: عدّل عينات الكود لتناسب مشروعك، جرّبها مع مستندات حقيقية، وكرّر. أفضل طريقة لإتقان مقارنة المستندات هي تطبيق هذه الأنماط على التحديات التي تواجهها.
 
----
-
-**آخر تحديث:** 2025-12-23  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2  
-**المؤلف:** GroupDocs  
-
 **الموارد ذات الصلة:**  
 - [توثيق GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
 - [مرجع API](https://reference.groupdocs.com/comparison/java/)  
@@ -437,3 +431,9 @@ try {
 - [خيارات الشراء](https://purchase.groupdocs.com/buy)  
 - [نسخة تجريبية مجانية](https://releases.groupdocs.com/comparison/java/)  
 - [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**آخر تحديث:** 2025-12-23  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2  
+**المؤلف:** GroupDocs  

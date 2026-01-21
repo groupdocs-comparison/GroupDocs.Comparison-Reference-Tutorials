@@ -13,7 +13,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 'GroupDocs का उपयोग कैसे करें: जावा दस्तावेज़ तुलना स्ट्रीम्स – पूर्ण गाइड'
+title: 'GroupDocs का उपयोग कैसे करें - जावा दस्तावेज़ तुलना स्ट्रीम्स – पूर्ण गाइड'
 type: docs
 url: /hi/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -423,12 +423,6 @@ try {
 
 **आज ही निर्माण शुरू करें**: कोड नमूनों को अपने प्रोजेक्ट में अनुकूलित करें, वास्तविक दस्तावेज़ों के साथ परीक्षण करें, और दोहराएँ। दस्तावेज़ तुलना में महारत हासिल करने का सबसे अच्छा तरीका इन पैटर्न को अपने वास्तविक चुनौतियों पर लागू करना है।
 
----
-
-**अंतिम अपडेट:** 2025-12-23  
-**परीक्षित संस्करण:** GroupDocs.Comparison 25.2  
-**लेखक:** GroupDocs  
-
 **संबंधित संसाधन:**  
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -437,3 +431,9 @@ try {
 - [Purchase Options](https://purchase.groupdocs.com/buy)  
 - [Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**अंतिम अपडेट:** 2025-12-23  
+**परीक्षित संस्करण:** GroupDocs.Comparison 25.2  
+**लेखक:** GroupDocs  

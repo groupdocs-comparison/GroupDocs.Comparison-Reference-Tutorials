@@ -14,7 +14,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: Σύγκριση εγγράφων με ευκολία'
+title: 'GroupDocs Comparison Java - Σύγκριση εγγράφων με ευκολία'
 type: docs
 url: /el/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -454,12 +454,6 @@ try (Comparer comparer = new Comparer("source.docx")) {
 **Ε: Πώς λαμβάνω υποστήριξη αν αντιμετωπίσω προβλήματα;**  
 Α: Το [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) είναι ένας εξαιρετικός πόρος κοινότητας, και οι κάτοχοι εμπορικής άδειας λαμβάνουν προτεραιότητα στην υποστήριξη.
 
----
-
-**Τελευταία Ενημέρωση:** 2025-12-23  
-**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java  
-**Συγγραφέας:** GroupDocs  
-
 **Πρόσθετοι Πόροι**  
 - **Τεκμηρίωση:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **Αναφορά API:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -467,3 +461,9 @@ try (Comparer comparer = new Comparer("source.docx")) {
 - **Λήψη Τελευταίας Έκδοσης:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Επιλογές Αγοράς:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Δωρεάν Δοκιμή:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2025-12-23  
+**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java  
+**Συγγραφέας:** GroupDocs  

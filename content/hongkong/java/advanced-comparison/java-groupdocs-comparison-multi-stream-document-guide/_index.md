@@ -12,7 +12,7 @@ tags:
 - java-streams
 - groupdocs
 - file-processing
-title: 如何使用 GroupDocs：Java 文件比對串流 – 完整指南
+title: 如何使用 GroupDocs - Java 文件比對串流 – 完整指南
 type: docs
 url: /zh-hant/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
@@ -422,12 +422,6 @@ A:
 
 **立即開始建置**：將程式碼範例套用至你的專案，使用真實文件測試，並持續迭代。實踐這些模式是精通文件比較的最佳方式。
 
----
-
-**最後更新：** 2025-12-23  
-**測試版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **相關資源：**  
 - [GroupDocs.Comparison 文件](https://docs.groupdocs.com/comparison/java/)  
 - [API 參考文件](https://reference.groupdocs.com/comparison/java/)  
@@ -436,3 +430,9 @@ A:
 - [購買方案](https://purchase.groupdocs.com/buy)  
 - [免費試用](https://releases.groupdocs.com/comparison/java/)  
 - [臨時授權](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**最後更新：** 2025-12-23  
+**測試版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

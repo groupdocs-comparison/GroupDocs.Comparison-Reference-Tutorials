@@ -14,7 +14,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: Сравнение документов стало проще'
+title: 'GroupDocs Comparison Java - Сравнение документов стало проще'
 type: docs
 url: /ru/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -448,12 +448,6 @@ try (Comparer comparer = new Comparer("source.docx")) {
 **В: Как получить поддержку при возникновении проблем?**  
 О: Отличный ресурс — [GroupDocs Forum](https://forum.groupdocs.com/c/comparison); владельцы коммерческих лицензий получают приоритетную поддержку.
 
----
-
-**Последнее обновление:** 2025-12-23  
-**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
-**Автор:** GroupDocs  
-
 **Дополнительные ресурсы**  
 - **Документация:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API‑справочник:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -461,3 +455,9 @@ try (Comparer comparer = new Comparer("source.docx")) {
 - **Скачать последнюю версию:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Варианты покупки:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Бесплатная пробная версия:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Последнее обновление:** 2025-12-23  
+**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
+**Автор:** GroupDocs  

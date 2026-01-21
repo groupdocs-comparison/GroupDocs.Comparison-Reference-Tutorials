@@ -13,7 +13,7 @@ tags:
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java: การเปรียบเทียบเอกสารทำได้ง่าย'
+title: 'GroupDocs Comparison Java - การเปรียบเทียบเอกสารทำได้ง่าย'
 type: docs
 url: /th/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
@@ -409,10 +409,6 @@ A: รูปแบบที่พบบ่อยส่วนใหญ่—ร�
 **Q: ฉันจะได้รับการสนับสนุนอย่างไรหากเจอปัญหา?**  
 A: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) เป็นแหล่งข้อมูลชุมชนที่ดี, และผู้ถือไลเซนส์เชิงพาณิชย์จะได้รับการสนับสนุนเป็นลำดับแรก.  
 
-**อัปเดตล่าสุด:** 2025-12-23  
-**ทดสอบด้วย:** GroupDocs.Comparison 25.2 for Java  
-**ผู้เขียน:** GroupDocs  
-
 **แหล่งข้อมูลเพิ่มเติม**  
 - **Documentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -420,3 +416,7 @@ A: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) เป็นแ�
 - **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Purchase Options:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
 - **Free Trial:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+
+**อัปเดตล่าสุด:** 2025-12-23  
+**ทดสอบด้วย:** GroupDocs.Comparison 25.2 for Java  
+**ผู้เขียน:** GroupDocs  

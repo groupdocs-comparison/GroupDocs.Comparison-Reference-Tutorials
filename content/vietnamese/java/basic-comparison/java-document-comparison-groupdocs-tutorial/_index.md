@@ -306,12 +306,6 @@ Bạn đã có đầy đủ bộ công cụ để triển khai so sánh tài li�
 **Hỏi: Nếu tài liệu có bố cục trang khác nhau thì sao?**  
 Đáp: GroupDocs thông minh xử lý sự khác biệt về bố cục, tập trung vào thay đổi nội dung hơn là biến thể định dạng. Bạn có thể cấu hình độ nhạy để kiểm soát hành vi này.
 
----
-
-**Cập nhật lần cuối:** 2025-12-23  
-**Kiểm thử với:** GroupDocs.Comparison 25.2 cho Java  
-**Tác giả:** GroupDocs  
-
 **Tài nguyên và Học thêm**
 - [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
 - [Complete API Reference](https://reference.groupdocs.com/comparison/java/)
@@ -320,3 +314,9 @@ Bạn đã có đầy đủ bộ công cụ để triển khai so sánh tài li�
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)
 - [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Cập nhật lần cuối:** 2025-12-23  
+**Kiểm thử với:** GroupDocs.Comparison 25.2 cho Java  
+**Tác giả:** GroupDocs  

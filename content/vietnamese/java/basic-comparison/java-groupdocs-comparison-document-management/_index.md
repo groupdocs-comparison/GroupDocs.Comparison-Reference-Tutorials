@@ -1,32 +1,65 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh tài liệu hiệu quả và tạo bản xem trước trang trong Java bằng thư viện GroupDocs.Comparison mạnh mẽ. Hoàn hảo cho các doanh nghiệp quản lý nhiều phiên bản tài liệu."
-"title": "So sánh tài liệu Java và xem trước trang bằng GroupDocs.Comparison"
-"url": "/vi/java/basic-comparison/java-groupdocs-comparison-document-management/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-23'
+description: Tìm hiểu cách sử dụng API so sánh tài liệu Java của GroupDocs để so sánh
+  tài liệu, xử lý tệp lớn, tạo bản xem trước và tuân thủ các thực tiễn tốt nhất.
+keywords: Java document comparison, GroupDocs Comparison Java, document version control
+  Java, Java PDF comparison library, document management Java
+lastmod: '2025-12-23'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-api
+- groupdocs
+- document-management
+title: 'groupdocs comparison java - Hướng dẫn so sánh tài liệu'
 type: docs
+url: /vi/java/basic-comparison/java-groupdocs-comparison-document-management/
+weight: 1
 ---
-# Làm chủ việc so sánh tài liệu Java với GroupDocs.Comparison
 
-**Mở khóa Quản lý tài liệu hiệu quả: Hướng dẫn toàn diện về cách sử dụng GroupDocs.Comparison trong Java**
+# groupdocs comparison java: Bản hướng dẫn chính GroupDocs.Comparison API
 
-## Giới thiệu
+**Bạn đang gặp khó khăn trong việc kiểm soát phiên bản tài liệu trong ứng dụng Java của mình?** Bạn không đơn độc. Quản lý nhiều phiên bản tài liệu, theo dõi các thay đổi và tạo bản xem trước trực quan có thể nhanh chóng trở thành cơn ác mộng nếu không có công cụ phù hợp.
 
-Trong bối cảnh kỹ thuật số ngày nay, việc quản lý hiệu quả các phiên bản tài liệu là rất quan trọng đối với cả doanh nghiệp và cá nhân. Cho dù theo dõi các thay đổi trong hợp đồng hay đảm bảo tính nhất quán giữa các báo cáo, một công cụ mạnh mẽ như **GroupDocs.So sánh** có thể tiết kiệm thời gian và ngăn ngừa lỗi bằng cách đơn giản hóa quá trình so sánh tài liệu và tạo bản xem trước trang.
+Đó là lúc **GroupDocs.Comparison for Java** xuất hiện. API mạnh mẽ này cho phép bạn so sánh tài liệu, làm nổi bật các khác biệt và tạo bản xem trước các trang chỉ với vài dòng mã. Dù bạn đang xây dựng hệ thống quản lý nội dung, cần **java compare word files**, hoặc muốn **java compare pdf documents**, hướng dẫn này sẽ giúp bạn nhanh chóng khởi động.
 
-Trong hướng dẫn này, chúng ta sẽ khám phá cách sử dụng GroupDocs.Comparison cho Java để thiết lập so sánh tài liệu và tạo bản xem trước trang. Bằng cách làm theo, bạn sẽ học được:
-- Cách khởi tạo trình so sánh với tài liệu nguồn và tài liệu đích.
-- Kỹ thuật tạo bản xem trước trang cụ thể từ một tài liệu.
-- Các tùy chọn cấu hình chính và biện pháp thực hành tốt nhất.
+## Câu trả lời nhanh
+- **groupdocs comparison java làm gì?** Nó so sánh hai hoặc nhiều tài liệu, làm nổi bật các thay đổi và có thể tạo bản xem trước trực quan.  
+- **Các định dạng tệp nào được hỗ trợ?** Word, PDF, Excel, PowerPoint, hình ảnh, HTML và nhiều hơn nữa.  
+- **Tôi có cần giấy phép cho môi trường sản xuất không?** Có – giấy phép GroupDocs hợp lệ sẽ loại bỏ watermark và mở khóa đầy đủ tính năng.  
+- **Tôi có thể xử lý tài liệu lớn không?** Có, với quản lý bộ nhớ hợp lý và phân trang xem trước.  
+- **Tôi có thể tìm dependency Maven mới nhất ở đâu?** Trên kho lưu trữ GroupDocs – hãy kiểm tra phiên bản mới nhất trước khi thêm.
 
-Chúng ta hãy bắt đầu bằng cách tìm hiểu các điều kiện tiên quyết!
+## groupdocs comparison java là gì?
+GroupDocs.Comparison for Java là một thư viện cho phép so sánh tài liệu một cách lập trình, xác định các khác biệt về văn bản, định dạng và hình ảnh, và tùy chọn tạo một tài liệu kết quả hiển thị các thay đổi đó.
 
-## Điều kiện tiên quyết
+## Tại sao nên sử dụng GroupDocs.Comparison trong các dự án Java?
+- **Phát hiện thay đổi chính xác** trên nhiều loại tệp.  
+- **Dễ dàng tích hợp** với Maven hoặc Gradle.  
+- **Tạo bản xem trước tích hợp** để rà soát nhanh chóng.  
+- **Hiệu năng mở rộng** khi bạn tuân theo các thực hành tốt nhất được đề xuất cho việc xử lý tài liệu lớn.
 
-Trước khi bắt đầu, hãy đảm bảo môi trường của bạn được thiết lập chính xác:
+## Yêu cầu trước: Những gì bạn cần để bắt đầu
 
-### Thư viện và phụ thuộc bắt buộc
-Để sử dụng GroupDocs.Comparison trong dự án Java của bạn, hãy bao gồm nó như một phụ thuộc. Nếu sử dụng Maven để quản lý phụ thuộc, hãy thêm cấu hình sau vào `pom.xml` tài liệu:
+### Yêu cầu thiết yếu
+
+Trước khi chúng ta bắt đầu viết mã, hãy chắc chắn rằng bạn đã chuẩn bị đầy đủ các yếu tố cơ bản sau:
+
+**Môi trường phát triển:**
+- Java Development Kit (JDK) 8 hoặc mới hơn (JDK 11+ được khuyến nghị để có hiệu năng tốt hơn)
+- Maven hoặc Gradle để quản lý dependency
+- IDE yêu thích của bạn (IntelliJ IDEA, Eclipse, hoặc VS Code đều hoạt động tốt)
+
+**Kiến thức tiên quyết:**
+- Kỹ năng lập trình Java cơ bản (bạn nên thoải mái với các lớp và phương thức)
+- Hiểu biết về các thao tác I/O file trong Java
+- Quen thuộc với các dependency của Maven (đừng lo – chúng ta sẽ hướng dẫn chi tiết)
+
+### Thêm GroupDocs.Comparison vào dự án của bạn
+
+Bắt đầu rất đơn giản. Thêm dependency này vào `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -45,70 +78,61 @@ Trước khi bắt đầu, hãy đảm bảo môi trường của bạn được
 </dependencies>
 ```
 
-### Yêu cầu thiết lập môi trường
-- Java Development Kit (JDK) 8 trở lên.
-- Một IDE như IntelliJ IDEA, Eclipse hoặc VSCode có hỗ trợ Maven.
+**Mẹo:** Luôn kiểm tra phiên bản mới nhất trên trang web GroupDocs để đảm bảo bạn nhận được các tính năng và bản sửa lỗi mới nhất.
 
-### Điều kiện tiên quyết về kiến thức
-Sự quen thuộc với lập trình Java cơ bản và hiểu biết về các hoạt động I/O của tệp sẽ có lợi. Kiến thức cơ bản về các dự án Maven cũng hữu ích nhưng không bắt buộc.
+## Giấy phép (Đừng bỏ qua phần này!)
 
-## Thiết lập GroupDocs.Comparison cho Java
+Mặc dù bạn có thể bắt đầu với bản dùng thử miễn phí, bạn sẽ muốn thiết lập giấy phép phù hợp cho môi trường sản xuất:
 
-Để bắt đầu sử dụng GroupDocs.Comparison trong dự án của bạn, hãy làm theo các bước sau:
+1. **Dùng thử miễn phí**: Tải xuống từ [GroupDocs](https://releases.groupdocs.com/comparison/java/)
+2. **Giấy phép tạm thời**: Nhận một giấy phép [tại đây](https://purchase.groupdocs.com/temporary-license/) để thử nghiệm kéo dài
+3. **Giấy phép đầy đủ**: Mua tại [GroupDocs Store](https://purchase.groupdocs.com/buy)
 
-1. **Thêm sự phụ thuộc**: Đảm bảo của bạn `pom.xml` bao gồm sự phụ thuộc chính xác như được hiển thị ở trên.
-2. **Có được giấy phép**:
-   - Bắt đầu với bản dùng thử miễn phí hoặc mua giấy phép từ [NhómDocs](https://purchase.groupdocs.com/buy).
-   - Ngoài ra, hãy yêu cầu giấy phép tạm thời để khám phá tất cả các tính năng mà không có giới hạn tại [Giấy phép tạm thời của GroupDocs](https://purchase.groupdocs.com/temporary-license/).
+## Cài đặt ban đầu: Chuẩn bị GroupDocs.Comparison
 
-3. **Khởi tạo cơ bản**:
-   Bắt đầu bằng cách nhập các lớp cần thiết và thiết lập môi trường so sánh tài liệu trong Java.
+### Khởi tạo cơ bản
+
+Đây là cách bạn bắt đầu với lần so sánh đầu tiên:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.examples.SampleFiles;
 
-// Khởi tạo trình so sánh với một tài liệu nguồn
+// Initialize the comparer with a source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-## Hướng dẫn thực hiện
+**Điều gì đang diễn ra ở đây?** Chúng ta đang tạo một đối tượng `Comparer` sẽ xử lý tất cả các thao tác so sánh tài liệu. Hãy nghĩ nó như không gian làm việc so sánh tài liệu của bạn.
 
-Trong phần này, chúng tôi sẽ chia nhỏ quá trình triển khai thành hai tính năng chính: Thiết lập so sánh tài liệu và Tạo bản xem trước trang.
+## Hướng dẫn triển khai từng bước
 
-### Tính năng 1: Thiết lập so sánh tài liệu
+### Phần 1: Thiết lập so sánh tài liệu
 
-**Tổng quan**:Tính năng này cho phép bạn khởi tạo môi trường so sánh bằng cách chỉ định tài liệu nguồn và tài liệu đích.
+Hãy xây dựng một hệ thống so sánh tài liệu mạnh mẽ mà bạn có thể thực sự sử dụng trong môi trường sản xuất.
 
-#### Bước 1: Tạo một đối tượng so sánh
-
-Bắt đầu bằng cách tạo một phiên bản của `Comparer` với tài liệu nguồn của bạn. Đối tượng này sẽ đóng vai trò là nền tảng cho tất cả các hoạt động tiếp theo.
+#### Bước 1: Khởi tạo Comparer của bạn
 
 ```java
-// Khởi tạo trình so sánh với tài liệu nguồn
+// Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Tại sao**: Các `Comparer` Đối tượng quản lý quá trình so sánh, lưu trữ cả tài liệu nguồn và tài liệu đích.
+**Tại sao điều này quan trọng:** Tài liệu nguồn đóng vai trò là chuẩn mực. Tất cả các so sánh sẽ hiển thị những gì đã thay đổi so với tài liệu này.
 
 #### Bước 2: Thêm tài liệu mục tiêu
 
-Thêm tài liệu mục tiêu để so sánh với tài liệu nguồn của bạn. Điều này rất quan trọng để xác định sự khác biệt.
-
 ```java
-// Thêm một tài liệu mục tiêu để so sánh
+// Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**Tại sao**:Bằng cách thêm mục tiêu, bạn cho phép công cụ phân tích và so sánh cả hai tài liệu một cách hiệu quả.
+**Kịch bản thực tế:** Trong hệ thống quản lý hợp đồng, tài liệu nguồn có thể là hợp đồng gốc, và tài liệu mục tiêu là phiên bản đã chỉnh sửa từ bộ phận pháp lý.
 
-### Tính năng 2: Tạo bản xem trước trang
+### Phần 2: Tạo bản xem trước các trang
 
-**Tổng quan**: Tạo bản xem trước các trang cụ thể từ tài liệu mục tiêu của bạn. Điều này đặc biệt hữu ích để xác minh trực quan hoặc chia sẻ với các bên liên quan.
+Đôi khi bạn cần bản xem trước trực quan của tài liệu. Đây là cách tạo chúng một cách hiệu quả:
 
-#### Bước 1: Xác định phương thức tạo OutputStream
-
-Thiết lập phương pháp tạo luồng đầu ra cho mỗi trang bạn muốn xem trước. Điều này bao gồm việc xây dựng đường dẫn tệp và xử lý ngoại lệ.
+#### Bước 1: Thiết lập tạo Output Stream
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -129,63 +153,217 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**Tại sao**:Phương pháp này cho phép bạn chỉ định vị trí và cách lưu bản xem trước trang, mang lại sự linh hoạt trong việc quản lý đầu ra.
+**Nhận xét quan trọng:** Mẫu delegate này cho phép bạn kiểm soát hoàn toàn nơi và cách các hình ảnh xem trước được lưu. Bạn có thể dễ dàng chỉnh sửa để lưu vào lưu trữ đám mây hoặc cơ sở dữ liệu.
 
-#### Bước 2: Cấu hình PreviewOptions
-
-Cài đặt `PreviewOptions` với các định dạng mong muốn, chỉ định những trang nào sẽ tạo bản xem trước.
+#### Bước 2: Cấu hình tùy chọn xem trước
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.enums.PreviewFormats;
 
-// Đặt tùy chọn xem trước
+// Set preview options
 PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
-    .setPreviewFormat(PreviewFormats.PNG) // Chọn định dạng PNG để có hình ảnh chất lượng cao.
-    .setPageNumbers(new int[]{1, 2}) // Chỉ định các trang để tạo bản xem trước.
+    .setPreviewFormat(PreviewFormats.PNG) // High-quality images
+    .setPageNumbers(new int[]{1, 2}) // Only generate what you need
     .build();
 ```
 
-**Tại sao**:Bằng cách cấu hình các tùy chọn này, bạn có thể kiểm soát định dạng và phạm vi của đầu ra, đảm bảo chỉ tạo ra những bản xem trước cần thiết.
+**Mẹo hiệu năng:** Chỉ tạo bản xem trước cho các trang bạn thực sự cần. Điều này tiết kiệm thời gian xử lý và không gian lưu trữ.
 
-#### Bước 3: Tạo bản xem trước
-
-Cuối cùng, gọi phương pháp tạo bản xem trước bằng cách sử dụng cấu hình `PreviewOptions`.
+#### Bước 3: Tạo các bản xem trước
 
 ```java
-// Tạo bản xem trước trang
+// Generate page previews
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**Tại sao**:Bước này tạo ra hình ảnh đại diện cho các trang được chỉ định, hỗ trợ việc xem xét và xác thực tài liệu.
+**Điều gì đang diễn ra:** Điều này tạo ra các hình ảnh PNG của các trang được chỉ định từ tài liệu mục tiêu. Hoàn hảo để tạo thumbnail hoặc rà soát nhanh.
 
-## Ứng dụng thực tế
+## Định dạng tệp được hỗ trợ
 
-GroupDocs.Comparison có thể được sử dụng trong nhiều tình huống khác nhau:
-1. **Đánh giá tài liệu pháp lý**:Luật sư có thể so sánh các phiên bản hợp đồng để đảm bảo mọi sửa đổi đều được ghi lại chính xác.
-2. **Nghiên cứu học thuật**:Các nhà nghiên cứu có thể theo dõi những thay đổi trên các bản thảo khác nhau của các bài báo học thuật.
-3. **Phát triển phần mềm**:Các nhà phát triển có thể sử dụng nó để quản lý và xem xét các thay đổi về mã trong tài liệu dự án.
+GroupDocs.Comparison hỗ trợ một loạt các định dạng tài liệu, giúp nó linh hoạt cho nhiều trường hợp sử dụng khác nhau:
 
-## Cân nhắc về hiệu suất
+**Định dạng phổ biến:**
+- **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
+- **PDF Documents**: Tất cả các phiên bản file PDF
+- **Text Files**: Plain text (.txt), Rich Text (.rtf)
+- **Images**: JPEG, PNG, BMP, GIF
+- **Web Formats**: HTML, MHTML
+- **Other**: ODT, ODS, ODP (định dạng OpenDocument)
 
-Để tối ưu hóa hiệu suất khi sử dụng GroupDocs.Comparison:
-- Giới hạn số trang xem trước để giảm thời gian xử lý.
-- Quản lý bộ nhớ hiệu quả bằng cách loại bỏ các đối tượng không cần thiết sau khi so sánh.
-- Sử dụng các biện pháp xử lý tệp hiệu quả để giảm thiểu các hoạt động I/O.
+## Các vấn đề thường gặp và giải pháp
 
-## Phần kết luận
+### Vấn đề 1: FileNotFoundException khi tạo bản xem trước
 
-Bây giờ bạn đã thành thạo việc thiết lập so sánh tài liệu và tạo bản xem trước trang bằng GroupDocs.Comparison trong Java. Công cụ mạnh mẽ này có thể hợp lý hóa đáng kể quy trình làm việc của bạn, đảm bảo tính chính xác và hiệu quả trong việc quản lý tài liệu.
+**Triệu chứng:** Mã của bạn ném ra ngoại lệ khi cố gắng tạo output stream.
 
-Các bước tiếp theo bao gồm khám phá các tính năng nâng cao hơn của GroupDocs.Comparison hoặc tích hợp nó vào các dự án lớn hơn để có tác động lớn hơn nữa. Chúng tôi khuyến khích bạn thử nghiệm các cấu hình và trường hợp sử dụng khác nhau để tận dụng tối đa khả năng của nó.
+**Giải pháp:**  
+```java
+Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
+    @Override
+    public OutputStream invoke(int pageNumber) {
+        String outputDir = "previews";
+        File directory = new File(outputDir);
+        if (!directory.exists()) {
+            directory.mkdirs(); // Create directory if it doesn't exist
+        }
+        
+        String pagePath = outputDir + "/preview_page_" + pageNumber + ".png";
+        try {
+            return new FileOutputStream(pagePath);
+        } catch (FileNotFoundException e) {
+            System.err.println("Failed to create output file: " + pagePath);
+            throw new RuntimeException("Cannot create preview file", e);
+        }
+    }
+};
+```
 
-## Phần Câu hỏi thường gặp
+### Vấn đề 2: Vấn đề bộ nhớ với tài liệu lớn
 
-**Câu hỏi 1: Yêu cầu hệ thống để sử dụng GroupDocs.Comparison là gì?**
-A1: Bạn cần JDK 8+ và IDE tương thích hỗ trợ Maven, chẳng hạn như IntelliJ IDEA hoặc Eclipse.
+**Triệu chứng:** `OutOfMemoryError` khi xử lý các tệp lớn hoặc nhiều trang.
 
-**Câu hỏi 2: Làm thế nào để xử lý các ngoại lệ trong quá trình xử lý tệp trong bản xem trước?**
-A2: Triển khai các khối try-catch xung quanh các luồng tệp để quản lý `FileNotFoundException` và các vấn đề liên quan đến IO khác một cách hiệu quả.
+**Giải pháp:** Xử lý tài liệu theo từng khối và giải phóng đối tượng đúng cách:  
+```java
+// Process fewer pages at a time
+PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
+    .setPreviewFormat(PreviewFormats.PNG)
+    .setPageNumbers(new int[]{1, 2, 3}) // Limit page range
+    .build();
 
-**Câu hỏi 3: GroupDocs.Comparison có thể tích hợp với các giải pháp lưu trữ đám mây không?**
-A3: Có, có thể tích hợp. Bạn có thể sửa đổi đường dẫn tệp trong mã của mình để làm việc với nhiều dịch vụ lưu trữ đám mây khác nhau.
+// Always dispose of the comparer when done
+try (Comparer comparer = new Comparer(sourceDocument)) {
+    comparer.add(targetDocument);
+    comparer.getTargets().get(0).generatePreview(previewOptions);
+} // Automatic cleanup
+```
+
+### Vấn đề 3: Vấn đề giấy phép
+
+**Triệu chứng:** Watermark trên đầu ra hoặc chức năng bị giới hạn.
+
+**Giải pháp:** Đảm bảo giấy phép của bạn được áp dụng đúng cách:  
+```java
+// Apply license at the start of your application
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
+
+## Mẹo hiệu năng và thực hành tốt nhất (java comparison best practices)
+
+1. **Giới hạn tạo bản xem trước** – Chỉ tạo bản xem trước cho các trang bạn thực sự cần.  
+2. **Chọn định dạng hình ảnh phù hợp** – PNG cho chất lượng không mất dữ liệu, JPEG cho file nhỏ hơn.  
+3. **Triển khai caching** – Lưu trữ kết quả so sánh để tránh xử lý lại các tài liệu giống nhau.  
+4. **Quản lý bộ nhớ** – Sử dụng try‑with‑resources và xử lý các file lớn theo các batch nhỏ.  
+5. **Giải phóng đối tượng Comparer** – Luôn đóng `Comparer` khi hoàn thành.
+
+### Mẫu mã sẵn sàng cho môi trường sản xuất
+
+```java
+public class DocumentComparisonService {
+    private static final String OUTPUT_DIR = "document-previews/";
+    
+    public ComparisonResult compareDocuments(String sourcePath, String targetPath) {
+        try (Comparer comparer = new Comparer(sourcePath)) {
+            comparer.add(targetPath);
+            
+            // Perform comparison
+            String resultPath = OUTPUT_DIR + "comparison-result.docx";
+            comparer.compare(resultPath);
+            
+            // Generate previews if needed
+            generatePreviews(comparer, 3); // First 3 pages only
+            
+            return new ComparisonResult(resultPath, true);
+        } catch (Exception e) {
+            log.error("Document comparison failed", e);
+            return new ComparisonResult(null, false);
+        }
+    }
+    
+    private void generatePreviews(Comparer comparer, int maxPages) {
+        // Implementation details...
+    }
+}
+```
+
+## Ví dụ triển khai thực tế
+
+### Ví dụ 1: Hệ thống quản lý hợp đồng
+
+```java
+public class ContractVersionManager {
+    public void reviewContractChanges(String originalContract, String revisedContract) {
+        try (Comparer comparer = new Comparer(originalContract)) {
+            comparer.add(revisedContract);
+            
+            // Generate comparison document
+            String comparisonResult = "contracts/comparison-" + System.currentTimeMillis() + ".docx";
+            comparer.compare(comparisonResult);
+            
+            // Create preview for stakeholder review
+            generatePreviewsForReview(comparer);
+        }
+    }
+}
+```
+
+### Ví dụ 2: Đánh giá bài báo học thuật
+
+```java
+public class AcademicDocumentReview {
+    public void compareResearchDrafts(String draft1, String draft2) {
+        try (Comparer comparer = new Comparer(draft1)) {
+            comparer.add(draft2);
+            
+            // Focus on specific sections (first 10 pages typically contain main content)
+            PreviewOptions options = new PreviewOptions.Builder(createPageStream)
+                .setPageNumbers(IntStream.rangeClosed(1, 10).toArray())
+                .setPreviewFormat(PreviewFormats.PNG)
+                .build();
+                
+            comparer.getTargets().get(0).generatePreview(options);
+        }
+    }
+}
+```
+
+## Câu hỏi thường gặp
+
+**Q: Làm thế nào để xử lý tài liệu được bảo vệ bằng mật khẩu?**  
+A: GroupDocs.Comparison có thể mở các tệp được mã hóa. Cung cấp mật khẩu qua `LoadOptions`:
+
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Comparer comparer = new Comparer("protected-document.docx", loadOptions);
+```
+
+**Q: Tôi có thể so sánh tài liệu được lưu trữ trên cloud không?**  
+A: Chắc chắn! Sử dụng input streams thay vì đường dẫn file:
+
+```java
+InputStream sourceStream = getDocumentFromCloud("source-doc-id");
+InputStream targetStream = getDocumentFromCloud("target-doc-id");
+Comparer comparer = new Comparer(sourceStream);
+comparer.add(targetStream);
+```
+
+**Q: Kích thước file tối đa mà GroupDocs.Comparison có thể xử lý là bao nhiêu?**  
+A: Không có giới hạn cứng, nhưng hiệu năng phụ thuộc vào bộ nhớ khả dụng. Đối với các file lớn hơn 100 MB, hãy tăng kích thước heap JVM hoặc xử lý theo các khối.
+
+**Q: Thuật toán so sánh có độ chính xác như thế nào?**  
+A: Thư viện sử dụng các thuật toán diff tiên tiến để phát hiện thay đổi trong văn bản, định dạng, hình ảnh và thậm chí các đối tượng nhúng—lý tưởng cho các trường hợp pháp lý hoặc tuân thủ.
+
+**Q: Tôi có thể tùy chỉnh loại thay đổi nào sẽ được phát hiện không?**  
+A: Có. Sử dụng `CompareOptions` để bật hoặc tắt việc phát hiện văn bản, định dạng, hình ảnh, bảng, v.v.
+
+## Kết luận
+
+Bạn giờ đã có một hướng dẫn đầy đủ, sẵn sàng cho môi trường sản xuất về **groupdocs comparison java**. Bằng cách làm theo các bước, thực hành tốt nhất và các mẫu mã ví dụ ở trên, bạn có thể tích hợp khả năng so sánh tài liệu và tạo bản xem trước mạnh mẽ vào bất kỳ ứng dụng Java nào—dù bạn đang xử lý việc sửa đổi hợp đồng, bản thảo học thuật, hay lưu trữ các file PDF lớn.
+
+---
+
+**Cập nhật lần cuối:** 2025-12-23  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs

@@ -1,32 +1,65 @@
 ---
-"date": "2025-05-05"
-"description": "เรียนรู้วิธีการเปรียบเทียบเอกสารและสร้างตัวอย่างหน้าอย่างมีประสิทธิภาพใน Java โดยใช้ไลบรารี GroupDocs.Comparison ที่มีประสิทธิภาพ เหมาะสำหรับธุรกิจที่จัดการเอกสารหลายเวอร์ชัน"
-"title": "การเปรียบเทียบเอกสาร Java และการดูตัวอย่างหน้าโดยใช้ GroupDocs.Comparison"
-"url": "/th/java/basic-comparison/java-groupdocs-comparison-document-management/"
-"weight": 1
+categories:
+- Java Development
+date: '2025-12-23'
+description: เรียนรู้วิธีใช้ GroupDocs Comparison Java API เพื่อเปรียบเทียบเอกสาร
+  จัดการไฟล์ขนาดใหญ่ สร้างตัวอย่างภาพล่วงหน้า และปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุด
+keywords: Java document comparison, GroupDocs Comparison Java, document version control
+  Java, Java PDF comparison library, document management Java
+lastmod: '2025-12-23'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-api
+- groupdocs
+- document-management
+title: 'groupdocs comparison java - บทเรียนการเปรียบเทียบเอกสาร'
 type: docs
+url: /th/java/basic-comparison/java-groupdocs-comparison-document-management/
+weight: 1
 ---
-# เรียนรู้การเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison
 
-**ปลดล็อกการจัดการเอกสารที่มีประสิทธิภาพ: คู่มือครอบคลุมสำหรับการใช้ GroupDocs.Comparison ใน Java**
+# groupdocs comparison java: คู่มือหลักของ GroupDocs.Comparison API
 
-## การแนะนำ
+**กำลังประสบปัญหาการควบคุมเวอร์ชันเอกสารในแอปพลิเคชัน Java ของคุณหรือไม่?** คุณไม่ได้อยู่คนเดียว. การจัดการหลายเวอร์ชันของเอกสาร, การติดตามการเปลี่ยนแปลง, และการสร้างภาพตัวอย่างแบบภาพอาจกลายเป็นความฝันร้ายอย่างรวดเร็วหากไม่มีเครื่องมือที่เหมาะสม.
 
-ในภูมิทัศน์ดิจิทัลของปัจจุบัน การจัดการเวอร์ชันเอกสารอย่างมีประสิทธิภาพถือเป็นสิ่งสำคัญสำหรับทั้งธุรกิจและบุคคล ไม่ว่าจะเป็นการติดตามการเปลี่ยนแปลงในสัญญาหรือการรับรองความสอดคล้องกันในรายงาน เครื่องมือที่มีประสิทธิภาพเช่น **GroupDocs.การเปรียบเทียบ** สามารถประหยัดเวลาและป้องกันข้อผิดพลาดได้โดยทำให้กระบวนการเปรียบเทียบเอกสารและสร้างการแสดงตัวอย่างหน้าง่ายขึ้น
+นี่คือจุดที่ **GroupDocs.Comparison for Java** เข้ามาช่วย. API ที่ทรงพลังนี้ช่วยให้คุณเปรียบเทียบเอกสาร, เน้นความแตกต่าง, และสร้างภาพตัวอย่างของหน้าเพียงไม่กี่บรรทัดของโค้ด. ไม่ว่าคุณจะกำลังสร้างระบบจัดการเนื้อหา, ต้องการ **java compare word files**, หรืออยาก **java compare pdf documents**, บทเรียนนี้จะทำให้คุณเริ่มต้นได้อย่างรวดเร็ว.
 
-ในบทช่วยสอนนี้ เราจะมาเรียนรู้วิธีใช้ GroupDocs.Comparison สำหรับ Java เพื่อตั้งค่าการเปรียบเทียบเอกสารและสร้างการแสดงตัวอย่างหน้า เมื่อทำตามนี้แล้ว คุณจะได้เรียนรู้สิ่งต่อไปนี้:
-- วิธีการเริ่มต้นตัวเปรียบเทียบกับเอกสารต้นฉบับและเอกสารเป้าหมาย
-- เทคนิคในการสร้างตัวอย่างหน้าเฉพาะจากเอกสาร
-- ตัวเลือกการกำหนดค่าที่สำคัญและแนวทางปฏิบัติที่ดีที่สุด
+## คำตอบอย่างรวดเร็ว
+- **groupdocs comparison java ทำอะไร?** มันเปรียบเทียบเอกสารสองฉบับหรือมากกว่า, เน้นการเปลี่ยนแปลง, และสามารถสร้างภาพตัวอย่างแบบภาพได้.  
+- **รูปแบบไฟล์ใดบ้างที่รองรับ?** Word, PDF, Excel, PowerPoint, รูปภาพ, HTML, และอื่น ๆ อีกมาก.  
+- **ต้องการใบอนุญาตสำหรับการใช้งานจริงหรือไม่?** ใช่ – ใบอนุญาต GroupDocs ที่ถูกต้องจะลบลายน้ำและเปิดใช้งานคุณสมบัติทั้งหมด.  
+- **สามารถจัดการเอกสารขนาดใหญ่ได้หรือไม่?** ใช่, ด้วยการจัดการหน่วยความจำที่เหมาะสมและการแบ่งหน้าตัวอย่าง.  
+- **จะหา Maven dependency ล่าสุดได้จากที่ไหน?** บนรีโพซิทอรีของ GroupDocs – ตรวจสอบเวอร์ชันล่าสุดก่อนเพิ่ม.
 
-มาเริ่มต้นด้วยการครอบคลุมข้อกำหนดเบื้องต้นกันก่อน!
+## groupdocs comparison java คืออะไร?
+GroupDocs.Comparison for Java เป็นไลบรารีที่เปรียบเทียบเอกสารโดยอัตโนมัติ, ระบุความแตกต่างของข้อความ, การจัดรูปแบบ, และรูปภาพ, และสามารถสร้างเอกสารผลลัพธ์ที่แสดงการเปลี่ยนแปลงเหล่านั้นได้.
 
-## ข้อกำหนดเบื้องต้น
+## ทำไมต้องใช้ GroupDocs.Comparison ในโครงการ Java?
+- **การตรวจจับการเปลี่ยนแปลงที่แม่นยำ** สำหรับหลายประเภทไฟล์.  
+- **การผสานรวมที่ง่าย** กับ Maven หรือ Gradle.  
+- **การสร้างภาพตัวอย่างในตัว** เพื่อการตรวจสอบภาพอย่างรวดเร็ว.  
+- **ประสิทธิภาพที่ขยายได้** เมื่อคุณปฏิบัติตามแนวทางปฏิบัติที่แนะนำสำหรับการจัดการเอกสารขนาดใหญ่.
 
-ก่อนที่คุณจะเริ่มต้น โปรดตรวจสอบให้แน่ใจว่าสภาพแวดล้อมของคุณได้รับการตั้งค่าอย่างถูกต้อง:
+## ข้อกำหนดเบื้องต้น: สิ่งที่คุณต้องการเพื่อเริ่มต้น
 
-### ไลบรารีและการอ้างอิงที่จำเป็น
-หากต้องการใช้ GroupDocs.Comparison ในโปรเจ็กต์ Java ของคุณ ให้รวมไว้เป็นส่วนที่ต้องพึ่งพา หากใช้ Maven สำหรับการจัดการส่วนที่ต้องพึ่งพา ให้เพิ่มการกำหนดค่าต่อไปนี้ลงในโปรเจ็กต์ของคุณ `pom.xml` ไฟล์:
+### ข้อกำหนดที่จำเป็น
+
+ก่อนที่เราจะเริ่มเขียนโค้ด, ตรวจสอบให้แน่ใจว่าคุณได้เตรียมพื้นฐานเหล่านี้ครบแล้ว:
+
+**สภาพแวดล้อมการพัฒนา:**
+- Java Development Kit (JDK) 8 หรือใหม่กว่า (แนะนำ JDK 11+ เพื่อประสิทธิภาพที่ดีกว่า)
+- Maven หรือ Gradle สำหรับการจัดการ dependencies
+- IDE ที่คุณชื่นชอบ (IntelliJ IDEA, Eclipse หรือ VS Code ทำงานได้ดี)
+
+**ความรู้เบื้องต้นที่จำเป็น:**
+- ทักษะการเขียนโปรแกรม Java เบื้องต้น (คุณควรคุ้นเคยกับคลาสและเมธอด)
+- ความเข้าใจการทำงานของไฟล์ I/O ใน Java
+- ความคุ้นเคยกับ Maven dependencies (ไม่ต้องกังวล—we’ll walk through this)
+
+### การเพิ่ม GroupDocs.Comparison ไปยังโปรเจกต์ของคุณ
+
+การเริ่มต้นทำได้อย่างง่ายดาย. เพิ่ม dependency นี้ลงใน `pom.xml` ของคุณ:
 
 ```xml
 <repositories>
@@ -45,70 +78,60 @@ type: docs
 </dependencies>
 ```
 
-### ข้อกำหนดการตั้งค่าสภาพแวดล้อม
-- Java Development Kit (JDK) 8 หรือใหม่กว่า
-- IDE เช่น IntelliJ IDEA, Eclipse หรือ VSCode ที่รองรับ Maven
+**เคล็ดลับ:** ตรวจสอบเวอร์ชันล่าสุดบนเว็บไซต์ของ GroupDocs เสมอเพื่อให้แน่ใจว่าคุณได้รับฟีเจอร์และการแก้ไขบั๊กล่าสุด.
 
-### ข้อกำหนดเบื้องต้นของความรู้
-ความคุ้นเคยกับการเขียนโปรแกรม Java ขั้นพื้นฐานและความเข้าใจเกี่ยวกับการดำเนินการ I/O ของไฟล์จะเป็นประโยชน์ ความรู้พื้นฐานเกี่ยวกับโปรเจ็กต์ Maven ก็มีประโยชน์เช่นกันแต่ไม่จำเป็น
+## การให้ลิขสิทธิ์ (อย่าข้ามส่วนนี้!)
+แม้ว่าคุณจะเริ่มต้นด้วยการทดลองใช้ฟรี, คุณจะต้องตั้งค่าการให้ลิขสิทธิ์ที่เหมาะสมสำหรับการใช้งานจริง:
 
-## การตั้งค่า GroupDocs.Comparison สำหรับ Java
+1. **Free Trial**: ดาวน์โหลดจาก [GroupDocs](https://releases.groupdocs.com/comparison/java/)  
+2. **Temporary License**: รับใบอนุญาตชั่วคราวจาก [here](https://purchase.groupdocs.com/temporary-license/) สำหรับการทดสอบต่อเนื่อง  
+3. **Full License**: ซื้อจาก [GroupDocs Store](https://purchase.groupdocs.com/buy)
 
-หากต้องการเริ่มใช้ GroupDocs.Comparison ในโครงการของคุณ ให้ทำตามขั้นตอนเหล่านี้:
+## การตั้งค่าเริ่มต้น: เตรียม GroupDocs.Comparison ให้พร้อม
 
-1. **เพิ่มการพึ่งพา**: ให้แน่ใจว่าคุณ `pom.xml` รวมถึงการอ้างอิงที่ถูกต้องดังแสดงข้างต้น
-2. **การขอใบอนุญาต**-
-   - เริ่มต้นด้วยการทดลองใช้ฟรีหรือซื้อใบอนุญาตจาก [เอกสารกลุ่ม](https://purchase-groupdocs.com/buy).
-   - อีกวิธีหนึ่งคือขอใบอนุญาตชั่วคราวเพื่อสำรวจคุณสมบัติทั้งหมดโดยไม่มีข้อจำกัดที่ [ใบอนุญาตชั่วคราวของ GroupDocs](https://purchase-groupdocs.com/temporary-license/).
+### การเริ่มต้นพื้นฐาน
 
-3. **การเริ่มต้นขั้นพื้นฐาน**-
-   เริ่มต้นด้วยการนำเข้าคลาสที่จำเป็นและตั้งค่าสภาพแวดล้อมการเปรียบเทียบเอกสารของคุณใน Java
+นี่คือวิธีเริ่มต้นการเปรียบเทียบครั้งแรกของคุณ:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.examples.SampleFiles;
 
-// เริ่มต้นตัวเปรียบเทียบกับเอกสารต้นฉบับ
+// Initialize the comparer with a source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-## คู่มือการใช้งาน
+**เกิดอะไรขึ้นที่นี่?** เรากำลังสร้างอ็อบเจกต์ `Comparer` ที่จะจัดการการเปรียบเทียบเอกสารทั้งหมดของเรา. คิดว่าเป็นพื้นที่ทำงานสำหรับการเปรียบเทียบเอกสารของคุณ.
 
-ในส่วนนี้เราจะแบ่งการใช้งานออกเป็นสองฟีเจอร์หลัก: การตั้งค่าการเปรียบเทียบเอกสารและการสร้างตัวอย่างหน้า
+## คู่มือการทำงานแบบขั้นตอนต่อขั้นตอน
 
-### คุณสมบัติ 1: การตั้งค่าการเปรียบเทียบเอกสาร
+### ส่วนที่ 1: การตั้งค่าการเปรียบเทียบเอกสาร
 
-**ภาพรวม**:คุณลักษณะนี้ช่วยให้คุณสามารถเริ่มสภาพแวดล้อมการเปรียบเทียบโดยระบุเอกสารต้นฉบับและเอกสารเป้าหมาย
+มาสร้างระบบการเปรียบเทียบเอกสารที่แข็งแรงซึ่งคุณสามารถใช้ในการผลิตได้จริง.
 
-#### ขั้นตอนที่ 1: สร้างวัตถุ Comparer
-
-เริ่มต้นด้วยการสร้างอินสแตนซ์ของ `Comparer` ด้วยเอกสารต้นฉบับของคุณ วัตถุนี้จะทำหน้าที่เป็นรากฐานสำหรับการดำเนินการที่ตามมาทั้งหมด
+#### ขั้นตอนที่ 1: เริ่มต้น Comparer ของคุณ
 
 ```java
-// เริ่มต้นตัวเปรียบเทียบกับเอกสารต้นฉบับ
+// Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**ทำไม**: เดอะ `Comparer` วัตถุจัดการกระบวนการเปรียบเทียบโดยถือทั้งเอกสารแหล่งที่มาและเอกสารเป้าหมาย
+**ทำไมจึงสำคัญ:** เอกสารต้นฉบับทำหน้าที่เป็นฐานข้อมูล. การเปรียบเทียบทั้งหมดจะแสดงว่ามีการเปลี่ยนแปลงอะไรบ้างเมื่อเทียบกับเอกสารนี้.
 
 #### ขั้นตอนที่ 2: เพิ่มเอกสารเป้าหมาย
 
-เพิ่มเอกสารเป้าหมายที่จะเปรียบเทียบกับแหล่งที่มาของคุณ ซึ่งเป็นสิ่งสำคัญสำหรับการระบุความแตกต่าง
-
 ```java
-// เพิ่มเอกสารเป้าหมายเพื่อการเปรียบเทียบ
+// Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**ทำไม**:การเพิ่มเป้าหมายจะช่วยให้เครื่องมือสามารถวิเคราะห์และเปรียบเทียบเอกสารทั้งสองได้อย่างมีประสิทธิภาพ
+**สถานการณ์จริง:** ในระบบการจัดการสัญญา, แหล่งข้อมูลของคุณอาจเป็นสัญญาต้นฉบับ, และเป้าหมายอาจเป็นเวอร์ชันที่แก้ไขจากทีมกฎหมาย.
 
-### คุณสมบัติ 2: การสร้างตัวอย่างหน้า
+### ส่วนที่ 2: การสร้างภาพตัวอย่างของหน้า
 
-**ภาพรวม**:สร้างตัวอย่างหน้าเฉพาะจากเอกสารเป้าหมายของคุณ ซึ่งมีประโยชน์โดยเฉพาะสำหรับการตรวจสอบภาพหรือการแบ่งปันกับผู้มีส่วนได้ส่วนเสีย
+บางครั้งคุณต้องการภาพตัวอย่างของเอกสารของคุณ. นี่คือวิธีสร้างอย่างมีประสิทธิภาพ:
 
-#### ขั้นตอนที่ 1: กำหนดวิธีการสร้าง OutputStream
-
-ตั้งค่าวิธีการที่สร้างสตรีมเอาต์พุตสำหรับแต่ละหน้าที่คุณต้องการดูตัวอย่าง ซึ่งเกี่ยวข้องกับการสร้างเส้นทางไฟล์และการจัดการข้อยกเว้น
+#### ขั้นตอนที่ 1: ตั้งค่าการสร้าง Output Stream
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -129,63 +152,219 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**ทำไม**:วิธีการนี้ช่วยให้คุณระบุได้ว่าจะบันทึกตัวอย่างหน้าที่ไหนและอย่างไร ช่วยให้จัดการเอาต์พุตได้อย่างยืดหยุ่น
+**ข้อสังเกตสำคัญ:** รูปแบบ delegate นี้ให้คุณควบคุมอย่างเต็มที่ว่าภาพตัวอย่างของคุณจะถูกบันทึกที่ไหนและอย่างไร. คุณสามารถปรับเปลี่ยนให้บันทึกไปยังคลาวด์สตอเรจหรือฐานข้อมูลได้อย่างง่ายดาย.
 
-#### ขั้นตอนที่ 2: กำหนดค่า PreviewOptions
-
-ตั้งค่า `PreviewOptions` ด้วยรูปแบบที่ต้องการ โดยระบุว่าจะสร้างตัวอย่างหน้าใด
+#### ขั้นตอนที่ 2: กำหนดค่าตัวเลือกการสร้างภาพตัวอย่าง
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
 import com.groupdocs.comparison.options.enums.PreviewFormats;
 
-// ตั้งค่าตัวเลือกการดูตัวอย่าง
+// Set preview options
 PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
-    .setPreviewFormat(PreviewFormats.PNG) // เลือกรูปแบบ PNG สำหรับรูปภาพคุณภาพสูง
-    .setPageNumbers(new int[]{1, 2}) // ระบุหน้าที่จะสร้างการแสดงตัวอย่าง
+    .setPreviewFormat(PreviewFormats.PNG) // High-quality images
+    .setPageNumbers(new int[]{1, 2}) // Only generate what you need
     .build();
 ```
 
-**ทำไม**:โดยการกำหนดค่าตัวเลือกเหล่านี้ คุณสามารถควบคุมรูปแบบและขอบเขตของเอาต์พุต และทำให้มั่นใจว่าจะสร้างเฉพาะตัวอย่างที่จำเป็นเท่านั้น
+**เคล็ดลับประสิทธิภาพ:** สร้างภาพตัวอย่างเฉพาะหน้าที่คุณต้องการจริง ๆ. นี้จะช่วยประหยัดเวลาในการประมวลผลและพื้นที่จัดเก็บ.
 
-#### ขั้นตอนที่ 3: สร้างการแสดงตัวอย่าง
-
-สุดท้ายให้เรียกใช้วิธีการสร้างตัวอย่างโดยใช้การกำหนดค่า `PreviewOptions`-
+#### ขั้นตอนที่ 3: สร้างภาพตัวอย่าง
 
 ```java
-// สร้างการแสดงตัวอย่างหน้า
+// Generate page previews
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**ทำไม**ขั้นตอนนี้จะสร้างการแสดงภาพของหน้าที่ระบุไว้ เพื่อช่วยในการตรวจสอบและตรวจสอบเอกสาร
+**เกิดอะไรขึ้น:** นี้จะสร้างภาพ PNG ของหน้าที่ระบุจากเอกสารเป้าหมายของคุณ. เหมาะสำหรับการสร้างภาพย่อหรือการตรวจสอบภาพอย่างรวดเร็ว.
 
-## การประยุกต์ใช้งานจริง
+## รูปแบบไฟล์ที่รองรับ
 
-GroupDocs.Comparison สามารถใช้ประโยชน์ได้ในหลายสถานการณ์:
-1. **การตรวจสอบเอกสารทางกฎหมาย**:ทนายความสามารถเปรียบเทียบสัญญารุ่นต่างๆ เพื่อให้แน่ใจว่าการแก้ไขทั้งหมดได้รับการบันทึกอย่างถูกต้อง
-2. **งานวิจัยเชิงวิชาการ**:นักวิจัยสามารถติดตามการเปลี่ยนแปลงในร่างเอกสารวิชาการต่าง ๆ ได้
-3. **การพัฒนาซอฟต์แวร์**:นักพัฒนาสามารถใช้เพื่อจัดการและตรวจสอบการเปลี่ยนแปลงโค้ดภายในเอกสารโครงการ
+GroupDocs.Comparison รองรับรูปแบบไฟล์เอกสารหลากหลาย ทำให้มันมีความยืดหยุ่นสำหรับกรณีการใช้งานต่าง ๆ:
 
-## การพิจารณาประสิทธิภาพ
+**รูปแบบยอดนิยม:**
+- **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
+- **PDF Documents**: ทุกเวอร์ชันของไฟล์ PDF
+- **Text Files**: Plain text (.txt), Rich Text (.rtf)
+- **Images**: JPEG, PNG, BMP, GIF
+- **Web Formats**: HTML, MHTML
+- **Other**: ODT, ODS, ODP (รูปแบบ OpenDocument)
 
-การเพิ่มประสิทธิภาพการทำงานเมื่อใช้ GroupDocs.Comparison:
-- จำกัดจำนวนหน้าสำหรับการดูตัวอย่างเพื่อลดเวลาในการประมวลผล
-- จัดการหน่วยความจำอย่างมีประสิทธิภาพด้วยการกำจัดวัตถุที่ไม่จำเป็นหลังการเปรียบเทียบ
-- ใช้แนวทางการจัดการไฟล์ที่มีประสิทธิภาพเพื่อลดการดำเนินการ I/O
+## ปัญหาที่พบบ่อยและวิธีแก้
 
-## บทสรุป
+### ปัญหา 1: FileNotFoundException ระหว่างการสร้างภาพตัวอย่าง
 
-ตอนนี้คุณได้เชี่ยวชาญการตั้งค่าการเปรียบเทียบเอกสารและการสร้างตัวอย่างหน้าด้วย GroupDocs.Comparison ใน Java แล้ว เครื่องมืออันทรงพลังนี้จะช่วยเพิ่มประสิทธิภาพเวิร์กโฟลว์ของคุณได้อย่างมาก ช่วยให้มั่นใจถึงความถูกต้องและประสิทธิภาพในการจัดการเอกสาร
+**อาการ:** โค้ดของคุณโยนข้อยกเว้นเมื่อพยายามสร้าง output stream.
 
-ขั้นตอนต่อไปได้แก่ การสำรวจฟีเจอร์ขั้นสูงเพิ่มเติมของ GroupDocs.Comparison หรือการรวมเข้าในโปรเจ็กต์ขนาดใหญ่เพื่อให้เกิดผลกระทบที่มากขึ้น เราขอแนะนำให้คุณทดลองใช้การกำหนดค่าและกรณีการใช้งานที่แตกต่างกันเพื่อใช้ประโยชน์จากความสามารถของ GroupDocs.Comparison อย่างเต็มที่
+**Solution:**
 
-## ส่วนคำถามที่พบบ่อย
+```java
+Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
+    @Override
+    public OutputStream invoke(int pageNumber) {
+        String outputDir = "previews";
+        File directory = new File(outputDir);
+        if (!directory.exists()) {
+            directory.mkdirs(); // Create directory if it doesn't exist
+        }
+        
+        String pagePath = outputDir + "/preview_page_" + pageNumber + ".png";
+        try {
+            return new FileOutputStream(pagePath);
+        } catch (FileNotFoundException e) {
+            System.err.println("Failed to create output file: " + pagePath);
+            throw new RuntimeException("Cannot create preview file", e);
+        }
+    }
+};
+```
 
-**คำถามที่ 1: ข้อกำหนดของระบบสำหรับการใช้ GroupDocs.Comparison คืออะไร**
-A1: คุณต้องมี JDK 8+ และ IDE ที่เข้ากันได้ที่รองรับ Maven เช่น IntelliJ IDEA หรือ Eclipse
+### ปัญหา 2: ปัญหาหน่วยความจำกับเอกสารขนาดใหญ่
 
-**คำถามที่ 2: ฉันจะจัดการข้อยกเว้นระหว่างการดำเนินการไฟล์ในการแสดงตัวอย่างได้อย่างไร**
-A2: นำบล็อก try-catch มาใช้งานรอบสตรีมไฟล์เพื่อจัดการ `FileNotFoundException` และปัญหาอื่น ๆ ที่เกี่ยวข้องกับ IO ได้อย่างมีประสิทธิภาพ
+**อาการ:** `OutOfMemoryError` เมื่อประมวลผลไฟล์ขนาดใหญ่หรือหลายหน้า.
 
-**คำถามที่ 3: สามารถบูรณาการ GroupDocs.Comparison เข้ากับโซลูชั่นการจัดเก็บข้อมูลบนคลาวด์ได้หรือไม่**
-A3: ใช่ สามารถบูรณาการได้ คุณสามารถปรับเปลี่ยนเส้นทางไฟล์ในโค้ดของคุณเพื่อให้ทำงานร่วมกับบริการจัดเก็บข้อมูลบนคลาวด์ต่างๆ ได้
+**Solution:** ประมวลผลเอกสารเป็นชิ้นส่วนและทำลายอ็อบเจกต์อย่างเหมาะสม:
+
+```java
+// Process fewer pages at a time
+PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
+    .setPreviewFormat(PreviewFormats.PNG)
+    .setPageNumbers(new int[]{1, 2, 3}) // Limit page range
+    .build();
+
+// Always dispose of the comparer when done
+try (Comparer comparer = new Comparer(sourceDocument)) {
+    comparer.add(targetDocument);
+    comparer.getTargets().get(0).generatePreview(previewOptions);
+} // Automatic cleanup
+```
+
+### ปัญหา 3: ปัญหาการให้ลิขสิทธิ์
+
+**อาการ:** มีลายน้ำบนผลลัพธ์หรือฟังก์ชันจำกัด.
+
+**Solution:** ตรวจสอบว่าใบอนุญาตของคุณได้ถูกนำไปใช้อย่างถูกต้อง:
+
+```java
+// Apply license at the start of your application
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
+
+## เคล็ดลับประสิทธิภาพและแนวทางปฏิบัติที่ดีที่สุด (java comparison best practices)
+1. **จำกัดการสร้างภาพตัวอย่าง** – สร้างภาพตัวอย่างเฉพาะหน้าที่คุณต้องการจริง ๆ.  
+2. **เลือกรูปแบบภาพที่เหมาะสม** – PNG สำหรับคุณภาพไม่มีการสูญเสีย, JPEG สำหรับไฟล์ขนาดเล็ก.  
+3. **ใช้ Caching** – เก็บผลลัพธ์การเปรียบเทียบเพื่อหลีกเลี่ยงการประมวลผลเอกสารที่เหมือนกันซ้ำ.  
+4. **จัดการหน่วยความจำ** – ใช้ try‑with‑resources และประมวลผลไฟล์ขนาดใหญ่เป็นชุดย่อย.  
+5. **ทำลายอ็อบเจกต์ Comparer** – ปิด `Comparer` เสมอเมื่อทำงานเสร็จ.
+
+### รูปแบบโค้ดพร้อมใช้งานในการผลิต
+
+```java
+public class DocumentComparisonService {
+    private static final String OUTPUT_DIR = "document-previews/";
+    
+    public ComparisonResult compareDocuments(String sourcePath, String targetPath) {
+        try (Comparer comparer = new Comparer(sourcePath)) {
+            comparer.add(targetPath);
+            
+            // Perform comparison
+            String resultPath = OUTPUT_DIR + "comparison-result.docx";
+            comparer.compare(resultPath);
+            
+            // Generate previews if needed
+            generatePreviews(comparer, 3); // First 3 pages only
+            
+            return new ComparisonResult(resultPath, true);
+        } catch (Exception e) {
+            log.error("Document comparison failed", e);
+            return new ComparisonResult(null, false);
+        }
+    }
+    
+    private void generatePreviews(Comparer comparer, int maxPages) {
+        // Implementation details...
+    }
+}
+```
+
+## ตัวอย่างการใช้งานจริง
+
+### ตัวอย่าง 1: ระบบการจัดการสัญญา
+
+```java
+public class ContractVersionManager {
+    public void reviewContractChanges(String originalContract, String revisedContract) {
+        try (Comparer comparer = new Comparer(originalContract)) {
+            comparer.add(revisedContract);
+            
+            // Generate comparison document
+            String comparisonResult = "contracts/comparison-" + System.currentTimeMillis() + ".docx";
+            comparer.compare(comparisonResult);
+            
+            // Create preview for stakeholder review
+            generatePreviewsForReview(comparer);
+        }
+    }
+}
+```
+
+### ตัวอย่าง 2: การตรวจสอบเอกสารวิชาการ
+
+```java
+public class AcademicDocumentReview {
+    public void compareResearchDrafts(String draft1, String draft2) {
+        try (Comparer comparer = new Comparer(draft1)) {
+            comparer.add(draft2);
+            
+            // Focus on specific sections (first 10 pages typically contain main content)
+            PreviewOptions options = new PreviewOptions.Builder(createPageStream)
+                .setPageNumbers(IntStream.rangeClosed(1, 10).toArray())
+                .setPreviewFormat(PreviewFormats.PNG)
+                .build();
+                
+            comparer.getTargets().get(0).generatePreview(options);
+        }
+    }
+}
+```
+
+## คำถามที่พบบ่อย
+
+**ถาม: ฉันจะจัดการกับเอกสารที่มีการป้องกันด้วยรหัสผ่านอย่างไร?**  
+ตอบ: GroupDocs.Comparison สามารถเปิดไฟล์ที่เข้ารหัสได้. ให้ระหัสผ่านผ่าน `LoadOptions`:
+
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Comparer comparer = new Comparer("protected-document.docx", loadOptions);
+```
+
+**ถาม: ฉันสามารถเปรียบเทียบเอกสารที่เก็บในคลาวด์สตอเรจได้หรือไม่?**  
+ตอบ: แน่นอน! ใช้ input stream แทนการระบุเส้นทางไฟล์:
+
+```java
+InputStream sourceStream = getDocumentFromCloud("source-doc-id");
+InputStream targetStream = getDocumentFromCloud("target-doc-id");
+Comparer comparer = new Comparer(sourceStream);
+comparer.add(targetStream);
+```
+
+**ถาม: ขนาดไฟล์สูงสุดที่ GroupDocs.Comparison สามารถจัดการได้คือเท่าไหร่?**  
+ตอบ: ไม่มีขีดจำกัดที่แน่นอน, แต่ประสิทธิภาพขึ้นอยู่กับหน่วยความจำที่มี. สำหรับไฟล์ที่ใหญ่กว่า 100 MB, ควรเพิ่มขนาด heap ของ JVM หรือประมวลผลเป็นชิ้นส่วน.
+
+**ถาม: อัลกอริธึมการเปรียบเทียบมีความแม่นยำแค่ไหน?**  
+ตอบ: ไลบรารีใช้ขั้นตอน diff ขั้นสูงที่ตรวจจับการเปลี่ยนแปลงในข้อความ, การจัดรูปแบบ, รูปภาพ, และแม้กระทั่งวัตถุที่ฝังอยู่—เหมาะสำหรับการใช้งานด้านกฎหมายหรือการปฏิบัติตามข้อกำหนด.
+
+**ถาม: ฉันสามารถปรับแต่งประเภทของการเปลี่ยนแปลงที่ต้องการตรวจจับได้หรือไม่?**  
+ตอบ: ได้. ใช้ `CompareOptions` เพื่อเปิดหรือปิดการตรวจจับข้อความ, การจัดรูปแบบ, รูปภาพ, ตาราง ฯลฯ.
+
+## สรุป
+
+ตอนนี้คุณมีคู่มือครบถ้วนพร้อมใช้งานในการผลิตสำหรับ **groupdocs comparison java**. ด้วยการทำตามขั้นตอน, แนวทางปฏิบัติที่ดีที่สุด, และรูปแบบตัวอย่างข้างต้น, คุณสามารถผสานรวมความสามารถการเปรียบเทียบและสร้างภาพตัวอย่างเอกสารที่ทรงพลังเข้าไปในแอปพลิเคชัน Java ใดก็ได้—ไม่ว่าจะเป็นการจัดการการแก้ไขสัญญา, เอกสารร่างวิชาการ, หรือคลัง PDF ขนาดใหญ่.
+
+**อัปเดตล่าสุด:** 2025-12-23  
+**ทดสอบกับ:** GroupDocs.Comparison 25.2  
+**ผู้เขียน:** GroupDocs  
+
+---

@@ -305,12 +305,6 @@ O: Upewnij się, że używasz strumieni, zwiększ heap JVM w razie potrzeby, sko
 **P: Gdzie mogę uzyskać pomoc w razie problemów?**  
 O: Forum wsparcia GroupDocs jest aktywne i szybko reaguje. Oficjalna dokumentacja również zawiera szczegółowe wskazówki i przykłady kodu.
 
----
-
-**Ostatnia aktualizacja:** 2025-12-26  
-**Testowano z:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Zasoby**
 - [Dokumentacja GroupDocs](https://docs.groupdocs.com/comparison/java/)  
 - [Referencja API GroupDocs](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ O: Forum wsparcia GroupDocs jest aktywne i szybko reaguje. Oficjalna dokumentacj
 - [Bezpłatna wersja próbna GroupDocs](https://releases.groupdocs.com/comparison/java/)  
 - [Tymczasowa licencja GroupDocs](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum wsparcia GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-26  
+**Testowano z:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

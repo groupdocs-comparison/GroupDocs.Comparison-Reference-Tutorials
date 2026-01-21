@@ -305,12 +305,6 @@ Sẵn sàng cách mạng hoá cách ứng dụng của bạn xử lý so sánh t
 **H: Khi gặp vấn đề, tôi có thể nhận hỗ trợ ở đâu?**  
 Đ: Diễn đàn hỗ trợ GroupDocs hoạt động tích cực và phản hồi nhanh. Tài liệu chính thức cũng cung cấp hướng dẫn chi tiết và các mẫu code.
 
----
-
-**Cập nhật lần cuối:** 2025-12-26  
-**Được kiểm tra với:** GroupDocs.Comparison 25.2  
-**Tác giả:** GroupDocs  
-
 **Tài nguyên**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ Sẵn sàng cách mạng hoá cách ứng dụng của bạn xử lý so sánh t
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Cập nhật lần cuối:** 2025-12-26  
+**Được kiểm tra với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs  

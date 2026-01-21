@@ -305,12 +305,6 @@ R: Verifica que estés usando streams, incrementa el heap de JVM si es necesario
 **P: ¿Dónde puedo obtener ayuda si tengo problemas?**  
 R: El foro de soporte de GroupDocs está activo y responde rápidamente. Su documentación oficial también ofrece guías detalladas y ejemplos de código.
 
----
-
-**Última actualización:** 2025-12-26  
-**Probado con:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Recursos**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ R: El foro de soporte de GroupDocs está activo y responde rápidamente. Su docu
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Última actualización:** 2025-12-26  
+**Probado con:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

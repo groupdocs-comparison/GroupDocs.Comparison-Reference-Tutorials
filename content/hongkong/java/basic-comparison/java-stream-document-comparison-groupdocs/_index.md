@@ -311,12 +311,6 @@ A: 確認已使用 streams，必要時增加 JVM 堆積大小，先將檔案複�
 **Q: 若遇到問題，該向何處尋求協助？**  
 A: 可前往 GroupDocs 支援論壇，社群活躍且回應迅速。官方文件亦提供詳細指引與程式碼範例。
 
----
-
-**最後更新：** 2025-12-26  
-**測試環境：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **資源**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -325,3 +319,9 @@ A: 可前往 GroupDocs 支援論壇，社群活躍且回應迅速。官方文件
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**最後更新：** 2025-12-26  
+**測試環境：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

@@ -305,12 +305,6 @@ J: Pastikan Anda menggunakan streams, tingkatkan heap JVM bila perlu, salin file
 **T: Di mana saya dapat mendapatkan bantuan jika mengalami masalah?**  
 J: Forum Dukungan GroupDocs aktif dan responsif. Dokumentasi resmi mereka juga menyediakan panduan detail dan contoh kode.
 
----
-
-**Terakhir Diperbarui:** 2025-12-26  
-**Diuji Dengan:** GroupDocs.Comparison 25.2  
-**Penulis:** GroupDocs  
-
 **Sumber Daya**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ J: Forum Dukungan GroupDocs aktif dan responsif. Dokumentasi resmi mereka juga m
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-26  
+**Diuji Dengan:** GroupDocs.Comparison 25.2  
+**Penulis:** GroupDocs  

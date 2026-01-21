@@ -304,12 +304,6 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 **问：遇到问题时该向哪里求助？**  
 答：GroupDocs 支持论坛活跃且响应及时。官方文档也提供了详细的指南和代码示例。
 
----
-
-**最后更新：** 2025-12-26  
-**测试版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **资源**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -318,3 +312,9 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**最后更新：** 2025-12-26  
+**测试版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

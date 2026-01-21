@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - file-processing
-title: 'Poradnik Java: Porównywanie plików PDF – Kompletny przewodnik GroupDocs'
+title: 'Poradnik Java - Porównywanie plików PDF – Kompletny przewodnik GroupDocs'
 type: docs
 url: /pl/java/basic-comparison/master-java-document-comparison-preview-groupdocs/
 weight: 1

@@ -313,12 +313,6 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 **Q: 問題が発生した場合、どこでサポートを受けられますか？**  
 **A:** GroupDocs のサポートフォーラムが活発に運営されています。公式ドキュメントにも詳細なガイドとコードサンプルが掲載されています。
 
----
-
-**Last Updated:** 2025-12-26  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Resources**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -327,3 +321,9 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-26  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

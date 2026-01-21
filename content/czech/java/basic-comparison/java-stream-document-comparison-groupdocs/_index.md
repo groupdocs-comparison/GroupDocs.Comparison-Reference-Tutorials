@@ -303,10 +303,6 @@ A: Ověřte, že používáte streamy, zvyšte JVM heap podle potřeby, zkopíru
 **Q: Kde mohu získat pomoc, pokud narazím na problémy?**  
 A: Fórum podpory GroupDocs je aktivní a rychle reaguje. Oficiální dokumentace také poskytuje podrobné návody a ukázky kódu.
 
-**Poslední aktualizace:** 2025-12-26  
-**Testováno s:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Zdroje**
 - [Dokumentace GroupDocs](https://docs.groupdocs.com/comparison/java/)  
 - [Reference API GroupDocs](https://reference.groupdocs.com/comparison/java/)  
@@ -315,3 +311,7 @@ A: Fórum podpory GroupDocs je aktivní a rychle reaguje. Oficiální dokumentac
 - [Bezplatná zkušební verze GroupDocs](https://releases.groupdocs.com/comparison/java/)  
 - [Dočasná licence GroupDocs](https://purchase.groupdocs.com/temporary-license/)  
 - [Fórum podpory GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+**Poslední aktualizace:** 2025-12-26  
+**Testováno s:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

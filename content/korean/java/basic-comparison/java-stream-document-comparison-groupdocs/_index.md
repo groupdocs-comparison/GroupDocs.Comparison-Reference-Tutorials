@@ -310,12 +310,6 @@ A: 스트림을 사용하고 있는지 확인하고, 필요하면 JVM 힙을 늘
 **Q: 문제가 발생하면 어디서 도움을 받을 수 있나요?**  
 A: GroupDocs Support Forum이 활발히 운영되고 있습니다. 공식 문서에도 자세한 가이드와 코드 샘플이 제공됩니다.
 
----
-
-**Last Updated:** 2025-12-26  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Resources**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -324,3 +318,9 @@ A: GroupDocs Support Forum이 활발히 운영되고 있습니다. 공식 문서
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2025-12-26  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

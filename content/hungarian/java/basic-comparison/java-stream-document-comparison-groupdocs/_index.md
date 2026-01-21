@@ -305,12 +305,6 @@ A: Győződj meg róla, hogy stream‑eket használsz, növeld a JVM heap‑et h
 **Q: Hol kaphatok segítséget, ha problémába ütközöm?**  
 A: A GroupDocs Support Fórum aktív és gyorsan reagál. A hivatalos dokumentáció is részletes útmutatót és kódrészleteket tartalmaz.
 
----
-
-**Legutóbb frissítve:** 2025-12-26  
-**Tesztelve a következővel:** GroupDocs.Comparison 25.2  
-**Szerző:** GroupDocs  
-
 **Erőforrások**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -319,3 +313,9 @@ A: A GroupDocs Support Fórum aktív és gyorsan reagál. A hivatalos dokumentá
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Legutóbb frissítve:** 2025-12-26  
+**Tesztelve a következővel:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs  

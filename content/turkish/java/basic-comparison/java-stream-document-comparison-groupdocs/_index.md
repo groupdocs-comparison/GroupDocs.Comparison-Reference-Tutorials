@@ -312,12 +312,6 @@ C: Akışları kullandığınızı doğrulayın, gerekirse JVM yığınını art
 **S: Sorun yaşarsam nereden yardım alabilirim?**  
 C: GroupDocs Destek Forumu aktif ve yanıt vericidir. Resmi dokümantasyonları da ayrıntılı rehberlik ve kod örnekleri sunar.
 
----
-
-**Son Güncelleme:** 2025-12-26  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
-**Yazar:** GroupDocs  
-
 **Kaynaklar**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -326,3 +320,9 @@ C: GroupDocs Destek Forumu aktif ve yanıt vericidir. Resmi dokümantasyonları 
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Son Güncelleme:** 2025-12-26  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs  

@@ -304,12 +304,6 @@ A: Verifiera att du använder strömmar, öka JVM‑heap om behövs, kopiera fil
 **Q: Vart kan jag få hjälp om jag stöter på problem?**  
 A: GroupDocs Support Forum är aktivt och svarar snabbt. Deras officiella dokumentation erbjuder också detaljerad vägledning och kodexempel.
 
----
-
-**Senast uppdaterad:** 2025-12-26  
-**Testat med:** GroupDocs.Comparison 25.2  
-**Författare:** GroupDocs  
-
 **Resurser**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -318,3 +312,9 @@ A: GroupDocs Support Forum är aktivt och svarar snabbt. Deras officiella dokume
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Senast uppdaterad:** 2025-12-26  
+**Testat med:** GroupDocs.Comparison 25.2  
+**Författare:** GroupDocs  

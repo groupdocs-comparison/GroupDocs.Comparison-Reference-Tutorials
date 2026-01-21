@@ -304,12 +304,6 @@ A: Stellen Sie sicher, dass Sie Streams verwenden, erhöhen Sie ggf. den JVM‑H
 **F: Wo bekomme ich Hilfe, wenn Probleme auftreten?**  
 A: Das GroupDocs Support‑Forum ist aktiv und reagiert schnell. Auch die offizielle Dokumentation bietet detaillierte Anleitungen und Code‑Beispiele.
 
----
-
-**Zuletzt aktualisiert:** 2025-12-26  
-**Getestet mit:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Ressourcen**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -318,3 +312,9 @@ A: Das GroupDocs Support‑Forum ist aktiv und reagiert schnell. Auch die offizi
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Zuletzt aktualisiert:** 2025-12-26  
+**Getestet mit:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

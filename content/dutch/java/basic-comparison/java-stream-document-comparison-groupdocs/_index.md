@@ -304,12 +304,6 @@ A: Controleer of je streams gebruikt, vergroot de JVM‑heap indien nodig, kopie
 **Q: Waar kan ik hulp krijgen als ik tegen problemen aanloop?**  
 A: Het GroupDocs Support Forum is actief en reageert snel. De officiële documentatie biedt ook gedetailleerde begeleiding en code‑voorbeelden.
 
----
-
-**Laatst bijgewerkt:** 2025-12-26  
-**Getest met:** GroupDocs.Comparison 25.2  
-**Auteur:** GroupDocs  
-
 **Resources**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
@@ -318,3 +312,9 @@ A: Het GroupDocs Support Forum is actief en reageert snel. De officiële documen
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Laatst bijgewerkt:** 2025-12-26  
+**Getest met:** GroupDocs.Comparison 25.2  
+**Auteur:** GroupDocs  

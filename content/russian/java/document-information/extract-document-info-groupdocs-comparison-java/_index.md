@@ -440,14 +440,14 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 **Вопрос:** Безопасно ли использовать в многопоточных приложениях?  
 **Ответ:** Да, но создавайте отдельные экземпляры `Comparer` для каждого потока. Не делитесь экземплярами между потоками.
 
----
-
-**Последнее обновление:** 2026-01-18  
-**Тестировано с:** GroupDocs.Comparison 25.2  
-**Автор:** GroupDocs  
-
 **Дополнительные ресурсы**  
 - **Документация:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Справочник API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Сообщество:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Бесплатная пробная версия:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Последнее обновление:** 2026-01-18  
+**Тестировано с:** GroupDocs.Comparison 25.2  
+**Автор:** GroupDocs  

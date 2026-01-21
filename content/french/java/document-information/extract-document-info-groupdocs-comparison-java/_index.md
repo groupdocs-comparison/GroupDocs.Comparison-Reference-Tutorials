@@ -441,14 +441,14 @@ R : Vérifiez que vous avez appliqué correctement votre licence au démarrage
 **Q : Est‑ce sûr à utiliser dans des applications multithread ?**  
 R : Oui, mais créez des instances `Comparer` distinctes pour chaque thread. Ne partagez pas les instances entre les threads.
 
----
-
-**Dernière mise à jour :** 2026-01-18  
-**Testé avec :** GroupDocs.Comparison 25.2  
-**Auteur :** GroupDocs  
-
 **Ressources supplémentaires**  
 - **Documentation** : [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Référence API** : [Documentation complète de l’API](https://reference.groupdocs.com/comparison/java/)  
 - **Support communautaire** : [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)  
 - **Essai gratuit** : [Télécharger et tester](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Dernière mise à jour :** 2026-01-18  
+**Testé avec :** GroupDocs.Comparison 25.2  
+**Auteur :** GroupDocs  

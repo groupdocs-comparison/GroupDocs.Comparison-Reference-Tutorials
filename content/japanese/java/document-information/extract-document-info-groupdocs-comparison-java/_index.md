@@ -24,26 +24,26 @@ weight: 1
 
 このガイドでは、GroupDocs.Comparison for Java を使用してドキュメントメタデータ（ファイルタイプ、ページ数、サイズなど）を抽出する方法をステップバイステップで解説します。このライブラリが初めてでも安心してください。一般的な落とし穴と回避方法も網羅しています。
 
-## Quick Answers
-- **What library can I use to java get file type?** GroupDocs.Comparison for Java.  
-- **Can I also java extract pdf metadata?** Yes – the same API works for PDFs and many other formats.  
-- **Do I need a license?** A trial or temporary license works for development; a full license is required for production.  
-- **What Java version is required?** JDK 8+ (JDK 11+ recommended).  
-- **Is the code thread‑safe?** Create a separate `Comparer` instance per thread.
+## クイックアンサー
+- **Javaでファイルタイプを取得するにはどのライブラリを使用できますか？** Javaの場合はGroupDocs.Comparisonです。
+- **JavaでPDFメタデータも抽出できますか？** はい。同じAPIがPDFやその他の多くの形式で使用できます。
+- **ライセンスは必要ですか？** 開発環境では試用版または一時ライセンスを使用できますが、本番環境ではフルライセンスが必要です。
+- **必要なJavaのバージョンは？** JDK8以上（JDK11以上を推奨）。
+- **コードはスレッドセーフですか？** スレッドごとに個別の`Comparer`インスタンスを作成します。
 
-## Why Extract Document Metadata?
+## ドキュメントメタデータを抽出する理由
 
 コードに入る前に、実際のアプリケーションでこの処理がなぜ重要かを見てみましょう。
 
-- **Document Management Systems** – ファイルのプロパティに基づいて自動的に分類・インデックス化します。  
-- **File Upload Validation** – 処理前にファイルタイプやサイズをチェックします。  
-- **Content Analysis** – 長さ、フォーマット、その他の基準でドキュメントをフィルタリング・ソートします。  
-- **Legal & Compliance** – ドキュメントが特定の要件を満たしているか確認します。  
-- **Performance Optimization** – 条件を満たすファイルだけを事前に処理します。
+- **ドキュメント管理システム** – ファイルのプロパティに基づいて自動的に分類・インデックス化します。  
+- **ファイルアップロード検証** – 処理前にファイルタイプやサイズをチェックします。  
+- **コンテンツ分析** – 長さ、フォーマット、その他の基準でドキュメントをフィルタリング・ソートします。  
+- **法務およびコンプライアンス** – ドキュメントが特定の要件を満たしているか確認します。  
+- **パフォーマンス最適化** – 条件を満たすファイルだけを事前に処理します。
 
 要するに、メタデータ抽出はドキュメントの取り扱いに関する賢い判断を可能にします。
 
-## What You'll Learn in This Guide
+## このガイドで学ぶ内容
 
 このチュートリアルの最後までに、以下ができるようになります。
 
@@ -53,15 +53,15 @@ weight: 1
 - よくある問題のトラブルシューティング方法を把握する。  
 - 本番環境向けのベストプラクティスを実装する。
 
-## Prerequisites: What You Need Before Starting
+## 前提条件: 開始前に必要なもの
 
-### Required Software and Tools
+### 必要なソフトウェアとツール
 
 - **Java Development Kit (JDK)** – バージョン 8 以上（パフォーマンス向上のため JDK 11+ を推奨）。  
 - **Maven** – 依存関係管理とビルドに使用。  
 - **IDE** – IntelliJ IDEA、Eclipse、VS Code などお好みの Java IDE。
 
-### Knowledge Prerequisites
+### 前提知識
 
 Java のエキスパートである必要はありませんが、以下の基本的な知識があるとスムーズです。
 
@@ -69,15 +69,15 @@ Java のエキスパートである必要はありませんが、以下の基本
 - Maven の依存関係管理（本ガイドで手順を示します）。  
 - try‑with‑resources 文（リソースの適切な管理）の使い方。
 
-### Why GroupDocs.Comparison?
+### GroupDocs.Comparison を選ぶ理由
 
 「なぜメタデータ抽出に GroupDocs.Comparison を使うのか？」と疑問に思うかもしれません。比較機能で有名なこのライブラリは、実はドキュメント情報抽出にも優れています。将来的に比較機能が必要になっても、すでに環境が整っているというメリットがあります。
 
-## Setting Up GroupDocs.Comparison for Java
+## Java 版 GroupDocs.Comparison のセットアップ
 
 プロジェクトの設定を正しく行いましょう。依存関係の設定ミスは開発者が最もよく遭遇する問題の一つです。
 
-### Step 1: Maven Configuration
+### ステップ 1: Maven の設定
 
 `pom.xml` に以下を追加してください（正しいセクションに配置すること）:
 
@@ -98,9 +98,9 @@ Java のエキスパートである必要はありませんが、以下の基本
 </dependencies>
 ```
 
-**Pro tip**: 常に GroupDocs の公式サイトで最新バージョン番号を確認してください。古いバージョンを使用すると互換性の問題が発生することがあります。
+**プロのヒント**: 常に GroupDocs の公式サイトで最新バージョン番号を確認してください。古いバージョンを使用すると互換性の問題が発生することがあります。
 
-### Step 2: License Setup (Don't Skip This!)
+### ステップ 2: ライセンスの設定 (必ず行ってください!)
 
 GroupDocs.Comparison は無料ライブラリではありませんが、以下のオプションがあります。
 
@@ -108,7 +108,7 @@ GroupDocs.Comparison は無料ライブラリではありませんが、以下�
 2. **Temporary License**: 開発・評価向けに便利です。[here](https://purchase.groupdocs.com/temporary-license/) から申請できます。  
 3. **Full License**: 本番環境での使用に必要です。[Purchase here](https://purchase.groupdocs.com/buy) で購入してください。
 
-### Step 3: Verify Your Setup
+### ステップ 3: 設定を確認する
 
 すべてが正しく動作するか、簡単なテストクラスを作成して確認します:
 
@@ -123,11 +123,11 @@ public class SetupTest {
 }
 ```
 
-## Implementation Guide: Extracting Document Metadata Step by Step
+## 実装ガイド：ドキュメントメタデータの抽出手順
 
 さあ、実際に役立つコードを書いてみましょう！
 
-### java get file type – Initialize the Comparer Object
+### java ファイルタイプの取得 - Comparer オブジェクトの初期化
 
 `Comparer` クラスがドキュメント情報への入口です。正しい初期化方法は以下の通りです:
 
@@ -142,12 +142,13 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**What's happening here?**  
+**ここで何が起こっているのか？**
+ 
 - try‑with‑resources を使ってリソースの自動クリーンアップを保証（メモリリーク防止に超重要）。  
 - パスは実際のドキュメントを指す必要があります。  
 - エラーハンドリングでファイルが見つからない、アクセス権がない等の問題を捕捉します。
 
-### Get Document Information Object
+### ドキュメント情報オブジェクトの取得
 
 次に、メタデータを保持するドキュメント情報オブジェクトを取得します:
 
@@ -163,12 +164,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Key points:**  
+**キーポイント:**  
 - `getSource()` がソースドキュメントを取得。  
 - `getDocumentInfo()` が全メタデータを含むインターフェイスを返します。  
 - こちらも try‑with‑resources で適切にクリーンアップ。
 
-### Extract the Good Stuff
+### 重要な部分を抽出する
 
 実際のメタデータを取得しましょう:
 
@@ -191,12 +192,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**What each method returns:**  
+**各メソッドの戻り値:**
 - `getFileType().getFileFormat()`: ファイル形式（DOCX、PDF、TXT など）。  
 - `getPageCount()`: 総ページ数。  
 - `getSize()`: バイト単位のファイルサイズ。
 
-## Real-World Example: Complete Implementation
+## 実際の例: 完全な実装
 
 実務でそのまま使える、より堅牢なサンプルです:
 
@@ -249,12 +250,12 @@ public class DocumentMetadataExtractor {
 }
 ```
 
-## Common Issues and Solutions
+## よくある問題と解決策
 
-### Problem 1: "File Not Found" Errors
+### 問題 1: 「ファイルが見つかりません」エラー
 
-**Symptoms**: Comparer の初期化時に例外がスローされる  
-**Solution**: ファイルパスと存在を必ず検証してください:
+**症状**: Comparer の初期化時に例外がスローされる  
+**解決策**: ファイルパスと存在を必ず検証してください:
 
 ```java
 Path filePath = Paths.get(documentPath);
@@ -266,10 +267,10 @@ if (!Files.isReadable(filePath)) {
 }
 ```
 
-### Problem 2: Memory Issues with Large Files
+### 問題 2: 大きなファイルでのメモリ問題
 
-**Symptoms**: OutOfMemoryError や処理速度低下  
-**Solution**: ファイルを個別に処理し、リソースのクリーンアップを徹底します:
+**症状**: OutOfMemoryError や処理速度低下  
+**解決策**: ファイルを個別に処理し、リソースのクリーンアップを徹底します:
 
 ```java
 // Always use try-with-resources
@@ -279,10 +280,10 @@ try (Comparer comparer = new Comparer(filePath)) {
 } // Resources automatically cleaned up here
 ```
 
-### Problem 3: Unsupported File Formats
+### 問題 3: サポートされていないファイル形式
 
-**Symptoms**: 特定ファイルを処理しようとしたときに例外が発生  
-**Solution**: 事前にサポート対象フォーマットを確認してください:
+**症状**: 特定ファイルを処理しようとしたときに例外が発生  
+**解決策**: 事前にサポート対象フォーマットを確認してください:
 
 ```java
 public static boolean isSupportedFormat(String filePath) {
@@ -291,10 +292,10 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### Problem 4: License Issues in Production
+### 問題 4: 本番環境でのライセンス問題
 
-**Symptoms**: ウォーターマークが表示されたり機能が制限されたりする  
-**Solution**: ライセンスが正しく適用されているか確認してください:
+**症状**: ウォーターマークが表示されたり機能が制限されたりする  
+**解決策**: ライセンスが正しく適用されているか確認してください:
 
 ```java
 // Apply license at application startup
@@ -302,9 +303,9 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Best Practices for Production Use
+## 本番環境での使用に関するベストプラクティス
 
-### 1. Resource Management
+### 1. リソース管理
 
 自動クリーンアップのために必ず try‑with‑resources を使用します:
 
@@ -322,7 +323,7 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 // Resources might not be cleaned up properly
 ```
 
-### 2. Error Handling Strategy
+### 2. エラー処理戦略
 
 包括的なエラーハンドリングを実装します:
 
@@ -343,7 +344,7 @@ public DocumentInfo extractSafely(String filePath) {
 }
 ```
 
-### 3. Performance Optimization
+### 3. パフォーマンス最適化
 
 複数ファイルを処理する場合はバッチ処理を検討してください:
 
@@ -356,9 +357,10 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 }
 ```
 
-## When to Use This vs. Other Approaches
 
-**Use GroupDocs.Comparison when:**  
+## 他のアプローチと比較した、この方法を使用するタイミング
+
+**GroupDocs.Comparison は次の場合に使用します:**  
 - 多様な Office フォーマットから信頼性の高いメタデータ抽出が必要なとき。  
 - 将来的にドキュメント比較機能も利用したいとき。  
 - 正確なページカウントが求められる複雑なドキュメントを扱うとき。
@@ -368,33 +370,33 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 - シンプルなテキストファイルだけを扱うとき（標準 Java API で十分）。  
 - コストが大きな制約になるとき（まずはオープンソースの代替案を検討）。
 
-## Troubleshooting Guide
+## トラブルシューティングガイド
 
-### Issue: Code compiles but throws runtime exceptions
+### 問題: コードはコンパイルされるが、実行時例外が発生する
 
-**Check these:**  
+**以下の点を確認してください:**
 1. ライセンスが正しく設定されているか。  
 2. ファイルパスが正しいか。  
 3. ファイルへの読み取り権限があるか。  
 4. ファイル形式がサポート対象か。
 
-### Issue: Memory usage keeps growing
+### 問題: メモリ使用量が増加し続ける
 
-**Solutions:**  
+**解決策:**
 1. try‑with‑resources を使用しているか確認。  
 2. 複数ファイルを同時にロードせず、1つずつ処理する。  
 3. 静的参照がオブジェクトを保持していないかチェック。
 
-### Issue: Some metadata fields return null
+### 問題: 一部のメタデータフィールドがnullを返す
 
-**This is normal for:**  
+**これは以下の場合に正常です:**  
 - 該当メタデータが存在しないファイル。  
 - 破損または不完全なファイル。  
 - サポート外のフォーマットバリエーション。  
 
 メタデータを使用する前に必ず null チェックを行ってください。
 
-## Conclusion and Next Steps
+## まとめと次のステップ
 
 これで GroupDocs.Comparison for Java を使ったドキュメントメタデータ抽出の基礎が身につきました。カバーした内容は以下の通りです。
 
@@ -404,7 +406,7 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 ✅ 本番環境向けベストプラクティス  
 ✅ 典型的な問題のトラブルシューティング
 
-### What's Next?
+### 次は何ですか?
 
 メタデータ抽出ができたら、次の領域にも挑戦してみてください。
 
@@ -415,37 +417,37 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 
 さらに深掘りしたい方は、[公式 GroupDocs ドキュメント](https://docs.groupdocs.com/comparison/java/) をチェックして高度な機能やサンプルをご覧ください。
 
-## Frequently Asked Questions
+## よくある質問
 
-**Q: Can I extract metadata from password‑protected documents?**  
-A: Yes, but you'll need to provide the password when initializing the `Comparer` object. Use the overloaded constructor that accepts load options.
+**Q: パスワードで保護されたドキュメントからメタデータを抽出できますか？**
+A: はい。ただし、`Comparer` オブジェクトを初期化する際にパスワードを指定する必要があります。読み込みオプションを受け入れるオーバーロードされたコンストラクターを使用してください。
 
-**Q: What file formats are supported for metadata extraction?**  
-A: GroupDocs.Comparison supports most common document formats including DOCX, PDF, XLSX, PPTX, TXT, RTF, and many others. Check their documentation for the complete list.
+**Q: メタデータ抽出でサポートされているファイル形式は何ですか？**
+A: GroupDocs.Comparison は、DOCX、PDF、XLSX、PPTX、TXT、RTF など、ほとんどの一般的なドキュメント形式をサポートしています。完全なリストについては、ドキュメントをご確認ください。
 
-**Q: Is there a way to extract custom properties from Office documents?**  
-A: The basic document info primarily covers standard properties. For custom properties, you might need to explore additional GroupDocs libraries or combine with other tools.
+**Q: Office ドキュメントからカスタムプロパティを抽出する方法はありますか？**
+A: 基本的なドキュメント情報は、主に標準プロパティをカバーしています。カスタムプロパティについては、追加の GroupDocs ライブラリを調べるか、他のツールと組み合わせる必要がある場合があります。
 
-**Q: How do I handle very large files without running out of memory?**  
-A: Always use try‑with‑resources, process files individually, and consider streaming approaches for batch processing. Also ensure your JVM has adequate heap space.
+**Q: メモリ不足に陥ることなく、非常に大きなファイルを処理するにはどうすればよいですか？**
+A: 常に try-with-resources を使用し、ファイルを個別に処理し、バッチ処理にはストリーミングアプローチを検討してください。また、JVM に十分なヒープスペースがあることを確認してください。
 
-**Q: Can this work with documents stored in cloud storage?**  
-A: Yes, but you'll need to download the file locally first or use a stream‑based approach. GroupDocs works with local files and streams.
+**Q: クラウドストレージに保存されているドキュメントでも動作しますか？**
+A: はい。ただし、まずファイルをローカルにダウンロードするか、ストリームベースのアプローチを使用する必要があります。GroupDocs はローカルファイルとストリームの両方で動作します。
 
-**Q: What should I do if I get licensing errors?**  
-A: Make sure you've applied your license correctly at application startup and that your license hasn't expired. Contact GroupDocs support if issues persist.
+**Q: ライセンスエラーが発生した場合はどうすればよいですか？**
+A: アプリケーションの起動時にライセンスが正しく適用されていること、およびライセンスの有効期限が切れていないことを確認してください。問題が解決しない場合は、GroupDocs サポートにお問い合わせください。
 
-**Q: Is it safe to use in multi‑threaded applications?**  
-A: Yes, but create separate `Comparer` instances for each thread. Don't share instances across threads.
+**Q: マルチスレッドアプリケーションで使用しても安全ですか？**
+A: はい。ただし、スレッドごとに個別の `Comparer` インスタンスを作成してください。スレッド間でインスタンスを共有しないでください。
+
+**追加リソース**
+- **ドキュメント**: [GroupDocs.Comparison Javaドキュメント](https://docs.groupdocs.com/comparison/java/)
+- **APIリファレンス**: [完全なAPIドキュメント](https://reference.groupdocs.com/comparison/java/)
+- **コミュニティサポート**: [GroupDocsフォーラム](https://forum.groupdocs.com/c/comparison)
+- **無料トライアル**: [ダウンロードしてテスト](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
-**Additional Resources**  
-- **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
-- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
-- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+**最終更新日:** 2026年1月18日
+**テスト環境:** GroupDocs.Comparison 25.2
+**作成者:** GroupDocs

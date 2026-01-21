@@ -418,14 +418,14 @@ A: 애플리케이션 시작 시 라이선스를 올바르게 적용했는지, �
 **Q: 멀티스레드 애플리케이션에서 사용해도 안전한가요?**  
 A: 예, 하지만 스레드당 별도의 `Comparer` 인스턴스를 생성하십시오. 인스턴스를 스레드 간에 공유하지 마세요.
 
----
-
-**마지막 업데이트:** 2026-01-18  
-**테스트 환경:** GroupDocs.Comparison 25.2  
-**작성자:** GroupDocs  
-
 **추가 리소스**  
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**마지막 업데이트:** 2026-01-18  
+**테스트 환경:** GroupDocs.Comparison 25.2  
+**작성자:** GroupDocs  

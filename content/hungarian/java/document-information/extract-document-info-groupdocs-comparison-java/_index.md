@@ -441,14 +441,14 @@ A: Ellenőrizd, hogy a licenc helyesen van‑e alkalmazva az alkalmazás indít�
 **K: Biztonságos a használat több szálon?**  
 A: Igen, de minden szálnak külön `Comparer` példányt kell létrehoznia. Ne ossz meg példányokat szálak között.
 
----
-
-**Utolsó frissítés:** 2026-01-18  
-**Tesztelt verzió:** GroupDocs.Comparison 25.2  
-**Szerző:** GroupDocs  
-
 **További források**  
 - **Dokumentáció:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API referencia:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Közösségi támogatás:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Ingyenes próba:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Utolsó frissítés:** 2026-01-18  
+**Tesztelt verzió:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs  

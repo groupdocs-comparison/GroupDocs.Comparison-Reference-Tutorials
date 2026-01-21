@@ -440,14 +440,14 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 **ถาม: ปลอดภัยหรือไม่เมื่อใช้ในแอปหลายเธรด?**  
 ตอบ: ใช่, แต่ต้องสร้างอินสแตนซ์ `Comparer` แยกสำหรับแต่ละเธรด อย่าแชร์อินสแตนซ์ระหว่างเธรด
 
----
-
-**อัปเดตล่าสุด:** 2026-01-18  
-**ทดสอบกับ:** GroupDocs.Comparison 25.2  
-**ผู้เขียน:** GroupDocs  
-
 **แหล่งข้อมูลเพิ่มเติม**  
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**อัปเดตล่าสุด:** 2026-01-18  
+**ทดสอบกับ:** GroupDocs.Comparison 25.2  
+**ผู้เขียน:** GroupDocs  

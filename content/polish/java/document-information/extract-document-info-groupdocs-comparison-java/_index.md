@@ -440,14 +440,14 @@ O: Upewnij się, że licencja została poprawnie zastosowana przy starcie aplika
 **P: Czy biblioteka jest bezpieczna w aplikacjach wielowątkowych?**  
 O: Tak, ale twórz oddzielne instancje `Comparer` dla każdego wątku. Nie udostępniaj jednej instancji wielu wątkom.
 
----
-
-**Ostatnia aktualizacja:** 2026-01-18  
-**Testowano z:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Dodatkowe zasoby**  
 - **Dokumentacja**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Referencja API**: [Kompletna dokumentacja API](https://reference.groupdocs.com/comparison/java/)  
 - **Wsparcie społeczności**: [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)  
 - **Bezpłatna wersja próbna**: [Pobierz i testuj](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Ostatnia aktualizacja:** 2026-01-18  
+**Testowano z:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

@@ -431,14 +431,14 @@ A: Make sure you've applied your license correctly at application startup and th
 **Q: Is it safe to use in multi‑threaded applications?**  
 A: Yes, but create separate `Comparer` instances for each thread. Don't share instances across threads.
 
----
-
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Last Updated:** 2026-01-18  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

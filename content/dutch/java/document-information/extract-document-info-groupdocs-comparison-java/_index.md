@@ -20,68 +20,68 @@ url: /nl/java/document-information/extract-document-info-groupdocs-comparison-ja
 weight: 1
 ---
 
-# Java Get File Type – Gids voor het Extraheren van Documentmetadata
+# Java Get File Type – Gids voor het extraheren van documentmetadata
 
-Heb je ooit snel bestandsinformatie uit documenten moeten halen zonder ze te openen? Je bent niet de enige. Of je nu een documentbeheersysteem bouwt, bestandsuploads moet valideren, of documentverwerkingsworkflows wilt automatiseren, **java get file type** programmatisch kan je veel tijd besparen.
+Heb je ooit snel bestandsinformatie uit documenten moeten halen zonder ze te openen? Je bent niet de enige. Of je nu een documentbeheersysteem bouwt, bestandsuploads moeten valideren, of documentverwerkingsworkflows willen automatiseren, **java get file type** programmatisch kan je veel tijd besparen.
 
 In deze gids lopen we stap voor stap door hoe je documentmetadata (zoals bestandsformaat, paginatelling en grootte) kunt extraheren met GroupDocs.Comparison voor Java. Maak je geen zorgen als je nieuw bent met deze bibliotheek – we behandelen alles stap voor stap, inclusief veelvoorkomende valkuilen en hoe je ze kunt vermijden.
 
-## Quick Answers
-- **Welke bibliotheek kan ik gebruiken om java get file type?** GroupDocs.Comparison voor Java.  
-- **Kan ik ook java extract pdf metadata?** Ja – dezelfde API werkt voor PDF‑bestanden en vele andere formaten.  
-- **Heb ik een licentie nodig?** Een trial‑ of tijdelijke licentie werkt voor ontwikkeling; een volledige licentie is vereist voor productie.  
-- **Welke Java‑versie is vereist?** JDK 8+ (JDK 11+ aanbevolen).  
+## Snelle antwoorden
+- **Welke bibliotheek kan ik gebruiken om java get file type?** GroupDocs.Comparison voor Java.
+- **Kan ik ook java pdf-metadata extraheren?** Ja – dezelfde API werkt voor PDF‑bestanden en vele andere formaten.
+- **Heb ik een licentie nodig?** Een proefperiode of tijdelijke licentie werkt voor ontwikkeling; een volledige licentie is vereist voor productie.
+- **Welke Java‑versie is vereist?** JDK8+ (JDK11+ aanbevolen).
 - **Is de code thread‑safe?** Maak een aparte `Comparer`‑instantie per thread.
 
-## Why Extract Document Metadata?
+## Waarom documentmetagegevens extraheren?
 
-Voordat we in de code duiken, laten we bespreken waarom dit belangrijk is in real‑world toepassingen:
+Voordat we in de code duiken, laten we onderzoeken waarom dit belangrijk is in real‑world toepassingen:
 
-- **Document Management Systems** – categoriseer en indexeer bestanden automatisch op basis van hun eigenschappen.  
-- **File Upload Validation** – controleer bestandsformaten en -groottes voordat je ze verwerkt.  
-- **Content Analysis** – filter en sorteer documenten op lengte, formaat of andere criteria.  
-- **Legal & Compliance** – zorg ervoor dat documenten aan specifieke eisen voldoen.  
-- **Performance Optimization** – pre‑process alleen bestanden die aan bepaalde criteria voldoen.
+- **Documentbeheersystemen** – categoriseer en indexeer bestanden automatisch op basis van hun eigenschappen.
+- **File Upload Validation** – controleer bestandsformaten en -groottes voordat je ze verwerkt.
+- **Inhoudsanalyse** – filter en sorteer op lengte, formaat of andere criteria.
+- **Legal & Compliance** – zorg ervoor dat documenten aan specifieke eisen voldoen.
+- **Prestatieoptimalisatie** – pre-processeer alleen bestanden die aan bepaalde criteria voldoen.
 
-Kort gezegd: metadata‑extractie helpt je slimmer beslissingen te nemen over hoe je met je documenten omgaat.
+Kort gezegd: metadata-extractie helpt je slimmer beslissen om over te nemen hoe je met je documenten omgaat.
 
-## What You'll Learn in This Guide
+## Wat u in deze handleiding leert
 
 Aan het einde van deze tutorial kun je:
 
-- GroupDocs.Comparison voor Java in je project instellen.  
-- **java get file type** en andere essentiële documenteigenschappen met slechts een paar regels code ophalen.  
-- Verschillende bestandsformaten en randgevallen afhandelen.  
-- Veelvoorkomende problemen oplossen die je kunt tegenkomen.  
+- GroupDocs.Comparison voor Java in je project instellen.
+- **java get file type** en andere essentiële documenteigenschappen met slechts een paar regels code ophalen.
+- Verschillende bestandsformaten en randgevallen afhandelen.
+- Veelvoorkomende problemen oplossen die je kunt tegenkomen.
 - Best practices implementeren voor productieomgevingen.
 
-## Prerequisites: What You Need Before Starting
+## Vereisten: wat je nodig hebt voordat je begint
 
-### Required Software and Tools
+### Vereiste software en hulpmiddelen
 
-- **Java Development Kit (JDK)** – Versie 8 of hoger (we raden JDK 11+ aan voor betere prestaties).  
-- **Maven** – Voor dependency‑beheer en het bouwen van je project.  
-- **IDE** – Elke Java‑IDE zoals IntelliJ IDEA, Eclipse of VS Code.
+- **Java Development Kit (JDK)** – Versie8 of hoger (we raden JDK11+ aan voor betere prestaties).
+- **Maven** – Voor dependency‑beheer en het bouwen van je project.
+- **IDE** – Elke Java‑IDE zoals IntelliJ IDEA, Eclipse of VSCode.
 
-### Knowledge Prerequisites
+### Kennisvereisten
 
 Je hoeft geen Java‑expert te zijn, maar enige basiskennis van:
 
-- Java‑syntaxis en object‑georiënteerde concepten.  
-- Maven‑dependency‑beheer (we begeleiden je hier toch door).  
-- Try‑with‑resources‑statements (voor correcte resource‑beheer).
+- Java‑syntaxis en object‑georiënteerde concepten.
+- Maven‑dependency‑beheer (we begeleiden je hier toch door).
+- Try-with-resources-statements (voor correct resource-beheer).
 
-### Why GroupDocs.Comparison?
+### Waarom GroupDocs.Vergelijking?
 
-Je vraagt je misschien af – waarom GroupDocs.Comparison gebruiken voor metadata‑extractie? Hoewel het vooral bekend staat om documentvergelijking, biedt het ook uitstekende mogelijkheden voor het extraheren van documentinformatie. Bovendien, als je later vergelijking‑functies nodig hebt, ben je al klaar!
+Je vraagt ​​je misschien af ​​– waarom GroupDocs.Comparison gebruiken voor metadata‑extractie? Hoewel het vooral bekend staat om documentvergelijking, biedt het ook uitstekende mogelijkheden voor het extraheren van documentinformatie. Bovendien, als je later vergelijkingsfuncties nodig hebt, ben je al klaar!
 
-## Setting Up GroupDocs.Comparison for Java
+## GroupDocs.Comparison voor Java instellen
 
-Laten we je project correct configureren. Deze stap is cruciaal – verkeerde dependencies zijn een van de meest voorkomende problemen voor ontwikkelaars.
+Laten we je project correct uitvoeren. Deze stap is cruciaal – foutieve afhankelijkheden zijn een van de meest voorkomende problemen voor ontwikkelaars.
 
-### Step 1: Maven Configuration
+### Stap 1: Maven-configuratie
 
-Voeg dit toe aan je `pom.xml`‑bestand (zorg dat je het op de juiste plek plaatst):
+Voeg dit toe aan je `pom.xml`‑bestand (zorg ervoor dat je het op de juiste plek geplaatst):
 
 ```xml
 <repositories>
@@ -102,15 +102,15 @@ Voeg dit toe aan je `pom.xml`‑bestand (zorg dat je het op de juiste plek plaat
 
 **Pro tip**: Controleer altijd het nieuwste versienummer op de GroupDocs‑website – verouderde versies kunnen compatibiliteitsproblemen veroorzaken.
 
-### Step 2: License Setup (Don't Skip This!)
+### Stap 2: Licentie instellen (sla dit niet over!)
 
 GroupDocs.Comparison is geen gratis bibliotheek, maar je hebt opties:
 
-1. **Free Trial**: Perfect voor testen en kleine projecten. Download vanaf de [free trial page](https://releases.groupdocs.com/comparison/java/)  
-2. **Temporary License**: Ideaal voor ontwikkeling en evaluatie. Vraag aan [here](https://purchase.groupdocs.com/temporary-license/)  
-3. **Full License**: Voor productiegebruik. [Purchase here](https://purchase.groupdocs.com/buy)
+1. **Gratis proefversie**: Perfect voor testen en kleine projecten. Download vanaf de [gratis proefpagina](https://releases.groupdocs.com/comparison/java/)
+2. **Tijdelijke licentie**: Ideaal voor ontwikkeling en evaluatie. Vraag aan [hier](https://purchase.groupdocs.com/temporary-license/)
+3. **Volledige licentie**: Voor productiegebruik. [Koop hier](https://purchase.groupdocs.com/buy)
 
-### Step 3: Verify Your Setup
+### Stap 3: Controleer uw configuratie
 
 Maak een eenvoudige testklasse om te controleren of alles werkt:
 
@@ -125,11 +125,11 @@ public class SetupTest {
 }
 ```
 
-## Implementation Guide: Extracting Document Metadata Step by Step
+## Implementatiehandleiding: Metagegevens van documenten stap voor stap extraheren
 
 Nu het leuke deel – laten we code schrijven die echt iets nuttigs doet!
 
-### java get file type – Initialize the Comparer Object
+### java get bestandstype – Initialiseer het Comparer-object
 
 De `Comparer`‑klasse is je toegangspoort tot documentinformatie. Zo stel je het correct in:
 
@@ -144,12 +144,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Wat gebeurt er hier?**  
-- We gebruiken try‑with‑resources om correcte opruiming te garanderen (super belangrijk om geheugenlekken te voorkomen!).  
-- Het pad moet wijzen naar je daadwerkelijke document.  
-- Foutafhandeling vangt problemen zoals bestand niet gevonden of toegangsproblemen.
+**Wat gebeurt er hier?**
+- We gebruiken try‑with‑resources om het corrigeren van opruiming te beveiligen (super belangrijk om geheugenlekken te voorkomen!).
+- Het pad moet wijzen naar je daadwerkelijke document.
+- Foutafhandeling vangt problemen zoals bestand niet gevonden van toegangsproblemen.
 
-### Get Document Information Object
+### Documentinformatieobject ophalen
 
 Vervolgens halen we het document‑info‑object op dat al onze metadata bevat:
 
@@ -165,12 +165,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Belangrijke punten:**  
-- `getSource()` haalt het bron‑document op.  
-- `getDocumentInfo()` retourneert een interface met alle metadata.  
+**Belangrijke punten:**
+- `getSource()` haalt het brondocument op.
+- `getDocumentInfo()` retourneert een interface met alle metadata.
 - Een andere try‑with‑resources zorgt voor correcte opruiming.
 
-### Extract the Good Stuff
+### Haal de goede dingen eruit
 
 Nu halen we de daadwerkelijke metadata op:
 
@@ -193,12 +193,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Wat elke methode retourneert:**  
-- `getFileType().getFileFormat()`: Bestandsformaat (DOCX, PDF, TXT, enz.).  
-- `getPageCount()`: Totaal aantal pagina's.  
+**Wat elke methode retourneert:**
+- `getFileType().getFileFormat()`: Bestandsformaat (DOCX, PDF, TXT, enz.).
+- `getPageCount()`: Totaal aantal pagina's.
 - `getSize()`: Bestandsgrootte in bytes.
 
-## Real-World Example: Complete Implementation
+## Voorbeeld uit de praktijk: volledige implementatie
 
 Hier is een robuuster voorbeeld dat je daadwerkelijk in je projecten kunt gebruiken:
 
@@ -251,9 +251,9 @@ public class DocumentMetadataExtractor {
 }
 ```
 
-## Common Issues and Solutions
+## Veelvoorkomende problemen en oplossingen
 
-### Problem 1: "File Not Found" Errors
+### Probleem 1: Foutmeldingen "Bestand niet gevonden"
 
 **Symptomen**: Exception gegooid bij het initialiseren van Comparer  
 **Oplossing**: Valideer altijd bestands‑paden en bestaan:
@@ -268,7 +268,7 @@ if (!Files.isReadable(filePath)) {
 }
 ```
 
-### Problem 2: Memory Issues with Large Files
+### Probleem 2: Geheugenproblemen bij grote bestanden
 
 **Symptomen**: OutOfMemoryError of trage prestaties  
 **Oplossing**: Verwerk bestanden afzonderlijk en zorg voor correcte resource‑opruiming:
@@ -281,7 +281,7 @@ try (Comparer comparer = new Comparer(filePath)) {
 } // Resources automatically cleaned up here
 ```
 
-### Problem 3: Unsupported File Formats
+### Probleem 3: Niet-ondersteunde bestandsindelingen
 
 **Symptomen**: Exceptions bij het verwerken van bepaalde bestanden  
 **Oplossing**: Controleer eerst ondersteunde formaten:
@@ -293,7 +293,7 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### Problem 4: License Issues in Production
+### Probleem 4: Licentieproblemen in een productieomgeving
 
 **Symptomen**: Watermerken of functionaliteitsbeperkingen  
 **Oplossing**: Zorg dat je licentie correct is toegepast:
@@ -304,9 +304,9 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Best Practices for Production Use
+## Beste werkwijzen voor productiegebruik
 
-### 1. Resource Management
+### 1. Resourcebeheer
 
 Gebruik altijd try‑with‑resources voor automatische opruiming:
 
@@ -323,8 +323,7 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 // Processing code
 // Resources might not be cleaned up properly
 ```
-
-### 2. Error Handling Strategy
+### 2. Strategie voor foutafhandeling
 
 Implementeer uitgebreide foutafhandeling:
 
@@ -345,7 +344,7 @@ public DocumentInfo extractSafely(String filePath) {
 }
 ```
 
-### 3. Performance Optimization
+### 3. Prestatieoptimalisatie
 
 Voor het verwerken van meerdere bestanden, overweeg batchverwerking:
 
@@ -358,96 +357,96 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 }
 ```
 
-## When to Use This vs. Other Approaches
+## Wanneer moet u dit versus andere benaderingen gebruiken?
 
-**Gebruik GroupDocs.Comparison wanneer:**  
-- Je betrouwbare metadata‑extractie nodig hebt uit diverse Office‑formaten.  
-- Je later ook documentvergelijkingsfuncties wilt gebruiken.  
-- Je werkt met complexe documenten die nauwkeurige paginatelling vereisen.
+**Gebruik GroupDocs.Vergelijking wanneer:**
+- Je betrouwbare metadata‑extractie nodig hebt uit diverse Office‑formaten.
+- Je zult later ook documentvergelijkingsfuncties gebruiken.
+- Je werkt met complexe documenten die nauwkeurige paginatelling indirect.
 
-**Overweeg alternatieven wanneer:**  
-- Je alleen basis‑bestand‑info nodig hebt (gebruik `java.nio.file.Files` voor grootte, datums).  
-- Je werkt met eenvoudige tekstbestanden (ingebouwde Java‑API’s zijn voldoende).  
+**Overweeg alternatieven wanneer:**
+- Je alleen basis‑bestand‑info nodig hebt (gebruik `java.nio.file.Files` voor grootte, datums).
+- Je werkt met eenvoudige tekstbestanden (ingebouwde Java‑API’s zijn voldoende).
 - Budget een grote beperking is (verken eerst open‑source alternatieven).
 
-## Troubleshooting Guide
+## Gids voor probleemoplossing
 
-### Issue: Code compiles but throws runtime exceptions
+### Probleem: code compileert maar genereert runtime-uitzonderingen
 
-**Controleer het volgende:**  
-1. Is je licentie correct geconfigureerd?  
-2. Gebruik je de juiste bestands‑paden?  
-3. Heb je leesrechten op de bestanden?  
+**Controleer de volgende:**
+1. Is je licentie correct geconfigureerd?
+2. Gebruik je de juiste bestandspaden?
+3. Heeft u leesrechten op de bestanden?
 4. Wordt het bestandsformaat daadwerkelijk ondersteund?
 
-### Issue: Memory usage keeps growing
+### Probleem: het geheugengebruik blijft groeien
 
-**Oplossingen:**  
-1. Zorg dat je try‑with‑resources gebruikt.  
-2. Verwerk bestanden één voor één in plaats van meerdere tegelijk te laden.  
+**Oplossingen:**
+1. Zorg ervoor dat je de middelen gebruikt.
+2. Verwerk bestanden één voor één in plaats van meerdere tegelijk te laden.
 3. Controleer op statische referenties die objecten vasthouden.
 
-### Issue: Some metadata fields return null
+### Probleem: sommige metagegevensvelden retourneren null
 
-**Dit is normaal voor:**  
-- Bestanden die dat type metadata niet bevatten.  
-- Beschadigde of onvolledige bestanden.  
-- Niet‑ondersteunde variaties van bestandsformaten.  
+**Dit is normaal voor:**
+- Bestanden die dat type metadata niet bevatten.
+- Beschadigde van onvolledige bestanden.
+- Niet-ondersteunde variaties van bestandsformaten.
 
-Controleer altijd op null‑waarden voordat je metadata gebruikt.
+Controleer altijd op nulwaarden voordat u metadata gebruikt.
 
-## Conclusion and Next Steps
+## Conclusie en volgende stappen
 
-Je hebt nu een solide basis voor het extraheren van documentmetadata met GroupDocs.Comparison voor Java! Hieronder een samenvatting van wat we hebben behandeld:
+Je hebt nu een solide basis voor het extraheren van documentmetadata met GroupDocs.Comparison voor Java! plaatsen een samenvatting van wat we hebben behandeld:
 
-✅ Correcte installatie van de bibliotheek en dependencies  
-✅ **java get file type** en andere belangrijke documenteigenschappen  
-✅ Afhandeling van veelvoorkomende fouten en randgevallen  
-✅ Best practices voor productieomgevingen  
-✅ Troubleshooting‑richtlijnen voor typische problemen  
+✅ Correcte installatie van de bibliotheek en afhankelijkheden
+✅ **java get file type** en andere belangrijke documenteigenschappen
+✅ Afhandeling van veelvoorkomende fouten en randgevallen
+✅ Best practices voor productieomgevingen
+✅ Probleemoplossing‑richtlijnen voor typische problemen
 
-### What's Next?
+### Wat is het volgende?
 
 Nu je metadata‑extractie onder de knie hebt, overweeg je:
 
-- **Document comparison‑functies** voor het bijhouden van wijzigingen.  
-- **Integratie met Spring Boot** voor webapplicaties.  
-- **Batchverwerking** voor het efficiënt afhandelen van meerdere bestanden.  
+- **Documentvergelijkingsfuncties** voor het bijhouden van wijzigingen.
+- **Integratie met Spring Boot** voor webapplicaties.
+- **Batchverwerking** voor het efficiënt afhandelen van meerdere bestanden.
 - **Aangepaste metadata‑extractie** voor specifieke bestandsformaten.
 
-Wil je dieper duiken? Bekijk de [official GroupDocs documentation](https://docs.groupdocs.com/comparison/java/) voor geavanceerde functies en voorbeelden.
+Wil je dieper duiken? Bekijk de [officiële GroupDocs-documentatie](https://docs.groupdocs.com/comparison/java/) voor geavanceerde functies en voorbeelden.
 
-## Frequently Asked Questions
+## Veelgestelde vragen
 
-**Q: Kan ik metadata extraheren uit met een wachtwoord beveiligde documenten?**  
-A: Ja, maar je moet het wachtwoord opgeven bij het initialiseren van het `Comparer`‑object. Gebruik de overladen constructor die load‑options accepteert.
+**Q: Kan ik metadata extraheren uit met een wachtwoord beveiligde documenten?**
+A: Ja, maar je moet het wachtwoord opgeven bij het initialiseren van het `Comparer`‑object. Gebruik de overladen constructor van de laadopties.
 
-**Q: Welke bestandsformaten worden ondersteund voor metadata‑extractie?**  
-A: GroupDocs.Comparison ondersteunt de meeste gangbare documentformaten, waaronder DOCX, PDF, XLSX, PPTX, TXT, RTF en vele anderen. Bekijk hun documentatie voor de volledige lijst.
+**Q: Welke bestandsformaten worden ondersteund voor metadata‑extractie?**
+A: GroupDocs.Comparison ondersteunt de meest gebruikelijke documentformaten, waaronder DOCX, PDF, XLSX, PPTX, TXT, RTF en vele anderen. Bekijk hun documentatie voor de volledige lijst.
 
-**Q: Is er een manier om aangepaste eigenschappen uit Office‑documenten te extraheren?**  
+**V: Is er een manier om aangepaste eigenschappen uit Office-documenten te extraheren?**
 A: De basis‑documentinfo dekt voornamelijk standaardeigenschappen. Voor aangepaste eigenschappen moet je mogelijk aanvullende GroupDocs‑bibliotheken verkennen of combineren met andere tools.
 
-**Q: Hoe ga ik om met zeer grote bestanden zonder geheugenproblemen?**  
+**Q: Hoe ga ik om met zeer grote bestanden zonder geheugenproblemen?**
 A: Gebruik altijd try‑with‑resources, verwerk bestanden één voor één en overweeg streaming‑benaderingen voor batchverwerking. Zorg ook dat je JVM voldoende heap‑ruimte heeft.
 
-**Q: Werkt dit met documenten die in cloud‑opslag staan?**  
-A: Ja, maar je moet het bestand eerst lokaal downloaden of een stream‑gebaseerde aanpak gebruiken. GroupDocs werkt met lokale bestanden en streams.
+**Q: Werkt dit met documenten die in cloud‑opslag staan?**
+A: Ja, maar je moet het bestand eerst lokaal downloaden van een stream‑gebaseerde aanpak gebruiken. GroupDocs werkt met lokale bestanden en streams.
 
-**Q: Wat moet ik doen als ik licentie‑fouten krijg?**  
-A: Zorg dat je de licentie correct toepast bij het opstarten van de applicatie en dat de licentie niet is verlopen. Neem contact op met GroupDocs‑support als de problemen aanhouden.
+**Vraag: Wat moet ik doen als ik licentie‑fouten krijg?**
+A: Zorg ervoor dat je de licentie correct is bij het verwijderen van de applicatie en dat de licentie niet is verlopen. Neem contact op met GroupDocs-ondersteuning als de problemen aanhouden.
 
-**Q: Is het veilig om te gebruiken in multi‑threaded applicaties?**  
-A: Ja, maar maak aparte `Comparer`‑instanties voor elke thread. Deel geen instanties tussen threads.
+**V: Is het veilig om te gebruiken in multi-threaded applicaties?**
+A: Ja, maar maak aparte `Comparer`‑instanties voor elke draad. Deel geen samengesteld tussen threads.
+
+**Aanvullende bronnen**
+- **Documentatie**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)
+- **API-referentie**: [Volledige API-documentatie](https://reference.groupdocs.com/comparison/java/)
+- **Communityondersteuning**: [GroupDocs-forum](https://forum.groupdocs.com/c/comparison)
+- **Gratis proefversie**: [Downloaden en testen](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
-**Additional Resources**  
-- **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
-- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
-- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+**Laatst bijgewerkt:** 18-01-2026
+**Getest met:** GroupDocs.Comparison 25.2
+**Auteur:** GroupDocs 

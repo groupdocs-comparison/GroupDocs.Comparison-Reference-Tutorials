@@ -440,14 +440,14 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 **प्र: क्या यह मल्टी‑थ्रेडेड एप्लिकेशन में सुरक्षित है?**  
 उ: हाँ, लेकिन प्रत्येक थ्रेड के लिए अलग `Comparer` इंस्टेंस बनाएँ। इंस्टेंस को थ्रेड्स के बीच शेयर न करें।
 
----
-
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Last Updated:** 2026-01-18  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

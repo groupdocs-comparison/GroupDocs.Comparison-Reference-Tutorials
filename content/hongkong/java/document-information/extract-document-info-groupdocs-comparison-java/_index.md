@@ -438,14 +438,14 @@ A: 確認在應用程式啟動時已正確套用授權，且授權未過期。�
 **Q: 在多執行緒環境下使用安全嗎？**  
 A: 安全，只要為每個執行緒建立獨立的 `Comparer` 實例，切勿共用同一個實例。
 
----
-
-**最後更新日期：** 2026-01-18  
-**測試版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **其他資源**  
 - **文件說明**： [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API 參考**： [完整 API 文件](https://reference.groupdocs.com/comparison/java/)  
 - **社群支援**： [GroupDocs 論壇](https://forum.groupdocs.com/c/comparison)  
 - **免費試用**： [下載與測試](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**最後更新日期：** 2026-01-18  
+**測試版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

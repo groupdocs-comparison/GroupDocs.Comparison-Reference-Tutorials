@@ -438,14 +438,14 @@ A: 确认在应用启动时已正确加载许可证且未过期。如仍有问�
 **Q: 在多线程环境下使用安全么？**  
 A: 安全，只需为每个线程创建独立的 `Comparer` 实例，避免跨线程共享。
 
----
-
-**最后更新：** 2026-01-18  
-**测试环境：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
 **附加资源**  
 - **文档**： [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API 参考**： [完整 API 文档](https://reference.groupdocs.com/comparison/java/)  
 - **社区支持**： [GroupDocs 论坛](https://forum.groupdocs.com/c/comparison)  
 - **免费试用**： [下载并测试](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**最后更新：** 2026-01-18  
+**测试环境：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  

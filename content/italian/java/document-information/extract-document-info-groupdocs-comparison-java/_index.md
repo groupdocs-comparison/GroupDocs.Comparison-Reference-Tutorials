@@ -440,14 +440,14 @@ R: Verifica di aver applicato correttamente la licenza all’avvio dell’applic
 **D: È sicuro usarlo in applicazioni multithread?**  
 R: Sì, ma crea istanze `Comparer` separate per ogni thread. Non condividere le istanze tra thread.
 
----
-
-**Ultimo Aggiornamento:** 2026-01-18  
-**Testato Con:** GroupDocs.Comparison 25.2  
-**Autore:** GroupDocs  
-
 **Risorse Aggiuntive**  
 - **Documentazione:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Riferimento API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Supporto Community:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Prova Gratuita:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Ultimo Aggiornamento:** 2026-01-18  
+**Testato Con:** GroupDocs.Comparison 25.2  
+**Autore:** GroupDocs  

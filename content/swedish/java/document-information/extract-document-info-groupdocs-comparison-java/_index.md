@@ -435,12 +435,12 @@ A: Säkerställ att du har applicerat licensen korrekt vid applikationens start 
 **Q: Är det säkert att använda i multitrådade applikationer?**  
 A: Ja, men skapa separata `Comparer`‑instanser för varje tråd. Dela inte instanser mellan trådar.
 
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
 ## Ytterligare resurser
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+**Last Updated:** 2026-01-18  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

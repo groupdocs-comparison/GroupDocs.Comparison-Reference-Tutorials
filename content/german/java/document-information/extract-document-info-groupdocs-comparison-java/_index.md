@@ -445,14 +445,14 @@ A: Stellen Sie sicher, dass Sie Ihre Lizenz korrekt beim Anwendungsstart angewen
 **Q: Ist es sicher, in multithreaded Anwendungen zu verwenden?**  
 A: Ja, aber erstellen Sie für jeden Thread separate `Comparer`‑Instanzen. Teilen Sie Instanzen nicht über Threads hinweg.
 
----
-
-**Zuletzt aktualisiert:** 2026-01-18  
-**Getestet mit:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 ## Zusätzliche Ressourcen
 - **Dokumentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API‑Referenz**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Community‑Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Kostenlose Testversion**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Zuletzt aktualisiert:** 2026-01-18  
+**Getestet mit:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

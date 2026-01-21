@@ -440,14 +440,14 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 **Ε: Είναι ασφαλές να το χρησιμοποιήσω σε πολυνηματικές εφαρμογές;**  
 Α: Ναι, αρκεί να δημιουργείτε ξεχωριστά αντικείμενα `Comparer` για κάθε νήμα. Μην μοιράζεστε τις ίδιες παρουσίες μεταξύ νημάτων.
 
----
-
-**Τελευταία Ενημέρωση:** 2026-01-18  
-**Δοκιμασμένο Με:** GroupDocs.Comparison 25.2  
-**Συγγραφέας:** GroupDocs  
-
 **Πρόσθετοι Πόροι**  
 - **Τεκμηρίωση:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Αναφορά API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Κοινότητα:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Δωρεάν Δοκιμή:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2026-01-18  
+**Δοκιμασμένο Με:** GroupDocs.Comparison 25.2  
+**Συγγραφέας:** GroupDocs  

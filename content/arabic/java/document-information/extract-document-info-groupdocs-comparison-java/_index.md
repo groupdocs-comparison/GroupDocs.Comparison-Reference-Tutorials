@@ -440,14 +440,14 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 **س: هل هو آمن للاستخدام في تطبيقات متعددة الخيوط؟**  
 ج: نعم، لكن أنشئ نسخًا منفصلة من كائنات `Comparer` لكل خيط. لا تشارك الكائنات بين الخيوط.
 
----
-
-**آخر تحديث:** 2026-01-18  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2  
-**المؤلف:** GroupDocs  
-
 **موارد إضافية**  
 - **التوثيق:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **مرجع الـ API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **دعم المجتمع:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **تجربة مجانية:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**آخر تحديث:** 2026-01-18  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2  
+**المؤلف:** GroupDocs  

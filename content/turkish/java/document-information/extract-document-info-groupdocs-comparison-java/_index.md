@@ -440,14 +440,14 @@ C: Lisansın uygulama başlangıcında doğru şekilde yüklendiğinden ve süre
 **S: Çoklu iş parçacıklı (multi‑threaded) uygulamalarda güvenli mi?**  
 C: Evet, ancak her iş parçacığı için ayrı `Comparer` örnekleri oluşturun. Örnekleri iş parçacıkları arasında paylaşmayın.
 
----
-
-**Son Güncelleme:** 2026-01-18  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
-**Yazar:** GroupDocs  
-
 **Ek Kaynaklar**  
 - **Dokümantasyon:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Referansı:** [Tam API Dokümantasyonu](https://reference.groupdocs.com/comparison/java/)  
 - **Topluluk Desteği:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Ücretsiz Deneme:** [İndir ve Test Et](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Son Güncelleme:** 2026-01-18  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs  

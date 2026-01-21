@@ -440,14 +440,14 @@ A: Ověřte, že jste licenci aplikovali při startu aplikace a že licence nevy
 **Q: Je to bezpečné používat v multithreaded aplikacích?**  
 A: Ano, ale vytvářejte samostatné instance `Comparer` pro každé vlákno. Nesdílejte instance mezi vlákny.
 
----
-
-**Poslední aktualizace:** 2026-01-18  
-**Testováno s:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Další zdroje**  
 - **Dokumentace:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API reference:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Komunitní podpora:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Poslední aktualizace:** 2026-01-18  
+**Testováno s:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

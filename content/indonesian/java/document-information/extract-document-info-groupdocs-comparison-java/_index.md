@@ -440,14 +440,14 @@ J: Pastikan lisensi diterapkan dengan benar saat aplikasi mulai dan lisensi belu
 **T: Apakah aman digunakan dalam aplikasi multi‑thread?**  
 J: Ya, tetapi buat instance `Comparer` terpisah untuk setiap thread. Jangan bagikan instance antar thread.
 
----
-
-**Terakhir Diperbarui:** 2026-01-18  
-**Diuji Dengan:** GroupDocs.Comparison 25.2  
-**Penulis:** GroupDocs  
-
 **Sumber Daya Tambahan**  
 - **Dokumentasi**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Referensi API**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
 - **Dukungan Komunitas**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 - **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Terakhir Diperbarui:** 2026-01-18  
+**Diuji Dengan:** GroupDocs.Comparison 25.2  
+**Penulis:** GroupDocs  

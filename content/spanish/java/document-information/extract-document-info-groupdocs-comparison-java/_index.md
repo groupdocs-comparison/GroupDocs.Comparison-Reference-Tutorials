@@ -440,14 +440,14 @@ R: Verifica que hayas aplicado la licencia correctamente al iniciar la aplicaci�
 **P: ¿Es seguro usarlo en aplicaciones multihilo?**  
 R: Sí, pero crea instancias separadas de `Comparer` para cada hilo. No compartas instancias entre hilos.
 
----
-
-**Última actualización:** 2026-01-18  
-**Probado con:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
 **Recursos adicionales**  
 - **Documentación:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **Referencia API:** [Documentación completa de la API](https://reference.groupdocs.com/comparison/java/)  
 - **Soporte comunitario:** [Foro de GroupDocs](https://forum.groupdocs.com/c/comparison)  
 - **Prueba gratuita:** [Descargar y probar](https://releases.groupdocs.com/comparison/java/)
+
+---
+
+**Última actualización:** 2026-01-18  
+**Probado con:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  

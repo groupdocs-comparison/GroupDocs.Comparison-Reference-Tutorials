@@ -20,54 +20,54 @@ url: /ko/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-
 weight: 1
 ---
 
-# Compare Word Documents in Java – Style Inserted Items with GroupDocs
+# Java의 Word 문서 비교 – GroupDocs를 사용하여 삽입된 항목 스타일 지정
 
-## Introduction
+## 소개
 
-두 문서를 비교했는데 표시되지 않은 변경 사항 때문에 눈을 가늘게 뜨고 있던 적 있나요? 당신만 그런 것이 아닙니다. 계약서 수정 추적이든, 코드 문서 관리이든, 기술 사양 협업이든, **Java에서 문서 비교**는 적절한 스타일링 없이는 큰 골칫거리가 될 수 있습니다.
+두 문서를 작성하지 않았는데 표시되지 않았으므로 눈을 가늘게 시작하고 시작했습니까? 당신만은 그런 것이 아닙니다. 계약서 수정 추적이든, 코드 문서 관리이든, 기술 사양 작업이든, **Java에서 문서 분석**은 적절한 스타일링 없이 큰 틀이 될 수 있습니다.
 
-문제는 이렇습니다: 원시 문서 차이는 초콜릿 주전자를 보는 것만큼 도움이 되지 않습니다. 바로 **GroupDocs.Comparison for Java**가 구원 투구를 쓰고 등장합니다. 이 강력한 라이브러리는 차이점을 찾는 것에 그치지 않고, 원하는 대로 스타일을 지정해 변경 사항을 페이지에서 돋보이게 합니다.
+문제는 이렇습니다: 원시 문서 모형은 초콜릿 주전자를 볼 수 있는 만큼 도움이 되지 않습니다. 바로 **GroupDocs.Java 비교**가 구원 투구를 어색합니다. 이 강도는 구별되는 차이점을 보이는데, 선호하는 스타일을 변경해 주시기 바랍니다.
 
-이 포괄적인 가이드에서는 지루한 문서 비교를 시각적으로 매력적이고 전문적인 결과물로 바꾸는 방법을 배웁니다. 기본 설정부터 고급 스타일링 기법, 그리고 실제로 중요한 상황까지 모두 다룹니다. 문서 차이를 빛나게 할 준비가 되셨나요?
+이 전반적인 가이드에서는 지루한 문서 비교를 보고하는 것보다 매력적이고 전문적인 결과로 바꾸는 방법을 배웁니다. 기본 설정부터 정체성까지, 그리고 실제로 중요한 상황 모두 다. 문서 차이를 빛나게 할 준비가 되셨나요?
 
-## Quick Answers
- **What library lets me compare word documents in Java?** GroupDocs.Comparison for Java.  
-- **How can I highlight inserted text?** Use `StyleSettings` with `setHighlightColor`.  
-- **Do I need a license for production?** Yes, a commercial license is required.  
-- **Can I compare PDFs as well?** Absolutely – the same API works for PDF, Excel, PPT, etc.  
-- **Is asynchronous processing possible?** Yes, wrap the comparison in a `CompletableFuture` or similar.
+## 빠른 답변 
+**Java의 단어 문서를 비교할 수 있는 라이브러리는 무엇입니까?** Java용 GroupDocs.Comparison.
+- **삽입된 텍스트를 어떻게 강조할 수 있나요?** `setHighlightColor`와 함께 `StyleSettings`를 사용하세요.
+- **제작을 하려면 라이선스가 필요합니까?** 네, 상용 라이선스가 필요합니다.
+- **PDF도 비교할 수 있나요?** 물론입니다. PDF, Excel, PPT 등에서도 동일한 API가 작동합니다.
+- **비동기 처리가 가능합니까?** 예, `CompletableFuture` 또는 이와 유사한 것으로 비교를 래핑합니다.
 
-## Why Document Comparison Styling Actually Matters
+## 문서 비교 스타일이 실제로 중요한 이유
 
-코드에 들어가기 전에, **java document comparison customization**에 왜 신경을 써야 하는지 이야기해 보겠습니다. 단순히 예쁘게 만드는 것만이 목적은 아닙니다(그것도 좋지만).
+코드에 있기 때문에, **java 문서 비교 사용자 정의**에 왜 신경을 쓸 것이 없기 때문입니다. 단지 존재하는 목적은 그것이 아닙니다(그것도 아닙니다).
 
-**Real‑World Impact**
-- **Legal Teams** – 중요한 조항을 놓치지 않고 계약 변경을 즉시 파악.  
-- **Development Teams** – 버전 간 문서 업데이트를 선명하게 추적.  
-- **Content Teams** – 제안서를 협업하면서 시각적 계층 구조 유지.  
-- **Compliance Officers** – 규제 문서가 감사 요구 사항을 충족하도록 보장.
+**실제 영향**
+- **법무팀** – 중요한 조항을 본인의 소유로 변경하여 즉시 파악합니다.
+- **개발팀** – 버전 간 문서 업데이트를 통해 추적합니다.
+- **콘텐츠 팀** – 제안과 함께 관련 부분 구조를 유지합니다.
+- **준법감시인** – 문서가 감사하도록 처리하기 위한 것입니다.
 
-스타일이 적용된 비교와 적용되지 않은 비교의 차이는? 전문 프레젠테이션과 낙서 메모를 비교하는 것과 같습니다. 둘 다 정보는 담고 있지만, 결과를 이끄는 것은 하나뿐입니다.
+스타일이 적용되지 않은 비교의 차이점은 무엇입니까? 전문 프레젠테이션과 메모를 작성하는 것과 같습니다. 둘 다 정보는 없었지만, 결과를 이끌어낸 것은 하나였습니다.
 
-## Prerequisites and Setup Requirements
+## 전제 조건 및 설정 요구 사항
 
-멋진 문서 비교를 만들기 전에, 모든 준비가 되었는지 확인해 봅시다.
+멋진 문서를 만들기 전에, 모든 준비가 가능하다고 볼 수 있습니다.
 
-### What You'll Need
-- **Java Development Kit (JDK)** – 버전 8 이상 (JDK 11+ 권장).  
-- **Maven or Gradle** – 의존성 관리용.  
-- **IDE** – IntelliJ IDEA, Eclipse, 혹은 Java 확장 기능이 포함된 VS Code.  
-- **Basic Java Knowledge** – Streams, try‑with‑resources, OOP 개념.  
-- **Sample Documents** – 테스트용 Word, PDF 등 지원 포맷 파일.
+### 필요한 것
+- **JDK(Java Development Kit)** – 버전8 이상(JDK11+ 권장).
+- **Maven 또는 Gradle** – 의존성 관리용.
+- **IDE** – IntelliJ IDEA, Eclipse, 또는 Java 확장 기능이 포함된 VSCode입니다.
+- **기본 Java 지식** – 스트림, 리소스 사용 시도, OOP 개념.
+- **샘플 문서** – 테스트용 Word, PDF 등 지원양식 파일.
 
-### Environment Setup Tips
-Java 문서 처리를 처음 접한다면, 복잡한 포맷에 도전하기 전에 간단한 Word 문서(`.docx`)부터 시작하세요. 디버깅이 쉽고 결과를 바로 확인할 수 있습니다.
+### 환경 설정 팁
+Java 문서 처리를 처음 시작하는 경우, 복잡한 대상에 접근하기 전에 복잡한 Word 문서(`.docx`)부터 시작하세요. 교환이 가능한 결과를 바로 보실 수 있습니다.
 
-## Setting Up GroupDocs.Comparison for Java
+## Java용 GroupDocs.Comparison 설정
 
-프로젝트에 이 라이브러리를 추가해 보겠습니다. 설정은 간단하지만 몇 가지 주의할 점이 있습니다.
+프로젝트에 이 역할을 추가해 줍니다. 설정은 간단하지만 몇 가지 주의할 사항이 있습니다.
 
-### Maven Configuration
+### 메이븐 구성
 
 `pom.xml`에 아래 내용을 추가하세요 (리포지토리 URL은 반드시 포함해야 합니다):
 
@@ -89,17 +89,17 @@ Java 문서 처리를 처음 접한다면, 복잡한 포맷에 도전하기 전�
 </dependencies>
 ```
 
-### Licensing Considerations
+### 라이센스 고려 사항
 
-많은 개발자가 간과하는 부분: **GroupDocs.Comparison은 프로덕션 사용 시 라이선스가 필요**합니다. 선택지는 다음과 같습니다:
+많은 개발자가 간과하는 부분: **GroupDocs.Comparison은 관리자를 운용하는 것이 필요합니다**합니다. 선택되는 다음과 같습니다:
 
-- **Free Trial** – 테스트에 최적 – [GroupDocs 웹사이트](https://releases.groupdocs.com/comparison/java/)에서 다운로드.  
-- **Temporary License** – 개발 및 PoC에 적합.  
-- **Commercial License** – 프로덕션 배포에 필수.
+- **무료 평가판** – 테스트에 최적 – [GroupDocs 웹사이트](https://releases.groupdocs.com/comparison/java/)에서 다운로드하세요.
+- **임시 라이선스** – 개발 및 PoC에 적합합니다.
+- **상용 라이센스** – 반드시 배포해야 합니다.
 
-**Pro Tip**: 무료 체험으로 사용 사례를 검증한 뒤 라이선스를 구매하세요.
+**Pro Tip**: 무료로 체험해 보세요.
 
-### Basic Initialization and Sanity Check
+### 기본 초기화 및 온전성 검사
 
 라이브러리를 초기화하고 정상 동작을 확인하는 방법은 다음과 같습니다:
 
@@ -115,22 +115,22 @@ try (Comparer comparer = new Comparer("path/to/source/document")) {
 }
 ```
 
-## Complete Implementation Guide
+## 전체 구현 가이드
 
-이제 **삽입된 항목에 대한 커스텀 스타일링**을 포함한 문서 비교 시스템을 만들어 보겠습니다. 단계별로 설명하니 놓치지 마세요.
+이제 **삽입된 항목에 대한 사용자 정의 스타일링**을 포함하는 문서 시스템을 만들었습니다. 후반으로 설명하지 마세요.
 
-### Understanding the Architecture
+### 아키텍처 이해
 
-코드에 들어가기 전에 GroupDocs.Comparison의 흐름을 살펴봅시다:
+코드에 있기 때문에 GroupDocs.Comparison의 좀 보기를 살펴보겠습니다.
 
-1. **Source Document** – 원본/베이스라인 문서.  
-2. **Target Document** – 비교 대상이 되는 수정된 문서.  
-3. **Style Configuration** – 변경 사항이 어떻게 표시될지 정의.  
-4. **Output Document** – 스타일이 적용된 최종 비교 결과.
+1. **소스 문서** – 원본/베이스라인 문서.
+2. **대상 문서** – 비교 대상이 변경된 문서.
+3. **스타일 구성** – 변경 사항이 어떻게 표시될지 정의합니다.
+4. **출력 문서** – 스타일이 적용된 최종 비교 결과.
 
-### Step‑by‑Step Implementation
+### 단계별 구현
 
-#### Step 1: Document Path Management and Stream Setup
+#### 1단계: 문서 경로 관리 및 스트림 설정
 
 먼저 파일 처리를 설정합니다. 스트림 사용은 메모리 효율성을 위해 필수입니다(특히 대용량 문서).
 
@@ -146,9 +146,9 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 }
 ```
 
-**Why Streams Matter** – 메모리 효율적이며 리소스 정리를 자동으로 해줍니다. 프로덕션에서 메모리 누수는 피하고 싶을 겁니다.
+**스트림이 중요한 이유** – 메모리를 사용하여 리소스 정리를 자동으로 변경합니다. 메모리에서 누수는 피하고 싶어요.
 
-#### Step 2: Initialize Comparer and Add Target Document
+#### 2단계: 비교기 초기화 및 대상 문서 추가
 
 `Comparer` 객체를 생성하고 비교할 문서를 지정합니다:
 
@@ -160,9 +160,9 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 }
 ```
 
-**Common Mistake** – `add()` 호출을 빼먹는 경우가 많습니다. 타깃 문서를 추가하지 않아 비교가 수행되지 않는 상황을 자주 목격합니다.
+**일반적인 실수** – `add()` 호출을 제거하는 경우가 있습니다. 타깃을 추가하지 않고 오히려 업무를 처리하지 않는 상황을 자주 목격했습니다.
 
-#### Step 3: Configure Custom Style Settings
+#### 3단계: 사용자 정의 스타일 설정 구성
 
 여기서 **java document diff styling**이 본격적으로 등장합니다. 삽입된 항목에 눈에 띄는 스타일을 만들어 보세요:
 
@@ -176,9 +176,9 @@ StyleSettings insertedItemStyle = new StyleSettings.Builder()
     .build();
 ```
 
-**Style Customization Options** – 굵게, 기울임, 취소선 등도 설정 가능합니다. 가시성과 가독성 사이의 적절한 균형을 찾는 것이 핵심입니다.
+**스타일 사용자 정의 옵션** – 굵은, 테임, 취소선 등도 설정 가능합니다. 매우 흥미로운 결과를 찾는 것이 핵심입니다.
 
-#### Step 4: Apply Settings and Execute Comparison
+#### 4단계: 설정 적용 및 비교 실행
 
 모든 설정을 적용하고 비교를 실행합니다:
 
@@ -192,13 +192,13 @@ CompareOptions compareOptions = new CompareOptions.Builder()
 comparer.compare(resultStream, compareOptions);
 ```
 
-**Performance Note** – `compare()` 메서드가 핵심 연산을 수행합니다. 대용량 문서는 몇 초 정도 소요될 수 있으니 정상적인 현상입니다.
+**성능 노트** – `compare()` 메서드가 핵심적으로 참여를 수행합니다. 보관 문서는 몇 가지 초정도 소요될 수 있도록 보호합니다.
 
-## Advanced Styling Techniques
+## 고급 스타일링 기법
 
-**document comparison customization**을 한 단계 끌어올리고 싶나요? 아래 고급 트릭을 확인하세요.
+**문서 비교 사용자 정의**을 한 단계 끌어올리고 싶으신가요? 아래의 특별 표시를 확인하세요.
 
-### Multi‑Style Configuration
+### 다중 스타일 구성
 
 변경 유형마다 서로 다른 스타일을 적용합니다:
 
@@ -222,17 +222,17 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-### Conditional Styling Based on Content
+### 콘텐츠에 따른 조건부 스타일링
 
-복잡한 시나리오에서는 콘텐츠 유형(예: 표 vs. 단락)을 검사한 뒤 스타일을 적용할 수 있습니다. 보통 커스텀 콜백을 구현하는데, `IStyleCallback` 구현을 참고하세요.
+복잡한 부분에서는 콘텐츠 유형(예: 표 vs. 단락)을 검사한 후 스타일을 적용할 수 있습니다. 북커스텀 포크백을 구성합니다, `IStyleCallback` 구현을 참고하세요.
 
-## Common Issues and Troubleshooting
+## 일반적인 문제 및 문제 해결
 
-가장 흔히 마주치는 문제와 해결 방법을 정리했습니다.
+가장 자주 만나 대화와 해결 방법을 정리했습니다.
 
-### File Path Problems  
-**Symptom**: `FileNotFoundException` or `IllegalArgumentException`  
-**Solution**: 파일 경로를 다시 확인하고 문서가 존재하는지 검증하세요. 개발 단계에서는 절대 경로 사용을 권장합니다.
+### 파일 경로 문제
+**증상**: `FileNotFoundException` 또는 `IllegalArgumentException`
+**해결책**: 파일을 다시 확인하고 문서가 존재하는지 확인하세요. 개발 단계에서는 절대 사용을 권장합니다.
 
 ```java
 // Instead of this:
@@ -242,27 +242,27 @@ String path = "document.docx";
 String path = Paths.get("src", "test", "resources", "document.docx").toString();
 ```
 
-### Memory Issues with Large Documents  
-**Symptom**: `OutOfMemoryError` or extremely slow performance  
-**Solution**: JVM 힙 크기를 늘리고 스트림 처리를 올바르게 수행하세요:
+### 대용량 문서의 메모리 문제
+**증상**: `OutOfMemoryError` 또는 극도로 느린 성능
+**솔루션**: JVM 힙 크기를 충분히 고려하여 처리하세요:
 
 ```bash
 java -Xmx2G -jar your-application.jar
 ```
 
-### Licensing Errors  
-**Symptom**: Watermarks on output or license‑related exceptions  
-**Solution**: 라이선스 파일이 올바르게 로드됐는지, 만료되지 않았는지 확인하세요.
+### 라이센스 오류
+**증상**: 출력 또는 라이센스 관련 예외에 워터마크가 표시됨
+**솔루션**: 권한 파일이 로드되었는지 여부를 확인하십시오.
 
-### Version Compatibility Issues  
-**Symptom**: `NoSuchMethodError` or `ClassNotFoundException`  
-**Solution**: GroupDocs.Comparison 버전이 현재 Java 버전 요구 사항과 일치하는지 검증하세요.
+### 버전 호환성 문제
+**증상**: `NoSuchMethodError` 또는 `ClassNotFoundException`
+**솔루션**: GroupDocs.Comparison 버전이 현재 Java 버전 관련 사항과 일치하는지 확인하세요.
 
-## Performance Optimization and Best Practices
+## 성능 최적화 및 모범 사례
 
-**document comparison in Java**을 대규모로 운영할 때는 성능이 핵심입니다. 검증된 전략을 소개합니다.
+**Java에서의 문서 비교**을 프로세서로 운영할 수 있는 성능이 핵심입니다. 검증된 전략을 소개합니다.
 
-### Memory Management Best Practices
+### 메모리 관리 모범 사례
 
 ```java
 // Always use try-with-resources for automatic cleanup
@@ -271,7 +271,7 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 } // Comparer is automatically closed here
 ```
 
-### Batch Processing for Multiple Documents
+### 여러 문서 일괄 처리
 
 다수의 문서 쌍을 비교할 경우, 배치 처리로 메모리 고갈을 방지하세요:
 
@@ -287,7 +287,7 @@ public void compareBatch(List<DocumentPair> documents, int batchSize) {
 }
 ```
 
-### Asynchronous Processing
+### 비동기 처리
 
 웹 애플리케이션에서는 비동기 처리를 도입해 UI 응답성을 유지합니다:
 
@@ -298,9 +298,9 @@ CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
 });
 ```
 
-## Integration Patterns and Architecture
+## 통합 패턴 및 아키텍처
 
-### Spring Boot Integration
+### Spring Boot 통합
 
 Spring Boot를 사용한다면 로직을 서비스 클래스로 캡슐화합니다:
 
@@ -326,19 +326,19 @@ public class DocumentComparisonService {
 }
 ```
 
-### Microservices Architecture
+### 마이크로서비스 아키텍처
 
 마이크로서비스 환경에서는 다음 패턴을 고려하세요:
 
-- **Document Storage** – 입력/출력 파일을 클라우드 스토리지(AWS S3, Google Cloud Storage)에 저장.  
-- **Queue Processing** – RabbitMQ, Kafka 등 메시지 큐로 비교 요청을 비동기 처리.  
-- **Caching** – 자주 비교되는 문서 쌍의 결과를 캐시.
+- **문서 저장소** – 입력/출력 파일을 클라우드 스토리지(AWS S3, Google Cloud Storage)에 저장합니다.
+- **큐 처리** – RabbitMQ, Kafka 등의 메시지를 큐로 요청을 처리합니다.
+- **캐싱** – 자주 비교되는 문서의 결과를 만드는 것입니다.
 
-## Security Considerations
+## 보안 고려 사항
 
-프로덕션 환경에서 문서 비교를 다룰 때 보안은 최우선입니다.
+내구성이 뛰어난 문서를 보관할 때 보안이 유지됩니다.
 
-### Input Validation
+### 입력 유효성 검사
 
 업로드된 문서는 반드시 검증하세요:
 
@@ -351,73 +351,74 @@ public boolean isValidDocument(InputStream documentStream) {
 }
 ```
 
-### Sensitive Data Handling
+### 민감한 데이터 처리
 
-- **Temporary Files** – 처리 후 즉시 삭제.  
-- **Memory Clearance** – 기밀 텍스트가 들어 있는 바이트 배열을 0으로 초기화.  
-- **Access Controls** – 인증 및 역할 기반 권한 부여 적용.
+- **임시 파일** – 처리 후 즉시 삭제합니다.
+- **메모리 정리** – 텍스트가 들어가는 바이트 배열을 0으로 이동합니다.
+- **액세스 제어** – 인증 및 역할 기반 권한 부여 적용.
 
-## Real‑World Use Cases and Applications
+## 실제 사용 사례 및 애플리케이션
 
-**java document change tracking**이 빛을 발하는 실제 사례를 살펴봅니다:
+**java 문서 변경 추적**이 빛을 발하는 실제 사례를 살펴봅니다.
 
-### Legal Document Review Workflows
-법무팀은 스타일이 적용된 비교를 통해 계약 변경을 강조하고, 수정 이력을 추적하며, 클라이언트용 프레젠테이션을 생성합니다.
+### 법적 문서 검토 워크플로
+무팀은 스타일을 적용하여 변경 계약을 강조하고, 수정력을 추적하며, 클라이언트용 프레젠테이션을 생성합니다.
 
-### Software Documentation Management
-개발팀은 스타일이 적용된 체인지로그를 자동 생성하고, API 문서 업데이트를 시각적으로 관리합니다.
+### 소프트웨어 문서 관리
+개발팀은 스타일이 적용된 체인지 로그를 자동으로 생성하고, API 문서 업데이트를 표시하여 관리합니다.
 
-### Content Collaboration Scenarios
-마케팅팀은 제안서 협업 시 브랜드 일관성을 유지하고, 규제 감사 추적을 만족시킵니다.
+### 콘텐츠 협업 시나리오
+마케팅팀은 제안서와 함께 브랜드 이름을 일관성 있게 유지하고, 감사하는 추적을 만족시켜 드립니다.
 
-### Academic and Research Applications
-연구자는 원고 수정 내역을 추적하고, 보조금 제안서 업데이트를 시각화하며, 논문 편집을 명확한 변경 표시와 함께 관리합니다.
+### 학술 및 연구 애플리케이션
+연구원은 일치 수정 내역을 추적하고, 이에 대한 제안서 업데이트를 거부하며, 논문 편집을 수정하여 표시와 함께 관리합니다.
 
-## Conclusion and Next Steps
+## 결론 및 다음 단계
 
-이제 **GroupDocs.Comparison**을 활용한 **java document comparison customization**을 완전히 마스터했습니다! 기본 스타일링부터 고급 최적화까지, 전문적이고 시각적으로 매력적인 문서 비교를 만들 수 있는 모든 도구를 갖추었습니다.
+이제 **GroupDocs.Comparison**을 활용한 **java 문서 비교 사용자 정의**를 완료했습니다! 기본 스타일링부터 최고급까지 최적화, 전문적인 작성을 통해 매력적인 문서 비교를 할 수 있는 모든 도구를 구성했습니다.
 
-**Key Takeaways**
-- 적절한 스타일링은 원시 차이를 실행 가능한 인사이트로 변환합니다.  
-- 프로덕션 워크로드에서는 성능 최적화가 필수입니다.  
-- 보안과 라이선스 문제는 초기 단계에서 해결해야 합니다.  
+**주요 시사점**
+- 적절한 가공은 원시 실험을 수행하는 사이트로 변환됩니다.
+- 워크로드에서는 성능 최적화가 필수입니다.
+- 보안과 문제는 초기 단계에서 해결해야 합니다.
 
-**What to Do Next**
-1. 도메인에 맞는 다양한 스타일 조합을 실험해 보세요.  
-2. 메타데이터 비교 등 추가 GroupDocs 기능을 탐색하세요.  
-3. 기존 문서 관리 워크플로에 비교 서비스를 통합하세요.  
-4. 고급 팁과 트릭을 얻으려면 [GroupDocs 커뮤니티](https://forum.groupdocs.com)에 참여하세요.
+**다음에 수행할 작업**
+1. 할로윈에 맞는 스타일을 실험해 보세요.
+2. 데이터 데이터 추가 등 추가 GroupDocs 기능을 탐색하세요.
+3. 기존 문서 관리 플로에 비교 서비스를 통합하세요.
+4. 독특한 팁을 선택하고 싶다면 [GroupDocs 커뮤니티](https://forum.groupdocs.com)에 참여하세요.
 
-기억하세요: 훌륭한 문서 비교는 단순히 차이를 찾는 것이 아니라, 그 차이를 행동으로 이어지게 제시하는 것입니다. 이제 멋진 무언가를 만들어 보세요!
+기억하세요: 훌륭하지 않고 단순히 비교하는 것을 찾는 것이, 그 차이를 행동으로 이어지게 하는 것입니다. 이제 멋진 뭔가를 만들어 보세요!
 
-## Frequently Asked Questions
+## 자주 묻는 질문
 
-**Q: What are the system requirements for GroupDocs.Comparison in production?**  
-A: You’ll need JDK 8+ (JDK 11+ recommended), at least 2 GB RAM for medium‑sized documents, and sufficient disk space for temporary processing files. For high‑volume scenarios, consider 4 GB+ RAM.
+**Q: 프로덕션 환경에서 GroupDocs.Comparison의 시스템 요구 사항은 무엇입니까?**
+A: JDK8+(JDK11+ 권장), 중간 크기 문서의 경우 최소 2GB RAM, 임시 파일 처리를 위한 충분한 디스크 공간이 필요합니다. 대용량 시나리오의 경우 4GB 이상의 RAM을 고려하세요.
 
-**Q: Can I compare documents other than Word files with custom styling?**  
-A: Absolutely! GroupDocs.Comparison supports PDF, Excel, PowerPoint, plain text, and many other formats. The same styling API works across all supported types.
+**Q: Word 파일이 아닌 문서를 사용자 지정 스타일로 비교할 수 있나요?**
+답: 물론이죠! GroupDocs.Comparison은 PDF, Excel, PowerPoint, 일반 텍스트 및 기타 다양한 형식을 지원합니다. 동일한 스타일 지정 API가 지원되는 모든 유형에서 작동합니다.
 
-**Q: How do I handle very large documents (100 MB+) efficiently?**  
-A: Use streaming processing, increase the JVM heap (`-Xmx4G` or higher), process documents in chunks, and consider asynchronous execution to avoid timeouts.
+**Q: 대용량 문서(100MB 이상)를 효율적으로 처리하려면 어떻게 해야 합니까?**
+A: 스트리밍 처리를 사용하고, JVM 힙(`-Xmx4G` 이상)을 늘리고, 문서를 청크로 처리하고, 시간 초과를 방지하기 위해 비동기 실행을 고려하십시오.
 
-**Q: Is it possible to style different types of changes differently?**  
-A: Yes. You can configure separate styles for inserted, deleted, and modified items using `setInsertedItemStyle()`, `setDeletedItemStyle()`, and `setChangedItemStyle()`.
+**질문: 변경 유형별로 스타일을 다르게 지정할 수 있나요?**
+답변: 네. `setInsertedItemStyle()`, `setDeletedItemStyle()`, `setChangedItemStyle()` 함수를 사용하여 삽입, 삭제, 수정된 항목에 대해 각각 다른 스타일을 설정할 수 있습니다.
 
-**Q: What's the licensing model for commercial use?**  
-A: GroupDocs.Comparison requires a commercial license for production. Options include developer, site, and enterprise licenses. Check the official pricing page for the latest rates.
+**질문: 상업적 용도의 라이선스 모델은 어떻게 되나요?**
+답변: GroupDocs.Comparison은 프로덕션 환경에서 사용하려면 상업용 라이선스가 필요합니다. 개발자, 사이트, 엔터프라이즈 라이선스 옵션이 있으며, 최신 가격은 공식 가격 페이지에서 확인할 수 있습니다.
 
-**Q: How can I integrate this with cloud storage services?**  
-A: Download the source and target files to streams using the cloud provider’s SDK (AWS S3, Google Cloud Storage, Azure Blob), run the comparison, then upload the result back to the cloud.
+**질문: 클라우드 스토리지 서비스와 어떻게 통합할 수 있나요?**
+답변: 클라우드 제공업체의 SDK(AWS S3, Google Cloud Storage, Azure Blob 등)를 사용하여 소스 및 대상 파일을 스트림으로 다운로드하고, 비교를 실행한 다음 결과를 다시 클라우드에 업로드하면 됩니다.
 
-**Q: Can I customize the output format of comparison results?**  
-A: Yes. The API can generate DOCX, PDF, HTML, and other formats, and you can control layout, metadata, and styling for each output type.
+**질문: 비교 결과의 출력 형식을 사용자 지정할 수 있나요?**
+답변: 네. API는 DOCX, PDF, HTML 등 다양한 형식을 지원하며, 각 출력 형식에 대한 레이아웃, 메타데이터, 스타일을 제어할 수 있습니다.
 
-**Q: Where can I get help if I encounter issues?**  
-A: The [GroupDocs Support Forum](https://forum.groupdocs.com) is your best bet for community assistance, and the official documentation provides extensive samples and troubleshooting guides.
+
+**질문: 문제가 발생하면 어디에서 도움을 받을 수 있나요?**
+답변: 커뮤니티 지원을 받으려면 [GroupDocs 지원 포럼](https://forum.groupdocs.com)을 이용하시는 것이 가장 좋습니다. 또한 공식 문서에는 다양한 예제와 문제 해결 가이드가 제공됩니다.
 
 ---
 
-**Last Updated:** 2025-12-28  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs
+**최종 업데이트:** 2025년 12월 28일
+**테스트 환경:** GroupDocs.Comparison 25.2
+**제작자:** GroupDocs

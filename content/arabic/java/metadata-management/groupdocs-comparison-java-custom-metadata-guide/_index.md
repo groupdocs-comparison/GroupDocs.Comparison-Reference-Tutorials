@@ -1,49 +1,71 @@
 ---
-"date": "2025-05-05"
-"description": "تعرّف على كيفية إدارة بيانات تعريفية مخصصة للمستندات وتعيينها باستخدام GroupDocs.Comparison لجافا. حسّن إمكانية تتبع المستندات والتعاون مع الآخرين من خلال دليلنا الشامل."
-"title": "تعيين بيانات تعريفية مخصصة في مستندات Java باستخدام GroupDocs.Comparison - دليل خطوة بخطوة"
-"url": "/ar/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-01-31'
+description: تعلم كيفية تعيين بيانات تعريف مخصصة في Java باستخدام GroupDocs.Comparison.
+  يغطي هذا الدليل التكوين، أمثلة الشيفرة، وحل المشكلات لإدارة بيانات تعريف المستندات
+  في Java.
+keywords: java document metadata, GroupDocs java tutorial, document comparison java,
+  java metadata management, set custom metadata java
+lastmod: '2026-01-31'
+linktitle: Java Document Metadata with GroupDocs
+tags:
+- java
+- document-management
+- metadata
+- groupdocs
+- tutorial
+title: ضبط البيانات الوصفية المخصصة في جافا مع GroupDocs – دليل كامل
 type: docs
+url: /ar/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/
+weight: 1
 ---
-# تعيين بيانات تعريفية مخصصة في مستندات Java باستخدام GroupDocs.Comparison: دليل خطوة بخطوة
 
-## مقدمة
+# إعداد م custom metadata java** هي طريقة مخفية في العديد من تطبيقات Java، يتغافل المط، مما يؤدي إلى إصدارات معزولة وملكية غير واضحة. باستخدام GroupDocs.Com والحفاظ على الميتاداتا—مليل ستتعلم كيفية:
 
-في العصر الرقمي، تُعدّ الإدارة الفعّالة لبيانات المستندات الوصفية أمرًا بالغ الأهمية للشركات التي تسعى إلى تبسيط العمليات وتحسين التعاون. ومع خضوع المستندات لمراجعات متعددة، تنشأ تحديات في الحفاظ على دقة سجلات التأليف، وسجل الإصدارات، وبيانات المؤسسة. يوضح هذا الدليل كيفية إعداد بيانات وصفية مخصصة ومحددة من قِبل المستخدم باستخدام GroupDocs.Comparison لـ Java، وهي أداة فعّالة تُحسّن إمكانيات مقارنة المستندات.
+- تكوين GroupDocs.Comparison for Java وتمكين معالجة الميتاداتا  
+- **Set custom metadata java** أثناء مقارنة المستندات  
+- حل المشكلات الشائعة مثل فقدان الميتاداتا أو أخطاء الوصول إلى الملفات  
+- تطبيق هذه التقنيات على سيناريوهات واقعية مثل القانونية، الأكاديمية، ونجعل إدارة ميتاداتا مستندات Java صلبة كالصخر.
 
-بحلول نهاية هذا الدليل، ستعرف كيفية:
-- قم بتكوين إعدادات البيانات التعريفية المخصصة باستخدام GroupDocs.Comparison لـ Java.
-- استخدم SaveOptions.Builder لإدارة بيانات تعريف المستندات بشكل فعال.
-- قم بتطبيق هذه التقنيات في السيناريوهات الواقعية لتحسين إدارة المستندات.
+## إجابات سريعة
+- **ما هي المكتبة الأساسية؟** GroupDocs.Comparison for Java  
+- **كيف يمكنني تعيين ميتاداتا مخصصة في Java؟** استخدم `Save الأدنى لإصدار Java؟**** نسخة تجريبية مجانية للتقييم؛ الإنتاج يتطلب ترخيصًا مدفوعًا  
+- **الصيغ المدعومة؟** DOCX، PDF، PPTX، XLSX وأكثر  
 
-دعنا نتعمق في إعداد بيئتك وتنفيذ هذه الميزات!
+## ما هو “set custom metadata java”؟
+تعيين ميتاداتا مخصصة في Java يعني إضافة أو تحديث خصائص المستند برمجيًا—مثل المؤلف، الشركة، أو آخر.
 
-## المتطلبات الأساسية
+## لماذا نستخدم GroupDocs.Com واجهة برمجة تطبيقات عالية المستوى تُجرد التعامل منخفض المستوى مع الملفات، مما يتيح لك التركيز على منطق الأعمال. تدعم مجموعة واسعة من الصيغ، وتقدم نمط بناء fluent للسلامة، وتتكامل بسهولة مع مشاريع Maven أو Gradle.
 
-قبل أن تبدأ، تأكد من أن لديك ما يلي:
+## المتطلبات المسبقة – ما ستحتاجه
+- **GroupDocs.Comparison for Java** ≥ 25.2  
+- **JDK** 8+  
+- Maven أو Gradle لإدارة التبعيات  
+- بيئة تطوير متكاملة (IntelliJ IDEA، Eclipse، إلخ)  
+- ملفات DOCX/PDF نموذجية للاختبار  
 
-### المكتبات والتبعيات المطلوبة
-- **GroupDocs.Comparison لـ Java**:الإصدار 25.2 أو أحدث.
+### التبعيات والأدوات الأساسية
+- **GroupDocs.Comparison for Java**: الإصدار 25.2 أو أحدث (مطلوب لميزات الميتاداتا)  
+- **Java Development Kit**: Java 8 أو أعلى  
+- **Maven أو Gradle**: لإدارة التبعيات  
+- **IDE**: IntelliJ IDEA، Eclipse، أو أي بيئة تطوير Java تفضلها  
 
-### متطلبات إعداد البيئة
-- بيئة تطوير متكاملة متوافقة (على سبيل المثال، IntelliJ IDEA أو Eclipse).
-- تم تثبيت Maven على نظامك.
+### إعداد بيئة التطوير
+- هيكل مشروع Java يعمل  
+- اتصال بالإنترنت لتحميل التبعيات  
+- مستندات نموذجية للاختبار (سنشير إلى المسارات في الكود)  
 
 ### متطلبات المعرفة
-- فهم أساسي لمفاهيم برمجة جافا.
-- التعرف على هيكل مشروع Maven وعملية البناء.
+يجب أن تكون مرتاحًا مع مفاهيم Java الأساسية، هيكل مشروع Maven، وتعامل مسارات الملفات. لا تحتاج إلى خبرة عميقة في GroupDocs.
 
-مع توفر هذه المتطلبات الأساسية، تكون جاهزًا للانتقال إلى مرحلة الإعداد.
+**نصيحة احترافية**: الوثائق الرسمية لـ GroupDocs قوية، لكن هذا الدليل يمنحك السياق العملي الواقعي الذي لن تجده في مكان آخر.
 
-## إعداد GroupDocs.Comparison لـ Java
+## إعداد GroupDocs.Comparison for Java (الطريقة الصحيحة)
 
-لبدء استخدام GroupDocs.Comparison في مشاريع Java الخاصة بك، اتبع الخطوات التالية:
+إعداد GroupDocs بشكل صحيح هو المكان الذي يواجه فيه معظم المطورين صعوبة. إليك الإعداد الدقيق الذي تحتاجه.
 
-### تكوين Maven
-
-أضف التكوين التالي إلى ملفك `pom.xml` ملف:
-
+### تكوين Maven الذي يعمل فعليًا
 ```xml
 <repositories>
    <repository>
@@ -62,58 +84,56 @@ type: docs
 </dependencies>
 ```
 
-### الحصول على الترخيص
-- **نسخة تجريبية مجانية**قم بتنزيل النسخة التجريبية من [صفحة تنزيل GroupDocs](https://releases.groupdocs.com/comparison/java/).
-- **رخصة مؤقتة**:الحصول على ترخيص مؤقت عن طريق [نموذج طلب ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/).
-- **شراء**:للاستخدام المستمر، قم بشراء ترخيص من [موقع شراء GroupDocs](https://purchase.groupdocs.com/buy).
+**خطأ شائع**: استخدام إصدار أقدم من 25.2 يعطل واجهات برمجة تطبيقات الميتاداتا، لذا فإن استدعاءات `set custom metadata java` لن تفعل شيئًا بصمت.
 
-### التهيئة الأساسية
+### إعداد الترخيص (نسخة تجريبية vs. إنتاج)
 
-لتهيئة GroupDocs.Comparison في تطبيق Java الخاص بك:
+- **فقط تستكشف؟** حمّل النسخة التجريبية من [صفحة تنزيل GroupDocs](https://releases.groupdocs.com/comparison/java/)  
+- **تحتاج تقييمًا ممتدًا؟** احصل على ترخيص مؤقت عبر [نموذج طلب الترخيص المؤقت](https://purchase.groupdocs.com/temporary-license/)  
+- **جاهز للإنتاج؟** اشترِ ترخيصًا كاملًا من [موقع شراء GroupDocs](https://purchase.groupdocs.com/buy)  
 
+### التهيئة الأساسية (مثالك الأول العامل)
 ```java
 import com.groupdocs.comparison.Comparer;
 
-public class ComparisonSetup {
+public class MetadataBasics {
     public static void main(String[] args) throws Exception {
-        // قم بتهيئة Comparer باستخدام مسار المستند المصدر.
+        // This is your starting point - simple but functional
         try (Comparer comparer = new Comparer("path/to/your/source/document.docx")) {
-            // متابعة إعداد المقارنة...
+            System.out.println("GroupDocs.Comparison initialized successfully!");
+            // We'll build on this foundation
         }
     }
 }
 ```
 
-بعد إعداد بيئتك، سنستكشف الآن كيفية تنفيذ ميزات البيانات التعريفية المخصصة.
+**نصيحة استكشاف الأخطاء**: عادةً ما يعني “الملف غير موجود” أن المسار النسبي غير صحيح—غيّر إلى مسار مطلق أثناء الاختبار.
 
-## دليل التنفيذ
+## دليل تنفيذ ميتاداتا المستندات في Java
 
-### الميزة 1: تعيين بيانات تعريف المستند للمستخدم
+الآن نصل إلى جوهر **set custom metadata java**. سنستعرض ميزتين أساسيتين.
 
-#### ملخص
-تتيح لك هذه الميزة تحديد بيانات تعريفية مُعرّفة من قِبل المستخدم لمستند بعد مقارنته باستخدام GroupDocs.Comparison. يُعد هذا مفيدًا عند الحاجة إلى إضافة أو تعديل بيانات تعريفية، مثل اسم المؤلف وتفاصيل الشركة وآخر معلومات تم حفظها.
+### الميزة 1: تعيين ميتاداتا مستند مخصصة من قبل المستخدم
 
-#### التنفيذ خطوة بخطوة
+يمكنك برمجيًا تعيين ميتادات حفظه—مثالي للتوافق ومسارات التدقيق.
 
-##### 1. تحديد مسار الإخراج
-ابدأ بإعداد مسار ملف الإخراج الذي سيتم تخزين المستند المقارن فيه:
-
+#### الخطوة 1: إعداد مسار الإخراج الخاص بك
 ```java
 String outputFileName = "YOUR_OUTPUT_DIRECTORY/SetDocumentMetadataUserDefined.docx";
 ```
 
-##### 2. تهيئة المقارن وإضافة المستندات
-إنشاء مثيل لـ `Comparer` مع المستند المصدر، ثم أضف مستندًا مستهدفًا للمقارنة:
+ المحتمل أن تُنشئ هذا المسار ديناميكيًا، ربما باستخدام `System.getProperty("java.io.tmpdir")`.
 
+#### الخطوة 2: تهيئة Comparer وإضافة المستندات الهدف
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD.docx")) {
     comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD.docx");
+    
+    // This is where we'll add our metadata magic
 }
 ```
 
-##### 3. تكوين إعدادات البيانات الوصفية
-يستخدم `SaveOptions.Builder` لتكوين إعدادات البيانات الوصفية قبل مقارنة المستندات:
-
+#### الخطوة 3: تكوين الميتاداتا المخصصة (الجزء المهم)
 ```java
 final Path resultPath = comparer.compare(outputFileName,
         new SaveOptions.Builder()
@@ -127,20 +147,20 @@ final Path resultPath = comparer.compare(outputFileName,
                 .build());
 ```
 
-##### 4. التفسير
-- **`MetadataType.FILE_AUTHOR`**:يحدد نوع البيانات الوصفية التي سيتم استنساخها.
-- **`FileAuthorMetadata.Builder`**:إنشاء بيانات تعريفية مخصصة للمؤلف، مما يسمح لك بتعيين سمات مثل اسم المؤلف والشركة.
+**ما الذي يحدث؟**  
+- `MetadataType.FILE_AUTHOR` يخبر GroupDocs أي كتلة ميتاداتا يجب تعديلها.  
+- `FileAuthor تعيين حقول المؤلف، الشركة، وآخر من حفظه.  
+- نمط البناء يضمن أن الكائن مُكوَّن بالكامل قبل تطبيقه.
 
-### الميزة 2: حفظ استخدام منشئ الخيارات
+**متى تستخدم ذلك؟**  
+- تتبع مؤلفي المستندات عبر الفرق  
+- فرضيتاداتا في وظائف الدُفعات  
 
-#### ملخص
-يوضح هذا القسم استخدام `SaveOptions.Builder` بشكل مستقل لتكوين خيارات البيانات الوصفية لنتيجة مقارنة المستندات.
+### الميزة 2: تكوين SaveOptions المتقدم
 
-#### التنفيذ خطوة بخطوة
+إذا كنت بحاجة إلى ميتاداتا قابلة لإعادة الاستخدام أو مشروطة، فإن `SaveOptions.Builder` يمنحك التحكم الكامل.
 
-##### إنشاء بيانات تعريفية مخصصة
-إنشاء `SaveOptions` الكائن مع إعدادات البيانات الوصفية المحددة:
-
+#### بناء تكوينات ميتاداتا قابلة لإعادة الاستخدام
 ```java
 SaveOptions saveOptions = new SaveOptions.Builder()
         .setCloneMetadataType(MetadataType.FILE_AUTHOR)
@@ -151,45 +171,168 @@ SaveOptions saveOptions = new SaveOptions.Builder()
                         .setLastSaveBy("Jack")
                         .build())
         .build();
+
+// Now you can reuse this configuration across multiple comparisons
 ```
 
-##### توضيح
-- **`SetCloneMetadataType`**:يحدد سمات البيانات الوصفية التي سيتم استنساخها أثناء عملية المقارنة.
-- **منشئ البيانات الوصفية المخصصة**:يسمح بتعيين خصائص مختلفة مثل المؤلف والشركة، مما يوفر المرونة في إدارة المستندات.
+#### مثال على مُنشئ ميتاداتا مشروط
+```java
+public SaveOptions buildMetadataOptions(String author, String company, boolean preserveOriginal) {
+    SaveOptions.Builder builder = new SaveOptions.Builder()
+            .setCloneMetadataType(MetadataType.FILE_AUTHOR);
+    
+    if (!preserveOriginal) {
+        builder.setFileAuthorMetadata(
+                new FileAuthorMetadata.Builder()
+                        .setAuthor(author)
+                        .setCompany(company)
+                        .setLastSaveBy(getCurrentUser())
+                        .build());
+    }
+    
+    return builder.build();
+}
+```
 
-#### نصائح استكشاف الأخطاء وإصلاحها
-- تأكد من أن جميع المسارات محددة بشكل صحيح ويمكن الوصول إليها.
-- تأكد من استخدام GroupDocs.Comparison الإصدار 25.2 أو أعلى للتوافق مع ميزات البيانات الوصفية.
+**لماذا هذا مهم**: يمكنك توليد ميتادات—مثالي للأتمتة على نطاق واسع.
 
-## التطبيقات العملية
+## المشكلات الشائعة وكيفية حلها
 
-وفيما يلي بعض حالات الاستخدام في العالم الحقيقي:
+### المشكلة 1: الميتاداتا لا تظهر في المستندات الناتجة
+**الحل**:  
+1. تأكد من أنك تستخدم GroupDocs.Com تأكد من صحة مسارات الملفات وأنها قابلة للكتابة.  
+4. راجع أن `setCloneMetadataType` يتطابق مع نوع المستند.
 
-1. **إدارة الوثائق القانونية**:أتمتة إضافة تفاصيل التأليف إلى العقود القانونية أثناء المراجعات.
-2. **التعاون البحثي الأكاديمي**:الحفاظ على سجلات دقيقة للمؤلفين والمساهمين في أوراق البحث.
-3. **وثائق تطوير البرمجيات**:تتبع التغييرات التي أجراها مطورون مختلفون من خلال تعليقات البيانات الوصفية.
+### المشكلة 2: استثناءات الوصول إلى الملفات
+with‑resources لكل كائن `Comparer`.  
+- أغلق أي ع 3: مشاكل كتابة الميتاداتا فوق بعضها
+**الحل**:  
+اقرأ الميتاداتا الحالية أولًا، ادمجها مع القيم المخصصة، ثم طبّق الكائن المدمج. هذا يمنع فقدانندات القانونية
+```java
+// Automatically set reviewer and review date for legal documents
+FileAuthorMetadata legalMetadata = new FileAuthorMetadata.Builder()
+        .setAuthor(getCurrentReviewer())
+        .setCompany("Legal Department")
+        .setLastSaveBy(getCurrentReviewer())
+        .build();
+```
 
-تتضمن إمكانيات التكامل الاتصال بأنظمة إدارة المستندات مثل SharePoint أو التكامل مع خطوط أنابيب CI/CD للإصدارات التلقائية.
+### الحالة 2: تعاون الأبحاث الأكاديمية
+```java
+// Track multiple contributors in research documents
+FileAuthorMetadata researchMetadata = new FileAuthorMetadata.Builder()
+        .setAuthor("Dr. Smith")
+        .setCompany("University Research Lab")
+        .setLastSaveBy("Research Assistant")
+        .build();
+```
 
-## اعتبارات الأداء
+### الحالة 3: سير عمل توثيق البرمجيات
+```java
+// Integrate with version control systems
+FileAuthorMetadata devMetadata = new FileAuthorMetadata.Builder()
+        .setAuthor(getGitUsername())
+        .setCompany("Development Team")
+        .setLastSaveBy(getCurrentDeveloper())
+        .build();
+```
 
-لتحسين الأداء أثناء استخدام GroupDocs.Comparison:
+تظهر هذه المقاطع كيف يمكن دمج **set custom metadata java** في عمليات موجودة—سواءً كنت تغذي البيانات إلى SharePoint، خطوط أنابيب CI/CD، أو نظام إدارة محتوى مخصص.
 
-- **إدارة الذاكرة بكفاءة**:تأكد من تخصيص مساحة كافية من الذاكرة لتطبيقك، خاصة عند معالجة المستندات الكبيرة.
-- **إرشادات استخدام الموارد**:راقب استخدام الموارد لتجنب الاختناقات أثناء عمليات مقارنة المستندات.
-- **أفضل ممارسات جافا**:اتبع أفضل ممارسات Java القياسية لجمع البيانات المهملة وإدارة الخيوط.
+## نصائح تحسين الأداء
 
-## خاتمة
+### أفضل ممارسات إدارة الذاكرة
+```java
+// Good: Proper resource management
+try (Comparer comparer = new Comparer("source.docx")) {
+    // Do your comparison work here
+    // Resources automatically cleaned up
+}
 
-في هذا البرنامج التعليمي، استكشفنا كيفية إعداد بيانات تعريفية مخصصة باستخدام GroupDocs.Comparison لجافا. بالاستفادة من `SetDocumentMetadataUserDefined` و `SaveOptionsBuilderUsage` بفضل الميزات التي تقدمها، يمكنك تحسين عمليات مقارنة المستندات الخاصة بك من خلال التحكم الدقيق في البيانات الوصفية.
+// Avoid: Manual resource management
+Comparer comparer = new Comparer("source.docx");
+// Easy to forget cleanup, leading to memory leaks
+```
 
-تشمل الخطوات التالية استكشاف وظائف GroupDocs.Comparison الإضافية أو دمج هذه التقنيات في عمليات إدارة المستندات الأوسع. نشجعكم على إجراء المزيد من التجارب واكتشاف كيف يمكن لهذه الأداة أن تُفيد مشاريعكم!
+### استراتيجيات المعالجة الدُفعية
+- أعد استخدام كائن `SaveOptions` واحد عند معالجة ملفات متعددة.  
+- عالج المستندات على دفعات صغيرة للحفاظ على استهلاك الذاكرة المتوقّع.  
+- للملفات المستقلة، على حماية عمليات I/O لتجنب استنفاد المقابض.
 
-## قسم الأسئلة الشائعة
+### المراقبة في بيئة الإنتاج
+- **استخدام الـ Heap**: الملفات الكبيرة من نوع DOCX/PDF قد تستهلك ذاكرة كبيرة.  
+- **مقابض الملفات**: تأكد من إغلاقاحة القرص**: تُكتب ملفات المقارنة المؤقتة إلى دليل النظام المؤقت.
 
-1. **ما هو الغرض من تعيين البيانات الوصفية المخصصة في المستندات؟**
-   - تعمل البيانات الوصفية المخصصة على تحسين إمكانية تتبع المستندات ووضوح التأليف ودقة البيانات التنظيمية.
-2. **هل يمكنني تعيين أنواع أخرى من البيانات الوصفية بالإضافة إلى FILE_AUTHOR باستخدام GroupDocs.Comparison؟**
-   - في حين يركز هذا الدليل على `FILE_AUTHOR`يدعم GroupDocs.Comparison أنواعًا مختلفة من البيانات الوصفية التي يمكن تكوينها على نحو مماثل.
-3. **كيف يمكنني استكشاف الأخطاء وإصلاحها بشكل شائع في إعداد البيانات الوصفية المخصصة؟**
-   - تأكد من تعريف جميع المسارات بشكل صحيح وإمكانية الوصول إليها، وتحقق من استخدام إصدار متوافق من GroupDocs.Comparison (25.2 أو أعلى).
+## نصائح متقدمة وأفضل الممارسات
+
+###ق
+```java
+public FileAuthorMetadata createContextualMetadata(DocumentContext context) {
+    return new FileAuthorMetadata.Builder()
+            .setAuthor(context.getCurrentUser())
+            .setCompany(context.getOrganization())
+            .setLastSaveBy(context.getLastModifier())
+            .build();
+}
+```
+
+### معالجة الأخطاء بشكل قوي
+```java
+try (Comparer comparer = new Comparer(sourceFile)) {
+    comparer.add(targetFile);
+    comparer.compare(outputFile, saveOptions);
+} catch (Exception e) {
+    logger.error("Failed to process document: " + sourceFile, e);
+    // Implement your error handling strategy
+    throw new DocumentProcessingException("Comparison failed", e);
+}
+```
+
+### استخراج الإعدادات إلى ملفات تكوين خارجية
+```java
+// Load from properties file or database
+Properties metadataConfig = loadMetadataConfiguration();
+FileAuthorMetadata metadata = new FileAuthorMetadata.Builder()
+        .setAuthor(metadataConfig.getProperty("default.author"))
+        .setCompany(metadataConfig.getProperty("default.company"))
+        .build();
+```
+
+## الخاتمة – خطواتك التالية
+
+أصبحت الآن تمتلك نهجًا كاملاً وج GroupDocs.Comparison. إليك ملخص سريع:
+
+1. **إعداد** GroupDocs عبر Maven وترخيص صالح.  
+2. **تهيئة** كائن `Comparer` وإضافة المستندات الهدف.  
+3. **تكوين** `SaveOptions` باستخدام `FileAuthorMetadata` لتضمين الحقول المخصصة.  
+4. **معالجة الأخطاء** وإدارة الموارد بشكل صحيح.  
+5. **التوسع** بإعادة استخدام التكوينات ومعالجة الدُفعات.
+
+### ما الذي يجب فعله الآن
+- نفّذ المثال الأساسي على ملف DOCX واحد.  
+- وسّع الدعم إلى صيغ PDF وPPTX، مع تعديل أنواع الميتاداتا حسب الحاجة.  
+- اربط مُنشئ الميتاداتا بخط أنابيب CI/CD لتوسيم الأصول تلقائيًا.  
+- راقب الأداء واضبط حجم الدُفعات للعبء الكبير.
+
+بإتقانك لإدارة الميتاداتا، ستحسّن القدرة على التتبع، تلبي متطلبات المدققين، وتمنح فريقك رؤية أوضح لمن قام بما—مباشرة داخل المستند نفسه.
+
+## الأسئلةاداتا للصيغات غير DOCX؟**  
+ج: تدعم GroupDocs PDF، PPTX، XLSX، وغيرها. استخدم `MetadataType` المناسب (مثل `MetadataType.PDF_AUTHOR`) الذي يتطابق مع صيغة الملف.
+
+**س: هل يمكنني قراءة الميتاداتا الحالية قبل تحديثها؟**  
+ج: نعم. استخدم فئة `MetadataInfo` لاستخراجدمجها مع القيم المخصصة قبل الحفظ.
+
+**س: هل يؤثر تعيين الميتاداتا أثناء المقارنة على الأداء؟**  
+ج: الحمل الإضافي ضئيل مقارنةً بعملية المقارنة نفسها. للآلاف من الملفات، ركّز على حجم الدُفعات والتنظيف السليم للموارد.
+
+**س: كيف يمكن دمج ذلك مع Git أو أنظمة التحكم في الإصدارات الأخرى؟**  
+ج: استخرج مؤلف الالتزام عبر أوامر Git أو مكتباته، ثم مرّر تلك القيمة إلى `FileAuthorMetadata.Builder().setAuthor(...)`.
+
+**س: هل يمكن تعيين أنواع متعددة من الميتاداتا في عملية واحدة؟**  
+ج: الإصدارات الحالية تسمح بنوع `MetadataType` واحد لكل استدعاء `SaveOptions`. لتطبيق عدة أنواع، استدعِ عمليات مقارنة متعددة أو انتظر إصدار مكتبة أحدث يدعم ذلك.
+
+---
+
+**آخر تحديث:** 2026-01-31  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
+**المؤلف:** GroupDocs

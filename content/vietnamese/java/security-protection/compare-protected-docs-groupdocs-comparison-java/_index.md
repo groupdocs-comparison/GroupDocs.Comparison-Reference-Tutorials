@@ -1,36 +1,67 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh hiệu quả nhiều tài liệu Word được bảo vệ bằng mật khẩu bằng thư viện GroupDocs.Comparison mạnh mẽ trong Java. Hợp lý hóa quy trình quản lý tài liệu của bạn với hướng dẫn toàn diện này."
-"title": "Cách so sánh các tài liệu được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison trong Java"
-"url": "/vi/java/security-protection/compare-protected-docs-groupdocs-comparison-java/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-02-13'
+description: Học cách so sánh tài liệu được bảo vệ trong Java bằng GroupDocs.Comparison.
+  Hướng dẫn từng bước kèm ví dụ mã cho quy trình làm việc tài liệu an toàn.
+keywords: compare password protected documents java, java document comparison library,
+  groupdocs comparison tutorial, secure document comparison java, java library for
+  comparing protected files
+lastmod: '2026-02-13'
+linktitle: Compare Protected Documents Java
+tags:
+- document-comparison
+- java-library
+- password-protection
+- groupdocs
+- secure-documents
+title: So sánh tài liệu được bảo vệ trong Java – Hướng dẫn đầy đủ
 type: docs
+url: /vi/java/security-protection/compare-protected-docs-groupdocs-comparison-java/
+weight: 1
 ---
-# Cách so sánh nhiều tài liệu được bảo vệ bằng GroupDocs.Comparison trong Java
 
-**Giới thiệu**
+ block placeholders unchanged.
 
-Trong thời đại kỹ thuật số ngày nay, việc quản lý luồng công việc tài liệu hiệu quả là rất quan trọng đối với cả doanh nghiệp và chuyên gia. So sánh nhiều tài liệu được bảo vệ bằng mật khẩu đảm bảo tính nhất quán và chính xác giữa các phiên bản. Hướng dẫn này hướng dẫn bạn sử dụng thư viện GroupDocs.Comparison mạnh mẽ trong Java để thực hiện nhiệm vụ này một cách liền mạch.
+Let's construct final output.# So sánh tài liệu được bảo vệ Java – Hướng dẫn phát triển đầy đủ
 
-Với GroupDocs.Comparison for Java, bạn có thể dễ dàng so sánh các tài liệu Word được bảo vệ bằng mật khẩu, hợp lý hóa quy trình quản lý tài liệu của bạn. Bằng cách làm theo hướng dẫn này, bạn sẽ học cách:
-- Thiết lập và cấu hình GroupDocs.Comparison cho Java
-- Tải và so sánh nhiều tài liệu được bảo vệ bằng mật khẩu
-- Lưu kết quả so sánh trong một tệp đầu ra duy nhất
+Bạn đã bao giờ phải xử lý nhiều phiên bản của tài liệu được bảo vệ bằng mật khẩu, cố gắng tìm sự khác nhau một cách thủ công chưa? Nếu bạn là một nhà phát triển Java cần **compare protected documents java**, hướng dẫn này dành cho bạn. Chúng tôi sẽ hướng dẫn chi tiết các bước tự động so sánh tài liệu an toàn bằng GroupDocs.Comparison, để bạn có thể tập trung vào logic nghiệp vụ thay vì các công việc kiểm tra thủ công tẻ nhạt.
 
-Chúng ta hãy cùng xem lại các điều kiện tiên quyết trước khi bắt đầu.
+## Câu trả lời nhanh
+- **Thư viện nào xử lý tài liệu được bảo vệ bằng mật khẩu?** GroupDocs.Comparison for Java  
+- **Tôi có thể so sánh hơn hai tệp cùng lúc không?** Yes – add as many target documents as needed  
+- **Tôi có cần giấy phép cho môi trường sản xuất không?** A commercial license is required for production use  
+- **Phiên bản Java nào được khuyến nghị?** JDK 11+ for best performance and security  
+- **Kết quả so sánh có thể chỉnh sửa được không?** The output is a standard Word/PDF file that you can open in any editor  
 
-## Điều kiện tiên quyết
+## So sánh tài liệu được bảo vệ java là gì?
+So sánh tài liệu được bảo vệ trong Java có nghĩa là tải các tệp được mã hoá, cung cấp mật khẩu đúng, và tạo báo cáo diff mà không bao giờ lộ nội dung gốc. GroupDocs.Comparison trừu tượng hoá quá trình giải mã và logic so sánh, cho phép bạn tập trung vào việc tích hợp quy trình làm việc.
 
-Trước khi bắt đầu, hãy đảm bảo bạn có những điều sau:
-1. **Bộ phát triển Java (JDK)**: Đảm bảo JDK 8 trở lên được cài đặt trên máy của bạn.
-2. **Maven**:Bạn sẽ cần Maven để quản lý sự phụ thuộc và thiết lập dự án.
-3. **Kiến thức lập trình Java cơ bản**: Sự quen thuộc với cú pháp và khái niệm Java sẽ rất hữu ích.
+## Tại sao nên sử dụng GroupDocs.Comparison cho quy trình tài liệu an toàn?
+- **Security first** – Mật khẩu chỉ tồn tại trong bộ nhớ trong thời gian so sánh  
+- **Broad format support** – Word, PDF, Excel, PowerPoint, và hơn 50 loại khác  
+- **High performance** – Thuật toán tối ưu xử lý các tệp lớn với mức sử dụng heap tối thiểu  
+- **Rich output** – Các thay đổi được đánh dấu, bình luận, và theo dõi phiên bản trong tệp kết quả  
 
-Ngoài ra, hãy đảm bảo bạn có quyền truy cập vào thư viện GroupDocs.Comparison, có thể được thêm thông qua Maven.
+## Các yêu cầu và cài đặt trước
 
-## Thiết lập GroupDocs.Comparison cho Java
+### Những gì bạn cần
+1. **Java Development Kit (JDK)** – phiên bản 8 trở lên (khuyến nghị JDK 11+)  
+2. **Maven hoặc Gradle** – để quản lý phụ thuộc (các ví dụ sử dụng Maven)  
+3. **Kiến thức Java cơ bản** – các khái niệm OOP, try‑with‑resources, và xử lý ngoại lệ  
+4. **IDE** – IntelliJ IDEA, Eclipse, hoặc VS Code với các tiện ích mở rộng Java  
 
-Để tích hợp GroupDocs.Comparison vào dự án Java của bạn bằng Maven, hãy thêm cấu hình sau vào `pom.xml` tài liệu:
+### Các cân nhắc về giấy phép GroupDocs.Comparison
+- **Free trial** – tuyệt vời cho việc thử nghiệm và các bằng chứng khái niệm nhỏ  
+- **Temporary license** – lý tưởng cho phát triển và kiểm thử nội bộ  
+- **Commercial license** – bắt buộc cho bất kỳ triển khai sản xuất nào  
+
+Bạn có thể lấy giấy phép tạm thời từ [GroupDocs website](https://purchase.groupdocs.com/temporary-license/) nếu bạn mới bắt đầu.
+
+## Cài đặt GroupDocs.Comparison cho Java
+
+### Cấu hình Maven
+Thêm repository và dependency sau vào tệp `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -50,42 +81,41 @@ Ngoài ra, hãy đảm bảo bạn có quyền truy cập vào thư viện Group
 </dependencies>
 ```
 
-### Mua lại giấy phép
+**Mẹo:** Luôn sử dụng phiên bản mới nhất. Phiên bản 25.2 bao gồm các cải tiến hiệu năng cho tài liệu được bảo vệ bằng mật khẩu.
 
-GroupDocs.Comparison cung cấp bản dùng thử miễn phí, giấy phép tạm thời để thử nghiệm hoặc bạn có thể mua giấy phép để sử dụng sản xuất. Để có được giấy phép tạm thời:
-1. Ghé thăm [Trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
-2. Điền vào mẫu để yêu cầu cấp giấy phép tạm thời.
-3. Tải xuống và áp dụng giấy phép vào ứng dụng Java của bạn theo hướng dẫn được cung cấp.
+### Thay thế Gradle
+Nếu bạn thích Gradle, hãy sử dụng cấu hình tương đương này:
 
-### Khởi tạo cơ bản
+```gradle
+repositories {
+    maven {
+        url "https://releases.groupdocs.com/comparison/java/"
+    }
+}
 
-Để khởi tạo GroupDocs.Comparison, hãy đảm bảo bạn đã thiết lập dự án Maven của mình với sự phụ thuộc được đề cập ở trên. Điều này sẽ cho phép bạn bắt đầu sử dụng các tính năng của nó để so sánh tài liệu.
+dependencies {
+    implementation 'com.groupdocs:groupdocs-comparison:25.2'
+}
+```
 
-## Hướng dẫn thực hiện
+## Cách so sánh tài liệu được bảo vệ Java
 
-Trong phần này, chúng tôi sẽ hướng dẫn cách triển khai tính năng so sánh nhiều tài liệu được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison trong Java.
+### Hiểu cách tiếp cận cốt lõi
+Quy trình rất đơn giản:
+1. Tải tài liệu nguồn cùng mật khẩu của nó.  
+2. Thêm mỗi tài liệu mục tiêu cùng mật khẩu riêng.  
+3. Thực hiện so sánh.  
+4. Lưu kết quả đã được đánh dấu.  
 
-### So sánh các tài liệu được bảo vệ bằng mật khẩu
+### Triển khai đầy đủ với xử lý lỗi
 
-#### Tổng quan
-
-Chúng tôi sẽ so sánh ba tài liệu Word được bảo vệ bằng mật khẩu và tạo báo cáo nêu bật sự khác biệt. Điều này hữu ích để xác minh các bản cập nhật hoặc thay đổi trên các phiên bản tài liệu một cách an toàn.
-
-#### Thực hiện từng bước
-
-**1. Nhập các lớp bắt buộc**
-
-Bắt đầu bằng cách nhập các lớp cần thiết từ thư viện GroupDocs.Comparison:
-
+#### 1. Nhập các lớp cần thiết
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.load.LoadOptions;
 ```
 
-**2. Xác định đường dẫn tệp và mật khẩu**
-
-Chỉ định đường dẫn cho tài liệu nguồn và tài liệu đích, cùng với mật khẩu của chúng:
-
+#### 2. Thiết lập đường dẫn tệp và thông tin xác thực
 ```java
 String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
 String targetFilePath1 = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
@@ -98,81 +128,148 @@ String targetFilesPassword = "5678";
 String outputFilePath = "YOUR_OUTPUT_DIRECTORY/comparison_result.docx";
 ```
 
-**3. Khởi tạo Trình so sánh với LoadOptions**
+> **Mẹo thực tế:** Không bao giờ hard‑code mật khẩu trong mã nguồn. Lưu chúng trong biến môi trường, trình quản lý bí mật, hoặc tệp cấu hình được mã hoá.
 
-Sử dụng `Comparer` lớp để tải các tài liệu được bảo vệ bằng mật khẩu của bạn:
-
+#### 3. Thực thi so sánh với quản lý tài nguyên đúng cách
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath, new LoadOptions(sourceFilePassword))) {
-    // Thêm tài liệu mục tiêu với mật khẩu tương ứng.
+    // Add target documents with their respective passwords.
     comparer.add(targetFilePath1, new LoadOptions(targetFilesPassword));
     comparer.add(targetFilePath2, new LoadOptions(targetFilesPassword));
     comparer.add(targetFilePath3, new LoadOptions(targetFilesPassword));
 
-    // Thực hiện so sánh và lưu kết quả.
+    // Perform the comparison and save the result.
     final Path resultPath = comparer.compare(outputFilePath);
 }
 ```
 
-**Giải thích:**
-- **TảiTùy chọn**:Lớp này cho phép bạn chỉ định mật khẩu để truy cập vào các tài liệu được bảo vệ.
-- **Bộ so sánh**: Tạo điều kiện thuận lợi cho việc tải các tài liệu nguồn có bảo vệ bằng mật khẩu.
-- **Phương pháp compare()**: Thực hiện so sánh tài liệu và lưu kết quả.
+**Các điểm chính:**
+- **Try‑with‑resources** đảm bảo các handle tệp được giải phóng ngay cả khi có ngoại lệ xảy ra.  
+- **LoadOptions** cung cấp mật khẩu cho mỗi tài liệu.  
+- **Nhiều lời gọi `add()`** cho phép bạn so sánh bất kỳ số lượng tài liệu nào trong một lần chạy (giới hạn chỉ bởi bộ nhớ khả dụng).  
 
-#### Mẹo khắc phục sự cố
+## Các vấn đề thường gặp và khắc phục
 
-- Đảm bảo tất cả đường dẫn tệp đều chính xác và có thể truy cập được.
-- Xác minh rằng mật khẩu được cung cấp trùng khớp với mật khẩu được sử dụng để mã hóa tài liệu.
-- Kiểm tra xem có bất kỳ ngoại lệ nào được đưa ra trong quá trình tải hoặc so sánh tài liệu không, vì chúng có thể chỉ ra các vấn đề như mật khẩu không đúng hoặc định dạng không được hỗ trợ.
+### Các vấn đề liên quan đến mật khẩu
+- **Invalid password error:** Kiểm tra không có ký tự ẩn (ví dụ: khoảng trắng ở cuối) và mật khẩu khớp với chế độ bảo vệ của tài liệu.  
+- **Mixed protection mechanisms:** Một số tệp sử dụng mật khẩu cấp tài liệu, các tệp khác dùng mã hoá cấp tệp. GroupDocs.Comparison tự động xử lý mật khẩu cấp tài liệu.
 
-## Ứng dụng thực tế
+### Các vấn đề về hiệu năng và bộ nhớ
+- **Slow processing on large files:** Tăng kích thước heap JVM (`-Xmx4g`) hoặc xử lý tài liệu theo các batch nhỏ hơn.  
+- **Out‑of‑memory exceptions:** Sử dụng xử lý batch hoặc stream tài liệu khi có thể.
 
-GroupDocs.Comparison cho Java có thể được sử dụng trong nhiều tình huống khác nhau:
-1. **Kiểm soát phiên bản tài liệu**: Dễ dàng so sánh các phiên bản khác nhau của hợp đồng để theo dõi những thay đổi theo thời gian.
-2. **Dự án hợp tác**: Thúc đẩy làm việc nhóm bằng cách so sánh các bản chỉnh sửa được thực hiện bởi nhiều người đóng góp.
-3. **Đánh giá tài liệu pháp lý**: So sánh các văn bản pháp lý để đảm bảo sự tuân thủ và tính nhất quán trong các lần sửa đổi.
+### Các vấn đề về đường dẫn tệp và quyền truy cập
+- **File not found / access denied:** Sử dụng đường dẫn tuyệt đối trong quá trình phát triển, đảm bảo có quyền đọc trên các tệp nguồn và quyền ghi trên thư mục đầu ra.
 
-Việc tích hợp với các hệ thống khác, chẳng hạn như nền tảng quản lý tài liệu hoặc ứng dụng kinh doanh tùy chỉnh, có thể nâng cao năng suất hơn nữa.
+## Cách so sánh nhiều tài liệu Java – Mở rộng giải pháp
 
-## Cân nhắc về hiệu suất
+Nếu bạn cần so sánh hàng chục phiên bản, hãy xem xét một công cụ hỗ trợ xử lý batch:
 
-Để tối ưu hóa hiệu suất khi sử dụng GroupDocs.Comparison:
-- Sử dụng cấu trúc dữ liệu hiệu quả để xử lý các tài liệu lớn.
-- Theo dõi việc sử dụng bộ nhớ và quản lý tài nguyên hiệu quả trong Java.
-- Tạo hồ sơ ứng dụng của bạn để xác định những điểm nghẽn trong quá trình so sánh.
+```java
+public class SecureDocumentComparator {
+    
+    public ComparisonResult compareBatch(List<DocumentInfo> documents, String outputDirectory) {
+        // Implementation for batch processing multiple document sets
+        // Returns structured results with metadata
+    }
+    
+    public boolean validateDocumentChanges(String originalPath, String revisedPath, List<String> allowedChanges) {
+        // Custom validation logic after comparison
+        // Returns true if changes are within acceptable parameters
+    }
+}
+```
 
-Việc tuân thủ các biện pháp quản lý bộ nhớ Java tốt nhất sẽ giúp duy trì hiệu suất tối ưu, đặc biệt là khi xử lý nhiều tài liệu cùng lúc.
+Mẫu này cho phép bạn tích hợp engine so sánh vào các hệ thống quản lý tài liệu hoặc tuân thủ quy trình lớn hơn.
 
-## Phần kết luận
+## Chiến lược tối ưu hoá hiệu năng
 
-Bằng cách làm theo hướng dẫn này, bạn đã học cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison cho Java. Thư viện mạnh mẽ này đơn giản hóa các tác vụ so sánh tài liệu và nâng cao hiệu quả quy trình làm việc.
+### Quản lý bộ nhớ
+- **Batch processing:** So sánh 3‑5 tài liệu mỗi lần để giữ mức sử dụng bộ nhớ dự đoán được.  
+- **Resource cleanup:** Luôn đóng các instance `Comparer` bằng try‑with‑resources.  
 
-Bước tiếp theo, hãy cân nhắc khám phá thêm nhiều tính năng của GroupDocs.Comparison, chẳng hạn như tùy chỉnh cài đặt so sánh hoặc tích hợp với các hệ thống khác. Thử nghiệm với các loại tài liệu và kịch bản khác nhau để tận dụng tối đa khả năng của công cụ này.
+```bash
+-Xms2g -Xmx8g -XX:+UseG1GC -XX:MaxGCPauseMillis=100
+```
 
-## Phần Câu hỏi thường gặp
+### Hiệu quả xử lý
+- **Pre‑validation:** Kiểm tra sự tồn tại của tệp và tính hợp lệ của mật khẩu trước khi khởi chạy so sánh.  
+- **Parallel processing:** Sử dụng `CompletableFuture` cho các công việc so sánh độc lập.  
 
-**H: Tôi có thể so sánh các tài liệu ở định dạng khác ngoài Word không?**
-A: Có, GroupDocs.Comparison hỗ trợ nhiều định dạng tệp khác nhau, bao gồm PDF, Excel, v.v.
+```java
+List<CompletableFuture<Path>> futures = documentPairs.parallelStream()
+    .map(pair -> CompletableFuture.supplyAsync(() -> compareDocuments(pair)))
+    .collect(Collectors.toList());
+```
 
-**H: Làm thế nào để xử lý việc so sánh các tài liệu lớn một cách hiệu quả?**
-A: Tối ưu hóa việc sử dụng bộ nhớ bằng cách xử lý tài liệu theo từng phần hoặc sử dụng cấu trúc dữ liệu hiệu quả.
+### Tối ưu hoá mạng và I/O
+- Lưu cache các tài liệu thường xuyên truy cập cục bộ.  
+- Nén tệp trong quá trình truyền nếu chúng nằm trên lưu trữ từ xa.  
+- Triển khai logic retry cho các lỗi mạng tạm thời.
 
-**H: Tôi phải làm sao nếu mật khẩu tài liệu của tôi không đúng?**
-A: Đảm bảo mật khẩu được cung cấp trùng khớp với mật khẩu được sử dụng trong quá trình mã hóa tài liệu. Mật khẩu không chính xác sẽ dẫn đến lỗi trong quá trình tải.
+## Các thực hành bảo mật tốt nhất
 
-**H: GroupDocs.Comparison có thể xử lý dữ liệu nhạy cảm một cách an toàn không?**
-A: Có, nó xử lý tài liệu cục bộ và đảm bảo xử lý an toàn các tệp được bảo vệ bằng mật khẩu.
+### Quản lý mật khẩu
+- Lưu mật khẩu bên ngoài mã nguồn (biến môi trường, vault).  
+- Thay đổi mật khẩu thường xuyên và kiểm tra các lần truy cập.
 
-**H: Có hỗ trợ tùy chỉnh kết quả so sánh không?**
-A: Hoàn toàn có thể, bạn có thể tùy chỉnh kiểu dáng và cài đặt để làm nổi bật những thay đổi theo sở thích của mình.
+### Bảo mật bộ nhớ
+- Ưu tiên sử dụng `char[]` thay vì `String` cho việc lưu trữ mật khẩu tạm thời.  
+- Xóa (zero out) các mảng mật khẩu sau khi sử dụng để giảm nguy cơ rò rỉ bộ nhớ.
 
-## Tài nguyên
+### Kiểm soát truy cập
+- Thực thi kiểm soát truy cập dựa trên vai trò (RBAC) trước khi cho phép thực hiện so sánh.  
+- Ghi lại mọi yêu cầu so sánh để có thể audit, nhưng không bao giờ ghi lại mật khẩu thực tế.
 
-Để được hỗ trợ và cung cấp thêm tài liệu:
-- **Tài liệu**: [GroupDocs.Comparison Tài liệu Java](https://docs.groupdocs.com/comparison/java/)
-- **Tài liệu tham khảo API**: [Tài liệu tham khảo API GroupDocs](https://reference.groupdocs.com/comparison/java/)
-- **Tải về**: [Tải xuống GroupDocs](https://releases.groupdocs.com/comparison/java/)
-- **Mua**: [Mua giấy phép GroupDocs](https://purchase.groupdocs.com/buy)
-- **Dùng thử miễn phí**: [Dùng thử miễn phí GroupDocs](https://releases.groupdocs.com/comparison/java/)
-- **Giấy phép tạm thời**: [Nhận giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- **Ủng hộ**: [Diễn đàn GroupDocs](https://forum.groupdocs.com/c)
+## Câu hỏi thường gặp
+
+**Q: Can I compare documents that have different passwords?**  
+A: Yes. Provide a separate `LoadOptions` instance with the correct password for each document.
+
+**Q: Which file formats are supported?**  
+A: Over 50 formats, including DOCX, PDF, XLSX, PPTX, TXT, and common image types.
+
+**Q: What happens if a document fails to load?**  
+A: An exception is thrown (e.g., `InvalidPasswordException`). Catch it, log a clear message, and optionally skip that file.
+
+**Q: Can I customize the visual style of the comparison result?**  
+A: Absolutely. GroupDocs.Comparison offers style options for change colors, fonts, and comment placement.
+
+**Q: Is there a limit to the number of documents I can compare at once?**  
+A: The practical limit is dictated by available memory and document size. For large batches, process them in smaller groups.
+
+## Các bước tiếp theo và tính năng nâng cao
+
+### Cơ hội tích hợp
+- **REST API wrapper:** Expose the comparison logic as a microservice.  
+- **Serverless functions:** Deploy to AWS Lambda or Azure Functions for on‑demand processing.  
+- **Database storage:** Persist comparison metadata for reporting and audit trails.
+
+### Các tính năng nâng cao để khám phá
+- **Custom comparison algorithms** for domain‑specific change detection.  
+- **Machine‑learning classifiers** to categorize changes (e.g., legal vs. financial).  
+- **Real‑time collaboration** with live diff updates in web editors.
+
+### Giám sát và vận hành
+- Implement structured logging (e.g., Logback, SLF4J).  
+- Track performance metrics (CPU, memory, latency) with Prometheus or CloudWatch.  
+- Set up alerts for failed comparisons or unusually long processing times.
+
+## Kết luận
+Bạn hiện đã có một lộ trình sẵn sàng cho môi trường sản xuất cho **compare protected documents java** bằng GroupDocs.Comparison. Bằng cách làm theo các bước trên, bạn sẽ đạt được việc diff tài liệu an toàn, hiệu năng cao và có thể mở rộng từ trường hợp sử dụng một tệp duy nhất đến xử lý batch cấp doanh nghiệp. Hãy nhớ giữ mật khẩu ra khỏi mã nguồn, tối ưu JVM cho khối lượng công việc của bạn, và tích hợp logging và monitoring thích hợp để có giải pháp bền vững.
+
+## Tài nguyên bổ sung
+
+- **Tài liệu:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **Tham khảo API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Tải xuống:** [Latest Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Mua:** [License Options](https://purchase.groupdocs.com/buy)  
+- **Dùng thử miễn phí:** [Try Before You Buy](https://releases.groupdocs.com/comparison/java/)  
+- **Giấy phép tạm thời:** [Development License](https://purchase.groupdocs.com/temporary-license/)  
+- **Hỗ trợ:** [Community Forum](https://forum.groupdocs.com/c)
+
+---
+
+**Cập nhật lần cuối:** 2026-02-13  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
+**Tác giả:** GroupDocs

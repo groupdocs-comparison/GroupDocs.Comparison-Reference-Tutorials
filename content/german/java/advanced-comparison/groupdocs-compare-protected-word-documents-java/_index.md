@@ -2,14 +2,15 @@
 categories:
 - Java Development
 - Document Processing
-date: '2025-12-17'
+date: '2026-02-16'
 description: Erfahren Sie, wie Sie Word‑Dokumente mit Passwortschutz in Java mithilfe
-  von GroupDocs.Comparison vergleichen. Vollständige Anleitung mit Codebeispielen,
-  Fehlersuche und bewährten Methoden.
+  von GroupDocs.Comparison vergleichen. Dieser Schritt‑für‑Schritt‑Leitfaden zeigt,
+  wie man Word‑Dateien vergleicht, Word‑Dateien stapelweise vergleicht und häufige
+  Stolperfallen bewältigt.
 keywords: compare password protected Word documents Java, GroupDocs comparison tutorial,
   Java document comparison library, protected Word file comparison, GroupDocs comparison
   password protected files, how to compare word, batch compare word files
-lastmod: '2025-12-17'
+lastmod: '2026-02-16'
 linktitle: How to Compare Word Docs Java
 tags:
 - groupdocs
@@ -23,63 +24,66 @@ url: /de/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
-# Wie man Word-Dokumente (Passwortgeschützt) in Java vergleicht
+.
+
+Let's start constructing.
+
+# Wie man Word‑Dokumente (Passwortgeschützt) in Java vergleicht
 
 ## Einführung
 
-Haben Sie jemals versucht, **wie man Word**-Dokumente zu vergleichen, die passwortgeschützt sind, und sind dabei an Grenzen gestoßen? Sie sind nicht allein. Die meisten Entwickler kämpfen mit genau dieser Herausforderung beim Aufbau von Dokumentenmanagementsystemen oder Audit‑Workflows.
+Haben Sie schon einmal versucht, **wie man Word**‑Dokumente zu vergleichen, die passwortgeschützt sind, und sind dabei auf ein Hindernis gestoßen? Sie sind nicht allein. Die meisten Entwickler kämpfen mit genau dieser Herausforderung beim Aufbau von Dokumenten‑Management‑Systemen oder Audit‑Workflows.
 
-Der springt: Das Vergleichen von regulären Dokumenten ist unkompliziert, aber sobald Passwörter ins Spiel kommen, wird alles kompliziert. Genau hier glänzt **GroupDocs.Comparison for Java**. Diese leistungsstarke Bibliothek übernimmt die schwere Arbeit und ermöglicht es Ihnen, verschlüsselte Dokumente genauso einfach zu vergleichen wie reguläre.
+Der springende Punkt: Das Vergleichen von normalen Dokumenten ist unkompliziert, aber sobald Passwörter ins Spiel kommen, wird alles komplex. Hier kommt **GroupDocs.Comparison for Java** ins Spiel. Diese leistungsstarke Bibliothek übernimmt die schwere Arbeit und ermöglicht Ihnen das Vergleichen verschlüsselter Dokumente genauso einfach wie regulärer Dateien.
 
-In diesem umfassenden Leitfaden lernen Sie, wie Sie passwortgeschützte Word-Dokumente mit GroupDocs.Comparison nahtlos laden und vergleichen. Egal, ob Sie ein System zur rechtlichen Dokumentenprüfung aufbauen oder Compliance‑Checks automatisieren, dieses Tutorial deckt alles ab.
+In diesem umfassenden Leitfaden lernen Sie, wie Sie passwortgeschützte Word‑Dokumente mit GroupDocs.Comparison nahtlos laden und vergleichen. Egal, ob Sie ein System zur juristischen Dokumentenprüfung bauen, Compliance‑Checks automatisieren oder **Word‑Dateien stapelweise vergleichen** müssen – dieses Tutorial deckt alles ab.
 
-## Schnelle Antworten
-- **Welche Bibliothek verarbeitet den Vergleich von passwortgeschützten Word-Dokumenten?** GroupDocs.Comparison for Java  
+## Schnellantworten
+- **Welche Bibliothek verarbeitet den Vergleich von passwortgeschützten Word‑Dokumenten?** GroupDocs.Comparison for Java  
 - **Benötige ich eine Lizenz für die Produktion?** Ja, eine Voll‑Lizenz entfernt Wasserzeichen und Beschränkungen  
 - **Kann ich mehrere geschützte Dateien gleichzeitig vergleichen?** Absolut – verwenden Sie `comparer.add()` für jedes Ziel  
-- **Gibt es eine Größenbeschränkung?** Hängt vom JVM‑Heap ab; erhöhen Sie `-Xmx` für große Dateien  
+- **Gibt es ein Limit für die Dateigröße?** Hängt vom JVM‑Heap ab; erhöhen Sie `-Xmx` für große Dateien  
 - **Wie vermeide ich das Schreiben von Passwörtern im Code?** Speichern Sie sie sicher (z. B. in Umgebungsvariablen) und übergeben Sie sie an `LoadOptions`
 
-## Was bedeutet „wie man Word vergleicht“ mit Passwortschutz?
-
-Der Vergleich von Word-Dokumenten bedeutet, Einfügungen, Löschungen, Formatierungsänderungen und andere Änderungen zwischen zwei oder mehr Versionen zu erkennen. Wenn diese Dateien verschlüsselt sind, muss die Bibliothek zunächst jedes Dokument authentifizieren, bevor der Unterschied berechnet wird. GroupDocs.Comparison abstrahiert diesen Schritt, sodass Sie sich auf die Vergleichslogik statt auf manuelle Entschlüsselung konzentrieren.
+## Was bedeutet „wie man Word“ mit Passwortschutz?
+Der Vergleich von Word‑Dokumenten bedeutet, Einfügungen, Löschungen, Formatierungsänderungen und andere Änderungen zwischen zwei oder mehr Versionen zu erkennen. Wenn diese Dateien verschlüsselt sind, muss die Bibliothek zunächst jedes Dokument authentifizieren, bevor der Unterschied berechnet wird. GroupDocs.Comparison abstrahiert diesen Schritt, sodass Sie sich auf die Vergleichslogik statt auf manuelle Entschlüsselung konzentrieren können.
 
 ## Warum GroupDocs für den Vergleich geschützter Dokumente wählen?
 
-Bevor wir in den Code eintauchen, sprechen wir das offensichtliche Problem an: Warum nicht einfach Dokumente manuell entschlüsseln oder andere Bibliotheken verwenden?
+Bevor wir zum Code kommen, sprechen wir das Offensichtliche an: Warum nicht einfach Dokumente manuell entschlüsseln oder andere Bibliotheken verwenden?
 
 **GroupDocs.Comparison überzeugt, weil es:**
-- Verarbeitet die Passwortauthentifizierung intern (keine manuelle Entschlüsselung erforderlich)  
-- Unterstützt mehrere Dokumentformate über Word hinaus  
-- Bietet detaillierte Vergleichsberichte mit Hervorhebung  
-- Lässt sich nahtlos in bestehende Java-Anwendungen integrieren  
-- Bietet Enterprise‑Sicherheitsniveau für sensible Dokumente  
+- Die Passwort‑Authentifizierung intern verarbeitet (keine manuelle Entschlüsselung nötig)  
+- Mehrere Dokumentformate über Word hinaus unterstützt  
+- Detaillierte Vergleichsberichte mit Hervorhebungen liefert  
+- Nahtlos in bestehende Java‑Anwendungen integriert werden kann  
+- Unternehmens‑Grade‑Sicherheit für sensible Dokumente bietet  
 
-**Wann GroupDocs gegenüber Alternativen wählen:**
+**Wann GroupDocs anderen Alternativen vorzuziehen ist:**
 - Sie arbeiten mit mehreren geschützten Dokumentformaten  
 - Sicherheit hat höchste Priorität (Dokumente werden nie auf die Festplatte entschlüsselt)  
-- Sie benötigen detaillierte Vergleichsanalysen  
+- Sie benötigen detaillierte Vergleichs‑Analytics  
 - Ihr Projekt erfordert Enterprise‑Support  
 
 ## Voraussetzungen und Umgebungseinrichtung
 
 ### Was Sie benötigen
 
-Bevor wir mit dem Codieren beginnen, stellen Sie sicher, dass Sie Folgendes haben:
+Bevor wir mit dem Coden beginnen, stellen Sie sicher, dass Sie Folgendes haben:
 
-**Erforderliche Grundlagen:**
-- Java Development Kit (JDK) 8 oder höher  
-- Maven‑ oder Gradle‑Buildsystem  
-- IDE (IntelliJ IDEA, Eclipse oder VS Code funktionieren hervorragend)  
-- Grundlegendes Verständnis von Java-Streams und Dateiverarbeitung  
+**Essentielle Anforderungen:**
+- Java Development Kit (JDK) 8 oder höher  
+- Maven‑ oder Gradle‑Build‑System  
+- IDE (IntelliJ IDEA, Eclipse oder VS Code funktionieren hervorragend)  
+- Grundlegendes Verständnis von Java‑Streams und Dateiverarbeitung  
 
 **Optional, aber hilfreich:**
-- Vertrautheit mit Maven-Dependency-Management  
+- Erfahrung mit Maven‑Abhängigkeitsverwaltung  
 - Verständnis von try‑with‑resources‑Mustern  
 
-### Maven-Konfigurationssetup
+### Maven‑Konfigurationssetup
 
-Der einfachste Weg, um zu beginnen, ist über Maven. Fügen Sie dies zu Ihrer `pom.xml` hinzu:
+Der einfachste Einstieg erfolgt über Maven. Fügen Sie Folgendes zu Ihrer `pom.xml` hinzu:
 
 ```xml
 <repositories>
@@ -98,15 +102,15 @@ Der einfachste Weg, um zu beginnen, ist über Maven. Fügen Sie dies zu Ihrer `p
 </dependencies>
 ```
 
-**Profi‑Tipp:** Überprüfen Sie immer die [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) für die neueste Version, bevor Sie Ihr Projekt starten.
+**Pro‑Tipp:** Prüfen Sie stets die [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) auf die neueste Version, bevor Sie Ihr Projekt starten.
 
 ### Lizenzkonfiguration
 
-Obwohl Sie GroupDocs für Evaluierungszwecke ohne Lizenz verwenden können, erhalten Sie Wasserzeichen und Funktionsbeschränkungen. Für den Produktionseinsatz:
+Sie können GroupDocs ohne Lizenz zu Evaluierungszwecken nutzen, erhalten jedoch Wasserzeichen und Funktionsbeschränkungen. Für den Produktionseinsatz:
 
 1. **Kostenlose Testversion** – ideal für Tests und kleine Projekte  
-2. **Temporäre Lizenz** – hervorragend für Entwicklungsphasen  
-3. **Vollständige Lizenz** – erforderlich für den Produktionseinsatz  
+2. **Temporäre Lizenz** – gut für Entwicklungsphasen  
+3. **Voll‑Lizenz** – erforderlich für den produktiven Einsatz  
 
 Holen Sie Ihre Lizenz von der [GroupDocs purchase page](https://purchase.groupdocs.com/buy).
 
@@ -114,7 +118,7 @@ Holen Sie Ihre Lizenz von der [GroupDocs purchase page](https://purchase.groupdo
 
 ### Laden Ihres ersten geschützten Dokuments
 
-Beginnen wir mit den Grundlagen – das Laden eines einzelnen passwortgeschützten Dokuments:
+Beginnen wir mit den Grundlagen – dem Laden eines einzelnen passwortgeschützten Dokuments:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -138,13 +142,13 @@ public class BasicProtectedDocumentLoad {
 ```
 
 **Was passiert hier?**
-- Wir erstellen einen `FileInputStream` für unser geschütztes Dokument  
-- `LoadOptions` übernimmt die Passwortauthentifizierung  
-- Die `Comparer`‑Instanz ist bereit für Operationen  
+- Wir erzeugen einen `FileInputStream` für unser geschütztes Dokument  
+- `LoadOptions` übernimmt die Passwort‑Authentifizierung  
+- Die `Comparer`‑Instanz ist bereit für weitere Operationen  
 
-### Vollständiger Dokumentvergleich‑Workflow
+### Vollständiger Dokument‑Vergleichs‑Workflow
 
-Jetzt zum Hauptteil – das Vergleichen mehrerer geschützter Dokumente:
+Jetzt zum Hauptteil – dem Vergleich mehrerer geschützter Dokumente:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -187,25 +191,25 @@ public class CompleteDocumentComparison {
 ```
 
 **Wichtige Punkte zum Merken:**
-- Jedes Dokument kann ein anderes Passwort haben  
-- Sie können mehrere Ziel‑Dokumente zum Vergleich hinzufügen  
-- Das Ergebnis‑Dokument zeigt alle Unterschiede hervorgehoben  
-- Verwenden Sie stets try‑with‑resources für eine korrekte Stream‑Verwaltung  
+- Jedes Dokument kann ein anderes Passwort besitzen  
+- Sie können mehrere Zieldokumente zum Vergleich hinzufügen  
+- Das Ergebnis‑Dokument zeigt alle Unterschiede hervorgehoben an  
+- Nutzen Sie stets try‑with‑resources für ein korrektes Stream‑Management  
 
-## Stapelvergleich von Word‑Dateien in Java
+## Stapelweiser Vergleich von Word‑Dateien in Java
 
-Wenn Sie viele Dokumentpaare automatisch verarbeiten müssen, können Sie die obige Logik in einer Schleife einbetten. Die gleiche `Comparer`‑Klasse funktioniert für jedes Paar, und Sie können das in **Vollständiger Dokumentvergleich‑Workflow** gezeigte Muster wiederverwenden. Denken Sie daran, Ressourcen nach jeder Iteration freizugeben, um den Speicherverbrauch gering zu halten.
+Wenn Sie viele Dokumentpaare automatisch verarbeiten müssen, können Sie die obige Logik in einer Schleife verpacken. Die gleiche `Comparer`‑Klasse funktioniert für jedes Paar, und Sie können das Muster aus **Vollständiger Dokument‑Vergleichs‑Workflow** wiederverwenden. Denken Sie daran, nach jeder Iteration Ressourcen freizugeben, um den Speicherverbrauch gering zu halten.
 
-## Häufige Fallstricke und Lösungen
+## Häufige Stolperfallen und Lösungen
 
 ### Authentifizierungsfehler
 
 **Problem:** `InvalidPasswordException` oder ähnliche Authentifizierungsfehler.  
 
 **Lösungen:**  
-- Überprüfen Sie die Passwortschreibung (Groß‑/Kleinschreibung beachten!)  
-- Stellen Sie sicher, dass das Dokument tatsächlich passwortgeschützt ist  
-- Vergewissern Sie sich, dass Sie den richtigen `LoadOptions`‑Konstruktor verwenden  
+- Passwort‑Rechtschreibung (Groß‑/Kleinschreibung!) überprüfen  
+- Sicherstellen, dass das Dokument tatsächlich passwortgeschützt ist  
+- Den korrekten `LoadOptions`‑Konstruktor verwenden  
 
 ```java
 // Wrong way
@@ -220,9 +224,9 @@ new LoadOptions("correct_password");
 **Problem:** `OutOfMemoryError` beim Verarbeiten großer Dateien.  
 
 **Lösungen:**  
-- Erhöhen Sie die JVM-Heap‑Größe: `-Xmx4g`  
-- Verarbeiten Sie Dokumente nach Möglichkeit in Teilen  
-- Schließen Sie Streams sofort nach der Verwendung  
+- JVM‑Heap vergrößern: `-Xmx4g`  
+- Dokumente nach Möglichkeit in Teilen verarbeiten  
+- Streams sofort nach Gebrauch schließen  
 
 ```java
 // Good practice - explicit resource management
@@ -231,14 +235,14 @@ try (FileInputStream stream = new FileInputStream(path)) {
 } // Automatically closed here
 ```
 
-### Dateipfad‑Probleme
+### Probleme mit Dateipfaden
 
 **Problem:** `FileNotFoundException` trotz scheinbar korrekter Pfade.  
 
 **Lösungen:**  
-- Verwenden Sie absolute Pfade während der Entwicklung  
-- Überprüfen Sie die Dateiberechtigungen  
-- Stellen Sie sicher, dass die Dokumentformate unterstützt werden  
+- Während der Entwicklung absolute Pfade verwenden  
+- Dateiberechtigungen prüfen  
+- Unterstützte Dokumentformate verifizieren  
 
 ```java
 // Use File.exists() to debug path issues
@@ -252,7 +256,7 @@ if (!sourceFile.exists()) {
 
 ### Speicherverwaltung
 
-Beim Umgang mit mehreren großen Dokumenten wird das Speicher‑Management entscheidend:
+Bei mehreren großen Dokumenten wird das Speichermanagement entscheidend:
 
 ```java
 public class OptimizedComparison {
@@ -275,21 +279,21 @@ public class OptimizedComparison {
 
 ### Überlegungen zur Stapelverarbeitung
 
-- **Sequenziell verarbeiten**, um Speicher‑Spitzen zu vermeiden  
-- **Richtige Fehlerbehandlung** für jedes Dokumentpaar implementieren  
-- **Thread‑Pools verwenden** nur, wenn ausreichend Speicher vorhanden ist  
-- **Heap‑Nutzung überwachen** während Stapeloperationen  
+- **Sequenziell verarbeiten**, um Speicher‑Spikes zu vermeiden  
+- **Fehlerbehandlung** für jedes Dokumentpaar implementieren  
+- **Thread‑Pools** nur einsetzen, wenn ausreichend Speicher vorhanden ist  
+- **Heap‑Nutzung** während Stapel‑Operationen überwachen  
 
 ### Caching‑Strategien
 
 Wenn Sie dieselben Dokumente wiederholt vergleichen:  
-- `Comparer`‑Instanzen cachen (aber den Speicherverbrauch im Auge behalten)  
-- Vergleichsergebnisse für häufig genutzte Dokumentpaare speichern  
-- Erwägen Sie die Verwendung von Dokument‑Checksummen, um redundante Vergleiche zu vermeiden  
+- `Comparer`‑Instanzen cachen (aber Speicherverbrauch im Auge behalten)  
+- Vergleichsergebnisse für häufig abgefragte Dokumentpaare speichern  
+- Dokument‑Checksummen nutzen, um redundante Vergleiche zu vermeiden  
 
 ## Praxisbeispiele
 
-### Rechtliche Dokumentenprüfung
+### Juristische Dokumentenprüfung
 
 ```java
 public class LegalDocumentComparison {
@@ -301,9 +305,9 @@ public class LegalDocumentComparison {
 }
 ```
 
-**Ideal für:** Vertragsüberarbeitungs‑Tracking, rechtliche Compliance‑Audits, Aktualisierungen regulatorischer Dokumente.
+**Ideal für:** Vertragsrevisionen, juristische Compliance‑Audits, regulatorische Dokumenten‑Updates.
 
-### Finanzielle Prüfungs‑Workflows
+### Finanzielle Audit‑Workflows
 
 ```java
 public class FinancialAuditComparison {
@@ -315,7 +319,7 @@ public class FinancialAuditComparison {
 }
 ```
 
-**Ideal für:** Quartalsbericht‑Validierung, abteilungsübergreifende Konsistenzprüfungen, Verifizierung regulatorischer Konformität.
+**Perfekt für:** Quartals‑Berichts‑Validierung, abteilungsübergreifende Konsistenz‑Checks, regulatorische Compliance‑Verifizierung.
 
 ### Anwendungen in der akademischen Forschung
 
@@ -329,13 +333,13 @@ public class AcademicResearchComparison {
 }
 ```
 
-**Ideal für:** Plagiaterkennungssysteme, Validierung von Forschungsarbeiten, Workflows zur akademischen Integrität.
+**Gut geeignet für:** Plagiaterkennungssysteme, Validierung von Forschungsarbeiten, akademische Integritäts‑Workflows.
 
 ## Erweiterte Konfigurationsoptionen
 
 ### Anpassung der Vergleichseinstellungen
 
-GroupDocs.Comparison bietet umfangreiche Anpassungsoptionen:
+GroupDocs.Comparison bietet umfangreiche Anpassungsmöglichkeiten:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -351,56 +355,56 @@ comparer.compare(outputStream, options);
 
 ### Ausgabeformat‑Optionen
 
-Sie können anpassen, wie Vergleichsergebnisse angezeigt werden:  
+Sie können festlegen, wie die Vergleichsergebnisse dargestellt werden:  
 - **Hervorhebungs‑Stile** für verschiedene Änderungsarten  
-- **Zusammenfassungsseiten** mit Änderungsstatistiken  
+- **Zusammenfassungsseiten** mit Änderungs‑Statistiken  
 - **Detaillierte Anmerkungen** für komplexe Dokumente  
 
-## Fehlerbehebungs‑Leitfaden
+## Fehlersuch‑Leitfaden
 
 ### Häufige Fehlermeldungen und Lösungen
 
-- **„Document format is not supported“** – Überprüfen Sie, ob die Datei ein gültiges `.docx`‑ oder `.doc`‑Format ist.  
+- **„Document format is not supported“** – Stellen Sie sicher, dass die Datei ein gültiges `.docx`‑ oder `.doc`‑Format hat.  
 - **„Password is incorrect“** – Testen Sie das Passwort manuell; achten Sie auf Sonderzeichen.  
 - **„Comparison failed with unknown error“** – Prüfen Sie Festplattenspeicher, Schreibrechte und verfügbaren Speicher.  
 
 ### Leistungsprobleme
 
 - **Langsame Vergleichszeiten** – Große Dateien benötigen naturgemäß mehr Zeit; erwägen Sie, sie in Abschnitte zu unterteilen.  
-- **Hoher Speicherverbrauch** – Überwachen Sie die Heap‑Größe, schließen Sie Ressourcen umgehend und verarbeiten Sie Dokumente sequenziell.  
+- **Hoher Speicherverbrauch** – Heap‑Größe überwachen, Ressourcen sofort schließen und Dokumente sequenziell verarbeiten.  
 
 ## Fazit
 
-Sie haben nun alles, was Sie benötigen, um **wie man Word**‑Dokumente, die passwortgeschützt sind, in Java mit GroupDocs.Comparison zu vergleichen. Dieser leistungsstarke Ansatz eröffnet Möglichkeiten für automatisierte Dokument‑Workflows, Compliance‑Prüfungen und Audit‑Prozesse.
+Sie verfügen nun über alles, was Sie benötigen, um **wie man Word**‑Dokumente, die passwortgeschützt sind, in Java mit GroupDocs.Comparison zu vergleichen. Dieser leistungsstarke Ansatz eröffnet Möglichkeiten für automatisierte Dokumenten‑Workflows, Compliance‑Prüfungen und Audit‑Prozesse.
 
 ## Häufig gestellte Fragen
 
 **F: Kann ich mehr als zwei passwortgeschützte Dokumente gleichzeitig vergleichen?**  
-A: Absolut! Verwenden Sie `comparer.add()` mehrfach; jedes Ziel kann sein eigenes Passwort haben.
+A: Absolut! Verwenden Sie `comparer.add()` mehrfach; jedes Ziel kann ein eigenes Passwort besitzen.
 
-**F: Was passiert, wenn ich ein falsches Passwort angebe?**  
-A: GroupDocs wirft eine Authentifizierungsausnahme. Überprüfen Sie Passwörter vor der Verarbeitung, insbesondere in automatisierten Pipelines.
+**F: Was passiert, wenn ich ein falsches Passwort übergebe?**  
+A: GroupDocs wirft eine Authentifizierungs‑Exception. Überprüfen Sie Passwörter vor der Verarbeitung, besonders in automatisierten Pipelines.
 
 **F: Arbeitet GroupDocs mit Dokumenten, die unterschiedliche Passwörter haben?**  
-A: Ja, jedes Dokument kann sein eigenes eindeutiges Passwort in den jeweiligen `LoadOptions` angeben.
+A: Ja, jedes Dokument kann sein individuelles Passwort in den jeweiligen `LoadOptions` erhalten.
 
-**F: Kann ich Dokumente vergleichen, ohne das Ergebnis auf die Festplatte zu speichern?**  
-A: Ja, schreiben Sie das Vergleichsergebnis in einen beliebigen `OutputStream`, z. B. einen Speicher‑Stream oder Netzwerk‑Stream.
+**F: Kann ich Dokumente vergleichen, ohne das Ergebnis auf die Festplatte zu schreiben?**  
+A: Ja, schreiben Sie das Vergleichsergebnis in einen beliebigen `OutputStream`, z. B. einen Memory‑Stream oder Netzwerk‑Stream.
 
 **F: Wie gehe ich mit Dokumenten um, deren Passwort ich nicht kenne?**  
-A: Sie müssen das korrekte Passwort erhalten; erwägen Sie die Integration eines sicheren Passwort‑Tresors für automatisierte Workflows.
+A: Sie müssen das korrekte Passwort erhalten; erwägen Sie die Integration eines sicheren Passwort‑Vaults für automatisierte Workflows.
 
-**F: Wie groß ist die maximale Dateigröße, die GroupDocs verarbeiten kann?**  
-A: Das hängt vom verfügbaren JVM‑Heap ab. Für Dateien > 100 MB erhöhen Sie den Heap (`-Xmx`) und erwägen eine Verarbeitung in Teilen.
+**F: Wie groß darf eine Datei maximal sein, die GroupDocs verarbeiten kann?**  
+A: Das hängt vom verfügbaren JVM‑Heap ab. Für Dateien > 100 MB erhöhen Sie den Heap (`-Xmx`) und verarbeiten Sie ggf. in Teilen.
 
 **F: Kann ich detaillierte Statistiken zu den Vergleichsergebnissen erhalten?**  
-A: Ja, aktivieren Sie `GenerateSummaryPage` in `CompareOptions`, um Änderungsstatistiken und Zusammenfassungen zu erhalten.
+A: Ja, aktivieren Sie `GenerateSummaryPage` in `CompareOptions`, um Änderungs‑Statistiken und Zusammenfassungen zu erhalten.
 
-**F: Ist es möglich, Dokumente aus Cloud‑Speicher zu vergleichen?**  
-A: Ja, solange Sie einen `InputStream` von Ihrem Cloud‑Anbieter bereitstellen können, kann GroupDocs ihn verarbeiten.
+**F: Ist ein Vergleich von Dokumenten aus Cloud‑Speichern möglich?**  
+A: Ja, solange Sie einen `InputStream` von Ihrem Cloud‑Provider bereitstellen, kann GroupDocs ihn verarbeiten.
 
 ---
 
-**Zuletzt aktualisiert:** 2025-12-17  
-**Getestet mit:** GroupDocs.Comparison 25.2  
+**Zuletzt aktualisiert:** 2026‑02‑16  
+**Getestet mit:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs

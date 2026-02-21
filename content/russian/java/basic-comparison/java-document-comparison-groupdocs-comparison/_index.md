@@ -1,14 +1,14 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
-description: Узнайте, как сравнивать PDF‑файлы в Java с помощью GroupDocs.Comparison.
-  Этот пошаговый учебник охватывает лучшие практики сравнения документов, примеры
-  кода, советы по производительности и устранению неполадок.
+date: '2026-02-21'
+description: Узнайте, как сравнивать PDF на Java с помощью GroupDocs.Comparison. Этот
+  пошаговый учебник охватывает лучшие практики сравнения документов, примеры кода,
+  советы по производительности и устранению неполадок.
 keywords: java compare documents programmatically, java document diff library, compare
   two files java, java text comparison, groupdocs comparison java, document version
   control java, compare pdf files java, document comparison best practices
-lastmod: '2025-12-20'
+lastmod: '2026-02-21'
 linktitle: Java Document Comparison Guide
 tags:
 - java
@@ -16,57 +16,61 @@ tags:
 - groupdocs
 - file-comparison
 - version-control
-title: Как программно сравнивать PDF‑файлы в Java
+title: compare pdf java – Сравнение PDF‑файлов в Java программно
 type: docs
 url: /ru/java/basic-comparison/java-document-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-# Как сравнивать PDF-файлы в Java программно
+# compare pdf java – Как сравнивать PDF файлы в Java программно
 
-## Введение
+Вы когда‑нибудь вручную сравнивали две версии документа? Если вы Java‑разработчик, ищущий **compare pdf java**, вы, вероятно, сталкивались с этой задачей больше, чем хотите признать. Независимо от того, создаёте ли вы систему управления контентом, реализуете контроль версий или просто нужно отслеживать изменения в юридических документах, автоматизация сравнения экономит часы утомительной работы.
 
-Когда‑нибудь вам приходилось вручную сравнивать две версии документа, уставившись в экран в поисках различий? Если вы Java‑разработчик, то, скорее всего, сталкивались с этой задачей гораздо чаще, чем хотите признать. Будь то система управления контентом, реализация контроля версий или просто необходимость отслеживать изменения в юридических документах, **compare pdf files java** может сэкономить вам часы утомительной работы.
+Хорошие новости? С GroupDocs.Comparison for Java вы можете автоматизировать весь процесс. Это всестороннее руководство проведёт вас через всё, что нужно знать о реализации сравнения документов в ваших Java‑приложениях. Вы узнаете, как обнаруживать изменения, извлекать координаты и даже работать с различными форматами файлов — всё с чистым, эффективным кодом.
 
-Хорошая новость? С GroupDocs.Comparison for Java вы можете автоматизировать весь процесс. Это подробное руководство проведёт вас через всё, что нужно знать о реализации сравнения документов в ваших Java‑приложениях. Вы узнаете, как обнаруживать изменения, извлекать координаты и даже работать с различными форматами файлов — всё с чистым, эффективным кодом.
+## Quick Answers
+- **What library lets me compare PDF files in Java?** GroupDocs.Comparison for Java.  
+- **Do I need a license?** A free trial works for learning; a full license is required for production.  
+- **Which Java version is required?** Java 8 minimum, Java 11+ recommended.  
+- **Can I compare documents without saving them to disk?** Yes, use streams to compare in memory.  
+- **How do I get change coordinates?** Enable `setCalculateCoordinates(true)` in `CompareOptions`.
 
-К концу этого урока вы будете уверенно разбираться в техниках сравнения документов и сможете внедрять их в собственные проекты. Поехали!
+## How to compare PDF files in Java (compare pdf java)
 
-## Быстрые ответы
-- **Какая библиотека позволяет сравнивать PDF‑файлы в Java?** GroupDocs.Comparison for Java.  
-- **Нужна ли лицензия?** Бесплатная пробная версия подходит для обучения; полная лицензия требуется для продакшна.  
-- **Какая версия Java требуется?** Минимум Java 8, рекомендуется Java 11+.  
-- **Можно ли сравнивать документы без сохранения их на диск?** Да, используйте потоки для сравнения в памяти.  
-- **Как получить координаты изменений?** Включите `setCalculateCoordinates(true)` в `CompareOptions`.
+Сравнение PDF‑файлов программно означает анализ двух документов для выявления добавлений, удалений и изменений. Результатом является структурированный список изменений, который вы можете отображать, логировать или передавать в последующие рабочие процессы.
 
-## Что такое “compare pdf files java”?
-Сравнение PDF‑файлов в Java означает программный анализ двух PDF (или других) документов с целью выявления добавлений, удалений и модификаций. Процесс возвращает структурированный список изменений, который можно использовать для отчётности, визуального выделения или автоматических рабочих процессов.
+## What is “compare pdf files java”?
 
-## Почему стоит использовать GroupDocs.Comparison for Java?
-- **Скорость и точность:** Поддерживает более 60 форматов с высокой точностью.  
-- **Лучшие практики сравнения документов** встроены, например игнорирование изменений стиля или обнаружение перемещённого контента.  
-- **Масштабируемость:** Работает с большими файлами, потоками и облачным хранилищем.  
-- **Расширяемость:** Настраивайте параметры сравнения под любые бизнес‑правила.
+Сравнение PDF‑файлов в Java означает программный анализ двух PDF (или других) документов с целью идентификации добавлений, удалений и модификаций. Процесс возвращает структурированный список изменений, который можно использовать для отчётности, визуального выделения или автоматических рабочих потоков.
 
-## Предварительные требования и что понадобится
+## Why use GroupDocs.Comparison for Java?
+- **Speed & Accuracy:** Handles over 60 formats with high fidelity.  
+- **Document comparison best practices** built‑in, such as ignoring style changes or detecting moved content.  
+- **Scalable:** Works with large files, streams, and cloud storage.  
+- **Extensible:** Customize comparison options to fit any business rule.
 
-### Технические требования
-- **Java Development Kit (JDK)** – версия 8 или выше (Java 11+ рекомендуется для лучшей производительности)  
-- **IDE** – IntelliJ IDEA, Eclipse или ваш любимый Java‑IDE  
-- **Maven** – для управления зависимостями (в большинстве IDE уже включён)
+## How to compare PDF files programmatically in Java
 
-### Требования к знаниям
-- Базовое программирование на Java (классы, методы, try‑with‑resources)  
-- Знакомство с зависимостями Maven (мы всё равно проведём вас через настройку)  
-- Понимание операций ввода‑вывода файлов (полезно, но не обязательно)
+Эта секция показывает пошаговую реализацию, необходимую для **compare pdf programmatically**. Каждый блок кода объясняется перед тем, как появится, так что вам никогда не придётся гадать, что делает фрагмент.
 
-### Документы для тестирования
-Подготовьте пару образцов документов – Word, PDF или текстовые файлы подойдут отлично. Если ничего нет, создайте два простых текстовых файла с небольшими различиями для тестов.
+### Prerequisites and What You'll Need
 
-## Настройка GroupDocs.Comparison for Java
+#### Technical Requirements
+- **Java Development Kit (JDK)** – version 8 or higher (Java 11+ recommended for better performance)  
+- **IDE** – IntelliJ IDEA, Eclipse, or your favorite Java IDE  
+- **Maven** – for dependency management (most IDEs include this)
 
-### Конфигурация Maven
+#### Knowledge Prerequisites
+- Basic Java programming (classes, methods, try‑with‑resources)  
+- Familiarity with Maven dependencies (we’ll walk you through the setup anyway)  
+- Understanding of file I/O operations (helpful but not required)
 
+#### Documents for Testing
+Подготовьте пару образцов документов — Word‑файлы, PDF или текстовые файлы подойдут отлично. Если их нет, создайте два простых текстовых файла с небольшими различиями для тестирования.
+
+## Setting Up GroupDocs.Comparison for Java
+
+### Maven Configuration
 Сначала добавьте репозиторий GroupDocs и зависимость в ваш `pom.xml`. Сохраните блок точно так, как показано:
 
 ```xml
@@ -87,18 +91,18 @@ weight: 1
 </dependencies>
 ```
 
-**Pro Tip**: Всегда проверяйте наличие последней версии на сайте GroupDocs. На момент написания актуальна версия 25.2, но более новые версии могут содержать дополнительные возможности или исправления ошибок.
+**Pro Tip**: Always check for the latest version on the GroupDocs website. Version 25.2 was current at the time of writing, but newer versions might have additional features or bug fixes.
 
-### Распространённые проблемы настройки и их решения
-- **«Repository not found»** – убедитесь, что блок `<repositories>` расположен *до* `<dependencies>`.  
-- **«ClassNotFoundException»** – обновите зависимости Maven (IntelliJ: *Maven → Reload project*).
+### Common Setup Issues and Solutions
+- **“Repository not found”** – ensure the `<repositories>` block appears *before* `<dependencies>`.  
+- **“ClassNotFoundException”** – refresh Maven dependencies (IntelliJ: *Maven → Reload project*).
 
-### Пояснение вариантов лицензирования
-1. **Free Trial** – идеально для обучения и небольших проектов.  
-2. **Temporary License** – запросите 30‑дневный ключ для расширенной оценки.  
-3. **Full License** – требуется для производственных нагрузок.
+### License Options Explained
+1. **Free Trial** – perfect for learning and small projects.  
+2. **Temporary License** – request a 30‑day key for extended evaluation.  
+3. **Full License** – required for production workloads.
 
-### Базовая структура проекта
+### Basic Project Structure
 ```
 your-project/
 ├── src/main/java/
@@ -110,10 +114,10 @@ your-project/
 └── pom.xml
 ```
 
-## Основная реализация: пошаговое руководство
+## Core Implementation: Step‑by‑Step Guide
 
-### Понимание класса Comparer
-Класс `Comparer` – ваш основной интерфейс для сравнения документов:
+### Understanding the Comparer Class
+The `Comparer` class is your primary interface for document comparison:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -124,17 +128,17 @@ try (Comparer comparer = new Comparer("sourceFilePath")) {
 }
 ```
 
-**Зачем использовать try‑with‑resources?** Класс `Comparer` реализует `AutoCloseable`, поэтому такой шаблон гарантирует корректную очистку памяти и файловых дескрипторов – спасает жизнь при работе с большими PDF.
+**Why use try‑with‑resources?** The `Comparer` implements `AutoCloseable`, so this pattern guarantees proper cleanup of memory and file handles – a lifesaver with large PDFs.
 
-### Функция 1: Получение координат изменений
-Эта функция указывает точное место каждого изменения – своего рода GPS‑координаты для правок в документе.
+### Feature 1: Getting Change Coordinates
+Эта функция точно указывает, где произошло каждое изменение — как GPS‑координаты для правок в документе.
 
-#### Когда использовать
-- Создание визуального дифф‑просмотрщика  
-- Реализация точных аудиторских отчётов  
-- Выделение изменений в PDF‑просмотрщике для юридической проверки
+#### When to Use It
+- Building a visual diff viewer  
+- Implementing precise audit reports  
+- Highlighting changes in a PDF viewer for legal review  
 
-#### Детали реализации
+#### Implementation Details
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.result.ChangeInfo;
@@ -147,7 +151,7 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-Включите расчёт координат:
+Enable coordinate calculation:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -158,7 +162,7 @@ final Path resultPath = comparer.compare(
                 .build());
 ```
 
-Извлеките и обработайте информацию об изменениях:
+Extract and work with the change information:
 
 ```java
 ChangeInfo[] changes = comparer.getChanges();
@@ -168,24 +172,23 @@ for (ChangeInfo change : changes) {
 }
 ```
 
-**Примечание о производительности**: Расчёт координат добавляет накладные расходы, поэтому включайте его только при необходимости.
+**Performance Note**: Calculating coordinates adds overhead, so enable it only when you need the data.
 
-### Функция 2: Получение изменений по путям к файлам
-Если нужен простой список изменений, этот метод – ваш выбор.
+### Feature 2: Getting Changes from File Paths
+Если нужен простой список изменений, это ваш основной метод.
 
-#### Идеально подходит для
-- Быстрых сводок изменений  
-- Простейших дифф‑отчётов  
-- Пакетной обработки нескольких пар документов
+#### Perfect For
+- Quick change summaries  
+- Simple diff reports  
+- Batch processing multiple document pairs  
 
-#### Реализация
-
+#### Implementation
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-Запустите сравнение без дополнительных опций:
+Run the comparison without extra options:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -194,18 +197,17 @@ System.out.println("\nCount of changes: " + changes.length);
 }
 ```
 
-**Best Practice**: Всегда проверяйте длину массива `changes` – пустой массив означает, что документы идентичны.
+**Best Practice**: Always verify the length of the `changes` array – an empty array means the documents are identical.
 
-### Функция 3: Работа с потоками
+### Feature 3: Working with Streams
 Идеально для веб‑приложений, микросервисов или любых сценариев, где файлы находятся в памяти или в облаке.
 
-#### Распространённые сценарии
-- Обработка загрузки файлов в контроллере Spring Boot  
-- Получение документов из AWS S3 или Azure Blob Storage  
-- Обработка PDF, хранящихся в колонке BLOB базы данных
+#### Common Use Cases
+- Handling file uploads in a Spring Boot controller  
+- Pulling documents from AWS S3 or Azure Blob Storage  
+- Processing PDFs stored in a database BLOB column  
 
-#### Реализация потоков
-
+#### Stream Implementation
 ```java
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -216,7 +218,7 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
     comparer.add(targetStream);
 ```
 
-Продолжайте с тем же вызовом сравнения:
+Proceed with the same comparison call:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -225,18 +227,17 @@ System.out.println("\nCount of changes: " + Arrays.toString(changes).length);
 }
 ```
 
-**Совет по памяти**: Блок try‑with‑resources автоматически закрывает потоки, предотвращая утечки при работе с большими PDF.
+**Memory Tip**: The try‑with‑resources block ensures streams are closed automatically, preventing leaks with large PDFs.
 
-### Функция 4: Извлечение целевого текста
-Иногда нужен точный текст, который изменился – идеально для журналов изменений или уведомлений.
+### Feature 4: Extracting Target Text
+Иногда требуется точный текст изменения — идеально для журналов изменений или уведомлений.
 
-#### Практические применения
-- Построение UI журнала изменений  
-- Отправка email‑уведомлений с вставленным/удалённым текстом  
-- Аудит контента на соответствие требованиям
+#### Practical Applications
+- Building a change‑log UI  
+- Sending email alerts with inserted/deleted text  
+- Auditing content for compliance  
 
-#### Реализация
-
+#### Implementation
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
@@ -251,7 +252,7 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
 }
 ```
 
-**Совет по фильтрации**: Сфокусируйтесь на конкретных типах изменений:
+**Filtering Tip**: Focus on specific change types:
 
 ```java
 for (ChangeInfo change : changes) {
@@ -261,11 +262,11 @@ for (ChangeInfo change : changes) {
 }
 ```
 
-## Распространённые подводные камни и как их избежать
+## Common Pitfalls and How to Avoid Them
 
-### 1. Проблемы с путями к файлам
-**Проблема**: «File not found», хотя файл существует.  
-**Решение**: Используйте абсолютные пути во время разработки или проверьте рабочий каталог. В Windows экранируйте обратные слеши или используйте прямые слеши.
+### 1. File Path Issues
+**Problem**: “File not found” even when the file exists.  
+**Solution**: Use absolute paths during development or verify the working directory. On Windows, escape backslashes or use forward slashes.
 
 ```java
 // Good
@@ -274,24 +275,24 @@ String path = "C:/Users/yourname/documents/test.docx";
 String path = "C:\\Users\\yourname\\documents\\test.docx";
 ```
 
-### 2. Утечки памяти при больших файлах
-**Проблема**: `OutOfMemoryError` на больших PDF.  
-**Решение**: Всегда используйте try‑with‑resources и рассматривайте потоковые API или обработку документов частями.
+### 2. Memory Leaks with Large Files
+**Problem**: `OutOfMemoryError` on big PDFs.  
+**Solution**: Always use try‑with‑resources and consider streaming APIs or processing documents in chunks.
 
-### 3. Неподдерживаемые форматы файлов
-**Проблема**: Исключения для некоторых форматов.  
-**Решение**: Сначала проверьте список поддерживаемых форматов. GroupDocs поддерживает более 60 форматов; убедитесь в совместимости перед реализацией.
+### 3. Unsupported File Formats
+**Problem**: Exceptions for certain formats.  
+**Solution**: Check the supported formats list first. GroupDocs supports 60+ formats; verify before implementing.
 
-### 4. Проблемы с производительностью
-**Проблема**: Сравнение занимает слишком много времени.  
-**Решение**:  
-- Отключайте расчёт координат, если они не нужны.  
-- Используйте подходящие `CompareOptions`.  
-- При возможности параллелизуйте пакетные задания.
+### 4. Performance Issues
+**Problem**: Comparisons taking too long.  
+**Solution**:  
+- Disable coordinate calculation unless required.  
+- Use appropriate `CompareOptions`.  
+- Parallelize batch jobs where possible.
 
-## Советы по оптимизации производительности
+## Performance Optimization Tips
 
-### Выбор правильных опций
+### Choose the Right Options
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setCalculateCoordinates(false) // Only enable when needed
@@ -299,14 +300,12 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-### Управление памятью
-- Обрабатывайте документы пакетами, а не загружайте всё сразу.  
-- Используйте потоковые API для больших файлов.  
-- Реализуйте корректную очистку в блоках `finally` или полагайтесь на try‑with‑resources.
+### Memory Management
+- Process documents in batches rather than loading everything at once.  
+- Use streaming APIs for large files.  
+- Implement proper cleanup in `finally` blocks or rely on try‑with‑resources.
 
-### Стратегии кэширования
-Для часто сравниваемых документов кэшируйте результаты:
-
+### Caching Strategies
 ```java
 // Pseudo-code for caching concept
 String cacheKey = generateCacheKey(sourceFile, targetFile);
@@ -315,9 +314,9 @@ if (cache.contains(cacheKey)) {
 }
 ```
 
-## Реальные сценарии и решения
+## Real‑World Scenarios and Solutions
 
-### Сценарий 1: Система управления контентом
+### Scenario 1: Content Management System
 ```java
 public class ArticleVersionComparison {
     public List<ChangeInfo> compareVersions(String oldVersion, String newVersion) {
@@ -333,7 +332,7 @@ public class ArticleVersionComparison {
 }
 ```
 
-### Сценарий 2: Автоматизированное обеспечение качества
+### Scenario 2: Automated Quality Assurance
 ```java
 public boolean validateReportAgainstTemplate(InputStream report, InputStream template) {
     try (Comparer comparer = new Comparer(template)) {
@@ -350,7 +349,7 @@ public boolean validateReportAgainstTemplate(InputStream report, InputStream tem
 }
 ```
 
-### Сценарий 3: Пакетная обработка документов
+### Scenario 3: Batch Document Processing
 ```java
 public void processBatchComparison(List<DocumentPair> documents) {
     documents.parallelStream().forEach(pair -> {
@@ -365,24 +364,9 @@ public void processBatchComparison(List<DocumentPair> documents) {
 }
 ```
 
-## Устранение распространённых проблем
+## Advanced Features and Best Practices
 
-### Результаты сравнения выглядят некорректно
-- Проверьте кодировку документов (UTF‑8 vs другие).  
-- Ищите скрытые символы или различия в форматировании.
-
-### Падение производительности
-- Профилируйте приложение, чтобы найти узкие места.  
-- Настройте `CompareOptions`, отключив ненужные функции.
-
-### Проблемы интеграции в продакшн
-- Проверьте classpath и версии зависимостей.  
-- Убедитесь, что файлы лицензий правильно размещены на сервере.  
-- Проверьте права доступа к файлам и сетевые настройки.
-
-## Расширенные возможности и лучшие практики
-
-### Работа с различными форматами файлов
+### Working with Different File Formats
 ```java
 public boolean isFormatSupported(String filePath) {
     String extension = getFileExtension(filePath);
@@ -393,7 +377,7 @@ public boolean isFormatSupported(String filePath) {
 }
 ```
 
-### Обработка больших документов
+### Handling Large Documents
 ```java
 CompareOptions largeDocOptions = new CompareOptions.Builder()
     .setCalculateCoordinates(false)  // Saves memory
@@ -402,7 +386,7 @@ CompareOptions largeDocOptions = new CompareOptions.Builder()
     .build();
 ```
 
-### Шаблоны обработки ошибок
+### Error Handling Patterns
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
     try (Comparer comparer = new Comparer(source)) {
@@ -424,13 +408,13 @@ public ComparisonResult compareDocuments(String source, String target) {
 }
 ```
 
-## Часто задаваемые вопросы
+## Frequently Asked Questions
 
-**В: Какова минимальная версия Java, требуемая для GroupDocs.Comparison?**  
-О: Java 8 — минимум, но Java 11+ рекомендуется для лучшей производительности и безопасности.
+**Q: What's the minimum Java version required for GroupDocs.Comparison?**  
+A: Java 8 is the minimum, but Java 11+ is recommended for better performance and security.
 
-**В: Можно ли сравнивать более двух документов одновременно?**  
-О:
+**Q: Can I compare more than two documents simultaneously?**  
+A:
 ```java
 try (Comparer comparer = new Comparer(sourceDocument)) {
     comparer.add(targetDocument1);
@@ -440,15 +424,15 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 }
 ```
 
-**В: Как работать с очень большими документами (100 МБ+)?**  
-О:  
-- Отключайте расчёт координат, если они не нужны.  
-- Используйте потоковые API.  
-- Обрабатывайте документы частями или по страницам.  
-- Тщательно мониторьте использование памяти.
+**Q: How should I handle very large documents (100 MB+)?**  
+A:  
+- Disable coordinate calculation unless needed.  
+- Use streaming APIs.  
+- Process documents in chunks or pages.  
+- Monitor memory usage closely.
 
-**В: Есть ли способ визуально выделять изменения в выводе?**  
-О:
+**Q: Is there a way to visually highlight changes in the output?**  
+A:
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setShowInsertedContent(true)
@@ -457,8 +441,8 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-**В: Как обрабатывать документы, защищённые паролем?**  
-О:
+**Q: How do I handle password‑protected documents?**  
+A:
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
@@ -468,8 +452,8 @@ try (Comparer comparer = new Comparer(protectedDocument, loadOptions)) {
 }
 ```
 
-**В: Можно ли настроить способ обнаружения изменений?**  
-О:
+**Q: Can I customize how changes are detected?**  
+A:
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setDetectStyleChanges(false)     // Ignore formatting changes
@@ -477,8 +461,8 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-**В: Как лучше всего интегрировать это с Spring Boot?**  
-О:
+**Q: What's the best way to integrate this with Spring Boot?**  
+A:
 ```java
 @Service
 public class DocumentComparisonService {
@@ -489,14 +473,14 @@ public class DocumentComparisonService {
 }
 ```
 
-## Дополнительные ресурсы
+## Additional Resources
 
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)
+- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)
 - [Community Support Forum](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Последнее обновление:** 2025-12-20  
-**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
-**Автор:** GroupDocs
+**Last Updated:** 2026-02-21  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs

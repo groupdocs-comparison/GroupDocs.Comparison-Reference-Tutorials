@@ -1,21 +1,21 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
-description: Leer hoe je documenten in Java kunt vergelijken met de GroupDocs.Comparison
-  API, inclusief het vergelijken van meerdere bestanden en wachtwoordbeveiligde documenten.
-  Stapsgewijze handleiding met code, best practices en probleemoplossing.
+date: '2026-02-23'
+description: Leer hoe je documenten in Java kunt vergelijken met de GroupDocs.Comparison‑API,
+  inclusief het vergelijken van meerdere bestanden en wachtwoordbeveiligde documenten.
+  Stapsgewijze gids met code, best practices en probleemoplossing.
 keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
   in java, java compare multiple files, java compare password protected, Java file
   comparison library, how to compare Word documents in Java
-lastmod: '2025-12-21'
+lastmod: '2026-02-23'
 linktitle: Java Document Comparison Tutorial
 tags:
 - document-comparison
 - groupdocs
 - java-tutorial
 - api-integration
-title: documenten vergelijken in Java – GroupDocs API Complete gids
+title: Documenten vergelijken in Java – Complete gids voor GroupDocs API
 type: docs
 url: /nl/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/
 weight: 1
@@ -23,22 +23,22 @@ weight: 1
 
 # documenten vergelijken in java – GroupDocs API Complete Guide
 
-## Introduction
+## Introductie
 
-Heb je ooit handmatig twee documenten regel voor regel vergeleken, alleen om kritieke verschillen te missen? Je bent zeker niet de enige. **compare documents in java** is een veelvoorkomende uitdaging, vooral wanneer je metadata moet behouden, wachtwoord‑beveiligde bestanden moet verwerken, of veel bestanden tegelijk moet vergelijken.
+Heb je ooit handmatig twee documenten regel voor regel vergeleken, alleen om kritieke verschillen te missen? Je bent zeker niet de enige. **compare documents in java** is een veelvoorkomende uitdaging, vooral wanneer je metadata moet behouden, met wachtwoord‑beveiligde bestanden moet omgaan, of veel bestanden tegelijk moet vergelijken.
 
-**Hier is het punt**: de meeste ontwikkelaars worstelen omdat ze ofwel iets vanaf nul bouwen (wat eeuwig duurt) of basis diff‑tools gebruiken die opmaak, metadata en beveiligingsinstellingen negeren. Daar komt **GroupDocs.Comparison for Java** om de hoek kijken.
+**Het punt is**: de meeste ontwikkelaars hebben moeite omdat ze ofwel iets vanaf nul bouwen (wat eeuwig duurt) of basis diff‑tools gebruiken die opmaak, metadata en beveiligingsinstellingen negeren. Daar komt **GroupDocs.Comparison for Java** om de hoek kijken.
 
 In deze uitgebreide tutorial ontdek je hoe je robuuste documentvergelijking implementeert in je Java‑applicaties. We behandelen alles van basisconfiguratie tot geavanceerde metadata‑verwerking, plus praktijkvoorbeelden die je daadwerkelijk in productie kunt gebruiken. Aan het einde weet je hoe je:
 
-- GroupDocs.Comparison instellen in je Java‑project (het is makkelijker dan je denkt)  
+- GroupDocs.Comparison in je Java‑project instellen (het is makkelijker dan je denkt)  
 - **compare documents in java** terwijl je de integriteit van metadata behoudt  
-- Omgaan met **java compare multiple files** en **java compare password protected** scenario's  
+- Scenario's **java compare multiple files** en **java compare password protected** afhandelen  
 - Prestaties optimaliseren voor grootschalige documentverwerking  
 
-Klaar om documentvergelijking een fluitje van een cent te maken in je Java‑apps? Laten we erin duiken!
+Klaar om documentvergelijking een fluitje van een cent te maken in je Java‑apps? Laten we beginnen!
 
-## Quick Answers
+## Snelle Antwoorden
 - **Welke bibliotheek laat me documenten vergelijken in java?** GroupDocs.Comparison for Java  
 - **Kan ik meerdere bestanden tegelijk vergelijken?** Ja – voeg zoveel doel‑documenten toe als nodig  
 - **Hoe ga ik om met wachtwoord‑beveiligde documenten?** Gebruik `LoadOptions` met het documentwachtwoord  
@@ -46,7 +46,7 @@ Klaar om documentvergelijking een fluitje van een cent te maken in je Java‑app
 - **Welke Java‑versie is vereist?** JDK 8+, JDK 11+ aanbevolen  
 
 ## Wat is **compare documents in java**?
-Documenten vergelijken in Java betekent programmatisch verschillen detecteren—tekstwijzigingen, opmaakaanpassingen of metadata‑updates—tussen twee of meer bestanden met behulp van een bibliotheek die de documentstructuur begrijpt. GroupDocs.Comparison abstraheert de complexiteit en biedt je een eenvoudige API om een diff‑document te genereren dat elke wijziging markeert.
+Documenten vergelijken in Java betekent programmatisch verschillen detecteren—tekstwijzigingen, opmaakaanpassingen of metadata‑updates—tussen twee of meer bestanden met behulp van een bibliotheek die de documentstructuur begrijpt. GroupDocs.Comparison abstraheert de complexiteit en biedt een eenvoudige API om een diff‑document te genereren dat elke wijziging markeert.
 
 ## Waarom GroupDocs.Comparison voor Java gebruiken?
 - **Rijke formaatondersteuning** – DOCX, PDF, XLSX, PPTX, TXT, en meer  
@@ -54,15 +54,15 @@ Documenten vergelijken in Java betekent programmatisch verschillen detecteren—
 - **Wachtwoordondersteuning** – open beveiligde bestanden zonder handmatige decryptie  
 - **Schaalbare prestaties** – batchverwerking, async uitvoering, en geheugen‑efficiënt ontwerp  
 
-## Vereisten
+## Prerequisites
 
 - **Java‑omgeving:** JDK 8+ (JDK 11+ aanbevolen), IDE naar keuze, Maven (of Gradle)  
 - **GroupDocs.Comparison‑bibliotheek:** Versie 25.2 of later (pak altijd de nieuwste)  
 - **Licentie:** Gratis proefversie, tijdelijke 30‑daagse licentie, of commerciële licentie  
 
-## GroupDocs.Comparison instellen in je project
+## GroupDocs.Comparison in je project instellen
 
-### Maven‑configuratie
+### Maven Configuration
 
 Allereerst – voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom.xml`. Dit is waar de meeste tutorials onnodig ingewikkeld worden, maar het is eigenlijk heel simpel:
 
@@ -84,31 +84,31 @@ Allereerst – voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom
 </dependencies>
 ```
 
-**Pro tip:** Controleer altijd het nieuwste versienummer op de [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/). Nieuwe versies bevatten vaak prestatie‑verbeteringen en bug‑fixes die je hoofdpijn kunnen besparen.
+**Pro tip:** Controleer altijd het nieuwste versienummer op de [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/). Nieuwe versies bevatten vaak prestatieverbeteringen en bugfixes die je hoofdpijn besparen.
 
 ### Je licentie regelen
 
-Dit is wat de meeste ontwikkelaars niet beseffen: je kunt direct met de gratis proefversie van GroupDocs.Comparison beginnen. Geen creditcard nodig, geen voorwaarden.
+Wat de meeste ontwikkelaars niet beseffen: je kunt direct beginnen met het testen van GroupDocs.Comparison via hun gratis proefversie. Geen creditcard vereist, geen verplichtingen.
 
 **Je opties:**
-1. **Free Trial** – perfect voor testen en kleine projecten. Download gewoon en begin met coderen!  
-2. **Temporary License** – meer tijd nodig om te evalueren? Haal een 30‑daagse tijdelijke licentie [hier](https://purchase.groupdocs.com/temporary-license/)  
-3. **Commercial License** – klaar voor productie? Bekijk de prijzen [hier](https://purchase.groupdocs.com/buy)
+1. **Gratis proefversie** – perfect voor testen en kleine projecten. Download en begin meteen met coderen!  
+2. **Tijdelijke licentie** – meer tijd nodig om te evalueren? Haal een 30‑daagse tijdelijke licentie [hier](https://purchase.groupdocs.com/temporary-license/)  
+3. **Commerciële licentie** – klaar voor productie? Bekijk de prijzen [hier](https://purchase.groupdocs.com/buy)
 
-De gratis proefversie bevat alle functies maar voegt een watermerk toe aan uitvoerbestanden. Voor ontwikkeling en testen is dit meestal prima.
+De gratis proefversie bevat alle functies, maar voegt een watermerk toe aan uitvoerbestanden. Voor ontwikkeling en testen is dit meestal prima.
 
-## Implementatie van documentvergelijking: de volledige walkthrough
+## Implementatie van documentvergelijking: De volledige walkthrough
 
-Nu het belangrijkste deel! We bouwen stap voor stap een volledige documentvergelijkingsoplossing. Maak je geen zorgen – we leggen niet alleen het “hoe” uit, maar ook het “waarom” achter elke beslissing.
+Nu het hoofdonderdeel! We bouwen stap voor stap een volledige documentvergelijkingsoplossing. Maak je geen zorgen – we leggen niet alleen het "hoe" uit, maar ook het "waarom" achter elke beslissing.
 
-### Begrijpen van metadata‑bronnen (Dit is belangrijk!)
+### Metadata‑bronnen begrijpen (Dit is belangrijk!)
 
-Voordat we gaan coderen, laten we het hebben over iets dat veel ontwikkelaars tegenkomt: metadata‑bronnen. Wanneer je **compare documents in java**, moet je beslissen welke metadata (auteur, aanmaakdatum, aangepaste eigenschappen, enz.) van welk document behouden moet blijven in het resultaat.
+Voordat we gaan coderen, laten we iets bespreken dat veel ontwikkelaars tegenkomt: metadata‑bronnen. Wanneer je **compare documents in java** uitvoert, moet je bepalen welke metadata (auteur, aanmaakdatum, aangepaste eigenschappen, enz.) van welk document behouden moet blijven in het resultaat.
 
 GroupDocs.Comparison biedt drie opties:
-- **SOURCE** – gebruik metadata van het originele document  
-- **TARGET** – gebruik metadata van het document waarmee je vergelijkt  
-- **NONE** – verwijder alle metadata uit het resultaat  
+- **SOURCE** – metadata van het originele document gebruiken  
+- **TARGET** – metadata van het document waarmee je vergelijkt gebruiken  
+- **NONE** – alle metadata uit het resultaat verwijderen  
 
 Voor de meeste zakelijke toepassingen wil je **SOURCE** gebruiken om consistentie te behouden.
 
@@ -144,7 +144,7 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Hier is iets gaafs**: je kunt daadwerkelijk meerdere doel‑documenten toevoegen en ze allemaal in één bewerking tegen je bron vergelijken. Roep gewoon `add()` meerdere keren aan:
+**Iets leuks**: je kunt daadwerkelijk meerdere doel‑documenten toevoegen en ze allemaal in één bewerking met je bron vergelijken. Roep gewoon `add()` meerdere keren aan:
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -164,9 +164,9 @@ final Path resultPath = comparer.compare("output/comparison_result.docx",
 ```
 
 **Wat gebeurt er hier?** We vertellen GroupDocs om:
-1. Alle toegevoegde documenten te vergelijken met de bron  
-2. Het resultaat op ons opgegeven pad op te slaan  
-3. De metadata van het **SOURCE**‑document te gebruiken in het uiteindelijke resultaat  
+1. Alle toegevoegde documenten met de bron vergelijken  
+2. Het resultaat opslaan op het opgegeven pad  
+3. De metadata van het **SOURCE**‑document gebruiken in het uiteindelijke resultaat  
 
 ### Volledig werkend voorbeeld
 
@@ -198,9 +198,9 @@ public class DocumentComparison {
 
 ## Veelvoorkomende valkuilen en hoe ze te vermijden
 
-Na honderden ontwikkelaars te hebben geholpen met documentvergelijking, zie ik steeds dezelfde problemen terugkomen. Hier zijn de belangrijkste (en hoe je ze oplost):
+Na het helpen van honderden ontwikkelaars bij het implementeren van documentvergelijking, zie ik steeds dezelfde problemen terugkomen. Hier zijn de belangrijkste (en hoe je ze oplost):
 
-### Bestands‑padproblemen
+### File Path Issues
 
 **Probleem**: `FileNotFoundException` hoewel het bestand bestaat  
 **Oplossing**: Gebruik altijd absolute paden of los relatieve paden correct op
@@ -213,17 +213,17 @@ String sourcePath = "documents/source.docx";
 String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toString();
 ```
 
-### Geheugenbeheerproblemen
+### Memory Management Problems
 
 **Probleem**: Out‑of‑memory‑fouten bij het vergelijken van grote documenten  
-**Oplossing**: Verhoog de JVM‑heap‑grootte en gebruik correct resource‑beheer
+**Oplossing**: Verhoog de JVM‑heap‑grootte en gebruik juist resource‑beheer
 
 ```bash
 # Add these JVM arguments when running your application
 -Xmx4g -XX:+UseG1GC
 ```
 
-### Onjuiste metadata‑verwerking
+### Incorrect Metadata Handling
 
 **Probleem**: Belangrijke documentmetadata verliezen tijdens vergelijking  
 **Oplossing**: Stel altijd expliciet het metadata‑type in – vertrouw niet op standaardinstellingen
@@ -235,10 +235,10 @@ SaveOptions saveOptions = new SaveOptions.Builder()
         .build();
 ```
 
-### Licentie‑configuratieproblemen
+### License Configuration Issues
 
 **Probleem**: Watermerken verschijnen in productie  
-**Oplossing**: Controleer of je licentie correct is geladen voordat je `Comparer`‑instanties maakt
+**Oplossing**: Controleer of je licentie correct geladen is voordat je `Comparer`‑instanties maakt
 
 ```java
 // Load license at application startup
@@ -248,11 +248,11 @@ license.setLicense("path/to/your/license.lic");
 
 ## Best practices voor productiegebruik
 
-Gebaseerd op praktijkervaring, hier zijn de praktijken die amateurimplementaties scheiden van productie‑klare oplossingen:
+Gebaseerd op praktijkervaring, hier zijn de methoden die amateurimplementaties scheiden van productie‑klare oplossingen:
 
 ### Foutafhandeling die echt helpt
 
-Vang niet alleen uitzonderingen – verwerk ze betekenisvol:
+Vang niet alleen uitzonderingen – verwerk ze op een betekenisvolle manier:
 
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
@@ -276,29 +276,31 @@ public ComparisonResult compareDocuments(String source, String target) {
 }
 ```
 
-### Prestatie‑optimalisatie
+### Performance Optimization
 
 Voor scenario's met hoog volume, overweeg deze optimalisaties:
-- **Herbruik `Comparer`‑instanties** wanneer mogelijk (maar wees voorzichtig met thread‑veiligheid)  
-- **Verwerk documenten in batches** om te voorkomen dat systeembronnen overbelast raken  
-- **Gebruik asynchrone verwerking** voor grote documenten  
-- **Monitor geheugenverbruik** en pas JVM‑instellingen dienovereenkomstig aan  
 
-### Beveiligingsoverwegingen
+1. **`Comparer`‑instanties hergebruiken** wanneer mogelijk (maar wees voorzichtig met thread‑veiligheid)  
+2. **Documenten in batches verwerken** om te voorkomen dat systeembronnen overbelast raken  
+3. **Asynchrone verwerking gebruiken** voor grote documenten  
+4. **Geheugengebruik monitoren** en JVM‑instellingen dienovereenkomstig aanpassen  
+
+### Security Considerations
 
 Bij het verwerken van gevoelige documenten:
-- **Valideer bestandstypen** vóór verwerking  
-- **Implementeer juiste toegangscontroles**  
-- **Ruim tijdelijke bestanden** direct na gebruik op  
+
+- **Bestandstypen valideren** vóór verwerking  
+- **Juiste toegangscontroles implementeren**  
+- **Tijdelijke bestanden onmiddellijk opruimen** na gebruik  
 - **Overweeg encryptie** van vergelijkingsresultaten  
 
-## Praktische toepassingen en use‑cases
+## Praktijktoepassingen en use‑cases
 
-Laten we kijken hoe ontwikkelaars GroupDocs.Comparison in productie gebruiken:
+Laten we bekijken hoe ontwikkelaars GroupDocs.Comparison in productie gebruiken:
 
-### Juridische documentreview
+### Legal Document Review
 
-Advocatenkantoren gebruiken documentvergelijking om wijzigingen in contracten en juridische overeenkomsten bij te houden. De metadata‑behoudfunctie is hier cruciaal omdat ze de herkomst van documenten moeten behouden.
+Advocatenkantoren gebruiken documentvergelijking om wijzigingen in contracten en juridische overeenkomsten bij te houden. De functie voor metadata‑behoud is hier cruciaal omdat ze de herkomst van documenten moeten behouden.
 
 ```java
 // Typical legal document comparison workflow
@@ -318,9 +320,9 @@ public void reviewContractChanges(String originalContract, String revisedContrac
 }
 ```
 
-### Content Management Systemen
+### Content Management Systems
 
-CMS‑platformen gebruiken documentvergelijking voor versiebeheer en wijzigingsopsporing:
+CMS‑platforms gebruiken documentvergelijking voor versiebeheer en wijzigingsregistratie:
 
 ```java
 public class CMSDocumentVersioning {
@@ -347,7 +349,7 @@ public class CMSDocumentVersioning {
 }
 ```
 
-### Financiële documentanalyse
+### Financial Document Analysis
 
 Financiële instellingen gebruiken dit voor naleving van regelgeving en audit‑trails:
 
@@ -372,7 +374,7 @@ public AuditResult auditFinancialDocument(String originalReport, String submitte
 
 Wanneer je klaar bent om serieuze documentvolumes te verwerken, houden deze strategieën je applicatie responsief:
 
-### Geheugenbeheer
+### Memory Management
 
 Grote documenten kunnen snel het beschikbare geheugen opslokken. Zo ga je er efficiënt mee om:
 
@@ -400,7 +402,7 @@ public class OptimizedDocumentProcessor {
 }
 ```
 
-### Batchverwerking
+### Batch Processing
 
 Voor meerdere documentvergelijkingen is batchverwerking je vriend:
 
@@ -427,17 +429,17 @@ private ComparisonResult compareDocumentPair(DocumentPair pair) {
 
 ## Probleemoplossingsgids
 
-Wanneer dingen misgaan (en dat gebeurt soms), hier is je checklist voor debugging:
+Als er iets misgaat (en dat gebeurt soms), hier is je checklist voor debugging:
 
-### “Comparison Failed” fouten
+### "Comparison Failed" Errors
 
 **Meest voorkomende oorzaken:**
-- Niet‑ondersteund bestandsformaat  
-- Beschadigde bron‑documenten  
-- Onvoldoende geheugen  
-- Bestands‑toegangsrechtenproblemen  
+1. Niet‑ondersteund bestandsformaat  
+2. Beschadigde bron‑documenten  
+3. Onvoldoende geheugen  
+4. Bestands‑toegangsrechtenproblemen  
 
-**Debugstappen:**
+**Debug‑stappen:**
 
 ```java
 // Add comprehensive logging to identify the issue
@@ -459,26 +461,28 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 }
 ```
 
-### Prestatieproblemen
+### Performance Issues
 
 Als vergelijkingen te lang duren:
-- **Controleer documentgrootte** – bestanden groter dan 100 MB hebben mogelijk speciale behandeling nodig  
-- **Monitor geheugenverbruik** – vergroot de heap‑grootte indien nodig  
-- **Controleer bestand‑I/O‑prestaties** – trage opslag kan bewerkingen belemmeren  
-- **Overweeg documentformaat** – sommige formaten zijn complexer te verwerken  
 
-### Geheugenlekken
+1. **Controleer documentgrootte** – bestanden groter dan 100 MB hebben mogelijk speciale behandeling nodig  
+2. **Geheugengebruik monitoren** – vergroot de heap‑grootte indien nodig  
+3. **Controleer bestand‑I/O‑prestaties** – trage opslag kan een knelpunt vormen  
+4. **Overweeg documentformaat** – sommige formaten zijn complexer te verwerken  
+
+### Memory Leaks
 
 Tekenen dat je mogelijk geheugenlekken hebt:
+
 - Applicatieprestaties verslechteren na verloop van tijd  
 - `OutOfMemoryError` na het verwerken van veel documenten  
 - Hoge garbage‑collection‑activiteit  
 
 **Oplossing**: Gebruik altijd try‑with‑resources en monitor je applicatie met profiling‑tools.
 
-## Werken met wachtwoord‑beveiligde bestanden
+## Wachtwoord‑beveiligde bestanden verwerken
 
-Als je **java compare password protected** documenten moet vergelijken, gebruik `LoadOptions` bij het openen van de bron of het doel:
+Als je **java compare password protected** documenten moet vergelijken, gebruik dan `LoadOptions` bij het openen van de bron of het doel:
 
 ```java
 LoadOptions loadOptions = new LoadOptions("your_password");
@@ -487,9 +491,22 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
-## Integratie met Spring Boot
+## Hoe java compare password protected documenten
 
-Voor ontwikkelaars die microservices bouwen, verpak je de vergelijkingslogica in een Spring service‑bean:
+Wachtwoord‑beveiligde bestanden zijn gebruikelijk in gereguleerde sectoren. Door het wachtwoord via `LoadOptions` door te geven, blijft de vergelijkingsstroom ongewijzigd terwijl de bibliotheek het bestand veilig kan ontsleutelen. Vergeet niet wachtwoorden nooit hard‑coded op te nemen; bewaar ze in een veilige kluis of omgevingsvariabele en injecteer ze tijdens runtime.
+
+## Hoe grote documenten java te verwerken
+
+Wanneer documenten enkele honderden megabytes overschrijden, kun je trager verwerken of hoger geheugenverbruik ervaren. Om dit te beperken:
+
+- **Verhoog de JVM‑heap** (`-Xmx`), vooral voor batch‑taken.  
+- **Streaming inschakelen** waar mogelijk – GroupDocs.Comparison verwerkt bestanden intern in delen, maar je kunt de geheugenbelasting verder verminderen door niet het hele bestand in het geheugen te laden.  
+- **Vergelijkingen asynchroon uitvoeren** (zie het async‑voorbeeld hierboven) om je UI responsief te houden.  
+- **Splits zeer grote PDF’s** in logische secties voordat je vergelijkt, indien de bedrijfslogica dit toelaat.  
+
+## Integrating with Spring Boot
+
+Voor ontwikkelaars die microservices bouwen, wikkel je de vergelijkingslogica in een Spring‑service‑bean:
 
 ```java
 @Service
@@ -517,13 +534,13 @@ A: Absoluut! Voeg meerdere doel‑documenten toe met `comparer.add()` voordat je
 A: Het ondersteunt DOCX, PDF, XLSX, PPTX, TXT en vele anderen. Zie de volledige lijst in de officiële documentatie.
 
 **Q: Hoe ga ik om met wachtwoord‑beveiligde documenten?**  
-A: Gebruik de `LoadOptions`‑klasse om het wachtwoord op te geven bij het maken van de `Comparer`‑instantie (zie het voorbeeld hierboven).
+A: Gebruik de `LoadOptions`‑klasse om het wachtwoord te leveren bij het maken van de `Comparer`‑instantie (zie het voorbeeld hierboven).
 
 **Q: Is GroupDocs.Comparison thread‑safe?**  
-A: Een enkele `Comparer`‑instantie is niet thread‑safe, maar je kunt veilig meerdere instanties in parallelle threads gebruiken.
+A: Een enkele `Comparer`‑instantie is niet thread‑safe, maar je kunt meerdere instanties veilig in parallelle threads gebruiken.
 
-**Q: Hoe kan ik de prestaties verbeteren voor grote documenten?**  
-A: Vergroot de JVM‑heap (`-Xmx`), verwerk bestanden asynchroon, batch ze, en hergebruik `Comparer`‑objecten wanneer passend.
+**Q: Hoe kan ik de prestaties voor grote documenten verbeteren?**  
+A: Verhoog de JVM‑heap (`-Xmx`), verwerk bestanden asynchroon, batch ze, en hergebruik `Comparer`‑objecten wanneer passend.
 
 ## Aanvullende bronnen
 
@@ -532,6 +549,6 @@ A: Vergroot de JVM‑heap (`-Xmx`), verwerk bestanden asynchroon, batch ze, en h
 
 ---
 
-**Laatst bijgewerkt:** 2025-12-21  
-**Getest met:** GroupDocs.Comparison 25.2  
-**Auteur:** GroupDocs
+**Last Updated:** 2026-02-23  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs

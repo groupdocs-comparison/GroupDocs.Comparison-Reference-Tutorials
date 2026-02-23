@@ -1,13 +1,13 @@
 ---
 categories:
 - Java Development
-date: '2025-12-19'
+date: '2026-02-23'
 description: Pelajari cara membandingkan dokumen Word dengan Java menggunakan GroupDocs.Comparison.
   Kuasai perbandingan multi‑file untuk Word, PDF, teks, dan email dengan kode Java
-  langkah demi langkah.
+  langkah‑demi‑langkah.
 keywords: java document comparison library, compare multiple documents java, groupdocs
-  comparison tutorial, java file diff tool, how to compare word documents in java
-lastmod: '2025-12-19'
+  comparison tutorial, java file diff tool, how to compare word docs java
+lastmod: '2026-02-23'
 linktitle: Java Document Comparison Guide
 tags:
 - document-comparison
@@ -20,46 +20,49 @@ url: /id/java/advanced-comparison/master-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Membandingkan Dokumen Word Java – Perbandingan Lanjutan GroupDocs
+# compare word docs java – GroupDocs Advanced Comparison
 
-**Kesulitan dengan peninjauan dokumen manual?** Berikut cara **compare word documents java** dan menghemat jam kerja yang melelahkan.
+**Kesulitan dengan tinjauan dokumen manual?** Berikut cara **compare word docs java** dan menghemat jam kerja yang membosankan.
 
-Jika Anda pernah harus membandingkan secara manual banyak versi kontrak, laporan, atau rangkaian email, Anda pasti tahu kesulitannya. Satu perubahan yang terlewat dapat merugikan bisnis Anda ribuan dolar, namun metode perbandingan manual tradisional lambat, rawan kesalahan, dan jujur saja… sangat menyiksa.
+Jika Anda pernah harus membandingkan secara manual beberapa versi kontrak, laporan, atau rangkaian email, Anda pasti tahu rasa sakitnya. Satu perubahan yang terlewat dapat menelan ribuan dolar bagi bisnis Anda, sementara metode perbandingan manual tradisional lambat, rawan kesalahan, dan secara jujur… menghancurkan semangat.
 
 Di sinilah GroupDocs.Comparison untuk Java berperan. Perpustakaan perbandingan dokumen yang kuat ini memungkinkan Anda membandingkan dokumen Word, PDF, file teks, dan email secara programatis dengan hanya beberapa baris kode. Anda akan menangkap setiap perbedaan secara otomatis, menghasilkan laporan perbandingan terperinci, dan membebaskan tim Anda untuk fokus pada hal yang benar‑benar penting.
 
 Dalam panduan komprehensif ini, Anda akan belajar cara mengimplementasikan perbandingan dokumen dalam aplikasi Java Anda, menghindari jebakan umum, dan mengoptimalkan kinerja untuk operasi berskala besar.
 
 ## Quick Answers
-- **Apa perpustakaan utama?** GroupDocs.Comparison untuk Java.  
-- **Format apa saja yang didukung?** Word, PDF, teks, email, dan lebih dari 50 lainnya.  
-- **Apakah saya memerlukan lisensi?** Versi percobaan berfungsi dengan watermark; produksi memerlukan lisensi.  
-- **Bisakah saya membandingkan banyak file sekaligus?** Ya – tambahkan beberapa dokumen target ke satu comparer.  
-- **Bagaimana menangani file besar?** Gunakan stream dan tingkatkan ukuran heap JVM.
+- **What is the primary library?** GroupDocs.Comparison for Java.  
+- **Which formats are supported?** Word, PDF, text, email, and 50+ others.  
+- **Do I need a license?** A trial works with watermarks; production requires a license.  
+- **Can I compare many files at once?** Yes – add multiple target documents to a single comparer.  
+- **How to handle large files?** Use streams and increase JVM heap size.
 
-## Apa itu **compare word documents java**?
-Membandingkan dokumen Word di Java berarti menggunakan API untuk mendeteksi penyisipan, penghapusan, dan perubahan format di berbagai versi file `.docx`. GroupDocs.Comparison menyederhanakan kompleksitas tersebut, menghasilkan laporan diff yang menyoroti setiap perubahan.
+## What is **compare word docs java**?
+Comparing Word documents in Java means using an API to detect insertions, deletions, and formatting changes across different versions of a `.docx` file. GroupDocs.Comparison abstracts the complexity, delivering a diff report that highlights every change.
 
-## Mengapa Menggunakan GroupDocs untuk Java Membandingkan Banyak File?
-- **Kecepatan:** Memproses puluhan dokumen dalam hitungan detik.  
-- **Akurasi:** Deteksi tingkat karakter, termasuk perubahan gaya.  
-- **Fleksibilitas:** Berfungsi dengan Word, PDF, teks, email, dan lainnya.  
-- **Skalabilitas:** Menangani file besar ketika Anda menggunakan stream dan pengaturan memori yang tepat.
+## Why Use GroupDocs for Java Compare Multiple Files?
+- **Speed:** Process dozens of documents in seconds.  
+- **Accuracy:** Character‑level detection, including style changes.  
+- **Flexibility:** Works with Word, PDF, text, email, and more.  
+- **Scalability:** Handles large files when you use streams and proper memory settings.
 
-## Prasyarat: Apa yang Anda Butuhkan untuk Memulai
-1. **Java Development Kit (JDK) 8+** – fitur Java modern diperlukan.  
-2. **Maven atau Gradle** – kami akan menggunakan Maven untuk manajemen dependensi.  
-3. **Pengetahuan dasar Java** – try‑catch, penanganan file, dan stream.  
-4. **Dokumen contoh** – beberapa dokumen Word, PDF, atau file teks untuk pengujian.  
+## How to compare word docs java in your Java project
+Below is a step‑by‑step walkthrough that shows exactly how to set up the library, add several target files, and generate a comparison report. Follow each step, and you’ll have a working solution in minutes.
 
-**Pro tip:** Pastikan aturan firewall mengizinkan akses ke repositori Maven GroupDocs sebelum Anda memulai.
+## Prerequisites: What You Need to Get Started
+1. **Java Development Kit (JDK) 8+** – modern Java features are required.  
+2. **Maven or Gradle** – we’ll use Maven for dependency management.  
+3. **Basic Java knowledge** – try‑catch, file handling, and streams.  
+4. **Sample documents** – a few Word docs, PDFs, or text files for testing.  
 
-## Quick Start: Menyiapkan GroupDocs.Comparison untuk Java
+**Pro tip:** Verify firewall rules allow access to the GroupDocs Maven repository before you start.
 
-Memulai dengan perpustakaan perbandingan dokumen Java ini cukup mudah, namun ada beberapa hal yang perlu diwaspadai.
+## Quick Start: Setting Up GroupDocs.Comparison for Java
+
+Getting started with this Java document comparison library is straightforward, but there are a few gotchas to watch out for.
 
 ### Maven Configuration
-Tambahkan repositori dan dependensi ke `pom.xml` Anda. Perhatikan URL repositori yang spesifik – menggunakan yang salah adalah kesalahan umum yang akan membuat Anda kebingungan:
+Add the repository and dependency to your `pom.xml`. Note the specific repository URL – using the wrong one is a common mistake that'll leave you scratching your head:
 
 ```xml
 <repositories>
@@ -79,12 +82,12 @@ Tambahkan repositori dan dependensi ke `pom.xml` Anda. Perhatikan URL repositori
 ```
 
 ### Licensing: Trial vs Production
-Untuk tujuan pengujian, Anda dapat menggunakan perpustakaan tanpa lisensi (dengan watermark). Untuk penggunaan produksi, Anda memerlukan lisensi sementara untuk evaluasi atau lisensi komersial penuh. Versi percobaan menambahkan watermark pada hasil perbandingan – hal ini perlu diingat saat menyajikan kepada pemangku kepentingan.
+For testing purposes, you can use the library without a license (with watermarks). For production use, you'll need either a temporary license for evaluation or a full commercial license. The trial version adds watermarks to your comparison results – something to keep in mind when presenting to stakeholders.
 
-## Cara **compare word documents java** dengan GroupDocs
+## How to **compare word docs java** with GroupDocs
 
-### Langkah 1: Inisialisasi Document Comparer Anda
-Kelas `Comparer` adalah titik masuk utama. Selalu gunakan try‑with‑resources untuk memastikan pembersihan yang tepat:
+### Step 1: Initialize Your Document Comparer
+The `Comparer` class is your main entry point. Always use try‑with‑resources to ensure proper cleanup:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word_document.docx")) {
@@ -92,10 +95,10 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word_docum
 }
 ```
 
-**Penting:** Jalur dokumen sumber harus absolut atau relatif dengan benar terhadap direktori kerja Anda. Kesalahan umum adalah menganggap jalur relatif ke root proyek padahal sebenarnya relatif ke tempat Anda menjalankan JVM.
+**Important:** The source document path must be absolute or properly relative to your working directory. A common mistake is assuming the path is relative to your project root when it's actually relative to where you run the JVM.
 
-### Langkah 2: Tambahkan Dokumen Target untuk Perbandingan
-Anda dapat menambahkan beberapa dokumen target untuk dibandingkan dengan sumber Anda. Di sinilah kekuatan sebenarnya terlihat – alih‑alih membandingkan dokumen satu per satu, Anda dapat memproses semuanya sekaligus:
+### Step 2: Add Target Documents for Comparison
+You can add multiple target documents to compare against your source. This is where the real power shows – instead of comparing documents one‑by‑one, you can process them all at once:
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word_document.docx");
@@ -103,20 +106,20 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2_word_document.docx");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target3_word_document.docx");
 ```
 
-### Langkah 3: Hasilkan Laporan Perbandingan Anda
-Jalankan perbandingan dan tentukan tempat menyimpan hasilnya:
+### Step 3: Generate Your Comparison Report
+Execute the comparison and specify where to save your results:
 
 ```java
 final Path resultPath = comparer.compare("YOUR_OUTPUT_DIRECTORY/compare_multiple_word_documents_result.docx");
 ```
 
-File hasil akan berisi semua perbedaan yang disorot, memudahkan Anda melihat perubahan di semua dokumen.
+The result file will contain all differences highlighted, making it easy to spot changes across all your documents.
 
-## Cara **java compare multiple files** – Contoh File Teks
-Perbandingan file teks sangat berguna untuk file konfigurasi, review kode, atau konten teks biasa lainnya. Prosesnya serupa tetapi menggunakan stream untuk manajemen memori yang lebih baik pada file besar.
+## How to **java compare multiple files** – Text File Example
+Text file comparison is incredibly useful for configuration files, code reviews, or any plain‑text content. The process is similar but uses streams for better memory management with large files.
 
-### Menyiapkan Perbandingan Berbasis Stream
-Menggunakan `OutputStream` memberi Anda kontrol lebih besar atas output dan lebih efisien memori untuk operasi besar:
+### Setting Up Stream‑Based Comparison
+Using an `OutputStream` gives you more control over the output and is more memory‑efficient for large operations:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_txt_documents_result.txt");
@@ -132,13 +135,13 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-**Tips kinerja:** Untuk file teks sangat besar (100 MB+), pertimbangkan memecahnya menjadi potongan‑potongan kecil untuk menghindari lonjakan memori.
+**Performance tip:** For very large text files (100 MB+), consider splitting them into smaller chunks to avoid memory spikes.
 
-## Cara **compare multiple pdfs java** – Perbandingan Dokumen Email
-Membandingkan dokumen email penting untuk penemuan hukum, audit kepatuhan, atau menjaga konsistensi dalam komunikasi pelanggan.
+## How to **compare multiple pdfs java** – Email Document Comparison
+Comparing email documents is crucial for legal discovery, compliance audits, or maintaining consistency in customer communications.
 
-### Menangani Format File Email
-File email (.eml, .msg) berisi metadata yang penting untuk dipertahankan selama perbandingan:
+### Handling Email File Formats
+Email files (.eml, .msg) contain metadata that's important to preserve during comparison:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_email_documents_result.eml");
@@ -152,11 +155,11 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-## Cara **handle large files java** – Perbandingan Dokumen PDF
-Perbandingan PDF krusial dalam lingkungan hukum, penelitian akademik, dan skenario lain di mana integritas dokumen sangat penting.
+## How to **handle large files java** – PDF Document Comparison
+PDF comparison is critical in legal environments, academic research, and any scenario where document integrity is paramount.
 
-### Perbandingan PDF yang Kuat dengan Penanganan Error
-PDF dapat menjadi rumit – mungkin memiliki encoding berbeda, font tersemat, atau pengaturan keamanan. Berikut cara menangani kasus tepi tersebut:
+### Robust PDF Comparison with Error Handling
+PDFs can be tricky – they might have different encoding, embedded fonts, or security settings. Here's how to handle these edge cases:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_pdf_documents_result.pdf");
@@ -175,10 +178,13 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-## Opsi Konfigurasi Lanjutan
+## Using a java file diff tool for advanced scenarios
+If you need granular control—such as custom diff visualizations or integration with CI pipelines—think of GroupDocs.Comparison as a **java file diff tool** that can be extended. You can combine the library with your own reporting logic, push results to a dashboard, or trigger alerts when critical changes are detected.
 
-### Menyesuaikan Sensitivitas Perbandingan
-Terkadang Anda memerlukan kontrol lebih besar atas apa yang dianggap “perbedaan”. GroupDocs.Comparison menawarkan beberapa opsi konfigurasi:
+## Advanced Configuration Options
+
+### Fine‑tuning Comparison Sensitivity
+Sometimes you need more control over what counts as a “difference.” GroupDocs.Comparison offers several configuration options:
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -187,18 +193,18 @@ options.setDetectStyleChanges(true);   // Catch formatting changes
 options.setInsertedItemStyle(new StyleSettings()); // Customize how insertions look
 ```
 
-### Menyesuaikan Format Output
-Anda dapat mengatur bagaimana perbedaan ditampilkan dalam dokumen output Anda:
+### Customizing Output Formats
+You can control how differences are displayed in your output documents:
 
 ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setCloneMetadataType(MetadataType.SOURCE); // Preserve original metadata
 ```
 
-## Masalah Umum dan Pemecahan Masalah
+## Common Issues and Troubleshooting
 
-### Error “File Not Found”
-Masalah paling umum adalah jalur file yang tidak tepat. Selalu gunakan jalur absolut atau verifikasi direktori kerja Anda:
+### "File Not Found" Errors
+The most common issue is incorrect file paths. Always use absolute paths or verify your working directory:
 
 ```java
 // Instead of this:
@@ -209,15 +215,15 @@ String absolutePath = System.getProperty("user.dir") + "/documents/document.docx
 Comparer comparer = new Comparer(absolutePath);
 ```
 
-### Masalah Memori dengan File Besar
-Jika Anda membandingkan dokumen sangat besar (50 MB+), Anda mungkin mengalami `OutOfMemoryError`. Tingkatkan ukuran heap JVM Anda:
+### Memory Issues with Large Files
+If you're comparing very large documents (50 MB+), you might run into `OutOfMemoryError`. Increase your JVM heap size:
 
 ```bash
 java -Xmx4g -jar your-application.jar
 ```
 
-### Masalah Aktivasi Lisensi
-Pastikan file lisensi berada di lokasi yang benar dan berformat tepat. Perpustakaan mencari lisensi di jalur‑jalur tertentu:
+### License Activation Problems
+Make sure your license file is in the correct location and properly formatted. The library looks for licenses in specific paths:
 
 ```java
 // Set license before any comparison operations
@@ -225,21 +231,21 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Praktik Terbaik Optimisasi Kinerja
+## Performance Optimization Best Practices
 
-### Manajemen Memori untuk Operasi Skala Besar
-Saat membandingkan banyak dokumen besar, manajemen memori menjadi sangat penting:
+### Memory Management for Large‑Scale Operations
+When comparing multiple large documents, memory management becomes crucial:
 
-1. **Gunakan stream alih‑alih jalur file** bila memungkinkan – ini mengurangi jejak memori.  
-2. **Proses dokumen secara batch** daripada memuat semuanya sekaligus.  
-3. **Dispose objek Comparer** dengan benar menggunakan try‑with‑resources.
+1. **Use streams instead of file paths** when possible – this reduces memory footprint.  
+2. **Process documents in batches** rather than loading everything at once.  
+3. **Dispose of Comparer objects** properly using try‑with‑resources.
 
-### Mengoptimalkan Kecepatan
-Berikut beberapa tips untuk mempercepat perbandingan dokumen Anda:
+### Optimizing for Speed
+Here are some tips to make your document comparison faster:
 
-- **Urutkan dokumen Anda** berdasarkan ukuran – bandingkan yang lebih kecil dulu.  
-- **Gunakan penyimpanan SSD** untuk file sementara – kecepatan I/O lebih penting daripada yang Anda kira.  
-- **Pertimbangkan pemrosesan paralel** untuk operasi perbandingan yang independen:
+- **Pre‑sort your documents** by size – compare smaller ones first.  
+- **Use SSD storage** for temporary files – I/O speed matters more than you think.  
+- **Consider parallel processing** for independent comparison operations:
 
 ```java
 // Example of parallel processing multiple comparison operations
@@ -252,38 +258,38 @@ tasks.parallelStream().forEach(task -> {
 });
 ```
 
-## Aplikasi Dunia Nyata dan Kasus Penggunaan
+## Real‑World Applications and Use Cases
 
-### Review Dokumen Hukum
-Firma hukum menggunakan perbandingan dokumen untuk:
-- Melacak perubahan dalam kontrak selama negosiasi.  
-- Membandingkan beberapa versi brief hukum.  
-- Menjamin konsistensi antar dokumen kasus serupa.
+### Legal Document Review
+Law firms use document comparison to:
+- Track changes in contracts during negotiations.  
+- Compare multiple versions of legal briefs.  
+- Ensure consistency across similar case documents.
 
-**Pro tip:** Pertahankan format dan metadata asli dengan mengaktifkan `CompareOptions` yang mempertahankan informasi gaya.
+**Pro tip:** Preserve original formatting and metadata by enabling `CompareOptions` that retain style information.
 
-### Penelitian Akademik dan Publikasi
-Peneliti mendapat manfaat dari:
-- Deteksi plagiarisme antar banyak makalah.  
-- Kontrol versi untuk dokumen riset kolaboratif.  
-- Membandingkan sitasi dan referensi antar manuskrip terkait.
+### Academic Research and Publishing
+Researchers benefit from:
+- Plagiarism detection across multiple papers.  
+- Version control for collaborative research documents.  
+- Comparing citations and references across related manuscripts.
 
-### Manajemen Dokumentasi Korporat
-Bisnis menggunakan perbandingan dokumen untuk:
-- Pembaruan dokumen kebijakan lintas departemen.  
-- Pemeriksaan konsistensi materi pemasaran.  
-- Kontrol versi dokumentasi teknis.
+### Corporate Documentation Management
+Businesses use document comparison for:
+- Policy document updates across departments.  
+- Marketing material consistency checks.  
+- Technical documentation version control.
 
-### Alur Kerja Pengembangan Perangkat Lunak
-Tim pengembangan mengintegrasikan perbandingan dokumen ke dalam:
-- Proses review kode untuk file dokumentasi.  
-- Manajemen file konfigurasi.  
-- Konsistensi dokumentasi API.
+### Software Development Workflows
+Development teams integrate document comparison into:
+- Code review processes for documentation files.  
+- Configuration file management.  
+- API documentation consistency.
 
-## Integrasi dengan Sistem yang Ada
+## Integration with Existing Systems
 
-### Integrasi Spring Boot
-Jika Anda menggunakan Spring Boot, Anda dapat membuat layanan untuk perbandingan dokumen:
+### Spring Boot Integration
+If you're using Spring Boot, you can create a service for document comparison:
 
 ```java
 @Service
@@ -296,8 +302,8 @@ public class DocumentComparisonService {
 }
 ```
 
-### Implementasi REST API
-Buat endpoint untuk operasi perbandingan dokumen:
+### REST API Implementation
+Create endpoints for document comparison operations:
 
 ```java
 @RestController
@@ -312,45 +318,45 @@ public class ComparisonController {
 }
 ```
 
-## Apa Selanjutnya: Memperluas Kapabilitas Pemrosesan Dokumen Anda
-Setelah menguasai perbandingan dokumen di Java, pertimbangkan untuk menjelajahi:
+## What's Next: Expanding Your Document Processing Capabilities
+Now that you've mastered document comparison in Java, consider exploring:
 
-1. **Konversi dokumen** – Mengubah format sebelum perbandingan.  
-2. **Alur kerja otomatis** – Mengintegrasikan perbandingan ke pipeline CI/CD.  
-3. **Deploy ke cloud** – Skalakan pemrosesan dengan layanan cloud.  
-4. **Integrasi machine‑learning** – Gunakan ML untuk mengkategorikan perbedaan secara otomatis.
+1. **Document conversion** – Convert between formats before comparison.  
+2. **Automated workflows** – Integrate comparison into CI/CD pipelines.  
+3. **Cloud deployment** – Scale your processing with cloud services.  
+4. **Machine‑learning integration** – Use ML to automatically categorize differences.
 
-## Kesimpulan
-Anda kini memiliki semua yang diperlukan untuk mengimplementasikan perbandingan dokumen yang kuat dalam aplikasi Java Anda. Dari perbandingan dokumen Word dasar hingga operasi multi‑format yang kompleks, GroupDocs.Comparison memberi Anda alat untuk mengotomatisasi proses yang sebelumnya manual dan rawan kesalahan.
+## Conclusion
+You now have everything you need to implement powerful document comparison in your Java applications. From basic Word document comparisons to complex multi‑format operations, GroupDocs.Comparison gives you the tools to automate what used to be a manual, error‑prone process.
 
-Mulailah dengan sederhana: pilih satu tipe dokumen, biasakan diri dengan API, lalu kembangkan ke skenario yang lebih kompleks. Ingat untuk menangani error dengan elegan, optimalkan sesuai kebutuhan, dan selalu uji dengan dokumen dunia nyata.
+Start simple: pick one document type, get comfortable with the API, then expand to more complex scenarios. Remember to handle errors gracefully, optimize for your specific use case, and always test with real‑world documents.
 
-**Siap memulai?** Unduh perpustakaan, siapkan lingkungan pengembangan Anda, dan coba bandingkan beberapa dokumen. Anda akan terkejut berapa banyak waktu yang dapat dihemat ketika perbandingan dokumen menjadi otomatis.
+**Ready to get started?** Download the library, set up your development environment, and try comparing a few documents. You'll be amazed at how much time you can save once document comparison becomes automatic.
 
-### Bergabung dengan Komunitas
-- Lihat [dokumentasi GroupDocs](https://docs.groupdocs.com/comparison/java/) untuk fitur lanjutan  
-- Bergabung dengan forum pengembang untuk berbagi pengalaman dan mendapatkan bantuan  
-- Ikuti GroupDocs di media sosial untuk pembaruan dan tips  
+### Join the Community
+- Check out the [GroupDocs documentation](https://docs.groupdocs.com/comparison/java/) for more advanced features  
+- Join developer forums to share experiences and get help  
+- Follow GroupDocs on social media for updates and tips  
 
-## Pertanyaan yang Sering Diajukan
+## Frequently Asked Questions
 
-**T: Format file apa saja yang didukung GroupDocs.Comparison selain yang disebutkan?**  
-J: Perpustakaan mendukung lebih dari 50 format, termasuk spreadsheet Excel, presentasi PowerPoint, file HTML, gambar (PNG, JPG), gambar CAD, dan banyak lagi. Lihat dokumentasi resmi untuk daftar lengkap.
+**Q: What file formats does GroupDocs.Comparison support besides the ones mentioned?**  
+A: The library supports over 50 formats, including Excel spreadsheets, PowerPoint presentations, HTML files, images (PNG, JPG), CAD drawings, and many more. See the official docs for the full list.
 
-**T: Bisakah saya membandingkan dokumen yang dilindungi password?**  
-J: Ya. Berikan password saat menginisialisasi objek `Comparer`. Perpustakaan menangani PDF, Word, dan file Excel yang dilindungi.
+**Q: Can I compare password‑protected documents?**  
+A: Yes. Provide the password when initializing the `Comparer` object. The library handles protected PDFs, Word docs, and Excel files.
 
-**T: Seberapa akurat perbandingan? Apakah akan menangkap setiap perubahan?**  
-J: GroupDocs.Comparison sangat akurat, mendeteksi penyisipan, penghapusan, dan perubahan format pada tingkat karakter. Akurasi dapat dipengaruhi oleh kompleksitas dokumen dan opsi yang Anda aktifkan.
+**Q: How accurate is the comparison? Will it catch every single change?**  
+A: GroupDocs.Comparison is highly accurate, detecting insertions, deletions, and formatting changes at the character level. Accuracy can depend on document complexity and the options you enable.
 
-**T: Apakah ada batas berapa banyak dokumen yang dapat dibandingkan secara bersamaan?**  
-J: Tidak ada batas keras dalam API, namun batas praktis tergantung pada memori dan CPU sistem Anda. Untuk batch besar (100+ dokumen), proses dalam kelompok yang lebih kecil.
+**Q: Is there a limit to how many documents I can compare simultaneously?**  
+A: No hard limit in the API, but practical limits depend on your system's memory and CPU. For large batches (100+ docs), process them in smaller groups.
 
-**T: Bisakah saya menggunakan perpustakaan ini dalam aplikasi komersial?**  
-J: Ya, dengan lisensi komersial yang tepat. Versi percobaan hanya untuk evaluasi; penggunaan produksi memerlukan lisensi berbayar. GroupDocs menawarkan berbagai opsi lisensi untuk berbagai skenario.
+**Q: Can I use this library in a commercial application?**  
+A: Yes, with a proper commercial license. The trial version is for evaluation only; production use requires a paid license. GroupDocs offers various licensing options to fit different scenarios.
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-19  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
-**Penulis:** GroupDocs
+**Last Updated:** 2026-02-23  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs

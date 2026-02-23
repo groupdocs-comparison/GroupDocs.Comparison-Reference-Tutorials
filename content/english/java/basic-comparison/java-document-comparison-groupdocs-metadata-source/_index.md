@@ -5,8 +5,8 @@ description: "Learn how to compare documents in java using GroupDocs.Comparison 
 keywords: "Java document comparison tutorial, GroupDocs Java API guide, compare documents in java, java compare multiple files, java compare password protected, Java file comparison library, how to compare Word documents in Java"
 weight: 1
 url: "/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/"
-date: "2025-12-21"
-lastmod: "2025-12-21"
+date: "2026-02-23"
+lastmod: "2026-02-23"
 categories: ["Java Development"]
 tags: ["document-comparison", "groupdocs", "java-tutorial", "api-integration"]
 type: docs
@@ -481,6 +481,19 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
+## How to java compare password protected documents
+
+Password‑protected files are common in regulated industries. By passing the password through `LoadOptions`, you keep the comparison flow unchanged while ensuring the library can decrypt the file securely. Remember to never hard‑code passwords; store them in a secure vault or environment variable and inject them at runtime.
+
+## How to handle large documents java
+
+When documents exceed several hundred megabytes, you may encounter slower processing or higher memory consumption. To mitigate this:
+
+- **Increase JVM heap** (`-Xmx`), especially for batch jobs.  
+- **Enable streaming** where possible – GroupDocs.Comparison processes files in chunks internally, but you can further reduce memory pressure by avoiding loading whole files into memory yourself.  
+- **Run comparisons asynchronously** (see the async example above) to keep your UI responsive.  
+- **Split very large PDFs** into logical sections before comparison if business logic permits.
+
 ## Integrating with Spring Boot
 
 For developers building microservices, wrap the comparison logic in a Spring service bean:
@@ -526,7 +539,7 @@ A: Increase JVM heap (`-Xmx`), process files asynchronously, batch them, and reu
 
 ---
 
-**Last Updated:** 2025-12-21  
+**Last Updated:** 2026-02-23  
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
 

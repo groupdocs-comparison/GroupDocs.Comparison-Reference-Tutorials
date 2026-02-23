@@ -1,7 +1,7 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2025-12-17
-description: Leer hoe u Word-, PDF-, Excel- en andere documentformaten kunt vergelijken
+date: 2026-02-23
+description: Leer hoe je Word-, PDF-, Excel- en andere documentformaten kunt vergelijken
   met de GroupDocs.Comparison API voor documentvergelijking. Stapsgewijze tutorials
   voor .NET- en Java-ontwikkelaars met codevoorbeelden.
 is_root: true
@@ -16,165 +16,171 @@ keywords:
 - Java API
 - document diff
 linktitle: GroupDocs.Comparison Tutorials & Examples
-title: GroupDocs.Comparison API‑tutorials & ontwikkelaarsgids
+title: GroupDocs.Comparison API‑tutorials & Ontwikkelaarsgids
 type: docs
 url: /nl/
 weight: 11
 ---
 
-# GroupDocs.Comparison API Handleidingen & Ontwikkelaarsgids
+Make sure not to translate URLs.
+
+Let's craft final output.
+
+# GroupDocs.Comparison API Tutorials & Developer Guide
 
 ![GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)
 
-Welkom bij de **complete gids voor documentvergelijking** met de **GroupDocs.Comparison API**! Onze uitgebreide tutorials laten zien hoe u efficiënt verschillen tussen documenten in verschillende formaten kunt identificeren, inclusief **Word, PDF, Excel, PowerPoint, afbeeldingen en meer**. Of u nu een .NET webservice of een Java desktopapplicatie bouwt, deze gids geeft u de praktische stappen die u nodig heeft om snel krachtige documentvergelijkingsfuncties te integreren.
+Welkom bij de **complete gids voor documentvergelijking** met de **GroupDocs.Comparison API**! Onze uitgebreide tutorials laten zien hoe je efficiënt verschillen tussen documenten kunt identificeren in verschillende formaten, waaronder **Word, PDF, Excel, PowerPoint, afbeeldingen en meer**. Of je nu een .NET‑webservice of een Java‑desktopapplicatie bouwt, deze gids biedt de praktische stappen die je nodig hebt om krachtige documentvergelijkingsfuncties snel te integreren.
 
-## Snelle antwoorden
-- **Wat doet de GroupDocs.Comparison API?** Het detecteert en markeert wijzigingen tussen twee documenten van hetzelfde of verschillende formaten.  
-- **Welke platforms worden ondersteund?** .NET (Framework, .NET Core, .NET 5/6) en Java (8+).  
-- **Heb ik een licentie nodig voor ontwikkeling?** Een gratis proefversie werkt voor evaluatie; een commerciële licentie is vereist voor productie.  
-- **Kan ik wachtwoord‑beveiligde bestanden vergelijken?** Ja – de API accepteert wachtwoorden voor het openen van beveiligde documenten.  
-- **Is er een manier om visuele voorbeeldweergaven te genereren?** Absoluut, de API kan zij‑aan‑zij of overlay preview‑afbeeldingen van het vergelijkingsresultaat maken.
+## Quick Answers
+- **What does GroupDocs.Comparison API do?** Het detecteert en markeert wijzigingen tussen twee documenten van dezelfde of verschillende formaten.  
+- **Which platforms are supported?** .NET (Framework, .NET Core, .NET 5/6) en Java (8+).  
+- **Do I need a license for development?** Een gratis proefversie is voldoende voor evaluatie; een commerciële licentie is vereist voor productie.  
+- **Can I compare password‑protected files?** Ja – de API accepteert wachtwoorden om beveiligde documenten te openen.  
+- **Is there a way to generate visual previews?** Absoluut, de API kan side‑by‑side‑ of overlay‑preview‑afbeeldingen van het vergelijkingresultaat maken.  
+- **How can I compare entire folders?** Gebruik de map‑vergelijkingsfunctie om meerdere bestanden in één oproep te verwerken, perfect voor batchvalidatie.  
 
-## Wat is de GroupDocs.Comparison API?
-De **GroupDocs.Comparison API** is een set bibliotheken die ontwikkelaars in staat stelt om programmatisch de inhoud, lay-out en opmaak van documenten te vergelijken. Het ondersteunt meer dan 100 bestandstypen, levert gedetailleerde wijzigingslogboeken en biedt opties om wijzigingen te accepteren of te weigeren via code.
+## What is GroupDocs.Comparison API?
+De **GroupDocs.Comparison API** is een set bibliotheken waarmee ontwikkelaars programmatisch de inhoud, lay-out en opmaak van documenten kunnen vergelijken. Het ondersteunt meer dan 100 bestandstypen, levert gedetailleerde wijzigingslogboeken en biedt opties om wijzigingen via code te accepteren of te weigeren.
 
-## Waarom GroupDocs.Comparison API gebruiken?
-- **Multi‑formatondersteuning** – Vergelijk Word, PDF, Excel, Power, afbeeldingen, e‑mails en nog veel meer zonder eerst bestanden te converteren.  
-- **Rijke wijzigingsdetectie** – Zie invoegingen, verwijderingen, opmaakaanpassingen en stijlwijzigingen automatisch gemarkeerd.  
-- **Programmatic Change Management** – Accepteer of wijs specifieke wijzigingen af in uw workflow, perfect voor beoordelingssystemen.  
-- **Veilige verwerking** – Werk veilig met versleutelde of wachtwoord‑beveiligde documenten.  
-- **Hoge prestaties** – Geoptimaliseerde algoritmen verwerken grote bestanden en bulk mapvergelijkingen efficiënt.
+## Why Use GroupDocs.Comparison API?
+- **Multi‑format Support** – Vergelijk Word, PDF, Excel, PowerPoint, afbeeldingen, e‑mails en nog veel meer zonder eerst bestanden te converteren.  
+- **Rich Change Detection** – Zie invoegingen, verwijderingen, opmaakaanpassingen en stijlwijzigingen automatisch gemarkeerd.  
+- **Programmatic Change Management** – Accepteer of weiger specifieke wijzigingen in je workflow, ideaal voor beoordelingssystemen.  
+- **Secure Handling** – Werk veilig met versleutelde of wachtwoord‑beveiligde documenten.  
+- **High Performance** – Geoptimaliseerde algoritmen verwerken grote bestanden en bulk‑mapvergelijkingen efficiënt.
 
-## Waarom GroupDocs.Comparison gebruiken?
-- **Multi-format Support** - Vergelijk documenten over verschillende formaten
-- **Detailed Change Detection** - Identificeer invoegingen, verwijderingen, opmaakwijzigingen en stijlmodificaties
-- **Change Management** - Accepteer of wijs specifieke wijzigingen programmatisch af
-- **Secure Comparison** - Werk met wachtwoord‑beveiligde documenten
-- **High Performance** - Vergelijk efficiënt grote documenten met geoptimaliseerde algoritmen
+## Why Use GroupDocs.Comparison?
+- **Multi-format Support** – Vergelijk documenten over verschillende formaten heen.  
+- **Detailed Change Detection** – Identificeer invoegingen, verwijderingen, opmaakwijzigingen en stijlmodificaties.  
+- **Change Management** – Accepteer of weiger specifieke wijzigingen programmatisch.  
+- **Secure Comparison** – Werk met wachtwoord‑beveiligde documenten.  
+- **High Performance** – Vergelijk grote documenten efficiënt met geoptimaliseerde algoritmen.
 
-## GroupDocs.Comparison voor .NET-tutorials
+## GroupDocs.Comparison for .NET Tutorials
 
 {{% alert color="primary" %}}
-Beheers documentvergelijking in uw .NET‑applicaties met onze stapsgewijze tutorials. Leer hoe u professionele documentvergelijkingsfuncties voor Word, PDF, Excel en andere formaten implementeert met C#. Onze op ontwikkelaars gerichte gidsen behandelen alles, van basisinstallatie tot geavanceerde integratiescenario’s.
+Beheers documentvergelijking in je .NET‑applicaties met onze stap‑voor‑stap‑tutorials. Leer hoe je professionele documentvergelijkingsfuncties voor Word, PDF, Excel en andere formaten implementeert met C#. Onze ontwikkelaar‑gerichte gidsen behandelen alles van basisinstelling tot geavanceerde integratiescenario's.
 {{% /alert %}}
 
-### Essentiële .NET-tutorials
+### Essential .NET Tutorials
 
 <div class="row">
 <div class="col-md-6">
 
-#### Aan de slag
-- [Snelstartgids](./net/quick-start/) - Installeer en voer uw eerste vergelijking uit in enkele minuten
-- [Installatie & configuratie](./net/getting-started/) - Configureer uw ontwikkelomgeving
-- [Licentieopties](./net/licensing-configuration/) - Begrijp licentie‑ en implementatieopties
+#### Getting Started
+- [Quick Start Guide](./net/quick-start/) – Zet alles op en voer je eerste vergelijking uit binnen enkele minuten.  
+- [Installation & Setup](./net/getting-started/) – Configureer je ontwikkelomgeving.  
+- [Licensing Options](./net/licensing-configuration/) – Begrijp licentie‑ en implementatieopties.
 
-#### Kernfunctionaliteit
-- [Document laden](./net/document-loading/) - Leer verschillende manieren om documenten te laden
-- [Basisvergelijking](./net/basic-comparison/) - Implementeer eenvoudige vergelijkingsbewerkingen
-- [Geavanceerde vergelijking](./net/advanced-comparison/) - Beheers complexe vergelijkingsscenario's
-- [Wijzigingsbeheer](./net/change-management/) - Accepteer of wijs specifieke wijzigingen af
+#### Core Functionality
+- [Document Loading](./net/document-loading/) – Leer verschillende manieren om documenten te laden.  
+- [Basic Comparison](./net/basic-comparison/) – Implementeer eenvoudige vergelijkingsbewerkingen.  
+- [Advanced Comparison](./net/advanced-comparison/) – Beheers complexe vergelijkingsscenario's.  
+- [Change Management](./net/change-management/) – Accepteer of weiger specifieke wijzigingen.
 
 </div>
 <div class="col-md-6">
 
-#### Geavanceerde functies
-- [Voorbeeldgeneratie](./net/preview-generation/) - Maak visuele voorbeelden van vergelijkingsresultaten
-- [Metadata‑beheer](./net/metadata-management/) - Beheer documenteigenschappen
-- [Beveiliging & bescherming](./net/security-protection/) - Werk met beveiligde documenten
-- [Vergelijkingsopties](./net/comparison-options/) - Pas het vergelijkingsgedrag aan
+#### Advanced Features
+- [Preview Generation](./net/preview-generation/) – Maak visuele previews van vergelijkingresultaten.  
+- [Metadata Management](./net/metadata-management/) – Beheer documenteigenschappen.  
+- [Security & Protection](./net/security-protection/) – Werk met beveiligde documenten.  
+- [Comparison Options](./net/comparison-options/) – Pas het vergelijkingsgedrag aan.
 
-#### Gespecialiseerde vergelijkingen
-- [Afbeeldingsvergelijking](./net/image-comparison/) - Vergelijk afbeeldingen met pixel‑perfecte nauwkeurigheid
-- [Document‑ en mapvergelijking](./net/documents-and-folder-comparison/) - Vergelijk volledige mappen
-- [Documentinformatie](./net/document-information/) - Extraheer en analyseer documentmetadata
+#### Specialized Comparisons
+- [Image Comparison](./net/image-comparison/) – Vergelijk afbeeldingen met pixel‑perfecte nauwkeurigheid.  
+- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) – Vergelijk volledige mappen.  
+- [Document Information](./net/document-information/) – Haal metadata op en analyseer documentinformatie.
 
 </div>
 </div>
 
-## GroupDocs.Comparison voor Java-tutorials
+## GroupDocs.Comparison for Java Tutorials
 
 {{% alert color="primary" %}}
-Implementeer krachtige documentvergelijkingsmogelijkheden in uw Java‑applicaties met onze uitgebreide tutorials. Leer GroupDocs.Comparison voor Java te integreren in enterprise‑systemen, webapplicaties en desktopsoftware met duidelijke, praktische voorbeelden.
+Implementeer krachtige documentvergelijkingsmogelijkheden in je Java‑applicaties met onze uitgebreide tutorials. Leer GroupDocs.Comparison voor Java te integreren in enterprise‑systemen, webapplicaties en desktopsoftware met duidelijke, praktische voorbeelden.
 {{% /alert %}}
 
-### Essentiële Java-tutorials
+### Essential Java Tutorials
 
 <div class="row">
 <div class="col-md-6">
 
-#### Aan de slag
-- [Licentieopties](./java/licensing-configuration) - Begrijp implementatielicenties
+#### Getting Started
+- [Licensing Options](./java/licensing-configuration) – Begrijp licentie‑ en implementatieopties.
 
-#### Kernfunctionaliteit
-- [Document laden](./java/document-loading/) - Laad documenten vanuit verschillende bronnen
-- [Basisvergelijking](./java/basic-comparison/) - Implementeer fundamentele vergelijking
-- [Geavanceerde vergelijking](./java/advanced-comparison/) - Behandel complexe vergelijkingsscenario's
+#### Core Functionality
+- [Document Loading](./java/document-loading/) – Laad documenten vanuit diverse bronnen.  
+- [Basic Comparison](./java/basic-comparison/) – Implementeer fundamentele vergelijking.  
+- [Advanced Comparison](./java/advanced-comparison/) – Behandel complexe vergelijkingsscenario's.
 
 </div>
 <div class="col-md-6">
 
-#### Geavanceerde functies
-- [Voorbeeldgeneratie](./java/preview-generation/) - Genereer visuele vergelijkingsvoorbeelden
-- [Metadata‑beheer](./java/metadata-management/) - Beheer documentmetadata
-- [Beveiliging & bescherming](./java/security-protection/) - Vergelijk beveiligde documenten
-- [Vergelijkingsopties](./java/comparison-options/) - Stel vergelijkingsinstellingen fijn af
-- [Documentinformatie](./java/document-information) - Extraheer en toon metadata
+#### Advanced Features
+- [Preview Generation](./java/preview-generation/) – Genereer visuele vergelijkingpreviews.  
+- [Metadata Management](./java/metadata-management/) – Beheer documentmetadata.  
+- [Security & Protection](./java/security-protection/) – Vergelijk beveiligde documenten.  
+- [Comparison Options](./java/comparison-options/) – Fijn‑afstem vergelijkingsinstellingen.  
+- [Document Information](./java/document-information) – Haal metadata op en toon deze.
 
 </div>
 </div>
 
-## Ondersteunde documentformaten
+## Supported Document Formats
 
 GroupDocs.Comparison ondersteunt een breed scala aan documentformaten:
 
-| Categorie | Formaten |
+| Category | Formats |
 |----------|---------|
-| **Tekstverwerking** | DOCX, DOC, ODT, RTF, TXT |
+| **Word Processing** | DOCX, DOC, ODT, RTF, TXT |
 | **Spreadsheets** | XLSX, XLS, ODS, CSV |
-| **Presentaties** | PPTX, PPT, ODP |
-| **PDF‑documenten** | PDF, PDF/A |
-| **Afbeeldingen** | JPG, PNG, BMP, GIF, TIFF |
-| **E‑mail** | EML, MSG |
-| **En nog veel meer...** | HTML, EPUB, DJVU |
+| **Presentations** | PPTX, PPT, ODP |
+| **PDF Documents** | PDF, PDF/A |
+| **Images** | JPG, PNG, BMP, GIF, TIFF |
+| **Email** | EML, MSG |
+| **And many more…** | HTML, EPUB, DJVU |
 
-## Ontwikkelaarsbronnen
+## Developer Resources
 
-- [API‑documentatie](https://reference.groupdocs.com/comparison/) - Gedetailleerde API‑referenties
-- [GitHub‑voorbeelden](https://github.com/groupdocs-comparison/) - Repository met code‑voorbeelden
-- [Ontwikkelaarsblog](https://blog.groupdocs.com/category/comparison/) - Laatste updates en tutorials
-- [Gratis ondersteuningsforum](https://forum.groupdocs.com/c/comparison/) - Krijg hulp van onze experts
+- [API Documentation](https://reference.groupdocs.com/comparison/) – Gedetailleerde API‑referenties.  
+- [GitHub Examples](https://github.com/groupdocs-comparison/) – Repository met code‑voorbeelden.  
+- [Developer Blog](https://blog.groupdocs.com/category/comparison/) – Laatste updates en tutorials.  
+- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) – Krijg hulp van onze experts.
 
-## Veelvoorkomende use‑cases voor de GroupDocs.Comparison API
-- **Juridische documentreview** – Markeer snel wijzigingen tussen contractversies.  
-- **Financiële rapportage** – Detecteer wijzigingen in Excel‑ of PDF‑overzichten vóór publicatie.  
-- **Content‑managementsystemen** – Bied eindgebruikers visuele diff‑tools voor Word‑ of PowerPoint‑bestanden.  
-- **Geautomatiseerde QA** – Vergelijk gegenereerde PDF’s met basistemplates in CI‑pipelines.  
+## Common Use Cases for the GroupDocs.Comparison API
+- **Legal document review** – Markeer snel wijzigingen tussen contractversies.  
+- **Financial reporting** – Detecteer aanpassingen in Excel‑ of PDF‑overzichten vóór publicatie.  
+- **Content management systems** – Bied eindgebruikers visuele diff‑tools voor Word‑ of PowerPoint‑bestanden.  
+- **Automated QA** – Vergelijk gegenereerde PDF’s met basis‑templates in CI‑pipelines.  
+- **Regulatory compliance** – Verifieer dat beleidsdocumenten niet onbedoeld zijn gewijzigd.
 
-## Vandaag aan de slag
+## Getting Started Today
 
-Verken onze tutorials om professionele documentvergelijkingsfuncties in uw applicaties te implementeren. GroupDocs.Comparison biedt een krachtige, flexibele API die naadloos integreert met uw .NET‑ en Java‑projecten.
+Verken onze tutorials om professionele documentvergelijkingsfuncties in je applicaties te implementeren. GroupDocs.Comparison biedt een krachtige, flexibele API die naadloos integreert met je .NET‑ en Java‑projecten.
 
-[Download gratis proefversie](https://releases.groupdocs.com/comparison) | [Ontvang tijdelijke licentie](https://purchase.groupdocs.com/temporary-license)
+[Download Free Trial](https://releases.groupdocs.com/comparison) | [Get Temporary License](https://purchase.groupdocs.com/temporary-license)
 
-## Veelgestelde vragen
+## Frequently Asked Questions
 
-**Q: Kan ik de GroupDocs.Comparison API gebruiken in een commercieel product?**  
-A: Ja, een geldige commerciële licentie is vereist voor productie‑implementaties. Een gratis proefversie is beschikbaar voor evaluatie.
+**Q:** Kan ik de GroupDocs.Comparison API gebruiken in een commercieel product?  
+**A:** Ja, een geldige commerciële licentie is vereist voor productie‑implementaties. Een gratis proefversie is beschikbaar voor evaluatie.
 
-**Q: Ondersteunt de API wachtwoord‑beveiligde bestanden?**  
-A: Absoluut. U kunt het documentwachtwoord opgeven bij het laden van de bronbestanden.
+**Q:** Ondersteunt de API wachtwoord‑beveiligde bestanden?  
+**A:** Absoluut. Je kunt het documentwachtwoord opgeven bij het laden van de bronbestanden.
 
-**Q: Welke .NET‑versies zijn compatibel?**  
-A: De API werkt met .NET Framework 4.5+, .NET Core 3.1+, .NET 5 en .NET 6+.
+**Q:** Welke .NET‑versies zijn compatibel?  
+**A:** De API werkt met .NET Framework 4.5+, .NET Core 3.1+, .NET 5 en .NET 6+.
 
-**Q: Hoe gaat de API om met grote documenten of bulk‑mapvergelijkingen?**  
-A: Het gebruikt streaming en geoptimaliseerde algoritmen om het geheugenverbruik laag te houden, en u kunt volledige mappen vergelijken met de mapvergelijkingsfunctie.
+**Q:** Hoe gaat de API om met grote documenten of bulk‑mapvergelijkingen?  
+**A:** Het maakt gebruik van streaming en geoptimaliseerde algoritmen om het geheugenverbruik laag te houden, en je kunt volledige mappen vergelijken met de map‑vergelijkingsfunctie.
 
-**Q: Is er een manier om de visuele stijl van de vergelijkingsoutput aan te passen?**  
-A: Ja, de Vergelijkingsopties stellen u in staat kleuren, opmaakstijlen en uitvoerformaten voor de gegenereerde diff te definiëren.
+**Q:** Is er een manier om de visuele stijl van de vergelijkingoutput aan te passen?  
+**A:** Ja, de Comparison Options laten je kleuren, opmaakstijlen en outputformaten voor de gegenereerde diff definiëren.
 
 ---
 
-**Laatst bijgewerkt:** 2025-12-17  
-**Getest met:** GroupDocs.Comparison 23.11 (latest stable)  
-**Auteur:** GroupDocs
+**Last Updated:** 2026-02-23  
+**Tested With:** GroupDocs.Comparison 24.0 (latest stable)  
+**Author:** GroupDocs

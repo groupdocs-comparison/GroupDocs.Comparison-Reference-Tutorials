@@ -1,14 +1,15 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
+date: '2026-02-23'
 description: Pelajari cara membandingkan dokumen di Java menggunakan API GroupDocs.Comparison,
-  termasuk membandingkan beberapa file di Java dan dokumen yang dilindungi kata sandi.
-  Panduan langkah demi langkah dengan kode, praktik terbaik, dan pemecahan masalah.
+  termasuk membandingkan beberapa file sekaligus dan dokumen yang dilindungi kata
+  sandi. Panduan langkah demi langkah dengan kode, praktik terbaik, dan pemecahan
+  masalah.
 keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
   in java, java compare multiple files, java compare password protected, Java file
   comparison library, how to compare Word documents in Java
-lastmod: '2025-12-21'
+lastmod: '2026-02-23'
 linktitle: Java Document Comparison Tutorial
 tags:
 - document-comparison
@@ -21,50 +22,50 @@ url: /id/java/basic-comparison/java-document-comparison-groupdocs-metadata-sourc
 weight: 1
 ---
 
-# membandingkan dokumen di java – Panduan Lengkap API GroupDocs
+# compare documents in java – GroupDocs API Panduan Lengkap
 
 ## Pendahuluan
 
-Pernahkah Anda harus membandingkan dua dokumen secara manual baris per baris, hanya untuk melewatkan perbedaan penting? Anda tidak sendirian. **compare documents in java** adalah tantangan umum, terutama ketika Anda harus mempertahankan metadata, menangani file yang dilindungi kata sandi, atau membandingkan banyak file sekaligus.
+Pernahkah Anda secara manual membandingkan dua dokumen baris demi baris, hanya untuk melewatkan perbedaan penting? Anda pasti tidak sendirian. **compare documents in java** adalah tantangan umum, terutama ketika Anda perlu mempertahankan metadata, menangani file yang dilindungi password, atau membandingkan banyak file sekaligus.
 
-**Inilah masalahnya**: kebanyakan pengembang kesulitan karena mereka either membangun sesuatu dari nol (yang memakan waktu lama) atau menggunakan alat diff dasar yang mengabaikan format, metadata, dan pengaturan keamanan. Di sinilah **GroupDocs.Comparison for Java** berperan.
+**Berikut faktanya**: kebanyakan pengembang mengalami kesulitan karena mereka either build something from scratch (which takes forever) atau menggunakan alat diff dasar yang mengabaikan format, metadata, dan pengaturan keamanan. Di sinilah **GroupDocs.Comparison for Java** berperan.
 
-Dalam tutorial komprehensif ini, Anda akan menemukan cara mengimplementasikan perbandingan dokumen yang kuat dalam aplikasi Java Anda. Kami akan membahas semuanya mulai dari pengaturan dasar hingga penanganan metadata lanjutan, plus contoh dunia nyata yang dapat Anda gunakan langsung di produksi. Pada akhir tutorial, Anda akan tahu cara:
+Dalam tutorial komprehensif ini, Anda akan menemukan cara mengimplementasikan perbandingan dokumen yang kuat dalam aplikasi Java Anda. Kami akan membahas segala hal mulai dari penyiapan dasar hingga penanganan metadata lanjutan, plus contoh dunia nyata yang dapat Anda gunakan dalam produksi. Pada akhir tutorial, Anda akan tahu cara:
 
-- Menyiapkan GroupDocs.Comparison di proyek Java Anda (lebih mudah daripada yang Anda kira)  
+- Menyiapkan GroupDocs.Comparison dalam proyek Java Anda (lebih mudah daripada yang Anda kira)  
 - **compare documents in java** sambil mempertahankan integritas metadata  
 - Menangani skenario **java compare multiple files** dan **java compare password protected**  
 - Mengoptimalkan kinerja untuk pemrosesan dokumen berskala besar  
 
-Siap menjadikan perbandingan dokumen mudah dalam aplikasi Java Anda? Mari kita mulai!
+Siap membuat perbandingan dokumen menjadi mudah dalam aplikasi Java Anda? Mari kita mulai!
 
 ## Jawaban Cepat
-- **Perpustakaan apa yang memungkinkan saya membandingkan dokumen di java?** GroupDocs.Comparison for Java  
+- **Library apa yang memungkinkan saya membandingkan dokumen di java?** GroupDocs.Comparison for Java  
 - **Bisakah saya membandingkan banyak file sekaligus?** Ya – tambahkan sebanyak mungkin dokumen target yang diperlukan  
-- **Bagaimana cara menangani dokumen yang dilindungi kata sandi?** Gunakan `LoadOptions` dengan kata sandi dokumen  
-- **Apakah saya memerlukan lisensi untuk produksi?** Lisensi GroupDocs yang valid menghilangkan watermark dan batasan  
+- **Bagaimana cara menangani dokumen yang dilindungi password?** Gunakan `LoadOptions` dengan password dokumen  
+- **Apakah saya memerlukan lisensi untuk produksi?** Lisensi GroupDocs yang valid menghapus watermark dan batasan  
 - **Versi Java apa yang diperlukan?** JDK 8+, disarankan JDK 11+  
 
 ## Apa itu **compare documents in java**?
-Membandingkan dokumen di Java berarti secara programatis mendeteksi perbedaan—perubahan teks, edit format, atau pembaruan metadata—antara dua atau lebih file menggunakan perpustakaan yang memahami struktur dokumen. GroupDocs.Comparison menyederhanakan kompleksitas, memberikan API sederhana untuk menghasilkan dokumen diff yang menyoroti setiap perubahan.
+Membandingkan dokumen di Java berarti mendeteksi perbedaan secara programatik—perubahan teks, edit format, atau pembaruan metadata—antara dua atau lebih file menggunakan perpustakaan yang memahami struktur dokumen. GroupDocs.Comparison menyederhanakan kompleksitas, memberi Anda API sederhana untuk menghasilkan dokumen diff yang menyoroti setiap perubahan.
 
 ## Mengapa Menggunakan GroupDocs.Comparison untuk Java?
 - **Dukungan format kaya** – DOCX, PDF, XLSX, PPTX, TXT, dan lainnya  
-- **Penanganan metadata** – pilih metadata sumber, target, atau tidak ada metadata untuk hasilnya  
-- **Dukungan kata sandi** – buka file yang dilindungi tanpa dekripsi manual  
-- **Kinerja skalabel** – pemrosesan batch, eksekusi async, dan desain hemat memori  
+- **Penanganan metadata** – pilih source, target, atau tanpa metadata untuk hasil  
+- **Dukungan password** – buka file yang dilindungi tanpa dekripsi manual  
+- **Kinerja skalabel** – pemrosesan batch, eksekusi async, dan desain efisien memori  
 
 ## Prasyarat
 
-- **Lingkungan Java:** JDK 8+ (disarankan JDK 11+), IDE pilihan, Maven (atau Gradle)  
+- **Lingkungan Java:** JDK 8+ (JDK 11+ disarankan), IDE pilihan, Maven (atau Gradle)  
 - **Perpustakaan GroupDocs.Comparison:** Versi 25.2 atau lebih baru (selalu ambil yang terbaru)  
-- **Lisensi:** Versi percobaan gratis, lisensi sementara 30‑hari, atau lisensi komersial  
+- **Lisensi:** Uji coba gratis, lisensi sementara 30‑hari, atau lisensi komersial  
 
-## Menyiapkan GroupDocs.Comparison di Proyek Anda
+## Menyiapkan GroupDocs.Comparison dalam Proyek Anda
 
 ### Konfigurasi Maven
 
-Langkah pertama – tambahkan repositori GroupDocs dan dependensinya ke `pom.xml` Anda. Ini biasanya menjadi bagian yang terlalu rumit dalam tutorial, padahal sebenarnya cukup sederhana:
+Langkah pertama – tambahkan repositori GroupDocs dan dependensi ke `pom.xml` Anda. Di sinilah sebagian besar tutorial menjadi tidak perlu rumit, padahal sebenarnya cukup sederhana:
 
 ```xml
 <repositories>
@@ -84,37 +85,37 @@ Langkah pertama – tambahkan repositori GroupDocs dan dependensinya ke `pom.xml
 </dependencies>
 ```
 
-**Tip profesional:** Selalu periksa nomor versi terbaru di [halaman rilis GroupDocs](https://releases.groupdocs.com/comparison/java/). Versi baru biasanya menyertakan perbaikan kinerja dan bug yang dapat menghemat waktu Anda.
+**Tips pro:** Selalu periksa nomor versi terbaru di [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/). Versi baru sering menyertakan peningkatan kinerja dan perbaikan bug yang dapat menghemat waktu Anda.
 
 ### Mengatur Lisensi Anda
 
-Berikut hal yang tidak disadari banyak pengembang: Anda dapat langsung menguji GroupDocs.Comparison dengan versi percobaan gratisnya. Tanpa kartu kredit, tanpa ikatan.
+Inilah yang tidak disadari kebanyakan pengembang: Anda dapat mulai menguji GroupDocs.Comparison segera dengan uji coba gratis mereka. Tidak memerlukan kartu kredit, tanpa syarat apa pun.
 
 **Pilihan Anda:**
-1. **Percobaan Gratis** – sempurna untuk pengujian dan proyek kecil. Unduh dan mulai coding!  
-2. **Lisensi Sementara** – butuh lebih banyak waktu untuk evaluasi? Dapatkan lisensi sementara 30‑hari [di sini](https://purchase.groupdocs.com/temporary-license/)  
-3. **Lisensi Komersial** – siap untuk produksi? Lihat harga [di sini](https://purchase.groupdocs.com/buy)
+1. **Free Trial** – sempurna untuk pengujian dan proyek kecil. Cukup unduh dan mulai menulis kode!  
+2. **Temporary License** – butuh lebih banyak waktu untuk evaluasi? Dapatkan lisensi sementara 30‑hari [di sini](https://purchase.groupdocs.com/temporary-license/)  
+3. **Commercial License** – siap untuk produksi? Lihat harga [di sini](https://purchase.groupdocs.com/buy)
 
-Versi percobaan mencakup semua fitur tetapi menambahkan watermark pada file output. Untuk pengembangan dan pengujian, biasanya sudah cukup.
+Uji coba gratis mencakup semua fitur tetapi menambahkan watermark pada file output. Untuk pengembangan dan pengujian, biasanya cukup.
 
 ## Implementasi Perbandingan Dokumen: Panduan Lengkap
 
-Sekarang saatnya aksi utama! Kita akan membangun solusi perbandingan dokumen lengkap langkah demi langkah. Jangan khawatir – kami akan menjelaskan tidak hanya "bagaimana" tetapi juga "mengapa" di balik setiap keputusan.
+Sekarang saatnya acara utama! Kami akan membangun solusi perbandingan dokumen lengkap langkah demi langkah. Jangan khawatir – kami akan menjelaskan tidak hanya "bagaimana" tetapi juga "mengapa" di balik setiap keputusan.
 
 ### Memahami Sumber Metadata (Ini Penting!)
 
-Sebelum menulis kode, mari bahas hal yang sering membuat pengembang kebingungan: sumber metadata. Saat Anda **compare documents in java**, Anda harus memutuskan metadata dokumen mana (penulis, tanggal pembuatan, properti khusus, dll.) yang akan dipertahankan dalam hasil.
+Sebelum kita mulai menulis kode, mari bicarakan sesuatu yang membuat banyak pengembang bingung: sumber metadata. Saat Anda **compare documents in java**, Anda harus memutuskan metadata dokumen mana (penulis, tanggal pembuatan, properti khusus, dll.) yang harus dipertahankan dalam hasil.
 
 GroupDocs.Comparison memberi Anda tiga opsi:
 - **SOURCE** – gunakan metadata dari dokumen asli  
-- **TARGET** – gunakan metadata dari dokumen yang dibandingkan  
+- **TARGET** – gunakan metadata dari dokumen yang Anda bandingkan  
 - **NONE** – hapus semua metadata dari hasil  
 
 Untuk kebanyakan aplikasi bisnis, Anda akan ingin menggunakan **SOURCE** untuk menjaga konsistensi.
 
 ### Implementasi Langkah‑per‑Langkah
 
-Kita akan membuat utilitas yang dapat dipakai ulang di proyek mana pun.
+Kami akan membuat utilitas yang dapat digunakan kembali yang dapat Anda masukkan ke dalam proyek apa pun.
 
 #### Langkah 1: Impor Kelas yang Diperlukan
 
@@ -128,7 +129,7 @@ import java.io.IOException;
 
 #### Langkah 2: Buat Instance Comparer
 
-Inilah tempat keajaiban dimulai. Kelas `Comparer` adalah titik masuk utama untuk semua operasi perbandingan:
+Di sinilah keajaiban dimulai. Kelas `Comparer` adalah titik masuk utama Anda untuk semua operasi perbandingan:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
@@ -136,7 +137,7 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 }
 ```
 
-**Mengapa menggunakan try‑with‑resources?** Kelas `Comparer` mengimplementasikan `AutoCloseable`, yang berarti ia membersihkan sumber daya secara tepat ketika selesai. Ini mencegah kebocoran memori – sangat penting saat memproses banyak dokumen.
+**Mengapa menggunakan try‑with‑resources?** Kelas `Comparer` mengimplementasikan `AutoCloseable`, yang berarti ia membersihkan sumber daya dengan tepat ketika Anda selesai. Ini mencegah kebocoran memori – terutama penting saat memproses banyak dokumen.
 
 #### Langkah 3: Tambahkan Dokumen Target untuk Perbandingan
 
@@ -144,7 +145,7 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Berikut sesuatu yang keren**: Anda sebenarnya dapat menambahkan beberapa dokumen target dan membandingkannya semua terhadap sumber dalam satu operasi. Cukup panggil `add()` beberapa kali:
+**Berikut sesuatu yang keren**: Anda sebenarnya dapat menambahkan banyak dokumen target dan membandingkannya semua terhadap sumber Anda dalam satu operasi. Cukup panggil `add()` beberapa kali:
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -154,7 +155,7 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target3.docx");
 
 #### Langkah 4: Konfigurasikan Penanganan Metadata dan Jalankan Perbandingan
 
-Di sinilah kita mengatur sumber metadata dan menjalankan perbandingan sebenarnya:
+Di sinilah kami mengatur sumber metadata dan menjalankan perbandingan sebenarnya:
 
 ```java
 final Path resultPath = comparer.compare("output/comparison_result.docx",
@@ -170,7 +171,7 @@ final Path resultPath = comparer.compare("output/comparison_result.docx",
 
 ### Contoh Kerja Lengkap
 
-Mari satukan semuanya ke dalam metode yang dapat langsung Anda gunakan:
+Mari gabungkan semuanya ke dalam metode yang dapat Anda gunakan:
 
 ```java
 public class DocumentComparison {
@@ -198,12 +199,12 @@ public class DocumentComparison {
 
 ## Kesalahan Umum dan Cara Menghindarinya
 
-Setelah membantu ratusan pengembang mengimplementasikan perbandingan dokumen, saya melihat masalah yang sama berulang kali. Berikut yang paling sering (dan cara memperbaikinya):
+Setelah membantu ratusan pengembang mengimplementasikan perbandingan dokumen, saya telah melihat masalah yang sama muncul berulang kali. Berikut yang utama (dan cara memperbaikinya):
 
 ### Masalah Jalur File
 
-**Masalah**: `FileNotFoundException` padahal file memang ada  
-**Solusi**: Selalu gunakan jalur absolut atau resolusi jalur relatif yang tepat
+**Masalah**: `FileNotFoundException` meskipun file ada  
+**Solusi**: Selalu gunakan jalur absolut atau selesaikan jalur relatif dengan benar
 
 ```java
 // Instead of this:
@@ -225,8 +226,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### Penanganan Metadata yang Salah
 
-**Masalah**: Kehilangan metadata penting selama perbandingan  
-**Solusi**: Selalu tetapkan tipe metadata secara eksplisit – jangan mengandalkan nilai default
+**Masalah**: Kehilangan metadata dokumen penting selama perbandingan  
+**Solusi**: Selalu secara eksplisit mengatur tipe metadata – jangan mengandalkan default
 
 ```java
 // Always be explicit about metadata handling
@@ -238,7 +239,7 @@ SaveOptions saveOptions = new SaveOptions.Builder()
 ### Masalah Konfigurasi Lisensi
 
 **Masalah**: Watermark muncul di produksi  
-**Solusi**: Pastikan lisensi Anda dimuat dengan benar sebelum membuat instance `Comparer`
+**Solusi**: Verifikasi lisensi Anda dimuat dengan benar sebelum membuat instance `Comparer`
 
 ```java
 // Load license at application startup
@@ -246,13 +247,13 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Praktik Terbaik untuk Penggunaan di Produksi
+## Praktik Terbaik untuk Penggunaan Produksi
 
 Berdasarkan pengalaman dunia nyata, berikut praktik yang memisahkan implementasi amatir dari solusi siap produksi:
 
 ### Penanganan Error yang Benar‑Benar Membantu
 
-Jangan hanya menangkap exception – tangani dengan makna:
+Jangan hanya menangkap exception – tangani mereka secara bermakna:
 
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
@@ -279,28 +280,26 @@ public ComparisonResult compareDocuments(String source, String target) {
 ### Optimasi Kinerja
 
 Untuk skenario volume tinggi, pertimbangkan optimasi berikut:
-
-1. **Gunakan kembali instance `Comparer`** bila memungkinkan (tetapi perhatikan keamanan thread)  
-2. **Proses dokumen secara batch** untuk menghindari beban berlebih pada sistem  
+1. **Gunakan kembali instance `Comparer`** bila memungkinkan (tetapi hati-hati dengan keamanan thread)  
+2. **Proses dokumen dalam batch** untuk menghindari membebani sumber daya sistem  
 3. **Gunakan pemrosesan asynchronous** untuk dokumen besar  
-4. **Pantau penggunaan memori** dan sesuaikan pengaturan JVM sesuai kebutuhan  
+4. **Pantau penggunaan memori** dan sesuaikan pengaturan JVM secara tepat  
 
 ### Pertimbangan Keamanan
 
 Saat menangani dokumen sensitif:
-
 - **Validasi tipe file** sebelum diproses  
 - **Terapkan kontrol akses yang tepat**  
-- **Hapus file sementara** segera setelah selesai digunakan  
+- **Bersihkan file sementara** segera setelah digunakan  
 - **Pertimbangkan enkripsi** hasil perbandingan  
 
 ## Aplikasi Dunia Nyata dan Kasus Penggunaan
 
-Mari lihat bagaimana pengembang sebenarnya menggunakan GroupDocs.Comparison di produksi:
+Mari lihat bagaimana pengembang sebenarnya menggunakan GroupDocs.Comparison dalam produksi:
 
 ### Review Dokumen Hukum
 
-Firma hukum menggunakan perbandingan dokumen untuk melacak perubahan dalam kontrak dan perjanjian hukum. Fitur preservasi metadata sangat penting karena mereka harus mempertahankan asal‑usul dokumen.
+Firma hukum menggunakan perbandingan dokumen untuk melacak perubahan dalam kontrak dan perjanjian hukum. Fitur preservasi metadata sangat penting di sini karena mereka perlu mempertahankan asal usul dokumen.
 
 ```java
 // Typical legal document comparison workflow
@@ -372,11 +371,11 @@ public AuditResult auditFinancialDocument(String originalReport, String submitte
 
 ## Optimasi Kinerja dan Skalabilitas
 
-Saat Anda siap menangani volume dokumen yang serius, strategi berikut akan menjaga aplikasi tetap responsif:
+Saat Anda siap menangani volume dokumen serius, strategi ini akan menjaga aplikasi Anda responsif:
 
 ### Manajemen Memori
 
-Dokumen besar dapat dengan cepat menghabiskan memori yang tersedia. Berikut cara menanganinya secara efisien:
+Dokumen besar dapat dengan cepat mengonsumsi memori yang tersedia. Berikut cara menanganinya secara efisien:
 
 ```java
 public class OptimizedDocumentProcessor {
@@ -404,7 +403,7 @@ public class OptimizedDocumentProcessor {
 
 ### Pemrosesan Batch
 
-Untuk perbandingan banyak dokumen, pemrosesan batch adalah sahabat Anda:
+Untuk perbandingan banyak dokumen, pemrosesan batch adalah teman Anda:
 
 ```java
 public List<ComparisonResult> processBatch(List<DocumentPair> documentPairs) {
@@ -429,9 +428,9 @@ private ComparisonResult compareDocumentPair(DocumentPair pair) {
 
 ## Panduan Pemecahan Masalah
 
-Ketika sesuatu tidak berjalan (dan kadang memang terjadi), berikut daftar periksa debugging Anda:
+Ketika sesuatu tidak berjalan (dan kadang terjadi), berikut daftar periksa debugging Anda:
 
-### Error “Comparison Failed”
+### Kesalahan "Comparison Failed"
 
 **Penyebab paling umum:**
 1. Format file tidak didukung  
@@ -464,23 +463,21 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 ### Masalah Kinerja
 
 Jika perbandingan memakan waktu terlalu lama:
-
-1. **Periksa ukuran dokumen** – file > 100 MB mungkin memerlukan penanganan khusus  
-2. **Pantau penggunaan memori** – tingkatkan ukuran heap bila diperlukan  
+1. **Periksa ukuran dokumen** – file di atas 100 MB mungkin memerlukan penanganan khusus  
+2. **Pantau penggunaan memori** – tingkatkan ukuran heap jika diperlukan  
 3. **Verifikasi kinerja I/O file** – penyimpanan lambat dapat menjadi bottleneck operasi  
 4. **Pertimbangkan format dokumen** – beberapa format lebih kompleks untuk diproses  
 
 ### Kebocoran Memori
 
-Tanda‑tanda Anda mungkin mengalami kebocoran memori:
-
+Tanda-tanda Anda mungkin memiliki kebocoran memori:
 - Kinerja aplikasi menurun seiring waktu  
 - `OutOfMemoryError` setelah memproses banyak dokumen  
 - Aktivitas garbage collection tinggi  
 
 **Solusi**: Selalu gunakan try‑with‑resources dan pantau aplikasi Anda dengan alat profiling.
 
-## Menangani File yang Dilindungi Kata Sandi
+## Menangani File yang Dilindungi Password
 
 Jika Anda perlu **java compare password protected** dokumen, gunakan `LoadOptions` saat membuka sumber atau target:
 
@@ -491,7 +488,19 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
-## Integrasi dengan Spring Boot
+## Cara java compare password protected documents
+
+File yang dilindungi password umum di industri yang diatur. Dengan mengirimkan password melalui `LoadOptions`, Anda menjaga alur perbandingan tetap tidak berubah sambil memastikan perpustakaan dapat mendekripsi file dengan aman. Ingatlah untuk tidak pernah menuliskan password secara hard‑code; simpan di vault aman atau variabel lingkungan dan injeksikan pada runtime.
+
+## Cara menangani dokumen besar java
+
+Ketika dokumen melebihi beberapa ratus megabyte, Anda mungkin mengalami pemrosesan lebih lambat atau konsumsi memori lebih tinggi. Untuk mengurangi hal ini:
+- **Tingkatkan heap JVM** (`-Xmx`), terutama untuk pekerjaan batch.  
+- **Aktifkan streaming** bila memungkinkan – GroupDocs.Comparison memproses file dalam potongan secara internal, tetapi Anda dapat lebih mengurangi tekanan memori dengan menghindari memuat seluruh file ke memori secara manual.  
+- **Jalankan perbandingan secara asynchronous** (lihat contoh async di atas) untuk menjaga UI tetap responsif.  
+- **Pisahkan PDF yang sangat besar** menjadi bagian logis sebelum perbandingan jika logika bisnis mengizinkan.  
+
+## Mengintegrasikan dengan Spring Boot
 
 Untuk pengembang yang membangun microservice, bungkus logika perbandingan dalam bean layanan Spring:
 
@@ -515,28 +524,28 @@ public class DocumentComparisonService {
 ## Pertanyaan yang Sering Diajukan
 
 **T: Bisakah saya membandingkan lebih dari dua dokumen sekaligus?**  
-J: Tentu saja! Tambahkan beberapa dokumen target dengan `comparer.add()` sebelum mengeksekusi perbandingan.
+**J:** Tentu saja! Tambahkan banyak dokumen target dengan `comparer.add()` sebelum mengeksekusi perbandingan.
 
-**T: Format file apa saja yang didukung GroupDocs.Comparison?**  
-J: Mendukung DOCX, PDF, XLSX, PPTX, TXT, dan banyak lainnya. Lihat daftar lengkap di dokumentasi resmi.
+**T: Format file apa yang didukung oleh GroupDocs.Comparison?**  
+**J:** Mendukung DOCX, PDF, XLSX, PPTX, TXT, dan banyak lainnya. Lihat daftar lengkap di dokumentasi resmi.
 
-**T: Bagaimana cara menangani dokumen yang dilindungi kata sandi?**  
-J: Gunakan kelas `LoadOptions` untuk memberikan kata sandi saat membuat instance `Comparer` (lihat contoh di atas).
+**T: Bagaimana cara menangani dokumen yang dilindungi password?**  
+**J:** Gunakan kelas `LoadOptions` untuk menyediakan password saat membuat instance `Comparer` (lihat contoh di atas).
 
 **T: Apakah GroupDocs.Comparison thread‑safe?**  
-J: Satu instance `Comparer` tidak thread‑safe, tetapi Anda dapat menggunakan beberapa instance secara paralel di thread terpisah.
+**J:** Satu instance `Comparer` tidak thread‑safe, tetapi Anda dapat menggunakan beberapa instance secara paralel dengan aman.
 
 **T: Bagaimana cara meningkatkan kinerja untuk dokumen besar?**  
-J: Tingkatkan heap JVM (`-Xmx`), proses file secara asynchronous, batch, dan gunakan kembali objek `Comparer` bila memungkinkan.
+**J:** Tingkatkan heap JVM (`-Xmx`), proses file secara asynchronous, batch mereka, dan gunakan kembali objek `Comparer` bila tepat.
 
 ## Sumber Daya Tambahan
 
-- [Dokumentasi GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/) – referensi API lengkap dan contoh  
-- [Forum Komunitas GroupDocs](https://forum.groupdocs.com/) – dapatkan bantuan dari pengembang lain  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – referensi API komprehensif dan contoh  
+- [GroupDocs Community Forum](https://forum.groupdocs.com/) – dapatkan bantuan dari pengembang lain  
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-21  
+**Terakhir Diperbarui:** 2026-02-23  
 **Diuji Dengan:** GroupDocs.Comparison 25.2  
 **Penulis:** GroupDocs  
 

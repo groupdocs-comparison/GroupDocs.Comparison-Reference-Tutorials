@@ -1,65 +1,68 @@
 ---
 categories:
 - Java Development
-date: '2025-12-19'
+date: '2026-02-23'
 description: Aprende a comparar documentos Word en Java usando GroupDocs.Comparison.
   Domina la comparación de varios archivos para Word, PDF, texto y correo electrónico
   con código Java paso a paso.
 keywords: java document comparison library, compare multiple documents java, groupdocs
-  comparison tutorial, java file diff tool, how to compare word documents in java
-lastmod: '2025-12-19'
+  comparison tutorial, java file diff tool, how to compare word docs java
+lastmod: '2026-02-23'
 linktitle: Java Document Comparison Guide
 tags:
 - document-comparison
 - java-libraries
 - groupdocs
 - file-processing
-title: Comparar documentos Word Java – Comparación avanzada de GroupDocs
+title: Comparar documentos Word en Java – GroupDocs Advanced Comparison
 type: docs
 url: /es/java/advanced-comparison/master-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Compare Word Documents Java – GroupDocs Advanced Comparison
+# compare word docs java – Comparación Avanzada de GroupDocs
 
-**¿Tienes problemas con revisiones manuales de documentos?** Aquí tienes cómo **compare word documents java** y ahorrar horas de trabajo tedioso.
+**¿Luchando con revisiones manuales de documentos?** Aquí tienes cómo **compare word docs java** y ahorrar horas de trabajo tedioso.
 
-Si alguna vez has tenido que comparar manualmente múltiples versiones de contratos, informes o hilos de correo electrónico, conoces el dolor. Un cambio pasado por alto puede costarle a tu negocio miles de dólares, y los métodos tradicionales de comparación manual son lentos, propensos a errores y, francamente… agotan el alma.
+Si alguna vez has tenido que comparar manualmente múltiples versiones de contratos, informes o hilos de correo electrónico, conoces el dolor. Un cambio pasado por alto puede costarle a tu empresa miles, sin embargo los métodos tradicionales de comparación manual son lentos, propensos a errores y, francamente… desgastantes.
 
-Ahí es donde entra GroupDocs.Comparison for Java. Esta poderosa biblioteca de comparación de documentos te permite comparar programáticamente documentos Word, PDFs, archivos de texto y correos electrónicos con solo unas pocas líneas de código. Detectarás automáticamente cada diferencia, generarás informes de comparación detallados y liberarás a tu equipo para que se concentre en lo que realmente importa.
+Ahí es donde entra GroupDocs.Comparison for Java. Esta potente biblioteca de comparación de documentos te permite comparar programáticamente documentos Word, PDFs, archivos de texto y correos electrónicos con solo unas pocas líneas de código. Detectarás cada diferencia automáticamente, generarás informes de comparación detallados y liberarás a tu equipo para que se centre en lo que realmente importa.
 
 En esta guía completa, aprenderás exactamente cómo implementar la comparación de documentos en tus aplicaciones Java, evitar errores comunes y optimizar el rendimiento para operaciones a gran escala.
 
-## Quick Answers
+## Respuestas rápidas
 - **¿Cuál es la biblioteca principal?** GroupDocs.Comparison for Java.  
-- **¿Qué formatos son compatibles?** Word, PDF, texto, correo electrónico y más de 50 adicionales.  
+- **¿Qué formatos son compatibles?** Word, PDF, texto, correo electrónico y más de 50 más.  
 - **¿Necesito una licencia?** La versión de prueba funciona con marcas de agua; la producción requiere una licencia.  
 - **¿Puedo comparar muchos archivos a la vez?** Sí – agrega varios documentos objetivo a un solo comparador.  
 - **¿Cómo manejar archivos grandes?** Usa streams y aumenta el tamaño del heap de la JVM.
 
-## What is **compare word documents java**?
-Comparar documentos Word en Java significa usar una API para detectar inserciones, eliminaciones y cambios de formato entre diferentes versiones de un archivo `.docx`. GroupDocs.Comparison abstrae la complejidad, entregando un informe de diferencias que resalta cada cambio.
+## Qué es **compare word docs java**?
+Comparar documentos Word en Java significa usar una API para detectar inserciones, eliminaciones y cambios de formato entre diferentes versiones de un archivo `.docx`. GroupDocs.Comparison abstrae la complejidad, proporcionando un informe de diferencias que resalta cada cambio.
 
-## Why Use GroupDocs for Java Compare Multiple Files?
-- **Speed:** Process dozens of documents in seconds.  
-- **Accuracy:** Character‑level detection, including style changes.  
-- **Flexibility:** Works with Word, PDF, text, email, and more.  
-- **Scalability:** Handles large files when you use streams and proper memory settings.
+## ¿Por qué usar GroupDocs para Java comparar varios archivos?
+- **Velocidad:** Procesa decenas de documentos en segundos.  
+- **Precisión:** Detección a nivel de carácter, incluidos cambios de estilo.  
+- **Flexibilidad:** Funciona con Word, PDF, texto, correo electrónico y más.  
+- **Escalabilidad:** Maneja archivos grandes cuando utilizas streams y configuraciones de memoria adecuadas.
 
-## Prerequisites: What You Need to Get Started
-1. **Java Development Kit (JDK) 8+** – modern Java features are required.  
-2. **Maven or Gradle** – we’ll use Maven for dependency management.  
-3. **Basic Java knowledge** – try‑catch, file handling, and streams.  
-4. **Sample documents** – a few Word docs, PDFs, or text files for testing.  
+## Cómo comparar word docs java en tu proyecto Java
+A continuación se muestra una guía paso a paso que indica exactamente cómo configurar la biblioteca, agregar varios archivos objetivo y generar un informe de comparación. Sigue cada paso y tendrás una solución funcional en minutos.
 
-**Pro tip:** Verify firewall rules allow access to the GroupDocs Maven repository before you start.
+## Requisitos previos: lo que necesitas para comenzar
+1. **Java Development Kit (JDK) 8+** – se requieren características modernas de Java.  
+2. **Maven o Gradle** – utilizaremos Maven para la gestión de dependencias.  
+3. **Conocimientos básicos de Java** – try‑catch, manejo de archivos y streams.  
+4. **Documentos de muestra** – algunos documentos Word, PDFs o archivos de texto para pruebas.  
 
-## Quick Start: Setting Up GroupDocs.Comparison for Java
+**Consejo profesional:** Verifica que las reglas del firewall permitan el acceso al repositorio Maven de GroupDocs antes de comenzar.
 
-Getting started with this Java document comparison library is straightforward, but there are a few gotchas to watch out for.
+## Inicio rápido: Configuración de GroupDocs.Comparison para Java
 
-### Maven Configuration
-Add the repository and dependency to your `pom.xml`. Note the specific repository URL – using the wrong one is a common mistake that'll leave you scratching your head:
+Comenzar con esta biblioteca de comparación de documentos Java es sencillo, pero hay algunos inconvenientes a los que hay que prestar atención.
+
+### Configuración de Maven
+Agrega el repositorio y la dependencia a tu `pom.xml`. Observa la URL específica del repositorio – usar la incorrecta es un error común que te dejará perplejo:
 
 ```xml
 <repositories>
@@ -78,13 +81,13 @@ Add the repository and dependency to your `pom.xml`. Note the specific repositor
 </dependencies>
 ```
 
-### Licensing: Trial vs Production
-For testing purposes, you can use the library without a license (with watermarks). For production use, you'll need either a temporary license for evaluation or a full commercial license. The trial version adds watermarks to your comparison results – something to keep in mind when presenting to stakeholders.
+### Licenciamiento: Prueba vs Producción
+Para propósitos de prueba, puedes usar la biblioteca sin licencia (con marcas de agua). Para uso en producción, necesitarás una licencia temporal para evaluación o una licencia comercial completa. La versión de prueba agrega marcas de agua a tus resultados de comparación – algo a tener en cuenta al presentar a los interesados.
 
-## How to **compare word documents java** with GroupDocs
+## Cómo **compare word docs java** con GroupDocs
 
-### Step 1: Initialize Your Document Comparer
-The `Comparer` class is your main entry point. Always use try‑with‑resources to ensure proper cleanup:
+### Paso 1: Inicializar tu comparador de documentos
+La clase `Comparer` es tu punto de entrada principal. Siempre usa try‑with‑resources para asegurar una limpieza adecuada:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word_document.docx")) {
@@ -92,10 +95,10 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word_docum
 }
 ```
 
-**Important:** The source document path must be absolute or properly relative to your working directory. A common mistake is assuming the path is relative to your project root when it's actually relative to where you run the JVM.
+**Importante:** La ruta del documento fuente debe ser absoluta o correctamente relativa a tu directorio de trabajo. Un error común es asumir que la ruta es relativa a la raíz de tu proyecto cuando en realidad es relativa a donde ejecutas la JVM.
 
-### Step 2: Add Target Documents for Comparison
-You can add multiple target documents to compare against your source. This is where the real power shows – instead of comparing documents one‑by‑one, you can process them all at once:
+### Paso 2: Agregar documentos objetivo para la comparación
+Puedes agregar varios documentos objetivo para comparar con tu fuente. Aquí es donde se muestra el verdadero poder: en lugar de comparar documentos uno por uno, puedes procesarlos todos a la vez:
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word_document.docx");
@@ -103,20 +106,20 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2_word_document.docx");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target3_word_document.docx");
 ```
 
-### Step 3: Generate Your Comparison Report
-Execute the comparison and specify where to save your results:
+### Paso 3: Generar tu informe de comparación
+Ejecuta la comparación y especifica dónde guardar tus resultados:
 
 ```java
 final Path resultPath = comparer.compare("YOUR_OUTPUT_DIRECTORY/compare_multiple_word_documents_result.docx");
 ```
 
-The result file will contain all differences highlighted, making it easy to spot changes across all your documents.
+El archivo resultante contendrá todas las diferencias resaltadas, facilitando la identificación de cambios en todos tus documentos.
 
-## How to **java compare multiple files** – Text File Example
-Text file comparison is incredibly useful for configuration files, code reviews, or any plain‑text content. The process is similar but uses streams for better memory management with large files.
+## Cómo **java compare multiple files** – Ejemplo de archivo de texto
+La comparación de archivos de texto es increíblemente útil para archivos de configuración, revisiones de código o cualquier contenido de texto plano. El proceso es similar pero usa streams para una mejor gestión de memoria con archivos grandes.
 
-### Setting Up Stream‑Based Comparison
-Using an `OutputStream` gives you more control over the output and is more memory‑efficient for large operations:
+### Configuración de comparación basada en streams
+Usar un `OutputStream` te brinda más control sobre la salida y es más eficiente en memoria para operaciones grandes:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_txt_documents_result.txt");
@@ -132,13 +135,13 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-**Performance tip:** For very large text files (100 MB+), consider splitting them into smaller chunks to avoid memory spikes.
+**Consejo de rendimiento:** Para archivos de texto muy grandes (¡100 MB+!), considera dividirlos en fragmentos más pequeños para evitar picos de memoria.
 
-## How to **compare multiple pdfs java** – Email Document Comparison
-Comparing email documents is crucial for legal discovery, compliance audits, or maintaining consistency in customer communications.
+## Cómo **compare multiple pdfs java** – Comparación de documentos de correo electrónico
+Comparar documentos de correo electrónico es crucial para descubrimiento legal, auditorías de cumplimiento o mantener la consistencia en las comunicaciones con clientes.
 
-### Handling Email File Formats
-Email files (.eml, .msg) contain metadata that's important to preserve during comparison:
+### Manejo de formatos de archivos de correo electrónico
+Los archivos de correo electrónico (.eml, .msg) contienen metadatos que es importante preservar durante la comparación:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_email_documents_result.eml");
@@ -152,11 +155,11 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-## How to **handle large files java** – PDF Document Comparison
-PDF comparison is critical in legal environments, academic research, and any scenario where document integrity is paramount.
+## Cómo **handle large files java** – Comparación de documentos PDF
+La comparación de PDFs es crítica en entornos legales, investigación académica y cualquier escenario donde la integridad del documento es fundamental.
 
-### Robust PDF Comparison with Error Handling
-PDFs can be tricky – they might have different encoding, embedded fonts, or security settings. Here's how to handle these edge cases:
+### Comparación robusta de PDF con manejo de errores
+Los PDFs pueden ser complicados – pueden tener codificaciones diferentes, fuentes incrustadas o configuraciones de seguridad. Así es como se manejan estos casos extremos:
 
 ```java
 try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/compare_multiple_pdf_documents_result.pdf");
@@ -175,10 +178,13 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-## Advanced Configuration Options
+## Uso de una herramienta de diff de archivos java para escenarios avanzados
+Si necesitas un control granular—como visualizaciones de diff personalizadas o integración con pipelines CI—piensa en GroupDocs.Comparison como una **herramienta de diff de archivos java** que puede ampliarse. Puedes combinar la biblioteca con tu propia lógica de informes, enviar resultados a un panel de control o activar alertas cuando se detecten cambios críticos.
 
-### Fine‑tuning Comparison Sensitivity
-Sometimes you need more control over what counts as a “difference.” GroupDocs.Comparison offers several configuration options:
+## Opciones de configuración avanzadas
+
+### Ajuste fino de la sensibilidad de comparación
+A veces necesitas más control sobre qué se considera una “diferencia”. GroupDocs.Comparison ofrece varias opciones de configuración:
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -187,18 +193,18 @@ options.setDetectStyleChanges(true);   // Catch formatting changes
 options.setInsertedItemStyle(new StyleSettings()); // Customize how insertions look
 ```
 
-### Customizing Output Formats
-You can control how differences are displayed in your output documents:
+### Personalización de formatos de salida
+Puedes controlar cómo se muestran las diferencias en tus documentos de salida:
 
 ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setCloneMetadataType(MetadataType.SOURCE); // Preserve original metadata
 ```
 
-## Common Issues and Troubleshooting
+## Problemas comunes y solución de problemas
 
-### "File Not Found" Errors
-The most common issue is incorrect file paths. Always use absolute paths or verify your working directory:
+### Errores “File Not Found”
+El problema más común son rutas de archivo incorrectas. Siempre usa rutas absolutas o verifica tu directorio de trabajo:
 
 ```java
 // Instead of this:
@@ -209,15 +215,15 @@ String absolutePath = System.getProperty("user.dir") + "/documents/document.docx
 Comparer comparer = new Comparer(absolutePath);
 ```
 
-### Memory Issues with Large Files
-If you're comparing very large documents (50 MB+), you might run into `OutOfMemoryError`. Increase your JVM heap size:
+### Problemas de memoria con archivos grandes
+Si estás comparando documentos muy grandes (¡50 MB+!), podrías encontrarte con `OutOfMemoryError`. Aumenta el tamaño del heap de tu JVM:
 
 ```bash
 java -Xmx4g -jar your-application.jar
 ```
 
-### License Activation Problems
-Make sure your license file is in the correct location and properly formatted. The library looks for licenses in specific paths:
+### Problemas de activación de licencia
+Asegúrate de que tu archivo de licencia esté en la ubicación correcta y con el formato adecuado. La biblioteca busca licencias en rutas específicas:
 
 ```java
 // Set license before any comparison operations
@@ -225,21 +231,21 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Performance Optimization Best Practices
+## Mejores prácticas de optimización de rendimiento
 
-### Memory Management for Large‑Scale Operations
-When comparing multiple large documents, memory management becomes crucial:
+### Gestión de memoria para operaciones a gran escala
+Al comparar varios documentos grandes, la gestión de memoria se vuelve crucial:
 
-1. **Use streams instead of file paths** when possible – this reduces memory footprint.  
-2. **Process documents in batches** rather than loading everything at once.  
-3. **Dispose of Comparer objects** properly using try‑with‑resources.
+1. **Usa streams en lugar de rutas de archivo** cuando sea posible – esto reduce la huella de memoria.  
+2. **Procesa documentos en lotes** en lugar de cargar todo de una vez.  
+3. **Descarta correctamente los objetos Comparer** usando try‑with‑resources.  
 
-### Optimizing for Speed
-Here are some tips to make your document comparison faster:
+### Optimización para velocidad
+Aquí tienes algunos consejos para que la comparación de documentos sea más rápida:
 
-- **Pre‑sort your documents** by size – compare smaller ones first.  
-- **Use SSD storage** for temporary files – I/O speed matters more than you think.  
-- **Consider parallel processing** for independent comparison operations:
+- **Preordena tus documentos** por tamaño – compara primero los más pequeños.  
+- **Usa almacenamiento SSD** para archivos temporales – la velocidad de E/S importa más de lo que crees.  
+- **Considera el procesamiento paralelo** para operaciones de comparación independientes:
 
 ```java
 // Example of parallel processing multiple comparison operations
@@ -252,38 +258,36 @@ tasks.parallelStream().forEach(task -> {
 });
 ```
 
-## Real‑World Applications and Use Cases
+## Aplicaciones y casos de uso del mundo real
 
-### Legal Document Review
-Law firms use document comparison to:
-- Track changes in contracts during negotiations.  
-- Compare multiple versions of legal briefs.  
-- Ensure consistency across similar case documents.
+### Revisión de documentos legales
+Los despachos de abogados usan la comparación de documentos para:
 
-**Pro tip:** Preserve original formatting and metadata by enabling `CompareOptions` that retain style information.
+- Rastrear cambios en contratos durante negociaciones.  
+- Comparar múltiples versiones de escritos legales.  
+- Garantizar consistencia entre documentos de casos similares.  
 
-### Academic Research and Publishing
-Researchers benefit from:
-- Plagiarism detection across multiple papers.  
-- Version control for collaborative research documents.  
-- Comparing citations and references across related manuscripts.
+**Consejo profesional:** Conserva el formato original y los metadatos habilitando `CompareOptions` que retienen la información de estilo.
 
-### Corporate Documentation Management
-Businesses use document comparison for:
-- Policy document updates across departments.  
-- Marketing material consistency checks.  
-- Technical documentation version control.
+### Investigación académica y publicación
+- Detección de plagio entre varios artículos.  
+- Control de versiones para documentos de investigación colaborativa.  
+- Comparar citas y referencias entre manuscritos relacionados.  
 
-### Software Development Workflows
-Development teams integrate document comparison into:
-- Code review processes for documentation files.  
-- Configuration file management.  
-- API documentation consistency.
+### Gestión de documentación corporativa
+- Actualizaciones de documentos de políticas entre departamentos.  
+- Verificaciones de consistencia de material de marketing.  
+- Control de versiones de documentación técnica.  
 
-## Integration with Existing Systems
+### Flujos de trabajo de desarrollo de software
+- Procesos de revisión de código para archivos de documentación.  
+- Gestión de archivos de configuración.  
+- Consistencia de documentación de API.  
 
-### Spring Boot Integration
-If you're using Spring Boot, you can create a service for document comparison:
+## Integración con sistemas existentes
+
+### Integración con Spring Boot
+Si usas Spring Boot, puedes crear un servicio para la comparación de documentos:
 
 ```java
 @Service
@@ -296,8 +300,8 @@ public class DocumentComparisonService {
 }
 ```
 
-### REST API Implementation
-Create endpoints for document comparison operations:
+### Implementación de API REST
+Crea endpoints para operaciones de comparación de documentos:
 
 ```java
 @RestController
@@ -312,45 +316,45 @@ public class ComparisonController {
 }
 ```
 
-## What's Next: Expanding Your Document Processing Capabilities
-Now that you've mastered document comparison in Java, consider exploring:
+## Qué sigue: ampliando tus capacidades de procesamiento de documentos
+Ahora que dominas la comparación de documentos en Java, considera explorar:
 
-1. **Document conversion** – Convert between formats before comparison.  
-2. **Automated workflows** – Integrate comparison into CI/CD pipelines.  
-3. **Cloud deployment** – Scale your processing with cloud services.  
-4. **Machine‑learning integration** – Use ML to automatically categorize differences.
+1. **Conversión de documentos** – Convierte entre formatos antes de comparar.  
+2. **Flujos de trabajo automatizados** – Integra la comparación en pipelines CI/CD.  
+3. **Despliegue en la nube** – Escala tu procesamiento con servicios en la nube.  
+4. **Integración de aprendizaje automático** – Usa ML para categorizar automáticamente las diferencias.  
 
-## Conclusion
-You now have everything you need to implement powerful document comparison in your Java applications. From basic Word document comparisons to complex multi‑format operations, GroupDocs.Comparison gives you the tools to automate what used to be a manual, error‑prone process.
+## Conclusión
+Ahora tienes todo lo necesario para implementar una poderosa comparación de documentos en tus aplicaciones Java. Desde comparaciones básicas de documentos Word hasta operaciones complejas de múltiples formatos, GroupDocs.Comparison te brinda las herramientas para automatizar lo que antes era un proceso manual y propenso a errores.
 
-Start simple: pick one document type, get comfortable with the API, then expand to more complex scenarios. Remember to handle errors gracefully, optimize for your specific use case, and always test with real‑world documents.
+Comienza de forma simple: elige un tipo de documento, familiarízate con la API y luego amplía a escenarios más complejos. Recuerda manejar los errores de forma adecuada, optimizar según tu caso de uso específico y siempre probar con documentos del mundo real.
 
-**Ready to get started?** Download the library, set up your development environment, and try comparing a few documents. You'll be amazed at how much time you can save once document comparison becomes automatic.
+**¿Listo para comenzar?** Descarga la biblioteca, configura tu entorno de desarrollo y prueba comparar algunos documentos. Te sorprenderá cuánto tiempo puedes ahorrar una vez que la comparación de documentos sea automática.
 
-### Join the Community
-- Check out the [GroupDocs documentation](https://docs.groupdocs.com/comparison/java/) for more advanced features  
-- Join developer forums to share experiences and get help  
-- Follow GroupDocs on social media for updates and tips  
+### Únete a la comunidad
+- Consulta la [documentación de GroupDocs](https://docs.groupdocs.com/comparison/java/) para funciones más avanzadas  
+- Únete a los foros de desarrolladores para compartir experiencias y obtener ayuda  
+- Sigue a GroupDocs en redes sociales para actualizaciones y consejos  
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-**Q: What file formats does GroupDocs.Comparison support besides the ones mentioned?**  
-A: The library supports over 50 formats, including Excel spreadsheets, PowerPoint presentations, HTML files, images (PNG, JPG), CAD drawings, and many more. See the official docs for the full list.
+**P: ¿Qué formatos de archivo admite GroupDocs.Comparison además de los mencionados?**  
+R: La biblioteca admite más de 50 formatos, incluidos hojas de cálculo Excel, presentaciones PowerPoint, archivos HTML, imágenes (PNG, JPG), dibujos CAD y muchos más. Consulta la documentación oficial para la lista completa.
 
-**Q: Can I compare password‑protected documents?**  
-A: Yes. Provide the password when initializing the `Comparer` object. The library handles protected PDFs, Word docs, and Excel files.
+**P: ¿Puedo comparar documentos protegidos con contraseña?**  
+R: Sí. Proporciona la contraseña al inicializar el objeto `Comparer`. La biblioteca maneja PDFs, documentos Word y archivos Excel protegidos.
 
-**Q: How accurate is the comparison? Will it catch every single change?**  
-A: GroupDocs.Comparison is highly accurate, detecting insertions, deletions, and formatting changes at the character level. Accuracy can depend on document complexity and the options you enable.
+**P: ¿Qué tan precisa es la comparación? ¿Detectará cada cambio?**  
+R: GroupDocs.Comparison es muy precisa, detectando inserciones, eliminaciones y cambios de formato a nivel de carácter. La precisión puede depender de la complejidad del documento y de las opciones que actives.
 
-**Q: Is there a limit to how many documents I can compare simultaneously?**  
-A: No hard limit in the API, but practical limits depend on your system's memory and CPU. For large batches (100+ docs), process them in smaller groups.
+**P: ¿Hay un límite de cuántos documentos puedo comparar simultáneamente?**  
+R: No hay un límite estricto en la API, pero los límites prácticos dependen de la memoria y CPU de tu sistema. Para lotes grandes (¡100+ documentos!), procésalos en grupos más pequeños.
 
-**Q: Can I use this library in a commercial application?**  
-A: Yes, with a proper commercial license. The trial version is for evaluation only; production use requires a paid license. GroupDocs offers various licensing options to fit different scenarios.
+**P: ¿Puedo usar esta biblioteca en una aplicación comercial?**  
+R: Sí, con una licencia comercial adecuada. La versión de prueba es solo para evaluación; el uso en producción requiere una licencia de pago. GroupDocs ofrece varias opciones de licenciamiento para adaptarse a diferentes escenarios.
 
 ---
 
-**Last Updated:** 2025-12-19  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs
+**Última actualización:** 2026-02-23  
+**Probado con:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs

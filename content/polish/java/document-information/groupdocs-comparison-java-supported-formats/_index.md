@@ -1,20 +1,19 @@
 ---
 categories:
 - Java Development
-date: '2026-01-05'
-description: Naucz się wykrywać obsługiwane formaty Java i przeprowadzać walidację
-  formatu plików Java przy użyciu GroupDocs.Comparison. Przewodnik krok po kroku oraz
-  praktyczne rozwiązania.
+date: '2026-03-08'
+description: Learn how to detect supported formats java and perform java file format
+  validation with GroupDocs.Comparison. Step-by-step guide and practical solutions.
 keywords: java supported file formats, GroupDocs comparison tutorial, java document
   formats list, retrieve file types java, document management system file format checking
-lastmod: '2026-01-05'
+lastmod: '2026-03-08'
 linktitle: Java File Formats Detection
 tags:
 - java
 - file-formats
 - document-processing
 - groupdocs
-title: Wykryj obsługiwane formaty Java – Kompletny przewodnik wykrywania
+title: Wykrywanie obsługiwanych formatów Java – Kompletny przewodnik
 type: docs
 url: /pl/java/document-information/groupdocs-comparison-java-supported-formats/
 weight: 1
@@ -24,9 +23,9 @@ weight: 1
 
 ## Wstęp
 
-Czy kiedykolwiek próbowałeś przetworzyć dokument w Javie, a napotkałeś na problem, ponieważ Twoja biblioteka nie obsługuje tego konkretnego formatu? Nie jesteś sam. Zgodność formatów plików to jeden z tych „gotcha”, które mogą zniweczyć projekt szybciej, niż zdążysz powiedzieć *UnsupportedFileException*.
+Czy kiedykolwiek próbowałeś przetworzyć dokument w Javie, a napotkałeś problem, ponieważ Twoja biblioteka nie obsługuje tego konkretnego formatu? Nie jesteś sam. Zgodność formatów plików to jedna z tych „pułapek”, które mogą zniweczyć projekt szybciej, niż zdążysz powiedzieć *UnsupportedFileException*.
 
-Znajomość **jak wykrywać obsługiwane formaty java** jest niezbędna do budowania solidnych systemów przetwarzania dokumentów. Niezależnie od tego, czy tworzysz platformę zarządzania dokumentami, usługę konwersji plików, czy po prostu musisz zweryfikować przesyłane pliki przed ich przetworzeniem, programowe wykrywanie formatu chroni Cię przed niespodziewanymi błędami w czasie wykonywania i niezadowolonymi użytkownikami.
+Znajomość **jak wykrywać obsługiwane formaty java** jest niezbędna do budowania solidnych systemów przetwarzania dokumentów. Niezależnie od tego, czy tworzysz platformę zarządzania dokumentami, usługę konwersji plików, czy po prostu musisz **zweryfikować przesyłanie dokumentów java**, programowe wykrywanie formatów chroni Cię przed niespodziewanymi błędami w czasie działania i niezadowolonymi użytkownikami.
 
 **W tym przewodniku dowiesz się:**
 - Jak programowo wykrywać obsługiwane formaty plików w Javie
@@ -36,10 +35,10 @@ Znajomość **jak wykrywać obsługiwane formaty java** jest niezbędna do budow
 - Wskazówek optymalizacji wydajności w środowiskach produkcyjnych
 
 ## Szybkie odpowiedzi
-- **Jaka jest podstawowa metoda listowania formatów?** `FileType.getSupportedFileTypes()` zwraca wszystkie obsługiwane typy.  
-- **Czy potrzebna jest licencja do użycia API?** Tak, do rozwoju wymagana jest darmowa wersja próbna lub tymczasowa licencja.  
+- **Jaka jest podstawowa metoda wypisania formatów?** `FileType.getSupportedFileTypes()` zwraca wszystkie obsługiwane typy.  
+- **Czy potrzebna jest licencja do użycia API?** Tak, wymagana jest darmowa wersja próbna lub tymczasowa licencja na potrzeby rozwoju.  
 - **Czy mogę buforować listę formatów?** Oczywiście — buforowanie poprawia wydajność i zmniejsza obciążenie.  
-- **Czy wykrywanie formatu jest wątkowo‑bezpieczne?** Tak, API GroupDocs jest wątkowo‑bezpieczne, ale własne bufory muszą obsługiwać współbieżność.  
+- **Czy wykrywanie formatów jest bezpieczne wątkowo?** Tak, API GroupDocs jest bezpieczne wątkowo, ale własne buforowanie musi obsługiwać współbieżność.  
 - **Czy lista zmieni się po aktualizacji biblioteki?** Nowe wersje mogą dodawać formaty; po aktualizacjach zawsze ponownie buforuj.
 
 ## Dlaczego wykrywanie formatu pliku ma znaczenie w aplikacjach Java
@@ -50,20 +49,20 @@ Wyobraź sobie: Twoja aplikacja pewnie przyjmuje przesyłane pliki, przetwarza j
 
 **Typowe scenariusze, w których wykrywanie formatu ratuje sytuację:**
 - **Walidacja przesyłania**: Sprawdź kompatybilność przed zapisaniem plików  
-- **Przetwarzanie wsadowe**: Pomijaj nieobsługiwane pliki zamiast całkowicie się nie powieść  
+- **Przetwarzanie wsadowe**: Pomijaj nieobsługiwane pliki zamiast przerywać całość  
 - **Integracja API**: Dostarczaj jasne komunikaty o ograniczeniach formatu  
 - **Planowanie zasobów**: Szacuj wymagania przetwarzania na podstawie typów plików  
 - **Doświadczenie użytkownika**: Wyświetlaj obsługiwane formaty w selektorach plików  
 
 ### Wpływ na biznes
 
-Inteligentne wykrywanie formatu to nie tylko techniczna elegancja — ma bezpośredni wpływ na Twój wynik finansowy:
+Inteligentne wykrywanie formatów to nie tylko techniczna elegancja — ma bezpośredni wpływ na wyniki finansowe:
 - **Mniej zgłoszeń wsparcia**: Użytkownicy od razu wiedzą, co działa  
 - **Lepsze wykorzystanie zasobów**: Przetwarzaj tylko kompatybilne pliki  
-- **Wyższa satysfakcja użytkowników**: Jasna informacja o zgodności formatu  
-- **Szybsze cykle rozwoju**: Wczesne wykrywanie problemów z formatem w testach  
+- **Wyższa satysfakcja użytkowników**: Jasna informacja o kompatybilności formatów  
+- **Szybsze cykle rozwoju**: Wykrywanie problemów z formatem już na etapie testów  
 
-## Wymagania wstępne i konfiguracja
+## Wymagania wstępne i przygotowanie środowiska
 
 Zanim przejdziemy do implementacji, upewnijmy się, że masz wszystko, czego potrzebujesz.
 
@@ -72,12 +71,12 @@ Zanim przejdziemy do implementacji, upewnijmy się, że masz wszystko, czego pot
 **Środowisko programistyczne:**
 - Java Development Kit (JDK) 8 lub wyższy  
 - Maven lub Gradle do zarządzania zależnościami  
-- IDE według wyboru (IntelliJ IDEA, Eclipse, VS Code)
+- Ulubione IDE (IntelliJ IDEA, Eclipse, VS Code)
 
 **Wymagania wiedzy:**
-- Podstawowe koncepcje programowania w Javie  
+- Podstawowe pojęcia programowania w Javie  
 - Znajomość struktury projektu Maven/Gradle  
-- Zrozumienie obsługi wyjątków w Javie  
+- Rozumienie obsługi wyjątków w Javie  
 
 **Zależności biblioteczne:**
 - GroupDocs.Comparison for Java (pokażemy, jak dodać)
@@ -88,11 +87,11 @@ Nie martw się, jeśli nie znasz jeszcze GroupDocs — przeprowadzimy Cię krok 
 
 ### Dlaczego GroupDocs.Comparison?
 
-Wśród bibliotek przetwarzania dokumentów w Javie, GroupDocs.Comparison wyróżnia sięowym wsparciem formatów i prostym API. Obsługuje wszystko, od popularnych dokumentów biurowych po specjalistyczne formaty, takie jak rysunki CAD i pliki e‑mail.
+Wśród bibliotek przetwarzania dokumentów w Javie, GroupDocs.Comparison wyróżnia się szeroką obsługą formatów i prostym API. Obsługuje wszystko, od popularnych dokumentów biurowych po specjalistyczne formaty, takie jak rysunki CAD i pliki e‑mail.
 
 ### Instalacja Maven
 
-Dodaj to repozytorium i zależność do swojego `pom.xml`:
+Dodaj poniższe repozytorium i zależność do swojego `pom.xml`:
 
 ```xml
 <repositories>
@@ -139,11 +138,11 @@ dependencies {
 
 **Wskazówka**: Zacznij od darmowej wersji próbnej, aby zweryfikować, czy biblioteka spełnia Twoje potrzeby, a następnie przejdź do tymczasowej licencji, aby uzyskać pełny dostęp podczas rozwoju.
 
-## Przewodnik implementacji: pobieranie obsługiwanych formatów plików
+## How to detect supported formats java
 
 ### Podstawowa implementacja
 
-Oto jak programowo pobrać wszystkie obsługiwane formaty plików przy użyciu GroupDocs.Comparison:
+Poniżej znajdziesz sposób na programowe pobranie wszystkich obsługiwanych formatów plików przy użyciu GroupDocs.Comparison:
 
 ```java
 import com.groupdocs.comparison.result.FileType;
@@ -161,7 +160,7 @@ for (FileType fileType : fileTypes) {
 System.out.println("\nSupported file types retrieved successfully.");
 ```
 
-### Zrozumienie kodu
+### Analiza kodu
 
 **Co się tutaj dzieje:**
 1. `FileType.getSupportedFileTypes()` zwraca iterowalną kolekcję wszystkich obsługiwanych formatów.  
@@ -171,7 +170,7 @@ System.out.println("\nSupported file types retrieved successfully.");
 **Kluczowe korzyści tego podejścia:**
 - **Wykrywanie w czasie działania** – Brak list formatów zakodowanych na stałe.  
 - **Zgodność wersji** – Zawsze odzwierciedla możliwości aktualnej wersji biblioteki.  
-- **Dynamiczna walidacja** – Buduj kontrole formatów bezpośrednio w logice aplikacji.  
+- **Dynamiczna walidacja** – Buduj sprawdzanie formatów bezpośrednio w logice aplikacji.  
 
 ### Rozszerzona implementacja z filtrowaniem
 
@@ -217,15 +216,15 @@ public class FormatDetector {
 }
 ```
 
-## Typowe problemy konfiguracyjne i rozwiązania
+## Typowe problemy przy konfiguracji i ich rozwiązania
 
 ### Problem 1: Problemy z rozwiązywaniem zależności
 
 **Objaw**: Maven/Gradle nie może znaleźć repozytorium lub artefaktów GroupDocs.
 
 **Rozwiązanie**:
-- Sprawdź, czy połączenie internetowe umożliwia dostęp do zewnętrznych repozytoriów.  
-- Upewnij się, że adres URL repozytorium jest dokładnie taki, jak podany.  
+- Sprawdź, czy połączenie internetowe pozwala na dostęp do zewnętrznych repozytoriów.  
+- Upewnij się, że URL repozytorium jest dokładnie taki, jak podany.  
 - W środowiskach korporacyjnych może być konieczne dodanie repozytorium do Nexus/Artifactory.
 
 **Szybka poprawka**:
@@ -247,8 +246,8 @@ public class FormatDetector {
 
 **Rozwiązanie**:
 - Upewnij się, że plik licencji znajduje się w classpath.  
-- Zweryfikuj, czy licencja nie wygasła.  
-- Sprawdź, czy licencja obejmuje środowisko wdrożeniowe (dev/staging/prod).
+- Sprawdź, czy licencja nie wygasła.  
+- Zweryfikuj, czy licencja obejmuje środowisko wdrożeniowe (dev/staging/prod).
 
 **Przykład kodu ładowania licencji**:
 
@@ -265,18 +264,18 @@ license.setLicense("path/to/GroupDocs.Comparison.lic");
 **Typowe przyczyny**:
 - Konflikty zależności z innymi bibliotekami.  
 - Brak zależności tranzytywnych.  
-- Nieprawidłowa kompatybilność wersji Javy.
+- Nieodpowiednia kompatybilność wersji Javy.
 
 **Kroki debugowania**:
 1. Sprawdź drzewo zależności: `mvn dependency:tree`.  
 2. Zweryfikuj kompatybilność wersji Javy.  
-3. Wyklucz konflikujące zależności tranzytywne, jeśli to konieczne.
+3. Wyklucz konfliktujące zależności tranzytywne, jeśli to konieczne.
 
-### Problem 4: Problemy wydajnościowe przy dużych listach formatów
+### Problem 4: Problemy wydajności przy dużych listach formatów
 
 **Objaw**: Wywołanie `getSupportedFileTypes()` trwa dłużej niż oczekiwano.
 
-**Rozwiązanie**: Buforuj wyniki, ponieważ obsługiwane formaty nie zmieniają się w czasie działania:
+**Rozwiązanie**: Zbuforuj wyniki, ponieważ lista obsługiwanych formatów nie zmienia się w czasie działania:
 
 ```java
 public class FormatCache {
@@ -300,7 +299,7 @@ public class FormatCache {
 
 ### Wzorzec 1: Walidacja przed przesłaniem
 
-Idealny dla aplikacji webowych, które chcą zweryfikować pliki przed ich uploadem:
+Idealny dla aplikacji webowych, które chcą **sprawdzić format pliku java** przed uploadem:
 
 ```java
 public class FileUploadValidator {
@@ -330,7 +329,7 @@ public class FileUploadValidator {
 
 ### Wzorzec 2: Przetwarzanie wsadowe z filtrowaniem formatów
 
-Dla aplikacji przetwarzających wiele plików i potrzebujących eleganckiego obchodzenia się z nieobsługiwanymi formatami:
+Gdy trzeba **przetwarzać wsadowo formaty plików**, ten wzorzec elegancko pomija nieobsługiwane pliki:
 
 ```java
 public class BatchProcessor {
@@ -358,9 +357,9 @@ public class BatchProcessor {
 }
 ```
 
-### Wzorzec 3: API REST – informacje o formatach
+### Wzorzec 3: REST API – informacje o formatach
 
-Udostępnij możliwości formatów poprzez własne API:
+Udostępnij endpoint **list supported file types** dla aplikacji klienckich:
 
 ```java
 @RestController
@@ -407,7 +406,7 @@ private static final List<FileType> SUPPORTED_FORMATS =
 
 ### Obsługa błędów
 
-**Łagodna degradacja**: Zawsze zapewnij mechanizmy awaryjne, gdy wykrywanie formatu zawiedzie:
+**Łagodne degradacje**: Zawsze zapewnij mechanizmy awaryjne, gdy wykrywanie formatu zawiedzie:
 
 ```java
 public boolean isFormatSupported(String filename) {
@@ -425,7 +424,7 @@ public boolean isFormatSupported(String filename) {
 
 ### Optymalizacja wydajności
 
-**Leniwa inicjalizacja**: Nie ładuj informacji o formatach, dopóki nie będą potrzebne:
+**Lenistwo inicjalizacji**: Nie ładuj informacji o formatach, dopóki nie będzie to potrzebne:
 
 ```java
 public class LazyFormatChecker {
@@ -467,9 +466,9 @@ document-processing:
 
 ## Zaawansowane przypadki użycia i aplikacje
 
-### Zarządzanie dokumentami w przedsiębiorstwie
+### Enterprise Document Management
 
-**Scenariusz**: Duża organizacja musi zweryfikować tysiące dokumentów w różnych działach, przy różnych wymaganiach dotyczących formatów.
+**Scenariusz**: Duża organizacja musi **obsługiwać nieobsługiwane typy plików** w różnych działach, z odmiennymi wymaganiami formatowymi.
 
 **Podejście implementacyjne**:
 - Listy dozwolonych formatów specyficzne dla działów  
@@ -478,19 +477,19 @@ document-processing:
 
 ### Integracja z chmurą
 
-**Scenariusz**: Aplikacja SaaS synchronizująca pliki z różnymi dostawcami przechowywania w chmurze.
+**Scenariusz**: Aplikacja SaaS synchronizuje pliki z różnymi dostawcami przechowywania w chmurze.
 
 **Kluczowe kwestie**:
-- Zgodność formatów między różnymi systemami przechowywania  
-- Optymalizacja przepustowości przez wczesne odrzucanie nieobsługiwanych formatów  
+- Zgodność formatów pomiędzy różnymi systemami przechowywania  
+- Optymalizacja przepustowości poprzez wczesne odrzucanie nieobsługiwanych formatów  
 - Powiadomienia użytkowników o nieobsługiwanych plikach podczas synchronizacji  
 
 ### Zautomatyzowane systemy przepływu pracy
 
-**Scenariusz**: Automatyzacja procesów biznesowych, które kierują dokumenty w zależności od formatu i zawartości.
+**Scenariusz**: Automatyzacja procesów biznesowych, która kieruje dokumenty w zależności od formatu i zawartości.
 
 **Korzyści implementacyjne**:
-- Inteligentne kierowanie na podstawie możliwości formatu  
+- Inteligentne routowanie oparte na możliwościach formatu  
 - Automatyczna konwersja formatu, gdy to możliwe  
 - Optymalizacja przepływu pracy dzięki świadomości formatu  
 
@@ -501,15 +500,15 @@ document-processing:
 **Wyzwanie**: Ładowanie wszystkich informacji o obsługiwanych formatach może zużywać niepotrzebną pamięć w środowiskach o ograniczonych zasobach.
 
 **Rozwiązania**:
-1. **Lenie ładowanie** – Ładuj informacje o formacie tylko w razie potrzeby.  
+1. **Lazy loading** – Ładuj informacje o formacie tylko w razie potrzeby.  
 2. **Selektywne buforowanie** – Buforuj jedynie formaty istotne dla Twojego przypadku użycia.  
-3. **Słabe referencje** – Pozwalaj na garbage collection przy ograniczonej pamięci.  
+3. **Weak references** – Pozwól na garbage collection przy ograniczonej pamięci.  
 
 ### Wskazówki dotyczące wydajności CPU
 
 **Efektywne sprawdzanie formatu**:
 - Używaj `HashSet` dla wyszukiwania O(1) zamiast liniowych przeszukiwań.  
-- Pre‑kompiluj wyrażenia regularne do walidacji formatu.  
+- Prekompiluj wyrażenia regularne do walidacji formatu.  
 - Rozważ użycie równoległych strumieni przy dużych operacjach wsadowych.
 
 ```java
@@ -526,7 +525,7 @@ public boolean isSupported(String extension) {
 
 **Dla aplikacji o wysokim przepustowości**:
 - Inicjalizuj informacje o formacie przy starcie aplikacji.  
-- Używaj puli połączeń, jeśli integrujesz się z zewnętrznymi usługami wykrywania formatu.  
+- Korzystaj z puli połączeń, jeśli integrujesz się z zewnętrznymi usługami wykrywania formatu.  
 - Rozważ rozproszone buforowanie (Redis, Hazelcast) w środowiskach klastrowych.  
 
 ## Rozwiązywanie typowych problemów w czasie działania
@@ -545,63 +544,63 @@ public boolean isSupported(String extension) {
 2. Zweryfikuj status i zakres licencji.  
 3. Sprawdź, czy w classpath nie ma duplikatów JAR‑ów.  
 
-### Problem: Degradacja wydajności w czasie
+### Problem: Pogorszenie wydajności z czasem
 
-**Objawy**: Wykrywanie formatu staje się wolniejsze wraz z czasem działania aplikacji.
+**Objawy**: Wykrywanie formatu staje się wolniejsze wraz z upływem czasu działania aplikacji.
 
 **Typowe przyczyny**:
 - Wycieki pamięci w mechanizmach buforowania formatów.  
-- Rosnące wewnętrzne bufory bez czyszczenia.  
+- Rosnące wewnętrzne cache bez czyszczenia.  
 - Konflikty zasobów z innymi komponentami aplikacji.
 
 **Rozwiązania**:
-- Wdroż odpowiednie polityki wygaśnięcia bufora.  
-- Monitoruj wzorce zużycia pamięci.  
-- Używaj narzędzi profilujących do identyfikacji wąskich gardeł.  
+- Wdrożenie odpowiednich polityk wygaśnięcia cache.  
+- Monitorowanie wzorców zużycia pamięci.  
+- Użycie narzędzi profilujących do identyfikacji wąskich gardeł.  
 
-### Problem: Wykrywanie formatu milczy
+### Problem: Ciche niepowodzenie wykrywania formatu
 
-**Objawy**: Nie rzuca wyjątków, ale lista obsługiwanych formatów wydaje się niekompletna.
+**Objawy**: Brak wyjątków, ale wsparcie dla niektórych formatów wydaje się niekompletne.
 
-**Kroki badawcze**:
-1. Włącz debugowanie logów dla komponentów GroupDocs.  
-2. Upewnij się, że inicjalizacja biblioteki zakończyła się pomyślnie.  
+**Kroki dochodzeniowe**:
+1. Włącz debug logging dla komponentów GroupDocs.  
+2. Zweryfikuj, czy inicjalizacja biblioteki zakończyła się pomyślnie.  
 3. Sprawdź ograniczenia licencyjne dotyczące konkretnych formatów.  
 
-## Podsumowanie i kolejne kroki
+## Podsumowanie i dalsze kroki
 
 Zrozumienie i wdrożenie **detect supported formats java** to nie tylko pisanie kodu — to budowanie odpornych, przyjaznych użytkownikowi aplikacji, które radzą sobie z chaotycznym światem formatów plików.
 
 **Kluczowe wnioski z tego przewodnika**:
-- **Programowe wykrywanie formatu** zapobiega niespodziewanym błędom i podnosi doświadczenie użytkownika.  
+- **Programowe wykrywanie formatu** zapobiega niespodziewanym błędom i podnosi jakość doświadczenia użytkownika.  
 - **Poprawna konfiguracja i ustawienia** oszczędzają godziny debugowania typowych problemów.  
 - **Inteligentne buforowanie i optymalizacja wydajności** zapewniają skalowalność aplikacji.  
-- **Solidna obsługa błędów** utrzymuje działanie aplikacji nawet w nieprzewidzianych sytuacjach.  
+- **Solidna obsługa błędów** utrzymuje działanie aplikacji nawet w trudnych sytuacjach.  
 
 **Twoje kolejne kroki**:
-1. Zaimplementuj podstawowe wykrywanie formatu w bieżącym projekcie, korzystając z przykładu kodu podstawowego.  
-2. Dodaj rozbudowaną obsługę błędów, aby łapać przypadki brzegowe.  
-3. Dostosuj buforowanie do swojego konkretnego scenariusza, wykorzystując omówione wzorce.  
-4. Wybierz wzorzec integracji (walidacja przed uploadem, przetwarzanie wsadowe lub API REST), który najlepiej pasuje do Twojej architektury.  
+1. Zaimplementuj podstawowe wykrywanie formatu w bieżącym projekcie, korzystając z przykładu kodu.  
+2. Dodaj kompleksową obsługę błędów, aby łapać przypadki brzegowe.  
+3. Dostosuj buforowanie do swojego konkretnego scenariusza, używając omówionych wzorców.  
+4. Wybierz wzorzec integracji (walidacja przed uploadem, przetwarzanie wsadowe lub REST API), który najlepiej pasuje do Twojej architektury.  
 
-Gotowy na kolejny krok? Zbadaj zaawansowane funkcje GroupDocs.Comparison, takie jak opcje porównywania specyficzne dla formatu, ekstrakcja metadanych i możliwości przetwarzania wsadowego, aby zbudować jeszcze potężniejsze przepływy przetwarzania dokumentów.
+Gotowy na kolejny krok? Zapoznaj się z zaawansowanymi funkcjami GroupDocs.Comparison, takimi jak opcje porównywania specyficzne dla formatu, ekstrakcja metadanych i przetwarzanie wsadowe, aby tworzyć jeszcze potężniejsze przepływy przetwarzania dokumentów.
 
 ## Najczęściej zadawane pytania
 
 **Q: Co się stanie, jeśli spróbuję przetworzyć nieobsługiwany format pliku?**  
-A: GroupDocs.Comparison zgłosi wyjątek. Wstępna walidacja przy użyciu `getSupportedFileTypes()` pozwala wykryć problemy ze zgodnością przed rozpoczęciem przetwarzania.
+A: GroupDocs.Comparison zgłosi wyjątek. Pre‑walidacja przy użyciu `getSupportedFileTypes()` pozwala wykryć problemy kompatybilności przed rozpoczęciem przetwarzania.
 
-**Q: Czy lista obsługiwanych formatów zmienia się między wersjami biblioteki?**  
+**Q: Czy lista obsługiwanych formatów zmienia się pomiędzy wersjami biblioteki?**  
 A: Tak, nowsze wersje zazwyczaj dodają wsparcie dla dodatkowych formatów. Zawsze sprawdzaj notatki wydania przy aktualizacji i rozważ ponowne buforowanie listy formatów.
 
 **Q: Czy mogę rozszerzyć bibliotekę o dodatkowe formaty?**  
-A: GroupDocs.Comparison ma stały zestaw obsługiwanych formatów. Jeśli potrzebujesz dodatkowych, rozważ użycie jej razem z innymi wyspecjalizowanymi bibliotekami lub skontaktuj się z GroupDocs w sprawie wsparcia niestandardowego.
+A: GroupDocs.Comparison ma stały zestaw obsługiwanych formatów. Jeśli potrzebujesz dodatkowych, rozważ użycie jej w połączeniu z innymi wyspecjalizowanymi bibliotekami lub skontaktuj się z GroupDocs w sprawie wsparcia niestandardowego.
 
 **Q: Ile pamięci zużywa wykrywanie formatu?**  
-A: Ślad pamięciowy jest minimalny — zazwyczaj tylko kilka KB dla metadanych formatów. Większe znaczenie ma sposób, w jaki buforujesz i wykorzystujesz te informacje w aplikacji.
+A: Ślad pamięciowy jest minimalny — zazwyczaj kilka KB dla metadanych formatów. Większe znaczenie ma sposób, w jaki buforujesz i wykorzystujesz te informacje w aplikacji.
 
-**Q: Czy wykrywanie formatu jest wątkowo‑bezpieczne?**  
-A: Tak, `FileType.getSupportedFileTypes()` jest wątkowo‑bezpieczne. Jednak własne mechanizmy buforowania muszą prawidłowo obsługiwać współbieżny dostęp.
+**Q: Czy wykrywanie formatu jest bezpieczne wątkowo?**  
+A: Tak, `FileType.getSupportedFileTypes()` jest bezpieczne wątkowo. Jednak własne mechanizmy buforowania muszą prawidłowo obsługiwać współbieżny dostęp.
 
 **Q: Jaki jest wpływ na wydajność sprawdzania wsparcia formatu?**  
 A: Przy odpowiednim buforowaniu sprawdzanie formatu jest praktycznie operacją O(1). Pierwsze wywołanie `getSupportedFileTypes()` ma pewne obciążenie, ale kolejne kontrole są bardzo szybkie.
@@ -623,8 +622,6 @@ A: Przy odpowiednim buforowaniu sprawdzanie formatu jest praktycznie operacją O
 
 ---
 
-**Ostatnia aktualizacja:** 2026-01-05  
+**Ostatnia aktualizacja:** 2026-03-08  
 **Testowane z:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
----
+**Autor:** GroupDocs

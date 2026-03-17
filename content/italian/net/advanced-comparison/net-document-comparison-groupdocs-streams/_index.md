@@ -1,130 +1,395 @@
 ---
-"date": "2025-05-05"
-"description": "Scopri come automatizzare il confronto dei documenti utilizzando i flussi con GroupDocs.Comparison per .NET. Migliora l'efficienza e semplifica i flussi di lavoro."
-"title": "Automatizzare il confronto dei documenti in .NET utilizzando i flussi GroupDocs.Comparison"
-"url": "/it/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-17'
+description: Scopri come confrontare file PDF e Word utilizzando gli stream .NET con
+  GroupDocs.Comparison. Segui questo tutorial passo‑passo con le migliori pratiche
+  per il confronto dei documenti, esempi di codice e consigli per la risoluzione dei
+  problemi.
+keywords: compare pdf and word, document comparison best practices, GroupDocs.Comparison,
+  .NET streams, automate document comparison
+lastmod: '2026-03-17'
+linktitle: Document Comparison .NET Streams
+tags:
+- document-comparison
+- streams
+- groupdocs
+- automation
+- dotnet
+title: Confronta PDF e Word con .NET Streams – Guida all’automazione
 type: docs
+url: /it/net/advanced-comparison/net-document-comparison-groupdocs-streams/
+weight: 1
 ---
-# Automatizzare il confronto dei documenti in .NET utilizzando i flussi GroupDocs.Comparison
-## Introduzione
-Cerchi un modo efficiente per automatizzare il confronto dei documenti? Questo tutorial illustra come confrontare i documenti utilizzando i flussi in un ambiente .NET con GroupDocs.Comparison per .NET. Utilizzando i flussi di file, questo approccio offre flessibilità ed efficienza, soprattutto quando si gestiscono file di grandi dimensioni o risorse di rete.
-**Cosa imparerai:**
-- Come caricare documenti dai flussi
-- Implementazione del confronto dei documenti con GroupDocs.Comparison
-- Salvataggio del risultato del confronto come nuovo documento
-Grazie a queste informazioni, sarai pronto ad automatizzare il confronto dei documenti nelle tue applicazioni .NET. Iniziamo esaminando i prerequisiti.
-## Prerequisiti
-Prima di procedere, assicurati di avere quanto segue:
-- **Librerie e dipendenze richieste:**
-  - GroupDocs.Comparison per .NET (versione 25.4.0 o successiva)
-  - .NET Core SDK (si consiglia la versione più recente)
-- **Requisiti di configurazione dell'ambiente:**
-  - Un IDE compatibile come Visual Studio
-  - Conoscenza di base della programmazione C#
-## Impostazione di GroupDocs.Comparison per .NET
-### Informazioni sull'installazione
-Per iniziare a utilizzare GroupDocs.Comparison nel tuo progetto, devi installare la libreria. Puoi farlo tramite la console di NuGet Package Manager o la .NET CLI.
-**Console del gestore pacchetti NuGet:**
+
+ **bold** formatting.
+
+Also keep code block placeholders unchanged.
+
+Let's produce final Italian markdown.
+
+Be careful with bullet lists, keep same bullet markers.
+
+Translate each section.
+
+Let's start.
+
+We'll produce final answer.# confronta pdf e word con .NET Streams – Guida all'automazione
+
+Ti è mai capitato di annegare tra le versioni dei documenti, cercando di individuare le differenze manualmente? Se sviluppi applicazioni .NET, puoi **confrontare pdf e word** rapidamente ed efficientemente usando gli stream con GroupDocs.Comparison. Gli stream mantengono basso l'uso di memoria, ti permettono di lavorare con file di grandi dimensioni o remoti e eliminano la necessità di copie temporanee su disco.
+
+In questa guida imparerai come caricare i documenti direttamente dagli stream, eseguire un confronto affidabile e applicare le **best practice per il confronto di documenti** in soluzioni di livello produzione.
+
+## Risposte rapide
+- **Cosa posso confrontare?** Qualsiasi formato supportato—PDF, DOCX, PPTX, XLSX e molto altro.  
+- **Perché usare gli stream?** Gli stream leggono i dati a blocchi, riducendo il consumo di RAM per file di grandi dimensioni.  
+- **È necessaria una licenza?** Sì, è richiesta una licenza valida di GroupDocs.Comparison per la produzione.  
+- **Posso confrontare file remoti?** Assolutamente—basta passare uno stream HTTP al comparatore.  
+- **È supportato l'async?** La libreria è sincrona, ma puoi avvolgere le operazioni I/O in async/await per un’interfaccia utente reattiva.
+
+## Che cosa è confrontare pdf e word usando .NET Streams?
+Confrontare documenti PDF e Word tramite stream significa fornire alla classe `Comparer` un oggetto `Stream` invece di un percorso file. La libreria legge il contenuto al volo, ideale per contratti voluminosi, file archiviati nel cloud o qualsiasi scenario in cui si desidera mantenere ridotto l’ingombro di memoria.
+
+## Best practice per il confronto di documenti con gli stream
+- **Avvolgi sempre gli stream in blocchi `using`** per garantire lo smaltimento.  
+- **Preferisci `Path.Combine`** per gestire i percorsi in modo cross‑platform.  
+- **Convalida l’esistenza del file** prima di aprire gli stream per evitare `FileNotFoundException`.  
+- **Gestisci le eccezioni** come `UnauthorizedAccessException` per rendere il servizio più robusto.  
+- **Considera I/O asincrono** per applicazioni UI o web, così da mantenere l’interfaccia reattiva.
+
+## Prerequisiti e configurazione
+
+Prima di passare al codice, assicuriamoci che tu abbia tutto il necessario. Nessuna preoccupazione—la configurazione è semplice.
+
+### Cosa ti serve
+
+**Librerie e dipendenze richieste:**
+- GroupDocs.Comparison per .NET (versione 25.4.0 o successiva – usa sempre l’ultima)
+- .NET Core SDK (ultima versione stabile)
+
+**Requisiti per l’ambiente di sviluppo:**
+- Un IDE decente (Visual Studio è ottimo, ma anche VS Code va bene)
+- Conoscenze di base di C# (se sai scrivere un ciclo `for`, sei a posto)
+
+### Installare GroupDocs.Comparison
+
+L’installazione della libreria è facilissima. Hai due opzioni, entrambe funzionano alla perfezione:
+
+**Opzione 1: Console di NuGet Package Manager**  
 ```shell
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
-**Interfaccia della riga di comando .NET:**
+
+**Opzione 2: .NET CLI (se preferisci la riga di comando)**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
-### Acquisizione della licenza
-Per utilizzare GroupDocs.Comparison, puoi iniziare con una prova gratuita o ottenere una licenza temporanea per test più approfonditi. Per gli ambienti di produzione, valuta l'acquisto di una licenza completa.
-1. **Prova gratuita:** Scarica dal sito ufficiale [pagina di rilascio](https://releases.groupdocs.com/comparison/net/).
-2. **Licenza temporanea:** Richiedi tramite loro [pagina della licenza temporanea](https://purchase.groupdocs.com/temporary-license/).
-3. **Acquistare:** Per un utilizzo a lungo termine, acquista una licenza sul loro [pagina di acquisto](https://purchase.groupdocs.com/buy).
+
+### Acquisizione della licenza (non saltarla!)
+
+Ecco la questione della licenza—hai diverse opzioni a seconda delle tue esigenze:
+
+1. **Prova gratuita:** Perfetta per testare. Scarica dalla pagina ufficiale di [release](https://releases.groupdocs.com/comparison/net/).  
+2. **Licenza temporanea:** Hai bisogno di più tempo per valutare? Ottienila dalla loro pagina di [licenza temporanea](https://purchase.groupdocs.com/temporary-license/).  
+3. **Licenza completa:** Pronto per la produzione? Acquista nella loro pagina di [acquisto](https://purchase.groupdocs.com/buy).
+
 ### Inizializzazione di base
-Ecco come puoi inizializzare GroupDocs.Comparison nella tua applicazione .NET:
+
+Una volta installato tutto, iniziare è semplice come aggiungere questa istruzione `using`:
+
 ```csharp
 using GroupDocs.Comparison;
 ```
-## Guida all'implementazione
-Ora che abbiamo impostato i prerequisiti, passiamo all'implementazione del confronto dei documenti tramite flussi.
-### Caricamento di documenti dai flussi
-Questa funzionalità si concentra sul confronto di documenti caricati tramite flussi di file. Ecco come funziona:
-#### Passaggio 1: impostare i percorsi dei file
-Definisci i percorsi per i documenti di origine e di destinazione, nonché il file di output in cui verranno archiviati i risultati.
+
+È tutto! Sei pronto a confrontare documenti come un professionista.
+
+## Guida all'implementazione – La parte divertente
+
+Bene, ora passiamo al cuore del discorso. Costruiamo un sistema di confronto documenti che funzioni davvero nel mondo reale.
+
+### Comprendere il caricamento di documenti basato su stream
+
+Prima di tuffarci nel codice, parliamo del perché gli stream sono fantastici per il confronto di documenti. Quando carichi i documenti tramite stream, stai essenzialmente dicendo all’applicazione: “Ehi, non caricare l’intero file in memoria in una volta. Leggilo solo quando serve.” Questo approccio brilla quando:
+
+- Hai documenti molto grandi che altrimenti saturerebbero la RAM  
+- I file sono memorizzati su server remoti o in cloud  
+- È fondamentale una gestione precisa della memoria  
+
+### Implementazione passo‑passo
+
+#### Passo 1: Configurare i percorsi dei file
+
+Prima di tutto, definiamo dove vivono i tuoi documenti e dove vuoi che vengano salvati i risultati:
+
 ```csharp
 string sourceDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "source_document.docx");
 string targetDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "target_document.docx");
 string outputFileName = Path.Combine("YOUR_OUTPUT_DIRECTORY", "comparison_result.docx");
 ```
-#### Passaggio 2: caricare i documenti nei flussi
-Utilizzo `File.OpenRead` Per caricare documenti come flussi. Questo metodo è ideale per gestire file di grandi dimensioni o archiviati in remoto.
+
+**Consiglio pro:** Usa sempre `Path.Combine()` invece di concatenare stringhe. Gestisce correttamente i separatori di percorso su diversi sistemi operativi e ti farà risparmiare mal di testa in futuro.
+
+#### Passo 2: Caricare i documenti negli stream
+
+Qui inizia la magia. Usiamo `File.OpenRead` per creare gli stream dei nostri documenti:
+
 ```csharp
 using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
 {
     using (Stream targetStream = File.OpenRead(targetDocumentPath))
     {
-        // Qui va inserito il blocco di codice per il confronto.
+        // The comparison magic happens here
     }
 }
 ```
-#### Passaggio 3: inizializzare il comparatore e aggiungere il flusso di destinazione
-Crea un'istanza di `Comparer` con il flusso di origine, quindi aggiungere il flusso del documento di destinazione.
+
+Nota come avvolgiamo tutto in istruzioni `using`. Questo garantisce che gli stream vengano smaltiti correttamente, anche in caso di eccezione.
+
+#### Passo 3: Inizializzare il Comparer
+
+Ora creiamo l’istanza `Comparer` e aggiungiamo il documento target:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceStream)) 
 {
     comparer.Add(targetStream);
-    // Procedi al confronto dei documenti.
+    // Ready to compare!
 }
 ```
-#### Passaggio 4: eseguire il confronto e salvare il risultato
-Infine, esegui il confronto e salva il file di output utilizzando `File.Create`.
+
+La bellezza di questo approccio è che il `Comparer` lavora direttamente con gli stream—nessun file temporaneo a ingombrare il sistema.
+
+#### Passo 4: Eseguire il confronto e salvare i risultati
+
+Infine, eseguiamo il confronto e salviamo i risultati:
+
 ```csharp
 comparer.Compare(File.Create(outputFileName));
 ```
-### Suggerimenti per la risoluzione dei problemi
-- **Problema comune:** Assicurati che i percorsi siano impostati correttamente e accessibili dall'ambiente della tua applicazione.
-- **Gestione del flusso:** Per evitare perdite di memoria, smaltire sempre correttamente i flussi.
-## Applicazioni pratiche
-GroupDocs.Comparison per .NET può essere applicato in vari scenari reali:
-1. **Revisione dei documenti legali:** Automatizzare il confronto delle versioni contrattuali.
-2. **Contesti accademici:** Confrontare diverse bozze di articoli accademici o tesi.
-3. **Sviluppo software:** Tieni traccia delle modifiche nelle diverse versioni della documentazione del codice.
-Questa libreria si integra perfettamente con altri sistemi .NET, migliorando i flussi di lavoro di gestione dei documenti all'interno delle applicazioni aziendali.
-## Considerazioni sulle prestazioni
-Per ottimizzare le prestazioni quando si utilizza GroupDocs.Comparison:
-- Utilizzare i flussi per ridurre al minimo l'occupazione di memoria.
-- Sfruttare modelli di programmazione asincrona per le operazioni di I/O.
-- Seguire le best practice nella gestione della memoria .NET per garantire un utilizzo efficiente delle risorse.
+
+Fatto! I tuoi documenti sono confrontati e i risultati sono salvati esattamente dove hai indicato.
+
+## Esempio completo funzionante
+
+Ecco tutto assemblato in un metodo pulito, pronto per la produzione:
+
+```csharp
+public void CompareDocumentsUsingStreams()
+{
+    string sourceDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "source_document.docx");
+    string targetDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "target_document.docx");
+    string outputFileName = Path.Combine("YOUR_OUTPUT_DIRECTORY", "comparison_result.docx");
+
+    using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
+    {
+        using (Stream targetStream = File.OpenRead(targetDocumentPath))
+        {
+            using (Comparer comparer = new Comparer(sourceStream)) 
+            {
+                comparer.Add(targetStream);
+                comparer.Compare(File.Create(outputFileName));
+            }
+        }
+    }
+}
+```
+
+## Risoluzione dei problemi più comuni
+
+Siamo onesti—le cose non sempre funzionano alla prima. Di seguito i problemi più frequenti e le relative soluzioni.
+
+### Problemi di percorso file
+**Sintomo:** `FileNotFoundException` o errori simili legati al percorso  
+**Soluzione:** Ricontrolla i percorsi dei file. Usa percorsi assoluti durante lo sviluppo per evitare confusioni.
+
+```csharp
+// Instead of this:
+string path = "documents/source.docx";
+
+// Do this:
+string path = Path.GetFullPath("documents/source.docx");
+Console.WriteLine($"Full path: {path}"); // Always verify your paths
+```
+
+### Perdita di memoria per gestione impropria degli stream
+**Sintomo:** L’uso di memoria dell’applicazione cresce col tempo  
+**Soluzione:** Avvolgi sempre gli stream in blocchi `using`. Ecco cosa **NON** fare:
+
+```csharp
+// DON'T do this:
+Stream sourceStream = File.OpenRead(sourceDocumentPath);
+// Stream never gets disposed!
+
+// DO this instead:
+using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
+{
+    // Stream automatically disposed
+}
+```
+
+### Problemi di prestazioni con file di grandi dimensioni
+**Sintomo:** Il confronto richiede molto tempo con documenti voluminosi  
+**Soluzione:** Considera l’implementazione di operazioni asincrone e il reporting di avanzamento:
+
+```csharp
+// For large files, consider async operations
+public async Task CompareDocumentsAsync()
+{
+    // Implementation with async/await pattern
+    // This keeps your UI responsive
+}
+```
+
+### Errori di accesso negato
+**Sintomo:** `UnauthorizedAccessException` durante lettura/scrittura file  
+**Soluzione:** Verifica i permessi dei file e assicurati che non siano bloccati da altre applicazioni.
+
+## Applicazioni nel mondo reale
+
+Il confronto di documenti tramite stream non è solo un esercizio accademico—risolve problemi concreti in molti settori.
+
+### Revisione di documenti legali
+Gli studi legali confrontano versioni di contratti di decine di pagine. Il confronto basato su stream consente di individuare le modifiche alle clausole senza caricare l’intero contratto in memoria.
+
+### Pubblicazione accademica
+Le università confrontano bozze di tesi e articoli di ricerca, spesso mescolando formati PDF e Word. La capacità di gestire più formati semplifica il processo di revisione.
+
+### Gestione della documentazione software
+I team di sviluppo tracciano le modifiche su documenti API, guide utente e note di rilascio. Integrato nelle pipeline CI/CD, il confronto con stream automatizza i controlli di conformità.
+
+### Enterprise Content Management
+Le grandi organizzazioni applicano politiche di controllo delle modifiche confrontando revisioni di documenti prima della pubblicazione su intranet o portali pubblici.
+
+## Strategie di ottimizzazione delle prestazioni
+
+### Best practice per la gestione della memoria
+- **Usa gli stream con saggezza:** Mantengono l’ingombro di memoria basso rispetto al caricamento completo dei file.  
+- **Smaltisci prontamente:** Usa sempre blocchi `using` o chiamate esplicite a `Dispose()`.  
+- **Buffering:** Per file molto grandi, regola la dimensione del buffer quando crei istanze di `FileStream`.
+
+### Implementare pattern asincroni
+```csharp
+public async Task CompareDocumentsAsync()
+{
+    // Use async file operations for better responsiveness
+    using var sourceStream = new FileStream(sourcePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, true);
+    // The 'true' parameter enables asynchronous operations
+}
+```
+
+### Monitoraggio delle prestazioni
+Tieni sotto controllo queste metriche in produzione:
+- Utilizzo di memoria durante il confronto  
+- Tempo di esecuzione per diverse dimensioni di file  
+- Carico CPU sotto carichi di confronto concorrenti  
+
+### Suggerimenti per l’ottimizzazione
+- Raggruppa più confronti quando possibile.  
+- Scegli dimensioni di buffer adeguate al tuo ambiente.  
+- Sfrutta l’elaborazione parallela per coppie di documenti indipendenti.  
+- Cachea i documenti confrontati frequentemente se sono immutabili.
+
+## Modelli di utilizzo avanzati
+
+### Confrontare documenti da fonti diverse
+
+Non sei limitato ai file locali. Ecco come confrontare un file locale con un documento remoto:
+
+```csharp
+// Compare local file with remote document
+using (var localStream = File.OpenRead("local_document.docx"))
+{
+    using (var httpClient = new HttpClient())
+    {
+        using (var remoteStream = await httpClient.GetStreamAsync("https://example.com/remote_document.docx"))
+        {
+            using (var comparer = new Comparer(localStream))
+            {
+                comparer.Add(remoteStream);
+                comparer.Compare(File.Create("comparison_result.docx"));
+            }
+        }
+    }
+}
+```
+
+### Gestione degli errori e resilienza
+
+Le applicazioni di produzione richiedono una gestione robusta degli errori:
+
+```csharp
+public bool CompareDocumentsWithErrorHandling(string sourcePath, string targetPath, string outputPath)
+{
+    try
+    {
+        using (Stream sourceStream = File.OpenRead(sourcePath))
+        {
+            using (Stream targetStream = File.OpenRead(targetPath))
+            {
+                using (Comparer comparer = new Comparer(sourceStream))
+                {
+                    comparer.Add(targetStream);
+                    comparer.Compare(File.Create(outputPath));
+                    return true;
+                }
+            }
+        }
+    }
+    catch (FileNotFoundException ex)
+    {
+        Console.WriteLine($"File not found: {ex.Message}");
+        return false;
+    }
+    catch (UnauthorizedAccessException ex)
+    {
+        Console.WriteLine($"Access denied: {ex.Message}");
+        return false;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Unexpected error: {ex.Message}");
+        return false;
+    }
+}
+```
+
+## Domande frequenti
+
+**D: Quali formati di documento supporta GroupDocs.Comparison oltre a DOCX?**  
+R: Supporta PDF, Excel (XLS/XLSX), PowerPoint (PPT/PPTX), testo semplice e molti altri. È possibile confrontare formati diversi tra loro (ad es. PDF vs. Word).
+
+**D: Come gestire file estremamente grandi senza esaurire la memoria?**  
+R: Usa il caricamento basato su stream (come mostrato) e considera di aumentare la dimensione del buffer o di processare i file a blocchi. Implementa un reporting di avanzamento per monitorare operazioni lunghe.
+
+**D: Posso ignorare le modifiche di formattazione durante il confronto?**  
+R: Sì. GroupDocs.Comparison offre `CompareOptions` dove è possibile disabilitare i controlli di formattazione, le differenze di spazi bianchi e la sensibilità al maiuscolo/minuscolo.
+
+**D: Esiste supporto async per il confronto stesso?**  
+R: La libreria core è sincrona, ma puoi avvolgere le parti I/O (lettura/scrittura file) in pattern async/await per mantenere l’interfaccia utente reattiva.
+
+**D: Come confronto documenti protetti da password?**  
+R: Fornisci la password quando crei l’istanza `Comparer`. L’API accetta password per PDF, Word e file Excel.
+
+**D: Cosa fare se si verifica un’interruzione di rete durante il confronto di un documento remoto?**  
+R: Implementa una logica di retry con backoff esponenziale per la richiesta HTTP e valuta di scaricare il file remoto in uno stream locale temporaneo prima del confronto.
+
 ## Conclusione
-In questo tutorial, hai imparato come automatizzare il confronto dei documenti utilizzando flussi di file con GroupDocs.Comparison per .NET. Questo approccio non solo semplifica il flusso di lavoro, ma migliora anche le prestazioni gestendo in modo efficiente le risorse.
-I passaggi successivi potrebbero includere l'esplorazione di funzionalità più avanzate della libreria o la sua integrazione con altri sistemi all'interno del tuo stack tecnologico.
 
-## Sezione FAQ
+Hai appena imparato a **confrontare pdf e word** in modo efficiente usando .NET Streams e GroupDocs.Comparison. Seguendo le **best practice per il confronto di documenti** illustrate qui—smaltimento corretto degli stream, gestione robusta degli errori e ottimizzazione delle prestazioni—potrai costruire soluzioni scalabili da piccoli contratti a archivi multi‑gigabyte.
 
-**D1: Posso confrontare documenti in formati diversi dal DOCX?**
+**Qual è il prossimo passo?** Esplora funzionalità avanzate come `CompareOptions` personalizzati, output in altri formati (HTML, PNG) o integra questa logica in un workflow più ampio di elaborazione documenti, ad esempio un sistema di gestione dei contenuti o una pipeline CI.
 
-R1: Sì, GroupDocs.Comparison supporta un'ampia gamma di formati di documenti, tra cui file PDF, Excel e PowerPoint.
+---
 
-**D2: Come posso gestire in modo efficiente i confronti di file di grandi dimensioni?**
+**Ultimo aggiornamento:** 2026-03-17  
+**Testato con:** GroupDocs.Comparison 25.4.0 (ultima versione al momento della scrittura)  
+**Autore:** GroupDocs  
 
-A2: Utilizzare flussi per caricare documenti per ridurre al minimo l'utilizzo di memoria e migliorare le prestazioni.
-
-**D3: Quali sono i requisiti di sistema per utilizzare GroupDocs.Comparison nelle applicazioni .NET?**
-
-A3: È richiesta una versione compatibile di .NET Core SDK, insieme a Visual Studio o un IDE simile.
-
-**D4: Esiste supporto per le operazioni asincrone nel confronto dei documenti?**
-
-R4: Sì, è possibile implementare metodi asincroni per gestire le attività I/O in modo più efficiente.
-
-**D5: Dove posso trovare documentazione dettagliata e riferimenti API?**
-
-A5: Visita il [Documentazione .NET di GroupDocs.Comparison](https://docs.groupdocs.com/comparison/net/) per guide complete e dettagli sulle API.
-
-## Risorse
-- **Documentazione:** [Confronto GroupDocs Documenti .NET](https://docs.groupdocs.com/comparison/net/)
-- **Riferimento API:** [Riferimento API .NET per il confronto di GroupDocs](https://reference.groupdocs.com/comparison/net/)
-- **Scaricamento:** [Versioni di GroupDocs](https://releases.groupdocs.com/comparison/net/)
-- **Acquista licenza:** [Acquista GroupDocs](https://purchase.groupdocs.com/buy)
-- **Prova gratuita:** [Pagina di rilascio di GroupDocs](https://releases.groupdocs.com/comparison/net/)
-- **Licenza temporanea:** [Richiedi licenza temporanea](https://purchase.groupdocs.com/temporary-license/)
-- **Supporto:** [Forum di GroupDocs](https://forum.groupdocs.com/c/comparison/)
-Seguendo questa guida, sarai ora in grado di implementare un confronto efficiente di documenti nelle tue applicazioni .NET utilizzando GroupDocs.Comparison. Buon lavoro!
+**Risorse:**  
+- [Documentazione ufficiale](https://docs.groupdocs.com/comparison/net/)  
+- [Riferimento API completo](https://reference.groupdocs.com/comparison/net/)  
+- [Download ultima versione](https://releases.groupdocs.com/comparison/net/)  
+- [Acquista licenza](https://purchase.groupdocs.com/buy)  
+- [Prova gratuita](https://releases.groupdocs.com/comparison/net/)  
+- [Licenza temporanea](https://purchase.groupdocs.com/temporary-license/)  
+- [Forum della community](https://forum.groupdocs.com/c/comparison/)

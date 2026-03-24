@@ -1,70 +1,79 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Scopri come confrontare documenti Word in Java usando GroupDocs.Comparison
-  e gli stream Java. Include gli stream try‑with‑resources di Java e un tutorial passo‑passo.
+date: '2026-03-24'
+description: Scopri come eseguire il confronto GroupDocs Java usando gli stream Java
+  e il costrutto try‑with‑resources. Guida passo‑passo con codice, risoluzione dei
+  problemi e migliori pratiche.
 keywords: Java document comparison, GroupDocs Comparer, stream document processing,
   Java file comparison API, compare Word documents Java streams
-lastmod: '2025-12-26'
+lastmod: '2026-03-24'
 linktitle: Java Stream Document Comparison
 tags:
 - document-comparison
 - groupdocs
 - java-streams
 - file-processing
-title: Confronta documenti Word in Java con gli Stream
+title: 'groupdocs comparison java: confronta documenti Word con gli Stream'
 type: docs
 url: /it/java/basic-comparison/java-stream-document-comparison-groupdocs/
 weight: 1
 ---
 
-# confrontare documenti word java con Streams
+# groupdocs comparison java: confronta documenti Word con Streams
 
 ## Introduzione
 
-Ti sei mai trovato in difficoltà con il programma **compare word documents java** in modo programmatico? Non sei solo. Che tu stia costruendo un sistema di gestione documentale, gestendo il versionamento o automatizzando la revisione di documenti legali, un confronto efficiente dei documenti può diventare un vero grattacapo.
+Hai mai avuto difficoltà con il programma **compare word documents java** in modo programmatico? Non sei solo. Che tu stia costruendo un sistema di gestione documenti, gestendo il controllo di versione o automatizzando la revisione di documenti legali, un confronto efficiente dei documenti può essere un vero grattacapo. Con **groupdocs comparison java**, ottieni un modo potente e a basso consumo di memoria per confrontare file Word usando gli stream Java.
 
-Ecco il punto: i metodi tradizionali di confronto dei file spesso consumano troppa memoria e mancano della flessibilità necessaria per le applicazioni moderne. È qui che entra in gioco **GroupDocs.Comparison for Java**, soprattutto se combinato con Java Streams.
+Ecco la questione: i metodi tradizionali di confronto file spesso consumano troppa memoria e mancano della flessibilità necessaria per le applicazioni moderne. È qui che entra in gioco **GroupDocs.Comparison for Java**, soprattutto quando lo combini con Java Streams e **java try with resources**.
 
-In questa guida completa imparerai a implementare un confronto robusto dei documenti usando gli stream, in modo sia efficiente in termini di memoria sia scalabile. Copriremo tutto, dalla configurazione di base alla risoluzione avanzata dei problemi, così potrai gestire il confronto dei documenti nelle tue applicazioni Java con sicurezza.
+In questa guida completa, imparerai a implementare un confronto robusto dei documenti usando gli stream, in modo sia efficiente in termini di memoria sia scalabile. Copriremo tutto, dall'impostazione di base alla risoluzione avanzata dei problemi, così potrai gestire con sicurezza il confronto dei documenti nelle tue applicazioni Java.
 
-### Cosa Imparerai
+### Cosa imparerai
 - Configurare GroupDocs.Comparer nel tuo ambiente Java  
-- Caricare e confrontare documenti usando **java stream file comparison** (il modo intelligente)  
+- Caricare e confrontare documenti usando **java stream document comparison** (il modo intelligente)  
 - Scrivere i risultati del confronto su OutputStream in modo efficiente  
 - Implementare funzioni di utilità per una migliore organizzazione del codice  
-- Risolvere i problemi più comuni che potresti incontrare  
+- Risolvere i problemi comuni che potresti incontrare  
 
-Al termine di questo tutorial avrai una funzionalità di confronto documenti pronta per la produzione, che i tuoi utenti adoreranno. Iniziamo con ciò di cui avrai bisogno.
+Al termine di questo tutorial, avrai una funzionalità di confronto documenti pronta per la produzione che i tuoi utenti adoreranno. Iniziamo con ciò di cui hai bisogno.
 
-## Risposte Rapide
+## Risposte rapide
 - **Quale libreria devo usare?** GroupDocs.Comparison for Java  
-- **Posso confrontare file DOCX di grandi dimensioni?** Sì, usando gli stream si evita di caricare l’intero file in memoria  
-- **È necessaria una licenza?** Una prova gratuita è sufficiente per lo sviluppo; è richiesta una licenza completa per la produzione  
-- **Come gestisco le risorse?** Usa `java try-with-resources streams` per chiudere automaticamente i file  
+- **Posso confrontare file DOCX di grandi dimensioni?** Sì, gli stream evitano di caricare l'intero file in memoria  
+- **Ho bisogno di una licenza?** Una prova gratuita funziona per lo sviluppo; è necessaria una licenza completa per la produzione  
+- **Come gestisco le risorse?** Usa gli stream `java try‑with‑resources` per chiudere automaticamente i file  
 - **È possibile confrontare più di due documenti?** Sì, chiama `comparer.add()` per ogni documento aggiuntivo  
 
-## Prerequisiti e Configurazione dell'Ambiente
+## Cos'è groupdocs comparison java?
 
-Prima di immergerci nel contenuto, assicurati di avere questi elementi fondamentali pronti:
+GroupDocs.Comparison for Java è un'API commerciale che consente di confrontare programmaticamente un'ampia gamma di formati di documento—including DOCX, PDF, PPTX e molto altro—fornendo al contempo un tracciamento dettagliato delle modifiche. Si integra perfettamente con gli stream Java, abilitando **java stream document comparison** che scala a file di grandi dimensioni senza esaurire la memoria.
 
-**Strumenti Richiesti**
-- **Java Development Kit (JDK)**: versione 8 o superiore (consigliato Java 11+)  
+## Perché usare java try with resources per il confronto dei documenti?
+
+L'uso di `try‑with‑resources` garantisce che ogni `InputStream` e `OutputStream` venga chiuso automaticamente, prevenendo perdite di risorse e gli errori temuti “File is Being Used by Another Process”. Questo modello è essenziale quando confronti più documenti in un ambiente ad alto throughput.
+
+## Prerequisiti e configurazione dell'ambiente
+
+Prima di immergerci nei dettagli, assicurati di avere pronti questi elementi essenziali:
+
+**Strumenti richiesti**
+- **Java Development Kit (JDK)**: versione 8 o superiore (Java 11+ consigliato)  
 - **IDE**: IntelliJ IDEA, Eclipse o il tuo IDE Java preferito  
-- **Strumento di Build**: Maven o Gradle (gli esempi useranno Maven)  
-- **Conoscenza Base di Java**: familiarità con gli stream e la gestione dei file  
+- **Strumento di build**: Maven o Gradle (nei esempi useremo Maven)  
+- **Conoscenza base di Java**: familiarità con gli stream e la gestione dei file  
 
-**Configurazione Consigliata**
+**Configurazione consigliata**
 - Almeno 4 GB di RAM per uno sviluppo fluido  
 - Documenti Word di esempio per i test  
-- Un ambiente di lavoro tranquillo (crederai quando vedrai quanto può diventare intenso il debug del confronto documenti!)
+- Un ambiente di lavoro tranquillo (credimi, il debug del confronto dei documenti può diventare intenso!)
 
 ## Configurazione di GroupDocs.Comparison for Java
 
 ### Configurazione Maven
 
-Aggiungi il repository e la dipendenza seguenti al tuo file `pom.xml`:
+Aggiungi il seguente repository e dipendenza al tuo file `pom.xml`:
 
 ```xml
 <repositories>
@@ -84,18 +93,18 @@ Aggiungi il repository e la dipendenza seguenti al tuo file `pom.xml`:
 </dependencies>
 ```
 
-**Consiglio Pro**: controlla sempre la versione più recente nella pagina dei rilasci di GroupDocs. L'uso di versioni obsolete può causare problemi di compatibilità che ti faranno impazzire.
+**Consiglio professionale**: controlla sempre la versione più recente nella pagina dei rilasci di GroupDocs. L'uso di versioni obsolete può causare problemi di compatibilità che ti faranno impazzire.
 
-### Acquisizione della Licenza (Non Saltarla!)
+### Acquisizione della licenza (non saltare questo passo!)
 
 Hai tre opzioni:
-1. **Prova Gratuita** – perfetta per i primi test e proof‑of‑concept  
-2. **Licenza Temporanea** – ideale quando hai bisogno di più tempo per la valutazione  
-3. **Licenza Completa** – per le applicazioni in produzione  
+1. **Prova gratuita** – perfetta per i primi test e proof‑of‑concept  
+2. **Licenza temporanea** – ideale quando hai bisogno di più tempo per la valutazione  
+3. **Licenza completa** – per le applicazioni in produzione  
 
 La maggior parte degli sviluppatori inizia con la prova gratuita, che fornisce funzionalità sufficienti per costruire e testare la tua implementazione.
 
-### Inizializzazione di Base
+### Inizializzazione di base
 
 Una volta aggiunto GroupDocs.Comparison al tuo progetto, ecco come inizializzarlo:
 
@@ -106,23 +115,23 @@ import com.groupdocs.comparison.Comparer;
 Comparer comparer = new Comparer("source.docx");
 ```
 
-Semplice, vero? Ma ecco quello che la maggior parte dei tutorial non ti dirà: avvolgi sempre l’inizializzazione di `Comparer` in un blocco **java try-with-resources** per una corretta gestione delle risorse. Ne parleremo in dettaglio subito dopo.
+Semplice, vero? Ma ecco quello che la maggior parte dei tutorial non ti dirà: avvolgi sempre l'inizializzazione di `Comparer` in un blocco **java try‑with‑resources** per una corretta gestione delle risorse. Ne parleremo in dettaglio subito dopo.
 
-## Guida all'Implementazione: Il Cuore della Questione
+## Guida all'implementazione: il vero affare
 
-Ora arriva la parte più importante. È qui che il confronto di documenti Java diventa interessante, e dove la maggior parte degli sviluppatori o riesce brillantemente o resta bloccata per giorni. Assicuriamoci che tu sia nel primo gruppo.
+Ora arriva la parte principale. È qui che il confronto dei documenti Java diventa interessante, e dove la maggior parte degli sviluppatori o riesce brillantemente o resta bloccata per giorni. Assicuriamoci che tu sia nel primo gruppo.
 
-### Caricamento dei Documenti con gli Stream (L'Approccio Intelligente)
+### Caricamento dei documenti usando gli stream (l'approccio intelligente)
 
-#### Perché gli Stream Sono Importanti
+#### Perché gli stream sono importanti
 
-Prima di tuffarci nel codice, parliamo del perché gli stream sono i tuoi migliori alleati per il confronto dei documenti:
-- **Efficienza di Memoria** – gli stream non caricano l’intero file in memoria in una sola volta  
+Prima di passare al codice, parliamo del perché gli stream sono i tuoi migliori alleati per il confronto dei documenti:
+- **Efficienza di memoria** – gli stream non caricano l'intero file in memoria contemporaneamente  
 - **Scalabilità** – gestisci documenti di grandi dimensioni senza degradare le prestazioni  
 - **Flessibilità** – funziona con varie fonti di dati (file, rete, database)  
-- **Gestione delle Risorse** – controllo migliore sui handle dei file e sull’utilizzo della memoria  
+- **Gestione delle risorse** – controllo migliore su handle di file e utilizzo della memoria  
 
-#### Implementazione Passo‑per‑Passo
+#### Implementazione passo‑passo
 
 **Passo 1: Prepara i tuoi InputStream**
 
@@ -134,21 +143,21 @@ InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/source.d
 InputStream targetStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Consiglio dal Mondo Reale**: in produzione, verifica che questi file esistano prima di creare gli stream. Nulla è più frustrante di una `FileNotFoundException` davanti agli utenti.
+**Consiglio pratico**: in produzione, verifica che questi file esistano prima di creare gli stream. Nulla è peggio di una `FileNotFoundException` davanti agli utenti.
 
-**Passo 2: Inizializza Comparer con lo Stream di Origine**
+**Passo 2: Inizializza Comparer con lo stream di origine**
 
 ```java
 Comparer comparer = new Comparer(sourceStream);
 ```
 
-**Passo 3: Aggiungi il Documento di Destinazione per il Confronto**
+**Passo 3: Aggiungi il documento di destinazione per il confronto**
 
 ```java
 comparer.add(targetStream);
 ```
 
-**Passo 4: Esegui il Confronto e Scrivi i Risultati**
+**Passo 4: Esegui il confronto e scrivi i risultati**
 
 ```java
 import java.io.FileOutputStream;
@@ -159,23 +168,23 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-#### Comprendere i Componenti
+#### Comprendere i componenti
 
 - **InputStream** – carica i file in modo efficiente, solo quando necessario, non tutti in una volta  
 - **Comparer** – il motore che gestisce tutta la logica complessa del confronto  
 - **OutputStream** – scrive il risultato del confronto senza sovraccaricare la memoria del sistema  
 
-### Funzioni di Utilità (Mantieni il Codice Pulito)
+### Funzioni di utilità (mantieni il codice pulito)
 
-#### Perché le Utility Sono Importanti
+#### Perché le utility sono importanti
 
 Il codice pulito non è solo una questione di aspetto professionale (anche se aiuta). Le funzioni di utilità rendono il tuo codice:
-- **Manutenibile** – una modifica in un punto influisce sull’intero sistema  
-- **Testabile** – più facile scrivere unit test per funzionalità specifiche  
+- **Manutenibile** – le modifiche in un unico punto influenzano l'intero sistema  
+- **Testabile** – più facile scrivere test unitari per funzionalità specifiche  
 - **Riutilizzabile** – scrivi una volta, usa ovunque  
-- **Leggibile** – altri sviluppatori (incluso il te stesso futuro) ti ringrazieranno  
+- **Leggibile** – altri sviluppatori (incluso il futuro te) ti ringrazieranno  
 
-#### Implementazione di Metodi di Utilità Intelligenti
+#### Implementazione di metodi di utilità intelligenti
 
 ```java
 import java.nio.file.Path;
@@ -187,11 +196,11 @@ class Utils {
 }
 ```
 
-Questo semplice metodo costruisce dinamicamente i percorsi dei file, cosa estremamente utile quando si elaborano più documenti o si hanno necessità di file di output unici.
+Questo semplice metodo costruisce percorsi di file in modo dinamico, il che è estremamente utile quando elabori più documenti o hai bisogno di file di output unici.
 
-### Gestione Corretta delle Risorse con java try‑with‑resources
+### Gestione corretta delle risorse con java try‑with‑resources
 
-Usare `try‑with‑resources` garantisce che gli stream vengano chiusi automaticamente, evitando l’errore temuto **“File is Being Used by Another Process”**:
+Usare `try‑with‑resources` garantisce che gli stream vengano chiusi automaticamente, evitando l'errore temuto **“File is Being Used by Another Process”**:
 
 ```java
 try (FileInputStream sourceStream = new FileInputStream(sourcePath);
@@ -200,109 +209,109 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 }
 ```
 
-## Problemi Comuni e Soluzioni (Risparmia Ore di Debug)
+## Problemi comuni e soluzioni (risparmia ore di debug)
 
-### Problema 1: OutOfMemoryError con Documenti Grandi
-- **Sintomi**: l’applicazione si arresta durante il confronto di file di grandi dimensioni  
-- **Soluzione**: aumenta l’heap JVM (`-Xmx4g`), usa esclusivamente lo streaming, elabora i documenti in blocchi più piccoli se possibile  
+### Problema 1: OutOfMemoryError con documenti di grandi dimensioni
+- **Sintomi**: l'applicazione si chiude quando confronta file di grandi dimensioni  
+- **Soluzione**: aumenta l'heap JVM (`-Xmx4g`), usa esclusivamente lo streaming, elabora i documenti in blocchi più piccoli se possibile  
 
 ### Problema 2: “File is Being Used by Another Process”
 - **Sintomi**: `IOException` in lettura/scrittura  
-- **Soluzione**: usa sempre **java try-with-resources streams** come mostrato sopra  
+- **Soluzione**: usa sempre **java try‑with‑resources streams** come mostrato sopra  
 
-### Problema 3: Prestazioni Lente su Unità di Rete
+### Problema 3: Prestazioni lente su unità di rete
 - **Sintomi**: il confronto richiede molto tempo  
-- **Soluzione**: copia i file in una directory temporanea locale prima dell’elaborazione  
+- **Soluzione**: copia i file in una directory temporanea locale prima dell'elaborazione  
 
-### Problema 4: Errori di Validazione della Licenza
+### Problema 4: Errori di validazione della licenza
 - **Sintomi**: le funzionalità non funzionano come previsto  
 - **Soluzione**: verifica che il file di licenza sia caricato correttamente prima di creare le istanze di `Comparer`  
 
-## Best Practice per l'Uso in Produzione
+## Best practice per l'uso in produzione
 
-### Gestione della Memoria
+### Gestione della memoria
 - Usa `try‑with‑resources` per ogni stream  
-- Imposta limiti di memoria JVM appropriati e monitora l’utilizzo durante i picchi di carico  
+- Imposta limiti di memoria JVM appropriati e monitora l'utilizzo durante i picchi di carico  
 
-### Gestione degli Errori
+### Gestione degli errori
 - Implementa una gestione completa delle eccezioni (cattura `IOException` e `ComparisonException`)  
 - Registra gli errori con contesto sufficiente per il debug  
-- Fornisci messaggi di errore comprensibili all’utente  
+- Fornisci messaggi di errore comprensibili all'utente  
 
-### Ottimizzazione delle Prestazioni
-- Cachea i documenti confrontati più frequentemente, se possibile  
+### Ottimizzazione delle prestazioni
+- Cachea i documenti confrontati più frequentemente quando possibile  
 - Elabora più confronti in modo asincrono usando thread pool  
-- Implementa timeout per operazioni a lunga durata  
+- Implementa la gestione dei timeout per operazioni a lunga durata  
 
-### Considerazioni di Sicurezza
-- Valida i file di input prima dell’elaborazione  
-- Sanifica i percorsi dei file per prevenire attacchi di traversal  
-- Applica controlli di accesso adeguati per i documenti sensibili  
+### Considerazioni sulla sicurezza
+- Valida i file di input prima dell'elaborazione  
+- Sanifica i percorsi dei file per prevenire attacchi di traversal di directory  
+- Applica controlli di accesso appropriati per documenti sensibili  
 
-## Applicazioni Reali (Dove Questo È Davvero Importante)
+## Applicazioni reali (dove conta davvero)
 
-- **Sistemi di Gestione Documentale** – traccia le modifiche tra versioni, riduci i conflitti  
-- **Revisione Legale di Documenti** – confronta bozze di contratti, assicurati che nessuna clausola venga persa  
-- **Piattaforme di Content Management** – mantieni la coerenza editoriale tra revisioni  
-- **Sistemi di Conformità & Audit** – fornisci trail di audit immutabili per documenti regolamentati  
+- **Sistemi di gestione documenti** – traccia le modifiche tra versioni, riduci i conflitti  
+- **Revisione legale di documenti** – confronta bozze di contratti, assicurati che nessuna clausola venga persa  
+- **Piattaforme di gestione contenuti** – mantieni la coerenza editoriale tra revisioni  
+- **Sistemi di conformità e audit** – fornisci tracce di audit immutabili per documenti regolamentati  
 
-## Quando Utilizzare Questo Approccio
+## Quando utilizzare questo approccio
 
-**Usa il confronto di documenti Java con stream quando:**
+**Usa il confronto di documenti con stream Java quando:**
 - I documenti superano i 50 MB  
-- L’efficienza della memoria è critica  
+- L'efficienza della memoria è critica  
 - Devi elaborare molti documenti contemporaneamente  
-- È necessaria l’integrazione con applicazioni Java esistenti  
+- È necessaria l'integrazione con applicazioni Java esistenti  
 - Sono richiesti report di confronto dettagliati  
 
 **Considera alternative quando:**
 - Confronti file di testo piccoli (una semplice comparazione di stringhe può bastare)  
-- È richiesto editing collaborativo in tempo reale  
-- I vincoli di budget impediscono l’uso di librerie commerciali  
+- È richiesta la modifica collaborativa in tempo reale  
+- I vincoli di budget impediscono l'uso di librerie commerciali  
 
-## Suggerimenti per l'Ottimizzazione delle Prestazioni
+## Suggerimenti per l'ottimizzazione delle prestazioni
 
-- **Elaborazione a Lotti** – accoda i documenti e processali in batch controllati  
-- **Tuning della Configurazione** – regola la sensibilità del confronto in base al caso d’uso  
-- **Monitoraggio delle Risorse** – usa JMX o strumenti simili per osservare l’utilizzo dell’heap  
+- **Elaborazione batch** – accoda i documenti e processali in batch controllati  
+- **Tuning della configurazione** – regola la sensibilità del confronto in base al caso d'uso  
+- **Monitoraggio delle risorse** – usa JMX o strumenti simili per osservare l'utilizzo dell'heap  
 
 ## Conclusione
 
-Ora disponi del toolkit completo per implementare un confronto robusto di **compare word documents java** usando GroupDocs.Comparer e gli stream. Non è solo un altro tutorial – è un approccio testato in battaglia che funziona in ambienti di produzione reali.
+Ora disponi dell'intero toolkit per implementare un confronto robusto **groupdocs comparison java** usando gli stream. Non è solo un altro tutorial – è un approccio collaudato in battaglia che funziona in ambienti di produzione reali.
 
-**Punti Chiave**
+**Punti chiave**
 - Il confronto basato su stream offre efficienza di memoria e scalabilità  
-- Una corretta gestione delle risorse (java try‑with‑resources) previene le trappole più comuni  
+- Una corretta gestione delle risorse (`java try‑with‑resources`) previene le insidie più comuni  
 - Le funzioni di utilità mantengono il codice pulito e manutenibile  
 - Una gestione completa degli errori e del monitoraggio è essenziale per la produzione  
 
-### I Prossimi Passi
-1. **Inizia in Piccolo** – implementa il confronto di base con file DOCX di test  
-2. **Aggiungi la Gestione degli Errori** – integra i pattern di troubleshooting descritti  
-3. **Scala** – introduci l’elaborazione a batch e il monitoraggio delle prestazioni  
-4. **Esplora Funzionalità Avanzate** – approfondisci la documentazione di GroupDocs per opzioni di confronto personalizzate  
+### I prossimi passi
+1. **Inizia in piccolo** – implementa il confronto base con file DOCX di test  
+2. **Aggiungi la gestione degli errori** – integra i pattern di risoluzione dei problemi descritti  
+3. **Scala** – introduci l'elaborazione batch e il monitoraggio delle prestazioni  
+4. **Esplora funzionalità avanzate** – approfondisci la documentazione di GroupDocs per opzioni di confronto personalizzate  
 
-Pronto a rivoluzionare il modo in cui la tua applicazione gestisce il confronto dei documenti? Parti dall’implementazione di base e itera verso le funzionalità avanzate man mano che le tue esigenze crescono.
+Pronto a rivoluzionare il modo in cui la tua applicazione gestisce il confronto dei documenti? Inizia con l'implementazione di base e itera verso le funzionalità avanzate man mano che le tue esigenze crescono.
 
-## Domande Frequenti
+## Domande frequenti
 
 **D: Come gestisco le eccezioni durante il confronto dei documenti?**  
-R: Avvolgi le operazioni di confronto in blocchi try‑catch, catturando `IOException` per I/O di file e `ComparisonException` per problemi specifici della libreria. Registra lo stack trace con informazioni contestuali per semplificare il debug.
+R: Avvolgi le operazioni di confronto in blocchi try‑catch, catturando `IOException` per I/O di file e `ComparisonException` per problemi specifici della libreria. Registra lo stack trace con informazioni contestuali per facilitare il debug.
 
-**D: Posso confrontare più di due documenti contemporaneamente?**  
-R: Sì. Chiama `comparer.add()` più volte per includere documenti target aggiuntivi. Tieni presente l’utilizzo della memoria quando gestisci molti file di grandi dimensioni.
+**D: Posso confrontare più di due documenti simultaneamente?**  
+R: Sì. Chiama `comparer.add()` più volte per includere documenti target aggiuntivi. Fai attenzione all'uso della memoria quando gestisci molti file di grandi dimensioni.
 
 **D: Quali formati di file supporta GroupDocs.Comparison?**  
-R: Supporta DOCX, PDF, XLSX, PPTX, TXT e molti altri. Consulta la documentazione ufficiale per l’elenco completo.
+R: Supporta DOCX, PDF, XLSX, PPTX, TXT e molti altri. Consulta la documentazione ufficiale per l'elenco completo.
 
 **D: Come posso personalizzare la sensibilità del confronto?**  
-R: Usa `CompareOptions` per ignorare le modifiche di formattazione, impostare soglie di similarità o concentrarti su tipi di contenuto specifici. Questo ti permette di adattare il confronto al tuo dominio.
+R: Usa `CompareOptions` per ignorare le modifiche di formattazione, impostare soglie di similarità o concentrarti su tipi di contenuto specifici. Questo aiuta a tarare il confronto sul tuo dominio.
 
 **D: Cosa fare se il confronto è troppo lento?**  
-R: Verifica di utilizzare gli stream, aumenta l’heap JVM se necessario, copia i file localmente prima dell’elaborazione e considera l’esecuzione asincrona per migliorare la reattività.
+R: Verifica di utilizzare gli stream, aumenta l'heap JVM se necessario, copia i file localmente prima dell'elaborazione e considera l'esecuzione asincrona per una migliore reattività.
 
-**D: Dove posso trovare supporto se incontro problemi?**  
-R: Il Forum di Supporto GroupDocs è attivo e reattivo. Anche la documentazione ufficiale fornisce guide dettagliate e esempi di codice.
+**D: Dove posso ottenere supporto se incontro problemi?**  
+R: Il Forum di Supporto GroupDocs è attivo e reattivo. Anche la loro documentazione ufficiale fornisce guide dettagliate e esempi di codice.
 
 **Risorse**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -311,10 +320,12 @@ R: Il Forum di Supporto GroupDocs è attivo e reattivo. Anche la documentazione 
 - [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)  
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+- [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Ultimo Aggiornamento:** 2025-12-26  
-**Testato Con:** GroupDocs.Comparison 25.2  
+**Ultimo aggiornamento:** 2026-03-24  
+**Testato con:** GroupDocs.Comparison 25.2  
 **Autore:** GroupDocs  
+
+---

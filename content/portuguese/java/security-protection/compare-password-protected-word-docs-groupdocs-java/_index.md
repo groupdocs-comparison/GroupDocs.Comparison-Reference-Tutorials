@@ -20,10 +20,6 @@ url: /pt/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
-.
-
-Let's produce final content.
-
 # Carregar Documento Protegido por Senha – Comparação Segura em Java
 
 ## Introdução
@@ -343,12 +339,6 @@ A: A API lança uma `InvalidPasswordException`. Trate-a de forma elegante e, se 
 **Q: Existe impacto perceptível de desempenho para arquivos criptografados?**  
 A: A descriptografia adiciona uma pequena sobrecarga, mas o tempo total de comparação continua dominado pelo algoritmo de diff, não pelo tratamento da senha.
 
----
-
-**Última Atualização:** 2026-02-10  
-**Testado Com:** GroupDocs.Comparison 25.2 para Java  
-**Autor:** GroupDocs  
-
 **Recursos e Leituras Complementares**
 
 - **Documentação**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -357,3 +347,9 @@ A: A descriptografia adiciona uma pequena sobrecarga, mas o tempo total de compa
 - **Licenciamento Corporativo**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Acesso ao Teste Gratuito**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Licença de Desenvolvimento**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Última Atualização:** 2026-02-10  
+**Testado Com:** GroupDocs.Comparison 25.2 para Java  
+**Autor:** GroupDocs  

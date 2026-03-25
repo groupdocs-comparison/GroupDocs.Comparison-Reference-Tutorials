@@ -320,8 +320,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 
 Безопасная загрузка защищённых паролем документов и их сравнение не обязаны быть компромиссом между безопасностью и скоростью. С GroupDocs.Comparison for Java вы получаете проверенный движок, который уважает шифрование, предлагает богатые отчёты о различиях и легко интегрируется в корпоративные конвейеры. Следуйте рекомендациям выше — правильное управление учётными данными, надёжная обработка ошибок и тщательный аудит — чтобы построить решение, масштабируемое, соответствующее требованиям комплаенса и приносящее измеримый ROI.
 
----
-
 ## Часто задаваемые вопросы
 
 **В: Как GroupDocs.Comparison обрабатывает различные сложности паролей?**  
@@ -339,12 +337,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 **В: Есть ли заметное падение производительности для зашифрованных файлов?**  
 О: Дешифрование добавляет небольшие накладные расходы, но общее время сравнения в основном определяется алгоритмом диффа, а не обработкой пароля.
 
----
-
-**Последнее обновление:** 2026-02-10  
-**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
-**Автор:** GroupDocs  
-
 **Ресурсы и дополнительное чтение**
 
 - **Документация:** [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -353,3 +345,9 @@ logger.info("Starting secure document comparison for files: {} and {}",
 - **Корпоративные лицензии:** [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Бесплатный пробный доступ:** [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Лицензия для разработки:** [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Последнее обновление:** 2026-02-10  
+**Тестировано с:** GroupDocs.Comparison 25.2 for Java  
+**Автор:** GroupDocs  

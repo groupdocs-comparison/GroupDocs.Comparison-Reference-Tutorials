@@ -339,10 +339,6 @@ A: API‑et kastar ett `InvalidPasswordException`. Hantera det på ett smidigt s
 **Q: Finns det en märkbar prestandapåverkan för krypterade filer?**  
 A: Avkryptering lägger till en liten overhead, men den totala jämförelsetiden domineras av diff‑algoritmen, inte av lösenordshanteringen.
 
-**Senast uppdaterad:** 2026-02-10  
-**Testat med:** GroupDocs.Comparison 25.2 for Java  
-**Författare:** GroupDocs  
-
 **Resurser och vidare läsning**
 
 - **Documentation**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -351,3 +347,7 @@ A: Avkryptering lägger till en liten overhead, men den totala jämförelsetiden
 - **Företagslicensiering**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)
 - **Tillgång till gratis provversion**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)
 - **Utvecklingslicens**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+**Senast uppdaterad:** 2026-02-10  
+**Testat med:** GroupDocs.Comparison 25.2 for Java  
+**Författare:** GroupDocs  

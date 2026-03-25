@@ -339,12 +339,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 **प्रश्न: एन्क्रिप्टेड फ़ाइलों के लिए प्रदर्शन पर स्पष्ट असर दिखता है क्या?**  
 उत्तर: डिक्रिप्शन में थोड़ा ओवरहेड जोड़ता है, लेकिन कुल तुलना समय मुख्यतः डिफ़ एल्गोरिद्म द्वारा निर्धारित होता है, पासवर्ड हैंडलिंग द्वारा नहीं।
 
----
-
-**अंतिम अपडेट:** 2026-02-10  
-**परीक्षित संस्करण:** GroupDocs.Comparison 25.2 for Java  
-**लेखक:** GroupDocs  
-
 **संसाधन और आगे पढ़ने के लिए**
 
 - **डॉक्यूमेंटेशन**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -353,3 +347,9 @@ logger.info("Starting secure document comparison for files: {} and {}",
 - **एंटरप्राइज़ लाइसेंसिंग**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **फ़्री ट्रायल एक्सेस**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **डेवलपमेंट लाइसेंस**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**अंतिम अपडेट:** 2026-02-10  
+**परीक्षित संस्करण:** GroupDocs.Comparison 25.2 for Java  
+**लेखक:** GroupDocs  

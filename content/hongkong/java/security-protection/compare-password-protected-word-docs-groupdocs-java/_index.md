@@ -338,12 +338,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 **問：加密文件會有明顯的效能衝擊嗎？**  
 **答**：解密會帶來少量額外負擔，但整體比較時間仍以差異演算法為主，而非密碼處理。
 
----
-
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **資源與進一步閱讀**
 
 - **文件說明**：[GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -352,3 +346,9 @@ logger.info("Starting secure document comparison for files: {} and {}",
 - **企業授權**：[Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **免費試用**：[No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **開發授權**：[Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Last Updated:** 2026-02-10  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

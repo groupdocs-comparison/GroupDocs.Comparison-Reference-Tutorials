@@ -340,12 +340,6 @@ A: Die API wirft eine `InvalidPasswordException`. Behandeln Sie sie elegant und 
 **F: Gibt es einen spürbaren Performance‑Einbruch bei verschlüsselten Dateien?**  
 A: Die Entschlüsselung verursacht einen kleinen Overhead, aber die Gesamtlaufzeit bleibt vom Diff‑Algorithmus dominiert, nicht von der Passwort‑Verarbeitung.
 
----
-
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Ressourcen und weiterführende Literatur**
 
 - **Documentation**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -354,3 +348,9 @@ A: Die Entschlüsselung verursacht einen kleinen Overhead, aber die Gesamtlaufze
 - **Enterprise Licensing**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Free Trial Access**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Development License**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Last Updated:** 2026-02-10  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

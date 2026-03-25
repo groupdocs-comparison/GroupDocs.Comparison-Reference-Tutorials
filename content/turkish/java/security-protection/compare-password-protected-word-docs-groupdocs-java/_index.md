@@ -20,20 +20,7 @@ type: docs
 url: /tr/java/security-protection/compare-password-protected-word-docs-groupdocs-java/
 weight: 1
 ---
-
---- final line.
-
-Make sure to keep all placeholders unchanged.
-
-Now produce final markdown content.
-
-Check for any missed shortcodes: none.
-
-Check for any code blocks: placeholders only.
-
-Make sure to keep triple backticks? There are none actual code blocks, only placeholders. So fine.
-
-Now produce final answer.# Şifre Koruması Olan Belgeyi Yükleme – Java'da Güvenli Karşılaştırma
+# Şifre Koruması Olan Belgeyi Yükleme – Java'da Güvenli Karşılaştırma
 
 ## Giriş
 
@@ -352,12 +339,6 @@ C: API bir `InvalidPasswordException` fırlatır. Bunu nazikçe ele alın ve uyg
 **S: Şifreli dosyalar için belirgin bir performans kaybı var mı?**  
 C: Şifre çözme küçük bir ek yük ekler, ancak toplam karşılaştırma süresi şifre yönetiminden ziyade fark algoritması tarafından belirlenir.
 
----
-
-**Son Güncelleme:** 2026-02-10  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
-**Yazar:** GroupDocs  
-
 **Kaynaklar ve İleri Okuma**
 
 - **Dokümantasyon**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -366,3 +347,9 @@ C: Şifre çözme küçük bir ek yük ekler, ancak toplam karşılaştırma sü
 - **Satın Alma Seçenekleri ve Fiyatlandırma**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Taahhüt Gerektirmeyen Deneme Sürümü**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Test İçin Geçici Lisans**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Son Güncelleme:** 2026-02-10  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs  

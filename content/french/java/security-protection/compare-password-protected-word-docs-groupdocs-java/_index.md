@@ -21,25 +21,7 @@ url: /fr/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
- know a document’s password?** etc.
-
-**Q: Is there a noticeable performance hit for encrypted files?** etc.
-
-Then footer.
-
-**Last Updated:** keep date.
-
-**Tested With:** translate.
-
-**Author:** translate? maybe keep "GroupDocs". Keep as is.
-
-**Resources and Further Reading** translate.
-
-List items: translate link text.
-
-Now produce final markdown.
-
-Let's craft.# Charger un document protégé par mot de passe – Comparaison sécurisée en Java
+# Charger un document protégé par mot de passe – Comparaison sécurisée en Java
 
 ## Introduction
 
@@ -358,12 +340,6 @@ R : L’API lève une `InvalidPasswordException`. Gérez‑la proprement et, l
 **Q : Y a‑t‑il un impact notable sur les performances pour les fichiers chiffrés ?**  
 R : Le déchiffrement ajoute une petite surcharge, mais le temps total de comparaison reste dominé par l’algorithme de diff, pas par la gestion du mot de passe.
 
----
-
-**Dernière mise à jour :** 2026-02-10  
-**Testé avec :** GroupDocs.Comparison 25.2 for Java  
-**Auteur :** GroupDocs  
-
 **Ressources et lectures complémentaires**
 
 - **Documentation** : [Documentation GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -372,3 +348,9 @@ R : Le déchiffrement ajoute une petite surcharge, mais le temps total de comp
 - **Licence entreprise** : [Options d’achat et tarification](https://purchase.groupdocs.com/buy)  
 - **Essai gratuit** : [Version d’essai sans engagement](https://releases.groupdocs.com/comparison/java/)  
 - **Licence développeur** : [Licence temporaire pour les tests](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Dernière mise à jour :** 2026-02-10  
+**Testé avec :** GroupDocs.Comparison 25.2 for Java  
+**Auteur :** GroupDocs  

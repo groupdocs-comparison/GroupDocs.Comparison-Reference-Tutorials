@@ -331,12 +331,6 @@ A: The API throws an `InvalidPasswordException`. Handle it gracefully and, if ap
 **Q: Is there a noticeable performance hit for encrypted files?**  
 A: Decryption adds a small overhead, but the overall comparison time remains dominated by the diff algorithm, not by password handling.
 
----
-
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Resources and Further Reading**
 
 - **Documentation**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -345,5 +339,11 @@ A: Decryption adds a small overhead, but the overall comparison time remains dom
 - **Enterprise Licensing**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)
 - **Free Trial Access**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)
 - **Development License**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Last Updated:** 2026-02-10  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  
 
 ---

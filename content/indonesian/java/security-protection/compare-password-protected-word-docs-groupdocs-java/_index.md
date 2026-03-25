@@ -340,10 +340,6 @@ A: API akan melempar `InvalidPasswordException`. Tangani dengan elegan dan, bila
 **Q: Apakah ada penurunan kinerja yang terlihat untuk file terenkripsi?**  
 A: Dekripsi menambah overhead kecil, tetapi total waktu perbandingan tetap didominasi oleh algoritma diff, bukan oleh penanganan kata sandi.
 
-**Terakhir Diperbarui:** 2026-02-10  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 for Java  
-**Penulis:** GroupDocs  
-
 ### Sumber Daya dan Bacaan Lanjutan
 
 - **Dokumentasi**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -352,3 +348,7 @@ A: Dekripsi menambah overhead kecil, tetapi total waktu perbandingan tetap didom
 - **Lisensi Perusahaan**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Akses Uji Coba Gratis**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Lisensi Pengembangan**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+**Terakhir Diperbarui:** 2026-02-10  
+**Diuji Dengan:** GroupDocs.Comparison 25.2 for Java  
+**Penulis:** GroupDocs  

@@ -20,11 +20,7 @@ url: /it/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
-Now produce final markdown with all translations.
-
-Make sure to keep placeholders unchanged.
-
-Let's construct final output.# Caricare Documento Protetto da Password – Confronto Sicuro in Java
+# Caricare Documento Protetto da Password – Confronto Sicuro in Java
 
 ## Introduzione
 
@@ -343,12 +339,6 @@ A: L'API lancia un `InvalidPasswordException`. Gestiscilo in modo appropriato e,
 **Q: C'è un impatto notevole sulle prestazioni per i file criptati?**  
 A: La decrittazione aggiunge un piccolo overhead, ma il tempo complessivo di confronto rimane dominato dall'algoritmo di diff, non dalla gestione della password.
 
----
-
-**Ultimo Aggiornamento:** 2026-02-10  
-**Testato Con:** GroupDocs.Comparison 25.2 per Java  
-**Autore:** GroupDocs  
-
 **Risorse e Ulteriori Letture**
 
 - **Documentazione**: [Documentazione GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -357,3 +347,9 @@ A: La decrittazione aggiunge un piccolo overhead, ma il tempo complessivo di con
 - **Licenza Enterprise**: [Opzioni di Acquisto e Prezzi](https://purchase.groupdocs.com/buy)  
 - **Accesso alla Prova Gratuita**: [Versione di Prova Senza Impegno](https://releases.groupdocs.com/comparison/java/)  
 - **Licenza di Sviluppo**: [Licenza Temporanea per Test](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Ultimo Aggiornamento:** 2026-02-10  
+**Testato Con:** GroupDocs.Comparison 25.2 per Java  
+**Autore:** GroupDocs  

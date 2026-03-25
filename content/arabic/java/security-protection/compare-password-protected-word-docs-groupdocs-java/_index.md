@@ -339,12 +339,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 **س: هل هناك تأثير ملحوظ على الأداء للملفات المشفرة؟**  
 ج: يضيف فك التشفير عبئًا صغيرًا، لكن الوقت الكلي للمقارنة لا يزال يهيمن عليه خوارزمية الفرق، وليس معالجة كلمة المرور.
 
----
-
-**آخر تحديث:** 2026-02-10  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
-**المؤلف:** GroupDocs  
-
 **الموارد والقراءة الإضافية**
 
 - **التوثيق**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -353,3 +347,9 @@ logger.info("Starting secure document comparison for files: {} and {}",
 - **ترخيص المؤسسات**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)
 - **الوصول إلى التجربة المجانية**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)
 - **ترخيص التطوير**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**آخر تحديث:** 2026-02-10  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
+**المؤلف:** GroupDocs  

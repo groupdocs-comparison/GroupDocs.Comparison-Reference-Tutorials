@@ -19,17 +19,7 @@ url: /zh/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
- – Java 中的安全比较"
-
-Similarly for other headings.
-
-Translate content.
-
-Preserve code block placeholders as separate lines with same placeholder.
-
-Make sure to keep markdown tables.
-
-Let's produce final answer.# 加载受密码保护的文档 – Java 中的安全比较
+# 加载受密码保护的文档 – Java 中的安全比较
 
 ## 介绍
 
@@ -348,12 +338,6 @@ logger.info("Starting secure document comparison for files: {} and {}",
 **问：加密文件会带来明显的性能损失吗？**  
 答：解密会产生少量开销，但整体比较时间仍主要受差异算法支配，而非密码处理。
 
----
-
-**最后更新：** 2026-02-10  
-**测试环境：** GroupDocs.Comparison 25.2 for Java  
-**作者：** GroupDocs  
-
 **资源与进一步阅读**
 
 - **文档**： [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -362,3 +346,9 @@ logger.info("Starting secure document comparison for files: {} and {}",
 - **企业授权**： [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **免费试用**： [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **开发者授权**： [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**最后更新：** 2026-02-10  
+**测试环境：** GroupDocs.Comparison 25.2 for Java  
+**作者：** GroupDocs  

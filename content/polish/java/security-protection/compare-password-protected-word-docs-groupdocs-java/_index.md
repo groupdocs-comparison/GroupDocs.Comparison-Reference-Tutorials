@@ -340,10 +340,6 @@ A: API zgłasza `InvalidPasswordException`. Obsłuż to w sposób elegancki i, w
 **Q: Czy występuje zauważalny spadek wydajności przy plikach zaszyfrowanych?**  
 A: Odszyfrowanie dodaje niewielki narzut, ale całkowity czas porównania jest nadal zdominowany przez algorytm diff, a nie przez obsługę hasła.
 
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
 **Zasoby i dalsza lektura**
 
 - **Documentation**: [Dokumentacja GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
@@ -352,3 +348,7 @@ A: Odszyfrowanie dodaje niewielki narzut, ale całkowity czas porównania jest n
 - **Enterprise Licensing**: [Opcje zakupu i ceny](https://purchase.groupdocs.com/buy)  
 - **Free Trial Access**: [Wersja próbna bez zobowiązań](https://releases.groupdocs.com/comparison/java/)  
 - **Development License**: [Licencja tymczasowa do testów](https://purchase.groupdocs.com/temporary-license)
+
+**Last Updated:** 2026-02-10  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  

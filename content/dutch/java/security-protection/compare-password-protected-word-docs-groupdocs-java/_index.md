@@ -340,10 +340,6 @@ A: De API gooit een `InvalidPasswordException`. Handel dit netjes af en, indien 
 **Q: Is er een merkbare prestatie‑impact voor versleutelde bestanden?**  
 A: Decryptie voegt een kleine overhead toe, maar de totale vergelijktijd wordt nog steeds gedomineerd door het diff‑algoritme, niet door wachtwoordverwerking.
 
-**Laatst bijgewerkt:** 2026-02-10  
-**Getest met:** GroupDocs.Comparison 25.2 for Java  
-**Auteur:** GroupDocs  
-
 ## Resources en verdere lectuur
 
 - **Documentatie**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -352,3 +348,7 @@ A: Decryptie voegt een kleine overhead toe, maar de totale vergelijktijd wordt n
 - **Enterprise‑licenties**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Gratis proefversie**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Ontwikkelingslicentie**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+**Laatst bijgewerkt:** 2026-02-10  
+**Getest met:** GroupDocs.Comparison 25.2 for Java  
+**Auteur:** GroupDocs  

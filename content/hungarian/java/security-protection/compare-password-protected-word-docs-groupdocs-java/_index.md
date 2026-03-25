@@ -21,13 +21,7 @@ url: /hu/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
- translate.
-
-List items with link text translate but URLs unchanged.
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# Jelszóval védett dokumentum betöltése – Biztonságos összehasonlítás Java-ban
+# Jelszóval védett dokumentum betöltése – Biztonságos összehasonlítás Java-ban
 
 ## Bevezetés
 
@@ -346,10 +340,6 @@ A: Az API `InvalidPasswordException`‑t dob. Kezelje ezt megfelelően, és ha s
 **K: Van jelentős teljesítménycsökkenés titkosított fájlok esetén?**  
 A: A dekódolás kis többletterhet jelent, de az összes összehasonlítási időt továbbra is a diff algoritmus dominálja, nem a jelszókezelés.
 
-**Utoljára frissítve:** 2026-02-10  
-**Tesztelve a következővel:** GroupDocs.Comparison 25.2 for Java  
-**Szerző:** GroupDocs  
-
 **Erőforrások és további olvasnivaló**
 
 - **Dokumentáció**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -358,3 +348,7 @@ A: A dekódolás kis többletterhet jelent, de az összes összehasonlítási id
 - **Vállalati licencelés**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)  
 - **Ingyenes próba hozzáférés**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)  
 - **Fejlesztői licenc**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+**Utoljára frissítve:** 2026-02-10  
+**Tesztelve a következővel:** GroupDocs.Comparison 25.2 for Java  
+**Szerző:** GroupDocs  

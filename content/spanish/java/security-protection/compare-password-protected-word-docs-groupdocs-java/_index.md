@@ -21,9 +21,7 @@ url: /es/java/security-protection/compare-password-protected-word-docs-groupdocs
 weight: 1
 ---
 
- sure to keep markdown formatting.
-
-Now produce final content.# Cargar documento protegido con contraseña – Comparación segura en Java
+# Cargar documento protegido con contraseña – Comparación segura en Java
 
 ## Introducción
 
@@ -341,10 +339,6 @@ R: La API lanza una `InvalidPasswordException`. Maneje la excepción de forma ad
 **P: ¿Hay una pérdida de rendimiento notable para archivos encriptados?**  
 R: La desencriptación añade una pequeña sobrecarga, pero el tiempo total de comparación sigue estando dominado por el algoritmo de diferencias, no por el manejo de contraseñas.
 
-**Última actualización:** 2026-02-10  
-**Probado con:** GroupDocs.Comparison 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Recursos y lecturas adicionales**
 
 - **Documentación**: [GroupDocs Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)
@@ -353,3 +347,7 @@ R: La desencriptación añade una pequeña sobrecarga, pero el tiempo total de c
 - **Licenciamiento empresarial**: [Purchase Options and Pricing](https://purchase.groupdocs.com/buy)
 - **Acceso a prueba gratuita**: [No-commitment Trial Version](https://releases.groupdocs.com/comparison/java/)
 - **Licencia de desarrollo**: [Temporary License for Testing](https://purchase.groupdocs.com/temporary-license)
+
+**Última actualización:** 2026-02-10  
+**Probado con:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  

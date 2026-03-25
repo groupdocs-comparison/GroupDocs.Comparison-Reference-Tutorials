@@ -22,19 +22,7 @@ url: /el/java/security-protection/compare-protected-docs-groupdocs-comparison-ja
 weight: 1
 ---
 
- all text. So translate label.
-
-"**Last Updated:** 2026-02-13" -> "**Last Updated:** 2026-02-13" maybe translate "Last Updated" to Greek: "**Last Updated:**" -> "**Τελευταία Ενημέρωση:**". Keep bold.
-
-Next "**Tested With:** GroupDocs.Comparison 25.2 for Java" -> translate label: "**Tested With:**" -> "**Δοκιμάστηκε Με:**". So "**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java"
-
-Next "**Author:** GroupDocs" -> "**Author:**" translate to Greek: "**Συγγραφέας:** GroupDocs"
-
-Now ensure all placeholders and code fences remain.
-
-We have no actual fenced code blocks besides placeholders. Ensure we didn't remove any.
-
-Now produce final content.# Σύγκριση Προστατευμένων Εγγράφων Java – Πλήρης Οδηγός Προγραμματιστή
+# Σύγκριση Προστατευμένων Εγγράφων Java – Πλήρης Οδηγός Προγραμματιστή
 
 Έχετε βρεθεί ποτέ να διαχειρίζεστε πολλαπλές εκδόσεις εγγράφων προστατευμένων με κωδικό, προσπαθώντας να εντοπίσετε τις διαφορές χειροκίνητα; Αν είστε προγραμματιστής Java που χρειάζεται να **compare protected documents java**, αυτός ο οδηγός είναι για εσάς. Θα σας καθοδηγήσουμε βήμα προς βήμα για την αυτοματοποίηση της ασφαλούς σύγκρισης εγγράφων χρησιμοποιώντας το GroupDocs.Comparison, ώστε να εστιάσετε στη λογική της επιχείρησης αντί για τις επίμονες χειροκίνητες ανασκοπήσεις.
 

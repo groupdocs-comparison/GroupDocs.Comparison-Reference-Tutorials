@@ -20,15 +20,7 @@ url: /zh/java/security-protection/compare-protected-docs-groupdocs-comparison-ja
 weight: 1
 ---
 
-测试环境：** GroupDocs.Comparison 25.2 for Java"
-
-"**Author:** GroupDocs" => "**作者：** GroupDocs"
-
-We must ensure no missing elements.
-
-Now produce final markdown content with translations. Ensure placeholders and code blocks remain.
-
-Let's assemble.# 比较受保护文档 Java – 完整开发者指南
+# 比较受保护文档 Java – 完整开发者指南
 
 是否曾经需要同时处理多个密码保护的文档版本，并手动寻找差异？如果你是一名需要 **compare protected documents java** 的 Java 开发者，本指南适合你。我们将逐步演示如何使用 GroupDocs.Comparison 自动化安全文档比较，让你专注于业务逻辑，而不是繁琐的手动审查。
 

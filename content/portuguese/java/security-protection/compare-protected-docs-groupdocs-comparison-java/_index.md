@@ -22,9 +22,7 @@ url: /pt/java/security-protection/compare-protected-docs-groupdocs-comparison-ja
 weight: 1
 ---
 
- translations. Ensure placeholders remain.
-
-Let's craft.# Compare Protected Documents Java – Complete Developer Guide
+# Compare Protected Documents Java – Complete Developer Guide
 
 Já se pegou lidando com várias versões de documentos protegidos por senha, tentando encontrar as diferenças manualmente? Se você é um desenvolvedor Java que precisa **compare protected documents java**, este guia é para você. Vamos percorrer os passos exatos para automatizar a comparação segura de documentos usando GroupDocs.Comparison, para que você possa focar na lógica de negócios em vez de revisões manuais tediosas.
 

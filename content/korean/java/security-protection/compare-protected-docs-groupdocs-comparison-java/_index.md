@@ -21,10 +21,6 @@ url: /ko/java/security-protection/compare-protected-docs-groupdocs-comparison-ja
 weight: 1
 ---
 
- present.
-
-Proceed.
-
 # 보호된 문서 Java 비교 – 완전 개발자 가이드
 
 여러 버전의 비밀번호로 보호된 문서를 손으로 직접 비교해 본 적이 있나요? **compare protected documents java**가 필요한 Java 개발자라면 이 가이드를 확인하세요. GroupDocs.Comparison을 사용해 안전한 문서 비교를 자동화하는 정확한 단계들을 안내해 드리며, 번거로운 수동 검토 대신 비즈니스 로직에 집중할 수 있습니다.

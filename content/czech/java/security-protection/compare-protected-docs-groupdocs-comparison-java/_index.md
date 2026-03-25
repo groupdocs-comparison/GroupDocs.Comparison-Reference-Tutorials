@@ -20,24 +20,7 @@ type: docs
 url: /cs/java/security-protection/compare-protected-docs-groupdocs-comparison-java/
 weight: 1
 ---
-
-](https://forum.groupdocs.com/c)"
-
-Then horizontal rule? There's "---". Keep as is.
-
-Then "**Last Updated:** 2026-02-13" -> "**Last Updated:** 2026-02-13" (date unchanged)
-
-"**Tested With:** GroupDocs.Comparison 25.2 for Java" -> "**Tested With:** GroupDocs.Comparison 25.2 for Java"
-
-"**Author:** GroupDocs" -> "**Author:** GroupDocs"
-
-Now ensure we keep all markdown formatting, code block placeholders remain.
-
-Also ensure we didn't translate any URLs.
-
-Check for any remaining shortcodes: none.
-
-Now produce final content.# Porovnávejte chráněné dokumenty Java – Kompletní průvodce pro vývojáře
+# Porovnávejte chráněné dokumenty Java – Kompletní průvodce pro vývojáře
 
 Už jste se někdy ocitli v situaci, kdy musíte spravovat více verzí dokumentů chráněných heslem a ručně hledat rozdíly? Pokud jste Java vývojář, který potřebuje **compare protected documents java**, tento průvodce je pro vás. Provedeme vás přesné kroky k automatizaci bezpečného porovnání dokumentů pomocí GroupDocs.Comparison, abyste se mohli soustředit na obchodní logiku místo únavných ručních kontrol.
 

@@ -21,9 +21,7 @@ url: /vi/java/security-protection/compare-protected-docs-groupdocs-comparison-ja
 weight: 1
 ---
 
- block placeholders unchanged.
-
-Let's construct final output.# So sánh tài liệu được bảo vệ Java – Hướng dẫn phát triển đầy đủ
+# So sánh tài liệu được bảo vệ Java – Hướng dẫn phát triển đầy đủ
 
 Bạn đã bao giờ phải xử lý nhiều phiên bản của tài liệu được bảo vệ bằng mật khẩu, cố gắng tìm sự khác nhau một cách thủ công chưa? Nếu bạn là một nhà phát triển Java cần **compare protected documents java**, hướng dẫn này dành cho bạn. Chúng tôi sẽ hướng dẫn chi tiết các bước tự động so sánh tài liệu an toàn bằng GroupDocs.Comparison, để bạn có thể tập trung vào logic nghiệp vụ thay vì các công việc kiểm tra thủ công tẻ nhạt.
 

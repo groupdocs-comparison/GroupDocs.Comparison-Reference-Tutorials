@@ -2,14 +2,14 @@
 categories:
 - Java Development
 - Document Processing
-date: '2025-12-17'
-description: Tìm hiểu cách so sánh tài liệu Word có bảo mật mật khẩu trong Java bằng
-  GroupDocs.Comparison. Hướng dẫn đầy đủ với các ví dụ mã, khắc phục sự cố và các
-  thực tiễn tốt nhất.
+date: '2026-02-16'
+description: Học cách so sánh tài liệu Word có bảo mật mật khẩu trong Java bằng GroupDocs.Comparison.
+  Hướng dẫn từng bước này chỉ ra cách so sánh các tệp Word, so sánh hàng loạt các
+  tệp Word và xử lý các vấn đề thường gặp.
 keywords: compare password protected Word documents Java, GroupDocs comparison tutorial,
   Java document comparison library, protected Word file comparison, GroupDocs comparison
   password protected files, how to compare word, batch compare word files
-lastmod: '2025-12-17'
+lastmod: '2026-02-16'
 linktitle: How to Compare Word Docs Java
 tags:
 - groupdocs
@@ -17,7 +17,7 @@ tags:
 - document-comparison
 - password-protected
 - word-documents
-title: Cách so sánh tài liệu Word (được bảo vệ bằng mật khẩu) trong Java
+title: Cách so sánh tài liệu Word (được bảo mật bằng mật khẩu) trong Java
 type: docs
 url: /vi/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/
 weight: 1
@@ -27,26 +27,27 @@ weight: 1
 
 ## Giới thiệu
 
-Bạn đã bao giờ thử **cách so sánh word** tài liệu được bảo vệ bằng mật khẩu và gặp khó khăn chưa? Bạn không phải là người duy nhất. Hầu hết các nhà phát triển gặp phải thách thức này khi xây dựng hệ thống quản lý tài liệu hoặc quy trình kiểm toán.
+Bạn đã bao giờ thử **cách so sánh word** tài liệu được bảo vệ bằng mật khẩu mà gặp khó khăn chưa? Bạn không phải là người duy nhất. Hầu hết các nhà phát triển đều gặp phải thách thức này khi xây dựng hệ thống quản lý tài liệu hoặc quy trình kiểm toán.
 
-Thực tế là: so sánh các tài liệu thông thường khá đơn giản, nhưng khi có mật khẩu, mọi thứ trở nên phức tạp. Đó là lúc **GroupDocs.Comparison for Java** tỏa sáng. Thư viện mạnh mẽ này thực hiện phần công việc nặng, cho phép bạn so sánh các tài liệu được mã hoá một cách dễ dàng như các tài liệu thông thường.
+Thực tế là: việc so sánh các tài liệu thông thường khá đơn giản, nhưng khi có mật khẩu, mọi thứ trở nên phức tạp. Đó là lúc **GroupDocs.Comparison for Java** tỏa sáng. Thư viện mạnh mẽ này thực hiện các công việc nặng, cho phép bạn so sánh các tài liệu được mã hoá một cách dễ dàng như các tài liệu thông thường.
 
-Trong hướng dẫn toàn diện này, bạn sẽ học cách tải và so sánh các tài liệu Word được bảo vệ bằng mật khẩu một cách liền mạch bằng GroupDocs.Comparison. Dù bạn đang xây dựng hệ thống xem xét tài liệu pháp lý hay tự động hoá kiểm tra tuân thủ, bài hướng dẫn này sẽ đáp ứng nhu cầu của bạn.
+Trong hướng dẫn toàn diện này, bạn sẽ học cách tải và so sánh các tài liệu Word được bảo vệ bằng mật khẩu một cách liền mạch bằng GroupDocs.Comparison. Dù bạn đang xây dựng hệ thống xem xét tài liệu pháp lý, tự động hoá kiểm tra tuân thủ, hay cần **so sánh hàng loạt các tệp word**, bài hướng dẫn này sẽ đáp ứng nhu cầu của bạn.
 
 ## Câu trả lời nhanh
 - **Thư viện nào xử lý việc so sánh Word được bảo vệ bằng mật khẩu?** GroupDocs.Comparison for Java  
 - **Tôi có cần giấy phép cho môi trường production không?** Có, giấy phép đầy đủ sẽ loại bỏ watermark và các giới hạn  
-- **Tôi có thể so sánh nhiều tệp được bảo vệ cùng một lúc không?** Chắc chắn – sử dụng `comparer.add()` cho mỗi mục tiêu  
-- **Có giới hạn về kích thước tệp không?** Phụ thuộc vào bộ nhớ heap của JVM; tăng `-Xmx` cho các tệp lớn  
-- **Làm sao tránh việc ghi mật khẩu trong mã?** Lưu trữ chúng một cách an toàn (ví dụ: biến môi trường) và truyền vào `LoadOptions`
+- **Tôi có thể so sánh nhiều tệp được bảo vệ cùng lúc không?** Chắc chắn – sử dụng `comparer.add()` cho mỗi mục tiêu  
+- **Có giới hạn kích thước tệp không?** Phụ thuộc vào heap của JVM; tăng `-Xmx` cho các tệp lớn  
+- **Làm sao tránh viết mật khẩu trong mã?** Lưu chúng một cách an toàn (ví dụ: biến môi trường) và truyền vào `LoadOptions`
 
 ## “Cách so sánh word” với bảo vệ mật khẩu là gì?
-So sánh tài liệu Word có nghĩa là phát hiện các chèn, xóa, thay đổi định dạng và các chỉnh sửa khác giữa hai hoặc nhiều phiên bản. Khi các tệp này được mã hoá, thư viện phải xác thực mỗi tài liệu trước khi thực hiện việc so sánh. GroupDocs.Comparison trừu tượng hoá bước này, vì vậy bạn chỉ tập trung vào logic so sánh thay vì việc giải mã thủ công.
+So sánh tài liệu Word có nghĩa là phát hiện các chèn, xóa, thay đổi định dạng và các chỉnh sửa khác giữa hai hoặc nhiều phiên bản. Khi các tệp này được mã hoá, thư viện phải xác thực mỗi tài liệu trước khi thực hiện việc so sánh. GroupDocs.Comparison trừu tượng hoá bước này, giúp bạn tập trung vào logic so sánh thay vì phải giải mã thủ công.
 
 ## Tại sao chọn GroupDocs cho việc so sánh tài liệu được bảo vệ?
-Trước khi đi vào mã, hãy giải quyết vấn đề quan trọng: tại sao không tự giải mã tài liệu hoặc sử dụng các thư viện khác?
 
-**GroupDocs.Comparison vượt trội vì:**
+Trước khi đi sâu vào mã, hãy giải quyết vấn đề quan trọng: tại sao không tự giải mã tài liệu hoặc sử dụng các thư viện khác?
+
+**GroupDocs.Comparison xuất sắc vì:**
 - Xử lý xác thực mật khẩu nội bộ (không cần giải mã thủ công)  
 - Hỗ trợ nhiều định dạng tài liệu ngoài Word  
 - Cung cấp báo cáo so sánh chi tiết với việc tô sáng  
@@ -59,11 +60,11 @@ Trước khi đi vào mã, hãy giải quyết vấn đề quan trọng: tại s
 - Bạn cần phân tích so sánh chi tiết  
 - Dự án của bạn yêu cầu hỗ trợ doanh nghiệp  
 
-## Yêu cầu và Cài đặt môi trường
+## Yêu cầu trước và Cài đặt môi trường
 
 ### Những gì bạn cần
 
-Trước khi bắt đầu viết mã, hãy chắc chắn bạn có:
+Trước khi bắt đầu viết mã, hãy chắc chắn rằng bạn có:
 
 **Yêu cầu thiết yếu:**
 - Java Development Kit (JDK) 8 trở lên  
@@ -73,9 +74,9 @@ Trước khi bắt đầu viết mã, hãy chắc chắn bạn có:
 
 **Tùy chọn nhưng hữu ích:**
 - Quen thuộc với quản lý phụ thuộc Maven  
-- Hiểu các mẫu try‑with‑resources  
+- Hiểu về mẫu try‑with‑resources  
 
-### Cài đặt cấu hình Maven
+### Cấu hình Maven
 
 Cách dễ nhất để bắt đầu là qua Maven. Thêm đoạn này vào `pom.xml` của bạn:
 
@@ -96,14 +97,14 @@ Cách dễ nhất để bắt đầu là qua Maven. Thêm đoạn này vào `pom
 </dependencies>
 ```
 
-**Mẹo:** Luôn kiểm tra [trang phát hành GroupDocs](https://releases.groupdocs.com/comparison/java/) để biết phiên bản mới nhất trước khi bắt đầu dự án.
+**Mẹo:** Luôn kiểm tra [trang phát hành của GroupDocs](https://releases.groupdocs.com/comparison/java/) để có phiên bản mới nhất trước khi bắt đầu dự án.
 
 ### Cấu hình giấy phép
 
-Mặc dù bạn có thể sử dụng GroupDocs mà không cần giấy phép để đánh giá, bạn sẽ gặp watermark và các giới hạn tính năng. Đối với môi trường production:
+Mặc dù bạn có thể sử dụng GroupDocs mà không cần giấy phép để đánh giá, nhưng sẽ gặp watermark và giới hạn tính năng. Đối với môi trường production:
 
-1. **Dùng thử miễn phí** – phù hợp cho việc kiểm tra và các dự án nhỏ  
-2. **Giấy phép tạm thời** – tuyệt vời cho giai đoạn phát triển  
+1. **Dùng thử miễn phí** – phù hợp cho việc thử nghiệm và dự án nhỏ  
+2. **Giấy phép tạm thời** – tuyệt vời cho các giai đoạn phát triển  
 3. **Giấy phép đầy đủ** – bắt buộc cho triển khai production  
 
 Lấy giấy phép của bạn từ [trang mua GroupDocs](https://purchase.groupdocs.com/buy).
@@ -112,7 +113,7 @@ Lấy giấy phép của bạn từ [trang mua GroupDocs](https://purchase.group
 
 ### Tải tài liệu được bảo vệ đầu tiên của bạn
 
-Hãy bắt đầu với những điều cơ bản – tải một tài liệu được bảo vệ bằng mật khẩu:
+Hãy bắt đầu với những điều cơ bản – tải một tài liệu được bảo vệ bằng mật khẩu duy nhất:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -188,13 +189,13 @@ public class CompleteDocumentComparison {
 - Mỗi tài liệu có thể có mật khẩu khác nhau  
 - Bạn có thể thêm nhiều tài liệu mục tiêu để so sánh  
 - Tài liệu kết quả hiển thị tất cả các khác biệt được tô sáng  
-- Luôn sử dụng try‑with‑resources để quản lý luồng đúng cách  
+- Luôn sử dụng try‑with‑resources để quản lý stream đúng cách  
 
 ## So sánh hàng loạt tệp Word trong Java
 
-Nếu bạn cần xử lý nhiều cặp tài liệu tự động, bạn có thể bao bọc logic trên trong một vòng lặp. Lớp `Comparer` giống nhau hoạt động cho mỗi cặp, và bạn có thể tái sử dụng mẫu được hiển thị trong **Quy trình so sánh tài liệu hoàn chỉnh**. Hãy nhớ giải phóng tài nguyên sau mỗi vòng lặp để giữ mức sử dụng bộ nhớ thấp.
+Nếu bạn cần xử lý tự động nhiều cặp tài liệu, bạn có thể đặt logic trên trong một vòng lặp. Lớp `Comparer` giống nhau hoạt động cho mỗi cặp, và bạn có thể tái sử dụng mẫu được hiển thị trong **Quy trình so sánh tài liệu hoàn chỉnh**. Hãy nhớ giải phóng tài nguyên sau mỗi vòng lặp để giảm mức sử dụng bộ nhớ.
 
-## Các lỗi thường gặp và giải pháp
+## Các vấn đề thường gặp và giải pháp
 
 ### Lỗi xác thực
 
@@ -218,9 +219,9 @@ new LoadOptions("correct_password");
 **Vấn đề:** `OutOfMemoryError` khi xử lý các tệp lớn.  
 
 **Giải pháp:**  
-- Tăng kích thước heap JVM: `-Xmx4g`  
+- Tăng kích thước heap của JVM: `-Xmx4g`  
 - Xử lý tài liệu theo từng phần nếu có thể  
-- Đóng luồng ngay sau khi sử dụng  
+- Đóng các stream ngay sau khi sử dụng  
 
 ```java
 // Good practice - explicit resource management
@@ -271,11 +272,11 @@ public class OptimizedComparison {
 }
 ```
 
-### Các lưu ý khi xử lý hàng loạt
+### Các cân nhắc khi xử lý hàng loạt
 
 - **Xử lý tuần tự** để tránh tăng đột biến bộ nhớ  
 - **Triển khai xử lý lỗi đúng cách** cho mỗi cặp tài liệu  
-- **Sử dụng pool luồng** chỉ khi có đủ bộ nhớ  
+- **Sử dụng thread pool** chỉ khi có đủ bộ nhớ  
 - **Giám sát việc sử dụng heap** trong quá trình xử lý hàng loạt  
 
 ### Chiến lược cache
@@ -333,7 +334,7 @@ public class AcademicResearchComparison {
 
 ### Tùy chỉnh cài đặt so sánh
 
-GroupDocs.Comparison cung cấp các tùy chọn tùy chỉnh mở rộng:
+GroupDocs.Comparison cung cấp các tùy chọn tùy chỉnh phong phú:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -360,43 +361,45 @@ Bạn có thể tùy chỉnh cách hiển thị kết quả so sánh:
 
 - **"Document format is not supported"** – Xác nhận tệp là `.docx` hoặc `.doc` hợp lệ.  
 - **"Password is incorrect"** – Kiểm tra mật khẩu thủ công; chú ý các ký tự đặc biệt.  
-- **"Comparison failed with unknown error"** – Kiểm tra dung lượng đĩa, quyền ghi và bộ nhớ khả dụng.  
+- **"Comparison failed with unknown error"** – Kiểm tra không gian đĩa, quyền ghi và bộ nhớ khả dụng.  
 
 ### Vấn đề hiệu năng
 
 - **Thời gian so sánh chậm** – Các tệp lớn tự nhiên mất thời gian hơn; cân nhắc chia chúng thành các phần.  
-- **Sử dụng bộ nhớ cao** – Giám sát kích thước heap, đóng tài nguyên kịp thời và xử lý tài liệu theo thứ tự.  
+- **Sử dụng bộ nhớ cao** – Giám sát kích thước heap, đóng tài nguyên kịp thời và xử lý tài liệu tuần tự.  
 
 ## Kết luận
 
-Bây giờ bạn đã có mọi thứ cần thiết để **cách so sánh word** các tài liệu được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Comparison. Cách tiếp cận mạnh mẽ này mở ra nhiều khả năng cho quy trình tài liệu tự động, kiểm tra tuân thủ và các quy trình kiểm toán.
+Bây giờ bạn đã có mọi thứ cần thiết để **cách so sánh word** các tài liệu được bảo vệ bằng mật khẩu trong Java bằng GroupDocs.Comparison. Cách tiếp cận mạnh mẽ này mở ra nhiều khả năng cho quy trình tài liệu tự động, kiểm tra tuân thủ và quy trình kiểm toán.
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể so sánh hơn hai tài liệu được bảo vệ bằng mật khẩu cùng một lúc không?**  
-A: Chắc chắn! Sử dụng `comparer.add()` nhiều lần; mỗi mục tiêu có thể có mật khẩu riêng.
+**H: Tôi có thể so sánh hơn hai tài liệu được bảo vệ bằng mật khẩu cùng lúc không?**  
+Đ: Chắc chắn! Sử dụng `comparer.add()` nhiều lần; mỗi mục tiêu có thể có mật khẩu riêng.
 
-**Q: Điều gì sẽ xảy ra nếu tôi cung cấp mật khẩu không đúng?**  
-A: GroupDocs sẽ ném ra một ngoại lệ xác thực. Xác minh mật khẩu trước khi xử lý, đặc biệt trong các pipeline tự động.
+**H: Điều gì xảy ra nếu tôi cung cấp mật khẩu không đúng?**  
+Đ: GroupDocs sẽ ném ra một ngoại lệ xác thực. Hãy xác minh mật khẩu trước khi xử lý, đặc biệt trong các pipeline tự động.
 
-**Q: GroupDocs có hoạt động với các tài liệu có mật khẩu khác nhau không?**  
-A: Có, mỗi tài liệu có thể có mật khẩu duy nhất riêng được chỉ định trong `LoadOptions` tương ứng.
+**H: GroupDocs có hoạt động với các tài liệu có mật khẩu khác nhau không?**  
+Đ: Có, mỗi tài liệu có thể có mật khẩu duy nhất riêng được chỉ định trong `LoadOptions` tương ứng.
 
-**Q: Tôi có thể so sánh tài liệu mà không lưu kết quả ra đĩa không?**  
-A: Có, ghi kết quả so sánh vào bất kỳ `OutputStream` nào, chẳng hạn như stream bộ nhớ hoặc stream mạng.
+**H: Tôi có thể so sánh tài liệu mà không lưu kết quả ra đĩa không?**  
+Đ: Có, ghi kết quả so sánh vào bất kỳ `OutputStream` nào, chẳng hạn như stream bộ nhớ hoặc stream mạng.
 
-**Q: Làm sao xử lý tài liệu khi tôi không biết mật khẩu?**  
-A: Bạn phải có được mật khẩu đúng; cân nhắc tích hợp một kho mật khẩu an toàn cho các quy trình tự động.
+**H: Làm sao tôi xử lý các tài liệu mà tôi không biết mật khẩu?**  
+Đ: Bạn phải có được mật khẩu đúng; cân nhắc tích hợp một kho mật khẩu an toàn cho các quy trình tự động.
 
-**Q: Kích thước tệp tối đa mà GroupDocs có thể xử lý là bao nhiêu?**  
-A: Phụ thuộc vào heap JVM có sẵn. Đối với các tệp >100 MB, tăng heap (`-Xmx`) và cân nhắc xử lý theo từng phần.
+**H: Kích thước tệp tối đa mà GroupDocs có thể xử lý là bao nhiêu?**  
+Đ: Phụ thuộc vào heap JVM có sẵn. Đối với tệp >100 MB, tăng heap (`-Xmx`) và cân nhắc xử lý theo từng phần.
 
-**Q: Tôi có thể nhận được thống kê chi tiết về kết quả so sánh không?**  
-A: Có, bật `GenerateSummaryPage` trong `CompareOptions` để lấy thống kê thay đổi và tóm tắt.
+**H: Tôi có thể nhận được thống kê chi tiết về kết quả so sánh không?**  
+Đ: Có, bật `GenerateSummaryPage` trong `CompareOptions` để lấy thống kê thay đổi và tóm tắt.
 
-**Q: Có thể so sánh tài liệu từ lưu trữ đám mây không?**  
-A: Có, miễn là bạn có thể cung cấp một `InputStream` từ nhà cung cấp đám mây, GroupDocs có thể xử lý.
+**H: Có thể so sánh tài liệu từ lưu trữ đám mây không?**  
+Đ: Có, miễn là bạn có thể cung cấp một `InputStream` từ nhà cung cấp đám mây, GroupDocs có thể xử lý.
 
-**Cập nhật lần cuối:** 2025-12-17  
-**Kiểm tra với:** GroupDocs.Comparison 25.2  
+---
+
+**Cập nhật lần cuối:** 2026-02-16  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.2  
 **Tác giả:** GroupDocs

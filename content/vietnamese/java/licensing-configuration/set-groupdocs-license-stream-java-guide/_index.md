@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Trình quản lý giấy phép tập trung qua luồng'
+title: 'GroupDocs Java - Trình quản lý giấy phép tập trung qua luồng'
 type: docs
 url: /vi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ try {
 
 Bạn đã có một **trình quản lý giấy phép tập trung** dựa trên Java streams, cung cấp sự linh hoạt, bảo mật và khả năng mở rộng cần thiết cho các triển khai hiện đại. Bằng cách tuân thủ các bước, thực tiễn tốt nhất và mẹo khắc phục sự cố trong hướng dẫn này, bạn có thể tự tin áp dụng giấy phép GroupDocs trên các container, dịch vụ đám mây và kiến trúc đa‑tenant.
 
----
-
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
-
 ## Tài nguyên bổ sung
 
 - **Tài liệu**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ Bạn đã có một **trình quản lý giấy phép tập trung** dựa trên 
 - **Tải phiên bản mới nhất**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Mua giấy phép**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Nhận hỗ trợ**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2026-01-28  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs  

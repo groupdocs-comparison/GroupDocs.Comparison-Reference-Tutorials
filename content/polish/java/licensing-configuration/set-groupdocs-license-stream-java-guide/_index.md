@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Centralny menedżer licencji za pośrednictwem strumienia'
+title: 'GroupDocs Java - Centralny menedżer licencji za pośrednictwem strumienia'
 type: docs
 url: /pl/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -320,12 +320,6 @@ O: Nieznaczny. Licencja jest zazwyczaj ustawiana raz przy starcie; później nar
 
 Masz teraz **centralny menedżer licencji** oparty na strumieniach Java, zapewniający elastyczność, bezpieczeństwo i skalowalność potrzebną w nowoczesnych wdrożeniach. Postępując zgodnie z krokami, najlepszymi praktykami i wskazówkami rozwiązywania problemów w tym przewodniku, możesz pewnie stosować licencjonowanie GroupDocs w kontenerach, usługach chmurowych i architekturach wielodzierżawczych.
 
----
-
-**Ostatnia aktualizacja:** 2026-01-28  
-**Testowano z:** GroupDocs.Comparison 25.2 (Java)  
-**Autor:** GroupDocs  
-
 ## Dodatkowe zasoby
 
 - **Dokumentacja**: [Dokumentacja GroupDocs.Comparison for Java](https://docs.groupdocs.com/comparison/java/)  
@@ -333,3 +327,9 @@ Masz teraz **centralny menedżer licencji** oparty na strumieniach Java, zapewni
 - **Pobierz najnowszą wersję**: [Wydania GroupDocs](https://releases.groupdocs.com/comparison/java/)  
 - **Kup licencję**: [Kup licencję GroupDocs](https://purchase.groupdocs.com/buy)  
 - **Uzyskaj wsparcie**: [Forum społeczności GroupDocs](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Ostatnia aktualizacja:** 2026-01-28  
+**Testowano z:** GroupDocs.Comparison 25.2 (Java)  
+**Autor:** GroupDocs  

@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Gecentraliseerde licentiebeheerder via stream'
+title: 'GroupDocs Java - Gecentraliseerde licentiebeheerder via stream'
 type: docs
 url: /nl/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ A: Verwaarloosbaar. De licentie wordt meestal één keer bij opstarten ingesteld
 
 Je beschikt nu over een **gecentraliseerde licentiebeheerder** gebouwd op Java‑streams, die je de flexibiliteit, beveiliging en schaalbaarheid biedt die nodig zijn voor moderne deployments. Door de stappen, best practices en probleemoplossingstips in deze gids te volgen, kun je GroupDocs‑licentiëring met vertrouwen toepassen over containers, cloud‑services en multi‑tenant architecturen.  
 
----
-
-**Laatst bijgewerkt:** 2026-01-28  
-**Getest met:** GroupDocs.Comparison 25.2 (Java)  
-**Auteur:** GroupDocs  
-
 ## Aanvullende Bronnen
 
 - **Documentatie**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ Je beschikt nu over een **gecentraliseerde licentiebeheerder** gebouwd op Java�
 - **Download Nieuwste Versie**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Licentie Aanschaffen**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Ondersteuning Krijgen**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Laatst bijgewerkt:** 2026-01-28  
+**Getest met:** GroupDocs.Comparison 25.2 (Java)  
+**Auteur:** GroupDocs  

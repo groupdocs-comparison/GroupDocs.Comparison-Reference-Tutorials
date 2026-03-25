@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: स्ट्रीम के माध्यम से केंद्रीकृत लाइसेंस प्रबंधक'
+title: 'GroupDocs Java - स्ट्रीम के माध्यम से केंद्रीकृत लाइसेंस प्रबंधक'
 type: docs
 url: /hi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ try {
 
 अब आपके पास Java स्ट्रीम्स पर आधारित **केंद्रीकृत लाइसेंस मैनेजर** है, जो आधुनिक डिप्लॉयमेंट के लिए लचीलापन, सुरक्षा और स्केलेबिलिटी प्रदान करता है। इस गाइड में बताए गए चरणों, सर्वश्रेष्ठ प्रैक्टिसेज और ट्रबलशूटिंग टिप्स को अपनाकर आप कंटेनर, क्लाउड सर्विसेज और मल्टी‑टेनेट आर्किटेक्चर में GroupDocs लाइसेंसिंग को आत्मविश्वास के साथ लागू कर सकते हैं।
 
----
-
-**अंतिम अपडेट:** 2026-01-28  
-**परीक्षित संस्करण:** GroupDocs.Comparison 25.2 (Java)  
-**लेखक:** GroupDocs  
-
 ## अतिरिक्त संसाधन
 
 - **डॉक्यूमेंटेशन**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ try {
 - **नवीनतम संस्करण डाउनलोड**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **लाइसेंस खरीदें**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **सपोर्ट प्राप्त करें**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**अंतिम अपडेट:** 2026-01-28  
+**परीक्षित संस्करण:** GroupDocs.Comparison 25.2 (Java)  
+**लेखक:** GroupDocs  

@@ -13,7 +13,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Centraliserad licenshanterare via ström'
+title: 'GroupDocs Java - Centraliserad licenshanterare via ström'
 type: docs
 url: /sv/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -319,10 +319,6 @@ A: Försumbar. Licensen sätts vanligtvis en gång vid start; därefter är str�
 
 Du har nu en **centraliserad licenshanterare** byggd på Java‑strömmar, vilket ger dig den flexibilitet, säkerhet och skalbarhet som behövs för moderna distributioner. Genom att följa stegen, bästa praxis och felsökningstips i den här guiden kan du tryggt tillämpa GroupDocs‑licensiering över containrar, molntjänster och multi‑tenant‑arkitekturer.
 
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
-
 ## Ytterligare resurser
 
 - **Documentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +326,7 @@ Du har nu en **centraliserad licenshanterare** byggd på Java‑strömmar, vilke
 - **Download Latest Version**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Purchase License**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Get Support**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+**Last Updated:** 2026-01-28  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs  

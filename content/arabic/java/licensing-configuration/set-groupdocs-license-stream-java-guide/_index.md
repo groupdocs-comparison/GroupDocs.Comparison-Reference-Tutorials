@@ -13,7 +13,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: مدير الترخيص المركزي عبر التدفق'
+title: 'GroupDocs Java - مدير الترخيص المركزي عبر التدفق'
 type: docs
 url: /ar/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -316,12 +316,6 @@ try {
 
 الآن لديك **مدير ترخيص مركزي** مبني على تدفقات Java، يمنحك المرونة، الأمان، والقابلية للتوسع المطلوبة للنشر الحديث. باتباع الخطوات، أفضل الممارسات، ونصائح استكشاف الأخطاء في هذا الدليل، يمكنك تطبيق ترخيص GroupDocs بثقة عبر الحاويات، الخدمات السحابية، والهياكل متعددة المستأجرين.
 
----
-
-**آخر تحديث:** 2026-01-28  
-**تم الاختبار مع:** GroupDocs.Comparison 25.2 (Java)  
-**المؤلف:** GroupDocs  
-
 ## موارد إضافية
 
 - **التوثيق**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -329,3 +323,9 @@ try {
 - **تحميل أحدث نسخة**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **شراء ترخيص**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **الحصول على الدعم**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**آخر تحديث:** 2026-01-28  
+**تم الاختبار مع:** GroupDocs.Comparison 25.2 (Java)  
+**المؤلف:** GroupDocs  

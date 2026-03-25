@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Κεντρικός Διαχειριστής Άδειας μέσω Ροής'
+title: 'GroupDocs Java - Κεντρικός Διαχειριστής Άδειας μέσω Ροής'
 type: docs
 url: /el/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ try {
 
 Τώρα διαθέτετε έναν **κεντρικό διαχειριστή άδειας** βασισμένο σε Java streams, που προσφέρει την ευελιξία, την ασφάλεια και την κλιμακωσιμότητα που απαιτούνται για σύγχρονες αναπτύξεις. Ακολουθώντας τα βήματα, τις καλές πρακτικές και τις συμβουλές αντιμετώπισης προβλημάτων που παρουσιάζονται σε αυτόν τον οδηγό, μπορείτε με σιγουριά να εφαρμόζετε την αδειοδότηση GroupDocs σε containers, υπηρεσίες cloud και αρχιτεκτονικές multi‑tenant.
 
----
-
-**Τελευταία ενημέρωση:** 2026-01-28  
-**Δοκιμασμένο με:** GroupDocs.Comparison 25.2 (Java)  
-**Συγγραφέας:** GroupDocs  
-
 ## Πρόσθετοι Πόροι
 
 - **Τεκμηρίωση**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ try {
 - **Λήψη Τελευταίας Έκδοσης**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Αγορά Άδειας**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Υποστήριξη**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Τελευταία ενημέρωση:** 2026-01-28  
+**Δοκιμασμένο με:** GroupDocs.Comparison 25.2 (Java)  
+**Συγγραφέας:** GroupDocs  

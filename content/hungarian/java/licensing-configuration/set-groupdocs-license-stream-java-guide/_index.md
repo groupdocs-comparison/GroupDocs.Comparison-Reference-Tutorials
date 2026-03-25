@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Központosított licenckezelő adatfolyamon keresztül'
+title: 'GroupDocs Java - Központosított licenckezelő adatfolyamon keresztül'
 type: docs
 url: /hu/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -320,12 +320,6 @@ Elhanyagolható. A licencet általában egyszer állítják be indításkor; ezu
 
 Most már rendelkezel egy **központosított licenckezelővel**, amely Java stream-ekre épül, és megadja a modern telepítésekhez szükséges rugalmasságot, biztonságot és skálázhatóságot. A lépések, a legjobb gyakorlatok és a hibakeresési tippek követésével magabiztosan alkalmazhatod a GroupDocs licencelést konténerekben, felhőszolgáltatásokban és több‑bérlős architektúrákban.
 
----
-
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
-
 ## További források
 
 - **Dokumentáció**: [GroupDocs.Comparison for Java dokumentáció](https://docs.groupdocs.com/comparison/java/)  
@@ -333,3 +327,9 @@ Most már rendelkezel egy **központosított licenckezelővel**, amely Java stre
 - **Legújabb verzió letöltése**: [GroupDocs kiadások](https://releases.groupdocs.com/comparison/java/)  
 - **Licenc vásárlása**: [GroupDocs licenc vásárlása](https://purchase.groupdocs.com/buy)  
 - **Támogatás**: [GroupDocs közösségi fórum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2026-01-28  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs  

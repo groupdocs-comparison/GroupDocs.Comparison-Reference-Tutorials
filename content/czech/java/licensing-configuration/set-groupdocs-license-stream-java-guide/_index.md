@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Centralizovaný správce licencí pomocí streamu'
+title: 'GroupDocs Java - Centralizovaný správce licencí pomocí streamu'
 type: docs
 url: /cs/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -320,12 +320,6 @@ A: Nezajímavý. Licence se obvykle nastavuje jednou při spuštění; poté je 
 
 Nyní máte **centralizovaný správce licencí** postavený na Java streamech, který vám poskytuje flexibilitu, bezpečnost a škálovatelnost potřebnou pro moderní nasazení. Dodržením kroků, nejlepších postupů a tipů na odstraňování problémů v tomto průvodci můžete sebejistě aplikovat licencování GroupDocs napříč kontejnery, cloudovými službami a multi‑tenant architekturami.
 
----
-
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
-
 ## Další zdroje
 
 - **Dokumentace**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -333,3 +327,9 @@ Nyní máte **centralizovaný správce licencí** postavený na Java streamech, 
 - **Stáhnout nejnovější verzi**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Zakoupit licenci**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Získat podporu**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2026-01-28  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs  

@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: ตัวจัดการใบอนุญาตแบบศูนย์กลางผ่านสตรีม'
+title: 'GroupDocs Java - ตัวจัดการใบอนุญาตแบบศูนย์กลางผ่านสตรีม'
 type: docs
 url: /th/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -320,12 +320,6 @@ A: ไม่สำคัญ. ใบอนุญาตมักตั้งค่
 
 คุณได้มี **centralized license manager** ที่สร้างบน Java streams แล้ว ซึ่งให้ความยืดหยุ่น, ความปลอดภัย, และความสามารถในการขยายตัวที่จำเป็นสำหรับการดีพลอยสมัยใหม่ โดยทำตามขั้นตอน, แนวปฏิบัติที่ดีที่สุด, และเคล็ดลับการแก้ไขปัญหาในคู่มือนี้ คุณจะมั่นใจได้ว่า GroupDocs จะทำงานอย่างถูกต้องในคอนเทนเนอร์, บริการคลาวด์, และสถาปัตยกรรมหลายผู้เช่า
 
----
-
-**อัปเดตล่าสุด:** 2026-01-28  
-**ทดสอบกับ:** GroupDocs.Comparison 25.2 (Java)  
-**ผู้เขียน:** GroupDocs  
-
 ## แหล่งข้อมูลเพิ่มเติม
 
 - **Documentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -333,3 +327,9 @@ A: ไม่สำคัญ. ใบอนุญาตมักตั้งค่
 - **Download Latest Version**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Purchase License**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Get Support**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**อัปเดตล่าสุด:** 2026-01-28  
+**ทดสอบกับ:** GroupDocs.Comparison 25.2 (Java)  
+**ผู้เขียน:** GroupDocs  

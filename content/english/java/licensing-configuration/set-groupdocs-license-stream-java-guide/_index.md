@@ -1,5 +1,5 @@
 ---
-title: "GroupDocs Java: Centralized License Manager via Stream"
+title: "GroupDocs Java - Centralized License Manager via Stream"
 linktitle: "GroupDocs License Java Tutorial"
 description: "Learn how to implement a centralized license manager for GroupDocs using Java streams. Complete guide with code, troubleshooting, and best practices for 2026."
 keywords: "GroupDocs license Java tutorial, Java license stream setup, GroupDocs Comparison licensing, programmatic license Java, centralized license manager"
@@ -309,12 +309,6 @@ A: Negligible. The license is typically set once at startup; thereafter, stream 
 
 You now have a **centralized license manager** built on Java streams, giving you the flexibility, security, and scalability needed for modern deployments. By following the steps, best practices, and troubleshooting tips in this guide, you can confidently apply GroupDocs licensing across containers, cloud services, and multi‑tenant architectures.
 
----
-
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
-
 ## Additional Resources
 
 - **Documentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -322,5 +316,11 @@ You now have a **centralized license manager** built on Java streams, giving you
 - **Download Latest Version**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Purchase License**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Get Support**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2026-01-28  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs  
 
 ---

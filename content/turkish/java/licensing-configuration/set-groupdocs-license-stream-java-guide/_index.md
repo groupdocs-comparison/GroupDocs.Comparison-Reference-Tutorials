@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Akış aracılığıyla Merkezi Lisans Yöneticisi'
+title: 'GroupDocs Java - Akış aracılığıyla Merkezi Lisans Yöneticisi'
 type: docs
 url: /tr/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ C: Önemsiz. Lisans genellikle başlangıçta bir kez ayarlanır; bundan sonra a
 
 Artık **Java akışları üzerine inşa edilmiş merkezi bir lisans yöneticiniz** var; bu sayede modern dağıtımlar için gereken esneklik, güvenlik ve ölçeklenebilirliği elde ediyorsunuz. Bu rehberdeki adımları, en iyi uygulamaları ve sorun giderme ipuçlarını izleyerek, konteynerler, bulut hizmetleri ve çok‑kiracılı mimarilerde GroupDocs lisanslamasını sorunsuz bir şekilde uygulayabilirsiniz.
 
----
-
-**Son Güncelleme:** 2026-01-28  
-**Test Edilen Sürümler:** GroupDocs.Comparison 25.2 (Java)  
-**Yazar:** GroupDocs  
-
 ## Ek Kaynaklar
 
 - **Dokümantasyon**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ Artık **Java akışları üzerine inşa edilmiş merkezi bir lisans yöneticini
 - **En Son Sürümü İndir**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Lisans Satın Al**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Destek Al**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Son Güncelleme:** 2026-01-28  
+**Test Edilen Sürümler:** GroupDocs.Comparison 25.2 (Java)  
+**Yazar:** GroupDocs  

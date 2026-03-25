@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java : Gestionnaire de licence centralisé via le flux'
+title: 'GroupDocs Java - Gestionnaire de licence centralisé via le flux'
 type: docs
 url: /fr/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ R : Négligeable. La licence est généralement définie une fois au démarrag
 
 Vous disposez maintenant d’un **gestionnaire de licence centralisé** construit sur les flux Java, vous offrant la flexibilité, la sécurité et l’évolutivité nécessaires aux déploiements modernes. En suivant les étapes, les bonnes pratiques et les conseils de dépannage présentés dans ce guide, vous pourrez appliquer la licence GroupDocs en toute confiance sur des conteneurs, des services cloud et des architectures multi‑locataires.
 
----
-
-**Dernière mise à jour :** 2026-01-28  
-**Testé avec :** GroupDocs.Comparison 25.2 (Java)  
-**Auteur :** GroupDocs  
-
 ## Ressources supplémentaires
 
 - **Documentation** : [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,3 +324,9 @@ Vous disposez maintenant d’un **gestionnaire de licence centralisé** construi
 - **Télécharger la dernière version** : [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Acheter une licence** : [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Obtenir du support** : [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Dernière mise à jour :** 2026-01-28  
+**Testé avec :** GroupDocs.Comparison 25.2 (Java)  
+**Auteur :** GroupDocs  

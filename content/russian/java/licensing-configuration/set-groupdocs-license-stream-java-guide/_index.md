@@ -14,7 +14,7 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: централизованный менеджер лицензий через поток'
+title: 'GroupDocs Java - централизованный менеджер лицензий через поток'
 type: docs
 url: /ru/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
@@ -317,12 +317,6 @@ try {
 
 Теперь у вас есть **централизованный менеджер лицензий**, построенный на Java‑потоках, который обеспечивает гибкость, безопасность и масштабируемость, необходимые для современных развертываний. Следуя шагам, лучшим практикам и советам по устранению неполадок из этого руководства, вы сможете уверенно применять лицензирование GroupDocs в контейнерах, облачных сервисах и многопользовательских архитектурах.
 
----
-
-**Последнее обновление:** 2026-01-28  
-**Тестировано с:** GroupDocs.Comparison 25.2 (Java)  
-**Автор:** GroupDocs  
-
 ## Дополнительные ресурсы
 
 - **Документация**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -330,5 +324,11 @@ try {
 - **Скачать последнюю версию**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - **Приобрести лицензию**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Получить поддержку**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)  
+
+---
+
+**Последнее обновление:** 2026-01-28  
+**Тестировано с:** GroupDocs.Comparison 25.2 (Java)  
+**Автор:** GroupDocs  
 
 ---

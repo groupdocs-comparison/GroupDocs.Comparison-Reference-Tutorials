@@ -580,12 +580,6 @@ Prêt à implémenter la génération d'aperçus de documents dans votre applica
 **Q6 :** Comment dépanner les erreurs « License not found » ?  
 **R :** Assurez‑vous que votre fichier de licence se trouve dans le classpath, vérifiez que la licence n’est pas expirée, et contrôlez que vous utilisez le bon type de licence pour votre version de GroupDocs.Comparison.
 
-**Dernière mise à jour :** 2026-02-08  
-**Testé avec :** GroupDocs.Comparison 25.2  
-**Auteur :** GroupDocs  
-
----  
-
 **Ressources supplémentaires**
 
 - **Documentation** : [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -595,3 +589,9 @@ Prêt à implémenter la génération d'aperçus de documents dans votre applica
 - **Essayer gratuitement** : [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Obtenir du support** : [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Licence temporaire** : [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---  
+
+**Dernière mise à jour :** 2026-02-08  
+**Testé avec :** GroupDocs.Comparison 25.2  
+**Auteur :** GroupDocs  

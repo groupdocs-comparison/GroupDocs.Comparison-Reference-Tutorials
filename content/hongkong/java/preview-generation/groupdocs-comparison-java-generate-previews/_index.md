@@ -580,14 +580,6 @@ private boolean isDocumentValid(String filePath) {
 **Q6：** 如何排除「License not found」授權錯誤？  
 **A：** 確認授權檔已放置於 classpath、授權未過期，且使用的授權類型與您所使用的 GroupDocs.Comparison 版本相符。
 
----
-
-**最後更新：** 2026-02-08  
-**測試版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
----  
-
 **其他資源**
 
 - **文件說明**： [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ private boolean isDocumentValid(String filePath) {
 - **免費試用**： [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **取得支援**： [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **臨時授權**： [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**最後更新：** 2026-02-08  
+**測試版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  
+
+---  

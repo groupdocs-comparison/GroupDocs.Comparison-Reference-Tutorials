@@ -580,14 +580,6 @@ Bereit, die Dokument‑Vorschau‑Erstellung in Ihrer Java‑Anwendung zu implem
 **F6:** Wie behebe ich den Fehler “License not found”?  
 **A:** Stellen Sie sicher, dass Ihre Lizenzdatei im Klassenpfad liegt, prüfen Sie, ob die Lizenz nicht abgelaufen ist, und vergewissern Sie sich, dass Sie den korrekten Lizenztyp für Ihre GroupDocs.Comparison‑Version verwenden.
 
----
-
-**Zuletzt aktualisiert:** 2026-02-08  
-**Getestet mit:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
----  
-
 **Zusätzliche Ressourcen**
 
 - **Dokumentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ Bereit, die Dokument‑Vorschau‑Erstellung in Ihrer Java‑Anwendung zu implem
 - **Kostenlos testen:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Support erhalten:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporäre Lizenz:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Zuletzt aktualisiert:** 2026-02-08  
+**Getestet mit:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  
+
+---  

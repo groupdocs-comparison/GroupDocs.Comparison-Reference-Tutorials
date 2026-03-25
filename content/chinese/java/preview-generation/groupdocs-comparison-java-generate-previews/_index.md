@@ -579,14 +579,6 @@ private boolean isDocumentValid(String filePath) {
 **Q6：** 如何排查 “License not found” 错误？  
 **A：** 确认许可证文件已放置在类路径下，检查许可证是否已过期，并确保使用的许可证类型与当前 GroupDocs.Comparison 版本匹配。
 
----
-
-**最后更新：** 2026-02-08  
-**测试版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
-
----  
-
 **附加资源**
 
 - **文档**： [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -596,3 +588,11 @@ private boolean isDocumentValid(String filePath) {
 - **免费试用**： [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **获取支持**： [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **临时许可证**： [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**最后更新：** 2026-02-08  
+**测试版本：** GroupDocs.Comparison 25.2  
+**作者：** GroupDocs  
+
+---  

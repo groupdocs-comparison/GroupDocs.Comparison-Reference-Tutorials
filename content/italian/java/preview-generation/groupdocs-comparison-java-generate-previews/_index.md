@@ -580,12 +580,6 @@ Pronto a implementare la generazione di anteprime di documenti nella tua applica
 **D6:** Come risolvo gli errori “License not found”?  
 **R:** Assicurati che il file di licenza sia nel classpath, verifica che la licenza non sia scaduta e controlla di utilizzare il tipo di licenza corretto per la tua versione di GroupDocs.Comparison.
 
-**Ultimo Aggiornamento:** 2026-02-08  
-**Testato Con:** GroupDocs.Comparison 25.2  
-**Autore:** GroupDocs  
-
----  
-
 **Documentazione:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 **Riferimento API:** [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
 **Download Ultimo:** [GroupDocs.Comparison Downloads](https://releases.groupdocs.com/comparison/java/)  
@@ -593,3 +587,9 @@ Pronto a implementare la generazione di anteprime di documenti nella tua applica
 **Prova Gratis:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 **Ottieni Supporto:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 **Licenza Temporanea:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---  
+
+**Ultimo Aggiornamento:** 2026-02-08  
+**Testato Con:** GroupDocs.Comparison 25.2  
+**Autore:** GroupDocs  

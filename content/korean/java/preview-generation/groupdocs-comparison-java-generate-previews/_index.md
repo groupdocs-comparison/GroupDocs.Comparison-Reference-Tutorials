@@ -580,12 +580,6 @@ Java 애플리케이션에 문서 미리보기 생성을 구현할 준비가 되
 **Q6:** “License not found” 오류를 해결하려면 어떻게 해야 하나요?  
 **A:** 라이선스 파일이 클래스패스에 있는지 확인하고, 라이선스가 만료되지 않았는지, 사용 중인 GroupDocs.Comparison 버전에 맞는 라이선스 유형인지 점검하세요.
 
-**마지막 업데이트:** 2026-02-08  
-**테스트 환경:** GroupDocs.Comparison 25.2  
-**작성자:** GroupDocs  
-
----  
-
 **추가 리소스**
 
 - **문서:** [GroupDocs.Comparison Java 문서](https://docs.groupdocs.com/comparison/java/)  
@@ -595,3 +589,9 @@ Java 애플리케이션에 문서 미리보기 생성을 구현할 준비가 되
 - **무료 체험:** [무료 체험 다운로드](https://releases.groupdocs.com/comparison/java/)  
 - **지원 포럼:** [GroupDocs 지원 포럼](https://forum.groupdocs.com/c/comparison)  
 - **임시 라이선스 요청:** [임시 라이선스 요청](https://purchase.groupdocs.com/temporary-license/)
+
+---  
+
+**마지막 업데이트:** 2026-02-08  
+**테스트 환경:** GroupDocs.Comparison 25.2  
+**작성자:** GroupDocs  

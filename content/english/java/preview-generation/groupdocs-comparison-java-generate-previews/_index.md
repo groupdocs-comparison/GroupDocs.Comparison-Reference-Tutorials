@@ -572,14 +572,6 @@ Ready to implement document preview generation in your Java application? Start w
 **Q6:** How do I troubleshoot “License not found” errors?  
 **A:** Ensure your license file is in the classpath, verify the license hasn’t expired, and check that you’re using the correct license type for your GroupDocs.Comparison version.
 
----
-
-**Last Updated:** 2026-02-08  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
----  
-
 **Additional Resources**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -589,3 +581,11 @@ Ready to implement document preview generation in your Java application? Start w
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Last Updated:** 2026-02-08  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+---  

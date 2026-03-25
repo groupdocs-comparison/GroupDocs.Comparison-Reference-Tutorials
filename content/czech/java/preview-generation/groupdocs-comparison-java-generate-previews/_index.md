@@ -579,14 +579,6 @@ Připraven(a) implementovat generování náhledů dokumentů ve vaší Java apl
 **Q6:** Jak řešit chyby „License not found“?  
 **A:** Ujistěte se, že soubor licence je v classpath, ověřte, že licence nevypršela, a zkontrolujte, že používáte správný typ licence pro vaši verzi GroupDocs.Comparison.
 
----
-
-**Last Updated:** 2026-02-08  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
----  
-
 **Další zdroje**
 
 - **Dokumentace**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -596,3 +588,9 @@ Připraven(a) implementovat generování náhledů dokumentů ve vaší Java apl
 - **Vyzkoušet zdarma**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Získat podporu**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Dočasná licence**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Last Updated:** 2026-02-08  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  

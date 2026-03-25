@@ -580,14 +580,6 @@ private boolean isDocumentValid(String filePath) {
 **Q6:** จะแก้ไขข้อผิดพลาด “License not found” อย่างไร?  
 **A:** ตรวจสอบว่าไฟล์ไลเซนส์อยู่ใน classpath, ยืนยันว่าไลเซนส์ยังไม่หมดอายุ, และตรวจสอบว่าคุณใช้ไลเซนส์ประเภทที่ตรงกับเวอร์ชัน GroupDocs.Comparison ของคุณ
 
----
-
-**อัปเดตล่าสุด:** 2026-02-08  
-**ทดสอบกับ:** GroupDocs.Comparison 25.2  
-**ผู้เขียน:** GroupDocs  
-
----  
-
 **แหล่งข้อมูลเพิ่มเติม**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ private boolean isDocumentValid(String filePath) {
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**อัปเดตล่าสุด:** 2026-02-08  
+**ทดสอบกับ:** GroupDocs.Comparison 25.2  
+**ผู้เขียน:** GroupDocs  
+
+---  

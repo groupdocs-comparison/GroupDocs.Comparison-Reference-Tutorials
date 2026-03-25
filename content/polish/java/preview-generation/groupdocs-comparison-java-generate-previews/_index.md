@@ -581,14 +581,6 @@ Gotowy, aby wdrożyć generowanie podglądów dokumentów w swojej aplikacji Jav
 **Q6:** Jak rozwiązać problemy z błędem „License not found”?  
 **A:** Upewnij się, że plik licencji znajduje się w classpath, sprawdź, czy licencja nie wygasła, oraz zweryfikuj, że używasz właściwego typu licencji dla wersji GroupDocs.Comparison.
 
----
-
-**Ostatnia aktualizacja:** 2026-02-08  
-**Testowano z:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
----  
-
 **Dodatkowe zasoby**
 
 - **Dokumentacja**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -598,3 +590,11 @@ Gotowy, aby wdrożyć generowanie podglądów dokumentów w swojej aplikacji Jav
 - **Wypróbuj za darmo**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Uzyskaj wsparcie**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Licencja tymczasowa**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Ostatnia aktualizacja:** 2026-02-08  
+**Testowano z:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  
+
+---  

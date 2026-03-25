@@ -576,14 +576,6 @@ Java アプリケーションでドキュメントプレビュー生成を実装
 **Q6:** “License not found” エラーのトラブルシューティング方法は？  
 **A:** ライセンスファイルがクラスパスにあることを確認し、ライセンスが期限切れでないか検証し、使用している GroupDocs.Comparison バージョンに適したライセンス種別を使用しているか確認してください。
 
----
-
-**最終更新日:** 2026-02-08  
-**テスト環境:** GroupDocs.Comparison 25.2  
-**作者:** GroupDocs  
-
----  
-
 **追加リソース**
 - **Documentation**: [GroupDocs.Comparison Java ドキュメンテーション](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [完全な API リファレンス](https://reference.groupdocs.com/comparison/java/)  
@@ -592,3 +584,11 @@ Java アプリケーションでドキュメントプレビュー生成を実装
 - **Try Free**: [無料トライアルをダウンロード](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [一時ライセンスをリクエスト](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**最終更新日:** 2026-02-08  
+**テスト環境:** GroupDocs.Comparison 25.2  
+**作者:** GroupDocs  
+
+---  

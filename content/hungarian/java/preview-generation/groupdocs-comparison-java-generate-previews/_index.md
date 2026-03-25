@@ -580,14 +580,6 @@ Készen áll a dokumentum előnézet generálás bevezetésére Java alkalmazás
 **Q6:** Hogyan hárítom el a „License not found” hibákat?  
 **A:** Győződjön meg róla, hogy a licencfájl a classpath‑ban van, ellenőrizze, hogy a licenc nem járt le, és ellenőrizze, hogy a megfelelő licenc típust használja a GroupDocs.Comparison verziójához.
 
----
-
-**Legutóbb frissítve:** 2026-02-08  
-**Tesztelve a következővel:** GroupDocs.Comparison 25.2  
-**Szerző:** GroupDocs  
-
----  
-
 **További források**
 
 - **Dokumentáció:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ Készen áll a dokumentum előnézet generálás bevezetésére Java alkalmazás
 - **Ingyenes próba:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Támogatás:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Ideiglenes licenc:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Legutóbb frissítve:** 2026-02-08  
+**Tesztelve a következővel:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs  
+
+---  

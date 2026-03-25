@@ -580,12 +580,6 @@ Sẵn sàng triển khai tạo bản xem trước tài liệu trong ứng dụng
 **Q6:** Làm sao để khắc phục lỗi “License not found”?  
 **A:** Đảm bảo tệp giấy phép nằm trong classpath, kiểm tra giấy phép chưa hết hạn, và xác nhận bạn đang sử dụng loại giấy phép đúng cho phiên bản GroupDocs.Comparison của mình.
 
-**Cập nhật lần cuối:** 2026-02-08  
-**Kiểm tra với:** GroupDocs.Comparison 25.2  
-**Tác giả:** GroupDocs  
-
----  
-
 **Tài nguyên Bổ sung**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -595,3 +589,11 @@ Sẵn sàng triển khai tạo bản xem trước tài liệu trong ứng dụng
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Cập nhật lần cuối:** 2026-02-08  
+**Kiểm tra với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs  
+
+---  

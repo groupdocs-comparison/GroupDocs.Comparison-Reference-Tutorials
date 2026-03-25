@@ -580,14 +580,6 @@ Pronto para implementar a geração de pré‑visualizações de documentos em s
 **Q6:** Como solucionar erros “License not found”?  
 **A:** Certifique‑se de que o arquivo de licença está no classpath, verifique se a licença não expirou e confirme que está usando o tipo correto de licença para sua versão do GroupDocs.Comparison.
 
---- 
-
-**Last Updated:** 2026-02-08  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
----  
-
 **Recursos Adicionais**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ Pronto para implementar a geração de pré‑visualizações de documentos em s
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+--- 
+
+**Last Updated:** 2026-02-08  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+---  

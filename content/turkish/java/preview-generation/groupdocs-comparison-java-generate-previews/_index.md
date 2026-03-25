@@ -579,14 +579,6 @@ Java uygulamanızda belge önizleme oluşturmayı uygulamaya hazır mısınız? 
 **Q6:** “License not found” hatalarını nasıl gideririm?  
 **A:** Lisans dosyanızın sınıf yolunda (classpath) olduğundan emin olun, lisansın süresinin dolmadığını doğrulayın ve GroupDocs.Comparison sürümünüz için doğru lisans tipini kullandığınızı kontrol edin.
 
----
-
-**Son Güncelleme:** 2026-02-08  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
-**Yazar:** GroupDocs  
-
----  
-
 **Ek Kaynaklar**
 
 - **Documentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -596,3 +588,11 @@ Java uygulamanızda belge önizleme oluşturmayı uygulamaya hazır mısınız? 
 - **Try Free:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Son Güncelleme:** 2026-02-08  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs  
+
+---  

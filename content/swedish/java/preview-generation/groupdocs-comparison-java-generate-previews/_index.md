@@ -581,12 +581,6 @@ Redo att implementera förhandsgranskningsgenerering i din Java‑applikation? B
 **Q6:** Hur felsöker jag ”License not found”‑fel?  
 **A:** Säkerställ att din licensfil finns i classpath, verifiera att licensen inte har löpt ut och kontrollera att du använder rätt licenstyp för din GroupDocs.Comparison‑version.
 
-**Senast uppdaterad:** 2026-02-08  
-**Testad med:** GroupDocs.Comparison 25.2  
-**Författare:** GroupDocs  
-
----  
-
 **Ytterligare resurser**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -596,3 +590,9 @@ Redo att implementera förhandsgranskningsgenerering i din Java‑applikation? B
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---  
+
+**Senast uppdaterad:** 2026-02-08  
+**Testad med:** GroupDocs.Comparison 25.2  
+**Författare:** GroupDocs  

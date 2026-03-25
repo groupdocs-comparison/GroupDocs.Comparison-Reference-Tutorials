@@ -581,14 +581,6 @@ Ahora sabes cómo **crear pdf preview java** usando GroupDocs.Comparison. Esta s
 **P6:** ¿Cómo soluciono errores “License not found”?  
 **R:** Asegúrate de que el archivo de licencia esté en el classpath, verifica que la licencia no haya expirado y confirma que estás usando el tipo de licencia correcto para tu versión de GroupDocs.Comparison.
 
----
-
-**Última actualización:** 2026-02-08  
-**Probado con:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
-
----  
-
 **Recursos adicionales**
 
 - **Documentación:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -598,3 +590,11 @@ Ahora sabes cómo **crear pdf preview java** usando GroupDocs.Comparison. Esta s
 - **Prueba gratuita:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Obtener soporte:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Licencia temporal:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Última actualización:** 2026-02-08  
+**Probado con:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs  
+
+---  

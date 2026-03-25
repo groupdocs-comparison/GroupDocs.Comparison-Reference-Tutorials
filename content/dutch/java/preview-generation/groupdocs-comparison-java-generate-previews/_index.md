@@ -577,14 +577,6 @@ Klaar om document‑preview‑generatie te implementeren in uw Java‑applicatie
 **Q6:** Hoe los ik “License not found” fouten op?  
 **A:** Zorg ervoor dat uw licentiebestand in de classpath staat, controleer of de licentie niet verlopen is, en controleer of u het juiste licentietype voor uw GroupDocs.Comparison‑versie gebruikt.
 
----
-
-**Laatst bijgewerkt:** 2026-02-08  
-**Getest met:** GroupDocs.Comparison 25.2  
-**Auteur:** GroupDocs  
-
----  
-
 **Aanvullende bronnen**
 
 - **Documentatie**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -594,3 +586,11 @@ Klaar om document‑preview‑generatie te implementeren in uw Java‑applicatie
 - **Gratis proberen**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Ondersteuning**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Tijdelijke licentie**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Laatst bijgewerkt:** 2026-02-08  
+**Getest met:** GroupDocs.Comparison 25.2  
+**Auteur:** GroupDocs  
+
+---  

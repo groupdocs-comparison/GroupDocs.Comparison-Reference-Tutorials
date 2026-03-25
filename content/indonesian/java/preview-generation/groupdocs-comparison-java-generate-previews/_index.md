@@ -580,14 +580,6 @@ Siap mengimplementasikan pembuatan pratinjau dokumen di aplikasi Java Anda? Mula
 **Q6:** Bagaimana cara memecahkan error “License not found”?  
 **A:** Pastikan file lisensi berada di classpath, verifikasi lisensi belum kedaluwarsa, dan periksa bahwa Anda menggunakan tipe lisensi yang benar untuk versi GroupDocs.Comparison Anda.
 
----
-
-**Last Updated:** 2026-02-08  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
-
----  
-
 **Sumber Daya Tambahan**
 
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
@@ -597,3 +589,11 @@ Siap mengimplementasikan pembuatan pratinjau dokumen di aplikasi Java Anda? Mula
 - **Try Free**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Last Updated:** 2026-02-08  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+---  

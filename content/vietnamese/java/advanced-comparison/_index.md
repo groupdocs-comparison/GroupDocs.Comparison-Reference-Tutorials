@@ -24,17 +24,17 @@ weight: 4
 
 Nếu bạn từng cần **compare excel files java** trên hàng trăm tài liệu, xử lý các tệp được bảo vệ bằng mật khẩu, hoặc kiểm toán toàn bộ thư mục để phát hiện thay đổi, bạn sẽ biết rằng so sánh cơ bản nhanh chóng gặp giới hạn. Trong trung tâm hướng dẫn này, chúng tôi sẽ đưa bạn qua các tính năng mạnh mẽ nhất của GroupDocs.Comparison giúp bạn giải quyết những kịch bản phức tạp này một cách tự tin.
 
-## Quick Answers
-- **GroupDocs.Comparison có thể làm gì cho tệp Excel?** Nó có thể so sánh các khác biệt ở mức ô, làm nổi bật các thay đổi và tạo báo cáo chi tiết mà không cần tải toàn bộ workbook vào bộ nhớ.  
-- **Tôi có thể so sánh tài liệu Word được bảo vệ bằng mật khẩu không?** Có – xem hướng dẫn “Password‑Protected Document Handling” để tải an toàn.  
-- **Có hỗ trợ xử lý dựa trên stream không?** Chắc chắn; bạn có thể so sánh các tệp trực tiếp từ InputStreams, rất phù hợp cho các ứng dụng web.  
-- **Làm sao giảm việc sử dụng bộ nhớ khi so sánh nhiều tệp?** Xử lý tài liệu theo lô, sử dụng streams và giải phóng các đối tượng Comparer kịp thời.  
-- **Các định dạng nào được hỗ trợ?** Word, Excel, PowerPoint, PDF, Text, Email và hơn nữa.
+## Trả lời nhanh
+- **GroupDocs.Comparison có thể làm gì cho tệp Excel?** Nó có thể so sánh các khác biệt ở trình độ, làm nổi bật các thay đổi và tạo báo cáo chi tiết mà không cần tải toàn bộ sổ làm việc vào bộ nhớ.
+- **Tôi có thể so sánh tài liệu Word được bảo vệ bằng mật khẩu không?** Có – xem hướng dẫn “Xử lý tài liệu được bảo vệ bằng mật khẩu” để tải an toàn.
+- **Dựa trên luồng xử lý được hỗ trợ có hỗ trợ không?** Chắc chắn; bạn có thể so sánh các tệp trực tiếp từ inputStreams, rất phù hợp cho các ứng dụng web.
+- **Làm sao giảm việc sử dụng bộ nhớ khi so sánh nhiều tệp?** Xử lý tài liệu theo lô, sử dụng luồng và giải nén Bộ so sánh đối tượng phù hợp.
+- **Các định dạng nào được hỗ trợ?** Word, Excel, PowerPoint, PDF, Text, Email và hơn thế nữa.
 
-## **compare excel files java** là gì?
-So sánh các tệp Excel trong Java có nghĩa là phát hiện một cách lập trình các thay đổi ở mức ô, bao gồm thêm, xóa hoặc sửa đổi giữa hai hoặc nhiều bảng tính. Với GroupDocs.Comparison, bạn có được một engine hiệu năng cao hoạt động với `.xlsx`, `.xls` và ngay cả các workbook được bảo vệ bằng mật khẩu.
+## **so sánh file excel java** là gì?
+So sánh các tệp Excel trong Java có nghĩa là được phát hiện bằng cách thiết lập các thay đổi ở ô, bao gồm các phần bổ sung, xóa hoặc sửa đổi giữa hai hoặc nhiều bảng tính. Với GroupDocs.Comparison, bạn có được một công cụ hoạt động hiệu quả với `.xlsx`, `.xls` và ngay cả các sổ làm việc được bảo vệ bằng mật khẩu.
 
-## Cách so sánh tệp Excel trong Java bằng GroupDocs.Comparison
+##Cách so sánh tệp Excel trong Java bằng GroupDocs.Comparison
 Khi bạn cần một cách đáng tin cậy, mở rộng để **how to compare excel** các workbook, hãy bắt đầu bằng việc tải mỗi workbook qua lớp `Comparer`. API tự động phát hiện loại tệp, vì vậy bạn không cần viết mã riêng cho từng định dạng. Cách tiếp cận này cho phép bạn tập trung vào logic nghiệp vụ thay vì phân tích nội bộ Excel.
 
 ## Tại sao nên sử dụng GroupDocs.Comparison cho các kịch bản nâng cao?

@@ -24,25 +24,7 @@ url: /hi/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
-2026-02-16  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs
-
-Translate these lines: Keep dates and version numbers unchanged.
-
-**Last Updated:** 2026-02-16 -> translate label: "**अंतिम अपडेट:** 2026-02-16"
-
-**Tested With:** GroupDocs.Comparison 25.2 -> "**परीक्षित संस्करण:** GroupDocs.Comparison 25.2"
-
-**Author:** GroupDocs -> "**लेखक:** GroupDocs"
-
-Now produce final markdown with all translations.
-
-Check that we didn't translate code block placeholders.
-
-Make sure we keep markdown formatting.
-
-Let's assemble.# जावा में पासवर्ड‑प्रोटेक्टेड Word डॉक्यूमेंट्स की तुलना कैसे करें
+# जावा में पासवर्ड‑प्रोटेक्टेड Word डॉक्यूमेंट्स की तुलना कैसे करें
 
 ## परिचय
 

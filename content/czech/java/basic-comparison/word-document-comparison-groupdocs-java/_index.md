@@ -20,10 +20,6 @@ url: /cs/java/basic-comparison/word-document-comparison-groupdocs-java/
 weight: 1
 ---
 
- final output with all translated content.
-
-Let's assemble.
-
 # groupdocs comparison java – Porovnání Word dokumentů v Javě
 
 Už jste někdy strávili hodiny ručním porovnáváním dvou Word dokumentů a snažili se najít každou drobnou změnu? Určitě nejste jediní. Ať už spravujete revize smluv, sledujete aktualizace obsahu nebo řešíte workflow spolupráce na úpravách, ruční porovnávání dokumentů je časově náročné a náchylné k chybám.

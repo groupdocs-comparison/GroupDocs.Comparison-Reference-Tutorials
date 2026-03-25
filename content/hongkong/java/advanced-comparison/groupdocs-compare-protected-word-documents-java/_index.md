@@ -22,16 +22,6 @@ url: /zh-hant/java/advanced-comparison/groupdocs-compare-protected-word-document
 weight: 1
 ---
 
-.
-
-Probably "最後更新：" etc.
-
-Now produce final content.
-
-Be careful to preserve markdown formatting exactly.
-
-Let's craft translation.
-
 # 如何在 Java 中比較受密碼保護的 Word 文件
 
 ## 介紹

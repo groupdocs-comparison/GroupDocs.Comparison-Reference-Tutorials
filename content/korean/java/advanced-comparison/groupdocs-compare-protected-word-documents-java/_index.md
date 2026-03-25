@@ -22,20 +22,6 @@ url: /ko/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
- many times. It might be better to translate the surrounding text but keep the phrase as is? The phrase is weird; it's like a keyword. I'd translate the phrase to Korean: "워드 비교 방법". But the phrase includes "how to compare word". I'd translate to "워드 문서 비교 방법". However the phrase appears inside bold: **how to compare word**. Might translate to Korean: **워드 문서 비교 방법**. That seems okay.
-
-Also "GroupDocs.Comparison for Java" keep as is.
-
-Proceed.
-
-We'll translate each bullet.
-
-Need to preserve bold formatting.
-
-Now go through.
-
-I'll produce final markdown.
-
 # Java에서 Word 문서(비밀번호 보호) 비교 방법
 
 ## 소개

@@ -20,7 +20,7 @@ url: /nl/java/advanced-comparison/
 weight: 4
 ---
 
-Proceed to output.# compare excel files java – Geavanceerde GroupDocs.Comparison Gids
+# compare excel files java – Geavanceerde GroupDocs.Comparison Gids
 
 Als je ooit **compare excel files java** moest vergelijken over honderden documenten, wachtwoord‑beveiligde bestanden moest verwerken, of volledige mappen moest auditen op wijzigingen, dan weet je dat eenvoudige vergelijking snel zijn grenzen bereikt. In dit tutorial‑centrum lopen we je door de krachtigste GroupDocs.Comparison‑functies die je in staat stellen deze complexe scenario's met vertrouwen aan te pakken.
 

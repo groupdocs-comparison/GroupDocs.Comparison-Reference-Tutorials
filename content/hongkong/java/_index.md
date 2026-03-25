@@ -18,21 +18,9 @@ url: /zh-hant/java/
 weight: 10
 ---
 
- are **load documents java** etc with bold and maybe italic? In original: **load documents java** inside bold. Keep same.
-
-Also there is **compare pdf files java** inside bold.
-
-Make sure to keep markdown formatting.
-
-At end resources list.
-
-Now produce final translation.
-
-Let's craft.
-
 # compare pdf java – Java 文件比較教學
 
-Ever needed to automatically detect changes between two versions of a contract, **compare pdf java** files, Excel reports, or track document revisions in your Java application? You're in the right place. In this tutorial we’ll walk through everything you need to know to integrate high‑accuracy document comparison into your Java projects using GroupDocs.Comparison.
+您是否曾經需要在 Java 應用程式中自動偵測兩個版本合約之間的差異、**比較 PDF 檔案**、Excel 報表，或追蹤文件修訂？您來對地方了。在本教學中，我們將逐步講解如何使用 GroupDocs.Comparison 將高精度文件比較功能整合到您的 Java 專案中。
 
 ## 快速解答
 - **「compare pdf java」是什麼功能？** 它可以直接在 Java 程式碼中偵測兩個 PDF 檔案之間的文字、格式與版面變更。  

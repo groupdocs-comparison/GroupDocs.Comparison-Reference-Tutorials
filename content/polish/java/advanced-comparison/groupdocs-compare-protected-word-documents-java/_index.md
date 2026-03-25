@@ -23,22 +23,6 @@ url: /pl/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
- keyword maybe. I'd translate to "jak porównać word". But the original bold includes that phrase. So we can translate the phrase inside bold: **jak porównać word**. That seems fine.
-
-Also "GroupDocs.Comparison for Java" keep as is.
-
-Proceed.
-
-Need to translate bullet points.
-
-Also code placeholders remain.
-
-Make sure to keep links unchanged.
-
-Now produce final markdown.
-
-Let's construct.
-
 # Jak porównać dokumenty Word (zabezpieczone hasłem) w Javie
 
 ## Wstęp

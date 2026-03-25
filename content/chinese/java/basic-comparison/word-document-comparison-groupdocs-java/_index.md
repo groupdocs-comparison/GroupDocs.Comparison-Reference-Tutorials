@@ -26,49 +26,51 @@ weight: 1
 
 在本完整指南中，你将了解如何在 Java 应用程序中实现文档比较——从基础设置到高级场景——从而用可靠、可重复的自动化取代手动审查。
 
-## Quick Answers
-- **What library handles Word diff in Java?** groupdocs comparison java  
-- **Can I compare DOCX files?** Yes, use the `java compare docx files` feature  
-- **Do I need a license for production?** A full GroupDocs.Comparison license is required  
-- **How fast is the comparison?** Typical small docs finish in < 1 second; large docs may need a few seconds  
-- **Is it compatible with Maven and Gradle?** Absolutely, both build tools are supported  
+## 快速解答
 
-## What is groupdocs comparison java?
+- **哪个库可以在 Java 中处理 Word 文档差异比较？**groupdocs comparison java
+- **我可以比较 DOCX 文件吗？**可以，使用 `java compare docx files` 功能
+- **我需要生产环境许可证吗？**需要完整的 GroupDocs.Comparison 许可证
+- **比较速度如何？**通常小型文档在 1 秒内完成；大型文档可能需要几秒钟
+- **它与 Maven 和 Gradle 兼容吗？**完全兼容，支持这两种构建工具
+
+## 什么是 groupdocs comparison java？
 groupdocs comparison java 是一个 Java SDK，能够分析两个或多个文档，检测文本和结构的变化，并生成带有高亮标记的结果文档。它支持 Word、PDF、Excel、PowerPoint 等多种格式，提供清晰的可视化差异，非技术审阅者也能轻松理解。
 
-## Why use groupdocs comparison java?
+## 为什么要使用 groupdocs comparison java？
 - **Speed:** 自动化完成原本需要手动耗费分钟甚至小时的工作。  
 - **Accuracy:** 检测到最细微的字符变化。  
 - **Scalability:** 支持对数十个文档进行批量处理。  
 - **Flexibility:** 支持 DOCX、PDF 以及超过 50 种其他格式。
 
-## Prerequisites and What You'll Need
+## 前提条件和所需工具
 
 在开始实现之前，先确保你的开发环境已准备就绪。别担心——设置过程非常简单，我会一步步带你完成。
 
-**Essential Requirements:**
-- **Java Development Kit (JDK):** Version 8 or higher (JDK 11+ recommended for better performance)  
-- **Maven or Gradle:** For dependency management (we'll use Maven in our examples)  
-- **Basic Java Knowledge:** Understanding of classes, objects, and file handling  
-- **GroupDocs.Comparison Library:** Version 25.2 (latest stable release)  
+**基本要求：**
 
-**Recommended Setup:**
-- IDE like IntelliJ IDEA or Eclipse for better development experience  
-- At least 2 GB RAM available for processing larger documents  
-- Sample Word documents for testing (we'll show you how to create test files)  
+- **Java 开发工具包 (JDK)：** 版本 8 或更高版本（建议使用 JDK 11 或更高版本以获得更佳性能）
+- **Maven 或 Gradle：** 用于依赖管理（我们的示例中将使用 Maven）
+- **Java 基础知识：** 理解类、对象和文​​件处理
+- **GroupDocs.Comparison 库：** 版本 25.2（最新稳定版本）
 
-**Quick Environment Check:**  
-Run `java -version` in your terminal. If you see version 8 or higher, you're good to go!
+**推荐配置：**
 
-Now that we've covered the basics, let's get GroupDocs.Comparison integrated into your project.
+- IDE，例如 IntelliJ IDEA 或 Eclipse，以获得更佳的开发体验
+- 至少 2GB 可用内存，用于处理大型文档
+- 用于测试的示例 Word 文档（我们将向您展示如何创建测试文件）
 
-## Setting Up GroupDocs.Comparison for Java
+**快速环境检查：** 在终端中运行 `java -version`。如果显示版本 8 或更高，则一切就绪！
+
+现在我们已经了解了基础知识，接下来让我们将 GroupDocs.Comparison 集成到您的项目中。
+
+## 为 Java 设置 GroupDocs.Comparison
 
 将 GroupDocs.Comparison 引入项目比想象中更简单。该库通过 Maven 提供，无需手动下载 JAR 或处理类路径问题。
 
-### Maven Integration Made Simple
+### 轻松集成 Maven
 
-Add this configuration to your `pom.xml` file:
+将以下配置添加到您的 `pom.xml` 文件中：
 
 ```xml
 <repositories>
@@ -87,14 +89,15 @@ Add this configuration to your `pom.xml` file:
 </dependencies>
 ```
 
-**Why This Configuration Works:**
-- The repository URL points directly to GroupDocs' official Maven repository  
-- Version 25.2 is the latest stable release with all recent bug fixes  
-- The dependency automatically pulls in all required sub‑dependencies  
+**此配置有效的原因：**
 
-### Gradle Users
+- 仓库 URL 直接指向 GroupDocs 的官方 Maven 仓库
+- 版本 25.2 是最新的稳定版本，包含所有最新的错误修复
+- 该依赖项会自动引入所有必需的子依赖项
 
-If you prefer Gradle, here's the equivalent configuration:
+### Gradle 用户
+
+如果您更喜欢使用 Gradle，以下是等效的配置：
 
 ```gradle
 repositories {
@@ -105,25 +108,25 @@ dependencies {
 }
 ```
 
-### License Options (Important for Production Use)
+### 许可选项（对生产环境至关重要）
 
-GroupDocs.Comparison offers flexible licensing options:
+GroupDocs.Comparison 提供灵活的许可选项：
 
-- **Free Trial:** Perfect for evaluation – includes full functionality with minor limitations  
-- **Temporary License:** Ideal for extended testing periods or proof‑of‑concept development  
-- **Full License:** Required for production applications – removes all restrictions  
+- **免费试用版：** 非常适合评估——包含所有功能，仅有少量限制
+- **临时许可：** 非常适合长期测试或概念验证开发
+- **完整许可：** 生产应用的必需版本——移除所有限制
 
-**Pro Tip:** Start with the free trial to familiarize yourself with the API. The functionality is identical to the full version, so your development work won't be wasted.
+**专业提示：** 先使用免费试用版熟悉 API。其功能与完整版完全相同，因此您的开发工作不会白费。
 
-Once your dependencies are resolved and your project builds successfully, you're ready to implement document comparison functionality.
+一旦您的依赖项已解决且项目构建成功，即可开始实现文档比较功能。
 
-## Step-by-Step Implementation Guide
+## 分步实施指南
 
 现在进入激动人心的部分——实际比较文档！我会逐步演示每一步，并详细解释背后的原因，让你不仅知道“怎么做”，还能理解“为什么这么做”。
 
-### Step 1: Initialize the Comparer Object
+### 第一步：初始化比较器对象
 
-Every document comparison starts with creating a `Comparer` object. Think of this as setting up your workspace before starting the actual comparison.
+每次文档比较都从创建 `Comparer` 对象开始。您可以将其理解为在开始实际比较之前设置工作区。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -138,28 +141,30 @@ public class CompareDocuments {
 }
 ```
 
-**What's Happening Here:**
-- We're using a try‑with‑resources block to ensure proper resource cleanup  
-- The source document serves as our "baseline" – all changes will be measured against this  
-- Replace `"YOUR_DOCUMENT_DIRECTORY"` with the actual path to your documents  
+**此处发生了什么：**
 
-**Common Gotcha:** Make sure your file paths are correct! Use absolute paths if you're unsure, or verify that your relative paths are correct from your application's working directory.
+- 我们使用 try-with-resources 代码块来确保资源清理正确。
+- 源文档作为我们的“基准”——所有更改都将以此为基准进行衡量。
+- 将 `"YOUR_DOCUMENT_DIRECTORY"` 替换为您的文档实际路径。
 
-### Step 2: Add Target Documents for Comparison
+**常见陷阱：** 请确保您的文件路径正确！如果您不确定，请使用绝对路径，或者从应用程序的工作目录验证您的相对路径是否正确。
 
-Next, we specify which document(s) we want to compare against our source. This is where the magic begins!
+### 步骤 2：添加要比较的目标文档
+
+接下来，我们指定要与源文档进行比较的文档。神奇之处就在这里！
 
 ```java
 // Add a target document for comparison
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Why This Step Matters:**
-- The target document contains the changes you want to identify  
-- You can actually add multiple target documents if needed (great for comparing multiple versions)  
-- The library will analyze differences between source and all target documents  
+**此步骤的重要性：**
 
-**Advanced Usage:** Need to compare against multiple documents? No problem:
+- 目标文档包含您要识别的更改。
+- 如果需要，您可以添加多个目标文档（非常适合比较多个版本）。
+- 该库将分析源文档和所有目标文档之间的差异。
+
+**高级用法：** 需要与多个文档进行比较？没问题：
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -167,26 +172,27 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2.docx");
 // Add as many as needed
 ```
 
-### Step 3: Execute Comparison and Generate Results
+### 第三步：执行比较并生成结果
 
-This is where all the heavy lifting happens. The library analyzes both documents and creates a comprehensive comparison report.
+这是最关键的一步。库会分析两个文档，并生成一份全面的比较报告。
 
 ```java
 // Compare documents and output the result
 final Path resultPath = comparer.compare("YOUR_OUTPUT_DIRECTORY/compare_result.docx");
 ```
 
-**What You Get:**
-- A new Word document showing all differences highlighted  
-- Deleted text marked clearly (usually with strikethrough)  
-- Added text highlighted (typically in a different color)  
-- Modified sections clearly indicated  
+**您将获得：**
 
-The generated comparison document isn't just a simple diff – it's a professional‑grade report that you can share with stakeholders, include in documentation, or use for audit purposes.
+- 一份全新的 Word 文档，其中所有差异均已高亮显示
+- 已删除的文本已清晰标记（通常带有删除线）
+- 已添加的文本已高亮显示（通常使用不同颜色）
+- 已修改的部分已清晰标明
 
-### Complete Working Example
+生成的对比文档并非简单的差异对比，而是一份专业级的报告，您可以与利益相关者分享、将其包含在文档中或用于审计目的。
 
-Here's the full implementation you can copy and run:
+### 完整工作示例
+
+以下是您可以复制并运行的完整实现：
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -217,89 +223,115 @@ public class DocumentComparisonDemo {
 }
 ```
 
-### Troubleshooting Common Issues
+### 常见问题排查
 
-**Problem:** `FileNotFoundException`  
-**Solution:** Double‑check your file paths and ensure documents exist. Use `File.exists()` to verify before comparison.
+**问题：** `FileNotFoundException`
 
-**Problem:** `OutOfMemoryError` with large documents  
-**Solution:** Increase JVM heap size using `-Xmx2g` or higher in your run configuration.
+**解决方案：** 请仔细检查文件路径，确保文档存在。在进行比较之前，请使用 `File.exists()` 进行验证。
 
-**Problem:** Unexpected comparison results  
-**Solution:** Ensure both documents are valid Word files and not corrupted. Try opening them in Microsoft Word first.
+**问题：** 处理大型文档时出现 `OutOfMemoryError`
 
-Now that you have basic comparison working, let's explore where this functionality really shines in real‑world applications.
+**解决方案：** 在运行配置中使用 `-Xmx2g` 或更高的参数增加 JVM 堆大小。
 
-## Real-World Applications and Use Cases
+**问题：** 比较结果异常
 
-Document comparison isn't just a nice‑to‑have feature – it's a game‑changer in many business scenarios. Let me show you some practical applications where this functionality can save hours of manual work.
+**解决方案：** 确保两个文档都是有效的 Word 文件且未损坏。请先尝试在 Microsoft Word 中打开它们。
 
-### 1. Contract Management and Legal Review
+现在您已经掌握了基本的比较功能，接下来让我们探索一下这项功能在实际应用中的真正优势。
 
-**The Challenge:** Law firms and businesses need to track changes across contract revisions, ensuring nothing important gets missed or accidentally modified.
+## 实际应用和用例
 
-**How GroupDocs Helps:**
-- Automatically highlight all changes between contract versions  
-- Generate professional reports for client review  
-- Reduce legal review time by 70‑80%  
-- Eliminate human error in change detection  
+文档比较不仅仅是一个锦上添花的功能，它在许多业务场景中都能带来颠覆性的改变。接下来，我将向您展示一些实际应用案例，说明这项功能如何节省大量的手动工作时间。
 
-**Implementation Tip:** Create a batch processing system that compares multiple contract versions automatically when new drafts are uploaded.
+### 1. 合同管理与法律审核
 
-### 2. Content Management and Publishing Workflows
+**挑战：** 律师事务所和企业需要追踪合同修订过程中的变更，确保不会遗漏任何重要内容或意外修改。
 
-**The Scenario:** Publishing teams need to review content updates before publication, ensuring quality and consistency.
+**GroupDocs 如何提供帮助：**
 
-**Benefits:**
-- Streamline editorial review processes  
-- Track contributor changes across collaborative projects  
-- Maintain content quality standards  
-- Automate pre‑publication checks  
+- 自动高亮显示合同版本之间的所有变更
 
-### 3. Version Control for Non‑Technical Teams
+- 生成专业报告供客户审核
 
-**The Problem:** Not everyone uses Git or understands technical version control, but they still need to track document changes.
+- 缩短 70-80% 的法律审核时间
 
-**The Solution:**
-- Provide visual, easy‑to‑understand change tracking  
-- Enable non‑technical stakeholders to review modifications  
-- Create audit trails for compliance requirements  
-- Simplify approval workflows  
+- 消除变更检测中的人为错误
 
-### 4. Quality Assurance in Documentation
+**实施建议：** 创建一个批量处理系统，在上传新草稿时自动比较多个合同版本。
 
-**Use Case:** Technical writing teams maintaining user manuals, API documentation, or compliance documents.
+### 2. 内容管理与发布工作流程
 
-**Value Delivered:**
-- Ensure accuracy across documentation updates  
-- Maintain consistency in technical terminology  
-- Speed up review cycles  
-- Reduce documentation errors  
+**场景：** 发布团队需要在发布前审核内容更新，以确保质量和一致性。
 
-### Integration Possibilities
+**优势：**
 
-Consider integrating document comparison with:
-- **Document Management Systems:** Automatically compare versions when new files are uploaded  
-- **Workflow Automation:** Trigger comparison reports as part of approval processes  
-- **Notification Systems:** Alert stakeholders when significant changes are detected  
-- **Compliance Monitoring:** Track changes for regulatory reporting  
+- 简化编辑审核流程
 
-The versatility of programmatic document comparison opens up countless possibilities for improving business processes.
+- 跟踪协作项目中贡献者的更改
 
-## Performance Optimization and Best Practices
+- 维护内容质量标准
 
-When you're dealing with document comparison in production environments, performance becomes crucial. Here are proven strategies to ensure your implementation runs smoothly, even under heavy loads.
+- 自动执行发布前检查
 
-### Memory Management for Large Documents
+### 3. 非技术团队的版本控制
 
-**Challenge:** Large Word documents (50+ pages) can consume significant memory during comparison.
+**问题：** 并非所有人都使用 Git 或了解技术版本控制，但他们仍然需要跟踪文档更改。
 
-**Solutions:**
-- **JVM Tuning:** Allocate sufficient heap memory using `-Xmx4g` or higher  
-- **Streaming Processing:** For very large documents, consider breaking them into sections  
-- **Garbage Collection:** Use G1 garbage collector for better memory management  
+**解决方案：**
 
-**Code Example for Memory‑Conscious Comparison:**
+- 提供可视化、易于理解的更改跟踪
+
+- 使非技术利益相关者能够查看修改
+
+- 创建符合合规性要求的审计跟踪
+
+- 简化审批工作流程
+
+### 4. 文档质量保证
+
+**用例：** 维护用户手册、API 文档或合规性文档的技术写作团队。
+
+**价值实现：**
+
+- 确保文档更新的准确性
+
+- 保持技术术语的一致性
+
+- 加快审核周期
+
+- 减少文档错误
+
+### 集成可能性
+
+考虑将文档比较功能与以下系统集成：
+
+- **文档管理系统：** 在上传新文件时自动比较版本
+
+- **工作流自动化：** 在审批流程中触发比较报告
+
+- **通知系统：** 在检测到重大变更时提醒相关人员
+
+- **合规性监控：** 跟踪变更以用于监管报告
+
+程序化文档比较的多功能性为改进业务流程开辟了无限可能。
+
+## 性能优化和最佳实践
+
+在生产环境中进行文档比较时，性能至关重要。以下是一些经过验证的策略，可确保您的实施即使在高负载下也能流畅运行。
+
+### 大型文档的内存管理
+
+**挑战：** 大型 Word 文档（50 页以上）在比较过程中会消耗大量内存。
+
+**解决方案：**
+
+- **JVM 调优：** 使用 `-Xmx4g` 或更高版本分配足够的堆内存
+
+- **流处理：** 对于非常大的文档，考虑将其拆分成多个部分
+
+- **垃圾回收：** 使用 G1 垃圾回收器以获得更好的内存管理
+
+**内存敏感型对比代码示例：**
 
 ```java
 // Configure JVM options for better performance
@@ -318,11 +350,11 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 }
 ```
 
-### Batch Processing Strategies
+### 批量处理策略
 
-When comparing multiple document pairs:
+比较多个文档对时：
 
-**Sequential Processing** (Simple but slower):
+**顺序处理**（简单但速度较慢）：
 
 ```java
 for (DocumentPair pair : documentPairs) {
@@ -333,7 +365,7 @@ for (DocumentPair pair : documentPairs) {
 }
 ```
 
-**Parallel Processing** (Faster but memory‑intensive):
+**并行处理**（速度较快但内存占用较高）：
 
 ```java
 documentPairs.parallelStream().forEach(pair -> {
@@ -347,15 +379,16 @@ documentPairs.parallelStream().forEach(pair -> {
 });
 ```
 
-### Performance Monitoring Tips
+### 性能监控技巧
 
-**Key Metrics to Track:**
-- Comparison time per document size  
-- Memory usage patterns  
-- Success/failure rates  
-- Queue processing times (if using async processing)  
+**需要跟踪的关键指标：**
 
-**Implementation Example:**
+- 不同文档大小的处理时间
+- 内存使用模式
+- 成功/失败率
+- 队列处理时间（如果使用异步处理）
+
+**实现示例：**
 
 ```java
 long startTime = System.currentTimeMillis();
@@ -373,9 +406,9 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 }
 ```
 
-### Library Updates and Maintenance
+### 库更新和维护
 
-**Stay Current:** GroupDocs regularly releases updates with performance improvements and bug fixes. Update your dependency at least quarterly:
+**保持最新：** GroupDocs 会定期发布更新，以改进性能并修复错误。请至少每季度更新一次您的依赖项：
 
 ```xml
 <!-- Check for updates regularly -->
@@ -386,17 +419,17 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 </dependency>
 ```
 
-Following these practices ensures your document comparison system remains fast and reliable as your usage scales.
+遵循这些实践可确保您的文档比较系统在用户规模扩大时依然保持快速可靠。
 
-## Advanced Configuration and Customization
+## 高级配置和自定义
 
-While the basic comparison functionality works great out of the box, GroupDocs.Comparison offers powerful customization options that let you tailor the behavior to your specific needs.
+虽然基本比较功能开箱即用，但 GroupDocs.Comparison 提供了强大的自定义选项，让您可以根据自身需求定制其行为。
 
-### Customizing Comparison Settings
+### 自定义比较设置
 
-**Why Customize?** Different use cases require different approaches. Legal documents need more sensitivity than casual content reviews.
+**为什么要自定义？** 不同的使用场景需要不同的方法。法律文件比普通内容审核需要更高的敏感度。
 
-**Example – High‑Sensitivity Comparison:**
+**示例 – 高敏感度比较：**
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -413,16 +446,17 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-### Output Formatting Options
+### 输出格式选项
 
-Control how differences appear in your result document:
-- **Color Schemes:** Customize highlighting colors  
-- **Change Indicators:** Choose how insertions and deletions are marked  
-- **Summary Reports:** Include statistical summaries of changes  
+控制结果文档中差异的显示方式：
 
-### Error Handling Best Practices
+- **配色方案：** 自定义高亮颜色
+- **更改指示器：** 选择插入和删除的标记方式
+- **汇总报告：** 包含更改的统计摘要
 
-**Robust Error Handling Example:**
+### 错误处理最佳实践
+
+**稳健的错误处理示例：**
 
 ```java
 public class DocumentComparisonService {
@@ -456,13 +490,13 @@ public class DocumentComparisonService {
 }
 ```
 
-This approach ensures your application handles errors gracefully and provides meaningful feedback to users.
+这种方法确保您的应用程序能够优雅地处理错误，并为用户提供有意义的反馈。
 
-## Frequently Asked Questions
+## 常见问题解答
 
-### Can I Compare More Than Two Documents Simultaneously?
+### 我可以同时比较两个以上的文档吗？
 
-Absolutely! GroupDocs.Comparison supports multiple target documents against a single source. Simply call `comparer.add()` multiple times:
+当然可以！GroupDocs.Comparison 支持将多个目标文档与单个源文档进行比较。只需多次调用 `comparer.add()` 即可：
 
 ```java
 try (Comparer comparer = new Comparer("source.docx")) {
@@ -473,23 +507,24 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-This is particularly useful for tracking changes across multiple document versions or comparing contributions from different team members.
+这对于跟踪多个文档版本之间的更改或比较不同团队成员的贡献尤其有用。
 
-### What File Formats Does GroupDocs.Comparison Support Beyond Word Documents?
+### 除了 Word 文档，GroupDocs.Comparison 还支持哪些文件格式？
 
-GroupDocs.Comparison works with 50+ file formats including:
-- **Documents:** DOCX, DOC, PDF, RTF, TXT  
-- **Spreadsheets:** XLSX, XLS, CSV  
-- **Presentations:** PPTX, PPT  
-- **Images:** PNG, JPEG, BMP, TIFF  
-- **Web:** HTML, MHT  
-- **Email:** EML, MSG  
+GroupDocs.Comparison 支持 50 多种文件格式，包括：
 
-The API remains consistent across all formats, so skills transfer easily.
+- **文档：** DOCX、DOC、PDF、RTF、TXT
+- **电子表格：** XLSX、XLS、CSV
+- **演示文稿：** PPTX、PPT
+- **图像：** PNG、JPEG、BMP、TIFF
+- **网页：** HTML、MHT
+- **电子邮件：** EML、MSG
 
-### How Do I Handle Password‑Protected Documents?
+所有格式的 API 保持一致，因此技能可以轻松迁移。
 
-GroupDocs.Comparison can work with password‑protected documents by specifying the password during initialization:
+### 如何处理受密码保护的文档？
+
+GroupDocs.Comparison 可以通过在初始化期间指定密码来处理受密码保护的文档：
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -505,21 +540,23 @@ try (Comparer comparer = new Comparer("protected_source.docx", loadOptions)) {
 }
 ```
 
-### What's the Performance Impact on Large Documents?
+### 大型文档的性能影响是什么？
 
-Performance varies based on document size and complexity:
-- **Small documents** (< 10 pages): Sub‑second comparison  
-- **Medium documents** (10‑50 pages): 2‑10 seconds typically  
-- **Large documents** (50+ pages): May require 30+ seconds and additional memory  
+性能取决于文档的大小和复杂程度：
 
-**Optimization Tips:**
-- Allocate sufficient JVM heap memory (4 GB+ for large documents)  
-- Use SSD storage for faster I/O  
-- Consider document segmentation for very large files  
+- **小型文档**（<10页）：亚秒级比较
+- **中型文档**（10-50页）：通常需要2-10秒
+- **大型文档**（50页以上）：可能需要30秒以上以及额外的内存
 
-### Can I Integrate This with Spring Boot or Other Java Frameworks?
+**优化建议：**
 
-Definitely! GroupDocs.Comparison integrates seamlessly with any Java framework. Here's a Spring Boot service example:
+- 分配足够的JVM堆内存（大型文档建议4GB以上）
+- 使用SSD存储以加快I/O速度
+- 对于非常大的文件，考虑进行文档分段
+
+### 我可以将其与Spring Boot或其他Java框架集成吗？
+
+当然可以！GroupDocs.Comparison可以与任何Java框架无缝集成。以下是一个Spring Boot服务示例：
 
 ```java
 @Service
@@ -544,9 +581,9 @@ public class DocumentComparisonService {
 }
 ```
 
-### How Do I Customize the Appearance of Comparison Results?
+### 如何自定义比较结果的外观？
 
-GroupDocs provides extensive styling options:
+GroupDocs 提供了丰富的样式选项：
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -561,22 +598,22 @@ options.getDeletedItemStyle().setStrikethrough(true);
 comparer.compare("styled_result.docx", options);
 ```
 
-This allows you to match your organization's document standards or create themed comparison reports.
+这样一来，您可以根据组织内部的文档标准进行调整，或者创建主题鲜明的对比报告。
 
-## Additional Resources
+## 其他资源
 
-- **Documentation:** [GroupDocs.Comparison for Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference:** [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Purchase License:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Free Trial:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
-- **Temporary License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Community Support:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **文档：** [GroupDocs.Comparison for Java Docs](https://docs.groupdocs.com/comparison/java/)
+- **API 参考：** [完整 API 参考](https://reference.groupdocs.com/comparison/java/)
+- **下载最新版本：** [GroupDocs 发布版本](https://releases.groupdocs.com/comparison/java/)
+- **购买许可：** [购买 GroupDocs 许可](https://purchase.groupdocs.com/buy)
+- **免费试用：** [下载免费试用版](https://releases.groupdocs.com/comparison/java/)
+- **临时许可：** [获取临时许可](https://purchase.groupdocs.com/temporary-license/)
+- **社区支持：** [GroupDocs 论坛](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2026-02-16  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
+**上次更新：** 2026-02-16
+**测试版本：** GroupDocs.Comparison 25.2 for Java
+**作者：** GroupDocs  
 
 ---

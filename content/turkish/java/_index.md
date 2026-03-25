@@ -20,7 +20,7 @@ url: /tr/java/
 weight: 10
 ---
 
-.# compare pdf java – Java Belge Karşılaştırma Öğreticisi
+# compare pdf java – Java Belge Karşılaştırma Öğreticisi
 
 Hiç bir sözleşmenin iki sürümü, **compare pdf java** dosyaları, Excel raporları arasında otomatik olarak değişiklikleri tespit etmeniz gerekti mi? Java uygulamanızda belge revizyonlarını izlemek mi istiyorsunuz? Doğru yerdesiniz. Bu öğreticide, GroupDocs.Comparison kullanarak Java projelerinize yüksek doğruluklu belge karşılaştırmasını entegre etmek için bilmeniz gereken her şeyi adım adım anlatacağız.
 

@@ -20,9 +20,7 @@ url: /fr/java/
 weight: 10
 ---
 
-Check for URLs: we kept them.
-
-Now produce final content.# compare pdf java – Tutoriel de comparaison de documents Java
+# compare pdf java – Tutoriel de comparaison de documents Java
 
 Vous avez déjà eu besoin de détecter automatiquement les changements entre deux versions d'un contrat, des fichiers **compare pdf java**, des rapports Excel, ou de suivre les révisions de documents dans votre application Java ? Vous êtes au bon endroit. Dans ce tutoriel, nous passerons en revue tout ce que vous devez savoir pour intégrer une comparaison de documents haute précision dans vos projets Java en utilisant GroupDocs.Comparison.
 

@@ -20,10 +20,6 @@ url: /id/java/advanced-comparison/
 weight: 4
 ---
 
- markdown links remain.
-
-Let's produce final translation.
-
 # bandingkan file excel java – Panduan Lanjutan GroupDocs.Comparison
 
 Jika Anda pernah perlu **compare excel files java** pada ratusan dokumen, menangani file yang dilindungi kata sandi, atau mengaudit seluruh direktori untuk perubahan, Anda tahu bahwa perbandingan dasar dengan cepat mencapai batasnya. Pada pusat tutorial ini kami akan membimbing Anda melalui fitur GroupDocs.Comparison yang paling kuat sehingga Anda dapat menangani skenario kompleks ini dengan percaya diri.

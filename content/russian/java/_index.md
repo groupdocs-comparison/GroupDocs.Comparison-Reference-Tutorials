@@ -20,32 +20,6 @@ url: /ru/java/
 weight: 10
 ---
 
-овое сравнение". Keep URL same.
-
-Similarly other links.
-
-Also code blocks: none.
-
-Also inline code: `ignoreFormatting` keep.
-
-Also there are bold headings like **What does “compare pdf java” do?** Keep bold but translate inside quotes? The phrase "compare pdf java" stays. So translate "Что делает “compare pdf java”?" Keep quotes.
-
-Also bullet lists.
-
-Let's produce final content.
-
-Will include all sections.
-
-Check for any shortcodes: none.
-
-Check for any images: none.
-
-Check for any code fences: none.
-
-Check for any URLs inside parentheses: keep unchanged.
-
-Now produce final Russian markdown.
-
 # compare pdf java – Руководство по сравнению документов Java
 
 Когда‑нибудь вам нужно было автоматически обнаруживать изменения между двумя версиями контракта, **compare pdf java** файлами, Excel‑отчетами или отслеживать изменения документов в вашем Java‑приложении? Вы попали по адресу. В этом руководстве мы пройдемся по всему, что нужно знать, чтобы интегрировать высокоточное сравнение документов в ваши Java‑проекты с помощью GroupDocs.Comparison.

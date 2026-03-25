@@ -20,30 +20,6 @@ url: /hi/java/
 weight: 10
 ---
 
- "**Last Updated:** 2026-02-16" keep as is maybe translate "Last Updated" to Hindi "अंतिम अपडेट". But it's a label; we can translate: "**अंतिम अपडेट:** 2026-02-16". Keep bold.
-
-**Tested With:** GroupDocs.Comparison 23.10 for Java -> "**परीक्षित संस्करण:** GroupDocs.Comparison 23.10 for Java"
-
-**Author:** GroupDocs -> "**लेखक:** GroupDocs"
-
-Make sure bold formatting stays.
-
-Now ensure all markdown formatting preserved.
-
-Check for any code fences: none.
-
-Check for inline code: `ignoreFormatting` appears. Keep as is.
-
-Check for shortcodes: none.
-
-Check for images: none.
-
-Check for URLs: we kept unchanged.
-
-Check for link texts: we translated many. Ensure we didn't translate URLs.
-
-Now produce final content.
-
 # compare pdf java – Java दस्तावेज़ तुलना ट्यूटोरियल
 
 क्या आपको कभी स्वचालित रूप से दो संस्करणों के अनुबंध, **compare pdf java** फ़ाइलों, Excel रिपोर्टों, या अपने Java एप्लिकेशन में दस्तावेज़ संशोधनों को ट्रैक करने में बदलाव पता करने की ज़रूरत पड़ी है? आप सही जगह पर हैं। इस ट्यूटोरियल में हम सब कुछ बताएँगे जो आपको GroupDocs.Comparison का उपयोग करके अपने Java प्रोजेक्ट्स में उच्च‑सटीकता दस्तावेज़ तुलना को एकीकृत करने के लिए जानना चाहिए।

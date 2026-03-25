@@ -20,57 +20,58 @@ url: /hu/java/basic-comparison/word-document-comparison-groupdocs-java/
 weight: 1
 ---
 
-# groupdocs comparison java – Java Word Document Comparison
+# groupdocs összehasonlítás java – Java Word dokumentum összehasonlítás
 
-Eltöltöttél már órákat kézzel két Word dokumentum összehasonlításával, hogy megtaláld a legapróbb változást? Biztosan nem vagy egyedül. Legyen szó szerződésváltozatok kezeléséről, tartalomfrissítések nyomon követéséről vagy együttműködő szerkesztési munkafolyamatok kezeléséről, a dokumentumok kézi összehasonlítása időigényes és hibára hajlamos.
+Eltöltöttél már órákat kézzel két Word dokumentum összehasonlításával, hogy megtaláltad a legapróbb változást? Biztosan nem vagy egyedül. Legyen szó szerződésváltozatok kezeléséről, tartalomfrissítések nyomon követéséről vagy együttműködő szerkesztési munkafolyamatok kezeléséről, a dokumentumok kézi összehasonlítása időigényes és hibás hajlamos.
 
-A **groupdocs comparison java** segítségével ez a fáradságos folyamat másodpercek alatt automatizálható. A könyvtár pontosan meghatározza a különbségeket, kiemeli a beszúrásokat, törléseket és formázási változásokat, és egy professzionális jelentést generál, amelyet megoszthatsz az érintettekkel.
+A **groupdocs összehasonlítása java** segítségével ez a fáradságos folyamat másodpercek alatt automatizálható. A könyvtár pontosan meghatározza a különbségeket, kiemeli a beszúrásokat, törléseket és formázási változásokat, és egy professzionális jelentést generál, amelyet megoszthatsz az érintettekkel.
 
-Ebben az átfogó útmutatóban pontosan megtudod, hogyan valósítható meg a dokumentum-összehasonlítás a Java alkalmazásaidban – az alapbeállítástól a fejlett forgatókönyvekig –, hogy a kézi ellenőrzéseket megbízható, ismételhető automatizációra cseréld.
+az átfogó útmutatóban pontosan megtudod, hogyan valósítható meg a dokumentum-összehasonlítás a Java alkalmazásaidban – az alapbeállítástól a fejlett forgatókönyvekig –, hogy a kézi ellenőrzéseket megbízhatóan, ismételhető automatizációra cseréld.
 
-## Quick Answers
-- **What library handles Word diff in Java?** groupdocs comparison java  
-- **Can I compare DOCX files?** Yes, use the `java compare docx files` feature  
-- **Do I need a license for production?** A full GroupDocs.Comparison license is required  
-- **How fast is the comparison?** Typical small docs finish in < 1 second; large docs may need a few seconds  
-- **Is it compatible with Maven and Gradle?** Absolutely, both build tools are supported  
+## Gyors válaszok
+- **Melyik könyvtár kezeli a Word diff-et Java-ban?**groupdocs összehasonlító java
+- **Összehasonlíthatom a DOCX-fájlokat?**Igen, használja a "Java docx-fájlok összehasonlítása" funkciót
+- **Szükség van licencre a termeléshez?** Teljes GroupDocs.Comparison licenc szükséges
+- **Milyen gyors az összehasonlítás?**A tipikus kis dokumentumok kevesebb mint 1 másodperc alatt elkészülnek; nagy dokumentumokhoz néhány másodpercre lehet szükség
+- **Kompatibilis a Maven és a Gradle programokkal?** Természetesen mindkét összeállítási eszköz támogatott
 
-## What is groupdocs comparison java?
-groupdocs comparison java egy Java SDK, amely két vagy több dokumentumot elemez, szöveges és strukturális változásokat észlel, és egy kiemelt eredménydokumentumot hoz létre. Word, PDF, Excel, PowerPoint és számos egyéb formátummal működik, egyértelmű vizuális diffet biztosítva, amelyet a nem‑technikai ellenőrzők is megértenek.
+## Mi az a groupdocs összehasonlító java?
+groupdocs összehasonlítása java egy Java SDK, amely két vagy több dokumentumot elemez, szöveges és strukturális változásokat észlel, és egy kiemelt eredménydokumentumot hoz létre. Word, PDF, Excel, PowerPoint és számos egyéb formátummal működik, egyértelműen vizuális diffet biztosítva, amelyet a nem-technikai ellenőrzők is megértenek.
 
-## Why use groupdocs comparison java?
-- **Speed:** Automates what would take minutes or hours manually.  
-- **Accuracy:** Detects even the smallest character change.  
-- **Scalability:** Handles batch processing of dozens of documents.  
-- **Flexibility:** Works with DOCX, PDF, and over 50 other formats.  
+## Miért érdemes a groupdocs összehasonlító javát használni?
+- **Sebesség:** Automatizálja a perceket vagy órákat manuálisan.
+- **Pontosság:** Még a legkisebb karakterváltozást is érzékeli.
+- **Skálázhatóság:** Több tucat dokumentum kötegelt feldolgozását kezeli.
+- **Rugalmasság:** DOCX, PDF és több mint 50 egyéb formátummal működik.
 
-## Prerequisites and What You'll Need
+## Előfeltételek és amire szüksége lesz
 
 Mielőtt belevágnánk a megvalósításba, győződjünk meg róla, hogy a fejlesztői környezet készen áll. Ne aggódj – a beállítás egyszerű, és minden lépésen végigvezetlek.
 
-**Essential Requirements:**
-- **Java Development Kit (JDK):** Version 8 or higher (JDK 11+ recommended for better performance)  
-- **Maven or Gradle:** For dependency management (we'll use Maven in our examples)  
-- **Basic Java Knowledge:** Understanding of classes, objects, and file handling  
-- **GroupDocs.Comparison Library:** Version 25.2 (latest stable release)  
+**Alapvető követelmények:**
+- **Java Development Kit (JDK):** 8-as vagy újabb verzió (JDK11+ ajánlott a jobb teljesítmény érdekében)
+- **Maven vagy Gradle:** Függőségkezeléshez (a példáinkban Mavent fogunk használni)
+- **Alapvető Java ismeretek:** Osztályok, objektumok és fájlkezelés ismerete
+- **GroupDocs.Comparison Library:** 25.2-es verzió (legújabb stabil kiadás)
 
-**Recommended Setup:**
-- IDE like IntelliJ IDEA or Eclipse for better development experience  
-- At least 2 GB RAM available for processing larger documents  
-- Sample Word documents for testing (we'll show you how to create test files)  
+**Ajánlott beállítás:**
+- IDE, mint például IntelliJ IDEA vagy Eclipse a jobb fejlesztési élmény érdekében
+- Legalább 2 GB RAM rendelkezésre áll nagyobb dokumentumok feldolgozásához
+- Minta Word dokumentumok teszteléshez (megmutatjuk, hogyan hozhat létre tesztfájlokat)
 
-**Quick Environment Check:**  
-Run `java -version` in your terminal. If you see version 8 or higher, you're good to go!
+**Gyors környezetellenőrzés:**
 
-Now that we've covered the basics, let's get GroupDocs.Comparison integrated into your project.
+Futtassa a `java -version` parancsot a terminálban. Ha 8-as vagy újabb verziót lát, akkor indulhat is!
 
-## Setting Up GroupDocs.Comparison for Java
+Most, hogy az alapokkal tisztában vagyunk, integráljuk a GroupDocs.Comparisont a projektbe.
 
-A GroupDocs.Comparison beillesztése a projektedbe egyszerűbb, mint gondolnád. A könyvtár Maven‑en keresztül érhető el, ami azt jelenti, hogy nincs szükség kézi JAR‑letöltésre vagy classpath‑bonyodalomra.
+## A GroupDocs.Comparison beállítása Java számára
+
+A GroupDocs.Comparison beillesztése a projektedbe egyszerűbb, mint gondolnád. A könyvtár Maven‑en érhető el, ami azt jelenti, hogy nincs szükség kézi JAR‑letöltésre vagy classpath‑bonyodalomra.
 
 ### Maven Integration Made Simple
 
-Add this configuration to your `pom.xml` file:
+Adja hozzá ezt a konfigurációt a "pom.xml" fájlhoz:
 
 ```xml
 <repositories>
@@ -89,14 +90,14 @@ Add this configuration to your `pom.xml` file:
 </dependencies>
 ```
 
-**Why This Configuration Works:**
-- The repository URL points directly to GroupDocs' official Maven repository  
-- Version 25.2 is the latest stable release with all recent bug fixes  
-- The dependency automatically pulls in all required sub‑dependencies  
+**Miért működik ez a konfiguráció:**
+- A tárhely URL-címe közvetlenül a GroupDocs hivatalos Maven tárhelyére mutat.
+- A 25.2-es verzió a legújabb stabil kiadás, amely tartalmazza az összes szükséges hibajavítást.
+- A függőség automatikusan behívja az összes szükséges alfüggőséget.
 
-### Gradle Users
+### Gradle felhasználók
 
-If you prefer Gradle, here's the equivalent configuration:
+Ha a Gradle-t részesíti előnyben, itt van az egyenértékű konfiguráció:
 
 ```gradle
 repositories {
@@ -107,25 +108,25 @@ dependencies {
 }
 ```
 
-### License Options (Important for Production Use)
+### Licencopciók (Fontos éles használatra)
 
-GroupDocs.Comparison offers flexible licensing options:
+A GroupDocs.Comparison rugalmas licencopciókat kínál:
 
-- **Free Trial:** Perfect for evaluation – includes full functionality with minor limitations  
-- **Temporary License:** Ideal for extended testing periods or proof‑of‑concept development  
-- **Full License:** Required for production applications – removes all restrictions  
+- **Ingyenes próbaverzió:** Tökéletes kiértékeléshez – teljes funkcionalitást tartalmaz kisebb korlátozásokkal
+- **Ideiglenes licenc:** Ideális hosszabb tesztelési időszakokhoz vagy koncepcióbizonyítás fejlesztéséhez
+- **Teljes licenc:** Éles alkalmazásokhoz szükséges – eltávolítja az összes korlátozást
 
-**Pro Tip:** Start with the free trial to familiarize yourself with the API. The functionality is identical to the full version, so your development work won't be wasted.
+**Profi tipp:** Kezdje az ingyenes próbaverzióval, hogy megismerkedjen az API-val. A funkcionalitás megegyezik a teljes verzióval, így a fejlesztői munkája nem vész kárba.
 
-Once your dependencies are resolved and your project builds successfully, you're ready to implement document comparison functionality.
+Miután a függőségek megoldódtak és a projekt sikeresen felépített, készen áll a dokumentum-összehasonlító funkció megvalósítására.
 
-## Step-by-Step Implementation Guide
+## Lépésről lépésre útmutató a megvalósításhoz
 
-Now comes the exciting part – actually comparing documents! I'll walk you through each step with detailed explanations, so you understand not just the "how" but also the "why" behind each decision.
+Most jön az izgalmas rész – a dokumentumok tényleges összehasonlítása! Részletes magyarázatokkal végigvezetem minden lépésen, így nemcsak a „hogyan”, hanem a „miért” mögött álló döntéseket is megérti.
 
-### Step 1: Initialize the Comparer Object
+### 1. lépés: A Comparer objektum inicializálása
 
-Every document comparison starts with creating a `Comparer` object. Think of this as setting up your workspace before starting the actual comparison.
+Minden dokumentum-összehasonlítás egy `Comparer` objektum létrehozásával kezdődik. Gondolj erre úgy, mint a munkaterület beállítására, mielőtt elkezdenéd a tényleges összehasonlítást.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -140,28 +141,28 @@ public class CompareDocuments {
 }
 ```
 
-**What's Happening Here:**
-- We're using a try‑with‑resources block to ensure proper resource cleanup  
-- The source document serves as our "baseline" – all changes will be measured against this  
-- Replace `"YOUR_DOCUMENT_DIRECTORY"` with the actual path to your documents  
+**Mi történik itt:**
+- Egy „try-with-resources” blokkot használunk a megfelelő erőforrás-tisztítás biztosítására.
+- A forrásdokumentum szolgál „alapvonalként” – minden módosítást ehhez mérünk.
+- Cserélje ki a „YOUR_DOCUMENT_DIRECTORY” részt a dokumentumok tényleges elérési útjával.
 
-**Common Gotcha:** Make sure your file paths are correct! Use absolute paths if you're unsure, or verify that your relative paths are correct from your application's working directory.
+**Gyakori hiba:** Győződjön meg arról, hogy a fájlelérési utak helyesek! Használjon abszolút elérési utakat, ha nem biztos benne, vagy ellenőrizze, hogy a relatív elérési utak helyesek-e az alkalmazás munkakönyvtárából.
 
-### Step 2: Add Target Documents for Comparison
+### 2. lépés: Céldokumentumok hozzáadása összehasonlításhoz
 
-Next, we specify which document(s) we want to compare against our source. This is where the magic begins!
+Ezután megadjuk, hogy mely dokumentumo(ka)t szeretnénk összehasonlítani a forrásdokumentummal. Itt kezdődik a varázslat!
 
 ```java
 // Add a target document for comparison
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Why This Step Matters:**
-- The target document contains the changes you want to identify  
-- You can actually add multiple target documents if needed (great for comparing multiple versions)  
-- The library will analyze differences between source and all target documents  
+**Miért fontos ez a lépés:**
+- A céldokumentum tartalmazza az azonosítani kívánt módosításokat.
+- Szükség esetén több céldokumentumot is hozzáadhat (nagyszerű több verzió összehasonlításához).
+- A könyvtár elemzi a forrás- és az összes céldokumentum közötti különbségeket.
 
-**Advanced Usage:** Need to compare against multiple documents? No problem:
+**Haladó használat:** Több dokumentummal kell összehasonlítania? Nem probléma:
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -169,26 +170,27 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2.docx");
 // Add as many as needed
 ```
 
-### Step 3: Execute Comparison and Generate Results
+### 3. lépés: Összehasonlítás végrehajtása és eredmények generálása
 
-This is where all the heavy lifting happens. The library analyzes both documents and creates a comprehensive comparison report.
+Itt történik a nehéz munka. A könyvtár mindkét dokumentumot elemzi, és átfogó összehasonlító jelentést készít.
 
 ```java
 // Compare documents and output the result
 final Path resultPath = comparer.compare("YOUR_OUTPUT_DIRECTORY/compare_result.docx");
 ```
 
-**What You Get:**
-- A new Word document showing all differences highlighted  
-- Deleted text marked clearly (usually with strikethrough)  
-- Added text highlighted (typically in a different color)  
-- Modified sections clearly indicated  
+**Amit kapsz:**
+- Egy új Word-dokumentum, amely kiemeli az összes különbséget
+- A törölt szöveg egyértelműen megjelölve (általában áthúzással)
+- A hozzáadott szöveg kiemelve (általában más színnel)
 
-The generated comparison document isn't just a simple diff – it's a professional‑grade report that you can share with stakeholders, include in documentation, or use for audit purposes.
+- A módosított részek egyértelműen megjelölve
 
-### Complete Working Example
+A létrehozott összehasonlító dokumentum nem csupán egy egyszerű különbség – ez egy professzionális minőségű jelentés, amelyet megoszthat az érdekelt felekkel, belefoglalhat a dokumentációba, vagy felhasználhat auditálási célokra.
 
-Here's the full implementation you can copy and run:
+### Teljes működő példa
+
+Íme a teljes implementáció, amelyet másolhat és futtathat:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -219,89 +221,89 @@ public class DocumentComparisonDemo {
 }
 ```
 
-### Troubleshooting Common Issues
+### Gyakori problémák elhárítása
 
-**Problem:** `FileNotFoundException`  
-**Solution:** Double‑check your file paths and ensure documents exist. Use `File.exists()` to verify before comparison.
+**Probléma:** `FileNotFoundException`
+**Megoldás:** Ellenőrizze a fájlútvonalakat, és győződjön meg arról, hogy a dokumentumok léteznek. Az összehasonlítás előtt használja a `File.exists()` függvényt.
 
-**Problem:** `OutOfMemoryError` with large documents  
-**Solution:** Increase JVM heap size using `-Xmx2g` or higher in your run configuration.
+**Probléma:** `OutOfMemoryError` nagy dokumentumoknál
+**Megoldás:** Növelje a JVM heap méretét `-Xmx2g` vagy magasabb paraméterrel a futtatási konfigurációban.
 
-**Problem:** Unexpected comparison results  
-**Solution:** Ensure both documents are valid Word files and not corrupted. Try opening them in Microsoft Word first.
+**Probléma:** Váratlan összehasonlítási eredmények
+**Megoldás:** Győződjön meg arról, hogy mindkét dokumentum érvényes Word-fájl, és nem sérült. Először próbálja meg megnyitni őket Microsoft Wordben.
 
-Now that you have basic comparison working, let's explore where this functionality really shines in real‑world applications.
+Most, hogy az alapvető összehasonlítás működik, vizsgáljuk meg, hogy ez a funkció hol igazán kiemelkedik a valós alkalmazásokban.
 
-## Real-World Applications and Use Cases
+## Valós alkalmazások és használati esetek
 
-Document comparison isn't just a nice‑to‑have feature – it's a game‑changer in many business scenarios. Let me show you some practical applications where this functionality can save hours of manual work.
+A dokumentum-összehasonlítás nem csak egy jó, ha van – sok üzleti helyzetben gyökeres változást hoz. Hadd mutassak be néhány gyakorlati alkalmazást, ahol ez a funkció órákig tartó manuális munkát takaríthat meg.
 
-### 1. Contract Management and Legal Review
+### 1. Szerződéskezelés és jogi felülvizsgálat
 
-**The Challenge:** Law firms and businesses need to track changes across contract revisions, ensuring nothing important gets missed or accidentally modified.
+**A kihívás:** Az ügyvédi irodáknak és a vállalkozásoknak nyomon kell követniük a szerződésmódosítások változásait, biztosítva, hogy semmi fontos ne maradjon ki vagy ne módosuljon véletlenül.
 
-**How GroupDocs Helps:**
-- Automatically highlight all changes between contract versions  
-- Generate professional reports for client review  
-- Reduce legal review time by 70‑80%  
-- Eliminate human error in change detection  
+**A GroupDocs hogyan segít:**
+- Automatikusan kiemeli az összes változást a szerződésváltozatok között
+- Professzionális jelentéseket készít az ügyfelek felülvizsgálatára
+- A jogi felülvizsgálati idő 70–80%-kal csökken
+- Az emberi hibák kiküszöbölése a változtatások észlelésekor
 
-**Implementation Tip:** Create a batch processing system that compares multiple contract versions automatically when new drafts are uploaded.
+**Megvalósítási tipp:** Hozzon létre egy kötegelt feldolgozási rendszert, amely automatikusan összehasonlítja a több szerződésváltozatot, amikor új tervezetek kerülnek feltöltésre.
 
-### 2. Content Management and Publishing Workflows
+### 2. Tartalomkezelés és közzétételi munkafolyamatok
 
-**The Scenario:** Publishing teams need to review content updates before publication, ensuring quality and consistency.
+**A forgatókönyv:** A kiadói csapatoknak a közzététel előtt át kell tekinteniük a tartalomfrissítéseket, biztosítva a minőséget és az egységességet.
 
-**Benefits:**
-- Streamline editorial review processes  
-- Track contributor changes across collaborative projects  
-- Maintain content quality standards  
-- Automate pre‑publication checks  
+**Előnyök:**
+- Egyszerűsíti a szerkesztői ellenőrzési folyamatokat
+- Követi a közreműködők változásait az együttműködésen alapuló projektekben
+- Fenntartja a tartalomminőségi szabványokat
+- Automatizálja a publikálás előtti ellenőrzéseket
 
-### 3. Version Control for Non‑Technical Teams
+### 3. Verziókövetés nem műszaki csapatok számára
 
-**The Problem:** Not everyone uses Git or understands technical version control, but they still need to track document changes.
+**A probléma:** Nem mindenki használja a Git-et, vagy érti a műszaki verziókövetést, de továbbra is nyomon kell követniük a dokumentumok változásait.
 
-**The Solution:**
-- Provide visual, easy‑to‑understand change tracking  
-- Enable non‑technical stakeholders to review modifications  
-- Create audit trails for compliance requirements  
-- Simplify approval workflows  
+**Megoldás:**
+- Vizuális, könnyen érthető változáskövetés biztosítása
+- Lehetővé teszi a nem műszaki érdekelt felek számára a módosítások áttekintését
+- Auditnaplók létrehozása a megfelelőségi követelményekhez
+- Egyszerűsíti a jóváhagyási munkafolyamatokat
 
-### 4. Quality Assurance in Documentation
+### 4. Minőségbiztosítás a dokumentációban
 
-**Use Case:** Technical writing teams maintaining user manuals, API documentation, or compliance documents.
+**Használati eset:** Műszaki írócsapatok, akik felhasználói kézikönyveket, API-dokumentációkat vagy megfelelőségi dokumentumokat tartanak karban.
 
-**Value Delivered:**
-- Ensure accuracy across documentation updates  
-- Maintain consistency in technical terminology  
-- Speed up review cycles  
-- Reduce documentation errors  
+**Szolgáltatott érték:**
+- Pontosság biztosítása a dokumentációfrissítések során
+- A műszaki terminológia egységességének fenntartása
+- Felgyorsítja az áttekintési ciklusokat
+- Csökkenti a dokumentációs hibákat
 
-### Integration Possibilities
+### Integrációs lehetőségek
 
-Consider integrating document comparison with:
-- **Document Management Systems:** Automatically compare versions when new files are uploaded  
-- **Workflow Automation:** Trigger comparison reports as part of approval processes  
-- **Notification Systems:** Alert stakeholders when significant changes are detected  
-- **Compliance Monitoring:** Track changes for regulatory reporting  
+Fontolja meg a dokumentum-összehasonlítás integrálását a következőkkel:
+- **Dokumentumkezelő rendszerek:** Verziók automatikus összehasonlítása új fájlok feltöltésekor
+- **Munkafolyamat-automatizálás:** Összehasonlító jelentések indítása a jóváhagyási folyamatok részeként
+- **Értesítési rendszerek:** Értesítse az érdekelt feleket jelentős változások észlelésekor
+- **Megfelelőség-felügyelet:** Változások nyomon követése a szabályozási jelentésekhez
 
-The versatility of programmatic document comparison opens up countless possibilities for improving business processes.
+A programozott dokumentum-összehasonlítás sokoldalúsága számtalan lehetőséget nyit meg az üzleti folyamatok javítására.
 
-## Performance Optimization and Best Practices
+## Teljesítményoptimalizálás és bevált gyakorlatok
 
-When you're dealing with document comparison in production environments, performance becomes crucial. Here are proven strategies to ensure your implementation runs smoothly, even under heavy loads.
+Amikor termelési környezetben végez dokumentum-összehasonlítást, a teljesítmény kulcsfontosságúvá válik. Íme néhány bevált stratégia, amelyek biztosítják a zökkenőmentes megvalósítást, még nagy terhelés alatt is.
 
-### Memory Management for Large Documents
+### Memóriakezelés nagy dokumentumokhoz
 
-**Challenge:** Large Word documents (50+ pages) can consume significant memory during comparison.
+**Kihívás:** A nagyméretű Word-dokumentumok (50+ oldal) jelentős memóriát fogyaszthatnak az összehasonlítás során.
 
-**Solutions:**
-- **JVM Tuning:** Allocate sufficient heap memory using `-Xmx4g` or higher  
-- **Streaming Processing:** For very large documents, consider breaking them into sections  
-- **Garbage Collection:** Use G1 garbage collector for better memory management  
+**Megoldások:**
+- **JVM finomhangolás:** Foglaljon le elegendő heap memóriát `-Xmx4g` vagy újabb kapcsolóval.
+- **Adagfeldolgozás:** Nagyon nagy dokumentumok esetén érdemes részekre bontani őket.
+- **Szemétgyűjtés:** Használjon G1 szemétgyűjtőt a jobb memóriakezelés érdekében.
 
-**Code Example for Memory‑Conscious Comparison:**
+**Kódpélda a memória-tudatos összehasonlításhoz:**
 
 ```java
 // Configure JVM options for better performance
@@ -320,11 +322,11 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 }
 ```
 
-### Batch Processing Strategies
+### Kötegelt feldolgozási stratégiák
 
-When comparing multiple document pairs:
+Több dokumentumpár összehasonlításakor:
 
-**Sequential Processing** (Simple but slower):
+**Szekvenciális feldolgozás** (Egyszerű, de lassabb):
 
 ```java
 for (DocumentPair pair : documentPairs) {
@@ -335,7 +337,7 @@ for (DocumentPair pair : documentPairs) {
 }
 ```
 
-**Parallel Processing** (Faster but memory‑intensive):
+**Párhuzamos feldolgozás** (Gyorsabb, de memóriaigényes):
 
 ```java
 documentPairs.parallelStream().forEach(pair -> {
@@ -349,15 +351,15 @@ documentPairs.parallelStream().forEach(pair -> {
 });
 ```
 
-### Performance Monitoring Tips
+### Teljesítményfigyelési tippek
 
-**Key Metrics to Track:**
-- Comparison time per document size  
-- Memory usage patterns  
-- Success/failure rates  
-- Queue processing times (if using async processing)  
+**Kulcsfontosságú mérőszámok a nyomon követéshez:**
+- Összehasonlítási idő dokumentumméret szerint
+- Memóriahasználati minták
+- Siker/sikertelenség aránya
+- Várakozási sor feldolgozási ideje (aszinkron feldolgozás használata esetén)
 
-**Implementation Example:**
+**Megvalósítási példa:**
 
 ```java
 long startTime = System.currentTimeMillis();
@@ -375,9 +377,9 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 }
 ```
 
-### Library Updates and Maintenance
+### Könyvtárfrissítések és karbantartás
 
-**Stay Current:** GroupDocs regularly releases updates with performance improvements and bug fixes. Update your dependency at least quarterly:
+**Maradjon naprakész:** A GroupDocs rendszeresen ad ki frissítéseket teljesítménybeli fejlesztésekkel és hibajavításokkal. Frissítse a függőségét legalább negyedévente:
 
 ```xml
 <!-- Check for updates regularly -->
@@ -388,17 +390,17 @@ try (Comparer comparer = new Comparer(sourceDoc)) {
 </dependency>
 ```
 
-Following these practices ensures your document comparison system remains fast and reliable as your usage scales.
+Ezen gyakorlatok betartása biztosítja, hogy a dokumentum-összehasonlító rendszer a használat skálázódása mellett is gyors és megbízható maradjon.
 
-## Advanced Configuration and Customization
+## Speciális konfiguráció és testreszabás
 
-While the basic comparison functionality works great out of the box, GroupDocs.Comparison offers powerful customization options that let you tailor the behavior to your specific needs.
+Míg az alapvető összehasonlítási funkciók azonnal nagyszerűen működnek, a GroupDocs.Comparison hatékony testreszabási lehetőségeket kínál, amelyek lehetővé teszik a viselkedés testreszabását az Ön egyedi igényeihez.
 
-### Customizing Comparison Settings
+### Összehasonlítási beállítások testreszabása
 
-**Why Customize?** Different use cases require different approaches. Legal documents need more sensitivity than casual content reviews.
+**Miért érdemes testreszabni?** A különböző felhasználási esetek eltérő megközelítéseket igényelnek. A jogi dokumentumok nagyobb érzékenységet igényelnek, mint az alkalmi tartalom-áttekintések.
 
-**Example – High‑Sensitivity Comparison:**
+**Példa – Nagy érzékenységű összehasonlítás:**
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -415,16 +417,16 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-### Output Formatting Options
+### Kimeneti formázási beállítások
 
-Control how differences appear in your result document:
-- **Color Schemes:** Customize highlighting colors  
-- **Change Indicators:** Choose how insertions and deletions are marked  
-- **Summary Reports:** Include statistical summaries of changes  
+Szabályozza, hogyan jelenjenek meg a különbségek az eredménydokumentumban:
+- **Színsémák:** Kiemelő színek testreszabása
+- **Változásjelzők:** Válassza ki, hogyan jelenjenek meg a beszúrások és törlések
+- **Összefoglaló jelentések:** Tartalmazza a változások statisztikai összefoglalását
 
-### Error Handling Best Practices
+### Hibakezelési bevált gyakorlatok
 
-**Robust Error Handling Example:**
+**Hatékony hibakezelési példa:**
 
 ```java
 public class DocumentComparisonService {
@@ -458,13 +460,13 @@ public class DocumentComparisonService {
 }
 ```
 
-This approach ensures your application handles errors gracefully and provides meaningful feedback to users.
+Ez a megközelítés biztosítja, hogy az alkalmazás szabályosan kezelje a hibákat, és értelmes visszajelzést adjon a felhasználóknak.
 
-## Frequently Asked Questions
+## Gyakran Ismételt Kérdések
 
-### Can I Compare More Than Two Documents Simultaneously?
+### Összehasonlíthatok kettőnél több dokumentumot egyszerre?
 
-Absolutely! GroupDocs.Comparison supports multiple target documents against a single source. Simply call `comparer.add()` multiple times:
+Természetesen! A GroupDocs.Comparison több céldokumentumot támogat egyetlen forrásból. Egyszerűen hívja meg a `comparer.add()` függvényt többször:
 
 ```java
 try (Comparer comparer = new Comparer("source.docx")) {
@@ -475,23 +477,23 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-This is particularly useful for tracking changes across multiple document versions or comparing contributions from different team members.
+Ez különösen hasznos több dokumentumverzió közötti változások követéséhez vagy a különböző csapattagok hozzájárulásainak összehasonlításához.
 
-### What File Formats Does GroupDocs.Comparison Support Beyond Word Documents?
+### Milyen fájlformátumokat támogat a GroupDocs.Comparison a Word dokumentumokon túl?
 
-GroupDocs.Comparison works with 50+ file formats including:
-- **Documents:** DOCX, DOC, PDF, RTF, TXT  
-- **Spreadsheets:** XLSX, XLS, CSV  
-- **Presentations:** PPTX, PPT  
-- **Images:** PNG, JPEG, BMP, TIFF  
-- **Web:** HTML, MHT  
-- **Email:** EML, MSG  
+A GroupDocs.Comparison több mint 50 fájlformátummal működik, beleértve:
+- **Dokumentumok:** DOCX, DOC, PDF, RTF, TXT
+- **Táblázatok:** XLSX, XLS, CSV
+- **Prezentációk:** PPTX, PPT
+- **Képek:** PNG, JPEG, BMP, TIFF
+- **Web:** HTML, MHT
+- **E-mail:** EML, MSG
 
-The API remains consistent across all formats, so skills transfer easily.
+Az API minden formátumban konzisztens marad, így a készségek könnyen átvihetők.
 
-### How Do I Handle Password‑Protected Documents?
+### Hogyan kezeljem a jelszóval védett dokumentumokat?
 
-GroupDocs.Comparison can work with password‑protected documents by specifying the password during initialization:
+A GroupDocs.Comparison jelszóval védett dokumentumokkal is tud dolgozni a jelszó inicializálás során történő megadásával:
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -507,21 +509,21 @@ try (Comparer comparer = new Comparer("protected_source.docx", loadOptions)) {
 }
 ```
 
-### What's the Performance Impact on Large Documents?
+### Milyen hatással van a teljesítményre nagy dokumentumok esetén?
 
-Performance varies based on document size and complexity:
-- **Small documents** (< 10 pages): Sub‑second comparison  
-- **Medium documents** (10‑50 pages): 2‑10 seconds typically  
-- **Large documents** (50+ pages): May require 30+ seconds and additional memory  
+A teljesítmény a dokumentum méretétől és összetettségétől függően változik:
+- **Kis dokumentumok** (<10 oldal): Másodpercnél rövidebb idő összehasonlításban
+- **Közepes dokumentumok** (10-50 oldal): Általában 2-10 másodperc
+- **Nagy dokumentumok** (50+ oldal): 30+ másodpercet és további memóriát igényelhetnek
 
-**Optimization Tips:**
-- Allocate sufficient JVM heap memory (4 GB+ for large documents)  
-- Use SSD storage for faster I/O  
-- Consider document segmentation for very large files  
+**Optimalizálási tippek:**
+- Foglaljon le elegendő JVM heap memóriát (4 GB+ nagy dokumentumokhoz)
+- Használjon SSD tárolót a gyorsabb I/O érdekében
+- Fontolja meg a dokumentumok szegmentálását nagyon nagy fájlok esetén
 
-### Can I Integrate This with Spring Boot or Other Java Frameworks?
+### Integrálhatom ezt Spring Boot vagy más Java keretrendszerekkel?
 
-Definitely! GroupDocs.Comparison integrates seamlessly with any Java framework. Here's a Spring Boot service example:
+Határozottan! A GroupDocs.Comparison zökkenőmentesen integrálható bármilyen Java keretrendszerrel. Íme egy példa a Spring Boot szolgáltatásra:
 
 ```java
 @Service
@@ -546,9 +548,9 @@ public class DocumentComparisonService {
 }
 ```
 
-### How Do I Customize the Appearance of Comparison Results?
+### Hogyan szabhatom testre az összehasonlítási eredmények megjelenését?
 
-GroupDocs provides extensive styling options:
+A GroupDocs széleskörű stílusbeállításokat kínál:
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -563,20 +565,20 @@ options.getDeletedItemStyle().setStrikethrough(true);
 comparer.compare("styled_result.docx", options);
 ```
 
-This allows you to match your organization's document standards or create themed comparison reports.
+Ez lehetővé teszi, hogy megfeleljen szervezete dokumentumszabványainak, vagy tematikus összehasonlító jelentéseket készítsen.
 
-## Additional Resources
+## További források
 
-- **Documentation:** [GroupDocs.Comparison for Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference:** [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Purchase License:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Free Trial:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
-- **Temporary License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Community Support:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Dokumentáció:** [GroupDocs.Comparison Java dokumentációkhoz](https://docs.groupdocs.com/comparison/java/)
+- **API referencia:** [Teljes API referencia](https://reference.groupdocs.com/comparison/java/)
+- **Legújabb verzió letöltése:** [GroupDocs kiadások](https://releases.groupdocs.com/comparison/java/)
+- **Licenc vásárlása:** [GroupDocs licenc vásárlása](https://purchase.groupdocs.com/buy)
+- **Ingyenes próbaverzió:** [Ingyenes próbaverzió letöltése](https://releases.groupdocs.com/comparison/java/)
+- **Ideiglenes licenc:** [Ideiglenes licenc beszerzése](https://purchase.groupdocs.com/temporary-license/)
+- **Közösségi támogatás:** [GroupDocs fórum](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2026-02-16  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs
+**Utolsó frissítés:** 2026-02-16
+**Tesztelve:** GroupDocs.Comparison 25.2 for Java
+**Szerző:** GroupDocs

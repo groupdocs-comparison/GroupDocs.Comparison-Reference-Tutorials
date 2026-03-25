@@ -20,10 +20,6 @@ url: /vi/java/basic-comparison/word-document-comparison-groupdocs-java/
 weight: 1
 ---
 
-.
-
-We'll produce final markdown.
-
 # groupdocs comparison java – So sánh tài liệu Word bằng Java
 
 Bạn đã từng dành hàng giờ để so sánh thủ công hai tài liệu Word, cố gắng phát hiện mọi thay đổi nhỏ nhất? Bạn không phải là người duy nhất. Dù bạn đang quản lý việc sửa đổi hợp đồng, theo dõi cập nhật nội dung, hay xử lý quy trình chỉnh sửa cộng tác, việc so sánh tài liệu thủ công tốn thời gian và dễ gây lỗi.

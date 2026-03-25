@@ -19,23 +19,7 @@ url: /ja/java/
 weight: 10
 ---
 
- 2026-02-16"
-
-- "**Tested With:** GroupDocs.Comparison 23.10 for Java" -> "**テスト環境:** GroupDocs.Comparison 23.10 for Java"
-
-- "**Author:** GroupDocs" -> "**作者:** GroupDocs"
-
-Now ensure we didn't miss any markdown formatting.
-
-Check for any code blocks: none.
-
-Check for shortcodes: none.
-
-Check for images: none.
-
-All URLs unchanged.
-
-Now produce final content.# compare pdf java – Java ドキュメント比較チュートリアル
+# compare pdf java – Java ドキュメント比較チュートリアル
 
 契約書の2つのバージョン間の変更を自動的に検出したり、**compare pdf java** ファイルや Excel レポートを比較したり、Java アプリケーションでドキュメントの改訂履歴を追跡したりしたことがありますか？ここが正しい場所です。このチュートリアルでは、GroupDocs.Comparison を使用して Java プロジェクトに高精度のドキュメント比較を統合するために必要なすべてを解説します。
 

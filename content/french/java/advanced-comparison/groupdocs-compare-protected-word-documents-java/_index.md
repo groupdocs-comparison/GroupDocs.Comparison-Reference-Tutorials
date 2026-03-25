@@ -23,25 +23,7 @@ url: /fr/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
----
-
-**Last Updated:** 2026-02-16  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs
-
-Translate the footer.
-
-**Last Updated:** 2026-02-16 (keep date)  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs
-
-Probably keep same English for these labels? Should translate "Last Updated" etc. Let's translate: "**Dernière mise à jour :** 2026-02-16" etc.
-
-Now produce final content with markdown.
-
-Check we kept all shortcodes? There were none except CODE_BLOCK placeholders. Ensure we didn't alter them.
-
-Now produce final answer.# Comment comparer des documents Word (protégés par mot de passe) en Java
+# Comment comparer des documents Word (protégés par mot de passe) en Java
 
 ## Introduction
 

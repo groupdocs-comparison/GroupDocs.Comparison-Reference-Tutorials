@@ -24,10 +24,6 @@ url: /de/java/advanced-comparison/groupdocs-compare-protected-word-documents-jav
 weight: 1
 ---
 
-.
-
-Let's start constructing.
-
 # Wie man Word‑Dokumente (Passwortgeschützt) in Java vergleicht
 
 ## Einführung

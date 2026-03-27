@@ -1,20 +1,20 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
+date: '2026-03-22'
 description: Java'da dizin karşılaştırması için GroupDocs Comparison Java'yı nasıl
-  kullanacağınızı öğrenin. Dosya denetimlerini, sürüm kontrol otomasyonunu ve performans
-  optimizasyonunu ustalaşın.
+  kullanacağınızı öğrenin. Dosya denetimlerinde, sürüm kontrol otomasyonunda ve performans
+  optimizasyonunda uzmanlaşın.
 keywords: java directory comparison tool, groupdocs comparison tutorial, java file
   audit automation, directory sync java, how to compare folders in java programming
-lastmod: '2025-12-20'
+lastmod: '2026-03-22'
 linktitle: Java Directory Comparison Guide
 tags:
 - directory-comparison
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java - Java Dizin Karşılaştırma Aracı - Tam Kılavuz'
+title: groupdocs comparison java - Java Dizin Karşılaştırma Aracı - Tam Kılavuz
 type: docs
 url: /tr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1
@@ -24,34 +24,34 @@ weight: 1
 
 ## Giriş
 
-İki proje sürümü arasındaki hangi dosyaların değiştiğini manuel olarak saatlerce kontrol ettiniz mi? Yalnız değilsiniz. Dizin karşılaştırması, tüm öğleden sonranızı yiyebilecek sıkıcı görevlerden biri — otomatikleştirmediğiniz sürece.
+Hiç iki proje sürümü arasında hangi dosyaların değiştiğini manuel olarak saatlerce kontrol ettiniz mi? Yalnız değilsiniz. **groupdocs comparison java** bu zahmetli görevi tek bir API çağrısıyla iki klasörü karşılaştırarak çocuk oyuncağı haline getirir. Dizin karşılaştırması, tüm öğleden sonranızı yiyebilecek o zahmetli görevlerden biridir — otomatikleştirmediğiniz sürece.
 
-**GroupDocs.Comparison for Java**, bu sorunu basit bir API çağrısına dönüştürüyor. İster büyük bir kod tabanındaki değişiklikleri izliyor olun, ortamlar arasında dosyaları senkronize ediyor olun ya da uyumluluk denetimleri yapıyor olun, bu kütüphane ağır işi üstleniyor, siz ise sadece sonuçları alıyorsunuz.
+**GroupDocs.Comparison for Java** bu sorunu basit bir API çağrısına dönüştürür. İster büyük bir kod tabanındaki değişiklikleri izliyor olun, ortamlar arasında dosyaları senkronize ediyor olun, ister uyumluluk denetimleri yapıyor olun, bu kütüphane ağır işi üstlenir, sizin yapmanıza gerek kalmaz.
 
-Bu kılavuzda, gerçek dünyadaki senaryolarda gerçekten işe yarayan otomatik dizin karşılaştırmalarını nasıl kuracağınızı öğreneceksiniz. Temel kurulumdan, binlerce dosyaya sahip devasa dizinler için performans optimizasyonuna kadar her şeyi kapsayacağız.
+Bu kılavuzda, gerçek dünyadaki senaryolarda çalışan otomatik dizin karşılaştırmalarını nasıl kuracağınızı öğreneceksiniz. Temel kurulumdan binlerce dosyaya sahip devasa dizinler için performans optimizasyonuna kadar her şeyi ele alacağız.
 
-**Öğrenecekleriniz:**
-- GroupDocs.Comparison kurulumunun tam süreci (dikkat edilmesi gereken noktalar dahil)
-- Adım adım dizin karşılaştırma uygulaması
+**Ne Öğreneceksiniz:**
+- Tam GroupDocs.Comparison kurulumu (tuhaflıkları dahil)
+- Adım‑adım dizin karşılaştırma uygulaması
 - Özel karşılaştırma kuralları için gelişmiş yapılandırma
-- Büyük ölçekli karşılaştırmalar için performans optimizasyonu  
-- Yaygın sorunların giderilmesi (çünkü sorunlar ortaya çıkacak)
-- Farklı sektörlerdeki gerçek dünya kullanım örnekleri
+- Büyük ölçekli karşılaştırmalar için performans optimizasyonu
+- Yaygın sorunların giderilmesi (çünkü ortaya çıkacak)
+- Farklı sektörlerde gerçek‑dünya kullanım örnekleri
 
 ### Hızlı Yanıtlar
-- **Birincil kütüphane nedir?** `groupdocs comparison java`
+- **Ana kütüphane nedir?** `groupdocs comparison java`
 - **Desteklenen Java sürümü?** Java 8 veya üzeri
 - **Tipik kurulum süresi?** Temel bir karşılaştırma için 10–15 dakika
 - **Lisans gereksinimi?** Evet – bir deneme veya ticari lisans gerekir
 - **Çıktı formatları?** HTML (varsayılan) veya PDF
 
-## Dizin Karşılaştırmasının Önemi (Düşündüğünüzden Daha Fazla)
+## Neden Dizin Karşılaştırması Önemlidir (Düşündüğünüzden Daha Fazla)
 
-Koda dalmadan önce, neden önemli olduğuna bir göz atalım. Dizin karşılaştırması sadece farklı dosyaları bulmakla kalmaz — veri bütünlüğünü korumak, uyumluluğu sağlamak ve üretim ortamınızı bozabilecek gizli değişiklikleri yakalamak için kritik bir adımdır.
+Koda dalmadan önce, neden önemli olduğundan bahsedelim. Dizin karşılaştırması sadece farklı dosyaları bulmakla ilgili değildir — veri bütünlüğünü korumak, uyumluluğu sağlamak ve üretim ortamınızı bozabilecek o gizli değişiklikleri yakalamakla ilgilidir.
 
-Bu ihtiyacınız olabilecek yaygın senaryolar:
+Bu ihtiyacı duyacağınız yaygın senaryolar:
 - **Sürüm Yönetimi**: Dağıtımdan önce staging ve production dizinlerini karşılaştırma
-- **Veri Göçü**: Sistemler arasında tüm dosyaların doğru şekilde aktarıldığından emin olma
+- **Veri Göçü**: Tüm dosyaların sistemler arasında doğru bir şekilde aktarıldığını doğrulama
 - **Uyumluluk Denetimleri**: Düzenleyici gereksinimler için belge değişikliklerini izleme
 - **Yedek Doğrulama**: Yedekleme sürecinizin gerçekten çalıştığını onaylama
 - **Takım İşbirliği**: Paylaşılan proje dizinlerinde kim neyi değiştirdiğini belirleme
@@ -62,28 +62,28 @@ Kodlamaya başlamadan önce ortamınızın hazır olduğundan emin olun. İşte 
 
 **Temel Gereksinimler:**
 1. **Java 8 veya üzeri** – GroupDocs.Comparison modern Java özelliklerini kullanır
-2. **Maven 3.6+** – Bağımlılık yönetimi için (manuel JAR yönetimine gerek yok)
+2. **Maven 3.6+** – Bağımlılık yönetimi için (sana güveniyorum, manuel JAR yönetimi deneme)
 3. **İyi Java desteği olan IDE** – IntelliJ IDEA veya Eclipse önerilir
 4. **En az 2 GB RAM** – Dizin karşılaştırmaları bellek yoğun olabilir
 
 **Bilgi Önkoşulları:**
-- Temel Java programlama (döngüler, koşullar, istisna yönetimi)
+- Temel Java programlama (döngüler, koşullu ifadeler, istisna yönetimi)
 - Dosya I/O işlemlerinin anlaşılması
-- Maven bağımlılık yönetimi bilgisi
-- try‑with‑resources kullanımına aşina olmak (bunu sıkça kullanacağız)
+- Maven bağımlılık yönetimine aşina olmak
+- try‑with‑resources temel bilgisi (bunu yoğun şekilde kullanacağız)
 
-**İsteğe Bağlı ama Faydalı:**
-- Günlükleme çerçeveleri (SLF4J/Logback) deneyimi
-- Çok iş parçacıklı (multi‑threading) kavramları
-- HTML (çıktı formatı için) temel bilgisi
+**Opsiyonel ama Faydalı:**
+- Kayıt (logging) çerçeveleri deneyimi (SLF4J/Logback)
+- Çoklu iş parçacığı (multi‑threading) kavramları anlayışı
+- HTML temel bilgisi (çıktı biçimlendirme için)
 
-## GroupDocs.Comparison for Java Kurulumu
+## GroupDocs.Comparison for Java'ı Kurma
 
-Bu kütüphaneyi projenize düzgün bir şekilde entegre edelim. Kurulum basit, ancak dikkat edilmesi gereken birkaç nokta var.
+Bu kütüphaneyi projenize düzgün bir şekilde entegre edelim. Kurulum basittir, ancak dikkat edilmesi gereken birkaç tuzak vardır.
 
 ### Maven Yapılandırması
 
-`pom.xml` dosyanıza aşağıdakileri ekleyin – özellikle sıkça gözden kaçan depo yapılandırmasına dikkat edin:
+`pom.xml` dosyanıza bunu ekleyin – genellikle gözden kaçan depo yapılandırmasına dikkat edin:
 
 ```xml
 <repositories>
@@ -103,19 +103,18 @@ Bu kütüphaneyi projenize düzgün bir şekilde entegre edelim. Kurulum basit, 
 </dependencies>
 ```
 
-**İpucu**: GroupDocs sitesinden en yeni sürüm numarasını kullanın. Burada gösterilen sürüm en güncel olmayabilir.
+**Pro İpucu**: Her zaman GroupDocs web sitesinden en son sürüm numarasını kullanın. Burada gösterilen sürüm en güncel olmayabilir.
 
 ### Lisans Kurulumu (Bunu Atlamayın)
 
-GroupDocs ücretsiz değildir, ancak çeşitli seçenekler sunar:
-
-- **Ücretsiz Deneme**: Tam özellikli 30‑günlük deneme (değerlendirme için ideal)
+GroupDocs ücretsiz değildir, ancak birkaç seçenek sunar:
+- **Ücretsiz Deneme**: Tam özellikli 30‑günlük deneme (değerlendirme için mükemmel)
 - **Geçici Lisans**: Geliştirme/test için uzatılmış deneme
 - **Ticari Lisans**: Üretim kullanımı için
 
-Lisansınızı şu adreslerden alın:
-- [Satın alım lisansı](https://purchase.groupdocs.com/buy) – üretim için
-- [Geçici lisans alın](https://purchase.groupdocs.com/temporary-license/) – uzatılmış test için
+Lisansınızı şu adresten alın:
+- [Üretim için bir lisans satın alın](https://purchase.groupdocs.com/buy)
+- [Uzatılmış test için geçici lisans alın](https://purchase.groupdocs.com/temporary-license/)
 
 ### Temel Başlatma ve Test
 
@@ -136,15 +135,15 @@ public class Main {
 }
 ```
 
-Bu kod hata vermeden çalışıyorsa devam edebilirsiniz. Aksi takdirde Maven yapılandırmanızı ve internet bağlantınızı kontrol edin (GroupDocs lisansları çevrimiçi doğrular).
+Eğer bu hatasız çalışıyorsa, devam etmeye hazırsınız. Aksi takdirde, Maven yapılandırmanızı ve internet bağlantınızı kontrol edin (GroupDocs lisansları çevrimiçi doğrular).
 
 ## Temel Uygulama: Dizin Karşılaştırması
 
-Şimdi esas konuya — dizinleri karşılaştırmaya — gelelim. Önce basit bir uygulama yapacağız, ardından gelişmiş özellikleri ekleyeceğiz.
+Şimdi ana konuya — dizinleri gerçekten karşılaştırmaya. Temel bir uygulama ile başlayacağız, ardından gelişmiş özellikler ekleyeceğiz.
 
 ### Temel Dizin Karşılaştırması
 
-Çoğu senaryoyu karşılayacak temel uygulama:
+Bu, çoğu kullanım senaryosunu karşılayan temel uygulamanızdır:
 
 #### Adım 1: Yollarınızı Ayarlayın
 
@@ -154,7 +153,7 @@ String targetDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/target_directory";
 String outputFileName = "YOUR_OUTPUT_DIRECTORY/compare_result.html";
 ```
 
-**Önemli**: Üretim ortamlarında mümkün olduğunca mutlak yollar kullanın. Göreceli yollar, uygulamanın çalıştığı konuma bağlı olarak sorun çıkarabilir.
+**Önemli**: Mümkün olduğunca mutlak yollar kullanın, özellikle üretim ortamlarında. Göreli yollar, uygulamanızın çalıştığı yere bağlı olarak sorunlara yol açabilir.
 
 #### Adım 2: Karşılaştırma Seçeneklerini Yapılandırın
 
@@ -167,9 +166,9 @@ compareOptions.setDirectoryCompare(true);
 compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 ```
 
-**Neden HTML çıktısı?** HTML raporları insanlar tarafından okunabilir ve herhangi bir tarayıcıda görüntülenebilir. Teknik olmayan paydaşlarla sonuçları paylaşmak için idealdir.
+**Neden HTML çıktısı?** HTML raporları insan tarafından okunabilir ve herhangi bir tarayıcıda görüntülenebilir. Teknik olmayan paydaşlarla sonuçları paylaşmak için mükemmeldir.
 
-#### Adım 3: Karşılaştırmayı Gerçekleştirin
+#### Adım 3: Karşılaştırmayı Çalıştırın
 
 ```java
 try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
@@ -182,11 +181,11 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-**Neden try‑with‑resources?** GroupDocs.Comparison dosya tanıtıcıları ve belleği dahili olarak yönetir. try‑with‑resources kullanmak, özellikle büyük dizin karşılaştırmalarında temizlik işlemlerinin doğru yapılmasını sağlar.
+**Neden try‑with‑resources?** GroupDocs.Comparison dosya tutamaçlarını ve belleği dahili olarak yönetir. try‑with‑resources kullanmak, özellikle büyük dizin karşılaştırmalarında doğru temizlik sağlar.
 
 ### Gelişmiş Yapılandırma Seçenekleri
 
-Temel kurulum işe yarar, ancak gerçek dünya senaryoları özelleştirme gerektirir. Karşılaştırmalarınızı ince ayarlamanın yolları:
+Temel kurulum çalışır, ancak gerçek dünya senaryoları özelleştirme gerektirir. Karşılaştırmalarınızı nasıl ince ayarlayacağınız burada:
 
 #### Çıktı Formatlarını Özelleştirme
 
@@ -203,7 +202,7 @@ compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 
 #### Dosya ve Dizinleri Filtreleme
 
-Bazen her şeyi karşılaştırmak istemezsiniz. Seçici olmanın yolu:
+Bazen her şeyi karşılaştırmak istemezsiniz. İşte seçici olmanın yolu:
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -217,13 +216,13 @@ compareOptions.setShowInsertedContent(true); // Do highlight new files
 
 ## Yaygın Sorunlar ve Çözümler
 
-Karşılaşmanız muhtemel problemleri ve çözümlerini ele alalım (çünkü Murphy Yasası kodlamaya da uygulanır):
+Karşılaşmanız muhtemel sorunları ele alalım (çünkü Murphy Yasası kodlamaya da uygulanır):
 
 ### Sorun 1: Büyük Dizinlerde OutOfMemoryError
 
-**Belirtiler**: Binlerce dosya içeren dizinleri karşılaştırırken uygulamanız heap bellek hatası veriyor.
+**Semptomlar**: Binlerce dosyaya sahip dizinleri karşılaştırırken uygulamanız yığın (heap) alanı hatalarıyla çöküyor.
 
-**Çözüm**: JVM heap boyutunu artırın ve dizinleri partiler halinde işleyin:
+**Çözüm**: JVM yığın boyutunu artırın ve dizinleri toplu olarak işleyin:
 
 ```java
 // JVM args: -Xmx4g -Xms2g
@@ -239,12 +238,12 @@ for (String subdir : subdirectories) {
 
 ### Sorun 2: Doğru Yollara Rağmen FileNotFoundException
 
-**Belirtiler**: Yollar doğru görünüyor, ancak dosya bulunamadı hataları alıyorsunuz.
+**Semptomlar**: Yollar doğru görünüyor, ancak dosya bulunamadı hataları alıyorsunuz.
 
 **Yaygın Nedenler ve Çözümler**:
-- **İzinler**: Java uygulamanızın kaynak dizinleri okuma ve çıktı konumuna yazma izni olduğundan emin olun
-- **Özel Karakterler**: Boşluk veya özel karakter içeren dizin adları uygun şekilde kaçırılmalı
-- **Ağ Yolları**: UNC yolları beklenildiği gibi çalışmayabilir — önce dosyaları yerel olarak kopyalayın
+- **İzinler**: Java uygulamanızın kaynak dizinlere okuma ve çıktı konumuna yazma erişimi olduğundan emin olun
+- **Özel Karakterler**: Boşluk veya özel karakter içeren dizin adları uygun şekilde kaçırılmalıdır
+- **Ağ Yolları**: UNC yolları beklenildiği gibi çalışmayabilir — dosyaları önce yerel olarak kopyalayın
 
 ```java
 // Better path handling
@@ -259,14 +258,14 @@ if (!Files.exists(targetPath)) {
 }
 ```
 
-### Sorun 3: Karşılaştırma Sürekli Uzun Sürüyor
+### Sorun 3: Karşılaştırma Sürekli Çalışıyor
 
-**Belirtiler**: Karşılaştırma saatlerce sürüyor ve tamamlanmıyor.
+**Semptomlar**: Karşılaştırmanız saatlerce çalışıyor ve tamamlanmıyor.
 
 **Çözümler**:
-1. Karşılaştırmadan önce gereksiz dosyaları **filtreleyin**
-2. Bağımsız alt‑dizinler için **çok iş parçacıklı** (multi‑threading) kullanımını değerlendirin
-3. **İlerleme takibi** ekleyerek neler olduğunu izleyin
+1. **Karşılaştırmadan önce gereksiz dosyaları filtreleyin**
+2. **Bağımsız alt dizinler için çoklu iş parçacığı (multi‑threading) kullanın**
+3. **Ne olduğunu izlemek için ilerleme takibi uygulayın**
 
 ```java
 // Add progress monitoring
@@ -283,9 +282,9 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-## Büyük Ölçekli Karşılaştırmalar için Performans Optimizasyonu
+## Büyük Ölçekli Karşılaştırmalar İçin Performans Optimizasyonu
 
-Binlerce dosya içeren dizinlerle çalışırken performans kritik hâle gelir. İşte optimizasyon adımları:
+Binlerce dosya içeren dizinlerle uğraşırken performans kritik hale gelir. İşte nasıl optimize edeceğiniz:
 
 ### Bellek Yönetimi En İyi Uygulamaları
 
@@ -305,7 +304,7 @@ compareOptions = null; // Help GC
 
 ### Toplu İşleme Stratejisi
 
-Devasa dizin yapıları için parçalar halinde işleyin:
+Devasa dizin yapıları için, parçalar halinde işleyin:
 
 ```java
 public void compareDirectoriesInBatches(String sourceDir, String targetDir, int batchSize) {
@@ -327,9 +326,9 @@ public void compareDirectoriesInBatches(String sourceDir, String targetDir, int 
 }
 ```
 
-### Bağımsız Dizinler için Paralel İşleme
+### Bağımsız Dizinler İçin Paralel İşleme
 
-Birden fazla dizin çifti karşılaştırıyorsanız paralel çalıştırın:
+Birden fazla dizin çiftini karşılaştırıyorsanız, paralel olarak yapın:
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -360,13 +359,13 @@ for (Future<String> future : futures) {
 executor.shutdown();
 ```
 
-## Gerçek Dünya Kullanım Senaryoları ve Endüstri Uygulamaları
+## Gerçek Dünya Kullanım Örnekleri ve Endüstri Uygulamaları
 
-Dizin karşılaştırması sadece geliştiricilerin aracı değil — iş süreçlerinin kritik bir parçasıdır:
+Dizin karşılaştırması sadece bir geliştirici aracı değildir — iş kritik süreçler için sektörler arasında kullanılır:
 
 ### Yazılım Geliştirme ve DevOps
 
-**Sürüm Yönetimi**: Dağıtımdan önce staging ve production dizinlerini karşılaştırarak konfigürasyon sürüklenmesini yakalayın:
+**Sürüm Yönetimi**: Dağıtımdan önce yapılandırma sapmalarını yakalamak için staging ve production dizinlerini karşılaştırın:
 
 ```java
 // Automated pre-deployment check
@@ -389,9 +388,9 @@ try (Comparer comparer = new Comparer(stagingConfig, options)) {
 }
 ```
 
-### Finans ve Uyum
+### Finans ve Uyumluluk
 
-**Denetim İzleri Bakımı**: Finans kurumları, düzenleyici uyumluluk için belge değişikliklerini izlemek amacıyla dizin karşılaştırması kullanır:
+**Denetim İzleri Bakımı**: Finans kurumları düzenleyici uyumluluk için belge değişikliklerini izlemek amacıyla dizin karşılaştırması kullanır:
 
 ```java
 // Monthly compliance check
@@ -405,7 +404,7 @@ performComplianceComparison(previousMonthDocs, currentMonthDocs, auditReport);
 
 ### Veri Yönetimi ve ETL Süreçleri
 
-**Veri Bütünlüğü Doğrulama**: Veri göçlerinin sorunsuz tamamlandığından emin olun:
+**Veri Bütünlüğü Doğrulama**: Veri göçlerinin başarılı bir şekilde tamamlandığını sağlamak:
 
 ```java
 public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir) {
@@ -430,7 +429,7 @@ public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir)
 
 ### İçerik Yönetimi ve Yayıncılık
 
-**Teknik Olmayan Takımlar İçin Sürüm Kontrolü**: Pazarlama ve içerik ekipleri, Git bilgisi olmadan belge depolarındaki değişiklikleri takip edebilir:
+**Teknik Olmayan Takımlar İçin Sürüm Kontrolü**: Pazarlama ve içerik ekipleri Git bilgisi olmadan belge depolarındaki değişiklikleri izleyebilir:
 
 ```java
 // Weekly content audit for marketing team
@@ -446,13 +445,13 @@ options.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 generateContentChangeReport(lastWeekContent, currentContent, marketingReport, options);
 ```
 
-## İleri İpuçları ve En İyi Uygulamalar
+## Gelişmiş İpuçları ve En İyi Uygulamalar
 
-Üretim ortamlarında dizin karşılaştırmasıyla çalıştıktan sonra edinilen bazı zorunlu dersler:
+Üretim ortamlarında dizin karşılaştırmasıyla çalıştıktan sonra, işte bazı zor öğrenilmiş dersler:
 
-### Günlükleme ve İzleme
+### Kayıt (Logging) ve İzleme
 
-Her zaman kapsamlı günlükleme uygulayın:
+Her zaman kapsamlı kayıt (logging) uygulayın:
 
 ```java
 import org.slf4j.Logger;
@@ -517,7 +516,7 @@ public void compareWithRetry(String source, String target, String output, int ma
 
 ### Konfigürasyon Yönetimi
 
-Ayarları dışarıdan alın, böylece yeniden derlemeden değişiklik yapabilirsiniz:
+Ayarları dışa aktarın, böylece yeniden derlemeden ayarlayabilirsiniz:
 
 ```java
 // application.properties
@@ -534,7 +533,7 @@ private String outputFormat;
 private int maxRetries;
 ```
 
-### Platform Bağımsız Yol İşleme
+### Platform‑Bağımsız Yol İşleme
 
 ```java
 // Use platform-independent path handling
@@ -554,7 +553,7 @@ if (!Files.isWritable(outputPath.getParent())) {
 }
 ```
 
-### Önemli Olmadığında Zaman Damgalarını Görmezden Gelme
+### Önemli Olmadığında Zaman Damgalarını Yoksayma
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -569,65 +568,45 @@ options.setIgnoreFormatting(true);
 
 ### Geliştirmede Çalışıyor, Üretimde Başarısız Oluyor
 
-**Belirtiler**: Karşılaştırma yerel ortamda çalışıyor ama sunucuda çöküyor.
+**Semptomlar**: Karşılaştırma yerel olarak çalışıyor ancak sunucuda çöküyor.
 
 **Temel Nedenler**:
-- Windows vs Linux arasındaki **büyük/küçük harf duyarlılığı** farkları
-- Daha katı **dosya sistemi izinleri**
-- **Sabit yol ayırıcıları** (`/` vs `\`) hard‑coded olarak kullanılması
+- Büyük/küçük harf duyarlılığı farkları (Windows vs Linux)
+- Daha katı dosya sistemi izinleri
+- Sabit kodlanmış yol ayırıcıları (`/` vs `\`)
 
-**Çözüm**: *Platform Bağımsız Yol İşleme* bölümünde gösterildiği gibi `Path` ve `File.separator` kullanın.
+**Çözüm**: Yukarıdaki *Platform‑Bağımsız Yol İşleme* bölümünde gösterildiği gibi `Path` ve `File.separator` kullanın.
 
 ### Tutarsız Sonuçlar
 
-**Belirtiler**: Aynı karşılaştırmayı iki kez çalıştırdığınızda farklı çıktılar alıyorsunuz.
+**Semptomlar**: Aynı karşılaştırmayı iki kez çalıştırmak farklı çıktılar verir.
 
 **Olası Nedenler**:
-- Çalışma sırasında dosyalar değişiyor
-- Zaman damgaları fark olarak kabul ediliyor
-- Alt dosya sistemi meta verileri farklılık gösteriyor
+- Çalışma sırasında dosyalar değiştiriliyor
+- Zaman damgaları fark olarak değerlendiriliyor
+- Alt dosya sistemi meta verileri farklı
 
-**Çözüm**: `CompareOptions` içinde zaman damgalarını yok sayacak şekilde yapılandırın (*Zaman Damgalarını Görmezden Gelme* bölümüne bakın).
+**Çözüm**: `CompareOptions` yapılandırmasını zaman damgalarını yoksayacak ve gerçek içeriğe odaklanacak şekilde ayarlayın (bkz. *Önemli Olmadığında Zaman Damgalarını Yoksayma*).
 
-## Sık Sorulan Sorular
+## Sıkça Sorulan Sorular
 
-**S: Milyonlarca dosyaya sahip dizinleri nasıl yönetebilirim?**  
-**C:** Toplu işleme, JVM heap artırma (`-Xmx`) ve alt‑dizin karşılaştırmalarını paralel çalıştırma kombinasyonunu kullanın. *Toplu İşleme Stratejisi* ve *Paralel İşleme* bölümlerindeki örnek kalıplar hazırdır.
+**S: Milyonlarca dosyaya sahip dizinleri nasıl yönetirim?**  
+C: Toplu işleme, JVM yığın boyutunu artırma (`-Xmx`) ve alt‑dizin karşılaştırmalarını paralel çalıştırma kombinasyonunu kullanın. *Toplu İşleme Stratejisi* ve *Paralel İşleme* bölümleri hazır kalıplar sunar.
 
 **S: Farklı sunuculardaki dizinleri karşılaştırabilir miyim?**  
-**C:** Evet, ancak ağ gecikmesi çalışma süresini uzatır. En iyi performans için uzak dizini yerel olarak kopyalayın ya da yeterli I/O bant genişliğine sahip bir ağ paylaşımını bağlayın.
+C: Evet, ancak ağ gecikmesi çalışma süresini domine edebilir. En iyi performans için, karşılaştırmayı çağırmadan önce uzak dizini yerel olarak kopyalayın veya yeterli I/O bant genişliğiyle uzak paylaşıma bağlayın.
 
 **S: GroupDocs.Comparison hangi dosya formatlarını destekliyor?**  
-**C:** DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML ve yaygın görüntü tipleri dahil olmak üzere geniş bir format yelpazesi. En güncel liste için resmi dokümantasyona bakın.
+C: GroupDocs.Comparison, DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML ve yaygın görüntü tipleri dahil olmak üzere geniş bir format yelpazesini destekler. En güncel liste için resmi belgelere bakın.
 
-**S: Bu karşılaştırmayı bir CI/CD pipeline'ına nasıl entegre ederim?**  
-**C:** Karşılaştırma mantığını bir Maven/Gradle eklentisi ya da bağımsız JAR olarak paketleyin, ardından Jenkins, GitHub Actions, Azure Pipelines vb. ortamlarında bir build adımı olarak çalıştırın. *Günlükleme ve İzleme* örneğini kullanarak sonuçları build artefaktı olarak sunabilirsiniz.
+**S: Bu karşılaştırmayı bir CI/CD boru hattına nasıl entegre edebilirim?**  
+C: Karşılaştırma mantığını bir Maven/Gradle eklentisi veya bağımsız JAR içinde paketleyin, ardından Jenkins, GitHub Actions, Azure Pipelines vb. içinde bir derleme adımı olarak çağırın. Sonuçları derleme çıktısı olarak göstermek için *Kayıt (Logging) ve İzleme* örneğini kullanın.
 
 **S: HTML raporunun görünümünü özelleştirmek mümkün mü?**  
-**C:** Yerleşik HTML şablonu sabittir, ancak oluşturulan dosyayı sonradan işleyerek (ör. özel CSS/JS ekleyerek) kurumsal kimliğinize uyarlayabilirsiniz.
-
-## Sonuç
-
-**groupdocs comparison java** kullanarak Java’da sağlam bir dizin karşılaştırma yeteneği oluşturmak için tam bir araç setine sahipsiniz. Temel kurulumdan üretim‑düzeyi performans ayarına kadar şunları öğrendiniz:
-
-- GroupDocs.Comparison kurulumu ve lisanslama
-- Basit bir dizin karşılaştırması gerçekleştirme
-- Çıktıyı özelleştirme, dosyaları filtreleme ve büyük veri setlerini yönetme
-- Bellek kullanımını optimize etme ve karşılaştırmaları paralel çalıştırma
-- DevOps, finans, veri göçü ve içerik yönetimi gibi gerçek dünya senaryolarına uygulama
-- Bakım kolaylığı için günlükleme, yeniden deneme ve dış konfigürasyon ekleme
-
-Başarının anahtarı, önce basit bir örnekle başlayıp sonuçları doğrulamak, ardından gerçekten ihtiyacınız olan optimizasyonları katmanlamak. Temelleri kavradıktan sonra bu yeteneği otomatik build pipeline’larına, uyumluluk panolarına ya da teknik olmayan kullanıcılar için bir web UI’ya entegre edebilirsiniz.
-
-**Sonraki Adımlar**  
-- Küçük bir test klasörüyle örnek kodu çalıştırarak çıktıyı doğrulayın  
-- Daha büyük bir dizine ölçekleyin ve toplu/paralel işleme deneyin  
-- Karşılaştırma adımını CI/CD iş akışınıza ekleyin ve her sürümde otomatik raporlar üretin  
-
-**Yardıma mı ihtiyacınız var?** GroupDocs topluluğu aktif ve yanıt vericidir. Dokümantasyonlarını, forumlarını inceleyin ya da belirli API soruları için destek ekibiyle iletişime geçin.
+C: Yerleşik HTML şablonu sabittir, ancak oluşturulan dosyayı (örneğin, özel CSS veya JavaScript ekleyerek) markanıza uygun hale getirecek şekilde sonradan işleyebilirsiniz.
 
 ---
 
-**Last Updated:** 2025-12-20  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs
+**Son Güncelleme:** 2026-03-22  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 (Java)  
+**Yazar:** GroupDocs

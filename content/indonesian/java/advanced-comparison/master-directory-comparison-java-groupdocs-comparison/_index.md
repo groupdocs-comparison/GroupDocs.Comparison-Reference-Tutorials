@@ -1,89 +1,89 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
+date: '2026-03-22'
 description: Pelajari cara menggunakan GroupDocs Comparison Java untuk perbandingan
   direktori di Java. Kuasai audit file, otomatisasi kontrol versi, dan optimisasi
   kinerja.
 keywords: java directory comparison tool, groupdocs comparison tutorial, java file
   audit automation, directory sync java, how to compare folders in java programming
-lastmod: '2025-12-20'
+lastmod: '2026-03-22'
 linktitle: Java Directory Comparison Guide
 tags:
 - directory-comparison
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java - Alat Perbandingan Direktori Java - Panduan Lengkap'
+title: groupdocs perbandingan java - Alat Perbandingan Direktori Java - Panduan Lengkap
 type: docs
 url: /id/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1
 ---
 
-# Alat Perbandingan Direktori Java - Panduan Lengkap dengan GroupDocs.Comparison
+# Java Directory Comparison Tool - Panduan Lengkap dengan GroupDocs.Comparison
 
-## Pendahuluan
+## Introduction
 
-Pernah menghabiskan berjam‑jam memeriksa secara manual file mana yang berubah antara dua versi proyek? Anda tidak sendirian. Perbandingan direktori adalah salah satu tugas membosankan yang dapat menyita seluruh sore Anda — kecuali Anda mengotomatisasinya.
+Pernah menghabiskan berjam‑jam memeriksa secara manual file mana yang berubah antara dua versi proyek? Anda tidak sendirian. **groupdocs comparison java** membuat tugas membosankan ini menjadi mudah dengan memungkinkan Anda membandingkan dua folder dengan satu panggilan API. Perbandingan direktori adalah salah satu tugas membosankan yang dapat menghabiskan seluruh sore Anda — kecuali Anda mengotomatisasinya.
 
-**GroupDocs.Comparison for Java** mengubah titik sakit ini menjadi panggilan API sederhana. Baik Anda melacak perubahan dalam basis kode yang besar, menyinkronkan file antar lingkungan, atau melakukan audit kepatuhan, perpustakaan ini menangani pekerjaan berat sehingga Anda tidak perlu melakukannya.
+**GroupDocs.Comparison for Java** mengubah titik sakit ini menjadi panggilan API sederhana. Baik Anda melacak perubahan dalam basis kode yang besar, menyinkronkan file antar lingkungan, atau melakukan audit kepatuhan, pustaka ini menangani pekerjaan berat sehingga Anda tidak perlu.
 
-Dalam panduan ini, Anda akan belajar cara menyiapkan perbandingan direktori otomatis yang benar‑benar berfungsi dalam skenario dunia nyata. Kami akan membahas semuanya mulai dari pengaturan dasar hingga optimasi kinerja untuk direktori raksasa dengan ribuan file.
+Dalam panduan ini, Anda akan belajar cara menyiapkan perbandingan direktori otomatis yang benar‑benar bekerja dalam skenario dunia nyata. Kami akan membahas semuanya mulai dari penyiapan dasar hingga optimasi kinerja untuk direktori raksasa dengan ribuan file.
 
 **Apa yang Akan Anda Kuasai:**
-- Pengaturan lengkap GroupDocs.Comparison (termasuk hal‑hal yang perlu diwaspadai)
+- Penyiapan lengkap GroupDocs.Comparison (termasuk hal‑hal yang perlu diwaspadai)
 - Implementasi perbandingan direktori langkah‑demi‑langkah
 - Konfigurasi lanjutan untuk aturan perbandingan khusus
-- Optimasi kinerja untuk perbandingan skala besar
+- Optimasi kinerja untuk perbandingan skala besar  
 - Pemecahan masalah umum (karena masalah akan muncul)
 - Kasus penggunaan dunia nyata di berbagai industri
 
-### Jawaban Cepat
+### Quick Answers
 - **Apa perpustakaan utama?** `groupdocs comparison java`
 - **Versi Java yang didukung?** Java 8 atau lebih tinggi
-- **Waktu pengaturan tipikal?** 10–15 menit untuk perbandingan dasar
+- **Waktu penyiapan tipikal?** 10–15 menit untuk perbandingan dasar
 - **Persyaratan lisensi?** Ya – diperlukan lisensi percobaan atau komersial
 - **Format output?** HTML (default) atau PDF
 
-## Mengapa Perbandingan Direktori Penting (Lebih Dari yang Anda Kira)
+## Why Directory Comparison Matters (More Than You Think)
 
-Sebelum menyelam ke kode, mari kita bahas mengapa ini penting. Perbandingan direktori bukan hanya tentang menemukan file yang berbeda — tetapi tentang menjaga integritas data, memastikan kepatuhan, dan menangkap perubahan tersembunyi yang dapat merusak lingkungan produksi Anda.
+Sebelum menyelam ke kode, mari bahas mengapa ini penting. Perbandingan direktori bukan hanya tentang menemukan file yang berbeda — tetapi tentang menjaga integritas data, memastikan kepatuhan, dan menangkap perubahan tersembunyi yang dapat merusak lingkungan produksi Anda.
 
-Skenario umum di mana Anda akan membutuhkan ini:
-- **Manajemen Rilis**: Membandingkan direktori staging vs produksi sebelum penyebaran
-- **Migrasi Data**: Memastikan semua file dipindahkan dengan benar antar sistem
-- **Audit Kepatuhan**: Melacak perubahan dokumen untuk persyaratan regulasi
-- **Verifikasi Cadangan**: Memastikan proses pencadangan Anda benar‑benar berhasil
-- **Kolaborasi Tim**: Mengidentifikasi siapa yang mengubah apa dalam direktori proyek bersama
+Skenario umum di mana Anda memerlukannya:
+- **Release Management**: Membandingkan direktori staging vs production sebelum deployment
+- **Data Migration**: Memastikan semua file dipindahkan dengan benar antar sistem
+- **Compliance Audits**: Melacak perubahan dokumen untuk persyaratan regulasi
+- **Backup Verification**: Mengonfirmasi proses backup Anda benar‑benar berhasil
+- **Team Collaboration**: Mengidentifikasi siapa yang mengubah apa dalam direktori proyek bersama
 
-## Prasyarat dan Persyaratan Pengaturan
+## Prerequisites and Setup Requirements
 
 Sebelum kita mulai menulis kode, pastikan lingkungan Anda siap. Berikut yang Anda perlukan (dan alasannya):
 
 **Essential Requirements:**
 1. **Java 8 atau lebih tinggi** – GroupDocs.Comparison menggunakan fitur Java modern
-2. **Maven 3.6+** – Untuk manajemen dependensi (percaya saya, jangan coba mengelola JAR secara manual)
-3. **IDE dengan dukungan Java yang baik** – Disarankan IntelliJ IDEA atau Eclipse
-4. **Setidaknya 2 GB RAM** – Perbandingan direktori dapat intensif memori
+2. **Maven 3.6+** – Untuk manajemen dependensi (percayalah, jangan coba kelola JAR secara manual)
+3. **IDE dengan dukungan Java yang baik** – IntelliJ IDEA atau Eclipse disarankan
+4. **Setidaknya 2 GB RAM** – Perbandingan direktori dapat memakan memori secara intensif
 
-**Prasyarat Pengetahuan:**
-- Pemrograman Java dasar (loop, kondisional, penanganan pengecualian)
-- Pemahaman operasi file I/O
-- Keterbiasaan dengan manajemen dependensi Maven
-- Pengetahuan dasar tentang try‑with‑resources (kami akan menggunakannya secara ekstensif)
+**Knowledge Prerequisites:**
+- Pemrograman Java dasar (loop, conditional, penanganan exception)
+- Pemahaman operasi I/O file
+- Familiaritas dengan manajemen dependensi Maven
+- Pengetahuan dasar tentang try‑with‑resources (akan banyak dipakai)
 
-**Opsional namun Membantu:**
-- Pengalaman dengan kerangka kerja logging (SLF4J/Logback)
+**Optional but Helpful:**
+- Pengalaman dengan kerangka logging (SLF4J/Logback)
 - Pemahaman konsep multi‑threading
 - Pengetahuan dasar HTML (untuk format output)
 
-## Menyiapkan GroupDocs.Comparison untuk Java
+## Setting Up GroupDocs.Comparison for Java
 
-Mari integrasikan perpustakaan ini dengan benar ke dalam proyek Anda. Pengaturannya sederhana, tetapi ada beberapa hal yang perlu diwaspadai.
+Mari integrasikan pustaka ini ke dalam proyek Anda. Penyiapan cukup sederhana, namun ada beberapa hal yang perlu diwaspadai.
 
-### Konfigurasi Maven
+### Maven Configuration
 
-Tambahkan ini ke file `pom.xml` Anda – perhatikan konfigurasi repositori, yang sering terlewat:
+Tambahkan ini ke file `pom.xml` Anda – perhatikan konfigurasi repository, yang sering terlewat:
 
 ```xml
 <repositories>
@@ -103,22 +103,23 @@ Tambahkan ini ke file `pom.xml` Anda – perhatikan konfigurasi repositori, yang
 </dependencies>
 ```
 
-**Tips Pro**: Selalu gunakan nomor versi terbaru dari situs web GroupDocs. Versi yang ditampilkan di sini mungkin bukan yang paling terbaru.
+**Pro Tip**: Selalu gunakan nomor versi terbaru dari situs GroupDocs. Versi yang ditampilkan di sini mungkin bukan yang paling baru.
 
-### Pengaturan Lisensi (Jangan Lewatkan Ini)
+### License Setup (Don't Skip This)
 
 GroupDocs tidak gratis, tetapi mereka menawarkan beberapa opsi:
-- **Uji Coba Gratis**: uji coba 30‑hari dengan semua fitur (sempurna untuk evaluasi)
-- **Lisensi Sementara**: uji coba diperpanjang untuk pengembangan/pengujian
-- **Lisensi Komersial**: Untuk penggunaan produksi
+
+- **Free Trial**: trial 30‑hari dengan semua fitur (sempurna untuk evaluasi)
+- **Temporary License**: trial diperpanjang untuk pengembangan/pengujian
+- **Commercial License**: Untuk penggunaan produksi
 
 Dapatkan lisensi Anda dari:
 - [Purchase a license](https://purchase.groupdocs.com/buy) untuk produksi
 - [Get a temporary license](https://purchase.groupdocs.com/temporary-license/) untuk pengujian yang diperpanjang
 
-### Inisialisasi Dasar dan Pengujian
+### Basic Initialization and Testing
 
-Setelah dependensi Anda diatur, uji integrasinya:
+Setelah dependensi terpasang, uji integrasinya:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -135,17 +136,17 @@ public class Main {
 }
 ```
 
-Jika ini berjalan tanpa error, Anda siap melanjutkan. Jika tidak, periksa konfigurasi Maven Anda dan koneksi internet (GroupDocs memvalidasi lisensi secara online).
+Jika ini berjalan tanpa error, Anda siap melanjutkan. Jika tidak, periksa konfigurasi Maven dan koneksi internet Anda (GroupDocs memvalidasi lisensi secara online).
 
-## Implementasi Inti: Perbandingan Direktori
+## Core Implementation: Directory Comparison
 
-Sekarang untuk acara utama — memang membandingkan direktori. Kami akan memulai dengan implementasi dasar dan kemudian menambahkan fitur lanjutan.
+Sekarang ke inti acara — membandingkan direktori secara nyata. Kami akan mulai dengan implementasi dasar lalu menambahkan fitur lanjutan.
 
-### Perbandingan Direktori Dasar
+### Basic Directory Comparison
 
-Ini adalah implementasi utama Anda yang menangani sebagian besar kasus penggunaan:
+Ini adalah implementasi dasar yang menangani kebanyakan kasus penggunaan:
 
-#### Langkah 1: Siapkan Jalur Anda
+#### Step 1: Set Up Your Paths
 
 ```java
 String sourceDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/source_directory";
@@ -153,9 +154,9 @@ String targetDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/target_directory";
 String outputFileName = "YOUR_OUTPUT_DIRECTORY/compare_result.html";
 ```
 
-**Penting**: Gunakan jalur absolut bila memungkinkan, terutama di lingkungan produksi. Jalur relatif dapat menyebabkan masalah tergantung di mana aplikasi Anda dijalankan.
+**Important**: Gunakan path absolut bila memungkinkan, terutama di lingkungan produksi. Path relatif dapat menimbulkan masalah tergantung di mana aplikasi Anda dijalankan.
 
-#### Langkah 2: Konfigurasikan Opsi Perbandingan
+#### Step 2: Configure Comparison Options
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -166,9 +167,9 @@ compareOptions.setDirectoryCompare(true);
 compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 ```
 
-**Mengapa output HTML?** Laporan HTML dapat dibaca manusia dan dapat dilihat di browser apa pun. Sempurna untuk berbagi hasil dengan pemangku kepentingan non‑teknis.
+**Why HTML output?** Laporan HTML mudah dibaca manusia dan dapat dilihat di browser apa pun. Sempurna untuk berbagi hasil dengan pemangku kepentingan non‑teknis.
 
-#### Langkah 3: Jalankan Perbandingan
+#### Step 3: Execute the Comparison
 
 ```java
 try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
@@ -181,13 +182,13 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-**Mengapa try‑with‑resources?** GroupDocs.Comparison mengelola handle file dan memori secara internal. Menggunakan try‑with‑resources memastikan pembersihan yang tepat, terutama penting untuk perbandingan direktori yang besar.
+**Why try‑with‑resources?** GroupDocs.Comparison mengelola handle file dan memori secara internal. Menggunakan try‑with‑resources memastikan pembersihan yang tepat, terutama penting untuk perbandingan direktori besar.
 
-### Opsi Konfigurasi Lanjutan
+### Advanced Configuration Options
 
-Pengaturan dasar berfungsi, tetapi skenario dunia nyata membutuhkan kustomisasi. Berikut cara menyesuaikan perbandingan Anda:
+Setup dasar berfungsi, namun skenario dunia nyata membutuhkan kustomisasi. Berikut cara menyetel perbandingan Anda secara detail:
 
-#### Menyesuaikan Format Output
+#### Customizing Output Formats
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -200,9 +201,9 @@ compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 // compareOptions.setFolderComparisonExtension(FolderComparisonExtension.PDF);
 ```
 
-#### Menyaring File dan Direktori
+#### Filtering Files and Directories
 
-Terkadang Anda tidak ingin membandingkan semuanya. Berikut cara menjadi selektif:
+Kadang Anda tidak ingin membandingkan semuanya. Berikut cara menjadi selektif:
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -214,15 +215,15 @@ compareOptions.setShowDeletedContent(false); // Don't highlight deleted files
 compareOptions.setShowInsertedContent(true); // Do highlight new files
 ```
 
-## Masalah Umum dan Solusinya
+## Common Issues and Solutions
 
-Mari kita bahas masalah yang kemungkinan akan Anda temui (karena Hukum Murphy juga berlaku dalam pemrograman):
+Mari bahas masalah yang kemungkinan akan Anda temui (karena Hukum Murphy juga berlaku untuk coding):
 
-### Masalah 1: OutOfMemoryError dengan Direktori Besar
+### Issue 1: OutOfMemoryError with Large Directories
 
-**Gejala**: Aplikasi Anda crash dengan error ruang heap saat membandingkan direktori dengan ribuan file.
+**Symptoms**: Aplikasi Anda crash dengan error heap space saat membandingkan direktori beribu‑ribu file.
 
-**Solusi**: Tingkatkan ukuran heap JVM dan proses direktori dalam batch:
+**Solution**: Tingkatkan ukuran heap JVM dan proses direktori secara batch:
 
 ```java
 // JVM args: -Xmx4g -Xms2g
@@ -236,14 +237,14 @@ for (String subdir : subdirectories) {
 }
 ```
 
-### Masalah 2: FileNotFoundException Meskipun Jalur Benar
+### Issue 2: FileNotFoundException Despite Correct Paths
 
-**Gejala**: Jalur terlihat benar, tetapi Anda mendapatkan error file‑not‑found.
+**Symptoms**: Path terlihat benar, tetapi Anda mendapatkan error file‑not‑found.
 
-**Penyebab Umum dan Perbaikan**
-- **Izin**: Pastikan aplikasi Java Anda memiliki akses baca ke direktori sumber dan akses tulis ke lokasi output
-- **Karakter Khusus**: Nama direktori dengan spasi atau karakter khusus memerlukan escaping yang tepat
-- **Jalur Jaringan**: Jalur UNC mungkin tidak berfungsi seperti yang diharapkan — salin file secara lokal terlebih dahulu
+**Common Causes and Fixes**:
+- **Permissions**: Pastikan aplikasi Java Anda memiliki akses baca ke direktori sumber dan akses tulis ke lokasi output
+- **Special Characters**: Nama direktori dengan spasi atau karakter khusus perlu di‑escape dengan benar
+- **Network Paths**: Path UNC mungkin tidak berfungsi sebagaimana mestinya — salin file secara lokal terlebih dahulu
 
 ```java
 // Better path handling
@@ -258,14 +259,14 @@ if (!Files.exists(targetPath)) {
 }
 ```
 
-### Masalah 3: Perbandingan Memakan Waktu Lama
+### Issue 3: Comparison Takes Forever
 
-**Gejala**: Perbandingan Anda berjalan berjam‑jam tanpa selesai.
+**Symptoms**: Perbandingan Anda berjalan berjam‑jam tanpa selesai.
 
-**Solusi**
-1. **Saring file yang tidak diperlukan** sebelum perbandingan
-2. **Gunakan multi‑threading** untuk subdirektori yang independen
-3. **Implementasikan pelacakan progres** untuk memantau apa yang terjadi
+**Solutions**:
+1. **Filter unnecessary files** sebelum perbandingan
+2. **Use multi‑threading** untuk sub‑direktori yang independen
+3. **Implement progress tracking** untuk memantau apa yang sedang terjadi
 
 ```java
 // Add progress monitoring
@@ -282,11 +283,11 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-## Optimasi Kinerja untuk Perbandingan Skala Besar
+## Performance Optimization for Large‑Scale Comparisons
 
-Ketika Anda menangani direktori yang berisi ribuan file, kinerja menjadi kritis. Berikut cara mengoptimalkannya:
+Saat Anda berurusan dengan direktori berisi ribuan file, kinerja menjadi krusial. Berikut cara mengoptimalkannya:
 
-### Praktik Terbaik Manajemen Memori
+### Memory Management Best Practices
 
 ```java
 // Increase heap size via JVM arguments
@@ -302,9 +303,9 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 compareOptions = null; // Help GC
 ```
 
-### Strategi Pemrosesan Batch
+### Batch Processing Strategy
 
-Untuk struktur direktori yang masif, proses dalam potongan:
+Untuk struktur direktori yang sangat besar, proses dalam potongan:
 
 ```java
 public void compareDirectoriesInBatches(String sourceDir, String targetDir, int batchSize) {
@@ -326,9 +327,9 @@ public void compareDirectoriesInBatches(String sourceDir, String targetDir, int 
 }
 ```
 
-### Pemrosesan Paralel untuk Direktori Independen
+### Parallel Processing for Independent Directories
 
-Jika Anda membandingkan beberapa pasangan direktori, lakukan secara paralel:
+Jika Anda membandingkan banyak pasangan direktori, lakukan secara paralel:
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -359,13 +360,13 @@ for (Future<String> future : futures) {
 executor.shutdown();
 ```
 
-## Kasus Penggunaan Dunia Nyata dan Aplikasi Industri
+## Real‑World Use Cases and Industry Applications
 
-Perbandingan direktori bukan hanya alat pengembang — ini digunakan di seluruh industri untuk proses bisnis‑kritikal:
+Perbandingan direktori bukan hanya alat developer — itu digunakan di seluruh industri untuk proses bisnis yang kritis:
 
-### Pengembangan Perangkat Lunak dan DevOps
+### Software Development and DevOps
 
-**Manajemen Rilis**: Bandingkan direktori staging vs produksi sebelum penyebaran untuk menangkap pergeseran konfigurasi:
+**Release Management**: Bandingkan direktori staging vs production sebelum deployment untuk menangkap drift konfigurasi:
 
 ```java
 // Automated pre-deployment check
@@ -388,9 +389,9 @@ try (Comparer comparer = new Comparer(stagingConfig, options)) {
 }
 ```
 
-### Keuangan dan Kepatuhan
+### Finance and Compliance
 
-**Pemeliharaan Jejak Audit**: Lembaga keuangan menggunakan perbandingan direktori untuk melacak perubahan dokumen demi kepatuhan regulasi:
+**Audit Trail Maintenance**: Institusi keuangan menggunakan perbandingan direktori untuk melacak perubahan dokumen demi kepatuhan regulasi:
 
 ```java
 // Monthly compliance check
@@ -402,9 +403,9 @@ String auditReport = "/audit/compliance-changes-december-2024.html";
 performComplianceComparison(previousMonthDocs, currentMonthDocs, auditReport);
 ```
 
-### Manajemen Data dan Proses ETL
+### Data Management and ETL Processes
 
-**Verifikasi Integritas Data**: Memastikan migrasi data selesai dengan sukses:
+**Data Integrity Verification**: Memastikan migrasi data selesai dengan sukses:
 
 ```java
 public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir) {
@@ -427,9 +428,9 @@ public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir)
 }
 ```
 
-### Manajemen Konten dan Penerbitan
+### Content Management and Publishing
 
-**Kontrol Versi untuk Tim Non‑Teknis**: Tim pemasaran dan konten dapat melacak perubahan di repositori dokumen tanpa pengetahuan Git:
+**Version Control for Non‑Technical Teams**: Tim marketing dan konten dapat melacak perubahan di repositori dokumen tanpa pengetahuan Git:
 
 ```java
 // Weekly content audit for marketing team
@@ -445,11 +446,11 @@ options.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 generateContentChangeReport(lastWeekContent, currentContent, marketingReport, options);
 ```
 
-## Tips Lanjutan dan Praktik Terbaik
+## Advanced Tips and Best Practices
 
-Setelah bekerja dengan perbandingan direktori di lingkungan produksi, berikut beberapa pelajaran berharga:
+Setelah bekerja dengan perbandingan direktori di lingkungan produksi, berikut beberapa pelajaran penting:
 
-### Logging dan Pemantauan
+### Logging and Monitoring
 
 Selalu terapkan logging yang komprehensif:
 
@@ -482,7 +483,7 @@ public void compareWithLogging(String source, String target, String output) {
 }
 ```
 
-### Pemulihan Error dan Ketahanan
+### Error Recovery and Resilience
 
 Bangun logika retry untuk kegagalan sementara:
 
@@ -514,9 +515,9 @@ public void compareWithRetry(String source, String target, String output, int ma
 }
 ```
 
-### Manajemen Konfigurasi
+### Configuration Management
 
-Eksternalisasi pengaturan sehingga Anda dapat menyesuaikannya tanpa mengompilasi ulang:
+Eksternalisasikan pengaturan sehingga Anda dapat menyesuaikannya tanpa harus recompiling:
 
 ```java
 // application.properties
@@ -533,7 +534,7 @@ private String outputFormat;
 private int maxRetries;
 ```
 
-### Penanganan Jalur Platform‑Independen
+### Platform‑Independent Path Handling
 
 ```java
 // Use platform-independent path handling
@@ -553,7 +554,7 @@ if (!Files.isWritable(outputPath.getParent())) {
 }
 ```
 
-### Mengabaikan Timestamp Saat Tidak Penting
+### Ignoring Timestamps When They Don't Matter
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -564,69 +565,49 @@ options.setIgnoreWhitespaces(true);
 options.setIgnoreFormatting(true);
 ```
 
-## Memecahkan Masalah Umum pada Deploymen
+## Troubleshooting Common Deployment Issues
 
-### Berfungsi di Pengembangan, Gagal di Produksi
+### Works in Development, Fails in Production
 
-**Gejala**: Perbandingan berfungsi secara lokal tetapi crash di server.
+**Symptoms**: Perbandingan berhasil secara lokal tetapi crash di server.
 
-**Penyebab Utama**
+**Root Causes**:
 - Perbedaan sensitivitas huruf (Windows vs Linux)
 - Izin sistem file yang lebih ketat
-- Path separator yang di‑hard‑code (`/` vs `\`)
+- Path separator yang di‑hardcode (`/` vs `\`)
 
-**Perbaikan**: Gunakan `Path` dan `File.separator` seperti yang ditunjukkan pada bagian *Penanganan Jalur Platform‑Independen* di atas.
+**Fix**: Gunakan `Path` dan `File.separator` seperti yang ditunjukkan pada bagian *Platform‑Independent Path Handling* di atas.
 
-### Hasil Tidak Konsisten
+### Inconsistent Results
 
-**Gejala**: Menjalankan perbandingan yang sama dua kali menghasilkan output yang berbeda.
+**Symptoms**: Menjalankan perbandingan yang sama dua kali menghasilkan output yang berbeda.
 
-**Penyebab Mungkin**
-- File sedang dimodifikasi selama proses
+**Possible Reasons**:
+- File dimodifikasi selama proses berjalan
 - Timestamp dianggap sebagai perbedaan
 - Metadata sistem file yang mendasari berbeda
 
-**Solusi**: Konfigurasikan `CompareOptions` untuk mengabaikan timestamp dan fokus pada konten sebenarnya (lihat *Mengabaikan Timestamp*).
+**Solution**: Konfigurasikan `CompareOptions` untuk mengabaikan timestamp dan fokus pada konten sebenarnya (lihat *Ignoring Timestamps*).
 
-## Pertanyaan yang Sering Diajukan
+## Frequently Asked Questions
 
-**T: Bagaimana cara menangani direktori dengan jutaan file?**  
-**J:** Gabungkan pemrosesan batch, tingkatkan heap JVM (`-Xmx`), dan jalankan perbandingan sub‑direktori secara paralel. Bagian *Strategi Pemrosesan Batch* dan *Pemrosesan Paralel* menyediakan pola siap pakai.
+**Q: How do I handle directories with millions of files?**  
+A: Gabungkan batch processing, tingkatkan heap JVM (`-Xmx`), dan jalankan perbandingan sub‑direktori secara paralel. Bagian *Batch Processing Strategy* dan *Parallel Processing* menyediakan pola siap pakai.
 
-**T: Bisakah saya membandingkan direktori yang terletak di server berbeda?**  
-**J:** Ya, tetapi latensi jaringan dapat mendominasi waktu proses. Untuk kinerja terbaik, salin direktori remote secara lokal sebelum memanggil perbandingan, atau mount share remote dengan bandwidth I/O yang cukup.
+**Q: Can I compare directories located on different servers?**  
+A: Ya, tetapi latensi jaringan dapat mendominasi waktu eksekusi. Untuk kinerja terbaik, salin direktori remote secara lokal sebelum memanggil perbandingan, atau mount share remote dengan bandwidth I/O yang memadai.
 
-**T: Format file apa saja yang didukung oleh GroupDocs.Comparison?**  
-**J:** GroupDocs.Comparison mendukung berbagai format, termasuk DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML, dan tipe gambar umum. Lihat dokumentasi resmi untuk daftar terbaru.
+**Q: Which file formats are supported by GroupDocs.Comparison?**  
+A: GroupDocs.Comparison mendukung berbagai format, termasuk DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML, dan tipe gambar umum. Lihat dokumentasi resmi untuk daftar terbaru.
 
-**T: Bagaimana saya dapat mengintegrasikan perbandingan ini ke dalam pipeline CI/CD?**  
-**J:** Bungkus logika perbandingan dalam plugin Maven/Gradle atau JAR mandiri, lalu panggil sebagai langkah build di Jenkins, GitHub Actions, Azure Pipelines, dll. Gunakan contoh *Logging dan Pemantauan* untuk menampilkan hasil sebagai artefak build.
+**Q: How can I integrate this comparison into a CI/CD pipeline?**  
+A: Bungkus logika perbandingan dalam plugin Maven/Gradle atau JAR mandiri, lalu panggil sebagai langkah build di Jenkins, GitHub Actions, Azure Pipelines, dll. Gunakan contoh *Logging and Monitoring* untuk menampilkan hasil sebagai artefak build.
 
-**T: Apakah memungkinkan menyesuaikan tampilan laporan HTML?**  
-**J:** Template HTML bawaan bersifat tetap, tetapi Anda dapat memproses file yang dihasilkan (misalnya, menyuntikkan CSS atau JavaScript khusus) agar sesuai dengan merek Anda.
-
-## Kesimpulan
-
-Anda kini memiliki toolkit lengkap untuk mengimplementasikan perbandingan direktori yang kuat di Java menggunakan **groupdocs comparison java**. Dari pengaturan dasar hingga penyetelan kinerja tingkat produksi, Anda telah melihat cara:
-
-- Menginstal dan melisensikan GroupDocs.Comparison
-- Melakukan perbandingan direktori yang sederhana
-- Menyesuaikan output, menyaring file, dan menangani set data besar
-- Mengoptimalkan penggunaan memori dan menjalankan perbandingan secara paralel
-- Menerapkan teknik ini pada skenario dunia nyata di DevOps, keuangan, migrasi data, dan manajemen konten
-- Menambahkan logging, logika retry, dan konfigurasi eksternal untuk kemudahan pemeliharaan
-
-Kunci keberhasilan adalah memulai dengan sederhana, memvalidasi hasil, lalu menambahkan optimasi yang memang Anda butuhkan. Setelah menguasai dasar‑dasarnya, Anda dapat menyematkan kemampuan ini ke dalam pipeline build otomatis, dasbor kepatuhan, atau bahkan UI web untuk pengguna non‑teknis.
-
-**Langkah Selanjutnya**  
-- Coba kode contoh pada folder uji kecil untuk memverifikasi output  
-- Skala ke direktori yang lebih besar dan bereksperimen dengan pemrosesan batch/paralel  
-- Integrasikan langkah perbandingan ke dalam alur kerja CI/CD Anda dan hasilkan laporan otomatis untuk setiap rilis  
-
-**Butuh Bantuan?** Komunitas GroupDocs aktif dan responsif. Periksa dokumentasi, forum, atau hubungi dukungan untuk pertanyaan API spesifik.
+**Q: Is it possible to customize the look‑and‑feel of the HTML report?**  
+A: Template HTML bawaan bersifat tetap, tetapi Anda dapat memproses file yang dihasilkan (misalnya menyisipkan CSS atau JavaScript khusus) agar sesuai dengan branding Anda.
 
 ---
 
-**Last Updated:** 2025-12-20  
+**Last Updated:** 2026-03-22  
 **Tested With:** GroupDocs.Comparison 25.2 (Java)  
 **Author:** GroupDocs

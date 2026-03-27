@@ -1,19 +1,19 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
+date: '2026-03-22'
 description: Leer hoe je GroupDocs Comparison Java gebruikt voor mapvergelijking in
-  Java. Beheers bestandsaudits, versiebeheerautomatisering en prestatieoptimalisatie.
+  Java. Beheers bestandsaudits, automatisering van versiebeheer en prestatieoptimalisatie.
 keywords: java directory comparison tool, groupdocs comparison tutorial, java file
   audit automation, directory sync java, how to compare folders in java programming
-lastmod: '2025-12-20'
+lastmod: '2026-03-22'
 linktitle: Java Directory Comparison Guide
 tags:
 - directory-comparison
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs vergelijking java - Java Mapvergelijkingshulpmiddel - Complete gids'
+title: groupdocs vergelijking java - Java mapvergelijkingshulpmiddel - Complete gids
 type: docs
 url: /nl/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1
@@ -21,68 +21,68 @@ weight: 1
 
 # Java Directory Comparison Tool - Complete Gids met GroupDocs.Comparison
 
-## Inleiding
+## Introductie
 
-Heb je ooit uren besteed aan het handmatig controleren welke bestanden zijn gewijzigd tussen twee projectversies? Je bent niet de enige. Directory comparison is een van die saaie taken die je hele middag kunnen opslokken — tenzij je het automatiseert.
+Heb je ooit uren besteed aan het handmatig controleren welke bestanden zijn gewijzigd tussen twee projectversies? Je bent niet de enige. **groupdocs comparison java** maakt deze saaie taak een fluitje van een cent door je twee mappen te laten vergelijken met één API‑aanroep. Directory comparison is een van die saaie taken die je hele middag kunnen opslokken — tenzij je het automatiseert.
 
-**GroupDocs.Comparison for Java** verandert dit pijnpunt in een eenvoudige API‑aanroep. Of je nu wijzigingen bijhoudt in een enorme codebase, bestanden synchroniseert tussen omgevingen, of compliance‑audits uitvoert, deze bibliotheek doet het zware werk zodat jij dat niet hoeft te doen.
+**GroupDocs.Comparison for Java** verandert dit pijnpunt in een eenvoudige API‑aanroep. Of je nu wijzigingen in een enorme codebase bijhoudt, bestanden synchroniseert tussen omgevingen, of compliance‑audits uitvoert, deze bibliotheek doet het zware werk zodat jij dat niet hoeft te doen.
 
 In deze gids leer je hoe je geautomatiseerde directory‑vergelijkingen opzet die echt werken in real‑world scenario's. We behandelen alles, van basisconfiguratie tot prestatie‑optimalisatie voor die monster‑directories met duizenden bestanden.
 
-**Wat je onder de knie krijgt:**
-- Volledige GroupDocs.Comparison installatie (inclusief de valkuilen)
-- Stap‑voor‑stap implementatie van directory‑vergelijking
+**Wat je zult beheersen:**
+- Complete GroupDocs.Comparison installatie (inclusief de valkuilen)
+- Stap‑voor‑stap directory‑vergelijkingsimplementatie
 - Geavanceerde configuratie voor aangepaste vergelijkingsregels
 - Prestatie‑optimalisatie voor grootschalige vergelijkingen  
-- Probleemoplossing van veelvoorkomende issues (omdat ze zullen optreden)
+- Probleemoplossing van veelvoorkomende issues (omdat ze zullen gebeuren)
 - Real‑world use cases in verschillende sectoren
 
 ### Snelle Antwoorden
 - **Wat is de primaire bibliotheek?** `groupdocs comparison java`
-- **Ondersteunde Java‑versie?** Java 8 or higher
-- **Typische installatietijd?** 10–15 minutes for a basic comparison
-- **Licentie‑vereiste?** Yes – a trial or commercial license is needed
-- **Uitvoerformaten?** HTML (default) or PDF
+- **Ondersteunde Java‑versie?** Java 8 of hoger
+- **Typische installatietijd?** 10–15 minuten voor een basisvergelijking
+- **Licentievereiste?** Ja – een trial‑ of commerciële licentie is vereist
+- **Uitvoerformaten?** HTML (standaard) of PDF
 
-## Waarom Directory Comparison belangrijk is (Meer dan je denkt)
+## Waarom Directory Comparison Belangrijk Is (Meer Dan Je Denkt)
 
-Voordat we in de code duiken, laten we bespreken waarom dit belangrijk is. Directory comparison gaat niet alleen over het vinden van verschillende bestanden — het gaat om het behouden van dataintegriteit, het waarborgen van compliance, en het opsporen van die sluipende wijzigingen die je productie‑omgeving kunnen breken.
+Voordat we in de code duiken, laten we bespreken waarom dit belangrijk is. Directory comparison gaat niet alleen over het vinden van verschillende bestanden — maar ook over het behouden van dataintegriteit, het waarborgen van compliance, en het opsporen van die sluwe wijzigingen die je productieomgeving kunnen breken.
 
-Veelvoorkomende scenario's waarin je dit nodig hebt:
-- **Release Management**: Vergelijken van staging‑ versus productie‑directories vóór deployment
-- **Data Migration**: Zeker stellen dat alle bestanden correct zijn overgezet tussen systemen
+Veelvoorkomende scenario's waarin je dit nodig zult hebben:
+- **Release Management**: Het vergelijken van staging‑ versus productie‑directories vóór deployment
+- **Data Migration**: Zeker stellen dat alle bestanden correct zijn overgedragen tussen systemen
 - **Compliance Audits**: Documentwijzigingen bijhouden voor regelgevingseisen
 - **Backup Verification**: Bevestigen dat je backup‑proces daadwerkelijk heeft gewerkt
 - **Team Collaboration**: Identificeren wie wat heeft gewijzigd in gedeelde project‑directories
 
-## Voorvereisten en Installatie‑vereisten
+## Vereisten en Installatievereisten
 
-Voordat we gaan coderen, zorg dat je omgeving klaar is. Dit heb je nodig (en waarom):
+Voordat we gaan coderen, zorg ervoor dat je omgeving klaar is. Dit heb je nodig (en waarom):
 
-**Essential Requirements:**
-1. **Java 8 or higher** – GroupDocs.Comparison uses modern Java features
-2. **Maven 3.6+** – For dependency management (trust me, don't try manual JAR management)
-3. **IDE with good Java support** – IntelliJ IDEA or Eclipse recommended
-4. **At least 2 GB RAM** – Directory comparisons can be memory‑intensive
+**Essentiële vereisten:**
+1. **Java 8 of hoger** – GroupDocs.Comparison gebruikt moderne Java‑features
+2. **Maven 3.6+** – Voor dependency‑beheer (geloof me, probeer geen handmatig JAR‑beheer)
+3. **IDE met goede Java‑ondersteuning** – IntelliJ IDEA of Eclipse aanbevolen
+4. **Minimaal 2 GB RAM** – Directory‑vergelijkingen kunnen veel geheugen gebruiken
 
-**Knowledge Prerequisites:**
-- Basic Java programming (loops, conditionals, exception handling)
-- Understanding of file I/O operations
-- Familiarity with Maven dependency management
-- Basic knowledge of try‑with‑resources (we'll use this extensively)
+**Kennisvereisten:**
+- Basis Java‑programmeren (loops, conditionals, exception handling)
+- Begrip van bestands‑I/O‑operaties
+- Bekendheid met Maven dependency‑beheer
+- Basiskennis van try‑with‑resources (we gebruiken dit uitgebreid)
 
-**Optional but Helpful:**
-- Experience with logging frameworks (SLF4J/Logback)
-- Understanding of multi‑threading concepts
-- Basic knowledge of HTML (for output formatting)
+**Optioneel maar nuttig:**
+- Ervaring met logging‑frameworks (SLF4J/Logback)
+- Begrip van multi‑threading concepten
+- Basiskennis van HTML (voor output‑formattering)
 
-## Instellen van GroupDocs.Comparison voor Java
+## GroupDocs.Comparison voor Java Instellen
 
 Laten we deze bibliotheek correct integreren in je project. De installatie is eenvoudig, maar er zijn een paar valkuilen waar je op moet letten.
 
-### Maven‑configuratie
+### Maven Configuratie
 
-Add this to your `pom.xml` file – note the repository configuration, which is often missed:
+Voeg dit toe aan je `pom.xml`‑bestand – let op de repository‑configuratie, die vaak over het hoofd wordt gezien:
 
 ```xml
 <repositories>
@@ -102,23 +102,22 @@ Add this to your `pom.xml` file – note the repository configuration, which is 
 </dependencies>
 ```
 
-**Pro Tip**: Always use the latest version number from the GroupDocs website. The version shown here might not be the most recent.
+**Pro Tip**: Gebruik altijd het nieuwste versienummer van de GroupDocs‑website. De hier getoonde versie is mogelijk niet de meest recente.
 
-### Licentie‑instelling (Niet overslaan)
+### Licentie‑Instelling (Niet Overslaan)
 
-GroupDocs isn't free, but they offer several options:
-
-- **Free Trial**: 30‑day trial with full features (perfect for evaluation)
-- **Temporary License**: Extended trial for development/testing
-- **Commercial License**: For production use
+GroupDocs is niet gratis, maar ze bieden verschillende opties:
+- **Free Trial**: 30‑daagse trial met volledige functionaliteit (perfect voor evaluatie)
+- **Temporary License**: Uitgebreide trial voor ontwikkeling/testing
+- **Commercial License**: Voor productiegebruik
 
 Haal je licentie hier:
 - [Purchase a license](https://purchase.groupdocs.com/buy) for production
 - [Get a temporary license](https://purchase.groupdocs.com/temporary-license/) for extended testing
 
-### Basisinitialisatie en testen
+### Basisinitialisatie en Testen
 
-Once your dependencies are set up, test the integration:
+Zodra je dependencies zijn ingesteld, test je de integratie:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -135,7 +134,7 @@ public class Main {
 }
 ```
 
-If this runs without errors, you're ready to proceed. If not, check your Maven configuration and internet connection (GroupDocs validates licenses online).
+Als dit zonder fouten draait, ben je klaar om verder te gaan. Zo niet, controleer je Maven‑configuratie en internetverbinding (GroupDocs valideert licenties online).
 
 ## Kernimplementatie: Directory Comparison
 
@@ -143,7 +142,7 @@ Nu het hoofdonderdeel — het daadwerkelijk vergelijken van directories. We 
 
 ### Basis Directory Comparison
 
-Dit is je bread‑and‑butter implementatie die de meeste use cases afhandelt:
+Dit is je brood‑en‑boter implementatie die de meeste use cases afhandelt:
 
 #### Stap 1: Stel je paden in
 
@@ -153,9 +152,9 @@ String targetDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/target_directory";
 String outputFileName = "YOUR_OUTPUT_DIRECTORY/compare_result.html";
 ```
 
-**Important**: Use absolute paths when possible, especially in production environments. Relative paths can cause issues depending on where your application runs.
+**Belangrijk**: Gebruik waar mogelijk absolute paden, vooral in productieomgevingen. Relatieve paden kunnen problemen veroorzaken afhankelijk van waar je applicatie draait.
 
-#### Stap 2: Configureer vergelijkingsopties
+#### Stap 2: Configureer Comparison‑opties
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -166,7 +165,7 @@ compareOptions.setDirectoryCompare(true);
 compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 ```
 
-**Why HTML output?** HTML reports are human‑readable and can be viewed in any browser. Perfect for sharing results with non‑technical stakeholders.
+**Waarom HTML‑output?** HTML‑rapporten zijn mens‑leesbaar en kunnen in elke browser worden bekeken. Perfect om resultaten te delen met niet‑technische belanghebbenden.
 
 #### Stap 3: Voer de vergelijking uit
 
@@ -181,13 +180,13 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-**Why try‑with‑resources?** GroupDocs.Comparison manages file handles and memory internally. Using try‑with‑resources ensures proper cleanup, especially important for large directory comparisons.
+**Waarom try‑with‑resources?** GroupDocs.Comparison beheert intern bestands‑handles en geheugen. Het gebruik van try‑with‑resources zorgt voor juiste opruiming, vooral belangrijk bij grote directory‑vergelijkingen.
 
-### Geavanceerde configuratie‑opties
+### Geavanceerde Configuratie‑Opties
 
-De basisinstelling werkt, maar real‑world scenario's vereisen maatwerk. Zo kun je je vergelijkingen fijn afstellen:
+De basisconfiguratie werkt, maar real‑world scenario's vereisen maatwerk. Zo kun je je vergelijkingen fijn afstemmen:
 
-#### Aanpassen van uitvoerformaten
+#### Outputformaten Aanpassen
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -200,9 +199,9 @@ compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 // compareOptions.setFolderComparisonExtension(FolderComparisonExtension.PDF);
 ```
 
-#### Filteren van bestanden en directories
+#### Bestanden en Directories Filteren
 
-Sometimes you don't want to compare everything. Here's how to be selective:
+Soms wil je niet alles vergelijken. Zo kun je selectief te werk gaan:
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -214,15 +213,15 @@ compareOptions.setShowDeletedContent(false); // Don't highlight deleted files
 compareOptions.setShowInsertedContent(true); // Do highlight new files
 ```
 
-## Veelvoorkomende problemen en oplossingen
+## Veelvoorkomende Problemen en Oplossingen
 
-Laten we de problemen aanpakken die je waarschijnlijk zult tegenkomen (omdat Murphy's Law ook bij coderen geldt):
+Laten we de problemen aanpakken die je waarschijnlijk tegenkomt (omdat Murphy's Law ook op coderen van toepassing is):
 
-### Probleem 1: OutOfMemoryError bij grote directories
+### Issue 1: OutOfMemoryError bij grote directories
 
-**Symptoms**: Your application crashes with heap space errors when comparing directories with thousands of files.
+**Symptomen**: Je applicatie crasht met heap‑space fouten bij het vergelijken van directories met duizenden bestanden.
 
-**Solution**: Increase JVM heap size and process directories in batches:
+**Oplossing**: Verhoog de JVM‑heap‑grootte en verwerk directories in batches:
 
 ```java
 // JVM args: -Xmx4g -Xms2g
@@ -236,14 +235,14 @@ for (String subdir : subdirectories) {
 }
 ```
 
-### Probleem 2: FileNotFoundException ondanks correcte paden
+### Issue 2: FileNotFoundException ondanks correcte paden
 
-**Symptoms**: The paths look right, but you get file‑not‑found errors.
+**Symptomen**: De paden lijken correct, maar je krijgt file‑not‑found fouten.
 
-**Common Causes and Fixes**:
-- **Permissions**: Ensure your Java application has read access to source directories and write access to output location
-- **Special Characters**: Directory names with spaces or special characters need proper escaping
-- **Network Paths**: UNC paths might not work as expected — copy files locally first
+**Veelvoorkomende oorzaken en oplossingen**:
+- **Permissions**: Zorg ervoor dat je Java‑applicatie leesrechten heeft op de bron‑directories en schrijfrechten op de output‑locatie
+- **Special Characters**: Directory‑namen met spaties of speciale tekens moeten correct worden geescaped
+- **Network Paths**: UNC‑paden werken mogelijk niet zoals verwacht — kopieer bestanden eerst lokaal
 
 ```java
 // Better path handling
@@ -258,14 +257,14 @@ if (!Files.exists(targetPath)) {
 }
 ```
 
-### Probleem 3: Vergelijking duurt eeuwig
+### Issue 3: Vergelijking Duurt Eeuwig
 
-**Symptoms**: Your comparison runs for hours without completing.
+**Symptomen**: Je vergelijking draait urenlang zonder te voltooien.
 
-**Solutions**:
-1. **Filter unnecessary files** before comparison
-2. **Use multi‑threading** for independent subdirectories
-3. **Implement progress tracking** to monitor what's happening
+**Oplossingen**:
+1. Filter onnodige bestanden vóór vergelijking
+2. Gebruik multi‑threading voor onafhankelijke subdirectories
+3. Implementeer voortgangs‑tracking om te monitoren wat er gebeurt
 
 ```java
 // Add progress monitoring
@@ -282,11 +281,11 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-## Prestatie‑optimalisatie voor grootschalige vergelijkingen
+## Prestatie‑optimalisatie voor Grootschalige Vergelijkingen
 
-Wanneer je werkt met directories die duizenden bestanden bevatten, wordt performance cruciaal. Zo optimaliseer je:
+Wanneer je werkt met directories met duizenden bestanden, wordt prestatie cruciaal. Zo optimaliseer je:
 
-### Best practices voor geheugenbeheer
+### Best Practices voor Geheugenbeheer
 
 ```java
 // Increase heap size via JVM arguments
@@ -304,7 +303,7 @@ compareOptions = null; // Help GC
 
 ### Batch‑verwerkingsstrategie
 
-For massive directory structures, process in chunks:
+Voor enorme directory‑structuren, verwerk in delen:
 
 ```java
 public void compareDirectoriesInBatches(String sourceDir, String targetDir, int batchSize) {
@@ -326,9 +325,9 @@ public void compareDirectoriesInBatches(String sourceDir, String targetDir, int 
 }
 ```
 
-### Parallelle verwerking voor onafhankelijke directories
+### Parallel Processing voor Onafhankelijke Directories
 
-If you're comparing multiple directory pairs, do them in parallel:
+Als je meerdere directory‑paren vergelijkt, doe ze dan parallel:
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -359,13 +358,13 @@ for (Future<String> future : futures) {
 executor.shutdown();
 ```
 
-## Real‑World use cases en industriële toepassingen
+## Real‑World Use Cases en Toepassingen in de Industrie
 
-Directory comparison is not just a developer tool — it's used across industries for business‑critical processes:
+Directory comparison is niet alleen een ontwikkelaarstool — het wordt in diverse sectoren gebruikt voor bedrijfs‑kritische processen:
 
 ### Softwareontwikkeling en DevOps
 
-**Release Management**: Compare staging vs production directories before deployment to catch configuration drift:
+**Release Management**: Vergelijk staging‑ versus productie‑directories vóór deployment om configuratiedrift te detecteren:
 
 ```java
 // Automated pre-deployment check
@@ -388,9 +387,9 @@ try (Comparer comparer = new Comparer(stagingConfig, options)) {
 }
 ```
 
-### Financiën en compliance
+### Financiën en Compliance
 
-**Audit Trail Maintenance**: Financial institutions use directory comparison to track document changes for regulatory compliance:
+**Audit Trail Maintenance**: Financiële instellingen gebruiken directory comparison om documentwijzigingen bij te houden voor regelgeving‑compliance:
 
 ```java
 // Monthly compliance check
@@ -402,9 +401,9 @@ String auditReport = "/audit/compliance-changes-december-2024.html";
 performComplianceComparison(previousMonthDocs, currentMonthDocs, auditReport);
 ```
 
-### Gegevensbeheer en ETL-processen
+### Data Management en ETL Processen
 
-**Data Integrity Verification**: Ensuring data migrations completed successfully:
+**Data Integrity Verification**: Zeker stellen dat datamigraties succesvol zijn voltooid:
 
 ```java
 public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir) {
@@ -427,9 +426,9 @@ public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir)
 }
 ```
 
-### Contentbeheer en publicatie
+### Content Management en Publicatie
 
-**Version Control for Non‑Technical Teams**: Marketing and content teams can track changes in document repositories without Git knowledge:
+**Version Control for Non‑Technical Teams**: Marketing‑ en content‑teams kunnen wijzigingen in document‑repositories bijhouden zonder Git‑kennis:
 
 ```java
 // Weekly content audit for marketing team
@@ -445,13 +444,13 @@ options.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 generateContentChangeReport(lastWeekContent, currentContent, marketingReport, options);
 ```
 
-## Geavanceerde tips en best practices
+## Geavanceerde Tips en Best Practices
 
-Na het werken met directory comparison in productieomgevingen, hier enkele hard‑learned lessons:
+Na het werken met directory comparison in productieomgevingen, hier enkele hard‑geleerde lessen:
 
-### Logging en monitoring
+### Logging en Monitoring
 
-Always implement comprehensive logging:
+Implementeer altijd uitgebreide logging:
 
 ```java
 import org.slf4j.Logger;
@@ -482,9 +481,9 @@ public void compareWithLogging(String source, String target, String output) {
 }
 ```
 
-### Foutherstel en veerkracht
+### Fout‑herstel en Veerkracht
 
-Build in retry logic for transient failures:
+Implementeer retry‑logica voor tijdelijke fouten:
 
 ```java
 public void compareWithRetry(String source, String target, String output, int maxRetries) {
@@ -516,7 +515,7 @@ public void compareWithRetry(String source, String target, String output, int ma
 
 ### Configuratiebeheer
 
-Externalize settings so you can tweak them without recompiling:
+Externaliseer instellingen zodat je ze kunt aanpassen zonder opnieuw te compileren:
 
 ```java
 // application.properties
@@ -533,7 +532,7 @@ private String outputFormat;
 private int maxRetries;
 ```
 
-### Platform‑onafhankelijke padverwerking
+### Platform‑Onafhankelijke Padafhandeling
 
 ```java
 // Use platform-independent path handling
@@ -553,7 +552,7 @@ if (!Files.isWritable(outputPath.getParent())) {
 }
 ```
 
-### Tijdstempels negeren wanneer ze niet relevant zijn
+### Timestamps Negeren Wanneer Ze Niet Relevant Zijn
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -564,69 +563,49 @@ options.setIgnoreWhitespaces(true);
 options.setIgnoreFormatting(true);
 ```
 
-## Probleemoplossing van veelvoorkomende implementatie‑issues
+## Veelvoorkomende Implementatie‑Problemen Oplossen
 
-### Werkt in ontwikkeling, faalt in productie
+### Werkt in Development, Fails in Production
 
-**Symptoms**: Comparison works locally but crashes on the server.
+**Symptomen**: Vergelijking werkt lokaal maar crasht op de server.
 
-**Root Causes**:
-- Case‑sensitivity differences (Windows vs Linux)
-- Stricter file‑system permissions
-- Hard‑coded path separators (`/` vs `\`)
+**Oorzaken**:
+- Case‑sensitivity verschillen (Windows vs Linux)
+- Strengere bestands‑systeem permissies
+- Hard‑coded pad‑scheidingstekens (`/` vs `\`)
 
-**Fix**: Use `Path` and `File.separator` as shown in the *Platform‑Independent Path Handling* section above.
+**Oplossing**: Gebruik `Path` en `File.separator` zoals getoond in de *Platform‑Independent Path Handling* sectie hierboven.
 
-### Inconsistente resultaten
+### Inconsistente Resultaten
 
-**Symptoms**: Running the same comparison twice yields different outputs.
+**Symptomen**: Het twee keer uitvoeren van dezelfde vergelijking levert verschillende outputs op.
 
-**Possible Reasons**:
-- Files are being modified during the run
-- Timestamps are being considered as differences
-- Underlying file‑system metadata differs
+**Mogelijke redenen**:
+- Bestanden worden tijdens de run gewijzigd
+- Timestamps worden als verschillen beschouwd
+- Onderliggende bestands‑systeem metadata verschilt
 
-**Solution**: Configure `CompareOptions` to ignore timestamps and focus on actual content (see *Ignoring Timestamps*).
+**Oplossing**: Configureer `CompareOptions` om timestamps te negeren en te focussen op de daadwerkelijke inhoud (zie *Ignoring Timestamps*).
 
-## Veelgestelde vragen
+## Veelgestelde Vragen
 
-**Q: How do I handle directories with millions of files?**  
-A: Combine batch processing, increase JVM heap (`-Xmx`), and run sub‑directory comparisons in parallel. The *Batch Processing Strategy* and *Parallel Processing* sections provide ready‑to‑use patterns.
+**Q: Hoe ga ik om met directories met miljoenen bestanden?**  
+A: Combineer batch‑verwerking, vergroot de JVM‑heap (`-Xmx`), en voer sub‑directory vergelijkingen parallel uit. De *Batch Processing Strategy* en *Parallel Processing* secties bieden kant‑klaar patronen.
 
-**Q: Can I compare directories located on different servers?**  
-A: Yes, but network latency can dominate runtime. For best performance, copy the remote directory locally before invoking the comparison, or mount the remote share with sufficient I/O bandwidth.
+**Q: Kan ik directories op verschillende servers vergelijken?**  
+A: Ja, maar netwerklatentie kan de uitvoeringstijd domineren. Voor optimale prestaties, kopieer de remote directory lokaal voordat je de vergelijking start, of mount de remote share met voldoende I/O‑bandbreedte.
 
-**Q: Which file formats are supported by GroupDocs.Comparison?**  
-A: GroupDocs.Comparison supports a wide range of formats, including DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML, and common image types. Refer to the official documentation for the latest list.
+**Q: Welke bestandsformaten ondersteunt GroupDocs.Comparison?**  
+A: GroupDocs.Comparison ondersteunt een breed scala aan formaten, waaronder DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML en gangbare afbeeldingsformaten. Raadpleeg de officiële documentatie voor de meest recente lijst.
 
-**Q: How can I integrate this comparison into a CI/CD pipeline?**  
-A: Wrap the comparison logic in a Maven/Gradle plugin or a standalone JAR, then invoke it as a build step in Jenkins, GitHub Actions, Azure Pipelines, etc. Use the *Logging and Monitoring* example to surface results as build artifacts.
+**Q: Hoe kan ik deze vergelijking integreren in een CI/CD‑pipeline?**  
+A: Pak de vergelijkingslogica in een Maven/Gradle‑plugin of een standalone JAR, en roep het aan als een build‑stap in Jenkins, GitHub Actions, Azure Pipelines, enz. Gebruik het *Logging and Monitoring* voorbeeld om resultaten als build‑artifacts beschikbaar te maken.
 
-**Q: Is it possible to customize the look‑and‑feel of the HTML report?**  
-A: The built‑in HTML template is fixed, but you can post‑process the generated file (e.g., inject custom CSS or JavaScript) to match your branding.
-
-## Conclusie
-
-You now have a complete toolkit for implementing robust directory comparison in Java using **groupdocs comparison java**. From basic setup to production‑grade performance tuning, you’ve seen how to:
-
-- Install and license GroupDocs.Comparison
-- Perform a straightforward directory comparison
-- Customize output, filter files, and handle large data sets
-- Optimize memory usage and run comparisons in parallel
-- Apply the technique to real‑world scenarios across DevOps, finance, data migration, and content management
-- Add logging, retry logic, and external configuration for maintainability
-
-The key to success is to start simple, validate the results, and then layer on the optimizations you actually need. Once you’ve mastered the basics, you can embed this capability into automated build pipelines, compliance dashboards, or even a web UI for non‑technical users.
-
-**Next Steps**  
-- Try the sample code against a small test folder to verify the output  
-- Scale up to a larger directory and experiment with batch/parallel processing  
-- Integrate the comparison step into your CI/CD workflow and generate automated reports for every release  
-
-**Need Help?** The GroupDocs community is active and responsive. Check their documentation, forums, or reach out to support for specific API questions.
+**Q: Is het mogelijk om het uiterlijk van het HTML‑rapport aan te passen?**  
+A: Het ingebouwde HTML‑template is vast, maar je kunt het gegenereerde bestand post‑processen (bijv. aangepaste CSS of JavaScript injecteren) om aan je branding te voldoen.
 
 ---
 
-**Last Updated:** 2025-12-20  
+**Last Updated:** 2026-03-22  
 **Tested With:** GroupDocs.Comparison 25.2 (Java)  
 **Author:** GroupDocs

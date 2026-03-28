@@ -1,20 +1,20 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: Pelajari cara mendapatkan jenis file dan mengekstrak metadata dokumen
+date: '2026-03-24'
+description: Pelajari cara mendapatkan tipe file dan mengekstrak metadata dokumen
   di Java menggunakan GroupDocs.Comparison. Dapatkan jumlah halaman, ukuran, dan lainnya
   dengan contoh kode sederhana serta tips pemecahan masalah.
 keywords: java document metadata extraction, groupdocs comparison tutorial, extract
   file properties java, document info java api, how to get document metadata in java
-lastmod: '2026-01-18'
+lastmod: '2026-03-24'
 linktitle: Java Document Metadata Extraction
 tags:
 - groupdocs
 - document-processing
 - metadata-extraction
 - java-tutorial
-title: Java Dapatkan Jenis File – Panduan Ekstraksi Metadata Dokumen
+title: Java Dapatkan Tipe File – Panduan Ekstraksi Metadata Dokumen
 type: docs
 url: /id/java/document-information/extract-document-info-groupdocs-comparison-java/
 weight: 1
@@ -22,35 +22,37 @@ weight: 1
 
 # Java Get File Type – Panduan Ekstraksi Metadata Dokumen
 
-Pernahkah Anda membutuhkan cara cepat untuk mengambil informasi file dari dokumen tanpa harus membukanya? Anda tidak sendirian. Baik Anda sedang membangun sistem manajemen dokumen, perlu memvalidasi unggahan file, atau ingin mengotomatisasi alur kerja pemrosesan dokumen, **java get file type** secara programatik dapat menghemat banyak waktu.
-
-Dalam panduan ini, kami akan menunjukkan cara mengekstrak metadata dokumen (seperti tipe file, jumlah halaman, dan ukuran) menggunakan GroupDocs.Comparison untuk Java. Jangan khawatir jika Anda baru mengenal pustaka ini – kami akan membahas semuanya langkah demi langkah, termasuk jebakan umum dan cara menghindarinya.
+Pernahkah Anda perlu dengan cepat mengambil informasi file dari dokumen tanpa membukanya? Baik Anda sedang membangun sistem manajemen dokumen, memvalidasi unggahan, atau mengotomatiskan alur kerja, **you can java get file type** dan mengambil properti penting lainnya hanya dalam beberapa baris kode. Dalam panduan ini kami akan menunjukkan cara **java get file type**, **java read file size**, dan **java get page count** menggunakan GroupDocs.Comparison for Java, serta tips untuk **java extract pdf metadata** dan penanganan kasus tepi.
 
 ## Jawaban Cepat
-- **Pustaka apa yang dapat saya gunakan untuk java get file type?** GroupDocs.Comparison untuk Java.  
+- **Library apa yang dapat saya gunakan untuk java get file type?** GroupDocs.Comparison for Java.  
 - **Apakah saya juga dapat java extract pdf metadata?** Ya – API yang sama bekerja untuk PDF dan banyak format lainnya.  
-- **Apakah saya memerlukan lisensi?** Lisensi percobaan atau sementara cukup untuk pengembangan; lisensi penuh diperlukan untuk produksi.  
-- **Versi Java apa yang dibutuhkan?** JDK 8+ (JDK 11+ direkomendasikan).  
-- **Apakah kode ini thread‑safe?** Buat instance `Comparer` terpisah per thread.
+- **Apakah saya membutuhkan lisensi?** Lisensi percobaan atau sementara dapat digunakan untuk pengembangan; lisensi penuh diperlukan untuk produksi.  
+- **Versi Java apa yang dibutuhkan?** JDK 8+ (JDK 11+ disarankan).  
+- **Apakah kode ini thread‑safe?** Buat instance `Comparer` terpisah per thread.  
+
+## Cara java get file type dan mengekstrak metadata dokumen
+Sebelum kita masuk ke kode, mari klarifikasi mengapa **java file type detection** penting dan bagaimana metadata yang Anda dapatkan (tipe file, jumlah halaman, ukuran file) dapat mendukung skenario dunia nyata.
 
 ## Mengapa Mengekstrak Metadata Dokumen?
 
 Sebelum masuk ke kode, mari bahas mengapa hal ini penting dalam aplikasi dunia nyata:
 
 - **Sistem Manajemen Dokumen** – secara otomatis mengkategorikan dan mengindeks file berdasarkan properti mereka.  
-- **Validasi Unggahan File** – memeriksa tipe dan ukuran file sebelum diproses.  
-- **Analisis Konten** – menyaring dan mengurutkan dokumen berdasarkan panjang, format, atau kriteria lainnya.  
+- **Validasi Unggahan File** – memeriksa tipe file dan ukuran sebelum diproses.  
+- **Analisis Konten** – menyaring dan mengurutkan dokumen berdasarkan panjang, format, atau kriteria lain.  
 - **Legal & Kepatuhan** – memastikan dokumen memenuhi persyaratan tertentu.  
-- **Optimisasi Kinerja** – pra‑proses hanya file yang memenuhi kriteria tertentu.
+- **Optimasi Kinerja** – pra‑proses hanya file yang memenuhi kriteria tertentu.
 
 Intinya? Ekstraksi metadata membantu Anda membuat keputusan yang lebih cerdas tentang cara menangani dokumen Anda.
 
 ## Apa yang Akan Anda Pelajari dalam Panduan Ini
 
-Setelah menyelesaikan tutorial ini, Anda akan dapat:
+Pada akhir tutorial ini, Anda akan dapat:
 
-- Menyiapkan GroupDocs.Comparison untuk Java dalam proyek Anda.  
-- **java get file type** dan properti dokumen penting lainnya dengan hanya beberapa baris kode.  
+- Menyiapkan GroupDocs.Comparison for Java dalam proyek Anda.  
+- **java get file type** dan properti dokumen penting lainnya hanya dengan beberapa baris kode.  
+- Menggunakan **java read file size** dan **java get page count** untuk menggerakkan logika bisnis.  
 - Menangani berbagai format file dan kasus tepi.  
 - Memecahkan masalah umum yang mungkin Anda temui.  
 - Menerapkan praktik terbaik untuk lingkungan produksi.
@@ -59,7 +61,7 @@ Setelah menyelesaikan tutorial ini, Anda akan dapat:
 
 ### Perangkat Lunak dan Alat yang Diperlukan
 
-- **Java Development Kit (JDK)** – Versi 8 atau lebih tinggi (kami merekomendasikan JDK 11+ untuk performa lebih baik).  
+- **Java Development Kit (JDK)** – Versi 8 atau lebih tinggi (kami merekomendasikan JDK 11+ untuk kinerja yang lebih baik).  
 - **Maven** – Untuk manajemen dependensi dan membangun proyek Anda.  
 - **IDE** – IDE Java apa pun seperti IntelliJ IDEA, Eclipse, atau VS Code.
 
@@ -73,15 +75,15 @@ Anda tidak perlu menjadi ahli Java, tetapi memiliki pemahaman dasar tentang:
 
 ### Mengapa GroupDocs.Comparison?
 
-Anda mungkin bertanya – mengapa menggunakan GroupDocs.Comparison untuk ekstraksi metadata? Meskipun pustaka ini lebih dikenal untuk perbandingan dokumen, ia juga menyediakan kemampuan ekstraksi informasi dokumen yang sangat baik. Selain itu, jika Anda nanti membutuhkan fitur perbandingan, semuanya sudah siap!
+Anda mungkin bertanya-tanya – mengapa menggunakan GroupDocs.Comparison untuk ekstraksi metadata? Meskipun biasanya dikenal untuk perbandingan dokumen, ia juga menyediakan kemampuan ekstraksi informasi dokumen yang luar biasa. Selain itu, jika Anda nanti membutuhkan fitur perbandingan, Anda sudah siap!
 
 ## Menyiapkan GroupDocs.Comparison untuk Java
 
-Mari konfigurasi proyek Anda dengan benar. Langkah ini krusial – kesalahan pada dependensi adalah salah satu masalah paling umum yang dihadapi pengembang.
+Mari konfigurasikan proyek Anda dengan benar. Langkah ini penting – kesalahan dalam dependensi adalah salah satu masalah paling umum yang dihadapi pengembang.
 
 ### Langkah 1: Konfigurasi Maven
 
-Tambahkan ini ke file `pom.xml` Anda (pastikan ditempatkan di bagian yang tepat):
+Tambahkan ini ke file `pom.xml` Anda (pastikan menempatkannya di bagian yang tepat):
 
 ```xml
 <repositories>
@@ -100,14 +102,14 @@ Tambahkan ini ke file `pom.xml` Anda (pastikan ditempatkan di bagian yang tepat)
 </dependencies>
 ```
 
-**Tip pro**: Selalu periksa nomor versi terbaru di situs GroupDocs – menggunakan versi usang dapat menyebabkan masalah kompatibilitas.
+**Tips pro**: Selalu periksa nomor versi terbaru di situs web GroupDocs – menggunakan versi lama dapat menyebabkan masalah kompatibilitas.
 
 ### Langkah 2: Pengaturan Lisensi (Jangan Lewatkan Ini!)
 
-GroupDocs.Comparison bukan pustaka gratis, tetapi Anda memiliki beberapa opsi:
+GroupDocs.Comparison bukan library gratis, tetapi Anda memiliki pilihan:
 
-1. **Free Trial**: Sempurna untuk pengujian dan proyek kecil. Unduh dari [halaman free trial](https://releases.groupdocs.com/comparison/java/)  
-2. **Temporary License**: Bagus untuk pengembangan dan evaluasi. Ajukan [di sini](https://purchase.groupdocs.com/temporary-license/)  
+1. **Free Trial**: Sempurna untuk pengujian dan proyek kecil. Unduh dari [halaman free trial](https://releases.groupdocs.com/comparison/java/)
+2. **Temporary License**: Bagus untuk pengembangan dan evaluasi. Ajukan [di sini](https://purchase.groupdocs.com/temporary-license/)
 3. **Full License**: Untuk penggunaan produksi. [Beli di sini](https://purchase.groupdocs.com/buy)
 
 ### Langkah 3: Verifikasi Pengaturan Anda
@@ -125,13 +127,13 @@ public class SetupTest {
 }
 ```
 
-## Panduan Implementasi: Ekstraksi Metadata Dokumen Langkah demi Langkah
+## Panduan Implementasi: Mengekstrak Metadata Dokumen Langkah demi Langkah
 
-Sekarang bagian yang menyenangkan – mari tulis kode yang benar‑benar berguna!
+Sekarang bagian yang menyenangkan – mari menulis kode yang benar‑benar berguna!
 
 ### java get file type – Inisialisasi Objek Comparer
 
-Kelas `Comparer` adalah pintu gerbang ke informasi dokumen. Berikut cara menyiapkannya dengan benar:
+Kelas `Comparer` adalah gerbang Anda ke informasi dokumen. Berikut cara menyiapkannya dengan benar:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -149,9 +151,9 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 - Path harus mengarah ke dokumen Anda yang sebenarnya.  
 - Penanganan error menangkap masalah seperti file tidak ditemukan atau masalah akses.
 
-### Dapatkan Objek Document Information
+### Dapatkan Objek Informasi Dokumen
 
-Selanjutnya, kita ambil objek info dokumen yang berisi semua metadata:
+Selanjutnya, kami mengambil objek informasi dokumen yang berisi semua metadata kami:
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
@@ -168,11 +170,11 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 **Poin penting:**  
 - `getSource()` mengambil dokumen sumber.  
 - `getDocumentInfo()` mengembalikan antarmuka yang berisi semua metadata.  
-- Try‑with‑resources lain memastikan pembersihan yang tepat.
+- Try‑with‑resources lain memastikan kami membersihkan dengan benar.
 
-### Ekstrak Data Penting
+### Ekstrak Informasi Penting
 
-Sekarang mari ambil metadata yang sebenarnya:
+Sekarang mari ambil metadata sebenarnya:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -195,12 +197,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 
 **Apa yang dikembalikan setiap metode:**  
 - `getFileType().getFileFormat()`: Format file (DOCX, PDF, TXT, dll.).  
-- `getPageCount()`: Total jumlah halaman.  
-- `getSize()`: Ukuran file dalam byte.
+- `getPageCount()`: Total jumlah halaman – ini adalah **java get page count** yang sering Anda butuhkan.  
+- `getSize()`: Ukuran file dalam byte – berguna untuk operasi **java read file size**.
 
 ## Contoh Dunia Nyata: Implementasi Lengkap
 
-Berikut contoh yang lebih robust yang dapat Anda gunakan langsung dalam proyek:
+Berikut contoh yang lebih kuat yang dapat Anda gunakan dalam proyek Anda:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -253,9 +255,9 @@ public class DocumentMetadataExtractor {
 
 ## Masalah Umum dan Solusinya
 
-### Masalah 1: Error “File Not Found”
+### Masalah 1: Kesalahan "File Not Found"
 
-**Gejala**: Exception dilempar saat menginisialisasi Comparer  
+**Gejala**: Pengecualian dilempar saat menginisialisasi Comparer  
 **Solusi**: Selalu validasi path file dan keberadaannya:
 
 ```java
@@ -271,7 +273,7 @@ if (!Files.isReadable(filePath)) {
 ### Masalah 2: Masalah Memori dengan File Besar
 
 **Gejala**: OutOfMemoryError atau kinerja lambat  
-**Solusi**: Proses file satu per satu dan pastikan pembersihan sumber daya yang tepat:
+**Solusi**: Proses file secara individual dan pastikan pembersihan sumber daya yang tepat:
 
 ```java
 // Always use try-with-resources
@@ -283,7 +285,7 @@ try (Comparer comparer = new Comparer(filePath)) {
 
 ### Masalah 3: Format File Tidak Didukung
 
-**Gejala**: Exception saat mencoba memproses file tertentu  
+**Gejala**: Pengecualian saat mencoba memproses file tertentu  
 **Solusi**: Periksa format yang didukung terlebih dahulu:
 
 ```java
@@ -295,7 +297,7 @@ public static boolean isSupportedFormat(String filePath) {
 
 ### Masalah 4: Masalah Lisensi di Produksi
 
-**Gejala**: Watermark atau pembatasan fungsionalitas  
+**Gejala**: Watermark atau batasan fungsionalitas  
 **Solusi**: Pastikan lisensi Anda diterapkan dengan benar:
 
 ```java
@@ -326,7 +328,7 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 
 ### 2. Strategi Penanganan Error
 
-Implementasikan penanganan error yang komprehensif:
+Terapkan penanganan error yang komprehensif:
 
 ```java
 public DocumentInfo extractSafely(String filePath) {
@@ -345,7 +347,7 @@ public DocumentInfo extractSafely(String filePath) {
 }
 ```
 
-### 3. Optimisasi Kinerja
+### 3. Optimasi Kinerja
 
 Untuk memproses banyak file, pertimbangkan batching:
 
@@ -361,21 +363,21 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 ## Kapan Menggunakan Ini vs. Pendekatan Lain
 
 **Gunakan GroupDocs.Comparison ketika:**  
-- Anda memerlukan ekstraksi metadata yang handal dari berbagai format Office.  
+- Anda membutuhkan ekstraksi metadata yang handal dari berbagai format Office.  
 - Anda mungkin juga membutuhkan fitur perbandingan dokumen di kemudian hari.  
-- Anda bekerja dengan dokumen kompleks yang memerlukan perhitungan halaman yang akurat.
+- Anda bekerja dengan dokumen kompleks yang memerlukan penghitung halaman yang akurat.
 
 **Pertimbangkan alternatif ketika:**  
 - Anda hanya membutuhkan info file dasar (gunakan `java.nio.file.Files` untuk ukuran, tanggal).  
 - Anda bekerja dengan file teks sederhana (API Java bawaan sudah cukup).  
-- Anggaran menjadi kendala utama (cari alternatif open‑source terlebih dahulu).
+- Anggaran menjadi kendala utama (jelajahi alternatif open‑source terlebih dahulu).
 
 ## Panduan Pemecahan Masalah
 
-### Masalah: Kode berhasil dikompilasi tetapi melempar exception saat runtime
+### Masalah: Kode berhasil dikompilasi tetapi melempar pengecualian runtime
 
-**Periksa hal berikut:**  
-1. Apakah lisensi Anda sudah dikonfigurasi dengan benar?  
+**Periksa hal-hal berikut:**  
+1. Apakah lisensi Anda dikonfigurasi dengan benar?  
 2. Apakah Anda menggunakan path file yang tepat?  
 3. Apakah Anda memiliki izin baca pada file?  
 4. Apakah format file memang didukung?
@@ -384,13 +386,13 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 
 **Solusi:**  
 1. Pastikan Anda menggunakan try‑with‑resources.  
-2. Proses file satu per satu, bukan memuat banyak sekaligus.  
+2. Proses file satu per satu alih‑alih memuat banyak sekaligus.  
 3. Periksa apakah ada referensi statis yang menahan objek.
 
 ### Masalah: Beberapa bidang metadata mengembalikan null
 
 **Ini normal untuk:**  
-- File yang tidak menyimpan jenis metadata tersebut.  
+- File yang tidak mengandung jenis metadata tersebut.  
 - File yang rusak atau tidak lengkap.  
 - Variasi format file yang tidak didukung.  
 
@@ -398,56 +400,56 @@ Selalu periksa nilai null sebelum menggunakan metadata.
 
 ## Kesimpulan dan Langkah Selanjutnya
 
-Anda kini memiliki fondasi yang kuat untuk mengekstrak metadata dokumen menggunakan GroupDocs.Comparison untuk Java! Berikut yang telah kami bahas:
+Anda kini memiliki fondasi yang kuat untuk mengekstrak metadata dokumen menggunakan GroupDocs.Comparison for Java! Berikut yang telah kami bahas:
 
-✅ Menyiapkan pustaka dan dependensi dengan benar  
-✅ **java get file type** dan properti dokumen kunci lainnya  
-✅ Menangani error umum dan kasus tepi  
-✅ Praktik terbaik untuk lingkungan produksi  
-✅ Panduan pemecahan masalah untuk isu‑isu tipikal  
+- ✅ Menyiapkan library dan dependensi dengan benar  
+- ✅ **java get file type** dan properti dokumen penting lainnya seperti **java read file size** dan **java get page count**  
+- ✅ Menangani error umum dan kasus tepi  
+- ✅ Praktik terbaik untuk lingkungan produksi  
+- ✅ Panduan pemecahan masalah untuk isu umum  
 
 ### Apa Selanjutnya?
 
-Setelah menguasai ekstraksi metadata, pertimbangkan untuk mengeksplor:
+Sekarang Anda telah menguasai ekstraksi metadata, pertimbangkan untuk menjelajahi:  
 
 - **Fitur perbandingan dokumen** untuk melacak perubahan.  
 - **Integrasi dengan Spring Boot** untuk aplikasi web.  
 - **Pemrosesan batch** untuk menangani banyak file secara efisien.  
-- **Ekstraksi metadata khusus** untuk tipe file tertentu.
+- **Ekstraksi metadata khusus** untuk tipe file tertentu, termasuk **java extract pdf metadata**.
 
 Ingin mendalami lebih jauh? Lihat [dokumentasi resmi GroupDocs](https://docs.groupdocs.com/comparison/java/) untuk fitur lanjutan dan contoh.
 
 ## Pertanyaan yang Sering Diajukan
 
-**T: Bisakah saya mengekstrak metadata dari dokumen yang dilindungi password?**  
-J: Ya, tetapi Anda harus menyediakan password saat menginisialisasi objek `Comparer`. Gunakan konstruktor overload yang menerima load options.
+**T: Apakah saya dapat mengekstrak metadata dari dokumen yang dilindungi kata sandi?**  
+J: Ya, tetapi Anda harus menyediakan kata sandi saat menginisialisasi objek `Comparer`. Gunakan konstruktor yang di‑overload yang menerima opsi pemuatan.
 
-**T: Format file apa saja yang didukung untuk ekstraksi metadata?**  
-J: GroupDocs.Comparison mendukung sebagian besar format dokumen umum termasuk DOCX, PDF, XLSX, PPTX, TXT, RTF, dan banyak lainnya. Lihat dokumentasi mereka untuk daftar lengkap.
+**T: Format file apa yang didukung untuk ekstraksi metadata?**  
+J: GroupDocs.Comparison mendukung sebagian besar format dokumen umum termasuk DOCX, PDF, XLSX, PPTX, TXT, RTF, dan banyak lainnya. Periksa dokumentasi mereka untuk daftar lengkap.
 
-**T: Apakah ada cara mengekstrak properti khusus dari dokumen Office?**  
-J: Informasi dokumen dasar mencakup properti standar. Untuk properti khusus, Anda mungkin perlu menjelajahi pustaka GroupDocs lain atau menggabungkannya dengan alat tambahan.
+**T: Apakah ada cara untuk mengekstrak properti khusus dari dokumen Office?**  
+J: Informasi dokumen dasar terutama mencakup properti standar. Untuk properti khusus, Anda mungkin perlu menjelajahi library GroupDocs tambahan atau menggabungkannya dengan alat lain.
 
 **T: Bagaimana cara menangani file sangat besar tanpa kehabisan memori?**  
-J: Selalu gunakan try‑with‑resources, proses file satu per satu, dan pertimbangkan pendekatan streaming untuk pemrosesan batch. Pastikan JVM Anda memiliki heap yang cukup.
+J: Selalu gunakan try‑with‑resources, proses file secara individual, dan pertimbangkan pendekatan streaming untuk pemrosesan batch. Juga pastikan JVM Anda memiliki ruang heap yang cukup.
 
-**T: Bisakah ini bekerja dengan dokumen yang disimpan di cloud storage?**  
+**T: Apakah ini dapat bekerja dengan dokumen yang disimpan di penyimpanan cloud?**  
 J: Ya, tetapi Anda harus mengunduh file secara lokal terlebih dahulu atau menggunakan pendekatan berbasis stream. GroupDocs bekerja dengan file lokal dan stream.
 
-**T: Apa yang harus saya lakukan jika mendapatkan error lisensi?**  
-J: Pastikan lisensi diterapkan dengan benar saat aplikasi mulai dan lisensi belum kedaluwarsa. Hubungi dukungan GroupDocs jika masalah berlanjut.
+**T: Apa yang harus saya lakukan jika mendapatkan kesalahan lisensi?**  
+J: Pastikan Anda telah menerapkan lisensi dengan benar saat aplikasi dimulai dan lisensi Anda belum kedaluwarsa. Hubungi dukungan GroupDocs jika masalah berlanjut.
 
 **T: Apakah aman digunakan dalam aplikasi multi‑thread?**  
-J: Ya, tetapi buat instance `Comparer` terpisah untuk setiap thread. Jangan bagikan instance antar thread.
+J: Ya, tetapi buat instance `Comparer` terpisah untuk setiap thread. Jangan berbagi instance antar thread.
 
 **Sumber Daya Tambahan**  
 - **Dokumentasi**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **Referensi API**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
-- **Dukungan Komunitas**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
-- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+- **Referensi API**: [Dokumentasi API Lengkap](https://reference.groupdocs.com/comparison/java/)  
+- **Dukungan Komunitas**: [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)  
+- **Free Trial**: [Unduh dan Uji](https://releases.groupdocs.com/comparison/java/)
 
----
+---  
 
-**Terakhir Diperbarui:** 2026-01-18  
+**Terakhir Diperbarui:** 2026-03-24  
 **Diuji Dengan:** GroupDocs.Comparison 25.2  
-**Penulis:** GroupDocs  
+**Penulis:** GroupDocs

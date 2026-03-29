@@ -1,68 +1,68 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
-description: GroupDocs.Comparison API を使用して Java でドキュメントを比較する方法を学びます。Java で複数ファイルやパスワード保護されたドキュメントを比較する方法も含まれます。コード、ベストプラクティス、トラブルシューティングを含むステップバイステップガイドです。
+date: '2026-02-23'
+description: GroupDocs.Comparison API を使用して Java でドキュメントを比較する方法を学びましょう。Java で複数ファイルやパスワード保護されたドキュメントを比較する方法を含みます。コード、ベストプラクティス、トラブルシューティングを含むステップバイステップのガイドです。
 keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
   in java, java compare multiple files, java compare password protected, Java file
   comparison library, how to compare Word documents in Java
-lastmod: '2025-12-21'
+lastmod: '2026-02-23'
 linktitle: Java Document Comparison Tutorial
 tags:
 - document-comparison
 - groupdocs
 - java-tutorial
 - api-integration
-title: Javaでドキュメントを比較 – GroupDocs API 完全ガイド
+title: Javaで文書を比較 – GroupDocs API 完全ガイド
 type: docs
 url: /ja/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/
 weight: 1
 ---
 
-# Javaでドキュメントを比較 – GroupDocs API 完全ガイド
+# Javaで文書を比較する – GroupDocs API 完全ガイド
 
 ## はじめに
 
-手作業で2つのドキュメントを行ごとに比較し、重要な違いを見逃したことはありませんか？ あなただけではありません。**compare documents in java** は、メタデータを保持したり、パスワードで保護されたファイルを扱ったり、一度に多数のファイルを比較したりする必要があるときに共通の課題です。
+手作業で文書を1行ずつ比較し、重要な差分を見逃したことはありませんか？ あなたは決して一人ではありません。**compare documents in java** は、メタデータを保持したり、パスワード保護されたファイルを扱ったり、複数のファイルを同時に比較したりする必要があるときに直面する一般的な課題です。
 
-**ポイントは**、多くの開発者が最初から作り直す（時間がかかる）か、書式やメタデータ、セキュリティ設定を無視する基本的な diff ツールを使うかのどちらかで苦労していることです。そこで **GroupDocs.Comparison for Java** が登場します。
+**ポイント**: 多くの開発者は、ゼロから実装しようとして時間がかかるか、書式やメタデータ、セキュリティ設定を無視する基本的な diff ツールを使うかのどちらかで苦労しています。そこで **GroupDocs.Comparison for Java** が登場します。
 
-この包括的なチュートリアルでは、Java アプリケーションに堅牢なドキュメント比較機能を実装する方法を学びます。基本的なセットアップから高度なメタデータ処理、実際に本番環境で使える実例まで網羅します。最後まで読むと、以下ができるようになります：
+この包括的なチュートリアルでは、Java アプリケーションに堅牢な文書比較機能を実装する方法を学びます。基本的なセットアップから高度なメタデータ処理、実際に本番環境で使えるサンプルまで網羅します。最後まで読めば、以下ができるようになります。
 
 - Java プロジェクトに GroupDocs.Comparison を設定する（思ったより簡単です）  
 - **compare documents in java** を実行し、メタデータの完全性を保持する  
 - **java compare multiple files** や **java compare password protected** のシナリオに対応する  
-- 大規模ドキュメント処理のパフォーマンスを最適化する  
+- 大規模文書処理のパフォーマンスを最適化する  
 
-Java アプリでドキュメント比較を楽にしたいですか？ それでは始めましょう！
+Java アプリで文書比較を楽にしたいですか？ それでは始めましょう！
 
 ## クイック回答
-- **Java でドキュメントを比較できるライブラリは？** GroupDocs.Comparison for Java  
-- **複数ファイルを同時に比較できますか？** はい – 必要なだけターゲットドキュメントを追加できます  
-- **パスワード保護されたドキュメントはどう扱いますか？** `LoadOptions` にパスワードを指定します  
+- **Java で文書を比較できるライブラリは？** GroupDocs.Comparison for Java  
+- **複数ファイルを同時に比較できますか？** はい – 必要なだけターゲット文書を追加できます  
+- **パスワード保護された文書はどう扱いますか？** `LoadOptions` にパスワードを指定します  
 - **本番環境でライセンスは必要ですか？** 有効な GroupDocs ライセンスを適用すれば透かしと制限が解除されます  
-- **必要な Java バージョンは？** JDK 8+、JDK 11+ 推奨  
+- **必要な Java バージョンは？** JDK 8+、推奨は JDK 11+  
 
 ## **compare documents in java** とは？
-Java でドキュメントを比較するとは、ライブラリを使って 2 つ以上のファイル間のテキスト変更、書式編集、メタデータ更新などの差分をプログラム上で検出することです。GroupDocs.Comparison はその複雑さを抽象化し、変更点をハイライトした差分ドキュメントを生成するシンプルな API を提供します。
+Java で文書を比較するとは、ライブラリを使って 2 つ以上のファイル間のテキスト変更、書式編集、メタデータ更新などの差分をプログラム上で検出することです。GroupDocs.Comparison はその複雑さを抽象化し、変更点をハイライトした diff 文書を生成するシンプルな API を提供します。
 
 ## なぜ GroupDocs.Comparison for Java を使うのか？
 - **豊富なフォーマット対応** – DOCX、PDF、XLSX、PPTX、TXT など多数  
 - **メタデータ処理** – 結果にソース、ターゲット、またはメタデータなしを選択可能  
 - **パスワード対応** – 手動復号せずに保護ファイルを開くことが可能  
-- **スケーラブルなパフォーマンス** – バッチ処理、非同期実行、メモリ効率の高い設計  
+- **スケーラブルなパフォーマンス** – バッチ処理、非同期実行、メモリ効率の設計  
 
 ## 前提条件
 
 - **Java 環境:** JDK 8+（JDK 11+ 推奨）、お好みの IDE、Maven（または Gradle）  
-- **GroupDocs.Comparison ライブラリ:** バージョン 25.2 以降（常に最新を取得）  
+- **GroupDocs.Comparison ライブラリ:** バージョン 25.2 以降（常に最新を取得してください）  
 - **ライセンス:** 無料トライアル、30 日間の一時ライセンス、または商用ライセンス  
 
 ## プロジェクトへの GroupDocs.Comparison 設定
 
 ### Maven 設定
 
-まずは `pom.xml` に GroupDocs リポジトリと依存関係を追加します。多くのチュートリアルが不必要に複雑に見せますが、実際はとてもシンプルです：
+まずは `pom.xml` に GroupDocs リポジトリと依存関係を追加します。多くのチュートリアルが不必要に複雑にしていますが、実際はとてもシンプルです。
 
 ```xml
 <repositories>
@@ -82,35 +82,35 @@ Java でドキュメントを比較するとは、ライブラリを使って 2 
 </dependencies>
 ```
 
-**プロのコツ:** 常に最新バージョン番号を [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) で確認してください。新バージョンにはパフォーマンス改善やバグ修正が含まれていることが多く、トラブル回避に役立ちます。
+**プロのコツ:** 最新バージョン番号は必ず [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) で確認してください。新バージョンにはパフォーマンス向上やバグ修正が含まれていることが多く、トラブル回避につながります。
 
-### ライセンスの取得
+### ライセンス取得
 
 多くの開発者が気付いていないのは、GroupDocs.Comparison をすぐに無料トライアルで試せることです。クレジットカード不要、条件なしで始められます。
 
 **選択肢:**
-1. **無料トライアル** – テストや小規模プロジェクトに最適。ダウンロードしてすぐにコーディング開始！  
-2. **一時ライセンス** – 評価期間を延長したいですか？ 30 日間の一時ライセンスは [こちら](https://purchase.groupdocs.com/temporary-license/) から取得  
-3. **商用ライセンス** – 本番環境向けに準備ができましたか？ 価格は [こちら](https://purchase.groupdocs.com/buy)  
+1. **無料トライアル** – テストや小規模プロジェクトに最適。ダウンロードしてすぐコーディング！  
+2. **一時ライセンス** – 評価期間を延長したい場合は 30 日間の一時ライセンスを [こちら](https://purchase.groupdocs.com/temporary-license/) から取得  
+3. **商用ライセンス** – 本番環境向けは [こちら](https://purchase.groupdocs.com/buy) で価格を確認  
 
-無料トライアルはすべての機能が利用可能ですが、出力ファイルに透かしが付加されます。開発・テスト段階では通常問題ありません。
+無料トライアルはすべての機能が利用可能ですが、出力ファイルに透かしが入ります。開発・テスト段階では通常問題ありません。
 
-## ドキュメント比較実装：完全ガイド
+## 文書比較実装：完全ウォークスルー
 
-さあ、本題です！ 完全なドキュメント比較ソリューションをステップバイステップで構築します。「やり方」だけでなく、各決定の「理由」も解説します。
+さあ本題です！ 完全な文書比較ソリューションをステップバイステップで構築します。実装だけでなく、各決定の「なぜ」も解説します。
 
-### メタデータソースの理解（重要です！）
+### メタデータソースの理解（重要ポイント！）
 
-コーディングを始める前に、開発者がよく躓くメタデータソースについて説明します。**compare documents in java** を行う際、結果にどのドキュメントのメタデータ（作成者、作成日、カスタムプロパティなど）を保持するかを決める必要があります。
+コーディング前に、開発者がよく躓くメタデータソースについて説明します。**compare documents in java** を行う際、結果にどの文書のメタデータ（作成者、作成日、カスタムプロパティなど）を保持するかを選択する必要があります。
 
-GroupDocs.Comparison では次の 3 つのオプションがあります：
-- **SOURCE** – 元ドキュメントのメタデータを使用  
-- **TARGET** – 比較対象ドキュメントのメタデータを使用  
+GroupDocs.Comparison では次の 3 つのオプションがあります:
+- **SOURCE** – 元文書のメタデータを使用  
+- **TARGET** – 比較対象文書のメタデータを使用  
 - **NONE** – 結果からすべてのメタデータを除去  
 
-多くの業務アプリでは **SOURCE** を選択して一貫性を保ちます。
+多くの業務アプリでは **SOURCE** を選んで一貫性を保ちます。
 
-### ステップバイステップ実装
+### 手順別実装
 
 再利用可能なユーティリティを作成し、どのプロジェクトにも組み込めるようにします。
 
@@ -126,7 +126,7 @@ import java.io.IOException;
 
 #### 手順 2: Comparer インスタンスの作成
 
-ここからが本番です。`Comparer` クラスがすべての比較操作のエントリーポイントになります：
+ここからが本番です。`Comparer` クラスがすべての比較操作のエントリーポイントになります。
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
@@ -134,15 +134,15 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 }
 ```
 
-**なぜ try‑with‑resources を使うのか？** `Comparer` は `AutoCloseable` を実装しているため、使用後にリソースが自動的に解放されます。大量のドキュメントを処理する際のメモリリーク防止に重要です。
+**try‑with‑resources を使う理由**: `Comparer` は `AutoCloseable` を実装しているため、使用後にリソースが自動的に解放されます。大量の文書を処理する際のメモリリーク防止に重要です。
 
-#### 手順 3: 比較対象ドキュメントの追加
+#### 手順 3: 比較対象文書の追加
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**便利なポイント**: `add()` を複数回呼び出すことで、ソースに対して複数のターゲットドキュメントを一括比較できます：
+**便利なポイント**: `add()` を複数回呼び出すことで、ソース文書に対して複数のターゲット文書を一括比較できます。
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -152,7 +152,7 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target3.docx");
 
 #### 手順 4: メタデータ処理の設定と比較実行
 
-メタデータソースを設定し、実際の比較を実行します：
+メタデータソースを指定し、実際の比較を実行します。
 
 ```java
 final Path resultPath = comparer.compare("output/comparison_result.docx",
@@ -161,14 +161,14 @@ final Path resultPath = comparer.compare("output/comparison_result.docx",
                 .build());
 ```
 
-**ここで何が起きているか？**  
-1. すべての追加ドキュメントをソースと比較  
+**ここで何が起きているか**:
+1. すべての追加文書をソースに対して比較  
 2. 結果を指定パスに保存  
-3. 最終結果に **SOURCE** のメタデータを使用  
+3. 最終結果に **SOURCE** 文書のメタデータを使用  
 
 ### 完全動作サンプル
 
-実際に呼び出せるメソッドとしてまとめます：
+実際に呼び出せるメソッドとしてまとめました。
 
 ```java
 public class DocumentComparison {
@@ -196,7 +196,7 @@ public class DocumentComparison {
 
 ## よくある落とし穴と回避策
 
-数百人の開発者を支援してきた経験から、繰り返し見られる問題とその解決策をまとめました。
+数百人の開発者を支援してきた経験から、頻出する問題とその対処法をまとめました。
 
 ### ファイルパスの問題
 
@@ -213,8 +213,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### メモリ管理の問題
 
-**問題**: 大きなドキュメントを比較するとメモリ不足になる  
-**解決策**: JVM ヒープサイズを増やし、適切なリソース管理を行う
+**問題**: 大きな文書を比較するとメモリ不足になる  
+**解決策**: JVM ヒープサイズを増やし、リソースは try‑with‑resources で確実に解放する
 
 ```bash
 # Add these JVM arguments when running your application
@@ -223,8 +223,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### メタデータ処理のミス
 
-**問題**: 比較中に重要なメタデータが失われる  
-**解決策**: デフォルトに頼らず、必ずメタデータタイプを明示的に設定する
+**問題**: 比較後に重要なメタデータが失われる  
+**解決策**: デフォルトに任せず、必ずメタデータタイプを明示的に設定する
 
 ```java
 // Always be explicit about metadata handling
@@ -236,7 +236,7 @@ SaveOptions saveOptions = new SaveOptions.Builder()
 ### ライセンス設定の問題
 
 **問題**: 本番環境で透かしが表示される  
-**解決策**: `Comparer` インスタンスを作成する前にライセンスが正しくロードされているか確認する
+**解決策**: `Comparer` インスタンスを作成する前に、ライセンスが正しくロードされていることを確認する
 
 ```java
 // Load license at application startup
@@ -246,11 +246,11 @@ license.setLicense("path/to/your/license.lic");
 
 ## 本番環境でのベストプラクティス
 
-実務経験に基づく、アマチュア実装と本番レベル実装を分けるポイントをご紹介します。
+実務で差が出るポイントをまとめました。
 
-### 実用的な例外処理
+### 意味のある例外処理
 
-例外を捕捉するだけでなく、意味のある処理を行いましょう：
+例外を捕捉するだけでなく、適切に対処しましょう。
 
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
@@ -276,29 +276,29 @@ public ComparisonResult compareDocuments(String source, String target) {
 
 ### パフォーマンス最適化
 
-高負荷シナリオ向けの最適化策：
+高負荷シナリオ向けの最適化手法:
 
-1. **可能な限り `Comparer` インスタンスを再利用**（ただしスレッド安全性に注意）  
-2. **バッチ処理でドキュメントをまとめて処理**し、システムリソースの過負荷を防止  
-3. **大容量ドキュメントは非同期処理**で実行  
+1. **Comparer インスタンスを再利用**（ただしスレッド安全性に注意）  
+2. **バッチ処理**でシステムリソースの過負荷を防止  
+3. **非同期処理**で大容量文書をバックグラウンド実行  
 4. **メモリ使用量を監視**し、JVM 設定を適宜調整  
 
 ### セキュリティ考慮事項
 
-機密文書を扱う際のポイント：
+機密文書を扱う際のチェックリスト:
 
 - **ファイルタイプを検証**してから処理  
 - **適切なアクセス制御**を実装  
 - **一時ファイルは即座に削除**  
 - **比較結果の暗号化**を検討  
 
-## 実際の活用例とユースケース
+## 実務での活用例
 
-開発者が本番で GroupDocs.Comparison をどのように利用しているかをご紹介します。
+実際に開発者が本番で GroupDocs.Comparison を利用しているシナリオを紹介します。
 
 ### 法務文書レビュー
 
-法律事務所は契約書や合意書の変更点追跡にドキュメント比較を使用します。メタデータ保持機能は文書の出所管理に不可欠です。
+法律事務所は契約書や合意書の変更点を追跡するために文書比較を使用します。メタデータ保持機能は文書の出所管理に不可欠です。
 
 ```java
 // Typical legal document comparison workflow
@@ -320,7 +320,7 @@ public void reviewContractChanges(String originalContract, String revisedContrac
 
 ### コンテンツ管理システム
 
-CMS プラットフォームはバージョン管理と変更追跡にドキュメント比較を活用します：
+CMS はバージョン管理と変更追跡のために文書比較を活用します。
 
 ```java
 public class CMSDocumentVersioning {
@@ -349,7 +349,7 @@ public class CMSDocumentVersioning {
 
 ### 金融文書分析
 
-金融機関は規制遵守や監査証跡のためにこの機能を利用しています：
+金融機関は規制遵守や監査証跡のために本機能を利用しています。
 
 ```java
 public AuditResult auditFinancialDocument(String originalReport, String submittedReport) {
@@ -370,11 +370,11 @@ public AuditResult auditFinancialDocument(String originalReport, String submitte
 
 ## パフォーマンス最適化とスケーリング
 
-大量のドキュメントを扱う準備ができたら、以下の戦略でアプリケーションの応答性を保ちます。
+大量文書を扱う準備ができたら、以下の戦略でアプリケーションの応答性を保ちます。
 
 ### メモリ管理
 
-大きなドキュメントはすぐにメモリを消費します。効率的に扱う方法：
+大容量文書はメモリを急速に消費します。効率的に処理する方法は次の通りです。
 
 ```java
 public class OptimizedDocumentProcessor {
@@ -402,7 +402,7 @@ public class OptimizedDocumentProcessor {
 
 ### バッチ処理
 
-複数のドキュメント比較はバッチ処理が最適です：
+複数文書の比較はバッチ処理が最適です。
 
 ```java
 public List<ComparisonResult> processBatch(List<DocumentPair> documentPairs) {
@@ -433,7 +433,7 @@ private ComparisonResult compareDocumentPair(DocumentPair pair) {
 
 **主な原因:**
 1. 未対応のファイル形式  
-2. ソースドキュメントの破損  
+2. ソース文書の破損  
 3. メモリ不足  
 4. ファイル権限の問題  
 
@@ -461,26 +461,26 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 
 ### パフォーマンス問題
 
-比較に時間がかかる場合の対策：
+比較に時間がかかる場合:
 
-1. **ドキュメントサイズを確認** – 100 MB 超は特別な処理が必要になることがあります  
+1. **文書サイズを確認** – 100 MB 超は特別な対策が必要  
 2. **メモリ使用量を監視** – 必要に応じてヒープを拡張  
-3. **ファイル I/O 性能を確認** – ストレージがボトルネックになることがあります  
-4. **ファイル形式を検討** – 一部の形式は処理が複雑です  
+3. **I/O 性能を測定** – ストレージがボトルネックになることがある  
+4. **ファイル形式を検討** – 一部形式は処理が複雑  
 
 ### メモリリーク
 
-メモリリークの兆候：
+メモリリークの兆候:
 
-- 時間経過とともにアプリのパフォーマンスが低下  
-- 多数のドキュメント処理後に `OutOfMemoryError` が発生  
-- ガベージコレクションが頻繁に実行  
+- 時間経過とともにアプリの性能が低下  
+- 多数文書処理後に `OutOfMemoryError` が発生  
+- ガベージコレクションが頻繁に走る  
 
-**解決策**: 常に try‑with‑resources を使用し、プロファイリングツールでアプリを監視してください。
+**解決策**: 常に try‑with‑resources を使用し、プロファイラでメモリ使用を監視してください。
 
 ## パスワード保護ファイルの取り扱い
 
-**java compare password protected** ドキュメントを比較する場合は、`LoadOptions` にパスワードを指定してソースまたはターゲットを開きます：
+**java compare password protected** 文書を比較するには、ソースまたはターゲットを開く際に `LoadOptions` にパスワードを設定します。
 
 ```java
 LoadOptions loadOptions = new LoadOptions("your_password");
@@ -489,9 +489,22 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
+## java でパスワード保護文書を比較する方法
+
+規制が厳しい業界ではパスワード保護されたファイルが頻出します。`LoadOptions` でパスワードを渡すことで、比較フローを変更せずに安全に復号できます。パスワードはハードコードせず、セキュアボールトや環境変数から取得し、実行時に注入してください。
+
+## 大容量文書を java で扱う方法
+
+文書が数百メガバイトを超えると、処理が遅くなったりメモリ消費が増大したりします。対策は次の通りです。
+
+- **JVM ヒープを増やす**（`-Xmx`）特にバッチジョブでは必須  
+- **ストリーミングを有効化** – GroupDocs.Comparison は内部でチャンク処理しますが、アプリ側でも全体読み込みを避けるとさらに効果的  
+- **非同期比較**（上記 async 例参照）で UI の応答性を維持  
+- **非常に大きな PDF** はビジネスロジックが許す限り、論理セクションに分割して比較  
+
 ## Spring Boot との統合
 
-マイクロサービスを構築する開発者向けに、比較ロジックを Spring のサービス Bean にラップします：
+マイクロサービスを構築する開発者向けに、比較ロジックを Spring のサービス Bean にラップする例です。
 
 ```java
 @Service
@@ -512,29 +525,29 @@ public class DocumentComparisonService {
 
 ## FAQ（よくある質問）
 
-**Q: 2 つ以上のドキュメントを同時に比較できますか？**  
-A: もちろんです！ `comparer.add()` で複数のターゲットドキュメントを追加してから比較を実行してください。
+**Q: 2 つ以上の文書を同時に比較できますか？**  
+A: もちろんです！ `comparer.add()` で複数のターゲット文書を追加してから比較を実行してください。
 
 **Q: GroupDocs.Comparison がサポートするファイル形式は？**  
-A: DOCX、PDF、XLSX、PPTX、TXT など多数をサポートしています。全リストは公式ドキュメントをご参照ください。
+A: DOCX、PDF、XLSX、PPTX、TXT など多数。完全な一覧は公式ドキュメントをご確認ください。
 
-**Q: パスワード保護されたドキュメントはどう扱いますか？**  
-A: `LoadOptions` クラスでパスワードを渡すだけです（上記サンプル参照）。
+**Q: パスワード保護された文書はどう扱いますか？**  
+A: `LoadOptions` クラスでパスワードを指定して `Comparer` インスタンスを作成します（上記例参照）。
 
 **Q: GroupDocs.Comparison はスレッドセーフですか？**  
 A: 単一の `Comparer` インスタンスはスレッドセーフではありませんが、複数インスタンスを並列スレッドで安全に使用できます。
 
-**Q: 大容量ドキュメントのパフォーマンスを向上させるには？**  
-A: JVM ヒープを増やす（`-Xmx`）、非同期処理、バッチ化、`Comparer` オブジェクトの再利用を検討してください。
+**Q: 大容量文書のパフォーマンスを向上させるには？**  
+A: JVM ヒープを増やす（`-Xmx`）、非同期処理、バッチ実行、必要に応じて `Comparer` オブジェクトを再利用してください。
 
 ## 追加リソース
 
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – 包括的な API リファレンスとサンプル集  
-- [GroupDocs Community Forum](https://forum.groupdocs.com/) – 他の開発者からのサポートが得られます  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – 完全な API リファレンスとサンプル集  
+- [GroupDocs Community Forum](https://forum.groupdocs.com/) – 他の開発者からサポートを受け取れます  
 
 ---
 
-**最終更新日:** 2025-12-21  
+**最終更新日:** 2026-02-23  
 **テスト環境:** GroupDocs.Comparison 25.2  
 **作成者:** GroupDocs  
 

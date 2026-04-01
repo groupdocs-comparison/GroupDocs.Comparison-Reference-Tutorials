@@ -1,137 +1,159 @@
 ---
 categories:
 - Java Development
-date: '2026-01-28'
-description: Tanulja meg, hogyan kezelje a dokumentum metaadatait Java-ban a GroupDocs.Comparison
-  segítségével. Ismerje meg az egyéni tulajdonságok beállítását, a megőrzési szabályok
+date: '2026-04-01'
+description: Tanulja meg, hogyan állíthat be egyedi metaadatokat Java-ban a GroupDocs.Comparison
+  segítségével. Ismerje meg az egyedi tulajdonságok hozzáadását, a megőrzési szabályok
   konfigurálását, és a metaadatok kezelését dokumentum-összehasonlítások során.
-keywords: Java document metadata management, GroupDocs comparison metadata tutorial,
-  Java document properties management, document metadata retention Java, custom metadata
-  Java
-lastmod: '2026-01-28'
-linktitle: Metadata Management Tutorials
+keywords:
+- set custom metadata java
+- document metadata java
+- metadata management java
+lastmod: '2026-04-01'
+linktitle: Metaadat-kezelési oktatóanyagok
 tags:
 - metadata-management
 - document-comparison
 - java-tutorial
 - groupdocs
-title: Dokumentum metaadatok kezelése Java – Teljes oktató útmutató
+title: Egyedi metaadatok beállítása Java-ban – Teljes oktató útmutató
 type: docs
 url: /hu/java/metadata-management/
 weight: 8
 ---
 
-# Dokumentum Metaadatok Kezelése Java – Teljes Oktató Útmutató
+# Egyéni metaadatok beállítása Java – Teljes oktató útmutató
 
-A dokumentum metaadatok hatékony kezelése kulcsfontosságú, amikor dokumentum‑összehasonlító alkalmazásokat fejlesztünk Java‑ban. Legyen szó verziókezelő rendszerekről, tartalomkezelő platformokról vagy együttműködésen alapuló szerkesztőeszközökről, a **manage document metadata java** megértése döntő lehet az alkalmazás használhatósága szempontjából.
+Amikor Java‑ban dokumentum‑összehasonlító megoldást építesz, a **set custom metadata java** nem csak egy kényelmi funkció – elengedhetetlen a kontextus, a megfelelőségi adatok és a munkafolyamat‑információk verziók közötti megőrzéséhez. Ebben az útmutatóban áttekintjük, miért fontos a metaadat, a GroupDocs.Comparison‑al történő kezelés alapfogalmait, és gyakorlati lépéseket mutatunk, amelyekkel már ma beágyazhatod az egyéni tulajdonságokat közvetlenül az összehasonlítási folyamatba.
 
 ## Gyors válaszok
-- **Mi a metaadatok kezelése legfőbb előnye?** Megőrzi a fontos kontextust, például a szerzőt, a verziót és az üzleti információkat az összehasonlítások során.  
-- **Melyik könyvtár támogatja a metaadatkezelést Java‑ban?** A GroupDocs.Comparison for Java.  
-- **Szükség van licencre a termelésben való használathoz?** Igen, érvényes GroupDocs.Comparison licenc szükséges.  
-- **Lehet egyedi metaadatokat hozzáadni?** Természetesen – egyedi tulajdonságokat programozottan definiálhat és manipulálhat.  
-- **Ez a megközelítés kompatibilis több fájlformátummal?** Igen, működik PDF, DOCX, XLSX és más népszerű formátumok esetén is.
+- **Mi a metaadatkezelés fő előnye?** Megőrzi a lényeges kontextust – szerző, verzió és üzleti adatok – így az összehasonlítási eredmények értelmesek maradnak.  
+- **Melyik könyvtár támogatja a metaadatkezelést Java‑ban?** GroupDocs.Comparison for Java.  
+- **Szükségem van licencre a termeléshez?** Igen, érvényes GroupDocs.Comparison licenc szükséges.  
+- **Beállíthatok egyéni metaadatokat Java dokumentumokban?** Természetesen – programozottan definiálhatod, olvashatod és egyesítheted az egyéni tulajdonságokat.  
+- **Ez a megközelítés kompatibilis több fájlformátummal?** Igen, működik PDF, DOCX, XLSX és sok más népszerű formátummal.
 
-## Miért érdemes a dokumentum metaadatokat Java‑ban kezelni?
+## Miért állítsunk be egyéni metaadatokat Java‑ban?
 
-Amikor programozottan hasonlítunk össze dokumentumokat, nem csak a tartalmi különbségekre figyelünk – egy sor metaadatot is kezelünk, amely fontos információkat hordoz a dokumentum történetéről, szerzői jogairól, létrehozási dátumairól és egyedi tulajdonságairól. A megfelelő metaadatkezelés biztosítja, hogy a felhasználók láthassák, **ki végezte a módosításokat, mikor, és milyen üzleti kontextusban** történt minden változtatás.
+Amikor programozottan hasonlítasz össze dokumentumokat, nem csak a szövegbeli különbségekre figyelsz; egy gazdag tulajdonságkészlettel is dolgozol, amely leírja, *ki* hozta létre a fájlt, *mikor* lett utoljára szerkesztve, és minden üzleti‑specifikus címkét, amit hozzáadtál. A **set custom metadata java** megfelelő használata biztosítja, hogy az érintettek azonnal láthassák minden módosítás eredetét, megfeleljenek az auditkövetelményeknek, és elősegítsék a downstream automatizációt, például az útválasztást vagy az értesítéseket.
 
-## Mi a dokumentum metaadatkezelés?
+## Mi a dokumentum metaadatkezelés Java‑ban?
 
-A dokumentum metaadatkezelés azt a gyakorlatot jelenti, amikor megőrzük, frissítjük és ellenőrizzük a fájlhoz csatolt tulajdonságokat. A GroupDocs.Comparison kontextusában ez azt jelenti, hogy eldöntjük, mely metaadatmezőket tartjuk meg, hogyan egyesítjük az ütköző értékeket, és hogyan jelenítjük meg ezeket az információkat az összehasonlítási eredményekben.
+A dokumentum metaadatkezelés azt jelenti, hogy megőrzöd, frissíted és szabályozod a fájlhoz csatolt tulajdonságokat. A GroupDocs.Comparison keretében ez a következőket jelenti:
+1. Döntsd el, mely metaadatmezőket tartsd meg vagy dobod el.  
+2. Ütköző értékek egyesítése az üzleti szabályaid szerint.  
+3. A végső tulajdonságkészlet megjelenítése az összehasonlítási jelentésben, hogy a felhasználók láthassák a teljes képet.
 
-## Gyakori felhasználási esetek a metaadatkezeléshez
+## Általános felhasználási esetek a metaadatkezeléshez
 
-**Verziókezelő integráció**: Dokumentumkezelő rendszerek építésekor gyakran szükség van a verziótörténet, a szerzői információk és az jóváhagyási állapot metaadatainak megőrzésére az összehasonlítási folyamat során.
+**Verziókezelés integrációja** – Verziószámok, szerző‑azonosítók és jóváhagyási állapotok megőrzése két revízió összehasonlítása közben.  
 
-**Megfelelőség és audit nyomvonalak**: Jogi és szabályozási környezetek megkövetelik a teljes metaadatláncok fenntartását. Az összehasonlítási eredményeknek tartalmazniuk kell a származási információkat, digitális aláírásokat és megfelelőségi jelzőket.
+**Megfelelőség és audit nyomvonalak** – Digitális aláírások, időbélyegek és szabályozási címkék hozzáadása, hogy az auditorok nyomon követhessék minden változást.  
 
-**Együttműködő dokumentum munkafolyamatok**: Csapatkörnyezetekben egyedi metaadatok, például felülvizsgálati állapot, részleg tulajdonjog vagy munkafolyamat állapot megőrzése vagy intelligens egyesítése szükséges a dokumentumösszehasonlítások során.
+**Kollaboratív munkafolyamatok** – Egyéni mezők, például „felülvizsgálati állapot”, „osztály” vagy „prioritás” megőrzése, amelyek a csapatfolyamatokat irányítják.  
 
-**Tartalomkezelő rendszerek (CMS)**: A CMS platformok erősen támaszkodnak a metaadatokra a kategorizáláshoz, keresőindexeléshez és tartalomirányításhoz – mindezt gondos kezelésre van szükség a dokumentumösszehasonlítási műveletek során.
+**Tartalomkezelő rendszerek** – Biztosítsd, hogy a keresőindexeléshez, kategorizáláshoz és útválasztáshoz használt metaadatok túléljék az összehasonlítási lépést.  
 
 ## Metaadatkezelési oktatóanyagaink
 
-Lépésről‑lépésre útmutatóink gyakorlati megoldásokat kínálnak a leggyakoribb metaadatkezelési kihívásokra, amelyekkel a GroupDocs.Comparison Java‑val való munkavégzés során találkozhat.
+Lépésről‑lépésre oktatóanyagaink gyakorlati megoldásokat kínálnak a leggyakoribb metaadatkihívásokra, amelyekkel a GroupDocs.Comparison Java‑ban való használata során találkozhatsz. Minden útmutató tartalmaz működő kódrészleteket és valós implementációs szituációkat tárgyal.
 
-### [Implement Document Metadata with GroupDocs.Comparison in Java: A Complete Guide](./implement-metadata-groupdocs-comparison-java-guide/)
+### [Dokumentum metaadatok implementálása a GroupDocs.Comparison segítségével Java‑ban: Teljes útmutató](./implement-metadata-groupdocs-comparison-java-guide/)
 
-Ez az alapvető oktatóanyag végigvezeti a metaadatkezelés alapfogalmaiban a dokumentumösszehasonlítások során. Megtanulja, hogyan konfigurálja az alap metaadatkezelést, megismeri a rendelkezésre álló dokumentumtulajdonságok típusait, és hogyan valósítja meg a megfelelő metaadatmegőrzési stratégiákat.
+Ez az alapozó oktatóanyag végigvezet a dokumentumösszehasonlítások metaadatkezelésének alapvető fogalmain. Megtanulod, hogyan konfiguráld az alap metaadatkezelést, megértsd a rendelkezésre álló dokumentumtulajdonságok különböző típusait, és hogyan valósítsd meg a megfelelő metaadatmegőrzési stratégiákat.
 
-**Amit elsajátít:**
-- Metaadatkonfiguráció beállítása összehasonlítási műveletekhez
-- Beépített és egyedi metaadattulajdonságok megértése
-- Metaadatforrások priorizálásának megvalósítása
-- Metaadatütközések kezelése dokumentumösszevonás során
+**Amit elsajátítasz:**
+- Metadata konfiguráció beállítása összehasonlítási műveletekhez  
+- Beépített és egyéni metaadat tulajdonságok megértése  
+- Metaadatforrások priorizálásának implementálása  
+- Metaadatütközések kezelése dokumentumösszevonás során  
 
-### [Set Custom Metadata in Java Documents Using GroupDocs.Comparison: A Step‑By‑Step Guide](./groupdocs-comparison-java-custom-metadata-guide/)
+### [Egyéni metaadatok beállítása Java dokumentumokban a GroupDocs.Comparison segítségével: Lépésről‑lépésre útmutató](./groupdocs-comparison-java-custom-metadata-guide/)
 
-A fejlett metaadatkezelés gyakran igényli egyedi tulajdonságok beállítását, amelyek tükrözik az üzleti logikát és a munkafolyamat-igényeket. Ez az útmutató megmutatja, hogyan valósítson meg egyedi metaadatmegoldásokat, amelyek zökkenőmentesen integrálódnak a meglévő dokumentumfeldolgozó csővezetékébe.
+A fejlett metaadatkezelés gyakran igényli az üzleti specifikus tulajdonságok hozzáadását, amelyek meghaladják a beépített készletet. Ez az oktatóanyag megmutatja, hogyan hozhatsz létre, validálj és sorosíts egyéni metaadatokat, hogy azok zökkenőmentesen integrálódjanak a meglévő feldolgozási folyamatodba.
 
-**Amit megtanul:**
-- Egyedi metaadatmezők létrehozása és kezelése
-- Metaadatvalidáció és típusellenőrzés megvalósítása
-- Metaadat-sablonok építése a konzisztens tulajdonságkezeléshez
-- Egyedi metaadat integrálása az összehasonlítási eredményekkel
+**Amit megtanulsz:**
+- Egyéni metaadatmezők létrehozása és kezelése  
+- Metaadat validáció és típusellenőrzés implementálása  
+- Metaadat sablonok építése a konzisztens tulajdonságkezeléshez  
+- Egyéni metaadatok integrálása az összehasonlítási eredményekkel  
 
-## Legjobb gyakorlatok a Java dokumentum metaadatkezeléshez
+## Hogyan állítsunk be egyéni metaadatokat Java‑ban a GroupDocs.Comparison segítségével
 
-**Tervezze meg metaadatstratégiáját korán**: Mielőtt a megvalósításba kezdene, határozza meg, mely metaadatmezők kritikusak az adott felhasználási esethez. Nem minden metaadatot kell megőrizni – fókuszáljon arra, ami valóban értéket ad a felhasználóknak.
+Az alábbiakban egy tömör, beszélgetős áttekintést találsz a kulcsfontosságú lépésekről, amelyeket bármely Java‑projektben meg kell tenned, ha **set custom metadata java**-t szeretnél. Bár a tényleges kódrészletek változatlanok maradnak az eredeti oktatóanyagokból, a környező magyarázatok világosabb képet adnak arról, *miért* fontos minden egyes lépés.
 
-**Alkalmazzon védelmi programozást**: A dokumentum metaadatok lehetnek inkonzisztensek vagy teljesen hiányozhatnak. Mindig tartalmazzon null‑ellenőrzéseket és alapértelmezett értékkezelést a metaadatkezelő kódban.
+### 1. Határozd meg a metaadat stratégiádat
 
-**Vegye figyelembe a teljesítményhatást**: A kiterjedt metaadatfeldolgozás lelassíthatja az összehasonlítási műveleteket. Profilozza a metaadatkezelő kódot, és fontolja meg a gyakran használt tulajdonságok gyorsítótárazását.
+Kezdd azzal, hogy felsorolod az alkalmazásod számára kritikus tulajdonságokat – például `Author`, `ReviewStatus`, `Department`. Döntsd el, melyek kötelezőek, melyek lehetnek opcionálisak, és hogyan kell megoldani az ütközéseket, ha két dokumentum különböző értékeket tartalmaz.
 
-**Teszteljen valós dokumentumokkal**: A szintetikus tesztdokumentumok gyakran tiszta, konzisztens metaadatokkal rendelkeznek. A felhasználók valós dokumentumai hiányzó mezőket, szokatlan formátumokat és olyan szélsőséges eseteket tartalmazhatnak, amelyek a naiv megvalósításokat tönkretehetik.
+> **Pro tipp:** Tartsd a listát röviden és fókuszáltan. A felesleges metaadatok feldolgozási terhet növelnek anélkül, hogy valódi előnyt nyújtanának.
 
-## Gyakori metaadatproblémák hibaelhárítása
+### 2. GroupDocs.Comparison beállításainak konfigurálása
 
-**Hiányzó metaadatmezők**: Ha a forrásdokumentumok nem tartalmazzák a várt metaadatokat, alkalmazzon tartalékstratégiákat, például létrehozási dátumok, fájlrendszer‑tulajdonságok vagy felhasználó‑által megadott alapértékek használatát.
+Amikor létrehozol egy `Comparison` objektumot, átadhatsz egy `ComparisonOptions` példányt, amely megmondja a motor számára, mely metaadatmezőket kell megőrizni, figyelmen kívül hagyni vagy egyesíteni.
 
-**Kódolási és karakterkészlet‑problémák**: Nemzetközi dokumentumok speciális karaktereket tartalmazó metaadatokkal rendelkezhetnek. Győződjön meg róla, hogy Java‑alkalmazása helyesen kezeli a UTF‑8 kódolást minden metaadatműveletnél.
+> **Miért fontos:** Az opciók kifejezett konfigurálásával elkerülöd az alapértelmezett „mindent másol” viselkedést, amely túlsúlyos eredményekhez vezethet.
 
-**Nagy metaadat‑terhelés**: Egyes dokumentumok kiterjedt egyedi tulajdonságokat tartalmaznak, amelyek memóriahasználatra hatással lehetnek. Fontolja meg a szelektív metaadatbetöltést a tényleges alkalmazási igények alapján.
+### 3. Egyéni tulajdonságok hozzáadása programozottan
 
-**Metaadat‑konzisztencia formátumok között**: Különböző dokumentumformátumok (PDF, DOCX, XLSX) eltérően kezelik a metaadatokat. Építsen formátum‑tudatos metaadatkezelést, amely normalizálja a tulajdonságokat a különböző típusok között.
+Használd a `DocumentProperty` API‑t, hogy egyéni metaadatokat injektálj minden dokumentumba *mielőtt* elindítod az összehasonlítást. Ez biztosítja, hogy a tulajdonságok átmennek az összehasonlítási folyamaton és megjelennek a végső jelentésben.
 
-## Haladó metaadatkonfigurációs technikák
+> **Gyakori hiba:** Ha elfelejted megadni a tulajdonság adat típusát, később sorosítási hibák léphetnek fel. Mindig add meg a helyes típust (pl. `String`, `Date`, `Integer`).
 
-Amint magabiztosabbá válik az alap metaadatkezelésben, érdemes felfedezni a fejlett konfigurációs lehetőségeket, amelyek finomhangolt vezérlést biztosítanak a metaadatok összehasonlítási műveletek során történő kezeléséhez.
+### 4. Az összehasonlítás futtatása és az eredmények lekérése
 
-**Feltételes metaadat‑megtartás**: Állítson be szabályokat, amelyek meghatározzák, mely metaadatmezőket kell megőrizni a dokumentum tartalma, a felhasználói jogosultságok vagy az üzleti logika alapján.
+Az összehasonlítás befejezése után kinyerheted az egyesített metaadatokat a `ComparisonResult`‑ből. Ez az objektum egységes nézetet biztosít az összes megőrzött tulajdonságról, készen a megjelenítésre vagy tárolásra.
 
-**Metaadat‑transzformációs csővezetékek**: Valósítson meg feldolgozási láncokat, amelyek módosíthatják, validálhatják vagy gazdagíthatják a metaadatokat az összehasonlítási folyamat során.
+> **Teljesítményjegyzet:** Ha nagy kötegeket dolgozol fel, fontold meg a gyakran használt metaadatok gyorsítótárazását vagy az egyéni mezők számának korlátozását a memóriahasználat csökkentése érdekében.
 
-**Egyedi metaadat‑szerializáció**: Komplex metaadatstruktúrák esetén egyedi szerializációs stratégiákra lehet szükség, amelyek megőrzik az adat integritását, miközben támogatják az alkalmazás specifikus követelményeit.
+## Legjobb gyakorlatok Java dokumentum metaadatkezeléshez
+
+- **Korai tervezés:** Határozd meg a világos metaadat sémát, mielőtt elkezdenél kódolni.  
+- **Defenzív kódolás:** Mindig ellenőrizd a `null` értékeket és adj értelmes alapértelmezéseket.  
+- **Teljesítmény figyelése:** Profilozd a metaadatkezelést külön a tartalom összehasonlítástól.  
+- **Tesztelj valós dokumentumokkal:** A valós fájlok gyakran hiányzó vagy hibás tulajdonságokat tartalmaznak – a kódodnak ezeket elegánsan kell kezelnie.  
+
+## Gyakori metaadat problémák hibaelhárítása
+
+- **Hiányzó tulajdonságok:** Térj vissza a fájlrendszer időbélyegeihez vagy kérd meg a felhasználót, hogy adja meg a hiányzó értékeket.  
+- **Kódolási problémák:** Győződj meg arról, hogy a Java alkalmazásod mindenhol UTF‑8-at használ, különösen egyéni karakterlánc tulajdonságok olvasásakor/írásakor.  
+- **Nagy metaadat terhek:** Csak a szükséges tulajdonságokat töltsd be; a nagy bináris blob-okat hagyd figyelmen kívül, ha nincs rá szükség.  
+- **Kereszt‑formátum inkonzisztenciák:** Normalizáld a tulajdonságneveket (pl. `Author` vs. `Creator`) egy közös belső reprezentációra az összehasonlítás előtt.  
+
+## Fejlett metaadat konfigurációs technikák
+
+- **Feltételes megőrzési szabályok:** Üzleti logikát használj a metaadatok megtartására vagy eldobására a felhasználói szerepkörök vagy a dokumentum érzékenysége alapján.  
+- **Átalakítási csővezetékek:** Alkalmazz validátorokat, gazdagítókat vagy fordítókat a metaadatokon, mielőtt elérik az összehasonlítási motort.  
+- **Egyéni sorosítás:** Összetett objektumok (pl. JSON blob-ok) esetén valósíts meg egy egyéni sorosítót, amely átalakítja őket egy olyan karakterlánc formátumba, amelyet az összehasonlítási motor kezelni tud.  
 
 ## További források
 
-- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison for Java API Reference](https://reference.groupdocs.com/comparison/java/)
-- [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Comparison Java dokumentáció](https://docs.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison Java API referencia](https://reference.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison Java letöltése](https://releases.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison fórum](https://forum.groupdocs.com/c/comparison)  
+- [Ingyenes támogatás](https://forum.groupdocs.com/)  
+- [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)  
 
-## Gyakran Ismételt Kérdések
+## Gyakran feltett kérdések
 
-**Q: Használhatom a GroupDocs.Comparison‑t olyan dokumentumok összehasonlítására, amelyek nem tartalmaznak metaadatot?**  
-A: Igen, a könyvtár továbbra is összehasonlítja a tartalmat; azonban ha az alkalmazása metaadatokra támaszkodik a megjelenítéshez vagy auditáláshoz, érdemes tartaléklogikát beépíteni.
+**K: Használhatom a GroupDocs.Comparison‑t olyan dokumentumok összehasonlítására, amelyek nem tartalmaznak metaadatokat?**  
+A: Igen, a könyvtár továbbra is összehasonlítja a tartalmat. Azonban, ha a felhasználói felületed a metaadatokra támaszkodik az audit nyomvonalakhoz, érdemes tartalék logikát bevezetni (pl. a fájl létrehozási dátumait használni).
 
-**Q: Hogyan adhatok hozzá egy egyedi metaadatmezőt egy DOCX fájlhoz az összehasonlítás előtt?**  
-A: Használja a `DocumentProperty` API‑t, amelyet a GroupDocs.Comparison biztosít, egy új tulajdonság létrehozásához, érték hozzárendeléséhez, majd a dokumentum beillesztéséhez az összehasonlítási munkafolyamatba.
+**K: Hogyan adhatok hozzá egy egyéni metaadatmezőt egy DOCX fájlhoz az összehasonlítás előtt?**  
+A: Használd a GroupDocs.Comparison által biztosított `DocumentProperty` API‑t egy új tulajdonság létrehozásához, érték hozzárendeléséhez, majd a dokumentum beillesztéséhez az összehasonlítási munkafolyamatba.
 
-**Q: Lehet-e bizonyos metaadatmezőket kizárni az összehasonlítási eredményekből?**  
-A: Természetesen – konfigurálhat egy metaadat‑szűrőlistát, amely megmondja az összehasonlító motornak, mely tulajdonságokat kell figyelmen kívül hagyni vagy megtartani.
+**K: Lehetőség van bizonyos metaadat tulajdonságok kizárására az összehasonlítási eredményekből?**  
+A: Természetesen – konfigurálhatsz egy metaadat szűrőlistát, amely megmondja az összehasonlítási motor számára, mely tulajdonságokat hagyja figyelmen kívül vagy tartsa meg.
 
-**Q: Milyen teljesítményhatást várhatok nagy metaadatkészletek kezelésekor?**  
-A: A nagy metaadatgyűjtemények feldolgozása növelheti a memóriahasználatot és a CPU‑időt. Ajánlott a profilozás és a csak a szükséges tulajdonságok szelektív betöltése.
+**K: Milyen teljesítménybeli hatást várhatok el nagy metaadatkészletek kezelésekor?**  
+A: A kiterjedt metaadatok feldolgozása növelheti a memóriahasználatot és a CPU-időt. Profilozd a megvalósításodat, és fontold meg csak a szükséges mezők betöltését vagy a gyakori lekérdezések gyorsítótárazását.
 
-**Q: Támogatja a GroupDocs.Comparison a metaadat‑verziókezelést több összehasonlítási futtatás között?**  
-A: Bár a könyvtár maga egyetlen összehasonlítási műveletre fókuszál, megvalósíthatja a verziókezelést metaadat‑pillanatképek adatbázisban történő tárolásával és azok futtatások közötti hivatkozásával.
+**K: Támogatja a GroupDocs.Comparison a metaadat verziókezelést több összehasonlítási futtatás során?**  
+A: Bár a könyvtár egyetlen összehasonlítási műveletre koncentrál, verziókezelést megvalósíthatsz úgy, hogy a metaadat pillanatképeket adatbázisban tárolod, és a futtatások között hivatkozol rájuk.
 
 ---
 
-**Utoljára frissítve:** 2026-01-28  
-**Tesztelt verzió:** GroupDocs.Comparison for Java 24.0  
+**Utolsó frissítés:** 2026-04-01  
+**Tesztelve ezzel:** GroupDocs.Comparison for Java 24.0  
 **Szerző:** GroupDocs

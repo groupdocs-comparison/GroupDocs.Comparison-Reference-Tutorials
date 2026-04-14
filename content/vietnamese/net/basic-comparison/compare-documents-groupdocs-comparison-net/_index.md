@@ -1,67 +1,82 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh nhiều tài liệu Word bằng luồng với GroupDocs.Comparison cho .NET. Hướng dẫn này bao gồm thiết lập, cấu hình và ứng dụng thực tế."
-"title": "So sánh các tài liệu từ các luồng bằng GroupDocs.Comparison .NET - Hướng dẫn đầy đủ cho các nhà phát triển"
-"url": "/vi/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-04-14'
+description: Tìm hiểu cách so sánh nhiều tài liệu Word trong C# bằng GroupDocs.Comparison
+  .NET, làm nổi bật các khác biệt trong Word với các ví dụ mã đầy đủ, khắc phục sự
+  cố và các thực tiễn tốt nhất.
+keywords:
+- compare multiple word documents
+- highlight differences in word
+- groupdocs comparison c#
+lastmod: '2026-04-14'
+linktitle: Hướng dẫn so sánh tài liệu C#
+tags:
+- csharp
+- document-comparison
+- groupdocs
+- tutorial
+title: Hướng dẫn C# so sánh tài liệu – So sánh nhiều tài liệu Word một cách lập trình
 type: docs
+url: /vi/net/basic-comparison/compare-documents-groupdocs-comparison-net/
+weight: 1
 ---
-# Cách so sánh nhiều tài liệu từ các luồng bằng GroupDocs.Comparison .NET
 
-## Giới thiệu
+# Hướng dẫn So sánh Tài liệu C# – So sánh Nhiều Tài liệu Word Một cách Lập trình
 
-Bạn có đang gặp khó khăn khi so sánh nhiều tài liệu một cách hiệu quả không? Hướng dẫn toàn diện này tận dụng các khả năng mạnh mẽ của GroupDocs.Comparison cho .NET để cho phép so sánh liền mạch các tài liệu Word trực tiếp từ các luồng. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn thiết lập và triển khai so sánh tài liệu bằng C#. Bạn sẽ hiểu rõ hơn về cách xử lý các so sánh tài liệu phức tạp một cách dễ dàng.
+Bạn đã bao giờ phải so sánh thủ công các tài liệu Word từng dòng một, cố gắng bắt mọi thay đổi chưa? Bạn không phải là người duy nhất. **Trong hướng dẫn này, bạn sẽ học cách so sánh nhiều tài liệu Word một cách hiệu quả**, dù bạn đang xem xét hợp đồng pháp lý, theo dõi các phiên bản, hoặc quản lý các dự án chỉnh sửa cộng tác. Tự động hoá quá trình với GroupDocs.Comparison cho .NET giúp bạn tiết kiệm thời gian, giảm lỗi, và tạo ra các báo cáo so sánh chuyên nghiệp chỉ trong vài dòng mã C#.
 
-**Những gì bạn sẽ học được:**
-- Cách so sánh nhiều tài liệu từ nhiều luồng.
-- Thiết lập GroupDocs.Comparison cho .NET trong dự án của bạn.
-- Cấu hình cài đặt kiểu cho các điểm khác biệt được tô sáng.
-- Ứng dụng thực tế của thư viện GroupDocs.Comparison.
-- Mẹo tối ưu hóa hiệu suất khi xử lý tài liệu quy mô lớn.
+**Bạn sẽ nắm vững trong tutorial này:**
+- Cách so sánh tài liệu Word bằng streams (hoàn hảo cho các tệp lưu trong cơ sở dữ liệu)
+- Cài đặt GroupDocs.Comparison trong dự án C# của bạn từ đầu
+- Tùy chỉnh kết quả so sánh với kiểu dáng chuyên nghiệp
+- Xử lý việc so sánh nhiều tài liệu một cách hiệu quả
+- Khắc phục các vấn đề thường gặp và tối ưu hiệu năng
+- Các ứng dụng thực tế sẽ giúp bạn tiết kiệm hàng giờ công việc thủ công
 
-Hãy cùng tìm hiểu những điều kiện tiên quyết cần thiết trước khi bắt đầu viết mã!
+## Câu trả lời nhanh
+- **Thư viện nào nên sử dụng?** GroupDocs.Comparison cho .NET  
+- **Tôi có thể so sánh nhiều tài liệu Word cùng lúc không?** Có – thêm bao nhiêu stream mục tiêu tùy ý.  
+- **Làm sao để làm nổi bật sự khác biệt trong Word?** Sử dụng `CompareOptions` với `StyleSettings` tùy chỉnh.  
+- **Tôi có cần giấy phép cho việc phát triển không?** Bản dùng thử miễn phí đủ cho việc học; giấy phép tạm thời sẽ loại bỏ watermark.  
+- **Có hỗ trợ async không?** Có – bạn có thể bọc việc so sánh trong `Task.Run` để gọi không chặn.
 
-## Điều kiện tiên quyết
+## Tại sao cần so sánh nhiều tài liệu Word?
 
-Trước khi triển khai GroupDocs.Comparison cho .NET, hãy đảm bảo bạn có:
+So sánh hơn hai phiên bản cùng lúc cho bạn một cái nhìn thống nhất về tất cả các thay đổi. Điều này đặc biệt có giá trị khi nhiều người duyệt cùng một hợp đồng hoặc khi bạn cần kiểm tra một loạt bản đề xuất. Thay vì phải xử lý nhiều báo cáo so sánh riêng lẻ, GroupDocs.Comparison hợp nhất mọi khác biệt vào một tài liệu duy nhất, giúp dễ dàng phát hiện các phần thêm, xóa và sửa đổi.
 
-### Thư viện và phiên bản bắt buộc
-- **GroupDocs.So sánh**: Yêu cầu phiên bản 25.4.0. Bạn có thể cài đặt bằng NuGet Package Manager hoặc qua .NET CLI.
+## Cách làm nổi bật sự khác biệt trong tài liệu Word
 
-### Yêu cầu thiết lập môi trường
-- Môi trường phát triển có cài đặt .NET Framework hoặc .NET Core.
-- Visual Studio hoặc IDE tương tự để phát triển C#.
+GroupDocs.Comparison cho phép bạn định nghĩa kiểu dáng tùy chỉnh cho văn bản được chèn, xóa hoặc thay đổi. Bằng cách thiết lập `InsertedItemStyle`, `DeletedItemStyle` và `ModifiedItemStyle`, bạn có thể làm cho báo cáo phù hợp với thương hiệu của tổ chức hoặc chỉ đơn giản là cải thiện khả năng đọc. Chúng tôi sẽ hướng dẫn một ví dụ cơ bản làm nổi bật văn bản chèn màu vàng.
 
-### Điều kiện tiên quyết về kiến thức
-- Hiểu biết cơ bản về lập trình C# và xử lý tệp trong .NET.
-- Việc quen thuộc với các khái niệm xử lý tài liệu sẽ có lợi nhưng không bắt buộc.
+## Yêu cầu trước
 
-Khi đã đáp ứng được các điều kiện tiên quyết này, bạn đã sẵn sàng thiết lập GroupDocs.Comparison cho .NET.
+- **Thư viện GroupDocs.Comparison** (v25.4.0 hoặc mới hơn) – hoạt động với .NET Framework 4.6.1+ và .NET Core 2.0+  
+- **Visual Studio** (bất kỳ phiên bản mới nào)  
+- Kiến thức cơ bản về C# – bạn nên thoải mái tạo một ứng dụng console  
+- Một vài tệp Word mẫu để thử nghiệm so sánh  
 
-## Thiết lập GroupDocs.Comparison cho .NET
+## Cài đặt GroupDocs.Comparison và chạy thử
 
-Để bắt đầu sử dụng GroupDocs.Comparison trong dự án của bạn, hãy làm theo các bước dưới đây:
+### Cài đặt Thư viện (Cách dễ dàng)
 
-### Hướng dẫn cài đặt
-
-**Bảng điều khiển quản lý gói NuGet**
+**Tùy chọn 1: Package Manager Console**
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NETCLI**
+**Tùy chọn 2: .NET CLI (Yêu thích cá nhân của tôi)**
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### Các bước xin cấp giấy phép
-- **Dùng thử miễn phí**: Truy cập phiên bản dùng thử miễn phí để đánh giá các tính năng của thư viện.
-- **Giấy phép tạm thời**: Yêu cầu cấp giấy phép tạm thời để thử nghiệm mở rộng mà không có giới hạn.
-- **Mua**: Để sử dụng sản xuất đầy đủ, hãy mua giấy phép từ [Mua GroupDocs](https://purchase.groupdocs.com/buy).
+### Cấp phép đơn giản
 
-### Khởi tạo và thiết lập cơ bản
+- **Bản dùng thử:** Tính năng đầy đủ với watermark nhẹ – lý tưởng cho việc học.  
+- **Giấy phép tạm thời:** Loại bỏ watermark cho demo; yêu cầu khóa tạm thời miễn phí từ GroupDocs.  
+- **Giấy phép sản xuất:** Mua giấy phép đầy đủ tại [GroupDocs Purchase](https://purchase.groupdocs.com/buy).
 
-Sau đây là cách bạn có thể khởi tạo GroupDocs.Comparison trong dự án C# của mình:
+### So sánh đầu tiên của bạn (Kiểu Hello World)
 
 ```csharp
 using System;
@@ -73,10 +88,10 @@ namespace DocumentComparisonApp
     {
         static void Main(string[] args)
         {
-            // Khởi tạo trình so sánh với luồng tài liệu nguồn
+            // Initialize comparer with a source document stream
             using (Comparer comparer = new Comparer(File.OpenRead("SOURCE_WORD.docx")))
             {
-                // Thêm tài liệu mục tiêu để so sánh
+                // Add target documents to compare
                 comparer.Add("TARGET_WORD.docx");
                 Console.WriteLine("Documents added for comparison.");
             }
@@ -85,36 +100,23 @@ namespace DocumentComparisonApp
 }
 ```
 
-Đoạn mã này trình bày cách khởi tạo cơ bản và cách thêm tài liệu mục tiêu, tạo tiền đề cho việc so sánh tài liệu toàn diện.
+Đoạn mã này tạo một đối tượng `Comparer`, tải tài liệu nguồn và thêm một tài liệu mục tiêu duy nhất. Hãy nghĩ nó như việc thiết lập một so sánh “trước và sau”.
 
-## Hướng dẫn thực hiện
+## Triển khai đầy đủ – Từng bước
 
-Bây giờ, chúng ta hãy chia nhỏ việc triển khai thành các tính năng chính. Chúng ta sẽ tập trung vào việc so sánh nhiều tài liệu từ các luồng và cấu hình cài đặt kiểu.
-
-### So sánh nhiều tài liệu từ các luồng
-
-#### Tổng quan
-Tính năng này cho phép bạn so sánh nhiều tài liệu Word bằng cách sử dụng luồng tệp, rất lý tưởng để xử lý các tệp được lưu trữ trong cơ sở dữ liệu hoặc nhận qua mạng.
-
-#### Các bước thực hiện
-
-**1. Luồng tài liệu nguồn mở**
-
-Bắt đầu bằng cách mở luồng tài liệu nguồn:
+### Bước 1: Thiết lập nền tảng
 
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
-    // Thêm tài liệu mục tiêu vào các bước tiếp theo
+    // We'll build on this foundation
 }
 ```
 
-*Giải thích:* Các `Comparer` đối tượng được khởi tạo bằng luồng tệp. Điều này thiết lập tài liệu nguồn để so sánh.
+*What’s happening?* Chúng tôi khởi tạo `Comparer` với một **stream** thay vì đường dẫn tệp, giúp chúng tôi linh hoạt làm việc với tài liệu lưu trong cơ sở dữ liệu hoặc nhận qua mạng.
 
-**2. Thêm tài liệu mục tiêu**
-
-Tiếp theo, thêm nhiều tài liệu mục tiêu để so sánh:
+### Bước 2: Thêm nhiều tài liệu mục tiêu
 
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
@@ -122,27 +124,23 @@ comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WO
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
 ```
 
-*Giải thích:* Mỗi tài liệu mục tiêu được thêm vào bằng luồng tệp của nó. Điều này cho phép so sánh với nguồn.
+Bây giờ bạn có thể **so sánh nhiều tài liệu Word** trong một lần chạy. GroupDocs.Comparison thông minh hợp nhất tất cả các khác biệt vào một tệp kết quả duy nhất.
 
-**3. Cấu hình tùy chọn so sánh**
-
-Thiết lập kiểu dáng cho các mục được chèn để làm nổi bật sự khác biệt:
+### Bước 3: Làm nổi bật sự khác biệt (Tùy chỉnh kiểu dáng)
 
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
     InsertedItemStyle = new StyleSettings()
     {
-        FontColor = System.Drawing.Color.Yellow  // Đánh dấu văn bản đã chèn bằng màu vàng
+        FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
 ```
 
-*Giải thích:* Các `CompareOptions` lớp cho phép tùy chỉnh kết quả so sánh. Ở đây, chúng tôi đặt màu phông chữ cho các mục được chèn thành màu vàng.
+Kiểu dáng tùy chỉnh **làm nổi bật sự khác biệt trong Word** và giúp báo cáo dễ đọc hơn cho các bên liên quan.
 
-**4. Thực hiện so sánh và lưu kết quả**
-
-Thực hiện so sánh và lưu kết quả:
+### Bước 4: Thực hiện so sánh và lưu kết quả
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
@@ -150,56 +148,114 @@ string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.doc
 comparer.Compare(File.Create(outputFileName), compareOptions);
 ```
 
-*Giải thích:* Các `Compare` Phương pháp này thực hiện so sánh tài liệu và lưu kết quả vào một tệp được chỉ định.
+Dòng lệnh duy nhất trên thực hiện so sánh trên tất cả các mục tiêu và ghi một tài liệu kết quả được tinh chỉnh. Vì chúng tôi sử dụng `File.Create()`, bạn có thể thay thế stream bằng đích lưu trữ trong cơ sở dữ liệu hoặc đám mây.
 
-**Mẹo khắc phục sự cố:**
-- Đảm bảo tất cả đường dẫn tài liệu đều chính xác.
-- Kiểm tra xem có đủ quyền để đọc/ghi tệp hay không.
+## Các vấn đề thường gặp và cách giải quyết
 
-### Ứng dụng thực tế
+### Vấn đề: Lỗi “File Not Found”
 
-1. **Đánh giá tài liệu pháp lý**: Tự động so sánh các bản thảo pháp lý trên nhiều phiên bản để phát hiện những thay đổi nhanh chóng.
-2. **Nghiên cứu học thuật**: So sánh các bản sửa đổi trong các bài nghiên cứu trước khi nộp bản cuối cùng.
-3. **Tài liệu phần mềm**: Duy trì tài liệu cập nhật bằng cách so sánh các phiên bản khác nhau.
-4. **Hợp đồng kinh doanh**: Theo dõi các sửa đổi trong đề xuất hợp đồng một cách rõ ràng.
-5. **Biên tập cộng tác**Quản lý hiệu quả các thay đổi từ nhiều người đóng góp.
+```csharp
+string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
+if (!File.Exists(sourcePath))
+{
+    throw new FileNotFoundException($"Source document not found: {sourcePath}");
+}
+```
 
-Việc tích hợp với các hệ thống và khuôn khổ .NET khác rất đơn giản, cho phép xử lý tài liệu liền mạch.
+Luôn kiểm tra đường dẫn trước khi mở stream.
 
-## Cân nhắc về hiệu suất
+### Vấn đề: Vấn đề bộ nhớ với tài liệu lớn
 
-Để có hiệu suất tối ưu:
-- Giảm thiểu việc sử dụng bộ nhớ bằng cách xóa các luồng ngay sau khi sử dụng.
-- Xử lý tài liệu theo trình tự để tránh tiêu tốn quá nhiều tài nguyên.
-- Sử dụng các phương pháp bất đồng bộ khi có thể để tăng khả năng phản hồi trong các ứng dụng.
-- Cập nhật thư viện thường xuyên để cải thiện hiệu suất và sửa lỗi.
+```csharp
+// Don't do this - keeps all streams in memory
+// comparer.Add(File.OpenRead(doc1));
+// comparer.Add(File.OpenRead(doc2));
 
-## Phần kết luận
+// Do this instead - process one at a time
+using (var stream1 = File.OpenRead(doc1))
+{
+    comparer.Add(stream1);
+    // Stream is disposed automatically here
+}
+```
 
-Trong hướng dẫn này, chúng tôi đã khám phá cách tận dụng GroupDocs.Comparison cho .NET để so sánh nhiều tài liệu Word bằng luồng. Bằng cách làm theo các bước này, bạn có thể xác định hiệu quả sự khác biệt giữa các phiên bản tài liệu với các tùy chọn kiểu tùy chỉnh. Các bước tiếp theo, hãy cân nhắc khám phá các tính năng bổ sung của thư viện hoặc tích hợp nó vào các hệ thống quản lý tài liệu lớn hơn.
+Giải phóng stream kịp thời để giảm mức sử dụng bộ nhớ.
 
-Sẵn sàng triển khai giải pháp của bạn? Hãy bắt đầu thử nghiệm và xem GroupDocs.Comparison có thể cải thiện các tác vụ xử lý tài liệu của bạn như thế nào!
+### Vấn đề: Kết quả so sánh không mong đợi
 
-## Phần Câu hỏi thường gặp
+```csharp
+CompareOptions options = new CompareOptions()
+{
+    CompareBookmarks = false,  // Ignore bookmark differences
+    CompareComments = false,   // Ignore comment differences
+    CompareFields = false      // Ignore field differences
+};
+```
 
-1. **GroupDocs.Comparison .NET là gì?**
-   - Đây là thư viện mạnh mẽ để so sánh các tài liệu trong các ứng dụng .NET, hỗ trợ các định dạng như Word, Excel, PDF, v.v.
+Điều chỉnh các thiết lập độ nhạy để bỏ qua các yếu tố không liên quan tới việc xem xét của bạn.
 
-2. **Tôi có thể so sánh các tài liệu từ nhiều nguồn khác nhau (ví dụ: tệp và luồng) không?**
-   - Có, bạn có thể so sánh các tài liệu cho dù chúng được tải từ đường dẫn tệp hay luồng.
+### So sánh bất đồng bộ cho ứng dụng web
 
-3. **Tôi phải xử lý việc so sánh các tài liệu lớn như thế nào?**
-   - Tối ưu hóa hiệu suất bằng cách xử lý tài liệu theo trình tự và quản lý tài nguyên hiệu quả.
+```csharp
+public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
+{
+    using (var comparer = new Comparer(source))
+    {
+        foreach (var target in targets)
+        {
+            comparer.Add(target);
+        }
+        
+        // Perform comparison on background thread
+        return await Task.Run(() => 
+        {
+            var output = new MemoryStream();
+            comparer.Compare(output, compareOptions);
+            return Convert.ToBase64String(output.ToArray());
+        });
+    }
+}
+```
 
-4. **GroupDocs.Comparison cung cấp những tùy chọn tùy chỉnh nào để làm nổi bật sự khác biệt?**
-   - Bạn có thể tùy chỉnh các kiểu như màu phông chữ, kích thước và nền để làm nổi bật các mục đã chèn, đã xóa hoặc đã thay đổi.
+Bọc việc so sánh trong `Task.Run` để giữ cho luồng UI phản hồi nhanh.
 
-5. **Có hỗ trợ so sánh các tài liệu được bảo vệ bằng mật khẩu không?**
-   - Có, bạn có thể so sánh các tài liệu được bảo vệ bằng mật khẩu bằng cách cung cấp thông tin xác thực cần thiết trong quá trình khởi tạo.
+## Mẹo tối ưu hiệu năng
 
-## Tài nguyên
+- **Luôn giải phóng streams** (`using` statements).  
+- **Xử lý tài liệu tuần tự** khi có thể.  
+- **Xem xét mô hình async** cho API web.  
+- **Mở rộng với hàng đợi** cho các kịch bản khối lượng lớn.  
+- **Giữ thư viện luôn cập nhật** để hưởng lợi từ các cải tiến hiệu năng.
 
-Khám phá thêm với các tài nguyên sau:
-- [Tài liệu GroupDocs](https://docs.groupdocs.com/comparison/net/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/net/)
-- [Tải xuống GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
+## Câu hỏi thường gặp
+
+**Q: GroupDocs.Comparison xử lý các định dạng tài liệu khác nhau như thế nào?**  
+A: Nó hỗ trợ Word, PDF, Excel, PowerPoint và nhiều định dạng khác. API giữ nguyên nhất quán giữa các định dạng, vì vậy cùng một đoạn mã hoạt động cho PDF, DOCX, v.v.
+
+**Q: Tôi có thể so sánh tài liệu với bố cục hoặc cấu trúc khác nhau không?**  
+A: Có. Engine so sánh nội dung theo ngữ nghĩa, không chỉ ký tự‑theo‑ký tự, vì vậy các thay đổi cấu trúc được xử lý một cách mềm dẻo.
+
+**Q: Nếu tài liệu được bảo vệ bằng mật khẩu thì sao?**  
+A: Bạn có thể cung cấp mật khẩu khi mở stream; thư viện sẽ giải mã tệp để so sánh.
+
+**Q: Có giới hạn số lượng tài liệu có thể so sánh cùng lúc không?**  
+A: Giới hạn thực tế là bộ nhớ hệ thống. Trên máy phát triển thông thường, so sánh 5‑10 tài liệu lớn hoạt động tốt.
+
+**Q: Làm sao tôi có thể tích hợp điều này vào pipeline CI/CD?**  
+A: Đóng gói logic so sánh trong một ứng dụng console hoặc API web, sau đó gọi nó từ script build để tự động phát hiện thay đổi tài liệu.
+
+**Q: Thư viện có hỗ trợ tài liệu đa ngôn ngữ không?**  
+A: Hoàn toàn có. Nó xử lý các ngôn ngữ viết từ phải sang trái như Arabic và Hebrew, cũng như các ký tự Unicode.
+
+## Tài nguyên bổ sung để học sâu hơn
+
+- [Documentation](https://docs.groupdocs.com/comparison/net/) – Tham khảo API toàn diện và các hướng dẫn nâng cao  
+- [API Reference](https://reference.groupdocs.com/comparison/net/) – Tài liệu chi tiết về phương thức và thuộc tính  
+- [Download Center](https://releases.groupdocs.com/comparison/net/) – Các bản phát hành mới nhất và nhật ký thay đổi  
+- **Community Forums** – Kết nối với các nhà phát triển khác và nhận trợ giúp từ các chuyên gia GroupDocs  
+
+---
+
+**Last Updated:** 2026-04-14  
+**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
+**Author:** GroupDocs

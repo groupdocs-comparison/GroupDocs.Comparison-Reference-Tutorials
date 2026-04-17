@@ -1,37 +1,57 @@
 ---
-"date": "2025-05-05"
-"description": "So sánh tài liệu chính với Java bằng API GroupDocs.Comparison mạnh mẽ. Tìm hiểu các kỹ thuật dựa trên luồng để xử lý hiệu quả các tài liệu pháp lý, học thuật và phần mềm."
-"title": "So sánh tài liệu Java bằng API GroupDocs.Comparison - Một phương pháp tiếp cận dựa trên luồng"
-"url": "/vi/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-03-30'
+description: Tìm hiểu cách so sánh tài liệu Java bằng streams với API GroupDocs.Comparison.
+  Thành thạo việc so sánh sự khác biệt tài liệu, chấp nhận/từ chối các thay đổi và
+  xử lý các tệp lớn một cách hiệu quả.
+keywords: java document comparison, compare documents in java, java file comparison
+  library, document diff java, groupdocs comparison java, stream based document comparison
+lastmod: '2026-03-30'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-api
+- file-processing
+- groupdocs
+title: Cách so sánh tài liệu Java – Hướng dẫn với API GroupDocs
 type: docs
+url: /vi/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/
+weight: 1
 ---
-# Làm chủ Java: So sánh tài liệu với API GroupDocs.Comparison
 
-Chào mừng bạn đến với hướng dẫn toàn diện này, nơi chúng ta khám phá việc so sánh tài liệu trong Java bằng API GroupDocs.Comparison mạnh mẽ. Cho dù bạn đang quản lý các tài liệu pháp lý, bài báo học thuật hay bất kỳ tệp văn bản nào khác, việc so sánh chúng một cách hiệu quả là rất quan trọng. Trong hướng dẫn này, chúng ta sẽ hướng dẫn cách chấp nhận hoặc từ chối các thay đổi được phát hiện giữa hai tài liệu bằng cách sử dụng luồng trong Java.
+# Cách So Sánh Tài Liệu Java – Hướng Dẫn với GroupDocs API
 
-## Những gì bạn sẽ học được
+Bạn đã bao giờ cần **how to compare java** nhanh chóng, dù là hợp đồng, đặc tả kỹ thuật, hay báo cáo PDF? Việc quét thủ công hai phiên bản dễ gây lỗi và tốn thời gian. Trong hướng dẫn này, bạn sẽ học cách so sánh tài liệu Java một cách hiệu quả với GroupDocs.Comparison API, sử dụng streams để tối ưu bộ nhớ. Chúng tôi sẽ hướng dẫn cài đặt, mã nguồn, các vấn đề thường gặp và các trường hợp thực tế để bạn có thể tự động hoá việc so sánh tài liệu trong vài phút.
 
-- Cách thiết lập và sử dụng GroupDocs.Comparison cho Java API.
-- Triển khai so sánh tài liệu theo luồng.
-- Chấp nhận hoặc từ chối những thay đổi cụ thể theo chương trình.
-- Áp dụng các thay đổi để tạo ra tài liệu cuối cùng.
+## Câu trả lời nhanh
+- **Thư viện nào phù hợp nhất để so sánh tài liệu Java?** GroupDocs.Comparison (Java)  
+- **Tôi có thể so sánh các tệp DOCX, PDF và TXT không?** Yes – the API supports 50+ formats.  
+- **So sánh dựa trên stream có tiết kiệm bộ nhớ không?** Absolutely; it processes data in chunks instead of loading whole files.  
+- **Làm thế nào để chấp nhận hoặc từ chối các thay đổi cụ thể?** Use `ChangeInfo.setComparisonAction(...)` on the returned changes.  
+- **Tôi có cần giấy phép cho môi trường production không?** Yes – a commercial license removes watermarks and unlocks full features.
 
-Bạn đã sẵn sàng để sắp xếp hợp lý việc quản lý tài liệu của mình chưa? Hãy bắt đầu thôi!
+## “how to compare java” với GroupDocs là gì
+GroupDocs.Comparison là một thư viện Java phát hiện các khác biệt về văn bản, định dạng và cấu trúc giữa hai tài liệu. Nó hoạt động trên nhiều định dạng (DOCX ↔ PDF, v.v.) và trả về danh sách thay đổi chi tiết mà bạn có thể chấp nhận hoặc từ chối bằng lập trình.
 
-### Điều kiện tiên quyết
+## Tại sao nên sử dụng GroupDocs.Comparison cho việc so sánh tài liệu Java?
+- **Tuân thủ pháp lý** – theo dõi thay đổi chính xác cho hợp đồng.  
+- **Kiểm soát phiên bản** – giữ các tài liệu không phải mã nguồn đồng bộ.  
+- **Hiệu suất** – xử lý dựa trên stream xử lý các tệp lớn mà không làm cạn kiệt RAM.  
+- **Tự động hoá** – tích hợp vào pipeline CI, hệ thống quản lý tài liệu, hoặc micro‑service.
 
-Trước khi bắt đầu, hãy đảm bảo bạn đã chuẩn bị những điều sau:
+## Yêu cầu trước
+- JDK 8+ (11+ recommended)  
+- Maven hoặc Gradle (sẽ trình bày Maven)  
+- Kiến thức cơ bản về Java streams và xử lý ngoại lệ  
+- Hai tài liệu mẫu (bất kỳ định dạng được hỗ trợ nào)
 
-- **Bộ phát triển Java (JDK)**: Khuyến khích sử dụng phiên bản 8 trở lên.
-- **Maven**: Dùng để quản lý sự phụ thuộc và thiết lập dự án.
-- **Kiến thức Java cơ bản**Sự quen thuộc với các luồng và xử lý ngoại lệ sẽ có lợi.
+**Pro tip:** Nếu bạn mới với streams, đừng lo – các đoạn mã đã được chú thích đầy đủ.
 
-## Thiết lập GroupDocs.Comparison cho Java
+## Cài đặt GroupDocs.Comparison: Nền tảng
 
-Để bắt đầu, bạn cần thêm thư viện GroupDocs.Comparison vào dự án của mình. Nếu bạn đang sử dụng Maven, việc này đơn giản như thêm kho lưu trữ và phụ thuộc vào `pom.xml`.
-
-**Thiết lập Maven**
+### Cấu hình Maven
+Thêm repository và dependency vào file `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -51,22 +71,24 @@ Trước khi bắt đầu, hãy đảm bảo bạn đã chuẩn bị những đi
 </dependencies>
 ```
 
-**Mua lại giấy phép**
+### Hiểu về giấy phép (Khía cạnh kinh doanh)
+GroupDocs hoạt động theo mô hình thương mại, nhưng họ khá linh hoạt:
+- **Free trial** – Dùng thử miễn phí – lý tưởng cho việc đánh giá và dự án nhỏ.  
+- **Temporary licenses** – Giấy phép tạm thời – hoàn hảo cho công việc proof‑of‑concept ([get one here](https://purchase.groupdocs.com/temporary-license/))  
+- **Commercial licenses** – Giấy phép thương mại – cần cho môi trường production ([pricing details](https://purchase.groupdocs.com/buy))
 
-GroupDocs cung cấp bản dùng thử miễn phí, giấy phép tạm thời cho mục đích đánh giá và các tùy chọn mua nếu bạn đã sẵn sàng tích hợp vào môi trường sản xuất của mình. Truy cập [trang mua hàng](https://purchase.groupdocs.com/buy) hoặc [trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/) để biết thêm chi tiết.
+Bản dùng thử sẽ thêm watermark vào tài liệu đầu ra, nhưng hành vi của API vẫn giống nhau.
 
-### Hướng dẫn thực hiện
+## Triển khai cốt lõi: So sánh tài liệu dựa trên Stream
 
-Hãy cùng tìm hiểu cách sử dụng API GroupDocs.Comparison để chấp nhận và từ chối các thay đổi trong tài liệu bằng luồng Java.
+### Quy trình hoàn chỉnh
+1. **Initialize** – tải tài liệu nguồn dưới dạng stream.  
+2. **Compare** – thêm stream của tài liệu mục tiêu.  
+3. **Detect** – lấy danh sách các đối tượng `ChangeInfo`.  
+4. **Decide** – chấp nhận hoặc từ chối các thay đổi bằng lập trình.  
+5. **Generate** – ghi tài liệu hợp nhất cuối cùng vào một output stream.
 
-#### Tính năng: Chấp nhận và từ chối các thay đổi được phát hiện bằng cách sử dụng Luồng
-
-Phần này trình bày cách xử lý các thay đổi được phát hiện giữa hai tài liệu theo chương trình. Bằng cách tận dụng các luồng, bạn có thể xử lý hiệu quả các tài liệu lớn mà không cần tải toàn bộ chúng vào bộ nhớ.
-
-**1. Khởi tạo Comparer với một luồng tài liệu nguồn**
-
-Để bắt đầu so sánh, bạn phải khởi tạo một `Comparer` đối tượng sử dụng luồng đầu vào của tài liệu nguồn của bạn:
-
+### Bước 1: Khởi tạo Comparer với Stream tài liệu nguồn
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath);
@@ -74,97 +96,129 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 
     Comparer comparer = new Comparer(sourceStream);
 ```
+*Why streams?* Chúng giữ mức sử dụng bộ nhớ thấp bằng cách xử lý dữ liệu theo từng khối thay vì tải toàn bộ tệp.
 
-**2. Thêm tài liệu mục tiêu để so sánh**
-
-Tiếp theo, thêm luồng tài liệu mục tiêu vào `Comparer`:
-
+### Bước 2: Thêm tài liệu mục tiêu để so sánh
 ```java
 comparer.add(targetStream);
 ```
+Engine hiện đã có cả hai tài liệu và có thể bắt đầu so sánh.
 
-Bước này thiết lập cả hai tài liệu trong công cụ so sánh.
-
-**3. Phát hiện thay đổi**
-
-Thực hiện so sánh và lấy một mảng các thay đổi được phát hiện:
-
+### Bước 3: Phát hiện và phân tích các thay đổi
 ```java
 ChangeInfo[] changes = comparer.getChanges();
 ```
+Mỗi `ChangeInfo` đại diện cho một chèn, xóa, điều chỉnh định dạng, thay đổi hình ảnh, v.v.
 
-Mỗi `ChangeInfo` đối tượng biểu thị sự thay đổi giữa tài liệu nguồn và tài liệu đích.
-
-**4. Chấp nhận hoặc từ chối thay đổi**
-
-Bạn có thể chấp nhận hoặc từ chối các thay đổi theo chương trình bằng cách thiết lập hành động của chúng. Ví dụ, để từ chối thay đổi đầu tiên:
-
+### Bước 4: Chấp nhận hoặc từ chối các thay đổi bằng lập trình
 ```java
 changes[0].setComparisonAction(ComparisonAction.REJECT);
 ```
+Các mẫu tự động điển hình:
+- Chấp nhận tất cả các thay đổi định dạng, từ chối các chỉnh sửa nội dung.  
+- Tự động từ chối các thay đổi trong header/footer.  
+- Chỉ chấp nhận các thay đổi từ các tác giả đáng tin cậy.
 
-Tính linh hoạt này cho phép bạn điều chỉnh kết quả so sánh tài liệu theo nhu cầu của mình.
-
-**5. Áp dụng thay đổi và tạo tài liệu kết quả**
-
-Cuối cùng, áp dụng các thay đổi đã chấp nhận/từ chối để tạo ra luồng tài liệu cuối cùng:
-
+### Bước 5: Tạo tài liệu cuối cùng
 ```java
 comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
 ```
+`ApplyChangeOptions` cho phép bạn tinh chỉnh hành vi hợp nhất, chẳng hạn giữ nguyên kiểu dáng gốc.
 
-### Ứng dụng thực tế
+## Ứng dụng thực tế: Nơi công cụ này tỏa sáng
+- **Legal contract review** – tự động đánh dấu redline và chuyển chúng tới người xem xét phù hợp.  
+- **Academic paper revisions** – chấp nhận các sửa đổi định dạng nhỏ trong khi đánh dấu các chỉnh sửa quan trọng.  
+- **Software documentation** – phát hiện các thay đổi trong spec API có thể làm hỏng mã khách hàng.  
+- **Regulatory compliance** – duy trì nhật ký kiểm toán cho các cập nhật chính sách.
 
-Khả năng so sánh các tài liệu bằng luồng có một số ứng dụng thực tế:
+## Những cạm bẫy thường gặp và cách tránh chúng
 
-- **Quản lý văn bản pháp lý**: Nhanh chóng xác định những điểm bất hợp lý trong bản thảo hợp đồng.
-- **Xuất bản học thuật**: Đảm bảo tính nhất quán giữa các phiên bản giấy khác nhau.
-- **Kiểm soát phiên bản phần mềm**: Theo dõi những thay đổi trong tài liệu phần mềm.
+### Vấn đề quản lý bộ nhớ
+- **Problem:** Lỗi out‑of‑memory trên các PDF lớn.  
+- **Solution:** Luôn sử dụng try‑with‑resources (như trong ví dụ) và giám sát kích thước heap (`-Xmx4g` hoặc cao hơn).
 
-Cũng có thể tích hợp với các hệ thống khác, chẳng hạn như nền tảng quản lý tài liệu hoặc các ứng dụng tùy chỉnh, giúp tăng cường hiệu quả và tự động hóa quy trình làm việc.
+```java
+try (InputStream source = new FileInputStream(sourcePath)) {
+    // comparison logic
+}
+```
 
-### Cân nhắc về hiệu suất
+### Bất ngờ về tính tương thích định dạng
+- **Problem:** So sánh DOCX với PDF có thể bỏ lỡ các khác biệt bố cục tinh tế.  
+- **Solution:** Ưu tiên so sánh cùng định dạng cho các tài liệu pháp lý quan trọng.
 
-Khi xử lý các tài liệu lớn hoặc nhiều phép so sánh:
+### Suy giảm hiệu suất
+- **Problem:** So sánh chậm dần theo thời gian.  
+- **Solution:** Dọn dẹp các tệp tạm thời, giới hạn kích thước tài liệu, và cân nhắc xử lý bất đồng bộ cho các công việc batch.
 
-- Tối ưu hóa cài đặt bộ nhớ Java để ngăn ngừa lỗi hết bộ nhớ.
-- Tối ưu hóa mã của bạn để có hiệu suất tốt hơn, đặc biệt là trong các tình huống tải cao.
-- Thường xuyên xem lại tài liệu GroupDocs để biết thông lệ tốt nhất về việc sử dụng tài nguyên.
+### Độ nhạy phát hiện thay đổi
+- **Problem:** Quá nhiều thay đổi không đáng kể (khoảng trắng, phông chữ).  
+- **Solution:** Cấu hình engine để bỏ qua các khác biệt không quan trọng:
 
-## Phần kết luận
+```java
+CompareOptions options = new CompareOptions();
+options.setIgnoreWhitespaces(true);
+comparer.compare(outputStream, options);
+```
 
-Bây giờ bạn đã trang bị cho mình kiến thức để triển khai so sánh tài liệu theo luồng bằng API GroupDocs.Comparison trong Java. Công cụ này mở ra nhiều khả năng để tự động hóa và tinh chỉnh cách bạn xử lý tài liệu.
+## Tối ưu hiệu suất: Mẹo sẵn sàng cho production
+- **JVM tuning:** Sử dụng G1GC và heap phù hợp (`-Xmx8g` cho tài liệu >100 MB).  
+- **Asynchronous processing:** Chuyển các so sánh sang hàng đợi worker.  
+- **Caching:** Lưu kết quả cho các cặp tài liệu thường xuyên so sánh.  
+- **Scaling:** Triển khai comparer dưới dạng microservice không trạng thái phía sau load balancer.
 
-Bước tiếp theo của bạn, hãy cân nhắc khám phá các tính năng nâng cao hơn của API hoặc tích hợp chức năng này vào quy trình làm việc của ứng dụng lớn hơn. Nếu bạn đã sẵn sàng, hãy truy cập [tài liệu](https://docs.groupdocs.com/comparison/java/) và bắt đầu thử nghiệm!
+## Hướng dẫn khắc phục sự cố
 
-## Phần Câu hỏi thường gặp
+| Triệu chứng | Chẩn đoán | Cách khắc phục |
+|-------------|-----------|----------------|
+| `OutOfMemoryError` | Tài liệu vượt quá dung lượng heap | Tăng dung lượng heap, sử dụng chunking, hoặc tiền xử lý để cắt bỏ các phần không cần thiết |
+| Missing changes | Định dạng không tương thích hoặc độ nhạy thấp | Xác minh định dạng, điều chỉnh `CompareOptions` |
+| Slow over time | Rò rỉ tài nguyên | Đảm bảo tất cả streams được đóng, dọn dẹp thư mục tạm thời |
 
-**H: Một số vấn đề thường gặp khi thiết lập GroupDocs.Comparison là gì?**
+## Các phương pháp thay thế (Khi GroupDocs không phải là lựa chọn tốt nhất)
+- **Apache Tika + custom diff** – miễn phí nhưng yêu cầu nhiều mã hơn.  
+- **Format‑specific libraries** – tốt cho các pipeline chỉ một định dạng.  
+- **Cloud APIs** – bảo trì thấp nhưng tăng độ trễ và lo ngại về quyền riêng tư dữ liệu.
 
-A: Đảm bảo thiết lập Maven của bạn là chính xác và bạn đã thêm đúng URL kho lưu trữ. Xác minh khả năng tương thích của phiên bản JDK.
+## Câu hỏi thường gặp
 
-**H: Làm thế nào tôi có thể so sánh nhiều hơn hai tài liệu?**
+**Q: GroupDocs.Comparison hỗ trợ những định dạng tài liệu nào?**  
+A: Hơn 50 định dạng, bao gồm DOCX, PDF, PPTX, XLSX, TXT, HTML, và nhiều hơn nữa. Xem [format documentation](https://docs.groupdocs.com/comparison/java/supported-document-formats/).
 
-A: Chuỗi nhiều `add()` gọi vào `Comparer` đối tượng trước khi gọi `getChanges()`.
+**Q: Tôi có thể so sánh hơn hai tài liệu cùng một lúc không?**  
+A: Có. Gọi `comparer.add()` nhiều lần trước khi `getChanges()` để hợp nhất nhiều phiên bản.
 
-**H: GroupDocs.Comparison có thể xử lý các định dạng tài liệu khác nhau không?**
+**Q: Làm thế nào để xử lý các tệp được bảo mật bằng mật khẩu?**  
+A: Sử dụng `LoadOptions` để cung cấp mật khẩu:
 
-A: Có, nó hỗ trợ nhiều định dạng bao gồm DOCX, PDF và nhiều định dạng khác. Kiểm tra [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/java/) để biết thông tin cụ thể.
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Comparer comparer = new Comparer(sourceStream, loadOptions);
+```
 
-**H: Có tác động nào đến hiệu suất khi so sánh các tài liệu lớn không?**
+**Q: Có giới hạn kích thước tệp không?**  
+A: Không có giới hạn cứng, nhưng mức sử dụng bộ nhớ tăng theo kích thước. Đối với các tệp >100 MB, tăng heap hoặc chia tệp.
 
-A: Sử dụng luồng giúp giảm đáng kể việc sử dụng bộ nhớ, nhưng hãy đảm bảo bạn quản lý tài nguyên hiệu quả để tối ưu hóa hiệu suất.
+**Q: Tôi có thể tùy chỉnh loại thay đổi nào sẽ được phát hiện không?**  
+A: Chắc chắn. `CompareOptions` cho phép bạn bỏ qua khoảng trắng, định dạng, hoặc tập trung vào các phần cụ thể.
 
-**H: Tôi xử lý các trường hợp ngoại lệ trong quá trình so sánh như thế nào?**
+**Q: Công cụ này có hoạt động trong Docker containers không?**  
+A: Có – chỉ cần cấp đủ bộ nhớ và mount file giấy phép của bạn.
 
-A: Sử dụng các khối try-catch xung quanh mã của bạn để xử lý và ghi lại mọi sự cố phát sinh một cách khéo léo.
+## Tài nguyên bổ sung
 
-## Tài nguyên
+- [Tải xuống GroupDocs.Comparison cho Java](https://releases.groupdocs.com/comparison/java/)  
+- [Nhận bản dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)  
+- [Mua giấy phép thương mại](https://purchase.groupdocs.com/buy)  
+- [Yêu cầu giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)  
+- [Diễn đàn hỗ trợ kỹ thuật](https://forum.groupdocs.com/c/comparison)  
+- [Tài liệu GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
+- [Tham chiếu API](https://reference.groupdocs.com/comparison/java/)  
+- [Diễn đàn cộng đồng](https://forum.groupdocs.com/c/comparison)
 
-- [Tài liệu so sánh GroupDocs](https://docs.groupdocs.com/comparison/java/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/java/)
-- [Tải xuống GroupDocs.Comparison cho Java](https://releases.groupdocs.com/comparison/java/)
-- [Mua sản phẩm GroupDocs](https://purchase.groupdocs.com/buy)
-- [Truy cập dùng thử miễn phí](https://releases.groupdocs.com/comparison/java/)
-- [Thông tin giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- [Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/comparison)
+---
+
+**Cập nhật lần cuối:** 2026-03-30  
+**Kiểm tra với:** GroupDocs.Comparison 25.2 (Java)  
+**Tác giả:** GroupDocs

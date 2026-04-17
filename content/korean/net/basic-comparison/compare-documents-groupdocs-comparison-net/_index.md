@@ -1,67 +1,81 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison for .NET을 사용하여 스트림을 사용하여 여러 Word 문서를 비교하는 방법을 알아보세요. 이 가이드에서는 설정, 구성 및 실제 활용 사례를 다룹니다."
-"title": "GroupDocs.Comparison .NET을 사용하여 스트림에서 문서 비교 - 개발자를 위한 완벽한 가이드"
-"url": "/ko/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-04-14'
+description: GroupDocs.Comparison .NET를 사용하여 C#에서 여러 Word 문서를 비교하는 방법을 배우고, Word에서
+  차이점을 강조 표시하며, 전체 코드 예제, 문제 해결 및 모범 사례를 제공합니다.
+keywords:
+- compare multiple word documents
+- highlight differences in word
+- groupdocs comparison c#
+lastmod: '2026-04-14'
+linktitle: 문서 비교 C# 튜토리얼
+tags:
+- csharp
+- document-comparison
+- groupdocs
+- tutorial
+title: 문서 비교 C# 튜토리얼 – 여러 워드 문서를 프로그래밍으로 비교하기
 type: docs
+url: /ko/net/basic-comparison/compare-documents-groupdocs-comparison-net/
+weight: 1
 ---
-# GroupDocs.Comparison .NET을 사용하여 스트림에서 여러 문서를 비교하는 방법
 
-## 소개
+# 문서 비교 C# 튜토리얼 – 여러 Word 문서를 프로그래밍 방식으로 비교하기
 
-여러 문서를 효율적으로 비교하는 데 어려움을 겪고 계신가요? 이 종합 가이드는 GroupDocs.Comparison for .NET의 강력한 기능을 활용하여 스트림에서 바로 Word 문서를 원활하게 비교할 수 있도록 지원합니다. 이 튜토리얼에서는 C#을 사용하여 문서 비교를 설정하고 구현하는 방법을 안내합니다. 복잡한 문서 비교를 손쉽게 처리하는 방법을 익힐 수 있습니다.
+Word 문서를 한 줄씩 수동으로 비교하면서 모든 변화를 놓치지 않으려고 애쓴 적이 있나요? 당신만 그런 것이 아닙니다. **이 가이드에서는 여러 Word 문서를 효율적으로 비교하는 방법을 배웁니다**, 법률 계약 검토, 수정 사항 추적, 협업 편집 프로젝트 관리 등 어떤 상황이든 말이죠. .NET용 GroupDocs.Comparison을 사용해 프로세스를 자동화하면 시간을 절약하고 오류를 줄이며 몇 줄의 C# 코드만으로 전문적인 비교 보고서를 생성할 수 있습니다.
 
-**배울 내용:**
-- 스트림에서 여러 문서를 비교하는 방법.
-- 프로젝트에서 .NET용 GroupDocs.Comparison을 설정합니다.
-- 강조된 차이점에 대한 스타일 설정 구성.
-- GroupDocs.Comparison 라이브러리의 실제 응용 프로그램.
-- 대규모 문서 처리를 위한 성능 최적화 팁.
+**이 튜토리얼에서 마스터하게 될 내용:**
+- 스트림을 사용하여 Word 문서를 비교하는 방법 (데이터베이스에 저장된 파일에 최적)
+- C# 프로젝트에서 GroupDocs.Comparison을 처음부터 설정하기
+- 전문적인 스타일링으로 비교 결과 맞춤화
+- 여러 문서 비교를 효율적으로 처리하기
+- 일반적인 문제 해결 및 성능 최적화
+- 수작업을 몇 시간씩 절약할 수 있는 실제 적용 사례
 
-코딩을 시작하기 전에 필요한 전제 조건을 살펴보겠습니다!
+## 빠른 답변
+- **어떤 라이브러리를 사용해야 하나요?** GroupDocs.Comparison for .NET  
+- **여러 Word 문서를 한 번에 비교할 수 있나요?** 예 – 필요한 만큼 대상 스트림을 추가하면 됩니다.  
+- **Word에서 차이를 어떻게 강조하나요?** 사용자 정의 `StyleSettings`와 함께 `CompareOptions`를 사용합니다.  
+- **개발에 라이선스가 필요합니까?** 학습용으로는 무료 체험판으로 충분하며, 임시 라이선스로 워터마크를 제거할 수 있습니다.  
+- **비동기 지원이 가능한가요?** 예 – `Task.Run`으로 비교를 감싸면 비차단 호출이 가능합니다.
 
-## 필수 조건
+## 왜 여러 Word 문서를 비교해야 할까요?
 
-.NET용 GroupDocs.Comparison을 구현하기 전에 다음 사항을 확인하세요.
+두 개 이상의 버전을 동시에 비교하면 모든 변경 사항을 하나의 통합된 뷰로 볼 수 있습니다. 이는 여러 검토자가 동일한 계약을 편집하거나 여러 제안서 초안을 감사해야 할 때 특히 유용합니다. 별도의 비교 보고서를 관리하는 대신 GroupDocs.Comparison은 모든 차이를 하나의 문서로 병합하여 추가, 삭제, 수정 내용을 쉽게 파악할 수 있게 해줍니다.
 
-### 필수 라이브러리 및 버전
-- **GroupDocs.Comparison**: 버전 25.4.0이 필요합니다. NuGet 패키지 관리자 또는 .NET CLI를 사용하여 설치할 수 있습니다.
+## Word 문서에서 차이를 강조하는 방법
 
-### 환경 설정 요구 사항
-- .NET Framework 또는 .NET Core가 설치된 개발 환경.
-- C# 개발을 위한 Visual Studio 또는 이와 유사한 IDE.
+GroupDocs.Comparison을 사용하면 삽입, 삭제, 변경된 텍스트에 대한 사용자 정의 스타일을 정의할 수 있습니다. `InsertedItemStyle`, `DeletedItemStyle`, `ModifiedItemStyle`을 설정하면 보고서를 조직의 브랜딩에 맞추거나 가독성을 향상시킬 수 있습니다. 여기서는 삽입된 텍스트를 노란색으로 강조하는 기본 예제를 단계별로 살펴보겠습니다.
 
-### 지식 전제 조건
-- C# 프로그래밍과 .NET에서의 파일 처리에 대한 기본적인 이해가 있습니다.
-- 문서 처리 개념에 익숙해지는 것이 유익하지만 필수는 아닙니다.
+## 사전 요구 사항
 
-이러한 전제 조건을 충족하면 .NET용 GroupDocs.Comparison을 설정할 준비가 되었습니다.
+- **GroupDocs.Comparison 라이브러리** (v25.4.0 이상) – .NET Framework 4.6.1+ 및 .NET Core 2.0+와 호환  
+- **Visual Studio** (최근 버전)  
+- 기본 C# 지식 – 콘솔 앱을 만드는 데 익숙해야 합니다  
+- 비교 테스트용 샘플 Word 파일 몇 개  
 
-## .NET용 GroupDocs.Comparison 설정
+## GroupDocs.Comparison 시작하기
 
-프로젝트에서 GroupDocs.Comparison을 사용하려면 다음 단계를 따르세요.
+### 라이브러리 설치 (쉬운 방법)
 
-### 설치 지침
-
-**NuGet 패키지 관리자 콘솔**
+**옵션 1: 패키지 관리자 콘솔**
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI**
+**옵션 2: .NET CLI (내가 가장 선호하는 방법)**
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### 라이센스 취득 단계
-- **무료 체험**: 무료 체험판을 이용해 라이브러리의 기능을 평가해 보세요.
-- **임시 면허**: 제한 없이 장기간 테스트를 위한 임시 라이선스를 요청하세요.
-- **구입**: 전체 프로덕션 사용을 위해서는 다음에서 라이센스를 구매하세요. [GroupDocs 구매](https://purchase.groupdocs.com/buy).
+### 라이선스 관리 간편하게
 
-### 기본 초기화 및 설정
+- **무료 체험:** 작은 워터마크가 있는 전체 기능 – 학습에 이상적입니다.  
+- **임시 라이선스:** 데모용 워터마크 제거; GroupDocs에 무료 임시 키를 요청하세요.  
+- **프로덕션 라이선스:** 전체 라이선스를 [GroupDocs Purchase](https://purchase.groupdocs.com/buy)에서 구매합니다.
 
-C# 프로젝트에서 GroupDocs.Comparison을 초기화하는 방법은 다음과 같습니다.
+### 첫 번째 비교 (Hello World 스타일)
 
 ```csharp
 using System;
@@ -73,10 +87,10 @@ namespace DocumentComparisonApp
     {
         static void Main(string[] args)
         {
-            // 소스 문서 스트림으로 비교자를 초기화합니다.
+            // Initialize comparer with a source document stream
             using (Comparer comparer = new Comparer(File.OpenRead("SOURCE_WORD.docx")))
             {
-                // 비교할 대상 문서 추가
+                // Add target documents to compare
                 comparer.Add("TARGET_WORD.docx");
                 Console.WriteLine("Documents added for comparison.");
             }
@@ -85,36 +99,23 @@ namespace DocumentComparisonApp
 }
 ```
 
-이 스니펫은 기본 초기화와 대상 문서를 추가하는 방법을 보여주며, 포괄적인 문서 비교를 위한 토대를 마련합니다.
+이 코드 조각은 `Comparer` 객체를 생성하고, 소스 문서를 로드한 뒤 단일 대상 문서를 추가합니다. “전후” 비교를 설정하는 과정이라고 생각하면 됩니다.
 
-## 구현 가이드
+## 전체 구현 – 단계별 안내
 
-이제 구현 과정을 주요 기능으로 나누어 살펴보겠습니다. 스트림에서 여러 문서를 비교하고 스타일 설정을 구성하는 데 중점을 두겠습니다.
-
-### 스트림에서 여러 문서 비교
-
-#### 개요
-이 기능을 사용하면 파일 스트림을 사용하여 여러 Word 문서를 비교할 수 있으므로 데이터베이스에 저장된 파일이나 네트워크를 통해 수신된 파일을 처리하는 데 이상적입니다.
-
-#### 구현 단계
-
-**1. 오픈소스 문서 스트림**
-
-먼저 소스 문서 스트림을 엽니다.
+### 단계 1: 기본 설정
 
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
-    // 이후 단계에서 대상 문서를 추가합니다.
+    // We'll build on this foundation
 }
 ```
 
-*설명:* 그만큼 `Comparer` 객체는 파일 스트림으로 초기화됩니다. 이는 비교할 소스 문서를 설정합니다.
+*무슨 일이 일어나고 있나요?* 파일 경로 대신 **스트림**으로 `Comparer`를 인스턴스화하여 데이터베이스에 저장되었거나 네트워크를 통해 전달된 문서를 유연하게 처리할 수 있습니다.
 
-**2. 대상 문서 추가**
-
-다음으로, 비교할 여러 대상 문서를 추가합니다.
+### 단계 2: 여러 대상 문서 추가
 
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
@@ -122,27 +123,23 @@ comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WO
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
 ```
 
-*설명:* 각 대상 문서는 파일 스트림을 통해 추가됩니다. 이를 통해 원본 문서와 비교할 수 있습니다.
+이제 한 번의 실행으로 **여러 Word 문서를 비교**할 수 있습니다. GroupDocs.Comparison은 모든 차이를 지능적으로 하나의 결과 파일로 병합합니다.
 
-**3. 비교 옵션 구성**
-
-삽입된 항목의 스타일을 설정하여 차이점을 강조합니다.
+### 단계 3: 차이를 돋보이게 만들기 (맞춤 스타일링)
 
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
     InsertedItemStyle = new StyleSettings()
     {
-        FontColor = System.Drawing.Color.Yellow  // 삽입된 텍스트를 노란색으로 강조 표시합니다.
+        FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
 ```
 
-*설명:* 그만큼 `CompareOptions` 이 클래스는 비교 결과를 사용자 지정할 수 있도록 합니다. 여기서는 삽입된 항목의 글꼴 색상을 노란색으로 설정합니다.
+맞춤 스타일링을 통해 Word에서 **차이를 강조**하고 이해관계자가 보고서를 더 쉽게 읽을 수 있게 합니다.
 
-**4. 비교 수행 및 결과 저장**
-
-비교를 실행하고 출력을 저장합니다.
+### 단계 4: 비교 실행 및 결과 저장
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
@@ -150,56 +147,114 @@ string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.doc
 comparer.Compare(File.Create(outputFileName), compareOptions);
 ```
 
-*설명:* 그만큼 `Compare` 이 방법은 문서 비교를 수행하고 결과를 지정된 파일에 저장합니다.
+위의 한 줄 코드는 모든 대상에 대해 비교를 수행하고 깔끔한 결과 문서를 작성합니다. `File.Create()`를 사용했기 때문에 스트림을 데이터베이스나 클라우드 스토리지 대상으로 교체할 수 있습니다.
 
-**문제 해결 팁:**
-- 모든 문서 경로가 올바른지 확인하세요.
-- 파일을 읽고 쓸 수 있는 충분한 권한이 있는지 확인하세요.
+## 일반적인 문제와 해결 방법
 
-### 실제 응용 프로그램
+### 문제: "파일을 찾을 수 없음" 오류
 
-1. **법률 문서 검토**: 여러 버전의 법률 초안을 자동으로 비교하여 변경 사항을 신속하게 찾아냅니다.
-2. **학술 연구**: 최종 제출 전에 연구 논문의 수정 사항을 비교합니다.
-3. **소프트웨어 문서**: 다양한 버전을 비교하여 최신 문서를 유지합니다.
-4. **사업 계약**: 계약 제안서의 수정 사항을 명확하게 추적합니다.
-5. **협업 편집**여러 참여자의 변경 사항을 효과적으로 관리합니다.
+```csharp
+string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
+if (!File.Exists(sourcePath))
+{
+    throw new FileNotFoundException($"Source document not found: {sourcePath}");
+}
+```
 
-다른 .NET 시스템 및 프레임워크와의 통합이 간단하여 원활한 문서 처리 워크플로가 가능합니다.
+스트림을 열기 전에 항상 경로를 확인하세요.
 
-## 성능 고려 사항
+### 문제: 대용량 문서의 메모리 문제
 
-최적의 성능을 위해:
-- 사용 후 스트림을 즉시 삭제하여 메모리 사용량을 최소화합니다.
-- 과도한 리소스 소모를 피하기 위해 문서를 순차적으로 처리합니다.
-- 가능한 경우 비동기 방식을 활용하여 애플리케이션의 응답성을 향상시킵니다.
-- 성능 향상과 버그 수정을 위해 라이브러리를 정기적으로 업데이트하세요.
+```csharp
+// Don't do this - keeps all streams in memory
+// comparer.Add(File.OpenRead(doc1));
+// comparer.Add(File.OpenRead(doc2));
 
-## 결론
+// Do this instead - process one at a time
+using (var stream1 = File.OpenRead(doc1))
+{
+    comparer.Add(stream1);
+    // Stream is disposed automatically here
+}
+```
 
-이 튜토리얼에서는 .NET용 GroupDocs.Comparison을 활용하여 스트림을 사용하여 여러 Word 문서를 비교하는 방법을 살펴보았습니다. 이 단계를 따라 하면 사용자 지정 스타일 옵션을 사용하여 문서 버전 간의 차이점을 효율적으로 파악할 수 있습니다. 다음 단계로 라이브러리의 추가 기능을 살펴보거나 더 큰 규모의 문서 관리 시스템에 통합하는 것을 고려해 보세요.
+메모리 사용량을 낮게 유지하려면 스트림을 즉시 해제하세요.
 
-솔루션을 구현할 준비가 되셨나요? 실험을 시작하고 GroupDocs.Comparison이 문서 처리 작업을 어떻게 향상시킬 수 있는지 확인해 보세요!
+### 문제: 예상치 못한 비교 결과
 
-## FAQ 섹션
+```csharp
+CompareOptions options = new CompareOptions()
+{
+    CompareBookmarks = false,  // Ignore bookmark differences
+    CompareComments = false,   // Ignore comment differences
+    CompareFields = false      // Ignore field differences
+};
+```
 
-1. **GroupDocs.Comparison .NET이란 무엇입니까?**
-   - .NET 애플리케이션에서 문서를 비교하기 위한 강력한 라이브러리로, Word, Excel, PDF 등의 형식을 지원합니다.
+검토와 관련 없는 요소를 무시하도록 민감도 설정을 조정하세요.
 
-2. **다양한 소스(예: 파일과 스트림)의 문서를 비교할 수 있나요?**
-   - 네, 파일 경로나 스트림에서 로드된 문서를 비교할 수 있습니다.
+### 웹 앱을 위한 비동기 비교
 
-3. **대용량 문서를 비교하려면 어떻게 해야 하나요?**
-   - 문서를 순차적으로 처리하고 리소스를 효과적으로 관리하여 성과를 최적화합니다.
+```csharp
+public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
+{
+    using (var comparer = new Comparer(source))
+    {
+        foreach (var target in targets)
+        {
+            comparer.Add(target);
+        }
+        
+        // Perform comparison on background thread
+        return await Task.Run(() => 
+        {
+            var output = new MemoryStream();
+            comparer.Compare(output, compareOptions);
+            return Convert.ToBase64String(output.ToArray());
+        });
+    }
+}
+```
 
-4. **GroupDocs.Comparison은 차이점을 강조하기 위해 어떤 사용자 정의 옵션을 제공합니까?**
-   - 삽입, 삭제 또는 변경된 항목을 강조하기 위해 글꼴 색상, 크기, 배경 등의 스타일을 사용자 정의할 수 있습니다.
+UI 스레드가 응답성을 유지하도록 비교를 `Task.Run`으로 감싸세요.
 
-5. **암호로 보호된 문서를 비교하는 기능이 지원되나요?**
-   - 네, 초기화하는 동안 필요한 자격 증명을 제공하여 비밀번호로 보호된 문서를 비교할 수 있습니다.
+## 성능 최적화 팁
 
-## 자원
+- **항상 스트림을 해제하세요** (`using` 구문).  
+- **가능하면 문서를 순차적으로 처리하세요**.  
+- **웹 API에 비동기 패턴을 고려하세요**.  
+- **대량 시나리오에서는 큐를 사용해 확장하세요**.  
+- **성능 향상을 위해 라이브러리를 최신 상태로 유지하세요**.
 
-다음 리소스를 통해 더 자세히 알아보세요.
-- [GroupDocs 문서](https://docs.groupdocs.com/comparison/net/)
-- [API 참조](https://reference.groupdocs.com/comparison/net/)
-- [GroupDocs.Comparison 다운로드](https://releases.groupdocs.com/comparison/net/)
+## 자주 묻는 질문
+
+**Q: GroupDocs.Comparison은 다양한 문서 형식을 어떻게 처리하나요?**  
+A: Word, PDF, Excel, PowerPoint 등 다양한 형식을 지원합니다. API는 형식에 관계없이 일관되므로 동일한 코드가 PDF, DOCX 등에도 적용됩니다.
+
+**Q: 레이아웃이나 구조가 다른 문서를 비교할 수 있나요?**  
+A: 예. 엔진은 문자 단위가 아니라 의미적으로 내용을 비교하므로 구조적 변경도 자연스럽게 처리됩니다.
+
+**Q: 문서가 비밀번호로 보호되어 있으면 어떻게 하나요?**  
+A: 스트림을 열 때 비밀번호를 제공하면 라이브러리가 파일을 복호화하여 비교합니다.
+
+**Q: 한 번에 비교할 수 있는 문서 수에 제한이 있나요?**  
+A: 실질적인 제한은 시스템 메모리입니다. 일반적인 개발 환경에서는 5~10개의 대형 문서를 비교하는 것이 무난합니다.
+
+**Q: CI/CD 파이프라인에 어떻게 통합할 수 있나요?**  
+A: 비교 로직을 콘솔 앱이나 웹 API로 감싼 뒤 빌드 스크립트에서 호출하면 문서 변경을 자동으로 감지할 수 있습니다.
+
+**Q: 라이브러리가 다국어 문서를 지원하나요?**  
+A: 물론입니다. 아라비아어, 히브리어와 같은 RTL 언어와 유니코드 문자 모두를 처리합니다.
+
+## 심화 학습을 위한 추가 자료
+
+- [문서](https://docs.groupdocs.com/comparison/net/) – 포괄적인 API 레퍼런스 및 고급 튜토리얼  
+- [API 레퍼런스](https://reference.groupdocs.com/comparison/net/) – 상세 메서드 및 속성 문서  
+- [다운로드 센터](https://releases.groupdocs.com/comparison/net/) – 최신 릴리스 및 변경 로그  
+- **커뮤니티 포럼** – 다른 개발자와 연결하고 GroupDocs 전문가에게 도움을 받으세요  
+
+---
+
+**마지막 업데이트:** 2026-04-14  
+**테스트 환경:** GroupDocs.Comparison 25.4.0 for .NET  
+**작성자:** GroupDocs

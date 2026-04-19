@@ -17,7 +17,7 @@ weight: 11
 url: /
 is_root: true
 type: docs
-date: 2025-12-17
+date: 2026-02-23
 ---
 # GroupDocs.Comparison API Tutorials & Developer Guide
 
@@ -30,7 +30,8 @@ Welcome to the **complete guide to document comparison** with the **GroupDocs.Co
 - **Which platforms are supported?** .NET (Framework, .NET Core, .NET 5/6) and Java (8+).  
 - **Do I need a license for development?** A free trial works for evaluation; a commercial license is required for production.  
 - **Can I compare password‑protected files?** Yes – the API accepts passwords for opening secured documents.  
-- **Is there a way to generate visual previews?** Absolutely, the API can create side‑by‑side or overlay preview images of the comparison result.
+- **Is there a way to generate visual previews?** Absolutely, the API can create side‑by‑side or overlay preview images of the comparison result.  
+- **How can I compare entire folders?** Use the folder‑comparison feature to process multiple files in one call, perfect for batch validation.  
 
 ## What is GroupDocs.Comparison API?
 The **GroupDocs.Comparison API** is a set of libraries that let developers programmatically compare the content, layout, and formatting of documents. It supports over 100 file types, delivers detailed change logs, and provides options to accept or reject modifications through code.
@@ -43,16 +44,16 @@ The **GroupDocs.Comparison API** is a set of libraries that let developers progr
 - **High Performance** – Optimized algorithms handle large files and bulk folder comparisons efficiently.
 
 ## Why Use GroupDocs.Comparison?
-- **Multi-format Support** - Compare documents across different formats
-- **Detailed Change Detection** - Identify insertions, deletions, formatting changes, and style modifications
-- **Change Management** - Accept or reject specific changes programmatically
-- **Secure Comparison** - Work with password-protected documents
-- **High Performance** - Efficiently compare large documents with optimized algorithms
+- **Multi-format Support** – Compare documents across different formats.  
+- **Detailed Change Detection** – Identify insertions, deletions, formatting changes, and style modifications.  
+- **Change Management** – Accept or reject specific changes programmatically.  
+- **Secure Comparison** – Work with password‑protected documents.  
+- **High Performance** – Efficiently compare large documents with optimized algorithms.
 
 ## GroupDocs.Comparison for .NET Tutorials
 
 {{% alert color="primary" %}}
-Master document comparison in your .NET applications with our step-by-step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer-focused guides cover everything from basic setup to advanced integration scenarios.
+Master document comparison in your .NET applications with our step‑by‑step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer‑focused guides cover everything from basic setup to advanced integration scenarios.
 {{% /alert %}}
 
 ### Essential .NET Tutorials
@@ -61,29 +62,29 @@ Master document comparison in your .NET applications with our step-by-step tutor
 <div class="col-md-6">
 
 #### Getting Started
-- [Quick Start Guide](./net/quick-start/) - Set up and run your first comparison in minutes
-- [Installation & Setup](./net/getting-started/) - Configure your development environment
-- [Licensing Options](./net/licensing-configuration/) - Understand licensing and deployment options
+- [Quick Start Guide](./net/quick-start/) – Set up and run your first comparison in minutes.  
+- [Installation & Setup](./net/getting-started/) – Configure your development environment.  
+- [Licensing Options](./net/licensing-configuration/) – Understand licensing and deployment options.
 
 #### Core Functionality
-- [Document Loading](./net/document-loading/) - Learn different ways to load documents
-- [Basic Comparison](./net/basic-comparison/) - Implement simple comparison operations
-- [Advanced Comparison](./net/advanced-comparison/) - Master complex comparison scenarios
-- [Change Management](./net/change-management/) - Accept or reject specific changes
+- [Document Loading](./net/document-loading/) – Learn different ways to load documents.  
+- [Basic Comparison](./net/basic-comparison/) – Implement simple comparison operations.  
+- [Advanced Comparison](./net/advanced-comparison/) – Master complex comparison scenarios.  
+- [Change Management](./net/change-management/) – Accept or reject specific changes.
 
 </div>
 <div class="col-md-6">
 
 #### Advanced Features
-- [Preview Generation](./net/preview-generation/) - Create visual previews of comparison results
-- [Metadata Management](./net/metadata-management/) - Control document properties
-- [Security & Protection](./net/security-protection/) - Work with protected documents
-- [Comparison Options](./net/comparison-options/) - Customize comparison behavior
+- [Preview Generation](./net/preview-generation/) – Create visual previews of comparison results.  
+- [Metadata Management](./net/metadata-management/) – Control document properties.  
+- [Security & Protection](./net/security-protection/) – Work with protected documents.  
+- [Comparison Options](./net/comparison-options/) – Customize comparison behavior.
 
 #### Specialized Comparisons
-- [Image Comparison](./net/image-comparison/) - Compare images with pixel-perfect accuracy
-- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) - Compare entire directories
-- [Document Information](./net/document-information/) - Extract and analyze document metadata
+- [Image Comparison](./net/image-comparison/) – Compare images with pixel‑perfect accuracy.  
+- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) – Compare entire directories.  
+- [Document Information](./net/document-information/) – Extract and analyze document metadata.
 
 </div>
 </div>
@@ -100,22 +101,22 @@ Implement powerful document comparison capabilities in your Java applications wi
 <div class="col-md-6">
 
 #### Getting Started
-- [Licensing Options](./java/licensing-configuration) - Understand deployment licensing
+- [Licensing Options](./java/licensing-configuration) – Understand deployment licensing.
 
 #### Core Functionality
-- [Document Loading](./java/document-loading/) - Load documents from various sources
-- [Basic Comparison](./java/basic-comparison/) - Implement fundamental comparison
-- [Advanced Comparison](./java/advanced-comparison/) - Handle complex comparison scenarios
+- [Document Loading](./java/document-loading/) – Load documents from various sources.  
+- [Basic Comparison](./java/basic-comparison/) – Implement fundamental comparison.  
+- [Advanced Comparison](./java/advanced-comparison/) – Handle complex comparison scenarios.
 
 </div>
 <div class="col-md-6">
 
 #### Advanced Features
-- [Preview Generation](./java/preview-generation/) - Generate visual comparison previews
-- [Metadata Management](./java/metadata-management/) - Control document metadata
-- [Security & Protection](./java/security-protection/) - Compare protected documents
-- [Comparison Options](./java/comparison-options/) - Fine-tune comparison settings
-- [Document Information](./java/document-information) - Extract and display metadata
+- [Preview Generation](./java/preview-generation/) – Generate visual comparison previews.  
+- [Metadata Management](./java/metadata-management/) – Control document metadata.  
+- [Security & Protection](./java/security-protection/) – Compare protected documents.  
+- [Comparison Options](./java/comparison-options/) – Fine‑tune comparison settings.  
+- [Document Information](./java/document-information) – Extract and display metadata.
 
 </div>
 </div>
@@ -132,20 +133,21 @@ GroupDocs.Comparison supports a wide range of document formats:
 | **PDF Documents** | PDF, PDF/A |
 | **Images** | JPG, PNG, BMP, GIF, TIFF |
 | **Email** | EML, MSG |
-| **And many more...** | HTML, EPUB, DJVU |
+| **And many more…** | HTML, EPUB, DJVU |
 
 ## Developer Resources
 
-- [API Documentation](https://reference.groupdocs.com/comparison/) - Detailed API references
-- [GitHub Examples](https://github.com/groupdocs-comparison/) - Repository of code examples
-- [Developer Blog](https://blog.groupdocs.com/category/comparison/) - Latest updates and tutorials
-- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) - Get help from our experts
+- [API Documentation](https://reference.groupdocs.com/comparison/) – Detailed API references.  
+- [GitHub Examples](https://github.com/groupdocs-comparison/) – Repository of code examples.  
+- [Developer Blog](https://blog.groupdocs.com/category/comparison/) – Latest updates and tutorials.  
+- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) – Get help from our experts.
 
 ## Common Use Cases for the GroupDocs.Comparison API
 - **Legal document review** – Quickly highlight changes between contract revisions.  
 - **Financial reporting** – Detect alterations in Excel or PDF statements before publishing.  
 - **Content management systems** – Provide end‑users with visual diff tools for Word or PowerPoint files.  
 - **Automated QA** – Compare generated PDFs against baseline templates in CI pipelines.  
+- **Regulatory compliance** – Verify that policy documents have not been unintentionally modified.
 
 ## Getting Started Today
 
@@ -155,23 +157,23 @@ Explore our tutorials to start implementing professional document comparison fea
 
 ## Frequently Asked Questions
 
-**Q: Can I use the GroupDocs.Comparison API in a commercial product?**  
-A: Yes, a valid commercial license is required for production deployments. A free trial is available for evaluation.
+**Q:** Can I use the GroupDocs.Comparison API in a commercial product?  
+**A:** Yes, a valid commercial license is required for production deployments. A free trial is available for evaluation.
 
-**Q: Does the API support password‑protected files?**  
-A: Absolutely. You can supply the document password when loading the source files.
+**Q:** Does the API support password‑protected files?  
+**A:** Absolutely. You can supply the document password when loading the source files.
 
-**Q: Which .NET versions are compatible?**  
-A: The API works with .NET Framework 4.5+, .NET Core 3.1+, .NET 5, and .NET 6+.
+**Q:** Which .NET versions are compatible?  
+**A:** The API works with .NET Framework 4.5+, .NET Core 3.1+, .NET 5, and .NET 6+.
 
-**Q: How does the API handle large documents or bulk folder comparisons?**  
-A: It uses streaming and optimized algorithms to keep memory usage low, and you can compare entire directories with the folder comparison feature.
+**Q:** How does the API handle large documents or bulk folder comparisons?  
+**A:** It uses streaming and optimized algorithms to keep memory usage low, and you can compare entire directories with the folder comparison feature.
 
-**Q: Is there a way to customize the visual style of the comparison output?**  
-A: Yes, the Comparison Options allow you to define colors, markup styles, and output formats for the generated diff.
+**Q:** Is there a way to customize the visual style of the comparison output?  
+**A:** Yes, the Comparison Options let you define colors, markup styles, and output formats for the generated diff.
 
 ---
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 23.11 (latest stable)  
+**Last Updated:** 2026-02-23  
+**Tested With:** GroupDocs.Comparison 24.0 (latest stable)  
 **Author:** GroupDocs

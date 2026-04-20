@@ -1,73 +1,80 @@
 ---
 categories:
 - Java Development
-date: '2025-12-23'
-description: Leer hoe je GroupDocs Comparison Java gebruikt om documenten in Java
-  te vergelijken. Deze stapsgewijze gids behandelt codevoorbeelden, HTML-rendering
-  en prestatie‑tips.
+date: '2026-03-24'
+description: Leer hoe je in Java grote bestanden kunt verwerken met GroupDocs.Comparison.
+  Deze gids laat zien hoe je PDF‑bestanden vergelijkt in Java, Word‑bestanden vergelijkt
+  in Java, en HTML rendert met prestatie‑tips.
 keywords: Java document comparison, compare documents Java, GroupDocs.Comparison tutorial,
   Java HTML document rendering, document diff Java
-lastmod: '2025-12-23'
+lastmod: '2026-03-24'
 linktitle: Java Document Comparison Tutorial
 tags:
 - document-comparison
 - java-libraries
 - groupdocs
 - html-rendering
-title: 'GroupDocs Comparison Java - Documentvergelijking Makkelijk Gemaakt'
+title: 'Java: grote bestanden verwerken met GroupDocs Comparison – Tutorial'
 type: docs
 url: /nl/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
 weight: 1
 ---
 
-# GroupDocs Comparison Java: Documentvergelijking Gemakkelijk Gemaakt
+# GroupDocs Comparison Java: Documentvergelijking Gemakkelijk
 
-## Introductie
+## Introduction
 
-Heb je ooit handmatig twee versies van een document regel voor regel vergeleken, op zoek naar verschillen? Als je een Java‑ontwikkelaar bent die met documentbeheer werkt, weet je hoe tijdrovend dit kan zijn. **Met groupdocs comparison java kun je het hele proces automatiseren** en zelfs je documenten naar HTML converteren voor gemakkelijke deling.  
+Als je **java grote bestanden moet verwerken** tijdens het vergelijken van documenten, maakt GroupDocs.Comparison het eenvoudig. Heb je ooit handmatig twee versies van een document regel voor regel vergeleken om de verschillen te vinden? Als je een Java‑ontwikkelaar bent die met documentbeheer werkt, weet je hoe tijdrovend dit kan zijn. **Met groupdocs comparison java kun je het hele proces automatiseren** en zelfs je documenten naar HTML converteren voor eenvoudig delen.  
 
 Of je nu een content‑managementsysteem bouwt, versiebeheer voor juridische documenten afhandelt, of gewoon wijzigingen tussen bestandsversies moet identificeren, deze tutorial biedt alles wat je nodig hebt.
 
-**Wat je aan het einde beheerst:**
-- GroupDocs.Comparison instellen in je Java‑project (op de juiste manier)
+**Wat je aan het einde onder de knie zult hebben:**
+- GroupDocs.Comparison opzetten in je Java‑project (op de juiste manier)
 - Documenten programmatisch vergelijken met slechts een paar regels code
-- Documenten converteren naar HTML voor web‑vriendelijke weergave
-- Veelvoorkomende valkuilen en prestatie‑optimalisatie afhandelen
-- Realtime integratie‑patronen die daadwerkelijk werken
+- Documenten naar HTML converteren voor web‑vriendelijke weergave
+- Veelvoorkomende valkuilen en prestatie‑optimalisatie behandelen
+- Integratiepatronen uit de praktijk die echt werken
 
-### Snelle Antwoorden
+## Quick Answers
 - **Welke bibliotheek maakt documentvergelijking in Java mogelijk?** GroupDocs.Comparison (groupdocs comparison java)  
 - **Kan ik een document renderen naar HTML?** Ja, met dezelfde `compare()`‑methode zonder doelbestand.  
 - **Heb ik een licentie nodig voor productie?** Ja, een commerciële licentie is vereist.  
 - **Welke Java‑versies worden ondersteund?** JDK 8+ (JDK 11+ aanbevolen).  
-- **Hoe ga ik om met grote bestanden?** Verhoog de JVM‑heap‑grootte en volg de onderstaande geheugen‑beheertips.
+- **Hoe ga ik om met grote bestanden?** Verhoog de JVM‑heapgrootte en volg de onderstaande geheugen‑beheer tips.  
 
-## Wat is groupdocs comparison java?
-`groupdocs comparison java` is een Java‑bibliotheek die programmatisch inserties, deleties en wijzigingen tussen twee of meer documenten identificeert. Het ondersteunt vele formaten — waaronder Word, PDF, Excel en PowerPoint — en kan de resultaten outputten als een nieuw document of als HTML voor weergave op het web.
+## What is groupdocs comparison java?
+`groupdocs comparison java` is een Java‑bibliotheek die programmatisch inserties, deleties en modificaties tussen twee of meer documenten identificeert. Het ondersteunt vele formaten — waaronder Word, PDF, Excel en PowerPoint — en kan de resultaten outputten als een nieuw document of als HTML voor weergave op het web.
 
-## Waarom GroupDocs.Comparison voor Java gebruiken?
+## Why use GroupDocs.Comparison for Java?
 - **Snelheid:** Geoptimaliseerde algoritmen verwerken grote bestanden snel.  
 - **Nauwkeurigheid:** Detecteert wijzigingen op tekst-, stijl- en lay-outniveau.  
-- **Flexibiliteit:** Vergelijk meerdere documenten, render naar HTML, en pas de styling aan.  
-- **Integratie‑klaar:** Werkt naadloos met Spring Boot, REST‑API’s en batch‑verwerkingspijplijnen.
+- **Flexibiliteit:** Vergelijk meerdere documenten, render naar HTML en pas de styling aan.  
+- **Integratie‑klaar:** Werkt naadloos met Spring Boot, REST‑API's en batch‑verwerkingspijplijnen.
 
-## Voorvereisten en Installatievereisten
+## How to java handle large files with GroupDocs Comparison
+Wanneer je gigabyte‑grote contracten of uitgebreide spreadsheets verwerkt, is de manier waarop je geheugen toewijst en de comparer configureert van belang. Hieronder vind je praktische tips die je **java grote bestanden kunt verwerken** zonder heap‑ruimte op te raken.
 
-Voordat we beginnen met coderen, laten we ervoor zorgen dat je alles hebt wat je nodig hebt. Maak je geen zorgen – de installatie is eenvoudig, maar het vanaf het begin goed doen bespaart later debug‑tijd.
+- **Verhoog de JVM‑heap:** `-Xmx4g -Xms2g` is een goed startpunt voor bestanden groter dan 50 MB.  
+- **Gebruik streaming‑API's** waar beschikbaar (bijv. PDF's pagina voor pagina verwerken).  
+- **Maak bronnen direct vrij** met try‑with‑resources, zoals getoond in de voorbeelden.  
 
-### Wat je nodig hebt
+## Prerequisites and Setup Requirements
+
+Voordat we beginnen met coderen, zorgen we ervoor dat je alles hebt wat je nodig hebt. Maak je geen zorgen – de installatie is eenvoudig, maar het vanaf het begin goed doen bespaart later debug‑tijd.
+
+### What You'll Need
 
 **Development Environment:**
 - Java Development Kit (JDK) 8 of hoger (JDK 11+ aanbevolen voor betere prestaties)
 - Een IDE zoals IntelliJ IDEA, Eclipse of VS Code met Java‑extensies
-- Maven of Gradle voor afhankelijkheidsbeheer (we gebruiken Maven in onze voorbeelden)
+- Maven of Gradle voor dependency‑beheer (we gebruiken Maven in onze voorbeelden)
 
 **GroupDocs.Comparison Requirements:**
-- GroupDocs.Comparison voor Java versie 25.2 of later
+- GroupDocs.Comparison for Java versie 25.2 of later
 - Minimaal 2 GB beschikbaar RAM (meer voor grote documenten)
 - Basiskennis van Java en Maven (niets te geavanceerd, beloofd!)
 
-### Maven-configuratie Instellen
+### Maven Configuration Setup
 
 Zo voeg je GroupDocs.Comparison toe aan je project. Voeg deze configuratie toe aan je `pom.xml`:
 
@@ -88,21 +95,20 @@ Zo voeg je GroupDocs.Comparison toe aan je project. Voeg deze configuratie toe a
 </dependencies>
 ```
 
-**Pro Tip:** Als je Gradle gebruikt, zou de equivalente afhankelijkheidsverklaring er als volgt uitzien:
-
+**Pro Tip:** Als je Gradle gebruikt, zou de equivalente dependency‑declaratie er zo uitzien:
 ```gradle
 implementation 'com.groupdocs:groupdocs-comparison:25.2'
 ```
 
-### Licentie‑instelling (Niet Overslaan!)
+### License Setup (Don't Skip This!)
 
-GroupDocs.Comparison is niet gratis voor commercieel gebruik, maar ze maken het gemakkelijk om te beginnen:
+GroupDocs.Comparison is niet gratis voor commercieel gebruik, maar ze maken het gemakkelijk om te starten:
 
-1. **Gratis proefversie**: Perfect voor testen – biedt volledige functionaliteit met enkele beperkingen  
-2. **Tijdelijke licentie**: Geweldig voor ontwikkeling en uitgebreide testfasen  
+1. **Gratis proefversie**: Perfect voor testen – geeft volledige functionaliteit met enkele beperkingen  
+2. **Tijdelijke licentie**: Ideaal voor ontwikkeling en uitgebreide testfasen  
 3. **Commerciële licentie**: Vereist voor productie – beschikbaar op [GroupDocs Purchase](https://purchase.groupdocs.com/buy)
 
-Zodra je afhankelijkheden geregeld zijn, laten we verifiëren dat alles werkt:
+Zodra je dependencies geregeld zijn, laten we verifiëren of alles werkt:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -120,24 +126,24 @@ public class InitializeComparison {
 
 Als je het succesbericht ziet zonder uitzonderingen, ben je klaar. Zo niet, controleer dan je Maven‑configuratie en zorg dat het pad naar je testdocument correct is.
 
-## Documentvergelijking: De Complete Gids
+## Document Comparison: The Complete Guide
 
-Nu het belangrijkste onderdeel – documenten vergelijken in Java. Hier blinkt GroupDocs.Comparison echt uit, waardoor een voorheen complexe taak verrassend eenvoudig wordt.
+Nu het hoofdonderdeel – documenten vergelijken in Java. Hier blinkt GroupDocs.Comparison echt uit, en maakt van een voorheen complexe taak iets verrassend eenvoudigs.
 
-### Begrijpen van Documentvergelijking
+### Understanding Document Comparison
 
 Wanneer we het hebben over documentvergelijking, zoeken we naar drie soorten wijzigingen:
-- **Inserties**: Inhoud die aan het doel‑document is toegevoegd  
+- **Inserties**: Inhoud die aan het doeldocument is toegevoegd  
 - **Deleties**: Inhoud die uit het origineel is verwijderd  
-- **Wijzigingen**: Tekst of opmaak die is aangepast  
+- **Modificaties**: Tekst of opmaak die is gewijzigd  
 
-GroupDocs.Comparison verwerkt dit allemaal automatisch en presenteert de resultaten in een formaat waarmee je gemakkelijk kunt werken.
+GroupDocs.Comparison handelt dit allemaal automatisch af en presenteert de resultaten in een formaat waarmee je gemakkelijk kunt werken.
 
-### Stapsgewijze Implementatie
+### Step‑by‑Step Implementation
 
-We lopen door een volledige vergelijkingsoplossing en leggen elke regel code uit.
+We lopen een volledige vergelijkingsoplossing door en leggen elke regel code uit.
 
-#### Stap 1: Initialiseert de Comparer
+#### Step 1: Initialize the Comparer
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -152,7 +158,7 @@ public class DocumentComparison {
 
 Het `try‑with‑resources`‑blok zorgt ervoor dat de `Comparer` automatisch wordt gesloten, wat cruciaal is voor grote bestanden.
 
-#### Stap 2: Voeg het Doeldocument Toe
+#### Step 2: Add the Target Document
 
 ```java
             // Add the document we want to compare against
@@ -160,9 +166,9 @@ Het `try‑with‑resources`‑blok zorgt ervoor dat de `Comparer` automatisch w
             System.out.println("Target document added for comparison: " + targetDocumentPath);
 ```
 
-Je kunt **meerdere documenten java vergelijken** door herhaaldelijk `comparer.add()` aan te roepen.
+Je kunt **meerdere documenten java vergelijken** door `comparer.add()` herhaaldelijk aan te roepen.
 
-#### Stap 3: Voer de Vergelijking Uit
+#### Step 3: Execute the Comparison
 
 ```java
             // Perform the comparison and get the result path
@@ -174,21 +180,22 @@ Je kunt **meerdere documenten java vergelijken** door herhaaldelijk `comparer.ad
 }
 ```
 
-De `compare()`‑methode doet al het zware werk, analyseert beide documenten en genereert een resultaatbestand dat elke wijziging markeert.
+De `compare()`‑methode doet al het zware werk, analyseert beide documenten en genereert een resultaatsbestand dat elke wijziging markeert.
 
-### Wanneer Documentvergelijking te Gebruiken
+### When to Use Document Comparison
 
 Hier zijn enkele real‑world scenario's waarin deze aanpak uitstekend werkt:
-- **Juridische Documentreview** – Vind wijzigingen in contracten, overeenkomsten of beleidsdocumenten.  
-- **Versiebeheer voor Niet‑Technische Teams** – Bied Git‑achtige tracking voor Word-, PDF- of Excel‑bestanden.  
-- **Content Management** – Volg inhoudsveranderingen in de loop van de tijd in een CMS.  
-- **Kwaliteitsborging** – Vergelijk gegenereerde rapporten met sjablonen om consistentie te waarborgen.
 
-## HTML Rendering: Documenten Web‑Klaar Maken
+- **Juridische documentreview** – Wijzigingen in contracten, overeenkomsten of beleidsdocumenten opsporen.  
+- **Versiebeheer voor niet‑technische teams** – Bied Git‑achtige tracking voor Word-, PDF- of Excel‑bestanden.  
+- **Content‑beheer** – Volg inhoudsveranderingen in de tijd in een CMS.  
+- **Kwaliteitsborging** – Vergelijk gegenereerde rapporten met sjablonen om consistentie te waarborgen.  
 
-Soms wil je niet alleen documenten vergelijken – je wilt ze converteren naar een formaat dat gemakkelijk te delen en te bekijken is op verschillende platformen. HTML‑rendering is hiervoor perfect.
+## HTML Rendering: Making Documents Web‑Ready
 
-### Waarom Renderen naar HTML?
+Soms wil je niet alleen documenten vergelijken – je wilt ze omzetten naar een formaat dat gemakkelijk te delen en te bekijken is op verschillende platforms. HTML‑rendering is hiervoor perfect.
+
+### Why Render to HTML?
 
 HTML‑documenten zijn:
 - **Universeel** – Open in elke webbrowser zonder speciale software  
@@ -196,7 +203,7 @@ HTML‑documenten zijn:
 - **Doorzoekbaar** – Inhoud is indexeerbaar en doorzoekbaar  
 - **Inbedbaar** – Gemakkelijk te integreren in webapplicaties  
 
-### Implementatiegids
+### Implementation Guide
 
 Het proces is opmerkelijk vergelijkbaar met documentvergelijking:
 
@@ -219,63 +226,61 @@ public class RenderDocumentToHTML {
 }
 ```
 
-**Belangrijke Opmerking:** Wanneer je `comparer.add()` weglaat, rendert de `compare()`‑methode het bron‑document naar het formaat dat wordt aangegeven door de extensie van het uitvoerbestand (bijv. `.html`).
+**Belangrijke Opmerking:** Wanneer je `comparer.add()` weglaten, rendert de `compare()`‑methode het bron‑document naar het formaat dat wordt aangegeven door de extensie van het uitvoerbestand (bijv. `.html`).
 
-### Praktische Toepassingen van HTML Rendering
+### Practical HTML Rendering Use Cases
 
-- **Rapportdistributie** – Converteer interne rapporten naar HTML voor gemakkelijke e‑maildeling.  
+- **Rapportdistributie** – Converteer interne rapporten naar HTML voor eenvoudige e‑maildeling.  
 - **Documentarchieven** – Maak web‑toegankelijke versies voor langdurige opslag.  
-- **Mobiel‑vriendelijke Weergave** – HTML werkt goed op tablets en telefoons.  
-- **Integratie met Webapps** – Integreer documentinhoud direct in portals zonder plugins.
+- **Mobiel‑vriendelijke weergave** – HTML werkt goed op tablets en telefoons.  
+- **Integratie met webapps** – Integreer documentinhoud direct in portals zonder plugins.  
 
-## Veelvoorkomende Problemen en Hoe ze op te Lossen
+## Common Issues and How to Solve Them
 
-Laten we de problemen behandelen die je waarschijnlijk tegenkomt (om eerlijk te zijn, gaat het niet altijd soepel de eerste keer).
+### Memory Issues with Large Documents
 
-### Geheugenproblemen met Grote Documenten
+**Probleem**: `OutOfMemoryError` bij het verwerken van grote bestanden (>50 MB).  
 
-**Probleem**: `OutOfMemoryError` bij het verwerken van grote bestanden (>50 MB).
-
-**Oplossing**: Verhoog de JVM‑heap‑grootte en gebruik streaming waar mogelijk:
+**Oplossing**: Verhoog de JVM‑heapgrootte en gebruik streaming waar mogelijk:
 
 ```bash
 java -Xmx4g -Xms2g YourApplication
 ```
 
-**Pro Tip**: Verwerk grote documenten in delen waar mogelijk, of overweeg je serverbronnen te upgraden voor productie.
+**Pro Tip**: Verwerk grote documenten in delen indien mogelijk, of overweeg je serverresources voor productie te upgraden.
 
-### Bestands‑pad Problemen
+### File Path Problems
 
-**Probleem**: `FileNotFoundException` zelfs wanneer het bestand bestaat.
+**Probleem**: `FileNotFoundException` zelfs wanneer het bestand bestaat.  
 
-**Oplossingen**:
+**Oplossingen**:  
 - Gebruik absolute paden tijdens ontwikkeling (`"C:\\Documents\\file.docx"` op Windows of `"/home/user/Documents/file.pdf"` op Linux/macOS).  
-- Controleer bestandsrechten – het Java‑proces heeft leesrechten nodig.  
-- Escape backslashes correct in Windows‑paden of gebruik schuine strepen.
+- Controleer bestandsrechten – het Java‑proces moet leesrechten hebben.  
+- Escape backslashes correct in Windows‑paden of gebruik forward slashes.
 
-### Niet‑Ondersteunde Bestandstype‑Fouten
+### Unsupported File Format Errors
 
-**Probleem**: `UnsupportedFileTypeException` voor bepaalde documenttypes.
+**Probleem**: `UnsupportedFileTypeException` voor bepaalde documenttypen.  
 
 **Oplossing**: GroupDocs.Comparison ondersteunt veel formaten, maar niet alle. Ondersteunde formaten omvatten:
 - Microsoft Office: Word, Excel, PowerPoint  
-- PDF’s  
+- PDF's  
 - Platte tekstbestanden  
 - Diverse afbeeldingsformaten  
 
-Bekijk de [officiële documentatie](https://docs.groupdocs.com/comparison/java/) voor een volledige lijst.
+Bekijk de [official documentation](https://docs.groupdocs.com/comparison/java/) voor een volledige lijst.
 
-### Prestatie‑optimalisatie
+### Performance Optimization
 
-- **Trage Vergelijkingstijden**: Schakel multi‑threading in (de bibliotheek is thread‑safe).  
-- **I/O‑Snelheid**: Gebruik SSD‑opslag voor betere lees‑/schrijfsnelheid.  
-- **Bronopruiming**: Sluit ongebruikte `Comparer`‑instanties direct.
+- **Trage vergelijktijden**: Schakel multi‑threading in (de bibliotheek is thread‑safe).  
+- **I/O‑snelheid**: Gebruik SSD‑opslag voor betere lees‑/schrijfsnelheid.  
+- **Resource‑opruiming**: Sluit ongebruikte `Comparer`‑instanties direct.
 
-## Best Practices voor Productiegebruik
+## Best Practices for Production Use
 
-### Foutafhandeling
+### Error Handling
 
-Omhul altijd je vergelijkingsbewerkingen met correcte foutafhandeling:
+Omring je vergelijkingsoperaties altijd met juiste exception‑handling:
 
 ```java
 public boolean compareDocumentsWithErrorHandling(String source, String target, String output) {
@@ -292,7 +297,7 @@ public boolean compareDocumentsWithErrorHandling(String source, String target, S
 }
 ```
 
-### Resourcebeheer
+### Resource Management
 
 Gebruik dependency injection of factory‑patronen om `Comparer`‑instanties in grotere applicaties te beheren:
 
@@ -310,7 +315,7 @@ public class DocumentComparisonService {
 }
 ```
 
-### Configuratiebeheer
+### Configuration Management
 
 Externaliseer je configuratie voor flexibiliteit:
 
@@ -325,9 +330,9 @@ public class ComparisonConfig {
 }
 ```
 
-## Real‑World Integratie‑Voorbeelden
+## Real‑World Integration Examples
 
-### Spring Boot Integratie
+### Spring Boot Integration
 
 Maak een REST‑API voor documentvergelijking:
 
@@ -362,7 +367,7 @@ public class DocumentComparisonController {
 }
 ```
 
-### Batchverwerking
+### Batch Processing
 
 Verwerk meerdere documentparen parallel:
 
@@ -382,18 +387,18 @@ public class BatchDocumentProcessor {
 }
 ```
 
-## Prestatie‑tips voor Grootschalig Gebruik
+## Performance Tips for Large‑Scale Usage
 
-### Geheugenbeheer
+### Memory Management
 
-- **JVM‑vlaggen**: `-Xmx4g -XX:+UseG1GC` voor betere garbage collection.  
+- **JVM‑flags**: `-Xmx4g -XX:+UseG1GC` voor betere garbage collection.  
 - **Monitoring**: Gebruik VisualVM of JProfiler om geheugenlekken te detecteren.  
-- **Pooling**: Hergebruik `Comparer`‑instanties waar mogelijk.
+- **Pooling**: Hergebruik `Comparer`‑instanties wanneer mogelijk.
 
-### Schaalstrategieën
+### Scaling Strategies
 
-- **Horizontale Schaling**: Zet meerdere instanties achter een load balancer.  
-- **Asynchrone Verwerking**: Gebruik berichtqueues (RabbitMQ, AWS SQS) voor niet‑blokkende workloads:
+- **Horizontale schaalbaarheid**: Deploy meerdere instanties achter een load balancer.  
+- **Async Processing**: Gebruik message queues (RabbitMQ, AWS SQS) voor non‑blocking workloads:
 
 ```java
 @RabbitListener(queues = "document.comparison.queue")
@@ -403,9 +408,9 @@ public void processComparisonRequest(ComparisonRequest request) {
 }
 ```
 
-## Geavanceerde Functies en Aanpassing
+## Advanced Features and Customization
 
-### Vergelijkingsinstellingen
+### Comparison Settings
 
 Pas aan hoe verschillen worden gemarkeerd:
 
@@ -421,43 +426,43 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-### Formaat‑Specifieke Opties
+### Format‑Specific Options
 
-Verschillende documenttypes ondersteunen verschillende vergelijkingsfuncties. Voor spreadsheets kun je kiezen om formules te vergelijken versus weergegeven waarden, voor PDF’s kun je de afbeeldingsvergelijking regelen, enz.
+Verschillende documenttypen ondersteunen verschillende vergelijkingsfuncties. Voor spreadsheets kun je kiezen om formules te vergelijken versus weergegeven waarden, voor PDF's kun je beeldvergelijking regelen, enzovoort.
 
-## Veelgestelde Vragen
+## Frequently Asked Questions
 
-**V: Kan ik meerdere documenten java tegelijk vergelijken?**  
+**Q: Kan ik meerdere documenten java tegelijk vergelijken?**  
 A: Ja! Roep `comparer.add()` meerdere keren aan om een bron‑document te vergelijken met verschillende doelversies in één run.
 
-**V: Wat is de maximale bestandsgrootte die GroupDocs.Comparison aankan?**  
-A: Er is geen harde limiet, maar de prestaties hangen af van het beschikbare geheugen. Voor bestanden groter dan 100 MB, vergroot de JVM‑heap‑grootte en zorg voor voldoende systeembronnen.
+**Q: Wat is de maximale bestandsgrootte die GroupDocs.Comparison aankan?**  
+A: Er is geen harde limiet, maar de prestaties hangen af van beschikbaar geheugen. Voor bestanden groter dan 100 MB, vergroot de JVM‑heap en zorg voor voldoende systeemresources.
 
-**V: Hoe ga ik om met met wachtwoord beveiligde documenten?**  
+**Q: Hoe ga ik om met wachtwoord‑beveiligde documenten?**  
 A: Geef het wachtwoord op bij het initialiseren van de `Comparer` of bij het toevoegen van een doel‑document. De bibliotheek zal het bestand intern ontsleutelen.
 
-**V: Kan ik aanpassen hoe verschillen worden gemarkeerd in de output?**  
-A: Absoluut. Gebruik `CompareOptions` om aangepaste kleuren, lettertypen en markeerstijlen in te stellen voor inserties, deleties en wijzigingen.
+**Q: Kan ik aanpassen hoe verschillen worden gemarkeerd in de output?**  
+A: Absoluut. Gebruik `CompareOptions` om aangepaste kleuren, lettertypen en markeerstijlen in te stellen voor inserties, deleties en modificaties.
 
-**V: Is GroupDocs.Comparison thread‑safe?**  
+**Q: Is GroupDocs.Comparison thread‑safe?**  
 A: Ja, maar het is beter om aparte `Comparer`‑instanties per thread te gebruiken in plaats van één instantie te delen.
 
-**V: Welke formaten kunnen naar HTML worden geconverteerd?**  
+**Q: Welke formaten kunnen naar HTML worden geconverteerd?**  
 A: De meeste gangbare formaten — waaronder Word, PDF, Excel en PowerPoint — kunnen naar HTML worden gerenderd.
 
-**V: Hoe krijg ik ondersteuning als ik tegen problemen aanloop?**  
-A: Het [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) is een uitstekende community‑bron, en houders van een commerciële licentie ontvangen prioritaire ondersteuning.
+**Q: Hoe krijg ik support als ik tegen problemen aanloop?**  
+A: Het [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) is een uitstekende community‑bron, en houders van een commerciële licentie krijgen prioritaire ondersteuning.
 
-**Aanvullende Bronnen**  
-- **Documentatie:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **API‑referentie:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Voorbeeldprojecten:** [GitHub Examples Repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)  
-- **Laatste Versie Downloaden:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Aankoopopties:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
-- **Gratis Proefversie:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+**Additional Resources**  
+- **Documentation:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Sample Projects:** [GitHub Examples Repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)  
+- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Purchase Options:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
+- **Free Trial:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Laatst Bijgewerkt:** 2025-12-23  
-**Getest Met:** GroupDocs.Comparison 25.2 voor Java  
-**Auteur:** GroupDocs  
+**Last Updated:** 2026-03-24  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs

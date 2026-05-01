@@ -1,125 +1,128 @@
 ---
 categories:
 - Java Development
-date: '2025-12-28'
+date: '2026-02-28'
 description: Meistern Sie, wie Sie den Dokumentenvergleich in Java mit GroupDocs.Comparison
   anpassen. Lernen Sie Empfindlichkeitseinstellungen, Stiloptionen und fortgeschrittene
   Konfigurationstechniken kennen.
 keywords: customize document comparison java, GroupDocs comparison settings Java,
   document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
   settings
-lastmod: '2025-12-28'
+lastmod: '2026-02-28'
 linktitle: Comparison Options & Settings
 tags:
 - document-comparison
 - java-tutorials
 - groupdocs
 - customization
-title: Dokumentvergleich in Java anpassen – Komplettleitfaden
+title: Dokumentvergleich in Java anpassen – Vollständiger Leitfaden
 type: docs
 url: /de/java/comparison-options/
 weight: 11
 ---
 
-# Anpassen des Dokumentenvergleichs Java – Komplettleitfaden
+# Dokumentvergleich Java anpassen – Vollständiger Leitfaden
 
-Haben Sie schon einmal Schwierigkeiten mit Dokumentenvergleichen gehabt, die jede noch so kleine Formatierungsänderung hervorheben oder wichtige Inhaltsunterschiede übersehen? Sie sind nicht allein. Die meisten Entwickler beginnen mit einem einfachen Dokumentenvergleich, merken jedoch schnell, dass sie eine feinkörnige Kontrolle darüber benötigen, was erkannt wird, wie Änderungen angezeigt werden und wie empfindlich der Vergleichs‑Algorithmus sein soll. **In diesem Leitfaden lernen Sie, wie Sie den Dokumentenvergleich Java anpassen**, sodass er exakt so funktioniert, wie Ihr Projekt es verlangt.
+Haben Sie schon einmal Schwierigkeiten mit Dokumentvergleichen gehabt, die jede winzige Formatierungsänderung hervorheben oder wichtige Inhaltsunterschiede übersehen? Sie sind nicht allein. Die meisten Entwickler beginnen mit einem einfachen Dokumentvergleich, stellen jedoch schnell fest, dass sie eine feinkörnige Kontrolle darüber benötigen, was erkannt wird, wie Änderungen angezeigt werden und wie empfindlich der Vergleichsalgorithmus sein soll. **In diesem Leitfaden lernen Sie, wie Sie document comparison java anpassen**, sodass es genau so funktioniert, wie Ihr Projekt es verlangt.
 
-## Schnellantworten
-- **Was bedeutet „customize document comparison java“?** Anpassung der GroupDocs.Comparison‑Einstellungen (Empfindlichkeit, Styling, Ignorier‑Regeln) an die Bedürfnisse Ihrer Java‑Anwendung.  
-- **Benötige ich eine Lizenz?** Ja, für die Produktion ist eine gültige GroupDocs.Comparison‑für‑Java‑Lizenz erforderlich.  
-- **Welche Formate werden unterstützt?** PDF, DOCX, PPTX, XLSX und viele weitere gängige Office‑Formate.  
-- **Kann ich Zeitstempel oder automatisch generierte IDs ignorieren?** Absolut – nutzen Sie Ignorier‑Muster oder passen Sie die Empfindlichkeit an, um solchen Rauschen zu filtern.  
-- **Beeinflusst hohe Empfindlichkeit die Leistung?** Höhere Empfindlichkeit kann die Verarbeitungszeit bei großen Dateien erhöhen; passen Sie die Einstellungen an Ihre Arbeitslast an.
+## Schnelle Antworten
+- **Was bedeutet „customize document comparison java“?** Anpassung der GroupDocs.Comparison‑Einstellungen (Sensitivität, Styling, Ignorierregeln), um den Anforderungen Ihrer Java‑Anwendung zu entsprechen.  
+- **Brauche ich eine Lizenz?** Ja, für den Produktionseinsatz ist eine gültige GroupDocs.Comparison für Java‑Lizenz erforderlich.  
+- **Welche Formate werden unterstützt?** PDF, DOCX, PPTX, XLSX und viele andere gängige Office‑Formate.  
+- **Kann ich Zeitstempel oder automatisch generierte IDs ignorieren?** Absolut – verwenden Sie Ignoriermuster oder passen Sie die Sensitivität an, um solche Störgeräusche herauszufiltern.  
+- **Wird die Leistung durch hohe Sensitivität beeinflusst?** Eine höhere Sensitivität kann die Verarbeitungszeit bei großen Dateien erhöhen; passen Sie die Einstellungen an Ihre Arbeitslast an.
 
-## Was bedeutet „customize document comparison java“?
-Den Dokumentenvergleich in Java anzupassen bedeutet, die GroupDocs.Comparison‑Engine so zu konfigurieren, dass nur die Änderungen erkannt werden, die für Sie relevant sind, und diese Änderungen klar und prüferfreundlich dargestellt werden. Durch Anpassen von Empfindlichkeits‑Levels, Styling‑Regeln und Ignorier‑Mustern erhalten Sie eine präzise Kontrolle über das Vergleichsergebnis.
+## Was ist „customize document comparison java“?
+Die Anpassung des Dokumentvergleichs in Java bedeutet, die GroupDocs.Comparison‑Engine so zu konfigurieren, dass nur die Änderungen erkannt werden, die für Sie relevant sind, und diese Änderungen in einer klaren, prüferfreundlichen Weise dargestellt werden. Durch Anpassen von Sensitivitätsstufen, Styling‑Regeln und Ignoriermustern erhalten Sie eine präzise Kontrolle über das Vergleichsergebnis.
 
-## Warum den Dokumentenvergleich Java anpassen?
+## Warum document comparison java anpassen?
 - **Rauschen reduzieren:** Verhindern Sie, dass Prüfer von unbedeutenden Formatierungsänderungen überflutet werden.  
 - **Kritische Änderungen hervorheben:** Lassen Sie rechtliche oder finanzielle Änderungen sofort auffallen.  
 - **Markenkonsistenz wahren:** Wenden Sie die Farben und Schriftarten Ihrer Organisation auf eingefügten oder gelöschten Inhalt an.  
-- **Leistung verbessern:** Überspringen Sie unnötige Prüfungen bei großen Dokumenten‑Batches.
+- **Leistung verbessern:** Überspringen Sie unnötige Prüfungen bei großen Dokumentenbatches.
 
-## Wann Vergleichs‑Optionen anpassen
+## Wann Document Comparison‑Optionen anpassen
 
-Bevor Sie in die technischen Details eintauchen, sollten Sie verstehen, wann und warum Sie das Vergleichs‑Verhalten anpassen möchten:
+Bevor Sie in die technischen Details eintauchen, sollten Sie verstehen, wann und warum Sie das Vergleichsverhalten anpassen möchten:
 
-**Hochvolumige Dokumentenverarbeitung** – Beim Vergleich von Hunderten von Verträgen oder Berichten benötigen Sie einheitliches Styling und klare Änderungs‑Hervorhebungen, die die Prüfer nicht überfordern.
+**High‑Volume Document Processing** – Beim Vergleich von Hunderten von Verträgen oder Berichten benötigen Sie ein konsistentes Format und klare Änderungskennzeichnung, die die Prüfer nicht überfordert.
 
-**Rechtliche Dokumentenprüfung** – Kanzleien benötigen präzise Kontrolle darüber, was als „Änderung“ gilt – Formatierungs‑Feinjustierungen ignorieren, aber jede Inhaltsänderung erfassen.
+**Legal Document Review** – Anwaltskanzleien benötigen präzise Kontrolle darüber, was als „Änderung“ gilt – Formatierungsanpassungen ignorieren, aber jede Inhaltsänderung erfassen.
 
-**Versionskontrolle für technische Dokumentation** – Software‑Teams müssen bedeutende Änderungen in der Dokumentation nachverfolgen, während automatisierte Zeitstempel‑Updates oder kleine Formatierungs‑Anpassungen herausgefiltert werden.
+**Version Control for Technical Documentation** – Software‑Teams müssen bedeutende Änderungen in der Dokumentation nachverfolgen und gleichzeitig automatisierte Zeitstempel‑Updates oder kleinere Formatierungsanpassungen herausfiltern.
 
-**Kollaborative Bearbeitungs‑Workflows** – Wenn mehrere Autoren am selben Dokument arbeiten, möchten Sie substanzielle Änderungen hervorheben, ohne die Ansicht mit jeder Leerzeichen‑Anpassung zu überladen.
+**Collaborative Editing Workflows** – Wenn mehrere Autoren am selben Dokument arbeiten, möchten Sie wesentliche Änderungen hervorheben, ohne die Ansicht mit jeder Abstandsanpassung zu überladen.
 
 ## Häufige Szenarien für die Anpassung des Vergleichs
 
-Das Verständnis dieser Praxisbeispiele hilft Ihnen, die richtigen Einstellungen für Ihre spezifischen Anforderungen zu wählen:
+Das Verständnis dieser realen Anwendungsfälle hilft Ihnen, die richtigen Einstellungen für Ihre spezifischen Bedürfnisse zu wählen:
 
 ### Szenario 1: Vertragsprüfung
-Sie bauen ein System für Rechtsabteilungen, um Vertragsänderungen zu prüfen. Sie müssen jede Wortänderung sehen, interessieren sich jedoch nicht für Schrift‑ oder Zeilenabstand‑Anpassungen.
+Sie bauen ein System für Rechtsteams zur Überprüfung von Vertragsänderungen. Sie müssen jede Wortänderung sehen, interessieren sich jedoch nicht für Schriftartänderungen oder Zeilenabstandsanpassungen.
 
-**Ideale Einstellungen:** Hohe Text‑Empfindlichkeit, deaktivierte Formatierungs‑Erkennung, benutzerdefiniertes Styling für Einfügungen und Löschungen.
+**Ideale Einstellungen**: Hohe Textsensitivität, deaktivierte Formatierungserkennung, benutzerdefiniertes Styling für Einfügungen und Löschungen.
 
-### Szenario 2: Aktualisierungen technischer Dokumentation  
-Ihr Team pflegt API‑Dokumentation, die häufig aktualisiert wird. Sie wollen Inhaltsänderungen erfassen, aber automatisierte Datums‑Stempel und kleine Formatierungs‑Updates ignorieren.
+### Szenario 2: Aktualisierungen technischer Dokumentation
+Ihr Team pflegt API‑Dokumentation, die häufig aktualisiert wird. Sie möchten Inhaltsänderungen erfassen, aber automatisierte Datumsstempel und kleinere Formatierungsupdates ignorieren.
 
-**Ideale Einstellungen:** Mittlere Empfindlichkeit, Ignorieren spezifischer Text‑Muster, benutzerdefinierte Hervorhebung für Code‑Blöcke.
+**Ideale Einstellungen**: Mittlere Sensitivität, Ignorieren spezifischer Textmuster, benutzerdefinierte Hervorhebung für Code‑Blöcke.
 
 ### Szenario 3: Berichtserstellung
 Sie vergleichen Quartalsberichte, bei denen sich die Daten ändern, die Vorlagenstruktur jedoch ähnlich bleibt. Der Fokus sollte auf numerischen Änderungen und neuen Abschnitten liegen.
 
-**Ideale Einstellungen:** Benutzerdefinierte Empfindlichkeit für Tabellen und Zahlen, erweitertes Styling für Daten‑Modifikationen.
+**Ideale Einstellungen**: Benutzerdefinierte Sensitivität für Tabellen und Zahlen, erweitertes Styling für Datenänderungen.
+
+## Wie man PDF‑Dokumente in Java mit GroupDocs.Comparison vergleicht
+Wenn Ihre Hauptarbeitslast PDFs umfasst, gelten dieselben Anpassungsprinzipien. Verwenden Sie das `ComparisonOptions`‑Objekt, um das PDF‑spezifische Verhalten fein abzustimmen – z. B. das Aktivieren oder Deaktivieren des Bildvergleichs, die Kontrolle der Genauigkeit der Textextraktion und das Anwenden von PDF‑freundlichen Hervorhebungsfarben. So erhalten Sie den zuverlässigsten Unterschied und halten die Verarbeitungszeiten im Rahmen.
 
 ## Verfügbare Tutorials
 
 ### [Customize Inserted Item Styles in Java Document Comparisons with GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-Erfahren Sie, wie Sie eingefügte Element‑Stile in Java‑Dokumentenvergleichen mit GroupDocs.Comparison anpassen. Dieses Tutorial deckt alles von grundlegender Styling‑Konfiguration bis hin zu fortgeschrittener Anzeige‑Anpassung ab und hilft Ihnen, professionelle Vergleichsergebnisse zu erstellen, die Klarheit und Benutzerfreundlichkeit für Ihre Endnutzer erhöhen.
+Erfahren Sie, wie Sie eingefügte Elementstile in Java‑Dokumentvergleichen mit GroupDocs.Comparison anpassen. Dieses Tutorial behandelt alles von grundlegender Styling‑Konfiguration bis hin zu fortgeschrittener Anzeigeanpassung und hilft Ihnen, professionell aussehende Vergleichsergebnisse zu erstellen, die Klarheit und Benutzerfreundlichkeit für Ihre Endbenutzer erhöhen.
 
-**Was Sie lernen werden:**
+**What You'll Learn:**
 - Konfiguration benutzerdefinierter Farben und Formatierungen für eingefügten Inhalt  
-- Einrichtung verschiedener visueller Stile für unterschiedliche Änderungs‑Typen  
-- Implementierung konsistenter Stile über verschiedene Dokumenten‑Formate hinweg  
-- Optimierung der visuellen Klarheit für Prüf‑Workflows  
+- Einrichtung verschiedener visueller Stile für unterschiedliche Änderungstypen  
+- Implementierung konsistenter Stile über verschiedene Dokumentformate hinweg  
+- Optimierung der visuellen Klarheit für Prüfabläufe  
 
-**Perfekt für:** Teams, die markenkonforme Vergleichsergebnisse oder spezifische visuelle Anforderungen für die Änderungsverfolgung benötigen.
+**Perfekt für**: Teams, die markenbezogene Vergleichsergebnisse oder spezifische visuelle Anforderungen für die Änderungsverfolgung benötigen.
 
-## Best Practices für die Anpassung des Java‑Dokumentenvergleichs
+## Best Practices für die Anpassung von Java‑Dokumentvergleichen
 
-**Mit den Standard‑Einstellungen starten** – Testen Sie zunächst die out‑of‑the‑box‑Konfiguration; oft löst ein einziger Feineinstellungs‑Schritt das Problem.
+**Start with Default Settings** – Testen Sie zunächst die Standardkonfiguration; oft löst eine einzige Anpassung das Problem.
 
-**Zielgruppe berücksichtigen** – Rechtliche Prüfer benötigen andere Hervorhebungen als technische Redakteure. Passen Sie Styling und Empfindlichkeit an die Erwartungen und Workflows der Nutzer an.
+**Consider Your Audience** – Rechtliche Prüfer benötigen andere Hervorhebungen als technische Redakteure. Passen Sie Ihr Styling und Ihre Sensitivität an die Erwartungen und Arbeitsabläufe der Nutzer an.
 
-**Mit repräsentativen Dokumenten testen** – Verwenden Sie immer reale Dateien aus Ihrem Fachgebiet, nicht nur einfache Test‑Cases. Randbedingungen zeigen sich häufig erst bei produktionsähnlichen Inhalten.
+**Test with Representative Documents** – Verwenden Sie stets reale Dateien aus Ihrem Fachgebiet, nicht nur einfache Testfälle. Randfälle treten häufig erst bei produktionsähnlichen Inhalten auf.
 
-**Leistungs‑ vs. Genauigkeits‑Abwägung** – Höhere Empfindlichkeit liefert präzisere Erkennung, kann aber die Verarbeitung großer Dokumente verlangsamen. Finden Sie den optimalen Kompromiss für Ihre Umgebung.
+**Performance vs. Accuracy Trade‑offs** – Höhere Sensitivität liefert präzisere Erkennung, kann jedoch die Verarbeitung großer Dokumente verlangsamen. Finden Sie das optimale Gleichgewicht für Ihre Umgebung.
 
-**Konsistenz über Dokumenttypen hinweg** – Wenn Sie PDFs, Word‑Dateien und Excel‑Sheets vergleichen, stellen Sie sicher, dass Ihre Stil‑Regeln in allen unterstützten Formaten einheitlich funktionieren.
+**Consistency Across Document Types** – Wenn Sie PDFs, Word‑Dateien und Excel‑Tabellen vergleichen, stellen Sie sicher, dass Ihre Stilregeln über alle unterstützten Formate hinweg einheitlich funktionieren.
 
-## Häufige Konfigurations‑Herausforderungen
+## Häufige Konfigurationsherausforderungen
 
-**Über‑empfindliche Erkennung** – Wenn der Vergleich zu viele unbedeutende Änderungen hervorhebt, reduzieren Sie die Empfindlichkeit oder fügen Sie Ignorier‑Muster für bekannte Varianten (z. B. Zeitstempel oder automatisch generierte IDs) hinzu.
+**Over‑Sensitive Detection** – Wenn Ihr Vergleich zu viele unbedeutende Änderungen hervorhebt, reduzieren Sie die Sensitivität oder fügen Sie Ignoriermuster für bekannte Variationen hinzu (z. B. Zeitstempel oder automatisch generierte IDs).
 
-**Wichtige Änderungen werden übersehen** – Wenn signifikante Modifikationen nicht erkannt werden, erhöhen Sie die Empfindlichkeit oder prüfen Sie, ob die betreffenden Elemente (Tabellen, eingebettete Objekte) im Vergleichs‑Umfang enthalten sind.
+**Missing Important Changes** – Wenn wichtige Änderungen nicht erkannt werden, erhöhen Sie die Sensitivität oder prüfen Sie, ob die Elemente (Tabellen, eingebettete Objekte) im Vergleichs‑Umfang enthalten sind.
 
-**Inkonsistentes Styling** – Wenn benutzerdefinierte Stile nicht überall angewendet werden, prüfen Sie, ob die Stil‑Definitionen mit jedem zu verarbeitenden Dokumenten‑Format kompatibel sind.
+**Inconsistent Styling** – Wenn benutzerdefinierte Stile nicht einheitlich angewendet werden, prüfen Sie, ob die Stildefinitionen mit jedem verarbeiteten Dokumentformat kompatibel sind.
 
-**Leistungsprobleme** – Große Dokumente mit hoher Empfindlichkeit können langsam sein. Erwägen Sie eine Vorverarbeitung der Dateien oder das Aufteilen des Vergleichs in Abschnitte.
+**Performance Issues** – Große Dokumente mit hoher Sensitivität können langsam sein. Erwägen Sie die Vorverarbeitung von Dateien oder das Aufteilen des Vergleichs in Abschnitte.
 
 ## Pro‑Tipps für fortgeschrittene Anpassungen
 
-- **Mehrere Techniken kombinieren** – Nutzen Sie benutzerdefiniertes Styling, Empfindlichkeits‑Anpassungen und Ignorier‑Muster gemeinsam für optimale Ergebnisse.  
-- **Erfolgreiche Konfigurationen speichern** – Legen Sie Ihre bevorzugten Einstellungen als Vorlagen ab, um sie projektübergreifend wiederzuverwenden.  
-- **Benutzer‑Feedback überwachen** – Sammeln Sie regelmäßig Rückmeldungen von Prüfern; passen Sie Styling oder Empfindlichkeit basierend auf realen Anwendungsfällen an.  
-- **Einstellungen dokumentieren** – Führen Sie eine knappe Aufzeichnung, warum jede Option gewählt wurde; das erleichtert zukünftige Wartung und Einarbeitung.
+- **Combine Multiple Techniques** – Verwenden Sie benutzerdefiniertes Styling, Sensitivitätsanpassung und Ignoriermuster zusammen für optimale Ergebnisse.  
+- **Save Successful Configurations** – Speichern Sie Ihre bevorzugten Einstellungen als Vorlagen zur Wiederverwendung in Projekten.  
+- **Monitor User Feedback** – Sammeln Sie regelmäßig Rückmeldungen von Prüfern; passen Sie Styling oder Sensitivität basierend auf realer Nutzung an.  
+- **Document Your Settings** – Führen Sie eine knappe Dokumentation darüber, warum jede Option gewählt wurde; das erleichtert zukünftige Wartung und Einarbeitung.
 
 ## Fehlersuche bei häufigen Problemen
 
-- **Änderungen werden nicht wie erwartet angezeigt** – Prüfen Sie, ob Ihr benutzerdefiniertes Styling von dokumentenbezogenen Formatierungen überschrieben wird. Beachten Sie die Priorität der Regeln.  
-- **Leistungsabfall** – Reduzieren Sie die Empfindlichkeit für weniger kritische Änderungs‑Typen oder aktivieren Sie parallele Verarbeitung für Batch‑Jobs.  
-- **Inkonsistente Ergebnisse** – Suchen Sie nach versteckten Metadaten, unsichtbaren Zeichen oder strukturellen Unterschieden, die den Algorithmus beeinflussen könnten.
+- **Changes Not Displaying as Expected** – Prüfen Sie, ob Ihr benutzerdefiniertes Styling nicht durch Dokument‑Level‑Formatierung überschrieben wird. Überprüfen Sie die Regelpriorität.  
+- **Performance Degradation** – Reduzieren Sie die Sensitivität für weniger kritische Änderungstypen oder aktivieren Sie die parallele Verarbeitung für Batch‑Jobs.  
+- **Inconsistent Results** – Suchen Sie nach versteckten Metadaten, unsichtbaren Zeichen oder strukturellen Unterschieden, die den Algorithmus beeinflussen könnten.
 
 ## Zusätzliche Ressourcen
 
@@ -132,25 +135,23 @@ Erfahren Sie, wie Sie eingefügte Element‑Stile in Java‑Dokumentenvergleiche
 
 ## Häufig gestellte Fragen
 
-**F: Kann ich die Formatierungs‑Erkennung deaktivieren und trotzdem den Textvergleich behalten?**  
-A: Ja, Sie können die Formatierungs‑Prüfungen im `ComparisonOptions`‑Objekt ausschalten und die Text‑Empfindlichkeit aktiviert lassen.
+**Q: Kann ich die Formatierungserkennung deaktivieren und gleichzeitig den Textvergleich beibehalten?**  
+A: Ja, Sie können die Formatierungsprüfungen im `ComparisonOptions`‑Objekt ausschalten und die Text‑Sensitivität aktiviert lassen.
 
-**F: Wie ignoriere ich bestimmte Wörter oder Muster wie Zeitstempel?**  
-A: Nutzen Sie die `ignorePatterns`‑Sammlung in `ComparisonOptions`, um reguläre Ausdrücke anzugeben, die vom Diff ausgeschlossen werden sollen.
+**Q: Wie ignoriere ich bestimmte Wörter oder Muster wie Zeitstempel?**  
+A: Verwenden Sie die `ignorePatterns`‑Sammlung im `ComparisonOptions`, um reguläre Ausdrücke anzugeben, die vom Diff ausgeschlossen werden sollen.
 
-**F: Ist es möglich, unterschiedliche Farben für Einfügungen und Löschungen zu verwenden?**  
-A: Absolut. Konfigurieren Sie `InsertedItemStyle` und `DeletedItemStyle` mit Ihren gewünschten Vorder‑ und Hintergrundfarben.
+**Q: Ist es möglich, unterschiedliche Farben für Einfügungen und Löschungen zu verwenden?**  
+A: Absolut. Konfigurieren Sie `InsertedItemStyle` und `DeletedItemStyle` mit Ihren bevorzugten Vorder‑ und Hintergrundfarben.
 
-**F: Welche Auswirkungen hat hohe Empfindlichkeit auf große PDFs?**  
-A: Hohe Empfindlichkeit erhöht CPU‑Auslastung und Speicherverbrauch. Bei sehr großen PDFs sollten Sie Seiten parallel verarbeiten oder die Empfindlichkeit für nicht‑kritische Abschnitte reduzieren.
+**Q: Welche Auswirkungen hat hohe Sensitivität auf große PDFs?**  
+A: Hohe Sensitivität erhöht die CPU‑Auslastung und den Speicherverbrauch. Bei sehr großen PDFs sollten Sie die Verarbeitung von Seiten parallelisieren oder die Sensitivität für nicht‑kritische Abschnitte senken.
 
-**F: Kann ich dieselbe Konfiguration für mehrere Vergleichsdurchläufe wiederverwenden?**  
-A: Ja, instanziieren Sie ein einzelnes `ComparisonOptions`‑Objekt mit Ihren benutzerdefinierten Einstellungen und verwenden Sie es für jeden Vergleichs‑Aufruf erneut.
+**Q: Kann ich dieselbe Konfiguration für mehrere Vergleichsdurchläufe wiederverwenden?**  
+A: Ja, erstellen Sie ein einzelnes `ComparisonOptions`‑Objekt mit Ihren benutzerdefinierten Einstellungen und verwenden Sie es für jeden Vergleichsaufruf erneut.
 
 ---
 
-**Zuletzt aktualisiert:** 2025-12-28  
+**Zuletzt aktualisiert:** 2026-02-28  
 **Getestet mit:** GroupDocs.Comparison for Java 23.11  
-**Autor:** GroupDocs  
-
----
+**Autor:** GroupDocs

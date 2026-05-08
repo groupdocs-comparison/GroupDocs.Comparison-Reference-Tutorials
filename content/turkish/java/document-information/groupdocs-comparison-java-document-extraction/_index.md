@@ -1,31 +1,70 @@
 ---
-"date": "2025-05-05"
-"description": "Java'da GroupDocs.Comparison kullanarak belge meta verilerini nasıl verimli bir şekilde çıkaracağınızı öğrenin. Dosya türlerini, sayfa sayılarını ve boyutlarını anlayarak iş akışlarını kolaylaştırın ve veri analizini geliştirin."
-"title": "Java'da GroupDocs ile Ana Belge Meta Verilerinin Çıkarılması"
-"url": "/tr/java/document-information/groupdocs-comparison-java-document-extraction/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-03-03'
+description: GroupDocs.Comparison'ı Java'da kullanarak dosya türünü ve PDF sayfa sayısını
+  nasıl alacağınızı öğrenin. Adım adım kod, sorun giderme ve performans ipuçları.
+keywords: extract document metadata Java, GroupDocs Java tutorial, document information
+  extraction, Java file metadata API, how to get document properties in Java
+lastmod: '2026-03-03'
+linktitle: Extract Document Metadata Java
+tags:
+- GroupDocs
+- document-processing
+- metadata-extraction
+- java-tutorial
+title: Java Dosya Türünü Al – GroupDocs ile Belge Metaverisini Çıkar
 type: docs
+url: /tr/java/document-information/groupdocs-comparison-java-document-extraction/
+weight: 1
 ---
-# Java'da GroupDocs ile Belge Meta Verisi Çıkarımında Ustalaşma
 
-Günümüzün dijital ortamında, belgelerden bilgileri etkin bir şekilde yönetmek ve çıkarmak, sektörler arası işletmeler için hayati önem taşır. İster yasal sözleşmelerle, ister akademik makalelerle veya finansal raporlarla uğraşıyor olun, dosya türü, sayfa sayısı ve boyut gibi belge meta verilerini anlamak iş akışlarını kolaylaştırabilir ve veri analizini geliştirebilir. Bu eğitim, hem girdi akışları hem de dosya yolları aracılığıyla değerli belge bilgilerini çıkarmak için Java'da GroupDocs.Comparison'ı kullanma konusunda size rehberlik eder.
+# Java Get File Type – GroupDocs ile Belge Meta Verilerini Çıkar
 
-## Ne Öğreneceksiniz:
-- GroupDocs.Comparison kullanarak Java ile belge meta verilerini çıkarma
-- GroupDocs.Comparison için ortamınızı ayarlama
-- InputStreams ve dosya yollarıyla belge bilgisi çıkarma işleminin uygulanması
-- Bu güçlü araçla gerçek dünya çözümlerini uygulayın
+Kendinizi bir klasördeki belgelerle boğuşurken, hangilerinin PDF olduğunu, kaç sayfa içerdiğini ya da dosya boyutlarını merak ederken buldunuz mu? Java’da belge işleme ile uğraşıyorsanız muhtemelen bu zorlukla karşılaşmışsınızdır. İçerik yönetim sistemi oluşturuyor, belge iş akışlarını otomatikleştiriyor ya da sadece dosyaları programlı olarak düzenlemeniz gerekiyorsa, belge meta verilerini çıkarmak bir oyun değiştiricidir. Bu rehberde **java get file type** nasıl yapılır ve GroupDocs.Comparison kullanarak sayfa sayısı gibi diğer özellikleri nasıl alırsınız öğreneceksiniz.
 
-Başlamak için ön koşullara bir göz atalım!
+## Quick Answers
+- **What does “java get file type” mean?** Bir belgenin dosya formatını (PDF, DOCX, vb.) Java’da programlı olarak almayı ifade eder.  
+- **Can I also obtain the PDF page count?** Evet – GroupDocs kullanarak kolayca java pdf page count alabilirsiniz.  
+- **Do I need a license?** Değerlendirme için ücretsiz deneme çalışır; tam lisans su işaretlerini ve sınırlamaları kaldırır.  
+- **Which Java version is required?** JDK 8+ desteklenir, ancak JDK 11+ daha iyi performans sunar.  
+- **Is this suitable for large batches?** Evet – uygun kaynak yönetimi ve eşzamanlılık ile binlerce dosyayı işleyebilirsiniz.
 
-## Ön koşullar
-Başlamadan önce aşağıdakilerin hazır olduğundan emin olun:
-- **Java Geliştirme Kiti (JDK):** Sürüm 8 veya üzeri gereklidir.
-- **Java için GroupDocs.Comparison:** Bu kütüphane belge karşılaştırma ve meta veri çıkarma olanağı sağlar. 
-- **Maven Kurulumu:** Maven proje yönetimi konusunda bilgi sahibi olmanız faydalı olacaktır.
+## Why Extract Document Metadata in Java?
 
-### Gerekli Kütüphaneler ve Bağımlılıklar
-GroupDocs.Comparison'ı Maven projenize eklemek için aşağıdakileri ekleyin: `pom.xml`:
+Koda dalmadan önce, belge meta verisi çıkarmanın gerçek dünyadaki uygulamalarda neden önemli olduğundan bahsedelim:
+
+**Common Business Scenarios:**
+- **Document Management Systems**: Yüklenen dosyaları otomatik olarak sınıflandırır ve düzenler
+- **Legal Software**: Sayfa sayısını kontrol ederek belgenin tamlığını doğrular
+- **Educational Platforms**: Öğrenci gönderilerinin format gereksinimlerini karşıladığını doğrular
+- **Financial Applications**: Raporların düzenleyici standartlara uygunluğunu sağlar
+- **Content Auditing**: Belge koleksiyonlarını uyumluluk veya kalite kontrolü için analiz eder
+
+Meta verileri programlı olarak çıkarmak, sayısız saatlik manuel işi tasarruf ettirir ve insan hatasını azaltır. Ayrıca, GroupDocs.Comparison ile PDF ve DOCX gibi yaygın formatlardan özel formatlara kadar 100+ dosya formatı desteği elde edersiniz.
+
+## What You'll Learn in This Tutorial
+
+Bu rehberin sonunda şunları yapabilecek duruma geleceksiniz:
+- Java projenizde GroupDocs.Comparison'ı kurmak
+- Dosya yolları ve InputStream'ler kullanarak belge meta verilerini çıkarmak
+- Yaygın hataları ve uç durumları ele almak
+- Büyük ölçekli belge işleme için performansı optimize etmek
+- Bu teknikleri gerçek dünya senaryolarına uygulamak
+
+## Prerequisites and Setup
+
+### What You'll Need
+
+Kodlamaya başlamadan önce şunların olduğundan emin olun:
+- **Java Development Kit (JDK) 8 veya üzeri** (Daha iyi performans için JDK 11+ önerilir)
+- **Maven veya Gradle** bağımlılık yönetimi için
+- **Favori IDE'niz** (IntelliJ IDEA, Eclipse veya VS Code harika çalışır)
+- **Temel Java bilgisi** – bir for döngüsü yazabiliyorsanız hazırsınız!
+
+### Adding GroupDocs.Comparison to Your Project
+
+Başlamanın en kolay yolu Maven üzerinden. `pom.xml` dosyanıza şunu ekleyin:
 
 ```xml
 <repositories>
@@ -44,156 +83,575 @@ GroupDocs.Comparison'ı Maven projenize eklemek için aşağıdakileri ekleyin: 
 </dependencies>
 ```
 
-### Çevre Kurulumu
-Maven desteğiyle yapılandırılmış IntelliJ IDEA veya Eclipse gibi bir Java IDE'niz olduğundan emin olun. Bu kurulum, bağımlılıkları yönetmeyi ve projenizi oluşturmayı basitleştirecektir.
+**Pro Tip**: En iyi özellikler ve güvenlik güncellemeleri için her zaman en son sürümü kullanın. En güncel sürüm için [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) adresine bakın.
 
-## Java için GroupDocs.Comparison Kurulumu
+### Getting Your License (Don't Skip This!)
 
-### Kurulum Bilgileri
-GroupDocs.Comparison'ı kullanmaya başlamak için şu adımları izleyin:
+GroupDocs.Comparison değerlendirme için lisans olmadan çalışsa da, işlenen belgelerde su işaretleri görürsünüz. İşte doğru lisans almanın yolu:
+1. **Free Trial**: Test için mükemmel – [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) adresinden indirin
+2. **Temporary License**: Geliştirme için harika – [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) adresinden alın
+3. **Full License**: Üretim kullanımı için – [Purchase Page](https://purchase.groupdocs.com/buy) adresinde mevcut
 
-1. **Bağımlılık Ekle:** Bağımlılığınızı ekleyin `pom.xml` Yukarıda gösterildiği gibi.
-2. **Lisans Edinimi:**
-   - **Ücretsiz Deneme:** Deneme sürümünü şuradan indirin: [GroupDocs İndirmeleri](https://releases.groupdocs.com/comparison/java/).
-   - **Geçici Lisans:** Genişletilmiş özellikler için bunu şu şekilde edinin: [Geçici Lisans Sayfası](https://purchase.groupdocs.com/temporary-license/).
-   - **Satın almak:** Tam erişim için şurayı ziyaret edin: [Satın Alma Sayfası](https://purchase.groupdocs.com/buy).
+## Basic Setup and Initialization
 
-### Temel Başlatma ve Kurulum
-Bağımlılığı ekledikten sonra, Java uygulamanızda GroupDocs.Comparison'ı başlatın:
+Her şeyin çalıştığından emin olmak için basit bir örnekle başlayalım:
 
 ```java
 import com.groupdocs.comparison.Comparer;
 
-public class DocumentComparison {
+public class DocumentMetadataExtractor {
     public static void main(String[] args) {
-        String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
+        String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/sample.docx";
         
         try (Comparer comparer = new Comparer(sourceFilePath)) {
-            // Belge bilgilerini çıkarmaya veya belgeleri karşılaştırmaya hazır.
+            System.out.println("GroupDocs.Comparison is ready to use!");
+            // We'll add metadata extraction code here
         } catch (Exception e) {
+            System.err.println("Error initializing GroupDocs: " + e.getMessage());
             e.printStackTrace();
         }
     }
 }
 ```
 
-Bu kod parçası, GroupDocs.Comparison'ı kullanmak için temel bir çerçeve kurar ve belge bilgilerini çıkarmaya odaklanır. Uygulamaya bir göz atalım.
+Bu temel kurulum bir `Comparer` nesnesi oluşturur – belgelerle çalışmak için ana aracınız. try‑with‑resources ifadesi kaynakların doğru temizlenmesini sağlar.
 
-## Uygulama Kılavuzu
+## How to java get file type from a document
 
-### Özellik 1: InputStreams ile Belge Bilgisi Çıkarımı
+Comparer API'sini kullanarak, **java get file type**'ı sayfa sayısı ve dosya boyutu gibi diğer özelliklerle birlikte kolayca alabilirsiniz. Aşağıda iki yaygın yaklaşım bulunmaktadır.
 
-#### Genel bakış
-Bu özellik, meta verileri doğrudan bir `InputStream`Özellikle veritabanlarında saklanan veya ağ akışları üzerinden alınan dosyalarla uğraşırken oldukça kullanışlıdır.
+### Method 1: Extract Document Metadata Using File Paths
 
-##### Adım Adım Uygulama
+Bu, yerel dosyalarla çalışırken veya dosya yollarına doğrudan erişiminiz olduğunda mükemmel, en basit yaklaşımdır.
 
-**Adım 1:** Gerekli Kütüphaneleri İçe Aktar
+#### Step‑by‑Step Implementation
 
 ```java
 import com.groupdocs.comparison.Comparer;
-import java.io.FileInputStream;
-import java.io.InputStream;
-```
+import com.groupdocs.comparison.result.IDocumentInfo;
 
-**Adım 2:** InputStream ve Comparer Nesnesini Başlat
-
-Yer değiştirmek `YOUR_DOCUMENT_DIRECTORY` belgenizin gerçek yolunu belirtin.
-
-```java
-String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
-
-try (InputStream sourceStream = new FileInputStream(sourceFilePath)) {
-    try (Comparer comparer = new Comparer(sourceStream)) {
-        // Çıkarılan bilgiler buradan alınacaktır.
-```
-
-**Adım 3:** Belge Bilgilerini Çıkar ve Görüntüle
-
-Kullanın `getDocumentInfo()` meta verileri alma yöntemi.
-
-```java
-        IDocumentInfo info = comparer.getSource().getDocumentInfo();
-        
-        System.out.printf("
+public class FilePathMetadataExtraction {
+    public static void extractMetadataFromPath(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.printf("
+File Analysis Results:
 File type: %s
 Number of pages: %d
-Document size: %d bytes%n", 
-            info.getFileType().getFileFormat(), info.getPageCount(), info.getSize());
+Document size: %d bytes (%.2f KB)%n", 
+                info.getFileType().getFileFormat(), 
+                info.getPageCount(), 
+                info.getSize(),
+                info.getSize() / 1024.0);
+        } catch (Exception e) {
+            System.err.println("Failed to extract metadata: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    
+    public static void main(String[] args) {
+        String documentPath = "YOUR_DOCUMENT_DIRECTORY/sample.pdf";
+        extractMetadataFromPath(documentPath);
     }
 }
 ```
 
-- **Parametrelerin Açıklaması:** `sourceStream` belgenizin giriş akışıdır.
-- **Dönüş Değerleri:** Yöntem `getDocumentInfo()` dosya türü, sayfa sayısı ve boyut gibi meta verileri içeren bir nesne döndürür.
+**Burada ne oluyor?**
+1. **Comparer Initialization** – dosya yolu ile bir `Comparer` nesnesi oluştururuz.  
+2. **Info Extraction** – `getDocumentInfo()` mevcut tüm meta verileri alır, böylece java get file type, sayfa sayısı ve boyutu elde edersiniz.  
+3. **Data Display** – ana bilgileri biçimlendirir ve gösteririz.
 
-**Sorun Giderme İpuçları:**
-- Belge yolunun doğru olduğundan emin olun ve bu sayede hatalardan kaçının `FileNotFoundException`.
-- GroupDocs kitaplık sürümünün projenizin gereksinimleriyle eşleştiğini doğrulayın.
+#### When to Use This Method
 
-### Özellik 2: Dosya Yollarıyla Belge Bilgisi Çıkarımı
+Dosya yolu ile çıkarım aşağıdaki durumlarda idealdir:
+- Yerel dosyalarla çalışmak
+- Dosyalar erişilebilir dizinlerde depolanmış
+- Basit, doğrudan meta veri çıkarımı ihtiyacınız var
+- Performans kritik değil (küçük‑orta dosya hacimleri)
 
-#### Genel bakış
-Bu yaklaşım, akışlar yerine doğrudan dosya yollarını kullanarak çıkarmayı basitleştirir. Yerel dosyalar için veya akış işlemenin gerekli olmadığı durumlarda uygundur.
+### How to java pdf page count using GroupDocs
 
-##### Adım Adım Uygulama
+Eğer temel ilginiz bir PDF'in sayfa sayısı ise, aynı `IDocumentInfo` nesnesi doğru bir sayı sağlar. Yukarıdaki örnek zaten `info.getPageCount()` gösteriyor, bu da aradığınız **java pdf page count**.
 
-**Adım 1:** Kütüphaneleri İçe Aktar ve Başlat `File` Nesne
+### Method 2: Extract Document Metadata Using InputStreams
+
+InputStream'ler, belgeleri çeşitli kaynaklardan – veritabanları, ağ akışları veya dosya işlemleri üzerinde daha fazla kontrol gerektiğinde – yönetmek için son derece güçlüdür.
+
+#### Step‑by‑Step Implementation
 
 ```java
 import com.groupdocs.comparison.Comparer;
-import java.io.File;
+import com.groupdocs.comparison.result.IDocumentInfo;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.IOException;
 
-String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
-File sourceFile = new File(sourceFilePath);
-```
-
-**Adım 2:** Dosya Yoluyla Karşılaştırıcı Örneği Oluştur
-
-```java
-try (Comparer comparer = new Comparer(sourceFilePath)) {
-    IDocumentInfo info = comparer.getSource().getDocumentInfo();
+public class InputStreamMetadataExtraction {
+    public static void extractMetadataFromStream(String filePath) {
+        try (InputStream sourceStream = new FileInputStream(filePath);
+             Comparer comparer = new Comparer(sourceStream)) {
+            
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.println("Document Metadata Analysis:");
+            System.out.println("==========================");
+            System.out.printf("File Format: %s%n", info.getFileType().getFileFormat());
+            System.out.printf("Total Pages: %d%n", info.getPageCount());
+            System.out.printf("File Size: %d bytes%n", info.getSize());
+            System.out.printf("Size (Human Readable): %s%n", formatFileSize(info.getSize()));
+            
+        } catch (IOException e) {
+            System.err.println("IO Error: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Metadata extraction failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
     
-    System.out.printf("
-File type: %s
-Number of pages: %d
-Document size: %d bytes%n", 
-        info.getFileType().getFileFormat(), info.getPageCount(), info.getSize());
+    // Helper method to make file sizes more readable
+    private static String formatFileSize(long size) {
+        if (size < 1024) return size + " bytes";
+        if (size < 1024 * 1024) return String.format("%.2f KB", size / 1024.0);
+        if (size < 1024 * 1024 * 1024) return String.format("%.2f MB", size / (1024.0 * 1024.0));
+        return String.format("%.2f GB", size / (1024.0 * 1024.0 * 1024.0));
+    }
+    
+    public static void main(String[] args) {
+        String documentPath = "YOUR_DOCUMENT_DIRECTORY/report.xlsx";
+        extractMetadataFromStream(documentPath);
+    }
 }
 ```
 
-- **Parametrelerin Açıklaması:** The `sourceFilePath` Comparer nesnesini başlatmak için doğrudan kullanılır.
-- **Dönüş Değerleri:** Akışların kullanılmasına benzer şekilde, meta veriler şu şekilde çıkarılır: `getDocumentInfo()`.
+#### Why Use InputStreams?
 
-**Sorun Giderme İpuçları:**
-- Dosya yollarının geçerli ve erişilebilir olduğundan emin olun.
-- Ortamınızın belirtilen dosyalar için okuma izinlerine sahip olduğunu doğrulayın.
+InputStream'ler aşağıdaki durumlarda öne çıkar:
+- **Database Storage**: Belgeler BLOB olarak depolanır  
+- **Network Sources**: Dosyalar HTTP, FTP veya bulut depolama üzerinden gelir  
+- **Memory Management**: Kaynak kullanımında ince ayar kontrolüne ihtiyaç duyarsınız  
+- **Security**: Doğrudan dosya sistemi erişimini sınırlamak istersiniz  
+- **Scalability**: Akış, bağlantı havuzu ve asenkron işleme iyi uyum sağlar  
 
-## Pratik Uygulamalar
+## Real‑World Applications and Use Cases
 
-1. **İçerik Yönetim Sistemleri (CMS):** Belgeleri boyuta veya türe göre otomatik olarak kategorilere ayırın.
-2. **Hukuki Belge İşleme:** Sayfa sayısını gereksinimlere göre kontrol ederek belgenin eksiksizliğini doğrulayın.
-3. **Akademik Kurumlar:** Gönderim dosyası formatlarının ve boyutlarının işleme alınmadan önce doğrulanmasını otomatikleştirin.
-4. **Finansal Raporlama:** Belge meta verilerini inceleyerek rapor biçimlendirme standartlarına uyumu sağlayın.
-5. **Veri Analitiği Araçlarıyla Entegrasyon:** İş zekası platformlarında daha ileri analiz için meta verileri çıkarın.
+### 1. Content Management System Integration
 
-## Performans Hususları
+```java
+public class DocumentCatalogSystem {
+    public void catalogDocument(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            // Store in database or index for search
+            DocumentRecord record = new DocumentRecord();
+            record.setFileType(info.getFileType().getFileFormat());
+            record.setPageCount(info.getPageCount());
+            record.setFileSize(info.getSize());
+            record.setFilePath(filePath);
+            
+            // Save to your database here
+            saveDocumentRecord(record);
+            
+        } catch (Exception e) {
+            logError("Failed to catalog document: " + filePath, e);
+        }
+    }
+}
+```
 
-GroupDocs.Comparison kullanırken performansı optimize etmek için:
-- **Bellek Yönetimi:** Bellek sızıntısı olmadan büyük belgeleri işlemek için Java'nın çöp toplama özelliğini etkili bir şekilde kullanın.
-- **Kaynak Kullanımı:** Özellikle birden fazla dosyayı aynı anda işlerken CPU ve bellek kullanımını izleyin.
-- **En İyi Uygulamalar:**
-  - Sistem kaynaklarının aşırı yüklenmesini önlemek için eş zamanlı işlem sayısını sınırlayın.
-  - G/Ç performansını artırmak için dosyaları okurken arabellekli akışları kullanın.
+### 2. Document Validation for Legal Systems
 
-## Çözüm
+```java
+public class LegalDocumentValidator {
+    public boolean validateSubmission(String documentPath) {
+        try (Comparer comparer = new Comparer(documentPath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            // Check if document meets legal requirements
+            boolean isValidFormat = isAcceptedFormat(info.getFileType().getFileFormat());
+            boolean hasValidPageCount = info.getPageCount() > 0 && info.getPageCount() <= 50;
+            boolean isValidSize = info.getSize() <= 10 * 1024 * 1024; // 10MB max
+            
+            return isValidFormat && hasValidPageCount && isValidSize;
+            
+        } catch (Exception e) {
+            return false; // Invalid if we can't process it
+        }
+    }
+    
+    private boolean isAcceptedFormat(String format) {
+        return Arrays.asList("PDF", "DOCX", "DOC").contains(format.toUpperCase());
+    }
+}
+```
 
-Java'da GroupDocs.Comparison ile belge meta verisi çıkarmada ustalaşarak, belgeleri işleme ve analiz etmede yeni verimliliklerin kilidini açarsınız. İster InputStreams ister dosya yolları aracılığıyla olsun, bu güçlü kitaplık meta veri çıkarmada esneklik ve hassasiyet sunar. Bu teknikleri projelerinize entegre ederken, belge yönetimi çözümlerinizi daha da geliştirmek için GroupDocs.Comparison'ın ek özelliklerini keşfetmeyi düşünün.
+### 3. Batch Document Processing
 
-## Sonraki Adımlar
-Keşfedin [GroupDocs Belgeleri](https://docs.groupdocs.com/comparison/java/) Belgeleri karşılaştırmak veya çıkarılan meta verilere dayalı raporlar oluşturmak gibi gelişmiş işlevler için.
+```java
+public class BatchDocumentProcessor {
+    public void processDocumentDirectory(String directoryPath) {
+        File directory = new File(directoryPath);
+        File[] files = directory.listFiles((dir, name) -> 
+            name.toLowerCase().endsWith(".pdf") || 
+            name.toLowerCase().endsWith(".docx") ||
+            name.toLowerCase().endsWith(".xlsx"));
+        
+        if (files == null) {
+            System.out.println("No documents found in directory");
+            return;
+        }
+        
+        System.out.println("Processing " + files.length + " documents...");
+        
+        for (File file : files) {
+            processDocument(file.getAbsolutePath());
+        }
+    }
+    
+    private void processDocument(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            
+            System.out.printf("%s: %s, %d pages, %s%n", 
+                new File(filePath).getName(),
+                info.getFileType().getFileFormat(),
+                info.getPageCount(),
+                formatFileSize(info.getSize()));
+                
+        } catch (Exception e) {
+            System.err.println("Error processing " + filePath + ": " + e.getMessage());
+        }
+    }
+}
+```
 
-## SSS Bölümü
+## Common Issues and Troubleshooting
 
-**S1:** GroupDocs.Comparison hangi dosya formatlarını destekler?
-- **A:** GroupDocs.Comparison, DOCX, PDF, XLSX ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler. Tam liste için resmi belgelere bakın.
+En iyi kodla bile sorunlar çıkabilir. Karşılaşabileceğiniz en yaygın sorunlar ve çözümleri aşağıdadır:
+
+### Issue 1: FileNotFoundException
+
+**Problem**  
+```
+java.io.FileNotFoundException: YOUR_DOCUMENT_DIRECTORY/document.pdf (No such file or directory)
+```
+
+**Solution** – yolu doğrulayın, mutlak yollar kullanın ve okuma izinlerinin olduğundan emin olun:
+
+```java
+public static boolean processDocumentSafely(String filePath) {
+    File file = new File(filePath);
+    
+    if (!file.exists()) {
+        System.err.println("File not found: " + filePath);
+        return false;
+    }
+    
+    if (!file.canRead()) {
+        System.err.println("Cannot read file: " + filePath);
+        return false;
+    }
+    
+    try (Comparer comparer = new Comparer(filePath)) {
+        // Your metadata extraction code here
+        return true;
+    } catch (Exception e) {
+        System.err.println("Processing failed: " + e.getMessage());
+        return false;
+    }
+}
+```
+
+### Issue 2: Unsupported File Format
+
+**Problem** – GroupDocs'un desteklemediği bir formatı işlemeye çalışmak.
+
+**Solution** – önce desteklenen uzantıları kontrol edin:
+
+```java
+public static boolean isSupportedFormat(String filePath) {
+    String extension = filePath.substring(filePath.lastIndexOf('.') + 1).toLowerCase();
+    Set<String> supportedFormats = Set.of(
+        "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", 
+        "txt", "rtf", "odt", "ods", "odp"
+    );
+    return supportedFormats.contains(extension);
+}
+```
+
+### Issue 3: Memory Issues with Large Files
+
+**Problem** – çok büyük belgeler işlenirken `OutOfMemoryError` oluşması.
+
+**Solution** – belleği proaktif olarak yönetin:
+
+```java
+public static void processLargeDocument(String filePath) {
+    // Set JVM options: -Xmx2g -XX:+UseG1GC
+    
+    System.gc(); // Suggest garbage collection before processing
+    
+    try (Comparer comparer = new Comparer(filePath)) {
+        IDocumentInfo info = comparer.getSource().getDocumentInfo();
+        
+        if (info.getSize() > 100 * 1024 * 1024) { // 100 MB
+            System.out.println("Warning: Processing large file (" + 
+                formatFileSize(info.getSize()) + ")");
+        }
+        
+        // Process document
+        
+    } catch (OutOfMemoryError e) {
+        System.err.println("File too large to process: " + filePath);
+        // Consider splitting or using a streaming approach
+    }
+}
+```
+
+### Issue 4: License‑Related Errors
+
+**Problem** – su işaretleri görünür veya bir lisans istisnası fırlatılır.
+
+**Solution** – lisansı uygulama başlangıcında bir kez yükleyin:
+
+```java
+public class LicenseManager {
+    private static boolean licenseSet = false;
+    
+    public static void setLicense() {
+        if (!licenseSet) {
+            try {
+                License license = new License();
+                license.setLicense("path/to/your/license.lic");
+                licenseSet = true;
+                System.out.println("License applied successfully");
+            } catch (Exception e) {
+                System.err.println("License error: " + e.getMessage());
+                System.out.println("Running in evaluation mode");
+            }
+        }
+    }
+}
+```
+
+## Performance Optimization Tips
+
+Birçok belge veya büyük dosyalar işlenirken performans kritik hale gelir. İşte kanıtlanmış stratejiler:
+
+### 1. Resource Management
+
+```java
+public class OptimizedDocumentProcessor {
+    private static final int MAX_CONCURRENT_PROCESSES = Runtime.getRuntime().availableProcessors();
+    private ExecutorService executorService = Executors.newFixedThreadPool(MAX_CONCURRENT_PROCESSES);
+    
+    public void processDocumentsConcurrently(List<String> filePaths) {
+        List<Future<DocumentMetadata>> futures = new ArrayList<>();
+        
+        for (String filePath : filePaths) {
+            Future<DocumentMetadata> future = executorService.submit(() -> {
+                return extractMetadata(filePath);
+            });
+            futures.add(future);
+        }
+        
+        // Collect results
+        for (Future<DocumentMetadata> future : futures) {
+            try {
+                DocumentMetadata metadata = future.get(30, TimeUnit.SECONDS);
+                processMetadata(metadata);
+            } catch (TimeoutException e) {
+                System.err.println("Document processing timed out");
+            }
+        }
+    }
+}
+```
+
+### 2. Caching Strategy
+
+```java
+public class CachedMetadataExtractor {
+    private static final Map<String, DocumentMetadata> metadataCache = new ConcurrentHashMap<>();
+    
+    public DocumentMetadata getDocumentMetadata(String filePath) {
+        File file = new File(filePath);
+        String cacheKey = filePath + "_" + file.lastModified();
+        
+        return metadataCache.computeIfAbsent(cacheKey, key -> {
+            return extractMetadataInternal(filePath);
+        });
+    }
+    
+    private DocumentMetadata extractMetadataInternal(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            return new DocumentMetadata(
+                info.getFileType().getFileFormat(),
+                info.getPageCount(),
+                info.getSize()
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to extract metadata", e);
+        }
+    }
+}
+```
+
+### 3. Memory‑Efficient Processing
+
+```java
+public class MemoryEfficientProcessor {
+    public void processLargeDirectory(String directoryPath) {
+        try (Stream<Path> paths = Files.walk(Paths.get(directoryPath))) {
+            paths.filter(Files::isRegularFile)
+                 .filter(path -> isSupportedFormat(path.toString()))
+                 .forEach(path -> {
+                     processDocument(path.toString());
+                     System.gc(); // Suggest cleanup after each document
+                 });
+        } catch (IOException e) {
+            System.err.println("Error accessing directory: " + e.getMessage());
+        }
+    }
+}
+```
+
+## Advanced Use Cases
+
+### Building a Document Analytics Dashboard
+
+```java
+public class DocumentAnalytics {
+    public Map<String, Integer> getFormatDistribution(List<String> filePaths) {
+        Map<String, Integer> formatCounts = new HashMap<>();
+        
+        for (String filePath : filePaths) {
+            try (Comparer comparer = new Comparer(filePath)) {
+                IDocumentInfo info = comparer.getSource().getDocumentInfo();
+                String format = info.getFileType().getFileFormat();
+                formatCounts.merge(format, 1, Integer::sum);
+            } catch (Exception e) {
+                formatCounts.merge("ERROR", 1, Integer::sum);
+            }
+        }
+        
+        return formatCounts;
+    }
+    
+    public long getTotalDocumentSize(List<String> filePaths) {
+        return filePaths.stream()
+                .mapToLong(this::getDocumentSize)
+                .sum();
+    }
+    
+    private long getDocumentSize(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            return comparer.getSource().getDocumentInfo().getSize();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+}
+```
+
+## Best Practices and Pro Tips
+
+### 1. Always Use Try‑With‑Resources
+
+```java
+// Good - automatic resource management
+try (Comparer comparer = new Comparer(filePath)) {
+    // Your code here
+} catch (Exception e) {
+    // Handle errors
+}
+
+// Avoid - manual resource management (error‑prone)
+Comparer comparer = new Comparer(filePath);
+// If exception occurs here, resources might not be cleaned up
+comparer.close();
+```
+
+### 2. Implement Proper Error Handling
+
+```java
+public class RobustDocumentProcessor {
+    public Optional<DocumentMetadata> extractMetadata(String filePath) {
+        try (Comparer comparer = new Comparer(filePath)) {
+            IDocumentInfo info = comparer.getSource().getDocumentInfo();
+            return Optional.of(new DocumentMetadata(info));
+        } catch (Exception e) {
+            logError("Failed to process: " + filePath, e);
+            return Optional.empty();
+        }
+    }
+}
+```
+
+### 3. Validate Input Parameters
+
+```java
+public void processDocument(String filePath) {
+    Objects.requireNonNull(filePath, "File path cannot be null");
+    
+    if (filePath.trim().isEmpty()) {
+        throw new IllegalArgumentException("File path cannot be empty");
+    }
+    
+    if (!new File(filePath).exists()) {
+        throw new IllegalArgumentException("File does not exist: " + filePath);
+    }
+    
+    // Process the document
+}
+```
+
+### 4. Password‑Protected Documents
+
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+try (Comparer comparer = new Comparer(filePath, loadOptions)) {
+    // Extract metadata from password‑protected document
+}
+```
+
+### 5. Cloud Storage (e.g., AWS S3)
+
+```java
+// Example with AWS S3
+S3Object object = s3Client.getObject("bucket-name", "document-key");
+try (InputStream stream = object.getObjectContent();
+     Comparer comparer = new Comparer(stream)) {
+    // Extract metadata
+}
+```
+
+## Conclusion and Next Steps
+
+Tebrikler! Artık GroupDocs.Comparison kullanarak Java’da **java get file type** ve ilgili meta veri çıkarımını ustalıkla yapabiliyorsunuz. Neredeyse tüm belge formatlarından dosya türlerini, sayfa sayılarını (**java pdf page count** dahil) ve boyutları alabilir, hataları zarifçe ele alabilir ve büyük ölçekli işlemler için performansı optimize edebilirsiniz.
+
+### Key Takeaways
+- İki çıkarım yöntemi: basitlik için dosya yolları, esneklik için InputStream'ler
+- Sağlam hata yönetimi, uygulamanızı hatalı dosyalardan korur
+- Performans ipuçları—caching, eşzamanlılık ve akış—çözümü ölçeklendirir
+- Gerçek dünya örnekleri, meta verileri CMS, doğrulama ve analiz boru hatlarına nasıl entegre edeceğinizi gösterir
+
+### What’s Next?
+- Sürümler arasındaki değişiklikleri vurgulamak için **document comparison**'ı keşfedin
+- Yazar, oluşturma tarihi ve özel özellikler için **GroupDocs.Metadata**'ya dalın
+- Çıkarıcıyı veritabanları, REST API'ler veya bulut depolamaya bağlayarak uçtan uca otomasyon sağlayın
+- Depoları periyodik olarak tarayan ve indeksleri güncelleyen zamanlanmış işler oluşturun
+
+---
+
+**Last Updated:** 2026-03-03  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+**Resources for Continued Learning:**  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
+- [API Reference Guide](https://apireference.groupdocs.com/comparison/java)  
+- [Community Forum](https://forum.groupdocs.com/)

@@ -1,75 +1,70 @@
 ---
 categories:
 - Java Development
-date: '2025-12-31'
-description: Apprenez à comparer des fichiers Excel et d’autres documents avec GroupDocs.Comparison
-  pour Java. Inclut la comparaison de documents PDF en Java, la comparaison de gros
-  documents en Java et des exemples de comparaison de PDF chiffrés en Java.
+date: '2026-03-03'
+description: Apprenez à comparer des fichiers Excel en Java avec GroupDocs.Comparison
+  for Java, avec des exemples pour PDF, les gros documents et les fichiers chiffrés.
 keywords: java compare excel files, compare pdf documents java, java compare large
   documents, java compare encrypted pdf, GroupDocs.Comparison Java
-lastmod: '2025-12-31'
+lastmod: '2026-03-03'
 linktitle: Java Compare Excel Files Guide
 tags:
 - document-comparison
 - java-api
 - automation
 - groupdocs
-title: Java comparer des fichiers Excel à l'aide de l'API de comparaison de documents
+title: Comparer des fichiers Excel Java avec l'API de comparaison de documents GroupDocs
 type: docs
 url: /fr/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Java Comparer des fichiers Excel avec l'API de comparaison de documents
+# Comparer des fichiers Excel Java avec l'API de comparaison de documents GroupDocs
 
-## Introduction
+Avez‑vous déjà passé des heures à comparer manuellement des documents, à rechercher les modifications ligne par ligne ? Que vous suiviez les révisions de contrats, révisiez la documentation du code, ou ayez besoin de **comparer des fichiers Excel en Java** pour des rapports financiers, la comparaison manuelle de documents est chronophage et sujette aux erreurs.
 
-Vous avez déjà passé des heures à comparer manuellement des documents, à rechercher les changements ligne par ligne ? Que vous suiviez les révisions de contrats, réexaminiez la documentation du code, ou **java compare excel files** pour des rapports financiers, la comparaison manuelle de documents est chronophage et sujette aux erreurs.
+Dans ce guide complet, vous découvrirez comment implémenter une solution robuste d’API de comparaison de documents Java qui fait gagner des heures de travail manuel tout en garantissant qu’aucun détail n’est omis. Nous couvrirons tout, de la configuration de base aux techniques de personnalisation avancées qui fonctionnent dans des environnements de production réels.
 
-L'API GroupDocs.Comparison for Java résout ce problème en automatisant la comparaison de documents avec une précision chirurgicale. Vous pouvez détecter les changements, ignorer les sections non pertinentes comme les en‑têtes et pieds de page, personnaliser les styles de mise en évidence et générer des rapports de comparaison professionnels—le tout de façon programmatique.
-
-Dans ce guide complet, vous découvrirez comment implémenter une solution robuste d'API de comparaison de documents Java qui fait gagner des heures de travail manuel tout en garantissant qu'aucun détail ne passe inaperçu. Nous couvrirons tout, de la configuration de base aux techniques de personnalisation avancées utilisées en production réelle.
-
-## Quick Answers
+## Réponses rapides
 - **GroupDocs peut‑il comparer des fichiers Excel en Java ?** Oui, il suffit de charger les fichiers `.xlsx` avec la classe `Comparer`.  
-- **Comment ignorer les en‑têtes/pieds de page ?** Appelez `setHeaderFootersComparison(false)` dans `CompareOptions`.  
-- **Qu’en est‑il des gros PDF ?** Augmentez le heap JVM et activez l’optimisation mémoire.  
+- **Comment ignorer les en‑têtes/pieds de page ?** Définissez `setHeaderFootersComparison(false)` dans `CompareOptions`.  
+- **Qu'en est‑il des gros PDF ?** Augmentez le tas JVM et activez l'optimisation de la mémoire.  
 - **Puis‑je comparer des PDF protégés par mot de passe ?** Fournissez le mot de passe lors de la création du `Comparer`.  
-- **Existe‑t‑il un moyen de changer les couleurs de mise en évidence ?** Utilisez `StyleSettings` pour les éléments insérés, supprimés et modifiés.
+- **Existe‑t‑il un moyen de changer les couleurs de surbrillance ?** Utilisez `StyleSettings` pour les éléments insérés, supprimés et modifiés.
 
-## What is java compare excel files?
-`java compare excel files` désigne la détection programmatique des différences entre deux classeurs Excel à l’aide de code Java. L’API GroupDocs.Comparison lit le contenu des feuilles de calcul, évalue les changements au niveau des cellules et produit un rapport de diff qui met en évidence les ajouts, suppressions et modifications.
+## Qu’est‑ce que comparer des fichiers Excel en Java ?
+`compare excel files java` désigne la détection programmatique des différences entre deux classeurs Excel à l’aide de code Java. L’API GroupDocs.Comparison lit le contenu des feuilles de calcul, évalue les changements au niveau des cellules et génère un rapport de différences qui met en évidence les ajouts, suppressions et modifications.
 
-## Why Use a Java Document Comparison API?
+## Pourquoi utiliser une API de comparaison de documents Java ?
 
-### The Business Case for Automation
+### Le cas d’utilisation business pour l’automatisation
 
-La comparaison manuelle de documents n’est pas seulement fastidieuse—c’est risqué. Des études montrent que les humains manquent environ 20 % des changements significatifs lorsqu’ils comparent les documents à la main. Voici pourquoi les développeurs adoptent des solutions programmatiques :
+La comparaison manuelle de documents n’est pas seulement fastidieuse — c’est risqué. Des études montrent que les humains manquent environ 20 % des changements significatifs lorsqu’ils comparent les documents manuellement. Voici pourquoi les développeurs adoptent des solutions programmatiques :
 
 **Points de douleur courants :**
-- **Perte de temps** : développeurs seniors passant 3–4 heures par semaine à réviser des documents  
-- **Erreur humaine** : omission de changements critiques dans les contrats juridiques ou les spécifications techniques  
-- **Normes incohérentes** : différents membres de l’équipe mettant en évidence les changements de façon différente  
-- **Problèmes d’échelle** : comparer des centaines de documents manuellement devient impossible  
+- **Perte de temps** : Les développeurs seniors passent 3–4 heures par semaine à examiner des documents  
+- **Erreur humaine** : Omission de changements critiques dans les contrats juridiques ou les spécifications techniques  
+- **Normes incohérentes** : Différents membres de l’équipe mettent en évidence les changements de manière différente  
+- **Problèmes d’échelle** : Comparer des centaines de documents manuellement devient impossible  
 
 **Les solutions API offrent :**
-- **99,9 % de précision** : capture chaque changement au niveau du caractère automatiquement  
-- **Vitesse** : compare des documents de plus de 100 pages en moins de 30 secondes  
-- **Cohérence** : mise en évidence et rapports standardisés pour toutes les comparaisons  
-- **Intégration** : s’intègre parfaitement aux flux de travail Java existants et aux pipelines CI/CD  
+- **99,9 % de précision** : Capture chaque changement au niveau du caractère automatiquement  
+- **Vitesse** : Comparez des documents de plus de 100 pages en moins de 30 secondes  
+- **Cohérence** : Mise en évidence et rapports standardisés pour toutes les comparaisons  
+- **Intégration** : S’intègre parfaitement aux flux de travail Java existants et aux pipelines CI/CD  
 
-### When to Use Document Comparison APIs
+### Quand utiliser les API de comparaison de documents
 
 Cette API de comparaison de documents Java excelle dans les scénarios suivants :
-- **Revue de documents juridiques** – suivre automatiquement les changements et amendements de contrats  
-- **Documentation technique** – surveiller les mises à jour de la documentation d’API et les changelogs  
-- **Gestion de contenu** – comparer des articles de blog, supports marketing ou manuels utilisateur  
-- **Audit de conformité** – garantir que les politiques respectent les exigences réglementaires  
-- **Contrôle de version** – compléter Git avec des diff de documents lisibles par l’homme  
+- **Revue de documents juridiques** – Suivez les changements et amendements de contrats automatiquement  
+- **Documentation technique** – Surveillez les mises à jour de la documentation API et les journaux de modifications  
+- **Gestion de contenu** – Comparez les articles de blog, les supports marketing ou les manuels d’utilisateur  
+- **Audit de conformité** – Assurez‑vous que les documents de politique respectent les exigences réglementaires  
+- **Contrôle de version** – Complétez Git avec des diff de documents lisibles par l’homme  
 
-## Supported File Formats and Capabilities
+## Formats de fichiers pris en charge et capacités
 
-GroupDocs.Comparison for Java gère plus de 50 formats de fichiers prêts à l’emploi :
+GroupDocs.Comparison pour Java gère plus de 50 formats de fichiers prêts à l’emploi :
 
 **Formats populaires :**
 - **Documents** : Word (DOCX, DOC), PDF, RTF, ODT  
@@ -80,23 +75,23 @@ GroupDocs.Comparison for Java gère plus de 50 formats de fichiers prêts à l
 
 **Fonctionnalités avancées :**
 - Comparaison de documents protégés par mot de passe  
-- Détection et comparaison multilingue du texte  
-- Paramètres de sensibilité personnalisés selon le type de document  
-- Traitement par lots de plusieurs paires de documents  
+- Détection et comparaison de texte multilingue  
+- Paramètres de sensibilité personnalisés pour différents types de documents  
+- Traitement par lots pour plusieurs paires de documents  
 - Options de déploiement cloud et sur site  
 
-## Prerequisites and Setup
+## Prérequis et configuration
 
-### System Requirements
+### Exigences système
 
-Avant de plonger dans le code, assurez‑vous que votre environnement de développement répond aux exigences suivantes :
+Avant de plonger dans le code, assurez‑vous que votre environnement de développement répond à ces exigences :
 
-1. **Java Development Kit (JDK)** : version 8 ou supérieure (JDK 11+ recommandé)  
-2. **Outil de build** : Maven 3.6+ ou Gradle 6.0+  
-3. **Mémoire** : minimum 4 Go de RAM pour le traitement de gros documents  
-4. **Stockage** : 500 Mo+ d’espace libre pour les fichiers temporaires de comparaison  
+1. **Java Development Kit (JDK) :** Version 8 ou supérieure (JDK 11+ recommandé)  
+2. **Outil de construction :** Maven 3.6+ ou Gradle 6.0+  
+3. **Mémoire :** Minimum 4 Go de RAM pour le traitement de gros documents  
+4. **Stockage :** 500 Mo+ d'espace libre pour les fichiers temporaires de comparaison  
 
-### Maven Configuration
+### Configuration Maven
 
 Ajoutez le dépôt GroupDocs et la dépendance à votre `pom.xml`. Cette configuration garantit que vous récupérez la version officielle :
 
@@ -117,16 +112,16 @@ Ajoutez le dépôt GroupDocs et la dépendance à votre `pom.xml`. Cette configu
 </dependencies>
 ```
 
-### License Setup
+### Configuration de la licence
 
 **Pour le développement et les tests :**
-- **Essai gratuit** : téléchargez depuis [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – sortie filigranée incluse  
-- **Licence temporaire** : obtenez 30 jours d’accès complet via [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/)  
+- **Essai gratuit :** Téléchargez depuis [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – comprend une sortie filigranée  
+- **Licence temporaire :** Obtenez un accès complet de 30 jours via [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/)  
 
 **Pour la production :**
-- **Licence complète** : achetez via [GroupDocs Purchase](https://purchase.groupdocs.com/buy) pour une utilisation commerciale illimitée  
+- **Licence complète :** Achetez via [GroupDocs Purchase](https://purchase.groupdocs.com/buy) pour une utilisation commerciale illimitée  
 
-Une fois votre fichier de licence en main, initialisez‑le ainsi :
+Une fois que vous avez votre fichier de licence, initialisez‑le comme suit :
 
 ```java
 // License initialization - do this once at application startup
@@ -134,15 +129,15 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Astuce pro :** placez votre fichier de licence dans le répertoire `resources` de votre application et chargez‑le avec `getClass().getResourceAsStream()` pour une meilleure portabilité entre les environnements.
+**Astuce :** Stockez votre fichier de licence dans le dossier `resources` de votre application et chargez‑le avec `getClass().getResourceAsStream()` pour une meilleure portabilité entre les environnements.
 
-## Core Implementation Guide
+## Guide d’implémentation principal
 
-### Feature 1: Ignore Header and Footer Comparison
+### Fonctionnalité 1 : Ignorer la comparaison des en‑têtes et pieds de page
 
-**Pourquoi c’est important :** Les en‑têtes et pieds de page contiennent souvent du contenu dynamique (horodatage, numéros de page, auteur) qui change entre les versions mais n’est pas pertinent pour la comparaison de contenu. Ignorer ces sections réduit le bruit et se concentre sur les changements significatifs.
+**Pourquoi c’est important :** Les en‑têtes et pieds de page contiennent souvent du contenu dynamique comme des horodatages, numéros de page ou informations d’auteur qui changent entre les versions mais ne sont pas pertinents pour la comparaison du contenu. Ignorer ces sections réduit le bruit et se concentre sur les changements significatifs.
 
-**Scénario réel :** Vous comparez des versions de contrat où chaque révision possède une date différente dans le pied de page, mais vous ne vous souciez que des modifications des clauses principales.
+**Scénario réel :** Vous comparez des versions de contrat où chaque révision possède un horodatage différent dans le pied de page, mais vous ne vous souciez que des modifications des clauses dans le corps du texte.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -170,13 +165,13 @@ public class IgnoreHeaderFooterExample {
 ```
 
 **Avantages clés :**
-- **Résultats plus clairs** – se concentrer sur les changements de contenu plutôt que sur les différences de mise en forme  
-- **Moins de faux positifs** – éliminer les notifications de changements non pertinents  
-- **Meilleure performance** – éviter les opérations de comparaison inutiles  
+- **Résultats plus clairs** – Se concentrer sur les changements de contenu plutôt que sur les différences de mise en forme  
+- **Faux positifs réduits** – Éliminer les notifications de changement non pertinentes  
+- **Meilleure performance** – Sauter les opérations de comparaison inutiles  
 
-### Feature 2: Set Output Paper Size for Professional Reports
+### Fonctionnalité 2 : Définir la taille du papier de sortie pour les rapports professionnels
 
-**Contexte métier :** Lors de la génération de rapports de comparaison destinés à l’impression ou à la distribution PDF, contrôler le format de papier assure une mise en forme cohérente sur les différentes plateformes de visualisation et scénarios d’impression.
+**Contexte business :** Lors de la génération de rapports de comparaison destinés à l’impression ou à la distribution PDF, contrôler la taille du papier assure une mise en forme cohérente sur les différentes plateformes de visualisation et scénarios d’impression.
 
 **Cas d’utilisation :** Les équipes juridiques ont souvent besoin de rapports de comparaison dans des formats spécifiques pour les dépôts judiciaires ou les présentations aux clients.
 
@@ -205,18 +200,18 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-**Formats de papier disponibles :** A0‑A10, Letter, Legal, Tabloid et dimensions personnalisées. Choisissez selon vos besoins — A4 pour les clients européens, Letter pour les équipes américaines.
+**Tailles de papier disponibles :** A0‑A10, Letter, Legal, Tabloid et dimensions personnalisées. Choisissez en fonction de vos exigences de distribution — A4 pour les clients européens, Letter pour les équipes américaines.
 
-### Feature 3: Fine‑Tune Comparison Sensitivity
+### Fonctionnalité 3 : Ajuster finement la sensibilité de comparaison
 
-**Le défi :** Différents types de documents exigent différents niveaux de détection des changements. Les contrats juridiques nécessitent chaque virgule, tandis que les supports marketing ne s’intéressent qu’aux modifications de contenu substantielles.
+**Le défi :** Différents types de documents nécessitent différents niveaux de détection des changements. Les contrats juridiques exigent la détection de chaque virgule, tandis que les supports marketing peuvent ne se préoccuper que des changements de contenu substantiels.
 
-**Fonctionnement de la sensibilité :** L’échelle de sensibilité va de 0 à 100, les valeurs élevées détectant des changements plus granulaires :
+**Comment fonctionne la sensibilité :** L’échelle de sensibilité va de 0 à 100, où des valeurs plus élevées détectent des changements plus granulaires :
 
-- **0‑25** : seuls les changements majeurs (ajouts/suppressions de paragraphes)  
-- **26‑50** : changements modérés (modifications de phrases)  
-- **51‑75** : changements détaillés (modifications au niveau des mots)  
-- **76‑100** : changements très granulaires (différences au niveau des caractères)  
+- **0‑25 :** Seulement les changements majeurs (ajouts/suppressions de paragraphes)  
+- **26‑50 :** Changements modérés (modifications de phrases)  
+- **51‑75 :** Changements détaillés (modifications au niveau des mots)  
+- **76‑100 :** Changements granulaires (différences au niveau des caractères)  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -243,15 +238,15 @@ public class AdjustComparisonSensitivityExample {
 ```
 
 **Bonnes pratiques pour les réglages de sensibilité :**
-- **Documents juridiques** : utilisez 90‑100 pour une détection exhaustive  
-- **Contenu marketing** : utilisez 40‑60 pour se concentrer sur les modifications substantielles  
-- **Spécifications techniques** : utilisez 70‑80 pour capturer les détails importants tout en filtrant les petites variations de mise en forme  
+- **Documents juridiques :** Utilisez 90‑100 pour une détection exhaustive des changements  
+- **Contenu marketing :** Utilisez 40‑60 pour se concentrer sur les modifications substantielles  
+- **Spécifications techniques :** Utilisez 70‑80 pour saisir les détails importants tout en filtrant les petites variations de mise en forme  
 
-### Feature 4: Customize Change Styles for Better Visual Communication
+### Fonctionnalité 4 : Personnaliser les styles de changement pour une meilleure communication visuelle
 
-**Pourquoi les styles personnalisés sont importants :** La mise en évidence par défaut peut ne pas correspondre aux standards de révision de votre équipe ou à l’identité visuelle de votre entreprise. Des styles personnalisés améliorent la lisibilité du document et aident les parties prenantes à identifier rapidement les différents types de changements.
+**Pourquoi les styles personnalisés sont importants :** La mise en évidence par défaut peut ne pas correspondre aux normes de révision de votre équipe ou à l’identité visuelle de votre entreprise. Des styles personnalisés améliorent la lisibilité du document et aident les parties prenantes à identifier rapidement les différents types de changements.
 
-**Approche professionnelle :** Utilisez la psychologie des couleurs — rouge pour les suppressions (urgence), vert pour les ajouts (positif), bleu pour les modifications (revue nécessaire).
+**Approche professionnelle :** Utilisez la psychologie des couleurs — rouge pour les suppressions (urgence), vert pour les ajouts (positif) et bleu pour les modifications (revue nécessaire).
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -302,12 +297,16 @@ public class CustomizeChangesStylesStreamExample {
 - Styles de bordure pour chaque type de changement  
 - Options de barré pour le contenu supprimé  
 
-## Common Issues and Troubleshooting
+## Comment définir la taille du papier en Java dans les rapports de comparaison
 
-### Memory Management for Large Documents
+Si vous devez **définir la taille du papier en Java** de façon programmatique, l’énumération `PaperSize` dans `CompareOptions` vous donne un contrôle total. L’exemple ci‑dessus montre déjà la définition de `PaperSize.A6`. Remplacez simplement `A6` par toute autre taille prise en charge (par ex., `PaperSize.LETTER`) pour correspondre aux normes d’impression de votre région.
+
+## Problèmes courants et dépannage
+
+### Gestion de la mémoire pour les gros documents
 
 **Problème :** `OutOfMemoryError` lors de la comparaison de documents de plus de 50 Mo  
-**Solution :** Augmentez la taille du heap JVM et implémentez le streaming
+**Solution :** Augmentez la taille du tas JVM et implémentez le streaming
 
 ```bash
 # Increase heap size for large document processing
@@ -325,7 +324,7 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 }
 ```
 
-### Handling Corrupted or Password‑Protected Files
+### Gestion des fichiers corrompus ou protégés par mot de passe
 
 **Problème :** La comparaison échoue avec des documents verrouillés  
 **Stratégie de prévention :**
@@ -343,7 +342,7 @@ try {
 }
 ```
 
-### Performance Optimization for Batch Processing
+### Optimisation des performances pour le traitement par lots
 
 **Défi :** Traiter efficacement plus de 100 paires de documents  
 **Solution :** Implémentez le traitement parallèle avec des pools de threads
@@ -364,23 +363,23 @@ for (Future<ComparisonResult> future : futures) {
 executor.shutdown();
 ```
 
-### Format‑Specific Issues
+### Problèmes spécifiques aux formats
 
 **Défis de comparaison PDF :**
-- **PDF scannés** : utilisez un pré‑traitement OCR pour extraire le texte  
-- **Mises en page complexes** : peut nécessiter un ajustement manuel de la sensibilité  
-- **Polices intégrées** : assurez une rendu de police cohérent entre les environnements  
+- **PDF scannés :** Utilisez un pré‑traitement OCR pour extraire le texte  
+- **Mises en page complexes :** Peut nécessiter un ajustement manuel de la sensibilité  
+- **Polices intégrées :** Assurez‑vous d’une restitution cohérente des polices entre les environnements  
 
 **Problèmes de documents Word :**
-- **Suivi des modifications** : désactivez le suivi existant avant la comparaison  
-- **Objets incorporés** : ils peuvent ne pas être comparés correctement, extrayez‑les et comparez séparément  
-- **Compatibilité de version** : testez avec différentes versions du format Word  
+- **Suivi des modifications :** Désactivez le suivi existant avant la comparaison  
+- **Objets incorporés :** Ils peuvent ne pas être comparés correctement ; extrayez‑les et comparez séparément  
+- **Compatibilité des versions :** Testez avec différentes versions du format Word  
 
-## Best Practices and Performance Tips
+## Bonnes pratiques et conseils de performance
 
-### 1. Document Preprocessing
+### 1. Prétraitement des documents
 
-**Nettoyez vos entrées :** supprimez les métadonnées et la mise en forme inutiles avant la comparaison pour améliorer la précision et la vitesse.
+**Nettoyez vos entrées :** Supprimez les métadonnées et la mise en forme inutiles avant la comparaison pour améliorer la précision et la rapidité.
 
 ```java
 // Example preprocessing workflow
@@ -391,7 +390,7 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Optimal Configuration for Different Document Types
+### 2. Configuration optimale pour différents types de documents
 
 **Profils de configuration :**
 ```java
@@ -414,7 +413,7 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Error Handling and Logging
+### 3. Gestion des erreurs et journalisation
 
 **Gestion robuste des erreurs :**
 ```java
@@ -428,16 +427,16 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Caching and Performance Optimization
+### 4. Caching et optimisation des performances
 
-**Mise en place d’un cache intelligent :**
-- Mettre en cache les résultats de comparaison pour les paires de fichiers identiques  
-- Stocker les empreintes des documents pour éviter de retraiter les fichiers non modifiés  
-- Utiliser le traitement asynchrone pour les comparaisons non critiques  
+**Mettez en place un caching intelligent :**
+- Mettez en cache les résultats de comparaison pour les paires de fichiers identiques  
+- Stockez les empreintes des documents pour éviter de retraiter les fichiers inchangés  
+- Utilisez le traitement asynchrone pour les comparaisons non critiques  
 
-## Real‑World Integration Scenarios
+## Scénarios d’intégration réels
 
-### Scenario 1: Automated Contract Review Pipeline
+### Scénario 1 : Pipeline automatisé de révision de contrats
 
 ```java
 @Service
@@ -460,7 +459,7 @@ public class ContractReviewService {
 }
 ```
 
-### Scenario 2: Content Management System Integration
+### Scénario 2 : Intégration du système de gestion de contenu
 
 ```java
 @RestController
@@ -482,31 +481,29 @@ public class DocumentComparisonController {
 }
 ```
 
-## Frequently Asked Questions
+## Questions fréquemment posées
 
 **Q : Puis‑je ignorer les en‑têtes et pieds de page lors de la comparaison avec GroupDocs pour Java ?**  
-R : Oui, utilisez `setHeaderFootersComparison(false)` dans vos `CompareOptions`. Cela est utile lorsque les en‑têtes contiennent du contenu dynamique comme des horodatages qui ne sont pas pertinents pour les changements principaux.
+R : Oui, utilisez `setHeaderFootersComparison(false)` dans votre `CompareOptions`. Cela est utile lorsque les en‑têtes contiennent du contenu dynamique comme des horodatages qui ne sont pas pertinents pour les changements principaux.
 
 **Q : Comment définir la taille du papier de sortie en Java avec GroupDocs ?**  
 R : Appliquez `setPaperSize(PaperSize.A6)` (ou toute autre constante) dans `CompareOptions`. Cela crée des rapports prêts à l’impression. Les tailles disponibles incluent A0‑A10, Letter, Legal et Tabloid.
 
-**Q : Est‑il possible d’ajuster finement la sensibilité de comparaison selon le type de document ?**  
-R : Absolument. Utilisez `setSensitivityOfComparison()` avec une valeur de 0 à 100. Des valeurs élevées détectent des changements plus granulaires—idéal pour les documents juridiques ; des valeurs plus basses conviennent aux contenus marketing.
+**Q : Est‑il possible d’ajuster finement la sensibilité de comparaison pour différents types de documents ?**  
+R : Absolument. Utilisez `setSensitivityOfComparison()` avec une valeur comprise entre 0 et 100. Des valeurs plus élevées détectent des changements plus granulaires — idéal pour les documents juridiques ; des valeurs plus basses conviennent aux contenus marketing.
 
 **Q : Puis‑je personnaliser le style des textes insérés, supprimés et modifiés pendant la comparaison ?**  
-R : Oui. Créez des `StyleSettings` personnalisés pour chaque type de changement et appliquez‑les via `CompareOptions`. Vous pouvez ajuster les couleurs de mise en évidence, les polices, les bordures, etc., pour correspondre à votre charte graphique.
+R : Oui. Créez des `StyleSettings` personnalisés pour chaque type de changement et appliquez‑les via `CompareOptions`. Vous pouvez ajuster les couleurs de surbrillance, les polices, les bordures, etc., afin de correspondre à votre charte graphique.
 
 **Q : Quels sont les prérequis pour démarrer avec GroupDocs Comparison en Java ?**  
 R : Vous avez besoin du JDK 8+ (JDK 11+ recommandé), Maven 3.6+ ou Gradle 6.0+, au moins 4 Go de RAM pour les gros documents, et d’une licence GroupDocs (essai gratuit disponible). Ajoutez le dépôt et la dépendance à votre projet, puis initialisez la licence au démarrage.
 
 **Q : Comment gérer les documents protégés par mot de passe dans GroupDocs.Comparison ?**  
-R : Passez le mot de passe comme deuxième argument lors de la création du `Comparer` : `new Comparer(sourceFile, "password123")`. Enveloppez l’appel dans un bloc try‑catch pour gérer proprement `PasswordRequiredException`.
+R : Passez le mot de passe comme second argument lors de la création du `Comparer` : `new Comparer(sourceFile, "password123")`. Enveloppez l’appel dans un bloc try‑catch pour gérer `PasswordRequiredException` de façon élégante.
 
-**Q : Quels formats de fichiers GroupDocs.Comparison for Java prend‑il en charge ?**  
-R : Plus de 50 formats dont Word (DOCX, DOC), PDF, Excel (XLSX, XLS), PowerPoint (PPTX, PPT), fichiers texte (TXT, HTML, XML) et images (PNG, JPEG) pour la comparaison visuelle. L’API détecte automatiquement les types, mais vous pouvez spécifier les formats pour optimiser les performances en mode batch.
+**Q : Quels formats de fichiers GroupDocs.Comparison pour Java prend‑il en charge ?**  
+R : Plus de 50 formats, dont Word (DOCX, DOC), PDF, Excel (XLSX, XLS), PowerPoint (PPTX, PPT), fichiers texte (TXT, HTML, XML) et images (PNG, JPEG) pour la comparaison visuelle. L’API détecte automatiquement les types, mais vous pouvez spécifier les formats pour améliorer les performances en mode batch.
 
----
-
-**Dernière mise à jour :** 2025-12-31  
+**Dernière mise à jour :** 2026-03-03  
 **Testé avec :** GroupDocs.Comparison 25.2 for Java  
 **Auteur :** GroupDocs

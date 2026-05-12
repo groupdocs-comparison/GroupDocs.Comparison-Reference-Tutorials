@@ -1,47 +1,103 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách đặt mục tiêu siêu dữ liệu trong so sánh tài liệu với GroupDocs.Comparison cho .NET. Nâng cao kỹ năng quản lý tài liệu của bạn và đảm bảo bảo quản siêu dữ liệu chính xác."
-"title": "So sánh tài liệu chính trong .NET&#58; Bảo tồn siêu dữ liệu bằng GroupDocs.Comparison"
-"url": "/vi/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
-"weight": 1
+categories:
+- Document Comparison
+date: '2026-03-06'
+description: Tìm hiểu cách bảo tồn siêu dữ liệu mục tiêu trong quá trình so sánh tài
+  liệu bằng GroupDocs.Comparison cho .NET. Hướng dẫn chi tiết từng bước kèm ví dụ
+  C#.
+keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
+  document comparison, metadata preservation tutorial
+lastmod: '2026-03-06'
+linktitle: Metadata Preservation Tutorial
+tags:
+- GroupDocs.Comparison
+- metadata-preservation
+- dotnet-tutorial
+- document-management
+title: Bảo tồn siêu dữ liệu mục tiêu với GroupDocs.Comparison – Hướng dẫn .NET
 type: docs
+url: /vi/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
+weight: 1
 ---
-# Làm chủ việc so sánh tài liệu trong .NET: Bảo quản siêu dữ liệu với GroupDocs.Comparison
+
+# Bảo tồn siêu dữ liệu mục tiêu với GroupDocs.Comparison – Hướng dẫn .NET
+
 ## Giới thiệu
-Bạn đã bao giờ gặp khó khăn khi so sánh các tài liệu trong khi cần bảo toàn siêu dữ liệu cụ thể chưa? GroupDocs.Comparison cho .NET chính là giải pháp! Hướng dẫn này sẽ hướng dẫn bạn cách thiết lập siêu dữ liệu của tài liệu mục tiêu trong quá trình so sánh, đảm bảo tài liệu cuối cùng của bạn giữ nguyên các thuộc tính mong muốn một cách liền mạch.
-**Những gì bạn sẽ học được:**
-- Cài đặt và cấu hình GroupDocs.Comparison cho .NET
-- Thiết lập so sánh tài liệu với mục tiêu siêu dữ liệu
-- Các tính năng và tùy chọn chính có sẵn trong GroupDocs.Comparison
-- Ứng dụng thực tế cho các tình huống thực tế
-Chúng ta hãy bắt đầu bằng cách thảo luận về các điều kiện tiên quyết cần thiết để làm theo hướng dẫn này.
-## Điều kiện tiên quyết
-Trước khi bắt đầu, hãy đảm bảo bạn có:
-### Thư viện và phiên bản bắt buộc
-- **GroupDocs.Comparison cho .NET**: Yêu cầu phiên bản 25.4.0 trở lên.
-- **Khung .NET**: Đảm bảo khả năng tương thích với phiên bản 4.6.1 trở lên.
-### Thiết lập môi trường
-- Môi trường phát triển như Visual Studio, được cấu hình bằng C#.
-### Điều kiện tiên quyết về kiến thức
-- Hiểu biết cơ bản về lập trình C#.
-- Làm quen với các khái niệm so sánh tài liệu.
-Với các điều kiện tiên quyết này, hãy thiết lập GroupDocs.Comparison cho .NET và bắt đầu hành trình triển khai.
-## Thiết lập GroupDocs.Comparison cho .NET
-Để sử dụng GroupDocs.Comparison, hãy cài đặt thư viện thông qua NuGet hoặc .NET CLI:
-**Bảng điều khiển quản lý gói NuGet**
+
+Bạn đã bao giờ so sánh hai tài liệu mà lại mất các siêu dữ liệu quan trọng trong quá trình không? Bạn không phải là người duy nhất. Khi bạn cần **bảo tồn siêu dữ liệu mục tiêu** trong khi so sánh tài liệu trong một ứng dụng .NET, công việc có thể cảm thấy khó khăn—nhưng không nhất thiết phải như vậy.
+
+GroupDocs.Comparison cho .NET cho phép bạn quyết định siêu dữ liệu của tài liệu nào sẽ được giữ lại trong kết quả so sánh. Dù bạn đang xây dựng hệ thống quản lý tài liệu, xử lý hợp đồng pháp lý, hay quản lý nội dung hợp tác, bạn sẽ muốn siêu dữ liệu từ tài liệu nguồn đúng mỗi lần.
+
+Trong hướng dẫn này, bạn sẽ học cách **bảo tồn siêu dữ liệu mục tiêu** trong quá trình so sánh, tránh các lỗi thường gặp, và triển khai giải pháp trong các kịch bản thực tế.
+
+## Câu trả lời nhanh
+- **“Bảo tồn siêu dữ liệu mục tiêu” có nghĩa là gì?** Nó giữ lại các siêu dữ liệu (tác giả, ngày tạo, thuộc tính tùy chỉnh, v.v.) từ tài liệu bạn chỉ định là mục tiêu khi tạo ra kết quả so sánh.  
+- **Phiên bản GroupDocs.Comparison nào được yêu cầu?** Phiên bản 25.4.0 trở lên.  
+- **Tôi có thể dùng với .NET Core không?** Có – .NET Core 2.0+ hoặc .NET Framework 4.6.1+.  
+- **Cần giấy phép cho môi trường production không?** Cần giấy phép thương mại cho production; bản dùng thử miễn phí đủ cho việc học.  
+- **Tính năng này có hoạt động với PDF và DOCX không?** Có – tất cả các định dạng Office và PDF chính đều hỗ trợ bảo tồn siêu dữ liệu.
+
+## Tại sao việc bảo tồn siêu dữ liệu lại quan trọng
+
+Trước khi nhảy vào code, hãy nói về lý do tại sao việc bảo tồn siêu dữ liệu mục tiêu lại quan trọng. Siêu dữ liệu tài liệu không chỉ là “đẹp mắt”—nó thường được yêu cầu pháp lý hoặc là yếu tố then chốt cho doanh nghiệp:
+
+- **Tài liệu pháp lý** – cần giữ các dấu hiệu bảo mật luật sư‑khách hàng.  
+- **Tệp công ty** – phải giữ các thẻ tuân thủ và chuỗi phê duyệt.  
+- **Bài báo học thuật** – ghi nhận tác giả và lịch sử sửa đổi là điều thiết yếu.  
+- **Tài liệu kỹ thuật** – kiểm soát phiên bản và trạng thái duyệt quan trọng.
+
+Nếu không xử lý đúng, bạn có thể vô tình xóa bỏ thông tin đã mất nhiều tháng để xây dựng. Đó là lúc tùy chọn **bảo tồn siêu dữ liệu mục tiêu** tỏa sáng.
+
+## Yêu cầu trước
+
+### Thư viện và phiên bản cần thiết
+- **GroupDocs.Comparison cho .NET**: Phiên bản 25.4.0 hoặc mới hơn (các phiên bản cũ hơn có tùy chọn siêu dữ liệu hạn chế).  
+- **.NET Framework**: 4.6.1 hoặc cao hơn, hoặc .NET Core 2.0+.
+
+### Cài đặt môi trường
+- Visual Studio (hoặc bất kỳ IDE C# nào bạn thích).  
+- Kiến thức cơ bản về C# (không quá phức tạp, yên tâm!).  
+- Hai tài liệu mẫu để thử nghiệm (Word *.docx* hoạt động tốt).
+
+### Kiến thức nền
+Bạn không cần phải là chuyên gia GroupDocs, nhưng nên thoải mái với:
+- Các câu lệnh `using` của C# và việc xử lý tệp.  
+- Các khái niệm cơ bản về xử lý tài liệu.  
+- Siêu dữ liệu là gì (tác giả, tiêu đề, thuộc tính tùy chỉnh, v.v.).
+
+Sẵn sàng? Hãy thiết lập môi trường.
+
+## Cài đặt GroupDocs.Comparison cho .NET
+
+Việc cài đặt GroupDocs.Comparison rất đơn giản, nhưng có một vài lưu ý cần chú ý.
+
+### Các tùy chọn cài đặt
+
+**NuGet Package Manager Console** (cách dễ nhất):
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
-**.NETCLI**
+
+**.NET CLI** (nếu bạn thích dòng lệnh):
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
-### Mua lại giấy phép
-GroupDocs cung cấp nhiều tùy chọn cấp phép khác nhau:
-- **Dùng thử miễn phí**: Kiểm tra toàn bộ khả năng của GroupDocs.Comparison.
-- **Giấy phép tạm thời**: Yêu cầu cấp giấy phép tạm thời để đánh giá mở rộng.
-- **Mua**: Xin giấy phép thương mại nếu bạn đã sẵn sàng tích hợp nó vào môi trường sản xuất của mình.
-Sau khi cài đặt, hãy khởi tạo và thiết lập GroupDocs.Comparison bằng một số mã C# cơ bản:
+
+**Mẹo chuyên nghiệp**: Luôn chỉ định phiên bản để tránh những thay đổi phá vỡ không mong muốn trong dự án của bạn.
+
+### Mua giấy phép
+Đây là nơi nhiều nhà phát triển gặp khó khăn ban đầu. GroupDocs.Comparison không miễn phí, nhưng bạn có các lựa chọn:
+
+- **Bản dùng thử** – đầy đủ chức năng trong 30 ngày, lý tưởng để đánh giá.  
+- **Giấy phép tạm thời** – thời gian đánh giá kéo dài nếu bạn cần thêm thời gian.  
+- **Giấy phép thương mại** – cho việc sử dụng trong production (có nhiều mức giá khác nhau).
+
+Đừng lo lắng về giấy phép ngay bây giờ nếu bạn chỉ đang học—phiên bản dùng thử đã bao gồm tất cả các tính năng **bảo tồn siêu dữ liệu mục tiêu**.
+
+### Kiểm tra cài đặt cơ bản
+
+Hãy chắc chắn mọi thứ hoạt động bằng một thử nghiệm đơn giản:
+
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -49,74 +105,418 @@ using GroupDocs.Comparison;
 string sourceFilePath = "source.docx";
 string targetFilePath = "target.docx";
 
-// Khởi tạo đối tượng Comparer.
+// Initialize the Comparer object.
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // Thêm tài liệu mục tiêu để so sánh.
+    // Add the target document for comparison.
     comparer.Add(targetFilePath);
 }
 ```
-Thiết lập này tạo thành nền tảng cho ứng dụng của chúng tôi, cho phép chúng tôi thực hiện so sánh.
-## Hướng dẫn thực hiện
-### Thiết lập mục tiêu siêu dữ liệu tài liệu
-Việc bảo toàn siêu dữ liệu trong quá trình so sánh tài liệu đảm bảo rằng các thuộc tính mong muốn được giữ lại trong đầu ra của bạn. Thực hiện theo các bước sau:
-#### Bước 1: Khởi tạo đối tượng so sánh
-Các `Comparer` đối tượng được khởi tạo bằng đường dẫn tài liệu nguồn, cung cấp ngữ cảnh cho các hoạt động của chúng tôi.
+
+Nếu đoạn mã này biên dịch không lỗi, bạn đã sẵn sàng. Nếu không, hãy kiểm tra lại việc cài đặt package và các câu lệnh `using`.
+
+## Cách bảo tồn siêu dữ liệu mục tiêu
+
+Bây giờ là phần chính—thực sự bảo tồn siêu dữ liệu trong quá trình so sánh tài liệu. Đây là nơi GroupDocs.Comparison thực sự tỏa sáng.
+
+### Hiểu luồng siêu dữ liệu
+
+Trong một lần so sánh thông thường:
+
+1. **Tài liệu nguồn** cung cấp nội dung cơ bản.  
+2. **Tài liệu mục tiêu** cung cấp các thay đổi để so sánh.  
+3. **Tài liệu đầu ra** kết hợp cả hai, nhưng siêu dữ liệu của tài liệu nào sẽ thắng?
+
+Mặc định, GroupDocs.Comparison sử dụng siêu dữ liệu của tài liệu nguồn. Để **bảo tồn siêu dữ liệu mục tiêu**, bạn cần chỉ định rõ cho API.
+
+### Thực hiện từng bước
+
+#### Bước 1: Khởi tạo đối tượng Comparer
+
+Điều này thiết lập tài liệu “cơ sở” — tài liệu bạn đang so sánh với:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // Các hoạt động sẽ được thực hiện trong phạm vi này.
+    // All comparison operations happen within this scope
 }
 ```
-**Tại sao điều này quan trọng**: Khởi tạo với tài liệu nguồn sẽ thiết lập cơ sở so sánh của bạn.
+
+**Tại sao dùng câu lệnh `using`?** Chúng tự động giải phóng tài nguyên, ngăn rò rỉ bộ nhớ khi xử lý các tài liệu lớn. Tin tôi đi, bạn sẽ cảm ơn mình khi làm việc với các file Word 50 MB.
+
 #### Bước 2: Thêm tài liệu mục tiêu
-Thêm tài liệu mục tiêu vào `Comparer` đối tượng để đánh giá song song.
+
+Cho Comparer biết tài liệu nào chứa các thay đổi bạn muốn phân tích:
+
 ```csharp
 comparer.Add(targetFilePath);
 ```
-**Nó làm gì**: Cho phép GroupDocs.Comparison phân tích và so sánh sự khác biệt một cách hiệu quả.
-#### Bước 3: Đặt loại siêu dữ liệu
-Chọn loại siêu dữ liệu bạn muốn giữ lại trong đầu ra của mình. Ở đây, chúng tôi chọn `MetadataType.Target`.
+
+**Sai lầm phổ biến**: Nhầm lẫn nguồn và mục tiêu. Hãy nghĩ như sau—nguồn là “bản gốc”, mục tiêu là “phiên bản cập nhật”.
+
+#### Bước 3: Đặt kiểu siêu dữ liệu (đây là phần “ma thuật”)
+
+Xác định tài liệu nào sẽ giữ siêu dữ liệu trong kết quả:
+
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
-**Giải thích**: Bằng cách chỉ định `CloneMetadataType`GroupDocs.Comparison sao chép siêu dữ liệu từ tài liệu mục tiêu vào kết quả của chúng tôi.
-### Mẹo khắc phục sự cố
-- **Đường dẫn tập tin**: Đảm bảo đường dẫn tệp được chỉ định chính xác để tránh `FileNotFoundException`.
-- **Phiên bản thư viện**: Sử dụng các phiên bản tương thích của .NET và GroupDocs.Comparison để tránh các sự cố thời gian chạy.
-- **Thư mục đầu ra**: Xác minh rằng thư mục đầu ra của bạn có thể ghi được hoặc xử lý các ngoại lệ cho các vấn đề về quyền.
-## Ứng dụng thực tế
-Với mục tiêu siêu dữ liệu trong quá trình so sánh tài liệu, bạn có thể cải thiện nhiều ứng dụng thực tế khác nhau:
-1. **Quản lý văn bản pháp lý**: Lưu giữ thông tin chi tiết về quyền lợi giữa luật sư và khách hàng trong bản tóm tắt.
-2. **Xuất bản học thuật**: Đảm bảo thông tin tác giả và đóng góp chính xác trong các bài báo cộng tác.
-3. **Tuân thủ doanh nghiệp**: Duy trì các thuộc tính siêu dữ liệu cụ thể để tuân thủ quy định trong quá trình kiểm toán.
-Việc tích hợp GroupDocs.Comparison với các hệ thống .NET khác cho phép quy trình làm việc tài liệu liền mạch trong các giải pháp doanh nghiệp lớn hơn.
-## Cân nhắc về hiệu suất
-Tối ưu hóa hiệu suất của GroupDocs.Comparison bao gồm:
-- Quản lý bộ nhớ hiệu quả bằng cách loại bỏ tài nguyên sau khi sử dụng.
-- Sử dụng các hoạt động không đồng bộ khi có thể để cải thiện khả năng phản hồi.
-- Cấu hình cài đặt so sánh phù hợp cho các tài liệu lớn để cân bằng tốc độ và độ chính xác.
-Bằng cách làm theo các hướng dẫn này, ứng dụng của bạn có thể xử lý việc so sánh tài liệu một cách trơn tru.
-## Phần kết luận
-Trong hướng dẫn này, chúng tôi đã khám phá cách thiết lập siêu dữ liệu của tài liệu mục tiêu bằng GroupDocs.Comparison cho .NET. Bằng cách hiểu quy trình thiết lập, các bước triển khai và ứng dụng thực tế, giờ đây bạn đã được trang bị để nâng cao hiệu quả các tác vụ so sánh tài liệu của mình.
-### Các bước tiếp theo
-- Thử nghiệm với nhiều loại siêu dữ liệu khác nhau.
-- Khám phá các tính năng bổ sung trong GroupDocs.Comparison.
-- Tích hợp chức năng này vào hệ thống hoặc quy trình làm việc lớn hơn.
-Bạn đã sẵn sàng thử chưa? Hãy triển khai các giải pháp này vào dự án của bạn và xem sự khác biệt!
-## Phần Câu hỏi thường gặp
-1. **Tôi có thể so sánh nhiều tài liệu cùng một lúc không?**
-   - Có, thêm một số tài liệu mục tiêu bằng cách sử dụng `comparer.Add()` để so sánh theo lô.
-2. **Tôi phải xử lý các tài liệu được bảo vệ bằng mật khẩu như thế nào?**
-   - GroupDocs.Comparison hỗ trợ mở các tệp được bảo vệ bằng mật khẩu bằng cách chỉ định mật khẩu khi tải tài liệu.
-3. **Có thể sao chép những loại siêu dữ liệu nào?**
-   - Siêu dữ liệu như tác giả, tiêu đề và ngày tạo là các tùy chọn có sẵn tùy thuộc vào loại tài liệu của bạn.
-4. **Có giới hạn về kích thước tài liệu tôi có thể so sánh không?**
-   - Mặc dù GroupDocs.Comparison xử lý các tệp lớn một cách hiệu quả, hiệu suất có thể thay đổi tùy theo tài nguyên hệ thống.
-5. **Làm thế nào để báo cáo sự cố hoặc nhận hỗ trợ?**
-   - Ghé thăm [Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/comparison) để được hỗ trợ và tư vấn từ cộng đồng.
-## Tài nguyên
-- **Tài liệu**: Khám phá hướng dẫn chi tiết tại [Tài liệu GroupDocs](https://docs.groupdocs.com/comparison/net/).
-- **Tài liệu tham khảo API**: Lặn sâu hơn với [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/net/).
-- **Tải về**: Truy cập bản phát hành mới nhất qua [Tải xuống GroupDocs](https://releases.groupdocs.com/comparison/net/).
-- **Mua và cấp phép**: Tìm hiểu thêm về các tùy chọn mua hàng tại [Mua GroupDocs](https://purchase.groupdocs.com/buy) hoặc yêu cầu dùng thử miễn phí từ [Trang dùng thử miễn phí](https://releases.groupdocs.com/comparison/net/).
+
+**Điều gì đang xảy ra?** `CloneMetadataType = MetadataType.Target` nói với GroupDocs.Comparison: “Hey, tôi muốn giữ siêu dữ liệu của tài liệu mục tiêu trong kết quả cuối cùng.”
+
+### Ví dụ hoàn chỉnh hoạt động
+
+Dưới đây là toàn bộ mã gộp lại trong một chương trình có thể chạy:
+
+```csharp
+using System;
+using System.IO;
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            string sourceFile = "original_document.docx";
+            string targetFile = "updated_document.docx";
+            string outputFile = "comparison_result.docx";
+            
+            using (Comparer comparer = new Comparer(sourceFile))
+            {
+                comparer.Add(targetFile);
+                
+                // Preserve target document metadata
+                comparer.Compare(outputFile, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                
+                Console.WriteLine($"Comparison completed! Check {outputFile}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
+
+### Những lỗi thường gặp cần tránh
+
+**Vấn đề đường dẫn tệp** – luôn dùng đường dẫn đầy đủ hoặc chắc chắn các tệp nằm trong thư mục làm việc:
+
+```csharp
+// Good
+string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
+
+// Risky (might work locally but fail in production)
+string sourceFile = "source.docx";
+```
+
+**Quản lý bộ nhớ** – với tài liệu lớn, luôn bao bọc đối tượng `Comparer` trong câu lệnh `using`.
+
+**Tương thích phiên bản** – các phiên bản GroupDocs.Comparison khác nhau cung cấp các tùy chọn siêu dữ liệu khác nhau—hãy dùng 25.4.0 hoặc mới hơn để có kết quả tốt nhất.
+
+## Các kịch bản siêu dữ liệu nâng cao
+
+### Khi nào nên dùng siêu dữ liệu mục tiêu vs. nguồn
+
+| Kịch bản | Ưu tiên **Siêu dữ liệu mục tiêu** | Ưu tiên **Siêu dữ liệu nguồn** |
+|----------|-----------------------------------|---------------------------------|
+| Cần thông tin tác giả cập nhật | ✅ | ❌ |
+| Tài liệu gốc có ưu tiên pháp lý | ❌ | ✅ |
+| Thuộc tính tùy chỉnh chỉ có trong file mới | ✅ | ❌ |
+| Muốn giữ lịch sử “master” của tài liệu | ❌ | ✅ |
+
+### Xử lý nhiều tài liệu mục tiêu
+
+Bạn có thể so sánh với nhiều mục tiêu đồng thời và vẫn bảo tồn siêu dữ liệu từ tài liệu mục tiêu đầu tiên được thêm:
+
+```csharp
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    comparer.Add(targetFilePath1);
+    comparer.Add(targetFilePath2);
+    comparer.Add(targetFilePath3);
+    
+    // Metadata will come from the first target document
+    comparer.Compare(outputFileName, new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    });
+}
+```
+
+## Ứng dụng thực tiễn và các trường hợp sử dụng
+
+### Quản lý tài liệu pháp lý
+Các công ty luật thường cần so sánh các phiên bản hợp đồng đồng thời giữ các dấu hiệu siêu dữ liệu đặc thù:
+
+```csharp
+// Preserve client metadata from updated contract
+using (Comparer comparer = new Comparer("original_contract.docx"))
+{
+    comparer.Add("client_revised_contract.docx");
+    
+    comparer.Compare("final_contract_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep client's metadata
+    });
+}
+```
+
+### Hợp tác học thuật và nghiên cứu
+Khi nhiều nhà nghiên cứu cộng tác, bạn muốn bảo tồn thông tin tác giả mới nhất:
+
+```csharp
+// Keep metadata from the researcher's latest submission
+using (Comparer comparer = new Comparer("draft_paper.docx"))
+{
+    comparer.Add("researcher_updates.docx");
+    
+    comparer.Compare("paper_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Preserve researcher metadata
+    });
+}
+```
+
+### Quy trình tuân thủ doanh nghiệp
+Trong các ngành được quy định chặt chẽ, duy trì siêu dữ liệu tuân thủ là yếu tố then chốt:
+
+```csharp
+// Preserve compliance tags from updated policy document
+using (Comparer comparer = new Comparer("old_policy.docx"))
+{
+    comparer.Add("compliance_approved_policy.docx");
+    
+    comparer.Compare("policy_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep compliance metadata
+    });
+}
+```
+
+## Khắc phục các vấn đề thường gặp
+
+### Lỗi “File Not Found”
+Vấn đề phổ biến nhất. Hãy debug bằng cách kiểm tra rõ ràng:
+
+```csharp
+string sourceFile = "source.docx";
+
+// Always check if files exist before comparison
+if (!File.Exists(sourceFile))
+{
+    Console.WriteLine($"Source file not found: {Path.GetFullPath(sourceFile)}");
+    return;
+}
+
+// Same for target files
+if (!File.Exists(targetFile))
+{
+    Console.WriteLine($"Target file not found: {Path.GetFullPath(targetFile)}");
+    return;
+}
+```
+
+### Vấn đề bộ nhớ với tài liệu lớn
+Đối với các tài liệu trên 10 MB, cân nhắc các tối ưu sau:
+
+```csharp
+// Use explicit disposal for large documents
+using (var comparer = new Comparer(sourceFile))
+{
+    comparer.Add(targetFile);
+    
+    var saveOptions = new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    };
+    
+    comparer.Compare(outputFile, saveOptions);
+    
+    // Explicitly clean up
+    GC.Collect();
+    GC.WaitForPendingFinalizers();
+}
+```
+
+### Vấn đề quyền truy cập
+Khi làm việc với tệp được bảo vệ hoặc chia sẻ trên mạng:
+
+```csharp
+try
+{
+    using (var comparer = new Comparer(sourceFile))
+    {
+        comparer.Add(targetFile);
+        comparer.Compare(outputFile, new SaveOptions() 
+        { 
+            CloneMetadataType = MetadataType.Target 
+        });
+    }
+}
+catch (UnauthorizedAccessException ex)
+{
+    Console.WriteLine("Access denied. Check file permissions.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+catch (IOException ex)
+{
+    Console.WriteLine("File I/O error occurred.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+```
+
+## Cân nhắc về hiệu năng và các thực tiễn tốt nhất
+
+### Quản lý bộ nhớ
+GroupDocs.Comparison có thể tiêu tốn nhiều bộ nhớ. Sử dụng câu lệnh `using` để đảm bảo giải phóng:
+
+```csharp
+// Good - automatic resource cleanup
+using (var comparer = new Comparer(sourceFile))
+{
+    // comparison logic here
+}
+
+// Bad - potential memory leaks
+var comparer = new Comparer(sourceFile);
+// ... comparison logic
+// comparer.Dispose(); // Easy to forget!
+```
+
+**Xử lý tài liệu theo lô** – nếu bạn so sánh nhiều file, hãy chia chúng thành các nhóm nhỏ để giảm tải bộ nhớ.
+
+### Các thao tác bất đồng bộ để tăng phản hồi
+Đối với ứng dụng desktop hoặc web, gói so sánh trong một phương thức async:
+
+```csharp
+public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
+{
+    return await Task.Run(() =>
+    {
+        try
+        {
+            using (var comparer = new Comparer(source))
+            {
+                comparer.Add(target);
+                comparer.Compare(output, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                return true;
+            }
+        }
+        catch
+        {
+            return false;
+        }
+    });
+}
+```
+
+### Hướng dẫn kích thước tệp
+- **Nhỏ (< 1 MB)** – xử lý trực tiếp.  
+- **Trung bình (1‑10 MB)** – hiển thị tiến độ để UI không bị treo.  
+- **Lớn (> 10 MB)** – luôn dùng xử lý async và cân nhắc gọi GC một cách rõ ràng như trong ví dụ trên.
+
+## Tích hợp với hệ thống lớn hơn
+
+### Tích hợp ASP.NET Core
+Dưới đây là một controller sẵn sàng sử dụng, nhận hai tệp tải lên, thực hiện so sánh và trả về kết quả đồng thời **bảo tồn siêu dữ liệu mục tiêu**:
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class DocumentComparisonController : ControllerBase
+{
+    [HttpPost("compare-with-target-metadata")]
+    public async Task<IActionResult> CompareWithTargetMetadata(
+        IFormFile sourceFile, 
+        IFormFile targetFile)
+    {
+        var tempSource = Path.GetTempFileName();
+        var tempTarget = Path.GetTempFileName();
+        var outputPath = Path.GetTempFileName();
+        
+        try
+        {
+            // Save uploaded files temporarily
+            await sourceFile.CopyToAsync(new FileStream(tempSource, FileMode.Create));
+            await targetFile.CopyToAsync(new FileStream(tempTarget, FileMode.Create));
+            
+            // Perform comparison with target metadata preservation
+            using (var comparer = new Comparer(tempSource))
+            {
+                comparer.Add(tempTarget);
+                comparer.Compare(outputPath, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+            }
+            
+            // Return comparison result
+            var resultBytes = await System.IO.File.ReadAllBytesAsync(outputPath);
+            return File(resultBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+                       "comparison_result.docx");
+        }
+        finally
+        {
+            // Clean up temporary files
+            if (System.IO.File.Exists(tempSource)) System.IO.File.Delete(tempSource);
+            if (System.IO.File.Exists(tempTarget)) System.IO.File.Delete(tempTarget);
+            if (System.IO.File.Exists(outputPath)) System.IO.File.Delete(outputPath);
+        }
+    }
+}
+```
+
+## Câu hỏi thường gặp
+
+**H: Tôi có thể bảo tồn siêu dữ liệu từ nhiều tài liệu mục tiêu khi so sánh không?**  
+Đ: Khi bạn thêm nhiều tệp mục tiêu, GroupDocs.Comparison sẽ sử dụng siêu dữ liệu từ **tài liệu mục tiêu đầu tiên** được thêm. Hãy thêm tài liệu mà bạn muốn giữ siêu dữ liệu lên trước trong chuỗi.
+
+**H: Nếu tài liệu mục tiêu không có một số trường siêu dữ liệu thì sao?**  
+Đ: Chỉ những siêu dữ liệu tồn tại trong mục tiêu sẽ được sao chép sang kết quả. Các trường thiếu sẽ bị bỏ qua; quá trình so sánh vẫn thành công.
+
+**H: Làm sao xử lý tài liệu được bảo vệ bằng mật khẩu?**  
+Đ: Sử dụng đối tượng `LoadOptions` kèm mật khẩu, sau đó truyền vào hàm khởi tạo `Comparer`:
+
+```csharp
+var loadOptions = new LoadOptions() { Password = "your_password" };
+using (var comparer = new Comparer(sourceFile, loadOptions))
+{
+    // comparison logic here
+}
+```
+
+**H: Có cách chỉ bảo tồn một số thuộc tính siêu dữ liệu được chọn không?**  
+Đ: API hiện tại bảo tồn **tất cả** siêu dữ liệu từ nguồn được chọn (Target hoặc Source). Để kiểm soát chi tiết, bạn cần trích xuất các thuộc tính sau khi so sánh và áp dụng lại thủ công.
+
+**H: Những định dạng tài liệu nào hỗ trợ bảo tồn siêu dữ liệu?**  
+Đ: Hầu hết các định dạng doanh nghiệp phổ biến—DOCX, PDF, PPTX, XLSX và nhiều định dạng khác—đều hỗ trợ tính năng này. Xem tài liệu chính thức để biết danh sách đầy đủ.
+
+**H: Tôi có thể nhận hỗ trợ khi gặp vấn đề không?**  
+Đ: Truy cập [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) để nhận trợ giúp cộng đồng, hoặc liên hệ trực tiếp với bộ phận hỗ trợ của GroupDocs nếu bạn có giấy phép thương mại.
+
+## Tài nguyên bổ sung
+
+- **Tài liệu chính thức**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **Tham khảo API**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- **Tải phiên bản mới nhất**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
+- **Bản dùng thử miễn phí**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
+- **Các tùy chọn mua**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
+
+---
+
+**Cập nhật lần cuối:** 2026-03-06  
+**Đã kiểm tra với:** GroupDocs.Comparison 25.4.0 cho .NET  
+**Tác giả:** GroupDocs  
+
+---

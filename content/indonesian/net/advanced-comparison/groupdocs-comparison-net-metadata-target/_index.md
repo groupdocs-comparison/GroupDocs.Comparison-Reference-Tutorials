@@ -1,47 +1,103 @@
 ---
-"date": "2025-05-05"
-"description": "Pelajari cara menetapkan target metadata dalam perbandingan dokumen dengan GroupDocs.Comparison untuk .NET. Tingkatkan keterampilan manajemen dokumen Anda dan pastikan keakuratan metadata terjaga."
-"title": "Perbandingan Dokumen Utama di .NET; Pertahankan Metadata Menggunakan GroupDocs.Comparison"
-"url": "/id/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
-"weight": 1
+categories:
+- Document Comparison
+date: '2026-03-06'
+description: Pelajari cara mempertahankan metadata target selama perbandingan dokumen
+  menggunakan GroupDocs.Comparison untuk .NET. Panduan langkah demi langkah dengan
+  contoh C#.
+keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
+  document comparison, metadata preservation tutorial
+lastmod: '2026-03-06'
+linktitle: Metadata Preservation Tutorial
+tags:
+- GroupDocs.Comparison
+- metadata-preservation
+- dotnet-tutorial
+- document-management
+title: Mempertahankan Metadata Target dengan GroupDocs.Comparison – Tutorial .NET
 type: docs
+url: /id/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
+weight: 1
 ---
-# Menguasai Perbandingan Dokumen di .NET: Mempertahankan Metadata dengan GroupDocs.Comparison
-## Perkenalan
-Pernahkah Anda kesulitan membandingkan dokumen saat perlu menyimpan metadata tertentu? GroupDocs.Comparison untuk .NET adalah solusinya! Tutorial ini akan memandu Anda mengatur metadata dokumen target selama perbandingan, memastikan dokumen akhir Anda mempertahankan atribut yang diinginkan dengan lancar.
-**Apa yang Akan Anda Pelajari:**
-- Menginstal dan mengonfigurasi GroupDocs.Comparison untuk .NET
-- Menyiapkan perbandingan dokumen dengan penargetan metadata
-- Fitur utama dan opsi yang tersedia di GroupDocs.Comparison
-- Aplikasi praktis untuk skenario dunia nyata
-Mari kita mulai dengan membahas prasyarat yang diperlukan untuk mengikuti panduan ini.
+
+# Mempertahankan Metadata Target dengan GroupDocs.Comparison – Tutorial .NET
+
+## Pendahuluan
+
+Pernah membandingkan dua dokumen hanya untuk kehilangan metadata penting dalam prosesnya? Anda tidak sendirian. Ketika Anda perlu **mempertahankan metadata target** saat membandingkan dokumen dalam aplikasi .NET, tugas ini bisa terasa rumit—tetapi tidak harus begitu.
+
+GroupDocs.Comparison untuk .NET memungkinkan Anda menentukan metadata dokumen mana yang akan dipertahankan pada hasil perbandingan. Baik Anda sedang membangun sistem manajemen dokumen, menangani kontrak hukum, atau mengelola konten kolaboratif, Anda pasti ingin metadata dari dokumen sumber yang tepat setiap saat.
+
+Dalam tutorial ini Anda akan belajar cara **mempertahankan metadata target** selama perbandingan, menghindari jebakan umum, dan mengimplementasikan solusi dalam skenario dunia nyata.
+
+## Jawaban Cepat
+- **Apa arti “mempertahankan metadata target”?** Itu menjaga metadata (penulis, tanggal pembuatan, properti khusus, dll.) dari dokumen yang Anda tetapkan sebagai target saat menghasilkan hasil perbandingan.  
+- **Versi GroupDocs.Comparison mana yang diperlukan?** Versi 25.4.0 atau lebih baru.  
+- **Bisakah saya menggunakan ini dengan .NET Core?** Ya – .NET Core 2.0+ atau .NET Framework 4.6.1+.  
+- **Apakah lisensi diperlukan untuk produksi?** Lisensi komersial diperlukan untuk produksi; versi percobaan gratis cukup untuk belajar.  
+- **Apakah fitur ini bekerja dengan PDF dan DOCX?** Ya – semua format Office utama dan PDF mendukung preservasi metadata.
+
+## Mengapa Preservasi Metadata Penting
+
+Sebelum masuk ke kode, mari bahas mengapa mempertahankan metadata target penting. Metadata dokumen bukan sekadar “bagus untuk dimiliki”—seringkali diperlukan secara hukum atau kritis bagi bisnis:
+
+- **Dokumen hukum** – harus mempertahankan penanda hak istimewa pengacara‑klien.  
+- **File korporat** – harus menyimpan tag kepatuhan dan rantai persetujuan.  
+- **Makalah akademik** – atribusi penulis dan riwayat revisi sangat penting.  
+- **Dokumentasi teknis** – kontrol versi dan status tinjauan sangat berpengaruh.
+
+Tanpa penanganan yang tepat, Anda mungkin secara tidak sengaja menghapus informasi yang memakan berbulan‑bulan untuk dibangun. Di sinilah opsi **mempertahankan metadata target** bersinar.
+
 ## Prasyarat
-Sebelum kita mulai, pastikan Anda memiliki:
-### Pustaka dan Versi yang Diperlukan
-- **GroupDocs.Perbandingan untuk .NET**: Diperlukan versi 25.4.0 atau yang lebih baru.
-- **Kerangka .NET**: Pastikan kompatibilitas dengan versi 4.6.1 atau lebih tinggi.
-### Pengaturan Lingkungan
-- Lingkungan pengembangan seperti Visual Studio, dikonfigurasi dengan C#.
+
+### Perpustakaan dan Versi yang Diperlukan
+- **GroupDocs.Comparison untuk .NET**: Versi 25.4.0 atau lebih baru (versi sebelumnya memiliki opsi metadata terbatas).  
+- **.NET Framework**: 4.6.1 atau lebih tinggi, atau .NET Core 2.0+.
+
+### Penyiapan Lingkungan
+- Visual Studio (atau IDE C# lain yang Anda sukai).  
+- Pengetahuan dasar C# (tidak terlalu rumit, janji!).  
+- Dua dokumen contoh untuk pengujian (Word *.docx* sangat cocok).
+
 ### Prasyarat Pengetahuan
-- Pemahaman dasar tentang pemrograman C#.
-- Keakraban dengan konsep perbandingan dokumen.
-Dengan prasyarat ini, mari siapkan GroupDocs.Comparison untuk .NET dan mulai perjalanan implementasi kita.
+Anda tidak perlu menjadi ahli GroupDocs, tetapi sebaiknya nyaman dengan:
+- Pernyataan `using` C# dan penanganan file.  
+- Konsep dasar pemrosesan dokumen.  
+- Apa itu metadata (penulis, judul, properti khusus, dll.).
+
+Siap? Mari siapkan semuanya.
+
 ## Menyiapkan GroupDocs.Comparison untuk .NET
-Untuk menggunakan GroupDocs.Comparison, instal pustaka melalui NuGet atau .NET CLI:
-**Konsol Pengelola Paket NuGet**
+
+Menginstal GroupDocs.Comparison cukup mudah, namun ada beberapa hal yang perlu diwaspadai.
+
+### Opsi Instalasi
+
+**NuGet Package Manager Console** (metode termudah):
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
-**.KLIK NET**
+
+**.NET CLI** (jika Anda lebih suka command line):
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
+
+**Tips pro**: Selalu tentukan versi untuk menghindari perubahan yang tidak terduga pada proyek Anda.
+
 ### Akuisisi Lisensi
-GroupDocs menawarkan berbagai pilihan lisensi:
-- **Uji Coba Gratis**: Uji kemampuan penuh GroupDocs.Comparison.
-- **Lisensi Sementara**: Minta lisensi sementara untuk evaluasi lanjutan.
-- **Pembelian**: Dapatkan lisensi komersial jika Anda siap mengintegrasikannya ke dalam lingkungan produksi Anda.
-Setelah terinstal, mari inisialisasi dan atur GroupDocs.Comparison dengan beberapa kode C# dasar:
+Di sinilah banyak pengembang terhenti pada awalnya. GroupDocs.Comparison tidak gratis, tetapi Anda memiliki pilihan:
+
+- **Trial Gratis** – fungsionalitas penuh selama 30 hari, cocok untuk evaluasi.  
+- **Lisensi Sementara** – periode evaluasi diperpanjang jika Anda butuh waktu lebih lama.  
+- **Lisensi Komersial** – untuk penggunaan produksi (berbagai tingkatan harga tersedia).
+
+Jangan khawatir tentang lisensi sekarang jika Anda hanya belajar—versi percobaan sudah mencakup semua fitur **mempertahankan metadata target**.
+
+### Verifikasi Penyiapan Dasar
+
+Mari pastikan semuanya berjalan dengan tes sederhana:
+
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -49,74 +105,418 @@ using GroupDocs.Comparison;
 string sourceFilePath = "source.docx";
 string targetFilePath = "target.docx";
 
-// Inisialisasi objek Comparer.
+// Initialize the Comparer object.
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // Tambahkan dokumen target untuk perbandingan.
+    // Add the target document for comparison.
     comparer.Add(targetFilePath);
 }
 ```
-Pengaturan ini membentuk fondasi aplikasi kami, yang memungkinkan kami melakukan perbandingan.
-## Panduan Implementasi
-### Menetapkan Target Metadata Dokumen
-Mempertahankan metadata selama perbandingan dokumen memastikan bahwa atribut yang diinginkan dipertahankan dalam output Anda. Ikuti langkah-langkah berikut:
-#### Langkah 1: Inisialisasi Objek Pembanding
-Itu `Comparer` Objek diinisialisasi dengan jalur dokumen sumber, menyediakan konteks untuk operasi kita.
+
+Jika ini berhasil dikompilasi tanpa error, Anda siap melanjutkan. Jika tidak, periksa kembali instalasi paket dan pernyataan `using` Anda.
+
+## Cara Mempertahankan Metadata Target
+
+Sekarang ke inti—mempertahankan metadata selama perbandingan dokumen. Di sinilah GroupDocs.Comparison benar‑benar bersinar.
+
+### Memahami Alur Metadata
+
+Selama perbandingan tipikal:
+
+1. **Dokumen sumber** menyediakan konten dasar.  
+2. **Dokumen target** menyediakan perubahan yang akan dibandingkan.  
+3. **Dokumen output** menggabungkan keduanya, tetapi metadata milik siapa yang dipertahankan?
+
+Secara default, GroupDocs.Comparison menggunakan metadata dokumen sumber. Untuk **mempertahankan metadata target**, Anda harus memberi tahu API secara eksplisit.
+
+### Implementasi Langkah‑per‑Langkah
+
+#### Langkah 1: Inisialisasi Objek Comparer Anda
+
+Ini menetapkan dokumen “baseline” — dokumen yang Anda bandingkan:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // Operasi akan dilakukan dalam lingkup ini.
+    // All comparison operations happen within this scope
 }
 ```
-**Mengapa Hal Ini Penting**: Inisialisasi dengan dokumen sumber menyiapkan dasar perbandingan Anda.
+
+**Mengapa menggunakan pernyataan `using`?** Mereka secara otomatis membuang sumber daya, mencegah kebocoran memori saat memproses dokumen besar. Percayalah, Anda akan berterima kasih nanti saat menangani file Word 50 MB.
+
 #### Langkah 2: Tambahkan Dokumen Target
-Tambahkan dokumen target ke `Comparer` objek untuk evaluasi berdampingan.
+
+Beritahu comparer dokumen mana yang berisi perubahan yang ingin Anda analisis:
+
 ```csharp
 comparer.Add(targetFilePath);
 ```
-**Apa Fungsinya**: Memungkinkan GroupDocs.Comparison untuk menganalisis dan membandingkan perbedaan secara efektif.
-#### Langkah 3: Tetapkan Jenis Metadata
-Pilih jenis metadata yang ingin Anda simpan dalam output Anda. Di sini, kami memilih `MetadataType.Target`.
+
+**Kesalahan umum**: Membingungkan sumber dan target. Anggap saja sumber adalah “asli” Anda, target adalah “versi yang diperbarui”.
+
+#### Langkah 3: Atur Tipe Metadata (Di Sinilah Magis Terjadi)
+
+Tentukan metadata dokumen mana yang harus dipertahankan pada output:
+
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
-**Penjelasan**:Dengan menentukan `CloneMetadataType`GroupDocs.Comparison mengkloning metadata dari dokumen target ke hasil kami.
-### Tips Pemecahan Masalah
-- **Jalur Berkas**: Pastikan jalur file ditentukan dengan benar untuk menghindari `FileNotFoundException`.
-- **Versi Perpustakaan**: Gunakan versi .NET dan GroupDocs.Comparison yang kompatibel untuk mencegah masalah runtime.
-- **Direktori Keluaran**: Verifikasi bahwa direktori keluaran Anda dapat ditulis, atau tangani pengecualian untuk masalah izin.
-## Aplikasi Praktis
-Dengan penargetan metadata selama perbandingan dokumen, Anda dapat meningkatkan berbagai aplikasi dunia nyata:
-1. **Manajemen Dokumen Hukum**: Pertahankan detail hak istimewa pengacara-klien dalam ringkasan.
-2. **Penerbitan Akademik**Pastikan informasi kepenulisan dan kontribusi yang tepat dalam makalah kolaboratif.
-3. **Kepatuhan Perusahaan**: Pertahankan atribut metadata spesifik untuk kepatuhan peraturan selama audit.
-Mengintegrasikan GroupDocs.Comparison dengan sistem .NET lainnya memungkinkan alur kerja dokumen yang lancar dalam solusi perusahaan yang lebih besar.
-## Pertimbangan Kinerja
-Mengoptimalkan kinerja GroupDocs.Comparison melibatkan:
-- Mengelola memori secara efisien dengan membuang sumber daya setelah digunakan.
-- Menggunakan operasi asinkron jika memungkinkan untuk meningkatkan responsivitas.
-- Mengonfigurasi pengaturan perbandingan yang tepat untuk dokumen besar guna menyeimbangkan kecepatan dan akurasi.
-Dengan mengikuti panduan ini, aplikasi Anda dapat menangani perbandingan dokumen dengan lancar.
-## Kesimpulan
-Dalam tutorial ini, kami menjajaki pengaturan metadata dokumen target menggunakan GroupDocs.Comparison untuk .NET. Dengan memahami proses penyiapan, langkah-langkah implementasi, dan aplikasi praktis, kini Anda siap untuk menyempurnakan tugas perbandingan dokumen secara efektif.
-### Langkah Berikutnya
-- Bereksperimenlah dengan berbagai jenis metadata.
-- Jelajahi fitur tambahan dalam GroupDocs.Comparison.
-- Integrasikan fungsi ini ke dalam sistem atau alur kerja yang lebih besar.
-Siap untuk mencobanya? Terapkan solusi ini dalam proyek Anda dan lihat perbedaannya!
-## Bagian FAQ
-1. **Bisakah saya membandingkan beberapa dokumen sekaligus?**
-   - Ya, tambahkan beberapa dokumen target menggunakan `comparer.Add()` untuk perbandingan batch.
-2. **Bagaimana cara menangani dokumen yang dilindungi kata sandi?**
-   - GroupDocs.Comparison mendukung pembukaan file yang dilindungi kata sandi dengan menentukan kata sandi saat memuat dokumen.
-3. **Jenis metadata apa yang dapat dikloning?**
-   - Metadata seperti penulis, judul, dan tanggal pembuatan adalah pilihan yang tersedia tergantung pada jenis dokumen Anda.
-4. **Apakah ada batasan ukuran dokumen yang dapat saya bandingkan?**
-   - Meskipun GroupDocs.Comparison menangani berkas besar secara efisien, kinerjanya dapat bervariasi berdasarkan sumber daya sistem.
-5. **Bagaimana cara melaporkan masalah atau mendapatkan dukungan?**
-   - Kunjungi [Forum Dukungan GroupDocs](https://forum.groupdocs.com/c/comparison) untuk bantuan dan saran komunitas.
-## Sumber daya
-- **Dokumentasi**:Jelajahi panduan terperinci di [Dokumentasi GroupDocs](https://docs.groupdocs.com/comparison/net/).
-- **Referensi API**:Selami lebih dalam dengan [Referensi API](https://reference.groupdocs.com/comparison/net/).
-- **Unduh**:Akses rilis terbaru melalui [Unduhan GroupDocs](https://releases.groupdocs.com/comparison/net/).
-- **Pembelian dan Lisensi**:Pelajari lebih lanjut tentang opsi pembelian di [Pembelian GroupDocs](https://purchase.groupdocs.com/buy) atau minta uji coba gratis dari [Halaman Uji Coba Gratis](https://releases.groupdocs.com/comparison/net/).
+
+**Apa yang terjadi?** `CloneMetadataType = MetadataType.Target` memberi tahu GroupDocs.Comparison: “Hei, saya ingin mempertahankan metadata dokumen target pada hasil akhir saya.”
+
+### Contoh Program Lengkap
+
+Berikut semua kode digabungkan dalam program yang dapat dijalankan:
+
+```csharp
+using System;
+using System.IO;
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            string sourceFile = "original_document.docx";
+            string targetFile = "updated_document.docx";
+            string outputFile = "comparison_result.docx";
+            
+            using (Comparer comparer = new Comparer(sourceFile))
+            {
+                comparer.Add(targetFile);
+                
+                // Preserve target document metadata
+                comparer.Compare(outputFile, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                
+                Console.WriteLine($"Comparison completed! Check {outputFile}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
+
+### Jebakan Umum yang Harus Dihindari
+
+**Masalah Jalur File** – selalu gunakan jalur lengkap atau pastikan file berada di direktori kerja:
+
+```csharp
+// Good
+string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
+
+// Risky (might work locally but fail in production)
+string sourceFile = "source.docx";
+```
+
+**Manajemen Memori** – untuk dokumen besar, selalu bungkus objek `Comparer` dalam pernyataan `using`.
+
+**Kompatibilitas Versi** – rilis GroupDocs.Comparison yang berbeda mengekspor opsi metadata yang berbeda—gunakan 25.4.0 atau lebih baru untuk hasil terbaik.
+
+## Skenario Metadata Lanjutan
+
+### Kapan Menggunakan Metadata Target vs. Source
+
+| Skenario | Lebih Memilih Metadata **Target** | Lebih Memilih Metadata **Source** |
+|----------|-----------------------------------|-----------------------------------|
+| Informasi penulis yang diperbarui diperlukan | ✅ | ❌ |
+| Dokumen asli memiliki kedudukan hukum | ❌ | ✅ |
+| Properti khusus hanya ditambahkan di file yang lebih baru | ✅ | ❌ |
+| Anda ingin mempertahankan riwayat dokumen “master” | ❌ | ✅ |
+
+### Menangani Beberapa Dokumen Target
+
+Anda dapat membandingkan terhadap beberapa target sekaligus sambil tetap mempertahankan metadata dari target pertama yang Anda tambahkan:
+
+```csharp
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    comparer.Add(targetFilePath1);
+    comparer.Add(targetFilePath2);
+    comparer.Add(targetFilePath3);
+    
+    // Metadata will come from the first target document
+    comparer.Compare(outputFileName, new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    });
+}
+```
+
+## Aplikasi Praktis dan Kasus Penggunaan
+
+### Manajemen Dokumen Hukum
+Firma hukum sering perlu membandingkan versi kontrak sambil mempertahankan penanda metadata tertentu:
+
+```csharp
+// Preserve client metadata from updated contract
+using (Comparer comparer = new Comparer("original_contract.docx"))
+{
+    comparer.Add("client_revised_contract.docx");
+    
+    comparer.Compare("final_contract_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep client's metadata
+    });
+}
+```
+
+### Kolaborasi Akademik dan Penelitian
+Saat banyak peneliti berkolaborasi, Anda ingin mempertahankan informasi penulis terbaru:
+
+```csharp
+// Keep metadata from the researcher's latest submission
+using (Comparer comparer = new Comparer("draft_paper.docx"))
+{
+    comparer.Add("researcher_updates.docx");
+    
+    comparer.Compare("paper_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Preserve researcher metadata
+    });
+}
+```
+
+### Alur Kerja Kepatuhan Korporat
+Di industri yang diatur, menjaga metadata kepatuhan sangat penting:
+
+```csharp
+// Preserve compliance tags from updated policy document
+using (Comparer comparer = new Comparer("old_policy.docx"))
+{
+    comparer.Add("compliance_approved_policy.docx");
+    
+    comparer.Compare("policy_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep compliance metadata
+    });
+}
+```
+
+## Memecahkan Masalah Umum
+
+### Error “File Not Found”
+Masalah paling umum. Debug dengan pemeriksaan eksplisit:
+
+```csharp
+string sourceFile = "source.docx";
+
+// Always check if files exist before comparison
+if (!File.Exists(sourceFile))
+{
+    Console.WriteLine($"Source file not found: {Path.GetFullPath(sourceFile)}");
+    return;
+}
+
+// Same for target files
+if (!File.Exists(targetFile))
+{
+    Console.WriteLine($"Target file not found: {Path.GetFullPath(targetFile)}");
+    return;
+}
+```
+
+### Masalah Memori pada Dokumen Besar
+Untuk dokumen > 10 MB, pertimbangkan optimalisasi berikut:
+
+```csharp
+// Use explicit disposal for large documents
+using (var comparer = new Comparer(sourceFile))
+{
+    comparer.Add(targetFile);
+    
+    var saveOptions = new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    };
+    
+    comparer.Compare(outputFile, saveOptions);
+    
+    // Explicitly clean up
+    GC.Collect();
+    GC.WaitForPendingFinalizers();
+}
+```
+
+### Masalah Izin dan Akses
+Saat bekerja dengan file yang dilindungi atau share jaringan:
+
+```csharp
+try
+{
+    using (var comparer = new Comparer(sourceFile))
+    {
+        comparer.Add(targetFile);
+        comparer.Compare(outputFile, new SaveOptions() 
+        { 
+            CloneMetadataType = MetadataType.Target 
+        });
+    }
+}
+catch (UnauthorizedAccessException ex)
+{
+    Console.WriteLine("Access denied. Check file permissions.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+catch (IOException ex)
+{
+    Console.WriteLine("File I/O error occurred.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+```
+
+## Pertimbangan Performa dan Praktik Terbaik
+
+### Manajemen Memori
+GroupDocs.Comparison dapat mengonsumsi banyak memori. Gunakan pernyataan `using` untuk menjamin pembuangan:
+
+```csharp
+// Good - automatic resource cleanup
+using (var comparer = new Comparer(sourceFile))
+{
+    // comparison logic here
+}
+
+// Bad - potential memory leaks
+var comparer = new Comparer(sourceFile);
+// ... comparison logic
+// comparer.Dispose(); // Easy to forget!
+```
+
+**Proses Dokumen dalam Batch** – jika Anda membandingkan banyak file, tangani dalam kelompok kecil untuk menjaga penggunaan memori tetap rendah.
+
+### Operasi Async untuk Responsivitas Lebih Baik
+Untuk aplikasi desktop atau web, bungkus perbandingan dalam metode async:
+
+```csharp
+public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
+{
+    return await Task.Run(() =>
+    {
+        try
+        {
+            using (var comparer = new Comparer(source))
+            {
+                comparer.Add(target);
+                comparer.Compare(output, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                return true;
+            }
+        }
+        catch
+        {
+            return false;
+        }
+    });
+}
+```
+
+### Pedoman Ukuran File
+- **Kecil (< 1 MB)** – proses langsung.  
+- **Sedang (1‑10 MB)** – tampilkan progres agar UI tetap responsif.  
+- **Besar (> 10 MB)** – selalu gunakan pemrosesan async dan pertimbangkan pemanggilan GC eksplisit seperti contoh di atas.
+
+## Integrasi dengan Sistem Lebih Besar
+
+### Integrasi ASP.NET Core
+Berikut contoh controller siap pakai yang menerima dua file yang di‑upload, menjalankan perbandingan, dan mengembalikan hasil sambil **mempertahankan metadata target**:
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class DocumentComparisonController : ControllerBase
+{
+    [HttpPost("compare-with-target-metadata")]
+    public async Task<IActionResult> CompareWithTargetMetadata(
+        IFormFile sourceFile, 
+        IFormFile targetFile)
+    {
+        var tempSource = Path.GetTempFileName();
+        var tempTarget = Path.GetTempFileName();
+        var outputPath = Path.GetTempFileName();
+        
+        try
+        {
+            // Save uploaded files temporarily
+            await sourceFile.CopyToAsync(new FileStream(tempSource, FileMode.Create));
+            await targetFile.CopyToAsync(new FileStream(tempTarget, FileMode.Create));
+            
+            // Perform comparison with target metadata preservation
+            using (var comparer = new Comparer(tempSource))
+            {
+                comparer.Add(tempTarget);
+                comparer.Compare(outputPath, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+            }
+            
+            // Return comparison result
+            var resultBytes = await System.IO.File.ReadAllBytesAsync(outputPath);
+            return File(resultBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+                       "comparison_result.docx");
+        }
+        finally
+        {
+            // Clean up temporary files
+            if (System.IO.File.Exists(tempSource)) System.IO.File.Delete(tempSource);
+            if (System.IO.File.Exists(tempTarget)) System.IO.File.Delete(tempTarget);
+            if (System.IO.File.Exists(outputPath)) System.IO.File.Delete(outputPath);
+        }
+    }
+}
+```
+
+## Pertanyaan yang Sering Diajukan
+
+**T: Bisakah saya mempertahankan metadata dari beberapa dokumen target saat membandingkan?**  
+J: Ketika Anda menambahkan beberapa file target, GroupDocs.Comparison menggunakan metadata dari **dokumen target pertama** yang ditambahkan. Tambahkan dokumen yang metadata‑nya ingin Anda pertahankan pertama dalam urutan.
+
+**T: Apa yang terjadi jika dokumen target tidak memiliki beberapa bidang metadata?**  
+J: Hanya metadata yang ada pada target yang akan disalin ke output. bidang yang tidak ada cukup diabaikan; perbandingan tetap berhasil.
+
+**T: Bagaimana cara menangani dokumen yang dilindungi password?**  
+J: Gunakan objek `LoadOptions` dengan password, lalu berikan ke konstruktor `Comparer`:
+
+```csharp
+var loadOptions = new LoadOptions() { Password = "your_password" };
+using (var comparer = new Comparer(sourceFile, loadOptions))
+{
+    // comparison logic here
+}
+```
+
+**T: Apakah ada cara untuk hanya mempertahankan properti metadata tertentu?**  
+J: API saat ini mempertahankan **semua** metadata dari sumber yang dipilih (Target atau Source). Untuk kontrol granular, Anda harus mengekstrak properti setelah perbandingan dan menerapkannya kembali secara manual.
+
+**T: Format dokumen apa yang mendukung preservasi metadata?**  
+J: Sebagian besar format bisnis umum—DOCX, PDF, PPTX, XLSX, dan banyak lainnya—mendukung preservasi metadata. Lihat dokumentasi resmi untuk daftar lengkap.
+
+**T: Di mana saya dapat mendapatkan bantuan jika mengalami masalah?**  
+J: Kunjungi [Forum Dukungan GroupDocs](https://forum.groupdocs.com/c/comparison) untuk bantuan komunitas, atau hubungi dukungan GroupDocs langsung jika Anda memiliki lisensi komersial.
+
+## Sumber Daya Tambahan
+
+- **Dokumentasi Resmi**: [GroupDocs.Comparison untuk .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **Referensi API**: [Referensi API Lengkap](https://reference.groupdocs.com/comparison/net/)  
+- **Unduh Versi Terbaru**: [Unduhan GroupDocs](https://releases.groupdocs.com/comparison/net/)  
+- **Trial Gratis**: [Mulai Trial Anda](https://releases.groupdocs.com/comparison/net/)  
+- **Opsi Pembelian**: [Lisensi dan Harga](https://purchase.groupdocs.com/buy)
+
+---
+
+**Terakhir Diperbarui:** 2026-03-06  
+**Diuji Dengan:** GroupDocs.Comparison 25.4.0 untuk .NET  
+**Penulis:** GroupDocs  
+
+---

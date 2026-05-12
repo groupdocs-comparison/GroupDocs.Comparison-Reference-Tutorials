@@ -1,47 +1,101 @@
 ---
-"date": "2025-05-05"
-"description": "了解如何使用 GroupDocs.Comparison for .NET 在文件比較中設定元資料目標。提升您的文件管理技能，並確保元資料的準確保存。"
-"title": ".NET 中的主文件比較 - 使用 GroupDocs.Comparison 保留元數據"
-"url": "/zh-hant/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
-"weight": 1
+categories:
+- Document Comparison
+date: '2026-03-06'
+description: 了解如何在使用 GroupDocs.Comparison for .NET 進行文件比較時保留目標元資料。提供帶有 C# 範例的逐步指南。
+keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
+  document comparison, metadata preservation tutorial
+lastmod: '2026-03-06'
+linktitle: Metadata Preservation Tutorial
+tags:
+- GroupDocs.Comparison
+- metadata-preservation
+- dotnet-tutorial
+- document-management
+title: 使用 GroupDocs.Comparison 保留目標元資料 – .NET 教學
 type: docs
+url: /zh-hant/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
+weight: 1
 ---
-# 掌握 .NET 中的文件比較：使用 GroupDocs.Comparison 儲存元數據
-## 介紹
-您是否曾在比較文件時遇到需要保留特定元資料的問題？ GroupDocs.Comparison for .NET 正是您的解決方案！本教學將指導您在比較過程中設定目標文件的元數據，確保最終文件無縫保留所需屬性。
-**您將學到什麼：**
-- 安裝與設定 GroupDocs.Comparison for .NET
-- 使用元資料定位設定文件比較
-- GroupDocs.Comparison 中的主要功能和選項
-- 現實世界場景的實際應用
-讓我們先討論遵循本指南所需的先決條件。
+
+# 保留目標中繼資料與 GroupDocs.Comparison – .NET 教學
+
+## 簡介
+
+曾經比較過兩份文件，結果卻失去了重要的中繼資料嗎？你並不孤單。當你在 .NET 應用程式中需要在比較文件時**保留目標中繼資料**，這個任務可能會感覺棘手——但其實不必如此。
+
+GroupDocs.Comparison for .NET 讓你可以決定哪一份文件的中繼資料會保留在比較結果中。無論你是在建構文件管理系統、處理法律合約，或是管理協作內容，你都會希望每次都能取得正確來源文件的中繼資料。
+
+在本教學中，你將學會如何在比較過程中**保留目標中繼資料**、避免常見陷阱，並在實際情境中實作此解決方案。
+
+## 快速答覆
+- **什麼是「保留目標中繼資料」？** 它會在產生比較結果時，保留你指定為目標的文件之中繼資料（作者、建立日期、自訂屬性等）。  
+- **需要哪個版本的 GroupDocs.Comparison？** 版本 25.4.0 或更新版本。  
+- **可以在 .NET Core 中使用嗎？** 可以 – .NET Core 2.0+ 或 .NET Framework 4.6.1+。  
+- **正式環境需要授權嗎？** 正式環境需要商業授權；免費試用可用於學習。  
+- **此功能支援 PDF 與 DOCX 嗎？** 支援 – 所有主要的 Office 與 PDF 格式皆支援中繼資料保留。
+
+## 為什麼中繼資料保留很重要
+
+在進入程式碼之前，先來談談為什麼保留目標中繼資料很重要。文件的中繼資料不只是「加分項」——它往往是法律要求或商業關鍵：
+
+- **法律文件** – 必須保留律師‑客戶保密標記。  
+- **企業檔案** – 必須保留合規標籤與批准流程。  
+- **學術論文** – 作者署名與修訂歷史必不可少。  
+- **技術文件** – 版本控制與審核狀態很重要。
+
+若未妥善處理，可能會不小心剝除花了數月時間建立的資訊。這時 **保留目標中繼資料** 的選項就顯得格外重要。
+
 ## 先決條件
-在開始之前，請確保您已：
-### 所需的庫和版本
-- **適用於 .NET 的 GroupDocs.Comparison**：需要 25.4.0 或更高版本。
-- **.NET 框架**：確保與 4.6.1 或更高版本相容。
+
+### 必需的函式庫與版本
+- **GroupDocs.Comparison for .NET**：版本 25.4.0 或更新（較早版本的中繼資料選項有限）。  
+- **.NET Framework**：4.6.1 或以上，或 .NET Core 2.0+。
+
 ### 環境設定
-- 類似 Visual Studio 的開發環境，配置 C#。
-### 知識前提
-- 對 C# 程式設計有基本的了解。
-- 熟悉文件比較概念。
-有了這些先決條件，讓我們為 .NET 設定 GroupDocs.Comparison 並開始我們的實作之旅。
-## 為 .NET 設定 GroupDocs.Comparison
-若要使用 GroupDocs.Comparison，請透過 NuGet 或 .NET CLI 安裝程式庫：
-**NuGet 套件管理器控制台**
+- Visual Studio（或任何你偏好的 C# IDE）。  
+- 基本的 C# 知識（不會太難，保證！）。  
+- 兩份測試用的範例文件（Word *.docx* 最佳）。
+
+### 知識先備
+你不需要是 GroupDocs 專家，但應該對以下內容熟悉：
+- C# `using` 陳述式與檔案處理。  
+- 基本的文件處理概念。  
+- 中繼資料的實際意義（作者、標題、自訂屬性等）。
+
+準備好了嗎？讓我們開始設定。
+
+## 設定 GroupDocs.Comparison for .NET
+
+安裝 GroupDocs.Comparison 相當簡單，但仍有幾個需要留意的細節。
+
+### 安裝方式
+
+**NuGet 套件管理員主控台**（最簡單的方法）：
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
-**.NET CLI**
+
+**.NET CLI**（如果你偏好使用指令列）：
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
-### 許可證獲取
-GroupDocs 提供多種授權選項：
-- **免費試用**：測試 GroupDocs.Comparison 的全部功能。
-- **臨時執照**：申請臨時許可證以進行延長評估。
-- **購買**：如果您準備將其整合到生產環境中，請取得商業許可證。
-安裝完成後，讓我們使用一些基本的 C# 程式碼初始化並設定 GroupDocs.Comparison：
+
+**專業提示**：始終指定版本，以避免在專案中出現意外的重大變更。
+
+### 取得授權
+
+這是許多開發者最初卡住的地方。GroupDocs.Comparison 並非免費，但你有以下選擇：
+
+- **免費試用** – 完整功能 30 天，適合評估。  
+- **暫時授權** – 若需要更長時間，可延長評估期。  
+- **商業授權** – 用於正式環境（提供多種價格方案）。
+
+如果你只是學習，暫時不必擔心授權問題——試用版已包含所有 **保留目標中繼資料** 功能。
+
+### 基本設定驗證
+
+讓我們用簡單測試確認一切正常：
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -49,74 +103,409 @@ using GroupDocs.Comparison;
 string sourceFilePath = "source.docx";
 string targetFilePath = "target.docx";
 
-// 初始化比較器物件。
+// Initialize the Comparer object.
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // 新增用於比較的目標文件。
+    // Add the target document for comparison.
     comparer.Add(targetFilePath);
 }
 ```
-此設定構成了我們的應用程式的基礎，使我們能夠進行比較。
-## 實施指南
-### 設定文檔元資料目標
-在文件比較期間保留元資料可確保所需的屬性保留在輸出中。請遵循以下步驟：
-#### 步驟1：初始化比較器對象
-這 `Comparer` 物件使用來源文檔路徑初始化，為我們的操作提供上下文。
+
+如果此程式碼編譯無誤，即可開始使用。若有錯誤，請再次檢查套件安裝與 `using` 陳述式。
+
+## 如何保留目標中繼資料
+
+現在進入重點——在文件比較過程中實際保留中繼資料。這正是 GroupDocs.Comparison 發揮威力的地方。
+
+### 了解中繼資料流程
+
+在一般的比較過程中：
+
+1. **來源文件** 提供基礎內容。  
+2. **目標文件** 提供要比較的變更。  
+3. **輸出文件** 結合兩者，但中繼資料以哪一方為主？
+
+預設情況下，GroupDocs.Comparison 會使用來源文件的中繼資料。若要**保留目標中繼資料**，必須明確告訴 API。
+
+### 逐步實作
+
+#### 步驟 1：初始化 Comparer 物件
+
+這會建立「基準」文件——即你要比較的對象：
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // 操作將在此範圍內進行。
+    // All comparison operations happen within this scope
 }
 ```
-**為什麼這很重要**：使用來源文件進行初始化可以建立您的比較基礎。
-#### 步驟2：新增目標文檔
-將目標文檔新增至 `Comparer` 對象進行並行評估。
+
+**為什麼使用 `using` 陳述式？** 它會自動釋放資源，防止在處理大型文件時發生記憶體洩漏。相信我，當你處理 50 MB 的 Word 檔時，會感謝自己的選擇。
+
+#### 步驟 2：加入目標文件
+
+告訴 Comparer 哪個文件包含你想要分析的變更：
 ```csharp
 comparer.Add(targetFilePath);
 ```
-**它的作用**：使 GroupDocs.Comparison 能夠有效地分析和比較差異。
-#### 步驟3：設定元資料類型
-選擇要在輸出中保留的元資料類型。在這裡，我們選擇 `MetadataType。Target`.
+
+**常見錯誤**：混淆來源與目標。可以這樣想——來源是「原始」文件，目標是「更新」版本。
+
+#### 步驟 3：設定中繼資料類型（關鍵所在）
+
+指定哪個文件的中繼資料應保留在輸出中：
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
-**解釋**：透過指定 `CloneMetadataType`，GroupDocs.Comparison 將目標文件中的元資料複製到我們的結果中。
-### 故障排除提示
-- **文件路徑**：確保正確指定檔案路徑以避免 `FileNotFoundException`。
-- **庫版本**：使用相容版本的 .NET 和 GroupDocs.Comparison 來防止執行階段問題。
-- **輸出目錄**：驗證您的輸出目錄是否可寫，或處理權限問題的例外狀況。
-## 實際應用
-透過在文件比較期間進行元資料定位，您可以增強各種實際應用程式：
-1. **法律文件管理**：在摘要中保留律師-客戶特權細節。
-2. **學術出版**：確保合作論文中的作者和貢獻資訊正確。
-3. **企業合規**：在審計期間維護特定的元資料屬性以確保法規遵循。
-將 GroupDocs.Comparison 與其他 .NET 系統集成，可在大型企業解決方案中實現無縫的文件工作流程。
-## 性能考慮
-優化 GroupDocs.Comparison 效能涉及：
-- 透過在使用後處置資源來有效地管理記憶體。
-- 在適用的情況下使用非同步操作來提高回應能力。
-- 為大型文件配置適當的比較設置，以平衡速度和準確性。
-透過遵循這些準則，您的應用程式可以順利處理文件比較。
-## 結論
-在本教學中，我們探討如何使用 GroupDocs.Comparison for .NET 設定目標文件的元資料。透過了解設定流程、實施步驟和實際應用，現在您可以有效地增強文件比較任務。
-### 後續步驟
-- 嘗試不同的元資料類型。
-- 探索 GroupDocs.Comparison 中的其他功能。
-- 將此功能整合到更大的系統或工作流程中。
-準備好嘗試了嗎？將這些解決方案應用到您的專案中，看看效果如何！
-## 常見問題部分
-1. **我可以一次比較多個文件嗎？**
-   - 是的，使用以下方式新增多個目標文檔 `comparer.Add()` 用於批次比較。
-2. **如何處理受密碼保護的文件？**
-   - GroupDocs.Comparison 支援在載入文件時指定密碼來開啟受密碼保護的文件。
-3. **可以複製哪些類型的元資料？**
-   - 根據您的文件類型，元資料（例如作者、標題和建立日期）是可用選項。
-4. **我可以比較的文件大小有限制嗎？**
-   - 雖然 GroupDocs.Comparison 可以有效處理大文件，但效能可能會根據系統資源而有所不同。
-5. **我該如何回報問題或獲得支持？**
-   - 訪問 [GroupDocs 支援論壇](https://forum.groupdocs.com/c/comparison) 尋求幫助和社區建議。
-## 資源
-- **文件**：查看詳細指南 [GroupDocs 文檔](https://docs。groupdocs.com/comparison/net/).
-- **API 參考**：深入了解 [API 參考](https://reference。groupdocs.com/comparison/net/).
-- **下載**：透過以下方式存取最新版本 [GroupDocs 下載](https://releases。groupdocs.com/comparison/net/).
-- **購買和許可**：了解更多購買選項 [GroupDocs 購買](https://purchase.groupdocs.com/buy) 或申請免費試用 [免費試用頁面](https://releases。groupdocs.com/comparison/net/).
+
+**發生了什麼？** `CloneMetadataType = MetadataType.Target` 告訴 GroupDocs.Comparison：「嘿，我想在最終結果中保留目標文件的中繼資料。」
+
+### 完整範例程式
+
+以下是完整可執行的程式碼：
+```csharp
+using System;
+using System.IO;
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+            string sourceFile = "original_document.docx";
+            string targetFile = "updated_document.docx";
+            string outputFile = "comparison_result.docx";
+            
+            using (Comparer comparer = new Comparer(sourceFile))
+            {
+                comparer.Add(targetFile);
+                
+                // Preserve target document metadata
+                comparer.Compare(outputFile, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                
+                Console.WriteLine($"Comparison completed! Check {outputFile}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
+
+### 常見陷阱須避免
+
+**檔案路徑問題** – 請始終使用完整路徑或確保檔案位於工作目錄中：
+```csharp
+// Good
+string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
+
+// Risky (might work locally but fail in production)
+string sourceFile = "source.docx";
+```
+
+**記憶體管理** – 處理大型文件時，務必將 `Comparer` 物件包在 `using` 陳述式中。
+
+**版本相容性** – 不同的 GroupDocs.Comparison 版本提供不同的中繼資料選項——請使用 25.4.0 或更新版本以獲得最佳效果。
+
+## 進階中繼資料情境
+
+### 何時使用目標與來源中繼資料
+
+| 情境 | 偏好 **目標** 中繼資料 | 偏好 **來源** 中繼資料 |
+|----------|----------------------------|----------------------------|
+| 需要更新的作者資訊 | ✅ | ❌ |
+| 原始文件具有法律效力 | ❌ | ✅ |
+| 僅在較新檔案中新增的自訂屬性 | ✅ | ❌ |
+| 想保留「主」文件的歷史紀錄 | ❌ | ✅ |
+
+### 處理多個目標文件
+
+你可以對多個目標文件進行比較，同時仍保留第一個加入的目標文件的中繼資料：
+```csharp
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    comparer.Add(targetFilePath1);
+    comparer.Add(targetFilePath2);
+    comparer.Add(targetFilePath3);
+    
+    // Metadata will come from the first target document
+    comparer.Compare(outputFileName, new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    });
+}
+```
+
+## 實務應用與案例
+
+### 法律文件管理
+
+律師事務所常需要比較合約版本，同時保留特定的中繼資料標記：
+```csharp
+// Preserve client metadata from updated contract
+using (Comparer comparer = new Comparer("original_contract.docx"))
+{
+    comparer.Add("client_revised_contract.docx");
+    
+    comparer.Compare("final_contract_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep client's metadata
+    });
+}
+```
+
+### 學術與研究協作
+
+多位研究者協作時，你會想保留最新的作者資訊：
+```csharp
+// Keep metadata from the researcher's latest submission
+using (Comparer comparer = new Comparer("draft_paper.docx"))
+{
+    comparer.Add("researcher_updates.docx");
+    
+    comparer.Compare("paper_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Preserve researcher metadata
+    });
+}
+```
+
+### 企業合規工作流程
+
+在受規範的產業中，維持合規中繼資料至關重要：
+```csharp
+// Preserve compliance tags from updated policy document
+using (Comparer comparer = new Comparer("old_policy.docx"))
+{
+    comparer.Add("compliance_approved_policy.docx");
+    
+    comparer.Compare("policy_comparison.docx", new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target  // Keep compliance metadata
+    });
+}
+```
+
+## 疑難排解常見問題
+
+### 「找不到檔案」錯誤
+
+最常見的問題。使用明確的檢查進行除錯：
+```csharp
+string sourceFile = "source.docx";
+
+// Always check if files exist before comparison
+if (!File.Exists(sourceFile))
+{
+    Console.WriteLine($"Source file not found: {Path.GetFullPath(sourceFile)}");
+    return;
+}
+
+// Same for target files
+if (!File.Exists(targetFile))
+{
+    Console.WriteLine($"Target file not found: {Path.GetFullPath(targetFile)}");
+    return;
+}
+```
+
+### 大型文件的記憶體問題
+
+對於超過 10 MB 的文件，請考慮以下最佳化：
+```csharp
+// Use explicit disposal for large documents
+using (var comparer = new Comparer(sourceFile))
+{
+    comparer.Add(targetFile);
+    
+    var saveOptions = new SaveOptions() 
+    { 
+        CloneMetadataType = MetadataType.Target 
+    };
+    
+    comparer.Compare(outputFile, saveOptions);
+    
+    // Explicitly clean up
+    GC.Collect();
+    GC.WaitForPendingFinalizers();
+}
+```
+
+### 權限與存取問題
+
+處理受保護的檔案或網路共享時：
+```csharp
+try
+{
+    using (var comparer = new Comparer(sourceFile))
+    {
+        comparer.Add(targetFile);
+        comparer.Compare(outputFile, new SaveOptions() 
+        { 
+            CloneMetadataType = MetadataType.Target 
+        });
+    }
+}
+catch (UnauthorizedAccessException ex)
+{
+    Console.WriteLine("Access denied. Check file permissions.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+catch (IOException ex)
+{
+    Console.WriteLine("File I/O error occurred.");
+    Console.WriteLine($"Details: {ex.Message}");
+}
+```
+
+## 效能考量與最佳實踐
+
+### 記憶體管理
+
+GroupDocs.Comparison 可能會大量佔用記憶體。使用 `using` 陳述式以確保釋放資源：
+```csharp
+// Good - automatic resource cleanup
+using (var comparer = new Comparer(sourceFile))
+{
+    // comparison logic here
+}
+
+// Bad - potential memory leaks
+var comparer = new Comparer(sourceFile);
+// ... comparison logic
+// comparer.Dispose(); // Easy to forget!
+```
+
+**分批處理文件** – 若要比較大量檔案，請分成較小的批次，以降低記憶體使用量。
+
+### 非同步作業提升回應性
+
+對於桌面或 Web 應用程式，將比較包在非同步方法中：
+```csharp
+public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
+{
+    return await Task.Run(() =>
+    {
+        try
+        {
+            using (var comparer = new Comparer(source))
+            {
+                comparer.Add(target);
+                comparer.Compare(output, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+                return true;
+            }
+        }
+        catch
+        {
+            return false;
+        }
+    });
+}
+```
+
+### 檔案大小指引
+- **小型（< 1 MB）** – 直接處理。  
+- **中型（1‑10 MB）** – 顯示進度以保持 UI 回應。  
+- **大型（> 10 MB）** – 必須使用非同步處理，並考慮如上所示的顯式 GC。
+
+## 與大型系統整合
+
+### ASP.NET Core 整合
+
+以下是一個即用型的 Controller，接受兩個上傳檔案，執行比較，並在**保留目標中繼資料**的同時回傳結果：
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class DocumentComparisonController : ControllerBase
+{
+    [HttpPost("compare-with-target-metadata")]
+    public async Task<IActionResult> CompareWithTargetMetadata(
+        IFormFile sourceFile, 
+        IFormFile targetFile)
+    {
+        var tempSource = Path.GetTempFileName();
+        var tempTarget = Path.GetTempFileName();
+        var outputPath = Path.GetTempFileName();
+        
+        try
+        {
+            // Save uploaded files temporarily
+            await sourceFile.CopyToAsync(new FileStream(tempSource, FileMode.Create));
+            await targetFile.CopyToAsync(new FileStream(tempTarget, FileMode.Create));
+            
+            // Perform comparison with target metadata preservation
+            using (var comparer = new Comparer(tempSource))
+            {
+                comparer.Add(tempTarget);
+                comparer.Compare(outputPath, new SaveOptions() 
+                { 
+                    CloneMetadataType = MetadataType.Target 
+                });
+            }
+            
+            // Return comparison result
+            var resultBytes = await System.IO.File.ReadAllBytesAsync(outputPath);
+            return File(resultBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", 
+                       "comparison_result.docx");
+        }
+        finally
+        {
+            // Clean up temporary files
+            if (System.IO.File.Exists(tempSource)) System.IO.File.Delete(tempSource);
+            if (System.IO.File.Exists(tempTarget)) System.IO.File.Delete(tempTarget);
+            if (System.IO.File.Exists(outputPath)) System.IO.File.Delete(outputPath);
+        }
+    }
+}
+```
+
+## 常見問與答
+
+**問：比較時可以保留多個目標文件的中繼資料嗎？**  
+答：當你加入多個目標檔案時，GroupDocs.Comparison 會使用**第一個**加入的目標文件的中繼資料。請先將你想保留中繼資料的文件放在最前面。
+
+**問：如果目標文件缺少某些中繼資料欄位會怎樣？**  
+答：只有目標文件中存在的中繼資料會被複製到輸出。缺少的欄位會被省略，比較仍會成功。
+
+**問：如何處理受密碼保護的文件？**  
+答：使用帶有密碼的 `LoadOptions` 物件，然後將其傳入 `Comparer` 建構函式：
+```csharp
+var loadOptions = new LoadOptions() { Password = "your_password" };
+using (var comparer = new Comparer(sourceFile, loadOptions))
+{
+    // comparison logic here
+}
+```
+
+**問：能只保留選取的中繼資料屬性嗎？**  
+答：目前的 API 會保留所選來源（目標或來源）的**全部**中繼資料。若需細部控制，必須在比較後自行擷取屬性並手動重新套用。
+
+**問：哪些文件格式支援中繼資料保留？**  
+答：大多數常見的商務格式——DOCX、PDF、PPTX、XLSX 以及其他許多格式——皆支援中繼資料保留。完整清單請參閱官方文件。
+
+**問：如果遇到問題，該向哪裡尋求協助？**  
+答：可前往 [GroupDocs 支援論壇](https://forum.groupdocs.com/c/comparison) 取得社群協助，若擁有商業授權亦可直接聯繫 GroupDocs 支援。
+
+## 其他資源
+
+- **官方文件**： [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **API 參考**： [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- **下載最新版本**： [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
+- **免費試用**： [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
+- **購買方案**： [Licensing and Pricing](https://purchase.groupdocs.com/buy)
+
+---
+
+**最後更新：** 2026-03-06  
+**測試環境：** GroupDocs.Comparison 25.4.0 for .NET  
+**作者：** GroupDocs

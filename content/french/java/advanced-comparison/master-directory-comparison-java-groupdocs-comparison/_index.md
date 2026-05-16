@@ -1,21 +1,21 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
+date: '2026-03-22'
 description: Apprenez à utiliser GroupDocs Comparison Java pour la comparaison de
-  répertoires en Java. Maîtrisez les audits de fichiers, l'automatisation du contrôle
-  de version et l'optimisation des performances.
+  répertoires en Java. Maîtrisez les audits de fichiers, l’automatisation du contrôle
+  de version et l’optimisation des performances.
 keywords: java directory comparison tool, groupdocs comparison tutorial, java file
   audit automation, directory sync java, how to compare folders in java programming
-lastmod: '2025-12-20'
+lastmod: '2026-03-22'
 linktitle: Java Directory Comparison Guide
 tags:
 - directory-comparison
 - file-audits
 - groupdocs
 - java-tutorial
-title: 'groupdocs comparison java - Outil de comparaison de répertoires Java - Guide
-  complet'
+title: groupdocs comparaison java - Outil de comparaison de répertoires Java - Guide
+  complet
 type: docs
 url: /fr/java/advanced-comparison/master-directory-comparison-java-groupdocs-comparison/
 weight: 1
@@ -25,66 +25,66 @@ weight: 1
 
 ## Introduction
 
-Avez-vous déjà passé des heures à vérifier manuellement quels fichiers ont changé entre deux versions d'un projet ? Vous n'êtes pas seul. La comparaison de répertoires est l'une de ces tâches fastidieuses qui peuvent vous occuper tout l'après‑midi — à moins de l'automatiser.
+Vous avez déjà passé des heures à vérifier manuellement quels fichiers ont changé entre deux versions d'un projet ? Vous n'êtes pas seul. **groupdocs comparison java** rend cette tâche fastidieuse un jeu d'enfant en vous permettant de comparer deux dossiers avec un seul appel d'API. La comparaison de répertoires est l'une de ces tâches fastidieuses qui peuvent vous absorber tout l'après‑midi — à moins de l'automatiser.
 
-**GroupDocs.Comparison for Java** transforme ce point douloureux en un simple appel d'API. Que vous suiviez les changements dans une base de code massive, synchronisiez des fichiers entre environnements, ou réalisiez des audits de conformité, cette bibliothèque gère le travail lourd afin que vous n'ayez pas à le faire.
+GroupDocs.Comparison for Java transforme ce point douloureux en un simple appel d'API. Que vous suiviez les changements dans une base de code massive, synchronisiez des fichiers entre environnements, ou réalisiez des audits de conformité, cette bibliothèque effectue le travail lourd pour que vous n'ayez pas à le faire.
 
 Dans ce guide, vous apprendrez à configurer des comparaisons de répertoires automatisées qui fonctionnent réellement dans des scénarios du monde réel. Nous couvrirons tout, de la configuration de base à l'optimisation des performances pour ces répertoires géants contenant des milliers de fichiers.
 
-**Ce que vous maîtriserez :**
-- Installation complète de GroupDocs.Comparison (y compris les pièges)
-- Implémentation de la comparaison de répertoires étape par étape
+**What You'll Master:**
+- Configuration complète de GroupDocs.Comparison (y compris les pièges)
+- Implémentation de comparaison de répertoires étape par étape
 - Configuration avancée pour des règles de comparaison personnalisées
 - Optimisation des performances pour les comparaisons à grande échelle
-- Dépannage des problèmes courants (car ils se produiront)
+- Résolution des problèmes courants (car ils se produiront)
 - Cas d'utilisation réels dans différents secteurs
 
-### Réponses rapides
-- **Quelle est la bibliothèque principale ?** `groupdocs comparison java`
-- **Version Java prise en charge ?** Java 8 ou supérieure
-- **Temps d'installation typique ?** 10–15 minutes pour une comparaison de base
-- **Exigence de licence ?** Oui – une licence d'essai ou commerciale est requise
-- **Formats de sortie ?** HTML (par défaut) ou PDF
+### Quick Answers
+- **What is the primary library?** `groupdocs comparison java`
+- **Supported Java version?** Java 8 or higher
+- **Typical setup time?** 10–15 minutes for a basic comparison
+- **License requirement?** Yes – a trial or commercial license is needed
+- **Output formats?** HTML (default) or PDF
 
-## Pourquoi la comparaison de répertoires est importante (plus que vous ne le pensez)
+## Why Directory Comparison Matters (More Than You Think)
 
-Avant de plonger dans le code, parlons de l'importance de cette tâche. La comparaison de répertoires ne consiste pas seulement à trouver des fichiers différents — il s'agit de maintenir l'intégrité des données, d'assurer la conformité et de détecter ces changements sournois qui pourraient compromettre votre environnement de production.
+Avant de plonger dans le code, parlons de l'importance de cette tâche. La comparaison de répertoires ne consiste pas seulement à trouver des fichiers différents — il s'agit de maintenir l'intégrité des données, d'assurer la conformité et de détecter ces changements sournois qui pourraient casser votre environnement de production.
 
-Scénarios courants où vous en aurez besoin :
-- **Gestion des versions** : comparaison des répertoires de préproduction et de production avant le déploiement
-- **Migration de données** : s'assurer que tous les fichiers ont été transférés correctement entre les systèmes
-- **Audits de conformité** : suivi des modifications de documents pour les exigences réglementaires
-- **Vérification des sauvegardes** : confirmer que votre processus de sauvegarde a réellement fonctionné
-- **Collaboration d'équipe** : identifier qui a modifié quoi dans les répertoires de projet partagés
+Scénarios courants où vous en aurez besoin :
+- **Gestion des versions** : Comparer les répertoires de préproduction et de production avant le déploiement
+- **Migration de données** : S'assurer que tous les fichiers ont été transférés correctement entre les systèmes
+- **Audits de conformité** : Suivre les modifications de documents pour les exigences réglementaires
+- **Vérification des sauvegardes** : Confirmer que votre processus de sauvegarde a réellement fonctionné
+- **Collaboration d'équipe** : Identifier qui a modifié quoi dans les répertoires de projet partagés
 
-## Prérequis et exigences de configuration
+## Prerequisites and Setup Requirements
 
-Avant de commencer à coder, assurez‑vous que votre environnement est prêt. Voici ce dont vous avez besoin (et pourquoi) :
+Avant de commencer à coder, assurez‑vous que votre environnement est prêt. Voici ce dont vous avez besoin (et pourquoi) :
 
-**Exigences essentielles :**
-1. **Java 8 ou supérieur** – GroupDocs.Comparison utilise les fonctionnalités modernes de Java
-2. **Maven 3.6+** – Pour la gestion des dépendances (croyez‑moi, n'essayez pas la gestion manuelle des JAR)
+**Essential Requirements:**
+1. **Java 8 ou supérieur** – GroupDocs.Comparison utilise des fonctionnalités Java modernes
+2. **Maven 3.6+** – Pour la gestion des dépendances (croyez‑moi, n'essayez pas de gérer les JAR manuellement)
 3. **IDE avec bon support Java** – IntelliJ IDEA ou Eclipse recommandés
 4. **Au moins 2 Go de RAM** – Les comparaisons de répertoires peuvent être gourmandes en mémoire
 
-**Prérequis de connaissances :**
-- Programmation Java de base (boucles, conditions, gestion des exceptions)
+**Knowledge Prerequisites:**
+- Programmation Java de base (boucles, conditionnelles, gestion des exceptions)
 - Compréhension des opérations d'E/S de fichiers
 - Familiarité avec la gestion des dépendances Maven
 - Connaissance de base du try‑with‑resources (nous l'utiliserons largement)
 
-**Optionnel mais utile :**
+**Optional but Helpful:**
 - Expérience avec les frameworks de journalisation (SLF4J/Logback)
 - Compréhension des concepts de multithreading
-- Connaissance de base du HTML (pour le formatage de la sortie)
+- Connaissance de base du HTML (pour le formatage de sortie)
 
-## Configuration de GroupDocs.Comparison pour Java
+## Setting Up GroupDocs.Comparison for Java
 
-Intégrons correctement cette bibliothèque à votre projet. La configuration est simple, mais il y a quelques pièges à surveiller.
+Intégrons correctement cette bibliothèque à votre projet. L'installation est simple, mais il y a quelques pièges à surveiller.
 
-### Configuration Maven
+### Maven Configuration
 
-Ajoutez ceci à votre fichier `pom.xml` – notez la configuration du dépôt, souvent oubliée :
+Ajoutez ceci à votre fichier `pom.xml` – notez la configuration du dépôt, souvent oubliée :
 
 ```xml
 <repositories>
@@ -104,23 +104,23 @@ Ajoutez ceci à votre fichier `pom.xml` – notez la configuration du dépôt, s
 </dependencies>
 ```
 
-**Astuce** : utilisez toujours le numéro de version le plus récent depuis le site Web de GroupDocs. La version affichée ici n'est peut‑être pas la plus récente.
+**Pro Tip** : Utilisez toujours le numéro de version le plus récent disponible sur le site de GroupDocs. La version affichée ici n’est peut‑être pas la plus récente.
 
-### Configuration de la licence (ne pas sauter cette étape)
+### License Setup (Don't Skip This)
 
-GroupDocs n'est pas gratuit, mais ils offrent plusieurs options :
+GroupDocs n’est pas gratuit, mais plusieurs options sont proposées :
 
-- **Essai gratuit** : essai de 30 jours avec toutes les fonctionnalités (parfait pour l'évaluation)
-- **Licence temporaire** : essai prolongé pour le développement/les tests
-- **Licence commerciale** : pour une utilisation en production
+- **Essai gratuit** : Essai de 30 jours avec toutes les fonctionnalités (parfait pour l'évaluation)
+- **Licence temporaire** : Essai prolongé pour le développement/les tests
+- **Licence commerciale** : Pour une utilisation en production
 
-Obtenez votre licence sur :
-- [Acheter une licence](https://purchase.groupdocs.com/buy) pour la production
+Obtenez votre licence ici :
+- [Acheter une licence](https://purchase.groupdocs.com/buy) for production
 - [Obtenir une licence temporaire](https://purchase.groupdocs.com/temporary-license/) pour des tests prolongés
 
-### Initialisation de base et test
+### Basic Initialization and Testing
 
-Une fois vos dépendances configurées, testez l'intégration :
+Une fois les dépendances installées, testez l’intégration :
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -137,17 +137,17 @@ public class Main {
 }
 ```
 
-Si cela s'exécute sans erreurs, vous êtes prêt à continuer. Sinon, vérifiez votre configuration Maven et votre connexion Internet (GroupDocs valide les licences en ligne).
+Si cela s’exécute sans erreur, vous pouvez continuer. Sinon, vérifiez votre configuration Maven et votre connexion Internet (GroupDocs valide les licences en ligne).
 
-## Implémentation principale : comparaison de répertoires
+## Core Implementation: Directory Comparison
 
-Passons maintenant à l'événement principal — la comparaison réelle de répertoires. Nous commencerons par une implémentation de base, puis ajouterons des fonctionnalités avancées.
+Passons maintenant à l’essentiel — la comparaison réelle de répertoires. Nous commencerons par une implémentation de base puis ajouterons des fonctionnalités avancées.
 
-### Comparaison de répertoire de base
+### Basic Directory Comparison
 
-Ceci est votre implémentation de base qui couvre la plupart des cas d'utilisation :
+Voici votre implémentation « pain‑and‑butter » qui couvre la plupart des cas d’utilisation :
 
-#### Étape 1 : configurez vos chemins
+#### Step 1: Set Up Your Paths
 
 ```java
 String sourceDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/source_directory";
@@ -155,9 +155,9 @@ String targetDirectoryPath = "YOUR_DOCUMENT_DIRECTORY/target_directory";
 String outputFileName = "YOUR_OUTPUT_DIRECTORY/compare_result.html";
 ```
 
-**Important** : utilisez des chemins absolus lorsque possible, surtout en environnement de production. Les chemins relatifs peuvent poser problème selon l'endroit où votre application s'exécute.
+**Important** : Utilisez des chemins absolus autant que possible, surtout en production. Les chemins relatifs peuvent poser problème selon l’endroit où votre application s’exécute.
 
-#### Étape 2 : configurez les options de comparaison
+#### Step 2: Configure Comparison Options
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -168,9 +168,9 @@ compareOptions.setDirectoryCompare(true);
 compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 ```
 
-**Pourquoi la sortie HTML ?** Les rapports HTML sont lisibles par les humains et peuvent être affichés dans n'importe quel navigateur. Parfait pour partager les résultats avec des parties prenantes non techniques.
+**Why HTML output?** Les rapports HTML sont lisibles par les humains et peuvent être affichés dans n’importe quel navigateur. Idéal pour partager les résultats avec des parties prenantes non techniques.
 
-#### Étape 3 : exécutez la comparaison
+#### Step 3: Execute the Comparison
 
 ```java
 try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
@@ -183,13 +183,13 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-**Pourquoi le try‑with‑resources ?** GroupDocs.Comparison gère les descripteurs de fichiers et la mémoire en interne. Utiliser le try‑with‑resources assure un nettoyage correct, ce qui est particulièrement important pour les comparaisons de répertoires volumineux.
+**Why try‑with‑resources?** GroupDocs.Comparison gère les descripteurs de fichiers et la mémoire en interne. L’utilisation du try‑with‑resources assure un nettoyage correct, ce qui est crucial pour les comparaisons de gros répertoires.
 
-### Options de configuration avancées
+### Advanced Configuration Options
 
-La configuration de base fonctionne, mais les scénarios réels nécessitent une personnalisation. Voici comment affiner vos comparaisons :
+La configuration de base fonctionne, mais les scénarios réels nécessitent des personnalisations. Voici comment affiner vos comparaisons :
 
-#### Personnalisation des formats de sortie
+#### Customizing Output Formats
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -202,9 +202,9 @@ compareOptions.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 // compareOptions.setFolderComparisonExtension(FolderComparisonExtension.PDF);
 ```
 
-#### Filtrage des fichiers et répertoires
+#### Filtering Files and Directories
 
-Parfois, vous ne voulez pas tout comparer. Voici comment être sélectif :
+Parfois, vous ne voulez pas tout comparer. Voici comment être sélectif :
 
 ```java
 CompareOptions compareOptions = new CompareOptions();
@@ -216,15 +216,15 @@ compareOptions.setShowDeletedContent(false); // Don't highlight deleted files
 compareOptions.setShowInsertedContent(true); // Do highlight new files
 ```
 
-## Problèmes courants et solutions
+## Common Issues and Solutions
 
-Abordons les problèmes que vous rencontrerez probablement (car la loi de Murphy s'applique aussi à la programmation) :
+Abordons les problèmes que vous rencontrerez probablement (la loi de Murphy s’applique aussi au code) :
 
-### Problème 1 : OutOfMemoryError avec de grands répertoires
+### Issue 1: OutOfMemoryError with Large Directories
 
-**Symptômes** : votre application plante avec des erreurs d'espace de tas lors de la comparaison de répertoires contenant des milliers de fichiers.
+**Symptoms** : Votre application plante avec des erreurs d’espace de tas lorsqu’elle compare des répertoires contenant des milliers de fichiers.
 
-**Solution** : augmentez la taille du tas JVM et traitez les répertoires par lots :
+**Solution** : Augmentez la taille du tas JVM et traitez les répertoires par lots :
 
 ```java
 // JVM args: -Xmx4g -Xms2g
@@ -238,14 +238,14 @@ for (String subdir : subdirectories) {
 }
 ```
 
-### Problème 2 : FileNotFoundException malgré des chemins corrects
+### Issue 2: FileNotFoundException Despite Correct Paths
 
-**Symptômes** : les chemins semblent corrects, mais vous obtenez des erreurs de fichier introuvable.
+**Symptoms** : Les chemins semblent corrects, mais vous obtenez des erreurs de fichier introuvable.
 
-**Causes courantes et correctifs** :
-- **Permissions** : assurez‑vous que votre application Java a les droits de lecture sur les répertoires source et les droits d'écriture sur l'emplacement de sortie
-- **Caractères spéciaux** : les noms de répertoires contenant des espaces ou des caractères spéciaux nécessitent un échappement approprié
-- **Chemins réseau** : les chemins UNC peuvent ne pas fonctionner comme prévu — copiez d'abord les fichiers localement
+**Common Causes and Fixes** :
+- **Permissions** : Assurez‑vous que votre application Java a accès en lecture aux répertoires source et en écriture à l'emplacement de sortie
+- **Caractères spéciaux** : Les noms de répertoires contenant des espaces ou des caractères spéciaux nécessitent un échappement correct
+- **Chemins réseau** : Les chemins UNC peuvent ne pas fonctionner comme prévu — copiez d'abord les fichiers localement
 
 ```java
 // Better path handling
@@ -260,14 +260,14 @@ if (!Files.exists(targetPath)) {
 }
 ```
 
-### Problème 3 : la comparaison prend une éternité
+### Issue 3: Comparison Takes Forever
 
-**Symptômes** : votre comparaison s'exécute pendant des heures sans se terminer.
+**Symptoms** : Votre comparaison tourne pendant des heures sans se terminer.
 
-**Solutions** :
+**Solutions** :
 1. **Filtrer les fichiers inutiles** avant la comparaison
 2. **Utiliser le multithreading** pour les sous‑répertoires indépendants
-3. **Implémenter le suivi de progression** pour surveiller ce qui se passe
+3. **Mettre en place le suivi de progression** pour surveiller l'avancement
 
 ```java
 // Add progress monitoring
@@ -284,11 +284,11 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 }
 ```
 
-## Optimisation des performances pour les comparaisons à grande échelle
+## Performance Optimization for Large‑Scale Comparisons
 
-Lorsque vous traitez des répertoires contenant des milliers de fichiers, les performances deviennent critiques. Voici comment optimiser :
+Lorsque vous traitez des répertoires contenant des milliers de fichiers, la performance devient critique. Voici comment optimiser :
 
-### Meilleures pratiques de gestion de la mémoire
+### Memory Management Best Practices
 
 ```java
 // Increase heap size via JVM arguments
@@ -304,9 +304,9 @@ try (Comparer comparer = new Comparer(sourceDirectoryPath, compareOptions)) {
 compareOptions = null; // Help GC
 ```
 
-### Stratégie de traitement par lots
+### Batch Processing Strategy
 
-Pour des structures de répertoires massives, traitez par morceaux :
+Pour des structures de répertoires massives, traitez par blocs :
 
 ```java
 public void compareDirectoriesInBatches(String sourceDir, String targetDir, int batchSize) {
@@ -328,9 +328,9 @@ public void compareDirectoriesInBatches(String sourceDir, String targetDir, int 
 }
 ```
 
-### Traitement parallèle pour les répertoires indépendants
+### Parallel Processing for Independent Directories
 
-Si vous comparez plusieurs paires de répertoires, effectuez-les en parallèle :
+Si vous comparez plusieurs paires de répertoires, faites‑les en parallèle :
 
 ```java
 import java.util.concurrent.ExecutorService;
@@ -361,13 +361,13 @@ for (Future<String> future : futures) {
 executor.shutdown();
 ```
 
-## Cas d'utilisation réels et applications industrielles
+## Real‑World Use Cases and Industry Applications
 
-La comparaison de répertoires n'est pas seulement un outil pour les développeurs — elle est utilisée dans divers secteurs pour des processus critiques pour l'entreprise :
+La comparaison de répertoires n’est pas seulement un outil pour les développeurs — elle est utilisée dans de nombreux secteurs pour des processus critiques :
 
-### Développement logiciel et DevOps
+### Software Development and DevOps
 
-**Gestion des versions** : comparez les répertoires de préproduction et de production avant le déploiement pour détecter les dérives de configuration :
+**Release Management** : Comparez les répertoires de préproduction et de production avant le déploiement afin de détecter les dérives de configuration :
 
 ```java
 // Automated pre-deployment check
@@ -390,9 +390,9 @@ try (Comparer comparer = new Comparer(stagingConfig, options)) {
 }
 ```
 
-### Finance et conformité
+### Finance and Compliance
 
-**Maintien de la piste d'audit** : les institutions financières utilisent la comparaison de répertoires pour suivre les modifications de documents afin de se conformer aux réglementations :
+**Audit Trail Maintenance** : Les institutions financières utilisent la comparaison de répertoires pour suivre les modifications de documents afin de respecter les exigences réglementaires :
 
 ```java
 // Monthly compliance check
@@ -404,9 +404,9 @@ String auditReport = "/audit/compliance-changes-december-2024.html";
 performComplianceComparison(previousMonthDocs, currentMonthDocs, auditReport);
 ```
 
-### Gestion des données et processus ETL
+### Data Management and ETL Processes
 
-**Vérification de l'intégrité des données** : s'assurer que les migrations de données se sont terminées avec succès :
+**Data Integrity Verification** : S’assurer que les migrations de données se sont déroulées avec succès :
 
 ```java
 public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir) {
@@ -429,9 +429,9 @@ public boolean verifyDataMigration(String sourceDataDir, String migratedDataDir)
 }
 ```
 
-### Gestion de contenu et publication
+### Content Management and Publishing
 
-**Contrôle de version pour les équipes non techniques** : les équipes marketing et de contenu peuvent suivre les changements dans les dépôts de documents sans connaissance de Git :
+**Version Control for Non‑Technical Teams** : Les équipes marketing et de contenu peuvent suivre les changements dans les dépôts de documents sans connaissance de Git :
 
 ```java
 // Weekly content audit for marketing team
@@ -447,13 +447,13 @@ options.setFolderComparisonExtension(FolderComparisonExtension.HTML);
 generateContentChangeReport(lastWeekContent, currentContent, marketingReport, options);
 ```
 
-## Conseils avancés et meilleures pratiques
+## Advanced Tips and Best Practices
 
-Après avoir travaillé avec la comparaison de répertoires en environnements de production, voici quelques leçons apprises à la dure :
+Après avoir utilisé la comparaison de répertoires en production, voici quelques leçons apprises :
 
-### Journalisation et surveillance
+### Logging and Monitoring
 
-Implémentez toujours une journalisation complète :
+Implémentez toujours une journalisation complète :
 
 ```java
 import org.slf4j.Logger;
@@ -484,9 +484,9 @@ public void compareWithLogging(String source, String target, String output) {
 }
 ```
 
-### Récupération d'erreurs et résilience
+### Error Recovery and Resilience
 
-Intégrez une logique de nouvelle tentative pour les échecs transitoires :
+Intégrez une logique de nouvelle tentative pour les échecs transitoires :
 
 ```java
 public void compareWithRetry(String source, String target, String output, int maxRetries) {
@@ -516,9 +516,9 @@ public void compareWithRetry(String source, String target, String output, int ma
 }
 ```
 
-### Gestion de la configuration
+### Configuration Management
 
-Externalisez les paramètres afin de pouvoir les ajuster sans recompilation :
+Externalisez les paramètres afin de pouvoir les ajuster sans recompilation :
 
 ```java
 // application.properties
@@ -535,7 +535,7 @@ private String outputFormat;
 private int maxRetries;
 ```
 
-### Gestion des chemins indépendante de la plateforme
+### Platform‑Independent Path Handling
 
 ```java
 // Use platform-independent path handling
@@ -555,7 +555,7 @@ if (!Files.isWritable(outputPath.getParent())) {
 }
 ```
 
-### Ignorer les horodatages lorsqu'ils ne sont pas pertinents
+### Ignoring Timestamps When They Don't Matter
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -566,68 +566,49 @@ options.setIgnoreWhitespaces(true);
 options.setIgnoreFormatting(true);
 ```
 
-## Dépannage des problèmes de déploiement courants
+## Troubleshooting Common Deployment Issues
 
-### Fonctionne en développement, échoue en production
+### Works in Development, Fails in Production
 
-**Symptômes** : la comparaison fonctionne localement mais plante sur le serveur.
+**Symptoms** : La comparaison fonctionne localement mais plante sur le serveur.
 
-**Causes profondes** :
+**Root Causes** :
 - Différences de sensibilité à la casse (Windows vs Linux)
 - Permissions de système de fichiers plus strictes
 - Séparateurs de chemin codés en dur (`/` vs `\`)
 
-**Correction** : utilisez `Path` et `File.separator` comme indiqué dans la section *Gestion des chemins indépendante de la plateforme* ci‑dessus.
+**Fix** : Utilisez `Path` et `File.separator` comme indiqué dans la section *Platform‑Independent Path Handling* ci‑dessus.
 
-### Résultats incohérents
+### Inconsistent Results
 
-**Symptômes** : exécuter la même comparaison deux fois donne des résultats différents.
+**Symptoms** : Exécuter la même comparaison deux fois donne des résultats différents.
 
-**Raisons possibles** :
+**Possible Reasons** :
 - Les fichiers sont modifiés pendant l'exécution
 - Les horodatages sont considérés comme des différences
-- Les métadonnées du système de fichiers sous-jacent diffèrent
+- Les métadonnées du système de fichiers sous‑jacent diffèrent
 
-**Solution** : configurez `CompareOptions` pour ignorer les horodatages et vous concentrer sur le contenu réel (voir *Ignorer les horodatages*).
+**Solution** : Configurez `CompareOptions` pour ignorer les horodatages et vous concentrer sur le contenu réel (voir *Ignoring Timestamps*).
 
-## Questions fréquentes
+## Frequently Asked Questions
 
-**Q : Comment gérer des répertoires contenant des millions de fichiers ?**  
-R : combinez le traitement par lots, augmentez le tas JVM (`-Xmx`) et exécutez les comparaisons de sous‑répertoires en parallèle. Les sections *Stratégie de traitement par lots* et *Traitement parallèle* offrent des modèles prêts à l'emploi.
+**Q : How do I handle directories with millions of files?**  
+A : Combinez le traitement par lots, augmentez le tas JVM (`-Xmx`) et exécutez les comparaisons de sous‑répertoires en parallèle. Les sections *Batch Processing Strategy* et *Parallel Processing* offrent des modèles prêts à l’emploi.
 
-**Q : Puis‑je comparer des répertoires situés sur différents serveurs ?**  
-R : Oui, mais la latence réseau peut dominer le temps d'exécution. Pour de meilleures performances, copiez le répertoire distant localement avant d'appeler la comparaison, ou montez le partage distant avec une bande passante d'E/S suffisante.
+**Q : Can I compare directories located on different servers?**  
+A : Oui, mais la latence réseau peut dominer le temps d’exécution. Pour de meilleures performances, copiez le répertoire distant localement avant d’appeler la comparaison, ou montez le partage distant avec une bande passante I/O suffisante.
 
-**Q : Quels formats de fichiers sont pris en charge par GroupDocs.Comparison ?**  
-R : GroupDocs.Comparison prend en charge un large éventail de formats, notamment DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML et les types d'images courants. Consultez la documentation officielle pour la liste la plus récente.
+**Q : Which file formats are supported by GroupDocs.Comparison?**  
+A : GroupDocs.Comparison prend en charge un large éventail de formats, dont DOC/DOCX, PDF, PPT/PPTX, XLS/XLSX, TXT, HTML et les types d’images courants. Consultez la documentation officielle pour la liste la plus à jour.
 
-**Q : Comment intégrer cette comparaison dans un pipeline CI/CD ?**  
-R : encapsulez la logique de comparaison dans un plugin Maven/Gradle ou un JAR autonome, puis invoquez‑le comme étape de construction dans Jenkins, GitHub Actions, Azure Pipelines, etc. Utilisez l'exemple *Journalisation et surveillance* pour exposer les résultats en tant qu'artefacts de build.
+**Q : How can I integrate this comparison into a CI/CD pipeline?**  
+A : Emballez la logique de comparaison dans un plugin Maven/Gradle ou un JAR autonome, puis invoquez‑le comme étape de build dans Jenkins, GitHub Actions, Azure Pipelines, etc. Utilisez l’exemple *Logging and Monitoring* pour exposer les résultats en tant qu’artefacts de build.
 
-**Q : Est‑il possible de personnaliser l'apparence du rapport HTML ?**  
-R : le modèle HTML intégré est fixe, mais vous pouvez post‑traiter le fichier généré (par ex., injecter du CSS ou du JavaScript personnalisés) pour correspondre à votre identité visuelle.
-
-## Conclusion
-
-Vous disposez maintenant d'une boîte à outils complète pour implémenter une comparaison de répertoires robuste en Java en utilisant **groupdocs comparison java**. De la configuration de base à l'optimisation des performances de niveau production, vous avez vu comment :
-- Installer et licencier GroupDocs.Comparison
-- Effectuer une comparaison de répertoires simple
-- Personnaliser la sortie, filtrer les fichiers et gérer de grands ensembles de données
-- Optimiser l'utilisation de la mémoire et exécuter les comparaisons en parallèle
-- Appliquer la technique à des scénarios réels dans les domaines DevOps, finance, migration de données et gestion de contenu
-- Ajouter la journalisation, la logique de nouvelle tentative et la configuration externe pour la maintenabilité
-
-La clé du succès est de commencer simplement, valider les résultats, puis ajouter les optimisations dont vous avez réellement besoin. Une fois les bases maîtrisées, vous pouvez intégrer cette capacité dans des pipelines de construction automatisés, des tableaux de bord de conformité, ou même une interface web pour les utilisateurs non techniques.
-
-**Prochaines étapes**
-- Essayez le code d'exemple sur un petit dossier de test pour vérifier la sortie
-- Passez à un répertoire plus grand et expérimentez le traitement par lots/parallèle
-- Intégrez l'étape de comparaison dans votre flux de travail CI/CD et générez des rapports automatisés pour chaque version
-
-**Besoin d'aide ?** La communauté GroupDocs est active et réactive. Consultez leur documentation, leurs forums, ou contactez le support pour des questions spécifiques sur l'API.
+**Q : Is it possible to customize the look‑and‑feel of the HTML report?**  
+A : Le modèle HTML intégré est fixe, mais vous pouvez post‑traiter le fichier généré (par ex., injecter du CSS ou du JavaScript personnalisés) pour l’adapter à votre identité visuelle.
 
 ---
 
-**Dernière mise à jour :** 2025-12-20  
-**Testé avec :** GroupDocs.Comparison 25.2 (Java)  
-**Auteur :** GroupDocs
+**Last Updated:** 2026-03-22  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs

@@ -1,69 +1,115 @@
 ---
-"date": "2025-05-05"
-"description": "了解如何使用 GroupDocs.Comparison for .NET 高效比較資料夾，並將結果儲存為 TXT 或 HTML 格式。使用詳細的 C# 程式碼範例來增強您的工作流程。"
-"title": "如何使用 GroupDocs.Comparison .NET 比較資料夾並將結果儲存為 TXT/HTML"
-"url": "/zh-hant/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/"
-"weight": 1
+categories:
+- File Comparison
+date: '2026-03-08'
+description: 學習如何在 .NET 中使用 GroupDocs.Comparison 比較資料夾，產生 HTML 報告或 TXT 日誌，並透過實用的 C#
+  範例自動化檔案管理。
+keywords: folder comparison .NET tutorial, GroupDocs comparison save TXT HTML, compare
+  directories C# code, .NET file comparison library, automated directory comparison
+lastmod: '2026-03-08'
+linktitle: How to Compare Folders in .NET
+tags:
+- groupdocs
+- folder-comparison
+- dotnet
+- csharp
+- file-management
+title: 如何在 .NET 中比較資料夾 – 使用 GroupDocs 的指南
 type: docs
+url: /zh-hant/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/
+weight: 1
 ---
-# 如何使用 GroupDocs.Comparison .NET 實作資料夾比較並將結果儲存為 TXT/HTML
 
-## 介紹
+# 如何在 .NET 中比較資料夾 – 使用 GroupDocs 的指南
 
-有效地比較資料夾中的大量文件對於開發人員來說可能是一項艱鉅的任務，尤其是在複雜的專案中。 **適用於 .NET 的 GroupDocs.Comparison** 提供了一個強大的解決方案，簡化了資料夾比較並將結果儲存為 TXT 或 HTML 檔案。
+有沒有曾經手動檢查數百個檔案以找出兩個目錄之間的差異？**在本教學中，你將學習如何使用 GroupDocs.Comparison 在 .NET 中比較資料夾**。無論你是管理程式碼部署、驗證備份，或是追蹤設定變更，.NET 中的資料夾比較都能為你節省大量繁瑣的時間。
 
-本教學將指導您使用 GroupDocs.Comparison 自動執行資料夾內的文件比較，從而提高開發工作流程的效率和可靠性。完成本指南後，您將能夠：
-- 了解使用 GroupDocs.Comparison for .NET 進行資料夾比較的基礎知識。
-- 配置選項以將結果儲存為 TXT 或 HTML 檔案。
-- 編寫C#程式碼實現資料夾比較。
-- 使用 GroupDocs.Comparison 功能優化效能。
+**GroupDocs.Comparison for .NET** 將這個痛點轉變為簡單、自动化的流程。你可以比較整個目錄結構、即時辨識變更，並以符合工作流程的格式匯出結果（TXT 用於日誌、HTML 用於視覺審查）。
 
-讓我們先來了解必要的先決條件！
+## 快速回答
+- **主要目的為何？** 自動化資料夾比較並產生詳細的 TXT 或 HTML 報告。  
+- **支援哪些輸出格式？** TXT 方便解析，HTML 用於產生視覺化報告。  
+- **需要授權嗎？** 免費試用可用於學習；商業授權可移除生產環境的浮水印。  
+- **可以在 Linux 上執行嗎？** 是的 – GroupDocs.Comparison 支援在 Linux、macOS 與 Windows 上的 .NET Core。  
+- **相容的 .NET 版本有哪些？** .NET Core 3.1 以上以及 .NET 5/6/7/8。
 
-## 先決條件
+## 為何資料夾比較對 .NET 開發者很重要
 
-在開始之前，請確保您具備以下條件：
+有沒有曾經手動檢查數百個檔案以找出兩個目錄之間的差異？你並不孤單。無論你是管理程式碼部署、驗證備份，或是追蹤設定變更，**folder comparison in .NET** 都能為你節省大量繁瑣的時間。
 
-### 所需的庫和版本
-- **適用於 .NET 的 GroupDocs.Comparison**：建議使用 25.4.0 版本。
-- **.NET 框架/SDK**：相容.NET Core及更高版本。
+**GroupDocs.Comparison for .NET** 將這個痛點轉變為簡單、自动化的流程。你可以比較整個目錄結構、即時辨識變更，並以符合工作流程的格式匯出結果（TXT 用於日誌、HTML 用於視覺審查）。
 
-### 環境設定要求
-- Visual Studio 或任何相容的 C# 開發環境。
-- 透過 NuGet 或 .NET CLI 存取終端以安裝套件。
+在這份完整教學中，你將學會如何實作健全的資料夾比較功能，從簡單的目錄檢查到複雜的企業級檔案管理情境皆能應付。
 
-### 知識前提
-- 對 C# 程式設計有基本的了解。
-- 熟悉.NET中的檔案系統操作。
+## 本指南你將學到什麼
 
-滿足這些先決條件後，讓我們為您的專案設定 GroupDocs.Comparison！
+完成本教學後，你將能自信地實作資料夾比較解決方案，具備以下能力：
 
-## 為 .NET 設定 GroupDocs.Comparison
+- 高效比較任意大小的目錄  
+- 以 TXT 與 HTML 格式產生詳細報告（包括如何 **generate HTML report**）  
+- 處理邊緣案例與效能考量  
+- 無縫整合至現有的 .NET 應用程式  
+- 自動化重複性的檔案管理工作  
 
-要將 GroupDocs.Comparison 整合到您的專案中，您需要安裝該程式庫。操作方法如下：
+讓我們深入前置條件，為成功做好準備！
 
-**NuGet 套件管理器控制台**
+## 前置條件與環境設定
+
+在開始有趣的部分之前，先確保你已備妥所有必需品。別擔心，設定相當簡單，我會一步步帶你完成。
+
+### 你需要的項目
+
+**必備函式庫與版本**  
+- **GroupDocs.Comparison for .NET**：Version 25.4.0（截至 2025 年的最新穩定版）  
+- **.NET Framework/SDK**：相容於 .NET Core 3.1+ 以及 .NET 5/6/7/8  
+- **開發環境**：Visual Studio 2019+（Community 版亦可完美運作）
+
+**知識前置條件**  
+- 基本的 C# 程式設計概念（只要能寫簡單的 console app 即可）  
+- 熟悉 .NET 中的檔案系統操作（路徑、目錄、檔案）  
+- 了解 NuGet 套件管理  
+
+### 快速環境檢查
+
+以下是一個簡單的方式，驗證你的環境是否已就緒：
+
+1. 開啟你慣用的 IDE（Visual Studio、VS Code 或 JetBrains Rider）  
+2. 建立一個目標 .NET Core 3.1 或更新版本的 console 應用程式  
+3. 確認可以存取 NuGet Package Manager  
+
+只要完成上述三件事，你就已經準備就緒！接下來我們就安裝並設定 GroupDocs.Comparison。
+
+## 安裝與設定 GroupDocs.Comparison
+
+在專案中讓 GroupDocs.Comparison 運作非常簡單。你有兩種主要的安裝方式，我會兩者都示範。
+
+### 安裝方式
+
+**Option 1: NuGet Package Manager Console（建議 Visual Studio 使用者）**  
 ```shell
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI**
+**Option 2: .NET CLI（適合命令列愛好者）**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### 許可證取得步驟
+小技巧：始終指定版本號，以確保團隊與部署環境的一致性。
 
-要開始使用 GroupDocs.Comparison，您可以選擇免費試用或購買許可證：
-- **免費試用**：使用有限的所有功能。
-- **臨時執照**：取得臨時許可證來評估全部功能。
-- **購買**：購買許可證以供長期使用。
+### 了解授權選項
 
-您可以透過在程式碼中套用許可證來管理許可證，確保可以存取所有功能。
+GroupDocs.Comparison 提供彈性的授權模式，滿足不同需求：
 
-### 基本初始化和設定
+- **Free Trial**：完美的評估版 – 可使用全部功能，但有部分限制  
+- **Temporary License**：適合概念驗證專案 – 暫時移除試用限制  
+- **Commercial License**：完整功能的正式版  
 
-以下是在 C# 應用程式中初始化 GroupDocs.Comparison 的方法：
+以學習為目的時，免費試用已足夠。等你準備好部署時再升級也不遲。
+
+### 基本初始化與設定
+
+以下是你的第一段 GroupDocs.Comparison 程式碼。這段簡易設定可驗證一切是否正常運作：
 
 ```csharp
 using System;
@@ -73,25 +119,34 @@ class Program
 {
     static void Main()
     {
-        // 如果可用，則初始化許可證
+        // Initialize the license if available
         License license = new License();
-        license.SetLicense("Path to your license file");
+        // license.SetLicense("Path to your license file"); // Uncomment when you have a license
 
         Console.WriteLine("GroupDocs.Comparison for .NET is ready to use.");
+        Console.WriteLine("Let's start comparing some folders!");
     }
 }
 ```
 
-## 實施指南
+如果此程式碼執行無誤，恭喜！你已經可以開始打造強大的資料夾比較功能了。
 
-讓我們使用 GroupDocs.Comparison 實作資料夾比較並將結果儲存為 TXT 或 HTML 檔案。
+## 如何比較資料夾並將結果儲存為 TXT 檔案
 
-### 比較資料夾並將結果儲存為 TXT
+先從最直接的方式開始：比較兩個目錄並將結果存成文字檔。此方法非常適合自動化腳本、日誌系統，或是需要簡單、可解析輸出格式的情境。
 
-#### 概述
-此功能可讓您比較兩個資料夾並在文字檔案中輸出差異，從而可以輕鬆地逐行查看變更。
+### 為何選擇 TXT 輸出？
 
-#### 步驟 1：配置比較選項
+文字檔極具彈性。它輕量、易於程式解析、適合版本控制，且可在任何系統上檢視。適用於：
+
+- 自動化建置流程  
+- 日誌檔案分析  
+- 命令列工具  
+- 與其他系統整合  
+
+### 步驟實作
+
+#### Step 1: Configure Your Comparison Options
 
 ```csharp
 using System;
@@ -103,7 +158,7 @@ string sourceFolder = "YOUR_DOCUMENT_DIRECTORY/SOURCE_FOLDER";
 string targetFolder = "YOUR_DOCUMENT_DIRECTORY/TARGET_FOLDER";
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 
-// 設定 TXT 輸出的比較選項
+// Set comparison options for TXT output
 Options.CompareOptions compareOptionsTxt = new Options.CompareOptions
 {
     DirectoryCompare = true,
@@ -111,32 +166,56 @@ Options.CompareOptions compareOptionsTxt = new Options.CompareOptions
 };
 ```
 
-#### 步驟2：初始化比較器對象
+**這段程式碼在做什麼？** 你告訴 GroupDocs.Comparison 要比較整個目錄（而非單一檔案），且輸出為文字格式。`DirectoryCompare = true` 設定相當關鍵，會啟用遞迴的目錄比較功能。
+
+#### Step 2: Initialize the Comparer Object
 
 ```csharp
 Comparer comparerTxt = new Comparer(sourceFolder, compareOptionsTxt);
-// 新增用於比較的目標資料夾
+// Add target folder for comparison
 comparerTxt.Add(targetFolder, compareOptionsTxt);
 ```
 
-#### 步驟3：進行比較並儲存結果
+這裡就是魔法開始的地方。你建立一個 `Comparer` 實例，以來源資料夾作為基準，接著加入目標資料夾進行比較。可以想像成「比較資料夾 B 中的所有內容與資料夾 A」的意思。
+
+#### Step 3: Execute the Comparison and Save Results
 
 ```csharp
 string txtOutputFileName = Path.Combine(outputDirectory, "ComparisonResult.txt");
 comparerTxt.Compare(txtOutputFileName, compareOptionsTxt);
 
 Console.WriteLine("TXT file with comparison results saved successfully.");
+Console.WriteLine($"Check your results at: {txtOutputFileName}");
 ```
 
-### 比較資料夾並將結果儲存為 HTML
+就這樣！比較結果已經儲存為文字檔。輸出內容會列出新增、刪除與修改的檔案，讓你一目了然兩個目錄之間的變化。
 
-#### 概述
-此功能可產生突出顯示變更的 HTML 報告，幫助您直觀地看到差異。
+### 了解 TXT 輸出格式
 
-#### 步驟 1：配置 HTML 輸出的比較選項
+產生的文字檔通常會包含：
+
+- **Added files** – 目標中存在但來源中不存在的檔案  
+- **Deleted files** – 來源中存在但目標中不存在的檔案  
+- **Modified files** – 兩個目錄皆有但內容不同的檔案  
+- **File metadata** – 檔案大小、修改日期等相關資訊  
+
+## 如何比較資料夾並將結果儲存為 HTML 檔案
+
+雖然 TXT 檔適合自動化，但在需要視覺化、易讀報告時，HTML 輸出則更為出色。HTML 比較結果非常適合程式碼審查、客戶簡報，或是與非技術團隊成員分享發現。
+
+### Benefits of HTML Output (and How to **generate HTML report**)
+
+- **Visual diff highlighting** – 以色彩標示變更，清楚看到差異  
+- **Interactive navigation** – 點擊即可輕鬆在檔案與資料夾間切換  
+- **Professional presentation** – 適合作為報告與文件  
+- **Cross‑platform viewing** – 任意瀏覽器皆可開啟  
+
+### 步驟實作
+
+#### Step 1: Configure HTML Comparison Options
 
 ```csharp
-// 設定 HTML 輸出的比較選項
+// Set comparison options for HTML output
 Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
 {
     DirectoryCompare = true,
@@ -144,75 +223,249 @@ Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
 };
 ```
 
-#### 步驟 2：初始化 HTML 的 Comparer 對象
+關鍵差異在於 `FolderComparisonExtension.Html` 設定。這告訴 GroupDocs.Comparison 產生豐富的 HTML 報告，而非純文字。
+
+#### Step 2: Initialize Comparer for HTML Output
 
 ```csharp
 Comparer comparerHtml = new Comparer(sourceFolder, compareOptionsHtml);
-// 將目標資料夾加入比較中
+// Add target folder to the comparison
 comparerHtml.Add(targetFolder, compareOptionsHtml);
 ```
 
-#### 步驟 3：進行比較並將結果儲存為 HTML
+與前述相同的模式，只是改為 HTML 輸出。GroupDocs.Comparison API 的一致性讓你無論輸出格式如何，都使用相同的方法。
+
+#### Step 3: Generate and Save HTML Report
 
 ```csharp
 string htmlOutputFileName = Path.Combine(outputDirectory, "ComparisonResult.html");
 comparerHtml.Compare(htmlOutputFileName, compareOptionsHtml);
 
 Console.WriteLine("HTML file with comparison results saved successfully.");
+Console.WriteLine($"Open in browser: {htmlOutputFileName}");
 ```
 
-### 故障排除提示
-- 確保正確指定目錄路徑。
-- 檢查輸出目錄中的寫入權限。
-- 驗證所有必要的文件和依賴項是否存在。
+產出的 HTML 檔是一個完整、獨立的報告，可在任何瀏覽器開啟。內含互動元素、程式碼語法高亮（針對程式碼檔案），以及乾淨、專業的版面配置。
 
-## 實際應用
+### 你的 HTML 報告會包含什麼
 
-以下是一些資料夾比較可能有益的實際用例：
-1. **程式碼審查**：比較程式碼庫的不同版本以識別變化。
-2. **資料備份驗證**：確保備份與原始資料資料夾相符。
-3. **配置管理**：追蹤跨環境的設定檔的變化。
-4. **文件版本控制**：保持文件更新和修訂的一致性。
-5. **與 CI/CD 管道集成**：作為部署過程的一部分，自動進行比較檢查。
+HTML 輸出通常會有：
 
-## 性能考慮
+- **Summary dashboard** – 總變更概覽、受影響檔案數量與比較統計  
+- **Side‑by‑side comparisons** – 以視覺 diff 方式顯示具體變更  
+- **Folder tree navigation** – 方便瀏覽目錄結構的樹狀導覽  
+- **File‑level details** – 單一檔案的比較結果，差異以高亮方式呈現  
 
-為確保使用 GroupDocs.Comparison 時獲得最佳效能：
-- 如果可能的話，盡量減少每個資料夾中的檔案數量以減少處理時間。
-- 使用高效的資料結構進行文件儲存和存取。
-- 監控記憶體使用情況並在 .NET 應用程式中有效管理資源。
+## 常見使用情境與實務應用
 
-## 結論
+了解何時以及如何使用資料夾比較，能顯著提升開發工作流程。以下是幾個此功能特別有價值的情境：
 
-恭喜！您已經學習如何使用 GroupDocs.Comparison for .NET 實作資料夾比較，並將結果儲存為 TXT 或 HTML 格式。這些技能將提升您高效管理和比較大型資料集的能力。
+### Code Review and Version Control
 
-接下來，考慮探索 GroupDocs.Comparison 的更多高級功能，例如比較特定文件類型或將該工具整合到更大的應用程式中。
+**Scenario**：你正在審查兩個分支之間的變更，或比較程式碼庫的不同版本。  
 
-準備好將這些知識付諸實踐了嗎？立即在您的專案中實施這些解決方案！
+**Why folder comparison helps**：不必逐一檢查檔案，即可一次看到整個專案結構的所有新增、修改與刪除。HTML 輸出在此特別有用，能與團隊分享視覺化的 diff 報告。
 
-## 常見問題部分
+### Data Backup Verification  
 
-**問題 1：我可以在 Linux 上使用 GroupDocs.Comparison for .NET 嗎？**
-- 是的，它透過 .NET Core 支援 Linux 等跨平台環境。
+**Scenario**：需要驗證備份程序是否正確複製所有檔案，且未發生損毀。  
 
-**Q2：比較時如何處理大檔案？**
-- 使用高效的記憶體管理方法，並考慮在必要時將檔案分解為較小的區塊。
+**Implementation tip**：使用 TXT 輸出，將其納入自動化驗證腳本，並在備份流程中整合。若偵測到差異，可即時發出警報。
 
-**問題 3：我可以比較的文件數量有限制嗎？**
-- 雖然從技術上來說沒有嚴格的限制，但效能可能會根據系統資源而有所不同。
+### Configuration Management Across Environments
 
-**Q4：GroupDocs.Comparison 可以處理加密檔案嗎？**
-- 目前不支援直接比較加密檔案。如有必要，您需要先解密。
+**Scenario**：在開發、測試與正式環境間管理應用程式設定。  
 
-**Q5：如何解決資料夾比較過程中的錯誤？**
-- 檢查控制台輸出的特定錯誤訊息並確保滿足所有先決條件。
+**Best practice**：定期執行資料夾比較，防止設定漂移造成生產問題。HTML 報告非常適合作為變更管理文件。
 
-## 資源
+### Document Version Control
 
-進一步探索：
-- **文件**： [GroupDocs.Comparison .NET 文檔](https://docs.groupdocs.com/comparison/net/)
-- **API 參考**： [GroupDocs API 參考](https://reference.groupdocs.com/comparison/net/)
-- **下載**： [GroupDocs 發布](https://releases.groupdocs.com/comparison/net/)
-- **購買**： [購買 GroupDocs 比較](https://purchase.groupdocs.com/buy)
-- **免費試用**： [免費試用](https://releases.groupdocs.com/comparison/net/)
-- **臨時執照**： [申請臨時許可證](https://purchase.groupdocs.com/temporary-license)
+**Scenario**：管理文件庫，讓多位團隊成員共同編輯檔案。  
+
+**Pro tip**：結合資料夾比較與排程任務，自動產生變更報告。此作法對合規與稽核尤為重要。
+
+### CI/CD Pipeline Integration
+
+**Scenario**：希望在部署流程中自動偵測並報告變更。  
+
+**Advanced usage**：將資料夾比較整合至建置管線，為每次部署產生變更報告，協助回滾決策與變更追蹤。
+
+## 效能最佳化與實務建議
+
+面對大型目錄結構時，效能是關鍵。以下是已驗證的策略，確保資料夾比較順暢執行：
+
+### Optimization Strategies
+
+1. **Smart Directory Selection**  
+   - 僅比較真正需要分析的目錄  
+   - 使用過濾條件排除暫存檔、日誌或其他不相關內容  
+   - 考慮將超大型比較拆分為多個較小、聚焦的批次  
+
+2. **Memory Management**  
+
+```csharp
+// Dispose of comparer objects properly
+using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
+{
+    comparer.Add(targetFolder, compareOptions);
+    comparer.Compare(outputFileName, compareOptions);
+} // Automatically disposed here
+```
+
+3. **Asynchronous Processing**  
+   對於大型比較，建議使用 async 模式，避免桌面應用程式 UI 被阻塞或 Web 應用程式因逾時而失敗。
+
+### Performance Monitoring Tips
+
+- 監控大型比較時的記憶體使用量  
+- 記錄不同目錄大小的處理時間  
+- 依目錄複雜度為使用者設定合理的期待值  
+- 為長時間執行的作業提供進度回報  
+
+## 常見問題排除
+
+即使程式碼寫得很好，仍可能遇到挑戰。以下列出最常見的問題與解決方案：
+
+### File Access and Permission Issues
+
+**Problem**： “Access denied” 或 “file in use” 錯誤  
+
+**Solution**：  
+- 確保應用程式以適當的權限執行  
+- 檢查檔案是否被其他程序鎖定  
+- 為暫時的檔案鎖定實作重試機制  
+
+### Path and Directory Issues
+
+**Problem**： 無效路徑錯誤或找不到目錄  
+
+**Solution**：  
+
+```csharp
+// Always validate paths before comparison
+if (!Directory.Exists(sourceFolder))
+{
+    throw new DirectoryNotFoundException($"Source directory not found: {sourceFolder}");
+}
+
+if (!Directory.Exists(targetFolder))
+{
+    throw new DirectoryNotFoundException($"Target directory not found: {targetFolder}");
+}
+```
+
+### Memory and Performance Issues
+
+**Problem**： 記憶體不足例外或效能緩慢  
+
+**Solutions**：  
+- 將大型比較拆分為較小的批次  
+- 排除不必要的檔案類型  
+- 監控並最佳化記憶體使用模式  
+
+### Output File Generation Issues
+
+**Problem**： 輸出檔案未產生或損毀  
+
+**Troubleshooting steps**：  
+- 確認輸出目錄的寫入權限  
+- 確保磁碟空間足夠  
+- 檢查檔案路徑中是否有非法字元  
+- 在比較前驗證輸出目錄是否已存在  
+
+## 進階設定選項
+
+GroupDocs.Comparison 提供大量設定，可讓你微調比較行為：
+
+### Comparison Sensitivity Settings
+
+你可以調整比較對不同變更類型的敏感度：
+
+- **Whitespace handling** – 忽略或包含空白變更  
+- **Case sensitivity** – 控制是否將大小寫差異視為變更  
+- **Line ending normalization** – 處理不同的換行符號格式  
+
+### File Type Filtering
+
+聚焦於特定檔案類型的比較：
+
+```csharp
+compareOptions.FileAuthorMetadata = false; // Ignore metadata changes
+compareOptions.GenerateFramePreview = true; // Generate preview frames
+```
+
+### Custom Output Formatting
+
+依需求自訂輸出格式：
+
+- **Custom templates** – 修改 HTML 輸出的樣式  
+- **Metadata inclusion** – 控制報告中包含哪些檔案資訊  
+- **Diff granularity** – 在檔案層級或行層級之間選擇比較粒度  
+
+## 結論與後續步驟
+
+恭喜！你已掌握使用 GroupDocs.Comparison for .NET 進行資料夾比較的基礎知識。現在你具備以下能力：
+
+✅ 在專案中設定與配置 GroupDocs.Comparison  
+✅ 比較目錄並產生 TXT 與 HTML 報告（包括如何 **generate HTML report**）  
+✅ 處理常見挑戰並最佳化效能  
+✅ 將資料夾比較整合至實務應用  
+
+### 後續建議
+
+想要將資料夾比較技巧提升到更高層次嗎？可考慮以下方向：
+
+- **Advanced filtering options** 以更精準的方式進行比較  
+- **API integration** 用於建置基於 Web 的比較服務  
+- **Batch processing** 處理多組目錄配對  
+- **Custom reporting formats** 依組織需求客製化報告樣式  
+
+### 今日就開始實作
+
+最好的學習方式就是動手練習。挑選目前正在進行的專案，找出資料夾比較能優化工作流程的環節。從小範圍開始，嘗試不同的輸出格式，逐步加入更進階的功能。
+
+記得：每位專家都曾是新手。給自己時間、自由實驗，遇到問題時隨時回顧本指南！
+
+## 常見問題
+
+**Q: Can I use GroupDocs.Comparison for .NET on Linux systems?**  
+A: Absolutely! GroupDocs.Comparison fully supports cross‑platform deployment through .NET Core. It works seamlessly on Linux, macOS, and Windows environments.
+
+**Q: How should I handle very large directories with thousands of files?**  
+A: For large directories, implement these strategies: use asynchronous processing, break comparisons into smaller batches, exclude unnecessary file types, and monitor memory usage. Consider providing progress feedback to users for long‑running operations.
+
+**Q: Is there a practical limit to the number of files I can compare?**  
+A: While there's no hard limit built into the library, performance depends on your system resources (RAM, CPU, disk speed) and file sizes. Most systems can handle thousands of files without issues, but very large datasets might require optimization strategies.
+
+**Q: Can GroupDocs.Comparison handle encrypted or password‑protected files?**  
+A: The library cannot directly compare encrypted files. You'll need to decrypt files first if you have the appropriate permissions and credentials. Always ensure you comply with your organization's security policies when handling encrypted content.
+
+**Q: How do I integrate folder comparison into automated CI/CD pipelines?**  
+A: Create console applications that use GroupDocs.Comparison, configure them to return appropriate exit codes based on comparison results, and integrate them into your build scripts. TXT output is particularly useful for parsing results in automated environments.
+
+**Q: What's the difference between trial and licensed versions?**  
+A: The trial version includes all functionality but adds watermarks to output and has some usage limitations. Licensed versions remove these restrictions and are suitable for production use.
+
+**Q: Can I customize the HTML output styling and layout?**  
+A: Yes, GroupDocs.Comparison provides options to customize HTML output. You can modify templates, adjust styling, and control what information is included in the reports.
+
+**Q: How do I handle files that exist in one directory but not the other?**  
+A: GroupDocs.Comparison automatically identifies and reports these differences as “added” or “deleted” files. You can configure how these differences are presented in your output format.
+
+## 其他資源與支援
+
+### Documentation
+- **Complete API Reference**：[GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)
+- **Developer Guide**：[GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
+
+### Download and Licensing
+- **Latest Release**：[Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
+- **Purchase Options**：[Buy Commercial License](https://purchase.groupdocs.com/buy)
+- **Free Trial**：[Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)
+- **Temporary License**：[Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
+
+---
+
+**Last Updated:** 2026-03-08  
+**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
+**Author:** GroupDocs

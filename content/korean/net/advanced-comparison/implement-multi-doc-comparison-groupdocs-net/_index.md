@@ -1,62 +1,101 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison for .NET을 사용하여 다중 문서 비교를 구현하는 방법을 알아보세요. 이 가이드에서는 설정, 구성 및 실제 적용 방법을 다룹니다."
-"title": "GroupDocs.Comparison을 사용하여 .NET에서 다중 문서 비교 구현"
-"url": "/ko/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-14'
+description: .NET에서 C#를 사용하여 여러 워드 문서를 비교하는 방법을 배우세요. 설정, 코드, 문제 해결 및 성능 팁을 다루는 단계별
+  튜토리얼.
+keywords: multi document comparison .NET, compare multiple documents C#, document
+  comparison library .NET, .NET document diff tool, compare word documents programmatically
+lastmod: '2025-01-02'
+linktitle: Multi Document Comparison .NET
+tags:
+- csharp
+- document-comparison
+- groupdocs
+- multi-file-comparison
+title: .NET과 C#를 사용하여 여러 Word 문서를 비교하는 방법
 type: docs
+url: /ko/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/
+weight: 1
 ---
-# GroupDocs.Comparison을 사용하여 .NET에서 다중 문서 비교 구현: 포괄적인 가이드
 
-## 소개
+ sure we preserve blockquote formatting >.
 
-여러 Word 문서를 비교하는 데 어려움을 겪고 계신가요? GroupDocs.Comparison for .NET은 문서를 효율적으로 비교할 수 있는 강력한 라이브러리를 제공하여 이러한 과정을 간소화합니다. 이 가이드에서는 C#을 사용하여 GroupDocs.Comparison을 활용하여 여러 Word 문서를 비교하는 방법을 보여줍니다. 단계별 튜토리얼을 따라 환경을 설정하고, 비교 기능을 구현하고, 워크플로를 최적화해 보세요.
+Now produce final output.
 
-**배울 내용:**
-- 프로젝트에서 .NET용 GroupDocs.Comparison 설정
-- 다중 문서 비교 기능 구현
-- 삽입된 항목에 대한 스타일 설정 구성
-- 일반적인 문제 및 문제 해결 팁 이해
+# .NET과 C#를 사용하여 여러 Word 문서 비교하기
 
-시작하기 위해 필요한 전제 조건부터 살펴보겠습니다.
+여러 Word 문서를 수동으로 비교하면서 다양한 버전 간 차이를 찾으려고 애쓴 적이 있나요? 당신만 그런 것이 아닙니다. 계약서 변경 사항을 추적하거나, 문서 버전을 비교하거나, 팀 간 콘텐츠를 검증할 때, .NET에서 **compare multiple word documents**를 사용하면 수시간의 지루한 작업을 절약할 수 있습니다.
 
-## 필수 조건
+이 포괄적인 가이드는 C#와 .NET을 사용하여 자동화된 다중 문서 비교를 구현하는 방법을 보여줍니다. 초기 설정부터 고급 구성까지 모든 과정을 단계별로 안내하고, 앞으로 겪을 수 있는 문제를 해결하는 데 도움이 되는 실전 팁도 공유합니다.
 
-구현에 들어가기 전에 다음 사항이 있는지 확인하세요.
-- **필수 라이브러리:** .NET 버전 25.4.0 이상용 GroupDocs.Comparison이 필요합니다.
-- **환경 설정:** .NET이 설치된 개발 환경(예: Visual Studio).
-- **지식 기반:** C#에 대한 기본적인 이해와 NuGet 패키지 사용에 대한 익숙함이 필요합니다.
+## 빠른 답변
+- **어떤 라이브러리를 사용해야 하나요?** GroupDocs.Comparison for .NET.  
+- **한 번에 몇 개의 문서를 비교할 수 있나요?** 최적 성능을 위해 실질적으로 3‑5개 정도이며, 더 큰 배치는 그룹으로 처리할 수 있습니다.  
+- **라이선스가 필요합니까?** 테스트용으로는 무료 체험판을 사용할 수 있으며, 프로덕션에서는 정식 라이선스가 필요합니다.  
+- **PDF와 Word 문서를 비교할 수 있나요?** 예 – GroupDocs는 혼합 형식 비교를 지원합니다.  
+- **지원되는 .NET 버전은 무엇인가요?** .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7.
 
-## .NET용 GroupDocs.Comparison 설정
+## “compare multiple word documents”란 무엇인가요?
+여러 Word 문서를 비교한다는 것은 두 개 이상의 `.docx` 파일(또는 다른 지원 형식)을 프로그래밍 방식으로 분석하여 삽입, 삭제, 수정 사항을 식별하고, 이러한 변경 사항을 강조한 단일 보고서를 생성하는 것을 의미합니다.
 
-시작하려면 NuGet 패키지 관리자 콘솔이나 .NET CLI를 통해 필요한 라이브러리를 설치하세요.
+## 다중 문서 비교에 GroupDocs를 사용하는 이유
+- **다양한 형식 지원** – DOCX, PDF, TXT 등 다양한 형식을 지원합니다.  
+- **정확한 diff 엔진** – 텍스트, 서식 및 레이아웃 변경을 감지합니다.  
+- **맞춤형 스타일링** – 삽입, 삭제 및 변경이 어떻게 표시될지 직접 정의할 수 있습니다.  
+- **Office 설치 불필요** – Microsoft Office 없이 서버에서 실행됩니다.
 
-**NuGet 패키지 관리자 콘솔**
+## 다중 문서 비교가 필요할 때
+코드로 들어가기 전에, 언제 이 기능이 실제로 유용한지 이야기해 보겠습니다. 다중 문서 비교는 다음과 같은 상황에서 빛을 발합니다:
+
+- **문서 버전 관리** – 여러 계약 초안을 한 번에 비교합니다.  
+- **팀 협업** – 여러 기여자의 변경 사항을 병합합니다.  
+- **품질 보증** – 부서 간 또는 번역본 간 일관성을 검증합니다.  
+- **법률 및 규정 준수** – 여러 초안에 걸친 모든 수정 사항을 추적합니다.
+
+프로그래밍 방식 비교의 장점은? 사람은 놓치기 쉬운 미세한 변경—공백, 서식, 작은 문구 수정 등을 포착합니다.
+
+## 사전 요구 사항 및 설정
+
+### 개발 환경
+- .NET Framework 4.6.1+ 또는 .NET Core 2.0+ (대부분 최신 프로젝트에 적합합니다)  
+- Visual Studio 또는 VS Code  
+- 기본 C# 지식 (간단한 콘솔 앱이면 충분합니다)
+
+### 필요한 패키지
+**GroupDocs.Comparison** for .NET을 사용할 예정입니다 – 무거운 작업을 수행하는 검증된 라이브러리입니다.
+
+#### GroupDocs.Comparison 설치
+
+**Package Manager Console** (개인적으로 가장 선호하는 방법):
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI**
+**.NET CLI** (명령줄을 선호한다면):
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### 라이센스 취득
+**PackageReference** (*.csproj* 파일을 직접 편집):
+```xml
+<PackageReference Include="GroupDocs.Comparison" Version="25.4.0" />
+```
 
-GroupDocs.Comparison의 기능을 최대한 활용하려면 라이선스를 취득하는 것을 고려해 보세요.
-- **무료 체험:** 무료 체험판을 통해 기능을 평가해보세요.
-- **임시 면허:** 장기 평가를 위해 임시 라이센스를 확보하세요.
-- **구입:** 생산 목적으로 사용하려면 전체 라이선스를 취득하세요.
+### 라이선스 고려 사항
+라이선스에 대한 간단한 안내 – GroupDocs는 여러 옵션을 제공합니다:
 
-패키지를 설치하고 라이선스를 설정한 후 C# 프로젝트에서 GroupDocs.Comparison을 초기화할 수 있습니다.
+- **Free Trial** – 테스트 및 소규모 프로젝트에 적합합니다  
+- **Temporary License** – 최대 30 days 동안 확장 평가 가능  
+- **Full License** – 프로덕션 사용에 필요합니다  
 
-## 구현 가이드
+**Pro tip:** 구매하기 전에 무료 체험판으로 시작해 필요에 맞는지 확인하세요.
 
-### 개요
-이 섹션에서는 GroupDocs.Comparison을 사용하여 여러 문서를 비교하는 방법을 안내합니다. 원본 및 대상 문서를 설정하고, 비교 옵션을 구성하고, 출력을 저장하는 방법을 알아봅니다.
+## 핵심 구현 가이드
 
-### 비교를 위한 문서 설정
-먼저, 소스 및 대상 문서에 대한 경로를 정의합니다.
+### 문서 경로 설정
+먼저 파일 위치를 정리합니다. `Path.Combine()`을 사용하면 모든 OS에서 올바른 경로 구분자를 보장합니다.
+
 ```csharp
 string sourceDocumentPath = "YOUR_DOCUMENT_DIRECTORY\\SOURCE_WORD";
 string targetDocument1Path = "YOUR_DOCUMENT_DIRECTORY\\TARGET_WORD";
@@ -66,77 +105,229 @@ string targetDocument3Path = "YOUR_DOCUMENT_DIRECTORY\\TARGET3_WORD";
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = Path.Combine(outputDirectory, "comparison_result.docx");
 ```
-**설명:** 여기서는 소스 문서와 세 개의 대상 문서에 대한 파일 경로를 지정합니다. `outputFileName` 변수는 비교 결과가 저장될 경로를 보관합니다.
 
-### 비교자 구성
-인스턴스를 생성합니다 `Comparer` 소스 문서가 있는 클래스:
+> **왜 중요한가:** 시작하기 전에 각 파일이 존재하는지 확인하면 나중에 발생할 수 있는 모호한 “file not found” 예외를 방지할 수 있습니다.
+
+### 비교 엔진 구축
+`Comparer` 클래스는 문서 비교의 핵심 엔진입니다.
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceDocumentPath))
 {
-    // 소스와 비교할 대상 문서를 추가합니다.
+    // Add target documents to be compared against the source.
     comparer.Add(targetDocument1Path);
     comparer.Add(targetDocument2Path);
     comparer.Add(targetDocument3Path);
 
-    // 삽입된 항목에 대한 스타일 설정 등의 비교 옵션을 구성합니다.
+    // Configure comparison options, such as style settings for inserted items.
     CompareOptions compareOptions = new CompareOptions()
     {
         InsertedItemStyle = new StyleSettings()
         {
-            FontColor = System.Drawing.Color.Yellow  // 삽입된 콘텐츠의 글꼴 색상을 노란색으로 설정합니다.
+            FontColor = System.Drawing.Color.Yellow  // Set the font color of inserted content to yellow.
         }
     };
 
-    // 비교를 수행하고 결과를 출력 파일에 저장합니다.
+    // Perform comparison and save results to output file.
     comparer.Compare(File.Create(outputFileName), compareOptions);
 }
 ```
-**설명:** 그만큼 `Comparer` 객체는 소스 문서로 초기화됩니다. 그런 다음 비교를 위해 대상 문서를 추가합니다. `CompareOptions` 클래스를 사용하면 차이점을 강조하는 방식을 사용자 지정할 수 있습니다. 이 경우 삽입된 콘텐츠에 노란색 글꼴을 사용합니다.
 
-### 문제 해결 팁
-- 모든 문서 경로가 올바르고 접근 가능한지 확인하세요.
-- GroupDocs.Comparison 버전 25.4.0 이상이 설치되어 있는지 확인하세요.
-- 파일 접근에 오류가 발생하면 출력 디렉토리의 권한을 확인하세요.
+무슨 일이 일어나고 있나요:
 
-## 실제 응용 프로그램
-GroupDocs.Comparison은 다양한 시나리오에서 활용될 수 있습니다.
-1. **문서 버전 관리:** 시간의 흐름에 따른 변경 사항을 추적하기 위해 문서의 여러 버전을 비교합니다.
-2. **품질 보증:** 여러 부서나 팀에 걸쳐 문서 일관성을 검증합니다.
-3. **법률 및 규정 준수:** 계약서 초안이 원래 계약서와 일치하는지 확인하세요.
-4. **콘텐츠 관리 시스템:** 업데이트된 기사나 보고서에 대한 콘텐츠 비교를 자동화합니다.
+1. **Baseline** – `sourceDocumentPath`는 기준 문서입니다.  
+2. **Targets** – 각 `Add` 호출은 기준 문서와 비교할 문서를 등록합니다.  
+3. **Styling** – `CompareOptions`를 사용해 삽입, 삭제 및 변경이 어떻게 표시될지 정의할 수 있습니다.  
+4. **Execution** – `Compare`가 diff 엔진을 실행하고 결과를 `outputFileName`에 기록합니다.
 
-## 성능 고려 사항
-GroupDocs.Comparison을 사용할 때 성능을 최적화하려면:
-- 동시에 비교하는 문서 수를 제한하여 리소스 사용량을 줄입니다.
-- 작업이 차단되는 것을 방지하기 위해 해당되는 경우 비동기 메서드를 사용하세요.
-- 애플리케이션 코드에서 메모리 소비를 모니터링하고 리소스를 효율적으로 관리하세요.
+`using` 문은 모든 비관리 리소스가 해제되도록 보장하며, 대용량 파일을 처리할 때 매우 중요합니다.
 
-## 결론
-이 가이드를 따라 하면 이제 .NET에서 GroupDocs.Comparison을 사용하여 다중 문서 비교를 구현하는 데 필요한 탄탄한 기반을 갖추게 됩니다. 이 강력한 도구는 여러 문서의 변경 사항에 대한 자세한 정보를 제공하여 문서 관리 워크플로를 크게 향상시킬 수 있습니다.
+### 비교 결과 커스터마이징
+삽입, 삭제 및 수정에 색상을 입혀 시각적으로 빠르게 스캔할 수 있습니다.
 
-**다음 단계:**
-- 다양한 방법으로 실험해보세요 `CompareOptions` 사용자 정의로 비교를 맞춤화하세요.
-- 대규모 .NET 애플리케이션이나 프레임워크 내에서의 통합 가능성을 탐색합니다.
-- 더 많은 지원과 팁을 얻으려면 커뮤니티 포럼에 기여하는 것을 고려하세요.
+```csharp
+CompareOptions compareOptions = new CompareOptions()
+{
+    InsertedItemStyle = new StyleSettings()
+    {
+        FontColor = System.Drawing.Color.Green,
+        IsUnderline = true
+    },
+    DeletedItemStyle = new StyleSettings()
+    {
+        FontColor = System.Drawing.Color.Red,
+        IsStrikeOut = true
+    },
+    ChangedItemStyle = new StyleSettings()
+    {
+        FontColor = System.Drawing.Color.Blue,
+        IsItalic = true
+    }
+};
+```
 
-## FAQ 섹션
-1. **GroupDocs.Comparison이란 무엇인가요?**
-   - 개발자가 .NET을 사용하여 다양한 형식의 여러 문서를 비교할 수 있도록 해주는 라이브러리입니다.
-2. **대용량 문서를 효율적으로 비교하려면 어떻게 해야 하나요?**
-   - 비교를 더 작은 배치로 나누거나 비동기 작업을 사용합니다.
-3. **차이점을 강조하는 방식을 사용자 정의할 수 있나요?**
-   - 네, 통해 `CompareOptions` 그리고 `StyleSettings`삽입된 콘텐츠의 모양을 조정할 수 있습니다.
-4. **GroupDocs.Comparison에 대한 추가 리소스와 지원은 어디에서 찾을 수 있나요?**
-   - 방문하세요 [선적 서류 비치](https://docs.groupdocs.com/comparison/net/) 또는 그들과 합류하다 [지원 포럼](https://forum.groupdocs.com/c/comparison/).
-5. **Word 문서 외에 다른 문서도 비교할 수 있나요?**
-   - 물론입니다. GroupDocs.Comparison은 Word뿐 아니라 다양한 문서 형식을 지원합니다.
+이제 추가된 내용은 **녹색 및 밑줄**, 삭제된 내용은 **빨간색 취소선**, 수정된 내용은 **파란색 이탤릭**으로 표시됩니다.
 
-## 자원
-- **선적 서류 비치:** [GroupDocs 비교 문서](https://docs.groupdocs.com/comparison/net/)
-- **API 참조:** [GroupDocs API 참조](https://reference.groupdocs.com/comparison/net/)
-- **라이브러리 다운로드:** [GroupDocs 릴리스](https://releases.groupdocs.com/comparison/net/)
-- **라이센스 구매:** [GroupDocs 구매](https://purchase.groupdocs.com/buy)
-- **무료 체험:** [GroupDocs 무료 평가판](https://releases.groupdocs.com/comparison/net/)
-- **임시 면허:** [임시 면허 신청](https://purchase.groupdocs.com/temporary-license/)
+## 일반 구현 과제
 
-이 가이드에서는 GroupDocs.Comparison을 사용하여 .NET 애플리케이션에서 문서 비교 기능을 효율적으로 구현하는 방법을 설명합니다. 즐거운 코딩 되세요!
+### 파일 경로 문제
+**Issue:** 경로가 올바르게 보이는데도 “File not found” 오류가 발생합니다.  
+**Solution:** 절대 경로를 사용하거나 상대 경로를 검증하고, 애플리케이션에 읽기/쓰기 권한이 있는지 확인하세요.
+
+```csharp
+// Validate files exist before processing
+if (!File.Exists(sourceDocumentPath))
+    throw new FileNotFoundException($"Source document not found: {sourceDocumentPath}");
+```
+
+### 대용량 문서의 메모리 사용량
+**Issue:** 큰 파일을 처리할 때 충돌하거나 멈춥니다.  
+**Solution:** 문서를 작은 배치로 처리하거나 메모리 할당량을 늘리세요. 매우 큰 파일은 비교하기 전에 섹션으로 분할합니다.
+
+### 출력 파일이 이미 사용 중인 경우
+**Issue:** 결과 파일이 잠겨 있어 저장할 수 없습니다.  
+**Solution:** 파일을 열고 있는 모든 인스턴스를 닫고 타임스탬프를 사용해 고유한 이름을 생성하세요.
+
+```csharp
+string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+string outputFileName = Path.Combine(outputDirectory, $"comparison_result_{timestamp}.docx");
+```
+
+## 성능 최적화 팁
+
+### 동시 비교 제한
+배치당 3‑5개의 문서부터 시작하세요. 메모리와 CPU 사용량을 측정한 후에만 규모를 늘립니다.
+
+### 비동기 처리 사용
+웹 애플리케이션에서는 비교 작업을 백그라운드 작업으로 넘겨 UI가 응답성을 유지하도록 합니다.
+
+```csharp
+public async Task<string> CompareDocumentsAsync(List<string> documentPaths)
+{
+    return await Task.Run(() => {
+        // Your comparison logic here
+        return outputFileName;
+    });
+}
+```
+
+### 리소스 사용량 모니터링
+`Comparer` 인스턴스를 즉시 해제하고, 대량 시나리오에서는 작업 큐 사용을 고려하세요.
+
+## 실용적인 사용 사례 및 예시
+
+### 버전 관리 시나리오
+분기별 정책 업데이트 자동화:
+
+```csharp
+var quarterlyVersions = new List<string> {
+    "policy_q1.docx",
+    "policy_q2.docx", 
+    "policy_q3.docx",
+    "policy_q4.docx"
+};
+
+// Compare current quarter against previous versions
+CompareQuarterlyChanges(quarterlyVersions);
+```
+
+### 품질 보증 워크플로우
+번역된 사양이 영어 원본과 일치하는지 검증:
+
+```csharp
+string originalDocument = "product_specs_english.docx";
+var translatedVersions = new List<string> {
+    "product_specs_spanish.docx",
+    "product_specs_french.docx",
+    "product_specs_german.docx"
+};
+```
+
+## 문제 해결 가이드
+
+### 일반 오류 메시지
+
+| Error | Likely Cause | Fix |
+|-------|--------------|-----|
+| **Invalid file format** | 지원되지 않거나 적절히 변환되지 않은 혼합 형식 | 모든 파일을 지원되는 형식(DOCX, PDF, TXT 등)으로 변환하세요 |
+| **Comparison timeout** | 매우 큰 문서가 기본 제한을 초과 | 파일을 섹션으로 나누거나 타임아웃 설정을 늘리세요 |
+| **Insufficient memory** | 여러 대용량 파일을 동시에 처리 | 배치 크기를 줄이거나 서버 RAM을 늘리세요 |
+
+### 디버깅 팁
+1. **간단히 시작** – 먼저 작은 문서로 테스트합니다.  
+2. **파일 무결성 확인** – 손상된 파일은 모호한 오류를 발생시킵니다.  
+3. **`CompareOptions` 로그** – 스타일 설정이 적용되었는지 확인합니다.  
+4. **대상 문서를 점진적으로 추가** – 오류를 일으키는 문서를 격리합니다.
+
+## 프로덕션을 위한 모범 사례
+
+### 보안 고려 사항
+- 처리 전에 파일 유형 및 크기를 검증합니다.  
+- 업로드 파일은 샌드박스 임시 폴더에 저장합니다.  
+- 비교가 끝난 후 즉시 임시 파일을 정리합니다.
+
+### 견고한 오류 처리
+```csharp
+try
+{
+    using (Comparer comparer = new Comparer(sourceDocumentPath))
+    {
+        // Comparison logic
+    }
+}
+catch (GroupDocsException ex)
+{
+    // Handle GroupDocs-specific errors
+    _logger.LogError($"GroupDocs comparison failed: {ex.Message}");
+}
+catch (IOException ex)
+{
+    // Handle file access errors
+    _logger.LogError($"File access error: {ex.Message}");
+}
+```
+
+### 확장성 팁
+- 메시지 브로커(예: RabbitMQ)로 비교 작업을 큐에 넣습니다.  
+- 동일한 문서 세트를 반복 비교할 때 결과를 캐시합니다.  
+- 매우 큰 작업은 더 많은 RAM을 가진 클라우드 인스턴스로 오프로드합니다.
+
+## 대체 접근 방식 및 사용 시점
+
+| Approach | Pros | Cons |
+|----------|------|------|
+| **GroupDocs.Comparison** | 전체 기능 제공, 온프레미스, 다양한 형식 지원 | 프로덕션에 라이선스 필요 |
+| **Microsoft Office Interop** | 네이티브 Word diff 활용 | 서버에 Office 설치 필요 |
+| **Open XML SDK** | 경량, 외부 라이브러리 불필요 | 직접 diff 로직을 구현해야 함 |
+| **Cloud APIs (e.g., PandaDoc)** | 인프라 필요 없음, 사용량 기반 과금 | 지속적인 서비스 비용, 데이터 프라이버시 우려 |
+
+**GroupDocs를 선택해야 하는 경우** 혼합 형식(예: **compare pdf with word** 문서)도 추가적인 작업 없이 처리할 수 있는 신뢰성 있는 온프레미스 솔루션이 필요할 때입니다.
+
+## 자주 묻는 질문
+
+**Q: 한 번에 몇 개의 문서를 비교할 수 있나요?**  
+A: 엄격한 제한은 없지만, 성능을 위해 배치당 10개 이하를 권장합니다.
+
+**Q: PDF와 Word와 같은 다른 형식을 비교할 수 있나요?**  
+A: 예 – GroupDocs.Comparison은 PDF, DOCX, TXT 등 다양한 형식을 동일 실행에서 비교할 수 있습니다.
+
+**Q: 처리할 수 있는 최대 파일 크기는 얼마인가요?**  
+A: 일반 서버에서는 약 50 MB까지 원활히 처리됩니다; 더 큰 파일은 더 많은 RAM이나 섹션 처리 필요할 수 있습니다.
+
+**Q: 비밀번호로 보호된 파일을 어떻게 처리하나요?**  
+A: `Comparer` 인스턴스를 생성할 때 비밀번호를 제공하면 라이브러리가 문서를 해제하고 비교합니다.
+
+**Q: 웹 애플리케이션에서 사용해도 안전한가요?**  
+A: 네, 업로드 파일을 검증하고, 비교를 비동기로 실행하며, 임시 파일을 정리하면 안전합니다.
+
+**Last Updated:** 2026-03-14  
+**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
+**Author:** GroupDocs  
+
+**추가 리소스**  
+- 공식 문서: [GroupDocs Comparison Documentation](https://docs.groupdocs.com/comparison/net/)  
+- API 레퍼런스: [GroupDocs API Reference](https://reference.groupdocs.com/comparison/net/)  
+- 라이브러리 다운로드: [GroupDocs Releases](https://releases.groupdocs.com/comparison/net/)  
+- 라이선스 구매: [Buy GroupDocs](https://purchase.groupdocs.com/buy)  
+- 무료 체험: [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/net/)  
+- 임시 라이선스 요청: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)

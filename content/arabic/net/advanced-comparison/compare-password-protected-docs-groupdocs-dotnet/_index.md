@@ -1,100 +1,108 @@
 ---
-"date": "2025-05-05"
-"description": "تعلّم كيفية مقارنة عدة مستندات Word محمية بكلمة مرور بسلاسة باستخدام GroupDocs.Comparison لـ .NET. اتبع هذا الدليل خطوة بخطوة مع أمثلة برمجية وتطبيقات عملية."
-"title": "كيفية مقارنة عدة مستندات Word محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison"
-"url": "/ar/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-14'
+description: تعلم كيفية مقارنة مستندات Word متعددة محمية بكلمة مرور باستخدام GroupDocs.Comparison
+  لـ .NET. دليل خطوة بخطوة مع الشيفرة، ونصائح الأمان، وأفضل ممارسات المقارنة الدفعة.
+keywords: compare multiple word documents, how to compare docs, batch compare word
+  documents, document comparison .NET, secure document comparison
+lastmod: '2026-03-14'
+linktitle: Compare Password Protected Documents .NET
+tags:
+- groupdocs
+- document-comparison
+- password-protected
+- dotnet
+- word-documents
+title: قارن مستندات Word متعددة في .NET (محمية بكلمة مرور)
 type: docs
+url: /ar/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/
+weight: 1
 ---
-# كيفية مقارنة عدة مستندات Word محمية بكلمة مرور في .NET باستخدام GroupDocs.Comparison
 
-## مقدمة
-في عالمنا الرقمي اليوم، تُعدّ إدارة مستندات متعددة محمية بكلمة مرور تحديًا متكررًا. سواء كنت تتعامل مع عقود قانونية أو تقارير سرية، فإن مقارنة هذه الملفات بدقة قد تكون مملة وعرضة للأخطاء. سيرشدك هذا البرنامج التعليمي خلال استخدام **GroupDocs.Comparison لـ .NET** لمقارنة عدة مستندات Word المحمية بكفاءة.
+ Arabic translations, preserving placeholders.
 
-بحلول نهاية هذا الدليل، سوف تتعلم كيفية:
-- قم بإعداد بيئتك باستخدام GroupDocs.Comparison
-- تهيئة المقارن باستخدام تدفقات المستندات
-- تكوين إعدادات حماية كلمة المرور
-- إنشاء تقرير مقارنة شامل
+Let's construct final answer.# مقارنة مستندات Word متعددة في .NET (محمية بكلمة مرور)
 
-دعونا نبدأ بمراجعة المتطلبات الأساسية اللازمة قبل المتابعة.
+عندما تحتاج إلى **مقارنة مستندات Word متعددة** كل منها مقفل بكلمة مرور، فإن القيام بذلك يدويًا كالكابوس—خصوصًا عندما تحتوي الملفات على عقود سرية أو بيانات مالية. في هذا الدرس ستتعرف على كيفية أتمتة العملية باستخدام **GroupDocs.Comparison for .NET**، مع الحفاظ على أمان بياناتك أثناء معالجة سيناريوهات المقارنة الجماعية بسهولة.
 
-## المتطلبات الأساسية
-قبل التنفيذ **GroupDocs.Comparison لـ .NET**تأكد من أن لديك ما يلي:
+## إجابات سريعة
+- **ما المكتبة التي تتعامل مع ملفات Word المحمية بكلمة مرور؟** GroupDocs.Comparison for .NET.  
+- **هل يمكنني مقارنة أكثر من مستندين في آن واحد؟** نعم—أضف عددًا كما تحتاج باستخدام `comparer.Add()`.  
+- **هل أحتاج إلى ترخيص للاستخدام في الإنتاج؟** يلزم الحصول على ترخيص كامل من GroupDocs للاستخدام في الإنتاج.  
+- **كيف يتم توفير كلمات المرور؟** عبر `LoadOptions { Password = "yourPassword" }` لكل تدفق مستند.  
+- **هل هذا النهج مناسب للوظائف الدفعية؟** بالتأكيد—اجمعه مع I/O غير متزامن وملفات إخراج ذات طوابع زمنية.
 
-### المكتبات والإصدارات المطلوبة
-- GroupDocs.Comparison الإصدار 25.4.0
-- بيئة .NET Framework أو .NET Core/5+
+## لماذا مقارنة مستندات Word متعددة؟
 
-### متطلبات إعداد البيئة
-- بيئة تطوير مثل Visual Studio
-- المعرفة الأساسية ببرمجة C#
+تخيل فريقًا قانونيًا يتلقى ثلاث نسخ من عقد، كل نسخة مشفرة بكلمة مرور مختلفة. الفتح والنسخ والتحقق من الاختلاف يدويًا لكل نسخة عرضة للأخطاء وتستغرق وقتًا طويلاً. من خلال **مقارنة مستندات Word متعددة** برمجيًا، تُزيل الأخطاء البشرية، وتسرّع دورات المراجعة، وتحافظ على سجل تغييرات جاهز للتدقيق.
 
-### متطلبات المعرفة
-سيكون من المفيد فهم التدفقات في .NET ومفاهيم التعامل مع الملفات الأساسية.
+## ما هو الهدف الأساسي؟
 
-## إعداد GroupDocs.Comparison لـ .NET
-للبدء، ستحتاج إلى تثبيت **GroupDocs.مقارنة** المكتبة. إليك طريقتان للقيام بذلك:
+الهدف الأساسي هو تحميل كل ملف Word محمي، وتوفير كلمة المرور الفريدة الخاصة به، والسماح لـ GroupDocs بالتعامل مع فك التشفير والمقارنة داخليًا. النتيجة هي تقرير Word واحد يبرز كل إدخال، حذف، وتغيير تنسيق عبر جميع المستندات المقدمة.
 
-### وحدة تحكم مدير الحزم NuGet
+## كيفية مقارنة مستندات Word متعددة (خطوة بخطوة)
+
+### المتطلبات المسبقة
+
+- **GroupDocs.Comparison** الإصدار 25.4.0 (أو أحدث)  
+- **.NET Framework 4.6.1+** أو **.NET 5/6+**  
+- Visual Studio 2019+ (أو أي بيئة تطوير تفضلها)  
+- الوصول إلى سلاسل كلمات المرور (احفظها بأمان—لا تدمجها مباشرة في الشيفرة)
+
+### تثبيت GroupDocs.Comparison
+
+يمكنك إضافة المكتبة عبر NuGet:
+
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### .NET CLI
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-#### خطوات الحصول على الترخيص
-توفر GroupDocs خيارات ترخيص مختلفة:
-- **نسخة تجريبية مجانية**:ابدأ بالتجربة المجانية لاستكشاف الميزات.
-- **رخصة مؤقتة**:تقدم بطلب للحصول على ترخيص مؤقت على موقعهم إذا لزم الأمر.
-- **شراء**:للحصول على إمكانية الوصول الكامل، فكر في شراء اشتراك.
-
-### التهيئة والإعداد الأساسي
-إليك كيفية تهيئة المقارن في تطبيق C# الخاص بك:
+### تهيئة المقارن مع المستند الأول
 
 ```csharp
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 
-// البدء باستخدام دفق المستند المصدر وكلمة المرور
+// Initialize with source document stream and password
 string filePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
 string password = "1234";
 
 using (Comparer comparer = new Comparer(File.OpenRead(filePath), 
     new LoadOptions() { Password = password }))
 {
-    // أضف المزيد من المستندات للمقارنة إذا لزم الأمر هنا
+    // Your comparison logic goes here
 }
 ```
 
-## دليل التنفيذ
-### مقارنة مستندات متعددة محمية من Stream
-سيرشدك هذا القسم خلال الخطوات اللازمة لمقارنة مستندات Word متعددة محمية بكلمة مرور باستخدام التدفقات.
+### الخطوة 1: إعداد وجهة الإخراج
 
-#### الخطوة 1: تحديد دليل الإخراج ومسار الملف
-أولاً، حدد المكان الذي سيتم حفظ ملف الإخراج الخاص بك فيه:
+وجود مسار إخراج متوقع يجعل من السهل أتمتة العمليات اللاحقة، مثل إرسال التقرير عبر البريد الإلكتروني أو تخزينه في نظام إدارة المستندات.
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = Path.Combine(outputDirectory, "result.docx");
 ```
 
-#### الخطوة 2: تهيئة Comparer باستخدام تدفق المستند المصدر وكلمة المرور
-استخدم `Comparer` الفئة لتحميل تدفق مستند المصدر الخاص بك مع حماية كلمة المرور:
+### الخطوة 2: تحميل المستند الأساسي (المصدر)
+
+كائن `LoadOptions` يخبر GroupDocs كيفية فك قفل الملف، لذا لا تحتاج إلى إدارة فك التشفير بنفسك.
 
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/source.docx"), 
     new LoadOptions() { Password = "1234" }))
 {
-    // الخطوة 3: إضافة مستندات إضافية للمقارنة
+    // We'll add more documents in the next step
 }
 ```
 
-#### الخطوة 3: إضافة مستندات إضافية
-لمقارنة مستندات متعددة، استخدم `Add` طريقة:
+### الخطوة 3: إضافة مستندات محمية بكلمة مرور إضافية
+
+كل استدعاء لـ `Add` يمكنه تحديد كلمة مرور مختلفة، مما يتيح **مقارنة دفعة من مستندات Word** حقيقية عبر الأقسام أو الشركاء.
 
 ```csharp
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"), 
@@ -102,58 +110,180 @@ comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"),
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/third.docx"), 
     new LoadOptions() { Password = "91011" });
 
-// إجراء المقارنة وحفظ النتائج
+// Execute the comparison and save results
 comparer.Compare(outputFileName);
 ```
 
-**خيارات تكوين المفتاح:**
-- `LoadOptions`:تستخدم للتعامل مع حماية كلمة المرور.
-- `Comparer.Add()`:إضافة مستندات إضافية للمقارنة.
+### مثال عملي كامل
 
-#### نصائح استكشاف الأخطاء وإصلاحها
-- تأكد من فتح جميع تدفقات المستندات بشكل صحيح باستخدام أذونات القراءة المناسبة.
-- تأكد من أن كلمات المرور المقدمة تتطابق مع كلمات المرور الخاصة بمستنداتك.
+```csharp
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+using System;
+using System.IO;
 
-## التطبيقات العملية
-### حالات الاستخدام في العالم الحقيقي
-1. **إدارة الوثائق القانونية**:قم بمقارنة مسودات العقود المتعددة لضمان الاتساق بين الإصدارات.
-2. **التقارير المالية**:دمج ومقارنة البيانات المالية من الإدارات المختلفة.
-3. **التحرير التعاوني**:تتبع التغييرات في المستندات المشتركة بين أعضاء الفريق.
+class Program
+{
+    static void Main(string[] args)
+    {
+        string outputDirectory = "C:\\ComparisonResults";
+        string outputFileName = Path.Combine(outputDirectory, 
+            $"comparison_result_{DateTime.Now:yyyyMMdd_HHmmss}.docx");
+        
+        try
+        {
+            using (Comparer comparer = new Comparer(
+                File.OpenRead("C:\\Documents\\source.docx"), 
+                new LoadOptions() { Password = "1234" }))
+            {
+                comparer.Add(File.OpenRead("C:\\Documents\\second.docx"), 
+                    new LoadOptions() { Password = "5678" });
+                comparer.Add(File.OpenRead("C:\\Documents\\third.docx"), 
+                    new LoadOptions() { Password = "91011" });
+                
+                comparer.Compare(outputFileName);
+                
+                Console.WriteLine($"Comparison completed! Results saved to: {outputFileName}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
 
-### إمكانيات التكامل
-يمكن دمج GroupDocs.Comparison مع أنظمة .NET المختلفة مثل تطبيقات ASP.NET MVC أو مشاريع Windows Forms لتحسين قدرات إدارة المستندات.
+شغّل البرنامج، وستجد ملف `comparison_result_YYYYMMDD_HHMMSS.docx` يوضح بوضوح كل تغيير عبر جميع المستندات الثلاثة المحمية.
 
-## اعتبارات الأداء
-- **تحسين عمليات إدخال/إخراج الملفات**:تأكد من قراءة وكتابة الملفات بكفاءة.
-- **إدارة الذاكرة**: يستخدم `using` بيانات للتخلص التلقائي من الموارد.
-- **معالجة الدفعات**:قم بمقارنة المستندات على دفعات إذا كنت تتعامل مع أحجام كبيرة.
+## أفضل ممارسات الأمان للإنتاج
 
-## خاتمة
-لقد تعلمتَ كيفية مقارنة عدة مستندات Word محمية بكلمة مرور باستخدام GroupDocs.Comparison لـ .NET. بفضل هذه المهارات، يمكنك تبسيط عمليات إدارة المستندات وضمان دقة ملفاتك. لمزيد من الاستكشاف، فكّر في التعمق في ميزات المقارنة المتقدمة أو دمج هذه الوظيفة في تطبيقات أكبر.
+### إدارة كلمات المرور
+لا تقم بدمج كلمات المرور مباشرة في الشيفرة المصدرية. بدلاً من ذلك:
+- استخدم **متغيرات البيئة** للاختبار المحلي.  
+- احفظ الأسرار في **Azure Key Vault**، **AWS Secrets Manager**، أو أي خدمة خزنة أخرى للنشر السحابي.  
+- في بيئات داخلية، احتفظ بملف إعدادات مشفر وفك تشفيره وقت التشغيل.
 
-هل أنت مستعد للخطوة التالية؟ جرّب تطبيق هذا الحل في مشاريعك اليوم!
+### إدارة الذاكرة
 
-## قسم الأسئلة الشائعة
-**س1: هل يمكنني مقارنة أكثر من مستندين في وقت واحد باستخدام GroupDocs.Comparison؟**
-ج1: نعم، يمكنك إضافة مستندات متعددة لإجراء مقارنة شاملة.
+```csharp
+// Good practice: Explicitly dispose of streams
+using (var sourceStream = File.OpenRead(sourcePath))
+using (var targetStream = File.OpenRead(targetPath))
+{
+    // Your comparison logic
+}
+// Streams are automatically disposed here
+```
 
-**س2: كيف أتعامل مع تنسيقات الملفات المختلفة؟**
-A2: يدعم GroupDocs.Comparison تنسيقات مختلفة؛ راجع الوثائق للحصول على التفاصيل.
+### التحكم في الوصول والتدقيق
+- قصر أذونات نظام الملفات على حساب الخدمة الذي يشغل عملية المقارنة.  
+- سجّل كل طلب مقارنة مع طوابع زمنية ومعرفات المستخدم لتتبع التدقيق.  
+- احذف الملفات المؤقتة فورًا بعد إنشاء التقرير.
 
-**س3: ما هي الأخطاء الشائعة أثناء مقارنة المستندات؟**
-أ3: تأكد من صحة كلمات المرور وإمكانية الوصول إلى كافة الملفات.
+## استكشاف المشكلات الشائعة
 
-**س4: هل هناك حد لحجم المستند؟**
-ج4: على الرغم من عدم وجود حد صارم، إلا أن الأداء قد يختلف مع المستندات الكبيرة جدًا.
+### استثناء “كلمة المرور غير صحيحة”
 
-**س5: هل يمكنني مقارنة المستندات غير المكتوبة بصيغة Word؟**
-A5: نعم، يدعم GroupDocs.Comparison تنسيقات ملفات متعددة بخلاف Word.
+```csharp
+// Debug password issues
+try
+{
+    using (var comparer = new Comparer(stream, new LoadOptions() { Password = password }))
+    {
+        // Success
+    }
+}
+catch (PasswordRequiredException ex)
+{
+    Console.WriteLine("Document requires password");
+}
+catch (IncorrectPasswordException ex)
+{
+    Console.WriteLine($"Wrong password for document: {ex.Message}");
+}
+```
+تحقق من وجود أحرف مخفية، أو عدم تطابق ترميز Unicode، أو تلف المستند.
 
-## موارد
-- [التوثيق](https://docs.groupdocs.com/comparison/net/)
-- [مرجع واجهة برمجة التطبيقات](https://reference.groupdocs.com/comparison/net/)
-- [تحميل](https://releases.groupdocs.com/comparison/net/)
-- [شراء](https://purchase.groupdocs.com/buy)
-- [نسخة تجريبية مجانية](https://releases.groupdocs.com/comparison/net/)
-- [رخصة مؤقتة](https://purchase.groupdocs.com/temporary-license/)
-- [يدعم](https://forum.groupdocs.com/c/comparison/)
+### أخطاء نفاد الذاكرة مع ملفات كبيرة
+
+```csharp
+// Configure comparison options for large documents
+var compareOptions = new CompareOptions()
+{
+    GenerateSummaryPage = false, // Reduces memory usage
+    DetalisLevel = DetalisLevel.Low // Process fewer details
+};
+
+comparer.Compare(outputPath, compareOptions);
+```
+
+### بطء الأداء عند مقارنة العديد من الملفات
+- استخدم **async I/O** لقراءة التدفقات.  
+- عالج المستندات في **دفعات متوازية** عندما تسمح موارد المعالج.  
+- قم بتخزين الملفات التي تُقارن كثيرًا مؤقتًا إذا تم إعادة استخدامها عبر عمليات التشغيل.
+
+## حالات الاستخدام الواقعية
+
+| الصناعة | السيناريو النموذجي |
+|----------|------------------|
+| قانونية | مقارنة مراجعات العقود من عدة مكاتب محاماة، كل ملف مشفر للحفاظ على سرية العميل. |
+| مالية | مراجعة التقارير الربعية من وحدات أعمال منفصلة، جميعها محمية بكلمة مرور للرقابة الداخلية. |
+| الرعاية الصحية | التحقق من بروتوكولات الرعاية المحدثة مع الالتزام بمتطلبات HIPAA. |
+| شركات | تتبع تغييرات السياسات عبر الأقسام مع سياسات Word مشفرة. |
+
+## نصائح الأداء
+
+### الوصول إلى الملفات باستخدام التخزين المؤقت
+
+```csharp
+// Use buffered streams for large files
+using (var bufferedStream = new BufferedStream(File.OpenRead(filePath), 8192))
+{
+    var comparer = new Comparer(bufferedStream, loadOptions);
+    // Your comparison logic
+}
+```
+
+### استراتيجية المعالجة الدفعية
+1. **تقسيم** قائمة المستندات (مثلاً 5‑10 ملفات لكل دفعة).  
+2. **الإبلاغ** عن التقدم بعد كل دفعة لإبقاء المستخدمين على علم.  
+3. **حفظ** النتائج الوسيطة إذا كنت بحاجة إلى الاستئناف بعد فشل.
+
+## الأسئلة المتكررة
+
+**س: هل يمكنني مقارنة أكثر من ثلاثة مستندات في آن واحد؟**  
+**ج:** بالتأكيد. استدعِ `comparer.Add()` لكل ملف إضافي؛ فقط راقب استهلاك الذاكرة للمجموعات الكبيرة جدًا.
+
+**س: ماذا يحدث إذا كان أحد المستندات يحتوي على كلمة مرور غير صحيحة؟**  
+**ج:** المكتبة ترمي استثناء `IncorrectPasswordException`. امسكه، سجّل المشكلة، واستمر مع الملفات المتبقية إذا رغبت.
+
+**س: هل تعمل هذه التقنية مع ملفات Excel أو PowerPoint؟**  
+**ج:** نعم. يدعم GroupDocs.Comparison صيغ XLSX، PPTX، PDF، والعديد من الصيغ الأخرى بنفس طريقة معالجة كلمة المرور.
+
+**س: كيف يمكنني مقارنة أقسام محددة فقط من ملف Word؟**  
+**ج:** استخدم `CompareOptions` لتحديد المقارنة على النص، أو التنسيق، أو البيانات الوصفية. راجع وثائق API للتحكم الدقيق.
+
+**س: هل هناك أي حدود لحجم المستند؟**  
+**ج:** لا يوجد حد ثابت، لكن الملفات الكبيرة جدًا (> 50 MB) قد تحتاج إلى تحسينات الذاكرة الموضحة سابقًا.
+
+## الخطوات التالية
+
+- **إتاحة المنطق عبر واجهة Web API** للسماح للأنظمة الأخرى بإرسال مستندات للمقارنة.  
+- **دمج مع نظام إدارة المستندات** (SharePoint، Box، إلخ) لتفعيل عمليات سير العمل تلقائيًا.  
+- **إنشاء صيغ تقارير بديلة** (PDF، HTML) بتغيير امتداد ملف الإخراج.
+
+---
+
+**آخر تحديث:** 2026-03-14  
+**تم الاختبار مع:** GroupDocs.Comparison 25.4.0 for .NET  
+**المؤلف:** GroupDocs  
+
+**الموارد**  
+- [الوثائق الرسمية لـ GroupDocs.Comparison](https://docs.groupdocs.com/comparison/net/)  
+- [المرجع الكامل للـ API](https://reference.groupdocs.com/comparison/net/)  
+- [تحميل أحدث نسخة](https://releases.groupdocs.com/comparison/net/)  
+- [خيارات شراء الترخيص](https://purchase.groupdocs.com/buy)  
+- [بدء تجربة مجانية](https://releases.groupdocs.com/comparison/net/)  
+- [الحصول على ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)  
+- [منتدى الدعم المجتمعي](https://forum.groupdocs.com/c/comparison/)

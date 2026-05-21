@@ -1,100 +1,109 @@
 ---
-"date": "2025-05-05"
-"description": ".NET के लिए GroupDocs.Comparison का उपयोग करके कई पासवर्ड-संरक्षित Word दस्तावेज़ों की तुलना करना सीखें। कोड उदाहरणों और व्यावहारिक अनुप्रयोगों के साथ इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
-"title": "GroupDocs.Comparison का उपयोग करके .NET में एकाधिक पासवर्ड-संरक्षित Word दस्तावेज़ों की तुलना कैसे करें?"
-"url": "/hi/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-14'
+description: GroupDocs.Comparison for .NET का उपयोग करके पासवर्ड‑सुरक्षित कई Word
+  दस्तावेज़ों की तुलना कैसे करें, जानें। कोड, सुरक्षा टिप्स और बैच तुलना के सर्वोत्तम
+  अभ्यासों के साथ चरण‑दर‑चरण मार्गदर्शिका।
+keywords: compare multiple word documents, how to compare docs, batch compare word
+  documents, document comparison .NET, secure document comparison
+lastmod: '2026-03-14'
+linktitle: Compare Password Protected Documents .NET
+tags:
+- groupdocs
+- document-comparison
+- password-protected
+- dotnet
+- word-documents
+title: .NET में कई Word दस्तावेज़ों की तुलना करें (पासवर्ड संरक्षित)
 type: docs
+url: /hi/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/
+weight: 1
 ---
-# GroupDocs.Comparison का उपयोग करके .NET में एकाधिक पासवर्ड-संरक्षित Word दस्तावेज़ों की तुलना कैसे करें?
 
-## परिचय
-आज की डिजिटल दुनिया में, पासवर्ड से सुरक्षित कई दस्तावेज़ों को प्रबंधित करना एक आम चुनौती है। चाहे आप कानूनी अनुबंधों या गोपनीय रिपोर्टों को संभाल रहे हों, इन फ़ाइलों की सटीक तुलना करना थकाऊ और त्रुटि-प्रवण हो सकता है। यह ट्यूटोरियल आपको उपयोग करने के तरीके के बारे में मार्गदर्शन करेगा **.NET के लिए GroupDocs.तुलना** कई संरक्षित वर्ड दस्तावेज़ों की कुशलतापूर्वक तुलना करने के लिए।
+ URLs or code placeholders.
 
-इस गाइड के अंत तक आप सीखेंगे कि कैसे:
-- GroupDocs.Comparison के साथ अपना परिवेश सेट करें
-- दस्तावेज़ स्ट्रीम के साथ तुलनाकर्ता को आरंभ करें
-- पासवर्ड सुरक्षा सेटिंग कॉन्फ़िगर करें
-- एक व्यापक तुलना रिपोर्ट तैयार करें
+Also ensure we didn't translate variable names inside code blocks (they are placeholders). Good.
 
-आगे बढ़ने से पहले आइए हम आवश्यक पूर्वापेक्षाओं की समीक्षा करें।
+Now produce final answer.# Compare Multiple Word Documents in .NET (Password Protected)
 
-## आवश्यक शर्तें
-कार्यान्वयन से पहले **.NET के लिए GroupDocs.तुलना**सुनिश्चित करें कि आपके पास निम्नलिखित हैं:
+जब आपको **एकाधिक Word दस्तावेज़ों** की तुलना करनी हो जो प्रत्येक पासवर्ड से लॉक हों, तो इसे मैन्युअल रूप से करना एक दुःस्वप्न है—विशेषकर जब फ़ाइलों में गोपनीय अनुबंध या वित्तीय विवरण हों। इस ट्यूटोरियल में आप देखेंगे कि **GroupDocs.Comparison for .NET** के साथ प्रक्रिया को कैसे स्वचालित किया जाए, जिससे आपका डेटा सुरक्षित रहे और बैच तुलना परिदृश्यों को आसानी से संभाला जा सके।
 
-### आवश्यक लाइब्रेरी और संस्करण
-- GroupDocs.तुलना संस्करण 25.4.0
-- .NET फ्रेमवर्क या .NET कोर/5+ वातावरण
+## त्वरित उत्तर
+- **कौन सा लाइब्रेरी पासवर्ड‑सुरक्षित Word फ़ाइलों को संभालता है?** GroupDocs.Comparison for .NET.  
+- **क्या मैं एक साथ दो से अधिक दस्तावेज़ों की तुलना कर सकता हूँ?** हाँ—जितने चाहें `comparer.Add()` से जोड़ें।  
+- **क्या उत्पादन के लिए लाइसेंस चाहिए?** उत्पादन उपयोग के लिए पूर्ण GroupDocs लाइसेंस आवश्यक है।  
+- **पासवर्ड कैसे प्रदान किए जाते हैं?** प्रत्येक दस्तावेज़ स्ट्रीम के लिए `LoadOptions { Password = "yourPassword" }` के माध्यम से।  
+- **क्या यह तरीका बैच जॉब्स के लिए उपयुक्त है?** बिल्कुल—इसे async I/O और टाइमस्टैम्प वाले आउटपुट फ़ाइलों के साथ मिलाएँ।
 
-### पर्यावरण सेटअप आवश्यकताएँ
-- विजुअल स्टूडियो जैसा विकास वातावरण
-- C# प्रोग्रामिंग का बुनियादी ज्ञान
+## कई Word दस्तावेज़ों की तुलना क्यों करें?
 
-### ज्ञान पूर्वापेक्षाएँ
-.NET में स्ट्रीम्स और बुनियादी फ़ाइल हैंडलिंग अवधारणाओं को समझना लाभदायक होगा।
+कल्पना करें कि एक कानूनी टीम को अनुबंध के तीन संस्करण मिलते हैं, प्रत्येक अलग पासवर्ड से एन्क्रिप्टेड है। मैन्युअल रूप से प्रत्येक संस्करण को खोलना, कॉपी करना और अंतर‑जाँच करना त्रुटिप्रवण और समय‑साध्य है। प्रोग्रामेटिक रूप से **एकाधिक Word दस्तावेज़ों की तुलना** करके आप मानवीय त्रुटियों को समाप्त करते हैं, समीक्षा चक्र को तेज़ बनाते हैं, और ऑडिट‑तैयार परिवर्तन लॉग बनाए रखते हैं।
 
-## .NET के लिए GroupDocs.तुलना सेट अप करना
-आरंभ करने के लिए, आपको स्थापित करना होगा **ग्रुपडॉक्स.तुलना** लाइब्रेरी में ऐसा करने के दो तरीके हैं:
+## प्राथमिक लक्ष्य क्या है?
 
-### NuGet पैकेज मैनेजर कंसोल
+मुख्य उद्देश्य प्रत्येक संरक्षित Word फ़ाइल को लोड करना, उसका विशिष्ट पासवर्ड प्रदान करना, और GroupDocs को आंतरिक रूप से डिक्रिप्शन और तुलना संभालने देना है। परिणामस्वरूप एक ही Word रिपोर्ट बनती है जो सभी प्रदान किए गए दस्तावेज़ों में प्रत्येक इंसर्शन, डिलीशन, और फ़ॉर्मेटिंग परिवर्तन को हाइलाइट करती है।
+
+## कई Word दस्तावेज़ों की तुलना कैसे करें (स्टेप‑बाय‑स्टेप)
+
+### पूर्वापेक्षाएँ
+
+- **GroupDocs.Comparison** संस्करण 25.4.0 (या नया)  
+- **.NET Framework 4.6.1+** या **.NET 5/6+**  
+- Visual Studio 2019+ (या कोई भी IDE जो आप पसंद करें)  
+- पासवर्ड स्ट्रिंग्स तक पहुँच (इन्हें सुरक्षित रूप से स्टोर करें—कभी हार्ड‑कोड न करें)
+
+### GroupDocs.Comparison स्थापित करें
+
+आप लाइब्रेरी को NuGet के माध्यम से जोड़ सकते हैं:
+
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### .NET सीएलआई
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-#### लाइसेंस प्राप्ति चरण
-ग्रुपडॉक्स विभिन्न लाइसेंसिंग विकल्प प्रदान करता है:
-- **मुफ्त परीक्षण**: सुविधाओं का पता लगाने के लिए निःशुल्क परीक्षण से शुरुआत करें।
-- **अस्थायी लाइसेंस**यदि आवश्यक हो तो उनकी साइट पर अस्थायी लाइसेंस के लिए आवेदन करें।
-- **खरीदना**पूर्ण पहुंच के लिए, सदस्यता खरीदने पर विचार करें।
-
-### बुनियादी आरंभीकरण और सेटअप
-यहां बताया गया है कि आप अपने C# अनुप्रयोग में तुलनित्र को कैसे आरंभ कर सकते हैं:
+### पहले दस्तावेज़ के साथ Comparer को इनिशियलाइज़ करें
 
 ```csharp
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 
-// स्रोत दस्तावेज़ स्ट्रीम और पासवर्ड के साथ आरंभ करें
+// Initialize with source document stream and password
 string filePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
 string password = "1234";
 
 using (Comparer comparer = new Comparer(File.OpenRead(filePath), 
     new LoadOptions() { Password = password }))
 {
-    // यदि आवश्यक हो तो तुलना के लिए यहां अधिक दस्तावेज़ जोड़ें
+    // Your comparison logic goes here
 }
 ```
 
-## कार्यान्वयन मार्गदर्शिका
-### स्ट्रीम से एकाधिक संरक्षित दस्तावेज़ों की तुलना करना
-यह अनुभाग आपको स्ट्रीम्स का उपयोग करके एकाधिक पासवर्ड-संरक्षित वर्ड दस्तावेज़ों की तुलना करने के चरणों के माध्यम से मार्गदर्शन करेगा।
-
-#### चरण 1: आउटपुट निर्देशिका और फ़ाइल पथ परिभाषित करें
-सबसे पहले, निर्दिष्ट करें कि आपकी आउटपुट फ़ाइल कहाँ सहेजी जाएगी:
+### चरण 1: आउटपुट गंतव्य सेट करें
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = Path.Combine(outputDirectory, "result.docx");
 ```
 
-#### चरण 2: स्रोत दस्तावेज़ स्ट्रीम और पासवर्ड के साथ Comparer को प्रारंभ करें
-उपयोग `Comparer` पासवर्ड सुरक्षा के साथ अपने स्रोत दस्तावेज़ स्ट्रीम को लोड करने के लिए क्लास:
+एक पूर्वनिर्धारित आउटपुट पथ होने से डाउनस्ट्रीम प्रक्रियाओं को स्वचालित करना आसान हो जाता है, जैसे रिपोर्ट को ईमेल करना या इसे दस्तावेज़ प्रबंधन प्रणाली में स्टोर करना।
+
+### चरण 2: प्राथमिक (स्रोत) दस्तावेज़ लोड करें
 
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/source.docx"), 
     new LoadOptions() { Password = "1234" }))
 {
-    // चरण 3: तुलना के लिए अतिरिक्त दस्तावेज़ जोड़ें
+    // We'll add more documents in the next step
 }
 ```
 
-#### चरण 3: अतिरिक्त दस्तावेज़ जोड़ना
-एकाधिक दस्तावेज़ों की तुलना करने के लिए, का उपयोग करें `Add` तरीका:
+`LoadOptions` ऑब्जेक्ट GroupDocs को बताता है कि फ़ाइल को कैसे अनलॉक किया जाए, इसलिए आपको स्वयं डिक्रिप्शन प्रबंधित करने की आवश्यकता नहीं है।
+
+### चरण 3: अतिरिक्त पासवर्ड‑सुरक्षित दस्तावेज़ जोड़ें
 
 ```csharp
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"), 
@@ -102,58 +111,183 @@ comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"),
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/third.docx"), 
     new LoadOptions() { Password = "91011" });
 
-// तुलना करें और परिणाम सहेजें
+// Execute the comparison and save results
 comparer.Compare(outputFileName);
 ```
 
-**मुख्य कॉन्फ़िगरेशन विकल्प:**
-- `LoadOptions`: पासवर्ड सुरक्षा को संभालने के लिए उपयोग किया जाता है।
-- `Comparer.Add()`: तुलना के लिए अतिरिक्त दस्तावेज़ जोड़ता है.
+`Add` के प्रत्येक कॉल में अलग पासवर्ड निर्दिष्ट किया जा सकता है, जिससे विभागों या साझेदारों के बीच वास्तविक **बैच तुलना Word दस्तावेज़ों** की सुविधा मिलती है।
 
-#### समस्या निवारण युक्तियों
-- सुनिश्चित करें कि सभी दस्तावेज़ स्ट्रीम उचित पठन अनुमतियों के साथ सही ढंग से खुलें।
-- सत्यापित करें कि दिए गए पासवर्ड आपके दस्तावेज़ों के पासवर्ड से मेल खाते हैं।
+### पूर्ण कार्यशील उदाहरण
 
-## व्यावहारिक अनुप्रयोगों
-### वास्तविक दुनिया में उपयोग के मामले
-1. **कानूनी दस्तावेज़ प्रबंधन**: विभिन्न संस्करणों में एकरूपता सुनिश्चित करने के लिए अनेक अनुबंध ड्राफ्टों की तुलना करें।
-2. **वित्तीय रिपोर्टिंग**विभिन्न विभागों के वित्तीय विवरणों को मिलाना और उनकी तुलना करना।
-3. **सहयोगात्मक संपादन**: टीम के सदस्यों के बीच साझा किए गए दस्तावेज़ों में परिवर्तनों को ट्रैक करें।
+```csharp
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+using System;
+using System.IO;
 
-### एकीकरण की संभावनाएं
-GroupDocs.Comparison को विभिन्न .NET सिस्टम जैसे ASP.NET MVC अनुप्रयोगों या Windows Forms परियोजनाओं के साथ एकीकृत किया जा सकता है ताकि दस्तावेज़ प्रबंधन क्षमताओं को बढ़ाया जा सके।
+class Program
+{
+    static void Main(string[] args)
+    {
+        string outputDirectory = "C:\\ComparisonResults";
+        string outputFileName = Path.Combine(outputDirectory, 
+            $"comparison_result_{DateTime.Now:yyyyMMdd_HHmmss}.docx");
+        
+        try
+        {
+            using (Comparer comparer = new Comparer(
+                File.OpenRead("C:\\Documents\\source.docx"), 
+                new LoadOptions() { Password = "1234" }))
+            {
+                comparer.Add(File.OpenRead("C:\\Documents\\second.docx"), 
+                    new LoadOptions() { Password = "5678" });
+                comparer.Add(File.OpenRead("C:\\Documents\\third.docx"), 
+                    new LoadOptions() { Password = "91011" });
+                
+                comparer.Compare(outputFileName);
+                
+                Console.WriteLine($"Comparison completed! Results saved to: {outputFileName}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
 
-## प्रदर्शन संबंधी विचार
-- **फ़ाइल I/O संचालन अनुकूलित करें**फ़ाइल पढ़ने और लिखने की दक्षता सुनिश्चित करें।
-- **स्मृति प्रबंधन**: उपयोग `using` स्वचालित संसाधन निपटान के लिए वक्तव्य।
-- **प्रचय संसाधन**यदि बड़ी मात्रा में काम करना हो तो दस्तावेजों की तुलना बैचों में करें।
+प्रोग्राम चलाएँ, और आपको `comparison_result_YYYYMMDD_HHMMSS.docx` फ़ाइल मिलेगी जो सभी तीन संरक्षित दस्तावेज़ों में प्रत्येक परिवर्तन को स्पष्ट रूप से चिह्नित करती है।
 
-## निष्कर्ष
-आपने .NET के लिए GroupDocs.Comparison का उपयोग करके कई पासवर्ड-संरक्षित Word दस्तावेज़ों की तुलना करना सीख लिया है। इन कौशलों के साथ, आप दस्तावेज़ प्रबंधन प्रक्रियाओं को सुव्यवस्थित कर सकते हैं और अपनी फ़ाइलों में सटीकता सुनिश्चित कर सकते हैं। आगे की खोज के लिए, उन्नत तुलना सुविधाओं में गहराई से गोता लगाने या बड़े अनुप्रयोगों के भीतर इस कार्यक्षमता को एकीकृत करने पर विचार करें।
+## उत्पादन के लिए सुरक्षा सर्वोत्तम प्रथाएँ
 
-अगला कदम उठाने के लिए तैयार हैं? आज ही अपने प्रोजेक्ट में इस समाधान को लागू करने का प्रयास करें!
+### पासवर्ड प्रबंधन
+कभी भी पासवर्ड को सीधे स्रोत कोड में एम्बेड न करें। इसके बजाय:
 
-## अक्सर पूछे जाने वाले प्रश्न अनुभाग
-**प्रश्न 1: क्या मैं GroupDocs.Comparison के साथ एक बार में दो से अधिक दस्तावेजों की तुलना कर सकता हूं?**
-A1: हां, आप व्यापक तुलना के लिए कई दस्तावेज़ जोड़ सकते हैं।
+- स्थानीय परीक्षण के लिए **environment variables** का उपयोग करें।  
+- क्लाउड डिप्लॉयमेंट के लिए **Azure Key Vault**, **AWS Secrets Manager**, या किसी अन्य वॉल्ट सेवा में सीक्रेट्स स्टोर करें।  
+- ऑन‑प्रेमिस के लिए, एक एन्क्रिप्टेड कॉन्फ़िगरेशन फ़ाइल रखें और रनटाइम पर डिक्रिप्ट करें।
 
-**प्रश्न 2: मैं विभिन्न फ़ाइल स्वरूपों को कैसे संभालूँ?**
-A2: GroupDocs.Comparison विभिन्न प्रारूपों का समर्थन करता है; विशेष जानकारी के लिए दस्तावेज़ देखें।
+### मेमोरी प्रबंधन
 
-**प्रश्न 3: दस्तावेज़ तुलना के दौरान सामान्य त्रुटियाँ क्या हैं?**
-A3: सुनिश्चित करें कि पासवर्ड सही है और सभी फ़ाइलें सुलभ हैं।
+```csharp
+// Good practice: Explicitly dispose of streams
+using (var sourceStream = File.OpenRead(sourcePath))
+using (var targetStream = File.OpenRead(targetPath))
+{
+    // Your comparison logic
+}
+// Streams are automatically disposed here
+```
 
-**प्रश्न 4: क्या दस्तावेज़ के आकार की कोई सीमा है?**
-A4: हालांकि कोई सख्त सीमा नहीं है, लेकिन बहुत बड़े दस्तावेज़ों के साथ प्रदर्शन भिन्न हो सकता है।
+### एक्सेस कंट्रोल और ऑडिटिंग
+- तुलना चलाने वाले सर्विस अकाउंट तक फ़ाइल सिस्टम अनुमतियों को सीमित करें।  
+- ऑडिट ट्रेल के लिए प्रत्येक तुलना अनुरोध को टाइमस्टैम्प और उपयोगकर्ता पहचानकर्ता के साथ लॉग करें।  
+- रिपोर्ट जनरेट होने के बाद तुरंत अस्थायी फ़ाइलों को हटा दें।
 
-**प्रश्न 5: क्या मैं गैर-वर्ड दस्तावेज़ों की तुलना कर सकता हूँ?**
-A5: हाँ, GroupDocs.Comparison Word से परे कई फ़ाइल स्वरूपों का समर्थन करता है।
+## सामान्य समस्याओं का निवारण
 
-## संसाधन
-- [प्रलेखन](https://docs.groupdocs.com/comparison/net/)
-- [एपीआई संदर्भ](https://reference.groupdocs.com/comparison/net/)
-- [डाउनलोड करना](https://releases.groupdocs.com/comparison/net/)
-- [खरीदना](https://purchase.groupdocs.com/buy)
-- [मुफ्त परीक्षण](https://releases.groupdocs.com/comparison/net/)
-- [अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/)
-- [सहायता](https://forum.groupdocs.com/c/comparison/)
+### “Password is incorrect” अपवाद
+
+```csharp
+// Debug password issues
+try
+{
+    using (var comparer = new Comparer(stream, new LoadOptions() { Password = password }))
+    {
+        // Success
+    }
+}
+catch (PasswordRequiredException ex)
+{
+    Console.WriteLine("Document requires password");
+}
+catch (IncorrectPasswordException ex)
+{
+    Console.WriteLine($"Wrong password for document: {ex.Message}");
+}
+```
+छिपे हुए अक्षरों, Unicode एन्कोडिंग असंगतियों, या दस्तावेज़ भ्रष्टाचार की जाँच करें।
+
+### बड़े फ़ाइलों के साथ Out‑of‑Memory त्रुटियाँ
+
+```csharp
+// Configure comparison options for large documents
+var compareOptions = new CompareOptions()
+{
+    GenerateSummaryPage = false, // Reduces memory usage
+    DetalisLevel = DetalisLevel.Low // Process fewer details
+};
+
+comparer.Compare(outputPath, compareOptions);
+```
+
+### कई फ़ाइलों की तुलना करते समय धीमी प्रदर्शन
+- स्ट्रीम पढ़ने के लिए **async I/O** का उपयोग करें।  
+- जब CPU संसाधन अनुमति दें, तो दस्तावेज़ों को **parallel batches** में प्रोसेस करें।  
+- यदि फ़ाइलें कई रन में पुनः उपयोग होती हैं तो अक्सर तुलना की गई फ़ाइलों को कैश करें।
+
+## वास्तविक‑विश्व उपयोग केस
+
+| Industry | Typical Scenario |
+|----------|------------------|
+| Legal | कई लॉ फर्मों से अनुबंध संशोधनों की तुलना करें, प्रत्येक फ़ाइल क्लाइंट गोपनीयता के लिए एन्क्रिप्टेड है। |
+| Finance | विभिन्न व्यवसाय इकाइयों के त्रैमासिक रिपोर्टों का मिलान करें, सभी आंतरिक नियंत्रण के लिए पासवर्ड‑सुरक्षित हैं। |
+| Healthcare | अद्यतन देखभाल प्रोटोकॉल को वैध करें जबकि HIPAA‑अनुपालन बनाए रखें। |
+| Corporate | विभागों में नीति परिवर्तन को ट्रैक करें, एन्क्रिप्टेड Word नीतियों के साथ। |
+
+## प्रदर्शन टिप्स
+
+### बफ़र्ड फ़ाइल एक्सेस
+
+```csharp
+// Use buffered streams for large files
+using (var bufferedStream = new BufferedStream(File.OpenRead(filePath), 8192))
+{
+    var comparer = new Comparer(bufferedStream, loadOptions);
+    // Your comparison logic
+}
+```
+
+### बैच प्रोसेसिंग रणनीति
+1. **Chunk** दस्तावेज़ सूची (उदा., 5‑10 फ़ाइलें प्रति बैच)।  
+2. प्रत्येक बैच के बाद **Report** प्रगति ताकि उपयोगकर्ताओं को सूचित रखा जा सके।  
+3. यदि विफलता के बाद पुनः शुरू करने की आवश्यकता हो तो **Persist** मध्यवर्ती परिणाम।
+
+## अक्सर पूछे जाने वाले प्रश्न
+
+**प्र: क्या मैं एक साथ तीन से अधिक दस्तावेज़ों की तुलना कर सकता हूँ?**  
+**उ:** बिल्कुल। प्रत्येक अतिरिक्त फ़ाइल के लिए `comparer.Add()` कॉल करें; बहुत बड़े सेट के लिए मेमोरी उपयोग पर ध्यान रखें।
+
+**प्र: यदि किसी दस्तावेज़ का पासवर्ड गलत है तो क्या होता है?**  
+**उ:** लाइब्रेरी `IncorrectPasswordException` फेंकती है। इसे पकड़ें, समस्या को लॉग करें, और यदि चाहें तो शेष फ़ाइलों के साथ जारी रखें।
+
+**प्र: क्या यह तकनीक Excel या PowerPoint फ़ाइलों के साथ काम करती है?**  
+**उ:** हाँ। GroupDocs.Comparison समान पासवर्ड हैंडलिंग के साथ XLSX, PPTX, PDF, और कई अन्य फ़ॉर्मेट्स को सपोर्ट करता है।
+
+**प्र: मैं Word फ़ाइल के केवल विशिष्ट सेक्शन की तुलना कैसे कर सकता हूँ?**  
+**उ:** तुलना को टेक्स्ट, फ़ॉर्मेटिंग, या मेटाडेटा तक सीमित करने के लिए `CompareOptions` का उपयोग करें। सूक्ष्म नियंत्रण के लिए API दस्तावेज़ देखें।
+
+**प्र: क्या दस्तावेज़ आकार पर कोई सीमा है?**  
+**उ:** कोई कठोर सीमा नहीं है, लेकिन बहुत बड़ी फ़ाइलें (> 50 MB) को पहले दिखाए गए मेमोरी‑ऑप्टिमाइज़ेशन की आवश्यकता हो सकती है।
+
+## अगले कदम
+
+- **Web API के माध्यम से लॉजिक को एक्सपोज़ करें** ताकि अन्य सिस्टम दस्तावेज़ तुलना के लिए सबमिट कर सकें।  
+- **Document Management System** (SharePoint, Box, आदि) के साथ इंटीग्रेट करें ताकि स्वचालित वर्कफ़्लो ट्रिगर हो सके।  
+- आउटपुट फ़ाइल एक्सटेंशन बदलकर **वैकल्पिक रिपोर्ट फ़ॉर्मेट** (PDF, HTML) जनरेट करें।
+
+---
+
+**अंतिम अपडेट:** 2026-03-14  
+**परीक्षित संस्करण:** GroupDocs.Comparison 25.4.0 for .NET  
+**लेखक:** GroupDocs  
+
+**संसाधन**  
+- [आधिकारिक GroupDocs.Comparison दस्तावेज़ीकरण](https://docs.groupdocs.com/comparison/net/)  
+- [पूर्ण API रेफ़रेंस](https://reference.groupdocs.com/comparison/net/)  
+- [नवीनतम संस्करण डाउनलोड करें](https://releases.groupdocs.com/comparison/net/)  
+- [लाइसेंसिंग विकल्प खरीदें](https://purchase.groupdocs.com/buy)  
+- [नि:शुल्क ट्रायल शुरू करें](https://releases.groupdocs.com/comparison/net/)  
+- [अस्थायी लाइसेंस प्राप्त करें](https://purchase.groupdocs.com/temporary-license/)  
+- [कम्युनिटी सपोर्ट फ़ोरम](https://forum.groupdocs.com/c/comparison/)

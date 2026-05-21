@@ -1,100 +1,105 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu một cách liền mạch bằng GroupDocs.Comparison cho .NET. Thực hiện theo hướng dẫn từng bước này với các ví dụ về mã và ứng dụng thực tế."
-"title": "Cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison"
-"url": "/vi/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-14'
+description: Tìm hiểu cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu bằng
+  GroupDocs.Comparison cho .NET. Hướng dẫn từng bước kèm mã nguồn, mẹo bảo mật và
+  các thực tiễn tốt nhất cho so sánh hàng loạt.
+keywords: compare multiple word documents, how to compare docs, batch compare word
+  documents, document comparison .NET, secure document comparison
+lastmod: '2026-03-14'
+linktitle: Compare Password Protected Documents .NET
+tags:
+- groupdocs
+- document-comparison
+- password-protected
+- dotnet
+- word-documents
+title: So sánh nhiều tài liệu Word trong .NET (Bảo vệ bằng mật khẩu)
 type: docs
+url: /vi/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/
+weight: 1
 ---
-# Cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu trong .NET bằng GroupDocs.Comparison
 
-## Giới thiệu
-Trong thế giới kỹ thuật số ngày nay, việc quản lý nhiều tài liệu được bảo vệ bằng mật khẩu là một thách thức thường xuyên. Cho dù bạn đang xử lý hợp đồng pháp lý hay báo cáo bí mật, việc so sánh chính xác các tệp này có thể rất tẻ nhạt và dễ xảy ra lỗi. Hướng dẫn này sẽ hướng dẫn bạn cách sử dụng **GroupDocs.Comparison cho .NET** để so sánh hiệu quả nhiều tài liệu Word được bảo vệ.
+# So sánh nhiều tài liệu Word trong .NET (Bảo vệ bằng mật khẩu)
 
-Đến cuối hướng dẫn này, bạn sẽ học cách:
-- Thiết lập môi trường của bạn với GroupDocs.Comparison
-- Khởi tạo trình so sánh với các luồng tài liệu
-- Cấu hình cài đặt bảo vệ bằng mật khẩu
-- Tạo báo cáo so sánh toàn diện
+Khi bạn cần **so sánh nhiều tài liệu word** mà mỗi tài liệu đều được khóa bằng mật khẩu, thực hiện thủ công là một cơn ác mộng—đặc biệt khi các tệp chứa các hợp đồng bí mật hoặc báo cáo tài chính. Trong hướng dẫn này, bạn sẽ thấy cách tự động hoá quy trình với **GroupDocs.Comparison for .NET**, giữ dữ liệu của bạn an toàn trong khi xử lý các kịch bản so sánh hàng loạt một cách dễ dàng.
 
-Chúng ta hãy bắt đầu bằng cách xem xét các điều kiện tiên quyết cần thiết trước khi tiến hành.
+## Câu trả lời nhanh
+- **Thư viện nào xử lý các tệp Word được bảo vệ bằng mật khẩu?** GroupDocs.Comparison for .NET.  
+- **Tôi có thể so sánh hơn hai tài liệu cùng một lúc không?** Có—thêm bao nhiêu tài liệu tùy ý bằng `comparer.Add()`.  
+- **Tôi có cần giấy phép cho môi trường sản xuất không?** Cần một giấy phép GroupDocs đầy đủ cho việc sử dụng trong môi trường sản xuất.  
+- **Mật khẩu được cung cấp như thế nào?** Thông qua `LoadOptions { Password = "yourPassword" }` cho mỗi luồng tài liệu.  
+- **Cách tiếp cận này có phù hợp cho các công việc batch không?** Hoàn toàn—kết hợp với async I/O và các tệp đầu ra có dấu thời gian.
 
-## Điều kiện tiên quyết
-Trước khi thực hiện **GroupDocs.Comparison cho .NET**, hãy đảm bảo bạn có những điều sau:
+## Tại sao cần so sánh nhiều tài liệu Word?
 
-### Thư viện và phiên bản bắt buộc
-- GroupDocs.Comparison phiên bản 25.4.0
-- Môi trường .NET Framework hoặc .NET Core/5+
+Hãy tưởng tượng một đội ngũ pháp lý nhận được ba phiên bản của một hợp đồng, mỗi phiên bản được mã hoá bằng một mật khẩu khác nhau. Mở, sao chép và kiểm tra sự khác nhau thủ công cho mỗi phiên bản là công việc dễ gây lỗi và tốn thời gian. Bằng cách **so sánh nhiều tài liệu word** một cách lập trình, bạn loại bỏ lỗi con người, tăng tốc chu kỳ xem xét và duy trì một nhật ký thay đổi sẵn sàng kiểm toán.
 
-### Yêu cầu thiết lập môi trường
-- Một môi trường phát triển như Visual Studio
-- Kiến thức cơ bản về lập trình C#
+## Mục tiêu chính là gì?
 
-### Điều kiện tiên quyết về kiến thức
-Hiểu biết về luồng trong .NET và các khái niệm xử lý tệp cơ bản sẽ rất có ích.
+Mục tiêu cốt lõi là tải mỗi tệp Word được bảo vệ, cung cấp mật khẩu duy nhất cho nó, và để GroupDocs thực hiện việc giải mã và so sánh nội bộ. Kết quả là một báo cáo Word duy nhất đánh dấu mọi chèn, xóa và thay đổi định dạng trên tất cả các tài liệu đã cung cấp.
 
-## Thiết lập GroupDocs.Comparison cho .NET
-Để bắt đầu, bạn sẽ cần cài đặt **GroupDocs.So sánh** thư viện. Sau đây là hai phương pháp để thực hiện:
+## Cách so sánh nhiều tài liệu Word (Bước‑bước)
 
-### Bảng điều khiển quản lý gói NuGet
+### Yêu cầu trước
+
+- **GroupDocs.Comparison** version 25.4.0 (or newer)  
+- **.NET Framework 4.6.1+** or **.NET 5/6+**  
+- Visual Studio 2019+ (or any IDE you prefer)  
+- Truy cập vào các chuỗi mật khẩu (lưu trữ chúng một cách an toàn—không bao giờ hard‑code)
+
+### Install GroupDocs.Comparison
+
+Bạn có thể thêm thư viện qua NuGet:
+
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### .NETCLI
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-#### Các bước xin cấp giấy phép
-GroupDocs cung cấp nhiều tùy chọn cấp phép khác nhau:
-- **Dùng thử miễn phí**: Bắt đầu bằng bản dùng thử miễn phí để khám phá các tính năng.
-- **Giấy phép tạm thời**Nộp đơn xin giấy phép tạm thời trên trang web của họ nếu cần.
-- **Mua**:Để có quyền truy cập đầy đủ, hãy cân nhắc việc mua gói đăng ký.
-
-### Khởi tạo và thiết lập cơ bản
-Sau đây là cách bạn có thể khởi tạo trình so sánh trong ứng dụng C# của mình:
+### Initialize the Comparer with the First Document
 
 ```csharp
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 
-// Khởi tạo với luồng tài liệu nguồn và mật khẩu
+// Initialize with source document stream and password
 string filePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
 string password = "1234";
 
 using (Comparer comparer = new Comparer(File.OpenRead(filePath), 
     new LoadOptions() { Password = password }))
 {
-    // Thêm nhiều tài liệu để so sánh nếu cần thiết ở đây
+    // Your comparison logic goes here
 }
 ```
 
-## Hướng dẫn thực hiện
-### So sánh nhiều tài liệu được bảo vệ từ Stream
-Phần này sẽ hướng dẫn bạn các bước để so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu bằng cách sử dụng luồng.
-
-#### Bước 1: Xác định thư mục đầu ra và đường dẫn tệp
-Đầu tiên, hãy chỉ định nơi lưu tệp đầu ra của bạn:
+### Step 1: Set Up the Output Destination
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = Path.Combine(outputDirectory, "result.docx");
 ```
 
-#### Bước 2: Khởi tạo Comparer với Source Document Stream và Password
-Sử dụng `Comparer` lớp để tải luồng tài liệu nguồn của bạn với mật khẩu bảo vệ:
+Có một đường dẫn đầu ra dự đoán được giúp việc tự động hoá các quy trình hạ nguồn, như gửi email báo cáo hoặc lưu trữ trong hệ thống quản lý tài liệu, trở nên dễ dàng hơn.
+
+### Step 2: Load the Primary (Source) Document
 
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/source.docx"), 
     new LoadOptions() { Password = "1234" }))
 {
-    // Bước 3: Thêm các tài liệu bổ sung để so sánh
+    // We'll add more documents in the next step
 }
 ```
 
-#### Bước 3: Thêm tài liệu bổ sung
-Để so sánh nhiều tài liệu, hãy sử dụng `Add` phương pháp:
+Đối tượng `LoadOptions` cho GroupDocs biết cách mở khóa tệp, vì vậy bạn không cần tự quản lý việc giải mã.
+
+### Step 3: Add Additional Password‑Protected Documents
 
 ```csharp
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"), 
@@ -102,58 +107,181 @@ comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/second.docx"),
 comparer.Add(File.OpenRead("YOUR_DOCUMENT_DIRECTORY/third.docx"), 
     new LoadOptions() { Password = "91011" });
 
-// Thực hiện so sánh và lưu kết quả
+// Execute the comparison and save results
 comparer.Compare(outputFileName);
 ```
 
-**Tùy chọn cấu hình chính:**
-- `LoadOptions`: Được sử dụng để xử lý bảo vệ bằng mật khẩu.
-- `Comparer.Add()`: Thêm tài liệu bổ sung để so sánh.
+Mỗi lần gọi `Add` có thể chỉ định một mật khẩu khác nhau, cho phép **so sánh hàng loạt tài liệu word** thực sự giữa các phòng ban hoặc đối tác.
 
-#### Mẹo khắc phục sự cố
-- Đảm bảo tất cả các luồng tài liệu được mở đúng cách với quyền đọc phù hợp.
-- Xác minh rằng mật khẩu bạn cung cấp trùng khớp với mật khẩu trong tài liệu của bạn.
+### Complete Working Example
 
-## Ứng dụng thực tế
-### Các trường hợp sử dụng thực tế
-1. **Quản lý văn bản pháp lý**: So sánh nhiều bản thảo hợp đồng để đảm bảo tính nhất quán giữa các phiên bản.
-2. **Báo cáo tài chính**: Hợp nhất và so sánh các báo cáo tài chính từ các phòng ban khác nhau.
-3. **Biên tập cộng tác**: Theo dõi những thay đổi trong tài liệu được chia sẻ giữa các thành viên trong nhóm.
+```csharp
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Options;
+using System;
+using System.IO;
 
-### Khả năng tích hợp
-GroupDocs.Comparison có thể được tích hợp với nhiều hệ thống .NET khác nhau như ứng dụng ASP.NET MVC hoặc dự án Windows Forms để nâng cao khả năng quản lý tài liệu.
+class Program
+{
+    static void Main(string[] args)
+    {
+        string outputDirectory = "C:\\ComparisonResults";
+        string outputFileName = Path.Combine(outputDirectory, 
+            $"comparison_result_{DateTime.Now:yyyyMMdd_HHmmss}.docx");
+        
+        try
+        {
+            using (Comparer comparer = new Comparer(
+                File.OpenRead("C:\\Documents\\source.docx"), 
+                new LoadOptions() { Password = "1234" }))
+            {
+                comparer.Add(File.OpenRead("C:\\Documents\\second.docx"), 
+                    new LoadOptions() { Password = "5678" });
+                comparer.Add(File.OpenRead("C:\\Documents\\third.docx"), 
+                    new LoadOptions() { Password = "91011" });
+                
+                comparer.Compare(outputFileName);
+                
+                Console.WriteLine($"Comparison completed! Results saved to: {outputFileName}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
 
-## Cân nhắc về hiệu suất
-- **Tối ưu hóa hoạt động I/O tệp**Đảm bảo đọc và ghi tệp hiệu quả.
-- **Quản lý bộ nhớ**: Sử dụng `using` các câu lệnh để tự động xử lý tài nguyên.
-- **Xử lý hàng loạt**: So sánh các tài liệu theo từng đợt nếu xử lý khối lượng lớn.
+Chạy chương trình, và bạn sẽ thấy một tệp `comparison_result_YYYYMMDD_HHMMSS.docx` đánh dấu rõ ràng mọi thay đổi trên ba tài liệu được bảo vệ.
 
-## Phần kết luận
-Bạn đã học cách so sánh nhiều tài liệu Word được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison cho .NET. Với các kỹ năng này, bạn có thể hợp lý hóa quy trình quản lý tài liệu và đảm bảo độ chính xác trên các tệp của mình. Để khám phá thêm, hãy cân nhắc tìm hiểu sâu hơn về các tính năng so sánh nâng cao hoặc tích hợp chức năng này vào các ứng dụng lớn hơn.
+## Các thực hành bảo mật tốt nhất cho môi trường sản xuất
 
-Sẵn sàng thực hiện bước tiếp theo? Hãy thử triển khai giải pháp này vào dự án của bạn ngay hôm nay!
+### Quản lý mật khẩu
+- Sử dụng **biến môi trường** cho việc kiểm thử cục bộ.  
+- Lưu trữ bí mật trong **Azure Key Vault**, **AWS Secrets Manager**, hoặc dịch vụ vault khác cho triển khai trên đám mây.  
+- Đối với on‑premises, giữ một tệp cấu hình được mã hoá và giải mã tại thời gian chạy.
 
-## Phần Câu hỏi thường gặp
-**Câu hỏi 1: Tôi có thể so sánh nhiều hơn hai tài liệu cùng lúc bằng GroupDocs.Comparison không?**
-A1: Có, bạn có thể thêm nhiều tài liệu để so sánh toàn diện.
+### Memory Management
 
-**Câu hỏi 2: Tôi phải xử lý các định dạng tệp khác nhau như thế nào?**
-A2: GroupDocs.Comparison hỗ trợ nhiều định dạng khác nhau; hãy tham khảo tài liệu để biết thông tin chi tiết.
+```csharp
+// Good practice: Explicitly dispose of streams
+using (var sourceStream = File.OpenRead(sourcePath))
+using (var targetStream = File.OpenRead(targetPath))
+{
+    // Your comparison logic
+}
+// Streams are automatically disposed here
+```
 
-**Câu 3: Những lỗi thường gặp khi so sánh tài liệu là gì?**
-A3: Đảm bảo mật khẩu đúng và tất cả các tệp đều có thể truy cập được.
+### Kiểm soát truy cập & Ghi nhật ký
+- Hạn chế quyền hệ thống tệp cho tài khoản dịch vụ chạy quá trình so sánh.  
+- Ghi nhật ký mỗi yêu cầu so sánh kèm thời gian và định danh người dùng để theo dõi audit.  
+- Xóa các tệp tạm thời ngay sau khi báo cáo được tạo.
 
-**Câu hỏi 4: Có giới hạn về kích thước tài liệu không?**
-A4: Mặc dù không có giới hạn nghiêm ngặt, hiệu suất có thể thay đổi đối với các tài liệu rất lớn.
+## Khắc phục các vấn đề thường gặp
 
-**Câu hỏi 5: Tôi có thể so sánh các tài liệu không phải Word không?**
-A5: Có, GroupDocs.Comparison hỗ trợ nhiều định dạng tệp khác ngoài Word.
+### Ngoại lệ “Password is incorrect”
 
-## Tài nguyên
-- [Tài liệu](https://docs.groupdocs.com/comparison/net/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/comparison/net/)
-- [Tải về](https://releases.groupdocs.com/comparison/net/)
-- [Mua](https://purchase.groupdocs.com/buy)
-- [Dùng thử miễn phí](https://releases.groupdocs.com/comparison/net/)
-- [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- [Ủng hộ](https://forum.groupdocs.com/c/comparison/)
+```csharp
+// Debug password issues
+try
+{
+    using (var comparer = new Comparer(stream, new LoadOptions() { Password = password }))
+    {
+        // Success
+    }
+}
+catch (PasswordRequiredException ex)
+{
+    Console.WriteLine("Document requires password");
+}
+catch (IncorrectPasswordException ex)
+{
+    Console.WriteLine($"Wrong password for document: {ex.Message}");
+}
+```
+Kiểm tra ký tự ẩn, không khớp mã hoá Unicode, hoặc tài liệu bị hỏng.
+
+### Lỗi Out‑of‑Memory với các tệp lớn
+
+```csharp
+// Configure comparison options for large documents
+var compareOptions = new CompareOptions()
+{
+    GenerateSummaryPage = false, // Reduces memory usage
+    DetalisLevel = DetalisLevel.Low // Process fewer details
+};
+
+comparer.Compare(outputPath, compareOptions);
+```
+
+### Hiệu năng chậm khi so sánh nhiều tệp
+- Sử dụng **async I/O** để đọc luồng.  
+- Xử lý tài liệu trong **batches song song** khi tài nguyên CPU cho phép.  
+- Lưu vào cache các tệp thường xuyên so sánh nếu chúng được dùng lại trong các lần chạy.
+
+## Các trường hợp sử dụng thực tế
+
+| Ngành | Kịch bản điển hình |
+|----------|------------------|
+| Pháp lý | So sánh các phiên bản hợp đồng từ nhiều công ty luật, mỗi tệp được mã hoá để bảo mật khách hàng. |
+| Tài chính | Đối chiếu báo cáo quý từ các đơn vị kinh doanh riêng biệt, tất cả được bảo vệ bằng mật khẩu để kiểm soát nội bộ. |
+| Chăm sóc sức khỏe | Xác thực các giao thức chăm sóc cập nhật đồng thời tuân thủ HIPAA. |
+| Doanh nghiệp | Theo dõi các thay đổi chính sách giữa các phòng ban với các chính sách Word được mã hoá. |
+
+## Mẹo về hiệu năng
+
+### Truy cập tệp có bộ đệm
+
+```csharp
+// Use buffered streams for large files
+using (var bufferedStream = new BufferedStream(File.OpenRead(filePath), 8192))
+{
+    var comparer = new Comparer(bufferedStream, loadOptions);
+    // Your comparison logic
+}
+```
+
+### Chiến lược xử lý batch
+1. **Chia** danh sách tài liệu (ví dụ, 5‑10 tệp mỗi batch).  
+2. **Báo cáo** tiến độ sau mỗi batch để người dùng được thông báo.  
+3. **Lưu** kết quả trung gian nếu cần tiếp tục sau khi gặp lỗi.
+
+## Câu hỏi thường gặp
+
+**Q: Tôi có thể so sánh hơn ba tài liệu cùng một lúc không?**  
+A: Chắc chắn. Gọi `comparer.Add()` cho mỗi tệp bổ sung; chỉ cần chú ý tới việc sử dụng bộ nhớ cho các tập hợp rất lớn.
+
+**Q: Điều gì sẽ xảy ra nếu một trong các tài liệu có mật khẩu không đúng?**  
+A: Thư viện sẽ ném ra `IncorrectPasswordException`. Bắt ngoại lệ này, ghi nhật ký vấn đề, và tiếp tục với các tệp còn lại nếu muốn.
+
+**Q: Kỹ thuật này có hoạt động với các tệp Excel hoặc PowerPoint không?**  
+A: Có. GroupDocs.Comparison hỗ trợ XLSX, PPTX, PDF và nhiều định dạng khác với cùng cách xử lý mật khẩu.
+
+**Q: Làm sao để chỉ so sánh các phần cụ thể của một tệp Word?**  
+A: Sử dụng `CompareOptions` để giới hạn so sánh chỉ ở văn bản, định dạng hoặc siêu dữ liệu. Tham khảo tài liệu API để có kiểm soát chi tiết.
+
+**Q: Có giới hạn nào về kích thước tài liệu không?**  
+A: Không có giới hạn cứng, nhưng các tệp rất lớn (> 50 MB) có thể cần các tối ưu hoá bộ nhớ như đã trình bày ở trên.
+
+## Các bước tiếp theo
+
+- **Phơi bày logic qua Web API** để các hệ thống khác gửi tài liệu để so sánh.  
+- **Tích hợp với Hệ thống quản lý tài liệu** (SharePoint, Box, v.v.) để kích hoạt quy trình tự động.  
+- **Tạo các định dạng báo cáo thay thế** (PDF, HTML) bằng cách đổi phần mở rộng tệp đầu ra.
+
+---
+
+**Last Updated:** 2026-03-14  
+**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
+**Author:** GroupDocs  
+
+**Tài nguyên**  
+- [Tài liệu chính thức của GroupDocs.Comparison](https://docs.groupdocs.com/comparison/net/)  
+- [Tham chiếu API đầy đủ](https://reference.groupdocs.com/comparison/net/)  
+- [Tải xuống phiên bản mới nhất](https://releases.groupdocs.com/comparison/net/)  
+- [Mua các tùy chọn cấp phép](https://purchase.groupdocs.com/buy)  
+- [Bắt đầu dùng thử miễn phí](https://releases.groupdocs.com/comparison/net/)  
+- [Nhận giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)  
+- [Diễn đàn hỗ trợ cộng đồng](https://forum.groupdocs.com/c/comparison/)

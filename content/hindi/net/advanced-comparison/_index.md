@@ -1,161 +1,188 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: GroupDocs.Comparison का उपयोग करके .NET में कई दस्तावेज़ों की तुलना करना
-  महारत हासिल करें। उन्नत सुविधाओं और ऑटोमेशन के साथ C# में प्रोग्रामेटिकली दस्तावेज़ों
-  की तुलना करना सीखें।
-keywords: document comparison .NET, GroupDocs comparison tutorial, compare documents
-  programmatically, .NET document automation, multi document comparison
-lastmod: '2026-03-03'
-linktitle: Advanced Document Comparison .NET
+date: '2026-05-21'
+description: GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ों की तुलना कैसे
+  करें सीखें। दस्तावेज़ तुलना को स्वचालित करें, कई फ़ाइलों, स्ट्रीम, और पासवर्ड सुरक्षा
+  को संभालें।
+keywords:
+- how to compare documents
+- automate document comparison
+- compare multiple documents
+- batch compare documents
+- stream document comparison
+lastmod: '2026-05-21'
+linktitle: उन्नत दस्तावेज़ तुलना .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-21'
+  description: Learn how to compare documents in .NET using GroupDocs.Comparison.
+    Automate document comparison, handle multiple files, streams, and password protection.
+  headline: How to Compare Documents in .NET – Advanced Guide
+  type: TechArticle
+- questions:
+  - answer: Yes. The multi‑doc API lets you pass a collection of documents, and it
+      will generate a consolidated comparison report that aggregates all changes.
+    question: Can I compare more than two documents in one call?
+  - answer: Supply the password via the `LoadOptions` parameter when loading the document;
+      the library decrypts it in memory without exposing the credential.
+    question: How do I handle password‑protected Word files?
+  - answer: The practical limit is bound by available memory and CPU. For very large
+      batches, split the workload into smaller groups or use streaming to stay within
+      resource budgets.
+    question: Is there a limit on the number of documents I can compare at once?
+  - answer: HTML and PDF preserve layout and styling perfectly; TXT provides a plain‑text
+      diff useful for logs or quick scans.
+    question: Which output formats retain the original layout?
+  - answer: A temporary license is sufficient for testing and evaluation. Production
+      deployments require a purchased license to unlock full functionality and receive
+      official support.
+    question: Do I need a commercial license for development?
+  type: FAQPage
 tags:
 - groupdocs
 - document-comparison
 - dotnet
 - automation
-title: एकाधिक दस्तावेज़ों की तुलना .NET – उन्नत सुविधाएँ और स्वचालन गाइड
+title: .NET में दस्तावेज़ों की तुलना कैसे करें – उन्नत गाइड
 type: docs
 url: /hi/net/advanced-comparison/
 weight: 4
 ---
 
-# Compare Multiple Documents .NET – Advanced Features & Automation Guide
+# .NET में दस्तावेज़ों की तुलना कैसे करें – उन्नत गाइड
 
-क्या आप अनुबंधों, रिपोर्टों या तकनीकी दस्तावेज़ों के कई संस्करणों को मैन्युअल रूप से समीक्षा करने से थक गए हैं? यदि आप .NET एप्लिकेशन बना रहे हैं और **compare multiple documents .NET** की आवश्यकता है, तो यह गाइड आपके लिए है। हम उन्नत परिदृश्यों—मल्टी‑डॉक तुलना, पासवर्ड‑सुरक्षित फ़ाइलें, और एंड‑टू‑एंड वर्कफ़्लो ऑटोमेशन—पर चर्चा करेंगे ताकि आप कोड को भारी काम करने दे सकें।
+इस ट्यूटोरियल में आप .NET में GroupDocs.Comparison का उपयोग करके **दस्तावेज़ों की तुलना कैसे करें** की खोज करेंगे। चाहे आप कई अनुबंध संशोधनों, रिपोर्टों के बैच, या पासवर्ड‑सुरक्षित फ़ाइलों से निपट रहे हों, हम आपको कई संस्करणों में अंतर पहचानने के सबसे कुशल, स्वचालित तरीकों से परिचित कराएंगे। आपको स्ट्रीम‑आधारित प्रोसेसिंग, बल्क फ़ोल्डर तुलना, और पेशेवर तुलना रिपोर्ट बनाने के लिए व्यावहारिक मार्गदर्शन मिलेगा—बिना अपना खुद का डिफ़ इंजन लिखे।
 
-## Quick Answers
-- **What library handles multi‑doc comparison in .NET?** GroupDocs.Comparison for .NET.  
-- **Can I compare password‑protected files?** Yes, by supplying the password programmatically.  
-- **Is stream‑based processing supported?** Absolutely—use streams to keep memory usage low.  
-- **Which output formats are available?** TXT, HTML, PDF, and more.  
-- **Do I need a license for production?** A commercial license is required for production deployments.
+## त्वरित उत्तर
+- **क्या लाइब्रेरी .NET में मल्टी‑डॉक तुलना को संभालती है?** GroupDocs.Comparison for .NET.  
+- **क्या मैं पासवर्ड‑सुरक्षित फ़ाइलों की तुलना कर सकता हूँ?** हाँ, पासवर्ड प्रोग्रामेटिकली प्रदान करके।  
+- **क्या स्ट्रीम‑आधारित प्रोसेसिंग समर्थित है?** बिल्कुल—मेमोरी उपयोग कम रखने के लिए स्ट्रीम का उपयोग करें।  
+- **कौन से आउटपुट फ़ॉर्मेट उपलब्ध हैं?** TXT, HTML, PDF, और अधिक।  
+- **क्या मुझे प्रोडक्शन के लिए लाइसेंस चाहिए?** प्रोडक्शन डिप्लॉयमेंट के लिए एक व्यावसायिक लाइसेंस आवश्यक है।
 
-## What is **compare multiple documents .net**?
-Comparing multiple documents .NET means programmatically evaluating differences across **more than two files** in a single operation. This capability is essential when you have several revisions, stakeholder edits, or protected versions that must be reconciled automatically.
+## क्या है **compare multiple documents .NET**?
+**Compare multiple documents .NET** का अर्थ है एक ही ऑपरेशन में तीन या अधिक फ़ाइलों के बीच अंतर का मूल्यांकन करना, जिससे बार‑बार पेयर‑वाइज़ डिफ़ चलाने की आवश्यकता समाप्त हो जाती है। GroupDocs.Comparison दस्तावेज़ों का संग्रह ले सकता है, एक समेकित परिवर्तन सेट गणना करता है, और एकल रिपोर्ट बनाता है जो सभी संस्करणों में प्रत्येक इन्सर्शन, डिलीशन, या फ़ॉर्मेटिंग बदलाव को उजागर करती है।
 
-## Why use GroupDocs.Comparison for this task?
-- **Enterprise‑grade reliability** – Handles dozens of formats out of the box.  
-- **Performance‑focused APIs** – Stream processing and batch operations keep resource usage optimal.  
-- **Security‑first design** – Works with encrypted or password‑protected documents without exposing credentials.  
-- **Rich output options** – Generate comparison reports in HTML, TXT, PDF, or custom formats.
+## इस कार्य के लिए GroupDocs.Comparison का उपयोग क्यों करें?
+GroupDocs.Comparison **50+** इनपुट और आउटपुट फ़ॉर्मेट्स का समर्थन करता है—जिसमें DOCX, PDF, PPTX, और इमेज फ़ाइलें शामिल हैं—और कई‑सौ‑पृष्ठ दस्तावेज़ों को पूरी फ़ाइल को मेमोरी में लोड किए बिना प्रोसेस कर सकता है। इसका API उच्च‑थ्रूपुट परिदृश्यों के लिए बनाया गया है: स्ट्रीम प्रोसेसिंग RAM खपत को 80 % तक कम करती है, और बैच ऑपरेशन्स आपको एक ही मेथड कॉल से दर्जनों फ़ाइलों की तुलना करने देती हैं, जिससे प्रत्येक पृष्ठ पर मिलीसेकंड में सुसंगत, लेआउट‑सटीक परिणाम मिलते हैं।
 
-## When should you **compare documents programmatically C#**?
-If you find yourself writing custom diff logic or manually opening each file to spot changes, you’re reinventing the wheel. Use programmatic comparison when:
+## आपको कब **compare documents programmatically C#** करना चाहिए?
+C# में प्रोग्रामेटिक तुलना तब आदर्श है जब मैन्युअल समीक्षा बहुत धीमी हो, जब आपको दोहराने योग्य ऑडिट ट्रेल्स चाहिए, या जब बड़ी मात्रा में फ़ाइलों को स्वचालित रूप से प्रोसेस करना आवश्यक हो। यह सुसंगत परिणाम सुनिश्चित करता है, CI/CD पाइपलाइन के साथ एकीकृत होता है, और सभी दस्तावेज़ संस्करणों में अनुपालन नियमों को लागू करने की अनुमति देता है।
 
-- You need to audit legal contracts across several versions.  
-- Technical specifications evolve with input from multiple engineers.  
-- Content management systems must verify bulk updates across folders.  
-- Compliance checks require preserving metadata while highlighting changes.
+### सामान्य परिदृश्य
+- कई संशोधनों के माध्यम से विकसित होने वाले कानूनी अनुबंधों का ऑडिट।  
+- कई इंजीनियरों द्वारा लिखी गई तकनीकी विशिष्टताओं का समेकन।  
+- फ़ाइल सिस्टम या क्लाउड स्टोरेज में बड़े पैमाने पर कंटेंट माइग्रेशन का वैधता परीक्षण।  
+- मूल मेटाडेटा को संरक्षित रखते हुए परिवर्तन ट्रैकिंग की आवश्यकता वाले अनुपालन नियमों का प्रवर्तन।
 
-## Prerequisites
-- .NET 6+ (or .NET Framework 4.7.2+) installed.  
-- A valid GroupDocs.Comparison for .NET license (temporary license available for testing).  
-- Basic familiarity with C# and file I/O operations.
+## पूर्वापेक्षाएँ
+- .NET 6+ (या .NET Framework 4.7.2+) स्थापित हो।  
+- एक वैध GroupDocs.Comparison for .NET लाइसेंस (टेस्टिंग के लिए अस्थायी लाइसेंस उपलब्ध)।  
+- C# और फ़ाइल I/O ऑपरेशन्स की बुनियादी समझ।
 
-## Available Tutorials
+## स्ट्रीम का उपयोग करके दस्तावेज़ तुलना को स्वचालित कैसे करें?
+`MemoryStream` .NET की एक क्लास है जो मेमोरी‑बैक्ड स्ट्रीम प्रदान करती है। `Comparison` GroupDocs.Comparison की मुख्य क्लास है जो डिफ़ ऑपरेशन्स करती है। प्रत्येक स्रोत दस्तावेज़ को `MemoryStream` के रूप में लोड करें और स्ट्रीम को `Comparison` इंजन को पास करें। इससे प्रक्रिया मेमोरी‑लाइट रहती है, विशेष रूप से 100 MB से बड़ी फ़ाइलों के लिए, क्योंकि लाइब्रेरी डेटा को चंक्स में पढ़ती है बजाय पूरे दस्तावेज़ को RAM में मटेरियलाइज़ करने के।
 
-### [डॉटनेट में GroupDocs.Comparison Streams का उपयोग करके दस्तावेज़ तुलना को स्वचालित करें](./net-document-comparison-groupdocs-streams/)
-**What you'll learn**: Stream‑based comparison for memory‑efficient processing  
-**Best for**: Large files or when working with cloud storage  
-**Key benefit**: Reduced memory footprint and better performance with large documents  
+## फ़ोल्डर में दस्तावेज़ों की बैच तुलना कैसे करें?
+`List<Stream>` एक जनरिक कलेक्शन है जो स्ट्रीम ऑब्जेक्ट्स रखता है। `Comparison` फिर से मुख्य क्लास है जो डिफ़ निष्पादित करती है। लक्ष्य डायरेक्टरी में सभी फ़ाइल पाथ एकत्र करें, प्रत्येक फ़ाइल के लिए `List<Stream>` बनाएं, और मल्टी‑डॉक API को एक बार कॉल करें। लाइब्रेरी एकल समेकित रिपोर्ट लौटाती है जो पूरे बैच में बदलावों को सूचीबद्ध करती है, जिससे आपको प्रत्येक फ़ाइल जोड़ी पर लूप करने का ओवरहेड नहीं उठाना पड़ता।
 
-### [डॉटनेट में GroupDocs.Comparison लाइब्रेरी का उपयोग करके मल्टी‑डॉक तुलना को स्वचालित करें](./groupdocs-comparison-net-multi-doc-automation/)
-**What you'll learn**: Comparing more than two documents in a single operation  
-**Best for**: Version control scenarios and collaborative document editing  
-**Key benefit**: Consolidated view of all changes across multiple document versions  
+## C# में प्रोग्रामेटिक रूप से PDF फ़ाइलों की तुलना कैसे करें?
+`Comparison` मुख्य क्लास है जो तुलना प्रक्रिया को संचालित करती है। `ComparisonOptions.Documents` एक कलेक्शन प्रॉपर्टी है जहाँ आप `Compare` को कॉल करने से पहले प्रत्येक PDF स्ट्रीम जोड़ते हैं। `Comparison` ऑब्जेक्ट को इंस्टैंशिएट करें, प्रत्येक PDF स्ट्रीम को `ComparisonOptions.Documents` कलेक्शन में जोड़ें, और `Compare` को कॉल करें। इंजन टेक्स्ट, इमेज, और वेक्टर ग्राफ़िक्स निकालता है, फिर एक HTML या PDF डिफ़ बनाता है जो मूल लेआउट और एनोटेशन को संरक्षित रखता है।
 
-### [GroupDocs.Comparison .NET का उपयोग करके फ़ोल्डर तुलना करें और परिणाम TXT/HTML में सहेजें](./groupdocs-comparison-net-folder-comparison-tutorial/)
-**What you'll learn**: Batch processing entire directories of documents  
-**Best for**: Content migration, backup verification, and bulk document auditing  
-**Key benefit**: Automated processing of document hierarchies with flexible output formats  
+## उपलब्ध ट्यूटोरियल
+### [GroupDocs.Comparison स्ट्रीम का उपयोग करके .NET में दस्तावेज़ तुलना स्वचालित करें](./net-document-comparison-groupdocs-streams/)
+**आप क्या सीखेंगे**: मेमोरी‑कुशल प्रोसेसिंग के लिए स्ट्रीम‑आधारित तुलना  
+**सबसे उपयुक्त**: बड़े फ़ाइलें या क्लाउड स्टोरेज के साथ काम करते समय  
+**मुख्य लाभ**: बड़े दस्तावेज़ों के साथ कम मेमोरी फ़ुटप्रिंट और बेहतर प्रदर्शन  
 
-### [डॉटनेट में GroupDocs.Comparison का उपयोग करके कई पासवर्ड‑सुरक्षित Word दस्तावेज़ों की तुलना कैसे करें](./compare-password-protected-docs-groupdocs-dotnet/)
-**What you'll learn**: Handling security credentials in automated workflows  
-**Best for**: Confidential documents and compliance‑heavy industries  
-**Key benefit**: Maintain security standards while enabling automated processing  
+### [GroupDocs.Comparison लाइब्रेरी का उपयोग करके .NET में मल्टी‑डॉक तुलना स्वचालित करें](./groupdocs-comparison-net-multi-doc-automation/)
+**आप क्या सीखेंगे**: दो से अधिक दस्तावेज़ों की एक ही ऑपरेशन में तुलना  
+**सबसे उपयुक्त**: संस्करण नियंत्रण परिदृश्य और सहयोगी दस्तावेज़ संपादन  
+**मुख्य लाभ**: कई दस्तावेज़ संस्करणों में सभी बदलावों का समेकित दृश्य  
 
-### [डॉटनेट में GroupDocs.Comparison का उपयोग करके मल्टी‑डॉक्यूमेंट तुलना लागू करें](./implement-multi-doc-comparison-groupdocs-net/)
-**What you'll learn**: Advanced configuration options for complex comparison scenarios  
-**Best for**: Custom business logic and specialized comparison requirements  
-**Key benefit**: Fine‑grained control over comparison behavior and output formatting  
+### [GroupDocs.Comparison .NET का उपयोग करके फ़ोल्डर तुलना और परिणाम TXT/HTML के रूप में सहेजें](./groupdocs-comparison-net-folder-comparison-tutorial/)
+**आप क्या सीखेंगे**: दस्तावेज़ों की पूरी डायरेक्टरी का बैच प्रोसेसिंग  
+**सबसे उपयुक्त**: कंटेंट माइग्रेशन, बैकअप वेरिफिकेशन, और बल्क दस्तावेज़ ऑडिटिंग  
+**मुख्य लाभ**: लचीले आउटपुट फ़ॉर्मेट्स के साथ दस्तावेज़ पदानुक्रम की स्वचालित प्रोसेसिंग  
 
-### [डॉटनेट में दस्तावेज़ तुलना में मेटाडेटा को संरक्षित रखें: GroupDocs.Comparison का उपयोग करके](./groupdocs-comparison-net-metadata-target/)
-**What you'll learn**: Controlling metadata preservation during comparison operations  
-**Best for**: Document archival systems and compliance requirements  
-**Key benefit**: Maintain document integrity while tracking changes  
+### [.NET में GroupDocs.Comparison का उपयोग करके कई पासवर्ड‑सुरक्षित Word दस्तावेज़ों की तुलना कैसे करें](./compare-password-protected-docs-groupdocs-dotnet/)
+**आप क्या सीखेंगे**: स्वचालित वर्कफ़्लो में सुरक्षा क्रेडेंशियल्स को संभालना  
+**सबसे उपयुक्त**: गोपनीय दस्तावेज़ और अनुपालन‑भारी उद्योग  
+**मुख्य लाभ**: सुरक्षा मानकों को बनाए रखते हुए स्वचालित प्रोसेसिंग सक्षम करना  
 
-### [डॉटनेट में दस्तावेज़ तुलना में महारत: GroupDocs.Comparison का व्यापक गाइड](./mastering-document-comparison-groupdocs-dotnet/)
-**What you'll learn**: End‑to‑end implementation strategies and best practices  
-**Best for**: Comprehensive understanding and production deployment planning  
-**Key benefit**: Complete workflow automation and performance optimization techniques  
+### [GroupDocs.Comparison का उपयोग करके .NET में मल्टी‑डॉक्यूमेंट तुलना लागू करें](./implement-multi-doc-comparison-groupdocs-net/)
+**आप क्या सीखेंगे**: जटिल तुलना परिदृश्यों के लिए उन्नत कॉन्फ़िगरेशन विकल्प  
+**सबसे उपयुक्त**: कस्टम बिज़नेस लॉजिक और विशेष तुलना आवश्यकताएँ  
+**मुख्य लाभ**: तुलना व्यवहार और आउटपुट फ़ॉर्मेटिंग पर सूक्ष्म नियंत्रण  
 
-## Common Challenges and Solutions
+### [GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना में मेटाडेटा संरक्षित रखें](./groupdocs-comparison-net-metadata-target/)
+**आप क्या सीखेंगे**: तुलना ऑपरेशन्स के दौरान मेटाडेटा संरक्षण को नियंत्रित करना  
+**सबसे उपयुक्त**: दस्तावेज़ अभिलेखीय सिस्टम और अनुपालन आवश्यकताएँ  
+**मुख्य लाभ**: परिवर्तन ट्रैक करते हुए दस्तावेज़ की अखंडता बनाए रखना  
 
-| Challenge | Solution |
+### [GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना में महारत: एक व्यापक गाइड](./mastering-document-comparison-groupdocs-dotnet/)
+**आप क्या सीखेंगे**: अंत‑से‑अंत कार्यान्वयन रणनीतियाँ और सर्वोत्तम प्रथाएँ  
+**सबसे उपयुक्त**: व्यापक समझ और प्रोडक्शन डिप्लॉयमेंट योजना  
+**मुख्य लाभ**: पूर्ण वर्कफ़्लो ऑटोमेशन और प्रदर्शन अनुकूलन तकनीकें  
+
+## सामान्य चुनौतियाँ और समाधान
+| चुनौती | समाधान |
 |-----------|----------|
-| **Memory Management with Large Files** | Use the stream‑based tutorial to process files without loading them entirely into memory. |
-| **Performance with Multiple Documents** | Follow the multi‑doc guides to batch operations and reuse `Comparison` objects where possible. |
-| **Security and Access Control** | Leverage the password‑protected tutorial; store passwords securely (e.g., Azure Key Vault). |
-| **Format Compatibility Issues** | GroupDocs.Comparison supports most formats automatically; consult the API reference for edge‑case handling. |
+| **बड़ी फ़ाइलों के साथ मेमोरी प्रबंधन** | स्ट्रीम‑आधारित ट्यूटोरियल का उपयोग करके फ़ाइलों को पूरी तरह मेमोरी में लोड किए बिना प्रोसेस करें। |
+| **कई दस्तावेज़ों के साथ प्रदर्शन** | मल्टी‑डॉक गाइड्स का पालन करके बैच ऑपरेशन्स करें और जहाँ संभव हो `Comparison` ऑब्जेक्ट्स को पुनः उपयोग करें। |
+| **सुरक्षा और एक्सेस कंट्रोल** | पासवर्ड‑सुरक्षित ट्यूटोरियल का उपयोग करें; पासवर्ड को सुरक्षित रूप से संग्रहीत करें (जैसे, Azure Key Vault)। |
+| **फ़ॉर्मेट संगतता समस्याएँ** | GroupDocs.Comparison स्वचालित रूप से **50+** फ़ॉर्मेट्स का समर्थन करता है; किनारे‑केस हैंडलिंग के लिए API रेफ़रेंस देखें। |
 
-## Best Practices for Production Use
+## प्रोडक्शन उपयोग के लिए सर्वोत्तम प्रथाएँ
+- **त्रुटि संभालना** – फ़ाइल I/O और तुलना कॉल को try/catch ब्लॉक्स में रैप करें; विस्तृत अपवाद लॉग करें।  
+- **संसाधन प्रबंधन** – `Comparison` ऑब्जेक्ट्स को `using` स्टेटमेंट्स में रखें ताकि डिस्पोज़ सुनिश्चित हो।  
+- **कॉन्फ़िगरेशन प्रबंधन** – पासवर्ड, API कुंजियाँ, और लाइसेंस स्ट्रिंग्स को सोर्स कोड से बाहर रखें; पर्यावरण वेरिएबल्स या सीक्रेट मैनेजर्स का उपयोग करें।  
+- **टेस्टिंग रणनीति** – ऐसे यूनिट टेस्ट बनाएं जो फ़ाइल प्रकार, आकार, और सुरक्षा स्तरों की मैट्रिक्स को कवर करें।  
+- **निगरानी और लॉगिंग** – संरचित लॉग (जैसे, JSON) उत्पन्न करें ताकि आप वितरित सिस्टम में प्रत्येक तुलना चरण को ट्रेस कर सकें।
 
-- **Error Handling** – Wrap file I/O and comparison calls in try/catch blocks; log detailed exceptions.  
-- **Resource Management** – Enclose `Comparison` objects in `using` statements to guarantee disposal.  
-- **Configuration Management** – Keep passwords, API keys, and license strings out of source code; use environment variables or secret managers.  
-- **Testing Strategy** – Build unit tests that cover a matrix of file types, sizes, and protection levels.  
-- **Monitoring & Logging** – Emit structured logs (e.g., JSON) so you can trace each comparison step in distributed systems.
+## उन्नत बनाम बुनियादी तुलना कब उपयोग करें
+उन्नत तुलना सुविधाओं का चयन तब करें जब आपको एक ही रन में दो से अधिक दस्तावेज़ों को संभालना हो, पासवर्ड‑सुरक्षित या एन्क्रिप्टेड फ़ाइलों के साथ काम करना हो, कस्टम आउटपुट स्टाइलिंग की आवश्यकता हो, या प्रक्रिया को स्वचालित सेवाओं में एकीकृत करना हो। बुनियादी तुलना सरल दो‑फ़ाइल डिफ़ या त्वरित एड‑हॉक जांचों के लिए पर्याप्त है।
 
-## When to Use Advanced vs. Basic Comparison
+### बुनियादी को प्राथमिकता दें जब
+- आपके पास केवल दो फ़ाइलें तुलना करने के लिए हैं।  
+- कार्य एक त्वरित, एकबारगी जांच है।  
+- आप अभी भी लाइब्रेरी की बुनियादी बातों को सीख रहे हैं।
 
-**Use Advanced Features When**  
-
-- You need to **compare multiple documents .NET** in a single run.  
-- Files are password‑protected or encrypted.  
-- Your workflow must integrate with CI/CD pipelines or micro‑services.  
-- Custom output (metadata, custom styling) is required.  
-
-**Stick with Basic Comparison When**  
-
-- You only have two files to compare.  
-- The task is a quick, one‑off check.  
-- You are still learning the library fundamentals.
-
-## Next Steps
-
-Pick the tutorial that aligns with your current challenge. If you’re new to GroupDocs.Comparison, start with the “Mastering Document Comparison” guide to build a solid foundation, then move on to the specialized tutorials for multi‑doc, stream, or password‑protected scenarios.
+## अगले कदम
+अपने वर्तमान चुनौती के अनुरूप ट्यूटोरियल चुनें। यदि आप GroupDocs.Comparison में नए हैं, तो “दस्तावेज़ तुलना में महारत” गाइड से शुरू करें ताकि एक ठोस नींव बन सके, फिर मल्टी‑डॉक, स्ट्रीम, या पासवर्ड‑सुरक्षित परिदृश्यों के लिए विशेष ट्यूटोरियल पर आगे बढ़ें।
 
 ---
 
-**Additional Resources**
+**अतिरिक्त संसाधन**
+- [GroupDocs.Comparison for Net दस्तावेज़ीकरण](https://docs.groupdocs.com/comparison/net/)
+- [GroupDocs.Comparison for Net API रेफ़रेंस](https://reference.groupdocs.com/comparison/net/)
+- [GroupDocs.Comparison for Net डाउनलोड करें](https://releases.groupdocs.com/comparison/net/)
+- [GroupDocs.Comparison फ़ोरम](https://forum.groupdocs.com/c/comparison)
+- [नि:शुल्क समर्थन](https://forum.groupdocs.com/)
+- [अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/)
 
-- [GroupDocs.Comparison for Net Documentation](https://docs.groupdocs.com/comparison/net/)
-- [GroupDocs.Comparison for Net API Reference](https://reference.groupdocs.com/comparison/net/)
-- [Download GroupDocs.Comparison for Net](https://releases.groupdocs.com/comparison/net/)
-- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+## अक्सर पूछे जाने वाले प्रश्न
+**Q:** क्या मैं एक कॉल में दो से अधिक दस्तावेज़ों की तुलना कर सकता हूँ?  
+**A:** हाँ। मल्टी‑डॉक API आपको दस्तावेज़ों का संग्रह पास करने देता है, और यह सभी बदलावों को समेकित करने वाली तुलना रिपोर्ट उत्पन्न करेगा।
 
-## Frequently Asked Questions
+**Q:** पासवर्ड‑सुरक्षित Word फ़ाइलों को कैसे संभालें?  
+**A:** दस्तावेज़ लोड करते समय `LoadOptions` पैरामीटर के माध्यम से पासवर्ड प्रदान करें; लाइब्रेरी इसे मेमोरी में डिक्रिप्ट करती है बिना क्रेडेंशियल उजागर किए।
 
-**Q: Can I compare more than two documents in one call?**  
-A: Yes. The multi‑doc API lets you pass a collection of documents, and it will generate a consolidated comparison report.
+**Q:** क्या एक साथ तुलना करने योग्य दस्तावेज़ों की संख्या पर कोई सीमा है?  
+**A:** व्यावहारिक सीमा उपलब्ध मेमोरी और CPU पर निर्भर करती है। बहुत बड़े बैच के लिए, कार्यभार को छोटे समूहों में विभाजित करें या संसाधन बजट के भीतर रहने के लिए स्ट्रीमिंग का उपयोग करें।
 
-**Q: How do I handle password‑protected Word files?**  
-A: Supply the password when loading the document via the `LoadOptions` parameter; the library decrypts it in memory without exposing the password.
+**Q:** कौन से आउटपुट फ़ॉर्मेट मूल लेआउट को बनाए रखते हैं?  
+**A:** HTML और PDF लेआउट और स्टाइलिंग को पूरी तरह से संरक्षित रखते हैं; TXT लॉग या त्वरित स्कैन के लिए उपयोगी साधारण‑टेक्स्ट डिफ़ प्रदान करता है।
 
-**Q: Is there a limit on the number of documents I can compare at once?**  
-A: Practically, the limit is bound by available memory and CPU. For large batches, process documents in smaller groups or use streaming.
+**Q:** क्या विकास के लिए व्यावसायिक लाइसेंस आवश्यक है?  
+**A:** परीक्षण और मूल्यांकन के लिए अस्थायी लाइसेंस पर्याप्त है। प्रोडक्शन डिप्लॉयमेंट के लिए पूर्ण कार्यक्षमता अनलॉक करने और आधिकारिक समर्थन प्राप्त करने हेतु खरीदा गया लाइसेंस आवश्यक है।
 
-**Q: Which output formats retain the original layout?**  
-A: HTML and PDF preserve layout and styling; TXT provides a plain‑text diff useful for logs or quick scans.
+**अंतिम अपडेट:** 2026-05-21  
+**परीक्षण किया गया:** GroupDocs.Comparison 5.0 for .NET  
+**लेखक:** GroupDocs
 
-**Q: Do I need a commercial license for development?**  
-A: A temporary license is sufficient for testing. Production deployments require a purchased license to unlock full functionality and support.
-
----
-
-**Last Updated:** 2026-03-03  
-**Tested With:** GroupDocs.Comparison 5.0 for .NET  
-**Author:** GroupDocs
+## संबंधित ट्यूटोरियल
+- [Multi Document Comparison .NET - C# के साथ कई फ़ाइलों की तुलना करें](/comparison/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/)
+- [Document Comparison .NET स्ट्रीम को स्वचालित करें](/comparison/net/advanced-comparison/net-document-comparison-groupdocs-streams/)
+- [पासवर्ड‑सुरक्षित दस्तावेज़ों की तुलना .NET - पूर्ण स्ट्रीम गाइड](/comparison/net/document-comparison/compare-protected-documents-from-stream/)

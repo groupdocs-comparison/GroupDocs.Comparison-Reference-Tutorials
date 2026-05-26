@@ -1,269 +1,258 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: 學習如何在 .NET 中使用 GroupDocs.Comparison 進行文件比較、接受/拒絕變更，以及提取文件的中繼資料。
+date: '2026-05-26'
+description: 了解如何使用 GroupDocs.Comparison 比較 .NET 文件，接受/拒絕變更，並提取文件元數據。
 is_root: true
-keywords: GroupDocs.Comparison tutorial, document comparison .NET, compare documents
-  programmatically, .NET document comparison library, GroupDocs.Comparison examples
-lastmod: '2026-03-03'
-linktitle: GroupDocs.Comparison for .NET Tutorials
+keywords:
+- compare documents .net
+- document comparison .net
+- GroupDocs.Comparison
+lastmod: '2026-05-26'
+linktitle: GroupDocs.Comparison for .NET 教程
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  headline: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  type: TechArticle
+- description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  name: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  steps:
+  - name: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+    text: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+  - name: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+    text: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+  - name: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+    text: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+  - name: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+    text: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+  - name: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+    text: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+  type: HowTo
+- questions:
+  - answer: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo`
+      and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
+    question: How do I programmatically accept or reject changes after a comparison?
+  - answer: Yes—`DocumentInfo` provides access to standard and custom metadata for
+      both source and target files, allowing you to log or display this information.
+    question: Can I extract metadata such as author, creation date, or custom properties
+      from documents?
+  - answer: Absolutely. The `CompareImages` API highlights pixel‑level differences
+      and returns a similarity percentage you can use in automated tests.
+    question: Is it possible to compare image files (e.g., PNG, JPEG) directly in
+      .NET?
+  - answer: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`;
+      the method returns a collection of `FolderComparisonResult` objects that indicate
+      the status of each file pair.
+    question: How can I compare entire folders to find added, removed, or modified
+      files?
+  - answer: Supply the password via `LoadOptions.Password` when loading each document;
+      the engine decrypts the files internally before performing the diff.
+    question: What should I do if I need to compare password‑protected documents?
+  type: FAQPage
 tags:
 - document-comparison
 - dotnet
 - groupdocs
 - tutorial
-title: 如何使用 GroupDocs.Comparison for .NET 進行文件比較
+title: 比較文件 .NET – 完整的 GroupDocs.Comparison 教程
 type: docs
 url: /zh-hant/net/
 weight: 10
 ---
 
-# 完整的 GroupDocs.Comparison 教學（適用於 .NET 開發者）
+# 比較文件 .net – 完整的 GroupDocs.Comparison 教學指南（適用於 .NET 開發人員）
 
-## 為何文件比較很重要（以及此函式庫的優勢）
+如果您需要以程式方式 **compare documents .net**，您已來到正確的指南。  
+手動找出合約、試算表或簡報兩個版本之間的差異可能耗費數小時，且仍可能遺漏細微變更。使用 GroupDocs.Comparison for .NET，您可以自動化此工作，產生視覺化差異報告，甚至在不開啟檔案的情況下接受或拒絕變更。本教學將逐步說明所有步驟——從安裝 NuGet 套件到處理大規模資料夾比較——讓您能在任何 .NET 解決方案中嵌入可靠的文件比較功能。
 
-如果你在尋找 **how to compare documents** 的程式化做法，你已經來對地方了。  
-如果你曾經花了數小時手動比較文件版本、追蹤團隊間的變更，或是想找出兩個檔案之間到底改了什麼，你並不孤單。文件比較看似簡單，直到你真的需要以程式方式執行時才會發現其複雜性。
-
-這正是 GroupDocs.Comparison for .NET 發揮作用的地方。它不只是一個普通的比較工具——是一套完整的解決方案，能處理從簡單文字文件到複雜試算表、簡報，甚至影像的所有情境。無論你是在建置文件管理系統、建立工作流程自動化，或只是需要可靠的比較功能，這個函式庫都能滿足你的需求。
-
-在這本完整的教學指南中，你將學會如何將強大的文件比較功能整合到 .NET 應用程式中，並透過真實範例與實務解決方案，處理常見情境。
-
-## 快速答覆
+## 快速解答
 - **GroupDocs.Comparison 的主要目的為何？** 以程式方式比較文件、偵測變更，並產生視覺或資料驅動的差異結果。  
-- **我可以自動接受或拒絕變更嗎？** 可以——使用 accept/reject changes API 取得細緻的控制。  
-- **此函式庫在 .NET 中支援影像比較嗎？** 絕對支援；你可以比較螢幕截圖、UI 渲染圖以及任何點陣圖。  
-- **可以比較資料夾嗎？** 可以——比較整個資料夾以找出新增、刪除或修改的檔案。  
-- **開始前需要什麼？** 一個 .NET 開發環境、NuGet 套件，以及有效的 GroupDocs.Comparison 授權（提供試用版）。
+- **我可以自動接受或拒絕變更嗎？** 是的——使用 accept/reject API 以取得細粒度控制。  
+- **此函式庫支援 .NET 中的影像比較嗎？** 當然可以；您可以比較螢幕截圖、UI 渲染圖以及任何點陣圖。  
+- **資料夾比較可行嗎？** 可以——比較整個資料夾即可找出新增、移除或修改的檔案。  
+- **開始前需要什麼？** .NET 開發環境、NuGet 套件，以及有效的 GroupDocs.Comparison 授權（提供試用版）。
 
-## 為何 GroupDocs.Comparison 與眾不同？
+## 什麼是 compare documents .net？
+`compare documents .net` 是使用 .NET 函式庫以程式方式辨識兩個或多個文件版本之間差異的過程。GroupDocs.Comparison 透過載入來源與目標檔案、套用可設定的比較選項，並回傳包含視覺標示與結構化變更清單的 `ComparisonResult`。**ComparisonResult** 代表比較的結果，包含偵測到的變更與視覺差異資料。
 
-在深入教學之前，先說明開發者為何會選擇這套函式庫而非其他方案：
+## 為何選擇 GroupDocs.Comparison for .NET？
+GroupDocs.Comparison 支援超過 50 種格式，能在數秒內處理大型 PDF，並提供企業級功能，如密碼處理、metadata 保留與細緻的變更管理，省去多套專門函式庫的需求，降低開發工作量。
 
-**全面的格式支援**：比較 Word、PDF、Excel、PowerPoint、影像等多種檔案——全部使用同一套 API。無需為不同檔案類型學習多套函式庫。
+## 先決條件
 
-**視覺與程式化結果**：同時取得視覺化的差異標示與程式化的變更資訊。無論是要向使用者展示變更，或是自動處理變更，都能輕鬆應對。
+- Visual Studio 2022 或更新版本（或任何相容 .NET 的 IDE）。  
+- .NET 6+ 執行環境（此函式庫亦支援 .NET Core 3.1 與 .NET Framework 4.8）。  
+- NuGet 套件 `GroupDocs.Comparison`（最新穩定版）。  
+- 有效的授權金鑰（您可先使用 30 天試用版）。  
 
-**企業級功能**：支援受密碼保護的文件、串流操作、元資料管理——所有生產環境所需的功能。
+## 如何比較兩個文件 .net？
+要比較兩個文件 .net，只需建立 `Comparer` 類別實例，呼叫 `Compare(sourcePath, targetPath, outputPath)`，並依需求指定 `ComparisonOptions`。此方法會產生一個差異檔，突顯插入、刪除與格式變更，同時提供 `Changes` 集合供程式檢查。`Comparer` 物件是驅動比較流程的核心引擎。
 
-**簡易整合**：只需少量程式碼即可將文件比較加入現有 .NET 應用程式。API 直觀且文件完整。
+### 逐步操作說明
 
-## 如何比較文件與偵測文件變更
+1. **建立 `Comparer` 實例** – 這是驅動比較引擎的核心物件。  
+2. **載入來源與目標** – 您可以傳入檔案路徑、串流或位元組陣列；對於大於 10 MB 的檔案建議使用串流。  
+3. **設定選項** – 透過 `ComparisonOptions` 忽略大小寫、設定密碼或調整靈敏度。  
+4. **執行比較** – 呼叫 `Compare` 並提供視覺差異的輸出位置。  
+5. **處理結果** – 讀取 `Changes` 集合以接受、拒絕或記錄每項修改。
 
-當你需要 **detect document changes** 時，通常會遵循以下三個步驟：
+## GroupDocs.Comparison 支援哪些格式比較？
+GroupDocs.Comparison 支援 **50+** 輸入與輸出格式，包括 DOCX、PDF、XLSX、PPTX、PNG、JPEG、BMP 與 TIFF。亦能處理受密碼保護的檔案以及透過串流 API 存於雲端的檔案。此廣度免除在建置通用文件處理管線時必須使用多套函式庫的需求。
 
-1. **Load** 來源與目標檔案（可從路徑、串流或位元組陣列載入）。  
-2. **Configure** 比較選項——例如忽略大小寫、處理受密碼保護的檔案，或設定自訂的變更偵測靈敏度。  
-3. **Execute** 比較並取得結果——可以是視覺化的 PDF/HTML 差異、`ChangeInfo` 物件清單，或是可進一步處理的合併文件。
+## 如何以程式方式接受或拒絕變更？
+`ComparisonResult` 物件會公開 `Changes` 集合。每個 `ChangeInfo` 代表單一偵測到的變更，並提供 `Accept()` 與 `Reject()` 方法。呼叫 `result.Changes.AcceptAll()` 可將所有偵測到的變更套用至目標文件，或遍歷 `result.Changes` 並對個別 `ChangeInfo` 呼叫 `Accept()` 或 `Reject()` 以取得細粒度控制。完成所需操作後，使用 `result.Save(outputPath)` 儲存更新後的文件。
 
-此流程讓你可以 **accept reject changes**、擷取文件元資料，甚至在來源檔案為圖片時 **compare images .net**。相同的模式亦適用於 **compare folders .net**，只要在資料夾中逐一迭代檔案配對即可。
+## 如何比較整個資料夾 .net？
+資料夾比較會遍歷相符的檔案對，對每對檔案呼叫相同的 `Compare` 邏輯。GroupDocs.Comparison 亦提供輔助方法 `CompareFolders(sourceFolder, targetFolder, outputFolder)`，比較兩個目錄中的所有相符檔案，偵測新增或移除的檔案，並產生差異結果。**CompareFolders** 會回傳 `FolderComparisonResult` 物件集合，每個物件指示檔案對的狀態與其差異文件的連結。
 
-## 入門：5 分鐘完成第一個比較
+## 在 .NET 中，影像比較如何運作？
+影像模組將每個像素視為資料點，產生一張差異影像，以紅色標示變更區域，並回傳相似度分數（0‑100 %）。呼叫 `Comparer.CompareImages(imagePath1, imagePath2, outputPath)`；引擎會對齊兩張影像，計算每像素差異，寫入以變更像素著色的差異影像，並提供 `Similarity` 數值，您可依此決定是否觸發警示或略過後續處理。
 
-剛接觸 GroupDocs.Comparison？以下是你需要先了解的要點：
+## 常見使用情境
 
-1. **Installation**：透過 NuGet Package Manager 安裝  
-2. **Licensing**：設定授權（提供免費試用）  
-3. **Basic Usage**：三行程式碼即可完成第一個比較  
-4. **Advanced Features**：隨需求深入探索  
+- **非程式碼資產的版本控制** – 保持合約修訂的清晰稽核軌跡。  
+- **自動合規檢查** – 標示政策文件中未授權的編輯。  
+- **CI/CD 流程的 UI 測試** – 比較不同建置之網頁截圖。  
+- **批次遷移專案** – 驗證轉換後的檔案仍保留原始內容。
 
-學習曲線平緩，但功能相當完整。先從基本文件比較開始，逐步探索變更管理與自訂比較設定等進階功能。
+## 大型文件的效能建議
 
-## 文件與資料夾比較
+- **串流檔案** 而非完整載入記憶體；可將峰值 RAM 使用量降低至 80 %。  
+- **重複使用單一 `Comparer` 實例** 進行多次比較，以利用內部快取。  
+- **調整 `ComparisonOptions.MemoryLimit`**，在處理大於 500 MB 的文件時防止記憶體不足例外。  
 
-大多數開發者都是從這裡開始——也是理所當然的。文件與資料夾比較是大多數文件管理工作流程的核心。
+## 常見問與答
 
-無論是合約修訂、技術文件更新，或是追蹤軟體版本間的變更，這些教學都能讓你快速上手。學會以程式方式接受或拒絕變更、自動化比較流程，並有效處理批次作業。
+**Q: 如何在比較後以程式方式接受或拒絕變更？**  
+A: 使用 `result.Changes.AcceptAll()`、`RejectAll()`，或遍歷每個 `ChangeInfo` 呼叫 `Accept()` / `Reject()`，完成後以 `result.Save(outputPath)` 儲存文件。
 
-**常見使用情境：**
-- 非程式碼文件的版本控制
-- 工作流程中的自動變更偵測  
-- 合規與稽核追蹤產生
-- 協作文件審閱流程
+**Q: 我可以從文件中擷取作者、建立日期或自訂屬性等 metadata 嗎？**  
+A: 可以——`DocumentInfo` 提供來源與目標檔案的標準與自訂 metadata 存取，讓您可以記錄或顯示這些資訊。
 
-[Read More](./documents-and-folder-comparison/)
+**Q: 是否可以直接在 .NET 中比較影像檔（例如 PNG、JPEG）？**  
+A: 當然可以。`CompareImages` API 會突顯像素層級的差異，並回傳相似度百分比，您可於自動化測試中使用。
 
-## 文件比較
+**Q: 如何比較整個資料夾以找出新增、移除或修改的檔案？**  
+A: 呼叫 `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`；此方法會回傳 `FolderComparisonResult` 物件集合，指示每對檔案的狀態。
 
-這是大多數開發者最常需要的核心功能。比較文字文件、試算表、簡報——只要說出需求即可。但它不只是找出差異，更在於了解這些差異的意義，並以程式方式處理。
+**Q: 若需比較受密碼保護的文件，我該怎麼做？**  
+A: 在載入每個文件時透過 `LoadOptions.Password` 提供密碼；引擎會在內部解密後執行差異比較。
 
-我們的教學涵蓋從基礎比較到進階情境，如處理大型文件、管理記憶體使用量，以及為高容量作業最佳化效能。
+**Q: GroupDocs.Comparison 是否支援 .NET Core 與 .NET 5/6？**  
+A: 支援——此函式庫相容於 .NET Core 3.1、.NET 5、.NET 6 以及更高版本，於所有執行環境提供相同功能集。
 
-**專業提示**：文件比較效能會因文件大小與複雜度而有顯著差異。我們會示範如何針對你的使用情境進行最佳化。
+## 可信資訊
 
-[Read More](./document-comparison/)
-
-## 載入與儲存文件
-
-看似簡單，實際上有多種方式可將文件載入以供比較——選擇正確的方法會影響效能與功能。
-
-了解何時使用檔案路徑、何時使用串流，如何處理來自資料庫、雲端儲存或 Web API 的文件，以及大型文件的記憶體管理最佳實踐。
-
-**開發者觀點**：許多效能問題源自於低效的文件載入模式。這些教學將協助你避免常見陷阱。
-
-[Read More](./loading-and-saving-documents/)
-
-## 影像比較
-
-視覺比較不只適用於文件。無論你在建置設計審查系統、監控 Web 應用的視覺變化，或是建立品質保證工作流程，影像比較都能開啟全新可能。
-
-我們的教學涵蓋實務情境，如比較螢幕截圖、偵測 UI 元素的視覺變化，並將影像比較整合到自動化測試流程中。
-
-[Read More](./image-comparison/)
-
-## 基本使用
-
-剛接觸文件比較嗎？從這裡開始。這些教學說明幾乎每個專案都會用到的基本概念與常見模式。
-
-掌握試算表儲存格比較、文件資訊擷取、支援格式的認識等關鍵主題。這些基礎將為你處理更複雜的情境奠定良好基礎。
-
-**學習路徑**：先學基本使用，再進入文件比較，最後探索進階功能。循序漸進的方式能系統化提升技能。
-
-[Read More](./basic-usage/)
-
-## 快速入門
-
-需要快速上手嗎？我們的快速入門教學專為想立刻看到成果的開發者設計。
-
-學會高效的授權設定、以最少程式碼整合比較功能，並在數分鐘內完成第一個文件比較。非常適合概念驗證與快速原型開發。
-
-[Read More](./quick-start/)
-
-## 進階教學分類
-
-### [Getting Started](./getting-started/)
-一步步教學 GroupDocs.Comparison 的安裝、授權、設定，以及在 .NET 應用程式中建立第一個文件比較。
-
-### [Document Loading](./document-loading/)
-探索從檔案路徑、串流、位元組陣列等不同來源載入文件以供比較的各種方法。
-
-### [Basic Comparison](./basic-comparison/)
-使用簡單的 API 呼叫，學習比較 Word、PDF、Excel 等不同文件類型。
-
-### [Advanced Comparison](./advanced-comparison/)
-深入探討多文件比較、自訂設定、受保護文件等複雜比較情境的強大功能。
-
-### [Change Management](./change-management/)
-精通偵測、接受與拒絕文件間特定變更，並對比較結果進行細緻控制。
-
-### [Document Information](./document-information/)
-在比較前後擷取文件的詳細元資料與資訊。
-
-### [Preview Generation](./preview-generation/)
-為來源、目標與比較結果文件產生視覺化預覽與縮圖。
-
-### [Metadata Management](./metadata-management/)
-控制比較過程中如何保留、修改或重設文件元資料。
-
-### [Security & Protection](./security-protection/)
-處理受密碼保護的文件，並在比較工作流程中實作安全功能。
-
-### [Licensing & Configuration](./licensing-configuration/)
-正確設定授權、計量計費，並最佳化 GroupDocs.Comparison 的應用程式配置。
-
-### [Comparison Options](./comparison-options/)
-透過詳細設定微調比較行為，為不同文件類型達到精確結果。
-
-## 常見挑戰與解決方案
-
-**大型文件的效能**：處理 >10 MB 的檔案時，建議使用串流而非一次載入整個文件。我們的文件載入教學提供最佳化技巧。
-
-**記憶體管理**：文件比較可能佔用大量記憶體。學會正確釋放物件，並使用有效的載入模式以避免記憶體洩漏。
-
-**格式特有考量**：不同文件類型有各自特性。PDF 的處理方式與 Word、試算表皆不同，我們的格式特定指南會說明這些差異。
-
-**整合模式**：無論是建置 Web API、桌面應用或背景服務，整合模式都很重要。我們提供常見架構情境的範例。
-
-## 生產環境最佳實踐
-
-**錯誤處理**：使用文件比較時務必實作完整的例外處理。對無效檔案、損毀文件與不支援格式都要能優雅地處理。
-
-**資源管理**：使用 `using` 陳述式或正確的釋放模式，確保在大量文件處理時資源能被正確回收。
-
-**效能監控**：追蹤比較時間與記憶體使用量，特別是在高容量情境下。這些資料有助於找出瓶頸並進行優化。
-
-**安全考量**：處理機密文件時，確保適當的存取控制，並留意暫存檔與記憶體使用的安全風險。
-
-## 接下來要做什麼？
-
-準備好深入探索了嗎？若想立即看到成果，可先從 [Quick Start](./quick-start/) 教學開始；若想打好基礎，則可先閱讀 [Getting Started](./getting-started/)。
-
-每篇教學都提供完整程式碼範例、何時何因使用不同方法的說明，以及根據真實案例整理的實務技巧。完成本系列教學後，你將具備在 .NET 應用程式中實作穩健文件比較功能的知識與信心。
-
-無論是建置文件管理系統、自動化合規工作流程，或是開發協作編輯功能，GroupDocs.Comparison for .NET 都能為你提供可靠且高效的文件比較基礎。
-
-## GroupDocs.Comparison for .NET 教學
-### [Documents and Folder Comparison](./documents-and-folder-comparison/)
-學習使用 GroupDocs Comparison for .NET 教學，輕鬆接受、拒絕變更並比較文件與資料夾。
-
-### [Document Comparison](./document-comparison/)
-在 .NET 中高效比較文件，簡化文件管理、提升工作流程、確保正確性。了解更多！
-
-### [Loading and Saving Documents](./loading-and-saving-documents/)
-使用 GroupDocs.Comparison for .NET 輕鬆比較文件，學習載入、儲存與使用載入選項以提升文件管理效率。
-
-### [Image Comparison](./image-comparison/)
-在 .NET 中高效比較影像，提供從路徑或串流整合的逐步教學。
-
-### [Basic Usage](./basic-usage/)
-在 .NET 中使用 GroupDocs.Comparison 高效比較文件，學習基本使用教學，涵蓋儲存格比較、文件資訊擷取與支援格式。
-
-### [Quick Start](./quick-start/)
-將 GroupDocs Comparison for .NET 無縫整合至專案，學習高效的授權設定方法，確保文件比較工作流程的準確性。
-
-### [Getting Started](./getting-started/)
-一步步教學 GroupDocs.Comparison 的安裝、授權、設定，以及在 .NET 應用程式中建立第一個文件比較。
-
-### [Document Loading](./document-loading/)
-探索從檔案路徑、串流、位元組陣列等不同來源載入文件以供比較的各種方法。
-
-### [Basic Comparison](./basic-comparison/)
-學習使用簡單的 API 呼叫比較 Word、PDF、Excel 等不同文件類型。
-
-### [Advanced Comparison](./advanced-comparison/)
-深入探討多文件比較、自訂設定、受保護文件等複雜比較情境的強大功能。
-
-### [Change Management](./change-management/)
-精通偵測、接受與拒絕文件間特定變更，並對比較結果進行細緻控制。
-
-### [Document Information](./document-information/)
-在比較前後擷取文件的詳細元資料與資訊。
-
-### [Preview Generation](./preview-generation/)
-為來源、目標與比較結果文件產生視覺化預覽與縮圖。
-
-### [Metadata Management](./metadata-management/)
-控制比較過程中如何保留、修改或重設文件元資料。
-
-### [Security & Protection](./security-protection/)
-處理受密碼保護的文件，並在比較工作流程中實作安全功能。
-
-### [Licensing & Configuration](./licensing-configuration/)
-正確設定授權、計量計費，並最佳化 GroupDocs.Comparison 的應用程式配置。
-
-### [Comparison Options](./comparison-options/)
-透過詳細設定微調比較行為，為不同文件類型達到精確結果。
-
-## 常見問題
-
-**Q: 如何在比較完成後以程式方式接受或拒絕變更？**  
-A: 使用比較結果回傳的 `Changes` 集合上的 `AcceptAll`、`RejectAll` 或 `Accept/Reject` 方法。
-
-**Q: 我可以從文件中擷取作者、建立日期或自訂屬性等元資料嗎？**  
-A: 可以——GroupDocs.Comparison 提供 `DocumentInfo` 物件，讓你取得來源與目標檔案的標準與自訂元資料。
-
-**Q: 能直接在 .NET 中比較影像檔（例如 PNG、JPEG）嗎？**  
-A: 絕對可以。函式庫內建影像比較 API，能標示像素層級的差異，並產生差異影像。
-
-**Q: 如何比較整個資料夾以找出新增、刪除或修改的檔案？**  
-A: 迭代資料夾中的每對檔案並呼叫比較 API；函式庫亦提供批次比較資料夾內容的輔助方法。
-
-**Q: 若需比較受密碼保護的文件，該怎麼做？**  
-A: 在載入每個文件時透過 `LoadOptions` 提供密碼，比較引擎會在內部解密檔案。
-
----
-
-**Last Updated:** 2026-03-03  
+**Last Updated:** 2026-05-26  
 **Tested With:** GroupDocs.Comparison 23.12 for .NET  
-**Author:** GroupDocs
+**Author:** GroupDocs  
+
+## 其他教學連結（未變更）
+
+### 文件與資料夾比較
+[閱讀更多](./documents-and-folder-comparison/)
+
+### 文件比較
+[閱讀更多](./document-comparison/)
+
+### 載入與儲存文件
+[閱讀更多](./loading-and-saving-documents/)
+
+### 影像比較
+[閱讀更多](./image-comparison/)
+
+### 基本使用
+[閱讀更多](./basic-usage/)
+
+### 快速入門
+[閱讀更多](./quick-start/)
+
+### 入門指南
+[入門指南](./getting-started/)
+
+### 文件載入
+[文件載入](./document-loading/)
+
+### 基本比較
+[基本比較](./basic-comparison/)
+
+### 進階比較
+[進階比較](./advanced-comparison/)
+
+### 變更管理
+[變更管理](./change-management/)
+
+### 文件資訊
+[文件資訊](./document-information/)
+
+### 預覽產生
+[預覽產生](./preview-generation/)
+
+### Metadata 管理
+[Metadata 管理](./metadata-management/)
+
+### 安全與保護
+[安全與保護](./security-protection/)
+
+### 授權與設定
+[授權與設定](./licensing-configuration/)
+
+### 比較選項
+[比較選項](./comparison-options/)
+
+[閱讀更多](./documents-and-folder-comparison/)
+[閱讀更多](./document-comparison/)
+[閱讀更多](./loading-and-saving-documents/)
+[閱讀更多](./image-comparison/)
+[閱讀更多](./basic-usage/)
+[閱讀更多](./quick-start/)
+[入門指南](./getting-started/)
+[文件載入](./document-loading/)
+[基本比較](./basic-comparison/)
+[進階比較](./advanced-comparison/)
+[變更管理](./change-management/)
+[文件資訊](./document-information/)
+[預覽產生](./preview-generation/)
+[Metadata 管理](./metadata-management/)
+[安全與保護](./security-protection/)
+[授權與設定](./licensing-configuration/)
+[比較選項](./comparison-options/)
+[快速入門](./quick-start/)
+[入門指南](./getting-started/)
+[文件與資料夾比較](./documents-and-folder-comparison/)
+[文件比較](./document-comparison/)
+[載入與儲存文件](./loading-and-saving-documents/)
+[影像比較](./image-comparison/)
+[基本使用](./basic-usage/)
+[快速入門](./quick-start/)
+[入門指南](./getting-started/)
+[文件載入](./document-loading/)
+[基本比較](./basic-comparison/)
+[進階比較](./advanced-comparison/)
+[變更管理](./change-management/)
+[文件資訊](./document-information/)
+[預覽產生](./preview-generation/)
+[Metadata 管理](./metadata-management/)
+[安全與保護](./security-protection/)
+[授權與設定](./licensing-configuration/)
+[比較選項](./comparison-options/)
+
+## 相關教學
+
+- [Document Comparison .NET：以程式方式接受與拒絕變更](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [GroupDocs Comparison NET 教學 – 完整的文件比較與 Metadata 指南](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [Document Comparison .NET 教學 – 使用 GroupDocs 保留 Metadata](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

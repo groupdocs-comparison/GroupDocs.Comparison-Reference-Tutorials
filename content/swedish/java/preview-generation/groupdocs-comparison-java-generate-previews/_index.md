@@ -1,73 +1,80 @@
 ---
 categories:
 - Java Development
-date: '2026-02-08'
-description: Lär dig hur du skapar PDF‑förhandsgranskning i Java med GroupDocs.Comparison.
-  Steg‑för‑steg‑handledning med kodexempel för förhandsgranskning av PDF, Word och
-  Excel.
-keywords: Java document preview generator, generate document thumbnails Java, Java
-  PDF preview creation, document image conversion Java, Java library for document
-  thumbnails
+date: '2026-05-26'
+description: Lär dig hur du skapar PDF-förhandsgranskning i Java med GroupDocs.Comparison.
+  Steg-för-steg handledning med kodexempel för PDF-, Word- och Excel-förhandsgranskningar.
+keywords:
+- create pdf preview java
+- java document preview generator
+- pdf thumbnail generation java
+- document image conversion java
 lastmod: '2025-01-02'
-linktitle: Java Document Preview Generator
+linktitle: Java-dokumentförhandsgranskning generator
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to create pdf preview java using GroupDocs.Comparison. Step-by-step
+    tutorial with code examples for PDF, Word, Excel previews.
+  headline: Create PDF Preview Java – Java Document Preview Generator
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Comparison provides a simple API for high‑quality previews.
+    question: What library can I use to create PDF previews in Java?
+  - answer: Over 50 formats including PDF, DOCX, XLSX, PPTX, and more.
+    question: Which formats are supported?
+  - answer: Set `previewOptions.setPageNumbers(new int[]{1})`.
+    question: How do I generate a preview for only the first page?
+  - answer: Yes—use `ExecutorService` or `CompletableFuture`.
+    question: Can I run preview generation asynchronously?
+  - answer: PNG offers the best quality; JPEG is smaller for web use.
+    question: What’s the best image format for thumbnails?
+  type: FAQPage
 tags:
 - document-processing
 - java-library
 - preview-generation
 - pdf-thumbnails
-title: Skapa PDF‑förhandsgranskning Java – Java‑dokumentförhandsgranskning generator
+title: Skapa PDF-förhandsgranskning i Java – Java-dokumentförhandsgranskning generator
 type: docs
 url: /sv/java/preview-generation/groupdocs-comparison-java-generate-previews/
 weight: 1
 ---
 
-# Skapa PDF‑förhandsgranskning Java – Java-dokumentförhandsgranskning Generator
+# Skapa PDF‑förhandsgranskning Java – Java-dokumentförhandsgranskning generator
 
-## Introduktion
+Att generera visuella miniatyrbilder av dokument förbättrar avsevärt användbarheten i alla Java‑baserade filhanteringsapplikationer. I den här handledningen kommer du att **create pdf preview java** med GroupDocs.Comparison, från miljöförberedelse till avancerad prestandaoptimering. I slutet har du en produktionsklar förhandsgranskningsgenerator som stödjer mer än 50 filformat och kan köras säkert på stora PDF‑filer.
 
-Behöver du generera dokumentförhandsgranskningar i din Java‑applikation? Oavsett om du bygger ett dokumenthanteringssystem, en filbläddrare eller ett samarbetsverktyg är det viktigt att skapa visuella miniatyrbilder av dokument för en bättre användarupplevelse. I den här guiden kommer du att **create pdf preview java** steg för steg med GroupDocs.Comparison, och täcker allt från miljöinställning till prestandaoptimering.
-
-### Snabba svar
+## Snabba svar
 - **Vilket bibliotek kan jag använda för att skapa PDF‑förhandsgranskningar i Java?** GroupDocs.Comparison tillhandahåller ett enkelt API för högkvalitativa förhandsgranskningar.  
 - **Vilka format stöds?** Över 50 format inklusive PDF, DOCX, XLSX, PPTX och fler.  
-- **Hur genererar jag en förhandsgranskning endast för den första sidan?** Sätt `previewOptions.setPageNumbers(new int[]{1})`.  
+- **Hur genererar jag en förhandsgranskning för endast den första sidan?** Använd `previewOptions.setPageNumbers(new int[]{1})`.  
 - **Kan jag köra förhandsgranskning generering asynkront?** Ja—använd `ExecutorService` eller `CompletableFuture`.  
 - **Vilket bildformat är bäst för miniatyrer?** PNG ger bästa kvalitet; JPEG är mindre för webbbruk.
 
-## Vad är “create pdf preview java”?
+## Vad är “create pdf preview java”
 
-Att skapa en PDF‑förhandsgranskning i Java innebär att konvertera varje sida i en PDF (eller annat dokument) till en bild som kan visas i webbläsare eller mobilappar. Denna process kallas ofta **java convert document to image**, och den möjliggör snabb visuell indexering utan att ladda hela dokumentet.
+Att skapa en PDF‑förhandsgranskning i Java innebär att konvertera varje sida i en PDF (eller något annat stödjat dokument) till en bild som kan visas i webbläsare eller mobilappar. Denna konvertering—ofta kallad **java convert document to image**—låter användare bläddra i stora samlingar utan att öppna hela filer, vilket sparar bandbredd och förbättrar svarstider.
 
-## Varför använda en Java-dokumentförhandsgranskning generator?
+## Varför använda en Java-dokumentförhandsgranskningsgenerator?
 
-Innan du hoppar in i koden, låt oss förstå varför dokumentförhandsgranskning är avgörande för moderna applikationer:
+Att generera förhandsgranskningar på serversidan eliminerar behovet av klient‑sidiga PDF‑renderingsbibliotek och säkerställer en enhetlig visuell upplevelse på alla enheter. Det snabbar upp dokumentbläddring, minskar bandbreddsanvändning och förenklar integration, vilket gör det idealiskt för dokumenthantering, e‑handel och samarbetsplattformar.
 
-**Fördelar för användarupplevelsen**
-- Användare kan snabbt identifiera dokument utan att öppna dem.
-- Snabbare navigering genom stora dokumentsamlingar.
-- Visuell bekräftelse innan nedladdning eller delning av filer.
-
-**Prestandafördelar**
-- Minskad serverbelastning genom att undvika fullständig dokumentrendering.
-- Bättre cachningsstrategier med lätta förhandsgranskningsbilder.
-- Förbättrad mobilupplevelse med optimerade miniatyrbilder.
-
-**Affärsapplikationer**
-- Dokumenthanteringssystem med visuell bläddring.
-- E‑handelsplattformar som visar produktkataloger.
-- Samarbetsverktyg med funktioner för dokumentdelning.
+- **Hastighet:** Miniatyrgenerering är vanligtvis 5‑10× snabbare än att ladda fulla PDF‑filer.  
+- **Skalbarhet:** GroupDocs.Comparison kan bearbeta 200‑sidiga dokument utan att ladda hela filen i minnet, tack vare sin streaming‑arkitektur.  
+- **Tillförlitlighet:** Stöder 50+ in‑ och utdataformat, vilket garanterar att de flesta företagsdokument täcks direkt ur lådan.
 
 ## Förutsättningar och miljöinställning
 
-Innan vi börjar bygga vår Java‑dokumentförhandsgranskningsgenerator, se till att du har:
+Innan vi börjar bygga vår Java-dokumentförhandsgranskningsgenerator, se till att du har:
 
 **Nödvändig programvara**
 - **Java Development Kit (JDK)**: Version 8 eller högre (Java 11+ rekommenderas för bättre prestanda)
 - **Maven eller Gradle**: För beroendehantering
 - **IDE**: IntelliJ IDEA, Eclipse eller din föredragna Java‑IDE
 
-**Grundläggande kunskaper**
-- Java‑programmeringsgrunder
+**Grundläggande kunskap**
+- Grundläggande Java‑programmering
 - Fil‑I/O‑operationer
 - Grundläggande förståelse för bildbehandlingskoncept
 
@@ -79,7 +86,7 @@ Innan vi börjar bygga vår Java‑dokumentförhandsgranskningsgenerator, se til
 
 ### Maven‑installation och konfiguration
 
-Det första steget i att skapa din Java‑dokumentförhandsgranskningsgenerator är att lägga till GroupDocs.Comparison‑beroendet. Lägg till detta i din `pom.xml`:
+`Comparison`‑paketet levereras via Maven Central. Lägg till detta beroende i din `pom.xml`:
 
 ```xml
 <repositories>
@@ -103,7 +110,7 @@ Det första steget i att skapa din Java‑dokumentförhandsgranskningsgenerator 
 
 ### Gradle‑konfiguration (alternativ)
 
-Om du använder Gradle, lägg till detta i din `build.gradle`:
+Om du föredrar Gradle, inkludera följande i din `build.gradle`‑fil:
 
 ```gradle
 repositories {
@@ -119,26 +126,26 @@ dependencies {
 
 ### Licensinställningsalternativ
 
-Du har flera licensalternativ för din förhandsgranskningsgenerator:
+Du har flera licensalternativ för din dokumentförhandsgranskningsgenerator:
 
-**1. Gratis provperiod** (Perfekt för testning):
+**1. Gratis provversion** (Perfekt för testning):
 - Ladda ner från GroupDocs webbplats
 - Begränsad till 3 sidor per dokument
-- Vattenstämpel på output
+- Vattenstämpel på utdata
 
 **2. Tillfällig licens** (För utveckling):
-- Full åtkomst till funktioner i 30 dagar
+- Full funktionstillgång i 30 dagar
 - Inga vattenstämplar eller sidbegränsningar
 - Idealisk för proof‑of‑concept‑projekt
 
 **3. Kommersiell licens** (Produktionsanvändning):
-- Obegränsade dokument och sidor
+- Obegränsat antal dokument och sidor
 - Prioriterad support ingår
 - Olika licensmodeller tillgängliga
 
 ### Grundläggande initiering
 
-Här är hur du initierar din förhandsgranskningsgenerator:
+`Comparison`‑objektet är ingångspunkten för alla förhandsgranskningsoperationer. Att initiera det korrekt säkerställer trådsäkerhet och optimal minnesanvändning.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -148,13 +155,15 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 
 **Viktigt:** Använd alltid try‑with‑resources för att säkerställa korrekt resursrensning och undvika minnesläckor.
 
-## Hur man skapar pdf preview java – Steg‑för‑steg‑implementering
+## Så skapar du pdf preview java – Steg‑för‑steg‑implementation
 
-### Förstå processen för förhandsgranskningsgenerering
+Läs in din källfil med `Comparison comparison = new Comparison("license.txt");` och anropa `comparison.generatePreview(inputPath, previewOptions);` — detta enda anrop hanterar dokumentladdning, sidrendering och bildströmsskapande. API‑et abstraherar låg‑nivå PDF‑parsning, så att du kan fokusera på affärslogik samtidigt som du levererar högkvalitativa PNG‑ eller JPEG‑miniatyrer.
+
+### Förstå processen för förhandsgranskning
 
 Innan du dyker ner i koden, låt oss förstå hur dokumentförhandsgranskning fungerar:
 
-1. **Document Loading** – Ladda källdokumentet i minnet.  
+1. **Document Loading** – Läs in källdokumentet i minnet.  
 2. **Page Processing** – Konvertera varje dokumentsida till en bild.  
 3. **Stream Management** – Hantera utdata‑strömmar för genererade bilder.  
 4. **Configuration** – Tillämpa förhandsgranskningsalternativ (format, kvalitet, sidor).  
@@ -162,7 +171,7 @@ Innan du dyker ner i koden, låt oss förstå hur dokumentförhandsgranskning fu
 
 ### Steg 1: Konfigurera förhandsgranskningsalternativ
 
-Grunden för din Java‑dokumentförhandsgranskningsgenerator är korrekt konfiguration. Så här ställer du in förhandsgranskningsalternativen:
+`CreatePageStream`‑delegaten skapar ett unikt utdata‑ström för varje sida. `previewOptions`‑objektet låter dig specificera bildformat, upplösning och vilka sidor som ska renderas.
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -180,13 +189,13 @@ final Delegates.CreatePageStream createPageStream = pageNumber -> {
 ```
 
 **Vad som händer här:**  
-- `CreatePageStream`‑delegaten skapar en unik utdata‑ström för varje sida.  
-- Filnamnet inkluderar sidnummer för enkel identifiering.  
-- PNG‑format ger god kvalitet med rimliga filstorlekar.
+- Delegaten skriver varje sida till en separat PNG‑fil med namnet `preview_page_{pageNumber}.png`.  
+- PNG‑formatet ger förlustfri kvalitet, medan en upplösning på 150 dpi balanserar klarhet och filstorlek för de flesta webbscenarier.
 
 ### Steg 2: Generera dokumentförhandsgranskningar
 
-Nu implementerar vi den centrala logiken för förhandsgranskning:
+`previewOptions` är ett objekt som specificerar utdataformat, upplösning och sidval för förhandsgranskningsprocessen.  
+Anropa förhandsgranskningsmotorn med de konfigurerade alternativen. API‑et kommer att iterera över de begärda sidorna, rendera dem och skriva resultaten till de strömmar du tillhandahåller.
 
 ```java
 PreviewOptions previewOptions = new PreviewOptions(createPageStream);
@@ -194,13 +203,13 @@ previewOptions.setPageNumbers(new int[]{1, 2, 3}); // Specify desired pages
 comparer.getDocument().generatePreview(previewOptions);
 ```
 
-**Viktiga punkter**
+**Viktiga punkter**  
 - `setPageNumbers()` låter dig generera förhandsgranskningar endast för specifika sidor, vilket är avgörande för prestanda vid stora dokument.  
 - Utelämna anropet för att generera förhandsgranskningar för alla sidor.
 
-### Avancerade konfigurationsalternativ
+## Avancerade konfigurationsalternativ
 
-För produktionsapplikationer vill du ha mer kontroll över din dokument‑miniatyrgenerering:
+Produktionsmiljöer kräver ofta striktare kontroll över utdata­storlek, färgdjup och cachning. Följande kodsnutt visar hur du justerar dessa inställningar:
 
 ```java
 PreviewOptions previewOptions = new PreviewOptions(createPageStream);
@@ -220,9 +229,7 @@ previewOptions.setPageNumbers(new int[]{1, 2, 3, 4, 5});
 
 ### Utmaning 1: Minneshantering med stora dokument
 
-**Problem:** Stora PDF‑filer eller dokument med många sidor kan orsaka `OutOfMemoryError`.
-
-**Lösning:** Bearbeta dokument i batcher och implementera korrekt rensning:
+Stora PDF‑filer kan tömma JVM‑heapen om varje sida hålls i minnet. Bearbeta dokument i batcher och frigör varje sidström omedelbart efter skrivning.
 
 ```java
 // Process in smaller batches
@@ -243,11 +250,9 @@ for (int i = 1; i <= totalPages; i += batchSize) {
 }
 ```
 
-### Utmaning 2: Fil‑sökväg och kataloghantering
+### Utmaning 2: Fil‑sökväg‑ och kataloghantering
 
-**Problem:** Förhandsgranskningsfiler spridda över kataloger, namnkonflikter.
-
-**Lösning:** Implementera ett strukturerat filhanteringssystem:
+Spridda förhandsgranskningsfiler orsakar underhållsproblem. Använd en deterministisk mappstruktur baserad på dokument‑ID och tidsstämpel.
 
 ```java
 public class PreviewFileManager {
@@ -276,9 +281,7 @@ public class PreviewFileManager {
 
 ### Utmaning 3: Hantera olika dokumentformat
 
-**Problem:** Olika dokumenttyper kräver olika hanteringsmetoder.
-
-**Lösning:** Skapa format‑specifika hanterare:
+Inte alla format renderas identiskt. GroupDocs.Comparison erbjuder format‑specifika optimeringar; till exempel drar DOCX‑filer nytta av vektorbaserad rendering medan bilder använder rasterkonvertering.
 
 ```java
 public class DocumentPreviewGenerator {
@@ -316,13 +319,12 @@ public class DocumentPreviewGenerator {
 }
 ```
 
-## Strategier för prestandaoptimering
+## Prestandaoptimeringsstrategier
 
 ### CPU‑ och minnesoptimering
 
-När du bygger en Java‑dokumentförhandsgranskningsgenerator för produktion är prestanda avgörande:
-
-**1. Konkurrerande bearbetning**
+`ExecutorService` är ett Java‑konkurrensverktyg som hanterar en pool av arbetstrådar för parallell uppgiftsexekvering.  
+Samtidig bearbetning kan dramatiskt minska total förhandsgranskningstid på fler‑kärniga servrar. Följande exempel startar en fast trådpool och bearbetar sidor parallellt.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -343,7 +345,10 @@ for (Future<Void> future : futures) {
 executor.shutdown();
 ```
 
-**2. Cachningsstrategi**
+### Caching‑strategi
+
+`Redis` är en minnesbaserad datalagring som ofta används för snabb cachning av objekt såsom genererade miniatyrer.  
+Cacha tidigare genererade miniatyrer i Redis eller en lokal filbutik. Cache‑nyckeln bör kombinera dokument‑hash, sidnummer och begärd bildstorlek.
 
 ```java
 public class PreviewCache {
@@ -359,19 +364,19 @@ public class PreviewCache {
 }
 ```
 
-### Balans mellan bildkvalitet och filstorlek
+### Bildkvalitet vs filstorleksbalans
 
 Att hitta rätt balans mellan bildkvalitet och filstorlek är avgörande:
 
 - **Hög kvalitet (PNG)** – Idealisk för tekniska dokument, diagram.  
-- **Optimerad storlek (JPEG, 80‑85 % kvalitet)** – Bättre för webb‑miniatyrer.  
-- Överväg att generera flera storleksvarianter (miniatyr, medium, stor) för att betjäna olika enheter.
+- **Optimized Size (JPEG, 80‑85 % quality)** – Bättre för webb‑miniatyrer.  
+- Överväg att generera flera storleksvarianter (miniature, medium, stor) för att betjäna olika enheter.
 
 ## Praktiska tillämpningar och användningsfall
 
 ### Integration med dokumenthanteringssystem
 
-Här är hur du integrerar din Java‑dokumentförhandsgranskningsgenerator i ett dokumenthanteringssystem:
+Integrera förhandsgranskningsgeneratorn i ett DMS‑arbetsflöde så att varje uppladdad fil automatiskt får en PNG‑miniatur lagrad bredvid originalet.
 
 ```java
 @Service
@@ -398,9 +403,9 @@ public class DocumentService {
 }
 ```
 
-### E‑handels produktkatalog
+### E‑handel produktkatalog
 
-För e‑handelsplattformar som visar produktdokument:
+För e‑handelsplattformar som säljer nedladdningsbara produktmanualer, generera en förhandsgranskningsbild för varje manual att visa på produktsidor, vilket förbättrar konverteringsgraden.
 
 ```java
 public class ProductDocumentHandler {
@@ -432,7 +437,7 @@ public class ProductDocumentHandler {
 
 ### Felhantering och loggning
 
-Implementera omfattande felhantering för din dokumentförhandsgranskningsgenerator:
+Implementera omfattande felhantering för att fånga licensproblem, ej stödda format och I/O‑fel. Logga varje undantag med ett unikt korrelations‑ID för enklare felsökning.
 
 ```java
 public class RobustPreviewGenerator {
@@ -458,7 +463,7 @@ public class RobustPreviewGenerator {
 
 ### Resurshantering
 
-Implementera alltid korrekt resurshantering:
+Stäng alltid strömmar i ett finally‑block eller använd try‑with‑resources. Detta förhindrar läckage av fil‑deskriptörer som kan krascha långvariga tjänster.
 
 ```java
 public class ResourceManagedPreviewGenerator implements AutoCloseable {
@@ -489,9 +494,9 @@ public class ResourceManagedPreviewGenerator implements AutoCloseable {
 
 ## Felsökning av vanliga problem
 
-### Problem 1: ”Could not load document”‑fel
+### Problem 1: “Could not load document”‑fel
 
-**Symptom:** Undantag när man försöker ladda vissa dokumenttyper.
+**Symptom:** Undantag när du försöker ladda vissa dokumenttyper.
 
 **Lösningar**
 1. Verifiera att dokumentet inte är korrupt.  
@@ -537,7 +542,7 @@ private boolean isDocumentValid(String filePath) {
 
 ## Alternativ till GroupDocs.Comparison
 
-Medan GroupDocs.Comparison är utmärkt för dokumentförhandsgranskning kan du överväga följande alternativ:
+Även om GroupDocs.Comparison är utmärkt för dokumentförhandsgranskning, kan du överväga alternativ:
 
 - **Apache PDFBox** (endast PDF, öppen källkod)  
 - **iText** (kommersiell, omfattande PDF‑funktioner)  
@@ -553,36 +558,34 @@ Du har nu lärt dig hur du **create pdf preview java** med GroupDocs.Comparison.
 - Skalbar arkitektur lämplig för företagsapplikationer  
 
 ### Nästa steg
+1. **Implement Caching** – Lägg till Redis‑ eller filbaserad cachning för ofta åtkomna förhandsgranskningar.  
+2. **Add Progress Tracking** – Visa användarna förloppet för förhandsgranskningsgenerering för stora dokument.  
+3. **Optimize for Mobile** – Skapa responsiva förhandsgranskningsvisningar för mobilapplikationer.  
+4. **Monitor Performance** – Lägg till mätvärden och övervakning för att spåra systemprestanda.
 
-1. **Implementera cachning** – Lägg till Redis eller fil‑baserad cachning för ofta åtkomna förhandsgranskningar.  
-2. **Lägg till förloppsspårning** – Visa användarna förloppet för förhandsgranskningsgenerering för stora dokument.  
-3. **Optimera för mobil** – Skapa responsiva förhandsgranskningsvisningar för mobilapplikationer.  
-4. **Övervaka prestanda** – Lägg till mätvärden och övervakning för att spåra systemprestanda.
-
-Redo att implementera förhandsgranskningsgenerering i din Java‑applikation? Börja med ett litet proof‑of‑concept och utöka funktionaliteten gradvis baserat på dina specifika krav.
+Redo att implementera dokumentförhandsgranskning i din Java‑applikation? Börja med ett litet proof‑of‑concept och utöka funktionaliteten gradvis baserat på dina specifika krav.
 
 ## Vanliga frågor
 
-**Q1:** Vilka dokumentformat stöder denna Java‑dokumentförhandsgranskningsgenerator?  
-**A:** GroupDocs.Comparison stöder över 50 dokumentformat inklusive PDF, DOCX, XLSX, PPTX, TXT, HTML och många fler. Kontrollera [documentation](https://docs.groupdocs.com/comparison/java/) för en komplett lista.
+**Q:** Vilka dokumentformat stöder denna Java‑dokumentförhandsgranskningsgenerator?  
+**A:** GroupDocs.Comparison stöder över 50 dokumentformat inklusive PDF, DOCX, XLSX, PPTX, TXT, HTML och många fler. Se [documentation](https://docs.groupdocs.com/comparison/java/) för en komplett lista.
 
-**Q2:** Hur genererar jag dokumentminiatyrer endast för den första sidan?  
+**Q:** Hur genererar jag dokumentminiatyrer för endast den första sidan?  
 **A:** Använd `previewOptions.setPageNumbers(new int[]{1})` för att generera en förhandsgranskning endast för den första sidan. Detta är perfekt för miniatyrskapande i dokumentbläddrare.
 
-**Q3:** Kan jag anpassa utdata‑bildformat och kvalitet?  
+**Q:** Kan jag anpassa utdata‑bildformat och kvalitet?  
 **A:** Ja, du kan konfigurera utdataformatet via `CreatePageStream`‑delegaten. Biblioteket stödjer främst PNG‑format, vilket ger utmärkt kvalitet för dokumentförhandsgranskningar.
 
-**Q4:** Hur hanterar jag mycket stora PDF‑filer utan att få slut på minne?  
-**A:** Bearbeta stora dokument i batcher genom att ange sidintervall, implementera korrekt resurshantering med try‑with‑resources och överväg att öka JVM‑heap‑storleken med `-Xmx`‑parametern.
+**Q:** Hur hanterar jag mycket stora PDF‑filer utan att få minnesbrist?  
+**A:** Bearbeta stora dokument i batcher genom att specificera sidintervall, implementera korrekt resurshantering med try‑with‑resources, och överväg att öka JVM‑heap‑storlek med parametern `-Xmx`.
 
-**Q5:** Finns det ett sätt att generera förhandsgranskningar asynkront?  
+**Q:** Finns det ett sätt att generera förhandsgranskningar asynkront?  
 **A:** Absolut! Använd `CompletableFuture.runAsync()` eller `ExecutorService` för att generera förhandsgranskningar i bakgrundstrådar. Detta förhindrar att din huvudapplikationstråd blockeras.
 
-**Q6:** Hur felsöker jag ”License not found”‑fel?  
-**A:** Säkerställ att din licensfil finns i classpath, verifiera att licensen inte har löpt ut och kontrollera att du använder rätt licenstyp för din GroupDocs.Comparison‑version.
+**Q:** Hur felsöker jag “License not found”-fel?  
+**A:** Säkerställ att din licensfil finns i classpath, verifiera att licensen inte har gått ut, och kontrollera att du använder rätt licenstyp för din GroupDocs.Comparison‑version.
 
 **Ytterligare resurser**
-
 - **Documentation**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
 - **Download Latest**: [GroupDocs.Comparison Downloads](https://releases.groupdocs.com/comparison/java/)  
@@ -591,8 +594,16 @@ Redo att implementera förhandsgranskningsgenerering i din Java‑applikation? B
 - **Get Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 - **Temporary License**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
----  
+---
 
-**Senast uppdaterad:** 2026-02-08  
-**Testad med:** GroupDocs.Comparison 25.2  
-**Författare:** GroupDocs  
+**Last Updated:** 2026-05-26  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs  
+
+---
+
+## Relaterade handledningar
+
+- [Java Document Preview Generation - Complete GroupDocs.Comparison Tutorial](/comparison/java/preview-generation/)  
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)  
+- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)

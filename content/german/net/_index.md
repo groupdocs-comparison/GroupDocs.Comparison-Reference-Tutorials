@@ -1,263 +1,261 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: Erfahren Sie, wie Sie Dokumente in .NET mit GroupDocs.Comparison vergleichen,
-  Änderungen akzeptieren/ablehnen und Dokumenten‑Metadaten extrahieren.
+date: '2026-05-26'
+description: Erfahren Sie, wie Sie Dokumente .net mit GroupDocs.Comparison vergleichen,
+  Änderungen akzeptieren/ablehnen und Dokumenten-Metadaten extrahieren.
 is_root: true
-keywords: GroupDocs.Comparison tutorial, document comparison .NET, compare documents
-  programmatically, .NET document comparison library, GroupDocs.Comparison examples
-lastmod: '2026-03-03'
-linktitle: GroupDocs.Comparison for .NET Tutorials
+keywords:
+- compare documents .net
+- document comparison .net
+- GroupDocs.Comparison
+lastmod: '2026-05-26'
+linktitle: GroupDocs.Comparison für .NET Tutorials
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  headline: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  type: TechArticle
+- description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  name: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  steps:
+  - name: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+    text: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+  - name: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+    text: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+  - name: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+    text: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+  - name: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+    text: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+  - name: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+    text: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+  type: HowTo
+- questions:
+  - answer: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo`
+      and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
+    question: How do I programmatically accept or reject changes after a comparison?
+  - answer: Yes—`DocumentInfo` provides access to standard and custom metadata for
+      both source and target files, allowing you to log or display this information.
+    question: Can I extract metadata such as author, creation date, or custom properties
+      from documents?
+  - answer: Absolutely. The `CompareImages` API highlights pixel‑level differences
+      and returns a similarity percentage you can use in automated tests.
+    question: Is it possible to compare image files (e.g., PNG, JPEG) directly in
+      .NET?
+  - answer: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`;
+      the method returns a collection of `FolderComparisonResult` objects that indicate
+      the status of each file pair.
+    question: How can I compare entire folders to find added, removed, or modified
+      files?
+  - answer: Supply the password via `LoadOptions.Password` when loading each document;
+      the engine decrypts the files internally before performing the diff.
+    question: What should I do if I need to compare password‑protected documents?
+  type: FAQPage
 tags:
 - document-comparison
 - dotnet
 - groupdocs
 - tutorial
-title: Wie man Dokumente mit GroupDocs.Comparison für .NET vergleicht
+title: Dokumente vergleichen .net – Vollständiges GroupDocs.Comparison Tutorial
 type: docs
 url: /de/net/
 weight: 10
 ---
 
-# Vollständiges GroupDocs.Comparison Tutorial für .NET-Entwickler
+# Dokumente vergleichen .net – Vollständiges GroupDocs.Comparison Tutorial für .NET-Entwickler
 
-## Warum Dokumentenvergleich wichtig ist (und warum diese Bibliothek großartig ist)
+If you need to **compare documents .net** programmatically, you’ve landed on the right guide.  
+Manually spotting differences between two versions of a contract, a spreadsheet, or a presentation can waste hours and still miss subtle changes. With GroupDocs.Comparison for .NET you can automate this task, generate visual diff reports, and even accept or reject changes without opening the files yourself. This tutorial walks you through every step—from installing the NuGet package to handling large‑scale folder comparisons—so you can embed reliable document comparison into any .NET solution.
 
-Wenn Sie nach **wie man Dokumente vergleicht** programmatisch suchen, sind Sie hier genau richtig.  
-Wenn Sie jemals Stunden damit verbracht haben, Dokumentenversionen manuell zu vergleichen, Änderungen über Teams hinweg nachzuverfolgen oder genau zu ermitteln, was sich zwischen zwei Dateien geändert hat, sind Sie nicht allein. Dokumentenvergleich ist eine dieser Aufgaben, die einfach erscheint, bis man sie programmatisch erledigen muss.
+## Schnelle Antworten
+- **What is the primary purpose of GroupDocs.Comparison?** To programmatically compare documents, detect changes, and generate visual or data‑driven diff results.  
+- **Can I accept or reject changes automatically?** Yes—use the accept/reject API to apply granular control.  
+- **Does the library support image comparison in .NET?** Absolutely; you can compare screenshots, UI renders, and any raster images.  
+- **Is folder comparison possible?** Yes—compare entire folders to spot added, removed, or modified files.  
+- **What do I need before starting?** A .NET development environment, the NuGet package, and a valid GroupDocs.Comparison license (trial available).  
 
-Genau hier kommt GroupDocs.Comparison für .NET ins Spiel. Das ist nicht nur ein weiteres Vergleichstool – es ist eine umfassende Lösung, die alles von einfachen Textdokumenten bis hin zu komplexen Tabellen, Präsentationen und sogar Bildern verarbeitet. Egal, ob Sie ein Dokumenten‑Management‑System bauen, Workflow‑Automatisierung erstellen oder einfach zuverlässige Vergleichsfunktionen benötigen, diese Bibliothek deckt alles ab.
+## Was ist compare documents .net?
+`compare documents .net` is the process of programmatically identifying differences between two or more document versions using a .NET library. GroupDocs.Comparison implements this by loading source and target files, applying configurable comparison options, and returning a `ComparisonResult` that contains both visual highlights and a structured list of changes. **ComparisonResult** represents the outcome of a comparison, containing the detected changes and visual diff data.
 
-In diesem vollständigen Tutorial‑Leitfaden erfahren Sie, wie Sie leistungsstarke Dokumentenvergleichsfunktionen in Ihre .NET‑Anwendungen integrieren, mit realen Beispielen und praktischen Lösungen für gängige Szenarien.
+## Warum GroupDocs.Comparison für .NET wählen?
+GroupDocs.Comparison supports over 50 formats, processes large PDFs in seconds, and includes enterprise‑grade features such as password handling, metadata preservation, and fine‑grained change management, eliminating the need for multiple specialized libraries and reducing development effort.
 
-## Schnellantworten
-- **Was ist der Hauptzweck von GroupDocs.Comparison?** Dokumente programmatisch zu vergleichen, Änderungen zu erkennen und visuelle oder datengetriebene Diff‑Ergebnisse zu erzeugen.  
-- **Kann ich Änderungen automatisch akzeptieren oder ablehnen?** Ja – verwenden Sie die accept/reject changes API, um eine feinkörnige Kontrolle anzuwenden.  
-- **Unterstützt die Bibliothek Bildvergleich in .NET?** Absolut; Sie können Screenshots, UI‑Renderings und beliebige Rasterbilder vergleichen.  
-- **Ist ein Ordnervergleich möglich?** Ja – vergleichen Sie komplette Ordner, um hinzugefügte, entfernte oder geänderte Dateien zu erkennen.  
-- **Was benötige ich, bevor ich starte?** Eine .NET‑Entwicklungsumgebung, das NuGet‑Paket und eine gültige GroupDocs.Comparison‑Lizenz (Testversion verfügbar).
+## Voraussetzungen
 
-## Was macht GroupDocs.Comparison anders?
+- Visual Studio 2022 or later (or any .NET‑compatible IDE).  
+- .NET 6+ runtime (the library also supports .NET Core 3.1 and .NET Framework 4.8).  
+- NuGet package `GroupDocs.Comparison` (latest stable version).  
+- A valid license key (you can start with a 30‑day trial).  
 
-Bevor Sie in die Tutorials eintauchen, lassen Sie uns darüber sprechen, warum Entwickler diese Bibliothek gegenüber Alternativen wählen:
+## Wie vergleiche ich zwei Dokumente .net?
+To compare two documents .net, instantiate the `Comparer` class, call `Compare(sourcePath, targetPath, outputPath)`, and specify any `ComparisonOptions` you need. The method creates a diff file that highlights insertions, deletions, and formatting changes, while also exposing a `Changes` collection for programmatic inspection. The `Comparer` object is the core engine that drives the comparison process.
 
-**Umfassende Formatunterstützung**: Vergleichen Sie Word‑Docs, PDFs, Excel‑Dateien, PowerPoint‑Präsentationen, Bilder und mehr – alles mit derselben API. Keine Notwendigkeit, verschiedene Bibliotheken für unterschiedliche Dateitypen zu lernen.
+### Schritt‑für‑Schritt‑Durchlauf
 
-**Visuelle und programmatische Ergebnisse**: Erhalten Sie sowohl visuelle Diff‑Highlights als auch programmatischen Zugriff auf Änderungen. Perfekt, egal ob Sie Benutzern zeigen wollen, was sich geändert hat, oder Änderungen automatisch verarbeiten möchten.
+1. **Create a `Comparer` instance** – this is the core object that drives the comparison engine.  
+2. **Load source and target** – you can pass file paths, streams, or byte arrays; streams are recommended for files larger than 10 MB.  
+3. **Configure options** – ignore case, set a password, or adjust sensitivity via `ComparisonOptions`.  
+4. **Execute the comparison** – call `Compare` and provide an output location for the visual diff.  
+5. **Process results** – read the `Changes` collection to accept, reject, or log each modification.
 
-**Enterprise‑Ready‑Funktionen**: Verarbeiten Sie passwortgeschützte Dokumente, arbeiten Sie mit Streams, verwalten Sie Metadaten – all das, was Sie für Produktionsanwendungen benötigen.
+## Welche Formate kann ich mit GroupDocs.Comparison vergleichen?
+GroupDocs.Comparison supports **50+ input and output formats**, including DOCX, PDF, XLSX, PPTX, PNG, JPEG, BMP, and TIFF. It can also handle password‑protected files and files stored in cloud storage (via stream APIs). This breadth eliminates the need for multiple libraries when building a universal document‑processing pipeline.
 
-**Einfache Integration**: Fügen Sie den Dokumentenvergleich Ihrer bestehenden .NET‑Anwendung mit minimalen Code‑Änderungen hinzu. Die API ist intuitiv und gut dokumentiert.
+## Wie kann ich Änderungen programmgesteuert annehmen oder ablehnen?
+The `ComparisonResult` object exposes a `Changes` collection. Each `ChangeInfo` item describes a single detected change and provides `Accept()` and `Reject()` methods. Call `result.Changes.AcceptAll()` to apply every detected change to the target document, or iterate `result.Changes` and invoke `Accept()` or `Reject()` on individual `ChangeInfo` objects for granular control. After applying the desired actions, save the updated document with `result.Save(outputPath)`.
 
-## Wie man Dokumente vergleicht und Dokumentenänderungen erkennt
+## Wie vergleiche ich komplette Ordner .net?
+Folder comparison involves iterating over matching file pairs and invoking the same `Compare` logic for each pair. GroupDocs.Comparison also offers a helper method `CompareFolders(sourceFolder, targetFolder, outputFolder)` that compares all matching files in two directories, detects added or removed files, and generates diff results. **CompareFolders** returns a collection of `FolderComparisonResult` objects, each indicating the status of a file pair and a link to its diff document.
 
-Wenn Sie **Dokumentänderungen erkennen** müssen, folgt der Workflow in der Regel drei Schritten:
+## Wie funktioniert Bildvergleich in .NET?
+The image module treats each pixel as a data point, generating a diff image that highlights changed regions in red and returning a similarity score (0‑100 %). Call `Comparer.CompareImages(imagePath1, imagePath2, outputPath)`; the engine aligns the images, computes per‑pixel differences, writes a diff image where altered pixels are colored, and provides a `Similarity` value you can use to trigger alerts or skip further processing if the change is below a threshold.
 
-1. **Load** die Quell‑ und Zieldateien (aus einem Pfad, Stream oder Byte‑Array).  
-2. **Configure** Vergleichsoptionen – z. B. Groß‑/Kleinschreibung ignorieren, passwortgeschützte Dateien handhaben oder eine benutzerdefinierte Empfindlichkeit für die Änderungserkennung festlegen.  
-3. **Execute** den Vergleich und holen Sie die Ergebnisse – entweder als visuelles PDF/HTML‑Diff, als Liste von `ChangeInfo`‑Objekten oder als kombiniertes Dokument, das Sie weiter verarbeiten können.
+## Häufige Anwendungsfälle
 
-Dieser Ansatz ermöglicht es Ihnen, **Änderungen zu akzeptieren/ablehnen**, Dokumenten‑Metadaten zu extrahieren und sogar **Bilder .net zu vergleichen**, wenn die Quelldateien Bilder sind. Das gleiche Muster funktioniert für **Ordner .net zu vergleichen**, indem Sie jedes Dateipaar im Ordner durchlaufen.
+- **Version control for non‑code assets** – keep a clear audit trail of contract revisions.  
+- **Automated compliance checks** – flag unauthorized edits in policy documents.  
+- **CI/CD pipelines for UI testing** – compare screenshots of web pages across builds.  
+- **Batch migration projects** – verify that converted files retain original content.
 
-## Erste Schritte: Ihr erster Vergleich in 5 Minuten
+## Leistungstipps für große Dokumente
 
-Neu bei GroupDocs.Comparison? Das ist, was Sie von Anfang an wissen sollten:
-
-1. **Installation**: Installation über den NuGet Package Manager  
-2. **Lizenzierung**: Lizenz einrichten (Testversion verfügbar)  
-3. **Grundlegende Nutzung**: Drei Code‑Zeilen für Ihren ersten Vergleich  
-4. **Erweiterte Funktionen**: Tiefer einsteigen, wenn Ihre Anforderungen wachsen  
-
-Die Lernkurve ist sanft, aber die Möglichkeiten sind umfangreich. Beginnen Sie mit dem grundlegenden Dokumentenvergleich und erkunden Sie nach und nach erweiterte Funktionen wie Änderungsmanagement und benutzerdefinierte Vergleichseinstellungen.
-
-## Dokumenten‑ und Ordnervergleich
-
-Hier beginnen die meisten Entwickler – und das aus gutem Grund. Dokumenten‑ und Ordnervergleich bildet das Rückgrat der meisten Dokumenten‑Management‑Workflows.
-
-Egal, ob Sie Vertragsrevisionen, technische Dokumentations‑Updates oder einfach nachverfolgen müssen, was sich zwischen Software‑Releases geändert hat, diese Tutorials bringen Sie schnell ans Ziel. Lernen Sie, Änderungen programmatisch zu akzeptieren oder abzulehnen, Vergleichs‑Workflows zu automatisieren und Batch‑Operationen effizient zu handhaben.
-
-**Typische Anwendungsfälle:**
-- Versionskontrolle für Nicht‑Code‑Dokumente
-- Automatisierte Änderungserkennung in Workflows  
-- Compliance‑ und Audit‑Trail‑Erstellung
-- Kollaborative Dokumenten‑Review‑Prozesse
-
-[Read More](./documents-and-folder-comparison/)
-
-## Dokumentenvergleich
-
-Dies ist die Kernfunktionalität, die die meisten Entwickler benötigen. Vergleichen Sie Textdokumente, Tabellen, Präsentationen – Sie nennen es. Aber es geht nicht nur darum, Unterschiede zu identifizieren; es geht darum, zu verstehen, was diese Unterschiede bedeuten und wie man sie programmatisch handhabt.
-
-Unsere Tutorials decken alles ab, von einfachen Vergleichen bis hin zu fortgeschrittenen Szenarien wie dem Umgang mit großen Dokumenten, Speicherverwaltung und Leistungsoptimierung für hochvolumige Operationen.
-
-**Pro‑Tipp**: Die Leistung des Dokumentenvergleichs kann je nach Größe und Komplexität stark variieren. Wir zeigen Ihnen, wie Sie für Ihren Anwendungsfall optimieren.
-
-[Read More](./document-comparison/)
-
-## Laden und Speichern von Dokumenten
-
-Das mag einfach erscheinen, aber es gibt tatsächlich mehrere Wege, Dokumente zum Vergleich zu laden – und die richtige Wahl kann sowohl die Leistung als auch die Funktionalität beeinflussen.
-
-Erfahren Sie, wann Sie aus Dateipfaden versus Streams laden, wie Sie Dokumente aus verschiedenen Quellen (Datenbanken, Cloud‑Speicher, Web‑APIs) handhaben und bewährte Methoden für die Speicherverwaltung bei großen Dokumenten.
-
-**Entwickler‑Insight**: Viele Leistungsprobleme entstehen durch ineffiziente Lademuster. Diese Tutorials helfen Ihnen, gängige Stolperfallen zu vermeiden.
-
-[Read More](./loading-and-saving-documents/)
-
-## Bildvergleich
-
-Visueller Vergleich ist nicht nur für Dokumente gedacht. Egal, ob Sie ein Design‑Review‑System bauen, visuelle Änderungen in Web‑Anwendungen überwachen oder Qualitätssicherungs‑Workflows erstellen, Bildvergleich eröffnet völlig neue Möglichkeiten.
-
-Unsere Tutorials behandeln praktische Szenarien wie den Vergleich von Screenshots, das Erkennen visueller Änderungen in UI‑Elementen und die Integration von Bildvergleich in automatisierte Test‑Workflows.
-
-[Read More](./image-comparison/)
-
-## Grundlegende Nutzung 
-
-Neu beim Dokumentenvergleich? Beginnen Sie hier. Diese Tutorials decken die Grundkonzepte und gängigen Muster ab, die Sie in fast jedem Projekt verwenden werden.
-
-Meistern Sie wesentliche Themen wie Zellenvergleich in Tabellen, Extraktion von Dokumentinformationen und das Verständnis unterstützter Formate. Dieses Fundament wird Ihnen bei komplexeren Szenarien gute Dienste leisten.
-
-**Lernpfad**: Beginnen Sie mit grundlegender Nutzung, gehen Sie dann zu Dokumentenvergleich über und erkunden Sie schließlich erweiterte Funktionen. Dieser Fortschritt baut Ihre Fähigkeiten systematisch auf.
-
-[Read More](./basic-usage/)
-
-## Schnellstart 
-
-Müssen Sie schnell loslegen? Unsere Schnellstart‑Tutorials sind für Entwickler gedacht, die sofort Ergebnisse sehen wollen.
-
-Lernen Sie die effiziente Lizenz‑Einrichtung, integrieren Sie die Vergleichsfunktion mit minimalem Code und bringen Sie Ihren ersten Dokumentenvergleich innerhalb weniger Minuten zum Laufen. Perfekt für Proof‑of‑Concepts und schnelles Prototyping.
-
-[Read More](./quick-start/)
-
-## Erweiterte Tutorial‑Kategorien
-
-### [Erste Schritte](./getting-started/)
-Schritt‑für‑Schritt‑Tutorials für die Installation von GroupDocs.Comparison, Lizenzierung, Einrichtung und das Erstellen Ihres ersten Dokumentenvergleichs in .NET‑Anwendungen.
-
-### [Dokumenten‑Laden](./document-loading/)
-Entdecken Sie verschiedene Ansätze, Dokumente zum Vergleich aus unterschiedlichen Quellen zu laden, einschließlich Dateipfaden, Streams und Byte‑Arrays.
-
-### [Grundlegender Vergleich](./basic-comparison/)
-Erfahren Sie, wie Sie verschiedene Dokumenttypen wie Word, PDF, Excel und mehr mit einfachen API‑Aufrufen von GroupDocs.Comparison vergleichen.
-
-### [Erweiterter Vergleich](./advanced-comparison/)
-Entdecken Sie leistungsstarke Funktionen für komplexe Vergleichsszenarien, einschließlich Mehrfach‑Dokumentvergleich, benutzerdefinierter Einstellungen und geschützter Dokumente.
-
-### [Änderungs‑Management](./change-management/)
-Meistern Sie das Erkennen, Akzeptieren und Ablehnen spezifischer Änderungen zwischen Dokumenten mit feinkörniger Kontrolle über die Vergleichsergebnisse.
-
-### [Dokumentinformationen](./document-information/)
-Extrahieren Sie detaillierte Metadaten und Informationen über Ihre Dokumente vor und nach Vergleichsvorgängen.
-
-### [Vorschau‑Erstellung](./preview-generation/)
-Erstellen Sie visuelle Vorschauen und Thumbnails von Dokumentseiten für Quell‑, Ziel‑ und Ergebnis‑Vergleichsdokumente.
-
-### [Metadaten‑Verwaltung](./metadata-management/)
-Steuern Sie, wie Dokument‑Metadaten während Vergleichsvorgängen erhalten, geändert oder zurückgesetzt werden.
-
-### [Sicherheit & Schutz](./security-protection/)
-Arbeiten Sie mit passwortgeschützten Dokumenten und implementieren Sie Sicherheitsfunktionen in Ihren Vergleichs‑Workflows.
-
-### [Lizenzierung & Konfiguration](./licensing-configuration/)
-Richten Sie Lizenzierung, nutzungsbasierte Abrechnung und die Optimierung der Anwendungskonfiguration für GroupDocs.Comparison korrekt ein.
-
-### [Vergleichs‑Optionen](./comparison-options/)
-Feinabstimmung des Vergleichsverhaltens mit detaillierten Einstellungen, um präzise Ergebnisse für verschiedene Dokumenttypen zu erzielen.
-
-## Häufige Herausforderungen und Lösungen
-
-**Leistung bei großen Dokumenten**: Beim Arbeiten mit großen Dateien (> 10 MB) sollten Sie Streams anstelle des Ladens kompletter Dokumente in den Speicher verwenden. Unsere Dokument‑Lade‑Tutorials behandeln Optimierungstechniken.
-
-**Speicherverwaltung**: Dokumentenvergleich kann speicherintensiv sein. Lernen Sie, Objekte korrekt zu entsorgen und effiziente Lademuster zu nutzen, um Speicherlecks zu vermeiden.
-
-**Format‑spezifische Überlegungen**: Unterschiedliche Dokumenttypen haben eigene Eigenschaften. PDFs werden anders behandelt als Word‑Dokumente, die wiederum anders als Tabellen sind. Unsere format‑spezifischen Leitfäden gehen auf diese Nuancen ein.
-
-**Integrations‑Muster**: Egal, ob Sie eine Web‑API, Desktop‑Anwendung oder Hintergrunddienst bauen, das Integrationsmuster ist entscheidend. Wir bieten Beispiele für gängige architektonische Szenarien.
-
-## Best Practices für den Produktionseinsatz
-
-**Fehlerbehandlung**: Implementieren Sie stets eine ordnungsgemäße Ausnahmebehandlung beim Dokumentenvergleich. Ungültige Dateien, beschädigte Dokumente und nicht unterstützte Formate sollten graceful gehandhabt werden.
-
-**Ressourcenverwaltung**: Verwenden Sie `using`‑Anweisungen oder korrekte Entsorgungsmuster, um sicherzustellen, dass Ressourcen, insbesondere bei der Verarbeitung vieler Dokumente, freigegeben werden.
-
-**Leistungs‑Monitoring**: Überwachen Sie Vergleichszeiten und Speicherverbrauch, besonders in hochvolumigen Szenarien. Diese Daten helfen, Engpässe zu identifizieren und Optimierungspotenziale zu erkennen.
-
-**Sicherheitsaspekte**: Beim Umgang mit sensiblen Dokumenten sollten Sie geeignete Zugriffskontrollen sicherstellen und die Sicherheitsimplikationen temporärer Dateien und Speicherverbrauch berücksichtigen.
-
-## Was kommt als Nächstes?
-
-Bereit, loszulegen? Beginnen Sie mit den [Schnellstart](./quick-start/)‑Tutorials, wenn Sie sofort Ergebnisse wollen, oder starten Sie mit [Erste Schritte](./getting-started/) für ein umfassenderes Fundament.
-
-Jedes Tutorial enthält vollständige Code‑Beispiele, Erklärungen, wann und warum verschiedene Ansätze verwendet werden sollten, sowie praktische Tipps aus der realen Anwendung. Am Ende dieser Tutorial‑Reihe verfügen Sie über das Wissen und das Selbstvertrauen, robuste Dokumentenvergleichsfunktionen in Ihren .NET‑Anwendungen zu implementieren.
-
-Egal, ob Sie Dokumenten‑Management‑Systeme bauen, Compliance‑Workflows automatisieren oder kollaborative Bearbeitungsfunktionen erstellen, GroupDocs.Comparison für .NET liefert die Basis, die Sie für zuverlässigen, effizienten Dokumentenvergleich benötigen.
-
-## GroupDocs.Comparison für .NET Tutorials 
-### [Dokument‑ und Ordnervergleich](./documents-and-folder-comparison/)
-Erfahren Sie, wie Sie Dokumenten‑Workflows mit GroupDocs Comparison für .NET‑Tutorials optimieren. Änderungen akzeptieren, ablehnen & Dokumente und Ordner mühelos vergleichen.
-### [Dokumentenvergleich](./document-comparison/)
-Effizient Dokumente in .NET mit GroupDocs.Comparison vergleichen. Dokumenten‑Management straffen, Workflows verbessern und Genauigkeit sichern. Mehr erfahren!
-### [Laden und Speichern von Dokumenten](./loading-and-saving-documents/)
-Dokumente in .NET mühelos mit GroupDocs.Comparison für .NET vergleichen. Laden, Speichern und Nutzung von Ladeoptionen für effizientes Dokumenten‑Management erlernen.
-### [Bildvergleich](./image-comparison/)
-Bilder in .NET effizient mit der GroupDocs.Comparison‑Bibliothek vergleichen. Schritt‑für‑Schritt‑Tutorials für nahtlose Integration von Pfad oder Stream.
-### [Grundlegende Nutzung](./basic-usage/)
-Dokumente in .NET effizient mit GroupDocs.Comparison vergleichen. Grundlegende Nutzung‑Tutorials zu Zellenvergleich, Dokument‑Info‑Extraktion und unterstützten Formaten lernen.
-### [Schnellstart](./quick-start/)
-GroupDocs Comparison für .NET mühelos in Ihre Projekte integrieren. Effiziente Lizenz‑Einstellungs‑Methoden für präzise Dokumentenvergleich‑Workflows erlernen.
-### [Erste Schritte](./getting-started/)
-Schritt‑für‑Schritt‑Tutorials für die Installation, Lizenzierung, Einrichtung von GroupDocs.Comparison und das Erstellen Ihres ersten Dokumentenvergleichs in .NET‑Anwendungen.
-### [Dokumenten‑Laden](./document-loading/)
-Verschiedene Ansätze entdecken, um Dokumente zum Vergleich aus unterschiedlichen Quellen zu laden, einschließlich Dateipfaden, Streams und Byte‑Arrays.
-
-### [Grundlegender Vergleich](./basic-comparison/)
-Erfahren Sie, wie Sie verschiedene Dokumenttypen wie Word, PDF, Excel und mehr mit einfachen API‑Aufrufen von GroupDocs.Comparison vergleichen.
-
-### [Erweiterter Vergleich](./advanced-comparison/)
-Entdecken Sie leistungsstarke Funktionen für komplexe Vergleichsszenarien, einschließlich Mehrfach‑Dokumentvergleich, benutzerdefinierter Einstellungen und geschützter Dokumente.
-
-### [Änderungs‑Management](./change-management/)
-Meistern Sie das Erkennen, Akzeptieren und Ablehnen spezifischer Änderungen zwischen Dokumenten mit feinkörniger Kontrolle über die Vergleichsergebnisse.
-
-### [Dokumentinformationen](./document-information/)
-Detaillierte Metadaten und Informationen über Ihre Dokumente vor und nach Vergleichsvorgängen extrahieren.
-
-### [Vorschau‑Erstellung](./preview-generation/)
-Visuelle Vorschauen und Thumbnails von Dokumentseiten für Quell‑, Ziel‑ und Ergebnis‑Vergleichsdokumente erstellen.
-
-### [Metadaten‑Verwaltung](./metadata-management/)
-Steuern, wie Dokument‑Metadaten während Vergleichsvorgängen erhalten, geändert oder zurückgesetzt werden.
-
-### [Sicherheit & Schutz](./security-protection/)
-Mit passwortgeschützten Dokumenten arbeiten und Sicherheitsfunktionen in Ihren Vergleichs‑Workflows implementieren.
-
-### [Lizenzierung & Konfiguration](./licensing-configuration/)
-Lizenzierung, nutzungsbasierte Abrechnung korrekt einrichten und die Anwendungskonfiguration für GroupDocs.Comparison optimieren.
-
-### [Vergleichs‑Optionen](./comparison-options/)
-Das Vergleichsverhalten mit detaillierten Einstellungen feinabstimmen, um präzise Ergebnisse für verschiedene Dokumenttypen zu erzielen.
+- **Stream files** instead of loading them fully into memory; this reduces peak RAM usage by up to 80 %.  
+- **Reuse a single `Comparer` instance** for multiple comparisons to take advantage of internal caching.  
+- **Adjust `ComparisonOptions.MemoryLimit`** when dealing with documents larger than 500 MB to prevent out‑of‑memory exceptions.  
 
 ## Häufig gestellte Fragen
 
-**Q: Wie akzeptiere oder lehne ich programmatisch Änderungen nach einem Vergleich ab?**  
-A: Verwenden Sie die `AcceptAll`, `RejectAll` oder `Accept/Reject`‑Methoden der `Changes`‑Sammlung, die vom Vergleichsergebnis zurückgegeben wird.
+**Q: How do I programmatically accept or reject changes after a comparison?**  
+A: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo` and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
 
-**Q: Kann ich Metadaten wie Autor, Erstellungsdatum oder benutzerdefinierte Eigenschaften aus Dokumenten extrahieren?**  
-A: Ja – GroupDocs.Comparison stellt ein `DocumentInfo`‑Objekt bereit, das standardmäßige und benutzerdefinierte Metadaten sowohl für Quell‑ als auch Ziel‑Dateien offenlegt.
+**Q: Can I extract metadata such as author, creation date, or custom properties from documents?**  
+A: Yes—`DocumentInfo` provides access to standard and custom metadata for both source and target files, allowing you to log or display this information.
 
-**Q: Ist es möglich, Bilddateien (z. B. PNG, JPEG) direkt in .NET zu vergleichen?**  
-A: Absolut. Die Bibliothek enthält eine Bildvergleich‑API, die Pixel‑Level‑Unterschiede hervorhebt und ein Diff‑Bild erzeugen kann.
+**Q: Is it possible to compare image files (e.g., PNG, JPEG) directly in .NET?**  
+A: Absolutely. The `CompareImages` API highlights pixel‑level differences and returns a similarity percentage you can use in automated tests.
 
-**Q: Wie kann ich komplette Ordner vergleichen, um hinzugefügte, entfernte oder geänderte Dateien zu finden?**  
-A: Durchlaufen Sie jedes Dateipaar in den Ordnern und rufen Sie die Vergleichs‑API auf; die Bibliothek bietet zudem eine Hilfsmethode zum Mass‑Vergleich von Ordnerinhalten.
+**Q: How can I compare entire folders to find added, removed, or modified files?**  
+A: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`; the method returns a collection of `FolderComparisonResult` objects that indicate the status of each file pair.
 
-**Q: Was soll ich tun, wenn ich passwortgeschützte Dokumente vergleichen muss?**  
-A: Übergeben Sie das Passwort über die `LoadOptions` beim Laden jedes Dokuments; die Vergleichs‑Engine entschlüsselt die Dateien intern.
+**Q: What should I do if I need to compare password‑protected documents?**  
+A: Supply the password via `LoadOptions.Password` when loading each document; the engine decrypts the files internally before performing the diff.
+
+**Q: Does GroupDocs.Comparison support .NET Core and .NET 5/6?**  
+A: Yes—the library is compatible with .NET Core 3.1, .NET 5, .NET 6, and later, offering the same feature set across all runtimes.
+
+## Vertrauenssignale
+
+**Last Updated:** 2026-05-26  
+**Tested With:** GroupDocs.Comparison 23.12 for .NET  
+**Author:** GroupDocs  
 
 ---
 
-**Last Updated:** 2026-03-03  
-**Tested With:** GroupDocs.Comparison 23.12 for .NET  
-**Author:** GroupDocs
+## Zusätzliche Tutorial-Links (unverändert)
+
+### Documents and Folder Comparison
+[Mehr lesen](./documents-and-folder-comparison/)
+
+### Document Comparison
+[Mehr lesen](./document-comparison/)
+
+### Loading and Saving Documents
+[Mehr lesen](./loading-and-saving-documents/)
+
+### Image Comparison
+[Mehr lesen](./image-comparison/)
+
+### Basic Usage
+[Mehr lesen](./basic-usage/)
+
+### Quick Start
+[Mehr lesen](./quick-start/)
+
+### Getting Started
+[Erste Schritte](./getting-started/)
+
+### Document Loading
+[Dokumentenladen](./document-loading/)
+
+### Basic Comparison
+[Grundlegender Vergleich](./basic-comparison/)
+
+### Advanced Comparison
+[Erweiterter Vergleich](./advanced-comparison/)
+
+### Change Management
+[Änderungsverwaltung](./change-management/)
+
+### Document Information
+[Dokumentinformationen](./document-information/)
+
+### Preview Generation
+[Vorschau-Generierung](./preview-generation/)
+
+### Metadata Management
+[Metadatenverwaltung](./metadata-management/)
+
+### Security & Protection
+[Sicherheit & Schutz](./security-protection/)
+
+### Licensing & Configuration
+[Lizenzierung & Konfiguration](./licensing-configuration/)
+
+### Comparison Options
+[Vergleichsoptionen](./comparison-options/)
+
+[Mehr lesen](./documents-and-folder-comparison/)
+[Mehr lesen](./document-comparison/)
+[Mehr lesen](./loading-and-saving-documents/)
+[Mehr lesen](./image-comparison/)
+[Mehr lesen](./basic-usage/)
+[Mehr lesen](./quick-start/)
+[Erste Schritte](./getting-started/)
+[Dokumentenladen](./document-loading/)
+[Grundlegender Vergleich](./basic-comparison/)
+[Erweiterter Vergleich](./advanced-comparison/)
+[Änderungsverwaltung](./change-management/)
+[Dokumentinformationen](./document-information/)
+[Vorschau-Generierung](./preview-generation/)
+[Metadatenverwaltung](./metadata-management/)
+[Sicherheit & Schutz](./security-protection/)
+[Lizenzierung & Konfiguration](./licensing-configuration/)
+[Vergleichsoptionen](./comparison-options/)
+[Schnellstart](./quick-start/)
+[Erste Schritte](./getting-started/)
+[Dokument- und Ordnervergleich](./documents-and-folder-comparison/)
+[Dokumentvergleich](./document-comparison/)
+[Laden und Speichern von Dokumenten](./loading-and-saving-documents/)
+[Bildvergleich](./image-comparison/)
+[Grundlegende Nutzung](./basic-usage/)
+[Schnellstart](./quick-start/)
+[Erste Schritte](./getting-started/)
+[Dokumentenladen](./document-loading/)
+[Grundlegender Vergleich](./basic-comparison/)
+[Erweiterter Vergleich](./advanced-comparison/)
+[Änderungsverwaltung](./change-management/)
+[Dokumentinformationen](./document-information/)
+[Vorschau-Generierung](./preview-generation/)
+[Metadatenverwaltung](./metadata-management/)
+[Sicherheit & Schutz](./security-protection/)
+[Lizenzierung & Konfiguration](./licensing-configuration/)
+[Vergleichsoptionen](./comparison-options/)
+
+## Verwandte Tutorials
+
+- [Dokumentvergleich .NET: Änderungen programmgesteuert annehmen & ablehnen](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [GroupDocs Comparison NET Tutorial – Vollständiger Leitfaden zum Dokumentvergleich mit Metadaten](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [Dokumentvergleich .NET Tutorial – Metadaten mit GroupDocs erhalten](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

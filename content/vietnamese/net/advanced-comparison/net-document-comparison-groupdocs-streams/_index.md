@@ -1,130 +1,382 @@
 ---
-"date": "2025-05-05"
-"description": "Tìm hiểu cách tự động so sánh tài liệu bằng luồng với GroupDocs.Comparison cho .NET. Nâng cao hiệu quả và hợp lý hóa quy trình làm việc."
-"title": "Tự động so sánh tài liệu trong .NET bằng cách sử dụng GroupDocs.Comparison Streams"
-"url": "/vi/net/advanced-comparison/net-document-comparison-groupdocs-streams/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-03-17'
+description: Học cách so sánh các tệp PDF và Word bằng .NET streams với GroupDocs.Comparison.
+  Theo dõi hướng dẫn từng bước này với các thực tiễn tốt nhất trong so sánh tài liệu,
+  ví dụ mã và mẹo khắc phục sự cố.
+keywords: compare pdf and word, document comparison best practices, GroupDocs.Comparison,
+  .NET streams, automate document comparison
+lastmod: '2026-03-17'
+linktitle: Document Comparison .NET Streams
+tags:
+- document-comparison
+- streams
+- groupdocs
+- automation
+- dotnet
+title: So sánh PDF và Word bằng .NET Streams – Hướng dẫn tự động hoá
 type: docs
+url: /vi/net/advanced-comparison/net-document-comparison-groupdocs-streams/
+weight: 1
 ---
-# Tự động so sánh tài liệu trong .NET bằng cách sử dụng GroupDocs.Comparison Streams
-## Giới thiệu
-Bạn đang tìm kiếm một cách hiệu quả để tự động so sánh tài liệu? Hướng dẫn này trình bày cách so sánh tài liệu bằng luồng trong môi trường .NET với GroupDocs.Comparison cho .NET. Bằng cách sử dụng luồng tệp, cách tiếp cận này mang lại sự linh hoạt và hiệu quả, đặc biệt là khi xử lý các tệp lớn hoặc tài nguyên dựa trên mạng.
-**Những gì bạn sẽ học được:**
-- Cách tải tài liệu từ luồng
-- Triển khai so sánh tài liệu với GroupDocs.Comparison
-- Lưu kết quả so sánh dưới dạng một tài liệu mới
-Với những hiểu biết sâu sắc này, bạn sẽ được trang bị tốt để tự động so sánh tài liệu trong các ứng dụng .NET của mình. Hãy bắt đầu bằng cách xem xét các điều kiện tiên quyết.
-## Điều kiện tiên quyết
-Trước khi tiếp tục, hãy đảm bảo rằng bạn có những điều sau:
-- **Thư viện và phụ thuộc cần thiết:**
-  - GroupDocs.Comparison cho .NET (phiên bản 25.4.0 trở lên)
-  - .NET Core SDK (khuyến nghị phiên bản mới nhất)
-- **Yêu cầu thiết lập môi trường:**
-  - Một IDE tương thích như Visual Studio
-  - Hiểu biết cơ bản về lập trình C#
-## Thiết lập GroupDocs.Comparison cho .NET
-### Thông tin cài đặt
-Để bắt đầu sử dụng GroupDocs.Comparison trong dự án của bạn, bạn cần cài đặt thư viện. Bạn có thể thực hiện việc này thông qua NuGet Package Manager Console hoặc .NET CLI.
-**Bảng điều khiển quản lý gói NuGet:**
+
+# compare pdf and word with .NET Streams – Automation Guide
+
+Bạn đã bao giờ cảm thấy ngập trong các phiên bản tài liệu, phải tự mình tìm kiếm sự khác biệt? Nếu bạn đang xây dựng các ứng dụng .NET, bạn có thể **compare pdf and word** nhanh chóng và hiệu quả bằng cách sử dụng streams với GroupDocs.Comparison. Streams giúp giảm mức sử dụng bộ nhớ, cho phép làm việc với các tệp lớn hoặc tệp từ xa, và loại bỏ nhu cầu sao chép tạm thời lên đĩa.
+
+Trong hướng dẫn này, bạn sẽ học cách tải tài liệu trực tiếp từ streams, thực hiện so sánh đáng tin cậy, và áp dụng **document comparison best practices** cho các giải pháp cấp sản xuất.
+
+## Quick Answers
+- **What can I compare?** Bất kỳ định dạng nào được hỗ trợ—PDF, DOCX, PPTX, XLSX, và hơn thế nữa.  
+- **Why use streams?** Streams đọc dữ liệu theo từng khối, giảm tiêu thụ RAM cho các tệp lớn.  
+- **Do I need a license?** Có, cần có giấy phép GroupDocs.Comparison hợp lệ cho môi trường sản xuất.  
+- **Can I compare remote files?** Chắc chắn—chỉ cần truyền một HTTP stream cho bộ so sánh.  
+- **Is async supported?** Thư viện bản thân là đồng bộ, nhưng bạn có thể bọc I/O trong async/await để giao diện người dùng phản hồi nhanh.
+
+## What is compare pdf and word using .NET Streams?
+So sánh tài liệu PDF và Word qua streams có nghĩa là bạn cung cấp cho lớp `Comparer` một đối tượng `Stream` thay vì đường dẫn tệp. Thư viện sẽ đọc nội dung ngay khi cần, rất phù hợp cho các hợp đồng lớn, tệp lưu trữ trên đám mây, hoặc bất kỳ trường hợp nào bạn muốn giữ kích thước bộ nhớ tối thiểu.
+
+## Document comparison best practices with streams
+- **Always wrap streams in `using` blocks** để đảm bảo giải phóng tài nguyên.  
+- **Prefer `Path.Combine`** để xử lý đường dẫn đa nền tảng.  
+- **Validate file existence** trước khi mở streams để tránh `FileNotFoundException`.  
+- **Handle exceptions** như `UnauthorizedAccessException` để làm cho dịch vụ của bạn vững chắc.  
+- **Consider async I/O** cho các ứng dụng UI hoặc web để giữ giao diện phản hồi nhanh.
+
+## Prerequisites and Setup
+
+Trước khi chúng ta chuyển sang code, hãy chắc chắn rằng bạn đã có mọi thứ cần thiết. Đừng lo—cài đặt rất đơn giản.
+
+### What You'll Need
+
+**Required Libraries and Dependencies:**
+- GroupDocs.Comparison for .NET (phiên bản 25.4.0 trở lên – luôn sử dụng phiên bản mới nhất)
+- .NET Core SDK (bản phát hành ổn định mới nhất)
+
+**Environment Setup Requirements:**
+- Một IDE ổn (Visual Studio rất tuyệt, nhưng VS Code cũng hoạt động tốt)
+- Kiến thức cơ bản về C# (nếu bạn có thể viết một vòng lặp `for`, bạn đã sẵn sàng)
+
+### Getting GroupDocs.Comparison Up and Running
+
+Cài đặt thư viện cực kỳ đơn giản. Bạn có hai lựa chọn, và cả hai đều hoạt động trơn tru:
+
+**Option 1: NuGet Package Manager Console**
 ```shell
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
-**.NETCLI:**
+
+**Option 2: .NET CLI (if you're more of a command‑line person)**
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
-### Mua lại giấy phép
-Để sử dụng GroupDocs.Comparison, bạn có thể bắt đầu bằng bản dùng thử miễn phí hoặc mua giấy phép tạm thời để thử nghiệm rộng rãi hơn. Đối với môi trường sản xuất, hãy cân nhắc mua giấy phép đầy đủ.
-1. **Dùng thử miễn phí:** Tải xuống từ trang web chính thức [trang phát hành](https://releases.groupdocs.com/comparison/net/).
-2. **Giấy phép tạm thời:** Yêu cầu thông qua họ [trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
-3. **Mua:** Để sử dụng lâu dài, hãy mua giấy phép trên [mua trang](https://purchase.groupdocs.com/buy).
-### Khởi tạo cơ bản
-Sau đây là cách bạn có thể khởi tạo GroupDocs.Comparison trong ứng dụng .NET của mình:
+
+### License Acquisition (Don't Skip This!)
+
+Về vấn đề giấy phép—bạn có các tùy chọn tùy theo nhu cầu:
+
+1. **Free Trial:** Hoàn hảo để thử nghiệm. Tải về từ [release page](https://releases.groupdocs.com/comparison/net/).  
+2. **Temporary License:** Cần thêm thời gian để đánh giá? Lấy một giấy phép tạm thời từ [temporary license page](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full License:** Sẵn sàng cho môi trường sản xuất? Mua tại [buy page](https://purchase.groupdocs.com/buy).
+
+### Basic Initialization
+
+Sau khi đã cài đặt mọi thứ, bắt đầu rất đơn giản bằng cách thêm câu lệnh using này:
+
 ```csharp
 using GroupDocs.Comparison;
 ```
-## Hướng dẫn thực hiện
-Bây giờ bạn đã thiết lập đủ các điều kiện tiên quyết, hãy chuyển sang triển khai so sánh tài liệu bằng luồng.
-### Tải tài liệu từ các luồng
-Tính năng này tập trung vào việc so sánh các tài liệu được tải qua luồng tệp. Sau đây là cách thức hoạt động:
-#### Bước 1: Thiết lập đường dẫn tệp
-Xác định đường dẫn cho tài liệu nguồn và đích cũng như tệp đầu ra nơi kết quả sẽ được lưu trữ.
+
+Xong! Bạn đã sẵn sàng so sánh tài liệu như một chuyên gia.
+
+## Implementation Guide – The Fun Part
+
+Được rồi, đến phần chính. Hãy xây dựng một hệ thống so sánh tài liệu thực sự hoạt động trong môi trường thực tế.
+
+### Understanding Stream‑Based Document Loading
+
+Trước khi viết code, hãy nói về lý do streams tuyệt vời cho việc so sánh tài liệu. Khi bạn tải tài liệu qua streams, bạn thực chất đang nói với ứng dụng: “Đừng tải toàn bộ tệp vào bộ nhớ một lúc. Hãy đọc khi cần.” Cách tiếp cận này tỏa sáng trong các trường hợp:
+
+- Tài liệu lớn có thể tiêu tốn RAM đáng kể  
+- Tệp lưu trữ trên máy chủ từ xa hoặc đám mây  
+- Các kịch bản yêu cầu quản lý bộ nhớ chính xác  
+
+### Step‑by‑Step Implementation
+
+#### Step 1: Setting Up Your File Paths
+
+Đầu tiên, định nghĩa vị trí tài liệu và nơi lưu kết quả:
+
 ```csharp
 string sourceDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "source_document.docx");
 string targetDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "target_document.docx");
 string outputFileName = Path.Combine("YOUR_OUTPUT_DIRECTORY", "comparison_result.docx");
 ```
-#### Bước 2: Tải tài liệu vào luồng
-Sử dụng `File.OpenRead` để tải tài liệu dưới dạng luồng. Phương pháp này lý tưởng để xử lý các tệp lớn hoặc các tệp được lưu trữ từ xa.
+
+**Pro tip:** Luôn dùng `Path.Combine()` thay vì nối chuỗi. Nó xử lý dấu phân cách đường dẫn đúng trên mọi hệ điều hành, và bạn sẽ cảm ơn mình trong tương lai.
+
+#### Step 2: Loading Documents into Streams
+
+Đây là nơi phép thuật bắt đầu. Chúng ta dùng `File.OpenRead` để tạo streams cho các tài liệu:
+
 ```csharp
 using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
 {
     using (Stream targetStream = File.OpenRead(targetDocumentPath))
     {
-        // Khối mã để so sánh nằm ở đây.
+        // The comparison magic happens here
     }
 }
 ```
-#### Bước 3: Khởi tạo Comparer và Thêm Luồng mục tiêu
-Tạo một trường hợp của `Comparer` với luồng nguồn, sau đó thêm luồng tài liệu đích.
+
+Bạn thấy không, chúng ta bọc mọi thứ trong các câu lệnh `using`? Điều này bảo đảm các stream được giải phóng đúng cách, ngay cả khi có ngoại lệ xảy ra.
+
+#### Step 3: Initialize the Comparer
+
+Bây giờ chúng ta tạo instance `Comparer` và thêm tài liệu mục tiêu:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceStream)) 
 {
     comparer.Add(targetStream);
-    // Tiến hành so sánh tài liệu.
+    // Ready to compare!
 }
 ```
-#### Bước 4: Thực hiện so sánh và lưu kết quả
-Cuối cùng, thực hiện so sánh và lưu tệp đầu ra bằng cách sử dụng `File.Create`.
+
+Điểm mạnh của cách này là `Comparer` làm việc trực tiếp với các stream—không có tệp tạm thời làm lộn xộn hệ thống.
+
+#### Step 4: Execute Comparison and Save Results
+
+Cuối cùng, chạy so sánh và lưu kết quả:
+
 ```csharp
 comparer.Compare(File.Create(outputFileName));
 ```
-### Mẹo khắc phục sự cố
-- **Vấn đề thường gặp:** Đảm bảo rằng các đường dẫn được thiết lập chính xác và có thể truy cập được từ môi trường ứng dụng của bạn.
-- **Quản lý luồng:** Luôn xử lý luồng đúng cách để tránh rò rỉ bộ nhớ.
-## Ứng dụng thực tế
-GroupDocs.Comparison cho .NET có thể được áp dụng trong nhiều tình huống thực tế khác nhau:
-1. **Đánh giá tài liệu pháp lý:** Tự động so sánh các phiên bản hợp đồng.
-2. **Bối cảnh học thuật:** So sánh các bản thảo khác nhau của các bài báo học thuật hoặc luận văn.
-3. **Phát triển phần mềm:** Theo dõi những thay đổi trên nhiều phiên bản tài liệu mã khác nhau.
-Thư viện này tích hợp liền mạch với các hệ thống .NET khác, nâng cao quy trình quản lý tài liệu trong các ứng dụng doanh nghiệp.
-## Cân nhắc về hiệu suất
-Để tối ưu hóa hiệu suất khi sử dụng GroupDocs.Comparison:
-- Sử dụng luồng để giảm thiểu dung lượng bộ nhớ.
-- Tận dụng các mô hình lập trình không đồng bộ cho các hoạt động I/O.
-- Thực hiện các biện pháp tốt nhất trong quản lý bộ nhớ .NET để đảm bảo sử dụng tài nguyên hiệu quả.
-## Phần kết luận
-Trong hướng dẫn này, bạn đã học cách tự động so sánh tài liệu bằng luồng tệp với GroupDocs.Comparison cho .NET. Phương pháp này không chỉ hợp lý hóa quy trình làm việc của bạn mà còn nâng cao hiệu suất bằng cách quản lý tài nguyên hiệu quả.
-Các bước tiếp theo có thể bao gồm khám phá các tính năng nâng cao hơn của thư viện hoặc tích hợp nó với các hệ thống khác trong ngăn xếp công nghệ của bạn.
 
-## Phần Câu hỏi thường gặp
+Xong! Các tài liệu của bạn đã được so sánh, và kết quả được lưu đúng nơi bạn chỉ định.
 
-**Câu hỏi 1: Tôi có thể so sánh các tài liệu có định dạng khác ngoài DOCX không?**
+## Complete Working Example
 
-A1: Có, GroupDocs.Comparison hỗ trợ nhiều định dạng tài liệu bao gồm tệp PDF, Excel và PowerPoint.
+Dưới đây là toàn bộ mã được gộp lại trong một phương thức sẵn sàng cho môi trường sản xuất:
 
-**Câu hỏi 2: Làm thế nào để xử lý việc so sánh các tệp lớn một cách hiệu quả?**
+```csharp
+public void CompareDocumentsUsingStreams()
+{
+    string sourceDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "source_document.docx");
+    string targetDocumentPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "target_document.docx");
+    string outputFileName = Path.Combine("YOUR_OUTPUT_DIRECTORY", "comparison_result.docx");
 
-A2: Sử dụng luồng để tải tài liệu nhằm giảm thiểu việc sử dụng bộ nhớ và nâng cao hiệu suất.
+    using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
+    {
+        using (Stream targetStream = File.OpenRead(targetDocumentPath))
+        {
+            using (Comparer comparer = new Comparer(sourceStream)) 
+            {
+                comparer.Add(targetStream);
+                comparer.Compare(File.Create(outputFileName));
+            }
+        }
+    }
+}
+```
 
-**Câu hỏi 3: Yêu cầu hệ thống để sử dụng GroupDocs.Comparison trong các ứng dụng .NET là gì?**
+## Troubleshooting Common Issues
 
-A3: Cần có phiên bản .NET Core SDK tương thích, cùng với Visual Studio hoặc IDE tương tự.
+Thành thật mà nói—đôi khi mọi thứ không chạy trơn tru ngay lần đầu. Dưới đây là những vấn đề thường gặp và cách khắc phục.
 
-**Câu hỏi 4: Có hỗ trợ cho các hoạt động không đồng bộ khi so sánh tài liệu không?**
+### File Path Problems
+**Symptom:** `FileNotFoundException` hoặc lỗi liên quan đến đường dẫn  
+**Solution:** Kiểm tra lại đường dẫn tệp. Sử dụng đường dẫn tuyệt đối trong quá trình phát triển để tránh nhầm lẫn.
 
-A4: Có, bạn có thể triển khai các phương pháp không đồng bộ để quản lý các tác vụ liên quan đến I/O hiệu quả hơn.
+```csharp
+// Instead of this:
+string path = "documents/source.docx";
 
-**Câu hỏi 5: Tôi có thể tìm tài liệu chi tiết và tham chiếu API ở đâu?**
+// Do this:
+string path = Path.GetFullPath("documents/source.docx");
+Console.WriteLine($"Full path: {path}"); // Always verify your paths
+```
 
-A5: Ghé thăm [Tài liệu GroupDocs.Comparison .NET](https://docs.groupdocs.com/comparison/net/) để biết hướng dẫn toàn diện và thông tin chi tiết về API.
+### Memory Leaks from Improper Stream Management
+**Symptom:** Bộ nhớ ứng dụng tăng dần theo thời gian  
+**Solution:** Luôn bọc streams trong câu lệnh `using`. Đây là cách **KHÔNG** nên làm:
 
-## Tài nguyên
-- **Tài liệu:** [So sánh GroupDocs .NET Docs](https://docs.groupdocs.com/comparison/net/)
-- **Tài liệu tham khảo API:** [So sánh GroupDocs Tài liệu tham khảo API .NET](https://reference.groupdocs.com/comparison/net/)
-- **Tải xuống:** [Bản phát hành GroupDocs](https://releases.groupdocs.com/comparison/net/)
-- **Giấy phép mua hàng:** [Mua GroupDocs](https://purchase.groupdocs.com/buy)
-- **Dùng thử miễn phí:** [Trang phát hành GroupDocs](https://releases.groupdocs.com/comparison/net/)
-- **Giấy phép tạm thời:** [Yêu cầu Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- **Ủng hộ:** [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/comparison/)
-Bằng cách làm theo hướng dẫn này, giờ đây bạn đã được trang bị để triển khai so sánh tài liệu hiệu quả trong các ứng dụng .NET của mình bằng GroupDocs.Comparison. Chúc bạn viết mã vui vẻ!
+```csharp
+// DON'T do this:
+Stream sourceStream = File.OpenRead(sourceDocumentPath);
+// Stream never gets disposed!
+
+// DO this instead:
+using (Stream sourceStream = File.OpenRead(sourceDocumentPath))
+{
+    // Stream automatically disposed
+}
+```
+
+### Large File Performance Issues
+**Symptom:** So sánh mất quá nhiều thời gian với tài liệu lớn  
+**Solution:** Xem xét triển khai các thao tác bất đồng bộ và báo cáo tiến độ:
+
+```csharp
+// For large files, consider async operations
+public async Task CompareDocumentsAsync()
+{
+    // Implementation with async/await pattern
+    // This keeps your UI responsive
+}
+```
+
+### Access Denied Errors
+**Symptom:** `UnauthorizedAccessException` khi cố đọc/ghi tệp  
+**Solution:** Kiểm tra quyền truy cập tệp và đảm bảo tệp không bị khóa bởi ứng dụng khác.
+
+## Real‑World Applications
+
+So sánh tài liệu bằng streams không chỉ là bài tập học thuật—nó giải quyết các vấn đề thực tế trong nhiều ngành công nghiệp.
+
+### Legal Document Review
+Các công ty luật so sánh các phiên bản hợp đồng có thể dài hàng chục trang. So sánh dựa trên stream giúp họ phát hiện thay đổi điều khoản mà không cần tải toàn bộ hợp đồng vào bộ nhớ.
+
+### Academic Publishing
+Các trường đại học so sánh bản thảo luận văn và bài nghiên cứu, thường hỗn hợp PDF và Word. Khả năng xử lý đa định dạng qua stream giúp quy trình đánh giá trở nên suôn sẻ.
+
+### Software Documentation Management
+Các đội phát triển theo dõi thay đổi trong tài liệu API, hướng dẫn người dùng, và ghi chú phát hành. Khi tích hợp vào pipeline CI/CD, so sánh stream tự động kiểm tra tuân thủ.
+
+### Enterprise Content Management
+Các tổ chức lớn thực thi chính sách kiểm soát thay đổi bằng cách so sánh các phiên bản tài liệu trước khi công bố lên intranet hoặc cổng thông tin công cộng.
+
+## Performance Optimization Strategies
+
+### Memory Management Best Practices
+- **Use Streams Wisely:** Streams giữ kích thước bộ nhớ thấp hơn so với việc tải toàn bộ tệp.  
+- **Dispose Promptly:** Luôn dùng `using` hoặc gọi `Dispose()` một cách rõ ràng.  
+- **Buffering:** Đối với tệp rất lớn, điều chỉnh kích thước buffer khi tạo instance `FileStream`.
+
+### Implement Asynchronous Patterns
+```csharp
+public async Task CompareDocumentsAsync()
+{
+    // Use async file operations for better responsiveness
+    using var sourceStream = new FileStream(sourcePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, true);
+    // The 'true' parameter enables asynchronous operations
+}
+```
+
+### Performance Monitoring
+Theo dõi các chỉ số sau trong môi trường sản xuất:
+- Sử dụng bộ nhớ trong quá trình so sánh  
+- Thời gian thực thi cho các kích thước tệp khác nhau  
+- Tải CPU khi thực hiện nhiều so sánh đồng thời  
+
+### Optimization Tips
+- Gộp nhiều so sánh lại với nhau khi có thể.  
+- Chọn kích thước buffer phù hợp với môi trường của bạn.  
+- Tận dụng xử lý song song cho các cặp tài liệu độc lập.  
+- Lưu cache các tài liệu thường xuyên so sánh nếu chúng không thay đổi.
+
+## Advanced Usage Patterns
+
+### Comparing Documents from Different Sources
+
+Bạn không bị giới hạn ở các tệp cục bộ. Dưới đây là cách so sánh một tệp cục bộ với tài liệu từ xa:
+
+```csharp
+// Compare local file with remote document
+using (var localStream = File.OpenRead("local_document.docx"))
+{
+    using (var httpClient = new HttpClient())
+    {
+        using (var remoteStream = await httpClient.GetStreamAsync("https://example.com/remote_document.docx"))
+        {
+            using (var comparer = new Comparer(localStream))
+            {
+                comparer.Add(remoteStream);
+                comparer.Compare(File.Create("comparison_result.docx"));
+            }
+        }
+    }
+}
+```
+
+### Error Handling and Resilience
+
+Các ứng dụng sản xuất cần xử lý lỗi mạnh mẽ:
+
+```csharp
+public bool CompareDocumentsWithErrorHandling(string sourcePath, string targetPath, string outputPath)
+{
+    try
+    {
+        using (Stream sourceStream = File.OpenRead(sourcePath))
+        {
+            using (Stream targetStream = File.OpenRead(targetPath))
+            {
+                using (Comparer comparer = new Comparer(sourceStream))
+                {
+                    comparer.Add(targetStream);
+                    comparer.Compare(File.Create(outputPath));
+                    return true;
+                }
+            }
+        }
+    }
+    catch (FileNotFoundException ex)
+    {
+        Console.WriteLine($"File not found: {ex.Message}");
+        return false;
+    }
+    catch (UnauthorizedAccessException ex)
+    {
+        Console.WriteLine($"Access denied: {ex.Message}");
+        return false;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Unexpected error: {ex.Message}");
+        return false;
+    }
+}
+```
+
+## Frequently Asked Questions
+
+**Q: What document formats does GroupDocs.Comparison support besides DOCX?**  
+A: Nó hỗ trợ PDF, Excel (XLS/XLSX), PowerPoint (PPT/PPTX), plain text, và nhiều định dạng khác. Bạn thậm chí có thể so sánh các định dạng khác nhau với nhau (ví dụ PDF vs. Word).
+
+**Q: How can I handle extremely large files without running out of memory?**  
+A: Sử dụng tải tài liệu dựa trên stream (như đã minh họa) và cân nhắc tăng kích thước buffer hoặc xử lý tệp theo từng phần. Thêm báo cáo tiến độ để giám sát các thao tác kéo dài.
+
+**Q: Can I ignore formatting changes during comparison?**  
+A: Có. GroupDocs.Comparison cung cấp `CompareOptions` cho phép bạn tắt kiểm tra định dạng, khoảng trắng, và phân biệt chữ hoa/thường.
+
+**Q: Is there async support for the comparison itself?**  
+A: Thư viện cốt lõi là đồng bộ, nhưng bạn có thể bọc các phần I/O (đọc/ghi tệp) trong async/await để giữ UI phản hồi nhanh.
+
+**Q: How do I compare password‑protected documents?**  
+A: Cung cấp mật khẩu khi tạo instance `Comparer`. API chấp nhận mật khẩu cho PDF, Word và Excel.
+
+**Q: What should I do if a network interruption occurs while comparing a remote document?**  
+A: Triển khai logic retry với exponential backoff cho yêu cầu HTTP, và cân nhắc tải tệp từ xa về một stream tạm thời cục bộ trước khi so sánh.
+
+## Conclusion
+
+Bạn vừa học cách **compare pdf and word** hiệu quả bằng .NET streams và GroupDocs.Comparison. Bằng cách tuân thủ **document comparison best practices** được nêu ở đây—đóng gói stream đúng cách, xử lý lỗi mạnh mẽ, và tối ưu hiệu năng—bạn sẽ xây dựng các giải pháp có thể mở rộng từ hợp đồng nhỏ đến kho lưu trữ đa gigabyte.
+
+**What’s next?** Khám phá các tính năng nâng cao như `CompareOptions` tùy chỉnh, xuất ra các định dạng khác (HTML, PNG), hoặc tích hợp logic này vào quy trình xử lý tài liệu lớn hơn như hệ thống quản lý nội dung hoặc pipeline CI.
+
+---
+
+**Last Updated:** 2026-03-17  
+**Tested With:** GroupDocs.Comparison 25.4.0 (latest at time of writing)  
+**Author:** GroupDocs  
+
+**Resources:**  
+- [Official Documentation](https://docs.groupdocs.com/comparison/net/)  
+- [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- [Download Latest Version](https://releases.groupdocs.com/comparison/net/)  
+- [Purchase License](https://purchase.groupdocs.com/buy)  
+- [Free Trial](https://releases.groupdocs.com/comparison/net/)  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- [Community Forum](https://forum.groupdocs.com/c/comparison/)

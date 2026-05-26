@@ -1,263 +1,259 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: GroupDocs.Comparison kullanarak .NET’te belgeleri nasıl karşılaştıracağınızı,
+date: '2026-05-26'
+description: GroupDocs.Comparison kullanarak .NET'te belgeleri nasıl karşılaştıracağınızı,
   değişiklikleri kabul/red etmeyi ve belge meta verilerini çıkarmayı öğrenin.
 is_root: true
-keywords: GroupDocs.Comparison tutorial, document comparison .NET, compare documents
-  programmatically, .NET document comparison library, GroupDocs.Comparison examples
-lastmod: '2026-03-03'
-linktitle: GroupDocs.Comparison for .NET Tutorials
+keywords:
+- compare documents .net
+- document comparison .net
+- GroupDocs.Comparison
+lastmod: '2026-05-26'
+linktitle: GroupDocs.Comparison için .NET Eğitimleri
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  headline: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  type: TechArticle
+- description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  name: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  steps:
+  - name: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+    text: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+  - name: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+    text: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+  - name: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+    text: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+  - name: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+    text: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+  - name: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+    text: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+  type: HowTo
+- questions:
+  - answer: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo`
+      and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
+    question: How do I programmatically accept or reject changes after a comparison?
+  - answer: Yes—`DocumentInfo` provides access to standard and custom metadata for
+      both source and target files, allowing you to log or display this information.
+    question: Can I extract metadata such as author, creation date, or custom properties
+      from documents?
+  - answer: Absolutely. The `CompareImages` API highlights pixel‑level differences
+      and returns a similarity percentage you can use in automated tests.
+    question: Is it possible to compare image files (e.g., PNG, JPEG) directly in
+      .NET?
+  - answer: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`;
+      the method returns a collection of `FolderComparisonResult` objects that indicate
+      the status of each file pair.
+    question: How can I compare entire folders to find added, removed, or modified
+      files?
+  - answer: Supply the password via `LoadOptions.Password` when loading each document;
+      the engine decrypts the files internally before performing the diff.
+    question: What should I do if I need to compare password‑protected documents?
+  type: FAQPage
 tags:
 - document-comparison
 - dotnet
 - groupdocs
 - tutorial
-title: GroupDocs.Comparison for .NET ile Belgeleri Nasıl Karşılaştırılır
+title: belge karşılaştırma .NET – Tam GroupDocs.Comparison Eğitimi
 type: docs
 url: /tr/net/
 weight: 10
 ---
 
-# Tam GroupDocs.Comparison .NET Geliştiricileri İçin Öğretici
+# compare documents .net – .NET Geliştiricileri için Tam GroupDocs.Comparison Öğreticisi
 
-## Belge Karşılaştırmasının Önemi (Ve Bu Kütüphane Neden Harika)
-
-Programatik olarak **belge nasıl karşılaştırılır** arıyorsanız, doğru yere geldiniz.  
-Eğer belge sürümlerini manuel olarak karşılaştırmak, ekipler arasında değişiklikleri izlemek ya da iki dosya arasındaki tam olarak neyin değiştiğini belirlemeye saatler harcadıysanız, yalnız değilsiniz. Belge karşılaştırması, programatik olarak yapmanız gerektiğinde basit göründüğü bir görevdir.
-
-İşte .NET için GroupDocs.Comparison devreye giriyor. Bu sadece bir başka karşılaştırma aracı değil—basit metin belgelerinden karmaşık elektronik tablolara, sunumlara ve hatta görüntülere kadar her şeyi yöneten kapsamlı bir çözüm. İster bir belge yönetim sistemi oluşturuyor olun, iş akışı otomasyonu geliştiriyor olun ya da sadece güvenilir karşılaştırma işlevselliğine ihtiyacınız olsun, bu kütüphane ihtiyaçlarınızı karşılar.
-
-Bu tam öğretici rehberde, .NET uygulamalarınıza güçlü belge karşılaştırma yeteneklerini nasıl entegre edeceğinizi, gerçek örnekler ve yaygın senaryolar için pratik çözümlerle keşfedeceksiniz.
+If you need to **compare documents .net** programmatically, you’ve landed on the right guide.  
+Manually spotting differences between two versions of a contract, a spreadsheet, or a presentation can waste hours and still miss subtle changes. With GroupDocs.Comparison for .NET you can automate this task, generate visual diff reports, and even accept or reject changes without opening the files yourself. This tutorial walks you through every step—from installing the NuGet package to handling large‑scale folder comparisons—so you can embed reliable document comparison into any .NET solution.
 
 ## Hızlı Yanıtlar
-- **GroupDocs.Comparison'ın temel amacı nedir?** Programatik olarak belgeleri karşılaştırmak, değişiklikleri tespit etmek ve görsel ya da veri‑tabanlı diff sonuçları üretmek.  
-- **Değişiklikleri otomatik olarak kabul edip reddedebilir miyim?** Evet—kabul/ret değişiklikleri API'sini kullanarak ayrıntılı kontrol sağlayabilirsiniz.  
-- **Kütüphane .NET'te görüntü karşılaştırmasını destekliyor mu?** Kesinlikle; ekran görüntüleri, UI renderları ve herhangi bir raster görüntüyü karşılaştırabilirsiniz.  
-- **Klasör karşılaştırması mümkün mü?** Evet—eklenen, kaldırılan veya değiştirilmiş dosyaları tespit etmek için tüm klasörleri karşılaştırabilirsiniz.  
-- **Başlamadan önce neye ihtiyacım var?** Bir .NET geliştirme ortamı, NuGet paketi ve geçerli bir GroupDocs.Comparison lisansı (deneme sürümü mevcut).
+- **What is the primary purpose of GroupDocs.Comparison?** To programmatically compare documents, detect changes, and generate visual or data‑driven diff results.  
+- **Can I accept or reject changes automatically?** Yes—use the accept/reject API to apply granular control.  
+- **Does the library support image comparison in .NET?** Absolutely; you can compare screenshots, UI renders, and any raster images.  
+- **Is folder comparison possible?** Yes—compare entire folders to spot added, removed, or modified files.  
+- **What do I need before starting?** A .NET development environment, the NuGet package, and a valid GroupDocs.Comparison license (trial available).  
 
-## GroupDocs.Comparison'ı Diğerlerinden Ayrı Kılan Nedir?
+## compare documents .net nedir?
+`compare documents .net` is the process of programmatically identifying differences between two or more document versions using a .NET library. GroupDocs.Comparison implements this by loading source and target files, applying configurable comparison options, and returning a `ComparisonResult` that contains both visual highlights and a structured list of changes. **ComparisonResult** represents the outcome of a comparison, containing the detected changes and visual diff data.
 
-Öğreticilere geçmeden önce, geliştiricilerin bu kütüphaneyi alternatiflerin üzerine tercih etmesinin nedenlerine bir göz atalım:
+## Neden .NET için GroupDocs.Comparison seçmelisiniz?
+GroupDocs.Comparison supports over 50 formats, processes large PDFs in seconds, and includes enterprise‑grade features such as password handling, metadata preservation, and fine‑grained change management, eliminating the need for multiple specialized libraries and reducing development effort.
 
-**Kapsamlı Format Desteği**: Word belgeleri, PDF'ler, Excel dosyaları, PowerPoint sunumları, görüntüler ve daha fazlasını aynı API ile karşılaştırın. Farklı dosya tipleri için ayrı kütüphaneler öğrenmenize gerek yok.
+## Önkoşullar
 
-**Görsel ve Programatik Sonuçlar**: Hem görsel diff vurguları hem de değişikliklere programatik erişim elde edin. Kullanıcılara neyin değiştiğini göstermeniz ya da değişiklikleri otomatik olarak işlemeniz gerektiğinde mükemmel.
+- Visual Studio 2022 or later (or any .NET‑compatible IDE).  
+- .NET 6+ runtime (the library also supports .NET Core 3.1 and .NET Framework 4.8).  
+- NuGet package `GroupDocs.Comparison` (latest stable version).  
+- A valid license key (you can start with a 30‑day trial).  
 
-**Kurumsal‑Hazır Özellikler**: Şifre korumalı belgelerle çalışın, akışlarla (streams) işlem yapın, meta verileri yönetin—üretim uygulamaları için ihtiyacınız olan tüm özellikler.
+## İki belgeyi .net nasıl karşılaştırabilirim?
+To compare two documents .net, instantiate the `Comparer` class, call `Compare(sourcePath, targetPath, outputPath)`, and specify any `ComparisonOptions` you need. The method creates a diff file that highlights insertions, deletions, and formatting changes, while also exposing a `Changes` collection for programmatic inspection. The `Comparer` object is the core engine that drives the comparison process.
 
-**Basit Entegrasyon**: Mevcut .NET uygulamanıza belge karşılaştırmasını minimum kod değişikliğiyle ekleyin. API sezgisel ve iyi belgelenmiş.
+### Adım adım rehber
 
-## Belgeleri Karşılaştırma ve Değişiklikleri Tespit Etme
+1. **Create a `Comparer` instance** – this is the core object that drives the comparison engine.  
+2. **Load source and target** – you can pass file paths, streams, or byte arrays; streams are recommended for files larger than 10 MB.  
+3. **Configure options** – ignore case, set a password, or adjust sensitivity via `ComparisonOptions`.  
+4. **Execute the comparison** – call `Compare` and provide an output location for the visual diff.  
+5. **Process results** – read the `Changes` collection to accept, reject, or log each modification.
 
-**Belge değişikliklerini** tespit etmeniz gerektiğinde, iş akışı genellikle üç adımdan oluşur:
+## GroupDocs.Comparison ile hangi formatları karşılaştırabilirim?
+GroupDocs.Comparison supports **50+ input and output formats**, including DOCX, PDF, XLSX, PPTX, PNG, JPEG, BMP, and TIFF. It can also handle password‑protected files and files stored in cloud storage (via stream APIs). This breadth eliminates the need for multiple libraries when building a universal document‑processing pipeline.
 
-1. **Yükle** kaynak ve hedef dosyaları (yol, akış veya bayt dizisi üzerinden).  
-2. **Yapılandır** karşılaştırma seçeneklerini—örneğin büyük/küçük harf duyarsızlığı, şifre korumalı dosyaların işlenmesi veya özel değişiklik tespit hassasiyeti ayarlama.  
-3. **Çalıştır** karşılaştırmayı ve sonuçları al—görsel PDF/HTML diff, `ChangeInfo` nesnelerinin listesi veya daha fazla işleyebileceğiniz birleştirilmiş belge olarak.
+## Değişiklikleri programlı olarak nasıl kabul eder ve reddederim?
+The `ComparisonResult` object exposes a `Changes` collection. Each `ChangeInfo` item describes a single detected change and provides `Accept()` and `Reject()` methods. Call `result.Changes.AcceptAll()` to apply every detected change to the target document, or iterate `result.Changes` and invoke `Accept()` or `Reject()` on individual `ChangeInfo` objects for granular control. After applying the desired actions, save the updated document with `result.Save(outputPath)`.
 
-Bu yaklaşım, **değişiklikleri kabul/red** etmenize, belge meta verilerini çıkarmanıza ve kaynak dosyalar resim olduğunda **compare images .net** yapmanıza olanak tanır. Aynı desen, **compare folders .net** için klasördeki her dosya çiftini döngüyle işleyerek çalışır.
+## Tüm klasörleri .net nasıl karşılaştırırım?
+Folder comparison involves iterating over matching file pairs and invoking the same `Compare` logic for each pair. GroupDocs.Comparison also offers a helper method `CompareFolders(sourceFolder, targetFolder, outputFolder)` that compares all matching files in two directories, detects added or removed files, and generates diff results. **CompareFolders** returns a collection of `FolderComparisonResult` objects, each indicating the status of a file pair and a link to its diff document.
 
-## Başlarken: İlk Karşılaştırmanız 5 Dakikada
+## .NET'te görüntü karşılaştırması nasıl çalışır?
+The image module treats each pixel as a data point, generating a diff image that highlights changed regions in red and returning a similarity score (0‑100 %). Call `Comparer.CompareImages(imagePath1, imagePath2, outputPath)`; the engine aligns the images, computes per‑pixel differences, writes a diff image where altered pixels are colored, and provides a `Similarity` value you can use to trigger alerts or skip further processing if the change is below a threshold.
 
-GroupDocs.Comparison’a yeni misiniz? İşte önceden bilmeniz gerekenler:
+## Yaygın Kullanım Senaryoları
 
-1. **Kurulum**: NuGet Package Manager üzerinden kurun  
-2. **Lisanslama**: Lisansınızı ayarlayın (ücretsiz deneme mevcut)  
-3. **Temel Kullanım**: İlk karşılaştırmanız için üç satır kod  
-4. **İleri Özellikler**: İhtiyaçlarınız büyüdükçe daha derinlemesine keşfedin  
+- **Version control for non‑code assets** – keep a clear audit trail of contract revisions.  
+- **Automated compliance checks** – flag unauthorized edits in policy documents.  
+- **CI/CD pipelines for UI testing** – compare screenshots of web pages across builds.  
+- **Batch migration projects** – verify that converted files retain original content.
 
-Öğrenme eğrisi hafif, ancak yetenekler geniş. Temel belge karşılaştırmasıyla başlayın ve ardından değişiklik yönetimi ve özel karşılaştırma ayarları gibi ileri özellikleri keşfedin.
+## Büyük Belgeler için Performans İpuçları
 
-## Belgeler ve Klasör Karşılaştırması
+- **Stream files** instead of loading them fully into memory; this reduces peak RAM usage by up to 80 %.  
+- **Reuse a single `Comparer` instance** for multiple comparisons to take advantage of internal caching.  
+- **Adjust `ComparisonOptions.MemoryLimit`** when dealing with documents larger than 500 MB to prevent out‑of‑memory exceptions.  
 
-Çoğu geliştiricinin başladığı yer burası—ve bunun iyi bir nedeni var. Belge ve klasör karşılaştırması, çoğu belge yönetim iş akışının belkemiğini oluşturur.
+## Sık Sorulan Sorular
 
-Sözleşme revizyonları, teknik dokümantasyon güncellemeleri ya da yazılım sürümleri arasındaki değişiklikleri izlemek gibi durumlarda bu öğreticiler sizi hızlıca çalışır hale getirir. Değişiklikleri programatik olarak kabul/red etmeyi, karşılaştırma iş akışlarını otomatikleştirmeyi ve toplu işlemleri verimli bir şekilde yönetmeyi öğrenin.
+**Q: How do I programmatically accept or reject changes after a comparison?**  
+A: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo` and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
 
-**Ortak Kullanım Senaryoları:**
-- Kod dışı belgeler için sürüm kontrolü
-- İş akışlarında otomatik değişiklik tespiti  
-- Uyumluluk ve denetim izi oluşturma
-- İşbirlikçi belge inceleme süreçleri
+**Q: Can I extract metadata such as author, creation date, or custom properties from documents?**  
+A: Yes—`DocumentInfo` provides access to standard and custom metadata for both source and target files, allowing you to log or display this information.
 
+**Q: Is it possible to compare image files (e.g., PNG, JPEG) directly in .NET?**  
+A: Absolutely. The `CompareImages` API highlights pixel‑level differences and returns a similarity percentage you can use in automated tests.
+
+**Q: How can I compare entire folders to find added, removed, or modified files?**  
+A: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`; the method returns a collection of `FolderComparisonResult` objects that indicate the status of each file pair.
+
+**Q: What should I do if I need to compare password‑protected documents?**  
+A: Supply the password via `LoadOptions.Password` when loading each document; the engine decrypts the files internally before performing the diff.
+
+**Q: Does GroupDocs.Comparison support .NET Core and .NET 5/6?**  
+A: Yes—the library is compatible with .NET Core 3.1, .NET 5, .NET 6, and later, offering the same feature set across all runtimes.
+
+## Güven İşaretleri
+
+**Last Updated:** 2026-05-26  
+**Tested With:** GroupDocs.Comparison 23.12 for .NET  
+**Author:** GroupDocs  
+
+## Ek Öğretici Bağlantıları (değiştirilmedi)
+
+### Belgeler ve Klasör Karşılaştırması
 [Read More](./documents-and-folder-comparison/)
 
-## Belge Karşılaştırması
-
-Çoğu geliştiricinin ihtiyaç duyduğu temel işlevsellik budur. Metin belgeleri, elektronik tablolar, sunumlar—ne isterseniz karşılaştırın. Ancak sadece farkları belirlemek değil, bu farkların ne anlama geldiğini ve programatik olarak nasıl ele alınacağını anlamak da önemlidir.
-
-Öğreticilerimiz temel karşılaştırmalardan büyük belgelerle çalışma, bellek kullanımı yönetimi ve yüksek hacimli operasyonlar için performans optimizasyonuna kadar her şeyi kapsar.
-
-**İpucu**: Belge karşılaştırma performansı, belge boyutu ve karmaşıklığına göre büyük ölçüde değişebilir. Size özel kullanım durumunuz için nasıl optimize edeceğinizi göstereceğiz.
-
+### Belge Karşılaştırması
 [Read More](./document-comparison/)
 
-## Belgeleri Yükleme ve Kaydetme
-
-Basit görünebilir, ancak karşılaştırma için belge yüklemenin birkaç farklı yolu vardır—ve doğru yaklaşımı seçmek performans ve işlevsellik açısından fark yaratabilir.
-
-Dosya yollarından akışlara, veritabanlarından bulut depolamaya ve web API'lerine kadar farklı kaynaklardan belgeleri nasıl yükleyeceğinizi ve büyük belgelerle çalışırken bellek yönetimi için en iyi uygulamaları öğrenin.
-
-**Geliştirici Görüşü**: Birçok performans sorunu, verimsiz belge yükleme kalıplarından kaynaklanır. Bu öğreticiler, yaygın tuzaklardan kaçınmanıza yardımcı olur.
-
+### Belgeleri Yükleme ve Kaydetme
 [Read More](./loading-and-saving-documents/)
 
-## Görüntü Karşılaştırması
-
-Görsel karşılaştırma sadece belgelerle sınırlı değildir. Tasarım inceleme sistemi, web uygulamalarındaki görsel değişikliklerin izlenmesi ya da kalite güvence iş akışları oluşturuyorsanız, görüntü karşılaştırması tamamen yeni olasılıklar sunar.
-
-Ekran görüntülerini karşılaştırma, UI öğelerindeki görsel değişiklikleri tespit etme ve görüntü karşılaştırmayı otomatik test iş akışlarına entegre etme gibi pratik senaryoları kapsayan öğreticilerimiz var.
-
+### Görüntü Karşılaştırması
 [Read More](./image-comparison/)
 
-## Temel Kullanım 
-
-Belge karşılaştırmasına yeni misiniz? Buradan başlayın. Bu öğreticiler, hemen hemen her projede kullanacağınız temel kavramları ve ortak kalıpları kapsar.
-
-Elektronik tablo hücre karşılaştırması, belge bilgisi çıkarma ve desteklenen formatları anlama gibi temel konularda uzmanlaşın. Bu temel, daha karmaşık senaryolara geçerken size sağlam bir zemin sağlar.
-
-**Öğrenme Yolu**: Temel kullanım ile başlayın, ardından belge karşılaştırmasına geçin ve sonunda ileri özellikleri keşfedin. Bu ilerleme, becerilerinizi sistematik olarak geliştirecek.
-
+### Temel Kullanım
 [Read More](./basic-usage/)
 
-## Hızlı Başlangıç 
-
-Hızlı bir şekilde çalışmaya başlamak mı istiyorsunuz? Hızlı başlangıç öğreticilerimiz, sonuçları hemen görmek isteyen geliştiriciler için tasarlandı.
-
-Lisans kurulumunu verimli bir şekilde öğrenin, minimum kodla karşılaştırma işlevselliğini entegre edin ve dakikalar içinde ilk belge karşılaştırmanızı çalıştırın. Kanıt‑konseptleri ve hızlı prototipleme için mükemmel.
-
+### Hızlı Başlangıç
 [Read More](./quick-start/)
 
-## İleri Düzey Öğretici Kategorileri
+### Başlangıç
+[Getting Started](./getting-started/)
 
-### [Getting Started](./getting-started/)
-GroupDocs.Comparison kurulumu, lisanslama, ayar ve .NET uygulamalarında ilk belge karşılaştırmanızı oluşturmak için adım‑adım öğreticiler.
+### Belge Yükleme
+[Document Loading](./document-loading/)
 
-### [Document Loading](./document-loading/)
-Farklı kaynaklardan (dosya yolları, akışlar, bayt dizileri) belgeleri karşılaştırma için yüklemenin çeşitli yaklaşımlarını keşfedin.
+### Temel Karşılaştırma
+[Basic Comparison](./basic-comparison/)
 
-### [Basic Comparison](./basic-comparison/)
-Word, PDF, Excel ve daha fazlası gibi farklı belge tiplerini GroupDocs.Comparison ile basit API çağrılarıyla karşılaştırmayı öğrenin.
+### Gelişmiş Karşılaştırma
+[Advanced Comparison](./advanced-comparison/)
 
-### [Advanced Comparison](./advanced-comparison/)
-Çoklu belge karşılaştırması, özel ayarlar ve korumalı belgeler gibi karmaşık senaryolar için güçlü özellikleri keşfedin.
+### Değişiklik Yönetimi
+[Change Management](./change-management/)
 
-### [Change Management](./change-management/)
-Belgeler arasındaki belirli değişiklikleri tespit etme, kabul etme ve reddetme konusunda ince ayarlı kontrol sağlayın.
+### Belge Bilgileri
+[Document Information](./document-information/)
 
-### [Document Information](./document-information/)
-Karşılaştırma işlemleri öncesi ve sonrası belgeleriniz hakkında ayrıntılı meta veri ve bilgi çıkarın.
+### Önizleme Oluşturma
+[Preview Generation](./preview-generation/)
 
-### [Preview Generation](./preview-generation/)
-Kaynak, hedef ve sonuç belge sayfalarının görsel ön izlemelerini ve küçük resimlerini oluşturun.
+### Meta Veri Yönetimi
+[Metadata Management](./metadata-management/)
 
-### [Metadata Management](./metadata-management/)
-Karşılaştırma işlemleri sırasında belge meta verilerinin nasıl korunacağını, değiştirileceğini veya sıfırlanacağını yönetin.
+### Güvenlik ve Koruma
+[Security & Protection](./security-protection/)
 
-### [Security & Protection](./security-protection/)
-Şifre korumalı belgelerle çalışın ve karşılaştırma iş akışlarınıza güvenlik özellikleri ekleyin.
+### Lisanslama ve Yapılandırma
+[Licensing & Configuration](./licensing-configuration/)
 
-### [Licensing & Configuration](./licensing-configuration/)
-Lisanslamayı, ölçülü faturalandırmayı doğru şekilde ayarlayın ve GroupDocs.Comparison için uygulama yapılandırmasını optimize edin.
+### Karşılaştırma Seçenekleri
+[Comparison Options](./comparison-options/)
 
-### [Comparison Options](./comparison-options/)
-Farklı belge tipleri için kesin sonuçlar elde etmek üzere ayrıntılı ayarlarla karşılaştırma davranışını ince ayarlayın.
+[Read More](./documents-and-folder-comparison/)
+[Read More](./document-comparison/)
+[Read More](./loading-and-saving-documents/)
+[Read More](./image-comparison/)
+[Read More](./basic-usage/)
+[Read More](./quick-start/)
+[Getting Started](./getting-started/)
+[Document Loading](./document-loading/)
+[Basic Comparison](./basic-comparison/)
+[Advanced Comparison](./advanced-comparison/)
+[Change Management](./change-management/)
+[Document Information](./document-information/)
+[Preview Generation](./preview-generation/)
+[Metadata Management](./metadata-management/)
+[Security & Protection](./security-protection/)
+[Licensing & Configuration](./licensing-configuration/)
+[Comparison Options](./comparison-options/)
+[Quick Start](./quick-start/)
+[Getting Started](./getting-started/)
+[Documents and Folder Comparison](./documents-and-folder-comparison/)
+[Document Comparison](./document-comparison/)
+[Loading and Saving Documents](./loading-and-saving-documents/)
+[Image Comparison](./image-comparison/)
+[Basic Usage](./basic-usage/)
+[Quick Start](./quick-start/)
+[Getting Started](./getting-started/)
+[Document Loading](./document-loading/)
+[Basic Comparison](./basic-comparison/)
+[Advanced Comparison](./advanced-comparison/)
+[Change Management](./change-management/)
+[Document Information](./document-information/)
+[Preview Generation](./preview-generation/)
+[Metadata Management](./metadata-management/)
+[Security & Protection](./security-protection/)
+[Licensing & Configuration](./licensing-configuration/)
+[Comparison Options](./comparison-options/)
 
-## Yaygın Zorluklar ve Çözümler
+## İlgili Öğreticiler
 
-**Büyük Belgelerde Performans**: 10 MB üzerindeki dosyalarla çalışırken tüm belgeyi belleğe yüklemek yerine akışları kullanın. Belge yükleme öğreticilerimizde optimizasyon tekniklerini bulabilirsiniz.
-
-**Bellek Yönetimi**: Belge karşılaştırması bellek‑yoğun olabilir. Nesneleri doğru şekilde dispose edin ve bellek sızıntılarını önlemek için verimli yükleme kalıpları kullanın.
-
-**Format‑Spesifik Dikkat Edilmesi Gerekenler**: Farklı belge tiplerinin kendine özgü özellikleri vardır. PDF'ler Word belgelerinden, Word belgeleri de elektronik tablolardan farklı şekilde ele alınır. Format‑spesifik rehberlerimiz bu nüansları ele alır.
-
-**Entegrasyon Kalıpları**: Web API, masaüstü uygulaması ya da arka plan servisi geliştirin, entegrasyon kalıbı önemlidir. Yaygın mimari senaryolar için örnekler sunuyoruz.
-
-## Üretim Kullanımı İçin En İyi Uygulamalar
-
-**Hata Yönetimi**: Belge karşılaştırmasıyla çalışırken her zaman uygun istisna yönetimini uygulayın. Geçersiz dosyalar, bozuk belgeler ve desteklenmeyen formatlar nazikçe ele alınmalıdır.
-
-**Kaynak Yönetimi**: Özellikle çok sayıda belge işliyorsanız, `using` ifadeleri veya doğru dispose kalıplarıyla kaynakların temizlendiğinden emin olun.
-
-**Performans İzleme**: Özellikle yüksek hacimli senaryolarda karşılaştırma sürelerini ve bellek kullanımını izleyin. Bu veriler darboğazları ve optimizasyon fırsatlarını belirlemenize yardımcı olur.
-
-**Güvenlik Hususları**: Hassas belgelerle çalışırken uygun erişim kontrolleri sağlayın ve geçici dosyalar ile bellek kullanımının güvenlik etkilerini göz önünde bulundurun.
-
-## Sıradaki Adım Ne?
-
-Hazır mısınız? Anında sonuçlar istiyorsanız [Quick Start](./quick-start/) öğreticileriyle başlayın, daha kapsamlı bir temel için ise [Getting Started](./getting-started/) öğreticilerine göz atın.
-
-Her öğretici, tam kod örnekleri, farklı yaklaşımların ne zaman ve neden kullanılacağı açıklamaları ve gerçek dünya kullanımına dayalı pratik ipuçları içerir. Bu öğretici serisinin sonunda, .NET uygulamalarınızda sağlam belge karşılaştırma işlevselliğini uygulamak için bilgi ve güvene sahip olacaksınız.
-
-İster belge yönetim sistemleri, ister uyumluluk iş akışları otomasyonu, ister işbirlikçi düzenleme özellikleri geliştirin, .NET için GroupDocs.Comparison güvenilir, verimli belge karşılaştırması için ihtiyacınız olan temeli sağlar.
-
-## GroupDocs.Comparison for .NET Öğreticileri 
-### [Documents and Folder Comparison](./documents-and-folder-comparison/)
-GroupDocs Comparison for .NET öğreticileriyle belge iş akışlarını kolaylaştırın. Değişiklikleri kabul edin, reddedin ve belgeleri ve klasörleri zahmetsizce karşılaştırın.
-### [Document Comparison](./document-comparison/)
-.NET içinde GroupDocs.Comparison ile belgeleri verimli bir şekilde karşılaştırın. Belge yönetimini kolaylaştırın, iş akışını iyileştirin ve doğruluğu sağlayın. Daha fazla bilgi!
-### [Loading and Saving Documents](./loading-and-saving-documents/)
-GroupDocs.Comparison for .NET kullanarak .NET içinde belgeleri zahmetsizce karşılaştırın. Yükleme, kaydetme ve verimli belge yönetimi için yükleme seçeneklerini öğrenin.
-### [Image Comparison](./image-comparison/)
-GroupDocs.Comparison kütüphanesini kullanarak .NET içinde görüntüleri verimli bir şekilde karşılaştırın. Yol ya da akış üzerinden sorunsuz entegrasyon için adım‑adım öğreticiler.
-### [Basic Usage](./basic-usage/)
-GroupDocs.Comparison kullanarak .NET içinde belgeleri verimli bir şekilde karşılaştırın. Hücre karşılaştırması, belge bilgisi çıkarma ve desteklenen formatlar gibi temel kullanım öğreticilerini öğrenin.
-### [Quick Start](./quick-start/)
-GroupDocs Comparison for .NET'i projelerinize zahmetsizce entegre edin. Doğru belge karşılaştırma iş akışları için etkili lisans ayar yöntemlerini öğrenin.
-### [Getting Started](./getting-started/)
-GroupDocs.Comparison kurulumu, lisanslama, ayar ve .NET uygulamalarında ilk belge karşılaştırmanızı oluşturmak için adım‑adım öğreticiler.
-### [Document Loading](./document-loading/)
-Dosya yolları, akışlar ve bayt dizileri dahil olmak üzere farklı kaynaklardan belge karşılaştırması için çeşitli yükleme yaklaşımlarını keşfedin.
-
-### [Basic Comparison](./basic-comparison/)
-Word, PDF, Excel ve daha fazlası gibi farklı belge tiplerini GroupDocs.Comparison ile basit API çağrılarıyla karşılaştırmayı öğrenin.
-
-### [Advanced Comparison](./advanced-comparison/)
-Çoklu belge karşılaştırması, özel ayarlar ve korumalı belgeler gibi karmaşık senaryolar için güçlü özellikleri keşfedin.
-
-### [Change Management](./change-management/)
-Belgeler arasındaki belirli değişiklikleri tespit etme, kabul etme ve reddetme konusunda ince ayarlı kontrol sağlayın.
-
-### [Document Information](./document-information/)
-Karşılaştırma işlemleri öncesi ve sonrası belgeleriniz hakkında ayrıntılı meta veri ve bilgi çıkarın.
-
-### [Preview Generation](./preview-generation/)
-Kaynak, hedef ve sonuç belge sayfalarının görsel ön izlemelerini ve küçük resimlerini oluşturun.
-
-### [Metadata Management](./metadata-management/)
-Karşılaştırma işlemleri sırasında belge meta verilerinin nasıl korunacağını, değiştirileceğini veya sıfırlanacağını yönetin.
-
-### [Security & Protection](./security-protection/)
-Şifre korumalı belgelerle çalışın ve karşılaştırma iş akışlarınıza güvenlik özellikleri ekleyin.
-
-### [Licensing & Configuration](./licensing-configuration/)
-Lisanslamayı, ölçülü faturalandırmayı doğru şekilde ayarlayın ve GroupDocs.Comparison için uygulama yapılandırmasını optimize edin.
-
-### [Comparison Options](./comparison-options/)
-Farklı belge tipleri için kesin sonuçlar elde etmek üzere ayrıntılı ayarlarla karşılaştırma davranışını ince ayarlayın.
-
-## Sıkça Sorulan Sorular
-
-**S: Karşılaştırma sonrası değişiklikleri programatik olarak nasıl kabul ya da reddedebilirim?**  
-C: Karşılaştırma sonucunda dönen `Changes` koleksiyonundaki `AcceptAll`, `RejectAll` veya `Accept/Reject` metodlarını kullanın.
-
-**S: Belgelerden yazar, oluşturma tarihi veya özel özellikler gibi meta verileri çıkarabilir miyim?**  
-C: Evet—GroupDocs.Comparison, hem kaynak hem de hedef dosyalar için standart ve özel meta verileri sunan bir `DocumentInfo` nesnesi sağlar.
-
-**S: .NET içinde doğrudan görüntü dosyalarını (örn. PNG, JPEG) karşılaştırmak mümkün mü?**  
-C: Kesinlikle. Kütüphane, piksel‑düzeyindeki farkları vurgulayan ve bir diff görüntüsü üretebilen bir görüntü karşılaştırma API'si içerir.
-
-**S: Tüm klasörleri karşılaştırarak eklenen, kaldırılan veya değiştirilmiş dosyaları nasıl bulabilirim?**  
-C: Klasörlerdeki her dosya çiftini döngüyle işleyin ve karşılaştırma API'sini çağırın; kütüphane ayrıca klasör içeriklerini toplu olarak karşılaştırmak için bir yardımcı yöntem sunar.
-
-**S: Şifre korumalı belgeleri karşılaştırmam gerektiğinde ne yapmalıyım?**  
-C: Her belgeyi yüklerken `LoadOptions` içinde şifreyi sağlayın; karşılaştırma motoru dosyaları dahili olarak çözer.
-
----
-
-**Son Güncelleme:** 2026-03-03  
-**Test Edilen Versiyon:** GroupDocs.Comparison 23.12 for .NET  
-**Yazar:** GroupDocs
+- [Document Comparison .NET: Accept & Reject Changes Programmatically](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [GroupDocs Comparison NET Tutorial - Complete Guide to Document Comparison with Metadata](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [Document Comparison .NET Tutorial - Preserve Metadata with GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

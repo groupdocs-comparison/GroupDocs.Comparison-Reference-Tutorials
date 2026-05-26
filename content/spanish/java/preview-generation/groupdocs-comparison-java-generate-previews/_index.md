@@ -1,14 +1,35 @@
 ---
 categories:
 - Java Development
-date: '2026-02-08'
-description: Aprende cómo crear una vista previa de PDF en Java usando GroupDocs.Comparison.
+date: '2026-05-26'
+description: Aprenda cómo crear una vista previa de PDF en Java usando GroupDocs.Comparison.
   Tutorial paso a paso con ejemplos de código para vistas previas de PDF, Word y Excel.
-keywords: Java document preview generator, generate document thumbnails Java, Java
-  PDF preview creation, document image conversion Java, Java library for document
-  thumbnails
+keywords:
+- create pdf preview java
+- java document preview generator
+- pdf thumbnail generation java
+- document image conversion java
 lastmod: '2025-01-02'
-linktitle: Java Document Preview Generator
+linktitle: Generador de vista previa de documentos Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to create pdf preview java using GroupDocs.Comparison. Step-by-step
+    tutorial with code examples for PDF, Word, Excel previews.
+  headline: Create PDF Preview Java – Java Document Preview Generator
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Comparison provides a simple API for high‑quality previews.
+    question: What library can I use to create PDF previews in Java?
+  - answer: Over 50 formats including PDF, DOCX, XLSX, PPTX, and more.
+    question: Which formats are supported?
+  - answer: Set `previewOptions.setPageNumbers(new int[]{1})`.
+    question: How do I generate a preview for only the first page?
+  - answer: Yes—use `ExecutorService` or `CompletableFuture`.
+    question: Can I run preview generation asynchronously?
+  - answer: PNG offers the best quality; JPEG is smaller for web use.
+    question: What’s the best image format for thumbnails?
+  type: FAQPage
 tags:
 - document-processing
 - java-library
@@ -23,63 +44,50 @@ weight: 1
 
 # Crear vista previa de PDF Java – Generador de vista previa de documentos Java
 
-## Introducción
+Generar miniaturas visuales de documentos mejora drásticamente la usabilidad de cualquier aplicación de manejo de archivos basada en Java. En este tutorial crearás **pdf preview java** con GroupDocs.Comparison, desde la preparación del entorno hasta la afinación avanzada del rendimiento. Al final tendrás un generador de vistas previas listo para producción que admite más de 50 formatos de archivo y puede ejecutarse de forma segura con PDFs grandes.
 
-¿Necesitas generar vistas previas de documentos en tu aplicación Java? Ya sea que estés construyendo un sistema de gestión documental, un explorador de archivos o una herramienta de colaboración, crear miniaturas visuales de los documentos es esencial para una mejor experiencia de usuario. En esta guía **crearás vista previa de PDF Java** paso a paso con GroupDocs.Comparison, cubriendo todo desde la configuración del entorno hasta la optimización del rendimiento.
-
-### Respuestas rápidas
-- **¿Qué biblioteca puedo usar para crear vistas previas de PDF en Java?** GroupDocs.Comparison ofrece una API sencilla para vistas previas de alta calidad.  
-- **¿Qué formatos son compatibles?** Más de 50 formatos, incluidos PDF, DOCX, XLSX, PPTX y muchos más.  
-- **¿Cómo genero una vista previa solo de la primera página?** Configura `previewOptions.setPageNumbers(new int[]{1})`.  
-- **¿Puedo ejecutar la generación de vistas previas de forma asíncrona?** Sí—usa `ExecutorService` o `CompletableFuture`.  
+## Respuestas rápidas
+- **¿Qué biblioteca puedo usar para crear vistas previas de PDF en Java?** GroupDocs.Comparison proporciona una API sencilla para vistas previas de alta calidad.  
+- **¿Qué formatos son compatibles?** Más de 50 formatos, incluidos PDF, DOCX, XLSX, PPTX y más.  
+- **¿Cómo genero una vista previa solo de la primera página?** Set `previewOptions.setPageNumbers(new int[]{1})`.  
+- **¿Puedo ejecutar la generación de vistas previas de forma asíncrona?** Sí—use `ExecutorService` o `CompletableFuture`.  
 - **¿Cuál es el mejor formato de imagen para miniaturas?** PNG ofrece la mejor calidad; JPEG es más pequeño para uso web.
 
 ## ¿Qué es “create pdf preview java”?
 
-Crear una vista previa de PDF en Java significa convertir cada página de un PDF (u otro documento) en una imagen que pueda mostrarse en navegadores o aplicaciones móviles. Este proceso a menudo se denomina **java convert document to image**, y permite una indexación visual rápida sin cargar el documento completo.
+Crear una vista previa de PDF en Java significa convertir cada página de un PDF (o cualquier documento compatible) en una imagen que pueda mostrarse en navegadores o aplicaciones móviles. Esta conversión—a menudo llamada **java convert document to image**—permite a los usuarios explorar grandes colecciones sin abrir los archivos completos, ahorrando ancho de banda y mejorando los tiempos de respuesta.
 
-## ¿Por qué usar un Generador de Vista Previa de Documentos Java?
+## ¿Por qué usar un generador de vista previa de documentos Java?
 
-Antes de sumergirte en el código, comprendamos por qué la generación de vistas previas es crucial para las aplicaciones modernas:
+Generar vistas previas en el lado del servidor elimina la necesidad de bibliotecas de renderizado de PDF del lado del cliente y garantiza una experiencia visual uniforme en todos los dispositivos. Acelera la navegación de documentos, reduce el consumo de ancho de banda y simplifica la integración, lo que lo hace ideal para la gestión de documentos, el comercio electrónico y plataformas de colaboración.
 
-**Beneficios para la experiencia del usuario**
-- Los usuarios pueden identificar rápidamente los documentos sin abrirlos.
-- Navegación más rápida a través de grandes colecciones de documentos.
-- Confirmación visual antes de descargar o compartir archivos.
-
-**Ventajas de rendimiento**
-- Reducción de la carga del servidor al evitar la renderización completa del documento.
-- Mejores estrategias de caché con imágenes de vista previa ligeras.
-- Experiencia móvil mejorada con miniaturas optimizadas.
-
-**Aplicaciones empresariales**
-- Sistemas de gestión documental con navegación visual.
-- Plataformas de comercio electrónico que muestran catálogos de productos.
-- Herramientas de colaboración con funciones de compartición de documentos.
+- **Velocidad:** La generación de miniaturas suele ser de 5‑10× más rápida que cargar PDFs completos.  
+- **Escalabilidad:** GroupDocs.Comparison puede procesar documentos de 200 páginas sin cargar todo el archivo en memoria, gracias a su arquitectura de streaming.  
+- **Confiabilidad:** Soporta más de 50 formatos de entrada y salida, garantizando que la mayoría de los documentos empresariales estén cubiertos de forma inmediata.
 
 ## Requisitos previos y configuración del entorno
 
-Antes de comenzar a construir nuestro generador de vista previa de documentos Java, asegúrate de contar con:
+Antes de comenzar a construir nuestro generador de vista previa de documentos Java, asegúrese de tener:
 
 **Software requerido**
-- **Java Development Kit (JDK)**: Versión 8 o superior (se recomienda Java 11+ para mejor rendimiento)
+- **Java Development Kit (JDK)**: Versión 8 o superior (Java 11+ recomendado para mejor rendimiento)
 - **Maven o Gradle**: Para la gestión de dependencias
-- **IDE**: IntelliJ IDEA, Eclipse o tu IDE Java preferido
+- **IDE**: IntelliJ IDEA, Eclipse o su IDE Java preferido
 
 **Conocimientos básicos**
-- Fundamentos de programación en Java
-- Operaciones de I/O de archivos
-- Conceptos básicos de procesamiento de imágenes
+- Fundamentos de programación Java
+- Operaciones de E/S de archivos
+- Comprensión básica de conceptos de procesamiento de imágenes
 
 **Requisitos del sistema**
 - Mínimo 4 GB de RAM (8 GB recomendados para procesar documentos grandes)
-- Espacio suficiente en disco para archivos temporales de vista previa
+- Espacio en disco suficiente para archivos temporales de vista previa
 
 ## Configuración de GroupDocs.Comparison para Java
 
-### Instalación y configuración con Maven
+### Instalación y configuración de Maven
 
-El primer paso para crear tu generador de vista previa de documentos Java es añadir la dependencia de GroupDocs.Comparison. Añádela a tu `pom.xml`:
+El paquete `Comparison` se entrega a través de Maven Central. Añada esta dependencia a su `pom.xml`:
 
 ```xml
 <repositories>
@@ -99,11 +107,11 @@ El primer paso para crear tu generador de vista previa de documentos Java es añ
 </dependencies>
 ```
 
-**Consejo profesional:** Siempre usa la versión más reciente para obtener las últimas funciones y correcciones de errores. Consulta la [página de lanzamientos de GroupDocs](https://releases.groupdocs.com/comparison/java/) para actualizaciones.
+**Consejo profesional:** Siempre use la última versión para obtener las funciones más recientes y correcciones de errores. Consulte la [página de lanzamientos de GroupDocs](https://releases.groupdocs.com/comparison/java/) para actualizaciones.
 
-### Configuración con Gradle (alternativa)
+### Configuración de Gradle (alternativa)
 
-Si utilizas Gradle, agrega lo siguiente a tu `build.gradle`:
+Si prefiere Gradle, incluya lo siguiente en su archivo `build.gradle`:
 
 ```gradle
 repositories {
@@ -119,26 +127,26 @@ dependencies {
 
 ### Opciones de configuración de licencia
 
-Dispones de varias opciones de licencia para tu generador de vista previa de documentos:
+Tiene varias opciones de licencia para su generador de vista previa de documentos:
 
-**1. Prueba gratuita** (ideal para pruebas):
-- Descarga desde el sitio web de GroupDocs
+**1. Prueba gratuita** (Perfecta para pruebas):
+- Descargue desde el sitio web de GroupDocs
 - Limitado a 3 páginas por documento
 - Salida con marca de agua
 
-**2. Licencia temporal** (para desarrollo):
-- Acceso completo a todas las funciones durante 30 días
+**2. Licencia temporal** (Para desarrollo):
+- Acceso completo a funciones durante 30 días
 - Sin marcas de agua ni limitaciones de páginas
 - Ideal para proyectos de prueba de concepto
 
-**3. Licencia comercial** (uso en producción):
+**3. Licencia comercial** (Uso en producción):
 - Documentos y páginas ilimitados
 - Soporte prioritario incluido
-- Diversos modelos de licencia disponibles
+- Disponibles varios modelos de licencia
 
 ### Inicialización básica
 
-Así es como se inicializa tu generador de vista previa de documentos:
+El objeto `Comparison` es el punto de entrada para todas las operaciones de vista previa. Inicializarlo correctamente garantiza la seguridad de hilos y un uso óptimo de la memoria.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -146,23 +154,25 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Importante:** Siempre usa *try‑with‑resources* para garantizar la correcta liberación de recursos y evitar fugas de memoria.
+**Importante:** Siempre use try‑with‑resources para asegurar la limpieza adecuada de recursos y evitar fugas de memoria.
 
 ## Cómo crear pdf preview java – Implementación paso a paso
 
-### Entendiendo el proceso de generación de vistas previas
+Cargue su archivo fuente con `Comparison comparison = new Comparison("license.txt");` y llame a `comparison.generatePreview(inputPath, previewOptions);` — esta única llamada maneja la carga del documento, el renderizado de páginas y la creación del flujo de imagen. La API abstrae el análisis de PDF de bajo nivel, permitiéndole centrarse en la lógica de negocio mientras entrega miniaturas PNG o JPEG de alta calidad.
 
-Antes de sumergirte en el código, comprendamos cómo funciona la generación de vistas previas de documentos:
+### Comprendiendo el proceso de generación de vistas previas
+
+Antes de sumergirse en el código, comprendamos cómo funciona la generación de vistas previas de documentos:
 
 1. **Carga del documento** – Carga el documento fuente en memoria.  
-2. **Procesamiento de páginas** – Convierte cada página del documento en una imagen.  
-3. **Gestión de streams** – Maneja los streams de salida para las imágenes generadas.  
-4. **Configuración** – Aplica opciones de vista previa (formato, calidad, páginas).  
+2. **Procesamiento de página** – Convierte cada página del documento en una imagen.  
+3. **Gestión de flujos** – Maneja los flujos de salida para las imágenes generadas.  
+4. **Configuración** – Aplica las opciones de vista previa (formato, calidad, páginas).  
 5. **Limpieza** – Libera recursos y archivos temporales.
 
 ### Paso 1: Configurar opciones de vista previa
 
-La base de tu generador de vista previa de documentos Java es una configuración adecuada. Así se establecen las opciones de vista previa:
+El delegado `CreatePageStream` crea un flujo de salida único para cada página. El objeto `previewOptions` le permite especificar el formato de imagen, la resolución y qué páginas renderizar.
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -179,14 +189,13 @@ final Delegates.CreatePageStream createPageStream = pageNumber -> {
 };
 ```
 
-**Qué ocurre aquí:**  
-- El delegado `CreatePageStream` crea un stream de salida único para cada página.  
-- El nombre del archivo incluye el número de página para una identificación sencilla.  
-- El formato PNG brinda buena calidad con tamaños de archivo razonables.
+**Qué está sucediendo aquí:**  
+- El delegado escribe cada página en un archivo PNG separado llamado `preview_page_{pageNumber}.png`.  
+- El formato PNG ofrece calidad sin pérdida, mientras que una resolución de 150 dpi equilibra claridad y tamaño de archivo para la mayoría de los escenarios web.
 
-### Paso 2: Generar vistas previas de documentos
+### Paso 2: Generar vistas previas del documento
 
-Ahora implementemos la lógica central de generación de vistas previas:
+`previewOptions` es un objeto que especifica el formato de salida, la resolución y la selección de páginas para el proceso de generación de vistas previas.  Invoque el motor de vista previa con las opciones configuradas. La API iterará sobre las páginas solicitadas, las renderizará y escribirá los resultados en los flujos que proporcionó.
 
 ```java
 PreviewOptions previewOptions = new PreviewOptions(createPageStream);
@@ -194,13 +203,13 @@ previewOptions.setPageNumbers(new int[]{1, 2, 3}); // Specify desired pages
 comparer.getDocument().generatePreview(previewOptions);
 ```
 
-**Puntos clave**
-- `setPageNumbers()` permite generar vistas previas solo de páginas específicas, lo cual es crucial para el rendimiento al trabajar con documentos extensos.  
-- Omite la llamada para generar vistas previas de todas las páginas.
+**Puntos clave**  
+- `setPageNumbers()` le permite generar vistas previas solo de páginas específicas, lo cual es crucial para el rendimiento al manejar documentos grandes.  
+- Omitir la llamada para generar vistas previas de todas las páginas.
 
-### Opciones de configuración avanzadas
+## Opciones avanzadas de configuración
 
-Para aplicaciones en producción, querrás tener mayor control sobre la generación de miniaturas de documentos:
+Los entornos de producción a menudo necesitan un control más estricto sobre el tamaño de salida, la profundidad de color y el almacenamiento en caché. El siguiente fragmento muestra cómo ajustar estas configuraciones:
 
 ```java
 PreviewOptions previewOptions = new PreviewOptions(createPageStream);
@@ -220,9 +229,7 @@ previewOptions.setPageNumbers(new int[]{1, 2, 3, 4, 5});
 
 ### Desafío 1: Gestión de memoria con documentos grandes
 
-**Problema:** PDFs o documentos con muchas páginas pueden provocar `OutOfMemoryError`.
-
-**Solución:** Procesa los documentos por lotes e implementa una limpieza adecuada:
+Los PDFs grandes pueden agotar el heap de la JVM si cada página se mantiene en memoria. Procese los documentos en lotes y deseche cada flujo de página inmediatamente después de escribirlo.
 
 ```java
 // Process in smaller batches
@@ -243,11 +250,9 @@ for (int i = 1; i <= totalPages; i += batchSize) {
 }
 ```
 
-### Desafío 2: Gestión de rutas y directorios
+### Desafío 2: Gestión de rutas de archivos y directorios
 
-**Problema:** Los archivos de vista previa se dispersan en varios directorios y pueden producir conflictos de nombres.
-
-**Solución:** Implementa un sistema estructurado de gestión de archivos:
+Los archivos de vista previa dispersos causan dolores de cabeza en el mantenimiento. Use una jerarquía de carpetas determinista basada en el ID del documento y la marca de tiempo.
 
 ```java
 public class PreviewFileManager {
@@ -276,9 +281,7 @@ public class PreviewFileManager {
 
 ### Desafío 3: Manejo de diferentes formatos de documento
 
-**Problema:** Los distintos tipos de documentos requieren enfoques de manejo diferentes.
-
-**Solución:** Crea manejadores específicos por formato:
+No todos los formatos se renderizan idénticamente. GroupDocs.Comparison ofrece optimizaciones específicas por formato; por ejemplo, los archivos DOCX se benefician del renderizado vectorial mientras que las imágenes usan conversión raster.
 
 ```java
 public class DocumentPreviewGenerator {
@@ -320,9 +323,7 @@ public class DocumentPreviewGenerator {
 
 ### Optimización de CPU y memoria
 
-Al construir un generador de vista previa de documentos Java para producción, el rendimiento es fundamental:
-
-**1. Procesamiento concurrente**
+`ExecutorService` es una utilidad de concurrencia de Java que gestiona un pool de hilos de trabajo para la ejecución de tareas en paralelo.  El procesamiento concurrente puede reducir drásticamente el tiempo total de vista previa en servidores multinúcleo. El siguiente ejemplo crea un pool de hilos fijo y procesa las páginas en paralelo.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -343,7 +344,9 @@ for (Future<Void> future : futures) {
 executor.shutdown();
 ```
 
-**2. Estrategia de caché**
+### Estrategia de caché
+
+`Redis` es un almacén de datos en memoria comúnmente usado para el caché rápido de objetos como miniaturas generadas.  Cachee miniaturas generadas previamente en Redis o en un almacén de archivos local. La clave de caché debe combinar el hash del documento, el número de página y el tamaño de imagen solicitado.
 
 ```java
 public class PreviewCache {
@@ -361,17 +364,17 @@ public class PreviewCache {
 
 ### Equilibrio entre calidad de imagen y tamaño de archivo
 
-Encontrar el balance adecuado entre calidad y tamaño es esencial:
+Encontrar el equilibrio adecuado entre calidad de imagen y tamaño de archivo es crucial:
 
 - **Alta calidad (PNG)** – Ideal para documentos técnicos, diagramas.  
 - **Tamaño optimizado (JPEG, 80‑85 % de calidad)** – Mejor para miniaturas web.  
-- Considera generar variantes de diferentes tamaños (miniatura, mediano, grande) para servir a distintos dispositivos.
+- Considere generar múltiples variantes de tamaño (miniatura, mediano, grande) para servir a diferentes dispositivos.
 
 ## Aplicaciones prácticas y casos de uso
 
-### Integración en un Sistema de Gestión Documental
+### Integración con sistemas de gestión documental
 
-Así es como integras tu generador de vista previa de documentos Java en un sistema de gestión documental:
+Integre el generador de vistas previas en un flujo de trabajo DMS para que cada archivo subido reciba automáticamente una miniatura PNG almacenada junto al original.
 
 ```java
 @Service
@@ -398,9 +401,9 @@ public class DocumentService {
 }
 ```
 
-### Catálogo de productos para e‑commerce
+### Catálogo de productos de comercio electrónico
 
-Para plataformas de comercio electrónico que muestran documentos de productos:
+Para plataformas de comercio electrónico que venden manuales de productos descargables, genere una imagen de vista previa para cada manual y muéstrela en las páginas de producto, mejorando las tasas de conversión.
 
 ```java
 public class ProductDocumentHandler {
@@ -432,7 +435,7 @@ public class ProductDocumentHandler {
 
 ### Manejo de errores y registro
 
-Implementa un manejo integral de errores para tu generador de vista previa de documentos:
+Implemente un manejo integral de errores para capturar problemas de licencia, formatos no compatibles y fallos de E/S. Registre cada excepción con un ID de correlación único para facilitar la solución de problemas.
 
 ```java
 public class RobustPreviewGenerator {
@@ -458,7 +461,7 @@ public class RobustPreviewGenerator {
 
 ### Gestión de recursos
 
-Siempre implementa una correcta limpieza de recursos:
+Siempre cierre los flujos en un bloque finally o use try‑with‑resources. Esto previene fugas de descriptores de archivo que pueden bloquear servicios de larga duración.
 
 ```java
 public class ResourceManagedPreviewGenerator implements AutoCloseable {
@@ -491,13 +494,13 @@ public class ResourceManagedPreviewGenerator implements AutoCloseable {
 
 ### Problema 1: Error “Could not load document”
 
-**Síntomas:** Excepción al intentar cargar ciertos tipos de documento.
+**Síntomas:** Excepción al intentar cargar ciertos tipos de documento.  
 
-**Soluciones**
-1. Verifica que el documento no esté corrupto.  
-2. Comprueba que el formato de archivo sea compatible.  
-3. Asegúrate de que los permisos de archivo sean correctos.  
-4. Valida que la ruta del archivo exista.
+**Soluciones**  
+1. Verifique que el documento no esté corrupto.  
+2. Compruebe si el formato de archivo es compatible.  
+3. Asegúrese de que los permisos del archivo sean correctos.  
+4. Valide que la ruta del archivo exista.
 
 ```java
 private boolean isDocumentValid(String filePath) {
@@ -516,85 +519,91 @@ private boolean isDocumentValid(String filePath) {
 }
 ```
 
-### Problema 2: Calidad de vista previa pobre
+### Problema 2: Calidad de vista previa deficiente
 
-**Síntomas:** Las vistas previas generadas aparecen borrosas o pixeladas.
+**Síntomas:** Las vistas previas generadas son borrosas o pixeladas.  
 
-**Soluciones**
-- Revisa la calidad del documento fuente.  
-- Ajusta la configuración del formato de salida (usa PNG para calidad sin pérdidas).  
-- Garantiza que haya recursos del sistema suficientes durante la conversión.
+**Soluciones**  
+- Verifique la calidad del documento fuente.  
+- Ajuste la configuración del formato de salida (use PNG para calidad sin pérdida).  
+- Asegúrese de contar con recursos del sistema adecuados durante la conversión.
 
 ### Problema 3: Generación lenta de vistas previas
 
-**Síntomas:** La generación de vistas previas tarda demasiado en documentos extensos.
+**Síntomas:** La generación de vistas previas lleva demasiado tiempo para documentos grandes.  
 
-**Soluciones**
-- Implementa límites de páginas para vistas previas iniciales.  
-- Usa procesamiento asíncrono (consulta el ejemplo con `ExecutorService`).  
-- Añade indicadores de progreso para retroalimentación al usuario.  
-- Cachea vistas previas de uso frecuente.
+**Soluciones**  
+- Implemente límites de páginas para vistas previas iniciales.  
+- Use procesamiento asíncrono (vea el ejemplo `ExecutorService`).  
+- Añada indicadores de progreso para la retroalimentación del usuario.  
+- Cachee vistas previas de acceso frecuente.
 
 ## Alternativas a GroupDocs.Comparison
 
-Aunque GroupDocs.Comparison es excelente para la generación de vistas previas, podrías considerar otras opciones:
+Aunque GroupDocs.Comparison es excelente para la generación de vistas previas de documentos, podría considerar alternativas:
 
 - **Apache PDFBox** (solo PDF, código abierto)  
-- **iText** (comercial, funciones PDF extensas)  
-- **ImageIO con bibliotecas Office** (más control, mayor complejidad de configuración)
+- **iText** (Comercial, características extensas de PDF)  
+- **ImageIO con bibliotecas Office** (Mayor control, mayor complejidad de configuración)
 
 ## Conclusión
 
-Ahora sabes cómo **crear pdf preview java** usando GroupDocs.Comparison. Esta solución ofrece:
+Ahora ha aprendido cómo **create pdf preview java** usando GroupDocs.Comparison. Esta solución ofrece:
 
 - Soporte para múltiples formatos de documento (PDF, Word, Excel, PowerPoint)  
 - Generación de vistas previas de alta calidad con opciones configurables  
-- Manejo de errores y gestión de recursos listos para producción  
+- Manejo de errores y gestión de recursos listo para producción  
 - Arquitectura escalable adecuada para aplicaciones empresariales  
 
 ### Próximos pasos
 
-1. **Implementar caché** – Añade Redis o caché basada en archivos para vistas previas de acceso frecuente.  
-2. **Agregar seguimiento de progreso** – Muestra a los usuarios el avance de la generación de vistas previas para documentos grandes.  
-3. **Optimizar para móvil** – Crea vistas previas responsivas para aplicaciones móviles.  
-4. **Monitorear rendimiento** – Añade métricas y monitoreo para rastrear el desempeño del sistema.
+1. **Implementar caché** – Añada caché Redis o basada en archivos para vistas previas de acceso frecuente.  
+2. **Añadir seguimiento de progreso** – Muestre a los usuarios el progreso de la generación de vistas previas para documentos grandes.  
+3. **Optimizar para móvil** – Cree vistas previas responsivas para aplicaciones móviles.  
+4. **Monitorear rendimiento** – Añada métricas y monitoreo para rastrear el rendimiento del sistema.
 
-¿Listo para implementar la generación de vistas previas en tu aplicación Java? Comienza con una prueba de concepto pequeña y amplía la funcionalidad gradualmente según tus requisitos específicos.
+¿Listo para implementar la generación de vistas previas de documentos en su aplicación Java? Comience con una pequeña prueba de concepto y expanda gradualmente la funcionalidad según sus requisitos específicos.
 
 ## Preguntas frecuentes
 
-**P1:** ¿Qué formatos de documento soporta este generador de vista previa de documentos Java?  
-**R:** GroupDocs.Comparison soporta más de 50 formatos, incluidos PDF, DOCX, XLSX, PPTX, TXT, HTML y muchos más. Consulta la [documentación](https://docs.groupdocs.com/comparison/java/) para obtener la lista completa.
+**Q:** ¿Qué formatos de documento admite este generador de vistas previas de documentos Java?  
+**A:** GroupDocs.Comparison admite más de 50 formatos de documento, incluidos PDF, DOCX, XLSX, PPTX, TXT, HTML y muchos más. Consulte la [documentación](https://docs.groupdocs.com/comparison/java/) para obtener una lista completa.
 
-**P2:** ¿Cómo genero miniaturas de documento solo para la primera página?  
-**R:** Usa `previewOptions.setPageNumbers(new int[]{1})` para generar una vista previa únicamente de la primera página. Es perfecto para crear miniaturas en navegadores de documentos.
+**Q:** ¿Cómo genero miniaturas de documentos solo de la primera página?  
+**A:** Use `previewOptions.setPageNumbers(new int[]{1})` para generar una vista previa solo de la primera página. Esto es perfecto para la creación de miniaturas en navegadores de documentos.
 
-**P3:** ¿Puedo personalizar el formato y la calidad de la imagen de salida?  
-**R:** Sí, puedes configurar el formato de salida mediante el delegado `CreatePageStream`. La biblioteca soporta principalmente PNG, que brinda una calidad excelente para vistas previas de documentos.
+**Q:** ¿Puedo personalizar el formato y la calidad de la imagen de salida?  
+**A:** Sí, puede configurar el formato de salida mediante el delegado `CreatePageStream`. La biblioteca admite principalmente el formato PNG, que brinda una excelente calidad para vistas previas de documentos.
 
-**P4:** ¿Cómo manejo archivos PDF muy grandes sin quedarme sin memoria?  
-**R:** Procesa documentos extensos por lotes especificando rangos de páginas, implementa una correcta limpieza de recursos con *try‑with‑resources* y considera aumentar el tamaño del heap de JVM con el parámetro `-Xmx`.
+**Q:** ¿Cómo manejo archivos PDF muy grandes sin quedarme sin memoria?  
+**A:** Procese documentos grandes en lotes especificando rangos de páginas, implemente una limpieza adecuada de recursos con try‑with‑resources y considere aumentar el tamaño del heap de la JVM con el parámetro `-Xmx`.
 
-**P5:** ¿Existe una forma de generar vistas previas de forma asíncrona?  
-**R:** ¡Claro! Usa `CompletableFuture.runAsync()` o `ExecutorService` para generar vistas previas en hilos en segundo plano. Así evitas bloquear el hilo principal de tu aplicación.
+**Q:** ¿Hay una forma de generar vistas previas de forma asíncrona?  
+**A:** ¡Absolutamente! Use `CompletableFuture.runAsync()` o `ExecutorService` para generar vistas previas en hilos en segundo plano. Esto evita bloquear el hilo principal de su aplicación.
 
-**P6:** ¿Cómo soluciono errores “License not found”?  
-**R:** Asegúrate de que el archivo de licencia esté en el classpath, verifica que la licencia no haya expirado y confirma que estás usando el tipo de licencia correcto para tu versión de GroupDocs.Comparison.
+**Q:** ¿Cómo soluciono los errores “License not found”?  
+**A:** Asegúrese de que su archivo de licencia esté en el classpath, verifique que la licencia no haya expirado y compruebe que está usando el tipo de licencia correcto para su versión de GroupDocs.Comparison.
 
-**Recursos adicionales**
+### Recursos adicionales
 
-- **Documentación:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **Referencia API:** [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Descarga más reciente:** [GroupDocs.Comparison Downloads](https://releases.groupdocs.com/comparison/java/)  
-- **Comprar licencia:** [Buy GroupDocs.Comparison License](https://purchase.groupdocs.com/buy)  
-- **Prueba gratuita:** [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
-- **Obtener soporte:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
-- **Licencia temporal:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **Documentación**: [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **Referencia API**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Descargar última versión**: [GroupDocs.Comparison Downloads](https://releases.groupdocs.com/comparison/java/)  
+- **Comprar licencia**: [Buy GroupDocs.Comparison License](https://purchase.groupdocs.com/buy)  
+- **Probar gratis**: [Download Free Trial](https://releases.groupdocs.com/comparison/java/)  
+- **Obtener soporte**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
+- **Licencia temporal**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
 ---
 
-**Última actualización:** 2026-02-08  
+**Última actualización:** 2026-05-26  
 **Probado con:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
----  
+---
+
+## Tutoriales relacionados
+
+- [Java Document Preview Generation - Complete GroupDocs.Comparison Tutorial](/comparison/java/preview-generation/)  
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)  
+- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)

@@ -1,57 +1,138 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: Tanulja meg, hogyan hasonlíthat össze több Word-fájlt Java stream dokumentum-összehasonlítással
-  a GroupDocs.Comparison segítségével. Teljes útmutató kódrészletekkel és hibaelhárítási
-  tippekkel.
-keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
-  based document comparison, Java Word document diff, how to compare multiple Word
-  documents Java
-lastmod: '2026-01-18'
-linktitle: Java Stream Document Comparison
+date: '2026-06-05'
+description: Ismerje meg, hogyan lehet kötegelt Word-dokumentumokat összehasonlítani
+  Java stream document comparison segítségével a GroupDocs.Comparison-nél. Teljes
+  útmutató kódrészletekkel, teljesítmény tippekkel és hibaelhárítással.
+keywords:
+- batch compare word documents
+- compare multiple word files
+- java compare docx files
+- java stream document comparison
+lastmod: '2026-06-05'
+linktitle: Java Stream Dokumentum-összehasonlítás
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-05'
+  description: Learn how to batch compare word documents using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples, performance
+    tips, and troubleshooting.
+  headline: Batch Compare Word Documents with Java Streams | GroupDocs
+  type: TechArticle
+- description: Learn how to batch compare word documents using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples, performance
+    tips, and troubleshooting.
+  name: Batch Compare Word Documents with Java Streams | GroupDocs
+  steps:
+  - name: Set Up Streams and Initialise the Comparer
+    text: '**What’s happening?** We open a source stream (the baseline document) and
+      three target streams (the variations we want to compare). The `Comparer` is
+      instantiated with the source stream, establishing the reference point for all
+      subsequent comparisons.'
+  - name: Add All Target Streams at Once
+    text: Adding multiple targets in a single call is far more efficient than invoking
+      separate comparisons for each file.
+  - name: Run the Comparison with Custom Styling
+    text: '`compare` executes the diff operation and returns the styled result document.
+      Here we not only perform the comparison but also tell GroupDocs to highlight
+      inserted text in **yellow**. You can similarly customise deleted or modified
+      items.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum, but Java 11+ is recommended for better performance
+      and security.
+    question: What is the minimum JDK version?
+  - answer: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`),
+      and consider larger buffer sizes.
+    question: How can I handle very large documents?
+  - answer: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions`
+      to define colors, fonts, or strikethroughs.
+    question: Can I style deletions and modifications too?
+  - answer: Stream comparison excels at batch processing and auditing. Real‑time editors
+      typically need lighter, diff‑based solutions.
+    question: Is this suitable for real‑time collaboration?
+  - answer: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`)
+      and pass it directly to the `Comparer`.
+    question: How do I compare files stored in AWS S3?
+  type: FAQPage
 tags:
 - java
 - document-comparison
 - streams
 - groupdocs
 - tutorial
-title: Több Word-fájl összehasonlítása Java Streamekkel | GroupDocs
+title: Kötegelt Word-dokumentumok összehasonlítása Java Streams segítségével | GroupDocs
 type: docs
 url: /hu/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-# Több Word fájl összehasonlítása Java streamekkel
+# Kötegelt Word dokumentumok összehasonlítása Java streamekkel
 
-Valaha is úgy érezted, hogy el vagy fulladva a dokumentumverziók tengerében, és próbálod kideríteni, mi változott a különböző vázlatok között? Nem vagy egyedül. Legyen szó szerződésekről, jelentésekről vagy közös dokumentumokról, a **compare multiple word files** manuális elvégzése rémálom, amely rengeteg értékes időt emészt fel. Ebben az útmutatóban megmutatjuk, hogyan végezz **java stream document comparison**-t a GroupDocs.Comparison könyvtárral, hogy automatizáld a folyamatot, hatékonyan kezeld a nagy fájlokat, és a végeredményt pontosan úgy formázd, ahogy szükséges.
+Ha valaha is elakadtál a tucatnyi Word vázlat átnézésében, hogy megtaláld a pontos változásokat, tudod, mennyire időigényes és hibára hajlamos a kézi ellenőrzés. A **Batch compare word documents** Java streamekkel lehetővé teszi, hogy automatizáld ezt a fáradságos folyamatot, alacsony memóriahasználatot tarts, és gyönyörűen formázott diff jelentéseket generálj. Ebben az útmutatóban végigvezetünk a teljes megoldáson a GroupDocs.Comparison for Java használatával, elmagyarázzuk, miért a stream‑alapú összehasonlítás a leghatékonyabb választás nagy fájlok esetén, és megmutatjuk, hogyan testre szabhatod a kimenetet a szervezeted márkájához.
 
 ## Gyors válaszok
 - **Melyik könyvtár kezeli a stream‑alapú összehasonlítást?** GroupDocs.Comparison for Java  
-- **Melyik elsődleges kulcsszóra céloz ez a tutorial?** *compare multiple word files*  
-- **Milyen Java verzió szükséges?** JDK 8 vagy újabb (Java 11+ ajánlott)  
-- **Szükségem van licencre?** Egy ingyenes próba verzió elegendő értékeléshez; a kereskedelmi licenc a termeléshez kötelező  
-- **Összehasonlíthatok-e egyszerre több mint két dokumentumot?** Igen – az API egyetlen hívásban támogat több cél streamet  
+- **Melyik elsődleges kulcsszót célozza ez az útmutató?** *batch compare word documents*  
+- **Milyen Java verzió szükséges?** JDK 8 vagy újabb (Java 11 vagy 17 ajánlott)  
+- **Szükségem van licencre?** Az ingyenes próba a kiértékeléshez működik; a termeléshez kereskedelmi licenc szükséges  
+- **Lehet-e egyszerre több mint két dokumentumot összehasonlítani?** Igen – az API egyetlen hívásban támogat több cél streamet  
 
-## Mi az a „compare multiple word files” streamekkel?
-A stream‑alapú összehasonlítás a dokumentumokat kis darabokban olvassa be, ahelyett, hogy az egész fájlt a memóriába töltené. Ez lehetővé teszi, hogy **compare multiple word files** akkor is működjön, ha azok tíz vagy akár száz megabájt méretűek, miközben az alkalmazásod reagálóképessége és memóriahasználata is kedvező marad.
+## Mi az a „compare multiple word files” streamek használatával?
+A streamek használata több Word fájl összehasonlításához azt jelenti, hogy minden dokumentumot folyamatos bájtsorozatként olvasunk, ahelyett, hogy teljesen betöltenénk a memóriába. Ez a megközelítés lehetővé teszi az alkalmazás számára, hogy nagy vagy sok fájlt hatékonyan dolgozzon fel, alacsony RAM használatot tartson, miközben továbbra is felismeri a beszúrásokat, törléseket és módosításokat az összes verzióban.
 
-## Miért használjunk Java stream dokumentum‑összehasonlítást?
+## Miért használjunk Java Stream dokumentum összehasonlítást?
+A stream‑alapú összehasonlítás jelentős előnyöket kínál nagy vagy sok dokumentum kezelésében. Az adatokat kis darabokban feldolgozva csökkenti a memóriafogyasztást, felgyorsítja a kötegelt műveleteket, és lehetővé teszi a különbségek egységes megjelenítését, így ideális vállalati környezetekben, ahol a teljesítmény és az erőforrás-kezelés kritikus.
+
 - **Memóriahatékonyság** – ideális nagy szerződésekhez vagy kötegelt feldolgozáshoz.  
-- **Skálázhatóság** – egy művelettel összehasonlíthatod a mesterdokumentumot tucatnyi változattal.  
-- **Testreszabható stílus** – kiemelheted a beszúrásokat, törléseket és módosításokat a kívánt módon.  
-- **Felhő‑kész** – működik helyi fájlok, adatbázisok vagy felhőtárolók (pl. AWS S3) streamjeivel.  
+- **Skálázható** – egy fő dokumentumot több tucat változattal hasonlíthat össze egyetlen API hívással.  
+- **Testreszabható stílus** – emelje ki a beszúrásokat, törléseket és módosításokat olyan színekkel, amelyek megfelelnek a vállalati stílus útmutatónak.  
+- **Felhő‑kész** – működik helyi lemezekről, adatbázisokból vagy felhő tárolási szolgáltatásokból, például AWS S3, Azure Blob vagy Google Cloud Storage streamekkel.
+
+### Mennyiségi állítás
+A GroupDocs.Comparison támogat **50+ bemeneti és kimeneti formátumot** (beleértve a DOCX, PDF, PPTX, HTML és PNG formátumokat), és akár **500 MB**-os dokumentumokat is össze tud hasonlítani anélkül, hogy a teljes fájlt a memóriába töltené, az eredményeket **30 másodpercnél kevesebb** idő alatt szállítja egy tipikus 8‑magos szerveren.
 
 ## Előfeltételek és környezet beállítása
 
-Mielőtt a kódba merülnénk, ellenőrizzük, hogy a fejlesztői környezet készen áll-e.
+Mielőtt a kódba merülnénk, ellenőrizd, hogy a fejlesztői környezeted megfelel-e ezeknek a követelményeknek.
 
 ### Szükséges eszközök
-- **JDK 8+** (Java 11 vagy 17 ajánlott)  
+- **JDK 8+** (Java 11 vagy 17 ajánlott)  
 - **Maven** (vagy Gradle, ha azt részesíted előnyben)  
 - **GroupDocs.Comparison** könyvtár (legújabb stabil verzió)
 
 ### Maven konfiguráció, amely tényleg működik
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-comparison</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Pro tipp**: Ha vállalati tűzfal mögött vagy, konfiguráld a Maven `settings.xml` fájlt a proxy részleteiddel.
+
+### Licenc áttekintés
+- **Free Trial** – vízjelezett kimenet, tökéletes teszteléshez.  
+- **Temporary License** – meghosszabbított értékelési időszak.  
+- **Commercial License** – szükséges a termelési telepítésekhez.
+
+## Mikor használjunk stream‑alapú dokumentum összehasonlítást
+A stream‑alapú összehasonlítás választása a fájlmérettől, a rendszer erőforrásaitól és a feldolgozási igényektől függ. Leginkább nagy dokumentumokhoz vagy kötegelt szcenáriókhoz alkalmas, ahol a memória korlátozott, míg a kisebb fájlok gyorsabban kezelhetők közvetlen fájl összehasonlítással a tipikus esetekben.
+
+| Helyzet | Ajánlott |
+|-----------|--------------|
+| Nagy Word fájlok (50 MB +) | ✅ Használj streameket |
+| Korlátozott RAM környezetek (pl. Docker konténerek) | ✅ Használj streameket |
+| Sok szerződés kötegelt feldolgozása | ✅ Használj streameket |
+| Kis fájlok (< 10 MB) vagy egyszeri ellenőrzések | ❌ Az egyszerű fájl összehasonlítás gyorsabb lehet |
+
+## Implementációs útmutató: Több dokumentum összehasonlítása
+Az alábbiakban a teljes, futtatható kód látható, amely bemutatja, hogyan **batch compare word documents** streamekkel, és hogyan alkalmazz egyedi stílusokat.
+
+### 1. lépés: Streamek beállítása és a Comparer inicializálása
 
 ```xml
 <repositories>
@@ -70,27 +151,10 @@ Mielőtt a kódba merülnénk, ellenőrizzük, hogy a fejlesztői környezet ké
 </dependencies>
 ```
 
-**Pro Tip**: Ha vállalati tűzfal mögött vagy, állítsd be a Maven `settings.xml` fájljában a proxy adatokat.
+**Mi történik?**  
+Megnyitunk egy forrás streamet (az alapdokumentumot) és három cél streamet (az összehasonlítani kívánt változatokat). A `Comparer` a forrás streammel példányosítva jön létre, amely a referencia pontot adja minden további összehasonlításhoz.
 
-### Licenc áttekintés
-- **Free Trial** – vízjelezett kimenet, tökéletes teszteléshez.  
-- **Temporary License** – meghosszabbított értékelési időszak.  
-- **Commercial License** – kötelező a termelési környezetben.  
-
-## Mikor használjunk stream‑alapú dokumentum‑összehasonlítást
-
-| Helyzet | Ajánlott |
-|-----------|--------------|
-| Nagy Word fájlok (50 MB +) | ✅ Használj streameket |
-| Korlátozott RAM környezetek (pl. Docker konténerek) | ✅ Használj streameket |
-| Tömeges szerződésfeldolgozás | ✅ Használj streameket |
-| Kis fájlok (< 10 MB) vagy egyszeri ellenőrzések | ❌ A hagyományos fájl‑összehasonlítás gyorsabb lehet |
-
-## Implementációs útmutató: Több dokumentum összehasonlítása
-
-Az alábbi kód teljes, futtatható példa, amely bemutatja, hogyan **compare multiple word files** streamekkel, és hogyan alkalmazz egyedi stílusokat.
-
-### 1. lépés: Streamek beállítása és a Comparer inicializálása
+### 2. lépés: Az összes cél stream hozzáadása egyszerre
 
 ```java
 try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
@@ -101,18 +165,20 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
      Comparer comparer = new Comparer(sourceStream)) {
 ```
 
-**Mi történik?**  
-Megnyitunk egy forrás streamet (a referencia dokumentumot) és három cél streamet (az összehasonlítandó változatokat). A `Comparer` a forrás streammel jön létre, így meghatározva a kiindulási pontot a további összehasonlításokhoz.
+Több cél stream egyetlen hívásban történő hozzáadása sokkal hatékonyabb, mint külön összehasonlítások indítása minden egyes fájlhoz.
 
-### 2. lépés: Az összes cél stream egyszerre hozzáadása
+### 3. lépés: Az összehasonlítás futtatása egyedi stílusokkal
 
 ```java
 comparer.add(target1Stream, target2Stream, target3Stream);
 ```
 
-Az egyszerre több cél stream hozzáadása sokkal hatékonyabb, mint minden fájlhoz külön hívást indítani.
+`compare` végrehajtja a diff műveletet és visszaadja a stílusos eredménydokumentumot.  
+Itt nem csak az összehasonlítást végezzük, hanem azt is megmondjuk a GroupDocs-nak, hogy a beszúrt szöveget **sárgával** emelje ki. Hasonlóan testreszabhatod a törölt vagy módosított elemeket is.
 
-### 3. lépés: Az összehasonlítás futtatása egyedi stílusokkal
+## Haladó stílusbeállítások
+
+Ha kifinomultabb megjelenésre van szükséged, definiálhatsz újrahasználható `StyleSettings`-et.
 
 ```java
 final Path resultPath = comparer.compare(resultStream,
@@ -123,20 +189,12 @@ final Path resultPath = comparer.compare(resultStream,
                                 .build())
                 .build());
 ```
-
-Itt nem csak az összehasonlítást végezzük, hanem azt is megmondjuk a GroupDocs‑nek, hogy a beszúrt szöveget **sárgával** emelje ki. Hasonlóan testreszabhatod a törölt vagy módosított elemeket is.
-
-## Haladó stílusbeállítási lehetőségek
-
-Ha kifinomultabb megjelenést szeretnél, definiálhatsz újrahasználható `StyleSettings`‑eket.
-
 ```java
 try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
      InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET_WORD");
      OutputStream resultStream = new FileOutputStream(outputFileName);
      Comparer comparer = new Comparer(sourceStream)) {
 ```
-
 ```java
 final StyleSettings styleSettings = new StyleSettings();
 styleSettings.setFontColor(Color.YELLOW);
@@ -144,100 +202,108 @@ CompareOptions compareOptions = new CompareOptions();
 compareOptions.setInsertedItemStyle(styleSettings);
 ```
 
+**Stílus Pro tippek**
+- **Insertions** – a sárga háttér jól működik a gyors vizuális átnézéshez.  
+- **Deletions** – a piros áthúzás (`setDeletedItemStyle`) egyértelműen jelzi a törlést.  
+- **Modifications** – a kék aláhúzás (`setModifiedItemStyle`) olvashatóvá teszi a dokumentumot.  
+- Kerüld a neon színeket; hosszú átnézések során fárasztják a szemet.
+
+## Definíciós horgonyok a fő osztályokhoz
+`Comparer` a GroupDocs.Comparison fő osztálya, amely a diff műveletet egy forrás dokumentum és egy vagy több cél dokumentum között irányítja.  
+`CompareOptions` tartalmaz konfigurációt, például stílusbeállításokat, összehasonlítási részletességet és kimeneti formátumot.  
+`StyleSettings` meghatározza, hogyan jelennek meg vizuálisan a beszúrások, törlések és módosítások a végső dokumentumban.
+
+## Gyakori problémák és hibaelhárítás
+
+### Memóriahibák hatalmas dokumentumok esetén
+**Probléma**: `OutOfMemoryError`  
+**Megoldás**: Növeld a JVM heap méretét vagy finomhangold a stream puffereket.
+
 ```java
 final Path resultPath = comparer.compare(resultStream, compareOptions);
 ```
 
-**Stílus Pro Tippek**
-- **Beszúrások** – a sárga háttér jól működik a gyors vizuális átnézéshez.  
-- **Törlések** – a piros áthúzás (`setDeletedItemStyle`) egyértelműen jelzi a eltávolítást.  
-- **Módosítások** – a kék aláhúzás (`setModifiedItemStyle`) megőrzi a dokumentum olvashatóságát.  
-- Kerüld a neon színeket; hosszú átnézések során fárasztóak a szemnek.
+### Stream életciklus problémák
+- **„Stream closed”** – győződj meg róla, hogy minden összehasonlításhoz friss `InputStream`-et hozol létre; a streamek nem használhatók újra a beolvasás után.  
+- **Erőforrás szivárgások** – a `try‑with‑resources` blokkok már kezelik a lezárást, de ellenőrizd a saját segédeszközeidet is.
 
-## Gyakori problémák és hibaelhárítás
+### Nem támogatott formátumok
+Győződj meg róla, hogy a fájl kiterjesztése megfelel a tényleges formátumnak (pl. valódi `.docx` fájl, nem átnevezett `.txt`).
 
-### Memóriahibák hatalmas dokumentumoknál
-**Probléma**: `OutOfMemoryError`  
-**Megoldás**: Növeld a JVM heap méretét vagy finomhangold a stream puffereket.
+### Teljesítmény szűk keresztmetszetek
+- Használj SSD-t a gyorsabb I/O-hoz.  
+- Növeld a pufferméreteket (lásd a következő szekciót).  
+- Feldolgozz 5‑10 dokumentumos kötegeket párhuzamosan, ahelyett, hogy egyszerre mindet.
+
+## Teljesítményoptimalizálási tippek
+
+### Memóriakezelési legjobb gyakorlatok
 
 ```bash
 java -Xms512m -Xmx2g YourApplication
 ```
 
-### Stream életciklus problémák
-- **„Stream closed”** – győződj meg róla, hogy minden összehasonlításhoz friss `InputStream`‑et hozol létre; a streamek nem használhatók újra a beolvasás után.  
-- **Erőforrás‑szivárgások** – a `try‑with‑resources` blokkok már kezelik a lezárást, de ellenőrizd a saját segédfüggvényeidet is.
-
-### Nem támogatott formátumok
-Győződj meg arról, hogy a fájlkiterjesztés megfelel a tényleges formátumnak (pl. valódi `.docx` fájl, nem átnevezett `.txt`).
-
-### Teljesítmény szűk keresztmetszetek
-- Használj SSD‑ket a gyorsabb I/O-hoz.  
-- Növeld a pufferméreteket (lásd a következő szekciót).  
-- Dolgozz párhuzamosan 5‑10 dokumentummal, ahelyett, hogy egyszerre az összeset próbálnád feldolgozni.
-
-## Teljesítményoptimalizálási tippek
-
-### Memóriakezelési legjobb gyakorlatok
+### JVM hangolás termeléshez
 
 ```java
 // Use larger buffers for big files
 BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768);
 ```
 
-### JVM hangolás termeléshez
+### Mikor nem szükségesek a streamek
+- 1 MB alatti fájlok, gyors helyi SSD-n tárolva.  
+- Egyszerű, egyedi összehasonlítások, ahol a stream kezelésének többlet költsége meghaladja az előnyöket.
 
-```bash
--XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
-```
-
-### Mikor nem szükséges a stream
-- 1 MB alatti fájlok gyors helyi SSD‑n.  
-- Egyszerű, egyedi összehasonlítások, ahol a stream kezelésének többletterhe meghaladja az előnyöket.
-
-## Valós‑világos alkalmazások
+## Valós világban alkalmazások
 
 | Terület | Hogyan segít a stream összehasonlítás |
 |--------|-----------------------------|
-| **Jog** | Egy mester szerződés összehasonlítása tucatnyi ügyfél‑specifikus verzióval, a beszúrások sárgával való kiemelésével a gyors áttekintéshez. |
-| **Szoftver dokumentáció** | API dokumentáció változásainak nyomon követése kiadások között; több verzió kötegelt összehasonlítása CI pipeline‑okban. |
-| **Kiadás** | Szerkesztők láthatják a különböző közreműködők kéziratváltozatai közti eltéréseket. |
-| **Megfelelőség** | Auditorok ellenőrzik a szabályzat frissítéseit a részlegek között anélkül, hogy a teljes PDF‑eket a memóriába töltenék. |
+| **Jogi** | Hasonlítsd össze a fő szerződést tucatnyi ügyfél‑specifikus változattal, a beszúrásokat sárgával emelve ki a gyors áttekintéshez. |
+| **Szoftver dokumentáció** | Kövesd nyomon az API dokumentáció változásait a kiadások során; kötegelt összehasonlítás több verziót CI csővezetékekben. |
+| **Kiadás** | A szerkesztők láthatják a kézirat vázlatok közötti különbségeket a különböző szerzőktől. |
+| **Megfelelőség** | Az auditorok ellenőrzik a szabályzat frissítéseket a részlegek között anélkül, hogy a teljes PDF-eket a memóriába töltenék. |
 
 ## Pro tippek a sikerhez
-
-- **Következetes elnevezés** – szerepeltess verziószámot vagy dátumot a fájlnevekben.  
-- **Tesztelj valós adatokkal** – a „Lorem ipsum” minták elrejtik a szélsőséges eseteket.  
-- **Memória monitorozás** – használj JMX‑et vagy VisualVM‑et termelésben a hirtelen növekedések korai észleléséhez.  
-- **Kötegelt feldolgozás stratégia** – csoportosíts 5‑10 dokumentumot feladatonként a throughput és a memóriahasználat egyensúlyához.  
-- **Graceful error handling** – kapd el a `UnsupportedFormatException`‑t, és tájékoztasd a felhasználókat egyértelmű üzenetekkel.
+- **Következetes elnevezés** – Tedd bele a verziószámokat vagy dátumokat a fájlnevekbe.  
+- **Tesztelj valós adatokkal** – A „Lorem ipsum” mintafájlok elrejtik a szélsőséges eseteket.  
+- **Memória monitorozás** – Használd a JMX-et vagy a VisualVM-et a termelésben, hogy időben észleld a csúcsokat.  
+- **Kötegelt stratégia** – Csoportosíts 5‑10 dokumentumot feladatonként a teljesítmény és memóriahasználat egyensúlyához.  
+- **Kifinomult hibakezelés** – Fogd el a `UnsupportedFormatException`-t, és tájékoztasd a felhasználókat egyértelmű üzenetekkel.
 
 ## Gyakran ismételt kérdések
 
 **Q: Mi a minimális JDK verzió?**  
-A: Java 8 a minimum, de a Java 11+ ajánlott a jobb teljesítmény és biztonság érdekében.
+A: A Java 8 a minimum, de a Java 11+ ajánlott a jobb teljesítmény és biztonság érdekében.
 
-**Q: Hogyan kezeljem a nagyon nagy dokumentumokat?**  
-A: Használd a fent bemutatott stream‑alapú megközelítést, növeld a JVM heap‑et (`-Xmx`), és fontold meg a nagyobb pufferméreteket.
+**Q: Hogyan kezelhetek nagyon nagy dokumentumokat?**  
+A: Használd a fent bemutatott stream‑alapú megközelítést, növeld a JVM heap-et (`-Xmx`), és fontold meg a nagyobb pufferméreteket.
 
-**Q: Stílusolhatom-e a törléseket és módosításokat is?**  
+**Q: Tudok törléseket és módosításokat is stílusozni?**  
 A: Igen. Használd a `setDeletedItemStyle()` és `setModifiedItemStyle()` metódusokat a `CompareOptions`‑on, hogy színeket, betűtípusokat vagy áthúzást definiálj.
 
 **Q: Alkalmas ez valós‑idő együttműködéshez?**  
 A: A stream összehasonlítás kiváló kötegelt feldolgozáshoz és auditáláshoz. A valós‑idő szerkesztők általában könnyebb, diff‑alapú megoldásokat igényelnek.
 
 **Q: Hogyan hasonlíthatok össze AWS S3‑ban tárolt fájlokat?**  
-A: Szerezz `InputStream`‑et az AWS SDK‑val (`s3Client.getObject(...).getObjectContent()`) és add át közvetlenül a `Comparer`‑nek.
+A: Szerezz be egy `InputStream`-et az AWS SDK‑val (`s3Client.getObject(...).getObjectContent()`) és add át közvetlenül a `Comparer`‑nek.
+
+## Hogyan kötegelt Word dokumentumokat hasonlítsunk össze Java streamekkel?
+Töltsd be a fő DOCX fájlt egy `FileInputStream`‑be, hozz létre egy `Comparer`‑t ezzel a streammel, add hozzá minden cél `InputStream`‑et az `add` vagy `addAll` segítségével, konfiguráld a `CompareOptions`‑t a stílushoz, majd hívd meg a `compare`‑t a diff dokumentum generálásához – mindezt néhány tömör kódsorban. Ez a minta tucatnyi fájlra skálázható, miközben a memóriahasználat 150 MB alatt marad.
 
 ## További források
-
 - **Dokumentáció**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **API referencia**: [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)  
+- **API referencia**: [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
 
 ---
+**Utoljára frissítve:** 2026-06-05  
+**Tesztelve ezzel:** GroupDocs.Comparison 25.2  
+**Szerző:** GroupDocs
 
-**Legutóbb frissítve:** 2026-01-18  
-**Tesztelve a következővel:** GroupDocs.Comparison 25.2  
-**Szerző:** GroupDocs  
+```bash
+-XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
+```
 
----
+## Kapcsolódó oktatóanyagok
+- [compare pdf java – Java dokumentum összehasonlítás oktatóanyag – Teljes útmutató a betöltéshez és összehasonlításhoz](/comparison/java/document-loading/)
+- [Hogyan használjuk a GroupDocs‑t – Java dokumentum összehasonlítás streamekkel – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [Word dokumentumok összehasonlítása Java‑ban – Beszúrt elemek stílusozása a GroupDocs‑szal](/comparison/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/)

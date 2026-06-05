@@ -1,75 +1,114 @@
 ---
 categories:
 - Document Comparison
-date: '2026-03-06'
-description: Ismerje meg, hogyan őrizheti meg a cél metaadatait a dokumentumok összehasonlítása
-  során a GroupDocs.Comparison for .NET használatával. Lépésről lépésre útmutató C#
-  példákkal.
-keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
-  document comparison, metadata preservation tutorial
-lastmod: '2026-03-06'
-linktitle: Metadata Preservation Tutorial
+date: '2026-06-05'
+description: Ismerje meg, hogyan őrizheti meg a metaadatokat a GroupDocs Comparison
+  for .NET segítségével, lépésről‑lépésre útmutató a cél dokumentum tulajdonságainak
+  megőrzéséhez az összehasonlítás során.
+keywords:
+- how to preserve metadata
+- keep custom properties
+- metadata preservation .NET
+lastmod: '2026-06-05'
+linktitle: Metaadat-megőrzési útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-05'
+  description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  headline: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  type: TechArticle
+- description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  name: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  steps:
+  - name: Initialize Your Comparer Object
+    text: 'The `Comparer` class is the core component that performs document comparison
+      and controls output options. Load the source (original) file and create a `Comparer`
+      instance: **Why use `using` statements?** They automatically dispose of resources,
+      preventing memory leaks when processing large documents'
+  - name: Add the Target Document
+    text: 'The `Add` method registers the target document whose changes will be compared
+      against the source. Specify the updated file you want to compare: **Common mistake**:
+      Confusing source and target. Think of it this way—source is your “original,”
+      target is your “updated version.”'
+  - name: Set the Metadata Type (The Magic Happens Here)
+    text: '`CloneMetadataType` property determines which document''s metadata is copied
+      to the result. Tell the comparer to keep the target’s metadata: **What’s happening?**
+      `CloneMetadataType = MetadataType.Target` tells GroupDocs.Comparison: “Hey,
+      I want to keep the target document’s metadata in my final resu'
+  type: HowTo
+- questions:
+  - answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+    question: Can I preserve metadata from multiple target documents when comparing?
+  - answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+    question: What happens if the target document lacks some metadata fields?
+  - answer: 'Use a `LoadOptions` object with the password, then pass it to the `Comparer`
+      constructor:'
+    question: How do I handle password‑protected documents?
+  - answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+    question: Is there a way to preserve only selected metadata properties?
+  - answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
+    question: Which document formats support metadata preservation?
+  type: FAQPage
 tags:
 - GroupDocs.Comparison
 - metadata-preservation
 - dotnet-tutorial
 - document-management
-title: Cél metaadatok megőrzése a GroupDocs.Comparison segítségével – .NET útmutató
+title: Hogyan őrizhetjük meg a metaadatokat a GroupDocs Comparison – .NET oktatóanyag
 type: docs
 url: /hu/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# Preserve Target Metadata with GroupDocs.Comparison – .NET Tutorial
+# Hogyan őrizhetjük meg a metaadatokat a GroupDocs Comparison segítségével – .NET útmutató
 
 ## Bevezetés
 
-Volt már, hogy két dokumentumot hasonlított össze, és közben elveszítette a fontos metaadatokat? Nem egyedül van ezzel. Amikor **célmetaadatok megőrzésére** van szükség a dokumentumok .NET alkalmazásban történő összehasonlítása során, a feladat trükkösnek tűnhet – de nem kell.
-
-A GroupDocs.Comparison for .NET lehetővé teszi, hogy meghatározza, melyik dokumentum metaadatai maradjanak meg az összehasonlítás eredményében. Akár dokumentumkezelő rendszert épít, akár jogi szerződésekkel dolgozik, vagy együttműködő tartalmat kezel, mindig a megfelelő forrásdokumentum metaadataira lesz szüksége.
-
-Ebben az útmutatóban megtanulja, hogyan **őrizze meg a célmetaadatokat** az összehasonlítás során, hogyan kerülje el a gyakori buktatókat, és hogyan valósítsa meg a megoldást valós helyzetekben.
+Már összehasonlítottál két dokumentumot, csak hogy a folyamat során elveszítsd a fontos metaadatokat? Nem vagy egyedül. Amikor **preserve target metadata**-t kell megőrizned a dokumentumok .NET alkalmazásban történő összehasonlítása közben, a feladat bonyolultnak tűnhet – de nem kell. Ez az útmutató megmutatja, **hogyan őrizhetjük meg a metaadatokat**, hogy a létrehozott fájl pontosan megőrizze a szerzőt, a létrehozás dátumát és a kívánt egyéni tulajdonságokat.
 
 ## Gyors válaszok
-- **Mit jelent a „célmetaadatok megőrzése”?** A metaadatokat (szerző, létrehozás dátuma, egyéni tulajdonságok stb.) a célként megadott dokumentumból tartja meg az összehasonlítás eredményének generálásakor.  
+- **Mi jelent a „preserve target metadata”?** A metaadatokat (szerző, létrehozás dátuma, egyéni tulajdonságok stb.) a célként megadott dokumentumból őrzi meg az összehasonlítási eredmény generálásakor.  
 - **Melyik GroupDocs.Comparison verzió szükséges?** 25.4.0 vagy újabb verzió.  
-- **Használhatom .NET Core‑dal?** Igen – .NET Core 2.0+ vagy .NET Framework 4.6.1+.  
-- **Szükséges licenc a termeléshez?** A termeléshez kereskedelmi licenc szükséges; a ingyenes próba verzió tanuláshoz elegendő.  
-- **Működik a funkció PDF‑el és DOCX‑szel?** Igen – minden főbb Office és PDF formátum támogatja a metaadatok megőrzését.
+- **Használhatom .NET Core-val?** Igen – .NET Core 2.0+ vagy .NET Framework 4.6.1+.  
+- **Szükséges licenc a termeléshez?** Kereskedelmi licenc szükséges a termeléshez; a ingyenes próba verzió tanuláshoz elegendő.  
+- **Működik ez a funkció PDF és DOCX esetén?** Igen – minden főbb Office és PDF formátum támogatja a metaadatok megőrzését.
+
+## Mi a metaadatok megőrzése?
+A metaadatok megőrzése azt jelenti, hogy a forrásdokumentum leíró információi – például szerző, cím, revíziószám és egyéni tulajdonságok – változatlanul megmaradnak egy feldolgozási művelet után. A GroupDocs.Comparison-ban eldöntheted, hogy a forrás vagy a cél dokumentum metaadatai maradjanak meg a végső összehasonlítási kimenetben.
 
 ## Miért fontos a metaadatok megőrzése
+A metaadatok megőrzése elengedhetetlen, mivel sok iparág jogi bizonyítékként vagy üzletkritikus információként kezeli őket. **Miért?** Mert a metaadatok rögzítik a tulajdonjogot, a megfelelőségi címkéket, a verziótörténetet és az audit nyomvonalakat, amelyekre a szervezetek a szabályozási jelentések, szerződéskezelés és tudományos hivatkozások során támaszkodnak. Ennek az adatnak a elvesztése érvénytelenítheti a dokumentum jogi státuszát vagy megszakíthatja az automatizált munkafolyamatokat.
 
-Mielőtt a kódba ugrunk, beszéljünk arról, miért fontos a célmetaadatok megőrzése. A dokumentum metaadatai nem csak „kellemes kiegészítések” – gyakran jogi követelmény vagy üzleti szempontból kritikusak:
-
-- **Jogi dokumentumok** – meg kell őrizni az ügyvéd‑kliens titoktartási jelzéseket.  
-- **Vállalati fájlok** – meg kell tartani a megfelelőségi címkéket és az jóváhagyási láncokat.  
-- **Tudományos dolgozatok** – a szerzői hozzájárulás és a verziótörténet elengedhetetlen.  
-- **Műszaki dokumentáció** – a verziókezelés és az átnézési állapot fontos.
-
-Megfelelő kezelés nélkül véletlenül eltávolíthatja azokat az információkat, amelyek létrehozása hónapokat vett igénybe. Itt jön jól a **célmetaadatok megőrzése** opció.
-
-## Előkövetelmények
+## Előfeltételek
 
 ### Szükséges könyvtárak és verziók
-- **GroupDocs.Comparison for .NET**: 25.4.0 vagy újabb verzió (korábbi verziók korlátozott metaadat‑opciókkal rendelkeznek).  
+- **GroupDocs.Comparison for .NET**: 25.4.0 vagy újabb verzió (korábbi verziók korlátozott metaadat opciókkal rendelkeznek).  
 - **.NET Framework**: 4.6.1 vagy újabb, vagy .NET Core 2.0+.
 
 ### Környezet beállítása
 - Visual Studio (vagy bármely kedvelt C# IDE).  
-- Alap C# ismeretek (semmi túl bonyolult, ígérem!).  
-- Két minta dokumentum a teszteléshez (Word *.docx* nagyszerűen működik).
+- Alap C# tudás (semmi túl bonyolult, ígérem!).  
+- Két mintadokumentum a teszteléshez (Word *.docx* nagyszerűen működik).
 
-### Tudás előkövetelmények
-Nem kell GroupDocs szakértőnek lennie, de kényelmesen kell kezelnie a következőket:
+### Tudás előfeltételek
+Nem kell GroupDocs szakértőnek lenned, de kényelmesen kell kezelned a következőket:
 - C# `using` utasítások és fájlkezelés.  
 - Alap dokumentumfeldolgozási koncepciók.  
 - Mi is a metaadat (szerző, cím, egyéni tulajdonságok stb.).
 
-Készen áll? Állítsuk be.
+Készen állsz? Állítsuk be.
 
-## A GroupDocs.Comparison for .NET beállítása
+## A GroupDocs.Comparison beállítása .NET-hez
 
-A GroupDocs.Comparison telepítése egyszerű, de van néhány trükk, amire figyelni kell.
+A GroupDocs.Comparison telepítése egyszerű, de néhány buktatóra érdemes figyelni.
 
 ### Telepítési lehetőségek
 
@@ -78,23 +117,22 @@ A GroupDocs.Comparison telepítése egyszerű, de van néhány trükk, amire fig
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI** (ha a parancssort részesíti előnyben):
+**.NET CLI** (ha a parancssort részesíted előnyben):
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-**Pro tip**: Mindig adja meg a verziót, hogy elkerülje a váratlan, a projektet megtörő változásokat.
+**Pro tipp**: Mindig add meg a verziót, hogy elkerüld a váratlan törő változásokat a projektedben.
 
 ### Licenc beszerzése
-Ez az a pont, ahol sok fejlesztő eleinte elakad. A GroupDocs.Comparison nem ingyenes, de vannak lehetőségek:
+Itt akadnak el sok fejlesztő kezdetben. A GroupDocs.Comparison nem ingyenes, de van néhány lehetőség:
 - **Free Trial** – teljes funkcionalitás 30 napig, tökéletes értékeléshez.  
-- **Temporary License** – meghosszabbított értékelési idő, ha több időre van szüksége.  
-- **Commercial License** – termelési használatra (különböző árképzési szintek elérhetők).
+- **Temporary License** – meghosszabbított értékelési idő, ha több időre van szükséged.  
+- **Commercial License** – termelési használathoz (különböző árazási szintek elérhetők).  
 
-Ne aggódjon a licencelés miatt, ha csak tanul – a próba verzió tartalmazza az összes **célmetaadatok megőrzése** funkciót.
+Ne aggódj a licencelés miatt most, ha csak tanulsz – a próba verzió tartalmazza az összes **preserve target metadata** funkciót.
 
 ### Alap beállítás ellenőrzése
-
 Győződjünk meg róla, hogy minden működik egy egyszerű teszttel:
 ```csharp
 using System.IO;
@@ -111,27 +149,24 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-Ha ez hibák nélkül fordul, készen áll a továbblépésre. Ha nem, ellenőrizze újra a csomag telepítését és a `using` utasításokat.
+Ha ez hibák nélkül lefordul, készen állsz. Ha nem, ellenőrizd újra a csomag telepítését és a `using` utasításokat.
 
-## Hogyan őrizze meg a célmetaadatokat
+## Hogyan őrizhetjük meg a cél metaadatokat
 
-Most jön a fő rész – a metaadatok tényleges megőrzése a dokumentumok összehasonlítása során. Itt ragyog igazán a GroupDocs.Comparison.
+A cél metaadatok megőrzéséhez a comparer-t úgy konfigurálod, hogy a cél dokumentum metaadatait klónozza a végeredmény generálása előtt. Ez a `CloneMetadataType` tulajdonság `MetadataType.Target` értékre állítását jelenti a `Comparer` példányon. Így az összes metaadatmező – szerző, létrehozás dátuma, egyéni tulajdonságok – a célból a kimeneti fájlba másolódik, biztosítva, hogy a frissített dokumentum információi megmaradjanak.
 
 ### A metaadatáramlás megértése
+1. **Source document** biztosítja az alap tartalmat.  
+2. **Target document** biztosítja a változásokat, amelyekhez összehasonlítunk.  
+3. A **output document** kombinálja mindkettőt, de melyik metaadat nyer?
 
-Egy tipikus összehasonlítás során:
-
-1. **Source document** – biztosítja az alap tartalmat.  
-2. **Target document** – biztosítja a változásokat, amelyekhez összehasonlít.  
-3. **output document** – egyesíti mindkettőt, de melyik metaadatai nyernek?
-
-Alapértelmezés szerint a GroupDocs.Comparison a forrásdokumentum metaadatait használja. A **célmetaadatok megőrzéséhez** explicit módon kell jelezni az API-nak.
+Alapértelmezés szerint a GroupDocs.Comparison a forrás dokumentum metaadatait használja. A **preserve target metadata** megőrzéséhez explicit módon kell jelezni az API-nak.
 
 ### Lépésről‑lépésre megvalósítás
 
-#### 1. lépés: Inicializálja a Comparer objektumot
-
-Ez meghatározza az „alap” dokumentumot – azt, amelyhez összehasonlít:
+#### 1. lépés: Inicializáld a Comparer objektumot
+A `Comparer` osztály a központi komponens, amely a dokumentumok összehasonlítását végzi és a kimeneti beállításokat szabályozza.  
+Töltsd be a forrás (eredeti) fájlt, és hozd létre a `Comparer` példányt:
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -139,29 +174,28 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-**Miért használjon `using` utasításokat?** Automatikusan felszabadítják az erőforrásokat, megakadályozva a memória szivárgást nagy dokumentumok feldolgozásakor. Higgyen nekem, később megköszönheti magának, amikor 50 MB-os Word fájlokkal dolgozik.
+**Miért használj `using` utasításokat?** Automatikusan felszabadítják az erőforrásokat, megakadályozva a memória szivárgást nagy dokumentumok feldolgozásakor. Higgy nekem, később megköszönöd magadnak, ha 50 MB-os Word fájlokkal dolgozol.
 
-#### 2. lépés: Adja hozzá a cél dokumentumot
-
-Adja meg a comparernek, melyik dokumentum tartalmazza a változásokat, amelyeket elemezni szeretne:
+#### 2. lépés: Add hozzá a cél dokumentumot
+Az `Add` metódus regisztrálja a cél dokumentumot, amelynek változásait a forráshoz képest összehasonlítjuk.  
+Add meg a frissített fájlt, amelyet összehasonlítani szeretnél:
 ```csharp
 comparer.Add(targetFilePath);
 ```
 
-**Gyakori hiba**: A forrás és a cél összekeverése. Gondolja így – a forrás a „eredeti”, a cél a „frissített verzió”.
+**Gyakori hiba**: A forrás és a cél összekeverése. Gondolj úgy – a forrás a „eredeti”, a cél a „frissített verzió”.
 
-#### 3. lépés: Állítsa be a metaadat típusát (itt történik a varázslat)
-
-Adja meg, melyik dokumentum metaadatai maradjanak meg a kimenetben:
+#### 3. lépés: Állítsd be a metaadat típust (itt történik a varázslat)
+A `CloneMetadataType` tulajdonság meghatározza, hogy melyik dokumentum metaadatai kerülnek másolásra az eredménybe.  
+Mondd meg a comparer-nek, hogy a cél metaadatait tartsa meg:
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
 
-**Mi történik?** A `CloneMetadataType = MetadataType.Target` azt mondja a GroupDocs.Comparison‑nek: „Hé, a végső eredményben a cél dokumentum metaadatait akarom megtartani.”
+**Mi történik?** `CloneMetadataType = MetadataType.Target` azt mondja a GroupDocs.Comparison-nak: „Hé, a végső eredményben a cél dokumentum metaadatait szeretném megtartani.”
 
 ### Teljes működő példa
-
-Itt van minden egyben egy futtatható programban:
+Itt van minden együtt egy futtatható programban:
 ```csharp
 using System;
 using System.IO;
@@ -199,9 +233,8 @@ class Program
 }
 ```
 
-### Kerülendő gyakori buktatók
-
-- **Fájlútvonal problémák** – mindig használjon teljes elérési utat, vagy győződjön meg róla, hogy a fájlok a munkakönyvtárban vannak:
+### Gyakori buktatók, amiket kerüld
+- **Fájlútvonal problémák** – mindig használj teljes útvonalakat, vagy győződj meg róla, hogy a fájlok a munkakönyvtárban vannak:
 ```csharp
 // Good
 string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
@@ -210,24 +243,22 @@ string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "sourc
 string sourceFile = "source.docx";
 ```
 
-- **Memória kezelés** – nagy dokumentumok esetén mindig csomagolja a `Comparer` objektumokat `using` utasításokba.
+- **Memória kezelés** – nagy dokumentumok esetén mindig csomagold a `Comparer` objektumokat `using` utasításokba.
 
-- **Verzió kompatibilitás** – a különböző GroupDocs.Comparison kiadások különböző metaadat‑opciókat kínálnak – a legjobb eredményért maradjon a 25.4.0 vagy újabb verziónál.
+- **Verzió kompatibilitás** – a különböző GroupDocs.Comparison kiadások különböző metaadat opciókat kínálnak – tartsd magad a 25.4.0 vagy újabb verzióhoz a legjobb eredmény érdekében.
 
-## Haladó metaadat szcenáriók
+## Haladó metaadat forgatókönyvek
 
-### Mikor használjon cél- vagy forrásmetaadatot
-
-| Szituáció | **Target** metaadat előnyben részesítése | **Source** metaadat előnyben részesítése |
-|----------|-------------------------------------------|-------------------------------------------|
+### Mikor használjuk a cél vs. forrás metaadatokat
+| Szenárió | **Target** metaadat előnyben | **Source** metaadat előnyben |
+|----------|----------------------------|----------------------------|
 | Frissített szerzői információ szükséges | ✅ | ❌ |
 | Az eredeti dokumentumnak jogi precedenciája van | ❌ | ✅ |
 | Egyéni tulajdonságok csak az újabb fájlban vannak | ✅ | ❌ |
-| A “mester” dokumentum történetét szeretné megtartani | ❌ | ✅ |
+| A “mester” dokumentum történetét szeretnéd megtartani | ❌ | ✅ |
 
 ### Több cél dokumentum kezelése
-
-Több cél dokumentummal is összehasonlíthat, miközben a hozzáadott első cél metaadatait őrzi meg:
+Több cél dokumentummal is összehasonlíthatsz, miközben a hozzáadott első cél metaadatait őrzöd:
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -261,7 +292,7 @@ using (Comparer comparer = new Comparer("original_contract.docx"))
 ```
 
 ### Tudományos és kutatási együttműködés
-Több kutató együttműködésénél a legfrissebb szerzői információk megőrzése a cél:
+Több kutató együttműködésekor szeretnéd megőrizni a legfrissebb szerzői információkat:
 ```csharp
 // Keep metadata from the researcher's latest submission
 using (Comparer comparer = new Comparer("draft_paper.docx"))
@@ -313,7 +344,7 @@ if (!File.Exists(targetFile))
 ```
 
 ### Memória problémák nagy dokumentumoknál
-10 MB‑nél nagyobb dokumentumok esetén fontolja meg ezeket az optimalizációkat:
+10 MB-nál nagyobb dokumentumok esetén fontold meg ezeket az optimalizációkat:
 ```csharp
 // Use explicit disposal for large documents
 using (var comparer = new Comparer(sourceFile))
@@ -359,10 +390,10 @@ catch (IOException ex)
 }
 ```
 
-## Teljesítmény szempontok és bevált gyakorlatok
+## Teljesítmény szempontok és legjobb gyakorlatok
 
 ### Memória kezelés
-A GroupDocs.Comparison memóriaigényes lehet. Használjon `using` utasításokat a felszabadítás garantálásához:
+A GroupDocs.Comparison memóriaigényes lehet. Használj `using` utasításokat a felszabadítás garantálásához:
 ```csharp
 // Good - automatic resource cleanup
 using (var comparer = new Comparer(sourceFile))
@@ -376,10 +407,10 @@ var comparer = new Comparer(sourceFile);
 // comparer.Dispose(); // Easy to forget!
 ```
 
-**Dokumentumok feldolgozása kötegekben** – ha sok fájlt hasonlít össze, kezelje őket kisebb csoportokban a memóriahasználat alacsonyan tartásához.
+**Dokumentumok feldolgozása kötegekben** – ha sok fájlt hasonlítasz össze, kezeld őket kisebb csoportokban a memóriahasználat alacsonyan tartása érdekében.
 
 ### Aszinkron műveletek a jobb válaszkészségért
-Asztali vagy webalkalmazásoknál csomagolja az összehasonlítást aszinkron metódusba:
+Asztali vagy webes alkalmazásoknál csomagold az összehasonlítást egy aszinkron metódusba:
 ```csharp
 public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
 {
@@ -406,14 +437,14 @@ public async Task<bool> CompareDocumentsAsync(string source, string target, stri
 ```
 
 ### Fájlméret irányelvek
-- **Kicsi (< 1 MB)** – közvetlenül feldolgozni.  
-- **Közepes (1‑10 MB)** – mutassa a folyamatot a UI válaszkészségének fenntartásához.  
-- **Nagy (> 10 MB)** – mindig használjon aszinkron feldolgozást, és fontolja meg a fenti módon explicit GC‑t.
+- **Kicsi (< 1 MB)** – közvetlen feldolgozás.  
+- **Közepes (1‑10 MB)** – mutass előrehaladást a UI válaszkészségének fenntartásához.  
+- **Nagy (> 10 MB)** – mindig használj aszinkron feldolgozást, és fontold meg a fenti módon explicit GC-t.
 
 ## Integráció nagyobb rendszerekkel
 
 ### ASP.NET Core integráció
-Az alábbi egy kész‑használatra szánt vezérlő, amely két feltöltött fájlt fogad, végrehajtja az összehasonlítást, és visszaadja az eredményt, miközben **megőrzi a célmetaadatokat**:
+Az alábbiakban egy kész‑használatra szánt vezérlő látható, amely két feltöltött fájlt fogad, végrehajtja az összehasonlítást, és visszaadja az eredményt, miközben **preserve target metadata**-t alkalmaz:
 ```csharp
 [ApiController]
 [Route("api/[controller]")]
@@ -463,13 +494,13 @@ public class DocumentComparisonController : ControllerBase
 ## Gyakran ismételt kérdések
 
 **Q: Megőrizhetem a metaadatokat több cél dokumentumból az összehasonlítás során?**  
-A: Ha több cél fájlt ad hozzá, a GroupDocs.Comparison a **első** hozzáadott cél dokumentum metaadatait használja. Tegye először a láncba azt a dokumentumot, amelynek metaadatait meg szeretné tartani.
+A: Ha több cél fájlt adsz hozzá, a GroupDocs.Comparison a **első** hozzáadott cél dokumentum metaadatait használja. Add hozzá először azt a dokumentumot, amelynek metaadatait meg szeretnéd tartani.
 
-**Q: Mi történik, ha a cél dokumentum nem tartalmaz bizonyos metaadat mezőket?**  
-A: Csak a célban létező metaadatok kerülnek átmásolásra a kimenetbe. A hiányzó mezők egyszerűen kihagyásra kerülnek; az összehasonlítás továbbra is sikeres.
+**Q: Mi történik, ha a cél dokumentumban hiányoznak bizonyos metaadat mezők?**  
+A: Csak a célban létező metaadatok kerülnek másolásra a kimenetbe. A hiányzó mezők egyszerűen kihagyásra kerülnek; az összehasonlítás továbbra is sikeres.
 
-**Q: Hogyan kezeljem a jelszóval védett dokumentumokat?**  
-A: Használjon egy `LoadOptions` objektumot a jelszóval, majd adja át a `Comparer` konstruktorának:
+**Q: Hogyan kezelem a jelszóval védett dokumentumokat?**  
+A: Használj egy `LoadOptions` objektumot a jelszóval, majd add át a `Comparer` konstruktorának:
 ```csharp
 var loadOptions = new LoadOptions() { Password = "your_password" };
 using (var comparer = new Comparer(sourceFile, loadOptions))
@@ -479,24 +510,30 @@ using (var comparer = new Comparer(sourceFile, loadOptions))
 ```
 
 **Q: Van mód csak kiválasztott metaadat tulajdonságok megőrzésére?**  
-A: A jelenlegi API a kiválasztott forrás (Target vagy Source) **összes** metaadatát megőrzi. Finomabb vezérléshez a metaadatokat az összehasonlítás után kell kinyerni és manuálisan újra alkalmazni.
+A: A jelenlegi API a kiválasztott forrás (Target vagy Source) **összes** metaadatát megőrzi. Finomabb vezérléshez a metaadatokat az összehasonlítás után kell kinyerni és manuálisan újraalkalmazni.
 
 **Q: Mely dokumentumformátumok támogatják a metaadatok megőrzését?**  
-A: A leggyakoribb üzleti formátumok – DOCX, PDF, PPTX, XLSX és sok más – támogatják a metaadatok megőrzését. A teljes listáért tekintse meg a hivatalos dokumentációt.
+A: A leggyakoribb üzleti formátumok – DOCX, PDF, PPTX, XLSX és sok más – támogatják a metaadatok megőrzését. Tekintsd meg a hivatalos dokumentációt a teljes listaért.
 
 **Q: Hol kaphatok segítséget, ha problémába ütközöm?**  
-A: Látogassa meg a [GroupDocs támogatási fórum](https://forum.groupdocs.com/c/comparison) közösségi segítségért, vagy vegye fel a kapcsolatot a GroupDocs támogatással közvetlenül, ha kereskedelmi licencet használ.
+A: Látogasd meg a [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) oldalt a közösségi segítségért, vagy vedd fel a kapcsolatot a GroupDocs támogatással közvetlenül, ha kereskedelmi licencet használsz.
 
 ## További források
 
-- **Official Documentation**: [GroupDocs.Comparison .NET dokumentáció](https://docs.groupdocs.com/comparison/net/)  
-- **API Reference**: [Teljes API referencia](https://reference.groupdocs.com/comparison/net/)  
-- **Download Latest Version**: [GroupDocs letöltések](https://releases.groupdocs.com/comparison/net/)  
-- **Free Trial**: [Kezdje el a próbát](https://releases.groupdocs.com/comparison/net/)  
-- **Purchase Options**: [Licencelés és árak](https://purchase.groupdocs.com/buy)
+- **Official Documentation**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **API Reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- **Download Latest Version**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
+- **Free Trial**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
+- **Purchase Options**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
 
 ---
 
-**Utolsó frissítés:** 2026-03-06  
-**Tesztelve:** GroupDocs.Comparison 25.4.0 for .NET  
-**Szerző:** GroupDocs
+**Last Updated:** 2026-06-05  
+**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
+**Author:** GroupDocs  
+
+## Kapcsolódó útmutatók
+
+- [Document Metadata .NET - Save & Preserve Custom Properties](/comparison/net/loading-and-saving-documents/saving-user-defined-document-metadata/)  
+- [Document Metadata Management .NET - Complete Guide for GroupDocs.Comparison](/comparison/net/metadata-management/)  
+- [Get Document Properties C# .NET - Extract File Metadata](/comparison/net/basic-usage/get-document-info-from-path/)

@@ -1,74 +1,114 @@
 ---
 categories:
 - Document Comparison
-date: '2026-03-06'
-description: GroupDocs.Comparison for .NET kullanarak belge karşılaştırması sırasında
-  hedef meta verilerini nasıl koruyacağınızı öğrenin. C# örnekleriyle adım adım rehber.
-keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
-  document comparison, metadata preservation tutorial
-lastmod: '2026-03-06'
-linktitle: Metadata Preservation Tutorial
+date: '2026-06-05'
+description: GroupDocs Comparison for .NET ile metadata'yı nasıl koruyacağınızı öğrenin,
+  karşılaştırma sırasında hedef belge özelliklerini korumak için adım adım rehber.
+keywords:
+- how to preserve metadata
+- keep custom properties
+- metadata preservation .NET
+lastmod: '2026-06-05'
+linktitle: Metadata Koruma Öğreticisi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-05'
+  description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  headline: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  type: TechArticle
+- description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  name: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  steps:
+  - name: Initialize Your Comparer Object
+    text: 'The `Comparer` class is the core component that performs document comparison
+      and controls output options. Load the source (original) file and create a `Comparer`
+      instance: **Why use `using` statements?** They automatically dispose of resources,
+      preventing memory leaks when processing large documents'
+  - name: Add the Target Document
+    text: 'The `Add` method registers the target document whose changes will be compared
+      against the source. Specify the updated file you want to compare: **Common mistake**:
+      Confusing source and target. Think of it this way—source is your “original,”
+      target is your “updated version.”'
+  - name: Set the Metadata Type (The Magic Happens Here)
+    text: '`CloneMetadataType` property determines which document''s metadata is copied
+      to the result. Tell the comparer to keep the target’s metadata: **What’s happening?**
+      `CloneMetadataType = MetadataType.Target` tells GroupDocs.Comparison: “Hey,
+      I want to keep the target document’s metadata in my final resu'
+  type: HowTo
+- questions:
+  - answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+    question: Can I preserve metadata from multiple target documents when comparing?
+  - answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+    question: What happens if the target document lacks some metadata fields?
+  - answer: 'Use a `LoadOptions` object with the password, then pass it to the `Comparer`
+      constructor:'
+    question: How do I handle password‑protected documents?
+  - answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+    question: Is there a way to preserve only selected metadata properties?
+  - answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
+    question: Which document formats support metadata preservation?
+  type: FAQPage
 tags:
 - GroupDocs.Comparison
 - metadata-preservation
 - dotnet-tutorial
 - document-management
-title: GroupDocs.Comparison ile Hedef Metaverisini Korumak – .NET Öğreticisi
+title: GroupDocs Comparison ile Metadata'yı Korumak – .NET Öğretici
 type: docs
 url: /tr/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# GroupDocs.Comparison ile Hedef Üstveriyi Korumak – .NET Öğreticisi
+# GroupDocs Comparison ile Meta Verileri Korumak – .NET Öğreticisi
 
 ## Giriş
 
-İki belgeyi karşılaştırıp süreçte önemli üstveriyi kaybettiğiniz oldu mu? Yalnız değilsiniz. .NET uygulamasında belgeleri karşılaştırırken **hedef üstveriyi korumak** istediğinizde görev zorlayıcı görünebilir—ama öyle olmak zorunda değil.
-
-GroupDocs.Comparison for .NET, karşılaştırma sonucunda hangi belgenin üstverisinin kalacağını seçmenizi sağlar. Bir belge yönetim sistemi oluşturuyor, yasal sözleşmelerle uğraşıyor ya da işbirlikçi içerik yönetiyorsanız, her seferinde doğru kaynak belgeden gelen üstveriyi elde etmek isteyeceksiniz.
-
-Bu öğreticide **hedef üstveriyi koruma** yöntemini öğrenecek, yaygın tuzaklardan kaçınacak ve çözümü gerçek dünyadaki senaryolara uygulayacaksınız.
+İki belgeyi karşılaştırıp süreçte önemli meta verileri kaybettiğiniz oldu mu? Yalnız değilsiniz. .NET uygulamasında belgeleri karşılaştırırken **hedef meta verilerini korumanız** gerektiğinde görev zorlayıcı görünebilir—ama öyle olmak zorunda değil. Bu öğretici, **meta verileri nasıl koruyacağınızı** gösterir, böylece ortaya çıkan dosya tam olarak beklediğiniz yazar, oluşturma tarihi ve özel özellikleri tutar.
 
 ## Hızlı Yanıtlar
-- **“Hedef üstveriyi korumak” ne anlama gelir?** Karşılaştırma sonucu oluşturulurken hedef olarak belirlediğiniz belgeden (author, creation date, custom properties vb.) üstverinin korunması demektir.  
-- **Hangi GroupDocs.Comparison sürümü gerekir?** Sürüm 25.4.0 veya üzeri.  
+- **“preserve target metadata” ne anlama geliyor?** Karşılaştırma sonucu oluşturulurken hedef olarak belirlediğiniz belgeden meta verileri (yazar, oluşturma tarihi, özel özellikler vb.) tutar.  
+- **Hangi GroupDocs.Comparison sürümü gereklidir?** Sürüm 25.4.0 veya üzeri.  
 - **Bunu .NET Core ile kullanabilir miyim?** Evet – .NET Core 2.0+ veya .NET Framework 4.6.1+.  
-- **Üretim için lisans gerekli mi?** Üretim ortamları için ticari bir lisans gerekir; öğrenme amaçlı ücretsiz deneme sürümü yeterlidir.  
-- **Özellik PDF ve DOCX ile çalışır mı?** Evet – tüm büyük Office ve PDF formatları üstveri korumayı destekler.
+- **Üretim için lisans gerekli mi?** Üretim için ticari lisans gerekir; öğrenme amaçlı ücretsiz deneme sürümü çalışır.  
+- **Özellik PDF ve DOCX ile çalışacak mı?** Evet – tüm büyük Office ve PDF formatları meta veri korumayı destekler.
 
-## Neden Üstveri Koruma Önemlidir
+## Meta veri koruması nedir?
+Meta veri koruması, bir işleme işleminden sonra kaynak belgenin açıklayıcı bilgilerinin—yazar, başlık, revizyon numarası ve özel özellikler gibi—bozulmadan tutulması anlamına gelir. GroupDocs.Comparison’da, kaynak ya da hedef belgenin meta verilerinin nihai karşılaştırma çıktısında kalıp kalmayacağını belirleyebilirsiniz.
 
-Koda geçmeden önce, hedef üstveriyi korumanın neden kritik olduğuna bakalım. Belge üstverisi sadece “güzel bir ek” değil; çoğu zaman yasal zorunluluk ya da iş kritik bir unsur olur:
+## Meta Veri Korumanın Önemi
 
-- **Yasal belgeler** – avukat‑müşteri gizlilik işaretlerini korumalı.  
-- **Kurumsal dosyalar** – uyumluluk etiketleri ve onay zincirleri saklanmalı.  
-- **Akademik makaleler** – yazar atıfları ve revizyon geçmişi hayati.  
-- **Teknik dokümantasyon** – sürüm kontrolü ve inceleme durumu önemli.
+Meta verileri korumak çok önemlidir çünkü birçok sektör bunu yasal kanıt ya da iş‑kritik bilgi olarak görür. **Neden?** Çünkü meta veriler, sahipliği, uyumluluk etiketlerini, sürüm geçmişini ve denetim izlerini kaydeder; bu da kuruluşların düzenleyici raporlama, sözleşme yönetimi ve akademik atıf için güvendiği bilgilerdir. Bu verilerin kaybı bir belgenin yasal geçerliliğini geçersiz kılabilir ya da otomatik iş akışlarını bozabilir.
 
-Uygun şekilde ele almazsanız, aylarca biriktirdiğiniz bilgileri istemeden silebilirsiniz. İşte **hedef üstveriyi koruma** seçeneği burada devreye girer.
-
-## Önkoşullar
+## Ön Koşullar
 
 ### Gerekli Kütüphaneler ve Sürümler
-- **GroupDocs.Comparison for .NET**: Sürüm 25.4.0 ve üzeri (eski sürümlerde üstveri seçenekleri sınırlıdır).  
-- **.NET Framework**: 4.6.1 ve üzeri, ya da .NET Core 2.0+.
+- **GroupDocs.Comparison for .NET**: Sürüm 25.4.0 veya üzeri (daha eski sürümlerde sınırlı meta veri seçenekleri vardır).  
+- **.NET Framework**: 4.6.1 veya üzeri, ya da .NET Core 2.0+.
 
 ### Ortam Kurulumu
-- Visual Studio (ya da tercih ettiğiniz C# IDE).  
-- Temel C# bilgisi (çok karmaşık olmayan, söz veriyoruz!).  
-- Test için iki örnek belge (Word *.docx* ideal).
+- Visual Studio (veya tercih ettiğiniz herhangi bir C# IDE).  
+- Temel C# bilgisi (çok ileri seviye bir şey yok, söz veriyorum!).  
+- Test için iki örnek belge (Word *.docx* harika çalışır).
 
-### Bilgi Önkoşulları
+### Bilgi Ön Koşulları
 GroupDocs uzmanı olmanıza gerek yok, ancak şu konularda rahat olmalısınız:
 - C# `using` ifadeleri ve dosya işleme.  
 - Temel belge‑işleme kavramları.  
-- Üstverinin ne olduğu (author, title, custom properties vb.).
+- Meta verinin aslında ne olduğu (yazar, başlık, özel özellikler vb.).
 
-Hazır mısınız? Hadi kurulum aşamasına geçelim.
+Hazır mısınız? Hadi kurulum yapalım.
 
 ## GroupDocs.Comparison for .NET Kurulumu
 
-GroupDocs.Comparison’ı kurmak oldukça basit, fakat dikkat etmeniz gereken birkaç nokta var.
+GroupDocs.Comparison’ı kurmak oldukça basittir, ancak dikkat etmeniz gereken birkaç tuzak vardır.
 
 ### Kurulum Seçenekleri
 
@@ -82,20 +122,20 @@ Install-Package GroupDocs.Comparison -Version 25.4.0
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-**İpucu**: Projenizde beklenmedik kırılmalardan kaçınmak için her zaman sürümü belirtin.
+**Pro tip**: Projenizde beklenmedik kırılma değişikliklerinden kaçınmak için her zaman sürümü belirtin.
 
-### Lisans Edinimi
-Birçok geliştiricinin ilk takıldığı nokta burada. GroupDocs.Comparison ücretsiz değil, fakat seçenekler mevcut:
+### Lisans Alımı
+İlk başta birçok geliştiricinin takıldığı yer burasıdır. GroupDocs.Comparison ücretsiz değildir, ancak seçenekleriniz vardır:
 
-- **Ücretsiz Deneme** – 30 gün tam işlevsellik, değerlendirme için ideal.  
-- **Geçici Lisans** – daha uzun bir deneme süresi gerektiğinde.  
-- **Ticari Lisans** – üretim kullanımı için (çeşitli fiyatlandırma katmanları mevcut).
+- **Free Trial** – tam işlevsellik 30 gün boyunca, değerlendirme için mükemmel.  
+- **Temporary License** – daha fazla zamana ihtiyacınız varsa uzatılmış değerlendirme süresi.  
+- **Commercial License** – üretim kullanımı için (çeşitli fiyatlandırma katmanları mevcuttur).
 
-Şu anda sadece öğreniyorsanız lisans konusunda endişelenmeyin—deneme sürümü **hedef üstveriyi koruma** özelliklerini içerir.
+Şu anda lisans konusunda endişelenmeyin, sadece öğreniyorsanız – deneme sürümü tüm **preserve target metadata** özelliklerini içerir.
 
 ### Temel Kurulum Doğrulaması
 
-Basit bir testle her şeyin çalıştığını kontrol edelim:
+Basit bir testle her şeyin çalıştığından emin olalım:
 
 ```csharp
 using System.IO;
@@ -112,27 +152,28 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-Bu kod hatasız derleniyorsa hazırsınız demektir. Derleme hatası alırsanız paket kurulumunu ve `using` ifadelerini tekrar kontrol edin.
+Bu kod hatasız derleniyorsa, hazırsınız demektir. Derlenmezse, paket kurulumunuzu ve `using` ifadelerinizi tekrar kontrol edin.
 
-## Hedef Üstveriyi Nasıl Korumalıyız
+## Hedef Meta Verilerini Nasıl Korumalıyız
 
-Şimdi esas konuya—belge karşılaştırması sırasında üstveriyi korumaya. İşte GroupDocs.Comparison’ın bu konuda ne kadar güçlü olduğu.
+Hedef meta verilerini korumak için, karşılaştırıcıyı sonuç üretmeden önce hedef belgeden meta verileri kopyalayacak şekilde yapılandırırsınız. Bu, `Comparer` örneğinde `CloneMetadataType` özelliğini `MetadataType.Target` olarak ayarlamayı içerir. Böylece tüm meta veri alanları—yazar, oluşturma tarihi, özel özellikler—hedeften çıktı dosyasına kopyalanır ve güncellenmiş belgenin bilgileri korunur.
 
-### Üstveri Akışını Anlamak
+### Meta Veri Akışını Anlamak
 
-Tipik bir karşılaştırmada:
+Tipik bir karşılaştırma sırasında:
 
 1. **Kaynak belge** temel içeriği sağlar.  
-2. **Hedef belge** karşılaştırılacak değişiklikleri içerir.  
-3. **Çıktı belgesi** ikisini birleştirir, ancak üstveri hangi belgeden alınır?
+2. **Hedef belge** karşılaştırılacak değişiklikleri sağlar.  
+3. **Çıktı belgesi** ikisini birleştirir, ancak meta verileri kim kazanır?
 
-Varsayılan olarak GroupDocs.Comparison, kaynak belgenin üstverisini kullanır. **Hedef üstveriyi korumak** için API’ye açıkça söylemeniz gerekir.
+Varsayılan olarak, GroupDocs.Comparison kaynak belgenin meta verilerini kullanır. **Hedef meta verilerini korumak** için API’ye açıkça söylemeniz gerekir.
 
 ### Adım‑Adım Uygulama
 
-#### Adım 1: Karşılaştırıcı Nesnesini Başlatın
+#### Adım 1: Karşılaştırıcı Nesnenizi Başlatın
 
-Bu, “baz” belgeyi (karşılaştırdığınız belge) tanımlar:
+`Comparer` sınıfı belge karşılaştırmasını gerçekleştiren ve çıktı seçeneklerini kontrol eden çekirdek bileşendir.  
+Kaynak (orijinal) dosyayı yükleyin ve bir `Comparer` örneği oluşturun:
 
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
@@ -141,31 +182,33 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-**Neden `using` ifadeleri kullanılır?** Büyük belgelerle çalışırken kaynakların otomatik olarak serbest bırakılmasını sağlar, hafıza sızıntılarını önler. 50 MB Word dosyalarıyla uğraşırken size çok teşekkür eder.
+**Neden `using` ifadeleri kullanmalı?** Büyük belgeler işlenirken kaynakları otomatik olarak serbest bırakır, bellek sızıntılarını önler. 50 MB Word dosyalarıyla uğraşırken size teşekkür edecek.
 
 #### Adım 2: Hedef Belgeyi Ekleyin
 
-Karşılaştırıcıya, analiz etmek istediğiniz değişikliklerin bulunduğu belgeyi belirtin:
+`Add` yöntemi, değişiklikleri kaynakla karşılaştırılacak hedef belgeyi kaydeder.  
+Karşılaştırmak istediğiniz güncellenmiş dosyayı belirtin:
 
 ```csharp
 comparer.Add(targetFilePath);
 ```
 
-**Yaygın hata**: Kaynak ve hedefi karıştırmak. Şöyle düşünün—kaynak “orijinal”, hedef “güncellenmiş sürüm”.
+**Yaygın hata**: Kaynak ve hedefi karıştırmak. Şöyle düşünün—kaynak “orijinal”iniz, hedef “güncellenmiş sürümünüz”.
 
-#### Adım 3: Üstveri Tipini Belirleyin (Büyü Burada Başlar)
+#### Adım 3: Meta Veri Türünü Ayarlayın (Büyü Burada Gerçekleşir)
 
-Çıktıda hangi belgenin üstverisinin kalacağını belirtin:
+`CloneMetadataType` özelliği, hangi belgenin meta verilerinin sonuca kopyalanacağını belirler.  
+Karşılaştırıcıya hedefin meta verilerini tutmasını söyleyin:
 
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
 
-**Ne oluyor?** `CloneMetadataType = MetadataType.Target` ifadesi, GroupDocs.Comparison’a “Hedef belgenin üstverisini nihai sonuçta tut” diyor.
+**Ne oluyor?** `CloneMetadataType = MetadataType.Target` ifadesi GroupDocs.Comparison’a: “Hey, final sonucumda hedef belgenin meta verilerini tutmak istiyorum.” der.
 
 ### Tam Çalışan Örnek
 
-Her şeyi bir araya getiren çalıştırılabilir program:
+Her şeyi bir araya getiren çalıştırılabilir bir program:
 
 ```csharp
 using System;
@@ -206,7 +249,7 @@ class Program
 
 ### Kaçınılması Gereken Yaygın Tuzaklar
 
-**Dosya Yolu Sorunları** – her zaman tam yol kullanın ya da dosyalarınızın çalışma dizininde olduğundan emin olun:
+**Dosya Yolu Sorunları** – her zaman tam yollar kullanın ya da dosyalarınızın çalışma dizininde olduğundan emin olun:
 
 ```csharp
 // Good
@@ -216,24 +259,24 @@ string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "sourc
 string sourceFile = "source.docx";
 ```
 
-**Bellek Yönetimi** – büyük belgeler için `Comparer` nesnelerini `using` içinde tutun.
+**Bellek Yönetimi** – büyük belgeler için `Comparer` nesnelerini her zaman `using` ifadeleri içinde tutun.
 
-**Sürüm Uyumluluğu** – farklı GroupDocs.Comparison sürümleri farklı üstveri seçenekleri sunar—en iyi sonuç için 25.4.0 ve üzerini tercih edin.
+**Sürüm Uyumluluğu** – farklı GroupDocs.Comparison sürümleri farklı meta veri seçenekleri sunar—en iyi sonuçlar için 25.4.0 veya daha yeni sürümü tercih edin.
 
-## İleri Düzey Üstveri Senaryoları
+## Gelişmiş Meta Veri Senaryoları
 
-### Hedef mi, Kaynak mı Üstveri?
+### Hedef vs. Kaynak Meta Verisi Ne Zaman Kullanılır
 
-| Senaryo | **Hedef** Üstveri Tercih Edilsin | **Kaynak** Üstveri Tercih Edilsin |
-|----------|----------------------------------|-----------------------------------|
+| Senaryo | **Hedef** Meta Verisini Tercih Et | **Kaynak** Meta Verisini Tercih Et |
+|----------|----------------------------|----------------------------|
 | Güncellenmiş yazar bilgisi gerekli | ✅ | ❌ |
-| Orijinal belge yasal önceliğe sahip | ❌ | ✅ |
-| Yeni dosyada sadece özel özellikler eklenmiş | ✅ | ❌ |
-| “Ana” belgenin geçmişini korumak istiyorsunuz | ❌ | ✅ |
+| Orijinal belgenin yasal önceliği var | ❌ | ✅ |
+| Özel özellikler yalnızca yeni dosyada eklendi | ✅ | ❌ |
+| “Ana” belgenin geçmişini tutmak istiyorsunuz | ❌ | ✅ |
 
-### Birden Fazla Hedef Belgeyle Çalışma
+### Birden Çok Hedef Belgeyi İşleme
 
-İlk eklediğiniz hedef belgeden üstveri koruyarak birden fazla hedefe karşılaştırma yapabilirsiniz:
+Birden fazla hedefe karşılaştırma yapabilir ve yine de eklediğiniz ilk hedefin meta verilerini koruyabilirsiniz:
 
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
@@ -250,10 +293,10 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-## Pratik Uygulamalar ve Kullanım Örnekleri
+## Pratik Uygulamalar ve Kullanım Durumları
 
 ### Hukuki Belge Yönetimi
-Hukuk firmaları, sözleşme sürümlerini karşılaştırırken belirli üstveri işaretlerini korumak zorundadır:
+Hukuk firmaları genellikle sözleşme sürümlerini karşılaştırırken belirli meta veri işaretçilerini korumak zorundadır:
 
 ```csharp
 // Preserve client metadata from updated contract
@@ -269,7 +312,7 @@ using (Comparer comparer = new Comparer("original_contract.docx"))
 ```
 
 ### Akademik ve Araştırma İşbirliği
-Birden fazla araştırmacı birlikte çalıştığında, en güncel yazar bilgisinin korunması istenir:
+Birden çok araştırmacı iş birliği yaptığında, en son yazar bilgisini korumak istersiniz:
 
 ```csharp
 // Keep metadata from the researcher's latest submission
@@ -285,7 +328,7 @@ using (Comparer comparer = new Comparer("draft_paper.docx"))
 ```
 
 ### Kurumsal Uyumluluk İş Akışları
-Düzenlenmiş sektörlerde, uyumluluk üstverisinin korunması kritik öneme sahiptir:
+Düzenlenmiş sektörlerde, uyumluluk meta verilerini sürdürmek kritik öneme sahiptir:
 
 ```csharp
 // Preserve compliance tags from updated policy document
@@ -303,7 +346,7 @@ using (Comparer comparer = new Comparer("old_policy.docx"))
 ## Yaygın Sorunların Çözümü
 
 ### “Dosya Bulunamadı” Hataları
-En sık karşılaşılan sorun. Açık kontrollerle hata ayıklayın:
+En yaygın sorun. Açık kontrollerle hata ayıklayın:
 
 ```csharp
 string sourceFile = "source.docx";
@@ -346,7 +389,7 @@ using (var comparer = new Comparer(sourceFile))
 ```
 
 ### İzin ve Erişim Sorunları
-Korunan dosyalar ya da ağ paylaşımlarıyla çalışırken:
+Korunan dosyalar veya ağ paylaşımlarıyla çalışırken:
 
 ```csharp
 try
@@ -375,7 +418,7 @@ catch (IOException ex)
 ## Performans Düşünceleri ve En İyi Uygulamalar
 
 ### Bellek Yönetimi
-GroupDocs.Comparison hafıza yoğun olabilir. `using` ifadeleriyle kesin imha sağlayın:
+GroupDocs.Comparison bellek yoğun olabilir. `using` ifadeleriyle serbest bırakmayı garantileyin:
 
 ```csharp
 // Good - automatic resource cleanup
@@ -390,10 +433,10 @@ var comparer = new Comparer(sourceFile);
 // comparer.Dispose(); // Easy to forget!
 ```
 
-**Belgeleri Partiler Halinde İşleyin** – çok sayıda dosyayı karşılaştırıyorsanız, hafıza kullanımını düşük tutmak için onları daha küçük gruplara ayırın.
+**Belgeleri Partiler Halinde İşleyin** – çok sayıda dosya karşılaştırıyorsanız, bellek kullanımını düşük tutmak için daha küçük gruplar halinde işleyin.
 
 ### Daha İyi Yanıt Verebilmek İçin Async İşlemler
-Masaüstü ya da web uygulamaları için karşılaştırmayı async bir metoda sarın:
+Masaüstü veya web uygulamaları için karşılaştırmayı async bir metoda sarın:
 
 ```csharp
 public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
@@ -420,15 +463,15 @@ public async Task<bool> CompareDocumentsAsync(string source, string target, stri
 }
 ```
 
-### Dosya Boyutu Rehberi
+### Dosya Boyutu Kılavuzları
 - **Küçük (< 1 MB)** – doğrudan işleyin.  
-- **Orta (1‑10 MB)** – UI’nın yanıt vermesini sağlamak için ilerleme göstergesi ekleyin.  
-- **Büyük (> 10 MB)** – mutlaka async işleme kullanın ve yukarıda gösterildiği gibi açık GC çağrısı düşünün.
+- **Orta (1‑10 MB)** – UI’nın yanıt vermesini sağlamak için ilerleme gösterin.  
+- **Büyük (> 10 MB)** – her zaman async işleme kullanın ve yukarıda gösterildiği gibi açık GC düşünün.
 
-## Daha Büyük Sistemlerle Entegrasyon
+## Büyük Sistemlerle Entegrasyon
 
 ### ASP.NET Core Entegrasyonu
-Aşağıda iki dosya yükleyip karşılaştırma yapan ve **hedef üstveriyi koruyarak** sonucu döndüren hazır bir denetleyici yer alıyor:
+Aşağıda iki yüklenen dosyayı kabul eden, karşılaştırmayı çalıştıran ve **hedef meta verilerini koruyarak** sonucu döndüren hazır bir denetleyici bulunmaktadır:
 
 ```csharp
 [ApiController]
@@ -478,14 +521,14 @@ public class DocumentComparisonController : ControllerBase
 
 ## Sık Sorulan Sorular
 
-**S: Birden fazla hedef belgeden üstveri koruyabilir miyim?**  
-C: Birden fazla hedef dosya eklediğinizde, GroupDocs.Comparison **ilk** eklenen hedef belgenin üstverisini kullanır. İstediğiniz üstveriye sahip belgeyi ilk ekleyin.
+**S: Birden çok hedef belgeyle karşılaştırma yaparken meta verileri koruyabilir miyim?**  
+C: Birden fazla hedef dosya eklediğinizde, GroupDocs.Comparison eklenen **ilk** hedef belgenin meta verilerini kullanır. Meta verilerini tutmak istediğiniz belgeyi zincirde ilk ekleyin.
 
-**S: Hedef belge bazı üstveri alanlarına sahip değilse ne olur?**  
-C: Yalnızca hedefte mevcut olan üstveri kopyalanır. Eksik alanlar göz ardı edilir; karşılaştırma sorunsuz devam eder.
+**S: Hedef belge bazı meta veri alanlarına sahip değilse ne olur?**  
+C: Yalnızca hedefte mevcut olan meta veriler çıktı dosyasına kopyalanır. Eksik alanlar basitçe atlanır; karşılaştırma yine başarılı olur.
 
-**S: Şifre korumalı belgeler nasıl işlenir?**  
-C: Şifreyi içeren bir `LoadOptions` nesnesi oluşturup `Comparer` yapıcısına geçirin:
+**S: Şifre korumalı belgelerle nasıl başa çıkılır?**  
+C: Şifreyi içeren bir `LoadOptions` nesnesi oluşturun ve ardından `Comparer` yapıcısına geçirin:
 
 ```csharp
 var loadOptions = new LoadOptions() { Password = "your_password" };
@@ -495,14 +538,14 @@ using (var comparer = new Comparer(sourceFile, loadOptions))
 }
 ```
 
-**S: Sadece seçili üstveri özelliklerini korumak mümkün mü?**  
-C: Mevcut API, seçilen kaynaktan (Target veya Source) **tüm** üstveriyi korur. Daha ince kontrol için karşılaştırma sonrası özellikleri çıkartıp manuel olarak yeniden uygulamanız gerekir.
+**S: Yalnızca seçilmiş meta veri özelliklerini korumanın bir yolu var mı?**  
+C: Mevcut API, seçilen kaynaktan (Hedef veya Kaynak) **tüm** meta verileri korur. Daha ince kontrol için karşılaştırmadan sonra özellikleri çıkartıp manuel olarak yeniden uygulamanız gerekir.
 
-**S: Hangi belge formatları üstveri korumayı destekler?**  
-C: DOCX, PDF, PPTX, XLSX ve birçok başka yaygın iş formatı üstveri korumayı destekler. Tam liste için resmi dokümantasyona bakın.
+**S: Hangi belge formatları meta veri korumayı destekler?**  
+C: Çoğu yaygın iş formatı—DOCX, PDF, PPTX, XLSX ve daha fazlası—meta veri korumayı destekler. Tam liste için resmi dokümantasyona bakın.
 
 **S: Sorun yaşarsam nereden yardım alabilirim?**  
-C: Topluluk desteği için [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) adresini ziyaret edin, ya da ticari lisansınız varsa doğrudan GroupDocs destek ekibiyle iletişime geçin.
+C: Topluluk desteği için [GroupDocs Destek Forumu](https://forum.groupdocs.com/c/comparison) adresini ziyaret edin veya ticari lisansınız varsa doğrudan GroupDocs desteğiyle iletişime geçin.
 
 ## Ek Kaynaklar
 
@@ -514,8 +557,14 @@ C: Topluluk desteği için [GroupDocs Support Forum](https://forum.groupdocs.com
 
 ---
 
-**Son Güncelleme:** 2026-03-06  
+**Son Güncelleme:** 2026-06-05  
 **Test Edilen Sürüm:** GroupDocs.Comparison 25.4.0 for .NET  
 **Yazar:** GroupDocs  
 
 ---
+
+## İlgili Öğreticiler
+
+- [Belge Meta Verileri .NET - Özel Özellikleri Kaydet ve Koru](/comparison/net/loading-and-saving-documents/saving-user-defined-document-metadata/)
+- [Belge Meta Veri Yönetimi .NET - GroupDocs.Comparison için Tam Kılavuz](/comparison/net/metadata-management/)
+- [Belge Özelliklerini Al C# .NET - Dosya Meta Verilerini Çıkar](/comparison/net/basic-usage/get-document-info-from-path/)

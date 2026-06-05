@@ -1,103 +1,143 @@
 ---
 categories:
 - Document Comparison
-date: '2026-03-06'
-description: Scopri come conservare i metadati di destinazione durante il confronto
-  dei documenti utilizzando GroupDocs.Comparison per .NET. Guida passo passo con esempi
-  in C#.
-keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
-  document comparison, metadata preservation tutorial
-lastmod: '2026-03-06'
-linktitle: Metadata Preservation Tutorial
+date: '2026-06-05'
+description: Scopri come preservare i metadati con GroupDocs Comparison per .NET,
+  guida passo‑passo per mantenere le proprietà del documento di destinazione durante
+  il confronto.
+keywords:
+- how to preserve metadata
+- keep custom properties
+- metadata preservation .NET
+lastmod: '2026-06-05'
+linktitle: Tutorial di preservazione dei metadati
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-05'
+  description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  headline: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  type: TechArticle
+- description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  name: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  steps:
+  - name: Initialize Your Comparer Object
+    text: 'The `Comparer` class is the core component that performs document comparison
+      and controls output options. Load the source (original) file and create a `Comparer`
+      instance: **Why use `using` statements?** They automatically dispose of resources,
+      preventing memory leaks when processing large documents'
+  - name: Add the Target Document
+    text: 'The `Add` method registers the target document whose changes will be compared
+      against the source. Specify the updated file you want to compare: **Common mistake**:
+      Confusing source and target. Think of it this way—source is your “original,”
+      target is your “updated version.”'
+  - name: Set the Metadata Type (The Magic Happens Here)
+    text: '`CloneMetadataType` property determines which document''s metadata is copied
+      to the result. Tell the comparer to keep the target’s metadata: **What’s happening?**
+      `CloneMetadataType = MetadataType.Target` tells GroupDocs.Comparison: “Hey,
+      I want to keep the target document’s metadata in my final resu'
+  type: HowTo
+- questions:
+  - answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+    question: Can I preserve metadata from multiple target documents when comparing?
+  - answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+    question: What happens if the target document lacks some metadata fields?
+  - answer: 'Use a `LoadOptions` object with the password, then pass it to the `Comparer`
+      constructor:'
+    question: How do I handle password‑protected documents?
+  - answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+    question: Is there a way to preserve only selected metadata properties?
+  - answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
+    question: Which document formats support metadata preservation?
+  type: FAQPage
 tags:
 - GroupDocs.Comparison
 - metadata-preservation
 - dotnet-tutorial
 - document-management
-title: Preservare i metadati di destinazione con GroupDocs.Comparison – Tutorial .NET
+title: Come preservare i metadati con GroupDocs Comparison – Tutorial .NET
 type: docs
 url: /it/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# Conserva i Metadati di Destinazione con GroupDocs.Comparison – Tutorial .NET
+# Come preservare i metadati con GroupDocs Comparison – Tutorial .NET
 
 ## Introduzione
 
-Ti è mai capitato di confrontare due documenti e di perdere metadati importanti nel processo? Non sei solo. Quando devi **preservare i metadati di destinazione** durante il confronto di documenti in un'applicazione .NET, il compito può sembrare difficile—ma non deve esserlo.
+Ti è mai capitato di confrontare due documenti e di perdere importanti metadati nel processo? Non sei l'unico. Quando devi **preservare i metadati di destinazione** durante il confronto di documenti in un'applicazione .NET, il compito può sembrare complicato, ma non deve esserlo. Questo tutorial mostra **come preservare i metadati** affinché il file risultante mantenga esattamente l'autore, la data di creazione e le proprietà personalizzate che ti aspetti.
 
-GroupDocs.Comparison per .NET ti consente di decidere quali metadati del documento sopravvivono al risultato del confronto. Che tu stia costruendo un sistema di gestione documenti, gestendo contratti legali o gestendo contenuti collaborativi, vorrai i metadati del documento sorgente corretto ogni volta.
-
-In questo tutorial imparerai come **preservare i metadati di destinazione** durante il confronto, evitare le insidie comuni e implementare la soluzione in scenari reali.
-
-## Risposte Rapide
+## Risposte rapide
 - **Cosa significa “preservare i metadati di destinazione”?** Mantiene i metadati (autore, data di creazione, proprietà personalizzate, ecc.) dal documento che designi come destinazione quando generi il risultato del confronto.  
 - **Quale versione di GroupDocs.Comparison è richiesta?** Versione 25.4.0 o successiva.  
 - **Posso usarlo con .NET Core?** Sì – .NET Core 2.0+ o .NET Framework 4.6.1+.  
 - **È necessaria una licenza per la produzione?** È richiesta una licenza commerciale per la produzione; una prova gratuita è sufficiente per l'apprendimento.  
-- **La funzionalità funziona con PDF e DOCX?** Sì – tutti i principali formati Office e PDF supportano la conservazione dei metadati.
+- **La funzionalità funziona con PDF e DOCX?** Sì – tutti i principali formati Office e PDF supportano la preservazione dei metadati.
 
-## Perché la Conservazione dei Metadati è Importante
+## Cos'è la preservazione dei metadati?
 
-Prima di passare al codice, parliamo del perché preservare i metadati di destinazione è importante. I metadati dei documenti non sono solo “belli da avere”—spesso sono richiesti legalmente o sono critici per il business:
+La preservazione dei metadati significa mantenere intatte le informazioni descrittive del documento di origine — come autore, titolo, numero di revisione e proprietà personalizzate — dopo un'operazione di elaborazione. In GroupDocs.Comparison, puoi decidere se i metadati del documento di origine o di destinazione sopravvivono nell'output finale del confronto.
 
-- **Documenti legali** – è necessario mantenere i marcatori di privilegio avvocato‑cliente.  
-- **File aziendali** – devono conservare i tag di conformità e le catene di approvazione.  
-- **Articoli accademici** – l'attribuzione dell'autore e la cronologia delle revisioni sono essenziali.  
-- **Documentazione tecnica** – il controllo di versione e lo stato di revisione sono importanti.  
+## Perché la preservazione dei metadati è importante
 
-Senza una gestione adeguata, potresti accidentalmente rimuovere informazioni che hanno richiesto mesi per essere stabilite. È qui che l'opzione **preservare i metadati di destinazione** brilla.
+Preservare i metadati è fondamentale perché molti settori li considerano prove legali o informazioni critiche per il business. **Perché?** Perché i metadati registrano la proprietà, i tag di conformità, la cronologia delle versioni e i percorsi di audit su cui le organizzazioni si basano per la segnalazione normativa, la gestione dei contratti e l'attribuzione accademica. Perdere questi dati può invalidare lo stato legale di un documento o interrompere i flussi di lavoro automatizzati.
 
 ## Prerequisiti
 
-### Librerie Richieste e Versioni
+### Librerie richieste e versioni
 - **GroupDocs.Comparison per .NET**: Versione 25.4.0 o successiva (le versioni precedenti hanno opzioni di metadati limitate).  
-- **.NET Framework**: 4.6.1 o superiore, o .NET Core 2.0+.
+- **.NET Framework**: 4.6.1 o superiore, oppure .NET Core 2.0+.
 
-### Configurazione dell'Ambiente
+### Configurazione dell'ambiente
 - Visual Studio (o qualsiasi IDE C# tu preferisca).  
-- Conoscenza di base di C# (niente di troppo avanzato, promesso!).  
-- Due documenti di esempio per il test (Word *.docx* funziona benissimo).
+- Conoscenze di base di C# (niente di troppo avanzato, promesso!).  
+- Due documenti di esempio per i test (Word *.docx* funziona benissimo).
 
-### Prerequisiti di Conoscenza
-Non è necessario essere esperti di GroupDocs, ma dovresti sentirti a tuo agio con:
+### Prerequisiti di conoscenza
+Non è necessario essere un esperto di GroupDocs, ma dovresti sentirti a tuo agio con:
 - le istruzioni `using` di C# e la gestione dei file.  
 - i concetti di base dell'elaborazione dei documenti.  
-- cosa sono effettivamente i metadati (autore, titolo, proprietà personalizzate, ecc.).  
+- cosa sono realmente i metadati (autore, titolo, proprietà personalizzate, ecc.).
 
 Pronto? Configuriamolo.
 
-## Configurazione di GroupDocs.Comparison per .NET
+## Configurare GroupDocs.Comparison per .NET
 
-Installare GroupDocs.Comparison è semplice, ma ci sono un paio di trappole da tenere in considerazione.
+Installare GroupDocs.Comparison è semplice, ma ci sono un paio di insidie da tenere in considerazione.
 
-### Opzioni di Installazione
+### Opzioni di installazione
 
-**NuGet Package Manager Console** (easiest method):
+**NuGet Package Manager Console** (metodo più semplice):
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI** (if you prefer command line):
+**.NET CLI** (se preferisci la riga di comando):
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-**Suggerimento professionale**: Specifica sempre la versione per evitare cambiamenti inattesi che potrebbero rompere il tuo progetto.
+**Consiglio professionale**: Specifica sempre la versione per evitare cambiamenti inattesi che potrebbero rompere il tuo progetto.
 
-### Acquisizione della Licenza
-Qui è dove molti sviluppatori si bloccano inizialmente. GroupDocs.Comparison non è gratuito, ma hai delle opzioni:
+### Acquisizione della licenza
 
-- **Prova Gratuita** – funzionalità complete per 30 giorni, perfetta per la valutazione.  
-- **Licenza Temporanea** – periodo di valutazione esteso se hai bisogno di più tempo.  
-- **Licenza Commerciale** – per l'uso in produzione (disponibili vari livelli di prezzo).  
+È qui che molti sviluppatori si bloccano inizialmente. GroupDocs.Comparison non è gratuito, ma hai delle opzioni:
+- **Prova gratuita** – funzionalità complete per 30 giorni, perfetta per la valutazione.  
+- **Licenza temporanea** – periodo di valutazione esteso se hai bisogno di più tempo.  
+- **Licenza commerciale** – per l'uso in produzione (varie fasce di prezzo disponibili).
 
-Non preoccuparti della licenza per ora se stai solo imparando—la versione di prova include tutte le funzionalità di **preservare i metadati di destinazione**.
+Non preoccuparti della licenza per ora se stai solo imparando — la versione di prova include tutte le funzionalità di **preservare i metadati di destinazione**.
 
-### Verifica della Configurazione di Base
+### Verifica della configurazione di base
 
 Assicuriamoci che tutto funzioni con un semplice test:
-
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -115,26 +155,25 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 
 Se questo compila senza errori, sei pronto. In caso contrario, ricontrolla l'installazione del pacchetto e le istruzioni `using`.
 
-## Come Conservare i Metadati di Destinazione
+## Come preservare i metadati di destinazione
 
-Ora il punto principale—preservare effettivamente i metadati durante il confronto dei documenti. È qui che GroupDocs.Comparison brilla davvero.
+Per preservare i metadati di destinazione, configuri il comparatore per clonare i metadati dal documento di destinazione prima di generare il risultato. Questo comporta l'impostazione della proprietà `CloneMetadataType` su `MetadataType.Target` nell'istanza `Comparer`. In questo modo, tutti i campi dei metadati — autore, data di creazione, proprietà personalizzate — vengono copiati dalla destinazione nel file di output, garantendo che le informazioni del documento aggiornato vengano mantenute.
 
-### Comprendere il Flusso dei Metadati
+### Comprendere il flusso dei metadati
 
 Durante un tipico confronto:
-
 1. **Documento sorgente** fornisce il contenuto di base.  
 2. **Documento di destinazione** fornisce le modifiche da confrontare.  
 3. Il **documento di output** combina entrambi, ma a chi appartengono i metadati?
 
 Per impostazione predefinita, GroupDocs.Comparison utilizza i metadati del documento sorgente. Per **preservare i metadati di destinazione**, devi indicarlo esplicitamente all'API.
 
-### Implementazione Passo‑Passo
+### Implementazione passo‑passo
 
-#### Passo 1: Inizializza l'Oggetto Comparer
+#### Passo 1: Inizializza l'oggetto Comparer
 
-Questo stabilisce il documento “di base”—quello con cui confronti:
-
+La classe `Comparer` è il componente principale che esegue il confronto dei documenti e controlla le opzioni di output.  
+Carica il file sorgente (originale) e crea un'istanza `Comparer`:
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -144,30 +183,29 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 
 **Perché usare le istruzioni `using`?** Dispensano automaticamente le risorse, prevenendo perdite di memoria quando si elaborano documenti di grandi dimensioni. Fidati, ti ringrazierai più tardi quando gestirai file Word da 50 MB.
 
-#### Passo 2: Aggiungi il Documento di Destinazione
+#### Passo 2: Aggiungi il documento di destinazione
 
-Indica al comparer quale documento contiene le modifiche che vuoi analizzare:
-
+Il metodo `Add` registra il documento di destinazione le cui modifiche saranno confrontate con la sorgente.  
+Specifica il file aggiornato che vuoi confrontare:
 ```csharp
 comparer.Add(targetFilePath);
 ```
 
-**Errore comune**: Confondere sorgente e destinazione. Pensalo così—la sorgente è il tuo “originale”, la destinazione è la tua “versione aggiornata”.
+**Errore comune**: Confondere sorgente e destinazione. Pensalo così — la sorgente è il tuo “originale”, la destinazione è la tua “versione aggiornata”.
 
-#### Passo 3: Imposta il Tipo di Metadati (Qui Avviene la Magia)
+#### Passo 3: Imposta il tipo di metadati (qui avviene la magia)
 
-Specifica quali metadati del documento devono essere mantenuti nell'output:
-
+La proprietà `CloneMetadataType` determina quali metadati del documento vengono copiati nel risultato.  
+Indica al comparatore di mantenere i metadati della destinazione:
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
 ```
 
 **Cosa sta succedendo?** `CloneMetadataType = MetadataType.Target` dice a GroupDocs.Comparison: “Ehi, voglio mantenere i metadati del documento di destinazione nel risultato finale.”
 
-### Esempio Completo Funzionante
+### Esempio completo funzionante
 
 Ecco tutto insieme in un programma eseguibile:
-
 ```csharp
 using System;
 using System.IO;
@@ -205,10 +243,9 @@ class Program
 }
 ```
 
-### Errori Comuni da Evitare
+### Problemi comuni da evitare
 
-**Problemi di Percorso File** – usa sempre percorsi completi o assicurati che i file siano nella directory di lavoro:
-
+- **Problemi di percorso file** – usa sempre percorsi completi o assicurati che i file siano nella directory di lavoro:
 ```csharp
 // Good
 string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
@@ -217,25 +254,24 @@ string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "sourc
 string sourceFile = "source.docx";
 ```
 
-**Gestione della Memoria** – per documenti di grandi dimensioni, avvolgi sempre gli oggetti `Comparer` in istruzioni `using`.
+- **Gestione della memoria** – per documenti di grandi dimensioni, avvolgi sempre gli oggetti `Comparer` in istruzioni `using`.
 
-**Compatibilità di Versione** – diverse versioni di GroupDocs.Comparison espongono opzioni di metadati differenti—rimani su 25.4.0 o versioni successive per i migliori risultati.
+- **Compatibilità delle versioni** – diverse versioni di GroupDocs.Comparison espongono opzioni di metadati differenti — rimani su 25.4.0 o versioni successive per i migliori risultati.
 
-## Scenari Avanzati di Metadati
+## Scenari avanzati di metadati
 
-### Quando Usare Metadati di Destinazione vs. Sorgente
+### Quando usare i metadati di destinazione vs. sorgente
 
-| Scenario | Preferisci Metadati **Destinazione** | Preferisci Metadati **Sorgente** |
-|----------|--------------------------------------|-----------------------------------|
-| Updated author info needed | ✅ | ❌ |
-| Original document has legal precedence | ❌ | ✅ |
-| Custom properties added only in the newer file | ✅ | ❌ |
-| You want to keep the “master” document’s history | ❌ | ✅ |
+| Scenario | Preferisci i metadati **Target** | Preferisci i metadati **Source** |
+|----------|-----------------------------------|-----------------------------------|
+| Necessità di informazioni sull'autore aggiornate | ✅ | ❌ |
+| Il documento originale ha precedenza legale | ❌ | ✅ |
+| Proprietà personalizzate aggiunte solo nel file più recente | ✅ | ❌ |
+| Vuoi mantenere la cronologia del documento “master” | ❌ | ✅ |
 
-### Gestione di Più Documenti di Destinazione
+### Gestione di più documenti di destinazione
 
-Puoi confrontare più destinazioni mantenendo i metadati dalla prima destinazione aggiunta:
-
+Puoi confrontare più destinazioni mantenendo comunque i metadati dal primo documento di destinazione aggiunto:
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -251,12 +287,11 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 }
 ```
 
-## Applicazioni Pratiche e Casi d'Uso
+## Applicazioni pratiche e casi d'uso
 
-### Gestione Documenti Legali
+### Gestione dei documenti legali
 
 Gli studi legali spesso devono confrontare versioni di contratti mantenendo marcatori di metadati specifici:
-
 ```csharp
 // Preserve client metadata from updated contract
 using (Comparer comparer = new Comparer("original_contract.docx"))
@@ -270,10 +305,9 @@ using (Comparer comparer = new Comparer("original_contract.docx"))
 }
 ```
 
-### Collaborazione Accademica e di Ricerca
+### Collaborazione accademica e di ricerca
 
 Quando più ricercatori collaborano, vuoi preservare le informazioni sull'autore più recenti:
-
 ```csharp
 // Keep metadata from the researcher's latest submission
 using (Comparer comparer = new Comparer("draft_paper.docx"))
@@ -287,10 +321,9 @@ using (Comparer comparer = new Comparer("draft_paper.docx"))
 }
 ```
 
-### Flussi di Lavoro per la Conformità Aziendale
+### Flussi di lavoro di conformità aziendale
 
-Nelle industrie regolamentate, mantenere i metadati di conformità è critico:
-
+Nei settori regolamentati, mantenere i metadati di conformità è fondamentale:
 ```csharp
 // Preserve compliance tags from updated policy document
 using (Comparer comparer = new Comparer("old_policy.docx"))
@@ -304,12 +337,11 @@ using (Comparer comparer = new Comparer("old_policy.docx"))
 }
 ```
 
-## Risoluzione dei Problemi Comuni
+## Risoluzione dei problemi comuni
 
-### Errori “File Non Trovato”
+### Errori “File non trovato”
 
-Il problema più comune. Debug con controlli espliciti:
-
+Il problema più comune. Esegui il debug con controlli espliciti:
 ```csharp
 string sourceFile = "source.docx";
 
@@ -328,10 +360,9 @@ if (!File.Exists(targetFile))
 }
 ```
 
-### Problemi di Memoria con Documenti Grandi
+### Problemi di memoria con documenti di grandi dimensioni
 
 Per documenti superiori a 10 MB, considera queste ottimizzazioni:
-
 ```csharp
 // Use explicit disposal for large documents
 using (var comparer = new Comparer(sourceFile))
@@ -351,10 +382,9 @@ using (var comparer = new Comparer(sourceFile))
 }
 ```
 
-### Problemi di Permessi e Accesso
+### Problemi di permessi e accesso
 
 Quando lavori con file protetti o condivisioni di rete:
-
 ```csharp
 try
 {
@@ -379,12 +409,11 @@ catch (IOException ex)
 }
 ```
 
-## Considerazioni sulle Prestazioni e Buone Pratiche
+## Considerazioni sulle prestazioni e migliori pratiche
 
-### Gestione della Memoria
+### Gestione della memoria
 
 GroupDocs.Comparison può richiedere molta memoria. Usa le istruzioni `using` per garantire lo smaltimento:
-
 ```csharp
 // Good - automatic resource cleanup
 using (var comparer = new Comparer(sourceFile))
@@ -398,12 +427,11 @@ var comparer = new Comparer(sourceFile);
 // comparer.Dispose(); // Easy to forget!
 ```
 
-**Elabora i Documenti in Batch** – se confronti molti file, gestiscili in gruppi più piccoli per mantenere basso l'uso della memoria.
+**Elabora i documenti in batch** – se confronti molti file, gestiscili in gruppi più piccoli per mantenere basso l'uso della memoria.
 
-### Operazioni Async per Maggiore Reattività
+### Operazioni asincrone per una migliore reattività
 
-Per app desktop o web, avvolgi il confronto in un metodo async:
-
+Per app desktop o web, avvolgi il confronto in un metodo asincrono:
 ```csharp
 public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
 {
@@ -429,17 +457,16 @@ public async Task<bool> CompareDocumentsAsync(string source, string target, stri
 }
 ```
 
-### Linee Guida sulle Dimensioni dei File
+### Linee guida sulle dimensioni dei file
 - **Piccoli (< 1 MB)** – processa direttamente.  
-- **Medio (1‑10 MB)** – mostra il progresso per mantenere l'interfaccia reattiva.  
-- **Grandi (> 10 MB)** – usa sempre l'elaborazione async e considera un GC esplicito come mostrato sopra.
+- **Medio (1‑10 MB)** – mostra l'avanzamento per mantenere l'interfaccia reattiva.  
+- **Grandi (> 10 MB)** – usa sempre l'elaborazione asincrona e considera un GC esplicito come mostrato sopra.
 
-## Integrazione con Sistemi più Grandi
+## Integrazione con sistemi più grandi
 
 ### Integrazione ASP.NET Core
 
-Di seguito un controller pronto all'uso che accetta due file caricati, esegue il confronto e restituisce il risultato mentre **preserva i metadati di destinazione**:
-
+Di seguito un controller pronto all'uso che accetta due file caricati, esegue il confronto e restituisce il risultato mantenendo **i metadati di destinazione**:
 ```csharp
 [ApiController]
 [Route("api/[controller]")]
@@ -486,17 +513,16 @@ public class DocumentComparisonController : ControllerBase
 }
 ```
 
-## Domande Frequenti
+## Domande frequenti
 
-**Q: Posso preservare i metadati da più documenti di destinazione quando confronto?**  
-A: Quando aggiungi diversi file di destinazione, GroupDocs.Comparison utilizza i metadati dal **primo** documento di destinazione aggiunto. Aggiungi per primo nella catena il documento i cui metadati vuoi conservare.
+**D: Posso preservare i metadati da più documenti di destinazione durante il confronto?**  
+R: Quando aggiungi diversi file di destinazione, GroupDocs.Comparison utilizza i metadati dal **primo** documento di destinazione aggiunto. Aggiungi per primo nella catena il documento i cui metadati vuoi conservare.
 
-**Q: Cosa succede se il documento di destinazione non contiene alcuni campi di metadati?**  
-A: Solo i metadati presenti nella destinazione verranno copiati nell'output. I campi mancanti vengono semplicemente omessi; il confronto riesce comunque.
+**D: Cosa succede se il documento di destinazione manca di alcuni campi di metadati?**  
+R: Verranno copiati solo i metadati presenti nella destinazione. I campi mancanti vengono semplicemente omessi; il confronto riesce comunque.
 
-**Q: Come gestisco i documenti protetti da password?**  
-A: Usa un oggetto `LoadOptions` con la password, quindi passalo al costruttore `Comparer`:
-
+**D: Come gestisco i documenti protetti da password?**  
+R: Usa un oggetto `LoadOptions` con la password, quindi passalo al costruttore `Comparer`:
 ```csharp
 var loadOptions = new LoadOptions() { Password = "your_password" };
 using (var comparer = new Comparer(sourceFile, loadOptions))
@@ -505,25 +531,33 @@ using (var comparer = new Comparer(sourceFile, loadOptions))
 }
 ```
 
-**Q: Esiste un modo per preservare solo proprietà di metadati selezionate?**  
-A: L'API attuale preserva **tutti** i metadati dalla sorgente scelta (Destinazione o Sorgente). Per un controllo più granulare dovresti estrarre le proprietà dopo il confronto e riapplicarle manualmente.
+**D: Esiste un modo per preservare solo alcune proprietà dei metadati?**  
+R: L'API attuale preserva **tutti** i metadati dalla sorgente scelta (Target o Source). Per un controllo più granulare dovresti estrarre le proprietà dopo il confronto e riapplicarle manualmente.
 
-**Q: Quali formati di documento supportano la conservazione dei metadati?**  
-A: La maggior parte dei formati aziendali comuni—DOCX, PDF, PPTX, XLSX e molti altri—supportano la conservazione dei metadati. Consulta la documentazione ufficiale per l'elenco completo.
+**D: Quali formati di documento supportano la preservazione dei metadati?**  
+R: La maggior parte dei formati aziendali più comuni — DOCX, PDF, PPTX, XLSX e molti altri — supportano la preservazione dei metadati. Consulta la documentazione ufficiale per l'elenco completo.
 
-**Q: Dove posso ottenere aiuto se incontro problemi?**  
-A: Visita il [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) per assistenza della community, o contatta direttamente il supporto GroupDocs se possiedi una licenza commerciale.
+**D: Dove posso ottenere aiuto se incontro problemi?**  
+R: Visita il [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) per assistenza dalla community, o contatta direttamente il supporto GroupDocs se disponi di una licenza commerciale.
 
-## Risorse Aggiuntive
+## Risorse aggiuntive
 
-- **Documentazione Ufficiale**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **Documentazione ufficiale**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
 - **Riferimento API**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
-- **Scarica l'Ultima Versione**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
-- **Prova Gratuita**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
-- **Opzioni di Acquisto**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
+- **Scarica l'ultima versione**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
+- **Prova gratuita**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
+- **Opzioni di acquisto**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
 
 ---
 
-**Ultimo Aggiornamento:** 2026-03-06  
-**Testato Con:** GroupDocs.Comparison 25.4.0 for .NET  
-**Autore:** GroupDocs
+**Ultimo aggiornamento:** 2026-06-05  
+**Testato con:** GroupDocs.Comparison 25.4.0 per .NET  
+**Autore:** GroupDocs  
+
+---
+
+## Tutorial correlati
+
+- [Metadati del documento .NET - Salva & preserva proprietà personalizzate](/comparison/net/loading-and-saving-documents/saving-user-defined-document-metadata/)
+- [Gestione dei metadati del documento .NET - Guida completa per GroupDocs.Comparison](/comparison/net/metadata-management/)
+- [Ottieni le proprietà del documento C# .NET - Estrai i metadati del file](/comparison/net/basic-usage/get-document-info-from-path/)

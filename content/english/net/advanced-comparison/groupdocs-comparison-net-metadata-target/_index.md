@@ -1,25 +1,70 @@
 ---
-title: "Preserve Target Metadata with GroupDocs.Comparison – .NET Tutorial"
+title: "How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial"
 linktitle: "Metadata Preservation Tutorial"
-description: "Learn how to preserve target metadata during document comparison using GroupDocs.Comparison for .NET. Step-by-step guide with C# examples."
-keywords: "preserve target metadata, GroupDocs.Comparison metadata preservation, .NET document comparison, metadata preservation tutorial"
+description: "Learn how to preserve metadata with GroupDocs Comparison for .NET, step‑by‑step guide to keep target document properties during comparison."
+keywords:
+- how to preserve metadata
+- keep custom properties
+- metadata preservation .NET
 weight: 1
 url: "/net/advanced-comparison/groupdocs-comparison-net-metadata-target/"
-date: "2026-03-06"
-lastmod: "2026-03-06"
+date: "2026-06-05"
+lastmod: "2026-06-05"
 categories: ["Document Comparison"]
 tags: ["GroupDocs.Comparison", "metadata-preservation", "dotnet-tutorial", "document-management"]
 type: docs
+schemas:
+- type: TechArticle
+  headline: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  dateModified: '2026-06-05'
+  author: GroupDocs
+- type: HowTo
+  name: How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
+  description: Learn how to preserve metadata with GroupDocs Comparison for .NET,
+    step‑by‑step guide to keep target document properties during comparison.
+  steps:
+  - name: Initialize Your Comparer Object
+    text: 'The `Comparer` class is the core component that performs document comparison
+      and controls output options. Load the source (original) file and create a `Comparer`
+      instance: **Why use `using` statements?** They automatically dispose of resources,
+      preventing memory leaks when processing large documents'
+  - name: Add the Target Document
+    text: 'The `Add` method registers the target document whose changes will be compared
+      against the source. Specify the updated file you want to compare: **Common mistake**:
+      Confusing source and target. Think of it this way—source is your “original,”
+      target is your “updated version.”'
+  - name: Set the Metadata Type (The Magic Happens Here)
+    text: '`CloneMetadataType` property determines which document''s metadata is copied
+      to the result. Tell the comparer to keep the target’s metadata: **What’s happening?**
+      `CloneMetadataType = MetadataType.Target` tells GroupDocs.Comparison: “Hey,
+      I want to keep the target document’s metadata in my final resu'
+- type: FAQPage
+  questions:
+  - question: Can I preserve metadata from multiple target documents when comparing?
+    answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+  - question: What happens if the target document lacks some metadata fields?
+    answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+  - question: How do I handle password‑protected documents?
+    answer: 'Use a `LoadOptions` object with the password, then pass it to the `Comparer`
+      constructor:'
+  - question: Is there a way to preserve only selected metadata properties?
+    answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+  - question: Which document formats support metadata preservation?
+    answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
 ---
-# Preserve Target Metadata with GroupDocs.Comparison – .NET Tutorial
+# How to Preserve Metadata with GroupDocs Comparison – .NET Tutorial
 
 ## Introduction
 
-Ever compared two documents only to lose important metadata in the process? You're not alone. When you need to **preserve target metadata** while comparing documents in a .NET application, the task can feel tricky—but it doesn’t have to be.
-
-GroupDocs.Comparison for .NET lets you decide which document’s metadata survives the comparison result. Whether you’re building a document‑management system, handling legal contracts, or managing collaborative content, you’ll want the metadata from the right source document every time.
-
-In this tutorial you’ll learn how to **preserve target metadata** during comparison, avoid common pitfalls, and implement the solution in real‑world scenarios.
+Ever compared two documents only to lose important metadata in the process? You're not alone. When you need to **preserve target metadata** while comparing documents in a .NET application, the task can feel tricky—but it doesn’t have to be. This tutorial shows **how to preserve metadata** so the resulting file keeps the exact author, creation date, and custom properties you expect.
 
 ## Quick Answers
 - **What does “preserve target metadata” mean?** It keeps the metadata (author, creation date, custom properties, etc.) from the document you designate as the target when generating the comparison result.  
@@ -28,16 +73,12 @@ In this tutorial you’ll learn how to **preserve target metadata** during compa
 - **Is a license needed for production?** A commercial license is required for production; a free trial works for learning.  
 - **Will the feature work with PDF and DOCX?** Yes – all major Office and PDF formats support metadata preservation.
 
+## What is metadata preservation?
+Metadata preservation means keeping the source document’s descriptive information—such as author, title, revision number, and custom properties—intact after a processing operation. In GroupDocs.Comparison, you can decide whether the source or the target document’s metadata survives in the final comparison output.
+
 ## Why Metadata Preservation Matters
 
-Before jumping into code, let’s talk about why preserving target metadata matters. Document metadata isn’t just “nice to have”—it’s often legally required or business‑critical:
-
-- **Legal documents** – need to retain attorney‑client privilege markers.  
-- **Corporate files** – must keep compliance tags and approval chains.  
-- **Academic papers** – author attribution and revision history are essential.  
-- **Technical documentation** – version control and review status matter.
-
-Without proper handling, you might accidentally strip away information that took months to establish. That’s where the **preserve target metadata** option shines.
+Preserving metadata is essential because many industries treat it as legal evidence or business‑critical information. **Why?** Because metadata records ownership, compliance tags, version history, and audit trails that organizations rely on for regulatory reporting, contract management, and scholarly attribution. Losing this data can invalidate a document’s legal standing or break automated workflows.
 
 ## Prerequisites
 
@@ -108,7 +149,7 @@ If this compiles without errors, you’re good to go. If not, double‑check you
 
 ## How to Preserve Target Metadata
 
-Now for the main event—actually preserving metadata during document comparison. This is where GroupDocs.Comparison really shines.
+To preserve target metadata, you configure the comparer to clone the metadata from the target document before generating the result. This involves setting the `CloneMetadataType` property to `MetadataType.Target` on the `Comparer` instance. By doing so, all metadata fields—author, creation date, custom properties—are copied from the target into the output file, ensuring the updated document’s information is retained.
 
 ### Understanding the Metadata Flow
 
@@ -124,7 +165,8 @@ By default, GroupDocs.Comparison uses the source document’s metadata. To **pre
 
 #### Step 1: Initialize Your Comparer Object
 
-This establishes the “baseline” document—the one you’re comparing against:
+The `Comparer` class is the core component that performs document comparison and controls output options.  
+Load the source (original) file and create a `Comparer` instance:
 
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
@@ -137,7 +179,8 @@ using (Comparer comparer = new Comparer(sourceFilePath))
 
 #### Step 2: Add the Target Document
 
-Tell the comparer which document contains the changes you want to analyze:
+The `Add` method registers the target document whose changes will be compared against the source.  
+Specify the updated file you want to compare:
 
 ```csharp
 comparer.Add(targetFilePath);
@@ -147,7 +190,8 @@ comparer.Add(targetFilePath);
 
 #### Step 3: Set the Metadata Type (The Magic Happens Here)
 
-Specify which document’s metadata should be kept in the output:
+`CloneMetadataType` property determines which document's metadata is copied to the result.  
+Tell the comparer to keep the target’s metadata:
 
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
@@ -506,8 +550,14 @@ A: Visit the [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2026-03-06  
+**Last Updated:** 2026-06-05  
 **Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
 **Author:** GroupDocs  
 
 ---
+
+## Related Tutorials
+
+- [Document Metadata .NET - Save & Preserve Custom Properties](/comparison/net/loading-and-saving-documents/saving-user-defined-document-metadata/)
+- [Document Metadata Management .NET - Complete Guide for GroupDocs.Comparison](/comparison/net/metadata-management/)
+- [Get Document Properties C# .NET - Extract File Metadata](/comparison/net/basic-usage/get-document-info-from-path/)

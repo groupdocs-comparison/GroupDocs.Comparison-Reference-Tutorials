@@ -1,13 +1,14 @@
 ---
 categories:
 - Java Development
-date: '2025-12-17'
-description: Java kullanarak GroupDocs.Comparison API ile PDF dosyalarını nasıl karşılaştıracağınızı
-  öğrenin. Bu adım adım kılavuz, kurulum, kredi takibi, belge karşılaştırması ve pratik
-  Java örnekleriyle sorun giderme konularını kapsar.
+date: '2026-03-22'
+description: GroupDocs.Comparison API'yi kullanarak Java ile PDF dosyalarını ve Excel
+  sayfalarını nasıl karşılaştıracağınızı öğrenin. Bu adım‑adım kılavuz, kurulum, kredi
+  takibi, belge karşılaştırması ve pratik Java örnekleriyle sorun giderme konularını
+  kapsar.
 keywords: java compare pdf files, java compare excel sheets, java file comparison
   library, groupdocs comparison tutorial, document diff java
-lastmod: '2025-12-17'
+lastmod: '2026-03-22'
 linktitle: Java Compare PDF Files Tutorial
 tags:
 - document-comparison
@@ -21,40 +22,40 @@ url: /tr/java/advanced-comparison/master-document-comparison-java-groupdocs-api/
 weight: 1
 ---
 
-# Java PDF Dosyalarını GroupDocs.Comparison API ile Karşılaştırma
+# Java ile PDF Dosyalarını GroupDocs.Comparison API ile Karşılaştırma
 
-Eğer **java compare pdf files**'ı hızlı ve doğru bir şekilde karşılaştırmanız gerekiyorsa, doğru yere geldiniz. İster yasal sözleşmelerdeki değişiklikleri izliyor olun, kodla ilgili PDF'leri karşılaştırıyor olun ya da Java uygulamanızda raporların farklı sürümlerini yönetiyor olun, GroupDocs.Comparison API zahmetli manuel süreci hızlı, otomatik bir çözüme dönüştürür.
+Eğer **java compare pdf files** hızlı ve doğru bir şekilde yapmak istiyorsanız, doğru yerdesiniz. İster yasal sözleşmelerdeki değişiklikleri izliyor olun, ister kodla ilgili PDF'leri karşılaştırıyor olun, ya da Java uygulamanızda raporların farklı sürümlerini yönetiyor olun, GroupDocs.Comparison API zahmetli manuel süreci hızlı, otomatik bir çözüme dönüştürür.
 
-Bu kapsamlı öğreticide API'yi nasıl kuracağınızı, kredi takibini nasıl uygulayacağınızı, güvenilir belge karşılaştırmalarını nasıl gerçekleştireceğinizi ve yaygın sorunları nasıl gidereceğinizi öğreneceksiniz. Sonunda, sadece birkaç satır Java kodu ile PDF, Word, Excel ve daha fazlası dahil olmak üzere neredeyse tüm belge formatlarını karşılaştırabilen üretim‑hazır bir uygulamaya sahip olacaksınız.
+Bu kapsamlı öğreticide API'yi nasıl kuracağınızı, kredi takibini nasıl uygulayacağınızı, güvenilir belge karşılaştırmalarını nasıl gerçekleştireceğinizi ve yaygın sorunları nasıl gidereceğinizi öğreneceksiniz. Sonunda, sadece birkaç Java kod satırıyla PDF, Word, Excel ve daha fazlası dahil neredeyse tüm belge formatlarını karşılaştırabilen üretim‑hazır bir uygulamaya sahip olacaksınız.
 
-## Hızlı Yanıtlar
-- **Hangi kütüphane bana java compare pdf files yapmamı sağlar?** GroupDocs.Comparison for Java.  
-- **Özel bir lisansa ihtiyacım var mı?** Ücretsiz deneme sürümü test için çalışır; üretim için tam lisans gereklidir.  
-- **Krediler nasıl tüketilir?** Her karşılaştırma dosya boyutu ve karmaşıklığına bağlı olarak 1‑5 kredi tüketir.  
-- **Excel sayfalarını da karşılaştırabilir miyim?** Evet – aynı API `java compare excel sheets`'i de destekler.  
-- **Java dosya karşılaştırma kütüphanesi var mı?** GroupDocs.Comparison, birçok formatı kapsayan sağlam bir `java file comparison library`dir.
+## Hızlı Cevaplar
+- **java compare pdf files** yapmamı sağlayan kütüphane hangisidir? GroupDocs.Comparison for Java.  
+- **Özel bir lisansa ihtiyacım var mı?** Ücretsiz deneme testi için çalışır; üretim için tam lisans gereklidir.  
+- **Krediler nasıl tüketilir?** Her karşılaştırma, dosya boyutu ve karmaşıklığına bağlı olarak 1‑5 kredi kullanır.  
+- **Excel sayfalarını da karşılaştırabilir miyim?** Evet – aynı API ayrıca `java compare excel sheets`'i destekler.  
+- **Java dosya karşılaştırma kütüphanesi var mı?** GroupDocs.Comparison, birçok formatı kapsayan sağlam bir `java file comparison library`'dir.
 
-## **java compare pdf files** Nedir?
+## **java compare pdf files** nedir?
 Bu ifade, iki PDF belgesi arasındaki metinsel, görsel ve yapısal farkları tespit etmek için Java‑tabanlı bir API kullanmayı ifade eder. GroupDocs.Comparison her PDF'i belleğe yükler, içeriği analiz eder ve eklemeleri, silmeleri ve biçimlendirme değişikliklerini vurgulayan bir sonuç belgesi üretir.
 
 ## Neden Java için GroupDocs.Comparison Kullanmalı?
 - **Format‑agnostic** – PDF, DOCX, XLSX, PPTX ve görüntülerle çalışır.  
-- **Yüksek doğruluk** – karmaşık düzenler, tablolar ve gömülü görüntülerle başa çıkar.  
-- **Yerleşik kredi takibi** – kullanımınızı izlemenize ve maliyetleri kontrol etmenize yardımcı olur.  
-- **Kolay entegrasyon** – Maven/Gradle hazır, net Java sınıflarıyla birlikte gelir.
+- **High accuracy** – karmaşık düzenler, tablolar ve gömülü görüntülerle başa çıkar.  
+- **Built‑in credit tracking** – kullanımınızı izlemenize ve maliyetleri kontrol etmenize yardımcı olur.  
+- **Easy integration** – Maven/Gradle hazır, net Java sınıflarıyla.
 
 ## Önkoşullar
 - JDK 8 veya daha yeni (JDK 11+ önerilir)  
 - Maven veya Gradle (örnek Maven kullanır)  
 - Temel Java bilgisi (try‑with‑resources, dosya I/O)  
-- Test için birkaç örnek belge (PDF, DOCX veya Excel dosyaları)  
+- Test için birkaç örnek belge (PDF, DOCX veya Excel dosyaları)
 
-> **Pro tip:** Akışı doğrulamak için önce basit metin‑tabanlı PDF'lerle başlayın, ardından daha zengin belgelerle devam edin.
+> **Pro tip:** Akışı doğrulamak için basit metin‑tabanlı PDF'lerle başlayın, ardından daha zengin belgelere geçin.
 
 ## Java için GroupDocs.Comparison Kurulumu
 
 ### Maven Yapılandırması
-`pom.xml` dosyanıza GroupDocs deposunu ve bağımlılığını ekleyin:
+GroupDocs deposunu ve bağımlılığını `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -73,22 +74,22 @@ Bu ifade, iki PDF belgesi arasındaki metinsel, görsel ve yapısal farkları te
 </dependencies>
 ```
 
-> **Common mistake:** Depo girişinin unutulması Maven'in artefakti bulamamasına neden olur.
+> **Yaygın hata:** Depo girdisini unutmak, Maven'in artefaktı bulamamasına neden olur.
 
-## Kredi Tüketimi İzleme Uygulaması
+## Kredi Tüketimi Takibini Uygulama
 
-### Kredi Sistemini Anlamak
-Her API çağrısı kredi tüketir – tipik olarak karşılaştırma başına 1‑5 kredi. Görüntülü büyük PDF'ler, düz metin dosyalarından daha fazla kredi kullanır.
+### Kredi Sistemini Anlama
+Her API çağrısı kredi tüketir – genellikle karşılaştırma başına 1‑5 kredi. Görüntülü büyük PDF'ler, düz metin dosyalarından daha fazla kredi kullanır.
 
 ### Adım‑Adım Kredi Takibi
 
-**Adım 1: Metered sınıfını içe aktarın**
+**Adım 1: Metered sınıfını içe aktar**  
 
 ```java
 import com.groupdocs.comparison.license.Metered;
 ```
 
-**Adım 2: Kullanımı kaydeden küçük bir yardımcı oluşturun**
+**Adım 2: Kullanımı kaydetmek için küçük bir yardımcı oluştur**  
 
 ```java
 public class GetCreditConsumption {
@@ -106,20 +107,20 @@ public class GetCreditConsumption {
 }
 ```
 
-**Neden önemli:** Üretimde bu değerleri kaydetmek, kota yaklaştığında uyarı vermek ve gerekirse kullanıcı başına kullanım sınırlaması uygulamak isteyeceksiniz.
+**Neden önemli:** Üretimde bu değerleri kaydetmek, kotaya yaklaştığınızda uyarılar ayarlamak ve gerekirse kullanıcı başına kullanım hızını sınırlamak isteyeceksiniz.
 
-## Belge Karşılaştırma Uygulamasına Hakim Olma
+## Belge Karşılaştırma Uygulamasında Uzmanlaşma
 
 ### Temel Karşılaştırma İş Akışı
-1. **Kaynak** belgeyi (referans) yükleyin.  
-2. Bir veya daha fazla **hedef** belgeyi karşılaştırma için ekleyin.  
-3. (İsteğe bağlı) Hassasiyet için `CompareOptions` yapılandırın.  
-4. Karşılaştırmayı yürütün ve sonuç dosyasını oluşturun.  
-5. Vurgulanan farkları kaydedin veya daha ileri işleyin.
+1. **source** belgesini yükle (referans).  
+2. Karşılaştırma için bir veya daha fazla **target** belge ekle.  
+3. (İsteğe bağlı) Hassasiyet için `CompareOptions` yapılandır.  
+4. Karşılaştırmayı yürüt ve bir sonuç dosyası oluştur.  
+5. Vurgulanan farkları kaydet veya daha ileri işleme tabi tut.
 
 ### Adım‑Adım Karşılaştırma Kodu
 
-**Adım 1: Gerekli sınıfları içe aktarın**
+**Adım 1: Gerekli sınıfları içe aktar**  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -130,7 +131,7 @@ import java.io.OutputStream;
 import java.nio.file.Path;
 ```
 
-**Adım 2: Dosya yollarını tanımlayın**
+**Adım 2: Dosya yollarını tanımla**  
 
 ```java
 String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source.docx";
@@ -138,7 +139,7 @@ String targetFilePath1 = "YOUR_DOCUMENT_DIRECTORY/target1.docx";
 String resultFilePath = "YOUR_OUTPUT_DIRECTORY/result.docx";
 ```
 
-**Adım 3: Karşılaştırmayı yürütün**
+**Adım 3: Karşılaştırmayı yürüt**  
 
 ```java
 public class CompareDocuments {
@@ -156,20 +157,9 @@ public class CompareDocuments {
 }
 ```
 
-> **What’s happening:** `try‑with‑resources` bloğu akışların otomatik olarak kapanmasını sağlar, bellek sızıntılarını önler.
+> **Ne oluyor:** `try‑with‑resources` bloğu, akışların otomatik olarak kapanmasını garanti eder ve bellek sızıntılarını önler.
 
-## İleri Düzey İpuçları ve En İyi Uygulamalar
-
-### Performans Optimizasyonu
-- **Memory:** 10 MB'den büyük dosyalar için JVM yığınını (`-Xmx2g`) artırın veya parçalar halinde işleyin.  
-- **Batching:** Çok sayıda çift karşılaştırırken tek bir `Comparer` örneğini yeniden kullanın.  
-- **Format choice:** Çok sayıda görüntü içeren PDF'ler, düz DOCX dosyalarından daha yavaştır.
-
-### Konfigürasyon Ayarları
-- **Sensitivity:** Sadece metinsel değişikliklerle ilgileniyorsanız `CompareOptions` ile biçimlendirme veya boşlukları yok sayın.  
-- **Output styling:** `SaveOptions` kullanarak vurgulama renklerini özelleştirin, böylece sonuç son kullanıcılar için daha okunaklı olur.
-
-### Robust Error Handling
+## Sağlam Hata Yönetimi
 
 ```java
 try {
@@ -181,18 +171,10 @@ try {
 }
 ```
 
-## Yaygın Sorunların Çözümü
+## Gerçek‑Dünya Uygulama Örnekleri
 
-| Sorun | Tipik Sebep | Hızlı Çözüm |
-|-------|-------------|-------------|
-| **File not found / Access denied** | Yanlış yol veya yetersiz izinler | Geliştirme sırasında mutlak yollar kullanın; okuma/yazma izinlerini doğrulayın |
-| **OutOfMemoryError** | Büyük belgeler yığını aşıyor | `-Xmx` artırın veya belgeleri bölün |
-| **License/credit errors** | Lisans ayarlanmamış veya krediler tükenmiş | Lisans dosyasını kontrol edin; `Metered` ile kullanım takibi yapın |
-| **Unexpected format differences** | Belirli düzenler için API sınırlamaları | GroupDocs format destek matrisine bakın; ön işleme düşünün |
+### Hukuki Sözleşme Karşılaştırma Sistemi
 
-## Gerçek Dünya Uygulama Örnekleri
-
-### Legal Contract Comparison System
 ```java
 // Example: Comparing contract versions for a law firm
 public class ContractComparison {
@@ -203,51 +185,50 @@ public class ContractComparison {
 }
 ```
 
-### Content Management Integration
-Yayınlamadan önce makalelerde veya dokümantasyonda yetkisiz düzenlemeleri tespit etmek için API'yi kullan.
+### İçerik Yönetimi Entegrasyonu
+Karşılaştırma mantığını bir CMS iş akışına gömerek, içeriği yayınlamadan önce yetkisiz düzenlemeleri otomatik olarak işaretleyebilirsiniz.
 
-### Financial Document Auditing
-Çeyrek dönem beyanlarını veya düzenleyici raporları karşılaştırarak veri bütünlüğünü sağlayın.
+### Finansal Belge Denetimi
+API'yi çeyrek dönem raporlarını veya düzenleyici beyanları karşılaştırmak için kullanın, raporlama döngüleri arasında veri tutarlılığını sağlayın.
 
 ## Desteklenen Dosya Formatları
-- **Text:** DOC, DOCX, RTF, TXT, PDF  
-- **Spreadsheets:** XLS, XLSX, CSV, ODS  
-- **Presentations:** PPT, PPTX, ODP  
-- **Images:** PNG, JPG, BMP (visual diff)  
-- **Others:** HTML, XML, source code files  
+- **Metin:** DOC, DOCX, RTF, TXT, PDF  
+- **Elektronik Tablo:** XLS, XLSX, CSV, ODS  
+- **Sunumlar:** PPT, PPTX, ODP  
+- **Görüntüler:** PNG, JPG, BMP (visual diff)  
+- **Diğer:** HTML, XML, source code files  
 
-> **Tip:** Çapraz‑format karşılaştırma (ör. DOCX vs PDF) çalışır, ancak biçimlendirme farkları değişiklik olarak görünebilir.
+> **İpucu:** Çapraz‑format karşılaştırması (ör. DOCX vs PDF) çalışır, ancak biçimlendirme farklarının değişiklik olarak görüneceğini bekleyin.
 
 ## Ölçekleme ve Performans Düşünceleri
-- **CPU:** Karşılaştırma CPU‑yoğun bir işlemdir; yüksek verim senaryoları için yeterli çekirdek sağlayın.  
-- **Memory:** Yığın kullanımını izleyin; `Comparer` örneklerini zamanında temizleyin.  
-- **Concurrency:** Çakışmayı önlemek için sınırlı bir iş parçacığı havuzu kullanın.  
-- **Horizontal scaling:** Karşılaştırma mantığını, büyük iş yükleri için bir yük dengeleyicinin arkasında mikro hizmet olarak dağıtın.  
+- **CPU:** Karşılaştırma CPU‑yoğun bir işlemdir; yüksek‑verim senaryoları için yeterli çekirdek sağlayın.  
+- **Memory:** Yığın kullanımını izleyin; `Comparer` örneklerini hızla temizleyin.  
+- **Concurrency:** Çakışmayı önlemek için sınırlı boyutta bir iş parçacığı havuzu kullanın.  
+- **Horizontal scaling:** Karşılaştırma mantığını, büyük iş yükleri için bir yük dengeleyicinin arkasında mikroservis olarak dağıtın.
 
-## Sonraki Adımlar ve İleri Entegrasyon
-1. **Expose as a REST microservice** – Java kodunu bir Spring Boot denetleyicisine sarın.  
-2. **Queue‑driven processing** – Büyük toplu işlemleri asenkron olarak ele almak için RabbitMQ veya Kafka kullanın.  
-3. **Analytics** – İşleme süresini, kredi tüketimini ve hata oranlarını kaydedin; sürekli iyileştirme için analiz edin.  
+## İleri Düzey Entegrasyon Fikirleri
+1. **REST mikroservisi olarak sun** – Java kodunu bir Spring Boot denetleyicisine sararak ön‑uç uygulamaları tarafından kolayca kullanılmasını sağlayın.  
+2. **Kuyruk‑tabanlı işleme** – büyük toplu işlemleri asenkron olarak yönetmek için RabbitMQ veya Kafka ile entegre edin.  
+3. **Analitik gösterge paneli** – işleme süresini, kredi tüketimini ve hata oranlarını kaydedin, performansı sürekli iyileştirin.
 
 ## Sıkça Sorulan Sorular
 
-**S: Karmaşık PDF'ler için API ne kadar doğru?**  
-C: Tablolar, görüntüler ve katmanlı içerikleri yüksek doğrulukla işler; küçük düzen farklılıkları fark olarak görünebilir.
+**S: Karmaşık PDF'lerde API ne kadar doğru?**  
+C: Tabloları, görüntüleri ve katmanlı içeriği yüksek doğrulukla işler; küçük düzen nüansları fark olarak görünebilir.
 
-**S: PDF'i bir Excel sayfasıyla karşılaştırabilir miyim?**  
-C: Evet – API çapraz‑format karşılaştırmayı destekler, ancak düzen‑özel farklar vurgulanır.
+**S: PDF'yi bir Excel sayfasıyla karşılaştırabilir miyim?**  
+C: Evet – API çapraz‑format karşılaştırmasını destekler, ancak düzen‑özgü farklar vurgulanır.
 
 **S: Biçimlendirme değişikliklerini nasıl yok sayarım?**  
 C: `CompareOptions` içinde `ignoreFormatting = true` olarak ayarlayın.
 
 **S: API bir java file comparison library olarak sayılır mı?**  
-C: Kesinlikle – birçok belge türünü kapsayan tam özellikli bir `java file comparison library`dir.
+C: Kesinlikle – birçok belge türünü kapsayan tam özellikli bir `java file comparison library`'dir.
 
-**S: Üretimde kredi kullanımını izlemek için en iyi yöntem nedir?**  
-C: Periyodik olarak `Metered.getConsumptionQuantity()` çağırın, değerleri izleme sisteminize kaydedin ve eşiklere ulaşıldığında uyarı verin.
+**S: Üretimde kredi kullanımını izlemek için en iyi yol nedir?**  
+C: Periyodik olarak `Metered.getConsumptionQuantity()` çağırın ve değerleri izleme sisteminizde saklayın; eşikler aşıldığında uyarılar ayarlayın.
 
-## Additional Resources
-
+## Ek Kaynaklar
 - **Documentation:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
 - **API Reference:** [Complete Reference Guide](https://reference.groupdocs.com/comparison/java/)  
 - **Latest Downloads:** [Get the Latest Version](https://releases.groupdocs.com/comparison/java/)  
@@ -256,6 +237,8 @@ C: Periyodik olarak `Metered.getConsumptionQuantity()` çağırın, değerleri i
 
 ---
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
+**Son Güncelleme:** 2026-03-22  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs  
+
+---

@@ -1,11 +1,11 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: 學習如何在 Java 中使用 GroupDocs.Comparison 取得檔案類型並擷取文件的中繼資料。透過簡單的程式碼範例，即可獲取頁數、檔案大小等資訊，並提供故障排除技巧。
+date: '2026-03-24'
+description: 學習如何在 Java 中使用 GroupDocs.Comparison 取得檔案類型並擷取文件的中繼資料。透過簡單的程式碼範例與故障排除技巧，取得頁數、大小等資訊。
 keywords: java document metadata extraction, groupdocs comparison tutorial, extract
   file properties java, document info java api, how to get document metadata in java
-lastmod: '2026-01-18'
+lastmod: '2026-03-24'
 linktitle: Java Document Metadata Extraction
 tags:
 - groupdocs
@@ -18,68 +18,70 @@ url: /zh-hant/java/document-information/extract-document-info-groupdocs-comparis
 weight: 1
 ---
 
-# Java 取得檔案類型 – 文件中繼資料提取指南
+# Java 取得檔案類型 – 擷取文件中繼資料指南
 
-有沒有遇過想在不開啟文件的情況下快速取得檔案資訊？你並不孤單。無論你是在建置文件管理系統、需要驗證檔案上傳，或是想自動化文件處理工作流程，**java get file type** 以程式方式取得檔案資訊都能為你節省大量時間。
+有沒有曾經需要快速取得文件的檔案資訊而不打開它們？無論您是建立文件管理系統、驗證上傳或自動化工作流程，**you can java get file type** 並且只需幾行程式碼即可取得其他關鍵屬性。在本指南中，我們將示範如何使用 GroupDocs.Comparison for Java 來 **java get file type**、**java read file size** 以及 **java get page count**，並提供 **java extract pdf metadata** 以及處理邊緣案例的技巧。
 
-在本指南中，我們將一步步說明如何使用 GroupDocs.Comparison for Java 來提取文件中繼資料（例如檔案類型、頁數與大小）。即使你是第一次接觸此函式庫，我們也會涵蓋所有步驟，包括常見陷阱與避免方式。
+## Quick Answers
+- **What library can I use to java get file type?** GroupDocs.Comparison for Java.  
+- **Can I also java extract pdf metadata?** Yes – the same API works for PDFs and many other formats.  
+- **Do I need a license?** A trial or temporary license works for development; a full license is required for production.  
+- **What Java version is required?** JDK 8+ (JDK 11+ recommended).  
+- **Is the code thread‑safe?** Create a separate `Comparer` instance per thread.  
 
-## 快速回答
-- **可以用哪個函式庫來 java get file type？** GroupDocs.Comparison for Java。  
-- **我也可以 java extract pdf metadata 嗎？** 可以 – 同一套 API 同時支援 PDF 以及多種其他格式。  
-- **需要授權嗎？** 開發階段可使用試用或臨時授權；正式環境必須使用正式授權。  
-- **需要哪個 Java 版本？** JDK 8 以上（建議 JDK 11 以上）。  
-- **程式碼是執行緒安全的嗎？** 每個執行緒請建立獨立的 `Comparer` 實例。
+## How to java get file type and extract document metadata
+在深入程式碼之前，讓我們說明為何 **java file type detection** 很重要，以及您取得的中繼資料（檔案類型、頁數、檔案大小）如何在實務情境中發揮作用。
 
-## 為什麼要提取文件中繼資料？
+## Why Extract Document Metadata?
 
-在進入程式碼之前，先說明這在實務上有何重要性：
+在深入程式碼之前，先談談為何這在實務應用中很重要：
 
-- **文件管理系統** – 依照檔案屬性自動分類與索引。  
-- **檔案上傳驗證** – 在處理前先檢查檔案類型與大小。  
-- **內容分析** – 依長度、格式或其他條件過濾與排序文件。  
-- **法規與合規** – 確保文件符合特定要求。  
-- **效能最佳化** – 僅前置處理符合條件的檔案。
+- **Document Management Systems** – 根據檔案屬性自動分類與索引。  
+- **File Upload Validation** – 在處理前檢查檔案類型與大小。  
+- **Content Analysis** – 依長度、格式或其他條件過濾與排序文件。  
+- **Legal & Compliance** – 確保文件符合特定要求。  
+- **Performance Optimization** – 僅預先處理符合條件的檔案。
 
-結論是：提取中繼資料能讓你在處理文件時做出更聰明的決策。
+結論是？擷取中繼資料可協助您更智慧地決定如何處理文件。
 
-## 本指南將教你什麼
+## What You'll Learn in This Guide
 
-完成本教學後，你將能夠：
+完成本教學後，您將能夠：
 
-- 在專案中正確設定 GroupDocs.Comparison for Java。  
-- **java get file type** 以及其他關鍵文件屬性，只需幾行程式碼。  
+- 在專案中設定 GroupDocs.Comparison for Java。  
+- 使用 **java get file type** 以及其他關鍵文件屬性，只需幾行程式碼。  
+- 使用 **java read file size** 與 **java get page count** 來驅動業務邏輯。  
 - 處理不同檔案格式與邊緣案例。  
-- 疑難排解常見問題。  
-- 在正式環境中落實最佳實踐。
+- 排除您可能遇到的常見問題。  
+- 在生產環境中實作最佳實踐。
 
-## 前置條件：開始前需要什麼
+## Prerequisites: What You Need Before Starting
 
-### 必備軟體與工具
+### Required Software and Tools
 
-- **Java Development Kit (JDK)** – 8 版或以上（建議使用 JDK 11 以上以獲得更佳效能）。  
+- **Java Development Kit (JDK)** – 版本 8 或以上（我們建議使用 JDK 11+ 以獲得更佳效能）。  
 - **Maven** – 用於相依管理與建置專案。  
-- **IDE** – 任意 Java IDE，如 IntelliJ IDEA、Eclipse 或 VS Code。
+- **IDE** – 任意 Java IDE，例如 IntelliJ IDEA、Eclipse 或 VS Code。
 
-### 知識前置條件
+### Knowledge Prerequisites
 
-不需要是 Java 大師，只要對以下概念有基本認識即可：
+您不需要是 Java 專家，但具備以下基本概念會很有幫助：
 
 - Java 語法與物件導向概念。  
-- Maven 相依管理（本教學會一步步說明）。  
-- try‑with‑resources 陳述式（用於正確釋放資源）。
+- Maven 相依管理（我們會一步步指導）。  
+- try‑with‑resources 陳述式（用於正確的資源管理）。
 
-### 為什麼選擇 GroupDocs.Comparison？
+### Why GroupDocs.Comparison?
 
-你可能會問 – 為什麼用 GroupDocs.Comparison 來提取中繼資料？雖然它主要以文件比較聞名，但同時也提供相當優秀的文件資訊提取功能。未來若需要比較功能，你已經做好準備！
+您可能會好奇 – 為何使用 GroupDocs.Comparison 來擷取中繼資料？雖然它主要以文件比較聞名，但同時也提供優秀的文件資訊擷取功能。而且若日後需要比較功能，您已經做好準備！
 
-## 設定 GroupDocs.Comparison for Java
+## Setting Up GroupDocs.Comparison for Java
 
-先把專案配置好。這一步非常關鍵，錯誤的相依設定是開發者最常碰到的問題。
+讓您的專案正確設定。這一步相當關鍵 – 相依設定錯誤是開發者最常遇到的問題之一。
 
-### 步驟 1：Maven 設定
+### Step 1: Maven Configuration
 
-將以下內容加入 `pom.xml`（請放在正確的區段）：
+將以下內容加入您的 `pom.xml` 檔案（請確保放在正確的區段）：
 
 ```xml
 <repositories>
@@ -98,19 +100,19 @@ weight: 1
 </dependencies>
 ```
 
-**小技巧**：請隨時到 GroupDocs 官方網站確認最新版本號碼，使用過時的版本可能會造成相容性問題。
+**Pro tip**: Always check for the latest version number on the GroupDocs website – using outdated versions can lead to compatibility issues.
 
-### 步驟 2：授權設定（千萬別跳過！）
+### Step 2: License Setup (Don't Skip This!)
 
-GroupDocs.Comparison 並非免費函式庫，但你有以下選擇：
+GroupDocs.Comparison 不是免費函式庫，但您有以下選擇：
 
-1. **免費試用**：適合測試與小型專案。從[免費試用頁面](https://releases.groupdocs.com/comparison/java/)下載。  
-2. **臨時授權**：適合開發與評估。申請請前往[此處](https://purchase.groupdocs.com/temporary-license/)。  
-3. **正式授權**：正式上線使用。[立即購買](https://purchase.groupdocs.com/buy)。
+1. **Free Trial**: Perfect for testing and small projects. Download from the [free trial page](https://releases.groupdocs.com/comparison/java/)  
+2. **Temporary License**: Great for development and evaluation. Apply [here](https://purchase.groupdocs.com/temporary-license/)  
+3. **Full License**: For production use. [Purchase here](https://purchase.groupdocs.com/buy)
 
-### 步驟 3：驗證設定
+### Step 3: Verify Your Setup
 
-建立一個簡易測試類別，確認一切正常：
+Create a simple test class to make sure everything's working:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -123,13 +125,13 @@ public class SetupTest {
 }
 ```
 
-## 實作指南：逐步提取文件中繼資料
+## Implementation Guide: Extracting Document Metadata Step by Step
 
-接下來的重頭戲 – 寫程式讓它真的跑起來！
+現在進入有趣的部分 – 讓我們撰寫實際可用的程式碼吧！
 
-### java get file type – 初始化 Comparer 物件
+### java get file type – Initialize the Comparer Object
 
-`Comparer` 類別是取得文件資訊的入口。以下示範正確的初始化方式：
+`Comparer` 類別是取得文件資訊的入口。以下示範如何正確設定：
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -142,12 +144,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**這段程式在做什麼？**  
-- 使用 try‑with‑resources 確保資源正確釋放（防止記憶體泄漏非常重要！）。  
-- `path` 必須指向實際的文件位置。  
-- 錯誤處理會捕捉檔案不存在或存取權限等例外。
+**這段程式碼在做什麼？**  
+- 我們使用 try‑with‑resources 以確保正確清理（防止記憶體洩漏非常重要！）。  
+- 路徑應指向您實際的文件。  
+- 錯誤處理會捕捉檔案找不到或存取問題等例外。
 
-### 取得 DocumentInfo 物件
+### Get Document Information Object
 
 接著，我們取得包含所有中繼資料的文件資訊物件：
 
@@ -163,14 +165,14 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**重點說明**：  
+**重點說明：**  
 - `getSource()` 取得來源文件。  
-- `getDocumentInfo()` 回傳一個介面，內含全部中繼資料。  
-- 再次使用 try‑with‑resources 以確保正確清理。
+- `getDocumentInfo()` 回傳包含全部中繼資料的介面。  
+- 另一個 try‑with‑resources 確保我們正確清理。
 
-### 抽取關鍵資訊
+### Extract the Good Stuff
 
-現在把真正需要的中繼資料抓出來：
+現在來抓取實際的中繼資料：
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -191,14 +193,14 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**每個方法回傳的內容**：  
-- `getFileType().getFileFormat()`：檔案格式（DOCX、PDF、TXT 等）。  
-- `getPageCount()`：總頁數。  
-- `getSize()`：檔案大小（位元組）。
+**每個方法回傳的內容：**  
+- `getFileType().getFileFormat()`: 檔案格式（DOCX、PDF、TXT 等）。  
+- `getPageCount()`: 總頁數 – 這就是您常需要的 **java get page count**。  
+- `getSize()`: 以位元組為單位的檔案大小 – 方便執行 **java read file size** 操作。
 
-## 實務範例：完整實作
+## Real-World Example: Complete Implementation
 
-以下是一個較為完整且可直接在專案中使用的範例：
+以下是一個更完整的範例，您可以直接在專案中使用：
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -249,12 +251,12 @@ public class DocumentMetadataExtractor {
 }
 ```
 
-## 常見問題與解決方案
+## Common Issues and Solutions
 
-### 問題 1：「找不到檔案」錯誤
+### Problem 1: "File Not Found" Errors
 
-**徵兆**：初始化 Comparer 時拋出例外  
-**解決方式**：務必先驗證檔案路徑與存在性：
+**Symptoms**: Exception thrown when initializing Comparer  
+**Solution**: Always validate file paths and existence:
 
 ```java
 Path filePath = Paths.get(documentPath);
@@ -266,10 +268,10 @@ if (!Files.isReadable(filePath)) {
 }
 ```
 
-### 問題 2：大型檔案記憶體問題
+### Problem 2: Memory Issues with Large Files
 
-**徵兆**：OutOfMemoryError 或效能變慢  
-**解決方式**：逐一處理檔案，並確保正確釋放資源：
+**Symptoms**: OutOfMemoryError or slow performance  
+**Solution**: Process files individually and ensure proper resource cleanup:
 
 ```java
 // Always use try-with-resources
@@ -279,10 +281,10 @@ try (Comparer comparer = new Comparer(filePath)) {
 } // Resources automatically cleaned up here
 ```
 
-### 問題 3：不支援的檔案格式
+### Problem 3: Unsupported File Formats
 
-**徵兆**：處理特定檔案時拋出例外  
-**解決方式**：先檢查是否支援該格式：
+**Symptoms**: Exceptions when trying to process certain files  
+**Solution**: Check supported formats first:
 
 ```java
 public static boolean isSupportedFormat(String filePath) {
@@ -291,10 +293,10 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### 問題 4：正式環境授權問題
+### Problem 4: License Issues in Production
 
-**徵兆**：出現浮水印或功能受限  
-**解決方式**：確認授權已正確套用：
+**Symptoms**: Watermarks or functionality limitations  
+**Solution**: Make sure your license is properly applied:
 
 ```java
 // Apply license at application startup
@@ -302,11 +304,11 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## 正式環境最佳實踐
+## Best Practices for Production Use
 
-### 1. 資源管理
+### 1. Resource Management
 
-始終使用 try‑with‑resources 以自動清理：
+Always use try‑with‑resources for automatic cleanup:
 
 ```java
 // Good - resources cleaned up automatically
@@ -322,9 +324,9 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 // Resources might not be cleaned up properly
 ```
 
-### 2. 錯誤處理策略
+### 2. Error Handling Strategy
 
-實作完整的錯誤處理機制：
+Implement comprehensive error handling:
 
 ```java
 public DocumentInfo extractSafely(String filePath) {
@@ -343,9 +345,9 @@ public DocumentInfo extractSafely(String filePath) {
 }
 ```
 
-### 3. 效能最佳化
+### 3. Performance Optimization
 
-若需一次處理多個檔案，建議使用批次處理：
+For processing multiple files, consider batching:
 
 ```java
 public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
@@ -356,96 +358,96 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 }
 ```
 
-## 何時使用此方案 vs. 其他方式
+## When to Use This vs. Other Approaches
 
-**適合使用 GroupDocs.Comparison 的情境**：  
-- 需要從各種 Office 格式可靠取得中繼資料。  
-- 未來可能會需要文件比較功能。  
-- 處理的文件結構複雜，需要精確的頁數計算。
+**Use GroupDocs.Comparison when:**  
+- 您需要從各種 Office 格式可靠地擷取中繼資料。  
+- 未來可能也需要文件比較功能。  
+- 您正處理需要精確頁數計算的複雜文件。
 
-**考慮其他方案的情況**：  
-- 僅需基本檔案資訊（可使用 `java.nio.file.Files` 取得大小、日期）。  
-- 處理純文字檔（內建 Java API 已足夠）。  
-- 預算有限（可先探索開源替代方案）。
+**Consider alternatives when:**  
+- 您只需要基本的檔案資訊（可使用 `java.nio.file.Files` 取得大小、日期）。  
+- 您處理的是簡單文字檔（內建 Java API 已足夠）。  
+- 預算是主要限制（可先探索開源方案）。
 
-## 疑難排解指南
+## Troubleshooting Guide
 
-### 問題：程式編譯成功卻在執行時拋出例外
+### Issue: Code compiles but throws runtime exceptions
 
-**檢查項目**：  
-1. 授權是否正確配置？  
-2. 檔案路徑是否正確？  
-3. 是否具備讀取檔案的權限？  
-4. 該檔案格式是否真的受支援？
+**Check these:**  
+1. 您的授權是否正確配置？  
+2. 您是否使用正確的檔案路徑？  
+3. 您是否對檔案具有讀取權限？  
+4. 檔案格式是否真的受到支援？
 
-### 問題：記憶體使用量持續上升
+### Issue: Memory usage keeps growing
 
-**解決方案**：  
-1. 確認使用了 try‑with‑resources。  
-2. 一次只處理單一檔案，避免同時載入多個。  
-3. 檢查是否有靜態變數持有物件引用。
+**Solutions:**  
+1. 確保使用 try‑with‑resources。  
+2. 一次只處理單一檔案，避免同時載入多個檔案。  
+3. 檢查是否有靜態參考持有物件。
 
-### 問題：某些中繼資料欄位回傳 null
+### Issue: Some metadata fields return null
 
-**這是正常情況**，可能因為：  
-- 檔案本身不包含該類型的中繼資料。  
-- 檔案受損或不完整。  
-- 使用的檔案格式變體未被支援。  
+**This is normal for:**  
+- 不含該類型中繼資料的檔案。  
+- 損毀或不完整的檔案。  
+- 不支援的檔案格式變體。  
 
-使用前務必先判斷 null。
+使用中繼資料前請先檢查是否為 null。
 
-## 結論與後續步驟
+## Conclusion and Next Steps
 
-現在你已掌握使用 GroupDocs.Comparison for Java 提取文件中繼資料的完整流程！本篇涵蓋：
+您現在已具備使用 GroupDocs.Comparison for Java 擷取文件中繼資料的堅實基礎！我們已涵蓋：
 
-✅ 正確設定函式庫與相依  
-✅ **java get file type** 以及其他關鍵文件屬性  
+✅ 正確設定函式庫與相依性  
+✅ **java get file type** 以及其他關鍵文件屬性，如 **java read file size** 與 **java get page count**  
 ✅ 處理常見錯誤與邊緣案例  
-✅ 正式環境的最佳實踐  
-✅ 典型問題的疑難排解  
+✅ 生產環境的最佳實踐  
+✅ 典型問題的故障排除指引  
 
-### 接下來可以做什麼？
+### What's Next?
 
-完成中繼資料提取後，你可以進一步探索：
+既然已掌握中繼資料擷取，建議您進一步探索：
 
-- **文件比較功能**，追蹤變更。  
-- **與 Spring Boot 整合**，建置 Web 應用。  
-- **批次處理**，一次處理大量檔案。  
-- **自訂中繼資料抽取**，針對特定檔案類型進行擴充。
+- **Document comparison features** for tracking changes.  
+- **Integration with Spring Boot** for web applications.  
+- **Batch processing** for handling multiple files efficiently.  
+- **Custom metadata extraction** for specific file types, including **java extract pdf metadata**.  
 
-想更深入了解？請參考[官方 GroupDocs 文件](https://docs.groupdocs.com/comparison/java/)取得進階功能與範例。
+想更深入了解？請查閱 [official GroupDocs documentation](https://docs.groupdocs.com/comparison/java/) 以取得進階功能與範例。
 
-## 常見問答
+## Frequently Asked Questions
 
-**Q: 能從受密碼保護的文件中抽取中繼資料嗎？**  
-A: 可以，但在初始化 `Comparer` 物件時必須提供密碼。請使用接受載入選項的建構子。
+**Q: Can I extract metadata from password‑protected documents?**  
+A: Yes, but you'll need to provide the password when initializing the `Comparer` object. Use the overloaded constructor that accepts load options.
 
-**Q: 支援哪些檔案格式的中繼資料提取？**  
-A: GroupDocs.Comparison 支援大多數常見文件格式，包括 DOCX、PDF、XLSX、PPTX、TXT、RTF 等等。完整清單請參考官方文件。
+**Q: What file formats are supported for metadata extraction?**  
+A: GroupDocs.Comparison supports most common document formats including DOCX, PDF, XLSX, PPTX, TXT, RTF, and many others. Check their documentation for the complete list.
 
-**Q: 有辦法抽取 Office 文件的自訂屬性嗎？**  
-A: 基本的 `DocumentInfo` 主要提供標準屬性。若需自訂屬性，可能需要使用其他 GroupDocs 函式庫或結合其他工具。
+**Q: Is there a way to extract custom properties from Office documents?**  
+A: The basic document info primarily covers standard properties. For custom properties, you might need to explore additional GroupDocs libraries or combine with other tools.
 
-**Q: 如何處理超大型檔案而不會耗盡記憶體？**  
-A: 必須使用 try‑with‑resources、逐一處理檔案，並在批次處理時考慮串流方式。同時確保 JVM 配置足夠的堆積空間。
+**Q: How do I handle very large files without running out of memory?**  
+A: Always use try‑with‑resources, process files individually, and consider streaming approaches for batch processing. Also ensure your JVM has adequate heap space.
 
-**Q: 能直接對雲端儲存的文件使用嗎？**  
-A: 可以，但需要先將檔案下載至本機或使用串流方式。GroupDocs 只能處理本機檔案或串流。
+**Q: Can this work with documents stored in cloud storage?**  
+A: Yes, but you'll need to download the file locally first or use a stream‑based approach. GroupDocs works with local files and streams.
 
-**Q: 若出現授權錯誤該怎麼辦？**  
-A: 確認在應用程式啟動時已正確套用授權，且授權未過期。若問題持續，請聯絡 GroupDocs 支援團隊。
+**Q: What should I do if I get licensing errors?**  
+A: Make sure you've applied your license correctly at application startup and that your license hasn't expired. Contact GroupDocs support if issues persist.
 
-**Q: 在多執行緒環境下使用安全嗎？**  
-A: 安全，只要為每個執行緒建立獨立的 `Comparer` 實例，切勿共用同一個實例。
+**Q: Is it safe to use in multi‑threaded applications?**  
+A: Yes, but create separate `Comparer` instances for each thread. Don't share instances across threads.
 
-**其他資源**  
-- **文件說明**： [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API 參考**： [完整 API 文件](https://reference.groupdocs.com/comparison/java/)  
-- **社群支援**： [GroupDocs 論壇](https://forum.groupdocs.com/c/comparison)  
-- **免費試用**： [下載與測試](https://releases.groupdocs.com/comparison/java/)
+**Additional Resources**  
+- **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**最後更新日期：** 2026-01-18  
-**測試版本：** GroupDocs.Comparison 25.2  
-**作者：** GroupDocs  
+**Last Updated:** 2026-03-24  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs

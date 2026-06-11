@@ -1,70 +1,77 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: GroupDocs.Comparison と Java ストリームを使用して Word 文書を比較する方法を学びましょう。Java の try‑with‑resources
-  ストリームとステップバイステップのチュートリアルが含まれています。
+date: '2026-03-24'
+description: Javaストリームと try‑with‑resources を使用して GroupDocs Comparison Java を実行する方法を学びましょう。コード、トラブルシューティング、ベストプラクティスを含むステップバイステップガイド。
 keywords: Java document comparison, GroupDocs Comparer, stream document processing,
   Java file comparison API, compare Word documents Java streams
-lastmod: '2025-12-26'
+lastmod: '2026-03-24'
 linktitle: Java Stream Document Comparison
 tags:
 - document-comparison
 - groupdocs
 - java-streams
 - file-processing
-title: Javaでストリームを使用してWord文書を比較する
+title: 'GroupDocs Comparison Java: ストリームでWord文書を比較'
 type: docs
 url: /ja/java/basic-comparison/java-stream-document-comparison-groupdocs/
 weight: 1
 ---
 
-# ストリームを使用した Java の Word ドキュメント比較
+# groupdocs comparison java: ストリームで Word ドキュメントを比較
 
 ## はじめに
 
-Ever struggled with **compare word documents java** programmatically? You're not alone. Whether you're building a document management system, handling version control, or automating legal document reviews, efficient document comparison can be a real headache.
+プログラムで **compare word documents java** に苦労したことはありませんか？ あなたは一人ではありません。ドキュメント管理システムの構築、バージョン管理、または法務文書レビューの自動化を行う場合、効率的なドキュメント比較は大きな頭痛の種になり得ます。 **groupdocs comparison java** を使用すれば、Java ストリームを使って Word ファイルを比較する強力でメモリ効率の高い方法が手に入ります。
 
-Here's the thing: traditional file comparison methods often consume excessive memory and lack the flexibility you need for modern applications. That's where **GroupDocs.Comparison for Java** comes in, especially when combined with Java Streams.
+ポイントは次のとおりです。従来のファイル比較手法はメモリを過剰に消費し、モダンなアプリケーションに必要な柔軟性が欠けています。そこで **GroupDocs.Comparison for Java** が登場します。特に Java Streams と **java try with resources** を組み合わせると威力を発揮します。
 
-In this comprehensive guide, you'll learn how to implement robust document comparison using streams that's both memory‑efficient and scalable. We'll cover everything from basic setup to advanced troubleshooting, so you can confidently handle document comparison in your Java applications.
+この包括的ガイドでは、メモリ効率が高くスケーラブルなストリームを使用した堅牢なドキュメント比較の実装方法を学びます。基本的なセットアップから高度なトラブルシューティングまで網羅するので、Java アプリケーションで自信を持ってドキュメント比較を扱えるようになります。
 
-### 学習内容
-- Java 環境で GroupDocs.Comparer を設定する  
-- **java stream file comparison** を使用してドキュメントを読み込み比較する（スマートな方法）  
-- 比較結果を OutputStreams に効率的に書き込む  
-- コードの整理を容易にするユーティリティ関数を実装する  
-- よくある問題のトラブルシューティング  
+### 学習できること
+- Java 環境で GroupDocs.Comparer を設定する方法  
+- **java stream document comparison** を使用したドキュメントの読み込みと比較（スマートな方法）  
+- OutputStream へ比較結果を書き込む効率的な手法  
+- コード整理のためのユーティリティ関数の実装  
+- よく遭遇する問題のトラブルシューティング  
 
-このチュートリアルの最後までに、ユーザーに喜ばれる本番環境向けのドキュメント比較機能が手に入ります。まずは必要なものから始めましょう。
+このチュートリアルの最後までに、ユーザーに喜ばれる本番環境向けのドキュメント比較機能が完成します。まずは必要なものから始めましょう。
 
 ## クイック回答
-- **どのライブラリを使用すべきですか？** GroupDocs.Comparison for Java  
-- **大きな DOCX ファイルを比較できますか？** はい、ストリームを使用すればファイル全体をメモリに読み込む必要がありません  
-- **ライセンスは必要ですか？** 開発には無料トライアルで十分です；本番環境にはフルライセンスが必要です  
-- **リソースはどう管理しますか？** `java try-with-resources streams` を使用してファイルを自動的にクローズします  
-- **2 つ以上のドキュメントを比較できますか？** はい、追加のドキュメントごとに `comparer.add()` を呼び出します  
+- **What library should I use?** GroupDocs.Comparison for Java  
+- **Can I compare large DOCX files?** Yes, using streams avoids loading the whole file into memory  
+- **Do I need a license?** A free trial works for development; a full license is required for production  
+- **How do I manage resources?** Use `java try‑with‑resources` streams to auto‑close files  
+- **Is it possible to compare more than two documents?** Yes, call `comparer.add()` for each additional document  
+
+## groupdocs comparison java とは？
+
+GroupDocs.Comparison for Java は、DOCX、PDF、PPTX など幅広いドキュメント形式をプログラムで比較できる商用 API です。詳細な変更トラッキングを提供し、Java ストリームとシームレスに統合できるため、**java stream document comparison** により大容量ファイルでもメモリを使い切ることなくスケールします。
+
+## なぜ java try with resources をドキュメント比較に使用するのか？
+
+`try‑with‑resources` を使用すると、すべての `InputStream` と `OutputStream` が自動的にクローズされ、リソースリークや「File is Being Used by Another Process」エラーを防止できます。このパターンは、スループットの高い環境で複数のドキュメントを比較する際に必須です。
 
 ## 前提条件と環境設定
 
-本題に入る前に、以下の必須項目が揃っていることを確認してください：
+本題に入る前に、以下の必須項目を準備してください。
 
-**必要なツール**
-- **Java Development Kit (JDK)**: バージョン 8 以上（Java 11+ 推奨）  
-- **IDE**: IntelliJ IDEA、Eclipse、またはお好みの Java IDE  
-- **ビルドツール**: Maven または Gradle（例では Maven を使用）  
-- **基本的な Java 知識**: ストリームとファイル操作に慣れていること  
+**Required Tools**
+- **Java Development Kit (JDK)**: Version 8 or higher (Java 11+ recommended)  
+- **IDE**: IntelliJ IDEA, Eclipse, or your preferred Java IDE  
+- **Build Tool**: Maven or Gradle (we'll use Maven in examples)  
+- **Basic Java Knowledge**: Familiarity with streams and file handling  
 
-**推奨設定**
-- スムーズな開発のために最低 4 GB の RAM  
-- テスト用のサンプル Word ドキュメント  
-- 静かな作業環境（ドキュメント比較のデバッグはかなりハードになることがあります）  
+**Recommended Setup**
+- At least 4 GB RAM for smooth development  
+- Sample Word documents for testing  
+- A quiet workspace (trust me, debugging document comparison can get intense!)
 
 ## GroupDocs.Comparison for Java の設定
 
 ### Maven 設定
 
-`pom.xml` ファイルに以下のリポジトリと依存関係を追加してください：
+Add the following repository and dependency to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -84,21 +91,20 @@ In this comprehensive guide, you'll learn how to implement robust document compa
 </dependencies>
 ```
 
-**Pro Tip**: 常に GroupDocs のリリースページで最新バージョンを確認してください。古いバージョンを使用すると、イライラするほどの互換性問題が発生する可能性があります。
+**Pro Tip**: Always check for the latest version on the GroupDocs releases page. Using outdated versions can lead to compatibility issues that'll drive you crazy.
 
 ### ライセンス取得（これをスキップしないで！）
 
-3 つのオプションがあります：
+You have three options:
+1. **Free Trial** – perfect for initial testing and proof‑of‑concepts  
+2. **Temporary License** – ideal when you need extended evaluation time  
+3. **Full License** – for production applications  
 
-1. **Free Trial** – 初期テストや概念実証に最適  
-2. **Temporary License** – 長期評価が必要なときに最適  
-3. **Full License** – 本番アプリケーション向け  
-
-多くの開発者は無料トライアルから始めます。実装の構築とテストに十分な機能が提供されます。
+Most developers start with the free trial, which gives you enough functionality to build and test your implementation.
 
 ### 基本的な初期化
 
-プロジェクトに GroupDocs.Comparison を追加したら、以下のように初期化します：
+Once GroupDocs.Comparison is added to your project, here's how to initialize it:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -107,26 +113,25 @@ import com.groupdocs.comparison.Comparer;
 Comparer comparer = new Comparer("source.docx");
 ```
 
-シンプルですね。でも多くのチュートリアルが教えてくれないのは、`Comparer` の初期化は必ず **java try-with-resources** ブロックでラップしてリソース管理を適切に行うことです。次に詳しく説明します。
+Simple, right? But here's what most tutorials won't tell you: always wrap your `Comparer` initialization in a **java try‑with‑resources** block for proper resource management. We'll cover this in detail next.
 
-## 実装ガイド：本番編
+## 実装ガイド：本題
 
-さあ、本題です。ここで Java のドキュメント比較が本格的に面白くなりますが、多くの開発者がここで大成功するか、数日間行き詰まります。あなたが前者になるようにしましょう。
+Now for the main event. This is where Java document comparison gets interesting, and where most developers either succeed brilliantly or get stuck for days. Let's make sure you're in the first group.
 
-### ストリームを使用したドキュメントの読み込み（スマートアプローチ）
+### ストリームを使用したドキュメントの読み込み（スマートなアプローチ）
 
 #### ストリームが重要な理由
 
-コードに入る前に、なぜストリームがドキュメント比較に最適なのか説明します：
+Before we jump into code, let's talk about why streams are your best friend for document comparison:
+- **Memory Efficiency** – streams don't load entire files into memory at once  
+- **Scalability** – handle large documents without performance degradation  
+- **Flexibility** – work with various data sources (files, networks, databases)  
+- **Resource Management** – better control over file handles and memory usage  
 
-- **メモリ効率** – ストリームはファイル全体を一度にメモリにロードしません  
-- **スケーラビリティ** – 大きなドキュメントでもパフォーマンス低下なしに処理できます  
-- **柔軟性** – ファイル、ネットワーク、データベースなど様々なデータソースで動作します  
-- **リソース管理** – ファイルハンドルやメモリ使用量をより適切に制御できます  
+#### 手順ごとの実装
 
-#### 手順別実装
-
-**Step 1: 入力ストリームの準備**
+**Step 1: Prepare Your Input Streams**
 
 ```java
 import java.io.FileInputStream;
@@ -136,21 +141,21 @@ InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/source.d
 InputStream targetStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**実務的なヒント**: 本番環境では、ストリームを作成する前にファイルが存在するか検証してください。ユーザーの前で `FileNotFoundException` が発生するより嫌なことはありません。
+**Real‑World Tip**: In production, validate that these files exist before creating streams. Nothing's worse than a `FileNotFoundException` in front of users.
 
-**Step 2: ソースストリームで Comparer を初期化**
+**Step 2: Initialize Comparer with Source Stream**
 
 ```java
 Comparer comparer = new Comparer(sourceStream);
 ```
 
-**Step 3: 比較対象ドキュメントを追加**
+**Step 3: Add Target Document for Comparison**
 
 ```java
 comparer.add(targetStream);
 ```
 
-**Step 4: 比較を実行し結果を書き込む**
+**Step 4: Execute Comparison and Write Results**
 
 ```java
 import java.io.FileOutputStream;
@@ -163,22 +168,21 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 
 #### コンポーネントの理解
 
-- **InputStream** – 必要に応じてファイルを効率的にロードし、一度にすべてを読み込むわけではありません  
-- **Comparer** – 複雑な比較ロジックをすべて処理する主役  
-- **OutputStream** – システムメモリを圧迫せずに比較結果を書き込みます  
+- **InputStream** – efficiently loads your files as needed, not all at once  
+- **Comparer** – the workhorse that handles all the complex comparison logic  
+- **OutputStream** – writes the comparison result without overwhelming system memory  
 
 ### ユーティリティ関数（コードをクリーンに保つ）
 
 #### ユーティリティが重要な理由
 
-クリーンコードは見た目がプロフェッショナルになるだけでなく（それも助けになります）、ユーティリティ関数はコードを次のようにします：
+Clean code isn't just about looking professional (though that helps). Utility functions make your code:
+- **Maintainable** – changes in one place affect the whole system  
+- **Testable** – easier to write unit tests for specific functionality  
+- **Reusable** – write once, use everywhere  
+- **Readable** – other developers (including future you) will thank you  
 
-- **保守性が高い** – 1 カ所の変更がシステム全体に影響します  
-- **テストしやすい** – 特定機能のユニットテストが容易になります  
-- **再利用可能** – 一度書けばどこでも使えます  
-- **可読性が高い** – 他の開発者（将来の自分も含む）が感謝します  
-
-#### スマートユーティリティメソッドの実装
+#### スマートなユーティリティメソッドの実装
 
 ```java
 import java.nio.file.Path;
@@ -190,11 +194,11 @@ class Utils {
 }
 ```
 
-このシンプルなメソッドはファイルパスを動的に構築します。複数のドキュメントを処理したり、ユニークな出力ファイルが必要なときに非常に便利です。
+This simple method constructs file paths dynamically, which is incredibly useful when you're processing multiple documents or need unique output files.
 
 ### java try‑with‑resources を使用した適切なリソース管理
 
-`try‑with‑resources` を使用すると、ストリームが自動的にクローズされ、恐ろしい **“File is Being Used by Another Process”** エラーを防止できます：
+Using `try‑with‑resources` guarantees that streams are closed automatically, preventing the dreaded **“File is Being Used by Another Process”** error:
 
 ```java
 try (FileInputStream sourceStream = new FileInputStream(sourcePath);
@@ -203,127 +207,126 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 }
 ```
 
-## よくある問題と解決策（デバッグ時間を何時間も節約）
+## よくある問題と解決策（デバッグにかかる時間を節約）
 
-### 問題 1: 大きなドキュメントで OutOfMemoryError が発生
+### 問題 1: 大きなドキュメントでの OutOfMemoryError
 
-- **症状**: 大きなファイルを比較するとアプリケーションがクラッシュする  
-- **解決策**: JVM ヒープを増やす（`-Xmx4g`）、ストリーミングのみを使用する、可能であればドキュメントを小さなチャンクに分割して処理する  
+- **Symptoms**: Application crashes when comparing large files  
+- **Solution**: Increase JVM heap (`-Xmx4g`), use streaming exclusively, process documents in smaller chunks if possible  
 
 ### 問題 2: “File is Being Used by Another Process”
 
-- **症状**: 読み書き時に `IOException` が発生  
-- **解決策**: 上記のように必ず **java try-with-resources streams** を使用する  
+- **Symptoms**: `IOException` on read/write  
+- **Solution**: Always use **java try‑with‑resources streams** as shown above  
 
 ### 問題 3: ネットワークドライブでのパフォーマンス低下
 
-- **症状**: 比較に異常に時間がかかる  
-- **解決策**: 処理前にファイルをローカルの一時ディレクトリにコピーする  
+- **Symptoms**: Comparison takes unusually long  
+- **Solution**: Copy files to a local temporary directory before processing  
 
 ### 問題 4: ライセンス検証エラー
 
-- **症状**: 機能が期待通りに動作しない  
-- **解決策**: `Comparer` インスタンスを作成する前に、ライセンスファイルが正しくロードされていることを確認する  
+- **Symptoms**: Features don’t work as expected  
+- **Solution**: Verify that your license file is correctly loaded before creating `Comparer` instances  
 
 ## 本番環境でのベストプラクティス
 
 ### メモリ管理
-- すべてのストリームで `try‑with‑resources` を使用する  
-- 適切な JVM メモリ上限を設定し、ピーク時の使用量を監視する  
+- Use `try‑with‑resources` for every stream  
+- Set appropriate JVM memory limits and monitor usage during peak loads  
 
 ### エラーハンドリング
-- 包括的な例外処理を実装する（`IOException` と `ComparisonException` をキャッチ）  
-- デバッグに十分なコンテキストを含めてエラーをログに記録する  
-- ユーザーに優しいエラーメッセージを提供する  
+- Implement comprehensive exception handling (catch `IOException` and `ComparisonException`)  
+- Log errors with sufficient context for debugging  
+- Provide user‑friendly error messages  
 
 ### パフォーマンス最適化
-- 可能であれば頻繁に比較するドキュメントをキャッシュする  
-- スレッドプールを使用して複数の比較を非同期に処理する  
-- 長時間実行される操作に対してタイムアウト処理を実装する  
+- Cache frequently compared documents when possible  
+- Process multiple comparisons asynchronously using thread pools  
+- Implement timeout handling for long‑running operations  
 
 ### セキュリティ考慮事項
-- 処理前に入力ファイルを検証する  
-- ディレクトリトラバーサル攻撃を防ぐためにファイルパスをサニタイズする  
-- 機密文書に対して適切なアクセス制御を実施する  
+- Validate input files before processing  
+- Sanitize file paths to prevent directory traversal attacks  
+- Enforce proper access controls for sensitive documents  
 
-## 実際のユースケース（実際に重要な場面）
+## 実際のユースケース（本当に重要な場面）
 
-- **Document Management Systems** – バージョン間の変更を追跡し、コンフリクトを減少させる  
-- **Legal Document Review** – 契約草案を比較し、条項が失われていないことを確認する  
-- **Content Management Platforms** – リビジョン間で編集の一貫性を維持する  
-- **Compliance & Audit Systems** – 規制文書に対して不変の監査トレイルを提供する  
+- **Document Management Systems** – track changes across versions, reduce conflicts  
+- **Legal Document Review** – compare contract drafts, ensure no clause is lost  
+- **Content Management Platforms** – maintain editorial consistency across revisions  
+- **Compliance & Audit Systems** – provide immutable audit trails for regulated documents  
 
-## このアプローチを使用すべき時
+## このアプローチを使用すべきとき
 
-**以下の場合に Java ストリームによるドキュメント比較を使用**：
+**Use Java stream document comparison when:**
+- Documents exceed 50 MB  
+- Memory efficiency is critical  
+- You need to process many documents concurrently  
+- Integration with existing Java applications is required  
+- Detailed comparison reports are needed  
 
-- ドキュメントが 50 MB を超える  
-- メモリ効率が重要  
-- 多数のドキュメントを同時に処理する必要がある  
-- 既存の Java アプリケーションとの統合が必要  
-- 詳細な比較レポートが必要  
-
-**以下の場合は代替手段を検討**：
-
-- 小さなプレーンテキストファイルを比較する場合（単純な文字列比較で十分）  
-- リアルタイムの共同編集が必要  
-- 予算制約で商用ライブラリが使用できない  
+**Consider alternatives when:**
+- Comparing small plain‑text files (simple string comparison may suffice)  
+- Real‑time collaborative editing is required  
+- Budget constraints prevent using commercial libraries  
 
 ## パフォーマンス最適化のヒント
 
-- **バッチ処理** – ドキュメントをキューイングし、制御されたバッチで処理する  
-- **設定チューニング** – ユースケースに応じて比較感度を調整する  
-- **リソース監視** – JMX などのツールでヒープ使用量を監視する  
+- **Batch Processing** – queue documents and process them in controlled batches  
+- **Configuration Tuning** – adjust comparison sensitivity based on use case  
+- **Resource Monitoring** – use JMX or similar tools to watch heap usage  
 
 ## 結論
 
-これで、GroupDocs.Comparer とストリームを使用した堅牢な **compare word documents java** を実装するための完全なツールキットが手に入りました。単なるチュートリアルではなく、実際の本番環境で動作する実戦テスト済みのアプローチです。
+You've now got the complete toolkit for implementing robust **groupdocs comparison java** using streams. This isn’t just another tutorial – it’s a battle‑tested approach that works in real production environments.
 
-**重要なポイント**
-- ストリームベースの比較はメモリ効率とスケーラビリティを提供する  
-- 適切なリソース管理（java try‑with‑resources）で一般的な落とし穴を防止できる  
-- ユーティリティ関数でコードをクリーンかつ保守しやすく保つ  
-- 包括的なエラーハンドリングと監視は本番環境で不可欠  
+**Key Takeaways**
+- Stream‑based comparison delivers memory efficiency and scalability  
+- Proper resource management (`java try‑with‑resources`) prevents common pitfalls  
+- Utility functions keep your code clean and maintainable  
+- Comprehensive error handling and monitoring are essential for production  
 
 ### 次のステップ
-1. **小規模から始める** – テスト用 DOCX ファイルで基本的な比較を実装する  
-2. **エラーハンドリングを追加** – 本稿で紹介したトラブルシューティングパターンを統合する  
-3. **スケールアップ** – バッチ処理とパフォーマンス監視を導入する  
-4. **高度な機能を探求** – カスタム比較オプションについて GroupDocs のドキュメントを参照する  
+1. **Start Small** – implement the basic comparison with test DOCX files  
+2. **Add Error Handling** – integrate the troubleshooting patterns we covered  
+3. **Scale Up** – introduce batch processing and performance monitoring  
+4. **Explore Advanced Features** – dive into GroupDocs documentation for custom comparison options  
 
-アプリケーションのドキュメント比較方法を革新する準備はできましたか？ 基本実装から始め、ニーズに合わせて高度な機能へと拡張していきましょう。
+Ready to revolutionize how your application handles document comparison? Begin with the basic implementation and iterate toward the advanced features as your needs grow.
 
 ## よくある質問
 
-**Q: ドキュメント比較中の例外はどう処理すればよいですか？**  
-**A:** 比較操作を `try‑catch` ブロックでラップし、ファイル I/O の `IOException` とライブラリ固有の `ComparisonException` をキャッチします。デバッグしやすいように、コンテキスト情報とともにスタックトレースをログに記録してください。
+**Q: How do I handle exceptions during document comparison?**  
+A: Wrap comparison operations in try‑catch blocks, catching `IOException` for file I/O and `ComparisonException` for library‑specific issues. Log the stack trace with contextual information for easier debugging.
 
-**Q: 同時に 2 つ以上のドキュメントを比較できますか？**  
-**A:** はい、追加のドキュメントごとに `comparer.add()` を呼び出すことで可能です。ただし多数の大容量ファイルを扱う場合はメモリ使用量に注意してください。
+**Q: Can I compare more than two documents simultaneously?**  
+A: Yes. Call `comparer.add()` multiple times to include additional target documents. Be mindful of memory usage when handling many large files.
 
-**Q: GroupDocs.Comparison がサポートするファイル形式は何ですか？**  
-**A:** DOCX、PDF、XLSX、PPTX、TXT など多数の形式をサポートしています。完全なリストは公式ドキュメントをご確認ください。
+**Q: What file formats does GroupDocs.Comparison support?**  
+A: It supports DOCX, PDF, XLSX, PPTX, TXT, and many others. See the official documentation for the full list.
 
-**Q: 比較感度をカスタマイズするには？**  
-**A:** `CompareOptions` を使用して書式変更の無視、類似度閾値の設定、特定コンテンツタイプへのフォーカスなどが可能です。これにより、ドメイン固有の要件に合わせた比較が実現できます。
+**Q: How can I customize comparison sensitivity?**  
+A: Use `CompareOptions` to ignore formatting changes, set similarity thresholds, or focus on specific content types. This helps tailor the comparison to your domain.
 
-**Q: 比較が遅すぎる場合、どうすればよいですか？**  
-**A:** ストリームを使用しているか確認し、必要に応じて JVM ヒープを増やします。可能であればローカルにファイルをコピーし、非同期実行やバッチ処理で応答性を向上させます。
+**Q: What should I do if the comparison is too slow?**  
+A: Verify you’re using streams, increase JVM heap if needed, copy files locally before processing, and consider asynchronous execution for better responsiveness.
 
-**Q: 問題が発生した場合、どこでサポートを受けられますか？**  
-**A:** GroupDocs のサポートフォーラムが活発に運営されています。公式ドキュメントにも詳細なガイドとコードサンプルが掲載されています。
+**Q: Where can I get help if I run into issues?**  
+A: The GroupDocs Support Forum is active and responsive. Their official documentation also provides detailed guidance and code samples.
 
-**Resources**
-- [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
-- [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)  
-- [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+- [GroupDocs ドキュメント](https://docs.groupdocs.com/comparison/java/)  
+- [GroupDocs API リファレンス](https://reference.groupdocs.com/comparison/java/)  
+- [GroupDocs リリース](https://releases.groupdocs.com/comparison/java/)  
+- [GroupDocs 購入ページ](https://purchase.groupdocs.com/buy)  
+- [GroupDocs 無料トライアル](https://releases.groupdocs.com/comparison/java/)  
+- [GroupDocs 一時ライセンス](https://purchase.groupdocs.com/temporary-license/)  
+- [GroupDocs サポートフォーラム](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Last Updated:** 2025-12-26  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
+**最終更新日:** 2026-03-24  
+**テスト環境:** GroupDocs.Comparison 25.2  
+**作者:** GroupDocs  
+
+---

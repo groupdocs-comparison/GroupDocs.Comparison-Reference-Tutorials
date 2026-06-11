@@ -1,69 +1,77 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Pelajari cara membandingkan dokumen Word menggunakan Java dengan GroupDocs.Comparison
-  dan aliran Java. Termasuk aliran Java try‑with‑resources serta tutorial langkah
-  demi langkah.
+date: '2026-03-24'
+description: Pelajari cara melakukan perbandingan GroupDocs Java menggunakan Java
+  streams dan try‑with‑resources. Panduan langkah demi langkah dengan kode, pemecahan
+  masalah, dan praktik terbaik.
 keywords: Java document comparison, GroupDocs Comparer, stream document processing,
   Java file comparison API, compare Word documents Java streams
-lastmod: '2025-12-26'
+lastmod: '2026-03-24'
 linktitle: Java Stream Document Comparison
 tags:
 - document-comparison
 - groupdocs
 - java-streams
 - file-processing
-title: Bandingkan dokumen Word Java dengan Streams
+title: 'groupdocs comparison java: bandingkan dokumen Word dengan Stream'
 type: docs
 url: /id/java/basic-comparison/java-stream-document-comparison-groupdocs/
 weight: 1
 ---
 
-# membandingkan dokumen word java dengan Streams
+# groupdocs comparison java: membandingkan dokumen Word dengan Streams
 
-## Pendahuluan
+## Introduction
 
-Pernah mengalami kesulitan dengan program **compare word documents java** secara programatik? Anda tidak sendirian. Baik Anda sedang membangun sistem manajemen dokumen, menangani kontrol versi, atau mengotomatisasi tinjauan dokumen hukum, perbandingan dokumen yang efisien dapat menjadi sumber sakit kepala yang nyata.
+Pernah mengalami kesulitan dengan program **compare word documents java** secara programatis? Anda tidak sendirian. Baik Anda sedang membangun sistem manajemen dokumen, menangani kontrol versi, atau mengotomatisasi tinjauan dokumen hukum, perbandingan dokumen yang efisien dapat menjadi sumber sakit kepala yang nyata. Dengan **groupdocs comparison java**, Anda mendapatkan cara yang kuat dan hemat memori untuk membandingkan file Word menggunakan Java streams.
 
-Begini: metode perbandingan file tradisional seringkali mengonsumsi memori berlebihan dan kurang fleksibel untuk aplikasi modern. Di sinilah **GroupDocs.Comparison for Java** berperan, terutama bila digabungkan dengan Java Streams.
+Begini masalahnya: metode perbandingan file tradisional sering mengonsumsi memori berlebih dan kurang fleksibel untuk aplikasi modern. Di sinilah **GroupDocs.Comparison for Java** berperan, terutama ketika digabungkan dengan Java Streams dan **java try with resources**.
 
-Dalam panduan komprehensif ini, Anda akan belajar cara mengimplementasikan perbandingan dokumen yang kuat menggunakan streams yang hemat memori dan skalabel. Kami akan membahas semuanya mulai dari penyiapan dasar hingga pemecahan masalah lanjutan, sehingga Anda dapat menangani perbandingan dokumen dengan percaya diri dalam aplikasi Java Anda.
+Dalam panduan komprehensif ini, Anda akan belajar cara mengimplementasikan perbandingan dokumen yang kuat menggunakan streams yang hemat memori dan dapat diskalakan. Kami akan membahas semuanya mulai dari penyiapan dasar hingga pemecahan masalah lanjutan, sehingga Anda dapat menangani perbandingan dokumen dengan percaya diri dalam aplikasi Java Anda.
 
-### Apa yang Akan Anda Kuasai
+### What You'll Master
 - Menyiapkan GroupDocs.Comparer di lingkungan Java Anda  
-- Memuat dan membandingkan dokumen menggunakan **java stream file comparison** (cara cerdas)  
+- Memuat dan membandingkan dokumen menggunakan **java stream document comparison** (cara cerdas)  
 - Menulis hasil perbandingan ke OutputStreams secara efisien  
 - Mengimplementasikan fungsi utilitas untuk organisasi kode yang lebih baik  
 - Memecahkan masalah umum yang kemungkinan akan Anda temui  
 
-Pada akhir tutorial ini, Anda akan memiliki fitur perbandingan dokumen siap produksi yang akan disukai pengguna Anda. Mari mulai dengan apa yang Anda perlukan.
+Pada akhir tutorial ini, Anda akan memiliki fitur perbandingan dokumen siap produksi yang akan disukai pengguna Anda. Mari mulai dengan apa yang Anda butuhkan.
 
-## Jawaban Cepat
-- **Perpustakaan apa yang harus saya gunakan?** GroupDocs.Comparison for Java  
-- **Bisakah saya membandingkan file DOCX besar?** Ya, menggunakan streams menghindari pemuatan seluruh file ke memori  
-- **Apakah saya memerlukan lisensi?** Versi percobaan gratis cukup untuk pengembangan; lisensi penuh diperlukan untuk produksi  
-- **Bagaimana cara mengelola sumber daya?** Gunakan `java try-with-resources streams` untuk menutup file secara otomatis  
-- **Apakah memungkinkan membandingkan lebih dari dua dokumen?** Ya, panggil `comparer.add()` untuk setiap dokumen tambahan  
+## Quick Answers
+- **What library should I use?** GroupDocs.Comparison for Java  
+- **Can I compare large DOCX files?** Yes, using streams avoids loading the whole file into memory  
+- **Do I need a license?** A free trial works for development; a full license is required for production  
+- **How do I manage resources?** Use `java try‑with‑resources` streams to auto‑close files  
+- **Is it possible to compare more than two documents?** Yes, call `comparer.add()` for each additional document  
 
-## Prasyarat dan Penyiapan Lingkungan
+## What is groupdocs comparison java?
 
-Sebelum kita masuk ke bagian utama, pastikan Anda telah menyiapkan hal-hal berikut:
+GroupDocs.Comparison for Java adalah API komersial yang memungkinkan Anda membandingkan secara programatis berbagai format dokumen—termasuk DOCX, PDF, PPTX, dan lainnya—sementara menyediakan pelacakan perubahan yang detail. Ia terintegrasi mulus dengan Java streams, memungkinkan **java stream document comparison** yang dapat diskalakan ke file besar tanpa menghabiskan memori.
 
-**Alat yang Diperlukan**
-- **Java Development Kit (JDK)**: Versi 8 atau lebih tinggi (Java 11+ disarankan)  
+## Why use java try with resources for document comparison?
+
+Menggunakan `try‑with‑resources` menjamin setiap `InputStream` dan `OutputStream` ditutup secara otomatis, mencegah kebocoran sumber daya dan kesalahan “File is Being Used by Another Process” yang menakutkan. Pola ini penting ketika Anda membandingkan banyak dokumen dalam lingkungan throughput tinggi.
+
+## Prerequisites and Environment Setup
+
+Sebelum kita masuk ke hal-hal penting, pastikan Anda memiliki hal‑hal berikut siap:
+
+**Required Tools**
+- **Java Development Kit (JDK)**: Versi 8 atau lebih tinggi (Java 11+ direkomendasikan)  
 - **IDE**: IntelliJ IDEA, Eclipse, atau IDE Java pilihan Anda  
-- **Alat Build**: Maven atau Gradle (kami akan menggunakan Maven dalam contoh)  
-- **Pengetahuan Dasar Java**: Familiaritas dengan streams dan penanganan file  
+- **Build Tool**: Maven atau Gradle (kami akan menggunakan Maven dalam contoh)  
+- **Basic Java Knowledge**: Familiaritas dengan streams dan penanganan file  
 
-**Penyiapan yang Disarankan**
+**Recommended Setup**
 - Minimal 4 GB RAM untuk pengembangan yang lancar  
 - Dokumen Word contoh untuk pengujian  
-- Ruang kerja yang tenang (percayalah, debugging perbandingan dokumen dapat menjadi intens!)  
+- Ruang kerja yang tenang (percayalah, debugging perbandingan dokumen bisa sangat intens!)
 
-## Menyiapkan GroupDocs.Comparison for Java
+## Setting Up GroupDocs.Comparison for Java
 
-### Konfigurasi Maven
+### Maven Configuration
 
 Tambahkan repositori dan dependensi berikut ke file `pom.xml` Anda:
 
@@ -85,20 +93,20 @@ Tambahkan repositori dan dependensi berikut ke file `pom.xml` Anda:
 </dependencies>
 ```
 
-**Tips Pro**: Selalu periksa versi terbaru di halaman rilis GroupDocs. Menggunakan versi usang dapat menyebabkan masalah kompatibilitas yang menyebalkan.
+**Pro Tip**: Selalu periksa versi terbaru di halaman rilis GroupDocs. Menggunakan versi usang dapat menyebabkan masalah kompatibilitas yang membuat Anda frustrasi.
 
-### Akuisisi Lisensi (Jangan Lewatkan Ini!)
+### License Acquisition (Don't Skip This!)
 
 Anda memiliki tiga opsi:
 1. **Free Trial** – sempurna untuk pengujian awal dan proof‑of‑concepts  
-2. **Temporary License** – ideal ketika Anda memerlukan waktu evaluasi yang lebih lama  
+2. **Temporary License** – ideal ketika Anda membutuhkan waktu evaluasi yang lebih lama  
 3. **Full License** – untuk aplikasi produksi  
 
 Sebagian besar pengembang memulai dengan free trial, yang memberikan cukup fungsionalitas untuk membangun dan menguji implementasi Anda.
 
-### Inisialisasi Dasar
+### Basic Initialization
 
-Setelah GroupDocs.Comparison ditambahkan ke proyek Anda, begini cara menginisialisasinya:
+Setelah GroupDocs.Comparison ditambahkan ke proyek Anda, inilah cara menginisialisasinya:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -107,25 +115,25 @@ import com.groupdocs.comparison.Comparer;
 Comparer comparer = new Comparer("source.docx");
 ```
 
-Sederhana, kan? Namun inilah yang tidak banyak tutorial beri tahu: selalu bungkus inisialisasi `Comparer` Anda dalam blok **java try-with-resources** untuk manajemen sumber daya yang tepat. Kami akan membahas ini secara detail selanjutnya.
+Sederhana, kan? Namun inilah yang tidak banyak tutorial beri tahu: selalu bungkus inisialisasi `Comparer` Anda dalam blok **java try‑with‑resources** untuk manajemen sumber daya yang tepat. Kami akan membahas ini secara detail selanjutnya.
 
-## Panduan Implementasi: Inti Sebenarnya
+## Implementation Guide: The Real Deal
 
-Sekarang saatnya bagian utama. Di sinilah perbandingan dokumen Java menjadi menarik, dan di mana kebanyakan pengembang either berhasil gemilang atau terjebak berhari‑hari. Pastikan Anda berada di kelompok pertama.
+Sekarang saatnya bagian utama. Di sinilah perbandingan dokumen Java menjadi menarik, dan di mana sebagian besar pengembang either berhasil dengan gemilang atau terjebak selama berhari‑hari. Pastikan Anda berada di grup pertama.
 
-### Memuat Dokumen Menggunakan Streams (Pendekatan Cerdas)
+### Loading Documents Using Streams (The Smart Approach)
 
-#### Mengapa Streams Penting
+#### Why Streams Matter
 
-Sebelum masuk ke kode, mari bahas mengapa streams adalah sahabat terbaik Anda untuk perbandingan dokumen:
-- **Efisiensi Memori** – streams tidak memuat seluruh file ke memori sekaligus  
-- **Skalabilitas** – menangani dokumen besar tanpa penurunan performa  
-- **Fleksibilitas** – bekerja dengan berbagai sumber data (file, jaringan, basis data)  
-- **Manajemen Sumber Daya** – kontrol lebih baik atas handle file dan penggunaan memori  
+Sebelum kita melompat ke kode, mari bahas mengapa streams adalah sahabat terbaik Anda untuk perbandingan dokumen:
+- **Memory Efficiency** – streams tidak memuat seluruh file ke memori sekaligus  
+- **Scalability** – menangani dokumen besar tanpa penurunan performa  
+- **Flexibility** – bekerja dengan berbagai sumber data (file, jaringan, basis data)  
+- **Resource Management** – kontrol lebih baik atas handle file dan penggunaan memori  
 
-#### Implementasi Langkah‑per‑Langkah
+#### Step‑by‑Step Implementation
 
-**Langkah 1: Siapkan Input Streams Anda**
+**Step 1: Prepare Your Input Streams**
 
 ```java
 import java.io.FileInputStream;
@@ -135,21 +143,21 @@ InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/source.d
 InputStream targetStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Tips Dunia Nyata**: Di produksi, validasi bahwa file tersebut memang ada sebelum membuat streams. Tidak ada yang lebih menyebalkan daripada `FileNotFoundException` di depan pengguna.
+**Real‑World Tip**: Di produksi, validasi bahwa file‑file tersebut ada sebelum membuat streams. Tidak ada yang lebih buruk daripada `FileNotFoundException` di depan pengguna.
 
-**Langkah 2: Inisialisasi Comparer dengan Source Stream**
+**Step 2: Initialize Comparer with Source Stream**
 
 ```java
 Comparer comparer = new Comparer(sourceStream);
 ```
 
-**Langkah 3: Tambahkan Dokumen Target untuk Perbandingan**
+**Step 3: Add Target Document for Comparison**
 
 ```java
 comparer.add(targetStream);
 ```
 
-**Langkah 4: Jalankan Perbandingan dan Tulis Hasilnya**
+**Step 4: Execute Comparison and Write Results**
 
 ```java
 import java.io.FileOutputStream;
@@ -160,23 +168,23 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/com
 }
 ```
 
-#### Memahami Komponen‑Komponennya
+#### Understanding the Components
 
 - **InputStream** – memuat file Anda secara efisien sesuai kebutuhan, bukan sekaligus  
-- **Comparer** – mesin utama yang menangani semua logika perbandingan yang kompleks  
+- **Comparer** – mesin yang menangani semua logika perbandingan yang kompleks  
 - **OutputStream** – menulis hasil perbandingan tanpa membebani memori sistem  
 
-### Fungsi Utilitas (Jaga Kode Anda Tetap Bersih)
+### Utility Functions (Keep Your Code Clean)
 
-#### Mengapa Utilitas Penting
+#### Why Utilities Matter
 
-Kode bersih bukan hanya soal tampilan profesional (meskipun membantu). Fungsi utilitas membuat kode Anda:
+Kode bersih bukan hanya soal penampilan profesional (meskipun membantu). Fungsi utilitas membuat kode Anda:
 - **Maintainable** – perubahan di satu tempat memengaruhi seluruh sistem  
 - **Testable** – lebih mudah menulis unit test untuk fungsionalitas spesifik  
 - **Reusable** – tulis sekali, pakai di mana saja  
 - **Readable** – pengembang lain (termasuk Anda di masa depan) akan berterima kasih  
 
-#### Mengimplementasikan Metode Utilitas Cerdas
+#### Implementing Smart Utility Methods
 
 ```java
 import java.nio.file.Path;
@@ -188,11 +196,11 @@ class Utils {
 }
 ```
 
-Metode sederhana ini membangun jalur file secara dinamis, yang sangat berguna saat Anda memproses banyak dokumen atau memerlukan file output yang unik.
+Metode sederhana ini membangun path file secara dinamis, yang sangat berguna ketika Anda memproses banyak dokumen atau membutuhkan file output yang unik.
 
-### Manajemen Sumber Daya yang Tepat dengan java try‑with‑resources
+### Proper Resource Management with java try‑with‑resources
 
-Menggunakan `try‑with‑resources` menjamin bahwa streams ditutup secara otomatis, mencegah error **“File is Being Used by Another Process”** yang menakutkan:
+Menggunakan `try‑with‑resources` menjamin streams ditutup secara otomatis, mencegah kesalahan **“File is Being Used by Another Process”** yang menakutkan:
 
 ```java
 try (FileInputStream sourceStream = new FileInputStream(sourcePath);
@@ -201,121 +209,121 @@ try (FileInputStream sourceStream = new FileInputStream(sourcePath);
 }
 ```
 
-## Masalah Umum dan Solusinya (Hemat Jam Debugging)
+## Common Issues and Solutions (Save Yourself Hours of Debugging)
 
-### Masalah 1: OutOfMemoryError dengan Dokumen Besar
-- **Gejala**: Aplikasi crash saat membandingkan file besar  
-- **Solusi**: Tingkatkan heap JVM (`-Xmx4g`), gunakan streaming secara eksklusif, proses dokumen dalam potongan lebih kecil bila memungkinkan  
+### Issue 1: OutOfMemoryError with Large Documents
+- **Symptoms**: Aplikasi crash saat membandingkan file besar  
+- **Solution**: Tingkatkan heap JVM (`-Xmx4g`), gunakan streaming secara eksklusif, proses dokumen dalam potongan lebih kecil jika memungkinkan  
 
-### Masalah 2: “File is Being Used by Another Process”
-- **Gejala**: `IOException` saat membaca/menulis  
-- **Solusi**: Selalu gunakan **java try-with-resources streams** seperti yang ditunjukkan di atas  
+### Issue 2: “File is Being Used by Another Process”
+- **Symptoms**: `IOException` saat membaca/menulis  
+- **Solution**: Selalu gunakan **java try‑with‑resources streams** seperti yang ditunjukkan di atas  
 
-### Masalah 3: Performa Lambat pada Network Drive
-- **Gejala**: Perbandingan memakan waktu tidak wajar  
-- **Solusi**: Salin file ke direktori temporer lokal sebelum diproses  
+### Issue 3: Slow Performance on Network Drives
+- **Symptoms**: Perbandingan memakan waktu tidak wajar  
+- **Solution**: Salin file ke direktori temporer lokal sebelum diproses  
 
-### Masalah 4: Error Validasi Lisensi
-- **Gejala**: Fitur tidak berfungsi sebagaimana mestinya  
-- **Solusi**: Pastikan file lisensi Anda dimuat dengan benar sebelum membuat instance `Comparer`  
+### Issue 4: License Validation Errors
+- **Symptoms**: Fitur tidak berfungsi sebagaimana mestinya  
+- **Solution**: Pastikan file lisensi Anda dimuat dengan benar sebelum membuat instance `Comparer`  
 
-## Praktik Terbaik untuk Penggunaan Produksi
+## Best Practices for Production Use
 
-### Manajemen Memori
+### Memory Management
 - Gunakan `try‑with‑resources` untuk setiap stream  
 - Tetapkan batas memori JVM yang tepat dan pantau penggunaan selama beban puncak  
 
-### Penanganan Error
-- Implementasikan penanganan exception yang komprehensif (tangkap `IOException` dan `ComparisonException`)  
-- Log error dengan konteks yang cukup untuk debugging  
-- Sajikan pesan error yang ramah pengguna  
+### Error Handling
+- Implementasikan penanganan pengecualian yang komprehensif (catch `IOException` dan `ComparisonException`)  
+- Log kesalahan dengan konteks yang cukup untuk debugging  
+- Berikan pesan kesalahan yang ramah pengguna  
 
-### Optimasi Performa
+### Performance Optimization
 - Cache dokumen yang sering dibandingkan bila memungkinkan  
 - Proses banyak perbandingan secara asynchronous menggunakan thread pool  
 - Implementasikan penanganan timeout untuk operasi yang berjalan lama  
 
-### Pertimbangan Keamanan
+### Security Considerations
 - Validasi file input sebelum diproses  
-- Sanitasi jalur file untuk mencegah serangan directory traversal  
+- Sanitasi path file untuk mencegah serangan directory traversal  
 - Terapkan kontrol akses yang tepat untuk dokumen sensitif  
 
-## Aplikasi Dunia Nyata (Di Mana Ini Benar‑Benar Penting)
+## Real‑World Applications (Where This Actually Matters)
 
-- **Sistem Manajemen Dokumen** – lacak perubahan antar versi, kurangi konflik  
-- **Tinjauan Dokumen Hukum** – bandingkan draf kontrak, pastikan tidak ada klausul yang hilang  
-- **Platform Manajemen Konten** – pertahankan konsistensi editorial antar revisi  
-- **Sistem Kepatuhan & Audit** – sediakan jejak audit tak dapat diubah untuk dokumen yang diatur  
+- **Document Management Systems** – melacak perubahan antar versi, mengurangi konflik  
+- **Legal Document Review** – membandingkan draf kontrak, memastikan tidak ada klausul yang hilang  
+- **Content Management Platforms** – menjaga konsistensi editorial antar revisi  
+- **Compliance & Audit Systems** – menyediakan jejak audit yang tidak dapat diubah untuk dokumen yang diatur  
 
-## Kapan Menggunakan Pendekatan Ini
+## When to Use This Approach
 
-**Gunakan perbandingan dokumen Java dengan stream ketika:**
-- Dokumen berukuran lebih dari 50 MB  
+**Gunakan perbandingan dokumen dengan Java stream ketika:**
+- Dokumen melebihi 50 MB  
 - Efisiensi memori sangat penting  
 - Anda perlu memproses banyak dokumen secara bersamaan  
 - Integrasi dengan aplikasi Java yang ada diperlukan  
 - Laporan perbandingan detail dibutuhkan  
 
 **Pertimbangkan alternatif ketika:**
-- Membandingkan file teks sederhana (perbandingan string biasa mungkin cukup)  
+- Membandingkan file teks sederhana kecil (perbandingan string sederhana mungkin cukup)  
 - Diperlukan penyuntingan kolaboratif real‑time  
-- Anggaran tidak memungkinkan penggunaan perpustakaan komersial  
+- Kendala anggaran menghalangi penggunaan library komersial  
 
-## Tips Optimasi Performa
+## Performance Optimization Tips
 
 - **Batch Processing** – antrikan dokumen dan proses dalam batch terkontrol  
-- **Tuning Konfigurasi** – sesuaikan sensitivitas perbandingan berdasarkan kasus penggunaan  
-- **Monitoring Sumber Daya** – gunakan JMX atau alat serupa untuk memantau penggunaan heap  
+- **Configuration Tuning** – sesuaikan sensitivitas perbandingan berdasarkan kasus penggunaan  
+- **Resource Monitoring** – gunakan JMX atau alat serupa untuk memantau penggunaan heap  
 
-## Kesimpulan
+## Conclusion
 
-Anda kini memiliki toolkit lengkap untuk mengimplementasikan perbandingan **compare word documents java** yang kuat menggunakan GroupDocs.Comparer dan streams. Ini bukan sekadar tutorial lain – melainkan pendekatan yang telah teruji di produksi nyata.
+Anda kini memiliki toolkit lengkap untuk mengimplementasikan perbandingan **groupdocs comparison java** yang kuat menggunakan streams. Ini bukan sekadar tutorial lain – ini adalah pendekatan yang telah teruji di lingkungan produksi nyata.
 
-**Poin Penting**
+**Key Takeaways**
 - Perbandingan berbasis stream memberikan efisiensi memori dan skalabilitas  
-- Manajemen sumber daya yang tepat (java try‑with‑resources) mencegah jebakan umum  
-- Fungsi utilitas menjaga kode tetap bersih dan maintainable  
-- Penanganan error yang komprehensif serta monitoring sangat penting untuk produksi  
+- Manajemen sumber daya yang tepat (`java try‑with‑resources`) mencegah jebakan umum  
+- Fungsi utilitas menjaga kode Anda tetap bersih dan dapat dipelihara  
+- Penanganan error yang komprehensif dan pemantauan sangat penting untuk produksi  
 
-### Langkah Selanjutnya
-1. **Mulai Kecil** – implementasikan perbandingan dasar dengan file DOCX percobaan  
-2. **Tambahkan Penanganan Error** – integrasikan pola troubleshooting yang telah kami bahas  
-3. **Skalakan** – perkenalkan batch processing dan monitoring performa  
-4. **Jelajahi Fitur Lanjutan** – selami dokumentasi GroupDocs untuk opsi perbandingan khusus  
+### Your Next Steps
+1. **Start Small** – implementasikan perbandingan dasar dengan file DOCX percobaan  
+2. **Add Error Handling** – integrasikan pola pemecahan masalah yang telah kami bahas  
+3. **Scale Up** – perkenalkan batch processing dan pemantauan performa  
+4. **Explore Advanced Features** – selami dokumentasi GroupDocs untuk opsi perbandingan khusus  
 
 Siap merevolusi cara aplikasi Anda menangani perbandingan dokumen? Mulailah dengan implementasi dasar dan iterasikan menuju fitur lanjutan seiring kebutuhan Anda berkembang.
 
-## Pertanyaan yang Sering Diajukan
+## Frequently Asked Questions
 
-**T: Bagaimana cara menangani exception selama perbandingan dokumen?**  
-J: Bungkus operasi perbandingan dalam blok try‑catch, tangkap `IOException` untuk I/O file dan `ComparisonException` untuk masalah spesifik perpustakaan. Log stack trace dengan informasi konteks untuk memudahkan debugging.
+**Q: How do I handle exceptions during document comparison?**  
+A: Bungkus operasi perbandingan dalam blok try‑catch, tangkap `IOException` untuk I/O file dan `ComparisonException` untuk masalah spesifik library. Log stack trace dengan informasi konteks untuk memudahkan debugging.
 
-**T: Bisakah saya membandingkan lebih dari dua dokumen secara bersamaan?**  
-J: Ya. Panggil `comparer.add()` beberapa kali untuk menambahkan dokumen target tambahan. Perhatikan penggunaan memori saat menangani banyak file besar.
+**Q: Can I compare more than two documents simultaneously?**  
+A: Yes. Call `comparer.add()` multiple times to include additional target documents. Be mindful of memory usage when handling many large files.
 
-**T: Format file apa saja yang didukung oleh GroupDocs.Comparison?**  
-J: Mendukung DOCX, PDF, XLSX, PPTX, TXT, dan banyak lainnya. Lihat dokumentasi resmi untuk daftar lengkap.
+**Q: What file formats does GroupDocs.Comparison support?**  
+A: It supports DOCX, PDF, XLSX, PPTX, TXT, and many others. See the official documentation for the full list.
 
-**T: Bagaimana cara menyesuaikan sensitivitas perbandingan?**  
-J: Gunakan `CompareOptions` untuk mengabaikan perubahan format, mengatur ambang kesamaan, atau fokus pada tipe konten tertentu. Ini membantu menyesuaikan perbandingan dengan domain Anda.
+**Q: How can I customize comparison sensitivity?**  
+A: Use `CompareOptions` to ignore formatting changes, set similarity thresholds, or focus on specific content types. This helps tailor the comparison to your domain.
 
-**T: Apa yang harus dilakukan jika perbandingan terlalu lambat?**  
-J: Pastikan Anda menggunakan streams, tingkatkan heap JVM bila perlu, salin file secara lokal sebelum diproses, dan pertimbangkan eksekusi asynchronous untuk responsivitas lebih baik.
+**Q: What should I do if the comparison is too slow?**  
+A: Verify you’re using streams, increase JVM heap if needed, copy files locally before processing, and consider asynchronous execution for better responsiveness.
 
-**T: Di mana saya dapat mendapatkan bantuan jika mengalami masalah?**  
-J: Forum Dukungan GroupDocs aktif dan responsif. Dokumentasi resmi mereka juga menyediakan panduan detail dan contoh kode.
+**Q: Where can I get help if I run into issues?**  
+A: The GroupDocs Support Forum is active and responsive. Their official documentation also provides detailed guidance and code samples.
 
-**Sumber Daya**
+**Resources**
 - [GroupDocs Documentation](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
 - [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)  
 - [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
+- [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-26  
-**Diuji Dengan:** GroupDocs.Comparison 25.2  
-**Penulis:** GroupDocs  
+**Last Updated:** 2026-03-24  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs

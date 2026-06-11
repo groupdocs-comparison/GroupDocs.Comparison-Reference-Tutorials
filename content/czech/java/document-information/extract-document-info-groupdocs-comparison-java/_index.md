@@ -1,13 +1,13 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
+date: '2026-03-24'
 description: Naučte se v Javě získat typ souboru a extrahovat metadata dokumentu pomocí
-  GroupDocs.Comparison. Zjistěte počet stránek, velikost a další pomocí jednoduchých
-  ukázek kódu a tipů na řešení problémů.
+  GroupDocs.Comparison. Získejte počet stránek, velikost a další informace pomocí
+  jednoduchých ukázek kódu a tipů pro řešení problémů.
 keywords: java document metadata extraction, groupdocs comparison tutorial, extract
   file properties java, document info java api, how to get document metadata in java
-lastmod: '2026-01-18'
+lastmod: '2026-03-24'
 linktitle: Java Document Metadata Extraction
 tags:
 - groupdocs
@@ -20,68 +20,70 @@ url: /cs/java/document-information/extract-document-info-groupdocs-comparison-ja
 weight: 1
 ---
 
-# Java Get File Type – Průvodce extrakcí metadat dokumentu
+# Java Získání typu souboru – Průvodce extrakcí metadat dokumentu
 
-Už jste někdy potřebovali rychle získat informace o souboru z dokumentů, aniž byste je otevírali? Nejste v tom sami. Ať už budujete systém pro správu dokumentů, potřebujete ověřovat nahrávané soubory, nebo chcete automatizovat workflow zpracování dokumentů, **java get file type** programově vám může ušetřit spoustu času.
-
-V tomto průvodci si podrobně ukážeme, jak pomocí GroupDocs.Comparison pro Java extrahovat metadata dokumentu (jako typ souboru, počet stránek a velikost). Nebojte se, pokud s touto knihovnou teprve začínáte – projdeme vše krok za krokem, včetně běžných úskalí a způsobů, jak se jim vyhnout.
+Už jste někdy potřebovali rychle získat informace o souboru z dokumentů, aniž byste je otevírali? Ať už budujete systém pro správu dokumentů, validujete nahrávání nebo automatizujete pracovní postupy, **you can java get file type** a získáte další klíčové vlastnosti během několika řádků kódu. V tomto průvodci vám ukážeme, jak **java get file type**, **java read file size** a **java get page count** pomocí GroupDocs.Comparison pro Java, plus tipy pro **java extract pdf metadata** a řešení okrajových případů.
 
 ## Rychlé odpovědi
-- **Jakou knihovnu mohu použít pro java get file type?** GroupDocs.Comparison pro Java.  
-- **Mohu také java extract pdf metadata?** Ano – stejné API funguje pro PDF i mnoho dalších formátů.  
+- **Jakou knihovnu mohu použít k java get file type?** GroupDocs.Comparison for Java.  
+- **Mohu také java extract pdf metadata?** Ano – stejné API funguje pro PDF a mnoho dalších formátů.  
 - **Potřebuji licenci?** Zkušební nebo dočasná licence stačí pro vývoj; pro produkci je vyžadována plná licence.  
-- **Jaká verze Javy je potřeba?** JDK 8+ (doporučeno JDK 11+).  
-- **Je kód thread‑safe?** Vytvořte samostatnou instanci `Comparer` pro každý vlákno.
+- **Jaká verze Javy je požadována?** JDK 8+ (doporučeno JDK 11+).  
+- **Je kód thread‑safe?** Vytvořte samostatnou instanci `Comparer` pro každý vlákno.  
+
+## Jak java get file type a extrahovat metadata dokumentu
+Než se ponoříme do kódu, objasníme, proč **java file type detection** má význam a jak metadata, která získáte (typ souboru, počet stránek, velikost souboru), mohou podpořit reálné scénáře.
 
 ## Proč extrahovat metadata dokumentu?
 
 Než se ponoříme do kódu, pojďme si říct, proč je to důležité v reálných aplikacích:
 
-- **Systémy pro správu dokumentů** – automaticky kategorizovat a indexovat soubory podle jejich vlastností.  
-- **Validace nahrávaných souborů** – kontrolovat typy a velikosti souborů před zpracováním.  
-- **Analýza obsahu** – filtrovat a řadit dokumenty podle délky, formátu nebo jiných kritérií.  
-- **Právní a compliance** – zajistit, že dokumenty splňují specifické požadavky.  
-- **Optimalizace výkonu** – předzpracovávat jen soubory, které splňují určité podmínky.
+- **Systémy pro správu dokumentů** – automaticky kategorizují a indexují soubory podle jejich vlastností.  
+- **Validace nahrávaných souborů** – kontrola typů souborů a velikostí před zpracováním.  
+- **Analýza obsahu** – filtrování a řazení dokumentů podle délky, formátu nebo jiných kritérií.  
+- **Právní a soulad** – zajistit, že dokumenty splňují konkrétní požadavky.  
+- **Optimalizace výkonu** – předzpracovat pouze soubory, které splňují určitá kritéria.
 
-Výsledek? Extrakce metadat vám pomůže dělat chytřejší rozhodnutí o tom, jak s dokumenty zacházet.
+Závěr? Extrakce metadat vám pomáhá činit chytřejší rozhodnutí o tom, jak zacházet s vašimi dokumenty.
 
 ## Co se v tomto průvodci naučíte
 
 Na konci tohoto tutoriálu budete schopni:
 
-- Nastavit GroupDocs.Comparison pro Java ve svém projektu.  
-- **java get file type** a další klíčové vlastnosti dokumentu pomocí několika řádků kódu.  
-- Zpracovávat různé formáty souborů a okrajové případy.  
+- Nastavit GroupDocs.Comparison pro Java ve vašem projektu.  
+- **java get file type** a další nezbytné vlastnosti dokumentu během několika řádků kódu.  
+- Použít **java read file size** a **java get page count** k řízení obchodní logiky.  
+- Zpracovat různé formáty souborů a okrajové případy.  
 - Řešit běžné problémy, na které můžete narazit.  
 - Implementovat osvědčené postupy pro produkční prostředí.
 
-## Předpoklady: Co potřebujete před začátkem
+## Předpoklady: Co potřebujete před zahájením
 
 ### Požadovaný software a nástroje
 
-- **Java Development Kit (JDK)** – verze 8 nebo vyšší (doporučujeme JDK 11+ pro lepší výkon).  
-- **Maven** – pro správu závislostí a sestavování projektu.  
-- **IDE** – libovolné Java IDE, např. IntelliJ IDEA, Eclipse nebo VS Code.
+- **Java Development Kit (JDK)** – Verze 8 nebo vyšší (doporučujeme JDK 11+ pro lepší výkon).  
+- **Maven** – Pro správu závislostí a sestavení projektu.  
+- **IDE** – Jakékoli Java IDE jako IntelliJ IDEA, Eclipse nebo VS Code.
 
-### Znalostní předpoklady
+### Předpoklady znalostí
 
-Nemusíte být Java expert, ale základní povědomí o:
+Nemusíte být Java expert, ale mít základní povědomí o:
 
-- Syntaxe Javy a objektově orientovaných konceptech.  
-- Správě závislostí v Maven (i tak vás provedeme).  
-- Try‑with‑resources (pro správnou správu zdrojů).
+- syntaxi Javy a objektově orientovaných konceptech.  
+- správě závislostí Maven (každopádně vás provedeme).  
+- příkazech try‑with‑resources (pro správnou správu zdrojů).
 
 ### Proč GroupDocs.Comparison?
 
-Možná se ptáte – proč použít GroupDocs.Comparison pro extrakci metadat? I když je tato knihovna známá hlavně pro porovnávání dokumentů, poskytuje také vynikající možnosti získávání informací o dokumentech. Navíc, pokud později budete potřebovat funkce porovnávání, už budete připraveni!
+Možná se ptáte – proč použít GroupDocs.Comparison pro extrakci metadat? I když je znám hlavně pro porovnávání dokumentů, poskytuje také vynikající možnosti extrakce informací o dokumentu. Navíc, pokud později budete potřebovat funkce porovnávání, už máte vše připravené!
 
 ## Nastavení GroupDocs.Comparison pro Java
 
-Pojďme správně nakonfigurovat váš projekt. Tento krok je klíčový – špatně nastavené závislosti jsou jedním z nejčastějších problémů vývojářů.
+Nastavme váš projekt správně. Tento krok je klíčový – špatná konfigurace závislostí je jedním z nejčastějších problémů vývojářů.
 
 ### Krok 1: Maven konfigurace
 
-Přidejte následující do souboru `pom.xml` (umístěte to do správných sekcí):
+Přidejte toto do souboru `pom.xml` (ujistěte se, že to umístíte do správných sekcí):
 
 ```xml
 <repositories>
@@ -100,19 +102,19 @@ Přidejte následující do souboru `pom.xml` (umístěte to do správných sekc
 </dependencies>
 ```
 
-**Tip:** Vždy kontrolujte nejnovější číslo verze na webu GroupDocs – používání zastaralých verzí může vést k problémům s kompatibilitou.
+**Tip**: Vždy kontrolujte nejnovější číslo verze na webu GroupDocs – používání zastaralých verzí může vést k problémům s kompatibilitou.
 
-### Krok 2: Nastavení licence (neskakujte přes to!)
+### Krok 2: Nastavení licence (nepřeskakujte!)
 
-GroupDocs.Comparison není zdarma, ale máte několik možností:
+GroupDocs.Comparison není zdarma, ale máte možnosti:
 
-1. **Free Trial**: Ideální pro testování a malé projekty. Stáhněte z [free trial page](https://releases.groupdocs.com/comparison/java/)  
-2. **Temporary License**: Skvělé pro vývoj a hodnocení. Požádejte [zde](https://purchase.groupdocs.com/temporary-license/)  
-3. **Full License**: Pro produkční nasazení. [Koupit zde](https://purchase.groupdocs.com/buy)
+1. **Free Trial**: Ideální pro testování a malé projekty. Stáhněte z [free trial page](https://releases.groupdocs.com/comparison/java/)
+2. **Temporary License**: Skvělá pro vývoj a hodnocení. Požádejte [zde](https://purchase.groupdocs.com/temporary-license/)
+3. **Full License**: Pro produkční použití. [Purchase here](https://purchase.groupdocs.com/buy)
 
 ### Krok 3: Ověření nastavení
 
-Vytvořte jednoduchou testovací třídu, abyste se ujistili, že vše funguje:
+Vytvořte jednoduchou testovací třídu, aby bylo jisté, že vše funguje:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -125,13 +127,13 @@ public class SetupTest {
 }
 ```
 
-## Implementační průvodce: Extrakce metadat dokumentu krok po kroku
+## Průvodce implementací: Extrakce metadat dokumentu krok za krokem
 
-Teď přijde ta zábavná část – napíšeme kód, který skutečně něco dělá!
+Teď ta zábavná část – pojďme napsat kód, který skutečně dělá něco užitečného!
 
 ### java get file type – Inicializace objektu Comparer
 
-Třída `Comparer` je vaším vstupem k informacím o dokumentu. Zde je správné nastavení:
+Třída `Comparer` je vaším vstupem k informacím o dokumentu. Zde je, jak ji správně nastavit:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -145,13 +147,13 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 ```
 
 **Co se zde děje?**  
-- Používáme try‑with‑resources pro zajištění správného uvolnění zdrojů (naprosto zásadní pro prevenci úniků paměti!).  
+- Používáme try‑with‑resources pro zajištění správného uvolnění zdrojů (velmi důležité pro zabránění únikům paměti!).  
 - Cesta by měla ukazovat na váš skutečný dokument.  
-- Ošetření chyb zachytí problémy jako „soubor nenalezen“ nebo přístupová omezení.
+- Zpracování chyb zachytí problémy jako soubor nenalezen nebo problémy s přístupem.
 
-### Získání objektu DocumentInfo
+### Získání objektu Document Information
 
-Dále získáme objekt s informacemi o dokumentu, který obsahuje všechna metadata:
+Dále získáme objekt informací o dokumentu, který obsahuje všechna naše metadata:
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
@@ -168,11 +170,11 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 **Klíčové body:**  
 - `getSource()` získá zdrojový dokument.  
 - `getDocumentInfo()` vrací rozhraní obsahující všechna metadata.  
-- Další try‑with‑resources zajišťuje řádné vyčištění.
+- Další try‑with‑resources zajišťuje správné uvolnění.
 
-### Extrakce požadovaných údajů
+### Extrakce užitečných informací
 
-Nyní si vyzvedneme samotná metadata:
+Nyní získáme skutečná metadata:
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -193,14 +195,14 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 }
 ```
 
-**Co vrací jednotlivé metody:**  
-- `getFileType().getFileFormat()`: Formát souboru (DOCX, PDF, TXT atd.).  
-- `getPageCount()`: Celkový počet stránek.  
-- `getSize()`: Velikost souboru v bajtech.
+**Co každá metoda vrací:**  
+- `getFileType().getFileFormat()`: Formát souboru (DOCX, PDF, TXT, atd.).  
+- `getPageCount()`: Celkový počet stránek – to je **java get page count**, který často potřebujete.  
+- `getSize()`: Velikost souboru v bajtech – užitečné pro operace **java read file size**.
 
 ## Praktický příklad: Kompletní implementace
 
-Zde je robustnější ukázka, kterou můžete rovnou použít ve svých projektech:
+Zde je robustnější příklad, který můžete skutečně použít ve svých projektech:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -253,10 +255,10 @@ public class DocumentMetadataExtractor {
 
 ## Časté problémy a řešení
 
-### Problém 1: Chyba „File Not Found“
+### Problém 1: Chyby „File Not Found“
 
-**Příznaky:** Výjimka při inicializaci Compareru  
-**Řešení:** Vždy ověřujte existenci a správnost cest k souborům:
+**Příznaky**: Vyhozená výjimka při inicializaci Comparer  
+**Řešení**: Vždy ověřujte cesty k souborům a jejich existenci:
 
 ```java
 Path filePath = Paths.get(documentPath);
@@ -270,8 +272,8 @@ if (!Files.isReadable(filePath)) {
 
 ### Problém 2: Problémy s pamětí u velkých souborů
 
-**Příznaky:** OutOfMemoryError nebo pomalý výkon  
-**Řešení:** Zpracovávejte soubory jednotlivě a zajistěte řádné uvolnění zdrojů:
+**Příznaky**: OutOfMemoryError nebo pomalý výkon  
+**Řešení**: Zpracovávejte soubory jednotlivě a zajistěte správné uvolnění zdrojů:
 
 ```java
 // Always use try-with-resources
@@ -283,8 +285,8 @@ try (Comparer comparer = new Comparer(filePath)) {
 
 ### Problém 3: Nepodporované formáty souborů
 
-**Příznaky:** Výjimky při pokusu o zpracování určitých souborů  
-**Řešení:** Nejprve zkontrolujte podporované formáty:
+**Příznaky**: Výjimky při pokusu zpracovat určité soubory  
+**Řešení**: Nejprve zkontrolujte podporované formáty:
 
 ```java
 public static boolean isSupportedFormat(String filePath) {
@@ -293,10 +295,10 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### Problém 4: Licence v produkci
+### Problém 4: Problémy s licencí v produkci
 
-**Příznaky:** Vodoznaky nebo omezení funkcionality  
-**Řešení:** Ujistěte se, že je licence správně aplikována:
+**Příznaky**: Vodoznaky nebo omezení funkčnosti  
+**Řešení**: Ujistěte se, že licence je správně aplikována:
 
 ```java
 // Apply license at application startup
@@ -304,11 +306,11 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Osvědčené postupy pro produkční nasazení
+## Osvědčené postupy pro produkční použití
 
 ### 1. Správa zdrojů
 
-Vždy používejte try‑with‑resources pro automatické čištění:
+Vždy používejte try‑with‑resources pro automatické uvolnění:
 
 ```java
 // Good - resources cleaned up automatically
@@ -324,9 +326,9 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 // Resources might not be cleaned up properly
 ```
 
-### 2. Strategie ošetření chyb
+### 2. Strategie zpracování chyb
 
-Implementujte komplexní ošetření chyb:
+Implementujte komplexní zpracování chyb:
 
 ```java
 public DocumentInfo extractSafely(String filePath) {
@@ -347,7 +349,7 @@ public DocumentInfo extractSafely(String filePath) {
 
 ### 3. Optimalizace výkonu
 
-Pro zpracování více souborů zvažte dávkové zpracování:
+Pro zpracování více souborů zvažte dávkování:
 
 ```java
 public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
@@ -358,96 +360,101 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 }
 ```
 
-## Kdy použít tuto metodu versus jiné přístupy
+## Kdy použít toto vs. jiné přístupy
 
-**Použijte GroupDocs.Comparison, když:**  
+**Použijte GroupDocs.Comparison, když:**
+
 - Potřebujete spolehlivou extrakci metadat z různých formátů Office.  
-- Můžete v budoucnu potřebovat i funkce porovnávání dokumentů.  
-- Pracujete s komplexními dokumenty, kde je důležité přesné počítání stránek.
+- Můžete později také potřebovat funkce porovnávání dokumentů.  
+- Pracujete s komplexními dokumenty, které vyžadují přesné počítání stránek.
 
-**Zvažte alternativy, když:**  
+**Zvažte alternativy, když:**
+
 - Potřebujete jen základní informace o souboru (použijte `java.nio.file.Files` pro velikost, data).  
-- Pracujete s jednoduchými textovými soubory (vestavěné Java API stačí).  
-- Rozpočet je hlavní omezení (nejprve prozkoumejte open‑source řešení).
+- Pracujete s jednoduchými textovými soubory (vestavěné Java API jsou dostačující).  
+- Rozpočet je hlavní omezení (nejprve prozkoumejte open‑source alternativy).
 
 ## Průvodce řešením problémů
 
-### Problém: Kód se kompiluje, ale hází výjimky za běhu
+### Problém: Kód se kompiluje, ale vyhazuje výjimky za běhu
 
-**Zkontrolujte:**  
-1. Je licence správně nakonfigurovaná?  
+**Zkontrolujte následující:**
+
+1. Je licence správně nakonfigurována?  
 2. Používáte správné cesty k souborům?  
-3. Máte dostatečná oprávnění ke čtení souborů?  
+3. Máte oprávnění ke čtení souborů?  
 4. Je formát souboru skutečně podporován?
 
-### Problém: Spotřeba paměti neustále roste
+### Problém: Spotřeba paměti stále roste
 
-**Řešení:**  
+**Řešení:**
+
 1. Ujistěte se, že používáte try‑with‑resources.  
 2. Zpracovávejte soubory po jednom místo načítání více najednou.  
-3. Zkontrolujte, zda neexistují statické reference, které drží objekty v paměti.
+3. Zkontrolujte, zda neexistují statické reference držící objekty.
 
-### Problém: Některá metadata vrací null
+### Problém: Některá pole metadat vrací null
 
-**Je to normální pro:**  
-- Soubory, které daný typ metadat neobsahují.  
+**Je to normální pro:**
+
+- Soubory, které neobsahují tento typ metadat.  
 - Poškozené nebo neúplné soubory.  
-- Nepodporované varianty formátu.
+- Variace nepodporovaných formátů souborů.
 
-Vždy před použitím metadat kontrolujte, zda nejsou null.
+Vždy kontrolujte hodnoty null před použitím metadat.
 
 ## Závěr a další kroky
 
-Nyní máte pevný základ pro extrakci metadat dokumentů pomocí GroupDocs.Comparison pro Java! Co jsme probrali:
+Nyní máte pevný základ pro extrakci metadat dokumentu pomocí GroupDocs.Comparison pro Java! Zde je, co jsme pokryli:
 
-✅ Správné nastavení knihovny a závislostí  
-✅ **java get file type** a další klíčové vlastnosti dokumentu  
-✅ Řešení běžných chyb a okrajových případů  
-✅ Osvědčené postupy pro produkční prostředí  
-✅ Návod na řešení typických problémů  
+- ✅ Správné nastavení knihovny a závislostí  
+- ✅ **java get file type** a další klíčové vlastnosti dokumentu jako **java read file size** a **java get page count**  
+- ✅ Řešení běžných chyb a okrajových případů  
+- ✅ Osvědčené postupy pro produkční prostředí  
+- ✅ Pokyny pro řešení typických problémů  
 
 ### Co dál?
 
-Po zvládnutí extrakce metadat můžete zkusit:
+Nyní, když máte extrakci metadat, zvažte prozkoumání:
 
-- **Funkce porovnávání dokumentů** pro sledování změn.  
-- **Integraci se Spring Boot** pro webové aplikace.  
+- **Funkcí porovnávání dokumentů** pro sledování změn.  
+- **Integrace se Spring Boot** pro webové aplikace.  
 - **Dávkové zpracování** pro efektivní práci s více soubory.  
-- **Vlastní extrakci metadat** pro specifické typy souborů.
+- **Vlastní extrakce metadat** pro specifické typy souborů, včetně **java extract pdf metadata**.
 
-Chcete jít ještě dál? Podívejte se na [oficiální dokumentaci GroupDocs](https://docs.groupdocs.com/comparison/java/) pro pokročilé funkce a příklady.
+Chcete se ponořit hlouběji? Podívejte se na [oficiální dokumentaci GroupDocs](https://docs.groupdocs.com/comparison/java/) pro pokročilé funkce a příklady.
 
 ## Často kladené otázky
 
 **Q: Mohu extrahovat metadata z dokumentů chráněných heslem?**  
-A: Ano, ale musíte při inicializaci objektu `Comparer` předat heslo. Použijte přetížený konstruktor, který přijímá možnosti načtení.
+A: Ano, ale budete muset při inicializaci objektu `Comparer` poskytnout heslo. Použijte přetížený konstruktor, který přijímá možnosti načtení.
 
 **Q: Jaké formáty souborů jsou podporovány pro extrakci metadat?**  
-A: GroupDocs.Comparison podporuje většinu běžných formátů, včetně DOCX, PDF, XLSX, PPTX, TXT, RTF a mnoha dalších. Kompletní seznam najdete v jejich dokumentaci.
+A: GroupDocs.Comparison podporuje většinu běžných formátů dokumentů včetně DOCX, PDF, XLSX, PPTX, TXT, RTF a mnoha dalších. Zkontrolujte jejich dokumentaci pro kompletní seznam.
 
-**Q: Existuje způsob, jak získat vlastní vlastnosti z Office dokumentů?**  
-A: Základní `DocumentInfo` pokrývá hlavně standardní vlastnosti. Pro vlastní vlastnosti možná budete muset použít další knihovny GroupDocs nebo kombinovat s jinými nástroji.
+**Q: Existuje způsob, jak extrahovat vlastní vlastnosti z Office dokumentů?**  
+A: Základní informace o dokumentu pokrývají převážně standardní vlastnosti. Pro vlastní vlastnosti možná budete muset prozkoumat další knihovny GroupDocs nebo kombinovat s jinými nástroji.
 
 **Q: Jak zacházet s velmi velkými soubory, aby nedošlo k vyčerpání paměti?**  
-A: Vždy používejte try‑with‑resources, zpracovávejte soubory po jednom a zvažte stream‑based přístup pro dávkové zpracování. Také zajistěte, aby JVM měla dostatečnou velikost haldy.
+A: Vždy používejte try‑with‑resources, zpracovávejte soubory jednotlivě a zvažte streamovací přístupy pro dávkové zpracování. Také zajistěte, aby JVM měla dostatečnou velikost haldy.
 
-**Q: Lze to použít s dokumenty uloženými v cloudovém úložišti?**  
-A: Ano, ale nejprve je musíte stáhnout lokálně nebo použít stream‑based přístup. GroupDocs pracuje s lokálními soubory i streamy.
+**Q: Může to fungovat s dokumenty uloženými v cloudovém úložišti?**  
+A: Ano, ale budete muset soubor nejprve stáhnout lokálně nebo použít stream‑based přístup. GroupDocs pracuje s lokálními soubory i streamy.
 
-**Q: Co dělat při chybách licence?**  
-A: Ověřte, že jste licenci aplikovali při startu aplikace a že licence nevypršela. V případě přetrvávajících problémů kontaktujte podporu GroupDocs.
+**Q: Co mám dělat, pokud dostanu chyby licence?**  
+A: Ujistěte se, že jste licenci správně aplikovali při spuštění aplikace a že licence nevypršela. V případě přetrvávajících problémů kontaktujte podporu GroupDocs.
 
-**Q: Je to bezpečné používat v multithreaded aplikacích?**  
-A: Ano, ale vytvářejte samostatné instance `Comparer` pro každé vlákno. Nesdílejte instance mezi vlákny.
+**Q: Je bezpečné používat v multithreaded aplikacích?**  
+A: Ano, ale vytvořte samostatné instance `Comparer` pro každé vlákno. Nesdílejte instance mezi vlákny.
 
 **Další zdroje**  
-- **Dokumentace:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API reference:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
-- **Komunitní podpora:** [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
-- **Free Trial:** [Download and Test](https://releases.groupdocs.com/comparison/java/)
+- **Dokumentace**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Komunitní podpora**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Poslední aktualizace:** 2026-01-18  
+**Poslední aktualizace:** 2026-03-24  
 **Testováno s:** GroupDocs.Comparison 25.2  
-**Autor:** GroupDocs  
+**Autor:** GroupDocs

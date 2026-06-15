@@ -1,22 +1,70 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: Tanulja meg, hogyan hasonlítsa össze a PDF Java-t a GroupDocs.Comparison
-  segítségével. Ez a lépésről‑lépésre útmutató a dokumentumösszehasonlítás legjobb
-  gyakorlatait, kódrészleteket, teljesítmény‑tippeket és hibakeresést tárgyalja.
-keywords: java compare documents programmatically, java document diff library, compare
-  two files java, java text comparison, groupdocs comparison java, document version
-  control java, compare pdf files java, document comparison best practices
-lastmod: '2026-02-21'
-linktitle: Java Document Comparison Guide
+date: '2026-06-15'
+description: Ismerje meg, hogyan lehet összehasonlítani a pdf java-t a GroupDocs.Comparison
+  segítségével. Ez a lépésről‑lépésre útmutató a dokumentum-összehasonlítás legjobb
+  gyakorlatait, kódrészleteket, teljesítmény tippeket és a hibakeresést tárgyalja.
+keywords:
+- compare pdf java
+- java compare two documents
+- compare documents without saving
+- document comparison java
+- groupdocs comparison java
+lastmod: '2026-06-15'
+linktitle: Java dokumentum-összehasonlítási útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-15'
+  description: Learn how to compare pdf java using GroupDocs.Comparison. This step‑by‑step
+    tutorial covers document comparison best practices, code examples, performance
+    tips, and troubleshooting.
+  headline: compare pdf java – Compare PDF Files in Java Programmatically
+  type: TechArticle
+- description: Learn how to compare pdf java using GroupDocs.Comparison. This step‑by‑step
+    tutorial covers document comparison best practices, code examples, performance
+    tips, and troubleshooting.
+  name: compare pdf java – Compare PDF Files in Java Programmatically
+  steps:
+  - name: '**Free Trial** – ideal for learning and small‑scale demos.'
+    text: '**Free Trial** – ideal for learning and small‑scale demos.'
+  - name: '**Temporary License** – request a 30‑day key for extended evaluation.'
+    text: '**Temporary License** – request a 30‑day key for extended evaluation.'
+  - name: '**Full License** – required for production, unlimited file size, and priority
+      support.'
+    text: '**Full License** – required for production, unlimited file size, and priority
+      support.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum supported version; Java 11+ is recommended for improved
+      garbage collection and module support.
+    question: What's the minimum Java version required for GroupDocs.Comparison?
+  - answer: GroupDocs.Comparison compares a single pair at a time. For multi‑document
+      versioning, iterate over the document list and compare each consecutive pair,
+      storing the resulting `ChangeInfo[]` for later aggregation.
+    question: Can I compare more than two documents simultaneously?
+  - answer: '- Disable coordinate calculation unless you need exact locations. - Prefer
+      the stream‑based API to avoid loading the entire file into RAM. - Split processing
+      into page‑ranges if you only need changes in specific sections. - Monitor JVM
+      heap usage and tune `-Xmx` accordingly.'
+    question: How should I handle very large documents (100 MB+)?
+  - answer: Yes. After obtaining `ChangeInfo[]`, you can generate a new PDF using
+      GroupDocs.Watermark or any PDF library, drawing rectangles at the coordinates
+      returned. This produces a “red‑line” version that end users can review in any
+      PDF viewer.
+    question: Is there a way to visually highlight changes in the output?
+  - answer: Pass the password to the `Comparer` constructor or set it on the `LoadOptions`
+      object before invoking `compare`. The library will decrypt the document in memory,
+      so the password never touches the filesystem.
+    question: How do I handle password‑protected documents?
+  type: FAQPage
 tags:
 - java
 - document-comparison
 - groupdocs
 - file-comparison
 - version-control
-title: pdf java összehasonlítás – PDF fájlok összehasonlítása Java-ban programozottan
+title: compare pdf java – PDF fájlok összehasonlítása Java-ban programozott módon
 type: docs
 url: /hu/java/basic-comparison/java-document-comparison-groupdocs-comparison/
 weight: 1
@@ -24,51 +72,44 @@ weight: 1
 
 # compare pdf java – Hogyan hasonlítsuk össze a PDF fájlokat Java‑ban programozottan
 
-Találkoztál már azzal, hogy kézzel hasonlítod össze két dokumentum verzióját? Ha Java fejlesztő vagy, aki **compare pdf java**‑t keres, valószínűleg többször is szembesültél ezzel a kihívással, mint amennyit szívesen beismernél. Akár tartalomkezelő rendszert építesz, verziókezelést valósítasz meg, vagy egyszerűen csak nyomon kell követned a jogi dokumentumok változásait, az automatikus összehasonlítás órákra nyújtó unalmas munkát takarít meg.
+Ha Java fejlesztő vagy, akinek gyorsan és pontosan kell **compare pdf java** fájlokat összehasonlítani, jó helyen jársz. Akár tartalomkezelő rendszert építesz, verziókezelést adsz jogi szerződésekhez, vagy QA‑t automatizálsz generált jelentésekhez, a kézi, oldal‑oldali ellenőrzések hibára hajlamosak és időigényesek. A GroupDocs.Comparison for Java egyetlen, megbízható API‑t biztosít, amely felismeri a beszúrásokat, törléseket, formázási változásokat és még az áthelyezett bekezdéseket is – mindezt anélkül, hogy saját diff logikát kellene írnod.
 
-A jó hír? A GroupDocs.Comparison for Java‑val automatizálhatod ezt a teljes folyamatot. Ez az átfogó útmutató végigvezet mindenen, amit a dokumentum‑összehasonlítás megvalósításához tudnod kell Java‑alkalmazásaidban. Megtanulod, hogyan észleld a változásokat, hogyan nyerd ki a koordinátákat, és még különböző fájlformátumok kezelését is – mindezt tiszta, hatékony kóddal.
+Ebben az útmutatóban lépésről‑lépésre végigvezetünk a könyvtár beállításán, a fájlok, stream‑ek vagy felhő tárolók összehasonlításán, a változási koordináták kinyerésén, valamint a nagy dokumentumok kezelésén. Praktikus tippeket kapsz a teljesítményhangoláshoz, a gyakori buktatókhoz és valós példákhoz, hogy gyorsabban szállíthass egy robusztus megoldást.
 
 ## Gyors válaszok
 - **Melyik könyvtár teszi lehetővé a PDF fájlok összehasonlítását Java‑ban?** GroupDocs.Comparison for Java.  
-- **Szükségem van licencre?** Egy ingyenes próba a tanuláshoz megfelelő; a teljes licenc a termeléshez kötelező.  
+- **Szükség van licencre?** Egy ingyenes próba elegendő a tanuláshoz; a teljes licenc a termeléshez kötelező.  
 - **Melyik Java verzió szükséges?** Minimum Java 8, ajánlott Java 11+.  
-- **Össze tudok‑e hasonlítani dokumentumokat anélkül, hogy lementeném őket a lemezre?** Igen, használj stream‑eket a memóriában történő összehasonlításhoz.  
-- **Hogyan kapom meg a változások koordinátáit?** Engedélyezd a `setCalculateCoordinates(true)`‑t a `CompareOptions`‑ban.
+- **Össze tudok-e hasonlítani dokumentumokat anélkül, hogy lementeném őket lemezre?** Igen – használj `InputStream`‑alapú overload‑okat, hogy minden memóriában maradjon.  
+- **Hogyan kapom meg a változási koordinátákat?** Hívd meg a `setCalculateCoordinates(true)` metódust a `CompareOptions`‑on, mielőtt meghívod a `compare`‑t.
 
-## Hogyan hasonlítsuk össze a PDF fájlokat Java‑ban (compare pdf java)
-A PDF‑ek programozott összehasonlítása azt jelenti, hogy két dokumentumot elemezünk, hogy pontosan meghatározzuk a hozzáadott, törölt és módosított részeket. Az eredmény egy strukturált változáslista, amelyet megjeleníthetsz, naplózhatsz, vagy továbbadhatsz a downstream munkafolyamatoknak.
+## Hogyan hasonlítsuk össze a PDF fájlokat Java‑ban (compare pdf java)?
+
+Töltsd be a két PDF‑et egy `Comparer` példány segítségével, konfiguráld a `CompareOptions`‑t igény szerint, majd hívd meg a `compare`‑t. A metódus egy `ChangeInfo[]` tömböt ad vissza, amely pontosan megmondja, mi változott, hol és hogyan. Ez a teljes munkafolyamat kevesebb, mint tíz sor Java‑kódban megírható, a könyvtár pedig gondoskodik minden formátumspecifikus sajátosságról.
 
 ## Mi az a “compare pdf files java”?
-A PDF fájlok Java‑ban történő összehasonlítása programozottan elemzi a két PDF (vagy más) dokumentumot, hogy azonosítsa a hozzáadott, törölt és módosított elemeket. A folyamat egy strukturált változáslistát ad vissza, amelyet jelentéskészítésre, vizuális kiemelésre vagy automatizált munkafolyamatokra használhatsz.
+
+A **compare pdf files java** kifejezés a PDF (vagy más támogatott) dokumentumok programozott elemzését jelenti egy Java‑alkalmazásban, részletes diff‑et előállítva. A diff tartalmazza a beszúrt, törölt és módosított szöveget, képeket, táblázatokat és akár áthelyezett szakaszokat is, strukturált listaként, amely megjeleníthető, naplózható vagy továbbküldhető más szolgáltatásoknak.
 
 ## Miért használjuk a GroupDocs.Comparison for Java‑t?
-- **Sebesség és pontosság:** Több mint 60 formátumot kezel magas hűséggel.  
-- **A dokumentum‑összehasonlítás legjobb gyakorlatai** beépítve, például a stílusváltozások figyelmen kívül hagyása vagy az áthelyezett tartalom felismerése.  
-- **Skálázható:** Nagy fájlokkal, stream‑ekkel és felhőtárolóval működik.  
-- **Bővíthető:** Testreszabható összehasonlítási beállítások bármely üzleti szabályhoz.
+
+A GroupDocs.Comparison több mint 60 bemeneti és kimeneti formátumot támogat, köztük PDF, DOCX, XLSX, PPTX, HTML és képek, miközben a layoutot érintetlenül hagyja. Több száz oldalas fájlokat is képes feldolgozni anélkül, hogy a teljes dokumentumot memóriába töltené, és tipikusan egy 50 oldalas PDF‑et kevesebb, mint egy másodperc alatt összehasonlít. Beépített opciók lehetővé teszik a stílusváltozások figyelmen kívül hagyását, az áthelyezett tartalom felismerését és az egyes változások oldal‑koordinátáinak kiszámítását.
 
 ## Hogyan hasonlítsuk össze a PDF fájlokat programozottan Java‑ban
-Ez a szakasz bemutatja a lépésről‑lépésre megvalósítást, amire szükséged lesz a **compare pdf programmatically** elvégzéséhez. Minden kódrészletet a megjelenése előtt magyarázunk, így sosem maradsz bizonytalanul a snippet működésével kapcsolatban.
 
-### Előkövetelmények és amire szükséged lesz
+Az alábbiakban a projektedben követendő vég‑től‑végig folyamatot mutatjuk be. Minden lépést a megfelelő helyőrző előtt magyarázunk, így mindig tudni fogod, miért van ott a kód.
 
-#### Technikai követelmények
-- **Java Development Kit (JDK)** – 8‑as vagy újabb verzió (Java 11+ ajánlott a jobb teljesítményért)  
-- **IDE** – IntelliJ IDEA, Eclipse vagy a kedvenc Java IDE‑d  
-- **Maven** – a függőségkezeléshez (a legtöbb IDE tartalmazza)
+### Előfeltételek és szükséges eszközök
 
-#### Tudás előkövetelmények
-- Alap Java programozás (osztályok, metódusok, try‑with‑resources)  
-- Maven függőségek ismerete (mi mindenképp végigvezetünk a beállításon)  
-- Fájl I/O műveletek megértése (hasznos, de nem kötelező)
+- **Java Development Kit (JDK)** – 8 vagy újabb verzió (Java 11+ jobb garbage‑collection‑t és modul‑támogatást nyújt).  
+- **IDE** – IntelliJ IDEA, Eclipse vagy bármely szerkesztő, amely támogatja a Maven‑t.  
+- **Maven** – a függőségkezeléshez; a bemutató a Maven standard `pom.xml`‑jét használja.  
+- **Minta dokumentumok** – két PDF (vagy bármely támogatott formátum) apró eltérésekkel a teszteléshez.
 
-#### Teszteléshez szükséges dokumentumok
-Készíts elő néhány mintadokumentumot – Word fájlok, PDF‑ek vagy szövegfájlok is jól működnek. Ha nincs kéznél, hozz létre két egyszerű szövegfájlt, amelyekben apró eltérések vannak a teszteléshez.
+### A GroupDocs.Comparison for Java beállítása
 
-## A GroupDocs.Comparison for Java beállítása
-
-### Maven konfiguráció
-Először add hozzá a GroupDocs tárolót és a függőséget a `pom.xml`‑hez. Tartsd meg a blokkot pontosan úgy, ahogy látható:
+#### Maven konfiguráció
+Először add hozzá a GroupDocs tárolót és a függőséget a `pom.xml`‑hez. A blokkot pontosan úgy hagyd, ahogy látható:
 
 ```xml
 <repositories>
@@ -88,18 +129,18 @@ Először add hozzá a GroupDocs tárolót és a függőséget a `pom.xml`‑hez
 </dependencies>
 ```
 
-**Pro Tip**: Mindig ellenőrizd a legújabb verziót a GroupDocs weboldalán. A 25.2‑es verzió volt aktuális a írás időpontjában, de az újabb verziók további funkciókat vagy hibajavításokat tartalmazhatnak.
+**Pro Tipp**: Mindig ellenőrizd, hogy a legújabb stabil verziót használod-e a GroupDocs letöltési oldalán. Az új kiadások gyakran további formátumokat és teljesítményjavításokat hoznak.
 
-### Gyakori beállítási problémák és megoldások
-- **„Repository not found”** – győződj meg róla, hogy a `<repositories>` blokk a `<dependencies>` előtt szerepel.  
-- **„ClassNotFoundException”** – frissítsd a Maven függőségeket (IntelliJ: *Maven → Reload project*).
+#### Gyakori beállítási problémák és megoldások
+- **„Repository not found”** – győződj meg róla, hogy a `<repositories>` elem **előtt** szerepel a `<dependencies>`‑nél.  
+- **„ClassNotFoundException”** – futtass Maven frissítést (pl. *Maven → Reload project* az IntelliJ‑ben), hogy a JAR‑ok bekerüljenek a classpath‑ba.
 
-### Licenc opciók magyarázata
-1. **Free Trial** – tökéletes tanuláshoz és kis projektekhez.  
-2. **Temporary License** – kérj egy 30‑napos kulcsot a hosszabb értékeléshez.  
-3. **Full License** – szükséges a termelési feladatokhoz.
+#### Licencopciók magyarázata
+1. **Ingyenes próba** – tanuláshoz és kis‑méretű demókhoz ideális.  
+2. **Ideiglenes licenc** – kérj 30 napos kulcsot a hosszabb kiértékeléshez.  
+3. **Teljes licenc** – kötelező a termeléshez, korlátlan fájlméret és prioritásos támogatás.
 
-### Alap projekt struktúra
+#### Alap projektstruktúra
 ```
 your-project/
 ├── src/main/java/
@@ -111,10 +152,10 @@ your-project/
 └── pom.xml
 ```
 
-## Core Implementation: Lépésről‑lépésre útmutató
+### Core implementáció: Lépés‑ről‑lépésre útmutató
 
-### A Comparer osztály megértése
-A `Comparer` osztály a fő interfészed a dokumentum‑összehasonlításhoz:
+#### A Comparer osztály megértése
+A `Comparer` osztály a GroupDocs.Comparison minden összehasonlítási műveletének központi belépési pontja.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -125,17 +166,17 @@ try (Comparer comparer = new Comparer("sourceFilePath")) {
 }
 ```
 
-**Miért használjuk a try‑with‑resources‑t?** A `Comparer` implementálja az `AutoCloseable`‑t, így ez a minta garantálja a memória és a fájlkezelők megfelelő tisztítását – életmentő nagy PDF‑ek esetén.
+**Miért használjunk try‑with‑resources‑t?** Mivel a `Comparer` implementálja az `AutoCloseable` interfészt, ez a minta garantálja, hogy a natív erőforrások (memória‑buffer, ideiglenes fájlok) automatikusan felszabadulnak, megakadályozva a memória‑szivárgást nagy PDF‑ek feldolgozásakor.
 
-### 1. funkció: Változási koordináták lekérése
-Ez a funkció pontosan megmutatja, hol történt minden változás – gondolj GPS‑koordinátákra a dokumentumszerkesztésekhez.
+#### Funkció 1: Változási koordináták lekérése
+Ez a funkció minden észlelt változás pontos oldal‑szintű X/Y koordinátáit adja vissza, lehetővé téve vizuális diff‑nézők építését.
 
-#### Mikor használjuk
-- Vizuális diff néző építése  
-- Pontos audit jelentések megvalósítása  
-- Változások kiemelése PDF nézőben jogi felülvizsgálathoz  
+##### Mikor érdemes használni
+- Web‑alapú dokumentum‑áttekintő építése, amely kiemeli a módosításokat.  
+- Audit naplók generálása, amelyek pontosan megmutatják a módosítás helyét.  
+- PDF‑nézőkkel való integráció, amelyek támogatják az annotáció‑rétegeket.
 
-#### Implementáció részletei
+##### Implementáció részletei
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.result.ChangeInfo;
@@ -148,7 +189,9 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-Engedélyezd a koordináta számítást:
+A `CompareOptions` szabályozza az összehasonlítás viselkedését, például a koordináta‑számítást.
+
+Koordináta‑számítás engedélyezése:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -159,7 +202,7 @@ final Path resultPath = comparer.compare(
                 .build());
 ```
 
-Nyerd ki és dolgozd fel a változási információkat:
+A változási információk kinyerése és feldolgozása:
 
 ```java
 ChangeInfo[] changes = comparer.getChanges();
@@ -169,23 +212,25 @@ for (ChangeInfo change : changes) {
 }
 ```
 
-**Performance Note**: A koordináták számítása további terhelést jelent, ezért csak akkor engedélyezd, ha valóban szükséged van az adatokra.
+**Teljesítményjegyzet**: A koordináták engedélyezése körülbelül 15‑20 % többletterhelést jelent; kapcsold ki, ha nagy mennyiségű diff‑feladatot futtatsz, ahol a helyadatok nem szükségesek.
 
-### 2. funkció: Változások lekérése fájl útvonalakból
-Ha csak egy egyszerű listára van szükséged arról, mi változott, ez a módszer a megfelelő választás.
+#### Funkció 2: Változások lekérése fájlútvonalakból
+Ha csak a változások listájára van szükséged, ez a metódus egy könnyű `ChangeInfo[]` tömböt ad vissza koordináták nélkül.
 
-#### Ideális
-- Gyors változási összefoglalók  
-- Egyszerű diff jelentések  
-- Tömeges feldolgozás több dokumentumpárra  
+A `ChangeInfo` egyetlen észlelt változást reprezentál, típusával és helyével együtt.
 
-#### Implementáció
+##### Ideális esetek
+- Egyszerű szöveges változási összefoglalók generálása.  
+- Éjszakai batch feladatok, amelyek több ezer dokumentumpárt hasonlítanak össze.  
+- Gyors ellenőrzés, hogy a két verzió azonos‑e.
+
+##### Implementáció
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-Futtasd az összehasonlítást extra beállítások nélkül:
+Futtasd az összehasonlítást extra opciók nélkül:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -194,17 +239,17 @@ System.out.println("\nCount of changes: " + changes.length);
 }
 ```
 
-**Best Practice**: Mindig ellenőrizd a `changes` tömb hosszát – egy üres tömb azt jelenti, hogy a dokumentumok azonosak.
+**Legjobb gyakorlat**: Mindig ellenőrizd a `changes.length` értékét. Egy üres tömb azt jelenti, hogy a két dokumentum azonos, így elkerülheted a további feldolgozást.
 
-### 3. funkció: Működés stream‑ekkel
-Ideális webalkalmazásokhoz, mikro‑szolgáltatásokhoz vagy bármely olyan szituációhoz, ahol a fájlok memóriában vagy a felhőben élnek.
+#### Funkció 3: Stream‑ek használata
+A stream‑ek lehetővé teszik olyan fájlok összehasonlítását, amelyek memóriában, hálózati megosztáson vagy felhő tárolóban élnek, anélkül, hogy a helyi fájlrendszert érintenék.
 
-#### Gyakori felhasználási esetek
-- Fájl feltöltések kezelése Spring Boot kontrollerben  
-- Dokumentumok lekérése AWS S3 vagy Azure Blob Storage‑ból  
-- PDF‑ek feldolgozása adatbázis BLOB oszlopban tárolva  
+##### Gyakori felhasználási esetek
+- Fájl‑feltöltések fogadása egy Spring Boot kontrollerben, és azok azonnali összehasonlítása.  
+- PDF‑ek letöltése AWS S3‑ról, Azure Blob‑ról vagy Google Cloud Storage‑ról közvetlenül `ByteArrayInputStream`‑be.  
+- Dokumentumok összehasonlítása adatbázis BLOB oszlopban tárolt fájlokkal.
 
-#### Stream implementáció
+##### Stream implementáció
 ```java
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -224,17 +269,17 @@ System.out.println("\nCount of changes: " + Arrays.toString(changes).length);
 }
 ```
 
-**Memory Tip**: A try‑with‑resources blokk automatikusan bezárja a stream‑eket, megakadályozva a szivárgásokat nagy PDF‑ek esetén.
+**Memória Tipp**: A try‑with‑resources blokk biztosítja, hogy a stream‑ek automatikusan bezáródjanak, ami kulcsfontosságú, ha sok nagy PDF‑et kezelsz egy több szálas szolgáltatásban.
 
-### 4. funkció: Cél szöveg kinyerése
-Néha a pontosan megváltozott szövegre van szükség – tökéletes változásnaplóhoz vagy értesítésekhez.
+#### Funkció 4: Cél‑szöveg kinyerése
+Néha szükség van a pontos szövegrészletre, amelyet hozzáadtak vagy eltávolítottak, például e‑mail értesítésekhez vagy változásnapló bejegyzésekhez.
 
-#### Gyakorlati alkalmazások
-- Változásnapló UI építése  
-- E‑mail értesítések küldése beillesztett/törölt szöveggel  
-- Tartalom auditálása megfelelőséghez  
+##### Gyakorlati alkalmazások
+- Értesítő e‑mail küldése, amely tartalmazza a beszúrt bekezdést.  
+- UI‑rács feltöltése, amely „régi vs. új” szöveget jelenít meg oldal‑oldal.  
+- Szabályozási dokumentumok auditálása konkrét kifejezés‑változásokra.
 
-#### Implementáció
+##### Implementáció
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
@@ -249,21 +294,13 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
 }
 ```
 
-**Filtering Tip**: Koncentrálj a specifikus változástípusokra:
+**Szűrési Tipp**: Használd a `ChangeInfo.getChangeType()` metódust, hogy csak a `INSERT` vagy `DELETE` típusú változásokra koncentrálj.
 
-```java
-for (ChangeInfo change : changes) {
-    if (change.getType() == ComparisonAction.INSERT) {
-        System.out.println("Added: " + change.getText());
-    }
-}
-```
+### Gyakori buktatók és elkerülésük módjai
 
-## Gyakori buktatók és hogyan kerüld el őket
-
-### 1. Fájl útvonal problémák
-- **Probléma**: „File not found”, még ha a fájl létezik is.  
-- **Megoldás**: Fejlesztés közben használj abszolút útvonalakat, vagy ellenőrizd a munkakönyvtárat. Windows‑on escape‑eld a backslash‑eket vagy használj előre‑döntött (forward) slash‑eket.
+#### 1. Fájlútvonal problémák
+**Probléma**: „File not found”, pedig a fájl létezik.  
+**Megoldás**: Fejlesztés közben használj abszolút útvonalakat, vagy ellenőrizd az IDE munkakönyvtárát. Windows‑on escapeld a backslash‑eket (`\\`) vagy használj előre‑döntő perjeleket (`/`).
 
 ```java
 // Good
@@ -272,24 +309,24 @@ String path = "C:/Users/yourname/documents/test.docx";
 String path = "C:\\Users\\yourname\\documents\\test.docx";
 ```
 
-### 2. Memória szivárgások nagy fájlok esetén
-- **Probléma**: `OutOfMemoryError` nagy PDF‑eken.  
-- **Megoldás**: Mindig használj try‑with‑resources‑t, és fontold meg a streaming API‑kat vagy a dokumentumok darabokra bontását.
+#### 2. Memória‑szivárgás nagy fájloknál
+**Probléma**: `OutOfMemoryError` 200‑oldalas PDF‑ek összehasonlításakor.  
+**Megoldás**: Mindig csomagold a `Comparer`‑t try‑with‑resources blokkba, és részesítsd előnyben a stream‑alapú overload‑okat, amelyek csak a szükséges oldalakat tartják memóriában.
 
-### 3. Nem támogatott fájlformátumok
-- **Probléma**: Kivétel bizonyos formátumoknál.  
-- **Megoldás**: Először ellenőrizd a támogatott formátumok listáját. A GroupDocs 60+ formátumot támogat; a megvalósítás előtt győződj meg róla.
+#### 3. Nem támogatott fájlformátumok
+**Probléma**: Kivétel bizonyos régi formátumoknál.  
+**Megoldás**: Ellenőrizd a hivatalos **supported‑formats** listát (a GroupDocs több mint **60** formátumot támogat). Ha egy formátum nincs felsorolva, konvertáld PDF‑re vagy DOCX‑re, mielőtt összehasonlítod.
 
-### 4. Teljesítmény problémák
-- **Probléma**: Az összehasonlítások túl sokáig tartanak.  
-- **Megoldás**:  
-  - Kapcsold ki a koordináta számítást, ha nincs rá szükség.  
-  - Használj megfelelő `CompareOptions`‑t.  
-  - Amennyiben lehetséges, párhuzamosítsd a kötegelt feladatokat.
+#### 4. Teljesítményproblémák
+**Probléma**: Az összehasonlítások hosszabbak a vártnál.  
+**Megoldás**:  
+- Kapcsold ki a koordináta‑számítást, ha nincs rá szükség.  
+- Használd a `CompareOptions.setDetectMovedBlocks(true)`‑t csak akkor, ha tényleg szükséged van az áthelyezett blokkok felismerésére.  
+- Párhuzamosítsd a független összehasonlítási feladatokat egy szál‑pool segítségével.
 
-## Teljesítmény optimalizálási tippek
+### Teljesítményoptimalizálási tippek
 
-### Válaszd a megfelelő beállításokat
+#### A megfelelő opciók kiválasztása
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setCalculateCoordinates(false) // Only enable when needed
@@ -297,12 +334,12 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-### Memória kezelés
-- Dokumentumok feldolgozása kötegekben, ahelyett, hogy egyszerre betöltenéd őket.  
-- Streaming API‑k használata nagy fájlokhoz.  
-- Megfelelő takarítás `finally` blokkokban vagy a try‑with‑resources‑re támaszkodva.
+#### Memóriakezelés
+- Dokumentumokat kötegekben dolgozd fel, ne egyszerre mindent tölts be.  
+- Használd a streaming API‑t 50 MB‑nál nagyobb fájloknál.  
+- A try‑with‑resources biztosítja a tiszta felszabadítást.
 
-### Gyorsítótár stratégiák
+#### Gyorsítótár‑stratégiák
 ```java
 // Pseudo-code for caching concept
 String cacheKey = generateCacheKey(sourceFile, targetFile);
@@ -311,9 +348,9 @@ if (cache.contains(cacheKey)) {
 }
 ```
 
-## Valós életbeli forgatókönyvek és megoldások
+### Valós példák és megoldások
 
-### Szenárió 1: Tartalomkezelő rendszer
+#### Szenárió 1: Tartalomkezelő rendszer
 ```java
 public class ArticleVersionComparison {
     public List<ChangeInfo> compareVersions(String oldVersion, String newVersion) {
@@ -329,7 +366,7 @@ public class ArticleVersionComparison {
 }
 ```
 
-### Szenárió 2: Automatizált minőségbiztosítás
+#### Szenárió 2: Automatizált minőség‑ellenőrzés
 ```java
 public boolean validateReportAgainstTemplate(InputStream report, InputStream template) {
     try (Comparer comparer = new Comparer(template)) {
@@ -346,7 +383,7 @@ public boolean validateReportAgainstTemplate(InputStream report, InputStream tem
 }
 ```
 
-### Szenárió 3: Tömeges dokumentumfeldolgozás
+#### Szenárió 3: Kötetes dokumentumfeldolgozás
 ```java
 public void processBatchComparison(List<DocumentPair> documents) {
     documents.parallelStream().forEach(pair -> {
@@ -361,9 +398,9 @@ public void processBatchComparison(List<DocumentPair> documents) {
 }
 ```
 
-## Haladó funkciók és legjobb gyakorlatok
+### Haladó funkciók és legjobb gyakorlatok
 
-### Különböző fájlformátumok kezelése
+#### Különböző fájlformátumok kezelése
 ```java
 public boolean isFormatSupported(String filePath) {
     String extension = getFileExtension(filePath);
@@ -374,7 +411,7 @@ public boolean isFormatSupported(String filePath) {
 }
 ```
 
-### Nagy dokumentumok kezelése
+#### Nagy dokumentumok kezelése
 ```java
 CompareOptions largeDocOptions = new CompareOptions.Builder()
     .setCalculateCoordinates(false)  // Saves memory
@@ -383,7 +420,7 @@ CompareOptions largeDocOptions = new CompareOptions.Builder()
     .build();
 ```
 
-### Hiba kezelési minták
+#### Hibakezelési minták
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
     try (Comparer comparer = new Comparer(source)) {
@@ -407,11 +444,12 @@ public ComparisonResult compareDocuments(String source, String target) {
 
 ## Gyakran feltett kérdések
 
-**Q: Mi a minimális Java verzió, amely a GroupDocs.Comparison‑hoz szükséges?**  
-A: Java 8 a minimum, de Java 11+ ajánlott a jobb teljesítmény és biztonság érdekében.
+**Q: Mi a minimális Java verzió a GroupDocs.Comparison‑hez?**  
+A: Java 8 a minimum, a Java 11+ ajánlott a jobb garbage‑collection és modul‑támogatás miatt.
 
-**Q: Tudok‑e egyszerre több mint két dokumentumot összehasonlítani?**  
-A:  
+**Q: Lehet egyszerre több mint két dokumentumot összehasonlítani?**  
+A: A GroupDocs.Comparison egyszerre egy párost hasonlít össze. Több‑dokumentumos verziókezeléshez iterálj a dokumentumlistán, és minden egymást követő párt hasonlíts össze, az eredményül kapott `ChangeInfo[]`‑t későbbi aggregálásra tárolva.
+
 ```java
 try (Comparer comparer = new Comparer(sourceDocument)) {
     comparer.add(targetDocument1);
@@ -423,13 +461,14 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 
 **Q: Hogyan kezeljem a nagyon nagy dokumentumokat (100 MB+)?**  
 A:  
-- Kapcsold ki a koordináta számítást, ha nincs rá szükség.  
-- Használj streaming API‑kat.  
-- Dokumentumokat dolgozz fel darabokban vagy oldalanként.  
-- Figyeld szorosan a memóriahasználatot.
+- Kapcsold ki a koordináta‑számítást, ha nincs rá szükség.  
+- Részesítsd előnyben a stream‑alapú API‑t, hogy elkerüld a teljes fájl RAM‑ba töltését.  
+- Oszd fel a feldolgozást oldal‑tartományokra, ha csak bizonyos szakaszok változásaira vagy kíváncsi.  
+- Figyeld a JVM heap használatát, és állítsd be a `-Xmx` paramétert ennek megfelelően.
 
-**Q: Van‑e mód a változások vizuális kiemelésére a kimenetben?**  
-A:  
+**Q: Van mód a változások vizuális kiemelésére a kimenetben?**  
+A: Igen. A `ChangeInfo[]` lekérése után generálhatsz új PDF‑et a GroupDocs.Watermark vagy bármely PDF‑könyvtár segítségével, a visszakapott koordináták alapján téglalapokat rajzolva. Így egy „red‑line” verziót kapsz, amely bármely PDF‑nézőben áttekinthető.
+
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setShowInsertedContent(true)
@@ -438,8 +477,9 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-**Q: Hogyan kezeljem a jelszóval védett dokumentumokat?**  
-A:  
+**Q: Hogyan kezeljem a jelszó‑védett dokumentumokat?**  
+A: Add át a jelszót a `Comparer` konstruktorának, vagy állítsd be a `LoadOptions` objektumon keresztül a `compare` meghívása előtt. A könyvtár a memóriában dekódolja a dokumentumot, így a jelszó soha nem kerül a fájlrendszerre.
+
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
@@ -449,8 +489,9 @@ try (Comparer comparer = new Comparer(protectedDocument, loadOptions)) {
 }
 ```
 
-**Q: Testreszabhatom‑e, hogyan észlelik a változásokat?**  
-A:  
+**Q: Testreszabhatom a változások észlelésének módját?**  
+A: Természetesen. A `CompareOptions` kínál olyan flag‑eket, mint `setIgnoreFormatting(true)`, `setDetectMovedBlocks(true)` és `setGranularity(Granularity.WORD)`. Ezeket a vállalati szabályaidhoz igazíthatod – például figyelmen kívül hagyhatod a betűtípus‑változásokat, miközben még mindig észleled az áthelyezett bekezdéseket.
+
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setDetectStyleChanges(false)     // Ignore formatting changes
@@ -458,8 +499,9 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-**Q: Mi a legjobb módja annak, hogy ezt integráljam Spring Boot‑dal?**  
-A:  
+**Q: Mi a legjobb módja a Spring Boot‑tal való integrációnak?**  
+A: Hozz létre egy `@Service` bean‑t, amely injektálja a licenc‑útvonalat, majd egy `@RestController` végpontot, amely `MultipartFile` feltöltéseket fogad. A kontrollerben konvertáld a `MultipartFile`‑t `InputStream`‑re, és hívd meg a stream‑alapú összehasonlítási metódust. A `ChangeInfo[]`‑t JSON‑ként küldd vissza a front‑end megjelenítéséhez.
+
 ```java
 @Service
 public class DocumentComparisonService {
@@ -478,6 +520,22 @@ public class DocumentComparisonService {
 
 ---
 
-**Utoljára frissítve:** 2026-02-21  
+**Utoljára frissítve:** 2026-06-15  
 **Tesztelve a következővel:** GroupDocs.Comparison 25.2 for Java  
-**Szerző:** GroupDocs
+**Szerző:** GroupDocs  
+
+---
+
+```java
+for (ChangeInfo change : changes) {
+    if (change.getType() == ComparisonAction.INSERT) {
+        System.out.println("Added: " + change.getText());
+    }
+}
+```
+
+## Kapcsolódó oktatóanyagok
+
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
+- [compare pdf files java - Java Document Comparison Tutorial - Complete GroupDocs Guide](/comparison/java/advanced-comparison/master-java-document-comparisons-groupdocs/)
+- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)

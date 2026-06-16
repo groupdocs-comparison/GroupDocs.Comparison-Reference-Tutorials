@@ -1,69 +1,67 @@
 ---
 categories:
 - Java Development
-date: '2025-12-23'
-description: Tanulja meg, hogyan használja a GroupDocs Comparison Java API-t dokumentumok
-  összehasonlításához, nagy fájlok kezeléséhez, előnézetek generálásához, és kövesse
-  a legjobb gyakorlatokat.
-keywords: Java document comparison, GroupDocs Comparison Java, document version control
-  Java, Java PDF comparison library, document management Java
-lastmod: '2025-12-23'
+date: '2026-03-27'
+description: Tanulja meg, hogyan hasonlítsa össze a PDF-fájlokat Java-ban a GroupDocs.Comparison
+  for Java segítségével, kezelje a jelszóval védett dokumentumokat, generáljon előnézeteket,
+  és kövesse a legjobb gyakorlatokat.
+keywords: java compare pdf files, java password protected documents, GroupDocs Comparison
+  Java, document version control Java, Java PDF comparison library, document management
+  Java
+lastmod: '2026-03-27'
 linktitle: Java Document Comparison Guide
 tags:
 - document-comparison
 - java-api
 - groupdocs
 - document-management
-title: 'groupdocs comparison java - Dokumentumösszehasonlítás útmutató'
+title: java pdf fájlok összehasonlítása – GroupDocs.Comparison Java oktató
 type: docs
 url: /hu/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1
 ---
 
-# groupdocs comparison java: A GroupDocs.Comparison API mesterfoka
+# java pdf fájlok összehasonlítása – Master GroupDocs.Comparison API
 
-**Küzdesz a dokumentum verziókezeléssel a Java alkalmazásodban?** Nem vagy egyedül. Több dokumentum verziójának kezelése, a változások nyomon követése és a vizuális előnézetek generálása gyorsan rémálommá válhat a megfelelő eszközök nélkül.
+**Küzdesz a dokumentumverzió-kezeléssel a Java alkalmazásodban?** Nem vagy egyedül. Több dokumentumverzió kezelése, a változások nyomon követése és a vizuális előnézetek generálása gyorsan rémálommá válhat a megfelelő eszközök nélkül.
 
-Itt jön képbe a **GroupDocs.Comparison for Java**. Ez a hatékony API lehetővé teszi dokumentumok összehasonlítását, a különbségek kiemelését és oldalak előnézetének generálását néhány kódsorral. Akár tartalomkezelő rendszert építesz, akár **java compare word files**-ra van szükséged, vagy **java compare pdf documents**-t szeretnél, ez a bemutató gyorsan beindít.
+Itt jön képbe a **GroupDocs.Comparison for Java**. Ez a hatékony API lehetővé teszi, hogy dokumentumokat hasonlíts össze, kiemeld a különbségeket, és néhány kódsorral oldal‑előnézeteket generálj. Akár tartalomkezelő rendszert építesz, akár **java compare pdf files**-re van szükséged, vagy **java compare word files**-t szeretnél, ez az útmutató gyorsan beindít.
 
 ## Gyors válaszok
-- **What does groupdocs comparison java do?** It compares two or more documents, highlights changes, and can produce visual previews.  
-- **Which file formats are supported?** Word, PDF, Excel, PowerPoint, images, HTML, and many more.  
-- **Do I need a license for production?** Yes – a valid GroupDocs license removes watermarks and unlocks full features.  
-- **Can I handle large documents?** Yes, with proper memory management and preview pagination.  
-- **Where can I find the latest Maven dependency?** On the GroupDocs repository – check the latest version before adding it.
+- **Mi a groupdocs comparison java feladata?** Két vagy több dokumentumot hasonlít össze, kiemeli a változásokat, és vizuális előnézeteket is képes előállítani.  
+- **Milyen fájlformátumok támogatottak?** Word, PDF, Excel, PowerPoint, képek, HTML és még sok más.  
+- **Szükségem van licencre a termeléshez?** Igen – egy érvényes GroupDocs licenc eltávolítja a vízjeleket és feloldja a teljes funkciókészletet.  
+- **Kezelhetek nagy dokumentumokat?** Igen, megfelelő memória‑kezeléssel és előnézet‑oldalazással.  
+- **Hol találom a legújabb Maven függőséget?** A GroupDocs tárolóban – a hozzáadás előtt ellenőrizd a legújabb verziót.
 
-## Mi az a groupdocs comparison java?
-A GroupDocs.Comparison for Java egy könyvtár, amely programozott módon hasonlítja össze a dokumentumokat, azonosítja a szöveg, a formázás és a képek közti eltéréseket, és opcionálisan létrehozhat egy eredménydokumentumot, amely vizualizálja ezeket a változásokat.
+## Mi az java compare pdf files?
+A GroupDocs.Comparison for Java egy könyvtár, amely programozott módon hasonlítja össze a dokumentumokat, azonosítja a szöveg, a formázás és a képek közti eltéréseket, és opcionálisan létrehozza a változásokat megjelenítő eredménydokumentumot. Ez a megoldás, ha megbízhatóan kell **java compare pdf files**-t végezni.
 
 ## Miért használjuk a GroupDocs.Comparison‑t Java projektekben?
-- **Pontos változásészlelés** számos fájltípuson.
+- **Pontos változás‑detektálás** számos fájltípusban, köztük a PDF‑ekben.  
+- **Könnyű integráció** Maven‑nel vagy Gradle‑lal.  
+- **Beépített előnézet‑generálás** gyors vizuális ellenőrzésekhez.  
+- **Skálázható teljesítmény** ha követed a nagy dokumentumok kezelésére javasolt legjobb gyakorlatokat.
 
-- **Könnyű integráció** Maven vagy Gradle szoftverrel.
-
-- **Beépített előnézet generálás** a gyors vizuális áttekintéshez.
-
-- **Skálázható teljesítmény**, ha követi a nagyméretű dokumentumok kezelésére vonatkozó ajánlott gyakorlatokat.
-
-## Előfeltételek: Amire szükséged van az induláshoz
+## Előkövetelmények: Amire szükséged van a kezdéshez
 
 ### Alapvető követelmények
 
-Mielőtt belevágnánk a kódba, győződj meg róla, hogy tisztában vagy ezekkel az alapokkal:
+Mielőtt a kódba merülnénk, győződj meg róla, hogy ezek az alapok rendben vannak:
 
 **Fejlesztői környezet:**
-- Java Development Kit (JDK) 8 vagy újabb (JDK11+ ajánlott a jobb teljesítmény érdekében)
-- Maven vagy Gradle a függőségek kezeléséhez
-- Kedvenc IDE-d (IntelliJ IDEA, Eclipse vagy VSCode remekül működik)
+- Java Development Kit (JDK) 8 vagy újabb (JDK 11+ ajánlott a jobb teljesítményért)
+- Maven vagy Gradle a függőségkezeléshez
+- Kedvenc IDE-d (IntelliJ IDEA, Eclipse vagy VS Code nagyszerűen működik)
 
-**Tudásfeltételek:**
-- Alapvető Java programozási ismeretek (jártasnak kell lenned az osztályokban és metódusokban)
-- Fájl I/O műveletek ismerete Java-ban
-- Maven függőségek ismerete (ne aggódj, végigvezetünk ezen)
+**Ismeretek előfeltételei:**
+- Alap Java programozási készségek (kényelmesen kell tudnod osztályokkal és metódusokkal dolgozni)
+- A fájl I/O műveletek megértése Java‑ban
+- Maven‑függőségek ismerete (ne aggódj – végigvezetünk)
 
-### GroupDocs.Comparison hozzáadása a projektedhez
+### GroupDocs.Comparison hozzáadása a projekthez
 
-A kezdés egyszerű. Add hozzá ezt a függőséget a `pom.xml` fájlodhoz:
+A kezdés egyszerű. Add hozzá ezt a függőséget a `pom.xml`‑hez:
 
 ```xml
 <repositories>
@@ -82,23 +80,20 @@ A kezdés egyszerű. Add hozzá ezt a függőséget a `pom.xml` fájlodhoz:
 </dependencies>
 ```
 
-**Profi tipp:** Mindig ellenőrizd a legújabb verziót a GroupDocs weboldalán, hogy biztosan megkapd a legújabb funkciókat és hibajavításokat.
+**Pro Tipp:** Mindig ellenőrizd a legújabb verziót a GroupDocs weboldalán, hogy a legújabb funkciókat és hibajavításokat kapd.
 
-## Licencelés (Ezt ne hagyd ki!)
+## Licencelés (Ne hagyd ki!)
 
-Bár ingyenes próbaverzióval is kezdheted, éles használatra megfelelő licencelést kell beállítanod:
-
-1. **Ingyenes próbaverzió**: Letöltés a [GroupDocs] oldalról (https://releases.groupdocs.com/comparison/java/)
-
-2. **Ideiglenes licenc**: Szerezz be egyet [itt] (https://purchase.groupdocs.com/temporary-license/) a hosszabb teszteléshez
-
-3. **Teljes licenc**: Vásárolj a [GroupDocs Store] oldalról (https://purchase.groupdocs.com/buy)
+Bár ingyenes próbaverzióval is elkezdheted, a termeléshez megfelelő licencet kell beállítanod:
+1. **Free Trial**: Töltsd le a [GroupDocs](https://releases.groupdocs.com/comparison/java/) oldalról
+2. **Temporary License**: Szerezz egyet [itt](https://purchase.groupdocs.com/temporary-license/) a kiterjesztett teszteléshez
+3. **Full License**: Vásárolj a [GroupDocs Store](https://purchase.groupdocs.com/buy) oldalon
 
 ## Kezdeti beállítás: A GroupDocs.Comparison előkészítése
 
-### Alapvető inicializálás
+### Alap inicializálás
 
-Így kezdheted el az első összehasonlítást:
+Íme, hogyan kezdhetsz az első összehasonlítással:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -108,37 +103,33 @@ import com.groupdocs.comparison.examples.SampleFiles;
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Mi történik itt?** Létrehozunk egy `Comparer` objektumot, amely az összes dokumentum-összehasonlítási műveletünket fogja kezelni. Gondolj rá úgy, mint a dokumentum-összehasonlító munkaterületedre.
+**Mi történik itt?** Létrehozunk egy `Comparer` objektumot, amely kezeli az összes dokumentum‑összehasonlítási műveletet. Tekintsd úgy, mint a dokumentum‑összehasonlítási munkaterületedet.
 
-## Lépésről lépésre útmutató a megvalósításhoz
+## Lépés‑ről‑lépésre megvalósítási útmutató
 
-### 1. rész: Dokumentum-összehasonlítás beállítása
+### 1. rész: Dokumentum‑összehasonlítás beállítása
 
-Építsünk egy robusztus dokumentum-összehasonlító rendszert, amelyet ténylegesen használhatsz éles környezetben.
-
-#### 1. lépés: Az összehasonlító inicializálása
+#### 1. lépés: Inicializáld a Comparer‑t
 
 ```java
 // Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Miért fontos ez:** A forrásdokumentum szolgál alapként. Minden összehasonlítás megmutatja, hogy mi változott ehhez a dokumentumhoz képest.
+**Miért fontos ez:** A forrásdokumentum a kiindulási alapod. Minden összehasonlítás megmutatja, mi változott a dokumentumhoz képest.
 
-#### 2. lépés: Céldokumentumok hozzáadása
+#### 2. lépés: Cél dokumentumok hozzáadása
 
 ```java
 // Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**Valós forgatókönyv:** Egy szerződéskezelő rendszerben a forrás lehet az eredeti szerződés, a cél pedig a jogi csapat által módosított verzió.
+**Valós például:** Egy szerződéskezelő rendszerben a forrás lehet az eredeti szerződés, a cél pedig a jogi csapat által módosított változat.
 
-### 2. rész: Oldal előnézetek létrehozása
+### 2. rész: Oldal‑előnézetek generálása
 
-Néha szükség van a dokumentumok vizuális előnézetére. Így hozhatja létre őket hatékonyan:
-
-#### 1. lépés: Kimeneti adatfolyam létrehozásának beállítása
+#### 1. lépés: Kimeneti stream létrehozásának beállítása
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -159,9 +150,9 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**Főbb tudnivalók:** Ez a delegálási minta teljes kontrollt biztosít az előnézeti képek mentési helye és módja felett. Könnyen módosíthatja ezt, hogy felhőalapú tárhelyre vagy adatbázisba mentse a képeket.
+**Kulcsfontosságú meglátás:** Ez a delegált minta teljes kontrollt ad arról, hogy hol és hogyan mentődnek az előnézeti képek. Könnyen módosítható, hogy felhő tárolóba vagy adatbázisba mentse.
 
-#### 2. lépés: Az előnézeti beállítások konfigurálása
+#### 2. lépés: Előnézet‑beállítások konfigurálása
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -174,7 +165,7 @@ PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
     .build();
 ```
 
-**Teljesítménytipp:** Csak azoknak az oldalaknak az előnézetét generáld, amelyekre valóban szükséged van. Ez feldolgozási időt és tárhelyet takarít meg.
+**Teljesítmény tipp:** Csak azokra az oldalakra generálj előnézetet, amelyekre valóban szükséged van. Ez időt és tárhelyet takarít meg.
 
 #### 3. lépés: Az előnézetek generálása
 
@@ -183,28 +174,27 @@ PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**Mi történik:** Ez PNG képeket hoz létre a céldokumentum megadott oldalairól. Tökéletes miniatűrök vagy gyors vizuális áttekintések készítéséhez.
+**Mi történik:** Ez PNG képeket hoz létre a cél dokumentum megadott oldalairól. Tökéletes bélyegkép vagy gyors vizuális ellenőrzés készítéséhez.
 
 ## Támogatott fájlformátumok
 
-A GroupDocs.Comparison számos dokumentumformátumot támogat, így sokoldalúan használható különböző felhasználási esetekben:
+A GroupDocs.Comparison számos dokumentumformátumot támogat, így sokféle felhasználási esethez alkalmazható:
 
 **Népszerű formátumok:**
 - **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
-- **PDF dokumentumok**: A PDF fájlok összes verziója
-- **Szöveges fájlok**: Sima szöveg (.txt), Rich Text (.rtf)
-- **Képek**: JPEG, PNG, BMP, GIF
-- **Webformátumok**: HTML, MHTML
-- **Egyéb**: ODT, ODS, ODP (OpenDocument formátumok)
+- **PDF Documents**: PDF fájlok minden verziója
+- **Text Files**: Egyszerű szöveg (.txt), Rich Text (.rtf)
+- **Images**: JPEG, PNG, BMP, GIF
+- **Web Formats**: HTML, MHTML
+- **Other**: ODT, ODS, ODP (OpenDocument formátumok)
 
 ## Gyakori problémák és megoldások
 
-### 1. probléma: FileNotFoundException az előnézet létrehozásakor
+### 1. probléma: FileNotFoundException az előnézet generálása során
 
-**Tünetek:** A kód kivételeket dob, amikor kimeneti adatfolyamokat próbál létrehozni.
+**Tünetek:** A kódod kivételeket dob, amikor kimeneti stream-eket próbál létrehozni.
 
 **Megoldás:**
-
 ```java
 Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
     @Override
@@ -226,12 +216,11 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-### 2. probléma: Memóriaproblémák nagyméretű dokumentumok esetén
+### 2. probléma: Memória problémák nagy dokumentumokkal
 
-**Tünetek:** `OutOfMemoryError` hibaüzenet jelenik meg nagyméretű fájlok vagy sok oldal feldolgozásakor.
+**Tünetek:** `OutOfMemoryError` nagy fájlok vagy sok oldal feldolgozásakor.
 
-**Megoldás:** A dokumentumokat darabokban dolgozza fel, és az objektumokat megfelelően semmisítse meg:
-
+**Megoldás:** Dolgozd fel a dokumentumokat darabokban, és megfelelően szabadítsd fel az objektumokat:
 ```java
 // Process fewer pages at a time
 PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
@@ -248,29 +237,24 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 
 ### 3. probléma: Licencelési problémák
 
-**Tünetek:** Vízjelek a kimeneten vagy korlátozott funkcionalitás.
+**Tünetek:** Vízjelek a kimeneten vagy korlátozott funkciók.
 
-**Megoldás:** Győződjön meg arról, hogy a licenc megfelelően van alkalmazva:
-
+**Megoldás:** Győződj meg róla, hogy a licenc megfelelően van alkalmazva:
 ```java
 // Apply license at the start of your application
 License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Teljesítménynövelő tippek és bevált gyakorlatok (Java összehasonlítási bevált gyakorlatok)
+## Teljesítmény tippek és legjobb gyakorlatok (java comparison best practices)
 
-1. **Előnézet generálásának korlátozása** – Csak azoknak az oldalaknak az előnézetét hozza létre, amelyekre valóban szüksége van.
+1. **Limit Preview Generation** – Csak azokra az oldalakra generálj előnézetet, amelyekre valóban szükséged van.  
+2. **Choose the Right Image Format** – PNG a veszteségmentes minőségért, JPEG a kisebb fájlokért.  
+3. **Implement Caching** – Tárold az összehasonlítási eredményeket, hogy elkerüld az azonos dokumentumok újbóli feldolgozását.  
+4. **Manage Memory** – Használj try‑with‑resources‑t és dolgozd fel a nagy fájlokat kisebb adagokban.  
+5. **Dispose of Comparer Objects** – Mindig zárd le a `Comparer` objektumot, amikor befejezted.
 
-2. **Válassza a megfelelő képformátumot** – PNG a veszteségmentes minőséghez, JPEG a kisebb fájlokhoz.
-
-3. **Gyorsítótár alkalmazása** – Az összehasonlítás eredményeinek tárolása az azonos dokumentumok újbóli feldolgozásának elkerülése érdekében.
-
-4. **Memória kezelése** – Használjon try-with erőforrásokat, és dolgozza fel a nagy fájlokat kisebb kötegekben.
-
-5. **Összehasonlító objektumok megsemmisítése** – Mindig zárja be a `Comparer`-t, ha befejezte.
-
-### Gyártásra kész kódminta
+### Termelésre kész kódminta
 
 ```java
 public class DocumentComparisonService {
@@ -300,7 +284,7 @@ public class DocumentComparisonService {
 }
 ```
 
-## Valós megvalósítási példák
+## Valós példák a megvalósításra
 
 ### 1. példa: Szerződéskezelő rendszer
 
@@ -321,7 +305,7 @@ public class ContractVersionManager {
 }
 ```
 
-### 2. példa: Akadémiai cikk áttekintése
+### 2. példa: Tudományos dolgozat felülvizsgálata
 
 ```java
 public class AcademicDocumentReview {
@@ -341,20 +325,18 @@ public class AcademicDocumentReview {
 }
 ```
 
-## Gyakran Ismételt Kérdések
+## Hogyan java compare pdf files jelszóvédelemmel
 
-**K: Hogyan kezelhetem a jelszóval védett dokumentumokat?**
-V: A GroupDocs.Comparison képes megnyitni a titkosított fájlokat. Adja meg a jelszót a `LoadOptions` segítségével:
-
+Jelszóval védett **java password protected documents** esetén is végezhetsz összehasonlítást, ha a jelszót a `LoadOptions`‑on keresztül adod meg:
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Comparer comparer = new Comparer("protected-document.docx", loadOptions);
 ```
 
-**K: Összehasonlíthatom a felhőalapú tárhelyen tárolt dokumentumokat?**
-V: Természetesen! Fájlútvonalak helyett bemeneti adatfolyamokat használjon:
+## Felhőben tárolt dokumentumok összehasonlítása
 
+Ha a forrás- és célfájlok felhő tárolóban vannak, adj át input stream-eket a fájlútvonalak helyett:
 ```java
 InputStream sourceStream = getDocumentFromCloud("source-doc-id");
 InputStream targetStream = getDocumentFromCloud("target-doc-id");
@@ -362,23 +344,37 @@ Comparer comparer = new Comparer(sourceStream);
 comparer.add(targetStream);
 ```
 
-**K: Mekkora a GroupDocs.Comparison által kezelhető maximális fájlméret?**
-V: Nincs szigorú korlát, de a teljesítmény a rendelkezésre álló memóriától függ. 100 MB-nál nagyobb fájlok esetén növelje a JVM heap méretét, vagy dolgozza fel darabokban.
+## Gyakran feltett kérdések
 
-**K: Mennyire pontos az összehasonlító algoritmus?**
-V: A könyvtár fejlett diff algoritmusokat használ, amelyek a szöveg, a formázás, a képek és akár a beágyazott objektumok változásait is észlelik – ideális jogi vagy megfelelőségi felhasználási esetekre.
+**Q: Hogyan kezeljem a jelszóval védett dokumentumokat?**  
+A: Használd a `LoadOptions`‑t a jelszó megadásához a `Comparer` példány létrehozásakor, ahogy fent is látható.
 
-**K: Testreszabhatom, hogy milyen típusú változásokat észleljen a rendszer?**
-V: Igen. A `CompareOptions` segítségével engedélyezheti vagy letilthatja a szöveg, a formázás, a képek, a táblázatok stb. észlelését.
+**Q: Hasonlíthatok össze felhőben tárolt dokumentumokat?**  
+A: Igen – egyszerűen add meg a felhőszolgáltatótól származó input stream-eket a `Comparer`‑nek.
 
-## Konklúzió
+**Q: Mi a maximális fájlméret, amit a GroupDocs.Comparison kezelni tud?**  
+A: Nincs szigorú korlát, de 100 MB-nál nagyobb fájlok esetén növelni kell a JVM heap méretét, vagy a dokumentumot kisebb darabokra kell bontani.
 
-Most már rendelkezik egy teljes, éles használatra kész útmutatóval a **groupdocs comparison java**-hoz. A fenti lépések, a bevált gyakorlatok és a példaminták követésével hatékony dokumentum-összehasonlítási és előnézeti funkciókat integrálhat bármely Java alkalmazásba – akár szerződésmódosításokat, tudományos vázlatokat vagy nagy PDF-archívumokat kezel.
+**Q: Mennyire pontos az összehasonlító algoritmus?**  
+A: A könyvtár fejlett diff algoritmusokat használ, amelyek a szöveg, a formázás, a képek és a beágyazott objektumok változásait is felismerik – ideális jogi vagy megfelelőségi felhasználásokhoz.
+
+**Q: Testreszabhatom, hogy mely típusú változások legyenek észlelve?**  
+A: Természetesen. Használd a `CompareOptions`‑t a szöveg, formázás, képek, táblázatok stb. észlelésének be‑ vagy kikapcsolásához.
+
+**Q: Támogatja az API az előnézetek generálását csak a kiválasztott oldalakra?**  
+A: Igen – állítsd be a `PreviewOptions`‑t egy konkrét `pageNumbers` tömbbel, hogy csak a szükséges oldalakat generálja.
+
+## Összegzés
+
+Most már egy teljes, termelésre kész útmutatóval rendelkezel a **java compare pdf files** használatához a GroupDocs.Comparison‑nel. A fenti lépések, legjobb gyakorlatok és példaminták követésével erőteljes dokumentum‑összehasonlítási és előnézeti funkciókat integrálhatsz bármely Java alkalmazásba – legyen szó szerződésváltozatok, tudományos vázlatok vagy nagy PDF archívumok kezeléséről.
 
 ---
 
-**Utolsó frissítés:** 2025-12-23
-**Tesztelve:** GroupDocs.Comparison 25.2
+**Utolsó frissítés:** 2026-03-27  
+**Tesztelt verzió:** GroupDocs.Comparison 25.2  
 **Szerző:** GroupDocs  
 
----
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+{< blocks/products/products-backtop-button >}

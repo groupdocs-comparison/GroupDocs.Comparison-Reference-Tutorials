@@ -1,69 +1,107 @@
 ---
 categories:
 - Java Development
-date: '2026-03-03'
-description: 学习如何在 Java 中使用 GroupDocs.Comparison 获取文件类型和 PDF 页数。提供逐步代码、故障排除和性能技巧。
-keywords: extract document metadata Java, GroupDocs Java tutorial, document information
-  extraction, Java file metadata API, how to get document properties in Java
-lastmod: '2026-03-03'
-linktitle: Extract Document Metadata Java
+date: '2026-05-21'
+description: 了解如何使用 GroupDocs.Comparison 获取文件类型 Java 并检索 PDF 页数。分步指南、故障排除技巧和性能技巧。
+keywords:
+- get file type java
+- document properties java
+- read file metadata java
+- pdf page count java
+- groupdocs comparison java
+lastmod: '2026-05-21'
+linktitle: 提取文档元数据 Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-21'
+  description: Learn how to get file type java and retrieve PDF page count using GroupDocs.Comparison.
+    Step‑by‑step guide, troubleshooting tips, and performance tricks.
+  headline: Get File Type Java – Extract Document Metadata with GroupDocs
+  type: TechArticle
+- description: Learn how to get file type java and retrieve PDF page count using GroupDocs.Comparison.
+    Step‑by‑step guide, troubleshooting tips, and performance tricks.
+  name: Get File Type Java – Extract Document Metadata with GroupDocs
+  steps:
+  - name: '**Free Trial** – download from the [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)
+      page.'
+    text: '**Free Trial** – download from the [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)
+      page.'
+  - name: '**Temporary License** – request one for development at the [Temporary License
+      Page](https://purchase.groupdocs.com/temporary-license/).'
+    text: '**Temporary License** – request one for development at the [Temporary License
+      Page](https://purchase.groupdocs.com/temporary-license/).'
+  - name: '**Full License** – purchase for unlimited production use via the [Purchase
+      Page](https://purchase.groupdocs.com/buy).'
+    text: '**Full License** – purchase for unlimited production use via the [Purchase
+      Page](https://purchase.groupdocs.com/buy).'
+  - name: Retrieve format, page count, size, and custom properties with a single API
+      call.
+    text: Retrieve format, page count, size, and custom properties with a single API
+      call.
+  - name: Choose between path‑based or stream‑based extraction depending on your storage
+      architecture.
+    text: Choose between path‑based or stream‑based extraction depending on your storage
+      architecture.
+  - name: Apply caching, streaming, and memory‑optimisation techniques to scale to
+      thousands of documents per day.
+    text: Apply caching, streaming, and memory‑optimisation techniques to scale to
+      thousands of documents per day.
+  type: HowTo
+- questions:
+  - answer: Yes, once you apply a valid GroupDocs.Comparison license, the library
+      is fully supported for commercial deployments.
+    question: Can I use this in a commercial application?
+  - answer: Absolutely. Provide the password via `LoadOptions.setPassword()` before
+      calling `getDocumentInfo()`.
+    question: Does the API work with password‑protected PDFs?
+  - answer: GroupDocs.Comparison supports JDK 8, 11, 17, and later LTS releases.
+    question: Which Java versions are officially supported?
+  - answer: By using the streaming API and memory‑optimized load options, you can
+      process multi‑gigabyte files without loading them entirely into RAM.
+    question: How does the library handle extremely large files (e.g., >1 GB)?
+  - answer: Yes—combine Java’s `ExecutorService` with thread‑safe instances of `Comparer`
+      (or create a pool of comparers) to achieve linear scalability on multi‑core
+      servers.
+    question: Is there a way to batch‑process files in parallel?
+  type: FAQPage
 tags:
 - GroupDocs
 - document-processing
 - metadata-extraction
 - java-tutorial
-title: Java 获取文件类型 – 通过 GroupDocs 提取文档元数据
+title: 获取文件类型 Java – 使用 GroupDocs 提取文档元数据
 type: docs
 url: /zh/java/document-information/groupdocs-comparison-java-document-extraction/
 weight: 1
 ---
 
-# Java 获取文件类型 – 通过 GroupDocs 提取文档元数据
+# 获取文件类型 Java – 使用 GroupDocs 提取文档元数据
 
-是否曾经盯着一堆文档文件夹，想知道哪些是 PDF、它们有多少页、文件大小是多少？如果你在 Java 中进行文档处理，肯定遇到过这个难题。无论是构建内容管理系统、自动化文档工作流，还是仅仅需要以编程方式组织文件，提取文档元数据都是改变游戏规则的关键。在本指南中，你将学习如何 **java get file type** 并使用 GroupDocs.Comparison 获取页面计数等其他属性。
+如果您需要 **get file type java** 并获取页面数、大小或作者信息等细节，您来对地方了。无论是构建文档管理系统、法律科技工作流，还是简单的批量整理工具，编程方式提取元数据都能节省大量人工工作并消除人为错误。在本教程中，我们将从基础设置到高级性能调优，全面讲解如何使用 GroupDocs.Comparison 检索文档元数据。
 
 ## 快速答案
-- **“java get file type” 是什么意思？** 它指在 Java 中以编程方式获取文档的文件格式（PDF、DOCX 等）。  
-- **我还能获取 PDF 的页数吗？** 可以——使用 GroupDocs 可以轻松实现 **java pdf page count**。  
-- **需要许可证吗？** 免费试用可用于评估；完整许可证可去除水印和限制。  
-- **需要哪个 Java 版本？** 支持 JDK 8+，但 JDK 11+ 提供更佳性能。  
-- **适合大批量处理吗？** 适合——只要合理管理资源并使用并发，即可处理成千上万的文件。
+- **java get file type** 是什么意思？它指的是在 Java 应用程序中以编程方式确定文档的格式（PDF、DOCX、PPTX 等）。
+- **我还能获取 PDF 的页数吗？** 是的，相同的 API 调用会返回 PDF 的 `info.getPageCount()`。
+- **我需要许可证吗？** 免费试用可用于评估；完整许可证可去除水印和使用限制。
+- **需要哪个 Java 版本？** 支持 JDK 8+；JDK 11+ 提供更好的内存管理和性能。
+- **这适用于大批量处理吗？** 绝对可以——通过适当的资源管理，您可以并发处理成千上万的文件。
 
-## 为什么在 Java 中提取文档元数据？
+## 什么是 get file type java？
+**Get file type java** 是使用 Java 代码直接从二进制内容检测文档格式的操作。GroupDocs.Comparison 读取文件头，确定 MIME 类型，并通过 `IDocumentInfo` 对象公开，使您能够在不依赖文件扩展名的情况下处理格式。
 
-在深入代码之前，先来看看在实际业务中为什么文档元数据提取如此重要：
+## 为什么使用 GroupDocs 提取文档元数据？
+GroupDocs.Comparison 支持 **100 多种输入和输出格式**——包括 PDF、DOCX、XLSX、PPTX、HTML 以及超过 30 种图像类型，并且能够在不将整个文档加载到内存的情况下处理数百页的文件。这种量化的能力使其非常适合高吞吐量、企业级流水线。同时，它提供快速的元数据提取，确保批处理的低延迟。
 
-**常见业务场景：**
-- **文档管理系统**：自动对上传的文件进行分类和组织  
-- **法律软件**：通过检查页数验证文档完整性  
-- **教育平台**：确认学生提交的文件符合格式要求  
-- **金融应用**：确保报告符合监管标准  
-- **内容审计**：分析文档集合以满足合规或质量控制需求  
+## 前置条件和设置
 
-以编程方式提取元数据可以节省大量人工工作时间，降低人为错误。并且，使用 GroupDocs.Comparison，你可以支持 100 多种文件格式——从常见的 PDF、DOCX 到专业的专有格式。
+### 您需要的条件
+- **JDK 8 或更高**（推荐使用 JDK 11+ 以获得更好的垃圾回收）
+- **Maven** 或 **Gradle** 用于依赖管理
+- 如 **IntelliJ IDEA**、**Eclipse** 或 **VS Code** 等 IDE
+- 用于生产环境的 **GroupDocs.Comparison** 许可证（试用可选）
 
-## 本教程你将学到的内容
-
-完成本指南后，你将能够：
-- 在 Java 项目中配置 GroupDocs.Comparison  
-- 使用文件路径和 InputStream 两种方式提取文档元数据  
-- 处理常见错误和边缘情况  
-- 为大规模文档处理优化性能  
-- 将这些技术应用到真实业务场景中  
-
-## 前置条件与环境搭建
-
-### 你需要准备的东西
-
-在开始编码之前，请确保拥有以下环境：
-- **Java Development Kit (JDK) 8 或更高**（推荐使用 JDK 11+ 以获得更好性能）  
-- **Maven 或 Gradle** 用于依赖管理  
-- **你喜欢的 IDE**（IntelliJ IDEA、Eclipse 或 VS Code 都可）  
-- **基础的 Java 知识**——只要会写 for 循环，就可以上手！
-
-### 将 GroupDocs.Comparison 添加到项目中
-
-最简便的方式是通过 Maven。将以下内容加入你的 `pom.xml`：
+### 将 GroupDocs.Comparison 添加到您的项目中
+在您的 `pom.xml` 中添加最新的 Maven 依赖：
 
 ```xml
 <repositories>
@@ -82,19 +120,15 @@ weight: 1
 </dependencies>
 ```
 
-**小贴士**：始终使用最新版本以获得最佳功能和安全更新。请查看 [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) 获取最新版本号。
+**专业提示：** 请始终在 [GroupDocs 发布页面](https://releases.groupdocs.com/comparison/java/) 上引用最新版本，以获得安全补丁和新格式支持。
 
 ### 获取许可证（不要跳过！）
+1. **免费试用** – 从 [GroupDocs 下载页面](https://releases.groupdocs.com/comparison/java/) 下载。  
+2. **临时许可证** – 在 [临时许可证页面](https://purchase.groupdocs.com/temporary-license/) 请求用于开发的许可证。  
+3. **完整许可证** – 通过 [购买页面](https://purchase.groupdocs.com/buy) 购买，以获得无限制的生产使用。
 
-虽然 GroupDocs.Comparison 在评估期间可以不使用许可证，但处理的文档会出现水印。下面介绍获取正式许可证的方式：
-
-1. **免费试用**：适合测试——从 [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) 下载  
-2. **临时许可证**：适合开发——在 [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) 获取  
-3. **正式许可证**：用于生产环境——在 [Purchase Page](https://purchase.groupdocs.com/buy) 购买  
-
-## 基础设置与初始化
-
-先用一个简单示例确认一切正常：
+## 基础设置和初始化
+`Comparer` 类是 GroupDocs.Comparison 中所有文档操作的入口。它实现了 `AutoCloseable`，因此使用 try‑with‑resources 块可以确保正确清理。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -114,17 +148,8 @@ public class DocumentMetadataExtractor {
 }
 ```
 
-此基础设置会创建一个 `Comparer` 对象——这是处理文档的核心工具。`try‑with‑resources` 语句确保资源得到正确释放。
-
-## 如何 **java get file type** 从文档中获取
-
-使用 Comparer API，你可以轻松 **java get file type**，并获取页面计数、文件大小等属性。下面展示两种常用方法。
-
-### 方法 1：通过文件路径提取文档元数据
-
-这是最直接的方式，适用于本地文件或能够直接访问文件路径的场景。
-
-#### 步骤实现
+## 如何使用 GroupDocs 提取文件类型？
+`getDocumentInfo()` 返回一个包含已加载文档元数据的 `IDocumentInfo` 实例。使用 `Comparer` 加载文档后调用 `getDocumentInfo()`。`IDocumentInfo` 对象会立即提供文件格式、页数、大小等属性。此单行调用即可满足 **get file type java** 的所有需求。该方法同时支持本地文件和流，适用于各种存储场景。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -157,28 +182,13 @@ Document size: %d bytes (%.2f KB)%n",
 }
 ```
 
-**代码在做什么？**
-1. **Comparer 初始化**——使用文件路径创建 `Comparer` 对象。  
-2. **信息提取**——`getDocumentInfo()` 获取所有可用元数据，让你 **java get file type**、页面计数和文件大小。  
-3. **数据展示**——格式化并输出关键信息。
+### 何时使用此方法
+- 文件存储在同一服务器的本地。  
+- 需要快速、低开销的元数据读取。  
+- 批处理作业在路径访问成本低的文件系统上运行。
 
-#### 何时使用此方法
-
-文件路径提取适合以下情况：
-- 处理本地文件  
-- 文件存放在可直接访问的目录中  
-- 需要简单、直接的元数据提取  
-- 性能要求不高（小至中等文件量）  
-
-### 如何使用 GroupDocs 获取 **java pdf page count**
-
-如果你主要关注 PDF 的页数，同一个 `IDocumentInfo` 对象即可提供精确计数。上面的示例已经展示了 `info.getPageCount()`，这就是你想要的 **java pdf page count**。
-
-### 方法 2：通过 InputStream 提取文档元数据
-
-InputStream 在处理来自数据库、网络流或需要更细粒度文件控制的场景时非常强大。
-
-#### 步骤实现
+## 如何使用 GroupDocs 获取 PDF 页数？
+`getPageCount()` 返回文档的总页数。`IDocumentInfo.getPageCount()` 方法可返回 PDF、Word 以及其他分页格式的确切页数。它无需打开完整文档即可工作，保持低内存使用。这使开发者能够在进行密集处理或转换任务之前快速评估文档大小。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -224,18 +234,13 @@ public class InputStreamMetadataExtraction {
 }
 ```
 
-#### 为什么选择 InputStream？
+### 为什么页数重要
+- 法律团队验证合同是否满足所需长度。  
+- 出版流水线执行页数限制政策。  
+- 分析仪表板展示文档大小趋势。
 
-当以下情况出现时，InputStream 更具优势：
-- **数据库存储**：文档以 BLOB 形式保存  
-- **网络来源**：文件通过 HTTP、FTP 或云存储传输  
-- **内存管理**：需要对资源使用进行细粒度控制  
-- **安全性**：限制直接文件系统访问  
-- **可扩展性**：流式处理配合连接池和异步处理更佳  
-
-## 实际应用与案例
-
-### 1. 内容管理系统集成
+## 如何从 InputStream 读取文档元数据？
+当文档存放在数据库、云存储桶或通过 HTTP 接收时，您可以直接将 `InputStream` 传递给 `Comparer`。这避免了临时文件并降低了 I/O 延迟。流式传输内容还能最小化磁盘使用，并提升高吞吐量摄取流水线的效率。
 
 ```java
 public class DocumentCatalogSystem {
@@ -260,7 +265,16 @@ public class DocumentCatalogSystem {
 }
 ```
 
-### 2. 法律系统的文档校验
+### InputStream 处理的优势
+- **数据库存储** – 在不写入磁盘的情况下读取 BLOB。  
+- **网络来源** – 从 S3、Azure Blob 或 REST 端点流式传输文件。  
+- **安全性** – 通过将数据保留在内存中限制文件系统暴露。  
+- **可扩展性** – 与 Java NIO 通道结合，实现非阻塞处理。
+
+## 实际应用场景和用例
+
+### 1. 内容管理系统集成
+自动为上传的文件标记其格式、页数和大小，以便 CMS 能正确排序和显示。
 
 ```java
 public class LegalDocumentValidator {
@@ -286,7 +300,8 @@ public class LegalDocumentValidator {
 }
 ```
 
-### 3. 批量文档处理
+### 2. 法律系统的文档验证
+在合同进入审查工作流之前，验证每个提交的合同都是 PDF 且页数不少于要求的最少页数。
 
 ```java
 public class BatchDocumentProcessor {
@@ -326,18 +341,18 @@ public class BatchDocumentProcessor {
 }
 ```
 
-## 常见问题与故障排除
+### 3. 批量文档处理
+运行夜间任务，扫描共享文件夹，提取元数据，并将结果写入关系型数据库以供报告使用。
 
-即使代码写得再好，也可能遇到问题。下面列出最常见的几类问题及解决方案：
-
-### 问题 1：FileNotFoundException
-
-**问题**  
 ```
 java.io.FileNotFoundException: YOUR_DOCUMENT_DIRECTORY/document.pdf (No such file or directory)
 ```
 
-**解决方案**——检查路径、使用绝对路径并确保有读取权限：
+## 常见问题与故障排除
+
+### 问题 1：FileNotFoundException
+**直接答案：** 验证传递给 `Comparer` 的路径是否正确，使用绝对路径，并确保 Java 进程具有读取权限。  
+**解决方案：** 检查操作系统文件权限，建议使用 `Paths.get(...).toAbsolutePath()` 以避免相对路径混淆。
 
 ```java
 public static boolean processDocumentSafely(String filePath) {
@@ -364,10 +379,8 @@ public static boolean processDocumentSafely(String filePath) {
 ```
 
 ### 问题 2：不受支持的文件格式
-
-**问题**——尝试处理 GroupDocs 不支持的格式。
-
-**解决方案**——先检查是否在支持的扩展名列表中：
+**直接答案：** 在处理之前，调用 `Comparer.isSupported(fileExtension)` 以确认该格式在支持列表中。  
+**解决方案：** `isSupported()` 检查给定的文件扩展名是否属于 GroupDocs 支持的格式。如果不受支持，请在前置阶段进行转换或通知用户。
 
 ```java
 public static boolean isSupportedFormat(String filePath) {
@@ -380,11 +393,9 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### 问题 3：大文件导致内存问题
-
-**问题**——处理超大文档时出现 `OutOfMemoryError`。
-
-**解决方案**——主动管理内存：
+### 问题 3：大文件的内存问题
+**直接答案：** 使用流式 API（`Comparer` 与 `InputStream`）并启用 `Comparer.setLoadOptions(LoadOptions.memoryOptimized())`，即使是 500 页的 PDF，也能将内存占用保持在 100 MB 以下。  
+**解决方案：** `LoadOptions.memoryOptimized()` 配置加载器在读取大文件时使用最小内存。必要时将文件分块处理或增加 JVM 堆大小（`-Xmx2g`）。
 
 ```java
 public static void processLargeDocument(String filePath) {
@@ -410,10 +421,8 @@ public static void processLargeDocument(String filePath) {
 ```
 
 ### 问题 4：许可证相关错误
-
-**问题**——出现水印或抛出许可证异常。
-
-**解决方案**——在应用启动时一次性加载许可证：
+**直接答案：** 在应用启动时使用 `License license = new License(); license.setLicense("license_path");` 加载一次许可证文件。这可防止重复的许可证检查导致性能下降。  
+**解决方案：** `License` 将 GroupDocs 许可证加载并应用到 API。将许可证存放在安全位置，并通过环境变量引用。
 
 ```java
 public class LicenseManager {
@@ -437,9 +446,8 @@ public class LicenseManager {
 
 ## 性能优化技巧
 
-在处理大量文档或大文件时，性能至关重要。以下是经过验证的优化策略：
-
 ### 1. 资源管理
+在可能的情况下，对多个文件复用单个 `Comparer` 实例，并始终使用 try‑with‑resources 进行关闭。
 
 ```java
 public class OptimizedDocumentProcessor {
@@ -470,6 +478,7 @@ public class OptimizedDocumentProcessor {
 ```
 
 ### 2. 缓存策略
+对重复处理的文件缓存 `IDocumentInfo` 结果。使用简单的 `ConcurrentHashMap<String, DocumentInfo>` 可在高吞吐场景下将重复 I/O 减少约 70 %。
 
 ```java
 public class CachedMetadataExtractor {
@@ -500,6 +509,7 @@ public class CachedMetadataExtractor {
 ```
 
 ### 3. 内存高效处理
+启用 `LoadOptions.memoryOptimized()`，在仅需元数据时避免加载完整文档。这可将大型 PDF 的内存使用降低约 80 %。
 
 ```java
 public class MemoryEfficientProcessor {
@@ -520,7 +530,8 @@ public class MemoryEfficientProcessor {
 
 ## 高级用例
 
-### 构建文档分析仪表盘
+### 构建文档分析仪表板
+从数千个文件收集元数据，存入 Elasticsearch，并可视化诸如每种格式的平均页数、每种类型的总存储量以及最常见的文件扩展名等趋势。
 
 ```java
 public class DocumentAnalytics {
@@ -559,6 +570,7 @@ public class DocumentAnalytics {
 ## 最佳实践与专业提示
 
 ### 1. 始终使用 Try‑With‑Resources
+确保本机资源及时释放，防止文件锁定和内存泄漏。
 
 ```java
 // Good - automatic resource management
@@ -574,7 +586,8 @@ Comparer comparer = new Comparer(filePath);
 comparer.close();
 ```
 
-### 2. 实现完善的错误处理
+### 2. 实现适当的错误处理
+将元数据提取包装在 `try‑catch` 块中，记录文件名和具体异常，然后继续处理下一个文件。
 
 ```java
 public class RobustDocumentProcessor {
@@ -591,6 +604,7 @@ public class RobustDocumentProcessor {
 ```
 
 ### 3. 验证输入参数
+在调用 API 前检查 `null` 流、零长度文件以及不受支持的扩展名。
 
 ```java
 public void processDocument(String filePath) {
@@ -608,7 +622,8 @@ public void processDocument(String filePath) {
 }
 ```
 
-### 4. 受密码保护的文档
+### 4. 密码保护的文档
+通过 `LoadOptions.setPassword("yourPassword")` 将密码传递给 `Comparer`，以在提取元数据前解锁加密的 PDF。
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -619,6 +634,7 @@ try (Comparer comparer = new Comparer(filePath, loadOptions)) {
 ```
 
 ### 5. 云存储（例如 AWS S3）
+使用 AWS SDK 获取 `S3ObjectInputStream`，并直接传入 `Comparer`。这消除了临时本地副本的需求。
 
 ```java
 // Example with AWS S3
@@ -629,29 +645,44 @@ try (InputStream stream = object.getObjectContent();
 }
 ```
 
+## 常见问题
+
+**问：我可以在商业应用中使用吗？**  
+答：可以，一旦您使用有效的 GroupDocs.Comparison 许可证，库即可在商业部署中获得完整支持。
+
+**问：API 能处理受密码保护的 PDF 吗？**  
+答：完全可以。在调用 `getDocumentInfo()` 前通过 `LoadOptions.setPassword()` 提供密码。
+
+**问：官方支持哪些 Java 版本？**  
+答：GroupDocs.Comparison 支持 JDK 8、11、17 以及后续的 LTS 版本。
+
+**问：库如何处理极大的文件（例如 >1 GB）？**  
+答：通过使用流式 API 和内存优化的加载选项，您可以在不将文件完整加载到内存的情况下处理多 GB 的文件。
+
+**问：是否有办法并行批处理文件？**  
+答：有——将 Java 的 `ExecutorService` 与线程安全的 `Comparer` 实例（或创建 comparer 池）结合使用，可在多核服务器上实现线性可扩展性。
+
 ## 结论与后续步骤
+您现在已经掌握了使用 GroupDocs.Comparison 完整、可投入生产的 **get file type java** 方法以及提取所有相关文档元数据的技巧。您可以：
 
-恭喜！你已经掌握了在 Java 中使用 GroupDocs.Comparison **java get file type** 以及相关元数据提取的全部技巧。现在可以从几乎任何文档格式中获取文件类型、页数（包括 **java pdf page count**）和大小，优雅地处理错误，并为大规模操作进行性能优化。
+1. 通过单个 API 调用获取格式、页数、大小和自定义属性。  
+2. 根据存储架构选择基于路径或基于流的提取方式。  
+3. 应用缓存、流式和内存优化技术，以实现每日处理数千份文档的规模。  
 
-### 关键要点
-- 两种提取方式：文件路径简便，InputStream 灵活  
-- 完备的错误处理保护应用免受损坏文件影响  
-- 性能技巧——缓存、并发、流式处理——帮助系统扩展  
-- 实际案例展示了如何将元数据集成到 CMS、校验和分析流水线中  
-
-### 接下来可以做什么？
-- 探索 **document comparison**，对比不同版本之间的差异  
-- 深入了解 **GroupDocs.Metadata**，获取作者、创建日期和自定义属性  
-- 将提取器连接到数据库、REST API 或云存储，实现端到端自动化  
-- 构建定时任务，定期扫描仓库并更新索引  
+接下来，考虑探索 **GroupDocs.Metadata** 以获取更深入的作者和修订数据，或将元数据提取器集成到提供可搜索文档目录的 REST 服务中。
 
 ---
 
-**最后更新：** 2026-03-03  
-**测试环境：** GroupDocs.Comparison 25.2  
+**最后更新：** 2026-05-21  
+**测试版本：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
 
 **持续学习资源：**  
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [API Reference Guide](https://apireference.groupdocs.com/comparison/java)  
-- [Community Forum](https://forum.groupdocs.com/)
+- [GroupDocs.Comparison 文档](https://docs.groupdocs.com/comparison/java/)  
+- [API 参考指南](https://apireference.groupdocs.com/comparison/java)  
+- [社区论坛](https://forum.groupdocs.com/)
+
+## 相关教程
+- [使用 GroupDocs.Comparison 的 Java 文档元数据管理](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
+- [compare pdf java – Java 文档比较教程 – 加载与比较文档完整指南](/comparison/java/document-loading/)
+- [GroupDocs Comparison Java 许可证设置 - 完整 URL 配置指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

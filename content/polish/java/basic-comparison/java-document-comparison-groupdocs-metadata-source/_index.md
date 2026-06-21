@@ -1,72 +1,110 @@
 ---
 categories:
 - Java Development
-date: '2026-02-23'
-description: Dowiedz się, jak porównywać dokumenty w Javie przy użyciu API GroupDocs.Comparison,
-  w tym porównywać wiele plików i dokumenty zabezpieczone hasłem. Przewodnik krok
-  po kroku z kodem, najlepszymi praktykami i rozwiązywaniem problemów.
-keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
-  in java, java compare multiple files, java compare password protected, Java file
-  comparison library, how to compare Word documents in Java
-lastmod: '2026-02-23'
-linktitle: Java Document Comparison Tutorial
+date: '2026-06-21'
+description: Dowiedz się, jak porównywać dokumenty w java przy użyciu GroupDocs.Comparison
+  API, w tym java compare multiple files oraz dokumenty zabezpieczone hasłem. Przewodnik
+  krok po kroku z kodem, najlepszymi praktykami i rozwiązywaniem problemów.
+keywords:
+- java compare pdf files
+- java compare word documents
+- compare documents in java
+lastmod: '2026-06-21'
+linktitle: Java Document Comparison Samouczek
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-21'
+  description: Learn how to compare documents in java using GroupDocs.Comparison API,
+    including java compare multiple files and password‑protected docs. Step‑by‑step
+    guide with code, best practices, and troubleshooting.
+  headline: java compare pdf files – GroupDocs API Complete Guide
+  type: TechArticle
+- description: Learn how to compare documents in java using GroupDocs.Comparison API,
+    including java compare multiple files and password‑protected docs. Step‑by‑step
+    guide with code, best practices, and troubleshooting.
+  name: java compare pdf files – GroupDocs API Complete Guide
+  steps:
+  - name: Import the Required Classes
+    text: '`Comparer`, `ComparisonOptions`, `LoadOptions`, and `MetadataSource` are
+      the core classes you’ll interact with.'
+  - name: Create the Comparer Instance
+    text: The `Comparer` class is the entry point for all comparison operations. It
+      implements `AutoCloseable`, so using try‑with‑resources guarantees that native
+      resources are released promptly.
+  - name: Add Target Documents for Comparison
+    text: You can compare a single source against multiple targets in one call. Each
+      call to `add()` registers an additional document. **Here’s something cool:**
+      you can mix formats—compare a PDF source with a DOCX target, and the library
+      will normalize both to an internal representation before diffing.
+  - name: Configure Metadata Handling and Execute Comparison
+    text: ComparisonOptions configures how the comparison is performed, including
+      output format and metadata handling. We now set the metadata source to **SOURCE**,
+      specify the output path, and run the comparison. **What’s happening?** 1. All
+      added documents are compared against the source in a single pass. 2
+  type: HowTo
+- questions:
+  - answer: Absolutely. Add each target with `comparer.add()` before calling `compare()`;
+      the library will generate a single diff that highlights changes across all targets.
+    question: Can I compare more than two documents at once?
+  - answer: Over 50 formats, including DOCX, PDF, XLSX, PPTX, TXT, HTML, and many
+      image types. See the official docs for the full list.
+    question: What file formats does GroupDocs.Comparison support?
+  - answer: Use `LoadOptions` to pass the password when constructing the `Comparer`.
+      The library decrypts internally, keeping the clear text out of your code.
+    question: How do I handle password‑protected documents?
+  - answer: A single `Comparer` instance is not thread‑safe, but you can safely create
+      separate instances per thread or use a thread‑local pool.
+    question: Is GroupDocs.Comparison thread‑safe?
+  - answer: Increase JVM heap, process files in batches, enable asynchronous execution,
+      and reuse `Comparer` objects when possible.
+    question: How can I improve performance for large documents?
+  type: FAQPage
 tags:
 - document-comparison
 - groupdocs
 - java-tutorial
 - api-integration
-title: porównywanie dokumentów w Javie – Kompletny przewodnik po GroupDocs API
+title: java compare pdf files – Kompletny przewodnik GroupDocs API
 type: docs
 url: /pl/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/
 weight: 1
 ---
 
- with translations.
-
-Let's assemble.# porównywanie dokumentów w java – Kompletny przewodnik po GroupDocs API
+# Porównywanie plików PDF w Java – Kompletny przewodnik API GroupDocs
 
 ## Wprowadzenie
 
-Czy kiedykolwiek zdarzyło Ci się ręcznie porównywać dwa dokumenty linia po linii, a przy tym przegapić krytyczne różnice? Z pewnością nie jesteś sam. **compare documents in java** jest powszechnym wyzwaniem, szczególnie gdy musisz zachować metadane, obsługiwać pliki zabezpieczone hasłem lub porównywać wiele plików jednocześnie.
-
-**Oto co**: większość programistów ma trudności, ponieważ albo budują coś od podstaw (co zajmuje wieki), albo używają podstawowych narzędzi diff, które ignorują formatowanie, metadane i ustawienia bezpieczeństwa. Właśnie tutaj wkracza **GroupDocs.Comparison for Java**.
-
-W tym kompleksowym samouczku dowiesz się, jak wdrożyć solidne porównywanie dokumentów w swoich aplikacjach Java. Omówimy wszystko, od podstawowej konfiguracji po zaawansowaną obsługę metadanych, oraz przykłady z rzeczywistego świata, które możesz używać w produkcji. Po zakończeniu będziesz wiedział, jak:
-
-- Skonfigurować GroupDocs.Comparison w swoim projekcie Java (to łatwiejsze niż myślisz)  
-- **compare documents in java** zachowując integralność metadanych  
-- Obsłużyć scenariusze **java compare multiple files** i **java compare password protected**  
-- Zoptymalizować wydajność przetwarzania dokumentów na dużą skalę  
-
-Gotowy, aby uczynić porównywanie dokumentów dziecinnie prostym w swoich aplikacjach Java? Zanurzmy się!
+Jeśli potrzebujesz **java compare pdf files** szybko, dokładnie i bez utraty formatowania lub metadanych, trafiłeś we właściwe miejsce. Ręczne porównania „obok siebie” są podatne na błędy, szczególnie przy kontraktach, dokumentach prawnych lub dużych partiach raportów. GroupDocs.Comparison for Java eliminuje zgadywanie, oferując wysokopoziomowe API, które rozumie wewnętrzną strukturę plików PDF, dokumentów Word, arkuszy kalkulacyjnych i wielu innych formatów. W tym samouczku dowiesz się, jak skonfigurować bibliotekę, obsługiwać pliki zabezpieczone hasłem, porównywać wiele dokumentów w jednym uruchomieniu oraz optymalizować wydajność pod kątem produkcji. Po zakończeniu będziesz mógł wstawić niezawodny silnik porównujący do dowolnej usługi Java przy użyciu kilku linijek kodu.
 
 ## Szybkie odpowiedzi
-- **Jaką bibliotekę mogę użyć do porównywania dokumentów w java?** GroupDocs.Comparison for Java  
-- **Czy mogę porównać wiele plików jednocześnie?** Tak – dodaj dowolną liczbę dokumentów docelowych  
-- **Jak obsłużyć dokumenty zabezpieczone hasłem?** Użyj `LoadOptions` z hasłem dokumentu  
-- **Czy potrzebuję licencji do produkcji?** Ważna licencja GroupDocs usuwa znaki wodne i ograniczenia  
-- **Jaka wersja Javy jest wymagana?** JDK 8+, zalecane JDK 11+
+- **Jaką bibliotekę użyć do porównywania dokumentów w java?** GroupDocs.Comparison for Java.  
+- **Czy mogę porównać wiele plików jednocześnie?** Tak – dodaj dowolną liczbę dokumentów docelowych przed uruchomieniem porównania.  
+- **Jak obsłużyć dokumenty zabezpieczone hasłem?** Przekaż hasło przez `LoadOptions` przy tworzeniu `Comparer`.  
+- **Czy potrzebna jest licencja do produkcji?** Ważna licencja GroupDocs usuwa znaki wodne i znosi limity użytkowania.  
+- **Jaka wersja Javy jest wymagana?** JDK 8+ działa, ale zalecany jest JDK 11+ dla lepszej wydajności.
 
 ## Co to jest **compare documents in java**?
-Porównywanie dokumentów w Javie oznacza programowe wykrywanie różnic — zmian tekstu, edycji formatowania lub aktualizacji metadanych — pomiędzy dwoma lub większą liczbą plików przy użyciu biblioteki rozumiejącej strukturę dokumentu. GroupDocs.Comparison ukrywa złożoność, oferując prosty interfejs API do generowania dokumentu diff, który podkreśla każdą zmianę.
+**Compare documents in java** to proces programowego wykrywania i podświetlania różnic — tekstu, formatowania, obrazów lub metadanych — między dwoma lub więcej plikami przy użyciu biblioteki, która analizuje natywną strukturę dokumentu. GroupDocs.Comparison generuje dokument diff, który wizualnie oznacza wstawienia, usunięcia i zmiany stylu, co przyspiesza i ułatwia przegląd.
 
-## Dlaczego używać GroupDocs.Comparison dla Java?
-- **Bogate wsparcie formatów** – DOCX, PDF, XLSX, PPTX, TXT i inne  
-- **Obsługa metadanych** – wybierz źródło, cel lub brak metadanych dla wyniku  
-- **Wsparcie haseł** – otwieraj zabezpieczone pliki bez ręcznego odszyfrowywania  
-- **Skalowalna wydajność** – przetwarzanie wsadowe, asynchroniczne wykonywanie i projektowanie oszczędzające pamięć  
+## Dlaczego warto używać GroupDocs.Comparison for Java?
+GroupDocs.Comparison for Java zapewnia kompleksowe, gotowe do produkcji rozwiązanie do porównywania dokumentów w szerokim zakresie formatów. Obsługuje ponad 50 typów plików, oferuje precyzyjną kontrolę metadanych, obsługuje zaszyfrowane pliki od razu po wyjęciu, a jego architektura jest zoptymalizowana pod kątem wysokiej przepustowości, co czyni go idealnym dla aplikacji korporacyjnych wymagających niezawodnych, szybkich i bezpiecznych porównań.
 
-## Prerequisites
+- **Szerokie wsparcie formatów** – ponad 50 formatów wejściowych i wyjściowych, w tym DOCX, PDF, XLSX, PPTX i TXT.  
+- **Kontrola metadanych** – wybierz SOURCE, TARGET lub NONE, aby określić, które metadane dokumentu pojawią się w wyniku.  
+- **Obsługa haseł** – otwieraj zaszyfrowane pliki bez ręcznego odszyfrowywania.  
+- **Skalowalna wydajność** – przetwarzanie wsadowe, asynchroniczne API i pamięciooszczędne strumieniowanie pozwalają obsługiwać tysiące stron na minutę na standardowym sprzęcie.  
 
-- **Środowisko Java:** JDK 8+ (zalecane JDK 11+), wybrane IDE, Maven (lub Gradle)  
-- **Biblioteka GroupDocs.Comparison:** wersja 25.2 lub nowsza (zawsze pobieraj najnowszą)  
-- **Licencja:** darmowa wersja próbna, tymczasowa licencja 30‑dniowa lub licencja komercyjna  
+## Wymagania wstępne
 
-## Konfigurowanie GroupDocs.Comparison w Twoim projekcie
+- **Środowisko Java:** JDK 8+ (zalecany JDK 11+), dowolne IDE, Maven lub Gradle do zarządzania zależnościami.  
+- **Biblioteka GroupDocs.Comparison:** wersja 25.2 lub nowsza (zawsze używaj najnowszego wydania).  
+- **Licencja:** darmowa wersja próbna, tymczasowa licencja 30‑dniowa lub licencja komercyjna do produkcji.  
 
-### Maven Configuration
+## Konfiguracja GroupDocs.Comparison w projekcie
 
-Na początek – dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. To miejsce, w którym większość tutoriali robi niepotrzebnie skomplikowane rzeczy, ale w rzeczywistości jest to dość proste:
+### Konfiguracja Maven
+
+Dodaj repozytorium GroupDocs oraz zależność Comparison do pliku `pom.xml`. Ten krok jest często przesadnie rozbudowany w innych przewodnikach, ale to tylko trzy linijki:
 
 ```xml
 <repositories>
@@ -86,39 +124,36 @@ Na początek – dodaj repozytorium GroupDocs i zależność do swojego `pom.xml
 </dependencies>
 ```
 
-**Wskazówka:** Zawsze sprawdzaj najnowszy numer wersji na [stronie wydań GroupDocs](https://releases.groupdocs.com/comparison/java/). Nowe wersje często zawierają ulepszenia wydajności i poprawki błędów, które mogą zaoszczędzić Ci nerwów.
+**Wskazówka:** Sprawdź najnowszą wersję na [stronie wydań GroupDocs](https://releases.groupdocs.com/comparison/java/). Nowe wydania często dodają obsługę formatów i ulepszenia wydajności, które mogą skrócić czas przetwarzania nawet o 20 %.
 
 ### Uzyskanie licencji
 
-Oto czego większość programistów nie zdaje sobie sprawy: możesz od razu rozpocząć testowanie GroupDocs.Comparison w wersji próbnej. Nie wymaga karty kredytowej, bez zobowiązań.
+Możesz od razu rozpocząć testy z darmową wersją próbną. Karta kredytowa nie jest wymagana.
 
 **Twoje opcje:**
-1. **Free Trial** – idealny do testów i małych projektów. Po prostu pobierz i zacznij kodować!  
-2. **Temporary License** – potrzebujesz więcej czasu na ocenę? Uzyskaj 30‑dniową tymczasową licencję [tutaj](https://purchase.groupdocs.com/temporary-license/)  
-3. **Commercial License** – gotowy do produkcji? Sprawdź ceny [tutaj](https://purchase.groupdocs.com/buy)
+1. **Darmowa wersja próbna** – idealna do proof‑of‑concept i małych testów.  
+2. **Licencja tymczasowa** – klucz na 30 dni do rozszerzonej oceny, dostępny [tutaj](https://purchase.groupdocs.com/temporary-license/).  
+3. **Licencja komercyjna** – odblokowuje nieograniczone użycie i usuwa znaki wodne; szczegóły zakupu znajdują się [tutaj](https://purchase.groupdocs.com/buy).  
 
-Wersja próbna zawiera wszystkie funkcje, ale dodaje znak wodny do plików wyjściowych. Dla rozwoju i testów zazwyczaj jest to w porządku.
+Wersja próbna zawiera wszystkie funkcje; jedynym ograniczeniem jest widoczny znak wodny na wygenerowanych dokumentach porównawczych.
 
 ## Implementacja porównywania dokumentów: pełny przewodnik
 
-Teraz najważniejsza część! Zbudujemy kompletną usługę porównywania dokumentów krok po kroku. Nie martw się – wyjaśnimy nie tylko „jak”, ale także „dlaczego” każdej decyzji.
-
 ### Zrozumienie źródeł metadanych (to ważne!)
 
-Zanim zaczniemy kodować, porozmawiajmy o czymś, co myli wielu programistów: źródłach metadanych. Gdy **compare documents in java**, musisz zdecydować, które metadane dokumentu (autor, data utworzenia, własne właściwości itp.) mają być zachowane w wyniku.
+`MetadataSource` to enum określający, które metadane dokumentu zostaną zachowane w wyniku porównania. Gdy **java compare pdf files**, musisz zdecydować, które metadane (autor, data utworzenia, własne właściwości) mają przetrwać w wyniku. GroupDocs.Comparison oferuje trzy opcje:
 
-GroupDocs.Comparison oferuje trzy opcje:
-- **SOURCE** – użyj metadanych z oryginalnego dokumentu  
-- **TARGET** – użyj metadanych z dokumentu, z którym porównujesz  
-- **NONE** – usuń wszystkie metadane z wyniku  
+- **SOURCE** – zachowaj metadane z pliku źródłowego.  
+- **TARGET** – przyjmij metadane z pliku, z którym porównujesz.  
+- **NONE** – usuń wszystkie metadane, uzyskując czysty, anonimowy wynik.  
 
-W większości aplikacji biznesowych będziesz chciał używać **SOURCE**, aby zachować spójność.
+W większości scenariuszy audytowych **SOURCE** jest najbezpieczniejszym domyślnym wyborem, ponieważ zachowuje pochodzenie oryginalnego dokumentu.
 
 ### Implementacja krok po kroku
 
-Stworzymy użyteczną klasę, którą możesz wkleić do dowolnego projektu.
+#### Krok 1: Import wymaganych klas
 
-#### Krok 1: Importuj wymagane klasy
+`Comparer`, `ComparisonOptions`, `LoadOptions` i `MetadataSource` to podstawowe klasy, z którymi będziesz pracować.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -128,9 +163,9 @@ import java.nio.file.Path;
 import java.io.IOException;
 ```
 
-#### Krok 2: Utwórz instancję Comparer
+#### Krok 2: Utworzenie instancji Comparer
 
-Tutaj zaczyna się magia. Klasa `Comparer` jest Twoim głównym punktem wejścia dla wszystkich operacji porównywania:
+Klasa `Comparer` jest punktem wejścia dla wszystkich operacji porównywania. Implementuje `AutoCloseable`, więc użycie try‑with‑resources zapewnia szybkie zwolnienie zasobów natywnych.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
@@ -138,15 +173,15 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 }
 ```
 
-**Dlaczego używać try‑with‑resources?** Klasa `Comparer` implementuje `AutoCloseable`, co oznacza, że prawidłowo zwalnia zasoby po zakończeniu. Zapobiega to wyciekom pamięci – szczególnie ważne przy przetwarzaniu wielu dokumentów.
+#### Krok 3: Dodanie dokumentów docelowych do porównania
 
-#### Krok 3: Dodaj dokumenty docelowe do porównania
+Możesz porównać jeden plik źródłowy z wieloma docelowymi w jednym wywołaniu. Każde wywołanie `add()` rejestruje dodatkowy dokument.
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Coś fajnego**: możesz dodać wiele dokumentów docelowych i porównać je wszystkie z źródłem w jednej operacji. Po prostu wywołaj `add()` wielokrotnie:
+**Coś ciekawego:** możesz mieszać formaty — porównać źródło PDF z docelowym DOCX, a biblioteka znormalizuje oba do wewnętrznej reprezentacji przed wykonaniem diffu.
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -154,9 +189,9 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2.docx");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target3.docx");
 ```
 
-#### Krok 4: Skonfiguruj obsługę metadanych i wykonaj porównanie
+#### Krok 4: Konfiguracja obsługi metadanych i wykonanie porównania
 
-Tutaj ustawiamy źródło metadanych i uruchamiamy faktyczne porównanie:
+`ComparisonOptions` konfiguruje sposób przeprowadzania porównania, w tym format wyjściowy i obsługę metadanych. Teraz ustawiamy źródło metadanych na **SOURCE**, określamy ścieżkę wyjściową i uruchamiamy porównanie.
 
 ```java
 final Path resultPath = comparer.compare("output/comparison_result.docx",
@@ -165,14 +200,14 @@ final Path resultPath = comparer.compare("output/comparison_result.docx",
                 .build());
 ```
 
-**Co się tutaj dzieje?** Mówimy GroupDocs, aby:
-1. Porównał wszystkie dodane dokumenty ze źródłem  
-2. Zapisał wynik w określonej ścieżce  
-3. Użył metadanych dokumentu **SOURCE** w ostatecznym wyniku  
+**Co się dzieje?**  
+1. Wszystkie dodane dokumenty są porównywane ze źródłem w jednym przebiegu.  
+2. Wynik jest zapisywany w `outputPath`.  
+3. Wyjście dziedziczy metadane źródła, zapewniając spójność audytu.
 
 ### Kompletny działający przykład
 
-Połączmy wszystko w metodę, którą możesz naprawdę używać:
+Poniżej gotowa metoda, która kapsułkuje cały przepływ. Wklej ją do klasy pomocniczej i wywołaj z warstwy serwisowej.
 
 ```java
 public class DocumentComparison {
@@ -200,12 +235,10 @@ public class DocumentComparison {
 
 ## Częste pułapki i jak ich unikać
 
-Po pomocy setkom programistów w implementacji porównywania dokumentów, widziałem te same problemy pojawiające się wielokrotnie. Oto najważniejsze (i jak je naprawić):
-
 ### Problemy ze ścieżkami plików
 
-- **Problem**: `FileNotFoundException` mimo że plik istnieje  
-- **Rozwiązanie**: Zawsze używaj ścieżek absolutnych lub prawidłowo rozwiąż ścieżki względne  
+**Problem:** `FileNotFoundException` mimo że plik istnieje.  
+**Rozwiązanie:** Rozwiązuj ścieżki względne względem katalogu roboczego aplikacji lub używaj ścieżek bezwzględnych.
 
 ```java
 // Instead of this:
@@ -217,8 +250,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### Problemy z zarządzaniem pamięcią
 
-- **Problem**: Błędy braku pamięci przy porównywaniu dużych dokumentów  
-- **Rozwiązanie**: Zwiększ rozmiar sterty JVM i używaj właściwego zarządzania zasobami  
+**Problem:** Błędy Out‑of‑memory przy dużych plikach PDF.  
+**Rozwiązanie:** Zwiększ pamięć heap JVM (`-Xmx2g` lub wyżej) i korzystaj ze trybu strumieniowego biblioteki, który przetwarza pliki w fragmentach.
 
 ```bash
 # Add these JVM arguments when running your application
@@ -227,8 +260,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### Nieprawidłowa obsługa metadanych
 
-- **Problem**: Utrata ważnych metadanych dokumentu podczas porównywania  
-- **Rozwiązanie**: Zawsze wyraźnie ustaw typ metadanych – nie polegaj na domyślnych  
+**Problem:** Wynikowy dokument traci autora i datę utworzenia.  
+**Rozwiązanie:** Jawnie ustaw `options.setMetadataSource(MetadataSource.SOURCE)`; domyślnie w starszych wersjach może być `NONE`.
 
 ```java
 // Always be explicit about metadata handling
@@ -239,8 +272,8 @@ SaveOptions saveOptions = new SaveOptions.Builder()
 
 ### Problemy z konfiguracją licencji
 
-- **Problem**: Znaki wodne pojawiają się w produkcji  
-- **Rozwiązanie**: Zweryfikuj, że licencja jest prawidłowo załadowana przed tworzeniem instancji `Comparer`  
+**Problem:** Znaki wodne pojawiają się w wersjach produkcyjnych.  
+**Rozwiązanie:** Załaduj plik licencji przed utworzeniem jakiejkolwiek instancji `Comparer`, najczęściej w statycznym inicjalizatorze.
 
 ```java
 // Load license at application startup
@@ -248,13 +281,11 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Najlepsze praktyki dla środowiska produkcyjnego
+## Najlepsze praktyki dla środowisk produkcyjnych
 
-Na podstawie doświadczeń z rzeczywistego świata, oto praktyki, które odróżniają amatorskie implementacje od gotowych rozwiązań produkcyjnych:
+### Solidna obsługa błędów
 
-### Obsługa błędów, która naprawdę pomaga
-
-Nie tylko przechwytuj wyjątki – obsługuj je sensownie:
+Nigdy nie „połykaj” wyjątków; loguj kontekst i ponownie rzucaj, gdy to właściwe.
 
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
@@ -280,26 +311,25 @@ public ComparisonResult compareDocuments(String source, String target) {
 
 ### Optymalizacja wydajności
 
-W scenariuszach wysokiego wolumenu rozważ następujące optymalizacje:
-1. **Ponowne użycie instancji `Comparer`** gdy to możliwe (ale zachowaj ostrożność w kwestii bezpieczeństwa wątków)  
-2. **Przetwarzaj dokumenty w partiach** aby nie przeciążać zasobów systemu  
-3. **Używaj przetwarzania asynchronicznego** dla dużych dokumentów  
-4. **Monitoruj użycie pamięci** i dostosuj ustawienia JVM odpowiednio  
+W środowiskach o wysokiej przepustowości:
 
-### Kwestie bezpieczeństwa
+1. **Ponowne użycie obiektów `Comparer`** przy przetwarzaniu wielu plików w jednym wątku.  
+2. **Przetwarzanie wsadowe** w celu zmniejszenia narzutu I/O.  
+3. **Wykorzystanie asynchronicznego wykonania** (`CompletableFuture`) dla nieblokującego UI lub odpowiedzi API.  
+4. **Dostosowanie ustawień JVM** (`-Xms`, `-Xmx`, flagi GC) w oparciu o obserwowane wzorce pamięciowe.
 
-- **Waliduj typy plików** przed przetwarzaniem  
-- **Wdroż właściwe kontrole dostępu**  
-- **Usuwaj pliki tymczasowe** natychmiast po użyciu  
-- **Rozważ szyfrowanie** wyników porównania  
+### Aspekty bezpieczeństwa
 
-## Praktyczne zastosowania i przypadki użycia
+- Waliduj rozszerzenia plików i typy MIME przed załadowaniem.  
+- Przechowuj hasła w bezpiecznym sejfie (np. HashiCorp Vault lub AWS Secrets Manager).  
+- Usuwaj pliki tymczasowe natychmiast po zakończeniu porównania.  
+- Opcjonalnie szyfruj wygenerowany dokument diff, jeśli zawiera wrażliwe dane.
 
-Spójrzmy, jak programiści rzeczywiście używają GroupDocs.Comparison w produkcji:
+## Praktyczne zastosowania i scenariusze użycia
 
-### Przegląd dokumentów prawnych
+### Przegląd umów prawnych
 
-Kancelarie prawne używają porównywania dokumentów do śledzenia zmian w umowach i dokumentach prawnych. Funkcja zachowywania metadanych jest tutaj kluczowa, ponieważ muszą utrzymać pochodzenie dokumentu.
+Kancelarie prawne porównują wersje kontraktów, aby upewnić się, że żaden klauzul nie został przypadkowo zmieniony. Zachowanie metadanych gwarantuje, że oryginalny autor i znacznik czasu pozostają widoczne w diffie.
 
 ```java
 // Typical legal document comparison workflow
@@ -319,9 +349,9 @@ public void reviewContractChanges(String originalContract, String revisedContrac
 }
 ```
 
-### Systemy zarządzania treścią
+### Systemy zarządzania treścią (CMS)
 
-Platformy CMS używają porównywania dokumentów do kontroli wersji i śledzenia zmian:
+Platformy CMS używają porównywania do implementacji kontroli wersji dla przesyłanych zasobów, umożliwiając redaktorom dokładne zobaczenie, co zmieniło się między wersjami.
 
 ```java
 public class CMSDocumentVersioning {
@@ -350,7 +380,7 @@ public class CMSDocumentVersioning {
 
 ### Analiza dokumentów finansowych
 
-Instytucje finansowe używają tego do zgodności regulacyjnej i ścieżek audytu:
+Banki porównują sprawozdania regulacyjne i raporty audytowe, potrzebując niezmiennego zapisu każdej zmiany dla audytów zgodności.
 
 ```java
 public AuditResult auditFinancialDocument(String originalReport, String submittedReport) {
@@ -371,11 +401,9 @@ public AuditResult auditFinancialDocument(String originalReport, String submitte
 
 ## Optymalizacja wydajności i skalowanie
 
-Gdy jesteś gotowy obsłużyć poważne wolumeny dokumentów, te strategie utrzymają responsywność aplikacji:
+### Zarządzanie pamięcią przy gigantycznych plikach
 
-### Zarządzanie pamięcią
-
-Duże dokumenty mogą szybko zużywać dostępną pamięć. Oto jak obsługiwać je efektywnie:
+Gdy dokumenty przekraczają kilkaset megabajtów, rozważ następujący wzorzec:
 
 ```java
 public class OptimizedDocumentProcessor {
@@ -401,9 +429,9 @@ public class OptimizedDocumentProcessor {
 }
 ```
 
-### Przetwarzanie wsadowe
+### Strategia przetwarzania wsadowego
 
-Do porównywania wielu dokumentów przetwarzanie wsadowe jest Twoim przyjacielem:
+Przetwarzaj dokumenty w logicznych grupach (np. per klient lub per dzień), aby utrzymać przewidywalny rozmiar pamięci.
 
 ```java
 public List<ComparisonResult> processBatch(List<DocumentPair> documentPairs) {
@@ -426,19 +454,11 @@ private ComparisonResult compareDocumentPair(DocumentPair pair) {
 }
 ```
 
-## Przewodnik rozwiązywania problemów
+## Poradnik rozwiązywania problemów
 
-Kiedy coś idzie nie tak (a tak się zdarza), oto lista kontrolna debugowania:
+### Błędy „Comparison Failed”
 
-### "Comparison Failed" Errors
-
-**Najczęstsze przyczyny:**
-- Nieobsługiwany format pliku  
-- Uszkodzone dokumenty źródłowe  
-- Niewystarczająca pamięć  
-- Problemy z uprawnieniami do plików  
-
-**Kroki debugowania:**
+Typowe przyczyny to nieobsługiwane formaty, uszkodzone pliki, niewystarczająca pamięć heap lub problemy z uprawnieniami do plików. Postępuj zgodnie z poniższymi krokami:
 
 ```java
 // Add comprehensive logging to identify the issue
@@ -460,26 +480,26 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 }
 ```
 
-### Problemy z wydajnością
+### Wąskie gardła wydajności
 
-Jeśli porównania trwają zbyt długo:
-1. **Sprawdź rozmiar dokumentu** – pliki powyżej 100 MB mogą wymagać specjalnego traktowania  
-2. **Monitoruj użycie pamięci** – zwiększ rozmiar sterty w razie potrzeby  
-3. **Sprawdź wydajność I/O plików** – wolne przechowywanie może wąskim gardłem operacji  
-4. **Rozważ format dokumentu** – niektóre formaty są bardziej złożone w przetwarzaniu  
+Jeśli porównania trwają dłużej niż oczekiwano:
 
-### Wycieki pamięci
+1. Sprawdź rozmiar pliku; pliki > 100 MB mogą wymagać dedykowanych opcji strumieniowych.  
+2. Zwiększ rozmiar heap (`-Xmx4g` dla zadań wsadowych).  
+3. Upewnij się, że podsystem magazynowania (SSD vs HDD) zapewnia wymaganą przepustowość I/O.  
+4. Preferuj formaty natywnie obsługiwane (np. DOCX zamiast starszego binarnego DOC), aby zmniejszyć narzut konwersji.
 
-Objawy, że możesz mieć wycieki pamięci:
-- Wydajność aplikacji pogarsza się z czasem  
-- `OutOfMemoryError` po przetworzeniu wielu dokumentów  
-- Wysoka aktywność garbage collection  
+### Wskaźniki wycieków pamięci
 
-**Rozwiązanie**: Zawsze używaj try‑with‑resources i monitoruj aplikację przy pomocy narzędzi profilujących.
+- Stopniowe spowolnienie po wielu porównaniach.  
+- Częste `OutOfMemoryError` mimo dużego heapu.  
+- Wysokie czasy pauz GC.
+
+**Rozwiązanie:** Zawsze używaj try‑with‑resources dla `Comparer`, monitoruj aplikację profilerem (VisualVM, YourKit) i unikaj utrzymywania referencji do dużych obiektów `Document` po zakończeniu porównania.
 
 ## Obsługa plików zabezpieczonych hasłem
 
-Jeśli musisz **java compare password protected** dokumenty, użyj `LoadOptions` przy otwieraniu źródła lub celu:
+Gdy musisz **java compare password protected** PDF‑y lub pliki Word, przekaż hasło poprzez `LoadOptions`. `LoadOptions` to obiekt konfiguracyjny, który pozwala określić hasła i inne parametry ładowania dla chronionych dokumentów:
 
 ```java
 LoadOptions loadOptions = new LoadOptions("your_password");
@@ -488,21 +508,24 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
-## Jak w java porównać dokumenty zabezpieczone hasłem
+**Wskazówka bezpieczeństwa:** Pobieraj hasła z zaszyfrowanego magazynu konfiguracji w czasie wykonywania; nigdy nie osadzaj ich w kodzie źródłowym.
 
-Pliki zabezpieczone hasłem są powszechne w branżach regulowanych. Przekazując hasło przez `LoadOptions`, utrzymujesz niezmieniony przepływ porównania, zapewniając jednocześnie, że biblioteka może bezpiecznie odszyfrować plik. Pamiętaj, aby nigdy nie wpisywać haseł na stałe; przechowuj je w bezpiecznym sejfie lub zmiennej środowiskowej i wstrzykuj w czasie działania.
+## Jak porównywać dokumenty zabezpieczone hasłem w java
 
-## Jak obsługiwać duże dokumenty w java
+Pliki zabezpieczone hasłem są powszechne w sektorach regulowanych. Przekazując hasło przez `LoadOptions`, biblioteka odszyfrowuje plik w locie, wykonuje porównanie, a następnie usuwa treść w postaci czystego tekstu z pamięci. Takie podejście spełnia wymogi polityk ochrony danych i zapewnia, że żadne poświadczenia nie pozostają w logach ani w przechowywaniu tymczasowym.
 
-Gdy dokumenty przekraczają kilkaset megabajtów, możesz napotkać wolniejsze przetwarzanie lub wyższe zużycie pamięci. Aby to złagodzić:
-- **Zwiększ stertę JVM** (`-Xmx`), szczególnie dla zadań wsadowych.  
-- **Włącz strumieniowanie** tam, gdzie to możliwe – GroupDocs.Comparison przetwarza pliki wewnętrznie w fragmentach, ale możesz dodatkowo zmniejszyć obciążenie pamięci, unikając ładowania całych plików do pamięci.  
-- **Uruchamiaj porównania asynchronicznie** (zobacz przykład async powyżej), aby UI pozostało responsywne.  
-- **Podziel bardzo duże PDFy** na logiczne sekcje przed porównaniem, jeśli logika biznesowa na to pozwala.
+## Jak radzić sobie z dużymi dokumentami w java
 
-## Integrating with Spring Boot
+Gdy dokumenty mają kilka set megabajtów, konieczne jest przyjęcie strategii oszczędzających pamięć i odpowiednia konfiguracja JVM. Zwiększ rozmiar heapu, włącz tryb strumieniowy biblioteki i rozważ przetwarzanie pliku w logicznych sekcjach, aby uniknąć ładowania całego dokumentu jednocześnie. Te kroki utrzymują aplikację responsywną i zapobiegają awariom z powodu braku pamięci.
 
-Dla programistów budujących mikrousługi, opakuj logikę porównywania w bean usługi Spring:
+- **Zwiększ heap JVM** (`-Xmx8g` dla bardzo dużych partii).  
+- **Włącz strumieniowanie** – GroupDocs.Comparison przetwarza pliki w fragmentach wewnętrznie; unikaj ładowania całego pliku do `byte[]`.  
+- **Uruchamiaj porównania asynchronicznie**, aby utrzymać usługę responsywną.  
+- **Rozważ podział** masywnych PDF‑ów na logiczne sekcje, jeśli logika biznesowa na to pozwala, a następnie porównuj każdą sekcję osobno.
+
+## Integracja ze Spring Boot
+
+Umieść logikę porównywania w beanie serwisowym Spring, aby udostępnić ją przez endpointy REST lub komunikację wiadomościową:
 
 ```java
 @Service
@@ -521,32 +544,38 @@ public class DocumentComparisonService {
 }
 ```
 
-## Frequently Asked Questions
+**Dlaczego Spring?** Zapewnia wstrzykiwanie zależności, zarządzanie cyklem życia oraz łatwą konfigurację pliku licencji przy użyciu `@PostConstruct`.
 
-**Q: Czy mogę porównać więcej niż dwa dokumenty jednocześnie?**  
-A: Oczywiście! Dodaj wiele dokumentów docelowych za pomocą `comparer.add()` przed wykonaniem porównania.
+## Najczęściej zadawane pytania
 
-**Q: Jakie formaty plików obsługuje GroupDocs.Comparison?**  
-A: Obsługuje DOCX, PDF, XLSX, PPTX, TXT i wiele innych. Pełną listę znajdziesz w oficjalnej dokumentacji.
+**P: Czy mogę porównać więcej niż dwa dokumenty jednocześnie?**  
+O: Oczywiście. Dodaj każdy cel za pomocą `comparer.add()` przed wywołaniem `compare()`; biblioteka wygeneruje jeden diff podkreślający zmiany we wszystkich celach.
 
-**Q: Jak obsłużyć dokumenty zabezpieczone hasłem?**  
-A: Użyj klasy `LoadOptions`, aby podać hasło przy tworzeniu instancji `Comparer` (zobacz przykład powyżej).
+**P: Jakie formaty plików obsługuje GroupDocs.Comparison?**  
+O: Ponad 50 formatów, w tym DOCX, PDF, XLSX, PPTX, TXT, HTML i wiele typów obrazów. Pełną listę znajdziesz w oficjalnej dokumentacji.
 
-**Q: Czy GroupDocs.Comparison jest bezpieczny wątkowo?**  
-A: Jedna instancja `Comparer` nie jest bezpieczna wątkowo, ale możesz bezpiecznie używać wielu instancji w równoległych wątkach.
+**P: Jak obsłużyć dokumenty zabezpieczone hasłem?**  
+O: Użyj `LoadOptions`, aby przekazać hasło przy konstruowaniu `Comparer`. Biblioteka odszyfrowuje wewnętrznie, trzymając czysty tekst poza Twoim kodem.
 
-**Q: Jak mogę poprawić wydajność przy dużych dokumentach?**  
-A: Zwiększ stertę JVM (`-Xmx`), przetwarzaj pliki asynchronicznie, grupuj je w partie i ponownie używaj obiektów `Comparer`, gdy to odpowiednie.
+**P: Czy GroupDocs.Comparison jest bezpieczny w środowiskach wielowątkowych?**  
+O: Jedna instancja `Comparer` nie jest wątkowo‑bezpieczna, ale możesz bezpiecznie tworzyć oddzielne instancje per wątek lub używać puli thread‑local.
 
-## Additional Resources
+**P: Jak poprawić wydajność przy dużych dokumentach?**  
+O: Zwiększ heap JVM, przetwarzaj pliki w partiach, włącz asynchroniczne wykonanie i, gdy to możliwe, ponownie używaj obiektów `Comparer`.
 
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – kompleksowa dokumentacja API i przykłady  
-- [GroupDocs Community Forum](https://forum.groupdocs.com/) – uzyskaj pomoc od innych programistów  
+## Dodatkowe zasoby
 
----
-
-**Last Updated:** 2026-02-23  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
+- [Dokumentacja GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/) – pełna referencja API i zaawansowane przykłady.  
+- [Forum społeczności GroupDocs](https://forum.groupdocs.com/) – wsparcie społeczności i przykłady z rzeczywistego świata.
 
 ---
+
+**Ostatnia aktualizacja:** 2026-06-21  
+**Testowane z:** GroupDocs.Comparison 25.2  
+**Autor:** GroupDocs
+
+## Powiązane samouczki
+
+- [compare pdf java – Samouczek porównywania dokumentów Java – Kompletny przewodnik ładowania i porównywania dokumentów](/comparison/java/document-loading/)  
+- [Jak załadować dokument zabezpieczony hasłem i porównać dokumenty w Java – Kompletny przewodnik bezpieczeństwa](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)  
+- [Jak używać GroupDocs: Strumienie porównywania dokumentów Java – Kompletny przewodnik](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

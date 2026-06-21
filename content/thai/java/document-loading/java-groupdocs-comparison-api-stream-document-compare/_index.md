@@ -1,37 +1,57 @@
 ---
-"date": "2025-05-05"
-"description": "การเปรียบเทียบเอกสารหลักด้วย Java โดยใช้ GroupDocs.Comparison API อันทรงพลัง เรียนรู้เทคนิคแบบเป็นลำดับขั้นตอนสำหรับการจัดการเอกสารทางกฎหมาย วิชาการ และซอฟต์แวร์อย่างมีประสิทธิภาพ"
-"title": "การเปรียบเทียบเอกสาร Java โดยใช้ GroupDocs.Comparison API แนวทางแบบสตรีม"
-"url": "/th/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-03-30'
+description: เรียนรู้วิธีเปรียบเทียบเอกสาร Java ด้วยสตรีมโดยใช้ GroupDocs.Comparison
+  API. เชี่ยวชาญการเปรียบเทียบความแตกต่างของเอกสาร, การยอมรับ/ปฏิเสธการเปลี่ยนแปลง,
+  และจัดการไฟล์ขนาดใหญ่อย่างมีประสิทธิภาพ.
+keywords: java document comparison, compare documents in java, java file comparison
+  library, document diff java, groupdocs comparison java, stream based document comparison
+lastmod: '2026-03-30'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-api
+- file-processing
+- groupdocs
+title: วิธีเปรียบเทียบเอกสาร Java – คู่มือกับ GroupDocs API
 type: docs
+url: /th/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/
+weight: 1
 ---
-# การเรียนรู้ภาษา Java: การเปรียบเทียบเอกสารด้วย GroupDocs.Comparison API
 
-ยินดีต้อนรับสู่คู่มือฉบับสมบูรณ์นี้ ซึ่งเราจะมาสำรวจการเปรียบเทียบเอกสารใน Java โดยใช้ GroupDocs.Comparison API อันทรงพลัง ไม่ว่าคุณจะกำลังจัดการเอกสารทางกฎหมาย เอกสารวิชาการ หรือไฟล์ข้อความอื่นใด การเปรียบเทียบอย่างมีประสิทธิภาพถือเป็นสิ่งสำคัญ ในบทช่วยสอนนี้ เราจะแนะนำวิธีการยอมรับหรือปฏิเสธการเปลี่ยนแปลงที่ตรวจพบระหว่างเอกสารสองฉบับโดยใช้สตรีมใน Java
+# วิธีเปรียบเทียบเอกสาร Java – คู่มือกับ GroupDocs API
 
-## สิ่งที่คุณจะได้เรียนรู้
+เคยต้องการ **how to compare java** ไฟล์อย่างรวดเร็วหรือไม่ ไม่ว่าจะเป็นสัญญา, เอกสารสเปคเทคนิค, หรือรายงาน PDF? การสแกนสองเวอร์ชันด้วยมือเต็มไปด้วยข้อผิดพลาดและเสียเวลา ในคู่มือนี้คุณจะได้เรียนรู้วิธีเปรียบเทียบเอกสาร Java อย่างมีประสิทธิภาพด้วย GroupDocs.Comparison API โดยใช้สตรีมเพื่อการใช้หน่วยความจำที่เหมาะสม เราจะพาคุณผ่านการตั้งค่า, โค้ด, ปัญหาที่พบบ่อย, และกรณีการใช้งานจริง เพื่อให้คุณสามารถทำอัตโนมัติการเปรียบเทียบเอกสารได้ในไม่กี่นาที
 
-- วิธีตั้งค่าและใช้งาน GroupDocs.Comparison สำหรับ Java API
-- การนำการเปรียบเทียบเอกสารแบบตามสตรีมมาใช้
-- การยอมรับหรือปฏิเสธการเปลี่ยนแปลงเฉพาะในโปรแกรม
-- การใช้การเปลี่ยนแปลงเพื่อสร้างเอกสารขั้นสุดท้าย
+## คำตอบด่วน
+- **What library works best for comparing Java documents?** GroupDocs.Comparison (Java)  
+- **Can I compare DOCX, PDF, and TXT files?** Yes – the API supports 50+ formats.  
+- **Is stream‑based comparison memory‑efficient?** Absolutely; it processes data in chunks instead of loading whole files.  
+- **How do I accept or reject specific changes?** Use `ChangeInfo.setComparisonAction(...)` on the returned changes.  
+- **Do I need a license for production?** Yes – a commercial license removes watermarks and unlocks full features.
 
-พร้อมที่จะปรับปรุงการจัดการเอกสารของคุณหรือยัง มาเริ่มกันเลย!
+## “how to compare java” กับ GroupDocs คืออะไร?
+GroupDocs.Comparison เป็นไลบรารี Java ที่ตรวจจับความแตกต่างด้านข้อความ, การจัดรูปแบบ, และโครงสร้างระหว่างสองเอกสาร ทำงานข้ามรูปแบบ (DOCX ↔ PDF ฯลฯ) และคืนรายการการเปลี่ยนแปลงโดยละเอียดที่คุณสามารถยอมรับหรือปฏิเสธได้โดยโปรแกรม
 
-### ข้อกำหนดเบื้องต้น
+## ทำไมต้องใช้ GroupDocs.Comparison สำหรับการเปรียบเทียบเอกสาร Java?
+- **Legal compliance** – การติดตามการเปลี่ยนแปลงอย่างแม่นยำสำหรับสัญญา  
+- **Version control** – ทำให้เอกสารที่ไม่ใช่โค้ดอยู่ในสภาพที่สอดคล้องกัน  
+- **Performance** – การประมวลผลแบบสตรีมจัดการไฟล์ขนาดใหญ่โดยไม่ทำให้ RAM หมด  
+- **Automation** – ผสานรวมกับ CI pipelines, ระบบจัดการเอกสาร, หรือไมโครเซอร์วิส
 
-ก่อนที่เราจะเริ่ม ให้แน่ใจว่าคุณมีสิ่งต่อไปนี้:
+## ข้อกำหนดเบื้องต้น
+- JDK 8+ (แนะนำ 11+)  
+- Maven หรือ Gradle (เราจะใช้ Maven)  
+- ความรู้พื้นฐานเกี่ยวกับสตรีมของ Java และการจัดการข้อยกเว้น  
+- ตัวอย่างเอกสารสองไฟล์ (รูปแบบที่รองรับใดก็ได้)
 
-- **ชุดพัฒนา Java (JDK)**:แนะนำเวอร์ชัน 8 ขึ้นไป
-- **เมเวน**:สำหรับการจัดการการอ้างอิงและการตั้งค่าโครงการ
-- **ความรู้พื้นฐานเกี่ยวกับภาษา Java**:ความคุ้นเคยกับสตรีมและการจัดการข้อยกเว้นจะเป็นประโยชน์
+**Pro tip:** หากคุณใหม่กับสตรีม, ไม่ต้องกังวล – ตัวอย่างโค้ดมีคำอธิบายครบถ้วน
 
-## การตั้งค่า GroupDocs.Comparison สำหรับ Java
+## การตั้งค่า GroupDocs.Comparison: พื้นฐาน
 
-ในการเริ่มต้น คุณต้องเพิ่มไลบรารี GroupDocs.Comparison ลงในโปรเจ็กต์ของคุณ หากคุณใช้ Maven วิธีนี้ง่ายพอๆ กับการเพิ่มที่เก็บข้อมูลและการอ้างอิงลงในโปรเจ็กต์ของคุณ `pom-xml`.
-
-**การตั้งค่า Maven**
+### การกำหนดค่า Maven
+เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
 
 ```xml
 <repositories>
@@ -51,22 +71,25 @@ type: docs
 </dependencies>
 ```
 
-**การขอใบอนุญาต**
+### ทำความเข้าใจการให้สิทธิ์ (ด้านธุรกิจ)
+GroupDocs ทำงานบนโมเดลเชิงพาณิชย์, แต่ค่อนข้างยืดหยุ่น:
 
-GroupDocs เสนอการทดลองใช้ฟรี ใบอนุญาตชั่วคราวเพื่อวัตถุประสงค์ในการประเมิน และตัวเลือกในการซื้อหากคุณพร้อมที่จะรวมเข้าในสภาพแวดล้อมการผลิตของคุณ เยี่ยมชม [หน้าการซื้อ](https://purchase.groupdocs.com/buy) หรือว่า [หน้าใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/) สำหรับรายละเอียดเพิ่มเติม
+- **Free trial** – เหมาะสำหรับการประเมินและโครงการขนาดเล็ก  
+- **Temporary licenses** – เหมาะสำหรับงาน proof‑of‑concept ([get one here](https://purchase.groupdocs.com/temporary-license/))  
+- **Commercial licenses** – จำเป็นสำหรับการผลิต ([pricing details](https://purchase.groupdocs.com/buy))
 
-### คู่มือการใช้งาน
+การทดลองใช้จะใส่ลายน้ำลงในเอกสารผลลัพธ์, แต่พฤติกรรมของ API จะเหมือนกัน
 
-มาดูกันว่าเราสามารถใช้ GroupDocs.Comparison API เพื่อยอมรับและปฏิเสธการเปลี่ยนแปลงในเอกสารโดยใช้สตรีม Java ได้อย่างไร
+## การดำเนินการหลัก: การเปรียบเทียบเอกสารแบบสตรีม
 
-#### คุณสมบัติ: ยอมรับและปฏิเสธการเปลี่ยนแปลงที่ตรวจพบโดยใช้สตรีม
+### กระบวนการทำงานทั้งหมด
+1. **Initialize** – โหลดเอกสารต้นฉบับเป็นสตรีม  
+2. **Compare** – เพิ่มสตรีมของเอกสารเป้าหมาย  
+3. **Detect** – ดึงรายการอ็อบเจ็กต์ `ChangeInfo`  
+4. **Decide** – ยอมรับหรือปฏิเสธการเปลี่ยนแปลงโดยโปรแกรม  
+5. **Generate** – เขียนเอกสารที่รวมแล้วลงสตรีมผลลัพธ์
 
-ส่วนนี้สาธิตการจัดการการเปลี่ยนแปลงที่ตรวจพบระหว่างเอกสารสองฉบับด้วยโปรแกรม โดยใช้ประโยชน์จากสตรีม คุณสามารถประมวลผลเอกสารขนาดใหญ่ได้อย่างมีประสิทธิภาพโดยไม่ต้องโหลดเอกสารทั้งหมดลงในหน่วยความจำ
-
-**1. เริ่มต้น Comparer ด้วยสตรีมเอกสารต้นฉบับ**
-
-ในการเริ่มการเปรียบเทียบ คุณต้องเริ่มต้น `Comparer` วัตถุที่ใช้สตรีมอินพุตจากเอกสารต้นฉบับของคุณ:
-
+### ขั้นตอนที่ 1: เริ่มต้น Comparer ด้วยสตรีมเอกสารต้นฉบับ
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath);
@@ -74,97 +97,131 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 
     Comparer comparer = new Comparer(sourceStream);
 ```
+*Why streams?* พวกมันช่วยลดการใช้หน่วยความจำโดยการประมวลผลข้อมูลเป็นชิ้นส่วนแทนการโหลดไฟล์ทั้งหมด
 
-**2. เพิ่มเอกสารเป้าหมายสำหรับการเปรียบเทียบ**
-
-ถัดไป เพิ่มสตรีมเอกสารเป้าหมายลงใน `Comparer`-
-
+### ขั้นตอนที่ 2: เพิ่มเอกสารเป้าหมายสำหรับการเปรียบเทียบ
 ```java
 comparer.add(targetStream);
 ```
+ตอนนี้เอนจินมีทั้งสองเอกสารและสามารถเริ่มทำ diff ได้
 
-ขั้นตอนนี้จะตั้งค่าเอกสารทั้งสองฉบับภายในเครื่องมือเปรียบเทียบ
-
-**3. ตรวจจับการเปลี่ยนแปลง**
-
-ดำเนินการเปรียบเทียบและดึงข้อมูลอาร์เรย์ของการเปลี่ยนแปลงที่ตรวจพบ:
-
+### ขั้นตอนที่ 3: ตรวจจับและวิเคราะห์การเปลี่ยนแปลง
 ```java
 ChangeInfo[] changes = comparer.getChanges();
 ```
+แต่ละ `ChangeInfo` แทนการแทรก, การลบ, การปรับรูปแบบ, การเปลี่ยนแปลงรูปภาพ ฯลฯ
 
-แต่ละ `ChangeInfo` วัตถุแสดงถึงการแก้ไขระหว่างเอกสารต้นฉบับและเอกสารเป้าหมาย
-
-**4. ยอมรับหรือปฏิเสธการเปลี่ยนแปลง**
-
-คุณสามารถยอมรับหรือปฏิเสธการเปลี่ยนแปลงโดยการตั้งค่าการดำเนินการ เช่น การปฏิเสธการเปลี่ยนแปลงครั้งแรก:
-
+### ขั้นตอนที่ 4: ยอมรับหรือปฏิเสธการเปลี่ยนแปลงโดยโปรแกรม
 ```java
 changes[0].setComparisonAction(ComparisonAction.REJECT);
 ```
+รูปแบบการทำอัตโนมัติทั่วไป:
+- ยอมรับการเปลี่ยนแปลงรูปแบบทั้งหมด, ปฏิเสธการแก้ไขเนื้อหา  
+- ปฏิเสธการเปลี่ยนแปลงในส่วนหัว/ส่วนท้ายโดยอัตโนมัติ  
+- ยอมรับการเปลี่ยนแปลงจากผู้เขียนที่เชื่อถือได้เท่านั้น
 
-ความยืดหยุ่นนี้ทำให้คุณปรับแต่งผลลัพธ์การเปรียบเทียบเอกสารตามความต้องการของคุณได้
-
-**5. นำการเปลี่ยนแปลงไปใช้และสร้างเอกสารผลลัพธ์**
-
-สุดท้าย ให้ใช้การเปลี่ยนแปลงที่ยอมรับ/ปฏิเสธเพื่อสร้างสตรีมเอกสารขั้นสุดท้าย:
-
+### ขั้นตอนที่ 5: สร้างเอกสารสุดท้าย
 ```java
 comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
 ```
+`ApplyChangeOptions` ให้คุณปรับแต่งพฤติกรรมการผสาน, เช่น การรักษารูปแบบเดิม
 
-### การประยุกต์ใช้งานจริง
+## การประยุกต์ใช้ในโลกจริง: จุดเด่นของวิธีนี้
+- **Legal contract review** – แสดงการแก้ไขสีแดงอัตโนมัติและส่งต่อให้ผู้ตรวจสอบที่เหมาะสม  
+- **Academic paper revisions** – ยอมรับการแก้ไขรูปแบบเล็กน้อยพร้อมทำเครื่องหมายการแก้ไขสำคัญ  
+- **Software documentation** – ตรวจจับการเปลี่ยนแปลงสเปค API ที่อาจทำให้โค้ดของลูกค้าเสียหาย  
+- **Regulatory compliance** – รักษาบันทึกการตรวจสอบสำหรับการอัปเดตนโยบาย
 
-ความสามารถในการเปรียบเทียบเอกสารโดยใช้สตรีมมีการใช้งานจริงหลายประการ:
+## ข้อผิดพลาดทั่วไปและวิธีหลีกเลี่ยง
 
-- **การจัดการเอกสารทางกฎหมาย**:ระบุความคลาดเคลื่อนในร่างสัญญาได้อย่างรวดเร็ว
-- **การตีพิมพ์ผลงานทางวิชาการ**:ให้แน่ใจว่ามีความสอดคล้องกันระหว่างเวอร์ชันกระดาษที่แตกต่างกัน
-- **การควบคุมเวอร์ชันซอฟต์แวร์**ติดตามการเปลี่ยนแปลงในเอกสารซอฟต์แวร์
+### ปัญหาการจัดการหน่วยความจำ
+- **Problem:** Out‑of‑memory errors on large PDFs.  
+- **Solution:** Always use try‑with‑resources (as shown) and monitor heap size (`-Xmx4g` or higher).
 
-นอกจากนี้ การบูรณาการกับระบบอื่นๆ เช่น แพลตฟอร์มการจัดการเอกสาร หรือแอปพลิเคชันที่กำหนดเองยังทำได้ ซึ่งจะช่วยเพิ่มประสิทธิภาพและการทำงานอัตโนมัติ
+```java
+try (InputStream source = new FileInputStream(sourcePath)) {
+    // comparison logic
+}
+```
 
-### การพิจารณาประสิทธิภาพ
+### ความประหลาดใจเรื่องความเข้ากันได้ของรูปแบบ
+- **Problem:** Comparing DOCX to PDF may miss subtle layout differences.  
+- **Solution:** Prefer same‑format comparisons for critical legal documents.
 
-เมื่อต้องจัดการกับเอกสารขนาดใหญ่หรือการเปรียบเทียบหลายรายการ:
+### การลดประสิทธิภาพ
+- **Problem:** Slower comparisons over time.  
+- **Solution:** Clean temporary files, limit document size, and consider asynchronous processing for batch jobs.
 
-- เพิ่มประสิทธิภาพการตั้งค่าหน่วยความจำ Java เพื่อป้องกันข้อผิดพลาดหน่วยความจำไม่เพียงพอ
-- ปรับแต่งโค้ดของคุณให้มีประสิทธิภาพมากขึ้น โดยเฉพาะอย่างยิ่งในสถานการณ์ที่มีโหลดสูง
-- ตรวจสอบเอกสาร GroupDocs เป็นประจำเพื่อดูแนวทางปฏิบัติที่ดีที่สุดในการใช้ทรัพยากร
+### ความไวต่อการตรวจจับการเปลี่ยนแปลง
+- **Problem:** Too many trivial changes (whitespace, fonts).  
+- **Solution:** Configure the engine to ignore non‑essential differences:
 
-## บทสรุป
+```java
+CompareOptions options = new CompareOptions();
+options.setIgnoreWhitespaces(true);
+comparer.compare(outputStream, options);
+```
 
-ตอนนี้คุณได้เตรียมความพร้อมให้กับตัวเองด้วยความรู้ในการใช้การเปรียบเทียบเอกสารแบบสตรีมโดยใช้ GroupDocs.Comparison API ใน Java แล้ว เครื่องมือนี้เปิดโอกาสให้คุณจัดการเอกสารโดยอัตโนมัติและปรับแต่งวิธีการจัดการเอกสารของคุณได้มากขึ้น
+## การเพิ่มประสิทธิภาพ: เคล็ดลับพร้อมใช้งานในการผลิต
 
-ในขั้นตอนถัดไป โปรดพิจารณาสำรวจฟีเจอร์ขั้นสูงเพิ่มเติมของ API หรือบูรณาการฟังก์ชันนี้เข้ากับเวิร์กโฟลว์แอปพลิเคชันขนาดใหญ่ หากคุณพร้อมแล้ว ให้ไปที่ [เอกสารประกอบ](https://docs.groupdocs.com/comparison/java/) และเริ่มทำการทดลอง!
+- **JVM tuning:** Use G1GC and appropriate heap (`-Xmx8g` for >100 MB docs).  
+- **Asynchronous processing:** Offload comparisons to a worker queue.  
+- **Caching:** Store results for frequently compared document pairs.  
+- **Scaling:** Deploy the comparer as a stateless microservice behind a load balancer.
 
-## ส่วนคำถามที่พบบ่อย
+## คู่มือแก้ไขปัญหา
 
-**ถาม: ปัญหาทั่วไปที่มักเกิดขึ้นเมื่อตั้งค่า GroupDocs.Comparison มีอะไรบ้าง**
+| อาการ | การวินิจฉัย | วิธีแก้ |
+|---------|------------|-----|
+| `OutOfMemoryError` | เอกสารใหญ่เกินขนาด heap | เพิ่ม heap, ใช้การแบ่งชิ้น, หรือทำการตัดส่วนที่ไม่จำเป็นก่อน |
+| Missing changes | รูปแบบไม่เข้ากันหรือความไวต่ำ | ตรวจสอบรูปแบบ, ปรับ `CompareOptions` |
+| Slow over time | มีการรั่วของทรัพยากร | ตรวจสอบให้สตรีมทั้งหมดถูกปิด, ทำความสะอาดโฟลเดอร์ชั่วคราว |
 
-A: ตรวจสอบให้แน่ใจว่าการตั้งค่า Maven ของคุณถูกต้องและคุณได้เพิ่ม URL ที่เก็บข้อมูลที่ถูกต้องแล้ว ตรวจสอบความเข้ากันได้ของเวอร์ชัน JDK ของคุณ
+## วิธีการทางเลือก (เมื่อ GroupDocs ไม่เหมาะที่สุด)
 
-**ถาม: ฉันจะเปรียบเทียบเอกสารมากกว่าสองฉบับได้อย่างไร**
+- **Apache Tika + custom diff** – ฟรีแต่ต้องเขียนโค้ดเพิ่ม  
+- **Format‑specific libraries** – เหมาะสำหรับ pipeline ที่ใช้รูปแบบเดียว  
+- **Cloud APIs** – ดูแลน้อยแต่เพิ่ม latency และกังวลเรื่องความเป็นส่วนตัวของข้อมูล
 
-ก. โซ่หลายอัน `add()` โทรหาที่ `Comparer` วัตถุก่อนที่จะเรียกร้อง `getChanges()`-
+## คำถามที่พบบ่อย
 
-**ถาม: GroupDocs.Comparison สามารถจัดการรูปแบบเอกสารที่แตกต่างกันได้หรือไม่**
+**Q: What document formats does GroupDocs.Comparison support?**  
+A: Over 50 formats, including DOCX, PDF, PPTX, XLSX, TXT, HTML, and more. See the [format documentation](https://docs.groupdocs.com/comparison/java/supported-document-formats/).
 
-A: ใช่ รองรับรูปแบบต่างๆ มากมาย เช่น DOCX, PDF และอื่นๆ ตรวจสอบ [เอกสารอ้างอิง API](https://reference.groupdocs.com/comparison/java/) สำหรับข้อมูลเฉพาะ
+**Q: Can I compare more than two documents at once?**  
+A: Yes. Call `comparer.add()` multiple times before `getChanges()` to merge several versions.
 
-**ถาม: จะมีผลกระทบต่อประสิทธิภาพเมื่อเปรียบเทียบเอกสารขนาดใหญ่หรือไม่**
+**Q: How do I handle password‑protected files?**  
+A: Use `LoadOptions` to supply the password:
 
-ตอบ: การใช้สตรีมจะช่วยลดการใช้หน่วยความจำได้อย่างมาก แต่ต้องแน่ใจว่าคุณจัดการทรัพยากรอย่างมีประสิทธิภาพเพื่อปรับประสิทธิภาพการทำงานให้เหมาะสม
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Comparer comparer = new Comparer(sourceStream, loadOptions);
+```
 
-**ถาม: ฉันจะจัดการข้อยกเว้นระหว่างการเปรียบเทียบได้อย่างไร**
+**Q: Is there a file‑size limit?**  
+A: No hard limit, but memory usage grows with size. For >100 MB files, increase heap or split the document.
 
-ตอบ: ใช้บล็อค try-catch รอบๆ โค้ดของคุณเพื่อจัดการและบันทึกปัญหาต่างๆ ที่เกิดขึ้นอย่างเหมาะสม
+**Q: Can I customize which change types are detected?**  
+A: Absolutely. `CompareOptions` lets you ignore whitespace, formatting, or focus on specific sections.
 
-## ทรัพยากร
+**Q: Does this work in Docker containers?**  
+A: Yes – just allocate sufficient memory and mount your license file.
 
-- [เอกสารเปรียบเทียบ GroupDocs](https://docs.groupdocs.com/comparison/java/)
-- [เอกสารอ้างอิง API](https://reference.groupdocs.com/comparison/java/)
-- [ดาวน์โหลด GroupDocs.Comparison สำหรับ Java](https://releases.groupdocs.com/comparison/java/)
-- [ซื้อผลิตภัณฑ์ GroupDocs](https://purchase.groupdocs.com/buy)
-- [เข้าถึงการทดลองใช้ฟรี](https://releases.groupdocs.com/comparison/java/)
-- [ข้อมูลใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
-- [ฟอรัมสนับสนุน GroupDocs](https://forum.groupdocs.com/c/comparison)
+## แหล่งข้อมูลเพิ่มเติม
+
+- [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)  
+- [Get a Free Trial](https://releases.groupdocs.com/comparison/java/)  
+- [Purchase Commercial License](https://purchase.groupdocs.com/buy)  
+- [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- [Technical Support Forum](https://forum.groupdocs.com/c/comparison)  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
+- [API Reference](https://reference.groupdocs.com/comparison/java/)  
+- [Community Forum](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Last Updated:** 2026-03-30  
+**Tested With:** GroupDocs.Comparison 25.2 (Java)  
+**Author:** GroupDocs

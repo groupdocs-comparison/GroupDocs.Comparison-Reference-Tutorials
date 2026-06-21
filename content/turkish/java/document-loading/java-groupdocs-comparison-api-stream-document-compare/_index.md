@@ -1,37 +1,57 @@
 ---
-"date": "2025-05-05"
-"description": "Güçlü GroupDocs.Comparison API'sini kullanarak Java ile ana belge karşılaştırmasını yapın. Hukuki, akademik ve yazılım belgelerinin verimli bir şekilde işlenmesi için akış tabanlı teknikleri öğrenin."
-"title": "GroupDocs.Comparison API'sini Kullanarak Java Belge Karşılaştırması&#58; Akış Tabanlı Bir Yaklaşım"
-"url": "/tr/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/"
-"weight": 1
+categories:
+- Java Development
+date: '2026-03-30'
+description: GroupDocs.Comparison API ile akışları kullanarak Java belgelerini nasıl
+  karşılaştıracağınızı öğrenin. Belge farkını (diff) ustalıkla yönetin, değişiklikleri
+  kabul edin/red edin ve büyük dosyaları verimli bir şekilde işleyin.
+keywords: java document comparison, compare documents in java, java file comparison
+  library, document diff java, groupdocs comparison java, stream based document comparison
+lastmod: '2026-03-30'
+linktitle: Java Document Comparison Guide
+tags:
+- document-comparison
+- java-api
+- file-processing
+- groupdocs
+title: Java Belgelerini Nasıl Karşılaştırılır – GroupDocs API ile Kılavuz
 type: docs
+url: /tr/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/
+weight: 1
 ---
-# Java'da Ustalaşma: GroupDocs.Comparison API ile Belge Karşılaştırması
 
-Java'da güçlü GroupDocs.Comparison API'sini kullanarak belge karşılaştırmasını incelediğimiz bu kapsamlı kılavuza hoş geldiniz. İster yasal belgeleri, ister akademik makaleleri veya başka herhangi bir metin dosyasını yönetiyor olun, bunları verimli bir şekilde karşılaştırmak çok önemlidir. Bu eğitimde, Java'da akışları kullanarak iki belge arasında algılanan değişiklikleri nasıl kabul edeceğinizi veya reddedeceğinizi ele alacağız.
+# Java Belgelerini Nasıl Karşılaştırılır – GroupDocs API ile Rehber
 
-## Ne Öğreneceksiniz
+Sözleşme, teknik özellik ya da PDF raporu olsun, **how to compare java** dosyalarını hızlı bir şekilde karşılaştırmanız gerektiğinde? İki sürümü manuel olarak taramak hataya açık ve zaman alıcıdır. Bu rehberde, GroupDocs.Comparison API kullanarak Java belgelerini akışlarla optimal bellek kullanımı sağlayarak nasıl verimli bir şekilde karşılaştıracağınızı öğreneceksiniz. Kurulum, kod, yaygın tuzaklar ve gerçek dünya kullanım örneklerini adım adım inceleyecek, böylece dakikalar içinde belge farklarını otomatikleştirebileceksiniz.
 
-- GroupDocs.Comparison for Java API'yi nasıl kuracağınız ve kullanacağınız.
-- Akış tabanlı belge karşılaştırmasının uygulanması.
-- Belirli değişiklikleri programlı olarak kabul etme veya reddetme.
-- Son belgeyi oluşturmak için değişiklikleri uygulama.
+## Hızlı Yanıtlar
+- **Java belgelerini karşılaştırmak için en iyi kütüphane hangisidir?** GroupDocs.Comparison (Java)  
+- **DOCX, PDF ve TXT dosyalarını karşılaştırabilir miyim?** Evet – API 50+ formatı destekler.  
+- **Akış‑tabanlı karşılaştırma bellek açısından verimli mi?** Kesinlikle; tüm dosyayı yüklemek yerine verileri parçalara ayırarak işler.  
+- **Belirli değişiklikleri nasıl kabul eder veya reddederim?** Döndürülen değişikliklerde `ChangeInfo.setComparisonAction(...)` kullanın.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet – ticari lisans su işaretlerini kaldırır ve tam özellikleri açar.
 
-Belge yönetiminizi kolaylaştırmaya hazır mısınız? Başlayalım!
+## GroupDocs ile “how to compare java” nedir?
+GroupDocs.Comparison, iki belge arasındaki metin, biçimlendirme ve yapısal farkları tespit eden bir Java kütüphanesidir. Formatlar arasında (DOCX ↔ PDF vb.) çalışır ve programatik olarak kabul edip reddedebileceğiniz ayrıntılı bir değişiklik listesi döndürür.
 
-### Ön koşullar
+## Neden Java Belge Karşılaştırması için GroupDocs.Comparison Kullanılmalı?
+- **Yasal uyumluluk** – sözleşmeler için kesin değişiklik takibi.  
+- **Versiyon kontrolü** – kod dışı belgeleri senkronize tutun.  
+- **Performans** – akış‑tabanlı işleme büyük dosyaları RAM tüketmeden işler.  
+- **Otomasyon** – CI boru hatlarına, belge‑yönetim sistemlerine veya mikro‑servislere entegre edin.
 
-Başlamadan önce aşağıdakilerin mevcut olduğundan emin olun:
+## Önkoşullar
+- JDK 8+ (11+ önerilir)  
+- Maven veya Gradle (Maven örneği gösterilecektir)  
+- Java akışları ve istisna yönetimi hakkında temel bilgi  
+- İki örnek belge (desteklenen herhangi bir format)
 
-- **Java Geliştirme Kiti (JDK)**: Sürüm 8 veya üzeri önerilir.
-- **Usta**: Bağımlılık yönetimi ve proje kurulumu için.
-- **Temel Java Bilgisi**:Akışlar ve istisna yönetimi konusunda bilgi sahibi olmak faydalı olacaktır.
+**Pro tip:** Akışlara yeniyseniz endişelenmeyin – kod parçacıkları tamamen yorumlanmıştır.
 
-## Java için GroupDocs.Comparison Kurulumu
+## GroupDocs.Comparison Kurulumu: Temel
 
-Başlamak için, projenize GroupDocs.Comparison kütüphanesini eklemeniz gerekir. Maven kullanıyorsanız, bu, projenize bir depo ve bağımlılık eklemek kadar basittir. `pom.xml`.
-
-**Maven Kurulumu**
+### Maven Yapılandırması
+`pom.xml` dosyanıza depo ve bağımlılığı ekleyin:
 
 ```xml
 <repositories>
@@ -51,22 +71,25 @@ Başlamak için, projenize GroupDocs.Comparison kütüphanesini eklemeniz gereki
 </dependencies>
 ```
 
-**Lisans Edinimi**
+### Lisanslama Anlayışı (İş Tarafı)
+GroupDocs ticari bir model üzerine kuruludur, ancak oldukça esnek:
 
-GroupDocs ücretsiz deneme, değerlendirme amaçlı geçici lisanslar ve üretim ortamınıza entegre etmeye hazırsanız satın alma seçenekleri sunar. Ziyaret edin [satın alma sayfası](https://purchase.groupdocs.com/buy) veya [geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/) Daha detaylı bilgi için.
+- **Ücretsiz deneme** – değerlendirme ve küçük projeler için idealdir.  
+- **Geçici lisanslar** – kanıt‑konsept çalışmaları için mükemmeldir ([buradan alın](https://purchase.groupdocs.com/temporary-license/))  
+- **Ticari lisanslar** – üretim için gereklidir ([fiyatlandırma detayları](https://purchase.groupdocs.com/buy))
 
-### Uygulama Kılavuzu
+Deneme sürümü çıktı belgelerine su işareti ekler, ancak API davranışı aynı kalır.
 
-Java akışlarını kullanarak GroupDocs.Comparison API'sini kullanarak belgelerdeki değişiklikleri nasıl kabul edip reddedebileceğimizi inceleyelim.
+## Temel Uygulama: Akış‑Tabanlı Belge Karşılaştırması
 
-#### Özellik: Akışları Kullanarak Algılanan Değişiklikleri Kabul Et ve Reddet
+### Tam İş Akışı
+1. **Başlat** – kaynak belgeyi bir akış olarak yükleyin.  
+2. **Karşılaştır** – hedef belge akışını ekleyin.  
+3. **Algıla** – `ChangeInfo` nesnelerinin listesini alın.  
+4. **Karar Ver** – değişiklikleri programatik olarak kabul edin veya reddedin.  
+5. **Oluştur** – nihai birleştirilmiş belgeyi bir çıktı akışına yazın.
 
-Bu bölüm, iki belge arasında algılanan değişikliklerin programatik olarak nasıl işlendiğini gösterir. Akışlardan yararlanarak, büyük belgeleri tamamen belleğe yüklemeden verimli bir şekilde işleyebilirsiniz.
-
-**1. Kaynak Belge Akışı ile Karşılaştırıcıyı Başlatın**
-
-Karşılaştırmayı başlatmak için bir başlatma işlemi yapmalısınız `Comparer` kaynak belgenizin giriş akışını kullanan nesne:
-
+### Adım 1: Kaynak Belge Akışı ile Karşılaştırıcıyı Başlatma
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath);
@@ -74,97 +97,131 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 
     Comparer comparer = new Comparer(sourceStream);
 ```
+*Akışlar neden?* Verileri parçalara ayırarak işlediği için bellek kullanımını düşük tutar, tüm dosyayı belleğe yüklemez.
 
-**2. Karşılaştırma için Hedef Belgeyi Ekleyin**
-
-Ardından hedef belge akışını ekleyin `Comparer`:
-
+### Adım 2: Karşılaştırma İçin Hedef Belgeyi Ekleme
 ```java
 comparer.add(targetStream);
 ```
+Motor artık her iki belgeyi de elinde bulunduruyor ve farkları hesaplamaya başlayabilir.
 
-Bu adım, her iki belgeyi de karşılaştırma motoruna kurar.
-
-**3. Değişiklikleri Algıla**
-
-Karşılaştırmayı gerçekleştirin ve tespit edilen değişikliklerin dizisini alın:
-
+### Adım 3: Değişiklikleri Algıla ve Analiz Et
 ```java
 ChangeInfo[] changes = comparer.getChanges();
 ```
+Her `ChangeInfo` bir ekleme, silme, biçimlendirme ayarı, resim değişikliği vb. temsil eder.
 
-Her biri `ChangeInfo` nesne, kaynak ve hedef belgeler arasındaki bir değişikliği temsil eder.
-
-**4. Değişiklikleri Kabul Et veya Reddet**
-
-Eylemlerini ayarlayarak değişiklikleri programatik olarak kabul edebilir veya reddedebilirsiniz. Örneğin, ilk değişikliği reddetmek için:
-
+### Adım 4: Değişiklikleri Programlı Olarak Kabul Et veya Reddet
 ```java
 changes[0].setComparisonAction(ComparisonAction.REJECT);
 ```
+Tipik otomasyon desenleri:
+- Tüm biçimlendirme değişikliklerini kabul et, içerik düzenlemelerini reddet.  
+- Başlık/künye değişikliklerini otomatik reddet.  
+- Sadece güvenilir yazarların değişikliklerini kabul et.
 
-Bu esneklik, belge karşılaştırma sonuçlarını ihtiyaçlarınıza göre uyarlamanıza olanak tanır.
-
-**5. Değişiklikleri Uygulayın ve Sonuç Belgesini Oluşturun**
-
-Son olarak, kabul edilen/reddedilen değişiklikleri uygulayarak nihai belge akışını oluşturun:
-
+### Adım 5: Son Belgeyi Oluştur
 ```java
 comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
 ```
+`ApplyChangeOptions` birleştirme davranışını, örneğin orijinal stilin korunmasını, ince ayarlamanıza olanak tanır.
 
-### Pratik Uygulamalar
+## Gerçek‑Dünya Uygulamaları: Bu Özellik Nerede Parlıyor
+- **Hukuki sözleşme incelemesi** – kırmızı çizgileri otomatik işaretleyin ve doğru inceleyiciye yönlendirin.  
+- **Akademik makale revizyonları** – küçük biçimlendirme düzeltmelerini kabul ederken içerik değişikliklerini işaretleyin.  
+- **Yazılım dokümantasyonu** – istemci kodunu kırabilecek API spec değişikliklerini tespit edin.  
+- **Regülasyon uyumu** – politika güncellemeleri için denetim izleri tutun.
 
-Akışları kullanarak belgeleri karşılaştırma yeteneğinin gerçek dünyada birçok uygulaması vardır:
+## Yaygın Tuzaklar ve Nasıl Kaçınılır
 
-- **Yasal Belge Yönetimi**:Sözleşme taslaklarındaki tutarsızlıkları hızla tespit edin.
-- **Akademik Yayıncılık**: Farklı kağıt versiyonları arasında tutarlılığı sağlayın.
-- **Yazılım Sürüm Kontrolü**: Yazılım belgelerindeki değişiklikleri takip edin.
+### Bellek Yönetimi Sorunları
+- **Sorun:** Büyük PDF'lerde bellek dışı hatalar.  
+- **Çözüm:** Her zaman try‑with‑resources (aşağıda gösterildiği gibi) kullanın ve yığın boyutunu izleyin (`-Xmx4g` veya daha yüksek).
 
-Belge yönetim platformları veya özel uygulamalar gibi diğer sistemlerle entegrasyon da mümkündür; bu sayede iş akışı otomasyonu ve verimliliği artırılır.
+```java
+try (InputStream source = new FileInputStream(sourcePath)) {
+    // comparison logic
+}
+```
 
-### Performans Hususları
+### Format Uyumluluğu Sürprizleri
+- **Sorun:** DOCX ile PDF karşılaştırması, ince yerleşim farklarını kaçırabilir.  
+- **Çözüm:** Kritik yasal belgeler için aynı formatta karşılaştırma yapın.
 
-Büyük belgelerle veya birden fazla karşılaştırmayla uğraşırken:
+### Performans Düşüşü
+- **Sorun:** Zamanla yavaşlayan karşılaştırmalar.  
+- **Çözüm:** Geçici dosyaları temizleyin, belge boyutunu sınırlayın ve toplu işler için asenkron işleme düşünün.
 
-- Bellek yetersizliği hatalarını önlemek için Java bellek ayarlarını optimize edin.
-- Özellikle yüksek yük senaryolarında daha iyi performans için kodunuzu düzene sokun.
-- Kaynak kullanımına ilişkin en iyi uygulamaları öğrenmek için GroupDocs belgelerini düzenli olarak inceleyin.
+### Değişiklik Algılama Hassasiyeti
+- **Sorun:** Çok fazla önemsiz değişiklik (boşluk, font).  
+- **Çözüm:** Motoru gereksiz farkları yok sayacak şekilde yapılandırın:
 
-## Çözüm
+```java
+CompareOptions options = new CompareOptions();
+options.setIgnoreWhitespaces(true);
+comparer.compare(outputStream, options);
+```
 
-Artık Java'da GroupDocs.Comparison API'sini kullanarak akış tabanlı belge karşılaştırmasını uygulamak için gereken bilgiyle kendinizi donattınız. Bu araç, belgeleri nasıl işlediğinizi otomatikleştirmek ve iyileştirmek için sayısız olasılık sunar.
+## Performans Optimizasyonu: Üretim‑Hazır İpuçları
 
-Bir sonraki adımınız olarak, API'nin daha gelişmiş özelliklerini keşfetmeyi veya bu işlevselliği daha büyük bir uygulama iş akışına entegre etmeyi düşünün. Hazırsanız, şuraya gidin: [belgeleme](https://docs.groupdocs.com/comparison/java/) ve denemeye başlayın!
+- **JVM ayarı:** G1GC ve uygun yığın (`-Xmx8g` >100 MB belgeler için) kullanın.  
+- **Asenkron işleme:** Karşılaştırmaları bir işçi kuyruğuna yönlendirin.  
+- **Önbellekleme:** Sık karşılaştırılan belge çiftleri için sonuçları saklayın.  
+- **Ölçekleme:** Karşılaştırıcıyı bir yük dengeleyicinin arkasında durum‑sız bir mikroservis olarak dağıtın.
 
-## SSS Bölümü
+## Sorun Giderme Kılavuzu
 
-**S: GroupDocs.Comparison kurulumu sırasında karşılaşılan yaygın sorunlar nelerdir?**
+| Belirti | Tanı | Çözüm |
+|---------|------|-------|
+| `OutOfMemoryError` | Belge yığını aşıyor | Yığını artırın, parçalama kullanın veya gereksiz bölümleri ön‑işlemle kesin |
+| Değişiklik eksik | Uyumsuz formatlar veya düşük hassasiyet | Formatları kontrol edin, `CompareOptions` ayarlarını değiştirin |
+| Zamanla yavaşlama | Kaynak sızıntıları | Tüm akışların kapalı olduğundan emin olun, geçici dizinleri temizleyin |
 
-A: Maven kurulumunuzun doğru olduğundan ve doğru depo URL'sini eklediğinizden emin olun. JDK sürüm uyumluluğunuzu doğrulayın.
+## Alternatif Yaklaşımlar (GroupDocs En Uygun Çözüm Olmadığında)
 
-**S: İkiden fazla belgeyi nasıl karşılaştırabilirim?**
+- **Apache Tika + özel diff** – ücretsiz ama daha fazla kod gerektirir.  
+- **Format‑özel kütüphaneler** – tek‑formatlı boru hatları için iyidir.  
+- **Bulut API'ları** – düşük bakım gerektirir ancak gecikme ve veri gizliliği endişeleri ekler.
 
-A: Zincir çoklu `add()` çağrıda bulunur `Comparer` çağırmadan önceki nesne `getChanges()`.
+## Sıkça Sorulan Sorular
 
-**S: GroupDocs.Comparison farklı belge biçimlerini işleyebilir mi?**
+**S: GroupDocs.Comparison hangi belge formatlarını destekliyor?**  
+C: DOCX, PDF, PPTX, XLSX, TXT, HTML ve daha fazlası dahil 50+ format. Detaylı bilgi için [format dokümantasyonuna](https://docs.groupdocs.com/comparison/java/supported-document-formats/) bakın.
 
-A: Evet, DOCX, PDF ve daha fazlası dahil olmak üzere çok çeşitli formatları destekler. Onların [API referansı](https://reference.groupdocs.com/comparison/java/) ayrıntılar için.
+**S: Aynı anda iki’den fazla belgeyi karşılaştırabilir miyim?**  
+C: Evet. `getChanges()` çağırmadan önce `comparer.add()` metodunu birden çok kez çağırarak birkaç sürümü birleştirebilirsiniz.
 
-**S: Büyük belgeleri karşılaştırmanın performans üzerinde herhangi bir etkisi var mı?**
+**S: Şifre korumalı dosyalarla nasıl başa çıkılır?**  
+C: Şifreyi sağlamak için `LoadOptions` kullanın:
 
-A: Akışları kullanmak bellek kullanımını önemli ölçüde azaltır, ancak performansı optimize etmek için kaynakları etkili bir şekilde yönettiğinizden emin olun.
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Comparer comparer = new Comparer(sourceStream, loadOptions);
+```
 
-**S: Karşılaştırma sırasında istisnaları nasıl ele alırım?**
+**S: Dosya boyutu için bir sınırlama var mı?**  
+C: Katı bir sınır yok, ancak bellek kullanımı boyutla artar. >100 MB dosyalar için yığını artırın veya belgeyi bölün.
 
-A: Kodunuzda ortaya çıkabilecek sorunları düzgün bir şekilde ele almak ve günlüğe kaydetmek için try-catch bloklarını kullanın.
+**S: Hangi değişiklik türlerinin algılanacağını özelleştirebilir miyim?**  
+C: Kesinlikle. `CompareOptions` boşlukları, biçimlendirmeyi yok sayabilir veya belirli bölümlere odaklanmanızı sağlar.
 
-## Kaynaklar
+**S: Bu Docker konteynerlerinde çalışır mı?**  
+C: Evet – yeterli bellek ayırın ve lisans dosyanızı bağlayın.
 
-- [GroupDocs Karşılaştırma Belgeleri](https://docs.groupdocs.com/comparison/java/)
-- [API Referansı](https://reference.groupdocs.com/comparison/java/)
-- [Java için GroupDocs.Comparison'ı indirin](https://releases.groupdocs.com/comparison/java/)
-- [GroupDocs Ürünlerini Satın Alın](https://purchase.groupdocs.com/buy)
-- [Ücretsiz Deneme Erişimi](https://releases.groupdocs.com/comparison/java/)
-- [Geçici Lisans Bilgileri](https://purchase.groupdocs.com/temporary-license/)
-- [GroupDocs Destek Forumu](https://forum.groupdocs.com/c/comparison)
+## Ek Kaynaklar
+
+- [GroupDocs.Comparison for Java'ı İndir](https://releases.groupdocs.com/comparison/java/)  
+- [Ücretsiz Deneme Alın](https://releases.groupdocs.com/comparison/java/)  
+- [Ticari Lisans Satın Alın](https://purchase.groupdocs.com/buy)  
+- [Geçici Lisans İsteyin](https://purchase.groupdocs.com/temporary-license/)  
+- [Teknik Destek Forumu](https://forum.groupdocs.com/c/comparison)  
+- [GroupDocs.Comparison Dokümantasyonu](https://docs.groupdocs.com/comparison/java/)  
+- [API Referansı](https://reference.groupdocs.com/comparison/java/)  
+- [Topluluk Forumu](https://forum.groupdocs.com/c/comparison)
+
+---
+
+**Son Güncelleme:** 2026-03-30  
+**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 (Java)  
+**Yazar:** GroupDocs

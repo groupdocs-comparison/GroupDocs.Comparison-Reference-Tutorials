@@ -1,137 +1,160 @@
 ---
 categories:
 - Java Development
-date: '2026-01-28'
-description: Nắm vững cách quản lý siêu dữ liệu tài liệu Java với GroupDocs.Comparison.
-  Học cách đặt thuộc tính tùy chỉnh, cấu hình chính sách lưu trữ và xử lý siêu dữ
-  liệu trong việc so sánh tài liệu.
-keywords: Java document metadata management, GroupDocs comparison metadata tutorial,
-  Java document properties management, document metadata retention Java, custom metadata
-  Java
-lastmod: '2026-01-28'
-linktitle: Metadata Management Tutorials
+date: '2026-04-01'
+description: Thành thạo cách thiết lập siêu dữ liệu tùy chỉnh trong Java bằng GroupDocs.Comparison.
+  Học cách thêm thuộc tính tùy chỉnh, cấu hình chính sách lưu trữ và xử lý siêu dữ
+  liệu trong so sánh tài liệu.
+keywords:
+- set custom metadata java
+- document metadata java
+- metadata management java
+lastmod: '2026-04-01'
+linktitle: Hướng dẫn quản lý siêu dữ liệu
 tags:
 - metadata-management
 - document-comparison
 - java-tutorial
 - groupdocs
-title: Quản lý siêu dữ liệu tài liệu Java – Hướng dẫn toàn diện
+title: Thiết lập Metadata tùy chỉnh Java – Hướng dẫn toàn diện
 type: docs
 url: /vi/java/metadata-management/
 weight: 8
 ---
 
-# Quản Lý Siêu Dữ Liệu Tài Liệu Java – Hướng Dẫn Toàn Diện
+# Đặt Siêu Dữ Liệu Tùy Chỉnh Java – Hướng Dẫn Toàn Diện
 
-Quản lý siêu dữ liệu tài liệu một cách hiệu quả là rất quan trọng khi bạn đang xây dựng các ứng dụng so sánh tài liệu bằng Java. Dù bạn đang làm việc với hệ thống kiểm soát phiên bản, nền tảng quản lý nội dung, hay công cụ chỉnh sửa cộng tác, việc hiểu **cách quản lý siêu dữ liệu tài liệu java** có thể quyết định tính khả dụng của ứng dụng của bạn.
+Khi bạn đang xây dựng một giải pháp so sánh tài liệu trong Java, **set custom metadata java** không chỉ là một tính năng tiện ích—nó là thiết yếu để bảo tồn ngữ cảnh, dữ liệu tuân thủ và thông tin quy trình làm việc qua các phiên bản. Trong hướng dẫn này, chúng tôi sẽ giải thích tại sao siêu dữ liệu quan trọng, các khái niệm cốt lõi về việc quản lý nó với GroupDocs.Comparison, và các bước thực tế bạn có thể thực hiện ngay hôm nay để nhúng các thuộc tính tùy chỉnh trực tiếp vào quy trình so sánh.
 
-## Câu trả lời nhanh
-- **Lợi ích chính của việc quản lý siêu dữ liệu là gì?** Nó bảo tồn ngữ cảnh quan trọng như tác giả, phiên bản và thông tin kinh doanh trong quá trình so sánh.  
+## Câu Trả Lời Nhanh
+- **Lợi ích chính của việc quản lý siêu dữ liệu là gì?** Nó bảo tồn ngữ cảnh quan trọng—tác giả, phiên bản và chi tiết kinh doanh—để kết quả so sánh vẫn có ý nghĩa.  
 - **Thư viện nào hỗ trợ xử lý siêu dữ liệu trong Java?** GroupDocs.Comparison for Java.  
-- **Có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Có, cần một giấy phép GroupDocs.Comparison hợp lệ.  
-- **Có thể thêm siêu dữ liệu tùy chỉnh không?** Chắc chắn – bạn có thể định nghĩa và thao tác các thuộc tính tùy chỉnh bằng lập trình.  
-- **Phương pháp này có tương thích với nhiều định dạng tệp không?** Có, nó hoạt động với PDF, DOCX, XLSX và các định dạng phổ biến khác.
+- **Tôi có cần giấy phép cho việc sử dụng trong môi trường sản xuất không?** Có, cần một giấy phép GroupDocs.Comparison hợp lệ.  
+- **Tôi có thể đặt siêu dữ liệu tùy chỉnh trong tài liệu Java không?** Chắc chắn—bạn có thể định nghĩa, đọc và hợp nhất các thuộc tính tùy chỉnh bằng chương trình.  
+- **Phương pháp này có tương thích với nhiều định dạng tệp không?** Có, nó hoạt động với PDF, DOCX, XLSX và nhiều định dạng phổ biến khác.
 
-## Tại sao nên quản lý siêu dữ liệu tài liệu java?
+## Tại sao phải set custom metadata java?
 
-Khi bạn so sánh tài liệu một cách lập trình, bạn không chỉ xem xét sự khác biệt về nội dung – bạn còn phải xử lý một lượng lớn siêu dữ liệu chứa thông tin quan trọng về lịch sử tài liệu, tác giả, ngày tạo và các thuộc tính tùy chỉnh. Quản lý siêu dữ liệu đúng cách giúp người dùng có thể thấy **ai đã thực hiện thay đổi, khi nào thay đổi và ngữ cảnh kinh doanh** đằng sau mỗi sửa đổi.
+Khi bạn so sánh tài liệu bằng chương trình, bạn không chỉ xem xét các khác biệt về văn bản; bạn còn xử lý một tập hợp phong phú các thuộc tính mô tả *ai* đã tạo tệp, *khi nào* nó được chỉnh sửa lần cuối, và bất kỳ thẻ kinh doanh nào bạn đã thêm. Việc **set custom metadata java** một cách đúng đắn đảm bảo các bên liên quan có thể ngay lập tức thấy nguồn gốc của mỗi thay đổi, đáp ứng yêu cầu kiểm toán, và thúc đẩy tự động hoá downstream như định tuyến hoặc thông báo.
 
-## Quản lý siêu dữ liệu tài liệu là gì?
+## Quản lý siêu dữ liệu tài liệu trong Java là gì?
 
-Quản lý siêu dữ liệu tài liệu là thực hành bảo tồn, cập nhật và kiểm soát các thuộc tính gắn vào một tệp. Trong ngữ cảnh của GroupDocs.Comparison, điều này có nghĩa là quyết định những trường siêu dữ liệu nào sẽ giữ lại, cách hợp nhất các giá trị mâu thuẫn và cách hiển thị thông tin đó trong kết quả so sánh.
+Quản lý siêu dữ liệu tài liệu có nghĩa là bảo tồn, cập nhật và kiểm soát các thuộc tính gắn vào một tệp. Trong GroupDocs.Comparison, điều này được diễn đạt là:
 
-## Các trường hợp sử dụng phổ biến cho quản lý siêu dữ liệu
+1. Quyết định trường siêu dữ liệu nào sẽ giữ lại hoặc loại bỏ.  
+2. Hợp nhất các giá trị xung đột theo quy tắc kinh doanh của bạn.  
+3. Tiết lộ tập hợp cuối cùng các thuộc tính trong báo cáo so sánh để người dùng có thể thấy toàn cảnh.
 
-**Tích hợp kiểm soát phiên bản**: Khi xây dựng hệ thống quản lý tài liệu, bạn thường cần bảo tồn lịch sử phiên bản, thông tin tác giả và siêu dữ liệu trạng thái phê duyệt trong suốt quá trình so sánh.
+## Các Trường Hợp Sử Dụng Thông Thường cho Quản Lý Siêu Dữ Liệu
 
-**Tuân thủ và theo dõi kiểm toán**: Các môi trường pháp lý và quy định yêu cầu duy trì chuỗi siêu dữ liệu đầy đủ. Kết quả so sánh của bạn cần bao gồm thông tin nguồn gốc, chữ ký số và các dấu hiệu tuân thủ.
+**Version Control Integration** – Giữ nguyên số phiên bản, ID tác giả và trạng thái phê duyệt khi so sánh hai phiên bản.
 
-**Quy trình làm việc tài liệu hợp tác**: Trong môi trường nhóm, siêu dữ liệu tùy chỉnh như trạng thái duyệt, sở hữu phòng ban và trạng thái quy trình phải được bảo tồn hoặc hợp nhất một cách thông minh trong quá trình so sánh tài liệu.
+**Compliance & Audit Trails** – Bao gồm chữ ký kỹ thuật số, dấu thời gian và thẻ quy định để kiểm toán viên có thể truy vết mọi thay đổi.
 
-**Hệ thống quản lý nội dung (CMS)**: Các nền tảng CMS dựa vào siêu dữ liệu để phân loại, lập chỉ mục tìm kiếm và định tuyến nội dung – tất cả đều cần được xử lý cẩn thận khi thực hiện các thao tác so sánh tài liệu.
+**Collaborative Workflows** – Bảo tồn các trường tùy chỉnh như “review status”, “department”, hoặc “priority” giúp điều hướng quy trình nhóm.
 
-## Các hướng dẫn quản lý siêu dữ liệu của chúng tôi
+**Content Management Systems** – Đảm bảo siêu dữ liệu dùng cho lập chỉ mục tìm kiếm, phân loại và định tuyến tồn tại qua bước so sánh.
 
-Các hướng dẫn từng bước của chúng tôi cung cấp các giải pháp thực tế cho những thách thức quản lý siêu dữ liệu phổ biến nhất mà bạn sẽ gặp khi làm việc với GroupDocs.Comparison trong Java. Mỗi hướng dẫn bao gồm các ví dụ mã hoạt động và giải quyết các kịch bản triển khai thực tế.
+## Các Bài Hướng Dẫn Quản Lý Siêu Dữ Liệu Của Chúng Tôi
+
+Các bài hướng dẫn từng bước của chúng tôi cung cấp các giải pháp thực tế cho những thách thức siêu dữ liệu phổ biến nhất mà bạn sẽ gặp khi làm việc với GroupDocs.Comparison trong Java. Mỗi hướng dẫn bao gồm các ví dụ mã hoạt động và giải quyết các kịch bản triển khai thực tế.
 
 ### [Triển khai Siêu Dữ Liệu Tài Liệu với GroupDocs.Comparison trong Java: Hướng Dẫn Toàn Diện](./implement-metadata-groupdocs-comparison-java-guide/)
 
-Bài hướng dẫn nền tảng này sẽ dẫn bạn qua các khái niệm thiết yếu của quản lý siêu dữ liệu trong so sánh tài liệu. Bạn sẽ học cách cấu hình xử lý siêu dữ liệu cơ bản, hiểu các loại thuộc tính tài liệu có sẵn và thực hiện các chiến lược bảo tồn siêu dữ liệu đúng cách.
+Bài hướng dẫn nền tảng này sẽ dẫn bạn qua các khái niệm thiết yếu của quản lý siêu dữ liệu trong so sánh tài liệu. Bạn sẽ học cách cấu hình xử lý siêu dữ liệu cơ bản, hiểu các loại thuộc tính tài liệu khác nhau có sẵn, và triển khai các chiến lược bảo tồn siêu dữ liệu đúng cách.
 
-**Bạn sẽ nắm vững:**
-- Cài đặt cấu hình siêu dữ liệu cho các thao tác so sánh
-- Hiểu sự khác nhau giữa thuộc tính siêu dữ liệu tích hợp và tùy chỉnh
-- Thực hiện ưu tiên nguồn siêu dữ liệu
-- Xử lý xung đột siêu dữ liệu khi hợp nhất tài liệu
+**Bạn sẽ thành thạo:**
+- Cấu hình siêu dữ liệu cho các thao tác so sánh  
+- Hiểu các thuộc tính siêu dữ liệu tích hợp sẵn và tùy chỉnh  
+- Triển khai ưu tiên nguồn siêu dữ liệu  
+- Xử lý xung đột siêu dữ liệu khi hợp nhất tài liệu  
 
 ### [Đặt Siêu Dữ Liệu Tùy Chỉnh trong Tài Liệu Java Sử Dụng GroupDocs.Comparison: Hướng Dẫn Từng Bước](./groupdocs-comparison-java-custom-metadata-guide/)
 
-Quản lý siêu dữ liệu nâng cao thường đòi hỏi việc thiết lập các thuộc tính tùy chỉnh phản ánh logic kinh doanh và yêu cầu quy trình làm việc của bạn. Bài hướng dẫn này chỉ cho bạn cách triển khai các giải pháp siêu dữ liệu tùy chỉnh tích hợp liền mạch với pipeline xử lý tài liệu hiện có.
+Quản lý siêu dữ liệu nâng cao thường yêu cầu thêm các thuộc tính kinh doanh cụ thể vượt qua tập hợp tích hợp sẵn. Bài hướng dẫn này chỉ cho bạn cách tạo, xác thực và tuần tự hoá siêu dữ liệu tùy chỉnh để nó tích hợp liền mạch với quy trình xử lý hiện có của bạn.
 
 **Bạn sẽ học:**
-- Tạo và quản lý các trường siêu dữ liệu tùy chỉnh
-- Thực hiện kiểm tra hợp lệ và kiểu dữ liệu cho siêu dữ liệu
-- Xây dựng mẫu siêu dữ liệu để xử lý thuộc tính nhất quán
-- Tích hợp siêu dữ liệu tùy chỉnh với kết quả so sánh
+- Tạo và quản lý các trường siêu dữ liệu tùy chỉnh  
+- Triển khai xác thực siêu dữ liệu và kiểm tra kiểu dữ liệu  
+- Xây dựng mẫu siêu dữ liệu để xử lý thuộc tính nhất quán  
+- Tích hợp siêu dữ liệu tùy chỉnh với kết quả so sánh  
 
-## Các thực tiễn tốt nhất cho quản lý siêu dữ liệu tài liệu Java
+## Cách set custom metadata java với GroupDocs.Comparison
 
-**Lập kế hoạch chiến lược siêu dữ liệu từ sớm**: Trước khi bắt tay vào triển khai, xác định những thuộc tính siêu dữ liệu nào là quan trọng đối với trường hợp sử dụng của bạn. Không phải tất cả siêu dữ liệu đều cần được bảo tồn – hãy tập trung vào những gì mang lại giá trị cho người dùng.
+Dưới đây là một hướng dẫn ngắn gọn, mang tính đối thoại về các bước chính bạn sẽ thực hiện trong bất kỳ dự án Java nào cần **set custom metadata java**. Mặc dù các đoạn mã thực tế vẫn giữ nguyên như trong các bài hướng dẫn gốc, các giải thích xung quanh sẽ giúp bạn hiểu rõ hơn *tại sao* mỗi bước lại quan trọng.
 
-**Áp dụng lập trình phòng thủ**: Siêu dữ liệu tài liệu có thể không nhất quán hoặc thậm chí thiếu hoàn toàn. Luôn bao gồm kiểm tra null và xử lý giá trị mặc định trong mã quản lý siêu dữ liệu của bạn.
+### 1. Xác Định Chiến Lược Siêu Dữ Liệu Của Bạn
 
-**Xem xét tác động đến hiệu năng**: Xử lý siêu dữ liệu quá mức có thể làm chậm các thao tác so sánh. Đánh giá hiệu năng mã xử lý siêu dữ liệu và cân nhắc các chiến lược cache cho các thuộc tính được truy cập thường xuyên.
+Bắt đầu bằng cách liệt kê các thuộc tính quan trọng đối với ứng dụng của bạn—ví dụ, `Author`, `ReviewStatus`, `Department`. Quyết định những thuộc tính nào là bắt buộc, những thuộc tính nào có thể tùy chọn, và cách giải quyết xung đột khi hai tài liệu chứa các giá trị khác nhau.
 
-**Kiểm thử với tài liệu thực tế**: Các tài liệu thử nghiệm tổng hợp thường có siêu dữ liệu sạch sẽ, nhất quán. Tài liệu thực tế từ người dùng sẽ có trường bị thiếu, định dạng lạ và các trường hợp góc cạnh có thể làm hỏng các triển khai đơn giản.
+> **Mẹo chuyên nghiệp:** Giữ danh sách ngắn gọn và tập trung. Siêu dữ liệu thừa sẽ làm tăng chi phí xử lý mà không mang lại lợi ích thực tế.
 
-## Khắc phục các vấn đề siêu dữ liệu thường gặp
+### 2. Cấu Hình Tùy Chọn GroupDocs.Comparison
 
-**Thiếu thuộc tính siêu dữ liệu**: Khi tài liệu nguồn không có siêu dữ liệu mong đợi, triển khai các chiến lược dự phòng bằng ngày tạo, thuộc tính hệ thống tệp hoặc giá trị mặc định do người dùng cung cấp.
+Khi bạn tạo một đối tượng `Comparison`, bạn có thể truyền một thể hiện `ComparisonOptions` cho biết engine nên bảo tồn, bỏ qua hoặc hợp nhất những trường siêu dữ liệu nào.
 
-**Vấn đề mã hoá và bộ ký tự**: Tài liệu quốc tế có thể chứa siêu dữ liệu với ký tự đặc biệt. Đảm bảo ứng dụng Java của bạn xử lý đúng mã hoá UTF‑8 cho mọi thao tác siêu dữ liệu.
+> **Tại sao điều này quan trọng:** Bằng cách cấu hình tùy chọn một cách rõ ràng, bạn tránh được hành vi mặc định “sao chép mọi thứ” có thể dẫn đến kết quả quá tải.
 
-**Khối lượng siêu dữ liệu lớn**: Một số tài liệu chứa nhiều thuộc tính tùy chỉnh có thể ảnh hưởng đến việc sử dụng bộ nhớ. Xem xét tải siêu dữ liệu có chọn lọc dựa trên yêu cầu thực tế của ứng dụng.
+### 3. Thêm Thuộc Tính Tùy Chỉnh Theo Chương Trình
 
-**Tính nhất quán của siêu dữ liệu giữa các định dạng**: Các định dạng tài liệu khác nhau (PDF, DOCX, XLSX) xử lý siêu dữ liệu khác nhau. Xây dựng xử lý siêu dữ liệu nhận thức định dạng để chuẩn hoá các thuộc tính giữa các loại tài liệu.
+Sử dụng API `DocumentProperty` để chèn siêu dữ liệu tùy chỉnh vào mỗi tài liệu *trước* khi chạy so sánh. Điều này đảm bảo các thuộc tính đi qua quy trình so sánh và xuất hiện trong báo cáo cuối cùng.
 
-## Kỹ thuật cấu hình siêu dữ liệu nâng cao
+> **Cạm bẫy phổ biến:** Quên đặt kiểu dữ liệu của thuộc tính có thể gây lỗi tuần tự hoá sau này. Luôn chỉ định kiểu đúng (ví dụ, `String`, `Date`, `Integer`).
 
-Khi bạn đã quen với quản lý siêu dữ liệu cơ bản, sẽ muốn khám phá các tùy chọn cấu hình nâng cao cho phép kiểm soát chi tiết cách siêu dữ liệu được xử lý trong quá trình so sánh.
+### 4. Thực Hiện So Sánh và Lấy Kết Quả
 
-**Giữ lại siêu dữ liệu có điều kiện**: Thiết lập các quy tắc xác định những thuộc tính siêu dữ liệu nào sẽ được bảo tồn dựa trên nội dung tài liệu, quyền người dùng hoặc logic kinh doanh.
+Sau khi so sánh hoàn tất, bạn có thể trích xuất siêu dữ liệu đã hợp nhất từ `ComparisonResult`. Đối tượng này cung cấp cho bạn một cái nhìn thống nhất về tất cả các thuộc tính đã được bảo tồn, sẵn sàng để hiển thị hoặc lưu trữ.
 
-**Đường ống chuyển đổi siêu dữ liệu**: Triển khai chuỗi xử lý có thể sửa đổi, xác thực hoặc làm phong phú siêu dữ liệu trong quá trình so sánh.
+> **Lưu ý về hiệu năng:** Nếu bạn đang xử lý các lô lớn, hãy cân nhắc lưu vào bộ nhớ đệm các siêu dữ liệu thường dùng hoặc giới hạn số trường tùy chỉnh để giảm tiêu thụ bộ nhớ.
 
-**Tuỳ chỉnh tuần tự hoá siêu dữ liệu**: Đối với cấu trúc siêu dữ liệu phức tạp, bạn có thể cần các chiến lược tuần tự hoá tùy chỉnh để duy trì tính toàn vẹn dữ liệu đồng thời đáp ứng yêu cầu cụ thể của ứng dụng.
+## Các Thực Hành Tốt Nhất cho Quản Lý Siêu Dữ Liệu Tài Liệu Java
 
-## Tài nguyên bổ sung
+- **Plan Early:** Định nghĩa một schema siêu dữ liệu rõ ràng trước khi bắt đầu viết mã.  
+- **Defensive Coding:** Luôn kiểm tra giá trị `null` và cung cấp các giá trị mặc định hợp lý.  
+- **Monitor Performance:** Đánh giá hiệu năng xử lý siêu dữ liệu riêng biệt so với so sánh nội dung.  
+- **Test with Real Documents:** Các tệp thực tế thường chứa thuộc tính thiếu hoặc sai định dạng—mã của bạn nên xử lý chúng một cách mềm dẻo.  
 
-- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison for Java API Reference](https://reference.groupdocs.com/comparison/java/)
-- [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+## Khắc Phục Các Vấn Đề Siêu Dữ Liệu Thông Thường
 
-## Câu hỏi thường gặp
+- **Missing Properties:** Quay lại sử dụng dấu thời gian của hệ thống tệp hoặc yêu cầu người dùng cung cấp các giá trị thiếu.  
+- **Encoding Problems:** Đảm bảo ứng dụng Java của bạn sử dụng UTF‑8 ở mọi nơi, đặc biệt khi đọc/ghi các thuộc tính chuỗi tùy chỉnh.  
+- **Large Metadata Payloads:** Chỉ tải các thuộc tính cần thiết; bỏ qua các khối nhị phân lớn trừ khi cần thiết.  
+- **Cross‑Format Inconsistencies:** Chuẩn hoá tên thuộc tính (ví dụ, `Author` vs. `Creator`) thành một biểu diễn nội bộ chung trước khi so sánh.  
+
+## Kỹ Thuật Cấu Hình Siêu Dữ Liệu Nâng Cao
+
+- **Conditional Retention Rules:** Sử dụng logic kinh doanh để giữ hoặc loại bỏ siêu dữ liệu dựa trên vai trò người dùng hoặc độ nhạy cảm của tài liệu.  
+- **Transformation Pipelines:** Áp dụng các bộ kiểm tra, làm phong phú hoặc dịch thuật cho siêu dữ liệu trước khi nó tới engine so sánh.  
+- **Custom Serialization:** Đối với các đối tượng phức tạp (ví dụ, JSON blobs), triển khai một bộ tuần tự hoá tùy chỉnh chuyển chúng sang định dạng chuỗi mà engine so sánh có thể xử lý.  
+
+## Tài Nguyên Bổ Sung
+
+- [Tài liệu GroupDocs.Comparison cho Java](https://docs.groupdocs.com/comparison/java/)
+- [Tham chiếu API GroupDocs.Comparison cho Java](https://reference.groupdocs.com/comparison/java/)
+- [Tải xuống GroupDocs.Comparison cho Java](https://releases.groupdocs.com/comparison/java/)
+- [Diễn đàn GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)
+- [Hỗ trợ miễn phí](https://forum.groupdocs.com/)
+- [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
+
+## Câu Hỏi Thường Gặp
 
 **Q: Tôi có thể sử dụng GroupDocs.Comparison để so sánh tài liệu không có siêu dữ liệu không?**  
-A: Có, thư viện vẫn sẽ so sánh nội dung; tuy nhiên, bạn nên triển khai logic dự phòng nếu ứng dụng của bạn dựa vào siêu dữ liệu để hiển thị hoặc mục đích kiểm toán.
+A: Có, thư viện vẫn sẽ so sánh nội dung. Tuy nhiên, nếu giao diện người dùng của bạn dựa vào siêu dữ liệu cho các chuỗi kiểm toán, bạn nên triển khai logic dự phòng (ví dụ, sử dụng ngày tạo tệp).
 
 **Q: Làm thế nào để thêm trường siêu dữ liệu tùy chỉnh vào tệp DOCX trước khi so sánh?**  
-A: Sử dụng API `DocumentProperty` do GroupDocs.Comparison cung cấp để tạo thuộc tính mới, gán giá trị và sau đó đưa tài liệu vào quy trình so sánh.
+A: Sử dụng API `DocumentProperty` do GroupDocs.Comparison cung cấp để tạo một thuộc tính mới, gán giá trị, và sau đó đưa tài liệu vào quy trình so sánh.
 
 **Q: Có thể loại bỏ một số thuộc tính siêu dữ liệu khỏi kết quả so sánh không?**  
-A: Chắc chắn – bạn có thể cấu hình danh sách bộ lọc siêu dữ liệu để chỉ định cho engine so sánh những thuộc tính nào cần bỏ qua hoặc giữ lại.
+A: Chắc chắn—bạn có thể cấu hình danh sách bộ lọc siêu dữ liệu để chỉ định engine so sánh những thuộc tính nào cần bỏ qua hoặc giữ lại.
 
-**Q: Tác động về hiệu năng khi xử lý bộ siêu dữ liệu lớn là gì?**  
-A: Xử lý các bộ sưu tập siêu dữ liệu lớn có thể tăng mức sử dụng bộ nhớ và thời gian CPU. Đánh giá hiệu năng và tải có chọn lọc chỉ các thuộc tính cần thiết là các thực tiễn tốt được khuyến nghị.
+**Q: Tôi nên mong đợi tác động hiệu năng nào khi xử lý bộ siêu dữ liệu lớn?**  
+A: Xử lý siêu dữ liệu rộng lớn có thể tăng mức sử dụng bộ nhớ và thời gian CPU. Đánh giá thực thi của bạn và cân nhắc chỉ tải các trường cần thiết hoặc lưu vào bộ nhớ đệm các truy vấn thường xuyên.
 
 **Q: GroupDocs.Comparison có hỗ trợ phiên bản siêu dữ liệu qua nhiều lần so sánh không?**  
-A: Mặc dù thư viện tập trung vào một thao tác so sánh duy nhất, bạn có thể triển khai phiên bản bằng cách lưu trữ các ảnh chụp siêu dữ liệu trong cơ sở dữ liệu và tham chiếu chúng qua các lần chạy.
+A: Mặc dù thư viện tập trung vào một thao tác so sánh duy nhất, bạn có thể triển khai phiên bản bằng cách lưu các ảnh chụp siêu dữ liệu vào cơ sở dữ liệu và tham chiếu chúng qua các lần chạy.
 
 ---
 
-**Cập nhật lần cuối:** 2026-01-28  
-**Đã kiểm tra với:** GroupDocs.Comparison for Java 24.0  
-**Tác giả:** GroupDocs
+**Last Updated:** 2026-04-01  
+**Tested With:** GroupDocs.Comparison for Java 24.0  
+**Author:** GroupDocs

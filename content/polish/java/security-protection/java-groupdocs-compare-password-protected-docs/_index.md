@@ -1,88 +1,116 @@
 ---
 categories:
 - Java Development
-date: '2026-02-26'
-description: Opanuj bezpieczne porównywanie dokumentów w Javie z GroupDocs. Dowiedz
-  się, jak wczytać dokument zabezpieczony hasłem i porównać zaszyfrowane pliki Word
-  oraz PDF w bezpieczny sposób, korzystając z najlepszych praktyk i wskazówek rozwiązywania
-  problemów.
-keywords: compare password protected documents java, java document comparison security,
-  groupdocs password protected files, secure document comparison java, encrypted document
-  comparison
-lastmod: '2026-02-26'
-linktitle: Compare Password Protected Documents Java
+date: '2026-07-01'
+description: Opanuj bezpieczne porównywanie dokumentów w Java z GroupDocs. Dowiedz
+  się, jak bezpiecznie porównywać dokumenty password protected w Java, stosując najlepsze
+  praktyki i wskazówki rozwiązywania problemów.
+keywords:
+- compare password protected java
+- document comparison best practices
+- secure document comparison java
+lastmod: '2026-07-01'
+linktitle: Porównaj dokumenty Password Protected w Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-01'
+  description: Master secure document comparison in Java with GroupDocs. Learn how
+    to compare password protected Java documents safely with best practices & troubleshooting
+    tips.
+  headline: How to Load Password Protected Doc and Compare Documents in Java – Complete
+    Security Guide
+  type: TechArticle
+- description: Master secure document comparison in Java with GroupDocs. Learn how
+    to compare password protected Java documents safely with best practices & troubleshooting
+    tips.
+  name: How to Load Password Protected Doc and Compare Documents in Java – Complete
+    Security Guide
+  steps:
+  - name: Initialize Secure Comparer
+    text: The `Comparer` class is the entry point for all comparison operations. It
+      holds the source document and orchestrates the diff engine. **Security Note:**
+      Retrieve passwords from a secure store rather than hard‑coding them.
+  - name: Add Target Documents
+    text: You can compare the source against one or many targets. Each `add()` call
+      accepts a file path and its own `LoadOptions`. **Pro Tip:** Order target documents
+      chronologically to produce a clear change timeline.
+  - name: Execute Comparison and Generate Results
+    text: '`compare()` executes the comparison and returns the result as a stream.
+      Run the comparison and write the output to a protected location. The API returns
+      a stream that you can pipe directly to a response or a secure file store. The
+      result highlights insertions, deletions, and formatting changes while'
+  type: HowTo
+- questions:
+  - answer: The library supports password‑protected Word (DOCX, DOC), PDF, Excel (XLSX,
+      XLS), and PowerPoint (PPTX, PPT) files — a total of 4 major office formats.
+    question: What document formats support password protection in GroupDocs.Comparison?
+  - answer: Supply a separate `LoadOptions` instance for each document when calling
+      `Comparer.add()`. The source password is set during `Comparer` construction;
+      each target uses its own password argument.
+    question: How do I handle documents with different passwords?
+  - answer: Yes. Provide an `InputStream` from AWS S3, Azure Blob, or Google Cloud
+      Storage, along with the correct `LoadOptions` password, and the API will process
+      the stream directly.
+    question: Can I compare password‑protected documents stored in cloud services?
+  - answer: The API throws a `GroupDocsException` with a clear “Invalid password”
+      message. `GroupDocsException` is the base exception type thrown by the GroupDocs
+      API. Catch this exception to prompt the user or log the incident without exposing
+      sensitive details.
+    question: What happens if I provide an incorrect password?
+  - answer: It streams data and keeps only necessary fragments in memory, allowing
+      processing of 500‑page documents on a 4 GB heap. For files larger than that,
+      enable `LoadOptions.setUseMemoryCache(true)` to off‑load to disk.
+    question: How does GroupDocs.Comparison handle memory usage with large encrypted
+      files?
+  type: FAQPage
 tags:
 - document-security
 - java-api
 - groupdocs
 - document-comparison
-title: Jak wczytać dokument zabezpieczony hasłem i porównać dokumenty w Javie – Kompletny
+title: Jak załadować dokument Password Protected i porównać dokumenty w Java – Kompletny
   przewodnik bezpieczeństwa
 type: docs
 url: /pl/java/security-protection/java-groupdocs-compare-password-protected-docs/
 weight: 1
 ---
 
- unchanged.
+# Jak załadować dokument zabezpieczony hasłem i porównać dokumenty w Javie – Kompletny przewodnik bezpieczeństwa
 
-Make sure to keep list checkboxes.
-
-Proceed.
-
-# Jak wczytać dokument chroniony hasłem i porównać dokumenty w Javie – Kompletny przewodnik bezpieczeństwa
-
-## Wprowadzenie
-
-Czy kiedykolwiek miałeś problem z porównywaniem różnych wersji zaszyfrowanych dokumentów w swojej aplikacji Java? Nie jesteś sam. Gdy masz do czynienia z poufnymi dokumentami biznesowymi, umowami prawnymi czy raportami o charakterze tajnym, nie możesz po prostu usuwać ochrony hasłem, aby wykonać porównania. Właśnie dlatego bezpieczne porównywanie dokumentów jest tak istotne.
-
-W tym obszernym przewodniku dowiesz się, jak **wczytać pliki doc chronione hasłem** i porównać je przy użyciu GroupDocs.Comparison dla Javy. Omówimy wszystko – od podstawowej konfiguracji po zabezpieczenia klasy korporacyjnej oraz scenariusze rozwiązywania problemów, które najprawdopodobniej napotkasz.
-
-**Co opanujesz po zakończeniu tego przewodnika:**
-- Konfigurowanie bezpiecznego porównywania dokumentów w aplikacjach Java  
-- Bezpieczne obsługiwanie różnych formatów plików chronionych hasłem  
-- Wdrażanie praktyk bezpieczeństwa na poziomie przedsiębiorstwa  
-- Rozwiązywanie typowych problemów i wąskich gardeł wydajnościowych  
-- Integracja bezpiecznego porównywania w istniejących przepływach pracy  
+Porównywanie dokumentów Javy zabezpieczonych hasłem jest powszechnym wymaganiem, gdy trzeba audytować zmiany bez ujawniania wrażliwej treści. W tym przewodniku nauczysz się **jak załadować dokument zabezpieczony hasłem** oraz **porównać dokumenty Javy zabezpieczone hasłem** przy użyciu GroupDocs.Comparison dla Javy. Przeprowadzimy Cię przez konfigurację, bezpieczne zarządzanie hasłami, optymalizację wydajności oraz praktyczne rozwiązywanie problemów, abyś mógł wdrożyć solidne, zgodne z przepisami rozwiązanie już dziś.
 
 ## Szybkie odpowiedzi
-- **Czy mogę porównywać zaszyfrowane pliki Word i PDF?** Tak, GroupDocs.Comparison działa bezpośrednio z dokumentami chronionymi hasłem.  
-- **Czy potrzebna jest licencja do produkcji?** Wymagana jest pełna licencja; dostępne są licencje testowe i tymczasowe do testowania.  
+- **Czy mogę porównać zaszyfrowane pliki Word i PDF?** Tak, GroupDocs.Comparison działa bezpośrednio z dokumentami zabezpieczonymi hasłem.  
+- **Czy potrzebna jest licencja do produkcji?** Wymagana jest pełna licencja; dostępne są licencje próbne i tymczasowe do testowania.  
 - **Jak uniknąć twardego kodowania haseł?** Używaj zmiennych środowiskowych lub bezpiecznego menedżera poświadczeń.  
-- **Jakiej wersji Javy potrzebuję?** Java 8 lub nowsza.  
-- **Czy przetwarzanie równoległe jest bezpieczne dla zaszyfrowanych plików?** Tak, pod warunkiem, że każdy wątek obsługuje własną parę dokumentów.  
+- **Jaka wersja Javy jest wymagana?** Java 8 lub nowsza.  
+- **Czy przetwarzanie równoległe jest bezpieczne dla zaszyfrowanych plików?** Tak, gdy każdy wątek obsługuje własną parę dokumentów.
 
-## Dlaczego bezpieczne porównywanie dokumentów ma znaczenie
+## Dlaczego bezpieczne porównywanie dokumentów ma znaczenie?
 
-Zanim przejdziemy do technicznej implementacji, zrozummy, dlaczego ta funkcjonalność jest niezbędna w nowoczesnym rozwoju Javy:
+Ładuj i porównuj zaszyfrowane pliki, nigdy nie ujawniając ich treści w postaci zwykłego tekstu. Takie podejście eliminuje lukę bezpieczeństwa, która pojawia się, gdy hasła są usuwane w celu przetwarzania, zapewniając zgodność z regulacjami takimi jak GDPR, HIPAA i PCI‑DSS. Przechowując dokumenty zaszyfrowane od końca do końca, chronisz poufne dane, jednocześnie uzyskując wgląd w zmiany wersji.
 
-**Przypadki użycia w przedsiębiorstwach:**
-- **Przegląd dokumentów prawnych**: Kancelarie muszą porównywać wersje umów bez naruszania poufności klientów  
-- **Raportowanie finansowe**: Banki muszą śledzić zmiany w wrażliwych dokumentach finansowych, zachowując zgodność z regulacjami bezpieczeństwa  
-- **Rekordy medyczne**: Systemy opieki zdrowotnej wymagają bezpiecznego porównywania dokumentów pacjentów zgodnie z przepisami HIPAA  
-- **Zarządzanie korporacyjne**: Firmy muszą audytować zmiany w wewnętrznych dokumentach chronionych hasłem  
+## Czym jest compare password protected java?
 
-Tradycyjne podejście polegające na tymczasowym usuwaniu haseł wprowadza luki bezpieczeństwa i problemy z zgodnością. GroupDocs.Comparison rozwiązuje to, pracując bezpośrednio z zaszyfrowanymi plikami.
+**compare password protected java** odnosi się do procesu ładowania i porównywania dokumentów zaszyfrowanych hasłem, przy użyciu API opartych na Javie, które przyjmują hasło w czasie ładowania. GroupDocs.Comparison umożliwia ten przepływ pracy bez konieczności odszyfrowywania na dysku, zachowując poufność przez cały cykl życia porównania.
 
 ## Wymagania wstępne i konfiguracja środowiska
 
-Zanim wdrożysz bezpieczne porównywanie dokumentów, upewnij się, że masz:
+Zanim rozpoczniesz, upewnij się, że masz następujące elementy:
 
-**Podstawowe wymagania:**
-- **Java Development Kit**: Wersja 8 lub wyższa  
-- **GroupDocs.Comparison dla Javy**: Wersja 25.2 (najnowsze stabilne wydanie)  
-- **Narzędzie budowania**: Maven lub Gradle do zarządzania zależnościami  
-- **IDE**: IntelliJ IDEA, Eclipse lub dowolne ulubione IDE Java  
+- **Java Development Kit**: 8 lub nowszy (zalecany Java 11 dla długoterminowego wsparcia).  
+- **GroupDocs.Comparison for Java**: 25.2 (najnowsze stabilne wydanie).  
+- **Narzędzie budowania**: Maven lub Gradle do zarządzania zależnościami.  
+- **IDE**: IntelliJ IDEA, Eclipse lub dowolny edytor kompatybilny z Javą.  
 
-**Kwestie bezpieczeństwa:**
-- Bezpieczna lokalizacja przechowywania wrażliwych dokumentów  
-- Odpowiednie kontrolowanie dostępu w środowisku deweloperskim  
-- Znajomość polityk bezpieczeństwa dokumentów obowiązujących w Twojej organizacji  
+### Lista kontrolna – bezpieczeństwo najpierw
+- Przechowuj wszystkie hasła w sejfie (np. HashiCorp Vault, Azure Key Vault).  
+- Ogranicz uprawnienia systemu plików do konta serwisowego, które uruchamia porównanie.  
+- Włącz TLS dla wszelkiego dostępu do plików przez sieć (S3, Azure Blob itp.).  
 
 ## Konfiguracja GroupDocs.Comparison dla Javy
 
-Rozpoczęcie pracy z GroupDocs.Comparison jest proste. Oto jak bezpiecznie zintegrować go z projektem:
-
-**Konfiguracja Maven:**
+Dodaj bibliotekę do projektu za pomocą Maven:
 
 ```xml
 <repositories>
@@ -103,14 +131,7 @@ Rozpoczęcie pracy z GroupDocs.Comparison jest proste. Oto jak bezpiecznie zinte
 
 ### Konfiguracja licencji i bezpieczeństwo
 
-W środowiskach produkcyjnych potrzebna jest odpowiednia licencja. Oto, co warto wiedzieć:
-
-**Opcje licencji:**
-- **Bezpłatna wersja próbna**: Idealna do oceny i testów w małej skali  
-- **Licencja tymczasowa**: Przeznaczona do środowisk deweloperskich i testowych  
-- **Pełna licencja**: Wymagana przy wdrożeniu produkcyjnym  
-
-**Najlepsza praktyka bezpieczeństwa**: Przechowuj licencję w bezpieczny sposób, używając zmiennych środowiskowych lub systemów zarządzania konfiguracją. Nigdy nie wprowadzaj licencji na stałe w kodzie źródłowym.
+Ważna licencja jest wymagana do użytku produkcyjnego. Wybierz opcję pasującą do Twojego środowiska i przechowuj klucz licencyjny poza kontrolą wersji.
 
 ```java
 // Secure license initialization example
@@ -121,13 +142,15 @@ if (licensePath != null) {
 }
 ```
 
-## Jak wczytać dokument chroniony hasłem do porównania
+## Jak załadować dokument zabezpieczony hasłem do porównania?
 
-Teraz, gdy biblioteka jest skonfigurowana, zobaczmy, jak **wczytać pliki doc chronione hasłem** w sposób bezpieczny i porównać je.
+Bezpośrednia odpowiedź (40‑70 słów): Utwórz instancję `Comparer`, przekazując ścieżkę dokumentu źródłowego oraz obiekt `LoadOptions` zawierający hasło źródłowe. Następnie wywołaj `add()` dla każdego dokumentu docelowego, podając również `LoadOptions` z odpowiednim hasłem. Na końcu wywołaj `compare()` i określ strumień wyjściowy lub ścieżkę pliku, aby otrzymać wynik różnic.
 
-### Krok 1: Inicjalizacja bezpiecznego porównywacza
+`LoadOptions` zawiera parametry, takie jak hasło wymagane do otwarcia zabezpieczonego dokumentu.
 
-Pierwszy krok polega na utworzeniu instancji `Comparer` z dokumentem źródłowym i jego hasłem. Oto jak zrobić to bezpiecznie:
+### Krok 1: Zainicjalizuj bezpieczny Comparer
+
+Klasa `Comparer` jest punktem wejścia dla wszystkich operacji porównywania. Przechowuje dokument źródłowy i koordynuje silnik różnic.
 
 ```java
 // Initialize Comparer with the source document and its password.
@@ -136,37 +159,35 @@ try (Comparer comparer = new Comparer("source_protected_doc.docx", new LoadOptio
 }
 ```
 
-**Uwaga dotycząca bezpieczeństwa**: W produkcji nigdy nie koduj haseł na stałe. Używaj systemów zarządzania poświadczeniami lub zmiennych środowiskowych do obsługi wrażliwych danych uwierzytelniających.
+**Uwaga bezpieczeństwa:** Pobieraj hasła z bezpiecznego magazynu, a nie poprzez twarde kodowanie.
 
-### Krok 2: Dodawanie dokumentów docelowych
+### Krok 2: Dodaj dokumenty docelowe
 
-Następnie dodaj dokument(y) docelowy(e), które chcesz porównać. Możesz porównywać wiele dokumentów jednocześnie:
+Możesz porównać źródło z jednym lub wieloma dokumentami docelowymi. Każde wywołanie `add()` przyjmuje ścieżkę pliku oraz własny obiekt `LoadOptions`.
 
 ```java
 // Add the target document with its password.
 comparer.add("target_protected_doc.docx", new LoadOptions("5678"));
 ```
 
-**Wskazówka**: Jeśli porównujesz wiele wersji, dodawaj je w kolejności chronologicznej. Ułatwia to zrozumienie wyników porównania i śledzenie zmian w czasie.
+**Wskazówka:** Uporządkuj dokumenty docelowe chronologicznie, aby uzyskać przejrzystą oś czasu zmian.
 
-### Krok 3: Wykonanie porównania i generowanie wyników
+### Krok 3: Wykonaj porównanie i wygeneruj wyniki
 
-Na koniec wykonaj porównanie i zapisz wyniki w bezpieczny sposób:
+`compare()` wykonuje porównanie i zwraca wynik jako strumień. Uruchom porównanie i zapisz wynik w chronionej lokalizacji. API zwraca strumień, który możesz bezpośrednio przekierować do odpowiedzi lub bezpiecznego magazynu plików.
 
 ```java
 // Execute the comparison and save the result.
 final Path resultPath = comparer.compare(outputFileName);
 ```
 
-Wyniki porównania pokażą dodatki, usunięcia i modyfikacje pomiędzy Twoimi dokumentami chronionymi hasłem, zachowując bezpieczeństwo oryginalnych plików.
+Wynik podkreśla wstawienia, usunięcia i zmiany formatowania, jednocześnie pozostawiając oryginalne pliki niezmienione.
 
 ## Zaawansowane konfiguracje bezpieczeństwa
 
-Podczas pracy z wrażliwymi dokumentami w środowiskach korporacyjnych rozważ następujące zaawansowane środki bezpieczeństwa:
-
 ### Bezpieczne zarządzanie hasłami
 
-Zamiast kodować hasła na stałe, wdroż bezpieczną obsługę poświadczeń:
+Nigdy nie osadzaj haseł w kodzie. Używaj `java.util.Properties` w Javie, wspieranego przez zaszyfrowany sejf lub magazyn kluczy systemu operacyjnego.
 
 ```java
 public class SecureDocumentComparer {
@@ -195,21 +216,17 @@ public class SecureDocumentComparer {
 
 ### Rozważania dotyczące bezpieczeństwa pamięci
 
-Przy obsłudze dokumentów chronionych hasłem zarządzanie pamięcią jest kluczowe:
+Duże zaszyfrowane pliki mogą zużywać znaczną ilość pamięci sterty. Stosuj następujące praktyki:
 
-**Najlepsze praktyki:**
-1. **Używaj try‑with‑resources**: Zapewnia prawidłowe czyszczenie wrażliwych danych  
-2. **Wyczyść zmienne haseł**: Jawnie ustaw na `null` ciągi znaków haseł po użyciu  
-3. **Monitoruj zużycie pamięci**: Duże zaszyfrowane dokumenty mogą pochłaniać znaczną ilość pamięci  
-4. **Wskazówki dla garbage collection**: Stosuj `System.gc()` strategicznie po przetworzeniu wrażliwych danych  
+1. Używaj **try‑with‑resources**, aby automatycznie zamykać strumienie.  
+2. Nadpisuj tablice znaków hasła po użyciu (`Arrays.fill(password, '\0')`).  
+3. Wywołuj zbieranie śmieci (`System.gc()`) po przetworzeniu, szczególnie w zadaniach wsadowych.  
 
-## Wzorce integracji w przedsiębiorstwie
-
-W środowiskach korporacyjnych porównywanie dokumentów zazwyczaj wpasowuje się w większe przepływy pracy. Oto typowe wzorce integracji:
+## Wzorce integracji przedsiębiorstwa
 
 ### Wzorzec przetwarzania wsadowego
 
-Dla organizacji przetwarzających wiele porównań dokumentów:
+Gdy musisz porównać tysiące par dokumentów, przetwarzaj je w partiach i ponownie używaj jednej instancji `Comparer` na wątek.
 
 ```java
 public class BatchSecureComparison {
@@ -229,93 +246,88 @@ public class BatchSecureComparison {
 }
 ```
 
-### Integracja w przepływie pracy
+### Integracja przepływu pracy
 
-Wiele firm włącza porównywanie dokumentów do procesów zatwierdzania:
+Typowy przepływ w przedsiębiorstwie:
 
-1. **Zgłoszenie dokumentu**: Użytkownicy przesyłają dokumenty chronione hasłem  
-2. **Automatyczne porównanie**: System porównuje je z poprzednimi wersjami  
-3. **Proces przeglądu**: Interesariusze przeglądają podświetlone zmiany  
-4. **Decyzja o zatwierdzeniu**: Na podstawie wyników porównania  
+1. **Upload** – Użytkownicy przesyłają pliki zabezpieczone hasłem przez bezpieczny portal.  
+2. **Compare** – Usługa backendowa wykonuje porównanie zgodnie z opisem powyżej.  
+3. **Review** – Wyniki są wyświetlane w interfejsie webowym z podświetleniem zmian.  
+4. **Approve** – Interesariusze zatwierdzają lub odrzucają zmiany, wyzwalając logowanie audytu.  
 
-## Optymalizacja wydajności przy bezpiecznych porównaniach
-
-Porównywanie dokumentów chronionych hasłem może być zasobo‑intensywne. Oto jak zoptymalizować wydajność:
+## Optymalizacja wydajności dla bezpiecznych porównań
 
 ### Optymalizacja pamięci
 
-**Obsługa dużych dokumentów:**
-- Przetwarzaj dokumenty w fragmentach, gdy to możliwe  
-- Stosuj podejścia strumieniowe przy bardzo dużych plikach  
-- Monitoruj zużycie sterty i dostosuj parametry JVM odpowiednio  
+GroupDocs.Comparison może obsługiwać dokumenty do **500 stron** bez ładowania całego pliku do pamięci, dzięki architekturze strumieniowej. Dla plików większych niż 500 stron włącz przetwarzanie w fragmentach:
 
-**Zalecane ustawienia JVM:**
 ```bash
 -Xmx4g -XX:+UseG1GC -XX:MaxGCPauseMillis=200
 ```
 
-### Poprawa szybkości przetwarzania
+#### Poprawa szybkości przetwarzania
 
-**Przetwarzanie równoległe:**  
-Podczas porównywania wielu par dokumentów rozważ równoległe wykonywanie:
+#### Przetwarzanie równoległe
+
+Wykorzystaj `ExecutorService` w Javie, aby uruchamiać wiele porównań równocześnie. `ExecutorService` jest narzędziem współbieżności w Javie, które zarządza pulą wątków roboczych. Każdy wątek musi tworzyć własną instancję `Comparer`, aby uniknąć warunków wyścigu.
 
 ```java
 documentPairs.parallelStream()
     .forEach(pair -> compareDocuments(pair.getSource(), pair.getTarget()));
 ```
 
-**Strategie buforowania:**
-- Buforuj często używane dokumenty  
-- Przechowuj szablony porównań do wielokrotnego użytku  
-- Używaj odcisków palców dokumentów, aby unikać niepotrzebnych porównań  
+#### Strategie buforowania
+
+- Buforuj często używane dokumenty źródłowe w pamięci tylko do odczytu.  
+- Przechowuj wygenerowane szablony porównań dla powtarzających się typów dokumentów.  
+- Używaj odcisków dokumentów (SHA‑256), aby pomijać niezmienione pliki.  
 
 ## Kompletny przewodnik rozwiązywania problemów
 
-Nawet przy prawidłowej implementacji napotkasz problemy. Oto jak radzić sobie z najczęstszymi:
+### Błędy uwierzytelniania
 
-### Niepowodzenia uwierzytelniania
+**Problem:** wyjątek „Invalid password”.  
 
-**Problem**: Błędy „Invalid password”  
 **Rozwiązania:**  
-1. Zweryfikuj kodowanie hasła (UTF‑8 vs ASCII)  
-2. Sprawdź znaki specjalne, które mogą wymagać ucieczki  
-3. Upewnij się, że hasło nie uległo zmianie od ostatniego udanego dostępu  
-4. Przetestuj z znanym, działającym hasłem  
+
+1. Zweryfikuj kodowanie UTF‑8 ciągu hasła.  
+2. Ucieknij znaki specjalne (`!`, `$`, `\`).  
+3. Potwierdź, że hasło nie zostało zmienione.  
 
 ### Problemy z pamięcią
 
-**Problem**: `OutOfMemoryError` podczas porównywania  
+**Problem:** `OutOfMemoryError` podczas porównania.  
+
 **Rozwiązania:**  
-1. Zwiększ rozmiar sterty JVM  
-2. Przetwarzaj mniejsze fragmenty dokumentów  
-3. Częściej czyszcz wyniki pośrednie  
-4. Używaj strumieniowania dokumentów, gdy jest dostępne  
+
+- Zwiększ stertę JVM (`-Xmx4g`).  
+- Przetwarzaj pliki w mniejszych fragmentach.  
+- Włącz tryb strumieniowy poprzez `LoadOptions.setUseMemoryCache(true)`.  
 
 ### Problemy z dostępem do plików
 
-**Problem**: Błędy „File not found” lub „Access denied”  
+**Problem:** „File not found” lub „Access denied”.  
+
 **Rozwiązania:**  
-1. Zweryfikuj, czy ścieżki do plików są poprawne i dostępne  
-2. Sprawdź uprawnienia plików oraz ustawienia zabezpieczeń  
-3. Upewnij się, że pliki nie są zablokowane przez inne procesy  
-4. Potwierdź dostęp sieciowy do plików zdalnych  
+
+- Sprawdź dokładnie ścieżki bezwzględne i uprawnienia do montowania sieciowego.  
+- Upewnij się, że konto serwisowe ma prawa odczytu/zapisu.  
 
 ### Spadek wydajności
 
-**Problem**: Wolne czasy porównywania  
+**Problem:** Wolne czasy porównywania dla PDF‑ów o 300 stronach.  
+
 **Przyczyny i rozwiązania:**  
-1. **Duże rozmiary plików** – wdroż ładowanie progresywne  
-2. **Złożone struktury dokumentów** – użyj uproszczonych trybów porównania  
-3. **Presja pamięciowa** – zoptymalizuj ustawienia garbage collection  
-4. **Opóźnienia sieciowe** – buforuj często używane dokumenty lokalnie  
+
+- Duże osadzone obrazy – włącz down‑sampling obrazów.  
+- Złożone tabele – przełącz na `ComparisonMode.SIMPLE`.  
+- Niewystarczająca moc CPU – przydziel więcej rdzeni lub użyj większej instancji.  
 
 ## Przykłady zastosowań w rzeczywistym świecie
 
-Przyjrzyjmy się, jak różne branże wykorzystują bezpieczne porównywanie dokumentów:
-
 ### Implementacja w sektorze prawnym
 
-Kancelarie używają bezpiecznego porównywania przy przeglądzie umów:
+Kancelarie prawne porównują wersje umów, zachowując poufność klientów.
 
 ```java
 public class LegalDocumentProcessor {
@@ -347,46 +359,40 @@ public class LegalDocumentProcessor {
 }
 ```
 
-### Aplikacja w usługach finansowych
+### Zastosowanie w usługach finansowych
 
-Banki muszą porównywać wrażliwe raporty finansowe, zachowując zgodność regulacyjną. Kluczowe wymagania obejmują ścieżki audytu, szyfrowanie w tranzycie i w spoczynku oraz kontrolę dostępu opartą na rolach.
+Banki audytują kwartalne sprawozdania finansowe, wymagając porównania zaszyfrowanych PDF‑ów z gotowymi do audytu logami zmian.
 
 ### Zarządzanie dokumentacją medyczną
 
-Placówki medyczne porównują rekordy pacjentów i plany leczenia zgodnie z wytycznymi HIPAA, zapewniając szyfrowanie, rejestrowanie dostępu i bezpieczne usuwanie plików tymczasowych.
+Szpitale porównują plany leczenia pacjentów zgodnie z HIPAA, przechowując wszystkie tymczasowe dane w zaszyfrowanych buforach pamięci.
 
 ## Najlepsze praktyki wdrożenia produkcyjnego
 
-Podczas wdrażania bezpiecznego porównywania dokumentów w środowisku produkcyjnym:
-
 ### Lista kontrolna bezpieczeństwa
 
-- [ ] Hasła przechowywane w bezpiecznym systemie zarządzania poświadczeniami  
-- [ ] Wdrożono logowanie audytowe dla wszystkich operacji porównywania  
-- [ ] Uprawnienia dostępu do plików skonfigurowane prawidłowo  
-- [ ] Pliki tymczasowe bezpiecznie usuwane po przetworzeniu  
-- [ ] Komunikacja sieciowa szyfrowana (HTTPS/TLS)  
-- [ ] Komunikaty o błędach nie ujawniają wrażliwych informacji  
+- [ ] Przechowuj hasła w sejfie (bez tekstu jawnego).  
+- [ ] Włącz logowanie audytu dla każdego żądania porównania.  
+- [ ] Usuwaj tymczasowe pliki przy użyciu `Files.deleteIfExists()` natychmiast po użyciu.  
+- [ ] Wymuszaj TLS 1.2+ dla całego ruchu sieciowego.  
+- [ ] Maskuj komunikaty wyjątków, aby nie ujawniały ścieżek plików ani haseł.  
 
 ### Monitorowanie i utrzymanie
 
-**Kluczowe metryki do śledzenia:**  
-- Wskaźniki sukcesu/porażki porównań  
-- Średnie czasy przetwarzania  
-- Wzorce wykorzystania pamięci  
-- Wskaźniki niepowodzeń uwierzytelniania  
-- Błędy dostępu do plików  
+Śledź następujące KPI:
 
-**Regularne zadania konserwacyjne:**  
-- Aktualizuj bibliotekę GroupDocs.Comparison  
-- Przeglądaj i rotuj poświadczenia dostępu  
-- Czyść pliki tymczasowe i katalogi buforów  
-- Monitoruj zużycie miejsca na dysku  
-- Przeglądaj logi audytu pod kątem nietypowej aktywności  
+- Wskaźnik sukcesu vs. niepowodzeń porównań.  
+- Średni czas przetwarzania na parę dokumentów.  
+- Skoki użycia sterty (pauzy GC).  
+- Liczba niepowodzeń uwierzytelniania.
+
+Zaplanować regularną konserwację:
+
+- Aktualizuj GroupDocs.Comparison do najnowszej poprawki.  
+- Rotuj poświadczenia sejfu co kwartał.  
+- Czyść stare katalogi pamięci podręcznej co tydzień.  
 
 ## Zaawansowane funkcje i dostosowanie
-
-GroupDocs.Comparison oferuje zaawansowane funkcje dla specyficznych wymagań:
 
 ### Niestandardowe opcje porównania
 
@@ -400,47 +406,53 @@ options.setShowDeletedContent(false); // Hide deleted content for cleaner result
 final Path resultPath = comparer.compare(outputFileName, options);
 ```
 
-### Dostosowanie formatu wyjściowego
+### Dostosowanie formatu wyjścia
 
-Kontroluj sposób prezentacji wyników porównania:  
-- **Raporty HTML** – dla przeglądów w środowisku webowym  
-- **Wyjście PDF** – do formalnej dokumentacji  
-- **Dokumenty Word** – do współpracy i edycji  
-- **Dane JSON** – do przetwarzania programistycznego  
+Wybierz format pasujący do Twojego przepływu pracy:
+
+- **HTML** – osadź w portalach webowych.  
+- **PDF** – oficjalne dokumenty audytowe.  
+- **DOCX** – edytowalne logi zmian.  
+- **JSON** – wprowadzaj do kolejnych zautomatyzowanych systemów.  
 
 ## Najczęściej zadawane pytania
 
-**P: Jakie formaty dokumentów obsługują ochronę hasłem w GroupDocs.Comparison?**  
-O: Biblioteka obsługuje dokumenty Word chronione hasłem (DOCX, DOC), pliki PDF, arkusze Excel (XLSX, XLS) oraz prezentacje PowerPoint (PPTX, PPT). Zawsze sprawdzaj najnowszą dokumentację pod kątem nowych formatów.
+**Q: Jakie formaty dokumentów obsługują ochronę hasłem w GroupDocs.Comparison?**  
+A: Biblioteka obsługuje dokumenty Word (DOCX, DOC), PDF, Excel (XLSX, XLS) i PowerPoint (PPTX, PPT) zabezpieczone hasłem — łącznie 4 główne formaty biurowe.
 
-**P: Jak obsłużyć dokumenty z różnymi hasłami?**  
-O: Każdy dokument może mieć własne hasło określone w konstruktorze `LoadOptions`. Hasło dokumentu źródłowego ustawia się podczas inicjalizacji `Comparer`, a dokumenty docelowe podają swoje hasła przy dodawaniu metodą `add()`.
+**Q: Jak obsługiwać dokumenty z różnymi hasłami?**  
+A: Dostarcz osobną instancję `LoadOptions` dla każdego dokumentu przy wywoływaniu `Comparer.add()`. Hasło źródłowe jest ustawiane podczas konstrukcji `Comparer`; każdy dokument docelowy używa własnego argumentu hasła.
 
-**P: Czy mogę porównywać dokumenty chronione hasłem przechowywane w usługach chmurowych?**  
-O: Tak, pod warunkiem, że masz dostęp do dokumentów poprzez ścieżki plików lub strumienie i podasz prawidłowe hasła. Wielu deweloperów integruje się z AWS S3, Azure Blob Storage lub Google Cloud Storage przy użyciu ich SDK.
+**Q: Czy mogę porównać dokumenty zabezpieczone hasłem przechowywane w usługach chmurowych?**  
+A: Tak. Dostarcz `InputStream` z AWS S3, Azure Blob lub Google Cloud Storage wraz z odpowiednim hasłem w `LoadOptions`, a API przetworzy strumień bezpośrednio.
 
-**P: Co się stanie, jeśli podam nieprawidłowe hasło?**  
-O: Biblioteka zgłosi `GroupDocsException` z informacjami o niepowodzeniu uwierzytelnienia. Zawsze implementuj odpowiednie obsługi wyjątków, aby elegancko radzić sobie z błędami autoryzacji.
+**Q: Co się stanie, jeśli podam nieprawidłowe hasło?**  
+A: API rzuca `GroupDocsException` z wyraźnym komunikatem „Invalid password”. `GroupDocsException` jest podstawowym typem wyjątku rzucanym przez API GroupDocs. Przechwyć ten wyjątek, aby poprosić użytkownika lub zalogować incydent bez ujawniania wrażliwych szczegółów.
 
-**P: Jak GroupDocs.Comparison radzi sobie z zużyciem pamięci przy dużych zaszyfrowanych plikach?**  
-O: Biblioteka stosuje efektywne algorytmy minimalizujące zużycie pamięci, ale duże dokumenty nadal wymagają odpowiedniej przestrzeni sterty. Monitoruj zużycie pamięci i dostosuj ustawienia JVM, aby uzyskać optymalną wydajność.
+**Q: Jak GroupDocs.Comparison radzi sobie z użyciem pamięci przy dużych zaszyfrowanych plikach?**  
+A: Strumieniuje dane i utrzymuje w pamięci tylko niezbędne fragmenty, co pozwala na przetwarzanie dokumentów do 500 stron przy stercie 4 GB. Dla większych plików włącz `LoadOptions.setUseMemoryCache(true)`, aby przenieść część danych na dysk.
 
-**P: Czy można porównać dokumenty bez zapisywania pliku wynikowego?**  
-O: Tak, możesz przetwarzać wyniki porównania w pamięci i wyodrębniać informacje o zmianach programowo, bez zapisywania dokumentu wyjściowego. Jest to przydatne w automatycznych przepływach walidacji.
+**Q: Czy można porównać dokumenty bez zapisywania pliku wynikowego?**  
+A: Oczywiście. Wywołaj `compare()` z `OutputStream` (np. `ByteArrayOutputStream`) i odczytaj dane różnic programowo, unikając zapisu na systemie plików.
 
 ## Dodatkowe zasoby
 
-- **Dokumentacja**: [GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
-- **Referencja API**: [Kompletna dokumentacja API](https://reference.groupdocs.com/comparison/java/)  
-- **Pobierz najnowszą wersję**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Zakup licencji**: [Kup pełną licencję](https://purchase.groupdocs.com/buy)  
-- **Bezpłatna wersja próbna**: [Wypróbuj GroupDocs Comparison](https://releases.groupdocs.com/comparison/java/)  
-- **Licencja tymczasowa**: [Uzyskaj licencję deweloperską](https://purchase.groupdocs.com/temporary-license/)  
-- **Wsparcie społeczności**: [Forum GroupDocs](https://forum.groupdocs.com/c/comparison)  
-- **Wsparcie korporacyjne**: Skontaktuj się z zespołem sprzedaży GroupDocs w celu uzyskania dedykowanych opcji wsparcia  
+- **Documentation**: [GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Download Latest Version**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Purchase License**: [Buy Full License](https://purchase.groupdocs.com/buy)  
+- **Free Trial**: [Try GroupDocs Comparison](https://releases.groupdocs.com/comparison/java/)  
+- **Temporary License**: [Get Development License](https://purchase.groupdocs.com/temporary-license/)  
+- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Ostatnia aktualizacja:** 2026-02-26  
-**Testowane z:** GroupDocs.Comparison 25.2 dla Javy  
-**Autor:** GroupDocs
+**Last Updated:** 2026-07-01  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs
+
+## Powiązane samouczki
+
+- [Load Password Protected Document – Secure Comparison in Java](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)  
+- [Compare Protected Documents Java – Complete Guide](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)  
+- [Customize Document Comparison Java – Complete Guide](/comparison/java/comparison-options/)

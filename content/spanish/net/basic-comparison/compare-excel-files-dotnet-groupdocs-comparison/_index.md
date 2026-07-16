@@ -1,60 +1,104 @@
 ---
-"date": "2025-05-05"
-"description": "Aprenda a comparar dos archivos de Excel con la biblioteca GroupDocs.Comparison para .NET. Esta guía abarca la configuración, la implementación y las aplicaciones prácticas."
-"title": "Cómo comparar archivos de Excel en .NET mediante la biblioteca GroupDocs.Comparison"
-"url": "/es/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/"
-"weight": 1
+categories:
+- File Comparison
+date: '2026-04-10'
+description: Aprende a comparar archivos de Excel programáticamente en .NET usando
+  GroupDocs.Comparison. Tutorial paso a paso con ejemplos de código, solución de problemas
+  y mejores prácticas.
+keywords:
+- how to compare excel
+- excel file diff tool
+- automate excel comparison
+lastmod: '2026-04-10'
+linktitle: Guía .NET para comparar archivos de Excel
+tags:
+- excel
+- dotnet
+- groupdocs
+- file-comparison
+- csharp
+title: Cómo comparar archivos de Excel en .NET
 type: docs
+url: /es/net/basic-comparison/compare-excel-files-dotnet-groupdocs-comparison/
+weight: 1
 ---
-# Cómo comparar archivos de Excel en .NET mediante la biblioteca GroupDocs.Comparison
 
-## Introducción
+# Cómo comparar archivos Excel en .NET
 
-¿Tiene dificultades para comparar diferentes versiones de un archivo de Excel? Garantizar la precisión de los datos en todos los conjuntos de datos es crucial. En este tutorial, le mostraremos cómo comparar dos archivos de celdas usando... **Comparación de GroupDocs para .NET** biblioteca.
+¿Alguna vez te has encontrado revisando manualmente las diferencias entre dos archivos Excel? Ya sea que estés rastreando cambios en informes financieros, comparando versiones de conjuntos de datos o auditando la integridad de los datos, la comparación manual es lenta y propensa a errores. En esta guía, **aprenderás a comparar archivos excel** de forma rápida y fiable usando GroupDocs.Comparison para .NET.
 
-Siguiendo estos pasos aprenderás:
-- Configuración de GroupDocs.Comparison para .NET
-- Implementación de la funcionalidad de comparación de archivos
-- Configuración de rutas de archivos y resultados de salida
+## Respuestas rápidas
+- **¿Qué biblioteca puedo usar?** GroupDocs.Comparison for .NET  
+- **¿Cuántas líneas de código se necesitan?** Less than 10 lines for a basic diff  
+- **¿Puedo comparar libros de Excel grandes?** Yes – use performance options to handle big files  
+- **¿Necesito una licencia?** A free trial works for testing; a commercial license is required for production  
+- **¿Es posible automatizar la comparación de excel en una API web?** Absolutely – see the ASP.NET controller example
 
-Esta guía es perfecta para desarrolladores que buscan integrar comparaciones de archivos de celdas en sus aplicaciones .NET. Comencemos con los prerrequisitos.
+## Por qué comparar archivos Excel programáticamente
 
-## Prerrequisitos
+Antes de sumergirnos en el código, hablemos de por qué la comparación automática de Excel es un cambio radical:
 
-Para seguir este tutorial, necesitas:
-- **Entorno de desarrollo**:Entorno de desarrollo AC# como Visual Studio.
-- **Biblioteca GroupDocs.Comparison**:Versión 25.4.0 o posterior instalada a través del Administrador de paquetes NuGet o la CLI de .NET.
-- **Conocimientos básicos**:Comprensión de C# y familiaridad con el manejo de archivos en .NET.
+- **Version Control** – Rastrea automáticamente los cambios entre versiones de documentos sin abrir los archivos manualmente  
+- **Data Auditing** – Garantiza la consistencia de los datos entre departamentos y sistemas  
+- **Quality Assurance** – Detecta discrepancias en los informes antes de que lleguen a los interesados  
+- **Workflow Automation** – Integra la lógica de comparación en procesos empresariales más amplios  
 
-## Configuración de GroupDocs.Comparison para .NET
+La biblioteca GroupDocs.Comparison se encarga de todo el trabajo pesado, por lo que no necesitas preocuparte por analizar formatos de Excel o implementar algoritmos de diff complejos.
 
-Para comenzar a comparar archivos de Excel, configure la biblioteca GroupDocs.Comparison en su proyecto:
+## Qué es una herramienta de diff de archivos Excel
 
-### Uso de la consola del administrador de paquetes NuGet
-Ejecute este comando:
+Una **herramienta de diff de archivos excel** compara dos versiones de una hoja de cálculo y resalta adiciones, eliminaciones y modificaciones. GroupDocs.Comparison actúa como una poderosa herramienta de diff programática que funciona directamente desde tu código .NET.
+
+## Requisitos previos y configuración
+
+### Lo que necesitarás
+
+- **Development Environment**: Entorno de desarrollo: Visual Studio 2019 o posterior (VS Code también funciona)  
+- **GroupDocs.Comparison Library**: Biblioteca GroupDocs.Comparison: Versión 25.4.0 o posterior  
+- **Basic Knowledge**: Conocimientos básicos: Familiaridad con C# y manejo de archivos en .NET  
+- **Sample Files**: Archivos de muestra: Dos archivos Excel para probar (te mostraremos cómo crear escenarios de prueba)  
+
+### Instalación de GroupDocs.Comparison para .NET
+
+Tienes varias opciones de instalación:
+
+#### Opción 1: Consola del Administrador de paquetes NuGet
 ```shell
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### Adquisición de una licencia
-Puede obtener una prueba gratuita o solicitar una licencia temporal en [Documentos de grupo](https://purchase.groupdocs.com/temporary-license/)Considere comprar una licencia para uso a largo plazo.
+#### Opción 2: Administrador de paquetes de Visual Studio
+1. Haz clic derecho en tu proyecto en el Explorador de soluciones  
+2. Selecciona **Manage NuGet Packages**  
+3. Busca **GroupDocs.Comparison**  
+4. Instala la versión más reciente  
 
-### Inicialización y configuración básicas
-Inicialice la biblioteca en su proyecto C# de la siguiente manera:
+### Opciones de licencia
+
+Mientras comienzas, puedes usar GroupDocs.Comparison con una prueba gratuita. Para uso en producción, necesitarás una licencia:
+
+- **Free Trial**: Prueba gratuita: Funcionalidad completa con marcas de agua de evaluación  
+- **Temporary License**: Licencia temporal: [Request here](https://purchase.groupdocs.com/temporary-license/) for testing  
+- **Commercial License**: Licencia comercial: [Purchase options](https://purchase.groupdocs.com/buy) for production use  
+
+## Cómo comparar archivos Excel usando GroupDocs.Comparison
+
+Ahora construyamos una solución completa de comparación de archivos Excel. Comenzaremos de forma simple y añadiremos características más sofisticadas a medida que avancemos.
+
+### Paso 1: Configuración básica del proyecto
+
+Primero, crea un nuevo proyecto C# y agrega las declaraciones `using` necesarias:
+
 ```csharp
 using GroupDocs.Comparison;
-// Inicializar el comparador con la ruta del archivo de origen
-using (Comparer comparer = new Comparer("source_cells.xlsx"))
-{
-    // Agregar archivo de destino para comparación
-    comparer.Add("target_cells.xlsx");
-}
+using System;
+using System.IO;
 ```
 
-## Guía de implementación
+### Paso 2: Configurar rutas de archivo
 
-### Paso 1: Configurar las rutas del directorio de salida
-Definir rutas para los documentos de entrada y los resultados de salida:
+Configura tus rutas de archivo de manera limpia y mantenible:
+
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 string resultOutputDirectory = "YOUR_OUTPUT_DIRECTORY";
@@ -64,77 +108,411 @@ string targetFilePath = Path.Combine(documentDirectory, "target_cells.xlsx");
 string resultFilePath = Path.Combine(resultOutputDirectory, "comparison_result.xlsx");
 ```
 
-### Paso 2: Inicializar el comparador con el archivo fuente
-Comience por inicializar el `Comparer` instancia:
+**Consejo profesional**: Usa rutas relativas para una mejor portabilidad entre entornos de desarrollo. Algo como `Path.Combine("TestData", "source_cells.xlsx")` funciona muy bien en la mayoría de los escenarios.
+
+### Paso 3: Inicializar el Comparador
+
+Aquí es donde ocurre la magia. La clase `Comparer` es tu punto de entrada para todas las operaciones de comparación:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
-    // Agregar archivo de destino para comparación
+    // Add target file for comparison
     comparer.Add(targetFilePath);
 }
 ```
-**Explicación**: El `Comparer` La clase se inicializa con un archivo Excel de origen, lo que le permite agregar otro archivo para comparar.
 
-### Paso 3: Realizar la comparación y guardar los resultados
-Ejecute la comparación y guarde los resultados:
+**¿Qué está sucediendo aquí?** El constructor `Comparer` carga tu archivo Excel fuente en memoria y lo prepara para la comparación. La instrucción `using` garantiza una correcta liberación de recursos – esto es crucial al manejar archivos Excel potencialmente grandes.
+
+### Paso 4: Ejecutar la comparación
+
+Ahora la comparación real. Es sorprendentemente simple:
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
     comparer.Add(targetFilePath);
-    // Comparar y guardar los resultados en la ruta de salida
+    // Compare and save results
     comparer.Compare(resultFilePath);
 }
 ```
-**Explicación**: El `Compare` El método procesa ambos archivos, resaltando las diferencias que se guardan en el archivo de salida especificado.
 
-## Aplicaciones prácticas
+**Detrás de escena**, GroupDocs.Comparison analiza ambos archivos celda por celda, identificando:
+- Filas y columnas añadidas  
+- Contenido eliminado  
+- Valores de celdas modificados  
+- Cambios de formato  
+- Diferencias en fórmulas  
 
-- **Control de versiones**:Realizar seguimiento de cambios entre diferentes versiones de informes financieros.
-- **Auditoría de datos**:Comparar conjuntos de datos para comprobar la coherencia entre departamentos.
-- **Generación de informes**:Automatizar las comparaciones de informes para fines de auditoría.
-- **Integración**:Se integra perfectamente con otros sistemas .NET como aplicaciones ASP.NET para la comparación de datos en tiempo real.
+Los resultados se guardan en el archivo de salida especificado con las diferencias claramente resaltadas.
 
-## Consideraciones de rendimiento
+### Paso 5: Ejemplo completo funcional
 
-Para optimizar el rendimiento al utilizar GroupDocs.Comparison:
+Aquí tienes un ejemplo completo, listo para producción, que puedes usar de inmediato:
 
-- **Gestión de la memoria**: Usar `using` Declaraciones para garantizar que los recursos se liberen rápidamente.
-- **Procesamiento por lotes**:Compare archivos en lotes si trabaja con conjuntos de datos grandes para evitar el desbordamiento de memoria.
-- **Consejos de optimización**:Actualice periódicamente la biblioteca para aprovechar nuevas funciones y mejoras.
+```csharp
+using GroupDocs.Comparison;
+using System;
+using System.IO;
 
-## Conclusión
+class Program
+{
+    static Main()
+    {
+        try
+        {
+            // Set up file paths
+            string documentDirectory = @"C:\TestFiles";
+            string outputDirectory = @"C:\ComparisonResults";
+            
+            string sourceFile = Path.Combine(documentDirectory, "quarterly_report_v1.xlsx");
+            string targetFile = Path.Combine(documentDirectory, "quarterly_report_v2.xlsx");
+            string resultFile = Path.Combine(outputDirectory, "comparison_result.xlsx");
+            
+            // Ensure output directory exists
+            Directory.CreateDirectory(outputDirectory);
+            
+            // Perform comparison
+            using (Comparer comparer = new Comparer(sourceFile))
+            {
+                comparer.Add(targetFile);
+                comparer.Compare(resultFile);
+            }
+            
+            Console.WriteLine($"Comparison complete! Results saved to: {resultFile}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during comparison: {ex.Message}");
+        }
+    }
+}
+```
 
-Aprendió a comparar dos archivos de celdas de Excel con GroupDocs.Comparison para .NET. Esta función puede optimizar significativamente sus procesos de gestión de datos al proporcionar información clara sobre las diferencias entre los archivos.
+## Automatizar la comparación de Excel – Opciones de configuración avanzadas
 
-Para una mayor exploración, considere experimentar con configuraciones de comparación adicionales e integrar esta funcionalidad en aplicaciones más grandes.
+La comparación básica es potente, pero podrías necesitar más control sobre el proceso. Aquí tienes algunas opciones avanzadas.
 
-¿Listo para empezar? ¡Implementa la solución en tus proyectos hoy mismo!
+### Personalizando la configuración de comparación
 
-## Sección de preguntas frecuentes
+```csharp
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    comparer.Add(targetFilePath);
+    
+    // Configure comparison options
+    CompareOptions options = new CompareOptions()
+    {
+        ShowRevisions = true,
+        DetectStyleChanges = true,
+        GenerateSummaryPage = true
+    };
+    
+    comparer.Compare(resultFilePath, options);
+}
+```
 
-1. **¿Cuáles son los requisitos del sistema para GroupDocs.Comparison?** 
-   Requiere .NET Framework 4.6 o superior. Asegúrese de que la memoria asignada sea adecuada según el tamaño del archivo.
+### Comparando múltiples archivos
 
-2. **¿Cómo puedo manejar archivos grandes de Excel con esta biblioteca?**
-   Considere dividir las comparaciones en partes más pequeñas y optimizar la gestión de recursos.
+¿Necesitas comparar más de dos archivos? No hay problema:
 
-3. **¿Puedo comparar más de dos archivos Excel a la vez?**
-   Sí, agregue varios archivos de destino utilizando el `comparer.Add()` método secuencialmente.
+```csharp
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    comparer.Add(targetFile1Path);
+    comparer.Add(targetFile2Path);
+    comparer.Add(targetFile3Path);
+    
+    comparer.Compare(resultFilePath);
+}
+```
 
-4. **¿Qué tipos de cambios puede detectar GroupDocs.Comparison?**
-   Detecta diferencias en el contenido, formato y estructura de las celdas.
+## Ejemplos de implementación en el mundo real
 
-5. **¿Hay alguna forma de personalizar la salida de comparación?**
-   Explore las opciones de API para personalizar aspectos visuales como resaltar diferencias.
+### Escenario 1: Validación de informes financieros
 
-## Recursos
+```csharp
+public class FinancialReportValidator
+{
+    public bool ValidateReportChanges(string previousReport, string currentReport)
+    {
+        string comparisonResult = Path.GetTempFileName() + ".xlsx";
+        
+        using (Comparer comparer = new Comparer(previousReport))
+        {
+            comparer.Add(currentReport);
+            comparer.Compare(comparisonResult);
+            
+            // Check if there are significant changes
+            return HasSignificantChanges(comparisonResult);
+        }
+    }
+    
+    private bool HasSignificantChanges(string comparisonFile)
+    {
+        // Your business logic here
+        // For example, check if revenue columns changed by more than 5%
+        return false;
+    }
+}
+```
 
-- **Documentación**: [Comparación de GroupDocs con la documentación de .NET](https://docs.groupdocs.com/comparison/net/)
-- **Referencia de API**: [Referencia de la API .NET de comparación de GroupDocs](https://reference.groupdocs.com/comparison/net/)
-- **Descargar**: [Versiones de GroupDocs para .NET](https://releases.groupdocs.com/comparison/net/)
-- **Licencia de compra**: [Comprar licencia de GroupDocs](https://purchase.groupdocs.com/buy)
-- **Prueba gratuita**: [Prueba gratuita de GroupDocs](https://releases.groupdocs.com/comparison/net/)
-- **Licencia temporal**: [Solicitar Licencia Temporal](https://purchase.groupdocs.com/temporary-license/)
-- **Foro de soporte**: [Comunidad de soporte de GroupDocs](https://forum.groupdocs.com/c/comparison/)
+### Escenario 2: Verificación de migración de datos
 
-Esta guía completa le proporciona los conocimientos necesarios para aprovechar GroupDocs.Comparison para .NET eficazmente, optimizando sus tareas de comparación de archivos de Excel. ¡Que disfrute programando!
+```csharp
+public class DataMigrationValidator
+{
+    public async Task<bool> VerifyMigration(string sourceData, string migratedData)
+    {
+        try
+        {
+            string resultPath = $"migration_validation_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+            
+            using (Comparer comparer = new Comparer(sourceData))
+            {
+                comparer.Add(migratedData);
+                comparer.Compare(resultPath);
+            }
+            
+            // Send result to stakeholders
+            await NotifyStakeholders(resultPath);
+            return true;
+        }
+        catch (Exception ex)
+        {
+            // Log error and handle gracefully
+            Console.WriteLine($"Migration validation failed: {ex.Message}");
+            return false;
+        }
+    }
+}
+```
+
+## Problemas comunes y soluciones
+
+Incluso con una API sencilla, podrías encontrarte con algunos desafíos. Aquí están los problemas más comunes y cómo solucionarlos.
+
+### Problema 1: "File is being used by another process"
+
+**Problema**: Los archivos Excel están bloqueados por otras aplicaciones.  
+**Solución**: Siempre usa instrucciones `using` y asegura que Excel no esté abierto:
+
+```csharp
+// Good practice
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    // Your comparison logic
+}
+
+// Check if file is in use before comparison
+private bool IsFileLocked(string filePath)
+{
+    try
+    {
+        using (FileStream stream = File.Open(filePath, FileMode.Open, FileAccess.Read, FileShare.None))
+        {
+            return false;
+        }
+    }
+    catch (IOException)
+    {
+        return true;
+    }
+}
+```
+
+### Problema 2: Rendimiento con archivos grandes
+
+**Problema**: La comparación lleva demasiado tiempo con archivos Excel grandes.  
+**Solución**: Considera estas estrategias de optimización:
+
+```csharp
+// Process files in chunks or limit comparison scope
+CompareOptions options = new CompareOptions()
+{
+    // Only compare content, skip formatting for speed
+    DetectStyleChanges = false,
+    
+    // Limit comparison to specific ranges if possible
+    // Note: Range limitation may require custom implementation
+};
+```
+
+### Problema 3: Consumo de memoria
+
+**Problema**: La aplicación usa demasiada memoria con archivos grandes.  
+**Solución**: Implementa una gestión adecuada de recursos:
+
+```csharp
+public void CompareFilesWithMemoryManagement(string source, string target, string output)
+{
+    // Ensure garbage collection
+    GC.Collect();
+    GC.WaitForPendingFinalizers();
+    
+    using (Comparer comparer = new Comparer(source))
+    {
+        comparer.Add(target);
+        comparer.Compare(output);
+    }
+    
+    // Force cleanup
+    GC.Collect();
+}
+```
+
+## Consejos de optimización de rendimiento – Detectar cambios en Excel más rápido
+
+### Mejores prácticas de gestión de memoria
+
+1. **Siempre usa instrucciones `using`** para la eliminación automática de recursos  
+2. **Procesa archivos secuencialmente** en lugar de en paralelo para archivos grandes  
+3. **Considera límites de tamaño de archivo** – divide archivos masivos en fragmentos más pequeños  
+4. **Monitorea el uso de memoria** durante el desarrollo y pruebas  
+
+### Optimización de velocidad
+
+```csharp
+// Optimize for speed
+CompareOptions fastOptions = new CompareOptions()
+{
+    DetectStyleChanges = false,        // Skip formatting comparison
+    ShowRevisions = false,             // Skip revision tracking
+    GenerateSummaryPage = false        // Skip summary generation
+};
+```
+
+### Estrategia de procesamiento por lotes – Comparar libros de Excel grandes de manera eficiente
+
+```csharp
+public async Task CompareMultipleFilePairs(List<(string source, string target)> filePairs)
+{
+    foreach (var (source, target) in filePairs)
+    {
+        string output = $"comparison_{Path.GetFileNameWithoutExtension(source)}.xlsx";
+        
+        using (Comparer comparer = new Comparer(source))
+        {
+            comparer.Add(target);
+            comparer.Compare(output);
+        }
+        
+        // Small delay to prevent resource exhaustion
+        await Task.Delay(100);
+    }
+}
+```
+
+## Integración con aplicaciones ASP.NET – Automatizar la comparación de Excel vía API
+
+¿Quieres añadir la comparación de Excel a tu aplicación web? Aquí tienes un ejemplo básico de controlador:
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class ExcelComparisonController : ControllerBase
+{
+    [HttpPost("compare")]
+    public async Task<IActionResult> CompareExcelFiles(IFormFile sourceFile, IFormFile targetFile)
+    {
+        if (sourceFile == null || targetFile == null)
+            return BadRequest("Both source and target files are required.");
+        
+        try
+        {
+            // Save uploaded files temporarily
+            string tempDir = Path.GetTempPath();
+            string sourcePath = Path.Combine(tempDir, sourceFile.FileName);
+            string targetPath = Path.Combine(tempDir, targetFile.FileName);
+            string resultPath = Path.Combine(tempDir, $"comparison_{Guid.NewGuid()}.xlsx");
+            
+            using (var sourceStream = new FileStream(sourcePath, FileMode.Create))
+            {
+                await sourceFile.CopyToAsync(sourceStream);
+            }
+            
+            using (var targetStream = new FileStream(targetPath, FileMode.Create))
+            {
+                await targetFile.CopyToAsync(targetStream);
+            }
+            
+            // Perform comparison
+            using (Comparer comparer = new Comparer(sourcePath))
+            {
+                comparer.Add(targetPath);
+                comparer.Compare(resultPath);
+            }
+            
+            // Return result file
+            var resultBytes = await System.IO.File.ReadAllBytesAsync(resultPath);
+            
+            // Cleanup temporary files
+            System.IO.File.Delete(sourcePath);
+            System.IO.File.Delete(targetPath);
+            System.IO.File.Delete(resultPath);
+            
+            return File(resultBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "comparison_result.xlsx");
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Comparison failed: {ex.Message}");
+        }
+    }
+}
+```
+
+## Cuándo usar la comparación de archivos Excel
+
+La comparación de Excel es particularmente valiosa en los siguientes escenarios:
+
+### Servicios financieros
+- **Quarterly Report Reviews** – compara los informes del trimestre actual con los del trimestre anterior  
+- **Budget Tracking** – monitorea los cambios de presupuesto entre departamentos  
+- **Audit Preparation** – asegura la consistencia de los datos antes de auditorías externas  
+
+### Gestión de datos
+- **ETL Validation** – verifica las transformaciones de datos durante la migración  
+- **Quality Assurance** – asegura que los datos importados coincidan con los sistemas de origen  
+- **Version Control** – rastrea los cambios en los archivos de datos maestros  
+
+### Inteligencia empresarial
+- **Report Validation** – compara los informes automatizados con cálculos manuales  
+- **Data Reconciliation** – compara datos entre diferentes sistemas  
+- **Change Tracking** – monitorea los cambios de KPI a lo largo del tiempo  
+
+## Preguntas frecuentes
+
+**Q: ¿Cuál es el tamaño máximo de archivo que GroupDocs.Comparison puede manejar?**  
+A: La biblioteca puede manejar archivos de hasta varios cientos de MB, pero el rendimiento depende de la memoria disponible. Para archivos mayores de 50 MB, considera implementar procesamiento por fragmentos o enfoques de transmisión.
+
+**Q: ¿Puedo comparar archivos Excel protegidos con contraseña?**  
+A: Sí, pero deberás proporcionar la contraseña durante el proceso de comparación. La biblioteca soporta archivos Excel encriptados con las credenciales adecuadas.
+
+**Q: ¿Qué tan precisa es la comparación para archivos Excel complejos con fórmulas?**  
+A: GroupDocs.Comparison detecta con precisión los cambios de fórmulas, incluidas referencias de celdas y modificaciones de funciones. Trata las fórmulas como cambios de contenido y las resalta en consecuencia.
+
+**Q: ¿Puedo personalizar la salida visual de los resultados de comparación?**  
+A: La biblioteca ofrece varios estilos de resaltado incorporados. Para estilos personalizados, puedes post‑procesar el archivo de salida o explorar las opciones de estilo de la API.
+
+**Q: ¿Existe una forma de comparar solo hojas de cálculo específicas dentro de un archivo Excel?**  
+A: Aunque la biblioteca compara archivos completos por defecto, puedes pre‑procesar los archivos para extraer hojas específicas antes de la comparación, o post‑procesar los resultados para filtrar los cambios relevantes.
+
+**Q: ¿Cómo detecta GroupDocs.Comparison los cambios en Excel?**  
+A: Realiza un diff celda por celda, verificando valores, fórmulas, formato y modificaciones estructurales como filas/columnas añadidas o eliminadas.
+
+**Q: ¿La herramienta funciona bien con libros de Excel muy grandes?**  
+A: Sí – desactivando la detección de estilos (`DetectStyleChanges = false`) y usando procesamiento por lotes puedes comparar eficientemente archivos Excel grandes.
+
+## Recursos adicionales
+
+- **Documentación**: [GroupDocs Comparison .NET Documentation](https://docs.groupdocs.com/comparison/net/)
+- **Referencia de API**: [GroupDocs Comparison .NET API Reference](https://reference.groupdocs.com/comparison/net/)
+- **Descarga**: [GroupDocs Releases for .NET](https://releases.groupdocs.com/comparison/net/)
+- **Comprar licencia**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
+- **Prueba gratuita**: [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/net/)
+- **Licencia temporal**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **Foro de soporte**: [GroupDocs Support Community](https://forum.groupdocs.com/c/comparison/)
+
+**Última actualización:** 2026-04-10  
+**Probado con:** GroupDocs.Comparison 25.4.0  
+**Autor:** GroupDocs

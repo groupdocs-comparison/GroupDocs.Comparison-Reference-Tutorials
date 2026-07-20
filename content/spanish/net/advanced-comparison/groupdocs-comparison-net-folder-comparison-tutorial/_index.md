@@ -1,14 +1,89 @@
 ---
 categories:
 - File Comparison
-date: '2026-03-08'
-description: Aprende a comparar carpetas en .NET usando GroupDocs.Comparison, generar
-  un informe HTML o un registro TXT, y automatizar la gestión de archivos con ejemplos
-  prácticos en C#.
-keywords: folder comparison .NET tutorial, GroupDocs comparison save TXT HTML, compare
-  directories C# code, .NET file comparison library, automated directory comparison
-lastmod: '2026-03-08'
-linktitle: How to Compare Folders in .NET
+date: '2026-07-20'
+description: Aprenda cómo comparar carpetas en .NET, descubra cómo comparar carpetas
+  paso a paso con GroupDocs.Comparison, genere informes HTML o TXT y automatice la
+  gestión de archivos usando C#.
+keywords:
+- how to compare folders
+- compare two directories
+- compare directories c#
+- GroupDocs folder comparison
+- .NET file comparison
+lastmod: '2026-07-20'
+linktitle: Cómo comparar carpetas en .NET
+og_description: Cómo comparar carpetas en .NET con GroupDocs.Comparison. Obtenga código
+  C# paso a paso, registros TXT, informes HTML y consejos de rendimiento para la comparación
+  de carpetas.
+og_image_alt: 'Developer guide: Compare folders in .NET using GroupDocs.Comparison'
+og_title: Cómo comparar carpetas en .NET – Guía completa
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  headline: How to Compare Folders in .NET – Guide with GroupDocs
+  type: TechArticle
+- description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  name: How to Compare Folders in .NET – Guide with GroupDocs
+  steps:
+  - name: Configure Your Comparison Options
+    text: The `FolderComparisonOptions` class lets you fine‑tune the comparison. **Definition
+      anchor:** `FolderComparisonOptions` defines all configurable settings for a
+      folder comparison operation. You’re telling GroupDocs.Comparison that you want
+      to compare entire directories (not individual files) and outp
+  - name: Initialize the Comparer Object
+    text: '**Definition anchor:** `Comparer` is the core class that performs the comparison
+      between source and target items. This is where the magic begins. You’re creating
+      a `Comparer` instance with your source folder as the baseline, then adding the
+      target folder for comparison. Think of it like saying “comp'
+  - name: Execute the Comparison and Save Results
+    text: That’s it! Your comparison results are now saved as a text file. The output
+      will include details about added, deleted, and modified files, making it easy
+      to understand what changed between the two directories.
+  - name: Configure HTML Comparison Options
+    text: '**Definition anchor:** `FolderComparisonExtension.Html` tells the API to
+      produce an HTML‑based report instead of plain text. The key difference here
+      is the `FolderComparisonExtension.Html` setting. This tells GroupDocs.Comparison
+      to generate a rich HTML report instead of plain text.'
+  - name: Initialize Comparer for HTML Output
+    text: Same pattern as before, but now configured for HTML output. The beauty of
+      GroupDocs.Comparison's API is its consistency—you use the same methods regardless
+      of output format.
+  - name: Generate and Save HTML Report
+    text: The HTML file you get is a complete, self‑contained report that you can
+      open in any web browser. It includes interactive elements, syntax highlighting
+      (for code files), and a clean, professional layout.
+  type: HowTo
+- questions:
+  - answer: Absolutely! GroupDocs.Comparison fully supports cross‑platform deployment
+      through .NET Core. It works seamlessly on Linux, macOS, and Windows environments.
+    question: Can I use GroupDocs.Comparison for .NET on Linux systems?
+  - answer: 'For large directories, implement these strategies: use asynchronous processing,
+      break comparisons into smaller batches, exclude unnecessary file types, and
+      monitor memory usage. Consider providing progress feedback to users for long‑running
+      operations.'
+    question: How should I handle very large directories with thousands of files?
+  - answer: While there’s no hard limit built into the library, performance depends
+      on your system resources (RAM, CPU, disk speed) and file sizes. Most systems
+      can handle thousands of files without issues, but very large datasets might
+      require optimisation strategies.
+    question: Is there a practical limit to the number of files I can compare?
+  - answer: The library cannot directly compare encrypted files. You’ll need to decrypt
+      files first if you have the appropriate permissions and credentials. Always
+      ensure you comply with your organisation’s security policies when handling encrypted
+      content.
+    question: Can GroupDocs.Comparison handle encrypted or password‑protected files?
+  - answer: Create console applications that use GroupDocs.Comparison, configure them
+      to return appropriate exit codes based on comparison results, and integrate
+      them into your build scripts. TXT output is particularly useful for parsing
+      results in automated environments.
+    question: How do I integrate folder comparison into automated CI/CD pipelines?
+  type: FAQPage
 tags:
 - groupdocs
 - folder-comparison
@@ -21,53 +96,33 @@ url: /es/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tuto
 weight: 1
 ---
 
- markdown formatting, code block placeholders unchanged.
-
-Also ensure we keep any bold formatting (**). Keep them.
-
-Now produce final content.
-
 # Cómo comparar carpetas en .NET – Guía con GroupDocs
 
-¿Alguna vez te has encontrado revisando manualmente cientos de archivos para detectar diferencias entre dos directorios? **En este tutorial aprenderás cómo comparar carpetas en .NET usando GroupDocs.Comparison**. Ya sea que estés gestionando despliegues de código, validando copias de seguridad o rastreando cambios de configuración, la comparación de carpetas en .NET puede ahorrarte horas de trabajo tedioso.
-
-**GroupDocs.Comparison for .NET** transforma este problema en un proceso simple y automatizado. Puedes comparar estructuras de directorios completas, identificar cambios al instante y exportar resultados en formatos que tengan sentido para tu flujo de trabajo (TXT para registros, HTML para revisiones visuales).
+Si necesitas saber **cómo comparar carpetas** en .NET, estás en el lugar correcto. En este tutorial recorreremos el uso de GroupDocs.Comparison para detectar automáticamente diferencias entre dos directorios, generar tanto registros TXT como informes HTML enriquecidos, e integrar el proceso en aplicaciones C# del mundo real.
 
 ## Respuestas rápidas
 - **¿Cuál es el propósito principal?** Automatizar la comparación de carpetas y generar informes detallados en TXT o HTML.  
 - **¿Qué formatos de salida son compatibles?** TXT para un análisis sencillo y HTML para generar un informe visual.  
 - **¿Necesito una licencia?** Una prueba gratuita funciona para aprender; una licencia comercial elimina las marcas de agua para producción.  
-- **¿Puedo ejecutar esto en Linux?** Sí – GroupDocs.Comparison soporta .NET Core en Linux, macOS y Windows.  
+- **¿Puedo ejecutar esto en Linux?** Sí – GroupDocs.Comparison admite .NET Core en Linux, macOS y Windows.  
 - **¿Qué versiones de .NET son compatibles?** .NET Core 3.1+ y .NET 5/6/7/8.
+
+## ¿Qué aprenderás en esta guía?
+
+En esta guía aprenderás a comparar dos directorios en C# usando GroupDocs.Comparison, generar informes tanto en TXT como en HTML, manejar estructuras de carpetas grandes de manera eficiente e integrar la comparación en pipelines CI/CD o scripts de verificación de copias de seguridad. También descubrirás cómo optimizar el rendimiento para conjuntos de datos masivos y personalizar el diseño del informe HTML según tus necesidades.
 
 ## Por qué la comparación de carpetas es importante para desarrolladores .NET
 
-¿Alguna vez te has encontrado revisando manualmente cientos de archivos para detectar diferencias entre dos directorios? No estás solo. Ya sea que estés gestionando despliegues de código, validando copias de seguridad o rastreando cambios de configuración, **la comparación de carpetas en .NET** puede ahorrarte horas de trabajo tedioso.
-
-**GroupDocs.Comparison for .NET** transforma este problema en un proceso simple y automatizado. Puedes comparar estructuras de directorios completas, identificar cambios al instante y exportar resultados en formatos que tengan sentido para tu flujo de trabajo (TXT para registros, HTML para revisiones visuales).
-
-En este tutorial completo, descubrirás cómo implementar una funcionalidad robusta de comparación de carpetas que maneja desde verificaciones simples de directorios hasta escenarios complejos de gestión de archivos a nivel empresarial.
-
-## Qué aprenderás en esta guía
-
-Al final de este tutorial, podrás implementar soluciones de comparación de carpetas que:
-
-- Comparen directorios de cualquier tamaño de manera eficiente  
-- Generen informes detallados en formatos TXT y HTML (incluido cómo **generar informe HTML**)  
-- Manejen casos límite y consideraciones de rendimiento  
-- Se integren sin problemas en tus aplicaciones .NET existentes  
-- Automatizen tareas repetitivas de gestión de archivos  
-
-¡Vamos a sumergirnos en los requisitos previos y a prepararte para el éxito!
+La comparación de carpetas te ahorra escanear manualmente cientos de archivos. Ya sea que estés validando despliegues, revisando copias de seguridad o rastreando desviaciones de configuración, **compare directories C#** te permite detectar archivos añadidos, eliminados o modificados en segundos en lugar de horas.
 
 ## Requisitos previos y configuración del entorno
 
-Antes de pasar a la parte divertida, asegurémonos de que tienes todo lo necesario. No te preocupes, la configuración es sencilla y te guiaré paso a paso.
+Antes de pasar a lo divertido, asegurémonos de que tienes todo lo necesario. No te preocupes – la configuración es sencilla, y te guiaré paso a paso.
 
-### Qué necesitarás
+### Lo que necesitarás
 
 **Bibliotecas y versiones requeridas**  
-- **GroupDocs.Comparison for .NET**: Versión 25.4.0 (la última versión estable a partir de 2025)  
+- **GroupDocs.Comparison for .NET**: Versión 25.4.0 (la última versión estable a partir de 2025) – soporta **más de 50 formatos de entrada y salida** incluidos DOCX, PDF, HTML y tipos de imagen.  
 - **.NET Framework/SDK**: Compatible con .NET Core 3.1+ y .NET 5/6/7/8  
 - **Entorno de desarrollo**: Visual Studio 2019+ (la edición Community funciona perfectamente)
 
@@ -86,7 +141,7 @@ Si puedes hacer estas tres cosas, ¡estás listo! Ahora instalemos y configuremo
 
 ## Instalación y configuración de GroupDocs.Comparison
 
-Poner en marcha GroupDocs.Comparison en tu proyecto es muy fácil. Tienes dos métodos principales de instalación, y te mostraré ambos.
+Poner en marcha GroupDocs.Comparison en tu proyecto es muy sencillo. Tienes dos métodos principales de instalación, y te mostraré ambos.
 
 ### Métodos de instalación
 
@@ -100,17 +155,17 @@ Install-Package GroupDocs.Comparison -Version 25.4.0
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-Consejo profesional: siempre especifica la versión para garantizar consistencia en tu equipo y entornos de despliegue.
+Consejo profesional: siempre especifica la versión para garantizar la consistencia en tu equipo y entornos de despliegue.
 
-### Comprendiendo las opciones de licencia
+### Entendiendo las opciones de licencia
 
-GroupDocs.Comparison ofrece licenciamiento flexible que se adapta a distintas necesidades:
+GroupDocs.Comparison ofrece licencias flexibles que se adaptan a diferentes necesidades:
 
 - **Prueba gratuita**: Perfecta para evaluación – te da acceso a todas las funciones con algunas limitaciones  
 - **Licencia temporal**: Ideal para proyectos de prueba de concepto – elimina temporalmente las restricciones de la prueba  
 - **Licencia comercial**: Todas las funciones para aplicaciones en producción  
 
-Para fines de aprendizaje, la prueba gratuita es más que suficiente. Siempre puedes actualizar más adelante cuando estés listo para desplegar.
+Para propósitos de aprendizaje, la prueba gratuita es más que suficiente. Siempre puedes actualizar más adelante cuando estés listo para desplegar.
 
 ### Inicialización y configuración básica
 
@@ -134,15 +189,15 @@ class Program
 }
 ```
 
-Si este código se ejecuta sin errores, ¡felicidades! Ya puedes comenzar a crear funcionalidades potentes de comparación de carpetas.
+Si este código se ejecuta sin errores, ¡felicidades! Ya estás listo para comenzar a crear funcionalidades potentes de comparación de carpetas.
 
 ## Cómo comparar carpetas y guardar resultados como archivos TXT
 
-Comencemos con el enfoque más directo: comparar dos directorios y guardar los resultados en un archivo de texto. Este método es perfecto para scripts automatizados, sistemas de registro o cuando necesitas un formato de salida simple y parseable.
+Comencemos con el enfoque más sencillo: comparar dos directorios y guardar los resultados en un archivo de texto. Este método es perfecto para scripts automatizados, sistemas de registro o cuando necesitas un formato de salida simple y analizabl​e.
 
 ### ¿Por qué elegir salida TXT?
 
-Los archivos de texto son increíblemente versátiles. Son ligeros, fáciles de parsear programáticamente, amigables con el control de versiones y pueden verse en cualquier sistema. Perfectos para:
+Los archivos de texto son increíblemente versátiles. Son ligeros, fáciles de analizar programáticamente, amigables con el control de versiones y pueden verse en cualquier sistema. Perfectos para:
 
 - Procesos de compilación automatizados  
 - Análisis de archivos de registro  
@@ -153,6 +208,8 @@ Los archivos de texto son increíblemente versátiles. Son ligeros, fáciles de 
 
 #### Paso 1: Configura tus opciones de comparación
 
+La clase `FolderComparisonOptions` te permite afinar la comparación.  
+**Ancla de definición:** `FolderComparisonOptions` define todas las configuraciones configurables para una operación de comparación de carpetas.  
 ```csharp
 using System;
 using System.IO;
@@ -171,17 +228,18 @@ Options.CompareOptions compareOptionsTxt = new Options.CompareOptions
 };
 ```
 
-**¿Qué está pasando aquí?** Le estás indicando a GroupDocs.Comparison que deseas comparar directorios completos (no archivos individuales) y que la salida sea en formato de texto. La configuración `DirectoryCompare = true` es crucial: habilita la funcionalidad de comparación recursiva de directorios.
+Le estás indicando a GroupDocs.Comparison que deseas comparar directorios completos (no archivos individuales) y que la salida sea en formato texto. La configuración `DirectoryCompare = true` es crucial: habilita la funcionalidad de comparación recursiva de directorios.
 
 #### Paso 2: Inicializa el objeto Comparer
 
+**Ancla de definición:** `Comparer` es la clase central que realiza la comparación entre los elementos de origen y destino.  
 ```csharp
 Comparer comparerTxt = new Comparer(sourceFolder, compareOptionsTxt);
 // Add target folder for comparison
 comparerTxt.Add(targetFolder, compareOptionsTxt);
 ```
 
-Aquí es donde comienza la magia. Creas una instancia de `Comparer` con tu carpeta de origen como referencia, y luego añades la carpeta de destino para la comparación. Es como decir “compara todo en la carpeta B contra la carpeta A”.
+Aquí es donde comienza la magia. Creas una instancia de `Comparer` con tu carpeta de origen como base, y luego añades la carpeta de destino para la comparación. Piensa en ello como decir “compara todo lo que hay en la carpeta B contra la carpeta A”.
 
 #### Paso 3: Ejecuta la comparación y guarda los resultados
 
@@ -193,7 +251,7 @@ Console.WriteLine("TXT file with comparison results saved successfully.");
 Console.WriteLine($"Check your results at: {txtOutputFileName}");
 ```
 
-¡Eso es todo! Los resultados de la comparación se guardan ahora en un archivo de texto. La salida incluirá detalles sobre archivos añadidos, eliminados y modificados, facilitando la comprensión de los cambios entre los dos directorios.
+¡Eso es todo! Tus resultados de comparación ahora se guardan en un archivo de texto. La salida incluirá detalles sobre archivos añadidos, eliminados y modificados, facilitando la comprensión de lo que cambió entre los dos directorios.
 
 ### Entendiendo el formato de salida TXT
 
@@ -206,7 +264,7 @@ El archivo de texto generado típicamente incluye:
 
 ## Cómo comparar carpetas y guardar resultados como archivos HTML
 
-Mientras que los archivos TXT son excelentes para automatización, la salida HTML brilla cuando necesitas un informe visual y legible por humanos. Los resultados en HTML son perfectos para revisiones de código, presentaciones a clientes o cuando deseas compartir hallazgos con miembros del equipo no técnicos.
+Mientras que los archivos TXT son excelentes para automatización, la salida HTML brilla cuando necesitas un informe visual y legible por humanos. Los resultados de comparación en HTML son perfectos para revisiones de código, presentaciones a clientes o cuando deseas compartir hallazgos con miembros no técnicos del equipo.
 
 ### Beneficios de la salida HTML (y cómo **generar informe HTML**)
 
@@ -215,10 +273,9 @@ Mientras que los archivos TXT son excelentes para automatización, la salida HTM
 - **Presentación profesional** – ideal para informes y documentación  
 - **Visualización multiplataforma** – se abre en cualquier navegador web  
 
-### Implementación paso a paso en HTML
-
 #### Paso 1: Configura las opciones de comparación HTML
 
+**Ancla de definición:** `FolderComparisonExtension.Html` indica a la API que produzca un informe basado en HTML en lugar de texto plano.  
 ```csharp
 // Set comparison options for HTML output
 Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
@@ -228,7 +285,7 @@ Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
 };
 ```
 
-La diferencia clave aquí es la configuración `FolderComparisonExtension.Html`. Esto indica a GroupDocs.Comparison que genere un informe HTML rico en lugar de texto plano.
+La diferencia clave aquí es la configuración `FolderComparisonExtension.Html`. Le dice a GroupDocs.Comparison que genere un informe HTML rico en lugar de texto plano.
 
 #### Paso 2: Inicializa el Comparer para salida HTML
 
@@ -269,19 +326,19 @@ Entender cuándo y cómo usar la comparación de carpetas puede mejorar signific
 
 **Escenario**: Estás revisando cambios entre dos ramas o comparando diferentes versiones de tu base de código.  
 
-**Por qué ayuda la comparación de carpetas**: En lugar de revisar archivos uno por uno, puedes ver instantáneamente todas las modificaciones, adiciones y eliminaciones en toda la estructura del proyecto. La salida HTML es particularmente útil aquí—puedes compartir informes visuales de diferencias con tu equipo.
+**Por qué ayuda la comparación de carpetas**: En lugar de revisar archivo por archivo, puedes ver instantáneamente todas las modificaciones, adiciones y eliminaciones en todo tu proyecto. La salida HTML es particularmente útil aquí—puedes compartir informes visuales de diferencias con tu equipo.
 
 ### Verificación de copias de seguridad de datos  
 
-**Escenario**: Necesitas verificar que tu proceso de respaldo haya copiado correctamente todos los archivos y que no haya corrupción.  
+**Escenario**: Necesitas verificar que tu proceso de respaldo copió correctamente todos los archivos y que no hubo corrupción.  
 
-**Consejo de implementación**: Usa la salida TXT para scripts de verificación automatizados que se integren en tu flujo de trabajo de respaldo. Configura alertas cuando se detecten discrepancias.
+**Consejo de implementación**: Usa la salida TXT para scripts de verificación automatizados que pueden integrarse en tu flujo de trabajo de respaldo. Configura alertas cuando se detecten discrepancias.
 
 ### Gestión de configuraciones entre entornos
 
 **Escenario**: Gestionas configuraciones de aplicaciones entre entornos de desarrollo, pruebas y producción.  
 
-**Mejor práctica**: Las comparaciones regulares de carpetas ayudan a detectar desviaciones de configuración antes de que causen problemas en producción. Los informes HTML son perfectos para la documentación de gestión de cambios.
+**Mejor práctica**: Las comparaciones de carpetas regulares ayudan a detectar desviaciones de configuración antes de que causen problemas en producción. Los informes HTML son perfectos para la documentación de gestión de cambios.
 
 ### Control de versiones de documentos
 
@@ -291,11 +348,11 @@ Entender cuándo y cómo usar la comparación de carpetas puede mejorar signific
 
 ### Integración en pipelines CI/CD
 
-**Escenario**: Quieres detectar y reportar cambios automáticamente como parte de tu proceso de despliegue.  
+**Escenario**: Deseas detectar y reportar cambios automáticamente como parte de tu proceso de despliegue.  
 
 **Uso avanzado**: Integra la comparación de carpetas en tu pipeline de compilación para generar informes de cambios en cada despliegue, ayudando en decisiones de rollback y seguimiento de cambios.
 
-## Optimización de rendimiento y mejores prácticas
+## Optimización de rendimiento y buenas prácticas
 
 Al trabajar con estructuras de directorios grandes, el rendimiento se vuelve crucial. Aquí tienes estrategias probadas para mantener tus comparaciones de carpetas funcionando sin problemas:
 
@@ -303,11 +360,12 @@ Al trabajar con estructuras de directorios grandes, el rendimiento se vuelve cru
 
 1. **Selección inteligente de directorios**  
    - Compara solo los directorios que realmente necesitas analizar  
-   - Usa filtros para excluir archivos temporales, registros u otro contenido irrelevante  
-   - Considera dividir comparaciones muy grandes en fragmentos más pequeños y enfocados  
+   - Usa filtros para excluir archivos temporales, logs u otro contenido irrelevante  
+   - Considera dividir comparaciones muy grandes en bloques más pequeños y enfocados  
 
 2. **Gestión de memoria**  
 
+**Ancla de definición:** `Comparer.Dispose()` libera todos los recursos no administrados mantenidos por el comparador, evitando fugas de memoria.  
 ```csharp
 // Dispose of comparer objects properly
 using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
@@ -318,22 +376,22 @@ using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
 ```
 
 3. **Procesamiento asíncrono**  
-   Para comparaciones extensas, considera implementar patrones async para evitar bloqueos de UI en aplicaciones de escritorio o problemas de tiempo de espera en aplicaciones web.
+   Para comparaciones grandes, considera implementar patrones async para evitar bloqueos de UI en aplicaciones de escritorio o problemas de tiempo de espera en aplicaciones web.
 
-### Consejos para monitorear el rendimiento
+### Consejos para monitorizar el rendimiento
 
-- Supervisa el uso de memoria durante comparaciones grandes  
+- Supervisa el uso de memoria durante comparaciones extensas  
 - Registra el tiempo de procesamiento para diferentes tamaños de directorios  
 - Establece expectativas realistas para los usuarios según la complejidad del directorio  
 - Considera reportar progreso en operaciones de larga duración  
 
 ## Solución de problemas comunes
 
-Incluso con código bien escrito, pueden surgir desafíos. Aquí tienes los problemas más comunes y sus soluciones:
+Incluso con código bien escrito, pueden surgir desafíos. Aquí tienes los problemas más frecuentes y sus soluciones:
 
 ### Problemas de acceso y permisos de archivos
 
-**Problema**: errores de “Acceso denegado” o “archivo en uso”  
+**Problema**: errores “Access denied” o “file in use”  
 
 **Solución**:  
 - Asegúrate de que tu aplicación se ejecute con los permisos adecuados  
@@ -342,7 +400,7 @@ Incluso con código bien escrito, pueden surgir desafíos. Aquí tienes los prob
 
 ### Problemas de rutas y directorios
 
-**Problema**: errores de ruta inválida o directorio no encontrado  
+**Problema**: errores de ruta no válida o directorio no encontrado  
 
 **Solución**:  
 
@@ -366,7 +424,7 @@ if (!Directory.Exists(targetFolder))
 **Soluciones**:  
 - Divide comparaciones grandes en lotes más pequeños  
 - Excluye tipos de archivo innecesarios de la comparación  
-- Supervisa y optimiza los patrones de uso de memoria  
+- Monitorea y optimiza los patrones de uso de memoria  
 
 ### Problemas al generar archivos de salida
 
@@ -375,20 +433,20 @@ if (!Directory.Exists(targetFolder))
 **Pasos de solución**:  
 - Verifica permisos de escritura en el directorio de salida  
 - Asegúrate de que haya suficiente espacio en disco  
-- Revisa caracteres inválidos en las rutas de archivo  
+- Comprueba que no haya caracteres inválidos en las rutas de archivo  
 - Valida que el directorio de salida exista antes de la comparación  
 
-## Opciones avanzadas de configuración
+## Opciones de configuración avanzadas
 
 GroupDocs.Comparison ofrece numerosas opciones de configuración que te permiten afinar el comportamiento de la comparación:
 
 ### Configuraciones de sensibilidad de comparación
 
-Puedes ajustar cuán sensible es la comparación a distintos tipos de cambios:
+Puedes ajustar cuán sensible es la comparación a diferentes tipos de cambios:
 
-- **Manejo de espacios en blanco** – ignorar o incluir cambios de espacios  
+- **Manejo de espacios en blanco** – ignorar o incluir cambios de espacio  
 - **Sensibilidad a mayúsculas/minúsculas** – controlar si las diferencias de caso se consideran cambios  
-- **Normalización de finales de línea** – manejar diferentes formatos de finales de línea  
+- **Normalización de finales de línea** – manejar diferentes formatos de fin de línea  
 
 ### Filtrado por tipo de archivo
 
@@ -412,7 +470,7 @@ Adapta el formato de salida a tus necesidades específicas:
 ¡Felicidades! Has dominado los fundamentos de la comparación de carpetas usando GroupDocs.Comparison para .NET. Ahora posees las habilidades para:
 
 ✅ Configurar y usar GroupDocs.Comparison en tus proyectos  
-✅ Comparar directorios y generar informes tanto en TXT como en HTML (incluido cómo **generar informe HTML**)  
+✅ Comparar directorios y generar informes tanto en TXT como en HTML (incluyendo cómo **generar informe HTML**)  
 ✅ Manejar desafíos comunes y optimizar el rendimiento  
 ✅ Integrar la comparación de carpetas en aplicaciones del mundo real  
 
@@ -427,9 +485,9 @@ Adapta el formato de salida a tus necesidades específicas:
 
 ### Comienza a implementar hoy
 
-La mejor manera de dominar estos conceptos es mediante la práctica. Elige uno de tus proyectos actuales e identifica dónde la comparación de carpetas podría optimizar tu flujo de trabajo. Empieza con algo pequeño, experimenta con diferentes formatos de salida y, gradualmente, incorpora funciones más avanzadas.
+La mejor manera de dominar estos conceptos es mediante la práctica. Elige uno de tus proyectos actuales e identifica dónde la comparación de carpetas podría optimizar tu flujo de trabajo. Comienza con algo pequeño, experimenta con diferentes formatos de salida y, gradualmente, incorpora funciones más avanzadas.
 
-Recuerda: todo experto fue alguna vez principiante. Tómate tu tiempo, experimenta libremente y no dudes en consultar esta guía siempre que necesites un repaso.
+Recuerda: todo experto fue una vez principiante. Tómate tu tiempo, experimenta libremente y no dudes en consultar esta guía siempre que necesites un repaso.
 
 ## Preguntas frecuentes
 
@@ -440,37 +498,43 @@ R: ¡Absolutamente! GroupDocs.Comparison soporta completamente el despliegue mul
 R: Para directorios extensos, implementa estas estrategias: usa procesamiento asíncrono, divide las comparaciones en lotes más pequeños, excluye tipos de archivo innecesarios y monitorea el uso de memoria. Considera proporcionar retroalimentación de progreso a los usuarios para operaciones de larga duración.
 
 **P: ¿Existe un límite práctico al número de archivos que puedo comparar?**  
-R: No hay un límite rígido en la biblioteca, pero el rendimiento depende de los recursos del sistema (RAM, CPU, velocidad del disco) y del tamaño de los archivos. La mayoría de los sistemas pueden manejar miles de archivos sin problemas, aunque conjuntos de datos extremadamente grandes pueden requerir estrategias de optimización.
+R: No hay un límite rígido en la biblioteca, pero el rendimiento depende de los recursos del sistema (RAM, CPU, velocidad de disco) y del tamaño de los archivos. La mayoría de los sistemas manejan miles de archivos sin problemas, aunque conjuntos de datos muy grandes pueden requerir estrategias de optimización.
 
-**P: ¿Puede GroupDocs.Comparison manejar archivos encriptados o protegidos con contraseña?**  
-R: La biblioteca no puede comparar directamente archivos encriptados. Deberás descifrarlos primero si cuentas con los permisos y credenciales adecuados. Siempre asegura cumplir con las políticas de seguridad de tu organización al manejar contenido encriptado.
+**P: ¿GroupDocs.Comparison puede manejar archivos cifrados o protegidos con contraseña?**  
+R: La biblioteca no puede comparar directamente archivos cifrados. Necesitarás descifrarlos primero si cuentas con los permisos y credenciales adecuados. Siempre asegúrate de cumplir con las políticas de seguridad de tu organización al manejar contenido cifrado.
 
 **P: ¿Cómo integro la comparación de carpetas en pipelines CI/CD automatizados?**  
-R: Crea aplicaciones de consola que usen GroupDocs.Comparison, configura que devuelvan códigos de salida apropiados según los resultados de la comparación e intégralas en tus scripts de compilación. La salida TXT es particularmente útil para parsear resultados en entornos automatizados.
+R: Crea aplicaciones de consola que usen GroupDocs.Comparison, configúralas para devolver códigos de salida apropiados según los resultados de la comparación e intégralas en tus scripts de compilación. La salida TXT es particularmente útil para analizar resultados en entornos automatizados.
 
-**P: ¿Cuál es la diferencia entre las versiones de prueba y con licencia?**  
-R: La versión de prueba incluye toda la funcionalidad pero añade marcas de agua a la salida y tiene algunas limitaciones de uso. Las versiones licenciadas eliminan estas restricciones y son adecuadas para producción.
+**P: ¿Cuál es la diferencia entre las versiones de prueba y las licenciadas?**  
+R: La versión de prueba incluye todas las funcionalidades pero añade marcas de agua a la salida y tiene algunas limitaciones de uso. Las versiones licenciadas eliminan estas restricciones y son adecuadas para producción.
 
 **P: ¿Puedo personalizar el estilo y diseño de la salida HTML?**  
 R: Sí, GroupDocs.Comparison ofrece opciones para personalizar la salida HTML. Puedes modificar plantillas, ajustar estilos y controlar qué información se incluye en los informes.
 
 **P: ¿Cómo manejo archivos que existen en un directorio pero no en el otro?**  
-R: GroupDocs.Comparison identifica y reporta automáticamente estas diferencias como archivos “añadidos” o “eliminados”. Puedes configurar cómo se presentan estas diferencias en tu formato de salida.
+R: GroupDocs.Comparison identifica y reporta automáticamente estas diferencias como archivos “añadidos” o “eliminados”. Puedes configurar cómo se presentan esas diferencias en tu formato de salida.
 
 ## Recursos adicionales y soporte
 
 ### Documentación
-- **Complete API Reference**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)
-- **Developer Guide**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
+- **Referencia completa de la API**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)
+- **Guía del desarrollador**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
 
 ### Descarga y licenciamiento
-- **Latest Release**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
-- **Purchase Options**: [Buy Commercial License](https://purchase.groupdocs.com/buy)
-- **Free Trial**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)
-- **Temporary License**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
+- **Última versión**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
+- **Opciones de compra**: [Buy Commercial License](https://purchase.groupdocs.com/buy)
+- **Prueba gratuita**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)
+- **Licencia temporal**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
 
 ---
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
-**Author:** GroupDocs
+**Última actualización:** 2026-07-20  
+**Probado con:** GroupDocs.Comparison 25.4.0 for .NET  
+**Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [GroupDocs Comparison .NET Quick Start - Complete Setup Guide](/comparison/net/quick-start/)
+- [GroupDocs Comparison .NET Tutorial - Complete Basic Usage Guide](/comparison/net/basic-usage/)
+- [Compare Multiple Documents .NET – Advanced Features & Automation Guide](/comparison/net/advanced-comparison/)

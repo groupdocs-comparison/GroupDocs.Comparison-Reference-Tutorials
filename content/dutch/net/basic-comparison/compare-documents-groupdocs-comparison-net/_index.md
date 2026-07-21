@@ -1,67 +1,82 @@
 ---
-"date": "2025-05-05"
-"description": "Leer hoe u meerdere Word-documenten kunt vergelijken met behulp van streams met GroupDocs.Comparison voor .NET. Deze handleiding behandelt installatie, configuratie en praktische toepassingen."
-"title": "Documenten uit streams vergelijken met GroupDocs.Comparison .NET - Een complete gids voor ontwikkelaars"
-"url": "/nl/net/basic-comparison/compare-documents-groupdocs-comparison-net/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-04-14'
+description: Leer hoe u meerdere Word-documenten kunt vergelijken in C# met GroupDocs.Comparison
+  .NET, waarbij verschillen in Word worden gemarkeerd, met volledige codevoorbeelden,
+  probleemoplossing en best practices.
+keywords:
+- compare multiple word documents
+- highlight differences in word
+- groupdocs comparison c#
+lastmod: '2026-04-14'
+linktitle: Documentvergelijking C#‑handleiding
+tags:
+- csharp
+- document-comparison
+- groupdocs
+- tutorial
+title: Documentvergelijking C# Tutorial – Vergelijk meerdere Word‑documenten programmatically
 type: docs
+url: /nl/net/basic-comparison/compare-documents-groupdocs-comparison-net/
+weight: 1
 ---
-# Meerdere documenten uit streams vergelijken met GroupDocs.Comparison .NET
 
-## Invoering
+# Documentvergelijking C# Tutorial – Meerdere Word-documenten programmatically vergelijken
 
-Heb je moeite met het efficiënt vergelijken van meerdere documenten? Deze uitgebreide handleiding maakt gebruik van de krachtige mogelijkheden van GroupDocs.Comparison voor .NET om Word-documenten naadloos rechtstreeks vanuit streams te vergelijken. In deze tutorial begeleiden we je bij het instellen en implementeren van documentvergelijking met C#. Je krijgt inzicht in hoe je complexe documentvergelijkingen eenvoudig kunt verwerken.
+Heb je ooit handmatig Word-documenten regel voor regel vergeleken, op zoek naar elke wijziging? Je bent niet de enige. **In deze gids leer je hoe je meerdere Word-documenten efficiënt kunt vergelijken**, of je nu juridische contracten beoordeelt, revisies bijhoudt of samenwerkende bewerkingsprojecten beheert. Het automatiseren van dit proces met GroupDocs.Comparison voor .NET bespaart tijd, vermindert fouten en genereert professionele vergelijkingsrapporten in slechts een paar regels C#-code.
 
-**Wat je leert:**
-- Hoe u meerdere documenten uit streams kunt vergelijken.
-- GroupDocs.Comparison instellen voor .NET in uw project.
-- Stijlinstellingen configureren voor gemarkeerde verschillen.
-- Praktische toepassingen van de GroupDocs.Comparison-bibliotheek.
-- Tips voor prestatie-optimalisatie bij grootschalige documentverwerking.
+**Wat je in deze tutorial onder de knie krijgt:**
+- Hoe je Word-documenten vergelijkt met streams (perfect voor in de database opgeslagen bestanden)
+- GroupDocs.Comparison opzetten in je C#-project vanaf nul  
+- Vergelijkingsresultaten aanpassen met professionele styling
+- Meerdere documentvergelijkingen efficiënt afhandelen
+- Veelvoorkomende problemen oplossen en prestatie‑optimalisatie
+- Praktische toepassingen die je uren handmatig werk besparen
 
-Laten we eens kijken naar de vereisten voordat we beginnen met coderen!
+## Snelle antwoorden
+- **Welke bibliotheek moet ik gebruiken?** GroupDocs.Comparison for .NET  
+- **Kan ik meerdere Word-documenten tegelijk vergelijken?** Ja – voeg zoveel doel‑streams toe als nodig.  
+- **Hoe markeer ik verschillen in Word?** Gebruik `CompareOptions` met aangepaste `StyleSettings`.  
+- **Heb ik een licentie nodig voor ontwikkeling?** Een gratis proefversie werkt voor leren; een tijdelijke licentie verwijdert watermerken.  
+- **Is async‑ondersteuning beschikbaar?** Ja – je kunt de vergelijking wikkelen in `Task.Run` voor niet‑blokkende aanroepen.
+
+## Waarom meerdere Word-documenten vergelijken?
+
+Het vergelijken van meer dan twee versies tegelijk geeft je een enkel, uniform overzicht van alle wijzigingen. Dit is vooral waardevol wanneer meerdere beoordelaars hetzelfde contract bewerken of wanneer je verschillende concept‑voorstellen moet auditten. In plaats van afzonderlijke vergelijkingsrapporten te beheren, voegt GroupDocs.Comparison elke afwijking samen in één document, waardoor toevoegingen, verwijderingen en aanpassingen gemakkelijk te herkennen zijn.
+
+## Hoe verschillen markeren in Word-documenten
+
+GroupDocs.Comparison stelt je in staat aangepaste opmaak te definiëren voor ingevoegde, verwijderde of gewijzigde tekst. Door `InsertedItemStyle`, `DeletedItemStyle` en `ModifiedItemStyle` in te stellen, kun je het rapport laten overeenkomen met de huisstijl van je organisatie of simpelweg de leesbaarheid verbeteren. We lopen een basisvoorbeeld door waarin ingevoegde tekst geel wordt gemarkeerd.
 
 ## Vereisten
 
-Voordat u GroupDocs.Comparison voor .NET implementeert, moet u ervoor zorgen dat u het volgende hebt:
+- **GroupDocs.Comparison Library** (v25.4.0 of later) – werkt met .NET Framework 4.6.1+ en .NET Core 2.0+  
+- **Visual Studio** (een recente versie)  
+- Basis C#-kennis – je moet vertrouwd zijn met het maken van een console‑applicatie  
+- Een paar voorbeeld‑Word‑bestanden om de vergelijking te testen  
 
-### Vereiste bibliotheken en versies
-- **GroupDocs.Vergelijking**: Versie 25.4.0 is vereist. U kunt deze installeren via NuGet Package Manager of via de .NET CLI.
+## GroupDocs.Comparison opzetten en laten draaien
 
-### Vereisten voor omgevingsinstellingen
-- Een ontwikkelomgeving met .NET Framework of .NET Core geïnstalleerd.
-- Visual Studio of een vergelijkbare IDE voor C#-ontwikkeling.
+### De bibliotheek installeren (De gemakkelijke manier)
 
-### Kennisvereisten
-- Basiskennis van C#-programmering en bestandsbeheer in .NET.
-- Kennis van documentverwerkingsconcepten is nuttig, maar niet verplicht.
-
-Nu u aan deze vereisten hebt voldaan, bent u klaar om GroupDocs.Comparison voor .NET te installeren.
-
-## GroupDocs.Comparison instellen voor .NET
-
-Volg de onderstaande stappen om GroupDocs.Comparison in uw project te gebruiken:
-
-### Installatie-instructies
-
-**NuGet-pakketbeheerconsole**
+**Optie 1: Package Manager Console**
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
 
-**.NET CLI**
+**Optie 2: .NET CLI (Mijn persoonlijke favoriet)**
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-### Stappen voor het verkrijgen van een licentie
-- **Gratis proefperiode**: Krijg toegang tot een gratis proefversie om de functies van de bibliotheek te evalueren.
-- **Tijdelijke licentie**: Vraag een tijdelijke licentie aan voor uitgebreide tests zonder beperkingen.
-- **Aankoop**: Voor volledig productiegebruik, koop een licentie van [GroupDocs-aankoop](https://purchase.groupdocs.com/buy).
+### Licenties eenvoudig gemaakt
 
-### Basisinitialisatie en -installatie
+- **Gratis proefversie:** Volledige functionaliteit met kleine watermerken – ideaal om te leren.  
+- **Tijdelijke licentie:** Verwijdert watermerken voor demo's; vraag een gratis tijdelijke sleutel aan bij GroupDocs.  
+- **Productielicentie:** Koop een volledige licentie op [GroupDocs Purchase](https://purchase.groupdocs.com/buy).
 
-Hier leest u hoe u GroupDocs.Comparison in uw C#-project kunt initialiseren:
+### Je eerste vergelijking (Hello World‑stijl)
 
 ```csharp
 using System;
@@ -73,10 +88,10 @@ namespace DocumentComparisonApp
     {
         static void Main(string[] args)
         {
-            // Initialiseer de vergelijker met een brondocumentstroom
+            // Initialize comparer with a source document stream
             using (Comparer comparer = new Comparer(File.OpenRead("SOURCE_WORD.docx")))
             {
-                // Voeg doeldocumenten toe om te vergelijken
+                // Add target documents to compare
                 comparer.Add("TARGET_WORD.docx");
                 Console.WriteLine("Documents added for comparison.");
             }
@@ -85,36 +100,23 @@ namespace DocumentComparisonApp
 }
 ```
 
-In dit fragment worden de basisinitialisatie en het toevoegen van doeldocumenten gedemonstreerd. Hiermee wordt de basis gelegd voor een uitgebreide vergelijking van documenten.
+Dit fragment maakt een `Comparer`‑object aan, laadt een bron‑document en voegt één doel‑document toe. Beschouw het als het opzetten van een “voor‑en‑na” vergelijking.
 
-## Implementatiegids
+## De volledige implementatie – Stap voor stap
 
-Laten we de implementatie nu opsplitsen in de belangrijkste functies. We richten ons op het vergelijken van meerdere documenten uit streams en het configureren van stijlinstellingen.
-
-### Meerdere documenten uit streams vergelijken
-
-#### Overzicht
-Met deze functie kunt u meerdere Word-documenten vergelijken met behulp van bestandsstromen. Dit maakt het ideaal voor het verwerken van bestanden die zijn opgeslagen in databases of die via netwerken zijn ontvangen.
-
-#### Implementatiestappen
-
-**1. Open Source Documentstroom**
-
-Begin met het openen van de brondocumentstroom:
+### Stap 1: De basis opzetten
 
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
-    // Voeg in volgende stappen doeldocumenten toe
+    // We'll build on this foundation
 }
 ```
 
-*Uitleg:* De `Comparer` Het object wordt geïnitialiseerd met een bestandsstroom. Dit stelt het brondocument in voor vergelijking.
+*Wat gebeurt er?* We maken een `Comparer`‑instantie aan met een **stream** in plaats van een bestandspad, waardoor we flexibel kunnen werken met documenten die in databases zijn opgeslagen of via een netwerk worden ontvangen.
 
-**2. Doeldocumenten toevoegen**
-
-Voeg vervolgens meerdere doeldocumenten toe die u wilt vergelijken:
+### Stap 2: Meerdere doel‑documenten toevoegen
 
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
@@ -122,27 +124,23 @@ comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WO
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
 ```
 
-*Uitleg:* Elk doeldocument wordt toegevoegd met behulp van de bestandsstroom. Dit maakt vergelijking met de bron mogelijk.
+Nu kun je **meerdere Word‑documenten** in één keer vergelijken. GroupDocs.Comparison voegt alle verschillen op intelligente wijze samen in één resultaatbestand.
 
-**3. Vergelijkingsopties configureren**
-
-Stel de stijl van ingevoegde items in om verschillen te benadrukken:
+### Stap 3: Verschillen laten opvallen (Aangepaste styling)
 
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
     InsertedItemStyle = new StyleSettings()
     {
-        FontColor = System.Drawing.Color.Yellow  // Markeer ingevoegde tekst in geel
+        FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
 ```
 
-*Uitleg:* De `CompareOptions` Met deze klasse kunnen de vergelijkingsresultaten worden aangepast. Hier stellen we de lettertypekleur voor ingevoegde items in op geel.
+Aangepaste styling **markeert verschillen in Word** en maakt het rapport makkelijker leesbaar voor belanghebbenden.
 
-**4. Vergelijking uitvoeren en resultaten opslaan**
-
-Voer de vergelijking uit en sla de uitvoer op:
+### Stap 4: De vergelijking uitvoeren en resultaten opslaan
 
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
@@ -150,56 +148,114 @@ string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.doc
 comparer.Compare(File.Create(outputFileName), compareOptions);
 ```
 
-*Uitleg:* De `Compare` methode voert de documentvergelijking uit en slaat de resultaten op in een opgegeven bestand.
+De enkele regel hierboven voert de vergelijking uit over alle doelen en schrijft een verzorgd resultaatdocument. Omdat we `File.Create()` gebruiken, kun je de stream vervangen door een database‑ of cloud‑opslaglocatie.
 
-**Tips voor probleemoplossing:**
-- Zorg ervoor dat alle documentpaden correct zijn.
-- Controleer of u voldoende rechten hebt om bestanden te lezen/schrijven.
+## Veelvoorkomende problemen en hoe ze op te lossen
 
-### Praktische toepassingen
+### Probleem: “File Not Found”-fouten
 
-1. **Juridische documentbeoordeling**:Automatiseer vergelijkingen van juridische concepten in meerdere versies, zodat u snel wijzigingen kunt ontdekken.
-2. **Academisch onderzoek**: Vergelijk revisies in onderzoekspapers voordat u ze definitief indient.
-3. **Softwaredocumentatie**: Zorg dat de documentatie actueel is door verschillende versies te vergelijken.
-4. **Zakelijke contracten**: Volg wijzigingen in contractvoorstellen duidelijk.
-5. **Samenwerkend bewerken**Beheer wijzigingen van meerdere bijdragers effectief.
+```csharp
+string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
+if (!File.Exists(sourcePath))
+{
+    throw new FileNotFoundException($"Source document not found: {sourcePath}");
+}
+```
 
-Integratie met andere .NET-systemen en -frameworks is eenvoudig, waardoor documentverwerkingsworkflows naadloos verlopen.
+Controleer altijd paden voordat je streams opent.
 
-## Prestatieoverwegingen
+### Probleem: Geheugenproblemen met grote documenten
 
-Voor optimale prestaties:
-- Minimaliseer het geheugengebruik door streams direct na gebruik te verwijderen.
-- Verwerk documenten sequentieel om overmatig resourceverbruik te voorkomen.
-- Maak waar mogelijk gebruik van asynchrone methoden om de responsiviteit van applicaties te verbeteren.
-- Werk de bibliotheek regelmatig bij om te profiteren van prestatieverbeteringen en bugfixes.
+```csharp
+// Don't do this - keeps all streams in memory
+// comparer.Add(File.OpenRead(doc1));
+// comparer.Add(File.OpenRead(doc2));
 
-## Conclusie
+// Do this instead - process one at a time
+using (var stream1 = File.OpenRead(doc1))
+{
+    comparer.Add(stream1);
+    // Stream is disposed automatically here
+}
+```
 
-In deze tutorial hebben we onderzocht hoe je GroupDocs.Comparison voor .NET kunt gebruiken om meerdere Word-documenten te vergelijken met behulp van streams. Door deze stappen te volgen, kun je efficiënt verschillen tussen documentversies identificeren met aangepaste stijlopties. Overweeg vervolgens om aanvullende functies van de bibliotheek te verkennen of deze te integreren in grotere documentmanagementsystemen.
+Maak streams direct vrij om het geheugenverbruik laag te houden.
 
-Klaar om uw oplossing te implementeren? Experimenteer en ontdek hoe GroupDocs.Comparison uw documentverwerking kan verbeteren!
+### Probleem: Onverwachte vergelijkingsresultaten
 
-## FAQ-sectie
+```csharp
+CompareOptions options = new CompareOptions()
+{
+    CompareBookmarks = false,  // Ignore bookmark differences
+    CompareComments = false,   // Ignore comment differences
+    CompareFields = false      // Ignore field differences
+};
+```
 
-1. **Wat is GroupDocs.Comparison .NET?**
-   - Het is een krachtige bibliotheek voor het vergelijken van documenten in .NET-toepassingen, met ondersteuning voor formaten zoals Word, Excel, PDF, enzovoort.
+Pas de gevoeligheidsinstellingen aan om elementen die niet relevant zijn voor je beoordeling te negeren.
 
-2. **Kan ik documenten uit verschillende bronnen (bijvoorbeeld bestanden en streams) vergelijken?**
-   - Ja, u kunt documenten vergelijken, ongeacht of ze zijn geladen via bestandspaden of streams.
+### Asynchrone vergelijking voor web‑apps
 
-3. **Hoe ga ik om met het vergelijken van grote documenten?**
-   - Optimaliseer uw prestaties door documenten sequentieel te verwerken en uw middelen effectief te beheren.
+```csharp
+public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
+{
+    using (var comparer = new Comparer(source))
+    {
+        foreach (var target in targets)
+        {
+            comparer.Add(target);
+        }
+        
+        // Perform comparison on background thread
+        return await Task.Run(() => 
+        {
+            var output = new MemoryStream();
+            comparer.Compare(output, compareOptions);
+            return Convert.ToBase64String(output.ToArray());
+        });
+    }
+}
+```
 
-4. **Welke aanpassingsopties biedt GroupDocs.Comparison om verschillen te benadrukken?**
-   - U kunt stijlen zoals letterkleur, -grootte en -achtergrond aanpassen om ingevoegde, verwijderde of gewijzigde items te markeren.
+Wikkel de vergelijking in `Task.Run` om UI‑threads responsief te houden.
 
-5. **Is er ondersteuning voor het vergelijken van wachtwoordbeveiligde documenten?**
-   - Ja, u kunt documenten die met een wachtwoord zijn beveiligd, vergelijken door tijdens de initialisatie de vereiste inloggegevens op te geven.
+## Tips voor prestatie‑optimalisatie
 
-## Bronnen
+- **Dispose streams altijd** (`using`‑statements).  
+- **Verwerk documenten opeenvolgend** wanneer mogelijk.  
+- **Overweeg async‑patronen** voor web‑API’s.  
+- **Schaal met wachtrijen** voor scenario’s met hoog volume.  
+- **Houd de bibliotheek up‑to‑date** om te profiteren van prestatieverbeteringen.
 
-Ontdek meer met behulp van deze bronnen:
-- [GroupDocs-documentatie](https://docs.groupdocs.com/comparison/net/)
-- [API-referentie](https://reference.groupdocs.com/comparison/net/)
-- [Download GroupDocs.Vergelijking](https://releases.groupdocs.com/comparison/net/)
+## Veelgestelde vragen
+
+**Q: Hoe gaat GroupDocs.Comparison om met verschillende documentformaten?**  
+A: Het ondersteunt Word, PDF, Excel, PowerPoint en nog veel meer. De API blijft consistent over formaten heen, zodat dezelfde code werkt voor PDF’s, DOCX, enz.
+
+**Q: Kan ik documenten met verschillende lay-outs of structuren vergelijken?**  
+A: Ja. De engine vergelijkt inhoud semantisch, niet alleen teken‑voor‑teken, waardoor structurele wijzigingen soepel worden afgehandeld.
+
+**Q: Wat als de documenten met een wachtwoord beveiligd zijn?**  
+A: Je kunt het wachtwoord opgeven bij het openen van de stream; de bibliotheek zal het bestand voor de vergelijking ontsleutelen.
+
+**Q: Is er een limiet aan hoeveel documenten ik tegelijk kan vergelijken?**  
+A: De praktische limiet is het systeemgeheugen. Op een typische ontwikkelmachine werkt het goed om 5‑10 grote documenten tegelijk te vergelijken.
+
+**Q: Hoe kan ik dit integreren in een CI/CD‑pipeline?**  
+A: Wikkel de vergelijkingslogica in een console‑applicatie of een web‑API, en roep deze vervolgens aan vanuit je buildscripts om automatisch documentwijzigingen te detecteren.
+
+**Q: Ondersteunt de bibliotheek meertalige documenten?**  
+A: Absoluut. Het verwerkt rechts‑naar‑links‑talen zoals Arabisch en Hebreeuws, evenals Unicode‑tekens.
+
+## Aanvullende bronnen voor verdieping
+
+- [Documentation](https://docs.groupdocs.com/comparison/net/) – Uitgebreide API‑referentie en geavanceerde tutorials  
+- [API Reference](https://reference.groupdocs.com/comparison/net/) – Gedetailleerde methode‑ en eigenschapsdocumentatie  
+- [Download Center](https://releases.groupdocs.com/comparison/net/) – Laatste releases en changelogs  
+- **Community Forums** – Maak contact met andere ontwikkelaars en krijg hulp van GroupDocs‑experts  
+
+---
+
+**Laatst bijgewerkt:** 2026-04-14  
+**Getest met:** GroupDocs.Comparison 25.4.0 voor .NET  
+**Auteur:** GroupDocs

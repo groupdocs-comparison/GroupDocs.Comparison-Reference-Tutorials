@@ -1,57 +1,104 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-14'
-description: Dowiedz się, jak porównywać wiele dokumentów Word w .NET przy użyciu
-  C#. Szczegółowy samouczek krok po kroku obejmujący konfigurację, kod, rozwiązywanie
-  problemów i wskazówki dotyczące wydajności.
-keywords: multi document comparison .NET, compare multiple documents C#, document
-  comparison library .NET, .NET document diff tool, compare word documents programmatically
-lastmod: '2025-01-02'
-linktitle: Multi Document Comparison .NET
+date: '2026-07-25'
+description: Dowiedz się, jak porównywać dokumenty w .NET przy użyciu C#. Szczegółowy
+  samouczek krok po kroku obejmujący setup, code, troubleshooting i performance tips.
+keywords:
+- how to compare docs
+- compare multiple word documents .NET
+- GroupDocs.Comparison .NET
+- document diff tool
+- multi-file document comparison
+lastmod: '2026-07-25'
+linktitle: Porównywanie wielu dokumentów .NET
+og_description: Dowiedz się, jak porównywać dokumenty w .NET przy użyciu C#. Ten przewodnik
+  prowadzi Cię przez setup GroupDocs.Comparison, opcje i generowanie merged diff report
+  dla wielu plików Word.
+og_image_alt: 'Developer guide: Compare multiple Word documents in .NET using GroupDocs.Comparison'
+og_title: 'Jak porównać dokumenty: porównanie wielu dokumentów Word w .NET C#'
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-25'
+  description: Learn how to compare docs in .NET using C#. Step‑by‑step tutorial covering
+    setup, code, troubleshooting, and performance tips.
+  headline: 'How to Compare Docs: Multiple Word Documents in .NET C#'
+  type: TechArticle
+- description: Learn how to compare docs in .NET using C#. Step‑by‑step tutorial covering
+    setup, code, troubleshooting, and performance tips.
+  name: 'How to Compare Docs: Multiple Word Documents in .NET C#'
+  steps:
+  - name: '**Baseline** – `sourceDocumentPath` is your reference document.'
+    text: '**Baseline** – `sourceDocumentPath` is your reference document.'
+  - name: '**Targets** – Each `Add` call registers a document to compare against the
+      baseline.'
+    text: '**Targets** – Each `Add` call registers a document to compare against the
+      baseline.'
+  - name: '**Styling** – `CompareOptions` lets you define how insertions, deletions,
+      and changes appear.'
+    text: '**Styling** – `CompareOptions` lets you define how insertions, deletions,
+      and changes appear.'
+  - name: '**Execution** – `Compare` runs the diff engine and writes the result to
+      `outputFileName`.'
+    text: '**Execution** – `Compare` runs the diff engine and writes the result to
+      `outputFileName`.'
+  - name: '**Start simple** – test with tiny documents first.'
+    text: '**Start simple** – test with tiny documents first.'
+  - name: '**Check file integrity** – corrupted files throw obscure errors.'
+    text: '**Check file integrity** – corrupted files throw obscure errors.'
+  - name: '**Log `CompareOptions`** – verify your styling settings are applied.'
+    text: '**Log `CompareOptions`** – verify your styling settings are applied.'
+  - name: '**Add targets incrementally** – isolate the document that triggers a failure.'
+    text: '**Add targets incrementally** – isolate the document that triggers a failure.'
+  type: HowTo
+- questions:
+  - answer: There’s no hard limit, but for performance reasons we recommend staying
+      under 10 documents per batch.
+    question: How many documents can I compare at once?
+  - answer: Yes – GroupDocs.Comparison can compare PDF, DOCX, TXT, and many other
+      formats in the same run.
+    question: Can I compare different formats, such as PDF with Word?
+  - answer: Files up to ~50 MB work well on typical servers; larger files may need
+      more RAM or sectional processing.
+    question: What is the maximum file size I can process?
+  - answer: Provide the password when creating the `Comparer` instance – the library
+      will unlock the document for comparison.
+    question: How do I handle password‑protected files?
+  - answer: Absolutely, as long as you validate uploads, run comparisons asynchronously,
+      and clean up temporary files.
+    question: Is it safe to use this in a web application?
+  type: FAQPage
 tags:
 - csharp
 - document-comparison
 - groupdocs
 - multi-file-comparison
-title: Jak porównać wiele dokumentów Word w .NET przy użyciu C#
+- compare docs
+title: 'Jak porównać dokumenty: wiele dokumentów Word w .NET C#'
 type: docs
 url: /pl/net/advanced-comparison/implement-multi-doc-comparison-groupdocs-net/
 weight: 1
 ---
 
-# Jak porównać wiele dokumentów Word w .NET przy użyciu C#
+# Jak porównać dokumenty: wiele dokumentów Word w .NET C#
 
-Czy kiedykolwiek ręcznie porównywałeś wiele dokumentów Word, starając się wyłapać różnice w różnych wersjach? Nie jesteś sam. Niezależnie od tego, czy śledzisz zmiany w umowach, porównujesz wersje dokumentacji, czy weryfikujesz treści w zespołach, **compare multiple word documents** w .NET może zaoszczędzić Ci godziny żmudnej pracy.
-
-Ten obszerny przewodnik pokazuje, jak zaimplementować automatyczne porównywanie wielu dokumentów przy użyciu C# i .NET. Przeprowadzimy Cię przez wszystko – od początkowej konfiguracji po zaawansowane ustawienia, a także podzielimy się cennymi wskazówkami rozwiązywania problemów, które zaoszczędzą Ci nerwy w przyszłości.
+Jeśli kiedykolwiek spędzałeś godziny ręcznie przeglądając kilka wersji umowy lub podręcznika technicznego, wiesz, jak łatwo przeoczyć jedną zmianę znaku. **jak porównać dokumenty** programowo eliminuje tę zgadywankę, dostarczając dokładny, kolorowo‑zakodowany raport różnic w kilka sekund. W tym samouczku pokażemy, jak skonfigurować GroupDocs.Comparison dla .NET, przeprowadzimy przez podstawowe API i podzielimy się wskazówkami optymalizacji wydajności, abyś mógł skalować rozwiązanie w rzeczywistych obciążeniach.
 
 ## Szybkie odpowiedzi
-- **What library should I use?** GroupDocs.Comparison for .NET.  
-- **How many documents can I compare at once?** Practically 3‑5 for optimal performance; larger batches can be processed in groups.  
-- **Do I need a license?** A free trial works for testing; a full license is required for production.  
-- **Can I compare PDF with Word documents?** Yes – GroupDocs supports mixed‑format comparison.  
-- **What .NET versions are supported?** .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7.
+- **Jakiej biblioteki powinienem używać?** GroupDocs.Comparison for .NET.  
+- **Ile dokumentów mogę porównać jednocześnie?** 3‑5 dokumentów daje najlepszy balans prędkości i pamięci; większe zestawy można podzielić na partie.  
+- **Czy potrzebuję licencji?** Bezpłatna wersja próbna działa do testów; pełna licencja jest wymagana w środowisku produkcyjnym.  
+- **Czy mogę porównać PDF z dokumentami Word?** Tak – GroupDocs obsługuje porównywanie mieszanych formatów od razu.  
+- **Jakie wersje .NET są obsługiwane?** .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7.
 
-## Co to jest „compare multiple word documents”?
-Porównywanie wielu dokumentów Word oznacza programowe analizowanie dwóch lub więcej plików `.docx` (lub innych obsługiwanych formatów) w celu zidentyfikowania wstawek, usunięć i modyfikacji, a następnie wygenerowanie jednego raportu podkreślającego te zmiany.
+## Co to jest „porównywanie wielu dokumentów Word”?
+Porównywanie wielu dokumentów Word oznacza programowe wczytywanie dwóch lub więcej plików `.docx` (lub innych obsługiwanych), analizowanie ich zawartości w celu wykrycia wstawień, usunięć i modyfikacji, a następnie generowanie jednego skonsolidowanego raportu, który podkreśla wszystkie zmiany w całym zestawie. Ten raport różnic ułatwia zobaczenie, co zostało dodane, usunięte lub zmienione w każdej wersji.
 
-## Dlaczego warto używać GroupDocs do porównywania wielu dokumentów?
-- **Rich format support** – works with DOCX, PDF, TXT, and more.  
-- **Accurate diff engine** – detects text, formatting, and layout changes.  
-- **Customizable styling** – you decide how insertions, deletions, and changes appear.  
-- **No Office installation required** – runs on servers without Microsoft Office.
+## Dlaczego używać GroupDocs do porównywania wielu dokumentów?
+GroupDocs.Comparison obsługuje **ponad 70 formatów wejściowych i wyjściowych** — w tym DOCX, PDF, TXT, HTML i pliki graficzne — i może przetworzyć dokument o 200 stronach w mniej niż 2 sekundy na typowym serwerze. Jego silnik różnic wykrywa zmiany tekstu, formatowania i układu bez konieczności posiadania Microsoft Office, co czyni go idealnym dla środowisk serwerowych bez interfejsu graficznego.
 
 ## Kiedy potrzebujesz porównywania wielu dokumentów
-
-Zanim przejdziemy do kodu, omówmy, kiedy ma to sens. Porównywanie wielu dokumentów błyszczy w następujących scenariuszach:
-
-- **Document Version Control** – compare several contract drafts at once.  
-- **Team Collaboration** – merge changes from multiple contributors.  
-- **Quality Assurance** – verify consistency across departments or translations.  
-- **Legal & Compliance** – track every amendment across multiple drafts.  
-
-Urok programowego porównywania? Łapie subtelne zmiany — odstępy, formatowanie lub drobne korekty słowne — które ludzie często przeoczają.
+Powinieneś sięgnąć po porównywanie wielu dokumentów, gdy musisz ocenić kilka wersji jednocześnie — na przykład konsolidując projekty umów, łącząc wkłady od wielu autorów lub weryfikując spójność tłumaczeń w plikach językowych. Gwarantuje to, że nawet subtelne zmiany odstępów czy stylu zostaną wykryte, co ręczne przeglądy często pomijają.
 
 ## Wymagania wstępne i konfiguracja
 
@@ -61,39 +108,44 @@ Urok programowego porównywania? Łapie subtelne zmiany — odstępy, formatowan
 - Podstawowa znajomość C# (wystarczy prosta aplikacja konsolowa)
 
 ### Wymagana paczka
-Użyjemy **GroupDocs.Comparison** dla .NET – sprawdzonej biblioteki, która wykonuje ciężką pracę.
+Użyjemy **GroupDocs.Comparison** dla .NET — sprawdzonej biblioteki, która wykonuje najcięższą pracę.
 
-#### Instalowanie GroupDocs.Comparison
-
-**Package Manager Console** (my personal favorite):
+#### Instalacja GroupDocs.Comparison
+**Package Manager Console** (mój ulubiony sposób):
+```csharp
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
+```
 
-**.NET CLI** (if you prefer the command line):
+**.NET CLI** (jeśli wolisz wiersz poleceń):
+```csharp
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
+```
 
-**PackageReference** (edit the *.csproj* directly):
+**PackageReference** (edytuj plik *.csproj* bezpośrednio):
+```csharp
 ```xml
 <PackageReference Include="GroupDocs.Comparison" Version="25.4.0" />
 ```
+```
 
 ### Rozważania licencyjne
-Szybka informacja o licencjonowaniu – GroupDocs oferuje kilka opcji:
+Krótka informacja o licencjonowaniu — GroupDocs oferuje kilka opcji:
+- **Free Trial** – idealny do testowania i małych projektów  
+- **Temporary License** – do 30 dni na rozszerzoną ocenę  
+- **Full License** – wymagana w środowisku produkcyjnym  
 
-- **Free Trial** – perfect for testing and small projects  
-- **Temporary License** – up to 30 days for extended evaluation  
-- **Full License** – required for production use  
+**Pro tip:** Rozpocznij od wersji próbnej, aby upewnić się, że spełnia Twoje potrzeby przed zakupem.
 
-**Pro tip:** Start with the free trial to make sure it fits your needs before purchasing.
+## Przewodnik po implementacji podstawowej
 
-## Przewodnik po podstawowej implementacji
+### Konfiguracja ścieżek dokumentów
+Najpierw uporządkuj lokalizacje plików. Użycie `Path.Combine()` zapewnia prawidłowy separator ścieżek na każdym systemie operacyjnym.
 
-### Ustawianie ścieżek do dokumentów
-Najpierw uporządkuj lokalizacje plików. Użycie `Path.Combine()` zapewnia prawidłowy separator ścieżki na każdym systemie operacyjnym.
-
+```csharp
 ```csharp
 string sourceDocumentPath = "YOUR_DOCUMENT_DIRECTORY\\SOURCE_WORD";
 string targetDocument1Path = "YOUR_DOCUMENT_DIRECTORY\\TARGET_WORD";
@@ -103,12 +155,14 @@ string targetDocument3Path = "YOUR_DOCUMENT_DIRECTORY\\TARGET3_WORD";
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = Path.Combine(outputDirectory, "comparison_result.docx");
 ```
+```
 
-> **Why this matters:** Validating that each file exists before you start prevents cryptic “file not found” exceptions later.
+> **Dlaczego to ważne:** Sprawdzenie, czy każdy plik istnieje przed rozpoczęciem, zapobiega niejasnym wyjątkom „plik nie znaleziony” później.
 
-### Budowanie silnika porównania
-Klasa `Comparer` jest sercem porównywania dokumentów.
+### Tworzenie silnika porównywania
+Klasa `Comparer` jest podstawowym komponentem, który wczytuje dokument źródłowy i wykonuje operacje różnicowe względem plików docelowych.
 
+```csharp
 ```csharp
 using (Comparer comparer = new Comparer(sourceDocumentPath))
 {
@@ -130,19 +184,20 @@ using (Comparer comparer = new Comparer(sourceDocumentPath))
     comparer.Compare(File.Create(outputFileName), compareOptions);
 }
 ```
+```
 
-Co się dzieje:
+**Co się dzieje:**  
+1. **Podstawa** – `sourceDocumentPath` jest Twoim dokumentem referencyjnym.  
+2. **Cele** – Każde wywołanie `Add` rejestruje dokument do porównania z podstawą.  
+3. **Stylowanie** – `CompareOptions` pozwala określić, jak mają wyglądać wstawienia, usunięcia i zmiany.  
+4. **Wykonanie** – `Compare` uruchamia silnik różnic i zapisuje wynik do `outputFileName`.
 
-1. **Baseline** – `sourceDocumentPath` is your reference document.  
-2. **Targets** – Each `Add` call registers a document to compare against the baseline.  
-3. **Styling** – `CompareOptions` lets you define how insertions, deletions, and changes appear.  
-4. **Execution** – `Compare` runs the diff engine and writes the result to `outputFileName`.  
-
-Instrukcja `using` gwarantuje zwolnienie wszystkich niezarządzanych zasobów, co jest kluczowe przy przetwarzaniu dużych plików.
+Instrukcja `using` zapewnia zwolnienie wszystkich niezarządzanych zasobów, co jest kluczowe przy przetwarzaniu dużych plików.
 
 ### Dostosowywanie wyjścia porównania
-Możesz pokolorować wstawki, usunięcia i modyfikacje, aby szybciej je zauważać.
+`CompareOptions` pozwala dostosować wygląd wizualny i zachowanie porównania. `StyleSettings` definiuje wygląd wstawionych, usuniętych lub zmienionych treści w dokumencie wyjściowym.
 
+```csharp
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
@@ -163,42 +218,48 @@ CompareOptions compareOptions = new CompareOptions()
     }
 };
 ```
+```
 
 Teraz dodatki pojawiają się **zielone i podkreślone**, usunięcia **czerwone z przekreśleniem**, a modyfikacje **niebieskie kursywą**.
 
 ## Typowe wyzwania implementacyjne
 
-### Problemy ze ścieżkami do plików
-**Issue:** “File not found” even when the path looks correct.  
-**Solution:** Use absolute paths or validate relative paths, and ensure the app has read/write permissions.
+### Problemy ze ścieżkami plików
+**Problem:** „Plik nie znaleziony”, nawet gdy ścieżka wygląda poprawnie.  
+**Rozwiązanie:** Używaj ścieżek bezwzględnych lub weryfikuj ścieżki względne oraz upewnij się, że aplikacja ma uprawnienia do odczytu/zapisu.
 
+```csharp
 ```csharp
 // Validate files exist before processing
 if (!File.Exists(sourceDocumentPath))
     throw new FileNotFoundException($"Source document not found: {sourceDocumentPath}");
 ```
+```
 
 ### Zużycie pamięci przy dużych dokumentach
-**Issue:** Crashes or freezes when handling big files.  
-**Solution:** Process documents in smaller batches or increase the memory allocation. For massive files, split them into sections before comparison.
+**Problem:** Awarie lub zawieszanie przy obsłudze dużych plików.  
+**Rozwiązanie:** Przetwarzaj dokumenty w mniejszych partiach lub zwiększ przydział pamięci. W przypadku bardzo dużych plików podziel je na sekcje przed porównaniem.
 
 ### Plik wyjściowy już używany
-**Issue:** The result file can’t be saved because it’s locked.  
-**Solution:** Close any open instances of the file and generate unique names with timestamps.
+**Problem:** Plik wynikowy nie może zostać zapisany, ponieważ jest zablokowany.  
+**Rozwiązanie:** Zamknij wszystkie otwarte instancje pliku i generuj unikalne nazwy z znacznikami czasu.
 
+```csharp
 ```csharp
 string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 string outputFileName = Path.Combine(outputDirectory, $"comparison_result_{timestamp}.docx");
 ```
+```
 
 ## Wskazówki optymalizacji wydajności
 
-### Ograniczanie równoczesnych porównań
-Start with 3‑5 documents per batch. Scale up only after you’ve measured memory and CPU usage.
+### Ogranicz równoczesne porównania
+Rozpocznij od 3‑5 dokumentów na partię. Skaluj w górę dopiero po zmierzeniu zużycia pamięci i CPU.
 
-### Użycie przetwarzania asynchronicznego
-For web apps, keep the UI responsive by offloading the comparison to a background task.
+### Użyj przetwarzania asynchronicznego
+W aplikacjach webowych utrzymaj responsywność interfejsu, przenosząc porównanie do zadania w tle.
 
+```csharp
 ```csharp
 public async Task<string> CompareDocumentsAsync(List<string> documentPaths)
 {
@@ -208,15 +269,17 @@ public async Task<string> CompareDocumentsAsync(List<string> documentPaths)
     });
 }
 ```
+```
 
-### Monitorowanie zużycia zasobów
-Dispose of `Comparer` instances promptly and consider a job queue for high‑volume scenarios.
+### Monitoruj zużycie zasobów
+Niezwłocznie zwalniaj instancje `Comparer` i rozważ kolejkę zadań dla scenariuszy o dużej liczbie operacji.
 
 ## Praktyczne przypadki użycia i przykłady
 
 ### Scenariusz kontroli wersji
-Automate quarterly policy updates:
+Automatyzuj kwartalne aktualizacje polityk:
 
+```csharp
 ```csharp
 var quarterlyVersions = new List<string> {
     "policy_q1.docx",
@@ -228,10 +291,12 @@ var quarterlyVersions = new List<string> {
 // Compare current quarter against previous versions
 CompareQuarterlyChanges(quarterlyVersions);
 ```
+```
 
-### Przepływ pracy zapewnienia jakości
-Validate that translated specs match the English source:
+### Proces zapewnienia jakości
+Waliduj, że przetłumaczone specyfikacje odpowiadają angielskiemu źródłu:
 
+```csharp
 ```csharp
 string originalDocument = "product_specs_english.docx";
 var translatedVersions = new List<string> {
@@ -240,31 +305,33 @@ var translatedVersions = new List<string> {
     "product_specs_german.docx"
 };
 ```
+```
 
 ## Przewodnik rozwiązywania problemów
 
 ### Typowe komunikaty o błędach
 
-| Error | Likely Cause | Fix |
-|-------|--------------|-----|
-| **Invalid file format** | Unsupported or mixed formats without proper conversion | Ensure all files are in supported formats (DOCX, PDF, TXT, etc.) |
-| **Comparison timeout** | Very large documents exceed default limits | Break files into sections or increase timeout settings |
-| **Insufficient memory** | Processing many large files simultaneously | Reduce batch size or increase server RAM |
+| Błąd | Prawdopodobna przyczyna | Rozwiązanie |
+|------|--------------------------|-------------|
+| **Nieprawidłowy format pliku** | Nieobsługiwane lub mieszane formaty bez odpowiedniej konwersji | Upewnij się, że wszystkie pliki są w obsługiwanych formatach (DOCX, PDF, TXT itp.) |
+| **Przekroczony limit czasu porównania** | Bardzo duże dokumenty przekraczają domyślne limity | Podziel pliki na sekcje lub zwiększ ustawienia limitu czasu |
+| **Niewystarczająca pamięć** | Przetwarzanie wielu dużych plików jednocześnie | Zmniejsz rozmiar partii lub zwiększ pamięć RAM serwera |
 
 ### Wskazówki debugowania
-1. **Start simple** – test with tiny documents first.  
-2. **Check file integrity** – corrupted files throw obscure errors.  
-3. **Log `CompareOptions`** – verify your styling settings are applied.  
-4. **Add targets incrementally** – isolate the document that triggers a failure.
+1. **Zacznij prosto** – najpierw testuj na małych dokumentach.  
+2. **Sprawdź integralność pliku** – uszkodzone pliki generują niejasne błędy.  
+3. **Zaloguj `CompareOptions`** – zweryfikuj, czy ustawienia stylów zostały zastosowane.  
+4. **Dodawaj cele stopniowo** – zidentyfikuj dokument wywołujący błąd.
 
 ## Najlepsze praktyki dla produkcji
 
-### Rozważania bezpieczeństwa
-- Validate file types and sizes before processing.  
-- Use a sandboxed temporary folder for uploads.  
-- Clean up temporary files immediately after comparison.
+### Aspekty bezpieczeństwa
+- Sprawdzaj typy i rozmiary plików przed przetworzeniem.  
+- Używaj odizolowanego tymczasowego folderu do przesyłania.  
+- Usuwaj tymczasowe pliki natychmiast po porównaniu.
 
 ### Solidna obsługa błędów
+```csharp
 ```csharp
 try
 {
@@ -284,50 +351,55 @@ catch (IOException ex)
     _logger.LogError($"File access error: {ex.Message}");
 }
 ```
+```
 
 ### Wskazówki skalowalności
-- Queue comparison jobs with a message broker (e.g., RabbitMQ).  
-- Cache results when the same document set is compared repeatedly.  
-- Offload very large workloads to cloud instances with more RAM.
+- Kolejkuj zadania porównania przy użyciu brokera wiadomości (np. RabbitMQ).  
+- Cache'uj wyniki, gdy ten sam zestaw dokumentów jest porównywany wielokrotnie.  
+- Przenoś bardzo duże obciążenia na instancje w chmurze z większą ilością RAM.
 
 ## Alternatywne podejścia i kiedy ich używać
 
-| Approach | Pros | Cons |
-|----------|------|------|
-| **GroupDocs.Comparison** | Full‑featured, on‑premises, supports many formats | Requires license for production |
-| **Microsoft Office Interop** | Leverages native Word diff | Needs Office installed on server |
-| **Open XML SDK** | Lightweight, no external libs | You must implement diff logic yourself |
-| **Cloud APIs (e.g., PandaDoc)** | No infrastructure, pay‑as‑you‑go | Ongoing service costs, data privacy concerns |
+| Podejście | Zalety | Wady |
+|-----------|--------|------|
+| **GroupDocs.Comparison** | Pełna funkcjonalność, rozwiązanie on‑premises, obsługuje wiele formatów | Wymaga licencji w środowisku produkcyjnym |
+| **Microsoft Office Interop** | Wykorzystuje natywny mechanizm różnic Word | Wymaga zainstalowanego Office na serwerze |
+| **Open XML SDK** | Lekki, bez zewnętrznych bibliotek | Musisz samodzielnie zaimplementować logikę różnic |
+| **Cloud APIs (e.g., PandaDoc)** | Brak infrastruktury, płatność za użycie | Stałe koszty usługi, obawy o prywatność danych |
 
-**Choose GroupDocs when** you need a reliable, on‑premises solution that works with mixed formats like **compare pdf with word** documents without extra plumbing.
+**Wybierz GroupDocs, gdy** potrzebujesz niezawodnego rozwiązania on‑premises, które działa z mieszanymi formatami, takimi jak **porównywanie pdf z word** dokumentami, bez dodatkowej konfiguracji.
 
-## Frequently Asked Questions
+## Najczęściej zadawane pytania
 
-**Q: How many documents can I compare at once?**  
-A: There’s no hard limit, but for performance reasons we recommend staying under 10 documents per batch.
+**Q: Ile dokumentów mogę porównać jednocześnie?**  
+A: Nie ma sztywnego limitu, ale ze względu na wydajność zalecamy pozostanie poniżej 10 dokumentów na partię.
 
-**Q: Can I compare different formats, such as PDF with Word?**  
-A: Yes – GroupDocs.Comparison can compare PDF, DOCX, TXT, and many other formats in the same run.
+**Q: Czy mogę porównywać różne formaty, takie jak PDF z Word?**  
+A: Tak — GroupDocs.Comparison może porównywać PDF, DOCX, TXT i wiele innych formatów w jednym uruchomieniu.
 
-**Q: What is the maximum file size I can process?**  
-A: Files up to ~50 MB work well on typical servers; larger files may need more RAM or sectional processing.
+**Q: Jaki jest maksymalny rozmiar pliku, który mogę przetworzyć?**  
+A: Pliki do ~50 MB działają dobrze na typowych serwerach; większe pliki mogą wymagać więcej RAM lub przetwarzania w sekcjach.
 
-**Q: How do I handle password‑protected files?**  
-A: Provide the password when creating the `Comparer` instance – the library will unlock the document for comparison.
+**Q: Jak obsłużyć pliki zabezpieczone hasłem?**  
+A: Podaj hasło przy tworzeniu instancji `Comparer` — biblioteka odblokuje dokument do porównania.
 
-**Q: Is it safe to use this in a web application?**  
-A: Absolutely, as long as you validate uploads, run comparisons asynchronously, and clean up temporary files.
+**Q: Czy bezpieczne jest użycie tego w aplikacji webowej?**  
+A: Zdecydowanie tak, pod warunkiem że weryfikujesz przesyłane pliki, wykonujesz porównania asynchronicznie i usuwasz tymczasowe pliki.
 
----
+**Ostatnia aktualizacja:** 2026-07-25  
+**Testowano z:** GroupDocs.Comparison 25.4.0 for .NET  
+**Autor:** GroupDocs  
 
-**Last Updated:** 2026-03-14  
-**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
-**Author:** GroupDocs  
+**Dodatkowe zasoby**
+- Oficjalna dokumentacja: [Dokumentacja GroupDocs Comparison](https://docs.groupdocs.com/comparison/net/)  
+- Referencja API: [Referencja API GroupDocs](https://reference.groupdocs.com/comparison/net/)  
+- Pobierz bibliotekę: [Wydania GroupDocs](https://releases.groupdocs.com/comparison/net/)  
+- Kup licencję: [Kup GroupDocs](https://purchase.groupdocs.com/buy)  
+- Bezpłatna wersja próbna: [Bezpłatna wersja próbna GroupDocs](https://releases.groupdocs.com/comparison/net/)  
+- Licencja tymczasowa: [Zamów licencję tymczasową](https://purchase.groupdocs.com/temporary-license/)
 
-**Additional Resources**  
-- Official Documentation: [GroupDocs Comparison Documentation](https://docs.groupdocs.com/comparison/net/)  
-- API Reference: [GroupDocs API Reference](https://reference.groupdocs.com/comparison/net/)  
-- Download Library: [GroupDocs Releases](https://releases.groupdocs.com/comparison/net/)  
-- Purchase License: [Buy GroupDocs](https://purchase.groupdocs.com/buy)  
-- Free Trial: [GroupDocs Free Trial](https://releases.groupdocs.com/comparison/net/)  
-- Temporary License: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+## Powiązane samouczki
+
+- [Jak porównać dokumenty przy użyciu GroupDocs.Comparison dla .NET](/comparison/net/)
+- [Porównywanie wielu dokumentów .NET — przewodnik po zaawansowanych funkcjach i automatyzacji](/comparison/net/advanced-comparison/)
+- [Samouczek GroupDocs Comparison NET — kompletny przewodnik po porównywaniu dokumentów z metadanymi](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)

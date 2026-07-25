@@ -1,152 +1,203 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: GroupDocs.Comparison kullanarak PDF Java karşılaştırmayı öğrenin. Dosyalar,
-  akışlar ve dizelerden yükleme için adım adım öğreticiler, kodsuz örneklerle.
-keywords: java document comparison tutorial, compare pdf java, groupdocs comparison
-  java, document diff java, java file comparison, document diff java
-lastmod: '2026-03-14'
-linktitle: Java Document Comparison Tutorial
+date: '2026-07-25'
+description: GroupDocs.Comparison kullanarak compare pdf java nasıl yapılır öğrenin.
+  Dosyalardan, akışlardan ve dizelerden yükleme için adım adım öğreticiler, code‑free
+  örneklerle.
+keywords:
+- compare pdf java
+- java pdf comparison
+- compare pdf files java
+- java document diff
+lastmod: '2026-07-25'
+linktitle: Java Belge Karşılaştırma Eğitimi
+og_description: compare pdf java öğreticisi, PDF, Word, Excel dosyalarını Java'da
+  GroupDocs.Comparison ile nasıl yükleyeceğinizi ve karşılaştıracağınızı, performans
+  ipuçları dahil gösterir.
+og_image_alt: 'Guide: compare pdf java using GroupDocs.Comparison in Java'
+og_title: compare pdf java – Java Belge Karşılaştırma Eğitimi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-25'
+  description: Learn how to compare pdf java using GroupDocs.Comparison. Step‑by‑step
+    tutorials for loading from files, streams & strings with code‑free examples.
+  headline: compare pdf java – Java Document Comparison Tutorial – Complete Guide
+    to Loading & Comparing Documents
+  type: TechArticle
+- description: Learn how to compare pdf java using GroupDocs.Comparison. Step‑by‑step
+    tutorials for loading from files, streams & strings with code‑free examples.
+  name: compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading
+    & Comparing Documents
+  steps:
+  - name: '**Initialize the Comparison object** – provide your license key if you
+      have one.'
+    text: '**Initialize the Comparison object** – provide your license key if you
+      have one.'
+  - name: '**Load the source and target documents** – choose file‑path loading for
+      small files or stream‑based loading for large PDFs.'
+    text: '**Load the source and target documents** – choose file‑path loading for
+      small files or stream‑based loading for large PDFs.'
+  - name: '**Configure `ComparisonOptions`** – enable or disable style/content detection
+      based on your needs.'
+    text: '**Configure `ComparisonOptions`** – enable or disable style/content detection
+      based on your needs.'
+  - name: '**Execute the comparison** – the API generates a diff document in the format
+      you specify (PDF, DOCX, HTML, etc.).'
+    text: '**Execute the comparison** – the API generates a diff document in the format
+      you specify (PDF, DOCX, HTML, etc.).'
+  - name: '**Save or stream the result** – return it to the caller, store it, or display
+      it in a UI.'
+    text: '**Save or stream the result** – return it to the caller, store it, or display
+      it in a UI.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Comparison can compare across formats (e.g., Word vs. PDF),
+      though same‑format comparisons yield the most precise visual diff.
+    question: Can I compare documents of different formats?
+  - answer: Provide the password via the `LoadOptions` parameter when loading the
+      document; the API will decrypt it on the fly.
+    question: How do I handle password‑protected documents?
+  - answer: No hard limit, but files larger than ~100 MB benefit from stream‑based
+      loading and may require JVM heap tuning (e.g., `-Xmx2g`).
+    question: Is there a size limit for documents I can compare?
+  - answer: Absolutely. Use `ComparisonOptions` to toggle detection of content, style,
+      or metadata changes per document type.
+    question: Can I customize which types of changes are detected?
+  - answer: Always adopt the latest stable release to gain performance improvements,
+      bug fixes, and expanded format support.
+    question: Which version of GroupDocs.Comparison should I use?
+  type: FAQPage
 tags:
 - document-comparison
 - java-tutorial
 - file-processing
 - api-integration
-title: pdf java karşılaştırma – Java Belge Karşılaştırma Eğitimi – Belgeleri Yükleme
-  ve Karşılaştırma İçin Tam Kılavuz
+title: compare pdf java – Java Belge Karşılaştırma Eğitimi – Belgeleri Yükleme ve
+  Karşılaştırma Tam Kılavuzu
 type: docs
-url: /tr/java/document-loading/
-weight: 2
 ---
 
-"
+# pdf java karşılaştırma – Java Belge Karşılaştırma Eğitimi – Belge Yükleme ve Karşılaştırmayı Ustalıkla Yapma
 
-Now ensure markdown formatting preserved.
-
-Check for any code blocks: none present.
-
-Shortcodes: none.
-
-Headers: keep same level.
-
-Now produce final translated content.# compare pdf java – Java Belge Karşılaştırma Eğitimi – Belge Yükleme ve Karşılaştırma Ustalığı
-
-Hiç **compare pdf java** dosyalarını—sözleşmeler, teknik özellikler veya kullanıcı kılavuzları—karşılaştırıp anında tüm değişiklikleri görmek zorunda kaldınız mı? Doğru yerdesiniz. Bu kapsamlı rehber, Java’da GroupDocs.Comparison API’sini kullanarak belgeleri yükleme ve karşılaştırma hakkında bilmeniz gereken her şeyi adım adım anlatıyor.
-
-Belge‑yönetim sistemi oluşturuyor, yasal sözleşmeler için denetim izleri yaratıyor ya da teknik dokümanlar için sürüm kontrolünü otomatikleştiriyor olun, **compare pdf java** konusuna hâkim olmak manuel inceleme saatlerini sayısız azaltabilir.
+Eğer **compare pdf java** dosyalarını—sözleşmeleri, teknik özellikleri veya kullanıcı kılavuzlarını—karşılaştırmanız ve her değişikliği anında fark etmeniz gerekiyorsa, doğru yere geldiniz. Bu kılavuz, Java’da GroupDocs.Comparison API’si ile belgeleri yükleme ve karşılaştırma sürecini, temel kullanımdan büyük ölçekli performans ayarlamalarına kadar her şeyi kapsayarak adım adım gösterir.
 
 ## Hızlı Yanıtlar
-- **Ne karşılaştırabilirim?** PDF’ler, Word, Excel, PowerPoint ve birçok diğer format.  
-- **Java için en iyi API hangisi?** GroupDocs.Comparison for Java, yapı‑bilinçli fark analizi sağlar.  
-- **Büyük dosyaları nasıl yüklerim?** OutOfMemoryError almamak için akış‑tabanlı yükleme kullanın.  
-- **Farklı dosya tiplerini karşılaştırabilir miyim?** Evet—Word ile PDF karşılaştırması desteklenir, ancak aynı tip karşılaştırmalar daha doğru olur.  
-- **Lisans gerekiyor mu?** Değerlendirme için geçici bir lisans mevcuttur; üretim için ticari lisans gereklidir.
+- **Ne karşılaştırabilirim?** PDFs, Word, Excel, PowerPoint, and over 80 other formats.  
+- **Java için en iyi API hangisidir?** GroupDocs.Comparison for Java delivers structure‑aware diffs and multi‑format support.  
+- **Büyük dosyaları nasıl yüklerim?** Use stream‑based loading; it processes documents piece‑by‑piece and avoids OutOfMemoryError.  
+- **Farklı dosya türlerini karşılaştırabilir miyim?** Yes—Word vs. PDF works, though same‑type comparisons give the most precise visual diff.  
+- **Lisans gerekiyor mu?** A temporary evaluation license is free; a commercial license is required for production deployments.  
+- **Hangi çıktı formatları mevcut?** HTML, PDF, DOCX, and PNG are supported for the diff report.  
 
 ## **compare pdf java** nedir?
-Java’da PDF dosyalarını karşılaştırmak, iki PDF belgesi arasındaki metin, biçimlendirme ve yerleşim farklarını programatik olarak tespit etmek anlamına gelir. Basit metin fark araçlarının aksine, GroupDocs.Comparison kütüphanesi PDF yapısını ayrıştırır, görsel bütünlüğü korur ve değişiklikleri vurgular.
+`compare pdf java` Java’da GroupDocs.Comparison kullanarak iki PDF belgesi arasındaki farkları programlı olarak tespit etmeye denir. Metin, biçimlendirme, görüntüler ve düzeni analiz eder, ardından eklemeleri, silmeleri ve stil değişikliklerini vurgulayan görsel bir fark raporu üretir ve orijinal görünümü korur.
 
-## Neden **GroupDocs.Comparison Java** Belge Farkı İçin Kullanılmalı?
-- **Yapı‑bilinçli karşılaştırma** – paragrafları, tabloları ve görselleri anlar.  
-- **Çapraz‑format desteği** – Word, Excel, PowerPoint ve PDF dosyalarını karşılaştırır.  
-- **Performansa odaklı** – akış yükleme ve özelleştirilebilir ayarlar bellek kullanımını düşük tutar.  
-- **Zengin çıktı seçenekleri** – eklemeleri, silmeleri ve stil değişikliklerini net gösteren HTML, PDF veya Word raporları oluşturur.
+## Neden **GroupDocs.Comparison Java**'yı Belge Farkı İçin Kullanmalısınız?
+GroupDocs.Comparison Java, paragrafları, tabloları ve görüntüleri anlayan **yapı‑bilinçli** bir fark motoru sağlar ve düz metin farklarına göre %30‑40 daha doğru görsel sonuçlar sunar. **80+ giriş ve çıkış formatını** destekler—DOCX, XLSX, PPTX, HTML ve yaygın görüntü türleri dahil—ve tüm dosyayı belleğe yüklemeden çok sayfalı PDF’leri işleyebilir, tipik bir sunucuda yığın kullanımını 150 MB’ın altında tutar.
 
 ## Önkoşullar
 - Java 8 ve üzeri.  
-- Projenize GroupDocs.Comparison for Java ekleyin (Maven/Gradle).  
-- Java I/O akışları hakkında temel bilgi.
+- Maven veya Gradle aracılığıyla projenize eklenmiş GroupDocs.Comparison for Java.  
+- Java I/O akışlarına temel aşinalık.  
 
 ## Mevcut Belge Yükleme Eğitimleri
 
 ### [Java Document Comparison Using GroupDocs.Comparison API: A Stream-Based Approach](./java-groupdocs-comparison-api-stream-document-compare/)
-GroupDocs.Comparison API’sinin güçlü özellikleriyle Java’da belge karşılaştırmayı ustalaştırın. Hukuki, akademik ve yazılım belgelerini verimli bir şekilde işlemek için akış‑tabanlı teknikleri öğrenin.
+Güçlü GroupDocs.Comparison API’si ile Java’da belge karşılaştırmasını ustalaştırın. Hukuki, akademik ve yazılım belgelerinin verimli işlenmesi için akış‑tabanlı teknikleri öğrenin.
 
-**Ne öğreneceksiniz**: Akış‑tabanlı belge yükleme, bellek‑verimli karşılaştırma teknikleri ve büyük belgeleri performans sorunları yaşamadan nasıl yöneteceğiniz. Bu eğitim, bulutta depolanan belgelerle çalışıyorsanız veya bellek kullanımının kritik olduğu web uygulamaları geliştiriyorsanız özellikle değerlidir.
+**Neler öğreneceksiniz**: Akış‑tabanlı belge yükleme, bellek‑verimli karşılaştırma teknikleri ve büyük belgeleri performans sorunları olmadan nasıl yöneteceğiniz. Bu eğitim, bulutta depolanan belgelerle çalışıyorsanız veya bellek kullanımının önemli olduğu web uygulamaları geliştiriyorsanız özellikle değerlidir.
 
 ### [Mastering Java Stream Document Comparison with GroupDocs.Comparison for Efficient Workflow Management](./java-stream-comparison-groupdocs-comparison/)
-GroupDocs.Comparison kütüphanesiyle Java akışlarını kullanarak Word belgelerini verimli bir şekilde karşılaştırmayı öğrenin. Akış‑tabanlı karşılaştırmaları ustalaştırın ve stilleri özelleştirin.
+Güçlü GroupDocs.Comparison kütüphanesi ile Java akışlarını kullanarak Word belgelerini verimli bir şekilde karşılaştırmayı öğrenin. Akış‑tabanlı karşılaştırmaları ustalaştırın ve stilleri özelleştirin.
 
-**Ne öğreneceksiniz**: İleri seviye akış yönetimi, özel karşılaştırma stilleri ve iş akışı entegrasyon desenleri. Bu eğitim, özellikle Word belgelerine odaklanır ve karşılaştırma çıktısını uygulamanızın ihtiyaçlarına göre özelleştirmek için pratik örnekler içerir.
+**Neler öğreneceksiniz**: İleri düzey akış yönetimi, özel karşılaştırma stilleri ve iş akışı entegrasyon desenleri. Bu eğitim özellikle Word belgelerine odaklanır ve karşılaştırma çıktısını uygulamanızın ihtiyaçlarına göre özelleştirmek için pratik örnekler içerir.
 
-## GroupDocs.Comparison ile **compare pdf java** Nasıl Yapılır
-Bir karşılaştırma başlatmak için sadece bir `Comparison` nesnesi oluşturur, iki belgeyi (dosya yolu ya da bir `InputStream` üzerinden) yüklersiniz ve `compare` metodunu çağırırsınız. API, eklemeleri, silmeleri ve biçimlendirme değişikliklerini vurgulayan bir sonuç belgesi döndürür. Kütüphane, belgenin yapısal öğeleri üzerinde çalıştığı için satır‑satır metin farkından çok daha doğru bir görsel diff elde edersiniz.
+## GroupDocs.Comparison ile pdf java nasıl karşılaştırılır
+`Comparison` GroupDocs.Comparison kütüphanesinin belge farkı işlemlerini yöneten ana sınıftır.  
+`ComparisonOptions` stil veya içerik değişiklikleri gibi hangi değişikliklerin tespit edileceğini özelleştirmenizi sağlar.  
+`compare` farkı yürütür ve çıktı belgesini oluşturur.
 
-### Ana adımlar bir bakışta
-1. **Comparison nesnesini başlatın** – varsa lisans anahtarınızı sağlayın.  
-2. **Kaynak ve hedef belgeleri yükleyin** – küçük dosyalar için dosya‑yolu yüklemeyi, büyük PDF’ler için akış‑tabanlı yüklemeyi seçin.  
-3. **`ComparisonOptions` yapılandırın** – ihtiyacınıza göre stil/içerik algılamayı etkinleştirin veya devre dışı bırakın.  
-4. **Karşılaştırmayı yürütün** – API, belirttiğiniz formatta (PDF, DOCX, HTML vb.) bir diff belgesi üretir.  
-5. **Sonucu kaydedin veya akışa gönderin** – çağırana döndürün, saklayın veya bir UI’da gösterin.
+PDF'lerinizi (veya desteklenen herhangi bir formatı) bir `Comparison` nesnesine yükleyin, `ComparisonOptions`'ı ihtiyaçlarınıza göre yapılandırın ve `compare` metodunu çağırın. API, eklemeleri, silmeleri ve biçimlendirme değişikliklerini vurgulayan, orijinal düzeni koruyan bir fark belgesi döndürür; sonucu PDF, HTML, DOCX veya PNG formatında kaydedebilir veya akış olarak sunabilirsiniz.
 
-Bu adımlar, iki PDF, PDF‑vs‑Word ya da başka bir desteklenen format karşılaştırması yapıyor olsanız da aynıdır.
+### Genel Bakışta Temel Adımlar
+1. **Comparison nesnesini başlatın** – bir lisans anahtarınız varsa sağlayın.  
+2. **Kaynak ve hedef belgeleri yükleyin** – küçük dosyalar için dosya‑yolu yüklemeyi, büyük PDF'ler için akış‑tabanlı yüklemeyi seçin.  
+3. **`ComparisonOptions`'ı yapılandırın** – ihtiyaçlarınıza göre stil/içerik algılamayı etkinleştirin veya devre dışı bırakın.  
+4. **Karşılaştırmayı yürütün** – API, belirttiğiniz formatta (PDF, DOCX, HTML, vb.) bir fark belgesi oluşturur.  
+5. **Sonucu kaydedin veya akış olarak sunun** – çağırana geri döndürün, depolayın veya bir UI’da gösterin.  
+
+Bu adımlar, iki PDF, PDF ile Word dosyası veya başka herhangi bir desteklenen çift karşılaştırması yaparken aynı şekildedir.
 
 ## Yaygın Zorluklar ve Çözüm Yolları
+**Büyük PDF'lerde Bellek Sorunları** – Dosya yolları ile büyük dosyalar yüklenirken OutOfMemoryError yaygındır. Akış‑tabanlı yüklemeye geçmek belgeyi parça‑parça işleyerek yığın tüketimini büyük ölçüde azaltır.  
+**Dosya Formatı Uyumluluğu** – Farklı Office sürümleri, fark doğruluğunu etkileyebilen ince format farklılıkları oluşturabilir. API, format başına duyarlılık ayarlarını ayarlamanıza izin vererek Word, Excel, PowerPoint ve PDF arasında güvenilir sonuçlar sağlar.  
+**Performans Optimizasyonu** – Birçok belgeyi paralel olarak karşılaştırmak CPU ve I/O kaynaklarını zorlayabilir. Toplu işleme kullanın, uygun karşılaştırma ayarlarını yapılandırın ve kaynakları try‑with‑resources ile hemen serbest bırakın.  
+**Karakter Kodlaması Sorunları** – Yanlış kodlama kullanıldığında İngilizce dışı karakterler bozuk görünebilir. Kütüphane otomatik olarak UTF‑8/UTF‑16’yı algılar, ancak akışlardan yüklerken kodlamayı açıkça ayarlayabilirsiniz.  
 
-**Büyük PDF’lerde Bellek Sorunları** – Dosya yolu ile büyük dosyalar yüklendiğinde OutOfMemoryError sık görülür. Akış‑tabanlı yüklemeye geçmek belgeyi parça‑parça işler ve yığın tüketimini büyük ölçüde azaltır.
-
-**Dosya Formatı Uyumluluğu** – Farklı Office sürümleri, diff doğruluğunu etkileyebilecek ince format farklılıkları üretebilir. API, format başına duyarlılık ayarlarını ayarlamanıza izin verir; böylece Word, Excel, PowerPoint ve PDF arasında tutarlı sonuçlar alırsınız.
-
-**Performans Optimizasyonu** – Birçok belgeyi paralel olarak karşılaştırmak CPU ve I/O’yı zorlayabilir. Toplu işleme kullanın, uygun karşılaştırma ayarlarını yapılandırın ve `try‑with‑resources` ile kaynakları hemen serbest bırakın.
-
-**Karakter Kodlaması Sorunları** – Yanlış kodlama kullanılırsa İngilizce dışı karakterler bozuk görünebilir. Kütüphane otomatik olarak UTF‑8/UTF‑16’yı algılar, ancak akıştan yüklerken kodlamayı açıkça belirtebilirsiniz.
-
-## Üretim‑Hazır Belge Karşılaştırma için En İyi Uygulamalar
-
-- **Kaynak Yönetimi** – Akışları her zaman try‑with‑resources içinde sararak kapanmasını garantileyin.  
+## Üretim‑Hazır Belge Karşılaştırması için En İyi Uygulamalar
+- **Kaynak Yönetimi** – Akışları her zaman try‑with‑resources içinde sararak kapanmalarını garanti edin.  
 - **Hata Yönetimi** – Bozuk dosyalar, desteklenmeyen formatlar ve ağ zaman aşımı için belirli istisnaları yakalayın.  
 - **Önbellek Stratejisi** – Sık karşılaştırılan belgeler için önceden hesaplanmış karşılaştırma sonuçlarını saklayın.  
-- **Yapılandırma Ayarı** – Belge tipine göre optimal doğruluk için `ComparisonOptions` (ör. `detectStyleChanges`, `detectContentChanges`) ayarlayın.
+- **Yapılandırma Ayarı** – `ComparisonOptions`'ı (ör. `detectStyleChanges`, `detectContentChanges`) belge türüne göre ayarlayarak en iyi doğruluğu elde edin.  
 
 ## Büyük‑Ölçekli Belge İşleme için Performans İpuçları
-
-- **Toplu İşleme** – Benzer belge tiplerini gruplayıp birlikte işleyerek kurulum maliyetini azaltın.  
-- **Paralel İşleme** – Java’nın `ExecutorService` i kullanarak birden fazla karşılaştırmayı aynı anda çalıştırın, bellek kullanımını izleyin.  
-- **İlerleme İzleme** – Gerçek zamanlı geri bildirim sağlamak ve kullanıcıların uzun süren işleri iptal etmesine izin vermek için `ComparisonCallback` i uygulayın.
+- **Toplu İşleme** – Benzer belge türlerini gruplayın ve birlikte işleyerek kurulum maliyetini azaltın.  
+- **Paralel İşleme** – Java’nın `ExecutorService`'ini kullanarak birden fazla karşılaştırmayı aynı anda çalıştırın, bellek kullanımını izleyin.  
+- **İlerleme İzleme** – `ComparisonCallback`'i uygulayarak gerçek zamanlı geri bildirim sağlayın ve kullanıcıların uzun süren işleri iptal etmesine izin verin.  
 
 ## Yaygın Sorunların Çözümü
-
-- **"Document format not supported" Hataları** – Bu genellikle bozuk bir dosya ya da desteklenmeyen bir dosya sürümünü gösterir. [desteklenen formatlar dokümantasyonunu](https://docs.groupdocs.com/comparison/java/) kontrol edin ve karşılaştırmadan önce dosya bütünlüğünü doğrulayın.  
-
-- **Karşılaştırma Sonuçları Yanlış Görünüyor** – `ComparisonOptions` inizi gözden geçirin. Çok hassas ayarlar format değişikliklerini içerik değişikliği olarak işaretleyebilir, düşük hassasiyet ise önemli düzenlemeleri kaçırabilir.  
-
-- **Yavaş Performans** – Büyük PDF’ler için dosya‑yolu yükleme yerine akış yüklemeyi tercih edin ve tüm belgeyi render etmeye zorlayan varsayılan ayarları kullanmadığınızdan emin olun.
+**"Document format not supported" Hataları** – Bu genellikle bozuk bir dosya veya desteklenmeyen bir dosya sürümünü gösterir. [desteklenen formatlar dokümantasyonunu](https://docs.groupdocs.com/comparison/java/) kontrol edin ve karşılaştırmadan önce dosya bütünlüğünü doğrulayın.  
+**Karşılaştırma Sonuçları Yanlış Görünüyor** – `ComparisonOptions`'ınızı gözden geçirin. Aşırı hassas ayarlar biçim değişikliklerini içerik değişikliği olarak işaretleyebilir, düşük hassasiyet ise önemli düzenlemeleri kaçırabilir.  
+**Yavaş Performans** – Büyük PDF'ler için dosya‑yolu yükleme yerine akış yüklemeyi tercih edin ve tüm belgeyi render etmeye zorlayan varsayılan ayarları kullanmadığınızdan emin olun.  
 
 ## Sonraki Adımlar: Entegrasyon Desenleri
-
-- **Web API Entegrasyonu** – Belge akışlarını kabul eden ve diff raporları dönen REST uç noktaları sunun.  
-- **Toplu İşleme İş Akışları** – Yüksek hacimli karşılaştırma işleri için mesaj kuyrukları (ör. RabbitMQ, Kafka) kullanın.  
-- **Bulut Depolama Entegrasyonu** – Ölçeklenebilir belge erişimi için AWS S3, Azure Blob veya Google Cloud Storage’a bağlanın.  
-- **Veritabanı Entegrasyonu** – Düzenleyici uyumluluk için karşılaştırma meta verilerini ve denetim izlerini kalıcı hale getirin.
+Temel yükleme tekniklerinde ustalaştıktan sonra çözümünüzü şu şekilde genişletebilirsiniz:
+- **Web API Entegrasyonu** – Belge akışlarını kabul eden ve fark raporları dönen REST uç noktalarını ortaya koyun.  
+- **Toplu İşleme İş Akışları** – Yüksek hacimli karşılaştırma görevlerini yönetmek için mesaj kuyrukları (ör. RabbitMQ, Kafka) kullanın.  
+- **Bulut Depolama Entegrasyonu** – Ölçeklenebilir belge erişimi için AWS S3, Azure Blob veya Google Cloud Storage ile bağlanın.  
+- **Veritabanı Entegrasyonu** – Düzenleyici uyumluluk için karşılaştırma meta verilerini ve denetim izlerini kalıcı hale getirin.  
 
 ## Sık Sorulan Sorular
+**Q: Farklı formatlarda belgeleri karşılaştırabilir miyim?**  
+A: Evet, GroupDocs.Comparison formatlar arasında (ör. Word vs. PDF) karşılaştırma yapabilir, ancak aynı formatta karşılaştırmalar en kesin görsel farkı verir.  
 
-**S: Farklı formatlardaki belgeleri karşılaştırabilir miyim?**  
-C: Evet, GroupDocs.Comparison formatlar arasında (ör. Word vs. PDF) karşılaştırma yapabilir, ancak aynı format karşılaştırmaları en kesin görsel diff’i verir.
+**Q: Şifre korumalı belgeler nasıl işlenir?**  
+A: Belgeyi yüklerken `LoadOptions` parametresi aracılığıyla şifreyi sağlayın; API anında şifreyi çözer.  
 
-**S: Şifre korumalı belgelerle nasıl başa çıkabilirim?**  
-C: Belgeyi `LoadOptions` parametresi ile yüklerken şifreyi sağlayın. Kod‑suz bir örnek için ilgili eğitimi inceleyin.
+**Q: Karşılaştırabileceğim belgeler için bir boyut sınırlaması var mı?**  
+A: Katı bir sınırlama yok, ancak ~100 MB üzerindeki dosyalar akış‑tabanlı yüklemeden fayda sağlar ve JVM yığın ayarının (ör. `-Xmx2g`) yapılması gerekebilir.  
 
-**S: Karşılaştırabileceğim belge boyutu için bir sınırlama var mı?**  
-C: Katı bir limit yok, ancak ~100 MB üzerindeki dosyalar akış‑tabanlı yüklemeden fayda sağlar ve JVM yığın ayarlarının yapılması gerekebilir.
+**Q: Hangi değişiklik türlerinin tespit edileceğini özelleştirebilir miyim?**  
+A: Kesinlikle. `ComparisonOptions` kullanarak belge türüne göre içerik, stil veya meta veri değişikliklerinin algılanmasını açıp kapatabilirsiniz.  
 
-**S: Hangi değişiklik türlerinin algılanacağını özelleştirebilir miyim?**  
-C: Kesinlikle. `ComparisonOptions` i kullanarak içerik, stil veya meta veri değişikliklerinin algılanmasını açıp kapatabilirsiniz.
+**Q: Hangi GroupDocs.Comparison sürümünü kullanmalıyım?**  
+A: Performans iyileştirmeleri, hata düzeltmeleri ve genişletilmiş format desteği için her zaman en son kararlı sürümü kullanın.  
 
-**S: Hangi GroupDocs.Comparison sürümünü kullanmalıyım?**  
-C: Performans iyileştirmelerinden ve genişletilmiş format desteğinden yararlanmak için her zaman en son kararlı sürümü kullanın.
+**Q: Web önizleme için diff raporunu HTML olarak nasıl oluşturabilirim?**  
+A: `compare` çağrısında `outputPath`'i bir `.html` dosyasına ayarlayın; kütüphane eklemeleri (yeşil) ve silmeleri (kırmızı) vurgulayan CSS'yi gömecektir.  
 
-## Ek Kaynaklar
+**Q: API, sürümlü belgeler için artımlı karşılaştırmayı destekliyor mu?**  
+A: Evet, yeni bir sürümü öncekiyle tekrar tekrar karşılaştırabilirsiniz; önceki diff sonucunu önbelleğe almak işlem hızını daha da artırabilir.  
 
+**Q: Resmi dokümantasyon ve desteği nereden bulabilirim?**  
+A: Dokümantasyon, API referansı, indirmeler, forumlar ve lisans bilgileri için aşağıdaki kaynaklara bakın.  
+
+## Kaynaklar
 - [GroupDocs.Comparison for Java Dokümantasyonu](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java API Referansı](https://reference.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison for Java İndir](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison Forumu](https://forum.groupdocs.com/c/comparison)  
+- [GroupDocs.Comparison for Java İndirme](https://releases.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)  
 - [Ücretsiz Destek](https://forum.groupdocs.com/)  
-- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)
+- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)  
 
 ---
 
-**Son Güncelleme:** 2026-03-14  
-**Test Edilen Versiyon:** GroupDocs.Comparison 23.10 for Java  
-**Yazar:** GroupDocs
+**Son Güncelleme:** 2026-07-25  
+**Test Edilen Sürüm:** GroupDocs.Comparison 23.10 for Java  
+**Yazar:** GroupDocs  
+
+## İlgili Eğitimler
+- [Java Belge Karşılaştırmasını Özelleştirme – Tam Kılavuz](/comparison/java/comparison-options/)  
+- [Korunan Belgeleri Java’da Karşılaştırma – Tam Güvenlik Kılavuzu](/comparison/java/security-protection/)  
+- [GroupDocs Kullanımı: Java Belge Karşılaştırma Akışları – Tam Kılavuz](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

@@ -1,76 +1,124 @@
 ---
 categories:
 - Java Development
-date: '2026-03-22'
-description: GroupDocs.Comparison ile akışları kullanarak Java’da Word belgelerini
-  nasıl karşılaştıracağınızı öğrenin. Bu öğreticide kurulum, kod, performans ipuçları
-  ve sorun giderme konuları ele alınmaktadır.
-keywords: java document comparison, compare word documents java, groupdocs comparison
-  tutorial, java stream document comparison, how to compare documents in java using
-  streams
-lastmod: '2026-03-22'
-linktitle: Java Document Comparison Guide
+date: '2026-08-09'
+description: Java'da akışlar kullanarak belgeleri nasıl karşılaştıracağınızı GroupDocs.Comparison
+  ile öğrenin. Bu rehber, kurulum, performans ipuçları ve java compare pdf word için
+  sorun giderme konularını kapsar.
+keywords:
+- how to compare docs
+- java compare pdf word
+- groupdocs comparison java
+- document comparison java streams
+- compare word documents java
+lastmod: '2026-08-09'
+linktitle: Java Belge Karşılaştırma Rehberi
+og_description: Java'da akışlar kullanarak belgeleri nasıl karşılaştıracağınızı GroupDocs.Comparison
+  ile öğrenin. Bu rehber, kurulum, performans ipuçları ve java compare pdf word için
+  sorun giderme konularını kapsar.
+og_image_alt: Guide to compare Word documents in Java using streams with GroupDocs.Comparison
+og_title: Java'da akışlar kullanarak belgeleri karşılaştırma – GroupDocs guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn how to compare docs in Java using streams with GroupDocs.Comparison.
+    This guide covers setup, performance tips, and troubleshooting for java compare
+    pdf word.
+  headline: How to compare docs in Java with streams – GroupDocs guide
+  type: TechArticle
+- description: Learn how to compare docs in Java using streams with GroupDocs.Comparison.
+    This guide covers setup, performance tips, and troubleshooting for java compare
+    pdf word.
+  name: How to compare docs in Java with streams – GroupDocs guide
+  steps:
+  - name: '**Free trial** – Ideal for quick evaluation and small‑scale testing.'
+    text: '**Free trial** – Ideal for quick evaluation and small‑scale testing.'
+  - name: '**Temporary license** – Perfect for development cycles and proof‑of‑concept
+      projects.'
+    text: '**Temporary license** – Perfect for development cycles and proof‑of‑concept
+      projects.'
+  - name: '**Full license** – Required for any production deployment that exceeds
+      trial limits.'
+    text: '**Full license** – Required for any production deployment that exceeds
+      trial limits.'
+  - name: '**Tune buffer sizes** – Set `java.io.BufferedInputStream` buffer to 64 KB
+      for typical 5‑10 MB files; increase to 256 KB for larger PDFs.'
+    text: '**Tune buffer sizes** – Set `java.io.BufferedInputStream` buffer to 64 KB
+      for typical 5‑10 MB files; increase to 256 KB for larger PDFs.'
+  - name: '**Monitor GC** – Use VisualVM or Java Flight Recorder to watch garbage‑collection
+      pauses during bulk comparisons.'
+    text: '**Monitor GC** – Use VisualVM or Java Flight Recorder to watch garbage‑collection
+      pauses during bulk comparisons.'
+  - name: '**Connection pooling** – Reuse HTTP connections when streaming files from
+      remote storage services.'
+    text: '**Connection pooling** – Reuse HTTP connections when streaming files from
+      remote storage services.'
+  type: HowTo
+- questions:
+  - answer: There is no hard limit, but documents larger than 100 MB benefit from
+      increased JVM heap size and stream‑buffer tuning to avoid `OutOfMemoryError`.
+    question: What's the maximum document size GroupDocs.Comparison can handle?
+  - answer: Yes. Provide the password when constructing the source or target stream;
+      the API will decrypt the file before comparison.
+    question: Can I compare password‑protected documents using streams?
+  - answer: The engine auto‑detects formats, but for optimal results convert all inputs
+      to a common format (e.g., PDF) before comparison when mixing types.
+    question: How do I handle different document formats in the same comparison?
+  - answer: Yes. Production deployments need a full or temporary GroupDocs.Comparison
+      license. Free trials are limited to 30 days and 20 comparisons.
+    question: Is a license required for production use?
+  - answer: Absolutely. Use `CompareOptions` to set highlight colors, change markers,
+      and output format (PDF, DOCX, HTML, etc.).
+    question: Can I customize the appearance of the comparison result?
+  type: FAQPage
 tags:
 - document-comparison
 - java-streams
 - groupdocs
 - word-documents
-title: Java ile akışlar kullanarak Word belgelerini karşılaştırma – GroupDocs rehberi
+title: Java'da akışlar kullanarak belgeleri karşılaştırma – GroupDocs guide
 type: docs
 url: /tr/java/basic-comparison/document-comparison-groupdocs-java/
 weight: 1
 ---
 
-# Akışlarla Java'da Word belgelerini karşılaştırma – GroupDocs rehberi
+# Java'da akışlarla belgeleri karşılaştırma – GroupDocs rehberi
 
-Java uygulamanızda Word belgelerinin birden fazla sürümünü karşılaştırmakta zorlandıysanız, yalnız değilsiniz. İster bir işbirliği platformu oluşturuyor olun, sürüm kontrolü uyguluyor olun ya da sadece belge revizyonları arasındaki değişiklikleri izlemek istiyor olun, **compare word documents java** doğru yaklaşım olmadan hızla karmaşık hale gelebilir.
+Java uygulamasında **belge karşılaştırma nasıl yapılır** ihtiyacınız varsa—ister işbirliği platformu, sürüm‑control sistemi oluşturuyor olun, ister revizyonlar arasındaki değişiklikleri izliyor olun—bu rehber ihtiyacınızı karşılar. GroupDocs.Comparison for Java, akış‑tabanlı belge karşılaştırması yapmanıza olanak tanır, yani geçici dosyaları diske yazmak zorunda kalmazsınız. Bu yaklaşım, bulut‑yerel uygulamalar, uzak depolama senaryoları ve bellek kullanımının düşük tutulması gereken ortamlar için idealdir.
 
-İşte bu noktada GroupDocs.Comparison for Java devreye girer. Manuel dosya işlemleriyle uğraşmak ya da karşılaştırma mantığını sıfırdan oluşturmak yerine, akış‑tabanlı belge karşılaştırmasını kullanarak dosyaları önce yerel olarak kaydetmeden verimli bir şekilde işleyebilirsiniz. Bu yaklaşım, bulut depolama, uzak dosyalar veya bellek‑kısıtlı ortamlarla çalışan modern uygulamalar için mükemmeldir.
-
-Bu kapsamlı rehberde, **compare word documents java** akışları kullanarak nasıl yapılacağını, yaygın tuzakları nasıl yöneteceğinizi ve üretim uygulamaları için performansı nasıl optimize edeceğinizi öğreneceksiniz. Sonunda, hem verimli hem de ölçeklenebilir güçlü bir belge karşılaştırma sistemine sahip olacaksınız.
-
-## Hızlı Yanıtlar
+## Hızlı cevaplar
 - **Hangi kütüphane kullanılıyor?** GroupDocs.Comparison for Java  
-- **Belgeleri diske kaydetmeden karşılaştırabilir miyim?** Yes, via streams  
-- **Hangi Java sürümü gereklidir?** JDK 8+ (Java 11+ recommended)  
-- **Üretim için lisansa ihtiyacım var mı?** Yes, a full or temporary license is required  
-- **Diğer formatları karşılaştırmak mümkün mü?** Absolutely – PDF, Excel, PowerPoint, etc.
+- **Belgeleri diske kaydetmeden karşılaştırabilir miyim?** Evet, akışları kullanarak  
+- **Hangi Java sürümü gereklidir?** JDK 8+ (Java 11+ önerilir)  
+- **Üretim için lisansa ihtiyacım var mı?** Evet, tam veya geçici bir lisans gereklidir  
+- **Diğer formatları karşılaştırmak mümkün mü?** Kesinlikle – PDF, Excel, PowerPoint ve daha fazlası  
 
-## compare word documents java nedir?
-Java'da Word belgelerini karşılaştırmak, iki veya daha fazla `.docx` (veya `.doc`) dosyası arasında eklemeleri, silmeleri ve biçimlendirme değişikliklerini programlı olarak tespit etmek anlamına gelir. Akışları kullanarak karşılaştırma bellek içinde gerçekleşir, bu da I/O yükünü azaltır ve ölçeklenebilirliği artırır.
+## Java'da Word belgelerini karşılaştırma nedir?
+“compare word documents java” ifadesi, bir Java uygulamasından iki veya daha fazla Word dosyası (.docx veya .doc) arasındaki metin, biçimlendirme ve yapısal değişiklikleri programlı olarak tespit etmeyi ifade eder. Akışları kullanarak, karşılaştırma tamamen bellek içinde gerçekleşir, disk I/O'sını ortadan kaldırır ve bulut depolama entegrasyonunu basitleştirir.
 
-## Neden akış‑tabanlı karşılaştırma kullanmalı?
-- **Bellek Verimliliği** – Tam dosyayı RAM'e yüklemeye gerek yok.  
-- **Uzak Dosya Desteği** – Bulutta depolanan veya veritabanında saklanan belgelerle doğrudan çalışır.  
+## Neden akış‑tabanlı karşılaştırma kullanılmalı?
+Akış‑tabanlı karşılaştırma, geçici dosyalara ihtiyaç duymadan doğrudan giriş akışlarıyla çalışmanıza olanak tanır. Bu yaklaşım, disk I/O'sunu azaltır, verileri bellek içinde tutarak güvenliği artırır ve bulut depolama hizmetleriyle sorunsuz entegrasyonu sağlar; bu da ölçeklenebilir, modern Java uygulamaları için idealdir.
+
+- **Bellek Verimliliği** – Tüm dosyayı RAM'e yüklemeye gerek yok.  
+- **Uzak Dosya Desteği** – Bulutta depolanmış veya veritabanında saklanan belgelerle doğrudan çalışır.  
 - **Güvenlik** – Diskteki geçici dosyaları ortadan kaldırır, maruz kalma riskini azaltır.  
-- **Ölçeklenebilirlik** – Az kaynak tüketimiyle çok sayıda eşzamanlı karşılaştırmayı yönetir.
+- **Ölçeklenebilirlik** – Çok sayıda eşzamanlı karşılaştırmayı minimum kaynak tüketimiyle yönetir.  
 
-## Önkoşullar ve Ortam Kurulumu
+## Önkoşullar ve ortam kurulumu
 
-**java stream document comparison** uygulamaya koymadan önce, geliştirme ortamınızın bu gereksinimleri karşıladığından emin olun:
+Java akış belge karşılaştırmasına başlamadan önce, geliştirme ortamınızın bu kesin gereksinimleri karşıladığından emin olun:
 
-### Gerekli Bağımlılıklar ve Sürümler
-- **GroupDocs.Comparison for Java** sürüm 25.2 veya üzeri (en son sürüm önerilir).  
-- **Java Development Kit (JDK)** sürüm 8 veya üzeri (Java 11+ önerilir).
+* **GroupDocs.Comparison for Java** sürüm 25.2 veya üzeri (son sürüm 50+ dosya formatı desteği ekler).  
+* **JDK** 8 veya daha yeni (Java 11+ performans ve modül desteği için şiddetle önerilir).  
+* **IDE** – IntelliJ IDEA, Eclipse veya Java uzantılarına sahip VS Code.  
+* **Build tool** – Bağımlılık yönetimi için Maven veya Gradle.  
+* **Memory** – Sorunsuz geliştirme için minimum 2 GB RAM; 100 sayfalık belgeleri işleyen üretim yükleri genellikle 4 GB tahsis eder.  
+*Pro ipucu*: Akışlar size yeni ise, karşılaştırma koduna dalmadan önce Java 8 `java.io.InputStream` ve `java.nio.file.Files` öğreticilerini inceleyin.
 
-### Geliştirme Ortamı Kurulumu
-- **IDE**: IntelliJ IDEA, Eclipse veya Java uzantılarına sahip VS Code.  
-- **Build Tool**: Bağımlılık yönetimi için Maven veya Gradle.  
-- **Memory**: Sorunsuz bir geliştirme deneyimi için en az 2 GB RAM.
+## Proje kurulumu ve yapılandırma
 
-### Bilgi Önkoşulları
-- Temel Java programlama (akışlar ve try‑with‑resources).  
-- Maven'e aşinalık.  
-- Java'da dosya I/O kavramı.
-
-**Pro İpucu**: Java akışlarına yeniyseniz, kavramı gözden geçirmek için birkaç dakikanızı ayırın—bu, karşılaştırma mantığını çok daha net hale getirecektir.
-
-## Proje Kurulumu ve Yapılandırması
-
-GroupDocs.Comparison for Java'ı kurmak basittir, ancak yapılandırmayı baştan doğru yapmak ileride baş ağrısını önler.
-
-### Maven Yapılandırması
-`pom.xml` dosyanıza bağımlılık yönetimi için bu yapılandırmaları ekleyin:
+### Maven yapılandırması
+`pom.xml` dosyanıza GroupDocs.Comparison bağımlılığını ekleyin. Güvenlik yamalarından ve performans iyileştirmelerinden yararlanmak için en son kararlı sürümü kullanın.
 
 ```xml
 <repositories>
@@ -89,23 +137,26 @@ GroupDocs.Comparison for Java'ı kurmak basittir, ancak yapılandırmayı başta
 </dependencies>
 ```
 
-**Önemli Not**: Güvenlik yamaları ve performans iyileştirmeleri için her zaman en son kararlı sürümü kullanın. Güncellemeler için GroupDocs sürüm sayfasını kontrol edin.
+**Önemli not**: Her zaman en yeni sürüm numarasına referans verin; eski sürümler en yeni Office formatları desteğine sahip olmayabilir.
 
-### Lisans Yapılandırma Seçenekleri
-**compare word documents java** işlevi için birkaç lisans seçeneğiniz var:
+### Lisans yapılandırma seçenekleri
+GroupDocs.Comparison üç lisans yolu sunar:
 
-1. **Free Trial** – Değerlendirme ve küçük ölçekli testler için mükemmeldir.  
-2. **Temporary License** – Geliştirme aşamaları ve kanıt‑konsept projeleri için idealdir.  
-3. **Full License** – Üretim dağıtımları için gereklidir.
+1. **Ücretsiz deneme** – Hızlı değerlendirme ve küçük ölçekli testler için idealdir.  
+2. **Geçici lisans** – Geliştirme döngüleri ve kanıt‑konsepti projeleri için mükemmeldir.  
+3. **Tam lisans** – Deneme sınırlarını aşan herhangi bir üretim dağıtımı için gereklidir.  
 
-**Geliştirme İpucu**: API'ye aşina olmak için ücretsiz deneme ile başlayın, ardından uzun vadeli geliştirme çalışmaları için geçici lisansa yükseltin.
+Ücretsiz deneme ile başlayın, ardından API'yi entegre ederken geçici bir lisansa yükseltin.
 
-## java akış belge karşılaştırması nasıl yapılır
+## Java akış belge karşılaştırması nasıl yapılır
+Kaynak ve hedef belgeleri akış olarak yükleyin, `Comparer`'a besleyin ve sonucu bir çıktı akışına yazın. Akışlar hazır olduğunda tüm işlem iki satır kodla tamamlanır ve try‑with‑resources bloğu doğru kapanışı garanti eder, bellek sızıntılarını önler ve iş parçacığı‑güvenli yürütmeyi sağlar.
 
-Şimdi heyecan verici kısma—**java'da akışları kullanarak belgeleri nasıl karşılaştırılır** uygulamaya geçiyoruz. Bu yaklaşım özellikle güçlüdür çünkü belgeleri yerel dosya depolamaya ihtiyaç duymadan verimli bir şekilde işler.
+## Temel ithalatlar ve kurulum
+İlk olarak ihtiyaç duyduğunuz şey, çekirdek sınıfın net bir tanımıdır:
 
-### Gerekli İçe Aktarmalar ve Kurulum
-İlk olarak, **java stream document comparison** uygulamanız için gerekli sınıfları içe aktarın:
+`Comparer` sınıfı, belge analizini yöneten ve bir karşılaştırma sonucu üreten GroupDocs.Comparison'ın çekirdek bileşenidir.
+
+Ardından gerekli paketleri içe aktarın:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -115,8 +166,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 ```
 
-### Tam Uygulama Örneği
-İşte akış‑tabanlı belge karşılaştırması için temel uygulama:
+## Tam uygulama örneği
+İşte akış‑tabanlı karşılaştırma için minimal, üretim‑hazır akış:
 
 ```java
 class CompareDocumentsFromStreamFeature {
@@ -139,18 +190,19 @@ class CompareDocumentsFromStreamFeature {
 }
 ```
 
-### Uygulamayı Anlamak
-- **Source Stream Management** – `sourceStream` temel belgeyi ("orijinal") temsil eder.  
-- **Target Stream Addition** – `comparer.add(targetStream)` kaynak belgeye karşı birden fazla belgeyi karşılaştırmanıza olanak tanır.  
-- **Result Stream Output** – Karşılaştırma sonucu doğrudan `resultStream`'e yazılır, bu da çıktıyı kaydetme, gönderme veya daha fazla işleme esnekliği sağlar.  
-- **Resource Management** – try‑with‑resources deseni, tüm akışların kapatılmasını garanti eder, bellek sızıntılarını önler—java belge karşılaştırma uygulamalarında yaygın bir sorundur.
+## Uygulamayı anlama
+* **Kaynak akış** – Temel belgeyi ("orijinal") temsil eder.  
+* **Hedef akış ekleme** – `comparer.add(targetStream)` kaynak karşılaştırmasına karşı istediğiniz sayıda revizyon eklemenizi sağlar.  
+* **Sonuç akışı çıktısı** – Karşılaştırma çıktısı doğrudan `resultStream`'e yazılır, böylece sonucun nerede saklanacağı veya iletileceği üzerinde tam kontrol sağlarsınız.  
+* **Kaynak yönetimi** – try‑with‑resources deseni akışların kapatılmasını sağlar, Java belge karşılaştırma uygulamalarında yaygın bellek sızıntısı sorununu ortadan kaldırır.  
 
-## Gelişmiş Yapılandırma ve Özelleştirme
+## Gelişmiş yapılandırma ve özelleştirme
+Temel akış çoğu senaryo için çalışsa da, karşılaştırma davranışını belirli iş ihtiyaçlarına göre ince ayar yapabilirsiniz.
 
-Temel uygulama harika çalışsa da, **java stream document comparison** karşılaştırma davranışını özelleştirdiğinizde daha güçlü hale gelir.
+### Karşılaştırma duyarlılık ayarları
+`CompareOptions` sınıfı, karşılaştırma çıktısının duyarlılığını ve görsel stilini yapılandırmanıza olanak tanır.
 
-### Karşılaştırma Hassasiyeti Ayarları
-Karşılaştırmanın ne kadar hassas olması gerektiğini ince ayar yapabilirsiniz:
+Motorun değişiklikleri ne kadar agresif işaretleyeceğini ayarlayın:
 
 ```java
 // Example of configuring comparison options (pseudo-code for concept)
@@ -159,67 +211,68 @@ options.setIgnoreFormatting(true);  // Focus on content changes
 options.setIgnoreWhitespace(true);  // Ignore spacing differences
 ```
 
-**Ne Zaman Kullanılır**: Hassasiyeti kullanım durumunuza göre ayarlayın. Hukuki belgeler için maksimum hassasiyet isteyebilirsiniz. İşbirlikçi düzenleme için ise küçük biçimlendirme değişikliklerini göz ardı edebilirsiniz.
+**Ne zaman kullanılmalı**: Hukuki sözleşmeler genellikle maksimum duyarlılık gerektirirken, işbirlikçi taslaklar küçük biçimlendirme değişikliklerini göz ardı edebilir.
 
-### Birden Çok Belge Formatını İşleme
-GroupDocs.Comparison, Word dışındaki birçok formatı destekler:
-- **Word**: `.docx`, `.doc`  
-- **PDF**: `.pdf`  
-- **Excel**: `.xlsx`, `.xls`  
-- **PowerPoint**: `.pptx`, `.ppt`
+### Birden fazla belge formatı işleme
+GroupDocs.Comparison, aşağıdakiler dahil 50'den fazla giriş ve çıkış formatını destekler:
 
-Aynı akış‑tabanlı yaklaşım tüm desteklenen formatlarda çalışır—sadece giriş dosya tiplerinizi değiştirin.
+* Word: `.docx`, `.doc`  
+* PDF: `.pdf`  
+* Excel: `.xlsx`, `.xls`  
+* PowerPoint: `.pptx`, `.ppt`  
 
-## Yaygın Tuzaklar ve Çözümler
+Aynı akış‑tabanlı desen tüm desteklenen formatlarda çalışır—giriş akışlarının dosya uzantılarını değiştirmeniz yeterlidir.
 
-Deneyimli geliştiriciler bile **java document comparison** uygularken sorunlarla karşılaşabilir. İşte en yaygın problemler ve çözümleri:
+## Yaygın tuzaklar ve çözümler
+Deneyimli geliştiriciler bile **java document comparison** uygularken sorunlarla karşılaşabilir. İşte en sık karşılaşılan sorunlar ve çözüm yolları.
 
-### Sorun 1: Akış Konumu Problemleri
-**Problem**: Akışlar karşılaştırma sırasında tüketilir, yeniden kullanılırsa hatalara yol açar.  
-**Solution**: Her karşılaştırma işlemi için her zaman yeni akışlar oluşturun. Akışları yeniden kullanmayın.
+### Sorun 1: Akış konumu problemleri
+**Problem**: Bir akış ilk karşılaştırma sırasında tüketilir ve sonraki çağrılar başarısız olur.  
+**Çözüm**: Her karşılaştırma işlemi için her zaman yeni bir `InputStream` oluşturun. Aynı akış örneğini yeniden kullanmayın.
 
-### Sorun 2: Bellek Sızıntıları
-**Problem**: Akışları düzgün kapatmayı unutmak bellek sorunlarına yol açar.  
-**Solution**: Örneklerde gösterildiği gibi her zaman try‑with‑resources bloklarını kullanın.
+### Sorun 2: Bellek sızıntıları
+**Problem**: Akışları kapatmayı unutmak yavaş yavaş yığın büyümesine yol açar.  
+**Çözüm**: Tüm akış kullanımını, uygulama örneğinde gösterildiği gibi, try‑with‑resources bloğuna sarın.
 
-### Sorun 3: Dosya Yolu Problemleri
-**Problem**: Yanlış dosya yolları `FileNotFoundException` hatasına neden olur.  
-**Solution**: Geliştirme sırasında mutlak yollar kullanın ve üretimde uygun yapılandırma yönetimini uygulayın.
+### Sorun 3: Dosya yolu problemleri
+**Problem**: Yanlış yollar `FileNotFoundException` hatasına neden olur.  
+**Çözüm**: Geliştirme sırasında mutlak yollar kullanın ve üretim için yapılandırma dosyaları aracılığıyla dışa aktarın.
 
-### Sorun 4: Büyük Belge Performansı
-**Problem**: Çok büyük belgeleri (50 MB +) karşılaştırmak zaman aşımına neden olabilir.  
-**Solution**: İlerleme takibi uygulayın ve büyük belgeleri bölümlere ayırmayı düşünün.
+### Sorun 4: Büyük belge performansı
+**Problem**: 50 MB'den büyük belgeleri karşılaştırmak zaman aşımına neden olabilir.  
+**Çözüm**: JVM yığınını artırın (`-Xmx4g`), iç tampon boyutunu ayarlayın ve paralel işleme için belgeyi mantıksal bölümlere ayırmayı düşünün.
 
-**Hata Ayıklama İpucu**: Akış işlemleri etrafına günlük ekleyerek kaynak kullanımını izleyin ve darboğazları hızlıca tespit edin.
+**Hata ayıklama ipucu**: Her akış işlemi etrafına günlük ekleyerek okunan baytları izleyin ve darboğazları hızlıca tespit edin.
 
-## Üretim İçin Performans Optimizasyonu
+## Üretim için performans optimizasyonu
+Karşılaştırma özelliğini canlı bir hizmete taşıdığınızda, performans ve ölçeklenebilirlik kritik hale gelir.
 
-Üretimde **compare word documents java** işlevini dağıtırken performans kritik hale gelir. İşte nasıl optimize edileceği:
+### Bellek yönetimi en iyi uygulamaları
+1. **Tampon boyutlarını ayarlayın** – Tipik 5‑10 MB dosyalar için `java.io.BufferedInputStream` tamponunu 64 KB olarak ayarlayın; daha büyük PDF'ler için 256 KB'ye yükseltin.  
+2. **GC'yi izleyin** – Toplu karşılaştırmalar sırasında çöp toplama duraklamalarını izlemek için VisualVM veya Java Flight Recorder kullanın.  
+3. **Bağlantı havuzlama** – Uzaktan depolama hizmetlerinden dosyaları akışlarken HTTP bağlantılarını yeniden kullanın.
 
-### Bellek Yönetimi En İyi Uygulamaları
-1. **Akış Tampon Boyutları** – Tipik belge boyutuna göre tampon boyutlarını ayarlayın.  
-2. **Garbage Collection** – Büyük belgeler işlenirken GC desenlerini izleyin.  
-3. **Bağlantı Havuzu** – Uzak kaynaklardan belgeleri karşılaştırıyorsanız bağlantı havuzu kullanın.
+### Eşzamanlı işleme hususları
+GroupDocs.Comparison örnekleri iş parçacığı‑güvenlidir, bu yüzden bir `ExecutorService` kullanarak birden fazla karşılaştırmayı paralel olarak güvenle çalıştırabilirsiniz.
 
-### Eşzamanlı İşleme Düşünceleri
 ```java
 // Example pattern for concurrent document comparison
 ExecutorService executor = Executors.newFixedThreadPool(4);
 // Process multiple comparisons concurrently
 ```
 
-**Performans İpucu**: Gerçekçi belge boyutları ve eşzamanlı kullanıcılarla test ederek temel ölçümleri belirleyin.
+**Performans ipucu**: Gerçekçi verim sayılarını belirlemek için 200 sayfalık belgeler üzerinde 100 eşzamanlı kullanıcıyla yük testleri yapın.
 
-### Önbellekleme Stratejileri
-- **Belge Parmak İzi** – Değişmemiş belgeleri tanımlamak için hash oluşturun.  
-- **Sonuç Önbellekleme** – Aynı belge çiftleri için karşılaştırma sonuçlarını saklayın.  
-- **Kısmi Önbellekleme** – Büyük belgeler için ara işleme sonuçlarını önbelleğe alın.
+### Önbellekleme stratejileri
+* **Belge parmak izi** – Her gelen dosya için SHA‑256 hash oluşturun; hash daha önce işlenmiş bir çiftle eşleşiyorsa karşılaştırmayı atlayın.  
+* **Sonuç önbellekleme** – Oluşturulan karşılaştırma akışını tekrar eden istekler için Redis veya bir CDN'de saklayın.  
+* **Kısmi önbellekleme** – Çok büyük dosyalar için ara ayrıştırma sonuçlarını önbelleğe alarak aynı bölümlerin yeniden ayrıştırılmasını önleyin.
 
-## Entegrasyon En İyi Uygulamaları
+## Entegrasyon en iyi uygulamaları
 
-**java document comparison**'ı mevcut uygulamalara başarılı bir şekilde entegre etmek için bu en iyi uygulamaları izleyin:
+### Hata yönetimi stratejisi
+`ComparisonException`'ı yakalayan ve yığını benzersiz bir korelasyon kimliğiyle günlüğe kaydeden merkezi bir istisna işleyicisi tanımlayın.
 
-### Hata Yönetimi Stratejisi
 ```java
 try {
     // Document comparison logic
@@ -235,108 +288,70 @@ try {
 }
 ```
 
-### İzleme ve Günlükleme
-Önemli metrikleri izleyin:
-- **İşleme Süresi** – Performans eğilimleri için süreyi izleyin.  
-- **Bellek Kullanımı** – Büyük belge işleme sırasında yığın kullanımını izleyin.  
-- **Hata Oranları** – Sistem sorunlarını belirlemek için hata kalıplarını izleyin.  
-- **Verimlilik** – Dakika/saat başına işlenen belge sayısını ölçün.
+### İzleme ve günlükleme
+Gözlemlenebilirlik platformunuzda bu ana metrikleri izleyin:
 
-### Yapılandırma Yönetimi
-Farklı ortamlar için dışa aktarılmış yapılandırma kullanın:
-- **Geliştirme** – Ayrıntılı günlükleme, daha kısa zaman aşımı.  
-- **Test** – Orta seviyede günlükleme, gerçekçi zaman aşımı.  
-- **Üretim** – Yalnızca temel günlükleme, optimize edilmiş zaman aşımı.
+* **İşlem süresi** – Belge boyutuna göre bölünmüş, karşılaştırma başına ortalama süre.  
+* **Bellek kullanımı** – Yoğun yük sırasında yığın tüketimi.  
+* **Hata oranı** – `ComparisonException` veya `OutOfMemoryError` sıklığı.  
+* **Verim** – Dakikada işlenen belge sayısı.
 
-## Gerçek Dünya Uygulamaları ve Kullanım Senaryoları
+### Yapılandırma yönetimi
+Tüm ayarları (lisans yolu, tampon boyutları, zaman aşımı değerleri) `application.yml` dosyasına veya ortam değişkenlerine dışa aktarın. Geliştirme, test ve üretim için ayrı profiller kullanın.
 
-**Java stream document comparison** birçok iş problemini çözer:
+## Gerçek dünya uygulamaları ve kullanım senaryoları
 
-### İşbirlikçi Belge Düzenleme
-Birden fazla ekip üyesi paylaşılan belgeleri düzenler → yüklenen sürümleri mevcut sürümle karşılaştırarak değişiklikleri vurgular.
+### İşbirlikçi belge düzenleme
+Birden fazla ekip üyesi yeni sürümler yüklediğinde, yüklemeyi depolanmış temel belgeyle karşılaştırarak eklemeleri ve silmeleri gerçek zamanlı olarak vurgulayın.
 
-### Hukuki Belge İncelemesi
-Hukuk firmaları sözleşme sürümlerini ve eklerini karşılaştırır → yüksek hassasiyetli karşılaştırma her değişikliği yakalar.
+### Hukuki belge incelemesi
+Hukuk firmaları sözleşmelerde yüksek duyarlılıkta karşılaştırmalar yapabilir, böylece her madde değişikliği yakalanır ve raporlanır.
 
-### İçerik Yönetim Sistemleri
-CMS platformları belge revizyonlarını izler → kullanıcılar yeni sürümler yüklediğinde otomatik karşılaştırma.
+### İçerik yönetim sistemleri
+CMS platformları bir yazar politika belgesini güncellediğinde otomatik olarak değişiklik günlükleri oluşturabilir.
 
-### API Dokümantasyonu Sürümleme
-Sürümler arasındaki API dokümantasyonunu karşılaştır → API tüketicileri için otomatik değişiklik günlükleri.
+### API dokümantasyonu sürümleme
+API referans kılavuzlarının ardışık sürümlerini karşılaştırarak geliştiriciler için otomatik değişiklik günlükleri oluşturun.
 
-## Yaygın Sorunların Çözümü
+## Yaygın sorunların giderilmesi
+* **ClassNotFoundException** – Maven bağımlılığının doğru çözüldüğünü ve JAR'ın sınıf yolunda olduğunu doğrulayın.  
+* **OutOfMemoryError** – JVM yığınını artırın (`-Xmx`) veya `ChunkSize` seçeneğiyle belge bölümlendirmesini etkinleştirin.  
+* **Yanlış karşılaştırma sonuçları** – Her iki belgenin aynı kodlamayı kullandığından ve gömülü fontların motor tarafından erişilebilir olduğundan emin olun.  
+* **Ağda depolanan dosyalarda yavaş performans** – Karşılaştırma süresince uzak dosyayı yerel olarak önbelleğe alın veya asenkron akış kullanın.
 
-### ClassNotFoundException veya NoClassDefFoundError
-**Neden**: GroupDocs.Comparison JAR dosyalarının eksik olması.  
-**Çözüm**: Maven bağımlılıklarının doğru çözüldüğünden ve JAR dosyalarının sınıf yolunda (classpath) olduğundan emin olun.
+## Sonraki adımlar ve gelişmiş özellikler
+Artık akışları kullanarak **java document comparison** için sağlam bir temele sahipsiniz. Bu bir sonraki seviye yetenekleri keşfetmeyi düşünün:
 
-### Büyük Belge Karşılaştırmasında OutOfMemoryError
-**Neden**: Yetersiz yığın (heap) alanı.  
-**Çözüm**: JVM yığın boyutunu `-Xmx` ile artırın veya belge bölümlendirme uygulayın.
-
-### Karşılaştırma Sonuçları Yanlış Görünüyor
-**Neden**: Farklı biçimlendirme veya kodlama.  
-**Çözüm**: Desteklenen formatları doğrulayın ve biçimlendirmeyi normalleştirmek için ön işleme yapmayı düşünün.
-
-### Ağda Depolanan Belgelerde Yavaş Performans
-**Neden**: Ağ gecikmesi akış okumasını etkiliyor.  
-**Çözüm**: Yerel önbellekleme veya eşzamansız işleme desenleri uygulayın.
-
-## Sonraki Adımlar ve Gelişmiş Özellikler
-
-Akışları kullanarak **java document comparison** temellerini kavradınız. İşte bir sonraki keşfedilecek alanlar:
-
-### Gelişmiş Karşılaştırma Özellikleri
-- Özel değişiklik tespit kuralları.  
-- Karışık belge tipleri için çoklu‑format desteği.  
-- Büyük belge setleri için toplu işleme.
-
-### Entegrasyon Fırsatları
-- Karşılaştırmayı REST API'leri aracılığıyla sunma.  
-- Ayrı bir mikro hizmet olarak dağıtma.  
-- Belge onay iş akışlarına yerleştirme.
-
-### Performans İyileştirmeleri
-- Büyük belge setleri için paralel işleme.  
-- Kesintisiz erişim için bulut depolama entegrasyonu.  
-- Makine‑öğrenimi‑tabanlı değişiklik sınıflandırması.
+* **Özel değişiklik tespiti kuralları** – Önemsiz biçimlendirme değişikliklerini yok saymak için alan‑spesifik kurallar tanımlayın.  
+* **Toplu işleme** – Belge çiftleri listesini kabul eden ve paralel işleyen bir mikroservis oluşturun.  
+* **Makine‑öğrenmeli sınıflandırma** – Değişiklikleri (ör. “hukuki madde eklendi” vs. “yazım hatası düzeltildi”) sınıflandırmak için bir ML modeli kullanın.  
+* **REST API sunumu** – Karşılaştırma mantığını bir Spring Boot denetleyicisine sararak ön‑uç uygulamaları tarafından kolayca kullanılmasını sağlayın.
 
 ## Sonuç
+Artık GroupDocs.Comparison ile akışları kullanarak Java'da **belge karşılaştırma nasıl yapılır** biliyorsunuz. Bu yöntem bellek‑dostu işlem sağlar, uzak depolama ile sorunsuz çalışır ve birçok eşzamanlı kullanıcıyı ölçeklendirebilir. Minimal örnekle başlayın, ardından projenizin gereksinimlerine uygun gelişmiş özelliklere doğru ilerleyin.
 
-GroupDocs.Comparison ile akışları kullanarak verimli **compare word documents java** uygulamasını başarıyla öğrendiniz. Bu yaklaşım bellek‑dostu işleme, uzak dosyalar için esneklik ve üretim iş yükleri için ölçeklenebilirlik sağlar.
+## Sıkça sorulan sorular
 
-**Ana Çıkarımlar**:
-- Akış‑tabanlı karşılaştırma I/O yükünü azaltır ve güvenliği artırır.  
-- Doğru kaynak yönetimi bellek sızıntılarını önler.  
-- Yapılandırma seçenekleri hassasiyeti ihtiyaçlarınıza göre ayarlamanızı sağlar.  
-- İzleme, hata yönetimi ve önbellekleme üretim hazırlığı için esastır.
+**S: GroupDocs.Comparison hangi maksimum belge boyutunu işleyebilir?**  
+C: Katı bir limit yoktur, ancak 100 MB'den büyük belgeler JVM yığınını artırarak ve akış tamponunu ayarlayarak `OutOfMemoryError`'dan kaçınabilir.
 
-Sağlanan temel örnekle başlayın, ardından projenizin gereksinimlerine uygun gelişmiş özelliklere doğru ilerleyin.
+**S: Şifre korumalı belgeleri akışlarla karşılaştırabilir miyim?**  
+C: Evet. Kaynak veya hedef akışı oluştururken şifreyi sağlayın; API karşılaştırmadan önce dosyayı çözer.
 
-## Sıkça Sorulan Sorular
+**S: Aynı karşılaştırmada farklı belge formatlarını nasıl yönetirim?**  
+C: Motor formatları otomatik algılar, ancak farklı tipleri karıştırırken optimum sonuçlar için tüm girdileri ortak bir formata (ör. PDF) dönüştürün.
 
-**S: GroupDocs.Comparison'ın işleyebileceği maksimum belge boyutu nedir?**  
-C: Kesin bir limit olmamakla birlikte, 100 MB'den büyük belgeler bellek optimizasyonu gerektirebilir. Akış kullanın ve JVM yığın ayarlarını buna göre ayarlayın.
+**S: Üretim kullanımında lisans gerekli mi?**  
+C: Evet. Üretim dağıtımları tam veya geçici bir GroupDocs.Comparison lisansı gerektirir. Ücretsiz denemeler 30 gün ve 20 karşılaştırma ile sınırlıdır.
 
-**S: Akışları kullanarak şifre korumalı belgeleri karşılaştırabilir miyim?**  
-C: Evet, ancak akışları Comparer'a göndermeden önce şifre çözme işlemini yapmanız gerekir. GroupDocs.Comparison şifre korumalı dosyaları destekler.
+**S: Karşılaştırma sonucunun görünümünü özelleştirebilir miyim?**  
+C: Kesinlikle. Vurgulama renklerini, değişiklik işaretçilerini ve çıktı formatını (PDF, DOCX, HTML vb.) ayarlamak için `CompareOptions` kullanın.
 
-**S: Aynı karşılaştırmada farklı belge formatlarıyla nasıl başa çıkabilirim?**  
-C: GroupDocs.Comparison formatları otomatik algılar, ancak farklı tipler arasında (ör. Word vs PDF) karşılaştırma sınırlamaları olabilir. Öncelikle ortak bir formata dönüştürmek tavsiye edilir.
+**Son Güncelleme:** 2026-08-09  
+**Test Edilen:** GroupDocs.Comparison 25.2 for Java  
+**Yazar:** GroupDocs  
 
-**S: Karşılaştırma sonucunun ötesinde detaylı değişiklik bilgisi almak mümkün mü?**  
-C: Evet, `CompareResult` nesnesi değişiklik türleri, konumları ve içerikleri hakkında detaylı bilgi sağlar. Ayrıntılı içgörüler için API'sini inceleyin.
-
-**S: Üretim kullanımı için lisans maliyeti nedir?**  
-C: Lisanslama dağıtım ve kullanım hacmine göre değişir. GroupDocs fiyatlandırma sayfasını kontrol edin ve geliştirme için geçici lisansı değerlendirin.
-
-**S: Karşılaştırma sonuçlarının görünümünü özelleştirebilir miyim?**  
-C: Kesinlikle. GroupDocs.Comparison, değişiklik vurgulama, renkler ve çıktı formatı gibi seçenekler sunarak UI'nize uyum sağlar.
-
-**S: Çok büyük veya çok sayıda eşzamanlı karşılaştırma için performansı nasıl artırabilirim?**  
-C: Daha büyük JVM yığını kullanın, akış tamponlarını ayarlayın, sonuç önbelleklemesini etkinleştirin ve karşılaştırmaları bir executor servisiyle paralel işleyin.
-
-**Ek Kaynaklar**
+**Ek kaynaklar**
 - [GroupDocs.Comparison Java Belgeleri](https://docs.groupdocs.com/comparison/java/)
 - [Tam Java API Referansı](https://reference.groupdocs.com/comparison/java/)
 - [GroupDocs Sürümleri](https://releases.groupdocs.com/comparison/java/)
@@ -345,8 +360,8 @@ C: Daha büyük JVM yığını kullanın, akış tamponlarını ayarlayın, sonu
 - [Geçici Lisans Al](https://purchase.groupdocs.com/temporary-license/)
 - [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)
 
----
+## İlgili Eğitimler
 
-**Son Güncelleme:** 2026-03-22  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2 for Java  
-**Yazar:** GroupDocs
+- [compare pdf java – Java Belge Karşılaştırma Eğitimi – Belgeleri Yükleme ve Karşılaştırma Tam Kılavuzu](/comparison/java/document-loading/)
+- [GroupDocs Nasıl Kullanılır: Java Belge Karşılaştırma Akışları – Tam Kılavuz](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [GroupDocs Comparison Java – Şifre Korunan Word Belgelerini Karşılaştır](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)

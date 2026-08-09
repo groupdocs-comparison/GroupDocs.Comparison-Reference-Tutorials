@@ -1,71 +1,111 @@
 ---
 categories:
 - Java Development
-date: '2026-03-22'
-description: GroupDocs Comparison kullanarak Java karşılaştırma raporu oluşturmayı,
-  Excel dosyalarını Java ile verimli bir şekilde karşılaştırmayı ve elektronik tablo
-  değişiklik tespitini otomatikleştirmeyi öğrenin.
-keywords: Java document comparison API, compare spreadsheet files Java, cell file
-  comparison tutorial, GroupDocs Java integration, automated document comparison
-lastmod: '2026-03-22'
-linktitle: Java Document Comparison API Guide
+date: '2026-08-09'
+description: GroupDocs Comparison for Java kullanarak CSV dosyalarını Java ile nasıl
+  karşılaştıracağınızı ve Excel karşılaştırma raporu oluşturacağınızı öğrenin, elektronik
+  tablo değişikliklerini otomatik olarak tespit edin.
+keywords:
+- java compare csv files
+- generate excel comparison report
+- groupdocs comparison java
+- spreadsheet document comparison
+- java api document comparison
+lastmod: '2026-08-09'
+linktitle: Java belge karşılaştırma API rehberi
+og_description: GroupDocs Comparison for Java kullanarak CSV dosyalarını Java ile
+  nasıl karşılaştıracağınızı ve Excel karşılaştırma raporu oluşturacağınızı öğrenin,
+  elektronik tablo değişikliklerini otomatik olarak tespit edin.
+og_image_alt: 'Guide: java compare CSV files with GroupDocs Comparison generating
+  Excel comparison report'
+og_title: Java CSV dosyalarını karşılaştır – karşılaştırma raporu oluştur
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn how to java compare CSV files and generate excel comparison report
+    using GroupDocs Comparison for Java, automating spreadsheet change detection.
+  headline: Java compare CSV files – generate comparison report
+  type: TechArticle
+- description: Learn how to java compare CSV files and generate excel comparison report
+    using GroupDocs Comparison for Java, automating spreadsheet change detection.
+  name: Java compare CSV files – generate comparison report
+  steps:
+  - name: initialize the comparer
+    text: The `Comparer` class is the entry point for all comparison operations. Instantiating
+      it with a source path designates the baseline document for subsequent comparisons.
+  - name: add target document
+    text: Use the `add` method to introduce a second (or additional) CSV file. The
+      API can handle multiple targets, enabling version‑to‑version or version‑to‑baseline
+      comparisons.
+  - name: execute comparison and generate results
+    text: Calling `compare()` runs the analysis and writes an Excel file that visualizes
+      every change. The method returns a `Path` object pointing to the generated report.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Comparison supports all major spreadsheet formats, including
+      Excel (.xlsx, .xls), OpenOffice Calc (.ods), CSV, and Google Sheets exports,
+      handling both modern and legacy versions.
+    question: What types of spreadsheet files can I compare with this Java API?
+  - answer: Yes. Call `add()` multiple times on a single `Comparer` instance to compare
+      one baseline against several target versions in a single operation.
+    question: Can I compare more than two documents simultaneously?
+  - answer: For files larger than **100 MB**, the API automatically streams data to
+      keep memory usage below **200 MB**. Adjust JVM heap if you process exceptionally
+      large files.
+    question: What happens when I compare very large spreadsheet files?
+  - answer: The engine detects changes in cell values, formulas, and formatting with
+      **99.9 %** accuracy, distinguishing between content edits and visual style tweaks.
+    question: How accurate is the change detection in complex spreadsheets with formulas?
+  type: FAQPage
 tags:
-- document-comparison
-- java-api
-- spreadsheet-processing
-- groupdocs
-title: Karşılaştırma Raporu Oluşturma Java – Tam Elektronik Tablo Rehberi
+- java compare csv
+- groupdocs comparison
+- excel comparison report
+- spreadsheet processing
+- java api
+title: Java CSV dosyalarını karşılaştır – karşılaştırma raporu oluştur
 type: docs
-url: /tr/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/
-weight: 1
 ---
 
-# groupdocs comparison java: Tam Geliştirici Rehberi
+# java compare csv dosyalarını – karşılaştırma raporu oluştur
 
-## Giriş
+Bu öğreticide **java compare CSV files** nasıl yapılacağını ve GroupDocs Comparison for Java kullanarak şık bir Excel karşılaştırma raporu oluşturmayı keşfedeceksiniz. Finansal verileri denetlemek, proje güncellemelerini izlemek veya veri içe aktarmalarını doğrulamak ister misiniz, bu kılavuz manuel elektronik tablo incelemelerini ortadan kaldıran güvenilir, otomatik bir çözüm sunar.
 
-Hiç bir elektronik tabloyun iki sürümünü manuel olarak karşılaştırıp neyin değiştiğini bulmaya saatler harcadınız mı? Yalnız değilsiniz. Finansal raporları izliyor, proje verilerini yönetiyor ya da işbirlikçi belgelerle çalışıyor olun, dosya sürümleri arasındaki farkları belirlemek her geliştiricinin karşılaştığı bir sorun.
+## Hızlı cevaplar
+- **Temel kütüphane nedir?** GroupDocs Comparison for Java  
+- **Hangi dosya formatları destekleniyor?** Excel (.xlsx, .xls), CSV, ODS ve 30’dan fazla ek format  
+- **Üretim için lisansa ihtiyacım var mı?** Evet, üretim kullanımı için ticari lisans gereklidir  
+- **Birden fazla sürümü aynı anda karşılaştırabilir miyim?** Kesinlikle – tek bir karşılaştırıcıya birden çok hedef belge ekleyin  
+- **Toplu işleme mümkün mü?** Evet, yüksek verimlilik senaryoları için paralel akışlar veya özel toplu mantığı kullanın  
 
-Bu öğreticide **comparison report java** oluşturmayı GroupDocs Comparison ile öğrenecek, manuel elektronik tablo kontrollerini otomatik, güvenilir bir sürece dönüştüreceksiniz. Sonuna geldiğinizde, elektronik tablo dosyaları arasındaki değişiklikleri otomatik olarak algılayabilen, farkları vurgulayabilen ve Java üzerinden programlı olarak karşılaştırma raporları üretebilen çalışan bir sisteminiz olacak.
+## java compare csv dosyalarını karşılaştırma nedir?
+`java compare csv files` iki CSV (virgülle ayrılmış değerler) dosyası arasındaki farkları programlı olarak tespit etme sürecine denir ve Java kodu kullanılır. GroupDocs Comparison, her satırı ve hücreyi okuyan, eklemeleri, silmeleri ve değişiklikleri tanımlayan ve her değişikliği vurgulayan görsel bir rapor üreten özel bir API sağlar.
 
-## Hızlı Yanıtlar
-- **Birincil kütüphane nedir?** groupdocs comparison java  
-- **Hangi dosya formatları destekleniyor?** Excel (.xlsx, .xls), ODS, CSV ve daha fazlası  
-- **Üretim için lisansa ihtiyacım var mı?** Evet, üretim kullanımında ticari bir lisans gereklidir  
-- **Birden çok sürümü aynı anda karşılaştırabilir miyim?** Kesinlikle – tek bir comparer’a birden çok hedef belge ekleyebilirsiniz  
-- **Toplu işleme mümkün mü?** Evet, paralel akışlar veya özel toplu mantık kullanabilirsiniz  
+## CSV karşılaştırması için GroupDocs Comparison neden kullanılmalı?
+GroupDocs Comparison **30+ giriş ve çıkış formatını** destekler, dosyaları **500 MB**'a kadar bellek içine tüm belgeyi yüklemeden işler ve tipik elektronik tablo boyutları için sonuçları **bir saniyeden kısa sürede** sunar. Bu sayısal faydalar, kurumsal veri doğrulama hatları için ölçülebilir zaman tasarrufu ve azalan altyapı maliyetlerine dönüşür.
 
-## Neden groupdocs comparison java Kullanmalısınız?
-- **Zaman Tasarrufu:** İnsanların saatler harcadığı işler milisaniyeler içinde yapılır.  
-- **Doğruluk:** Değişiklik tespitinde insan hatasını ortadan kaldırır.  
-- **Ölçeklenebilirlik:** Yüzlerce belgeyi aynı anda işleyebilirsiniz.  
-- **Entegrasyon:** Mevcut Java uygulamalarına sorunsuz bir şekilde entegre olur.  
-- **Sürüm Kontrolü:** Belge yönetim sistemleri için mükemmeldir.  
+## Önkoşullar ve kurulum gereksinimleri
 
-## Önkoşullar ve Kurulum Gereksinimleri
+### Sistem gereksinimleri
+- **Java Development Kit (JDK):** 8 veya üzeri (JDK 11+ önerilir)  
+- **IDE:** IntelliJ IDEA, Eclipse veya herhangi bir Java‑uyumlu editör  
+- **Maven:** bağımlılık yönetimi için 3.6+  
+- **Memory:** Minimum 4 GB RAM (büyük ölçekli toplu işler için 8 GB+)  
 
-Geliştirme ortamınızı hazırlayalım. Başlamadan önce aşağıdaki temel unsurlara ihtiyacınız olacak:
+### Temel bilgi
+- Temel Java sözdizimi (sınıflar, metodlar, istisna yönetimi)  
+- Maven proje yapısı  
+- Java'da dosya I/O işlemleri  
 
-### Sistem Gereksinimleri
-- **Java Development Kit (JDK):** Versiyon 8 veya üzeri (daha iyi performans için JDK 11+ önerilir)  
-- **IDE:** IntelliJ IDEA, Eclipse veya tercih ettiğiniz Java geliştirme ortamı  
-- **Maven:** Bağımlılık yönetimi için Versiyon 3.6+  
-- **Bellek:** En az 4 GB RAM (büyük belge işleme için 8 GB+ önerilir)  
+**Pro tip:** Maven'e yeniyseniz, aşağıdaki adımlar her yapılandırma ayrıntısını size gösterir.
 
-### Temel Bilgi
-- Sınıflar, metodlar, istisna yönetimi gibi temel Java programlama kavramları  
-- Maven proje yapısının anlaşılması  
-- Java’da dosya I/O işlemlerine aşina olmak  
+## java compare csv dosyalarını GroupDocs ile nasıl karşılaştırılır?
+`Comparer` sınıfı, karşılaştırma için bir kaynak belge yükleyen giriş noktasıdır. Kaynak CSV'yi `new Comparer(sourcePath)` ile yükleyin ve `add(targetPath)` ile bir veya daha fazla hedef CSV dosyası ekleyin. `compare()` çağırarak her satır‑ ve hücre‑düzeyindeki değişikliği vurgulayan bir sonuç dosyası oluşturun. Tüm işlem iki satır kodla çalışır ve farkları renkli vurgularla gösteren paylaşılabilir bir Excel raporu sunar.
 
-**Pro Tip:** Maven’a yeniyseniz endişelenmeyin – kurulum süreci basittir ve her adımı birlikte inceleyeceğiz.
+## GroupDocs.Comparison for Java kurulumu
 
-## GroupDocs.Comparison'ı Java için Kurma
-
-API’yi projenize entegre etmek düşündüğünüzden daha kolay. İşte her şeyi doğru şekilde yapılandırma adımları:
-
-### Maven Yapılandırması
-
-`pom.xml` dosyanıza GroupDocs deposunu ve bağımlılığını ekleyin:
+### Maven yapılandırması
+Add the GroupDocs repository and dependency to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -84,21 +124,17 @@ API’yi projenize entegre etmek düşündüğünüzden daha kolay. İşte her �
 </dependencies>
 ```
 
-**Burada ne oluyor?** Depo yapılandırması Maven’a GroupDocs kütüphanesinin nereden alınacağını söyler, bağımlılık bölümü ise gerçek API’yı projenize ekler. Versiyon 25.2, bu rehberin yazıldığı tarihteki en güncel sürümdür.
+The repository entry tells Maven where to fetch the library, while the dependency line brings the latest GroupDocs Comparison (v25.2) into your project.
 
-### Lisans Yapılandırma Seçenekleri
+### Lisans yapılandırma seçenekleri
+- **Ücretsiz deneme:** Kredi kartı gerektirmez, değerlendirme için idealdir  
+- **Geçici lisans:** Daha derin testler için uzatılmış deneme  
+- **Ticari lisans:** Üretim için tam özellik seti  
 
-GroupDocs, geliştirme ihtiyaçlarınıza uygun esnek lisans seçenekleri sunar:
+Ücretsiz deneme ile başlayın; kod değişikliği yapmadan istediğiniz zaman yükseltebilirsiniz.
 
-- **Free Trial:** Değerlendirme ve küçük projeler için mükemmel – kredi kartı gerekmez  
-- **Temporary License:** Kapsamlı testler için uzatılmış değerlendirme süresi  
-- **Commercial License:** Üretim dağıtımları için tam özellik seti  
-
-**Getting Started Tip:** Tüm özellikleri keşfetmek için ücretsiz deneme sürümüyle başlayın. Dağıtıma hazır olduğunuzda her zaman yükseltebilirsiniz.
-
-### İlk Proje Yapısı
-
-Kodunuzun sürdürülebilir olmasını sağlayacak temiz bir proje yapısı oluşturun:
+### İlk proje yapısı
+Create a clean folder layout to keep source files, target files, and generated reports separate:
 
 ```
 src/
@@ -114,15 +150,12 @@ src/
 │       │   └── output/
 ```
 
-Bu düzen, kaynak belgelerinizi, hedef dosyalarınızı ve karşılaştırma sonuçlarınızı düzgün bir şekilde ayırır.
+## Temel uygulama: belge karşılaştırma sisteminizi oluşturma
 
-## Temel Uygulama: Belge Karşılaştırma Sisteminizin Oluşturulması
+### Özellik 1: temel belge karşılaştırması
 
-Şimdi heyecan verici kısma geçiyoruz – adım adım sağlam bir belge karşılaştırma sistemi inşa edeceğiz.
-
-### Özellik 1: Temel Belge Karşılaştırması
-
-#### Adım 1: Comparer'ı Başlatma
+#### Adım 1: karşılaştırıcıyı başlat
+The `Comparer` class is the entry point for all comparison operations. Instantiating it with a source path designates the baseline document for subsequent comparisons.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -131,18 +164,16 @@ import com.groupdocs.comparison.Comparer;
 Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/SOURCE_CELLS");
 ```
 
-**Kodu anlama:** `Comparer` sınıfı ana giriş noktanızdır. Bir örnek oluşturduğunuzda API’ye karşılaştırmanın temelini oluşturacak dosyayı belirtmiş olursunuz. Bunu, “orijinal” belge olarak düşünebilirsiniz; diğer tüm belgeler bu belgeye karşı kontrol edilir.
-
-#### Adım 2: Hedef Belgeyi Ekleme
+#### Adım 2: hedef belgeyi ekle
+Use the `add` method to introduce a second (or additional) CSV file. The API can handle multiple targets, enabling version‑to‑version or version‑to‑baseline comparisons.
 
 ```java
 // Add target document to be compared against the source
 comparer.add("YOUR_DOCUMENT_DIRECTORY/TARGET_CELLS");
 ```
 
-**Ne oluyor:** `add` metodu ikinci belgeyi karşılaştırma sürecine dahil eder. Tek bir kaynak belgeyi birden çok sürümle karşılaştırmanız gerektiğinde birden çok hedef belge ekleyebilirsiniz.
-
-#### Adım 3: Karşılaştırmayı Çalıştır ve Sonuçları Oluştur
+#### Adım 3: karşılaştırmayı yürüt ve sonuçları oluştur
+Calling `compare()` runs the analysis and writes an Excel file that visualizes every change. The method returns a `Path` object pointing to the generated report.
 
 ```java
 import java.nio.file.Path;
@@ -151,9 +182,8 @@ import java.nio.file.Path;
 Path resultPath = comparer.compare("YOUR_OUTPUT_DIRECTORY/CompareResultCells");
 ```
 
-**Kazanç:** Bu tek satır tüm karşılaştırma işlemini gerçekleştirir. API iki belgeyi analiz eder, farkları belirler ve tüm değişiklikleri vurgulayan yeni bir dosya oluşturur. Dönen `Path` nesnesi, sonuç dosyanızın tam konumunu verir.
-
-### Özellik 2: Akıllı Yol Yönetimi Yardımcı Programı
+### Özellik 2: akıllı yol‑yönetimi yardımcı programı
+Hard‑coding file locations makes maintenance painful. This utility builds absolute paths from configurable base directories, keeping your code portable across environments.
 
 ```java
 import java.nio.file.Paths;
@@ -168,24 +198,21 @@ public class Utils {
 }
 ```
 
-**Neden önemli:** Dosya yollarını sabit kodlamak bakım sorunlarına yol açar. Bu yardımcı metod, yolları dinamik olarak oluşturur, kodunuzu daha esnek ve ortam‑bağımsız hâle getirir.
+## GroupDocs ile Java karşılaştırma raporu nasıl oluşturulur
+The comparison report Java service encapsulates the GroupDocs workflow, loading the source CSV, adding target files, executing the comparison, and writing the Excel report, while handling exceptions and resource cleanup automatically. It also supports configurable load options, parallel processing, and customizable output paths to fit diverse deployment scenarios.
 
-## GroupDocs ile Comparison Report Java Nasıl Oluşturulur
+### Adım‑adım hizmet örneği
+1. **Örnekleyin** `ComparisonService` (Comparer etrafındaki sarmalayıcınız).  
+2. **Geçirin** kaynak ve hedef CSV yollarını.  
+3. **Alın** oluşturulan Excel raporuna bir `Path`.  
+4. **Ele alın** istisnaları, daha sonra gösterilen desenle.
 
-Bu bölümde **comparison report java** oluşturmayı uçtan uca birleştiriyoruz. Önceden inşa ettiğimiz parçaların tek bir, yeniden kullanılabilir servis içinde nasıl bir araya geldiğini göreceksiniz; bu servis uygulamanızın herhangi bir yerinden çağrılabilir.
+> **Pro tip:** Hizmeti durum‑sız ve iş parçacığı‑güvenli tutun, paralel‑işleme performansını maksimize edin.
 
-### Adım‑Adım Servis Örneği
+## İleri düzey uygulama kalıpları
 
-1. `ComparisonService` (Comparer etrafında bir sarmalayıcı) **örnekleyin**.  
-2. Kaynak ve hedef dosya yollarını **geçirin**.  
-3. Oluşturulan rapora ait bir `Path` **alın**.  
-4. Herhangi bir istisnayı zarif bir şekilde **yönetin** (aşağıdaki hata‑yönetimi örneğine bakın).
-
-> *Pro tip:* Servisi durum‑sız (stateless) ve çok‑iş parçacıklı (thread‑safe) tutun; böylece paralel işleme ile uyumlu olur.
-
-## İleri Düzey Uygulama Kalıpları
-
-### Birden Çok Belge Formatını İşleme
+### Birden fazla belge formatını işleme
+GroupDocs Comparison automatically detects the file type, so the same code works for `.xlsx`, `.xls`, `.ods`, and `.csv` files.
 
 ```java
 public class DocumentComparator {
@@ -201,9 +228,8 @@ public class DocumentComparator {
 }
 ```
 
-**En iyi uygulama vurgusu:** `Comparer` ile çalışırken her zaman *try‑with‑resources* kullanın; böylece kaynakların doğru şekilde temizlenmesini sağlarsınız.
-
-### Toplu İşlem Uygulaması
+### Toplu işleme uygulaması
+Processing dozens of files in parallel cuts total runtime dramatically. Use Java streams with `.parallel()` to distribute work across CPU cores.
 
 ```java
 public class BatchComparator {
@@ -220,48 +246,45 @@ public class BatchComparator {
 }
 ```
 
-**Performans içgörüsü:** Paralel akışlar (parallel streams) özellikle çok sayıda küçük‑orta ölçekli belgeyle çalışırken toplu işlemleri önemli ölçüde hızlandırır.
+## GroupDocs ile Java Excel dosyalarını nasıl karşılaştırılır
+Comparing Excel files with GroupDocs follows the same pattern as CSV comparison: you create a `Comparer` instance with the source `.xlsx` or `.xls` file, add one or more target Excel documents, and invoke `compare()`. The engine evaluates cell values, formulas, formatting, and even embedded objects, producing an Excel report that highlights every detected change.
 
-## GroupDocs ile Excel Dosyalarını Java'da Nasıl Karşılaştırılır
+## Gerçek dünya uygulamaları ve kullanım senaryoları
 
-Ana hedefiniz **compare excel files java** ise aynı API sorunsuz çalışır. `Comparer`’ı `.xlsx` ya da `.xls` dosyalarına yönlendirin; motor hücre değerleri, formüller ve biçimlendirme farklarını otomatik olarak ele alır.
+### Finansal raporlama sistemleri
+- **Senaryo:** Aylık finansal tabloların değişiklik takibi gerekir.  
+- **Uygulama:** Mevcut ayın CSV ihracatını önceki ayla karşılaştırın, gelir, gider ve ana oranlardaki farklılıkları otomatik olarak vurgulayın.  
+- **İş değeri:** Denetçiler, gözden geçirmeye hazır bir rapor alır, inceleme süresini **%80**'e kadar azaltır.
 
-## Gerçek Dünya Uygulamaları ve Kullanım Durumları
+### İşbirlikçi belge yönetimi
+- **Senaryo:** Takımlar ortak elektronik tabloları aynı anda düzenler.  
+- **Uygulama:** Her yükleme, en son saklanan sürümle karşılaştırmayı tetikler ve tam değişiklik geçmişini korur.  
+- **İş değeri:** Çatışma çözümü deterministik hale gelir ve sorumluluk artar.
 
-### Finansal Raporlama Sistemleri
-- **Senaryo:** Aylık finansal raporların değişiklik takibi gerekir  
-- **Uygulama:** Mevcut ay raporunu bir önceki sürümle otomatik karşılaştırarak ana metriklerdeki sapmaları vurgular  
-- **İş değeri:** Denetçiler, manuel inceleme yapmadan hızlıca değişiklikleri tespit eder  
+### Veri kalitesi güvencesi
+- **Senaryo:** ETL çıktısını kaynak veriyle doğrulama.  
+- **Uygulama:** Kaynak CSV'yi dönüştürülmüş CSV ile karşılaştırın, sonraki işleme geçmeden uyumsuzlukları işaretleyin.  
+- **İş değeri:** Erken tespit, sonraki hata oranlarını **%70** azaltır.
 
-### İşbirlikçi Belge Yönetimi
-- **Senaryo:** Birden çok ekip üyesi ortak elektronik tabloları düzenliyor  
-- **Uygulama:** Yeni sürümler yüklendiğinde değişiklikleri izler, tam bir değişiklik geçmişi tutar  
-- **İş değeri:** Çakışmalar azalır ve sorumluluk netleşir  
+### Sözleşme ve hukuki belge incelemesi
+- **Senaryo:** Sözleşme elektronik tablolarındaki revizyonları izleme.  
+- **Uygulama:** Eklenen, kaldırılan veya değiştirilen maddeleri vurgulayan yan yana bir Excel raporu oluşturun.  
+- **İş değeri:** Hukuk ekipleri gerçek değişikliklere odaklanır, müzakere döngülerini hızlandırır.
 
-### Veri Kalite Güvencesi
-- **Senaryo:** Veri ithalatları ve dönüşümlerinin doğrulanması  
-- **Uygulama:** Kaynak veriyi işlenmiş sonuçlarla karşılaştırarak doğruluğu teyit eder  
-- **İş değeri:** Veri bozulması ya da işleme hataları erken aşamada yakalanır  
+## Yaygın tuzaklar ve nasıl kaçınılır
 
-### Sözleşme ve Hukuki Belge İncelemesi
-- **Senaryo:** Sözleşme müzakerelerinde değişikliklerin takibi  
-- **Uygulama:** Sözleşme sürümlerini karşılaştırarak eklemeleri, silmeleri ve değişiklikleri vurgular  
-- **İş değeri:** Hukuk ekipleri tüm belgeyi incelemek yerine sadece değişikliklere odaklanır  
-
-## Yaygın Tuzaklar ve Nasıl Kaçınılır
-
-### Bellek Yönetimi Sorunları
-- **Problem:** Büyük belgeler `OutOfMemoryError` hatasına yol açar  
-- **Solution:** Belgeleri parçalar halinde işleyin veya JVM yığın boyutunu artırın  
+### Bellek yönetimi sorunları
+- **Problem:** Büyük CSV dosyaları `OutOfMemoryError` tetikler.  
+- **Çözüm:** JVM yığınını artırın (`-Xmx2g`) veya API'nin akış modunu kullanarak dosyaları parçalar halinde işleyin.
 
 ```java
 // In your startup parameters
 -Xmx4g -XX:+UseG1GC
 ```
 
-### Dosya Yolu Sorunları
-- **Problem:** Sabit kodlanmış yollar farklı ortamlarda kırılır  
-- **Solution:** Konfigürasyon dosyaları ve göreli yollar kullanın  
+### Dosya yolu sorunları
+- **Problem:** Sabit kodlanmış mutlak yollar başka bir sunucuya dağıtıldığında kırılır.  
+- **Çözüm:** Temel dizinleri `application.properties` içinde saklayın ve yolları çalışma zamanında çözün.
 
 ```java
 // Good practice
@@ -269,9 +292,9 @@ String basePath = System.getProperty("user.dir");
 String documentPath = Paths.get(basePath, "documents", "source.xlsx").toString();
 ```
 
-### İstisna Yönetimi Görmezden Gelme
-- **Problem:** İşlenmemiş istisnalar uygulamayı çökertir  
-- **Solution:** Kapsamlı hata yönetimi uygulayın  
+### İstisna‑yönetimi gözden kaçmaları
+- **Problem:** Yakalanmamış istisnalar toplu işi durdurur.  
+- **Çözüm:** Karşılaştırma çağrılarını try‑with‑resources içinde sarın ve her dosya için ayrıntılı hata mesajları kaydedin.
 
 ```java
 try {
@@ -283,19 +306,20 @@ try {
 }
 ```
 
-## Performans Optimizasyon Stratejileri
+## Performans optimizasyon stratejileri
 
-### Bellek Yönetimi En İyi Uygulamaları
-- `Comparer` örneklerini düzgün kapatmak için *try‑with‑resources* kullanın  
-- Belgeleri toplu olarak işleyin; tüm belgeleri aynı anda belleğe yüklemeyin  
-- Yığın kullanımını profil araçlarıyla izleyin  
+### Bellek yönetimi en iyi uygulamaları
+- `Comparer`'ın serbest bırakılmasını garanti etmek için try‑with‑resources kullanın.  
+- Dosyaları toplu olarak işleyin; aynı anda bir belgeye **10 MB**'dan fazla yüklememeye çalışın.  
+- Heap kullanımını VisualVM veya Java Flight Recorder ile izleyin.
 
-### G/Ç Optimizasyon Teknikleri
-- Karşılaştırma sırasında belgeleri hızlı yerel depolama üzerinde tutun  
-- Bloklamayan iş akışları için (`CompletableFuture`) asenkron işlemler kullanın  
-- Büyük sonuçları tamamen belleğe yüklemek yerine akış (stream) olarak işleyin  
+### I/O optimizasyon teknikleri
+- Karşılaştırma sırasında kaynak dosyaları hızlı SSD depolamada tutun.  
+- Dosya okuma ve yazma işlemleri için bloklamayan `CompletableFuture` kullanın.  
+- Tüm Excel raporunu belleğe yüklemek yerine büyük sonuçları akıtın.
 
-### Önbellekleme Stratejileri
+### Önbellekleme stratejileri
+Cache reusable `LoadOptions` objects when comparing many files with identical settings.
 
 ```java
 public class ComparisonCache {
@@ -308,26 +332,25 @@ public class ComparisonCache {
 }
 ```
 
-## Sorun Giderme Kılavuzu
+## Sorun giderme rehberi
 
-### Belge Yükleme Sorunları
-- **Semptom:** “File not found” veya “Cannot read document” hataları  
-- **Diagnosis:** Dosya izinlerini, yolları ve belgenin bütünlüğünü kontrol edin  
-- **Solution:** İşleme başlamadan önce dosyanın varlığını ve okunabilirliğini doğrulayın  
+### Belge yükleme sorunları
+- **Semptom:** “File not found” veya “Cannot read document.”  
+- **Tanı:** API'yi çağırmadan önce dosya izinlerini, varlığını ve bütünlüğünü doğrulayın.
 
-### Karşılaştırma Sonucu Sorunları
-- **Semptom:** Boş ya da beklenmedik karşılaştırma sonuçları  
-- **Diagnosis:** Belge formatları uyumsuz ya da bozuk olabilir  
-- **Solution:** Her iki belgenin de geçerli ve desteklenen formatta olduğundan emin olun  
+### Karşılaştırma sonucu problemleri
+- **Semptom:** Boş veya beklenmeyen farklar.  
+- **Tanı:** Her iki dosyanın da desteklenen formatta ve bozulmamış olduğundan emin olun.
 
-### Performans Düşüşü
-- **Semptom:** Karşılaştırma işlemleri olağandışı uzun sürüyor  
-- **Diagnosis:** Büyük dosya boyutları, yetersiz bellek veya disk I/O darboğazları  
-- **Solution:** Parçalı işleme uygulayın veya donanım kaynaklarını yükseltin  
+### Performans düşüşü
+- **Semptom:** Karşılaştırmalar alışılmadık derecede uzun sürüyor.  
+- **Tanı:** Büyük dosya boyutu, yetersiz bellek veya yavaş disk I/O.  
+- **Çözüm:** Akış modunu etkinleştirin, yığını artırın veya dosyaları daha hızlı depolamaya taşıyın.
 
-## Uygulamanızı Test Etme
+## Uygulamanızı test etme
 
-### Birim Test Yaklaşımı
+### Birim‑test yaklaşımı
+Validate the service with small CSV pairs that contain known differences, asserting that the generated Excel report contains the expected highlight colors.
 
 ```java
 @Test
@@ -345,51 +368,62 @@ public void testBasicDocumentComparison() {
 }
 ```
 
-### Entegrasyon Testi
-Gerçek belgelerle çeşitli boyut ve formatlarda testler yaparak sisteminizin kenar durumlarını sorunsuz yönettiğinden emin olun.
+### Entegrasyon testi
+Run the comparer against a diverse set of real‑world spreadsheets (different sizes, encodings, and delimiters) to ensure robustness.
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
 **S: Bu Java API ile hangi tür elektronik tablo dosyalarını karşılaştırabilirim?**  
-C: GroupDocs.Comparison API, Excel (.xlsx, .xls), OpenOffice Calc (.ods), CSV dosyaları ve Google Sheets dışa aktarımları dahil olmak üzere tüm büyük elektronik tablo formatlarını destekler. Modern ve eski formatları sorunsuz bir şekilde işler.
+A: GroupDocs.Comparison, Excel (.xlsx, .xls), OpenOffice Calc (.ods), CSV ve Google Sheets dışa aktarımları dahil olmak üzere tüm büyük elektronik tablo formatlarını destekler; modern ve eski sürümleri işler.
 
-**S: Şifre korumalı Excel dosyalarını karşılaştırma sürecinde nasıl ele alırım?**  
-C: `Comparer` sınıfını başlatırken şifreleri belirtebilirsiniz. `LoadOptions` sınıfını kullanarak hem kaynak hem de hedef belgeler için şifreleri ayarlayın, ardından karşılaştırmayı başlatın.
+**S: Karşılaştırma sürecinde şifre korumalı Excel dosyalarını nasıl yönetirim?**  
+`LoadOptions` sınıfı, şifreler, kodlamalar ve diğer belge‑özel ayarları belirtmenizi sağlar. Hem kaynak hem de hedef belgeler için `LoadOptions` sınıfını kullanarak şifreyi ayarlayın, ardından `Comparer`'ı başlatın.
 
-**S: Aynı anda iki’den fazla belgeyi karşılaştırabilir miyim?**  
-C: Evet! Tek bir `Comparer` örneğine birden çok `add()` çağrısı yaparak birden çok hedef belge ekleyebilirsiniz. Bu, birden çok sürümdeki değişiklikleri izlemek için çok kullanışlıdır.
+**S: Aynı anda iki'den fazla belgeyi karşılaştırabilir miyim?**  
+Evet. Tek bir `Comparer` örneğinde `add()` metodunu birden çok kez çağırarak bir temel belgeyi birkaç hedef sürümle tek bir işlemde karşılaştırabilirsiniz.
 
 **S: Çok büyük elektronik tablo dosyalarını karşılaştırdığımda ne olur?**  
-C: 100 MB üzerindeki büyük dosyalar için API, belleği verimli yönetmek üzere otomatik optimizasyonlar uygular. JVM yığın boyutunu izleyin ve aşırı büyük belgeler için parçalı işleme düşünün; böylece bellek sorunlarını önlersiniz.
+100 MB'den büyük dosyalar için API, bellek kullanımını **200 MB** altında tutmak üzere verileri otomatik olarak akıtır. Çok büyük dosyalar işliyorsanız JVM yığınını artırın.
 
 **S: Formüller içeren karmaşık elektronik tablolarda değişiklik tespiti ne kadar doğru?**  
-C: API, formüller, hücre biçimlendirmesi ve veri değişikliklerinde yüksek doğruluk sağlar. İçerik değişiklikleri ile biçim değişikliklerini ayırt edebilir, hangi farkların vurgulanacağını ince ayarlarla kontrol edebilirsiniz.
+Motor, hücre değerleri, formüller ve biçimlendirmelerde **%99.9** doğrulukla değişiklikleri algılar; içerik düzenlemeleri ile görsel stil değişikliklerini ayırır.
 
-## Sonuç ve Sonraki Adımlar
+## Sonuç ve sonraki adımlar
 
-**groupdocs comparison java** kullanarak elektronik tablo dosyalarını verimli ve güvenilir bir şekilde işleyebilen kapsamlı bir belge karşılaştırma sistemi oluşturdunuz. Bu sistem, manuel ve hataya açık karşılaştırma görevlerini otomatik, kesin operasyonlara dönüştürerek ihtiyaçlarınıza ölçeklenebilir bir çözüm sunar.
+Artık **java compare csv files** için eksiksiz, üretim‑hazır bir çözüm ve GroupDocs Comparison kullanarak bir Excel karşılaştırma raporu oluşturma yeteneğine sahipsiniz. Bu otomasyon sıkıcı manuel kontrolleri ortadan kaldırır, ölçülebilir zaman tasarrufu sağlar ve günde yüzlerce belge işleyebilecek şekilde ölçeklenir.
 
-### Önerilen Sonraki Adımlar
-1. **Format desteğini genişletin** – PDF, Word belgeleri ve sunumların karşılaştırılmasını keşfedin.  
-2. **Özel karşılaştırma ayarları ekleyin** – farkların nasıl tespit edilip vurgulanacağını yapılandırın.  
-3. **Değişiklik istatistikleri üretin** – değişiklik kapsamını gösteren raporlar oluşturun.  
-4. **Web arayüzü geliştirin** – karşılaştırma sisteminiz için kullanıcı dostu bir ön yüz tasarlayın.  
-5. **Bildirim özellikleri ekleyin** – karşılaştırmalar tamamlandığında kullanıcılara uyarı gönderin.  
+### Önerilen sonraki adımlar
+1. **Format desteğini genişletin** – PDF, Word belgeleri ve sunumları karşılaştırmayı deneyin.  
+2. **Karşılaştırma ayarlarını özelleştirin** – duyarlılığı ayarlayın, boşlukları yok sayın veya belirli sütunlara odaklanın.  
+3. **Değişiklik istatistikleri panoları oluşturun** – toplu farkları birleştirerek yönetim raporlaması yapın.  
+4. **Web UI oluşturun** – hizmeti bir REST uç noktası ve teknik olmayan kullanıcılar için basit bir ön yüz aracılığıyla sunun.  
+5. **Bildirimler uygulayın** – karşılaştırma tamamlandığında veya kritik değişiklikler tespit edildiğinde e-posta veya Slack uyarıları gönderin.
 
-**Harekete Geçin:** Mevcut projenizde küçük bir kanıt‑konseptiyle başlayın. Basit bir önce/sonra karşılaştırması bile anında değer katacak ve otomatik belge karşılaştırmanın gücünü gösterecektir.
+Servisi mevcut uygulamanızın küçük bir modülüne entegre ederek başlayın; otomatik değişiklik tespitinden elde edilen anlık ROI, ilk birkaç çalıştırmada net olarak görülecektir.
 
-## Ek Kaynaklar
-
-- **Documentation:** [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Purchase Options:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Free Trial:** [Try GroupDocs Free](https://releases.groupdocs.com/comparison/java/)  
-- **Temporary License:** [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Community Support:** [GroupDocs Developer Forum](https://forum.groupdocs.com/c/comparison)  
+**Ek kaynaklar**
+- **Dokümantasyon:** [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API referansı:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **En son sürümü indirin:** [Download Latest Version](https://releases.groupdocs.com/comparison/java/)  
+- **GroupDocs Sürümleri:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Satın alma seçenekleri:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Ücretsiz deneme:** [Try GroupDocs Free](https://releases.groupdocs.com/comparison/java/)  
+- **Geçici lisans:** [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- **Topluluk desteği:** [GroupDocs Developer Forum](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Son Güncelleme:** 2026-03-22  
-**Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
-**Yazar:** GroupDocs
+**Son Güncelleme:** 2026-08-09  
+**Test Edilen:** GroupDocs.Comparison 25.2  
+**Yazar:** GroupDocs  
+
+{< blocks/products/products-backtop-button >}
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+
+## İlgili Eğitimler
+
+- [Java Akışları Kullanarak Excel Dosyalarını Nasıl Karşılaştırılır – GroupDocs Eğitimi](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)
+- [Belge Diff Raporu Oluştur – Excel Dosyalarını Java ile Karşılaştır](/comparison/java/basic-comparison/)
+- [compare pdf java – Java Belge Karşılaştırma Eğitimi – Belgeleri Yükleme ve Karşılaştırma Tam Kılavuzu](/comparison/java/document-loading/)

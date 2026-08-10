@@ -1,72 +1,77 @@
 ---
 categories:
 - Java Development
-date: '2025-12-28'
-description: Lär dig hur du jämför Word‑dokument i Java med GroupDocs.Comparison.
-  Formatera infogade objekt, markera ändringar och skapa professionella diff‑utdata
-  med anpassad stil.
+date: '2026-02-28'
+description: Lär dig hur du jämför dokument i Java med GroupDocs.Comparison. Styla
+  insatta element, markera förändringar och producera professionella diff‑utdata med
+  anpassad styling.
 keywords: java document comparison customization, groupdocs comparison java tutorial,
   document diff styling java, java document change tracking, customize document comparison
   styles
-lastmod: '2025-12-28'
+lastmod: '2026-02-28'
 linktitle: Java Document Comparison Customization
 tags:
 - document-comparison
 - java-tutorial
 - groupdocs
 - document-styling
-title: Jämför Word-dokument i Java – Styla infogade objekt med GroupDocs
+title: Hur man jämför dokument i Java – Styla infogade objekt med GroupDocs
 type: docs
 url: /sv/java/comparison-options/groupdocs-comparison-java-custom-inserted-item-styles/
 weight: 1
 ---
 
-# Jämför Word‑dokument i Java – Styla infogade objekt med GroupDocs
+# Så jämför du dokument i Java – Styla infogade objekt med GroupDocs
 
 ## Introduktion
 
-Har du någonsin försökt jämföra två dokument och slutat med att anstränga dig för att se en röra av omarkerade förändringar? Du är inte ensam. Oavsett om du spårar kontraktsrevisioner, hanterar koddokumentation eller samarbetar på tekniska specifikationer, kan **document comparison in Java** vara ett riktigt huvudvärk utan korrekt styling.
+Har du någonsin försökt jämföra två dokument och slutat med att anstränga ögonen över en röra av omarkerade ändringar? Du är inte ensam. Oavsett om du spårar kontraktsrevisioner, hanterar koddokumentation eller samarbetar på tekniska specifikationer, kan **how to compare docs** i Java vara ett riktigt huvudvärk utan korrekt styling.
 
-Det är så här: råa dokument‑diffar är ungefär lika hjälpsamma som en chokladtekanna. Här kommer **GroupDocs.Comparison for Java** till undsättning. Detta kraftfulla bibliotek hittar inte bara skillnader – det låter dig styla dem exakt som du vill, så att förändringarna verkligen poppar ut på sidan.
+Saken är den: råa dokumentdiffar är ungefär lika hjälpsamma som en chokladtekopp. Det är här **GroupDocs.Comparison for Java** kommer till undsättning. Detta kraftfulla bibliotek hittar inte bara skillnader – det låter dig styla dem exakt som du vill, så att förändringarna verkligen sticker ut på sidan.
 
-I den här omfattande guiden kommer du att upptäcka hur du förvandlar tråkiga dokumentjämförelser till visuellt imponerande, professionella resultat. Vi täcker allt från grundläggande installation till avancerade styling‑tekniker, plus verkliga scenarier där detta verkligen spelar roll. Är du redo att få dina dokument‑diffar att glänsa?
+I den här omfattande guiden kommer du att upptäcka hur du förvandlar tråkiga dokumentjämförelser till visuellt imponerande, professionella resultat. Vi täcker allt från grundläggande installation till avancerade stylingtekniker, samt verkliga scenarier där detta verkligen spelar roll. Är du redo att få dina dokumentdiffar att glänsa?
 
 ## Snabba svar
-- **Vilket bibliotek låter mig jämföra Word‑dokument i Java?** GroupDocs.Comparison for Java.  
+- **Vilket bibliotek låter mig jämföra Word-dokument i Java?** GroupDocs.Comparison for Java.  
 - **Hur kan jag markera infogad text?** Använd `StyleSettings` med `setHighlightColor`.  
 - **Behöver jag en licens för produktion?** Ja, en kommersiell licens krävs.  
-- **Kan jag också jämföra PDF‑filer?** Absolut – samma API fungerar för PDF, Excel, PPT osv.  
-- **Är asynkron bearbetning möjlig?** Ja, paketera jämförelsen i en `CompletableFuture` eller liknande.
+- **Kan jag också jämföra PDF-filer?** Absolut – samma API fungerar för PDF, Excel, PPT osv.  
+- **Är asynkron bearbetning möjlig?** Ja, omslut jämförelsen i en `CompletableFuture` eller liknande.
 
-## Varför styling av dokumentjämförelser faktiskt spelar roll
+## Så jämför du dokument i Java med anpassad styling
 
-Innan vi dyker ner i koden, låt oss prata om varför du bör bry dig om **java document comparison customization**. Det handlar inte bara om att göra saker snygga (fast det är trevligt också).
+Innan vi dyker ner i koden, låt oss prata om varför du bör bry dig om **java document comparison customization**. Det handlar inte bara om att göra saker snygga (även om det är trevligt).
 
 **Verklig påverkan**
-- **Juridiska team** – Upptäck omedelbart kontraktsändringar utan att missa kritiska klausuler.  
-- **Utvecklingsteam** – Följ dokumentationsuppdateringar mellan versioner med kristallklarhet.  
-- **Innehållsteam** – Samarbeta på förslag samtidigt som ni behåller visuell hierarki.  
-- **Efterlevnadsansvariga** – Säkerställ att regulatoriska dokument uppfyller revisionskrav.
+- **Legal Teams** – Upptäck omedelbart kontraktsändringar utan att missa kritiska klausuler.  
+- **Development Teams** – Spåra dokumentationsuppdateringar över versioner med kristallklarhet.  
+- **Content Teams** – Samarbeta på förslag samtidigt som du behåller den visuella hierarkin.  
+- **Compliance Officers** – Säkerställ att regulatoriska dokument uppfyller revisionskrav.
 
-Skillnaden mellan stylade och o‑stylade jämförelser? Det är som att jämföra en professionell presentation med klottrade anteckningar. Båda innehåller information, men bara den ena ger resultat.
+Skillnaden mellan stylade och ostylade jämförelser? Det är som att jämföra en professionell presentation med klottrade anteckningar. Båda innehåller information, men bara den ena ger resultat.
 
 ## Förutsättningar och installationskrav
 
-Innan vi börjar bygga fantastiska dokumentjämförelser, låt oss försäkra oss om att du har allt du behöver:
+Innan vi börjar bygga fantastiska dokumentjämförelser, låt oss säkerställa att du har allt i ordning:
 
 ### Vad du behöver
 - **Java Development Kit (JDK)** – Version 8 eller senare (JDK 11+ rekommenderas).  
 - **Maven eller Gradle** – För beroendehantering.  
 - **IDE** – IntelliJ IDEA, Eclipse eller VS Code med Java‑tillägg.  
 - **Grundläggande Java‑kunskaper** – Strömmar, try‑with‑resources, OOP‑koncept.  
-- **Exempeldokument** – Word‑filer, PDF‑filer eller andra stödda format för testning.
+- **Exempeldokument** – Word‑dokument, PDF‑filer eller andra stödda format för testning.
 
 ### Tips för miljöinställning
+
 Om du är ny på Java‑dokumentbehandling, börja med enkla Word‑dokument (`.docx`) innan du går vidare till mer komplexa format. De är enklare att felsöka och resultaten syns omedelbart.
 
-## Installera GroupDocs.Comparison för Java
+## Så jämför du PDF‑dokument i Java
 
-Låt oss få detta bibliotek att fungera i ditt projekt. Installationen är enkel, men det finns några fallgropar att hålla utkik efter.
+Samma **GroupDocs.Comparison**‑API som driver Word‑diff‑styling hanterar också **compare pdf documents java**‑scenarier direkt ur lådan. Peka bara jämförare mot en PDF‑källa och mål, och tillämpa samma `StyleSettings` som du använde för Word. Ingen extra kod behövs – bara ändra filändelserna.
+
+## Så installerar du GroupDocs.Comparison för Java
+
+Låt oss få detta bibliotek igång i ditt projekt. Installationen är enkel, men det finns några fallgropar att vara medveten om.
 
 ### Maven‑konfiguration
 
@@ -90,15 +95,14 @@ Lägg till detta i din `pom.xml` (och ja, repository‑URL:en är avgörande –
 </dependencies>
 ```
 
-### Licensaspekter
+### Licensöverväganden
 
 Här är något som många utvecklare förbiser: **GroupDocs.Comparison kräver en licens** för produktionsanvändning. Här är dina alternativ:
+- **Free Trial** – Perfekt för testning – hämta den från [GroupDocs website](https://releases.groupdocs.com/comparison/java/)
+- **Temporary License** – Bra för utveckling och proof‑of‑concepts.  
+- **Commercial License** – Krävs för produktionsdistributioner.
 
-- **Gratis provversion** – Perfekt för testning – hämta den från [GroupDocs‑webbplatsen](https://releases.groupdocs.com/comparison/java/)  
-- **Tillfällig licens** – Bra för utveckling och proof‑of‑concepts.  
-- **Kommersiell licens** – Krävs för produktionsdistributioner.
-
-**Pro‑tips**: Börja med gratis provversion för att validera ditt användningsfall innan du köper licens.
+**Pro Tip**: Börja med gratisprovperioden för att validera ditt användningsfall innan du förbinder dig till en licens.
 
 ### Grundläggande initiering och kontroll
 
@@ -118,22 +122,21 @@ try (Comparer comparer = new Comparer("path/to/source/document")) {
 
 ## Komplett implementationsguide
 
-Nu blir det roligt – låt oss bygga ett dokumentjämförelsesystem med **custom styling for inserted items**. Vi delar upp det steg‑för‑steg så att du inte går vilse i detaljerna.
+Nu till den roliga delen – låt oss bygga ett dokumentjämförelsesystem med **custom styling for inserted items**. Vi delar upp det steg för steg så att du inte går vilse i detaljerna.
 
 ### Förstå arkitekturen
 
 Innan du hoppar in i koden, så här fungerar GroupDocs.Comparison:
-
-1. **Källdokument** – Ditt ursprungliga/baslinjedokument.  
-2. **Måldokument** – Den modifierade versionen du vill jämföra med.  
-3. **Stilkonfiguration** – Regler för hur förändringar ska visas.  
-4. **Utdata‑dokument** – Slutresultatet med stylade skillnader.
+1. **Source Document** – Ditt original‑/basdokument.  
+2. **Target Document** – Den modifierade versionen du vill jämföra mot.  
+3. **Style Configuration** – Regler för hur förändringar ska visas.  
+4. **Output Document** – Den slutgiltiga jämförelsen med stylade skillnader.
 
 ### Steg‑för‑steg‑implementation
 
 #### Steg 1: Hantering av dokumentvägar och strömuppsättning
 
-Börja med att konfigurera filhantering. Att använda strömmar är avgörande för minnes‑effektivitet, särskilt med stora dokument:
+Först, konfigurera filhantering. Att använda strömmar är avgörande för minneseffektivitet, särskilt med stora dokument:
 
 ```java
 String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD";
@@ -147,11 +150,11 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 }
 ```
 
-**Varför strömmar är viktiga** – De är minnes‑effektiva och hanterar resurshantering automatiskt. Tro mig, du vill inte ha minnesläckor i produktion.
+**Why Streams Matter** – De är minnes‑effektiva och hanterar automatiskt resurshantering. Tro mig, du vill inte hantera minnesläckor i produktion.
 
-#### Steg 2: Initiera Comparer och lägg till måldokument
+#### Steg 2: Initiera Comparer och lägg till mål‑dokument
 
-Skapa nu `Comparer`‑objektet och tala om vilka dokument som ska jämföras:
+Skapa nu `Comparer`‑objektet och ange vilka dokument det ska arbeta med:
 
 ```java
 try (Comparer comparer = new Comparer(sourceStream)) {
@@ -161,11 +164,11 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 }
 ```
 
-**Vanligt misstag** – Att glömma att anropa `add()`. Jag har sett utvecklare spendera timmar på att debugga saknade jämförelser, bara för att inse att de aldrig lagt till måldokumentet.
+**Common Mistake** – Att glömma att anropa `add()`. Jag har sett utvecklare spendera timmar på att felsöka saknade jämförelser, bara för att inse att de aldrig lagt till mål‑dokumentet.
 
 #### Steg 3: Konfigurera anpassade stilinställningar
 
-Här blir **java document diff styling** riktigt intressant. Låt oss skapa iögonfallande stilar för infogade objekt:
+Det är här **java document diff styling** blir intressant. Låt oss skapa iögonfallande stilar för infogade objekt:
 
 ```java
 import com.groupdocs.comparison.options.style.StyleSettings;
@@ -177,7 +180,7 @@ StyleSettings insertedItemStyle = new StyleSettings.Builder()
     .build();
 ```
 
-**Alternativ för stilanpassning** – Du kan också konfigurera fet text, kursiv formatering, genomstrykning och mer. Nyckeln är att hitta rätt balans mellan synlighet och läsbarhet.
+**Style Customization Options** – Du kan också konfigurera fet text, kursiv formatering, genomstrykning och mer. Nyckeln är att hitta rätt balans mellan synlighet och läsbarhet.
 
 #### Steg 4: Tillämpa inställningar och kör jämförelsen
 
@@ -193,15 +196,15 @@ CompareOptions compareOptions = new CompareOptions.Builder()
 comparer.compare(resultStream, compareOptions);
 ```
 
-**Prestanda‑notering** – Metoden `compare()` gör det tunga lyftet. För stora dokument kan du förvänta dig några sekunders bearbetningstid; det är normalt.
+**Performance Note** – `compare()`‑metoden gör det tunga arbetet. För stora dokument, förvänta dig några sekunders bearbetningstid; det är normalt.
 
-## Avancerade styling‑tekniker
+## Avancerade stylingtekniker
 
 Vill du ta din **document comparison customization** till nästa nivå? Här är några avancerade knep.
 
 ### Multi‑style‑konfiguration
 
-Styla olika förändringstyper unikt:
+Styla olika ändringstyper unikt:
 
 ```java
 // Style for inserted items (additions)
@@ -225,11 +228,11 @@ CompareOptions options = new CompareOptions.Builder()
 
 ### Villkorlig styling baserad på innehåll
 
-För sofistikerade scenarier kan du inspektera innehållstyp (t.ex. tabeller vs. stycken) innan du applicerar en stil. Detta innebär vanligtvis anpassade callbacks – se GroupDocs API‑dokumentationen för `IStyleCallback`‑implementationer.
+För sofistikerade scenarier kan du inspektera innehållstypen (t.ex. tabeller vs. stycken) innan du tillämpar en stil. Detta innebär vanligtvis anpassade callbacks – se GroupDocs API‑dokumentationen för `IStyleCallback`‑implementationer.
 
 ## Vanliga problem och felsökning
 
-Låt mig spara dig lite debugging‑tid genom att gå igenom de vanligaste problemen.
+Låt mig spara dig tid på felsökning genom att gå igenom de vanligaste problemen.
 
 ### Filvägsproblem  
 **Symptom**: `FileNotFoundException` eller `IllegalArgumentException`  
@@ -253,15 +256,15 @@ java -Xmx2G -jar your-application.jar
 
 ### Licensfel  
 **Symptom**: Vattenstämplar på utdata eller licensrelaterade undantag  
-**Lösning**: Verifiera att licensfilen är korrekt laddad och inte har gått ut.
+**Lösning**: Verifiera att din licensfil är korrekt inläst och inte har gått ut.
 
 ### Versionskompatibilitetsproblem  
 **Symptom**: `NoSuchMethodError` eller `ClassNotFoundException`  
-**Lösning**: Säkerställ att versionen av GroupDocs.Comparison matchar dina Java‑versionskrav.
+**Lösning**: Säkerställ att GroupDocs.Comparison‑versionen matchar dina Java‑versionskrav.
 
 ## Prestandaoptimering och bästa praxis
 
-När du arbetar med **document comparison in Java** i stor skala spelar prestanda roll. Här är beprövade strategier.
+När du hanterar **document comparison in Java** i stor skala, spelar prestanda roll. Här är beprövade strategier.
 
 ### Bästa praxis för minneshantering
 
@@ -274,7 +277,7 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 
 ### Batch‑behandling för flera dokument
 
-När du jämför många dokumentpar, behandla dem i batcher för att undvika minnesutarmning:
+När du jämför många dokumentpar, bearbeta dem i batcher för att undvika minnesutarmning:
 
 ```java
 public void compareBatch(List<DocumentPair> documents, int batchSize) {
@@ -290,7 +293,7 @@ public void compareBatch(List<DocumentPair> documents, int batchSize) {
 
 ### Asynkron bearbetning
 
-För webbapplikationer, överväg async‑bearbetning för att hålla UI‑responsivt:
+För webbapplikationer, överväg asynkron bearbetning för att hålla UI responsivt:
 
 ```java
 CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
@@ -329,17 +332,16 @@ public class DocumentComparisonService {
 
 ### Mikrotjänstarkitektur
 
-För mikrotjänst‑distributioner, överväg dessa mönster:
-
-- **Dokumentlagring** – Använd molnlagring (AWS S3, Google Cloud Storage) för in‑ och utdatafiler.  
-- **Kö‑behandling** – Hantera jämförelsesökanden asynkront med ett meddelandekö (RabbitMQ, Kafka).  
+För mikrotjänstdistributioner, överväg dessa mönster:
+- **Document Storage** – Använd molnlagring (AWS S3, Google Cloud Storage) för in‑/utdatafiler.  
+- **Queue Processing** – Hantera jämförelseförfrågningar asynkront med en meddelandekö (RabbitMQ, Kafka).  
 - **Caching** – Cacha resultat för ofta jämförda dokumentpar.
 
 ## Säkerhetsaspekter
 
 När du hanterar dokumentjämförelser i produktion är säkerhet av största vikt.
 
-### Inmatningsvalidering
+### Validering av indata
 
 Validera alltid uppladdade dokument:
 
@@ -353,74 +355,71 @@ public boolean isValidDocument(InputStream documentStream) {
 ```
 
 ### Hantering av känslig data
-
-- **Temporära filer** – Radera dem omedelbart efter bearbetning.  
-- **Minnesrensning** – Nollställ byte‑arrayer som innehåller konfidentiell text.  
-- **Åtkomstkontroller** – Tvinga autentisering och roll‑baserad auktorisation.
+- **Temporary Files** – Radera dem omedelbart efter bearbetning.  
+- **Memory Clearance** – Nollställ byte‑arrayer som innehåller konfidentiell text.  
+- **Access Controls** – Upprätthåll autentisering och roll‑baserad auktorisation.
 
 ## Verkliga användningsfall och tillämpningar
 
-Här är där **java document change tracking** verkligen lyser:
+Här är där **java document change tracking** verkligen glänser:
 
-### Juridiska granskningsarbetsflöden
-Advokatbyråer använder stylade jämförelser för att markera kontraktsändringar, spåra revisionshistorik och skapa kundklara presentationer.
+### Juridiska dokumentgranskningsarbetsflöden
+Advokatbyråer använder stylade jämförelser för att markera kontraktsändringar, spåra revisionshistorik och skapa klientklara presentationer.
 
 ### Hantering av programvarudokumentation
 Utvecklingsteam genererar stylade changelogs, spårar API‑dokumentuppdateringar och håller tekniska specifikationer versionerade med visuell klarhet.
 
-### Innehållssamarbete
-Marknadsföringsteam samarbetar på förslag, upprätthåller varumärkes‑konsekventa dokument och uppfyller regulatoriska revisionsspår.
+### Innehållssamarbetsscenarier
+Marknadsteam samarbetar på förslag, upprätthåller varumärkes‑konsekventa dokument och uppfyller regulatoriska revisionsspår.
 
-### Akademiska och forskningsrelaterade tillämpningar
-Forskare spårar manuskriptrevisioner, visualiserar uppdateringar av bidragsansökningar och hanterar avhandlingar med tydliga förändringsindikatorer.
+### Akademiska och forskningsapplikationer
+Forskare spårar manuskriptrevisioner, visualiserar uppdateringar av bidragsförslag och hanterar avhandlingar med tydliga förändringsindikatorer.
 
 ## Slutsats och nästa steg
 
-Du har nu bemästrat konsten att **java document comparison customization** med GroupDocs.Comparison! Från grundläggande styling till avancerade optimeringstekniker har du alla verktyg du behöver för att skapa professionella, visuellt tilltalande dokumentjämförelser.
+Du har nu bemästrat konsten av **java document comparison customization** med GroupDocs.Comparison! Från grundläggande styling till avancerade optimeringstekniker har du alla verktyg som behövs för att skapa professionella, visuellt tilltalande dokumentjämförelser.
 
-**Viktiga insikter**
-- Rätt styling förvandlar råa diffar till handlingsbara insikter.  
+**Viktiga slutsatser**
+- Korrekt styling omvandlar råa diffar till handlingsbara insikter.  
 - Prestandaoptimering är avgörande för produktionsarbetsbelastningar.  
-- Säkerhet och licensiering måste tas om hand tidigt.  
+- Säkerhet och licensiering måste hanteras tidigt.  
 
-**Vad du bör göra härnäst**
+**Vad du ska göra härnäst**
 1. Experimentera med olika stilkombinationer för din domän.  
 2. Utforska ytterligare GroupDocs‑funktioner som metadata‑jämförelse.  
 3. Integrera jämförelsetjänsten i ditt befintliga dokumenthanteringsflöde.  
-4. Gå med i [GroupDocs‑communityn](https://forum.groupdocs.com) för avancerade tips och tricks.
+4. Gå med i [GroupDocs community](https://forum.groupdocs.com) för avancerade tips och tricks.
 
-Kom ihåg: Bra dokumentjämförelser handlar inte bara om att hitta skillnader – de handlar om att presentera dessa skillnader på ett sätt som driver handling. Nu kör du och bygger något fantastiskt!
+Kom ihåg: bra dokumentjämförelser handlar inte bara om att hitta skillnader – de handlar om att presentera dessa skillnader på ett sätt som driver handling. Nu, bygg något fantastiskt!
 
 ## Vanliga frågor
 
-**Q: Vilka systemkrav har GroupDocs.Comparison i produktion?**  
+**Q: Vad är systemkraven för GroupDocs.Comparison i produktion?**  
 A: Du behöver JDK 8+ (JDK 11+ rekommenderas), minst 2 GB RAM för medelstora dokument, och tillräckligt med diskutrymme för temporära bearbetningsfiler. För högvolymscenarier, överväg 4 GB+ RAM.
 
-**Q: Kan jag jämföra andra dokument än Word‑filer med anpassad styling?**  
+**Q: Kan jag jämföra dokument förutom Word-filer med anpassad styling?**  
 A: Absolut! GroupDocs.Comparison stödjer PDF, Excel, PowerPoint, vanlig text och många andra format. Samma styling‑API fungerar för alla stödda typer.
 
 **Q: Hur hanterar jag mycket stora dokument (100 MB+) effektivt?**  
-A: Använd streaming‑bearbetning, öka JVM‑heap (`-Xmx4G` eller högre), bearbeta dokument i delar och överväg asynkron körning för att undvika time‑outs.
+A: Använd ström‑bearbetning, öka JVM‑heap (`-Xmx4G` eller högre), bearbeta dokument i delar och överväg asynkron körning för att undvika tidsgränser.
 
 **Q: Är det möjligt att styla olika typer av förändringar på olika sätt?**  
 A: Ja. Du kan konfigurera separata stilar för infogade, raderade och modifierade objekt med `setInsertedItemStyle()`, `setDeletedItemStyle()` och `setChangedItemStyle()`.
 
-**Q: Hur ser licensmodellen ut för kommersiell användning?**  
-A: GroupDocs.Comparison kräver en kommersiell licens för produktion. Alternativen inkluderar utvecklar‑, site‑ och företagslicenser. Se den officiella pris‑sidan för de senaste satserna.
+**Q: Vad är licensmodellen för kommersiell användning?**  
+A: GroupDocs.Comparison kräver en kommersiell licens för produktion. Alternativen inkluderar utvecklar‑, site‑ och företagslicenser. Kontrollera den officiella prissidan för de senaste priserna.
 
-**Q: Hur integrerar jag detta med molnlagringstjänster?**  
+**Q: Hur kan jag integrera detta med molnlagringstjänster?**  
 A: Ladda ner käll‑ och målfilen till strömmar med molnleverantörens SDK (AWS S3, Google Cloud Storage, Azure Blob), kör jämförelsen och ladda sedan upp resultatet tillbaka till molnet.
 
 **Q: Kan jag anpassa utdataformatet för jämförelsens resultat?**  
-A: Ja. API‑et kan generera DOCX, PDF, HTML och andra format, och du kan styra layout, metadata och styling för varje utdataformat.
+A: Ja. API‑et kan generera DOCX, PDF, HTML och andra format, och du kan kontrollera layout, metadata och styling för varje utdataformat.
 
-**Q: Vart kan jag få hjälp om jag stöter på problem?**  
-A: [GroupDocs Support Forum](https://forum.groupdocs.com) är ditt bästa alternativ för community‑stöd, och den officiella dokumentationen erbjuder omfattande exempel och felsökningsguider.
-
----
-
-**Senast uppdaterad:** 2025‑12‑28  
-**Testad med:** GroupDocs.Comparison 25.2  
-**Författare:** GroupDocs  
+**Q: Var kan jag få hjälp om jag stöter på problem?**  
+A: [GroupDocs Support Forum](https://forum.groupdocs.com) är ditt bästa alternativ för community‑hjälp, och den officiella dokumentationen erbjuder omfattande exempel och felsökningsguider.
 
 ---
+
+**Senast uppdaterad:** 2026-02-28  
+**Testat med:** GroupDocs.Comparison 25.2  
+**Författare:** GroupDocs

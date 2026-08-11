@@ -1,99 +1,138 @@
 ---
 categories:
 - Java Development
-date: '2026-03-03'
-description: Tìm hiểu cách so sánh các tệp Excel bằng Java sử dụng GroupDocs.Comparison
-  cho Java, với các ví dụ cho PDF, tài liệu lớn và tệp được mã hóa.
-keywords: java compare excel files, compare pdf documents java, java compare large
-  documents, java compare encrypted pdf, GroupDocs.Comparison Java
-lastmod: '2026-03-03'
-linktitle: Java Compare Excel Files Guide
+date: '2026-05-16'
+description: Tìm hiểu cách so sánh tệp Excel Java bằng GroupDocs.Comparison for Java,
+  với các ví dụ cho PDF, tài liệu lớn và tệp được mã hóa.
+keywords:
+- compare excel files java
+- compare pdf documents java
+- groupdocs comparison java
+- excel file diff java
+- document comparison api
+lastmod: '2026-05-16'
+linktitle: Hướng dẫn so sánh tệp Excel Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-16'
+  description: Learn how to compare excel files java using GroupDocs.Comparison for
+    Java, with examples for PDF, large documents, and encrypted files.
+  headline: Compare Excel Files Java with GroupDocs Document Comparison API
+  type: TechArticle
+- description: Learn how to compare excel files java using GroupDocs.Comparison for
+    Java, with examples for PDF, large documents, and encrypted files.
+  name: Compare Excel Files Java with GroupDocs Document Comparison API
+  steps:
+  - name: '**Java Development Kit (JDK):** 8 or higher (JDK 11+ recommended)'
+    text: '**Java Development Kit (JDK):** 8 or higher (JDK 11+ recommended)'
+  - name: '**Build Tool:** Maven 3.6+ or Gradle 6.0+'
+    text: '**Build Tool:** Maven 3.6+ or Gradle 6.0+'
+  - name: '**Memory:** Minimum **4 GB RAM** for large files'
+    text: '**Memory:** Minimum **4 GB RAM** for large files'
+  - name: '**Storage:** At least **500 MB** free for temporary comparison data'
+    text: '**Storage:** At least **500 MB** free for temporary comparison data'
+  type: HowTo
+- questions:
+  - answer: Yes, call `setHeaderFootersComparison(false)` on `CompareOptions`. This
+      removes dynamic header/footer noise from the diff.
+    question: Can I ignore headers and footers during comparison in GroupDocs for
+      Java?
+  - answer: Use `setPaperSize(PaperSize.A6)` (or any other enum value) in `CompareOptions`.
+      This generates a print‑ready PDF in the chosen size.
+    question: How do I set output paper size in Java using GroupDocs?
+  - answer: Absolutely. Invoke `setSensitivityOfComparison(85)` for legal contracts
+      or `setSensitivityOfComparison(45)` for marketing drafts to control granularity.
+    question: Is it possible to fine‑tune comparison sensitivity for different document
+      types?
+  - answer: Yes. Create a `StyleSettings` instance for each change type and assign
+      colors, fonts, or borders before passing it to `CompareOptions`.
+    question: Can I customize the styling of inserted, deleted, and changed text during
+      comparison?
+  - answer: You need JDK 8+ (JDK 11+ recommended), Maven 3.6+ or Gradle 6.0+, at least
+      4 GB RAM, and a valid GroupDocs license (free trial available).
+    question: What are the prerequisites to get started with GroupDocs Comparison
+      in Java?
+  type: FAQPage
 tags:
 - document-comparison
 - java-api
 - automation
 - groupdocs
-title: So sánh các tệp Excel Java bằng API So sánh Tài liệu của GroupDocs
+title: So sánh tệp Excel Java với GroupDocs Document Comparison API
 type: docs
 url: /vi/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# So sánh tệp Excel Java với GroupDocs Document Comparison API
+# So sánh tệp Excel Java với API So sánh Tài liệu GroupDocs
 
-Bạn đã bao giờ dành hàng giờ để so sánh tài liệu một cách thủ công, tìm kiếm các thay đổi từng dòng không? Dù bạn đang theo dõi các phiên bản hợp đồng, xem xét tài liệu mã nguồn, hoặc cần **compare excel files java** cho các báo cáo tài chính, việc so sánh tài liệu thủ công tốn thời gian và dễ gây lỗi.
-
-Trong hướng dẫn toàn diện này, bạn sẽ khám phá cách triển khai giải pháp API so sánh tài liệu Java mạnh mẽ, giúp tiết kiệm hàng giờ công việc thủ công đồng thời đảm bảo không bỏ sót bất kỳ chi tiết nào. Chúng tôi sẽ đề cập đến mọi thứ từ cài đặt cơ bản đến các kỹ thuật tùy chỉnh nâng cao áp dụng trong môi trường sản xuất thực tế.
+Bạn đã bao giờ dành hàng giờ để so sánh tài liệu thủ công, tìm kiếm các thay đổi từng dòng không? Dù bạn đang theo dõi các phiên bản hợp đồng, xem xét tài liệu mã nguồn, hoặc cần **compare excel files java** cho báo cáo tài chính, việc so sánh tài liệu thủ công tốn thời gian và dễ gây lỗi. Trong hướng dẫn này, bạn sẽ học cách nhanh chóng và đáng tin cậy để so sánh sổ làm việc Excel (và nhiều định dạng khác) bằng GroupDocs.Comparison cho Java.
 
 ## Câu trả lời nhanh
-- **GroupDocs có thể so sánh tệp Excel trong Java không?** Có, chỉ cần tải các tệp `.xlsx` bằng lớp `Comparer`.  
-- **Làm thế nào để bỏ qua tiêu đề/chân trang?** Đặt `setHeaderFootersComparison(false)` trong `CompareOptions`.  
-- **Còn các tệp PDF lớn thì sao?** Tăng kích thước heap của JVM và bật tối ưu hoá bộ nhớ.  
-- **Tôi có thể so sánh các tệp PDF được bảo vệ bằng mật khẩu không?** Cung cấp mật khẩu khi tạo đối tượng `Comparer`.  
-- **Có cách nào để thay đổi màu sắc đánh dấu không?** Sử dụng `StyleSettings` cho các mục được chèn, xóa và thay đổi.
+
+Lớp `Comparer` là thành phần cốt lõi tải các tài liệu nguồn và thực hiện so sánh.  
+`CompareOptions` cung cấp một tập hợp các tham số có thể cấu hình để kiểm soát cách thực hiện so sánh.  
+`StyleSettings` cho phép bạn tùy chỉnh giao diện trực quan của các phần tử được chèn, xóa và thay đổi trong báo cáo đầu ra.
+
+- **GroupDocs có thể so sánh tệp Excel trong Java không?** Có, chỉ cần tải các tệp `.xlsx` bằng lớp `Comparer` và gọi `compare`.  
+- **Làm sao bỏ qua tiêu đề/chân trang?** Đặt `setHeaderFootersComparison(false)` trong `CompareOptions`.  
+- **Còn các tệp PDF lớn thì sao?** Tăng bộ nhớ heap của JVM, bật tối ưu hoá bộ nhớ và sử dụng chế độ streaming.  
+- **Có thể so sánh PDF được bảo vệ bằng mật khẩu không?** Cung cấp mật khẩu khi tạo `Comparer`.  
+- **Có cách nào thay đổi màu nổi bật không?** Sử dụng `StyleSettings` cho các mục được chèn, xóa và thay đổi.
 
 ## So sánh tệp Excel Java là gì?
-`compare excel files java` đề cập đến việc phát hiện sự khác biệt giữa hai sổ làm việc Excel một cách lập trình bằng mã Java. API GroupDocs.Comparison đọc nội dung bảng tính, đánh giá các thay đổi ở mức ô và tạo báo cáo diff hiển thị các phần được thêm, xóa và sửa đổi.
+
+`compare excel files java` là quá trình phát hiện sự khác biệt ở mức ô giữa hai sổ làm việc Excel bằng Java. API GroupDocs.Comparison tải mỗi bảng tính, đánh giá mọi ô, hàng và công thức, sau đó tạo báo cáo diff làm nổi bật các phần thêm, xóa và sửa đổi theo định dạng trực quan rõ ràng.
 
 ## Tại sao nên sử dụng API So sánh Tài liệu Java?
 
+So sánh tài liệu thủ công không chỉ tẻ nhạt—mà còn rủi ro. Các nghiên cứu cho thấy con người bỏ qua khoảng **20 %** các thay đổi quan trọng khi xem xét tài liệu thủ công. API loại bỏ rủi ro này và mang lại lợi ích năng suất có thể đo lường được:
+
+- **Độ chính xác 99,9 %** – mọi thay đổi ở mức ký tự đều được ghi lại.  
+- **Tốc độ** – so sánh một PDF 100 trang trong vòng dưới **30 giây** trên máy chủ tiêu chuẩn.  
+- **Tính nhất quán** – tô sáng và báo cáo đồng nhất cho mọi loại tài liệu.  
+- **Khả năng mở rộng** – xử lý hàng nghìn tệp theo lô mà không cần công sức thủ công.
+
 ### Lý do kinh doanh cho tự động hoá
 
-Việc so sánh tài liệu thủ công không chỉ tẻ nhạt—mà còn rủi ro. Các nghiên cứu cho thấy con người bỏ lỡ khoảng 20 % các thay đổi quan trọng khi so sánh tài liệu thủ công. Đây là lý do tại sao các nhà phát triển chuyển sang các giải pháp lập trình:
+Bạn sẽ nhận được lợi nhuận lớn nhất khi cần:
 
-**Các vấn đề thường gặp:**
-- **Time Drain**: Các nhà phát triển cấp cao dành 3–4 giờ mỗi tuần để xem xét tài liệu  
-- **Human Error**: Bỏ lỡ các thay đổi quan trọng trong hợp đồng pháp lý hoặc các thông số kỹ thuật  
-- **Inconsistent Standards**: Các thành viên trong nhóm đánh dấu thay đổi theo cách khác nhau  
-- **Scale Issues**: So sánh hàng trăm tài liệu một cách thủ công trở nên không thể thực hiện  
-
-**Giải pháp API mang lại:**
-- **99.9 % Accuracy**: Tự động phát hiện mọi thay đổi ở mức ký tự  
-- **Speed**: So sánh tài liệu trên 100 trang trong vòng dưới 30 giây  
-- **Consistency**: Đánh dấu và báo cáo chuẩn hoá cho mọi lần so sánh  
-- **Integration**: Tích hợp liền mạch vào quy trình Java hiện có và các pipeline CI/CD  
-
-### Khi nào nên sử dụng API So sánh Tài liệu
-
-API so sánh tài liệu Java này xuất sắc trong các kịch bản sau:
-- **Legal Document Review** – Tự động theo dõi các thay đổi và sửa đổi hợp đồng  
-- **Technical Documentation** – Giám sát cập nhật tài liệu API và nhật ký thay đổi  
-- **Content Management** – So sánh các bài blog, tài liệu marketing hoặc sách hướng dẫn người dùng  
-- **Compliance Auditing** – Đảm bảo các tài liệu chính sách đáp ứng yêu cầu quy định  
-- **Version Control** – Bổ sung Git bằng các diff tài liệu có thể đọc được bởi con người  
+- **Xem xét hợp đồng pháp lý** – tự động đánh dấu các sửa đổi điều khoản.  
+- **Theo dõi tài liệu kỹ thuật** – xem chính xác những gì đã thay đổi giữa các phiên bản đặc tả API.  
+- **Quản lý tài sản nội dung** – so sánh bản sao marketing, hướng dẫn người dùng hoặc bản nháp blog.  
+- **Kiểm toán tuân thủ** – đảm bảo các cập nhật chính sách được ghi lại và lưu trữ.  
+- **Bổ trợ kiểm soát phiên bản** – cung cấp diff có thể đọc được cho các tài sản không phải mã nguồn.
 
 ## Định dạng tệp được hỗ trợ và khả năng
 
-GroupDocs.Comparison cho Java hỗ trợ hơn 50 định dạng tệp ngay từ đầu:
+GroupDocs.Comparison cho Java hỗ trợ **hơn 50** định dạng đầu vào và đầu ra, bao gồm:
 
-**Định dạng phổ biến:**
-- **Documents**: Word (DOCX, DOC), PDF, RTF, ODT  
-- **Spreadsheets**: Excel (XLSX, XLS), CSV, ODS  
-- **Presentations**: PowerPoint (PPTX, PPT), ODP  
-- **Text Files**: TXT, HTML, XML, MD  
-- **Images**: PNG, JPEG, BMP, GIF (so sánh trực quan)  
+- **Tài liệu**: DOCX, DOC, PDF, RTF, ODT  
+- **Bảng tính**: XLSX, XLS, CSV, ODS  
+- **Bản trình chiếu**: PPTX, PPT, ODP  
+- **Văn bản**: TXT, HTML, XML, MD  
+- **Hình ảnh**: PNG, JPEG, BMP, GIF (so sánh trực quan)
 
-**Tính năng nâng cao:**
+### Tính năng nâng cao
+
 - So sánh tài liệu được bảo vệ bằng mật khẩu  
-- Phát hiện và so sánh văn bản đa ngôn ngữ  
-- Cài đặt độ nhạy tùy chỉnh cho các loại tài liệu khác nhau  
+- Phát hiện và so sánh đa ngôn ngữ  
+- Cài đặt độ nhạy tùy chỉnh cho từng loại tài liệu  
 - Xử lý hàng loạt cho nhiều cặp tài liệu  
-- Các tùy chọn triển khai trên đám mây và tại chỗ  
+- Các tùy chọn triển khai đám mây và nội bộ  
 
 ## Yêu cầu trước và Cài đặt
 
 ### Yêu cầu hệ thống
 
-Trước khi bắt đầu viết mã, hãy đảm bảo môi trường phát triển của bạn đáp ứng các yêu cầu sau:
-
-1. **Java Development Kit (JDK):** Phiên bản 8 trở lên (khuyến nghị JDK 11+)  
-2. **Build Tool:** Maven 3.6+ hoặc Gradle 6.0+  
-3. **Memory:** Ít nhất 4 GB RAM để xử lý tài liệu lớn  
-4. **Storage:** Ít nhất 500 MB dung lượng trống cho các tệp so sánh tạm thời  
+1. **Bộ công cụ phát triển Java (JDK):** 8 trở lên (khuyến nghị JDK 11+)  
+2. **Công cụ xây dựng:** Maven 3.6+ hoặc Gradle 6.0+  
+3. **Bộ nhớ:** Tối thiểu **4 GB RAM** cho các tệp lớn  
+4. **Lưu trữ:** Ít nhất **500 MB** trống cho dữ liệu so sánh tạm thời  
 
 ### Cấu hình Maven
 
-Thêm repository và dependency của GroupDocs vào file `pom.xml`. Cấu hình này đảm bảo bạn lấy phiên bản chính thức:
+Thêm kho lưu trữ và phụ thuộc của GroupDocs vào file `pom.xml` của bạn. Điều này đảm bảo bạn tải phiên bản chính thức:
 
 ```xml
 <repositories>
@@ -112,16 +151,16 @@ Thêm repository và dependency của GroupDocs vào file `pom.xml`. Cấu hình
 </dependencies>
 ```
 
-### Cấu hình giấy phép
+### Cài đặt giấy phép
 
-**Cho phát triển và thử nghiệm:**
-- **Free Trial:** Tải xuống từ [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – bao gồm đầu ra có watermark  
-- **Temporary License:** Nhận quyền truy cập đầy đủ trong 30 ngày qua [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/)  
+**Dành cho Phát triển và Kiểm thử:**  
+- **Dùng thử miễn phí:** Tải xuống từ [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – bao gồm đầu ra có watermark.  
+- **Giấy phép tạm thời:** Nhận quyền truy cập đầy đủ trong 30 ngày qua [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
 
-**Cho môi trường sản xuất:**
-- **Full License:** Mua qua [GroupDocs Purchase](https://purchase.groupdocs.com/buy) để sử dụng thương mại không giới hạn  
+**Dành cho Sản xuất:**  
+- **Giấy phép đầy đủ:** Mua qua [GroupDocs Purchase](https://purchase.groupdocs.com/buy) để sử dụng thương mại không giới hạn.  
 
-Khi đã có file giấy phép, khởi tạo như sau:
+Khởi tạo giấy phép khi ứng dụng khởi động:
 
 ```java
 // License initialization - do this once at application startup
@@ -129,15 +168,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-Mẹo: Lưu file giấy phép trong thư mục resources của ứng dụng và tải nó bằng `getClass().getResourceAsStream()` để tăng tính di động giữa các môi trường.
+**Mẹo:** Lưu file giấy phép trong thư mục resources và tải nó bằng `getClass().getResourceAsStream()` để triển khai di động.
 
 ## Hướng dẫn triển khai cốt lõi
 
 ### Tính năng 1: Bỏ qua so sánh tiêu đề và chân trang
 
-**Tại sao điều này quan trọng:** Tiêu đề và chân trang thường chứa nội dung động như dấu thời gian, số trang hoặc thông tin tác giả, thay đổi giữa các phiên bản tài liệu nhưng không liên quan đến việc so sánh nội dung. Bỏ qua các phần này giảm nhiễu và tập trung vào các thay đổi có ý nghĩa.
+Phương thức `setHeaderFootersComparison` tắt việc so sánh nội dung tiêu đề và chân trang, ngăn các khác biệt không liên quan xuất hiện trong diff.
 
-**Kịch bản thực tế:** Bạn đang so sánh các phiên bản hợp đồng, mỗi phiên bản có dấu thời gian khác nhau ở chân trang, nhưng bạn chỉ quan tâm đến các sửa đổi điều khoản trong nội dung chính.
+**Tại sao điều này quan trọng:** Tiêu đề và chân trang thường chứa dữ liệu động (dấu thời gian, số trang) thay đổi giữa các phiên bản nhưng không liên quan đến việc xem xét nội dung. Bỏ qua chúng giảm nhiễu và tăng tốc xử lý.
+
+**Kịch bản thực tế:** So sánh hai bản dự thảo hợp đồng, mỗi phiên bản thêm một dấu thời gian mới vào chân trang; bạn chỉ quan tâm đến các thay đổi điều khoản.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -164,16 +205,18 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**Lợi ích chính:**
-- **Cleaner Results** – Tập trung vào các thay đổi nội dung thay vì khác biệt về định dạng  
-- **Reduced False Positives** – Loại bỏ các thông báo thay đổi không liên quan  
-- **Better Performance** – Bỏ qua các thao tác so sánh không cần thiết  
+**Lợi ích chính:**  
+- Kết quả diff sạch hơn  
+- Ít cảnh báo sai lệch hơn  
+- So sánh nhanh hơn vì các phần này bị bỏ qua  
 
 ### Tính năng 2: Đặt kích thước giấy đầu ra cho báo cáo chuyên nghiệp
 
-**Business Context:** Khi tạo báo cáo so sánh để in hoặc phân phối dưới dạng PDF, việc kiểm soát kích thước giấy đảm bảo định dạng nhất quán trên các nền tảng xem và kịch bản in khác nhau.
+Enum `PaperSize` định nghĩa các kích thước trang tiêu chuẩn mà PDF được tạo sẽ sử dụng.
 
-**Use Case:** Các đội pháp lý thường cần báo cáo so sánh ở định dạng cụ thể cho hồ sơ tòa án hoặc trình bày với khách hàng.
+**Ngữ cảnh kinh doanh:** Đội ngũ pháp lý thường cần các báo cáo so sánh có thể in với kích thước giấy cụ thể cho việc nộp hồ sơ tòa án hoặc giao cho khách hàng.
+
+**Cách áp dụng:** Sử dụng enum `PaperSize` trong `CompareOptions` để xác định kích thước mục tiêu.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -200,18 +243,19 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-**Các kích thước giấy có sẵn:** A0‑A10, Letter, Legal, Tabloid và kích thước tùy chỉnh. Chọn dựa trên yêu cầu phân phối của bạn—A4 cho khách hàng châu Âu, Letter cho các đội ở Mỹ.
+Kích thước hỗ trợ bao gồm A0‑A10, Letter, Legal, Tabloid và các kích thước tùy chỉnh. Chọn A4 cho khách hàng châu Âu hoặc Letter cho đối tác Mỹ.
 
-### Tính năng 3: Điều chỉnh độ nhạy so sánh
+### Tính năng 3: Điều chỉnh độ nhạy của so sánh
 
-**Thách thức:** Các loại tài liệu khác nhau yêu cầu mức độ phát hiện thay đổi khác nhau. Hợp đồng pháp lý cần phát hiện mọi dấu phẩy, trong khi tài liệu marketing có thể chỉ quan tâm đến các thay đổi nội dung đáng kể.
+Phương thức `setSensitivityOfComparison` điều chỉnh mức độ chi tiết mà engine so sánh đánh giá các thay đổi, từ chỉnh sửa cấu trúc lớn đến sự khác biệt từng ký tự.
 
-**Cách hoạt động của độ nhạy:** Thang độ nhạy chạy từ 0‑100, giá trị cao hơn phát hiện các thay đổi chi tiết hơn:
+**Thách thức:** Các loại tài liệu khác nhau yêu cầu độ chi tiết khác nhau. Hợp đồng pháp lý đòi hỏi độ chính xác ở mức ký tự, trong khi bản sao marketing có thể chỉ cần thay đổi ở mức đoạn văn.
 
+**Thang độ nhạy (0‑100):**  
 - **0‑25:** Chỉ các thay đổi lớn (thêm/xóa đoạn văn)  
-- **26‑50:** Thay đổi vừa phải (sửa đổi câu)  
-- **51‑75:** Thay đổi chi tiết (sửa đổi ở mức từ)  
-- **76‑100:** Thay đổi tỉ mỉ (khác biệt ở mức ký tự)  
+- **26‑50:** Thay đổi vừa phải (chỉnh sửa câu)  
+- **51‑75:** Thay đổi chi tiết (cấp độ từ)  
+- **76‑100:** Thay đổi chi tiết (cấp độ ký tự)  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -237,16 +281,18 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**Các thực tiễn tốt nhất cho cài đặt độ nhạy:**
-- **Legal Documents:** Sử dụng 90‑100 để phát hiện thay đổi toàn diện  
-- **Marketing Content:** Sử dụng 40‑60 để tập trung vào các sửa đổi đáng kể  
-- **Technical Specs:** Sử dụng 70‑80 để bắt các chi tiết quan trọng trong khi lọc bỏ định dạng nhỏ  
+**Cài đặt thực tiễn:**  
+- Tài liệu pháp lý: 90‑100  
+- Nội dung marketing: 40‑60  
+- Thông số kỹ thuật: 70‑80  
 
-### Tính năng 4: Tùy chỉnh kiểu thay đổi để giao tiếp trực quan tốt hơn
+### Tính năng 4: Tùy chỉnh kiểu dáng thay đổi để giao tiếp trực quan hơn
 
-**Tại sao kiểu tùy chỉnh quan trọng:** Đánh dấu mặc định có thể không phù hợp với tiêu chuẩn đánh giá của đội ngũ hoặc thương hiệu công ty. Kiểu tùy chỉnh cải thiện khả năng đọc tài liệu và giúp các bên liên quan nhanh chóng nhận diện các loại thay đổi khác nhau.
+Đối tượng `StyleSettings` cho phép bạn định nghĩa màu sắc, phông chữ, viền và các dấu hiệu trực quan khác cho nội dung được chèn, xóa và sửa đổi.
 
-**Cách tiếp cận chuyên nghiệp:** Sử dụng tâm lý màu sắc—đỏ cho phần xóa tạo cảm giác khẩn cấp, xanh lá cho phần thêm gợi ý thay đổi tích cực, và xanh dương cho phần sửa đổi chỉ ra cần xem xét.
+**Tại sao tùy chỉnh kiểu dáng quan trọng:** Tô sáng mặc định có thể xung đột với thương hiệu công ty hoặc hướng dẫn truy cập. Tùy chỉnh màu sắc, phông chữ và viền giúp diff ngay lập tức dễ hiểu.
+
+**Ví dụ:** Nền đỏ cho phần xóa, xanh lá cho phần chèn, xanh dương cho phần sửa đổi.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -291,44 +337,30 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-**Các tùy chọn kiểu nâng cao** (có trong `StyleSettings`):
-- Thay đổi độ đậm, kích thước và họ phông chữ  
-- Màu nền và độ trong suốt  
-- Kiểu viền cho các loại thay đổi khác nhau  
-- Tùy chọn gạch ngang cho nội dung đã xóa  
+Các tùy chọn nâng cao trong `StyleSettings` cho phép bạn thay đổi độ đậm phông, kích thước, độ trong suốt nền, kiểu viền và hành vi gạch ngang.
 
 ## Cách đặt kích thước giấy java trong báo cáo so sánh
 
-Nếu bạn cần **set paper size java** một cách lập trình, enum `PaperSize` trong `CompareOptions` cung cấp toàn bộ quyền kiểm soát. Ví dụ ở trên đã minh họa cách đặt `PaperSize.A6`. Chỉ cần thay `A6` bằng bất kỳ kích thước hỗ trợ nào khác (ví dụ, `PaperSize.LETTER`) để phù hợp với tiêu chuẩn in khu vực của bạn.
+Đặt kích thước giấy trực tiếp bằng enum `PaperSize` trong `CompareOptions`. Thay thế `PaperSize.A6` bằng bất kỳ hằng số hỗ trợ nào (ví dụ, `PaperSize.LETTER`) để phù hợp với tiêu chuẩn in khu vực. Điều này đảm bảo báo cáo PDF được tạo in đúng mà không cần điều chỉnh thủ công. Ngoài ra, bạn có thể kết hợp cài đặt này với lề tùy chỉnh và cờ định hướng để tạo bố cục tuân thủ hướng dẫn nộp tài liệu của tổ chức, đảm bảo giao diện chuyên nghiệp mỗi lần.
 
 ## Các vấn đề thường gặp và khắc phục
 
 ### Quản lý bộ nhớ cho tài liệu lớn
 
-**Problem:** `OutOfMemoryError` khi so sánh các tài liệu lớn hơn 50 MB  
-**Solution:** Tăng kích thước heap của JVM và triển khai streaming  
+**Vấn đề:** `OutOfMemoryError` khi so sánh các tệp lớn hơn 50 MB.  
+**Giải pháp:** Tăng bộ nhớ heap của JVM (`-Xmx8g`) và bật chế độ streaming.
 
 ```bash
 # Increase heap size for large document processing
 java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 ```
 
-**Tối ưu hoá mã:**
-
-```java
-// Use streaming for memory efficiency
-try (Comparer comparer = new Comparer(sourceStream)) {
-    // Process in chunks for very large documents
-    CompareOptions options = new CompareOptions.Builder()
-            .setMemoryOptimization(true) // Enable memory optimization
-            .build();
-}
-```
-
 ### Xử lý tệp bị hỏng hoặc được bảo vệ bằng mật khẩu
 
-**Issue:** So sánh thất bại với các tài liệu bị khóa  
-**Prevention Strategy:**  
+`PasswordRequiredException` được ném khi API gặp tài liệu được mã hoá mà không có mật khẩu được cung cấp.  
+
+**Vấn đề:** So sánh thất bại trên các tài liệu bị khóa.  
+**Phòng ngừa:** Cung cấp mật khẩu khi tạo `Comparer` và bắt `PasswordRequiredException`.
 
 ```java
 // Check document accessibility before comparison
@@ -344,10 +376,10 @@ try {
 }
 ```
 
-### Tối ưu hoá hiệu suất cho xử lý hàng loạt
+### Tối ưu hoá hiệu năng cho xử lý hàng loạt
 
-**Challenge:** Xử lý hiệu quả hơn 100 cặp tài liệu  
-**Solution:** Triển khai xử lý song song với thread pool  
+**Thách thức:** Xử lý hiệu quả hơn 100 cặp tài liệu.  
+**Giải pháp:** Sử dụng pool luồng cố định và gửi mỗi lần so sánh như một nhiệm vụ riêng.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -365,23 +397,17 @@ for (Future<ComparisonResult> future : futures) {
 executor.shutdown();
 ```
 
-### Các vấn đề đặc thù theo định dạng
+### Các vấn đề riêng theo định dạng
 
-**Các thách thức khi so sánh PDF:**
-- **Scanned PDFs:** Sử dụng tiền xử lý OCR để trích xuất văn bản  
-- **Complex Layouts:** Có thể cần điều chỉnh độ nhạy thủ công  
-- **Embedded Fonts:** Đảm bảo việc hiển thị phông chữ nhất quán trên các môi trường  
+- **PDF đã quét:** Áp dụng tiền xử lý OCR trước khi so sánh.  
+- **Tài liệu Word:** Tắt tính năng “Track Changes” hiện có để tránh diff sai.  
+- **Đối tượng nhúng:** Trích xuất và so sánh chúng riêng biệt để đạt độ chính xác.
 
-**Các vấn đề với tài liệu Word:**
-- **Track Changes:** Tắt tính năng theo dõi thay đổi hiện có trước khi so sánh  
-- **Embedded Objects:** Có thể không so sánh đúng, hãy tách ra và so sánh riêng  
-- **Version Compatibility:** Kiểm tra với các phiên bản định dạng Word khác nhau  
-
-## Các thực tiễn tốt nhất và mẹo hiệu suất
+## Các thực tiễn tốt nhất và mẹo hiệu năng
 
 ### 1. Tiền xử lý tài liệu
 
-**Clean Your Input:** Loại bỏ siêu dữ liệu và định dạng không cần thiết trước khi so sánh để cải thiện độ chính xác và tốc độ.  
+Loại bỏ siêu dữ liệu không cần thiết và chuẩn hoá phông chữ trước khi so sánh để cải thiện tốc độ và độ chính xác.
 
 ```java
 // Example preprocessing workflow
@@ -392,9 +418,9 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Cấu hình tối ưu cho các loại tài liệu khác nhau
+### 2. Hồ sơ cấu hình tối ưu
 
-**Cấu hình hồ sơ:**  
+Tạo các preset `CompareOptions` có thể tái sử dụng cho mỗi loại tài liệu (pháp lý, marketing, kỹ thuật) và sử dụng lại chúng trong toàn bộ pipeline.
 
 ```java
 public class ComparisonProfiles {
@@ -416,9 +442,9 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Xử lý lỗi và ghi log
+### 3. Xử lý lỗi mạnh mẽ và ghi log
 
-**Quản lý lỗi mạnh mẽ:**  
+`ComparisonException` chỉ ra lỗi trong quá trình so sánh và cung cấp thông tin chẩn đoán chi tiết. Bao bọc các lời gọi so sánh trong khối try‑catch, ghi log chi tiết `ComparisonException`, và quay lại giá trị mặc định an toàn khi cần.
 
 ```java
 public ComparisonResult safeCompareDocuments(String source, String target) {
@@ -431,16 +457,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Caching và tối ưu hoá hiệu suất
+### 4. Bộ nhớ đệm và tái sử dụng thông minh
 
-**Triển khai caching thông minh:**
-- Lưu kết quả so sánh cho các cặp tệp giống nhau  
-- Lưu dấu vân tay tài liệu để tránh xử lý lại các tệp không thay đổi  
-- Sử dụng xử lý bất đồng bộ cho các so sánh không quan trọng  
+- Lưu trữ kết quả diff cho các cặp tệp giống hệt.  
+- Lưu dấu vân tay tài liệu (hash) để bỏ qua các tệp không thay đổi.  
+- Sử dụng hàng đợi bất đồng bộ cho các lần so sánh không quan trọng để giữ UI phản hồi nhanh.
 
 ## Các kịch bản tích hợp thực tế
 
-### Kịch bản 1: Quy trình tự động kiểm tra hợp đồng
+### Kịch bản 1: Quy trình xem xét hợp đồng tự động
 
 ```java
 @Service
@@ -487,29 +512,47 @@ public class DocumentComparisonController {
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể bỏ qua tiêu đề và chân trang khi so sánh trong GroupDocs cho Java không?**  
-A: Có, sử dụng `setHeaderFootersComparison(false)` trong `CompareOptions` của bạn. Điều này hữu ích khi tiêu đề chứa nội dung động như dấu thời gian không liên quan đến các thay đổi chính.
+**Hỏi: Tôi có thể bỏ qua tiêu đề và chân trang khi so sánh trong GroupDocs cho Java không?**  
+**Đáp:** Có, gọi `setHeaderFootersComparison(false)` trên `CompareOptions`. Điều này loại bỏ nhiễu tiêu đề/chân trang động khỏi diff.
 
-**Q: Làm thế nào để đặt kích thước giấy đầu ra trong Java bằng GroupDocs?**  
-A: Áp dụng `setPaperSize(PaperSize.A6)` (hoặc bất kỳ hằng số nào khác) trong `CompareOptions`. Điều này tạo ra các báo cáo sẵn sàng in. Các kích thước có sẵn bao gồm A0‑A10, Letter, Legal và Tabloid.
+**Hỏi: Làm thế nào để đặt kích thước giấy đầu ra trong Java bằng GroupDocs?**  
+**Đáp:** Sử dụng `setPaperSize(PaperSize.A6)` (hoặc bất kỳ giá trị enum nào khác) trong `CompareOptions`. Điều này tạo PDF sẵn sàng in với kích thước đã chọn.
 
-**Q: Có thể điều chỉnh độ nhạy so sánh cho các loại tài liệu khác nhau không?**  
-A: Chắc chắn. Sử dụng `setSensitivityOfComparison()` với giá trị từ 0‑100. Giá trị cao hơn phát hiện các thay đổi chi tiết hơn—lý tưởng cho tài liệu pháp lý; giá trị thấp hơn phù hợp với nội dung marketing.
+**Hỏi: Có thể điều chỉnh độ nhạy của so sánh cho các loại tài liệu khác nhau không?**  
+**Đáp:** Chắc chắn. Gọi `setSensitivityOfComparison(85)` cho hợp đồng pháp lý hoặc `setSensitivityOfComparison(45)` cho bản nháp marketing để kiểm soát độ chi tiết.
 
-**Q: Tôi có thể tùy chỉnh kiểu dáng của văn bản được chèn, xóa và thay đổi trong quá trình so sánh không?**  
-A: Có. Tạo `StyleSettings` tùy chỉnh cho mỗi loại thay đổi và áp dụng chúng qua `CompareOptions`. Bạn có thể điều chỉnh màu nổi bật, phông chữ, viền và các yếu tố khác để phù hợp với thương hiệu của mình.
+**Hỏi: Tôi có thể tùy chỉnh kiểu dáng của văn bản được chèn, xóa và thay đổi trong quá trình so sánh không?**  
+**Đáp:** Có. Tạo một thể hiện `StyleSettings` cho mỗi loại thay đổi và chỉ định màu sắc, phông chữ hoặc viền trước khi truyền vào `CompareOptions`.
 
-**Q: Những yêu cầu trước nào cần có để bắt đầu sử dụng GroupDocs Comparison trong Java?**  
-A: Bạn cần JDK 8+ (khuyến nghị JDK 11+), Maven 3.6+ hoặc Gradle 6.0+, ít nhất 4 GB RAM cho tài liệu lớn, và giấy phép GroupDocs (có bản dùng thử miễn phí). Thêm repository và dependency vào dự án, sau đó khởi tạo giấy phép khi khởi động.
+**Hỏi: Những yêu cầu trước nào cần có để bắt đầu với GroupDocs Comparison trong Java?**  
+**Đáp:** Bạn cần JDK 8+ (khuyến nghị JDK 11+), Maven 3.6+ hoặc Gradle 6.0+, ít nhất 4 GB RAM, và một giấy phép GroupDocs hợp lệ (có bản dùng thử miễn phí).
 
-**Q: Làm thế nào để xử lý tài liệu được bảo vệ bằng mật khẩu trong GroupDocs.Comparison?**  
-A: Cung cấp mật khẩu làm đối số thứ hai khi tạo `Comparer`: `new Comparer(sourceFile, "password123")`. Bao bọc lời gọi trong khối try‑catch để xử lý `PasswordRequiredException` một cách nhẹ nhàng.
+**Hỏi: Làm sao xử lý tài liệu được bảo vệ bằng mật khẩu trong GroupDocs.Comparison?**  
+**Đáp:** Truyền mật khẩu làm đối số thứ hai khi tạo `Comparer`: `new Comparer(sourceFile, "myPassword")`. Bắt `PasswordRequiredException` để xử lý lỗi một cách nhẹ nhàng.
 
-**Q: GroupDocs.Comparison cho Java hỗ trợ những định dạng tệp nào?**  
-A: Hơn 50 định dạng bao gồm Word (DOCX, DOC), PDF, Excel (XLSX, XLS), PowerPoint (PPTX, PPT), các tệp văn bản (TXT, HTML, XML) và hình ảnh (PNG, JPEG) để so sánh trực quan. API tự động phát hiện loại tệp, nhưng bạn có thể chỉ định định dạng để tăng hiệu suất xử lý hàng loạt.
+**Hỏi: GroupDocs.Comparison cho Java hỗ trợ những định dạng tệp nào?**  
+**Đáp:** Hơn **50** định dạng, bao gồm DOCX, PDF, XLSX, PPTX, TXT, HTML, XML và các loại ảnh phổ biến (PNG, JPEG). API tự động phát hiện định dạng, nhưng bạn có thể chỉ định rõ chúng để tăng hiệu năng xử lý hàng loạt.
 
----
+## Kết luận
 
-**Cập nhật lần cuối:** 2026-03-03  
-**Kiểm tra với:** GroupDocs.Comparison 25.2 for Java  
+Bằng cách tận dụng GroupDocs.Comparison cho Java, bạn có thể tự động hoá công việc tẻ nhạt của việc so sánh sổ làm việc Excel—và bất kỳ định dạng nào khác được hỗ trợ—với độ chính xác, tốc độ và tính nhất quán cao. Tích hợp các đoạn mã và mẹo thực tiễn từ hướng dẫn này vào pipeline CI/CD, hệ thống quản lý tài liệu hoặc công cụ kiểm toán tùy chỉnh để đạt được lợi ích năng suất có thể đo lường được.
+
+**Cập nhật lần cuối:** 2026-05-16  
+**Kiểm thử với:** GroupDocs.Comparison 25.2 cho Java  
 **Tác giả:** GroupDocs
+
+```java
+// Use streaming for memory efficiency
+try (Comparer comparer = new Comparer(sourceStream)) {
+    // Process in chunks for very large documents
+    CompareOptions options = new CompareOptions.Builder()
+            .setMemoryOptimization(true) // Enable memory optimization
+            .build();
+}
+```
+
+## Hướng dẫn liên quan
+
+- [so sánh pdf java – Hướng dẫn So sánh Tài liệu Java – Hướng dẫn đầy đủ về tải và so sánh tài liệu](/comparison/java/document-loading/)
+- [Cài đặt giấy phép GroupDocs Comparison Java - Hướng dẫn cấu hình URL đầy đủ](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Cách sử dụng GroupDocs - Luồng So sánh Tài liệu Java – Hướng dẫn đầy đủ](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

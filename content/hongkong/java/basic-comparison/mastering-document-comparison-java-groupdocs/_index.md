@@ -1,98 +1,139 @@
 ---
 categories:
 - Java Development
-date: '2026-03-03'
-description: 學習如何使用 GroupDocs.Comparison for Java 比較 Excel 檔案（Java），並提供 PDF、大型文件及加密檔案的範例。
-keywords: java compare excel files, compare pdf documents java, java compare large
-  documents, java compare encrypted pdf, GroupDocs.Comparison Java
-lastmod: '2026-03-03'
-linktitle: Java Compare Excel Files Guide
+date: '2026-05-16'
+description: 了解如何使用 GroupDocs.Comparison for Java 比較 Excel 檔案（Java），並提供 PDF、大型文件及加密檔案的範例。
+keywords:
+- compare excel files java
+- compare pdf documents java
+- groupdocs comparison java
+- excel file diff java
+- document comparison api
+lastmod: '2026-05-16'
+linktitle: Java 比較 Excel 檔案指南
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-16'
+  description: Learn how to compare excel files java using GroupDocs.Comparison for
+    Java, with examples for PDF, large documents, and encrypted files.
+  headline: Compare Excel Files Java with GroupDocs Document Comparison API
+  type: TechArticle
+- description: Learn how to compare excel files java using GroupDocs.Comparison for
+    Java, with examples for PDF, large documents, and encrypted files.
+  name: Compare Excel Files Java with GroupDocs Document Comparison API
+  steps:
+  - name: '**Java Development Kit (JDK):** 8 or higher (JDK 11+ recommended)'
+    text: '**Java Development Kit (JDK):** 8 or higher (JDK 11+ recommended)'
+  - name: '**Build Tool:** Maven 3.6+ or Gradle 6.0+'
+    text: '**Build Tool:** Maven 3.6+ or Gradle 6.0+'
+  - name: '**Memory:** Minimum **4 GB RAM** for large files'
+    text: '**Memory:** Minimum **4 GB RAM** for large files'
+  - name: '**Storage:** At least **500 MB** free for temporary comparison data'
+    text: '**Storage:** At least **500 MB** free for temporary comparison data'
+  type: HowTo
+- questions:
+  - answer: Yes, call `setHeaderFootersComparison(false)` on `CompareOptions`. This
+      removes dynamic header/footer noise from the diff.
+    question: Can I ignore headers and footers during comparison in GroupDocs for
+      Java?
+  - answer: Use `setPaperSize(PaperSize.A6)` (or any other enum value) in `CompareOptions`.
+      This generates a print‑ready PDF in the chosen size.
+    question: How do I set output paper size in Java using GroupDocs?
+  - answer: Absolutely. Invoke `setSensitivityOfComparison(85)` for legal contracts
+      or `setSensitivityOfComparison(45)` for marketing drafts to control granularity.
+    question: Is it possible to fine‑tune comparison sensitivity for different document
+      types?
+  - answer: Yes. Create a `StyleSettings` instance for each change type and assign
+      colors, fonts, or borders before passing it to `CompareOptions`.
+    question: Can I customize the styling of inserted, deleted, and changed text during
+      comparison?
+  - answer: You need JDK 8+ (JDK 11+ recommended), Maven 3.6+ or Gradle 6.0+, at least
+      4 GB RAM, and a valid GroupDocs license (free trial available).
+    question: What are the prerequisites to get started with GroupDocs Comparison
+      in Java?
+  type: FAQPage
 tags:
 - document-comparison
 - java-api
 - automation
 - groupdocs
-title: 使用 GroupDocs 文檔比較 API 在 Java 中比較 Excel 檔案
+title: 使用 GroupDocs Document Comparison API 比較 Excel 檔案（Java）
 type: docs
 url: /zh-hant/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# 使用 GroupDocs 文件比較 API 比較 Java Excel 檔案
+# 比較 Excel 檔案（Java）與 GroupDocs 文件比較 API
 
-是否曾花上數小時手動比較文件，一行一行找出變更？無論你是在追蹤合約修訂、審閱程式碼文件，或是需要 **compare excel files java** 來處理財務報表，手動文件比較既耗時又容易出錯。
+是否曾花了數小時手動比較文件，逐行搜尋變更？無論你是在追蹤合約修訂、審閱程式碼文件，或是需要 **compare excel files java** 以製作財務報告，手動文件比較既耗時又容易出錯。在本指南中，你將學會使用 GroupDocs.Comparison for Java 以快速、可靠的方式比較 Excel 活頁簿（以及許多其他格式）。
 
-在本完整指南中，你將學會如何實作一套穩健的 Java 文件比較 API 解決方案，省下大量手動工作時間，同時確保不遺漏任何變更。我們將涵蓋從基礎設定到可在實際生產環境中使用的進階客製化技巧。
+## 快速答案
 
-## 快速回答
-- **GroupDocs 能在 Java 中比較 Excel 檔案嗎？** 可以，只要使用 `Comparer` 類別載入 `.xlsx` 檔案。  
+`Comparer` 類別是載入來源文件並執行比較的核心元件。  
+`CompareOptions` 提供一組可設定的參數，用以控制比較的執行方式。  
+`StyleSettings` 讓你自訂輸出報告中插入、刪除與變更元素的視覺外觀。
+
+- **GroupDocs 能在 Java 中比較 Excel 檔案嗎？** 是的，只需使用 `Comparer` 類別載入 `.xlsx` 檔案，然後呼叫 `compare`。  
 - **如何忽略頁首/頁尾？** 在 `CompareOptions` 中設定 `setHeaderFootersComparison(false)`。  
-- **大型 PDF 該怎麼處理？** 增加 JVM heap 並啟用記憶體最佳化。  
-- **能比較受密碼保護的 PDF 嗎？** 在建立 `Comparer` 時提供密碼。  
-- **有辦法變更標示顏色嗎？** 使用 `StyleSettings` 來設定插入、刪除與變更項目的樣式。
+- **大型 PDF 該怎麼辦？** 增加 JVM 堆積，啟用記憶體最佳化，並使用串流模式。  
+- **我可以比較受密碼保護的 PDF 嗎？** 在建立 `Comparer` 時提供密碼。  
+- **有辦法變更標示顏色嗎？** 使用 `StyleSettings` 針對插入、刪除與變更項目設定顏色。
 
 ## 什麼是 compare excel files java？
-`compare excel files java` 指的是使用 Java 程式碼以程式化方式偵測兩個 Excel 活頁簿之間的差異。GroupDocs.Comparison API 會讀取試算表內容，評估儲存格層級的變更，並產生一份差異報告，突顯新增、刪除與修改的部分。
 
-## 為什麼要使用 Java 文件比較 API？
+`compare excel files java` 是使用 Java 程式化偵測兩個 Excel 活頁簿之間儲存格層級差異的過程。GroupDocs.Comparison API 會載入每個試算表，評估每個儲存格、列與公式，然後產生差異報告，以清晰的視覺格式突顯新增、刪除與修改。
+
+## 為何使用 Java 文件比較 API？
 
 ### 自動化的商業案例
 
-手動文件比較不只是繁瑣，更具風險。研究顯示，人工比對時約有 20 % 的重大變更會被遺漏。以下是開發者轉向程式化解決方案的原因：
+手動文件比較不僅繁瑣，還存在風險。研究顯示，人工審閱文件時大約會漏掉 **20 %** 的重要變更。API 消除這種風險，並帶來可衡量的生產力提升：
 
-**常見痛點：**
-- **時間消耗**：資深開發人員每週花 3–4 小時進行文件審查  
-- **人工錯誤**：遺漏法律合約或技術規格中的關鍵變更  
-- **標準不一致**：不同成員的變更標示方式各異  
-- **規模問題**：手動比對上百份文件幾乎不可能  
-
-**API 解決方案帶來的效益：**
-- **99.9 % 正確率**：自動捕捉每一個字元層級的變更  
-- **速度**：在 30 秒內比對 100 頁以上的文件  
-- **一致性**：所有比對均使用統一的標示與報告格式  
-- **整合**：無縫嵌入現有 Java 工作流程與 CI/CD 管線  
+- **99.9 % 準確率** – 每個字元層級的變更都會被捕捉。  
+- **速度** – 在標準伺服器上，於 **30 秒** 內比較 100 頁 PDF。  
+- **一致性** – 在所有文件類型中提供統一的標示與報告。  
+- **可擴展性** – 批次處理數千個檔案，無需人工干預。  
 
 ### 何時使用文件比較 API
 
-此 Java 文件比較 API 在以下情境中特別適用：
-- **法律文件審查** – 自動追蹤合約變更與修訂  
-- **技術文件** – 監控 API 文件更新與變更日誌  
-- **內容管理** – 比對部落格文章、行銷素材或使用手冊  
-- **合規稽核** – 確保政策文件符合監管要求  
-- **版本控制** – 為 Git 補充可讀的文件差異  
+當你需要以下情境時，將獲得最大的回報：
+
+- **審閱法律合約** – 自動標示條款修訂。  
+- **追蹤技術文件** – 清楚看到 API 規格發布之間的變更。  
+- **管理內容資產** – 比較行銷文案、使用手冊或部落格草稿。  
+- **稽核合規性** – 確保政策更新被捕捉並記錄。  
+- **補充版本控制** – 為非程式碼的產出提供易讀的差異。  
 
 ## 支援的檔案格式與功能
 
-GroupDocs.Comparison for Java 內建支援超過 50 種檔案格式：
+GroupDocs.Comparison for Java 支援 **50+** 種輸入與輸出格式，包括：
 
-**常見格式：**
-- **文件**：Word（DOCX、DOC）、PDF、RTF、ODT  
-- **試算表**：Excel（XLSX、XLS）、CSV、ODS  
-- **簡報**：PowerPoint（PPTX、PPT）、ODP  
-- **文字檔**：TXT、HTML、XML、MD  
-- **影像**：PNG、JPEG、BMP、GIF（視覺比較）  
+- **文件**: DOCX, DOC, PDF, RTF, ODT  
+- **試算表**: XLSX, XLS, CSV, ODS  
+- **簡報**: PPTX, PPT, ODP  
+- **文字**: TXT, HTML, XML, MD  
+- **影像**: PNG, JPEG, BMP, GIF（視覺比較）
 
-**進階功能：**
+### 進階功能
+
 - 受密碼保護的文件比較  
-- 多語言文字偵測與比較  
-- 針對不同文件類型的自訂靈敏度設定  
-- 批次處理多組文件對比  
-- 雲端與本地部署選項  
+- 多語言偵測與比較  
+- 依文件類型自訂靈敏度設定  
+- 批次處理多組文件對  
+- 雲端原生與本地部署選項  
 
 ## 前置條件與設定
 
 ### 系統需求
 
-在撰寫程式碼之前，請確保開發環境符合以下需求：
-
 1. **Java Development Kit (JDK)：** 8 版或以上（建議使用 JDK 11+）  
 2. **建置工具：** Maven 3.6+ 或 Gradle 6.0+  
-3. **記憶體：** 處理大型文件最低 4 GB RAM  
-4. **儲存空間：** 500 MB 以上的可用空間供暫存比較檔案使用  
+3. **記憶體：** 大檔案最低 **4 GB RAM**  
+4. **儲存空間：** 至少 **500 MB** 可用於暫存比較資料  
 
 ### Maven 設定
 
-將 GroupDocs 的儲存庫與相依性加入 `pom.xml`。此設定可確保從官方發布渠道取得套件：
+將 GroupDocs 的儲存庫與相依性加入你的 `pom.xml`。這可確保取得官方發行版：
 
 ```xml
 <repositories>
@@ -113,14 +154,16 @@ GroupDocs.Comparison for Java 內建支援超過 50 種檔案格式：
 
 ### 授權設定
 
-**開發與測試階段：**  
-- **免費試用：** 從 [GroupDocs 下載](https://releases.groupdocs.com/comparison/java/) 取得 – 產出會加上浮水印  
-- **臨時授權：** 透過 [GroupDocs 支援](https://purchase.groupdocs.com/temporary-license/) 取得 30 天完整存取權  
+**開發與測試用**：
 
-**正式上線：**  
-- **完整授權：** 前往 [GroupDocs 購買](https://purchase.groupdocs.com/buy) 取得無限制的商業使用授權  
+- **免費試用：** 從 [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) 下載 – 包含浮水印輸出。  
+- **臨時授權：** 透過 [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/) 取得 30 天完整存取。  
 
-取得授權檔案後，請依下列方式初始化：
+**正式環境**：
+
+- **完整授權：** 透過 [GroupDocs Purchase](https://purchase.groupdocs.com/buy) 購買，以獲得無限制的商業使用。  
+
+在應用程式啟動時初始化授權：
 
 ```java
 // License initialization - do this once at application startup
@@ -128,15 +171,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**小技巧：** 將授權檔案放在應用程式的 resources 資料夾，並使用 `getClass().getResourceAsStream()` 載入，以提升跨環境的可移植性。
+**小技巧：** 將授權檔案放在 resources 資料夾，並使用 `getClass().getResourceAsStream()` 載入，以實現可移植部署。
 
 ## 核心實作指南
 
 ### 功能 1：忽略頁首與頁尾比較
 
-**為何重要：** 頁首與頁尾常包含時間戳、頁碼或作者資訊等動態內容，這些在不同版本間會變動卻與內容比較無關。忽略這些區段可減少噪音，聚焦於實質變更。
+`setHeaderFootersComparison` 方法會停用頁首與頁尾內容的比較，避免不相關的差異出現在差異報告中。
 
-**實務情境：** 比較合約版本時，每個修訂的頁腳都有不同的日期標記，但你只關心正文條款的變動。
+**為何重要：** 頁首與頁尾常包含動態資料（時間戳記、頁碼），在版本間會變動卻與內容審閱無關。忽略它們可減少噪音並加快處理速度。
+
+**實務情境：** 比較兩份合約草稿時，每個版本的頁尾都會新增日期戳記；此時你只關心條款的變更。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -163,16 +208,18 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**主要好處：**
-- **更乾淨的結果** – 專注於內容變更，而非格式差異  
-- **降低誤報** – 消除不相關的變更通知  
-- **效能提升** – 跳過不必要的比較運算  
+**Key Benefits:**  
+- 更乾淨的差異結果  
+- 較少誤報  
+- 因跳過這些區段而加快比較速度  
 
-### 功能 2：設定輸出紙張大小以產出專業報告
+### 功能 2：設定輸出紙張大小以產生專業報告
 
-**商業背景：** 產出列印或 PDF 版的比較報告時，控制紙張大小可確保在不同平台與列印情境下的版面一致。
+`PaperSize` 列舉定義了產生 PDF 時使用的標準頁面尺寸。
 
-**使用案例：** 法務團隊常需將比較報告以特定格式提交法院或客戶簡報。
+**商業情境：** 法務團隊常需要特定紙張大小的可列印比較報告，以供法院提交或客戶交付。
+
+**使用方式：** 在 `CompareOptions` 中使用 `PaperSize` 列舉以設定目標尺寸。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -199,18 +246,19 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-**可用紙張尺寸：** A0‑A10、Letter、Legal、Tabloid 以及自訂尺寸。依需求選擇——A4 適合歐洲客戶，Letter 則符合美國團隊。
+支援的尺寸包括 A0‑A10、Letter、Legal、Tabloid 以及自訂尺寸。對於歐洲客戶可選 A4，對於美國合作夥伴則選 Letter。
 
 ### 功能 3：微調比較靈敏度
 
-**挑戰說明：** 不同文件類型需要不同的變更偵測程度。法律合約需要偵測每個逗號，行銷素材則可能只關心重大內容變動。
+`setSensitivityOfComparison` 方法調整比較引擎評估變更的細緻程度，範圍從主要結構編輯到單一字元差異。
 
-**靈敏度運作方式：** 靈敏度範圍為 0‑100，數值越高偵測越細緻：
+**挑戰：** 不同文件類型需要不同的細緻度。法律合約需要字元層級的精確度，而行銷文案可能只需段落層級的變更。
 
-- **0‑25：** 僅偵測重大變更（段落新增/刪除）  
-- **26‑50：** 中等變更（句子修改）  
-- **51‑75：** 詳細變更（單字層級）  
-- **76‑100：** 細粒度變更（字元層級）  
+**Sensitivity Scale (0‑100):**  
+- **0‑25：** 僅重大變更（段落新增/刪除）  
+- **26‑50：** 中等變更（句子編輯）  
+- **51‑75：** 詳細變更（字詞層級）  
+- **76‑100：** 細緻變更（字元層級）  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -236,16 +284,18 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**靈敏度設定最佳實踐：**
-- **法律文件：** 使用 90‑100 以獲得完整變更偵測  
-- **行銷內容：** 使用 40‑60 以聚焦實質修改  
-- **技術規格：** 使用 70‑80 兼顧重要細節與過濾次要格式  
+**Best‑Practice Settings:**  
+- **法律文件：** 90‑100  
+- **行銷內容：** 40‑60  
+- **技術規格：** 70‑80  
 
-### 功能 4：自訂變更樣式以提升視覺溝通
+### 功能 4：自訂變更樣式以提升視覺傳達
 
-**為何需要自訂樣式：** 預設的標示顏色可能不符合團隊審閱標準或企業品牌。自訂樣式能提升文件可讀性，讓利害關係人快速辨識不同類型的變更。
+`StyleSettings` 物件讓你為插入、刪除與修改的內容定義顏色、字型、邊框及其他視覺提示。
 
-**專業做法：** 利用色彩心理學——紅色代表刪除以示警示，綠色代表新增以示正向，藍色代表修改以示需審核。
+**為何自訂樣式重要：** 預設的標示可能與企業品牌或無障礙指南衝突。客製化顏色、字型與邊框可讓差異即時易於理解。
+
+**範例：** 刪除使用紅色背景，插入使用綠色，修改使用藍色。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -290,43 +340,31 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-**進階樣式選項**（於 `StyleSettings` 中提供）：
-- 字型粗細、大小與字型族的調整  
-- 背景色與透明度設定  
-- 各變更類型的邊框樣式  
-- 刪除內容的刪除線選項  
+`StyleSettings` 的進階選項允許你調整字型粗細、大小、背景透明度、邊框樣式以及刪除線行為。
 
-## 如何在比較報告中設定 Java 紙張大小
+## 如何在比較報告中設定 Java 的紙張大小
 
-若需以程式方式 **set paper size java**，`CompareOptions` 中的 `PaperSize` 列舉提供完整控制。上述範例已示範設定 `PaperSize.A6`。只要將 `A6` 替換為其他支援的尺寸（例如 `PaperSize.LETTER`），即可符合各地列印標準。
+直接透過 `CompareOptions` 中的 `PaperSize` 列舉設定紙張大小。將 `PaperSize.A6` 替換為任何支援的常數（例如 `PaperSize.LETTER`），以符合區域列印標準。這可確保產生的 PDF 報告正確列印，無需手動縮放。此外，你還可以將此設定與自訂邊距和方向旗標結合，產生符合組織文件提交指南的版面，確保每次都有專業外觀。
 
 ## 常見問題與故障排除
 
 ### 大型文件的記憶體管理
 
-**問題：** 比較超過 50 MB 的文件時拋出 `OutOfMemoryError`  
-**解決方案：** 增加 JVM heap 大小並實作串流處理
+**問題：** 比較大於 50 MB 的檔案時出現 `OutOfMemoryError`。  
+**解決方案：** 增加 JVM 堆積大小（`-Xmx8g`）並啟用串流模式。
 
 ```bash
 # Increase heap size for large document processing
 java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 ```
 
-**程式碼最佳化：**
-```java
-// Use streaming for memory efficiency
-try (Comparer comparer = new Comparer(sourceStream)) {
-    // Process in chunks for very large documents
-    CompareOptions options = new CompareOptions.Builder()
-            .setMemoryOptimization(true) // Enable memory optimization
-            .build();
-}
-```
-
 ### 處理損毀或受密碼保護的檔案
 
-**問題：** 鎖定的文件導致比較失敗  
-**預防策略：**
+當 API 遇到未提供密碼的加密文件時，會拋出 `PasswordRequiredException`。
+
+**問題：** 鎖定的文件比較失敗。  
+**預防措施：** 在建立 `Comparer` 時提供密碼，並捕捉 `PasswordRequiredException`。
+
 ```java
 // Check document accessibility before comparison
 try {
@@ -341,10 +379,10 @@ try {
 }
 ```
 
-### 批次處理的效能優化
+### 批次處理的效能最佳化
 
-**挑戰：** 高效處理 100 組以上的文件對比  
-**解決方案：** 使用執行緒池實作平行處理
+**挑戰：** 高效處理超過 100 組文件對。  
+**解決方案：** 使用固定大小的執行緒池，將每個比較作為獨立任務提交。
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -362,23 +400,17 @@ for (Future<ComparisonResult> future : futures) {
 executor.shutdown();
 ```
 
-### 格式特定問題
+### 特定格式問題
 
-**PDF 比較挑戰：**
-- **掃描版 PDF：** 使用 OCR 前置處理以抽取文字  
-- **複雜版面：** 可能需要手動調整靈敏度  
-- **內嵌字型：** 確保不同環境間的字型渲染一致  
-
-**Word 文件問題：**
-- **變更追蹤：** 比對前先停用現有的變更追蹤  
-- **內嵌物件：** 可能無法正確比較，需先抽出再比對  
-- **版本相容性：** 測試不同 Word 版本的相容性  
+- **掃描 PDF：** 在比較前先進行 OCR 前處理。  
+- **Word 文件：** 停用現有的「追蹤變更」功能，以避免誤報差異。  
+- **嵌入物件：** 先抽取再分別比較，以確保準確性。  
 
 ## 最佳實踐與效能技巧
 
-### 1. 文件前置處理
+### 1. 文件前處理
 
-**清理輸入：** 在比較前移除不必要的中繼資料與格式，可提升準確度與速度。
+在比較前去除不必要的中繼資料並統一字型，可提升速度與準確度。
 
 ```java
 // Example preprocessing workflow
@@ -389,9 +421,10 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. 不同文件類型的最佳設定
+### 2. 最佳化設定檔
 
-**設定檔範例：**
+為每種文件類型（法律、行銷、技術）建立可重複使用的 `CompareOptions` 預設，並在整個流程中重複使用。
+
 ```java
 public class ComparisonProfiles {
     public static CompareOptions getLegalDocumentProfile() {
@@ -412,9 +445,10 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. 錯誤處理與日誌記錄
+### 3. 完整的錯誤處理與日誌記錄
 
-**健全的錯誤管理：**
+`ComparisonException` 表示比較過程中發生失敗，並提供詳細的診斷資訊。將比較呼叫包在 try‑catch 區塊中，記錄 `ComparisonException` 細節，必要時回退至安全的預設值。
+
 ```java
 public ComparisonResult safeCompareDocuments(String source, String target) {
     try {
@@ -426,16 +460,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. 快取與效能優化
+### 4. 快取與智慧重用
 
-**實作智慧快取：**
-- 為相同檔案對快取比較結果  
-- 儲存文件指紋，避免對未變更的檔案重新處理  
-- 對非關鍵比較使用非同步處理  
+- 快取相同檔案對的差異結果。  
+- 儲存文件指紋（雜湊）以跳過未變更的檔案。  
+- 對非關鍵比較使用非同步佇列，以保持 UI 響應。  
 
-## 真實案例整合情境
+## 真實情境整合案例
 
-### 情境 1：自動化合約審查流水線
+### 情境 1：自動化合約審查流程
 
 ```java
 @Service
@@ -482,29 +515,49 @@ public class DocumentComparisonController {
 
 ## 常見問答
 
-**Q: 在 GroupDocs for Java 中能否忽略頁首與頁尾的比較？**  
-A: 可以，在 `CompareOptions` 中使用 `setHeaderFootersComparison(false)`。當頁首包含時間戳等動態內容且與核心變更無關時，此設定相當有用。
+**Q：我可以在 GroupDocs for Java 的比較中忽略頁首與頁尾嗎？**  
+A：可以，在 `CompareOptions` 上呼叫 `setHeaderFootersComparison(false)`。此舉會移除差異報告中動態的頁首/頁尾噪音。
 
-**Q: 如何在 Java 中使用 GroupDocs 設定輸出紙張大小？**  
-A: 在 `CompareOptions` 中呼叫 `setPaperSize(PaperSize.A6)`（或其他常數）。此設定會產生適合列印的報告。支援的尺寸包括 A0‑A10、Letter、Legal 與 Tabloid。
+**Q：如何在 Java 中使用 GroupDocs 設定輸出紙張大小？**  
+A：在 `CompareOptions` 中使用 `setPaperSize(PaperSize.A6)`（或其他列舉值）。這會產生符合所選尺寸的可列印 PDF。
 
-**Q: 能否針對不同文件類型微調比較靈敏度？**  
-A: 完全可以。使用 `setSensitivityOfComparison()` 並傳入 0‑100 的數值。較高的數值會偵測更細緻的變更——適合法律文件；較低的數值則適合行銷內容。
+**Q：能否針對不同文件類型微調比較靈敏度？**  
+A：當然可以。對法律合約使用 `setSensitivityOfComparison(85)`，對行銷草稿使用 `setSensitivityOfComparison(45)`，以控制細緻度。
 
-**Q: 能自訂插入、刪除與變更文字的樣式嗎？**  
-A: 能。為每種變更類型建立自訂的 `StyleSettings`，再透過 `CompareOptions` 套用。你可以調整標示顏色、字型、邊框等，以符合品牌需求。
+**Q：我可以自訂比較時插入、刪除與變更文字的樣式嗎？**  
+A：可以。為每種變更類型建立 `StyleSettings` 實例，並設定顏色、字型或邊框，然後再傳入 `CompareOptions`。
 
-**Q: 開始使用 GroupDocs Comparison for Java 需要哪些前置條件？**  
-A: 需要 JDK 8+（建議 JDK 11+），Maven 3.6+ 或 Gradle 6.0+，處理大型文件至少 4 GB 記憶體，以及一份 GroupDocs 授權（提供免費試用）。將儲存庫與相依性加入專案後，在啟動時初始化授權即可。
+**Q：開始使用 GroupDocs Comparison for Java 的前置條件是什麼？**  
+A：你需要 JDK 8+（建議 JDK 11+）、Maven 3.6+ 或 Gradle 6.0+、至少 4 GB RAM，以及有效的 GroupDocs 授權（提供免費試用）。
 
-**Q: 如何處理受密碼保護的文件？**  
-A: 在建立 `Comparer` 時將密碼作為第二個參數傳入，例如 `new Comparer(sourceFile, "password123")`。建議使用 try‑catch 包裹，以優雅處理 `PasswordRequiredException`。
+**Q：如何在 GroupDocs.Comparison 中處理受密碼保護的文件？**  
+A：在建立 `Comparer` 時將密碼作為第二個參數傳入，例如 `new Comparer(sourceFile, "myPassword")`。捕捉 `PasswordRequiredException` 以優雅地處理錯誤。
 
-**Q: GroupDocs.Comparison for Java 支援哪些檔案格式？**  
-A: 超過 50 種格式，包括 Word（DOCX、DOC）、PDF、Excel（XLSX、XLS）、PowerPoint（PPTX、PPT）、文字檔（TXT、HTML、XML）以及影像（PNG、JPEG）供視覺比較。API 會自動偵測類型，亦可在批次處理時手動指定以提升效能。
+**Q：GroupDocs.Comparison for Java 支援哪些檔案格式？**  
+A：支援超過 **50** 種格式，包括 DOCX、PDF、XLSX、PPTX、TXT、HTML、XML 以及常見影像類型（PNG、JPEG）。API 會自動偵測格式，但你也可以明確指定以提升批次效能。
+
+## 結論
+
+透過使用 GroupDocs.Comparison for Java，你可以自動化比較 Excel 活頁簿（以及任何其他支援格式）的繁瑣工作，達到精確、快速且一致的效果。將本指南中的程式碼片段與最佳實踐技巧整合到 CI/CD 流程、文件管理系統或自訂稽核工具中，即可獲得可衡量的生產力提升。
 
 ---
 
-**最後更新：** 2026-03-03  
-**測試環境：** GroupDocs.Comparison 25.2 for Java  
+**最後更新：** 2026-05-16  
+**測試版本：** GroupDocs.Comparison 25.2 for Java  
 **作者：** GroupDocs
+
+```java
+// Use streaming for memory efficiency
+try (Comparer comparer = new Comparer(sourceStream)) {
+    // Process in chunks for very large documents
+    CompareOptions options = new CompareOptions.Builder()
+            .setMemoryOptimization(true) // Enable memory optimization
+            .build();
+}
+```
+
+## 相關教學
+
+- [compare pdf java – Java 文件比較教學 – 載入與比較文件完整指南](/comparison/java/document-loading/)
+- [GroupDocs Comparison Java 授權設定 – 完整 URL 配置指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [如何使用 GroupDocs – Java 文件比較串流 – 完整指南](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

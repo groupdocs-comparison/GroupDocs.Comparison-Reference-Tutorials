@@ -1,271 +1,261 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: Tanulja meg, hogyan hasonlíthat össze dokumentumokat .NET-ben a GroupDocs.Comparison
-  segítségével, fogadja el vagy utasítsa el a módosításokat, és nyerje ki a dokumentum
-  metaadatait.
+date: '2026-05-26'
+description: Ismerje meg, hogyan lehet .net dokumentumokat összehasonlítani a GroupDocs.Comparison
+  segítségével, elfogadni/elutasítani a módosításokat, és kinyerni a dokumentum metaadatait.
 is_root: true
-keywords: GroupDocs.Comparison tutorial, document comparison .NET, compare documents
-  programmatically, .NET document comparison library, GroupDocs.Comparison examples
-lastmod: '2026-03-03'
-linktitle: GroupDocs.Comparison for .NET Tutorials
+keywords:
+- compare documents .net
+- document comparison .net
+- GroupDocs.Comparison
+lastmod: '2026-05-26'
+linktitle: GroupDocs.Comparison .NET oktatóanyagok
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  headline: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  type: TechArticle
+- description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  name: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  steps:
+  - name: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+    text: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+  - name: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+    text: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+  - name: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+    text: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+  - name: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+    text: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+  - name: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+    text: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+  type: HowTo
+- questions:
+  - answer: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo`
+      and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
+    question: How do I programmatically accept or reject changes after a comparison?
+  - answer: Yes—`DocumentInfo` provides access to standard and custom metadata for
+      both source and target files, allowing you to log or display this information.
+    question: Can I extract metadata such as author, creation date, or custom properties
+      from documents?
+  - answer: Absolutely. The `CompareImages` API highlights pixel‑level differences
+      and returns a similarity percentage you can use in automated tests.
+    question: Is it possible to compare image files (e.g., PNG, JPEG) directly in
+      .NET?
+  - answer: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`;
+      the method returns a collection of `FolderComparisonResult` objects that indicate
+      the status of each file pair.
+    question: How can I compare entire folders to find added, removed, or modified
+      files?
+  - answer: Supply the password via `LoadOptions.Password` when loading each document;
+      the engine decrypts the files internally before performing the diff.
+    question: What should I do if I need to compare password‑protected documents?
+  type: FAQPage
 tags:
 - document-comparison
 - dotnet
 - groupdocs
 - tutorial
-title: Hogyan hasonlítsuk össze a dokumentumokat a GroupDocs.Comparison .NET segítségével
+title: dokumentumok összehasonlítása .net – Teljes GroupDocs.Comparison útmutató
 type: docs
 url: /hu/net/
 weight: 10
 ---
 
-# Teljes GroupDocs.Comparison oktatóanyag .NET fejlesztőknek
+# dokumentumok összehasonlítása .net – Teljes GroupDocs.Comparison útmutató .NET fejlesztőknek
 
-## Miért fontos a dokumentumok összehasonlítása (és miért nagyszerű ez a könyvtár)
-
-Ha **hogyan hasonlítsd össze a dokumentumokat** programozott módon keresed, jó helyen jársz.  
-Ha valaha órákat töltöttél a dokumentumverziók kézi összehasonlításával, a csapatok közötti változások nyomon követésével, vagy azzal, hogy megpróbáld meghatározni, pontosan mi változott két fájl között, nem vagy egyedül. A dokumentumok összehasonlítása egy olyan feladat, amely egyszerűnek tűnik, amíg valóban programozottan nem kell elvégezni.
-
-Itt jön képbe a GroupDocs.Comparison for .NET. Ez nem csak egy újabb összehasonlító eszköz—ez egy átfogó megoldás, amely a egyszerű szöveges dokumentumoktól a komplex táblázatokon, prezentációkon és még képeken is átível. Akár dokumentumkezelő rendszert építesz, munkafolyamat‑automatizálást hozol létre, vagy csak megbízható összehasonlítási funkcióra van szükséged, ez a könyvtár mindent lefed.
-
-Ebben a teljes oktatóanyagban felfedezheted, hogyan integrálhatod a hatékony dokumentum‑összehasonlítási képességeket .NET alkalmazásaidba, valós példákkal és gyakorlati megoldásokkal a gyakori helyzetekhez.
+If you need to **compare documents .net** programmatically, you’ve landed on the right guide.  
+Manually spotting differences between two versions of a contract, a spreadsheet, or a presentation can waste hours and still miss subtle changes. With GroupDocs.Comparison for .NET you can automate this task, generate visual diff reports, and even accept or reject changes without opening the files yourself. This tutorial walks you through every step—from installing the NuGet package to handling large‑scale folder comparisons—so you can embed reliable document comparison into any .NET solution.
 
 ## Gyors válaszok
-- **Mi a GroupDocs.Comparison elsődleges célja?** A dokumentumok programozott összehasonlítása, változások észlelése, valamint vizuális vagy adat‑alapú diff eredmények generálása.  
-- **Elfogadhatok vagy elutasíthatok változásokat automatikusan?** Igen—használd az accept/reject changes API‑t a finomhangolt vezérléshez.  
-- **Támogatja a könyvtár a képek összehasonlítását .NET‑ben?** Természetesen; összehasonlíthatsz képernyőképeket, UI rendereléseket és bármilyen raszteres képet.  
-- **Lehetséges a mappák összehasonlítása?** Igen—összehasonlíthatod a teljes mappákat, hogy megtaláld a hozzáadott, eltávolított vagy módosított fájlokat.  
-- **Mire van szükségem a kezdéshez?** Egy .NET fejlesztői környezet, NuGet csomag, és egy érvényes GroupDocs.Comparison licenc (próba elérhető).
+- **Mi a GroupDocs.Comparison elsődleges célja?** Programozott módon dokumentumok összehasonlítása, változások észlelése, valamint vizuális vagy adat‑alapú diff eredmények generálása.  
+- **Elfogadhatok vagy elutasíthatok változásokat automatikusan?** Igen—használd az accept/reject API-t a részletes vezérléshez.  
+- **Támogatja a könyvtár a képek összehasonlítását .NET-ben?** Természetesen; összehasonlíthatsz képernyőképeket, UI rendereléseket és bármilyen raszteres képet.  
+- **Lehetséges mappák összehasonlítása?** Igen—összehasonlíthatod az egész mappákat, hogy megtaláld a hozzáadott, eltávolított vagy módosított fájlokat.  
+- **Mire van szükség a kezdéshez?** .NET fejlesztői környezet, a NuGet csomag, és egy érvényes GroupDocs.Comparison licenc (próba elérhető).  
 
-## Mi teszi egyedivé a GroupDocs.Comparison‑t?
+## Mi a compare documents .net?
+`compare documents .net` is the process of programmatically identifying differences between two or more document versions using a .NET library. GroupDocs.Comparison implements this by loading source and target files, applying configurable comparison options, and returning a `ComparisonResult` that contains both visual highlights and a structured list of changes. **ComparisonResult** represents the outcome of a comparison, containing the detected changes and visual diff data.
 
-Mielőtt belemerülnénk az oktatóanyagokba, beszéljünk arról, miért választják a fejlesztők ezt a könyvtárat a többi alternatíva helyett:
+## Miért válasszuk a GroupDocs.Comparison-t .NET-hez?
+GroupDocs.Comparison supports over 50 formats, processes large PDFs in seconds, and includes enterprise‑grade features such as password handling, metadata preservation, and fine‑grained change management, eliminating the need for multiple specialized libraries and reducing development effort.
 
-**Átfogó formátumtámogatás**: Word dokumentumok, PDF‑ek, Excel fájlok, PowerPoint prezentációk, képek és még sok más összehasonlítása—mindegyik ugyanazzal az API‑val. Nem kell különböző könyvtárakat tanulni különböző fájltípusokhoz.  
+## Előfeltételek
 
-**Vizuális és programozott eredmények**: Kapj vizuális diff kiemeléseket és programozott hozzáférést a változásokhoz. Tökéletes, ha felhasználóknak kell megmutatni, mi változott, vagy ha automatikusan kell feldolgozni a változásokat.  
+- Visual Studio 2022 vagy újabb (vagy bármely .NET‑kompatibilis IDE).  
+- .NET 6+ runtime (a könyvtár támogatja a .NET Core 3.1-et és a .NET Framework 4.8-at is).  
+- NuGet csomag `GroupDocs.Comparison` (legújabb stabil verzió).  
+- Érvényes licenckulcs (elindíthatod egy 30‑napos próba verzióval).  
 
-**Vállalati szintű funkciók**: Kezeld a jelszóval védett dokumentumokat, dolgozz streamekkel, kezeld a metaadatokat—minden funkció, amire egy éles alkalmazáshoz szükséged van.  
+## Hogyan hasonlíthatok össze két dokumentumot .net?
+To compare two documents .net, instantiate the `Comparer` class, call `Compare(sourcePath, targetPath, outputPath)`, and specify any `ComparisonOptions` you need. The method creates a diff file that highlights insertions, deletions, and formatting changes, while also exposing a `Changes` collection for programmatic inspection. The `Comparer` object is the core engine that drives the comparison process.
 
-**Egyszerű integráció**: Adj dokumentum‑összehasonlítást a meglévő .NET alkalmazásodhoz minimális kómmódosítással. Az API intuitív és jól dokumentált.
+### Lépésről‑lépésre útmutató
 
-## Hogyan hasonlítsd össze a dokumentumokat és észleld a dokumentumváltozásokat
+1. **Hozz létre egy `Comparer` példányt** – ez a magobjektum, amely a összehasonlító motor működését vezérli.  
+2. **Töltsd be a forrást és a célt** – megadhatsz fájlútvonalakat, stream-eket vagy byte tömböket; stream-ek ajánlottak 10 MB-nál nagyobb fájlok esetén.  
+3. **Állítsd be a beállításokat** – figyelmen kívül hagyhatod a kis‑nagybetűket, megadhatsz jelszót, vagy módosíthatod az érzékenységet a `ComparisonOptions` segítségével.  
+4. **Végrehajtsd az összehasonlítást** – hívd meg a `Compare` metódust, és add meg a vizuális diff kimeneti helyét.  
+5. **Feldolgozd az eredményeket** – olvasd a `Changes` gyűjteményt, hogy elfogadd, elutasítsd vagy naplózd az egyes módosításokat.
 
-Amikor **a dokumentumváltozásokat** kell észlelni, a munkafolyamat általában három lépésből áll:
+## Milyen formátumokat hasonlíthatok össze a GroupDocs.Comparison segítségével?
+GroupDocs.Comparison supports **50+ input and output formats**, including DOCX, PDF, XLSX, PPTX, PNG, JPEG, BMP, and TIFF. It can also handle password‑protected files and files stored in cloud storage (via stream APIs). This breadth eliminates the need for multiple libraries when building a universal document‑processing pipeline.
 
-1. **Betöltés** a forrás- és célfájlok (útvonalról, streamből vagy byte‑tömbből).  
-2. **Konfigurálás** az összehasonlítási beállítások—például a kis‑ és nagybetűk figyelmen kívül hagyása, jelszóval védett fájlok kezelése vagy egyedi változásérzékelési érzékenység beállítása.  
-3. **Végrehajtás** az összehasonlítást és az eredmények lekérése—legyen az vizuális PDF/HTML diff, egy `ChangeInfo` objektumok listája, vagy egy kombinált dokumentum, amelyet tovább feldolgozhatsz.
+## Hogyan fogadhatok el vagy utasíthatok el változásokat programozottan?
+The `ComparisonResult` object exposes a `Changes` collection. Each `ChangeInfo` item describes a single detected change and provides `Accept()` and `Reject()` methods. Call `result.Changes.AcceptAll()` to apply every detected change to the target document, or iterate `result.Changes` and invoke `Accept()` or `Reject()` on individual `ChangeInfo` objects for granular control. After applying the desired actions, save the updated document with `result.Save(outputPath)`.
 
-Ez a megközelítés lehetővé teszi a **változások elfogadását/elutasítását**, a dokumentum metaadatainak kinyerését, és még a **képek .net összehasonlítását** is, ha a forrásfájlok képek. Ugyanez a minta működik a **mappák .net összehasonlításához** is, a mappában lévő minden fájlpár ciklusával.
+## Hogyan hasonlíthatok össze teljes mappákat .net?
+Folder comparison involves iterating over matching file pairs and invoking the same `Compare` logic for each pair. GroupDocs.Comparison also offers a helper method `CompareFolders(sourceFolder, targetFolder, outputFolder)` that compares all matching files in two directories, detects added or removed files, and generates diff results. **CompareFolders** returns a collection of `FolderComparisonResult` objects, each indicating the status of a file pair and a link to its diff document.
 
-## Kezdés: Az első összehasonlítás 5 perc alatt
+## Hogyan működik a képek összehasonlítása .NET-ben?
+The image module treats each pixel as a data point, generating a diff image that highlights changed regions in red and returning a similarity score (0‑100 %). Call `Comparer.CompareImages(imagePath1, imagePath2, outputPath)`; the engine aligns the images, computes per‑pixel differences, writes a diff image where altered pixels are colored, and provides a `Similarity` value you can use to trigger alerts or skip further processing if the change is below a threshold.
 
-Új vagy a GroupDocs.Comparison‑ben? Íme, amit előre tudnod kell:
+## Gyakori felhasználási esetek
 
-1. **Telepítés**: Telepítsd a NuGet Package Manager‑rel  
-2. **Licencelés**: Állítsd be a licencet (ingyenes próba elérhető)  
-3. **Alap használat**: Három sor kód az első összehasonlításhoz  
-4. **Haladó funkciók**: Mélyedj el, ahogy a szükségleteid nőnek  
+- **Verziókezelés nem‑kódbeli eszközök számára** – tarts tiszta audit nyomot a szerződésváltozatokról.  
+- **Automatizált megfelelőségi ellenőrzések** – jelöld a jogosulatlan módosításokat a szabályzat dokumentumokban.  
+- **CI/CD pipeline-ok UI teszteléshez** – hasonlítsd össze a weboldalak képernyőképeit a különböző build-ek között.  
+- **Kötegelt migrációs projektek** – ellenőrizd, hogy a konvertált fájlok megtartják-e az eredeti tartalmat.
 
-A tanulási görbe enyhe, de a képességek széleskörűek. Kezdd az alap dokumentum‑összehasonlítással, és fokozatosan fedezd fel a haladó funkciókat, mint a változáskezelés és az egyedi összehasonlítási beállítások.
+## Teljesítmény tippek nagy dokumentumokhoz
 
-## Dokumentumok és mappák összehasonlítása
-
-Itt kezdik a legtöbb fejlesztő—és jó okból. A dokumentum‑ és mappa‑összehasonlítás a legtöbb dokumentumkezelő munkafolyamat gerincét képezi.
-
-Akár szerződésrevíziókkal, technikai dokumentáció frissítésekkel, vagy csak nyomon kell követned, mi változott a szoftverkiadások között foglalkozol, ezek az oktatóanyagok gyorsan beindítanak. Tanuld meg, hogyan fogadd vagy utasítsd el a változásokat programozottan, automatizáld az összehasonlítási munkafolyamatokat, és kezeld hatékonyan a kötegelt műveleteket.
-
-**Gyakori felhasználási esetek:**
-- Verziókezelés nem kódból álló dokumentumokhoz
-- Automatizált változásészlelés munkafolyamatokban
-- Megfelelőség és audit nyomvonal generálása
-- Kollaboratív dokumentum‑áttekintési folyamatok
-
-[Tovább olvasás](./documents-and-folder-comparison/)
-
-## Dokumentum összehasonlítás
-
-Ez a fő funkció, amire a legtöbb fejlesztőnek szüksége van. Szöveges dokumentumok, táblázatok, prezentációk összehasonlítása—bármit. De nem csak a különbségek azonosításáról van szó; arról is, hogy megértsd, mit jelentenek ezek a különbségek, és hogyan kezeld őket programozottan.
-
-Az oktatóanyagaink mindent lefednek az alap összehasonlításoktól a haladó szcenáriókig, mint a nagy dokumentumok kezelése, memóriahasználat menedzselése, és a teljesítmény optimalizálása nagy volumenű műveletekhez.
-
-**Pro Tip**: A dokumentum‑összehasonlítás teljesítménye jelentősen változhat a dokumentum mérete és összetettsége alapján. Megmutatjuk, hogyan optimalizálhatod a saját felhasználási esetedhez.
-
-[Tovább olvasás](./document-comparison/)
-
-## Dokumentumok betöltése és mentése
-
-Ez egyszerűnek tűnhet, de valójában több módja is van a dokumentumok betöltésének az összehasonlításhoz—és a megfelelő megközelítés kiválasztása befolyásolhatja a teljesítményt és a funkcionalitást.
-
-Tanuld meg, mikor tölts be fájlútvonalról, illetve streamből, hogyan kezeld a dokumentumokat különböző forrásokból (adatbázisok, felhő tárolók, web API‑k), és a nagy dokumentumok memória‑kezelésének legjobb gyakorlatait.
-
-**Fejlesztői betekintés**: Sok teljesítményprobléma az alacsony hatékonyságú dokumentumbetöltési mintákból ered. Ezek az oktatóanyagok segítenek elkerülni a gyakori buktatókat.
-
-[Tovább olvasás](./loading-and-saving-documents/)
-
-## Kép összehasonlítás
-
-A vizuális összehasonlítás nem csak dokumentumok számára szól. Akár egy tervezési felülvizsgálati rendszert építesz, vizuális változásokat figyelsz a webalkalmazásokban, vagy minőségbiztosítási munkafolyamatokat hozol létre, a kép‑összehasonlítás teljesen új lehetőségeket nyit.
-
-Az oktatóanyagaink gyakorlati szcenáriókat fednek le, mint a képernyőképek összehasonlítása, a UI elemek vizuális változásainak észlelése, és a kép‑összehasonlítás integrálása az automatizált tesztelési munkafolyamatokba.
-
-[Tovább olvasás](./image-comparison/)
-
-## Alap használat
-
-Új vagy a dokumentum‑összehasonlításban? Kezdd itt. Ezek az oktatóanyagok lefedik az alapvető koncepciókat és a gyakori mintákat, amelyeket szinte minden projektben használsz.
-
-Mesterezz olyan alapvető témákat, mint a cella‑összehasonlítás táblázatokban, a dokumentuminformációk kinyerése, és a támogatott formátumok megértése. Ez az alap jól szolgál majd, amikor összetettebb szcenáriókkal foglalkozol.
-
-**Tanulási út**: Kezdd az alap használattal, majd lépj a dokumentum‑összehasonlításra, végül fedezd fel a haladó funkciókat. Ez a sorrend szisztematikusan építi fel a készségeidet.
-
-[Tovább olvasás](./basic-usage/)
-
-## Gyors kezdés
-
-Szükséged van gyors indulásra? Gyors kezdő oktatóanyagaink fejlesztőknek készültek, akik azonnali eredményeket akarnak.
-
-Tanuld meg a hatékony licencbeállítást, integráld az összehasonlítási funkciót minimális kóddal, és pár percen belül működésbe hozd az első dokumentum‑összehasonlítást. Tökéletes proof‑of‑concept‑okhoz és gyors prototípusokhoz.
-
-[Tovább olvasás](./quick-start/)
-
-## Haladó oktatóanyag kategóriák
-
-### [Kezdő lépések](./getting-started/)
-Lépésről‑lépésre oktatóanyagok a GroupDocs.Comparison telepítéséhez, licenceléshez, beállításhoz, és az első dokumentum‑összehasonlítás létrehozásához .NET alkalmazásokban.
-
-### [Dokumentum betöltés](./document-loading/)
-Fedezd fel a különböző módszereket a dokumentumok betöltésére összehasonlításhoz különböző forrásokból, beleértve fájlútvonalakat, streameket és byte‑tömböket.
-
-### [Alap összehasonlítás](./basic-comparison/)
-Tanuld meg, hogyan hasonlítsd össze a különböző dokumentumtípusokat, mint a Word, PDF, Excel és mások, egyszerű API hívásokkal a GroupDocs.Comparison segítségével.
-
-### [Haladó összehasonlítás](./advanced-comparison/)
-Fedezd fel a hatékony funkciókat összetett összehasonlítási szcenáriókhoz, több dokumentum összehasonlítása, egyedi beállítások és védett dokumentumok.
-
-### [Változáskezelés](./change-management/)
-Mesterezz a változások észlelését, elfogadását és elutasítását a dokumentumok között, finomhangolt vezérléssel az összehasonlítási eredmények felett.
-
-### [Dokumentum információ](./document-information/)
-Kinyer részletes metaadatokat és információkat a dokumentumaidról összehasonlítási műveletek előtt és után.
-
-### [Előnézet generálás](./preview-generation/)
-Készíts vizuális előnézeteket és bélyegképeket a dokumentumoldalakról a forrás, cél és eredmény összehasonlító dokumentumokhoz.
-
-### [Metaadatkezelés](./metadata-management/)
-Irányítsd, hogyan őrzik, módosítják vagy állítják vissza a dokumentum metaadatait az összehasonlítási műveletek során.
-
-### [Biztonság és védelem](./security-protection/)
-Dolgozz jelszóval védett dokumentumokkal és valósíts meg biztonsági funkciókat az összehasonlítási munkafolyamataidban.
-
-### [Licencelés és konfiguráció](./licensing-configuration/)
-Állítsd be helyesen a licencelést, a mérő alapú számlázást, és optimalizáld az alkalmazás konfigurációját a GroupDocs.Comparison számára.
-
-### [Összehasonlítási beállítások](./comparison-options/)
-Finomhangold az összehasonlítási viselkedést részletes beállításokkal, hogy pontos eredményeket érj el különböző dokumentumtípusoknál.
-
-## Gyakori kihívások és megoldások
-
-**Teljesítmény nagy dokumentumok esetén**: Nagy fájlok (>10 MB) esetén fontold meg a streamek használatát a teljes dokumentum memóriába betöltése helyett. Dokumentum betöltési oktatóanyagaink lefedik az optimalizálási technikákat.  
-
-**Memória kezelés**: A dokumentum‑összehasonlítás memóriaigényes lehet. Tanuld meg a objektumok megfelelő eldobását és a hatékony betöltési mintákat a memória szivárgások elkerüléséhez.  
-
-**Formátumspecifikus szempontok**: A különböző dokumentumtípusok egyedi jellemzőkkel rendelkeznek. A PDF‑ek másként viselkednek, mint a Word dokumentumok, amelyek másként viselkednek, mint a táblázatok. Formátumspecifikus útmutatóink ezeket a finomságokat tárgyalják.  
-
-**Integrációs minták**: Akár web API‑t, asztali alkalmazást vagy háttérszolgáltatást építesz, az integrációs minta számít. Példákat nyújtunk a gyakori architekturális szcenáriókra.
-
-## Legjobb gyakorlatok éles használathoz
-
-**Hibakezelés**: Mindig valósíts meg megfelelő kivételkezelést a dokumentum‑összehasonlítás során. Érvénytelen fájlok, sérült dokumentumok és nem támogatott formátumok kezelése legyen elegáns.  
-
-**Erőforrás‑kezelés**: Használj `using` utasításokat vagy megfelelő eldobási mintákat, hogy az erőforrások felszabaduljanak, különösen sok dokumentum feldolgozásakor.  
-
-**Teljesítményfigyelés**: Kövesd nyomon az összehasonlítási időket és memóriahasználatot, különösen nagy volumenű szcenáriókban. Ezek az adatok segítenek azonosítani a szűk keresztmetszeteket és az optimalizálási lehetőségeket.  
-
-**Biztonsági szempontok**: Érzékeny dokumentumok kezelésekor biztosíts megfelelő hozzáférés‑ellenőrzést, és vedd figyelembe a temporális fájlok és memóriahasználat biztonsági következményeit.
-
-## Mi a következő lépés?
-
-Készen állsz belemerülni? Kezdd a [Gyors kezdés](./quick-start/) oktatóanyagokkal, ha azonnali eredményeket szeretnél, vagy indíts a [Kezdő lépések](./getting-started/) segítségével, ha átfogóbb alapot szeretnél.
-
-Minden oktatóanyag teljes kódpéldákat, magyarázatokat arról, mikor és miért használj különböző megközelítéseket, valamint gyakorlati tippeket tartalmaz a valós használat alapján. A sorozat végére a tudás és a magabiztosság birtokosa leszel, hogy robusztus dokumentum‑összehasonlítási funkciót valósíts meg .NET alkalmazásaidban.
-
-Akár dokumentumkezelő rendszereket építesz, megfelelőségi munkafolyamatokat automatizálsz, vagy kollaboratív szerkesztési funkciókat hozol létre, a GroupDocs.Comparison for .NET biztosítja az alapot a megbízható, hatékony dokumentum‑összehasonlításhoz.
-
-## GroupDocs.Comparison .NET oktatóanyagok 
-### [Dokumentumok és mappa összehasonlítás](./documents-and-folder-comparison/)
-Tanuld meg a dokumentum munkafolyamatok egyszerűsítését a GroupDocs Comparison .NET oktatóanyagokkal. Változások elfogadása, elutasítása és dokumentumok és mappák könnyed összehasonlítása.  
-
-### [Dokumentum összehasonlítás](./document-comparison/)
-Hatékonyan hasonlíts össze dokumentumokat .NET‑ben a GroupDocs.Comparison segítségével. Egyszerűsítsd a dokumentumkezelést, javítsd a munkafolyamatot, és biztosíts pontosságot. Tudj meg többet!  
-
-### [Dokumentumok betöltése és mentése](./loading-and-saving-documents/)
-Könnyedén hasonlíts össze dokumentumokat .NET‑ben a GroupDocs.Comparison segítségével. Tanuld meg a betöltést, mentést, és a betöltési beállítások használatát a hatékony dokumentumkezeléshez.  
-
-### [Kép összehasonlítás](./image-comparison/)
-Hatékonyan hasonlíts össze képeket .NET‑ben a GroupDocs.Comparison könyvtárral. Lépésről‑lépésre oktatóanyagok a zökkenőmentes integrációhoz útvonal vagy stream alapján.  
-
-### [Alap használat](./basic-usage/)
-Hatékonyan hasonlíts össze dokumentumokat .NET‑ben a GroupDocs.Comparison segítségével. Tanulj meg alap használati oktatóanyagokat, amelyek a cella‑összehasonlítást, dokumentuminformáció kinyerését és a támogatott formátumokat fedik le.  
-
-### [Gyors kezdés](./quick-start/)
-Könnyedén integráld a GroupDocs Comparison .NET‑et a projektjeidbe. Tanulj meg hatékony licencbeállítási módszereket a pontos dokumentum‑összehasonlítási munkafolyamatokhoz.  
-
-### [Kezdő lépések](./getting-started/)
-Lépésről‑lépésre oktatóanyagok a GroupDocs.Comparison telepítéséhez, licenceléshez, beállításhoz, és az első dokumentum‑összehasonlítás létrehozásához .NET alkalmazásokban.  
-
-### [Dokumentum betöltés](./document-loading/)
-Fedezd fel a különböző megközelítéseket a dokumentumok betöltésére összehasonlításhoz különböző forrásokból, beleértve fájlútvonalakat, streameket és byte‑tömböket.  
-
-### [Alap összehasonlítás](./basic-comparison/)
-Tanuld meg, hogyan hasonlíts össze különböző dokumentumtípusokat, mint a Word, PDF, Excel és mások, egyszerű API hívásokkal a GroupDocs.Comparison segítségével.  
-
-### [Haladó összehasonlítás](./advanced-comparison/)
-Fedezd fel a hatékony funkciókat összetett összehasonlítási szcenáriókhoz, több dokumentum összehasonlítása, egyedi beállítások és védett dokumentumok.  
-
-### [Változáskezelés](./change-management/)
-Mesterezz a változások észlelését, elfogadását és elutasítását a dokumentumok között, finomhangolt vezérléssel az összehasonlítási eredmények felett.  
-
-### [Dokumentum információ](./document-information/)
-Kinyer részletes metaadatokat és információkat a dokumentumaidról összehasonlítási műveletek előtt és után.  
-
-### [Előnézet generálás](./preview-generation/)
-Készíts vizuális előnézeteket és bélyegképeket a dokumentumoldalakról a forrás, cél és eredmény összehasonlító dokumentumokhoz.  
-
-### [Metaadatkezelés](./metadata-management/)
-Irányítsd, hogyan őrzik, módosítják vagy állítják vissza a dokumentum metaadatait az összehasonlítási műveletek során.  
-
-### [Biztonság és védelem](./security-protection/)
-Dolgozz jelszóval védett dokumentumokkal és valósíts meg biztonsági funkciókat az összehasonlítási munkafolyamataidban.  
-
-### [Licencelés és konfiguráció](./licensing-configuration/)
-Állítsd be helyesen a licencelést, a mérő alapú számlázást, és optimalizáld az alkalmazás konfigurációját a GroupDocs.Comparison számára.  
-
-### [Összehasonlítási beállítások](./comparison-options/)
-Finomhangold az összehasonlítási viselkedést részletes beállításokkal, hogy pontos eredményeket érj el különböző dokumentumtípusoknál.  
+- **Stream-eld a fájlokat** a teljes memóriába betöltés helyett; ez akár 80 %-kal csökkentheti a csúcs RAM használatot.  
+- **Használd újra ugyanazt a `Comparer` példányt** több összehasonlításhoz, hogy kihasználd a belső gyorsítótárat.  
+- **Állítsd be a `ComparisonOptions.MemoryLimit`-et** 500 MB-nál nagyobb dokumentumok esetén, hogy elkerüld a memóriahiányos kivételeket.  
 
 ## Gyakran Ismételt Kérdések
 
-**Q: Hogyan fogadhatok el vagy utasítok el programozottan változásokat egy összehasonlítás után?**  
-A: Használd az `AcceptAll`, `RejectAll`, vagy `Accept/Reject` metódusokat a `Changes` gyűjteményen, amelyet az összehasonlítási eredmény ad vissza.
+**Q: How do I programmatically accept or reject changes after a comparison?**  
+A: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo` and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
 
-**Q: Kinyerhetek metaadatokat, például szerzőt, létrehozási dátumot vagy egyedi tulajdonságokat a dokumentumokból?**  
-A: Igen— a GroupDocs.Comparison egy `DocumentInfo` objektumot biztosít, amely a forrás és cél fájlok standard és egyedi metaadatait teszi elérhetővé.
+**Q: Can I extract metadata such as author, creation date, or custom properties from documents?**  
+A: Yes—`DocumentInfo` provides access to standard and custom metadata for both source and target files, allowing you to log or display this information.
 
-**Q: Lehetséges közvetlenül .NET‑ben összehasonlítani képfájlokat (pl. PNG, JPEG)?**  
-A: Teljesen. A könyvtár tartalmaz egy kép‑összehasonlítási API‑t, amely pixel‑szintű különbségeket emel ki, és képes diff képet generálni.
+**Q: Is it possible to compare image files (e.g., PNG, JPEG) directly in .NET?**  
+A: Absolutely. The `CompareImages` API highlights pixel‑level differences and returns a similarity percentage you can use in automated tests.
 
-**Q: Hogyan hasonlíthatok össze teljes mappákat, hogy megtaláljam a hozzáadott, eltávolított vagy módosított fájlokat?**  
-A: Iterálj végig a mappák minden fájlpárján, és hívd meg az összehasonlítási API‑t; a könyvtár egy segítő metódust is kínál a mappa tartalmának tömeges összehasonlításához.
+**Q: How can I compare entire folders to find added, removed, or modified files?**  
+A: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`; the method returns a collection of `FolderComparisonResult` objects that indicate the status of each file pair.
 
-**Q: Mit tegyek, ha jelszóval védett dokumentumokat kell összehasonlítanom?**  
-A: Add meg a jelszót a `LoadOptions`‑on keresztül minden dokumentum betöltésekor; az összehasonlítási motor belülről dekódolja a fájlokat.
+**Q: What should I do if I need to compare password‑protected documents?**  
+A: Supply the password via `LoadOptions.Password` when loading each document; the engine decrypts the files internally before performing the diff.
+
+**Q: Does GroupDocs.Comparison support .NET Core and .NET 5/6?**  
+A: Yes—the library is compatible with .NET Core 3.1, .NET 5, .NET 6, and later, offering the same feature set across all runtimes.
+
+## Bizalom jelek
+
+**Last Updated:** 2026-05-26  
+**Tested With:** GroupDocs.Comparison 23.12 for .NET  
+**Author:** GroupDocs  
 
 ---
 
-**Utolsó frissítés:** 2026-03-03  
-**Tesztelve ezzel:** GroupDocs.Comparison 23.12 for .NET  
-**Szerző:** GroupDocs
+## További oktatóanyag linkek (változatlan)
+
+### Dokumentumok és mappa összehasonlítása
+[További információ](./documents-and-folder-comparison/)
+
+### Dokumentum összehasonlítás
+[További információ](./document-comparison/)
+
+### Dokumentumok betöltése és mentése
+[További információ](./loading-and-saving-documents/)
+
+### Kép összehasonlítás
+[További információ](./image-comparison/)
+
+### Alapvető használat
+[További információ](./basic-usage/)
+
+### Gyors kezdés
+[További információ](./quick-start/)
+
+### Első lépések
+[Első lépések](./getting-started/)
+
+### Dokumentum betöltése
+[Dokumentum betöltése](./document-loading/)
+
+### Alap összehasonlítás
+[Alap összehasonlítás](./basic-comparison/)
+
+### Haladó összehasonlítás
+[Haladó összehasonlítás](./advanced-comparison/)
+
+### Változáskezelés
+[Változáskezelés](./change-management/)
+
+### Dokumentum információ
+[Dokumentum információ](./document-information/)
+
+### Előnézet generálás
+[Előnézet generálás](./preview-generation/)
+
+### Metaadatkezelés
+[Metaadatkezelés](./metadata-management/)
+
+### Biztonság és védelem
+[Biztonság és védelem](./security-protection/)
+
+### Licencelés és konfiguráció
+[Licencelés és konfiguráció](./licensing-configuration/)
+
+### Összehasonlítási beállítások
+[Összehasonlítási beállítások](./comparison-options/)
+
+[További információ](./documents-and-folder-comparison/)
+[További információ](./document-comparison/)
+[További információ](./loading-and-saving-documents/)
+[További információ](./image-comparison/)
+[További információ](./basic-usage/)
+[További információ](./quick-start/)
+[Első lépések](./getting-started/)
+[Dokumentum betöltése](./document-loading/)
+[Alap összehasonlítás](./basic-comparison/)
+[Haladó összehasonlítás](./advanced-comparison/)
+[Változáskezelés](./change-management/)
+[Dokumentum információ](./document-information/)
+[Előnézet generálás](./preview-generation/)
+[Metaadatkezelés](./metadata-management/)
+[Biztonság és védelem](./security-protection/)
+[Licencelés és konfiguráció](./licensing-configuration/)
+[Összehasonlítási beállítások](./comparison-options/)
+[Gyors kezdés](./quick-start/)
+[Első lépések](./getting-started/)
+[Dokumentumok és mappa összehasonlítása](./documents-and-folder-comparison/)
+[Dokumentum összehasonlítás](./document-comparison/)
+[Dokumentumok betöltése és mentése](./loading-and-saving-documents/)
+[Kép összehasonlítás](./image-comparison/)
+[Alapvető használat](./basic-usage/)
+[Gyors kezdés](./quick-start/)
+[Első lépések](./getting-started/)
+[Dokumentum betöltése](./document-loading/)
+[Alap összehasonlítás](./basic-comparison/)
+[Haladó összehasonlítás](./advanced-comparison/)
+[Változáskezelés](./change-management/)
+[Dokumentum információ](./document-information/)
+[Előnézet generálás](./preview-generation/)
+[Metaadatkezelés](./metadata-management/)
+[Biztonság és védelem](./security-protection/)
+[Licencelés és konfiguráció](./licensing-configuration/)
+[Összehasonlítási beállítások](./comparison-options/)
+
+## Kapcsolódó oktatóanyagok
+
+- [Document Comparison .NET: Accept & Reject Changes Programmatically](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [GroupDocs Comparison NET Tutorial - Complete Guide to Document Comparison with Metadata](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [Document Comparison .NET Tutorial - Preserve Metadata with GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

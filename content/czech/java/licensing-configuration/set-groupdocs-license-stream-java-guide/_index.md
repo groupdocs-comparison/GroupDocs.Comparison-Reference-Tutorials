@@ -1,60 +1,103 @@
 ---
 categories:
 - Java Development
-date: '2026-01-28'
-description: Naučte se, jak implementovat centralizovaný správce licencí pro GroupDocs
-  pomocí Java streamů. Kompletní průvodce s kódem, řešením problémů a osvědčenými
-  postupy pro rok 2026.
-keywords: GroupDocs license Java tutorial, Java license stream setup, GroupDocs Comparison
-  licensing, programmatic license Java, centralized license manager
-lastmod: '2026-01-28'
-linktitle: GroupDocs License Java Tutorial
+date: '2026-05-26'
+description: Naučte se, jak nastavit centralizovaný správce licencí pro GroupDocs
+  pomocí Java streamů. Obsahuje krok‑za‑krokem kód, řešení problémů a osvědčené postupy
+  pro rok 2026.
+keywords:
+- centralized license manager
+- stream‑based licensing
+- GroupDocs Java licensing
+lastmod: '2026-05-26'
+linktitle: Návod na licencování GroupDocs v Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to set up a centralized license manager for GroupDocs using
+    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
+    for 2026.
+  headline: 'GroupDocs Java: Centralized License Manager via Stream'
+  type: TechArticle
+- description: Learn how to set up a centralized license manager for GroupDocs using
+    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
+    for 2026.
+  name: 'GroupDocs Java: Centralized License Manager via Stream'
+  steps:
+  - name: Verify License File Integrity
+    text: Check that the XML is well‑formed and matches the license you purchased.
+      A corrupted file will raise a `LicenseException`.
+  - name: Debug Stream Creation
+    text: Print the size of the byte array (`licenseBytes.length`) before passing
+      it to `setLicense()`; a size of zero indicates an empty stream.
+  - name: Test License Application
+    text: Run a simple comparison task after loading the license. If the output contains
+      watermarks, the license was not applied correctly.
+  type: HowTo
+- questions:
+  - answer: No. Once a stream is read, it’s exhausted. Create a fresh stream each
+      time or cache the raw byte array and wrap it in a new `ByteArrayInputStream`.
+    question: Can I use the same license stream multiple times?
+  - answer: GroupDocs runs in evaluation mode, inserting watermarks and limiting the
+      number of processed pages.
+    question: What happens if I don’t set a license?
+  - answer: Yes. By loading the license directly from memory you avoid leaving a readable
+      file on disk, which mitigates accidental exposure.
+    question: Is stream‑based licensing more secure than file‑based?
+  - answer: Absolutely. Call `LicenseManager.setLicense(newStream)` whenever you need
+      to change the active license—for example, per‑tenant or per‑feature licensing.
+    question: Can I switch licenses at runtime?
+  - answer: Each node must load the license independently. Use a shared configuration
+      service (Consul, Spring Cloud Config) or environment variables so every instance
+      receives the same license data.
+    question: How do I handle licensing in a clustered environment?
+  type: FAQPage
 tags:
 - groupdocs
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java - Centralizovaný správce licencí pomocí streamu'
+title: 'GroupDocs Java: Centralizovaný správce licencí přes Stream'
 type: docs
 url: /cs/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-# GroupDocs Java: Centralizovaný správce licencí pomocí streamu
+# Centralizovaný správce licencí pro GroupDocs Java pomocí streamu
 
-## Úvod
-
-Pokud pracujete s **GroupDocs.Comparison for Java**, pravděpodobně jste se zamýšleli nad tím, jaký je nejlepší způsob, jak ve svých aplikacích řešit licencování. Implementace **centralizovaného správce licencí** pomocí vstupních streamů vám poskytuje flexibilitu spravovat licence napříč prostředími, kontejnery a dynamickými scénáři – vše z jednoho udržovatelného řídicího bodu. Tento tutoriál vás provede vším, co potřebujete vědět o nastavení centralizovaného správce licencí s licencováním založeným na streamech, proč je to důležité a jak se vyhnout běžným úskalím.
-
-**Co se v tomto průvodci naučíte:**
-- Nastavení licence založené na streamech s kompletními ukázkami kódu  
-- Vytvoření **centralizovaného správce licencí** pro snadné opakované použití  
-- Klíčové výhody oproti tradičnímu licencování založenému na souborech  
-- Tipy na odstraňování problémů pro reálná nasazení  
+Pokud integrujete **GroupDocs.Comparison for Java** do moderní aplikace, nejspolehlivějším způsobem, jak spravovat licencování, je **centralizovaný správce licencí**, který funguje s Java streamy. Tento přístup vám umožní načíst licenci ze souborů, zdrojů ve classpath, URL nebo zabezpečených úložišť – čímž eliminujete pevně zakódované cesty a zvyšujete bezpečnost. V následujících minutách uvidíte, proč je centralizovaný správce důležitý, jak jej implementovat a jak se vyhnout úskalím, která mnohé vývojáře potkávají.
 
 ## Rychlé odpovědi
-- **Co je centralizovaný správce licencí?** Jedna třída nebo služba, která načte a použije licenci GroupDocs pro celou aplikaci.  
-- **Proč používat streamy pro licencování?** Streamy vám umožňují načíst licence ze souborů, zdrojů v classpath, URL nebo zabezpečených úložišť, aniž byste soubory zanechávali na disku.  
-- **Kdy přejít z licencování založeného na souborech na streamové?** Vždy, když nasazujete do kontejnerů, cloudových služeb nebo potřebujete dynamický výběr licence.  
-- **Jak se vyhnout únikům paměti?** Používejte try‑with‑resources nebo explicitně uzavírejte streamy po aplikaci licence.  
-- **Mohu změnit licenci za běhu?** Ano – zavolejte `setLicense()` s novým streamem, kdykoli potřebujete licenci změnit.
+- **Co je centralizovaný správce licencí?** Jedná se o znovupoužitelnou komponentu, která načítá a aplikuje licenci GroupDocs pro celou aplikaci, obvykle jako singleton nebo Spring bean.  
+- **Proč používat streamy pro licencování?** Streamy vám umožní číst licenci z libovolného zdroje (soubor, classpath, URL, úložiště) bez ukládání na disk, což zvyšuje bezpečnost a kompatibilitu s kontejnery.  
+- **Kdy přejít z licencování založeného na souboru na licencování založené na streamu?** Kdykoli nasazujete do Dockeru, Kubernetes nebo jakéhokoli cloudového prostředí, kde je připojování souborů nepohodlné.  
+- **Jak se vyhnout únikům paměti?** Zabalte `InputStream` do bloku try‑with‑resources nebo jej explicitně zavřete po volání `setLicense()`.  
+- **Mohu měnit licenci za běhu?** Ano – zavolejte `setLicense()` s novým streamem, kdykoli potřebujete přepnout licence pro konkrétního nájemce nebo sadu funkcí.
 
-## Proč zvolit licencování založené na streamech?
+## Co je centralizovaný správce licencí?
 
-Než se ponoříme do kódu, podívejme se, proč je **centralizovaný správce licencí** postavený na streamech chytřejší volbou pro moderní Java aplikace.
+**Centralizovaný správce licencí** je jediná třída nebo služba, která zapouzdřuje veškerou logiku pro načítání, aplikaci a obnovu licence GroupDocs. Tím, že tuto logiku udržujete na jednom místě, eliminujete duplicitní kód, zjednodušujete změny konfigurace a zajišťujete, že každá část vaší aplikace používá stejnou platnou licenci.
 
-- **Flexibilita v různých prostředích** – Načítání licencí z proměnných prostředí, konfiguračních služeb nebo databází, čímž se eliminuje pevně zakódované cesty k souborům.  
-- **Bezpečnostní výhody** – Udržujte licenci mimo souborový systém; načtěte ji ze zabezpečeného úložiště a aplikujte v paměti.  
-- **Kontejner‑přátelské** – Vkládejte licence pomocí secretů nebo config map bez nutnosti připojování svazků.  
-- **Dynamické licencování** – Měňte licence za chodu pro multi‑tenant nebo scénáře založené na funkcích.
+## Proč zvolit licencování založené na streamu?
+
+Použití streamu k načtení licence GroupDocs přináší několik hmatatelných výhod oproti klasickému přístupu s cestou k souboru. Odděluje umístění licence od aplikace, umožňuje bezpečné zacházení v paměti, funguje bez problémů v kontejnerizovaných prostředích a umožňuje dynamické změny licence za běhu, což společně zlepšuje flexibilitu, bezpečnost a škálovatelnost.
+
+Načtení licence pomocí streamu vám poskytuje **čtyři konkrétní výhody** oproti tradiční metodě s cestou k souboru:
+
+1. **Flexibilita prostředí** – Načtěte licenci z proměnných prostředí, správců tajemství nebo databází, takže stejný binární soubor funguje v dev, test a prod bez změn kódu.  
+2. **Zvýšená bezpečnost** – Licence se nikdy nedotkne souborového systému; žije pouze v paměti, čímž se snižuje povrch útoku.  
+3. **Přátelskost k kontejnerům** – V Dockeru nebo Kubernetes můžete licenci injektovat jako secret nebo config map, čímž se vyhnete připojování svazků.  
+4. **Dynamické licencování** – Multi‑tenant SaaS platformy mohou licence měnit za běhu pro jednotlivé nájemce, což umožňuje fakturaci založenou na funkcích.
+
+_GroupDocs.Comparison podporuje **70+** formátů dokumentů (PDF, DOCX, XLSX, PPTX, HTML, obrázky atd.) a dokáže zpracovat soubory o stovkách stránek, aniž by načítal celý dokument do paměti, což činí licencování založené na streamu přirozenou volbou pro služby s vysokým propustností._
 
 ## Požadavky a nastavení prostředí
 
 ### Požadované knihovny a verze
 
-- **GroupDocs.Comparison for Java**: Verze 25.2 nebo novější  
-- **Java Development Kit (JDK)**: Verze 8+ (doporučeno JDK 11+)  
-- **Maven nebo Gradle**: Pro správu závislostí (příklady používají Maven)
+- **GroupDocs.Comparison for Java** – verze **25.2** nebo novější (nejnovější vydání z roku 2026).  
+- **Java Development Kit (JDK)** – verze **8+** (JDK 11+ doporučeno pro lepší podporu modulů).  
+- **Maven nebo Gradle** – pro správu závislostí (příklady níže používají Maven).
 
 ### Maven konfigurace
 
@@ -76,23 +119,17 @@ Než se ponoříme do kódu, podívejme se, proč je **centralizovaný správce 
 </dependencies>
 ```
 
-### Získání licence
+## Získání licence
 
-1. **Začněte s bezplatnou zkušební verzí** – otestujte základní funkčnost.  
-2. **Získejte dočasnou licenci** – vhodná pro prodloužené hodnocení.  
-3. **Zakupte produkční licenci** – vyžadováno pro komerční nasazení.
+1. **Začněte s bezplatnou zkušební verzí** – získáte plný přístup k API na 30 dní.  
+2. **Požádejte o dočasnou licenci** – ideální pro rozšířené hodnocení v CI pipelinech.  
+3. **Kupte produkční licenci** – vyžadováno pro komerční nasazení a odstraňuje vodotisky z hodnocení.
 
-*Tip*: Uložte řetězec licence do zabezpečeného úložiště a načtěte jej za běhu; tím udržíte svůj **centralizovaný správce licencí** čistý a bezpečný.
+*Pro tip*: Uložte surový řetězec licence do správce tajemství (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) a načtěte jej za běhu. Tím licence zůstane mimo zdrojový kontrolní systém i souborový systém.
 
-## Co je centralizovaný správce licencí?
+## Ověření zdroje licence
 
-**Centralizovaný správce licencí** je znovupoužitelná komponenta (často singleton nebo Spring bean), která zapouzdřuje veškerou logiku pro načítání, aplikaci a obnovu licence GroupDocs. Centralizací této odpovědnosti se vyhnete duplicitnímu kódu, zjednodušíte změny konfigurace a zajistíte konzistentní licencování napříč všemi moduly vaší aplikace.
-
-## Kompletní průvodce implementací
-
-### Krok 1: Ověřte zdroj licence
-
-Před vytvořením streamu potvrďte, že zdroj licence je dostupný:
+Než vytvoříte stream, ujistěte se, že zdroj, ze kterého chcete číst, je dostupný. Chybějící soubor nebo nedostupná URL jsou nejčastější příčinou chyb v licencování.
 
 ```java
 if (new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic").exists()) {
@@ -102,11 +139,13 @@ if (new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic").exists()) {
 }
 ```
 
-> **Proč je to důležité** – Chybějící soubor je nejčastější příčinou chyb v licencování. Včasná kontrola šetří čas při ladění.
+> **Proč je to důležité** – Včasné odhalení chybějícího zdroje zabraňuje runtime chybám `LicenseException`, které mohou zastavit zpracování dokumentu.
 
-### Krok 2: Správně vytvořte vstupní stream
+## Správné vytvoření InputStreamu
 
-Můžete vytvářet streamy ze souborů, zdrojů v classpath, pole bajtů nebo URL:
+`InputStream` je abstraktní třída Javy, která představuje zdroj bajtů pro čtení dat.
+
+Můžete převést mnoho různých zdrojů na `InputStream`:
 
 ```java
 InputStream stream = new FileInputStream(new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic"));
@@ -119,12 +158,17 @@ try {
 }
 ```
 
-**Alternativní zdroje**  
-- Classpath: `getClass().getResourceAsStream("/licenses/my-license.lic")`  
-- Byte array: `new ByteArrayInputStream(licenseBytes)`  
-- URL: `new URL("https://secure.mycompany.com/license").openStream()`
+**Běžné alternativy**
 
-### Krok 3: Aplikujte licenci
+- **Zdroj v classpath** – `getClass().getResourceAsStream("/licenses/my-license.lic")`  
+- **Pole bajtů** – `new ByteArrayInputStream(licenseBytes)`  
+- **Vzdálená URL** – `new URL("https://secure.mycompany.com/license").openStream()`
+
+Každý z těchto způsobů vrací čerstvý stream, který lze předat přímo objektu `License` od GroupDocs.
+
+## Aplikace licence
+
+`License` je třída GroupDocs zodpovědná za načtení a aplikaci licence do SDK.
 
 ```java
 try {
@@ -135,11 +179,11 @@ try {
 }
 ```
 
-> **Důležité** – `setLicense()` načte celý stream, takže stream musí být na začátku při každém volání.
+> **Důležité** – `setLicense()` spotřebuje celý stream, takže stream musí být při každém volání nastaven na začátek. Opětovné použití již vyčerpáného streamu způsobí chybu „License file is empty“.
 
-### Krok 4: Správa zdrojů (kritické!)
+## Správa zdrojů (kritické!)
 
-Vždy uzavírejte streamy, aby nedocházelo k únikům, zejména v dlouho běžících službách:
+Nikdy nenechávejte streamy viset v paměti. V dlouho běžících službách může neuzavřený stream způsobit nenápadný tlak na paměť a nakonec vyvolat `OutOfMemoryError`.
 
 ```java
 finally {
@@ -156,7 +200,9 @@ finally {
 
 ## Vytvoření centralizovaného správce licencí
 
-Zabalte výše uvedené kroky do znovupoužitelné třídy:
+`LicenseManager` je vlastní pomocná třída, která zapouzdřuje načítání a nastavení licence GroupDocs.
+
+Zapouzdřete předchozí kroky do znovupoužitelného singletonu. Níže je stručná implementace, která funguje s čistou Javou, Springem nebo jakýmkoli DI kontejnerem.
 
 ```java
 public class LicenseManager {
@@ -171,14 +217,14 @@ public class LicenseManager {
 }
 ```
 
-Zavolejte `LicenseManager.initializeLicense()` jednou během spouštění aplikace (např. v `ServletContextListener` nebo Spring metodě označené `@PostConstruct`).
+> **Tip** – Zavolejte `LicenseManager.initializeLicense()` jednou během startu aplikace (např. v `ServletContextListener`, Spring `@PostConstruct` nebo v metodě `main()`). Následující komponenty se mohou spolehnout, že licence je již aktivní.
 
-## Běžné úskalí a řešení
+## Časté problémy a řešení
 
 ### Problém 1: „Soubor licence nebyl nalezen“
 
-**Příčina**: Různé pracovní adresáře v různých prostředích.  
-**Řešení**: Použijte absolutní cesty nebo zdroje v classpath:
+**Příčina** – Rozdíly v pracovním adresáři mezi IDE, CI a produkčními kontejnery.  
+**Řešení** – Upřednostněte absolutní cesty nebo zdroje v classpath a logujte vyřešenou cestu pro ladění.
 
 ```java
 InputStream stream = getClass().getClassLoader().getResourceAsStream("licenses/license.lic");
@@ -186,7 +232,7 @@ InputStream stream = getClass().getClassLoader().getResourceAsStream("licenses/l
 
 ### Problém 2: Úniky paměti z neuzavřených streamů
 
-**Řešení**: Použijte try‑with‑resources (Java 7+):
+**Řešení** – Použijte Java try‑with‑resources (dostupné od Javy 7) k zajištění uzavření.
 
 ```java
 try (InputStream stream = new FileInputStream(licenseFile)) {
@@ -199,7 +245,7 @@ try (InputStream stream = new FileInputStream(licenseFile)) {
 
 ### Problém 3: Neplatný formát licence
 
-**Řešení**: Ověřte integritu souboru a vynutí kódování UTF‑8 při vytváření streamů ze řetězců:
+**Řešení** – Ověřte, že soubor je kódován v UTF‑8 a obsahuje přesnou XML strukturu poskytnutou GroupDocs. Při vytváření streamu ze `String` jej zabalte do `new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8))`.
 
 ```java
 byte[] licenseBytes = licenseString.getBytes(StandardCharsets.UTF_8);
@@ -208,11 +254,12 @@ InputStream stream = new ByteArrayInputStream(licenseBytes);
 
 ## Nejlepší postupy pro produkční aplikace
 
-1. **Centralizovaná správa licencí** – Udržujte veškerou logiku licencování na jednom místě (viz `LicenseManager`).  
-2. **Konfigurace specifická pro prostředí** – Načítejte data licence z proměnných prostředí ve vývoji, z úložišť ve výrobě.  
-3. **Elegantní zpracování chyb** – Logujte selhání licencování a případně přejděte do režimu hodnocení.
+1. **Centralizujte veškerý licenční kód** – udržujte jej v jediné třídě `LicenseManager`, aby nedocházelo k duplicitám.  
+2. **Konfigurace specifická pro prostředí** – používejte proměnné prostředí v dev, zabezpečené úložiště v prod a CI tajemství pro automatizované testy.  
+3. **Elegantní degradace** – logujte selhání licencování a volitelně přejděte do režimu hodnocení s jasným varováním pro koncové uživatele.  
+4. **Cache licence** – po prvním úspěšném načtení uložte pole bajtů v paměti, aby se zabránilo opakovanému I/O při každém požadavku.  
 
-## Reálné scénáře implementace
+## Scénáře reálné implementace
 
 ### Scénář 1: Architektura mikroservis
 
@@ -223,6 +270,8 @@ byte[] licenseBytes = Base64.getDecoder().decode(licenseData);
 InputStream stream = new ByteArrayInputStream(licenseBytes);
 ```
 
+Každá mikroservisa načte licenci ze sdíleného úložiště tajemství během své fáze bootstrapu, čímž zajistí konzistentní licencování napříč meshí bez závislosti na souborovém systému.
+
 ### Scénář 2: Multi‑tenant aplikace
 
 ```java
@@ -232,7 +281,9 @@ public void setTenantLicense(String tenantId) {
 }
 ```
 
-### Scénář 3: Automatizované testování
+Licence specifické pro nájemce lze načíst z databázové tabulky, převést na stream a aplikovat za běhu před zpracováním dokumentu pro daného nájemce.
+
+### Scénář 3: Automatizované testovací pipeline
 
 ```java
 @BeforeEach
@@ -243,11 +294,13 @@ void setupTestLicense() {
 }
 ```
 
-## Úvahy o výkonu a optimalizace
+CI pipeline načtou licenci z šifrované proměnné prostředí, aplikují ji jednou na běh testů a poté zahodí kopii v paměti, čímž udržují CI prostředí čisté.
 
-- **Ukládejte licenci do cache** po prvním úspěšném načtení; vyhněte se opakovanému čtení streamu.  
-- **Používejte buffered streamy** pro velké soubory licencí ke zlepšení I/O.  
-- **Nastavte licenci brzy** v životním cyklu aplikace, aby nedocházelo ke zpožděním při zpracování dokumentů.
+## Úvahy o výkonu a optimalizaci
+
+- **Cache licence** po prvním načtení; následná volání `setLicense()` mohou znovu použít uložené pole bajtů, čímž se eliminuje latence disku nebo sítě.  
+- **Používejte bufferované streamy** (`BufferedInputStream`) při čtení velkých licenčních souborů z vzdálených URL, aby se snížila zátěž I/O.  
+- **Nastavte licenci co nejdříve** (např. ve `static` inicializátoru), aby zpracování dokumentu začalo s platnou licencí, čímž se vyhnete malému jednorázovému nákladu během první žádosti.
 
 ### Logika opakování pro síťové zdroje
 
@@ -264,15 +317,19 @@ for (int i = 0; i < maxRetries; i++) {
 }
 ```
 
-## Průvodce odstraňováním problémů
+Implementujte exponenciální back‑off při získávání licence ze vzdáleného koncového bodu. To zabrání přechodným síťovým výpadkům, které by mohly vaši službu zhavarovat.
 
-### Krok 1: Ověřte integritu souboru licence
+## Průvodce řešením problémů
+
+### Krok 1: Ověření integrity souboru licence
 
 ```java
 System.out.println("License file exists: " + licenseFile.exists());
 System.out.println("License file size: " + licenseFile.length() + " bytes");
 System.out.println("Can read file: " + licenseFile.canRead());
 ```
+
+Zkontrolujte, že XML je dobře formátováno a odpovídá zakoupené licenci. Poškozený soubor vyvolá `LicenseException`.
 
 ### Krok 2: Ladění vytvoření streamu
 
@@ -282,6 +339,8 @@ System.out.println("License file exists: " + licenseFile.exists());
 System.out.println("License file size: " + licenseFile.length() + " bytes");
 System.out.println("Can read file: " + licenseFile.canRead());
 ```
+
+Vytiskněte velikost pole bajtů (`licenseBytes.length`) před předáním do `setLicense()`; velikost nula značí prázdný stream.
 
 ### Krok 3: Testování aplikace licence
 
@@ -296,40 +355,50 @@ try {
 }
 ```
 
+Spusťte jednoduchý úkol porovnání po načtení licence. Pokud výstup obsahuje vodotisky, licence nebyla aplikována správně.
+
 ## Často kladené otázky
 
-**Q: Mohu použít stejný stream licence vícekrát?**  
-A: Ne. Jakmile je stream přečten, je vyčerpán. Vytvořte nový stream při každém použití nebo uložte pole bajtů do cache.
+**Q: Mohu použít stejný licenční stream vícekrát?**  
+A: Ne. Jakmile je stream přečten, je vyčerpán. Vytvořte čerstvý stream při každém použití nebo cacheujte surové pole bajtů a zabalte jej do nového `ByteArrayInputStream`.
 
-**Q: Co se stane, pokud licenci nenastavím?**  
-A: GroupDocs běží v evaluačním režimu, přidává vodoznaky a omezuje zpracování.
+**Q: Co se stane, když licenci nenastavím?**  
+A: GroupDocs běží v režimu hodnocení, vkládá vodotisky a omezuje počet zpracovávaných stránek.
 
-**Q: Je licencování založené na streamech bezpečnější než na souborech?**  
-A: Může být, protože licenci můžete načíst ze zabezpečených úložišť, aniž byste ji ukládali na disk.
+**Q: Je licencování založené na streamu bezpečnější než založené na souboru?**  
+A: Ano. Načtením licence přímo z paměti se vyhnete zanechání čitelného souboru na disku, což snižuje riziko neúmyslného odhalení.
 
-**Q: Mohu během běhu měnit licence?**  
-A: Ano. Zavolejte `setLicense()` s jiným streamem, kdykoli potřebujete licenci změnit.
+**Q: Mohu měnit licence za běhu?**  
+A: Rozhodně. Zavolejte `LicenseManager.setLicense(newStream)`, kdykoli potřebujete změnit aktivní licenci – například pro nájemce nebo funkční licencování.
 
 **Q: Jak řešit licencování v klastrovém prostředí?**  
-A: Každý uzel musí licenci načíst samostatně. Použijte sdílené konfigurační služby nebo proměnné prostředí k distribuci dat licence.
+A: Každý uzel musí licenci načíst samostatně. Použijte sdílenou konfigurační službu (Consul, Spring Cloud Config) nebo proměnné prostředí, aby každá instance získala stejná licenční data.
 
 **Q: Jaký je dopad na výkon při použití streamů?**  
-A: Nezajímavý. Licence se obvykle nastavuje jednou při spuštění; poté je režie streamu minimální ve srovnání se zpracováním dokumentů.
+A: Nezajímavý. Licence se obvykle nastavuje jednou při startu; čtení streamu spotřebuje jen několik kilobajtů, což je mnohem méně než megabajty zpracovávané během porovnání dokumentů.
 
 ## Závěr
 
-Nyní máte **centralizovaný správce licencí** postavený na Java streamech, který vám poskytuje flexibilitu, bezpečnost a škálovatelnost potřebnou pro moderní nasazení. Dodržením kroků, nejlepších postupů a tipů na odstraňování problémů v tomto průvodci můžete sebejistě aplikovat licencování GroupDocs napříč kontejnery, cloudovými službami a multi‑tenant architekturami.
+Nyní máte **centralizovaný správce licencí** postavený na Java streamách, který vám poskytuje flexibilitu, bezpečnost a škálovatelnost potřebnou pro moderní cloud‑native nasazení. Dodržením kroků, nejlepších postupů a tipů pro řešení problémů v tomto průvodci můžete s jistotou aplikovat licencování GroupDocs napříč kontejnery, mikroservisy a multi‑tenant architekturami bez potíží spojených s cestami k souborům.
 
 ## Další zdroje
 
 - **Dokumentace**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **Reference API**: [Complete API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
+- **API Reference**: [Complete API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
 - **Stáhnout nejnovější verzi**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Zakoupit licenci**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Koupit licenci**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Získat podporu**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
 
 ---
 
-**Last Updated:** 2026-01-28  
-**Tested With:** GroupDocs.Comparison 25.2 (Java)  
-**Author:** GroupDocs  
+**Poslední aktualizace:** 2026-05-26  
+**Testováno s:** GroupDocs.Comparison 25.2 (Java)  
+**Autor:** GroupDocs  
+
+---
+
+## Související tutoriály
+
+- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)
+- [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

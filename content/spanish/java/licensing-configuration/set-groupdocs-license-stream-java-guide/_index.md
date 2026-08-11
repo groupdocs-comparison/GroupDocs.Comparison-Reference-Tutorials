@@ -1,60 +1,103 @@
 ---
 categories:
 - Java Development
-date: '2026-01-28'
-description: Aprende cómo implementar un gestor de licencias centralizado para GroupDocs
-  usando flujos de Java. Guía completa con código, solución de problemas y mejores
-  prácticas para 2026.
-keywords: GroupDocs license Java tutorial, Java license stream setup, GroupDocs Comparison
-  licensing, programmatic license Java, centralized license manager
-lastmod: '2026-01-28'
-linktitle: GroupDocs License Java Tutorial
+date: '2026-05-26'
+description: Aprenda cómo configurar un administrador de licencias centralizado para
+  GroupDocs usando streams de Java. Incluye código paso a paso, solución de problemas
+  y mejores prácticas para 2026.
+keywords:
+- centralized license manager
+- stream‑based licensing
+- GroupDocs Java licensing
+lastmod: '2026-05-26'
+linktitle: Tutorial de licencia de GroupDocs Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to set up a centralized license manager for GroupDocs using
+    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
+    for 2026.
+  headline: 'GroupDocs Java: Centralized License Manager via Stream'
+  type: TechArticle
+- description: Learn how to set up a centralized license manager for GroupDocs using
+    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
+    for 2026.
+  name: 'GroupDocs Java: Centralized License Manager via Stream'
+  steps:
+  - name: Verify License File Integrity
+    text: Check that the XML is well‑formed and matches the license you purchased.
+      A corrupted file will raise a `LicenseException`.
+  - name: Debug Stream Creation
+    text: Print the size of the byte array (`licenseBytes.length`) before passing
+      it to `setLicense()`; a size of zero indicates an empty stream.
+  - name: Test License Application
+    text: Run a simple comparison task after loading the license. If the output contains
+      watermarks, the license was not applied correctly.
+  type: HowTo
+- questions:
+  - answer: No. Once a stream is read, it’s exhausted. Create a fresh stream each
+      time or cache the raw byte array and wrap it in a new `ByteArrayInputStream`.
+    question: Can I use the same license stream multiple times?
+  - answer: GroupDocs runs in evaluation mode, inserting watermarks and limiting the
+      number of processed pages.
+    question: What happens if I don’t set a license?
+  - answer: Yes. By loading the license directly from memory you avoid leaving a readable
+      file on disk, which mitigates accidental exposure.
+    question: Is stream‑based licensing more secure than file‑based?
+  - answer: Absolutely. Call `LicenseManager.setLicense(newStream)` whenever you need
+      to change the active license—for example, per‑tenant or per‑feature licensing.
+    question: Can I switch licenses at runtime?
+  - answer: Each node must load the license independently. Use a shared configuration
+      service (Consul, Spring Cloud Config) or environment variables so every instance
+      receives the same license data.
+    question: How do I handle licensing in a clustered environment?
+  type: FAQPage
 tags:
 - groupdocs
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java - Administrador de licencias centralizado mediante Stream'
+title: 'GroupDocs Java: Administrador de licencias centralizado mediante Stream'
 type: docs
 url: /es/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-# GroupDocs Java: Administrador Centralizado de Licencias mediante Stream
+# Administrador de licencias centralizado para GroupDocs Java mediante Stream
 
-## Introducción
-
-Si estás trabajando con **GroupDocs.Comparison for Java**, probablemente te hayas preguntado cuál es la mejor manera de gestionar las licencias en tus aplicaciones. Implementar un **administrador centralizado de licencias** usando streams de entrada te brinda la flexibilidad de manejar licencias en diferentes entornos, contenedores y escenarios dinámicos, todo desde un único punto de control mantenible. Este tutorial te guía a través de todo lo que necesitas saber para configurar un administrador centralizado de licencias con licenciamiento basado en streams, por qué es importante y cómo evitar errores comunes.
-
-**Qué dominarás en esta guía:**
-- Configuración de licencias basada en streams con ejemplos de código completos  
-- Construcción de un **administrador centralizado de licencias** para fácil reutilización  
-- Ventajas clave sobre el licenciamiento tradicional basado en archivos  
-- Consejos de solución de problemas para implementaciones del mundo real  
+Si está integrando **GroupDocs.Comparison for Java** en una aplicación moderna, la forma más confiable de gestionar licencias es con un **administrador de licencias centralizado** que funcione con streams de Java. Este enfoque le permite cargar la licencia desde archivos, recursos del classpath, URLs o almacenes seguros, eliminando rutas codificadas y mejorando la seguridad. En los próximos minutos verá por qué un administrador centralizado es importante, cómo implementarlo y cómo evitar los errores comunes que afectan a muchos desarrolladores.
 
 ## Respuestas rápidas
-- **¿Qué es un administrador centralizado de licencias?** Una única clase o servicio que carga y aplica la licencia de GroupDocs para toda la aplicación.  
-- **¿Por qué usar streams para licenciar?** Los streams te permiten cargar licencias desde archivos, recursos del classpath, URLs o almacenes seguros sin dejar archivos en disco.  
-- **¿Cuándo debería pasar de licenciamiento basado en archivos a basado en streams?** Cada vez que despliegues a contenedores, servicios en la nube o necesites una selección dinámica de licencias.  
-- **¿Cómo evito fugas de memoria?** Usa try‑with‑resources o cierra explícitamente los streams después de aplicar la licencia.  
-- **¿Puedo cambiar la licencia en tiempo de ejecución?** Sí—llama a `setLicense()` con un nuevo stream siempre que necesites cambiar de licencia.  
+- **¿Qué es un administrador de licencias centralizado?** Es un componente reutilizable que carga y aplica la licencia de GroupDocs para toda la aplicación, normalmente como un singleton o bean de Spring.  
+- **¿Por qué usar streams para licencias?** Los streams le permiten leer la licencia desde cualquier origen (archivo, classpath, URL, almacén) sin persistirla en disco, lo que mejora la seguridad y la compatibilidad con contenedores.  
+- **¿Cuándo debería cambiar de basado en archivos a basado en streams?** En cualquier momento que despliegue a Docker, Kubernetes o cualquier entorno en la nube donde montar archivos sea inconveniente.  
+- **¿Cómo evito fugas de memoria?** Envuelva el InputStream en un bloque try‑with‑resources o ciérrelo explícitamente después de llamar a `setLicense()`.  
+- **¿Puedo cambiar la licencia en tiempo de ejecución?** Sí—llame a `setLicense()` con un nuevo stream siempre que necesite cambiar licencias para un inquilino o conjunto de funcionalidades.
 
-## ¿Por qué elegir el licenciamiento basado en streams?
+## ¿Qué es un Administrador de Licencias Centralizado?
 
-Antes de sumergirnos en el código, exploremos por qué un **administrador centralizado de licencias** construido sobre streams es la opción más inteligente para aplicaciones Java modernas.
+Un **administrador de licencias centralizado** es una única clase o servicio que encapsula toda la lógica para cargar, aplicar y refrescar la licencia de GroupDocs. Al mantener esta lógica en un solo lugar elimina el código duplicado, simplifica los cambios de configuración y garantiza que cada parte de su aplicación use la misma licencia válida.
 
-- **Flexibilidad en diferentes entornos** – Carga licencias desde variables de entorno, servicios de configuración o bases de datos, eliminando rutas de archivo codificadas.  
-- **Beneficios de seguridad** – Mantén la licencia fuera del sistema de archivos; recupérala de un almacenamiento seguro y aplícala en memoria.  
-- **Amigable con contenedores** – Inyecta licencias mediante secretos o config maps sin montar volúmenes.  
-- **Licenciamiento dinámico** – Cambia licencias al vuelo para escenarios multi‑tenant o basados en funcionalidades.  
+## ¿Por qué elegir licenciamiento basado en streams?
+
+Usar un stream para cargar la licencia de GroupDocs brinda varios beneficios tangibles en comparación con el enfoque clásico de ruta de archivo. Desacopla la ubicación de la licencia de la aplicación, permite un manejo seguro en memoria, funciona sin problemas en entornos contenedorizados y permite cambios dinámicos de licencia en tiempo de ejecución, lo que en conjunto mejora la flexibilidad, la seguridad y la escalabilidad.
+
+Cargar la licencia mediante un stream le brinda **cuatro ventajas concretas** sobre el método tradicional de ruta de archivo:
+
+1. **Flexibilidad de entorno** – Obtenga la licencia de variables de entorno, gestores de secretos o bases de datos, de modo que el mismo binario funcione en desarrollo, pruebas y producción sin cambios de código.  
+2. **Seguridad mejorada** – La licencia nunca toca el sistema de archivos; solo vive en memoria, reduciendo la superficie de ataque.  
+3. **Amigable con contenedores** – En Docker o Kubernetes puede inyectar la licencia como un secreto o config map, evitando montajes de volúmenes.  
+4. **Licenciamiento dinámico** – Las plataformas SaaS multi‑inquilino pueden cambiar licencias al instante por inquilino, habilitando facturación basada en funcionalidades.
+
+_GroupDocs.Comparison soporta **más de 70** formatos de documento (PDF, DOCX, XLSX, PPTX, HTML, imágenes, etc.) y puede procesar archivos de cientos de páginas sin cargar todo el documento en memoria, lo que hace que el licenciamiento basado en streams sea una opción natural para servicios de alto rendimiento._
 
 ## Requisitos previos y configuración del entorno
 
-### Bibliotecas y versiones requeridas
+### Bibliotecas requeridas y versiones
 
-- **GroupDocs.Comparison for Java**: Versión 25.2 o posterior  
-- **Java Development Kit (JDK)**: Versión 8+ (JDK 11+ recomendado)  
-- **Maven o Gradle**: Para la gestión de dependencias (los ejemplos usan Maven)  
+- **GroupDocs.Comparison for Java** – versión **25.2** o posterior (la última versión 2026).  
+- **Java Development Kit (JDK)** – versión **8+** (se recomienda JDK 11+ para mejor soporte de módulos).  
+- **Maven o Gradle** – para la gestión de dependencias (los ejemplos a continuación usan Maven).
 
 ### Configuración de Maven
 
@@ -76,23 +119,17 @@ Antes de sumergirnos en el código, exploremos por qué un **administrador centr
 </dependencies>
 ```
 
-### Obtener tu licencia
+### Obtención de su licencia
 
-1. **Comienza con la prueba gratuita** – prueba la funcionalidad básica.  
-2. **Obtén una licencia temporal** – ideal para una evaluación prolongada.  
-3. **Compra una licencia de producción** – requerida para despliegues comerciales.  
+1. **Comience con la prueba gratuita** – obtiene acceso completo a la API durante 30 días.  
+2. **Solicite una licencia temporal** – ideal para una evaluación prolongada en pipelines de CI.  
+3. **Compre una licencia de producción** – requerida para despliegues comerciales y elimina las marcas de agua de evaluación.
 
-*Consejo profesional*: Almacena la cadena de licencia en un almacén seguro y cárgala en tiempo de ejecución; así mantienes tu **administrador centralizado de licencias** limpio y seguro.  
+*Consejo profesional*: almacene la cadena de licencia cruda en un gestor de secretos (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) y recupérela en tiempo de ejecución. Esto mantiene la licencia fuera del control de versiones y del sistema de archivos.
 
-## ¿Qué es un Administrador Centralizado de Licencias?
+## Verifique su fuente de licencia
 
-Un **administrador centralizado de licencias** es un componente reutilizable (a menudo un singleton o bean de Spring) que encapsula toda la lógica para cargar, aplicar y refrescar la licencia de GroupDocs. Al centralizar esta responsabilidad, evitas código duplicado, simplificas cambios de configuración y garantizas un licenciamiento consistente en todos los módulos de tu aplicación.  
-
-## Guía completa de implementación
-
-### Paso 1: Verificar la fuente de tu licencia
-
-Antes de crear un stream, confirma que la fuente de la licencia es accesible:
+Antes de crear un stream, asegúrese de que la fuente de la que pretende leer sea accesible. Un archivo faltante o una URL inaccesible es la causa más común de errores de licenciamiento.
 
 ```java
 if (new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic").exists()) {
@@ -102,11 +139,13 @@ if (new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic").exists()) {
 }
 ```
 
-> **Por qué es importante** – Un archivo faltante es la causa más común de errores de licenciamiento. Verificar temprano ahorra tiempo de depuración.  
+> **Por qué es importante** – Detectar una fuente faltante temprano previene errores de `LicenseException` en tiempo de ejecución que pueden detener el procesamiento de documentos.
 
-### Paso 2: Crear el InputStream correctamente
+## Crear el InputStream correctamente
 
-Puedes crear streams a partir de archivos, recursos del classpath, arreglos de bytes o URLs:
+`InputStream` es una clase abstracta de Java que representa una fuente de bytes para leer datos.
+
+Puede convertir muchas fuentes diferentes en un `InputStream`:
 
 ```java
 InputStream stream = new FileInputStream(new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic"));
@@ -119,12 +158,17 @@ try {
 }
 ```
 
-**Fuentes alternativas**  
-- Classpath: `getClass().getResourceAsStream("/licenses/my-license.lic")`  
-- Arreglo de bytes: `new ByteArrayInputStream(licenseBytes)`  
-- URL: `new URL("https://secure.mycompany.com/license").openStream()`  
+**Alternativas comunes**
 
-### Paso 3: Aplicar la licencia
+- **Recurso del classpath** – `getClass().getResourceAsStream("/licenses/my-license.lic")`  
+- **Arreglo de bytes** – `new ByteArrayInputStream(licenseBytes)`  
+- **URL remota** – `new URL("https://secure.mycompany.com/license").openStream()`
+
+Cada uno de estos devuelve un stream nuevo que puede pasarse directamente al objeto `License` de GroupDocs.
+
+## Aplicar la licencia
+
+`License` es la clase de GroupDocs responsable de cargar y aplicar una licencia al SDK.
 
 ```java
 try {
@@ -135,11 +179,11 @@ try {
 }
 ```
 
-> **Importante** – `setLicense()` lee todo el stream, por lo que el stream debe estar al inicio cada vez que lo llames.  
+> **Importante** – `setLicense()` consume todo el stream, por lo que el stream debe estar posicionado al inicio cada vez que lo invoque. Reutilizar el mismo stream agotado provocará un error “License file is empty”.
 
-### Paso 4: Gestión de recursos (¡Crítico!)
+## Gestión de recursos (¡Crítico!)
 
-Cierra siempre los streams para evitar fugas, especialmente en servicios de larga duración:
+Nunca deje que los streams permanezcan en memoria. En servicios de larga duración, un stream no cerrado puede causar una presión de memoria sutil y eventualmente desencadenar `OutOfMemoryError`.
 
 ```java
 finally {
@@ -154,9 +198,11 @@ finally {
 }
 ```
 
-## Construyendo un Administrador Centralizado de Licencias
+## Construcción del Administrador de Licencias Centralizado
 
-Encapsula los pasos anteriores en una clase reutilizable:
+`LicenseManager` es una clase utilitaria personalizada que encapsula la carga y configuración de la licencia de GroupDocs.
+
+Encapsule los pasos anteriores en un singleton reutilizable. A continuación se muestra una implementación concisa que funciona con Java puro, Spring o cualquier contenedor DI.
 
 ```java
 public class LicenseManager {
@@ -171,14 +217,14 @@ public class LicenseManager {
 }
 ```
 
-Llama a `LicenseManager.initializeLicense()` una sola vez durante el arranque de la aplicación (por ejemplo, en un `ServletContextListener` o método `@PostConstruct` de Spring).  
+> **Consejo** – Llame a `LicenseManager.initializeLicense()` una vez durante el inicio de la aplicación (p. ej., en un `ServletContextListener`, un `@PostConstruct` de Spring o en el método `main()`). Los componentes posteriores pueden simplemente confiar en que la licencia ya está activa.
 
-## Problemas comunes y soluciones
+## Errores comunes y soluciones
 
 ### Problema 1: “Archivo de licencia no encontrado”
 
-**Causa**: Directorios de trabajo diferentes entre entornos.  
-**Solución**: Usa rutas absolutas o recursos del classpath:
+**Causa** – Diferencias en el directorio de trabajo entre IDE, CI y contenedores de producción.  
+**Solución** – Prefiera rutas absolutas o recursos del classpath, y registre la ruta resuelta para depuración.
 
 ```java
 InputStream stream = getClass().getClassLoader().getResourceAsStream("licenses/license.lic");
@@ -186,7 +232,7 @@ InputStream stream = getClass().getClassLoader().getResourceAsStream("licenses/l
 
 ### Problema 2: Fugas de memoria por streams no cerrados
 
-**Solución**: Adoptar try‑with‑resources (Java 7+):
+**Solución** – Use try‑with‑resources de Java (disponible desde Java 7) para garantizar el cierre.
 
 ```java
 try (InputStream stream = new FileInputStream(licenseFile)) {
@@ -199,18 +245,19 @@ try (InputStream stream = new FileInputStream(licenseFile)) {
 
 ### Problema 3: Formato de licencia inválido
 
-**Solución**: Verifica la integridad del archivo y fuerza la codificación UTF‑8 al construir streams a partir de cadenas:
+**Solución** – Verifique que el archivo esté codificado en UTF‑8 y contenga la estructura XML exacta proporcionada por GroupDocs. Al construir un stream a partir de un `String`, envuélvalo con `new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8))`.
 
 ```java
 byte[] licenseBytes = licenseString.getBytes(StandardCharsets.UTF_8);
 InputStream stream = new ByteArrayInputStream(licenseBytes);
 ```
 
-## Mejores prácticas para aplicaciones en producción
+## Mejores prácticas para aplicaciones de producción
 
-1. **Gestión centralizada de licencias** – Mantén toda la lógica de licenciamiento en un solo lugar (ver `LicenseManager`).  
-2. **Configuración específica por entorno** – Obtén datos de licencia de variables de entorno en desarrollo y de almacenes seguros en producción.  
-3. **Manejo de errores elegante** – Registra fallos de licenciamiento y, opcionalmente, recurre al modo de evaluación.  
+1. **Centralice todo el código de licenciamiento** – manténgalo en una única clase `LicenseManager` para evitar duplicación.  
+2. **Configuración específica por entorno** – use variables de entorno en desarrollo, almacenes seguros en producción y secretos de CI para pruebas automatizadas.  
+3. **Degradación elegante** – registre fallos de licenciamiento y, opcionalmente, recurra al modo de evaluación con una advertencia clara para los usuarios finales.  
+4. **Cachear la licencia** – después de la primera carga exitosa, almacene el arreglo de bytes en memoria para evitar I/O repetido en cada solicitud.  
 
 ## Escenarios de implementación del mundo real
 
@@ -223,7 +270,9 @@ byte[] licenseBytes = Base64.getDecoder().decode(licenseData);
 InputStream stream = new ByteArrayInputStream(licenseBytes);
 ```
 
-### Escenario 2: Aplicaciones multi‑tenant
+Cada microservicio carga la licencia desde un almacén de secretos compartido durante su fase de arranque, asegurando un licenciamiento consistente en toda la malla sin dependencias del sistema de archivos.
+
+### Escenario 2: Aplicaciones multi‑inquilino
 
 ```java
 public void setTenantLicense(String tenantId) {
@@ -232,7 +281,9 @@ public void setTenantLicense(String tenantId) {
 }
 ```
 
-### Escenario 3: Pruebas automatizadas
+Las licencias específicas por inquilino pueden obtenerse de una tabla de base de datos, convertirse en un stream y aplicarse al vuelo antes de procesar un documento para ese inquilino.
+
+### Escenario 3: Pipelines de pruebas automatizadas
 
 ```java
 @BeforeEach
@@ -243,13 +294,15 @@ void setupTestLicense() {
 }
 ```
 
+Los pipelines de CI extraen la licencia de una variable de entorno encriptada, la aplican una vez por ejecución de pruebas y luego descartan la copia en memoria, manteniendo limpio el entorno de CI.
+
 ## Consideraciones de rendimiento y optimización
 
-- **Cachea la licencia** después de la primera carga exitosa; evita volver a leer el stream.  
-- **Usa streams con buffer** para archivos de licencia grandes y mejorar el I/O.  
-- **Establece la licencia temprano** en el ciclo de vida de la aplicación para evitar demoras durante el procesamiento de documentos.  
+- **Cachear la licencia** después de la primera carga; las llamadas subsecuentes a `setLicense()` pueden reutilizar el arreglo de bytes en caché, eliminando la latencia de disco o red.  
+- **Utilice streams con búfer** (`BufferedInputStream`) al leer archivos de licencia grandes desde URLs remotas para reducir la sobrecarga de I/O.  
+- **Establezca la licencia temprano** (p. ej., en un inicializador `static`) para que el procesamiento de documentos comience con una licencia válida, evitando el pequeño costo único durante la primera solicitud.
 
-### Lógica de reintento para fuentes de red
+### Lógica de reintentos para fuentes de red
 
 ```java
 int maxRetries = 3;
@@ -264,16 +317,22 @@ for (int i = 0; i < maxRetries; i++) {
 }
 ```
 
+Implemente retroceso exponencial al obtener la licencia de un endpoint remoto. Esto evita que fallas de red transitorias provoquen la caída de su servicio.
+
 ## Guía de solución de problemas
 
 ### Paso 1: Verificar la integridad del archivo de licencia
+
 ```java
 System.out.println("License file exists: " + licenseFile.exists());
 System.out.println("License file size: " + licenseFile.length() + " bytes");
 System.out.println("Can read file: " + licenseFile.canRead());
 ```
 
+Verifique que el XML esté bien formado y coincida con la licencia que compró. Un archivo corrupto generará una `LicenseException`.
+
 ### Paso 2: Depurar la creación del stream
+
 ```java
 // Add logging to understand what's happening
 System.out.println("License file exists: " + licenseFile.exists());
@@ -281,7 +340,10 @@ System.out.println("License file size: " + licenseFile.length() + " bytes");
 System.out.println("Can read file: " + licenseFile.canRead());
 ```
 
+Imprima el tamaño del arreglo de bytes (`licenseBytes.length`) antes de pasarlo a `setLicense()`; un tamaño cero indica un stream vacío.
+
 ### Paso 3: Probar la aplicación de la licencia
+
 ```java
 try {
     License license = new License();
@@ -293,29 +355,31 @@ try {
 }
 ```
 
+Ejecute una tarea de comparación simple después de cargar la licencia. Si la salida contiene marcas de agua, la licencia no se aplicó correctamente.
+
 ## Preguntas frecuentes
 
 **P: ¿Puedo usar el mismo stream de licencia varias veces?**  
-R: No. Una vez que un stream se lee, queda agotado. Crea un nuevo stream cada vez o cachea el arreglo de bytes.
+R: No. Una vez que se lee un stream, está agotado. Cree un stream nuevo cada vez o almacene en caché el arreglo de bytes crudo y envuélvalo en un nuevo `ByteArrayInputStream`.
 
 **P: ¿Qué ocurre si no establezco una licencia?**  
-R: GroupDocs funciona en modo de evaluación, añadiendo marcas de agua y limitando el procesamiento.
+R: GroupDocs funciona en modo de evaluación, insertando marcas de agua y limitando el número de páginas procesadas.
 
 **P: ¿El licenciamiento basado en streams es más seguro que el basado en archivos?**  
-R: Puede ser, porque puedes obtener la licencia de almacenes seguros sin persistirla en disco.
+R: Sí. Al cargar la licencia directamente desde memoria evita dejar un archivo legible en disco, lo que mitiga la exposición accidental.
 
 **P: ¿Puedo cambiar licencias en tiempo de ejecución?**  
-R: Sí. Llama a `setLicense()` con un stream diferente siempre que necesites cambiar la licencia.
+R: Absolutamente. Llame a `LicenseManager.setLicense(newStream)` siempre que necesite cambiar la licencia activa—por ejemplo, por inquilino o por funcionalidad.
 
 **P: ¿Cómo manejo el licenciamiento en un entorno clusterizado?**  
-R: Cada nodo debe cargar la licencia de forma independiente. Usa servicios de configuración compartidos o variables de entorno para distribuir los datos de licencia.
+R: Cada nodo debe cargar la licencia de forma independiente. Use un servicio de configuración compartido (Consul, Spring Cloud Config) o variables de entorno para que cada instancia reciba los mismos datos de licencia.
 
 **P: ¿Cuál es el impacto de rendimiento al usar streams?**  
-R: Negligible. La licencia normalmente se establece una sola vez al iniciar; después, la sobrecarga del stream es mínima comparada con el procesamiento de documentos.  
+R: Negligible. La licencia normalmente se establece una sola vez al iniciar; la lectura del stream consume solo unos pocos kilobytes, mucho menos que los megabytes procesados durante la comparación de documentos.
 
 ## Conclusión
 
-Ahora dispones de un **administrador centralizado de licencias** construido sobre streams de Java, que te brinda la flexibilidad, seguridad y escalabilidad necesarias para despliegues modernos. Siguiendo los pasos, mejores prácticas y consejos de solución de problemas de esta guía, podrás aplicar el licenciamiento de GroupDocs de manera confiable en contenedores, servicios en la nube y arquitecturas multi‑tenant.  
+Ahora dispone de un **administrador de licencias centralizado** basado en streams de Java, que le brinda la flexibilidad, seguridad y escalabilidad requeridas para despliegues cloud‑native modernos. Siguiendo los pasos, mejores prácticas y consejos de solución de problemas de esta guía, podrá aplicar con confianza el licenciamiento de GroupDocs en contenedores, microservicios y arquitecturas multi‑inquilino sin los problemas de rutas basadas en archivos.
 
 ## Recursos adicionales
 
@@ -327,6 +391,12 @@ Ahora dispones de un **administrador centralizado de licencias** construido sobr
 
 ---
 
-**Última actualización:** 2026-01-28  
+**Última actualización:** 2026-05-26  
 **Probado con:** GroupDocs.Comparison 25.2 (Java)  
 **Autor:** GroupDocs  
+
+## Tutoriales relacionados
+
+- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)  
+- [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)  
+- [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

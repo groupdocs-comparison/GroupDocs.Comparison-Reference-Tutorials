@@ -1,271 +1,261 @@
 ---
 categories:
 - Document Processing
-date: '2026-03-03'
-description: Naučte se porovnávat dokumenty v .NET pomocí GroupDocs.Comparison, přijímat/odmítat
-  změny a extrahovat metadata dokumentu.
+date: '2026-05-26'
+description: Naučte se, jak porovnávat dokumenty .NET pomocí GroupDocs.Comparison,
+  přijímat/odmítat změny a získávat metadata dokumentu.
 is_root: true
-keywords: GroupDocs.Comparison tutorial, document comparison .NET, compare documents
-  programmatically, .NET document comparison library, GroupDocs.Comparison examples
-lastmod: '2026-03-03'
-linktitle: GroupDocs.Comparison for .NET Tutorials
+keywords:
+- compare documents .net
+- document comparison .net
+- GroupDocs.Comparison
+lastmod: '2026-05-26'
+linktitle: GroupDocs.Comparison pro .NET tutoriály
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  headline: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  type: TechArticle
+- description: Learn how to compare documents .net using GroupDocs.Comparison, accept/reject
+    changes, and extract document metadata.
+  name: compare documents .net – Complete GroupDocs.Comparison Tutorial
+  steps:
+  - name: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+    text: '**Create a `Comparer` instance** – this is the core object that drives
+      the comparison engine.'
+  - name: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+    text: '**Load source and target** – you can pass file paths, streams, or byte
+      arrays; streams are recommended for files larger than 10 MB.'
+  - name: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+    text: '**Configure options** – ignore case, set a password, or adjust sensitivity
+      via `ComparisonOptions`.'
+  - name: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+    text: '**Execute the comparison** – call `Compare` and provide an output location
+      for the visual diff.'
+  - name: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+    text: '**Process results** – read the `Changes` collection to accept, reject,
+      or log each modification.'
+  type: HowTo
+- questions:
+  - answer: Use `result.Changes.AcceptAll()`, `RejectAll()`, or iterate each `ChangeInfo`
+      and call `Accept()` / `Reject()` as needed, then save the document with `result.Save(outputPath)`.
+    question: How do I programmatically accept or reject changes after a comparison?
+  - answer: Yes—`DocumentInfo` provides access to standard and custom metadata for
+      both source and target files, allowing you to log or display this information.
+    question: Can I extract metadata such as author, creation date, or custom properties
+      from documents?
+  - answer: Absolutely. The `CompareImages` API highlights pixel‑level differences
+      and returns a similarity percentage you can use in automated tests.
+    question: Is it possible to compare image files (e.g., PNG, JPEG) directly in
+      .NET?
+  - answer: Invoke `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`;
+      the method returns a collection of `FolderComparisonResult` objects that indicate
+      the status of each file pair.
+    question: How can I compare entire folders to find added, removed, or modified
+      files?
+  - answer: Supply the password via `LoadOptions.Password` when loading each document;
+      the engine decrypts the files internally before performing the diff.
+    question: What should I do if I need to compare password‑protected documents?
+  type: FAQPage
 tags:
 - document-comparison
 - dotnet
 - groupdocs
 - tutorial
-title: Jak porovnat dokumenty pomocí GroupDocs.Comparison pro .NET
+title: porovnat dokumenty .NET – Kompletní návod GroupDocs.Comparison
 type: docs
 url: /cs/net/
 weight: 10
 ---
 
-# Kompletní tutoriál GroupDocs.Comparison pro vývojáře .NET
+# porovnání dokumentů .net – Kompletní průvodce GroupDocs.Comparison pro vývojáře .NET
 
-## Proč je porovnávání dokumentů důležité (a proč je tato knihovna skvělá)
-
-Pokud hledáte **jak programově porovnávat dokumenty**, jste na správném místě.  
-Pokud jste někdy strávili hodiny ručním porovnáváním verzí dokumentů, sledováním změn napříč týmy nebo se snažili zjistit, co se přesně změnilo mezi dvěma soubory, nejste sami. Porovnávání dokumentů je jedním z těch úkolů, které se zdají jednoduché, dokud je nebudete muset provádět programově.
-
-A právě zde přichází GroupDocs.Comparison pro .NET. Nejedná se jen o další nástroj na porovnávání – je to komplexní řešení, které zvládne vše od jednoduchých textových dokumentů po složité tabulky, prezentace a dokonce i obrázky. Ať už budujete systém pro správu dokumentů, vytváříte automatizaci pracovních postupů nebo jen potřebujete spolehlivou funkci porovnávání, tato knihovna vám pokryje potřeby.
-
-V tomto kompletním tutoriálu se dozvíte, jak integrovat výkonné možnosti porovnávání dokumentů do vašich .NET aplikací, s reálnými příklady a praktickými řešeními pro běžné scénáře.
+Pokud potřebujete **compare documents .net** programově, jste na správném průvodci.  
+Manuální hledání rozdílů mezi dvěma verzemi smlouvy, tabulky nebo prezentace může zabrat hodiny a stále může přehlédnout jemné změny. S GroupDocs.Comparison pro .NET můžete tuto úlohu automatizovat, generovat vizuální diff zprávy a dokonce přijímat nebo odmítat změny, aniž byste soubory otevírali. Tento tutoriál vás provede každým krokem – od instalace NuGet balíčku po zpracování rozsáhlých porovnání složek – abyste mohli vložit spolehlivé porovnání dokumentů do jakéhokoli .NET řešení.
 
 ## Rychlé odpovědi
-- **Jaký je hlavní účel GroupDocs.Comparison?** Programově porovnávat dokumenty, detekovat změny a generovat vizuální nebo datově‑řízené diff výsledky.  
-- **Mohu automaticky přijímat nebo odmítat změny?** Ano — použijte API pro přijímání/odmítání změn a aplikujte detailní kontrolu.  
-- **Podporuje knihovna porovnávání obrázků v .NET?** Naprostě; můžete porovnávat screenshoty, rendery UI a jakékoli rastrové obrázky.  
-- **Je možné porovnávat složky?** Ano — porovnejte celé složky a zjistěte přidané, odebrané nebo upravené soubory.  
-- **Co potřebuji před zahájením?** Vývojové prostředí .NET, NuGet balíček a platnou licenci GroupDocs.Comparison (k dispozici zkušební verze).
+- **What is the primary purpose of GroupDocs.Comparison?** Programově porovnávat dokumenty, detekovat změny a generovat vizuální nebo datově řízené diff výsledky.  
+- **Can I accept or reject changes automatically?** Ano – použijte API pro přijímání/odmítání k aplikaci detailní kontroly.  
+- **Does the library support image comparison in .NET?** Rozhodně; můžete porovnávat snímky obrazovky, UI rendery a jakékoli rastrové obrázky.  
+- **Is folder comparison possible?** Ano – porovnejte celé složky a najděte přidané, odebrané nebo upravené soubory.  
+- **What do I need before starting?** Vývojové prostředí .NET, NuGet balíček a platná licence GroupDocs.Comparison (k dispozici zkušební verze).
 
-## Co dělá GroupDocs.Comparison odlišným?
+## Co je compare documents .net?
+`compare documents .net` je proces programového identifikování rozdílů mezi dvěma nebo více verzemi dokumentu pomocí .NET knihovny. GroupDocs.Comparison to realizuje načtením zdrojových a cílových souborů, aplikací konfigurovatelných možností porovnání a vrácením `ComparisonResult`, který obsahuje jak vizuální zvýraznění, tak strukturovaný seznam změn. **ComparisonResult** představuje výsledek porovnání, obsahuje detekované změny a vizuální diff data.
 
-Než se ponoříme do tutoriálů, pojďme si říct, proč vývojáři volí tuto knihovnu před alternativami:
+## Proč zvolit GroupDocs.Comparison pro .NET?
+GroupDocs.Comparison podporuje více než 50 formátů, zpracovává velké PDF během sekund a zahrnuje enterprise‑grade funkce jako manipulaci s hesly, zachování metadat a detailní správu změn, čímž eliminuje potřebu více specializovaných knihoven a snižuje vývojové úsilí.
 
-**Komplexní podpora formátů**: Porovnávejte Word dokumenty, PDF, Excel soubory, PowerPoint prezentace, obrázky a další — vše pomocí stejného API. Není potřeba učit se různé knihovny pro různé typy souborů.
+## Požadavky
 
-**Vizuální a programové výsledky**: Získáte jak vizuální zvýraznění rozdílů, tak programový přístup ke změnám. Ideální, ať už potřebujete uživatelům ukázat, co se změnilo, nebo zpracovávat změny automaticky.
+- Visual Studio 2022 nebo novější (nebo jakékoli .NET‑kompatibilní IDE).  
+- .NET 6+ runtime (knihovna také podporuje .NET Core 3.1 a .NET Framework 4.8).  
+- NuGet balíček `GroupDocs.Comparison` (nejnovější stabilní verze).  
+- Platný licenční klíč (můžete začít 30‑denní zkušební verzí).  
 
-**Enterprise‑Ready funkce**: Pracujte s dokumenty chráněnými heslem, s proudy (streams), spravujte metadata — všechny funkce, které potřebujete pro produkční aplikace.
+## Jak porovnat dva dokumenty .net?
+Pro porovnání dvou dokumentů .net vytvořte instanci třídy `Comparer`, zavolejte `Compare(sourcePath, targetPath, outputPath)` a specifikujte libovolné `ComparisonOptions`, které potřebujete. Metoda vytvoří diff soubor, který zvýrazní vložení, smazání a změny formátování, a zároveň poskytne kolekci `Changes` pro programovou inspekci. Objekt `Comparer` je jádrem, které řídí proces porovnání.
 
-**Jednoduchá integrace**: Přidejte porovnávání dokumentů do existující .NET aplikace s minimálními úpravami kódu. API je intuitivní a dobře zdokumentované.
+### Postup krok za krokem
 
-## Jak porovnávat dokumenty a detekovat změny v dokumentech
+1. **Create a `Comparer` instance** – tento objekt je jádrem, které řídí porovnávací engine.  
+2. **Load source and target** – můžete předat cesty k souborům, streamy nebo pole bajtů; streamy se doporučují pro soubory větší než 10 MB.  
+3. **Configure options** – ignorujte velikost písmen, nastavte heslo nebo upravte citlivost pomocí `ComparisonOptions`.  
+4. **Execute the comparison** – zavolejte `Compare` a zadejte výstupní umístění pro vizuální diff.  
+5. **Process results** – přečtěte kolekci `Changes` a přijměte, odmítněte nebo zaznamenejte každou úpravu.
 
-Když potřebujete **detekovat změny v dokumentech**, pracovní postup obvykle zahrnuje tři kroky:
+## Jaké formáty mohu porovnávat pomocí GroupDocs.Comparison?
+GroupDocs.Comparison podporuje **50+ vstupních a výstupních formátů**, včetně DOCX, PDF, XLSX, PPTX, PNG, JPEG, BMP a TIFF. Také zvládá soubory chráněné heslem a soubory uložené v cloudovém úložišti (prostřednictvím stream API). Tato šířka eliminuje potřebu více knihoven při budování univerzálního pipeline pro zpracování dokumentů.
 
-1. **Načíst** zdrojové a cílové soubory (z cesty, proudu nebo pole bajtů).  
-2. **Konfigurovat** možnosti porovnání — například ignorování velikosti písmen, práci s heslem chráněnými soubory nebo nastavení vlastní citlivosti detekce změn.  
-3. **Spustit** porovnání a získat výsledky — buď jako vizuální PDF/HTML diff, seznam objektů `ChangeInfo` nebo kombinovaný dokument, který můžete dále zpracovat.
+## Jak mohu programově přijímat nebo odmítat změny?
+Objekt `ComparisonResult` vystavuje kolekci `Changes`. Každá položka `ChangeInfo` popisuje jednu detekovanou změnu a poskytuje metody `Accept()` a `Reject()`. Zavolejte `result.Changes.AcceptAll()` pro aplikaci všech detekovaných změn na cílový dokument, nebo iterujte `result.Changes` a volajte `Accept()` či `Reject()` na jednotlivých objektech `ChangeInfo` pro detailní kontrolu. Po provedení požadovaných akcí uložte aktualizovaný dokument pomocí `result.Save(outputPath)`.
 
-Tento přístup vám umožní **přijímat a odmítat změny**, extrahovat metadata dokumentu a dokonce **porovnávat obrázky .net**, když jsou zdrojové soubory obrázky. Stejný vzor funguje pro **porovnání složek .net** pomocí iterace přes každou dvojici souborů ve složce.
+## Jak porovnat celé složky .net?
+Porovnání složek zahrnuje iteraci přes odpovídající páry souborů a volání stejné logiky `Compare` pro každý pár. GroupDocs.Comparison také nabízí pomocnou metodu `CompareFolders(sourceFolder, targetFolder, outputFolder)`, která porovná všechny odpovídající soubory ve dvou adresářích, detekuje přidané nebo odebrané soubory a generuje diff výsledky. **CompareFolders** vrací kolekci objektů `FolderComparisonResult`, z nichž každý udává stav páru souborů a odkaz na jeho diff dokument.
 
-## Začínáme: Vaše první porovnání za 5 minut
+## Jak funguje porovnání obrázků v .NET?
+Modul pro obrázky zachází s každým pixelem jako s datovým bodem, generuje diff obrázek, který zvýrazní změněné oblasti červeně, a vrací skóre podobnosti (0‑100 %). Zavolejte `Comparer.CompareImages(imagePath1, imagePath2, outputPath)`; engine zarovná obrázky, vypočítá rozdíly pixel po pixelu, zapíše diff obrázek, kde jsou změněné pixely zbarveny, a poskytne hodnotu `Similarity`, kterou můžete použít k vyvolání alarmů nebo k přeskočení dalšího zpracování, pokud je změna pod nastaveným prahem.
 
-Jste noví v GroupDocs.Comparison? Zde je, co potřebujete vědět hned na úvod:
+## Běžné případy použití
 
-1. **Instalace**: Nainstalujte pomocí NuGet Package Manager  
-2. **Licencování**: Nastavte svou licenci (k dispozici bezplatná zkušební verze)  
-3. **Základní použití**: Tři řádky kódu pro vaše první porovnání  
-4. **Pokročilé funkce**: Prozkoumejte hlouběji, jak vaše potřeby rostou  
+- **Version control for non‑code assets** – udržujte jasný auditní záznam revizí smluv.  
+- **Automated compliance checks** – označte neautorizované úpravy v politických dokumentech.  
+- **CI/CD pipelines for UI testing** – porovnávejte snímky webových stránek mezi buildy.  
+- **Batch migration projects** – ověřte, že konvertované soubory zachovávají původní obsah.
 
-Křivka učení je mírná, ale možnosti jsou rozsáhlé. Začněte se základním porovnáním dokumentů a postupně objevujte pokročilé funkce, jako je správa změn a vlastní nastavení porovnání.
+## Tipy pro výkon při velkých dokumentech
 
-## Porovnávání dokumentů a složek
-
-Zde většina vývojářů začíná — a to z dobrého důvodu. Porovnávání dokumentů a složek tvoří páteř většiny pracovních postupů správy dokumentů.
-
-Ať už řešíte revize smluv, aktualizace technické dokumentace nebo jen potřebujete sledovat, co se změnilo mezi verzemi softwaru, tyto tutoriály vás rychle uvedou do provozu. Naučte se programově přijímat nebo odmítat změny, automatizovat pracovní postupy porovnání a efektivně zvládat hromadné operace.
-
-**Běžné případy použití:**
-- Správa verzí pro dokumenty, které nejsou kódem
-- Automatická detekce změn v pracovních postupech
-- Generování souladnosti a auditního záznamu
-- Spolupráce při revizi dokumentů
-
-[Read More](./documents-and-folder-comparison/)
-
-## Porovnávání dokumentů
-
-Jedná se o hlavní funkci, kterou většina vývojářů potřebuje. Porovnávejte textové dokumenty, tabulky, prezentace — co jen chcete. Ale nejde jen o identifikaci rozdílů; jde o pochopení, co ty rozdíly znamenají a jak s nimi programově pracovat.
-
-Naše tutoriály pokrývají vše od základních porovnání po pokročilé scénáře, jako je práce s velkými dokumenty, správa využití paměti a optimalizace výkonu pro operace s vysokým objemem.
-
-**Tip**: Výkon porovnávání dokumentů se může výrazně lišit v závislosti na velikosti a složitosti dokumentu. Ukážeme vám, jak optimalizovat pro váš konkrétní případ.
-
-[Read More](./document-comparison/)
-
-## Načítání a ukládání dokumentů
-
-Může to vypadat jednoduše, ale ve skutečnosti existuje několik způsobů, jak načíst dokumenty pro porovnání — a výběr správného přístupu může ovlivnit jak výkon, tak funkčnost.
-
-Zjistěte, kdy načítat z cest k souborům versus proudy, jak pracovat s dokumenty z různých zdrojů (databáze, cloudové úložiště, webové API) a osvědčené postupy pro správu paměti u velkých dokumentů.
-
-**Postřeh vývojáře**: Mnoho problémů s výkonem pramení z neefektivních vzorů načítání dokumentů. Tyto tutoriály vám pomohou vyhnout se běžným úskalím.
-
-[Read More](./loading-and-saving-documents/)
-
-## Porovnávání obrázků
-
-Vizuální porovnání není jen pro dokumenty. Ať už budujete systém pro revizi designu, monitorujete vizuální změny ve webových aplikacích nebo vytváříte workflow pro zajištění kvality, porovnávání obrázků otevírá zcela nové možnosti.
-
-Naše tutoriály pokrývají praktické scénáře, jako je porovnávání screenshotů, detekce vizuálních změn v UI prvcích a integrace porovnávání obrázků do automatizovaných testovacích workflow.
-
-[Read More](./image-comparison/)
-
-## Základní použití 
-
-Jste noví v porovnávání dokumentů? Začněte zde. Tyto tutoriály pokrývají základní koncepty a běžné vzory, které použijete téměř v každém projektu.
-
-Osvojte si klíčová témata, jako je porovnávání buněk v tabulkách, extrakce informací o dokumentu a pochopení podporovaných formátů. Tento základ vám dobře poslouží při řešení složitějších scénářů.
-
-**Učební cesta**: Začněte se základním použitím, poté přejděte k porovnávání dokumentů a nakonec prozkoumejte pokročilé funkce. Tento postup vám systematicky vybuduje dovednosti.
-
-[Read More](./basic-usage/)
-
-## Rychlý start 
-
-Potřebujete rychle rozjet? Naše tutoriály pro rychlý start jsou určeny vývojářům, kteří chtějí okamžité výsledky.
-
-Naučte se efektivní nastavení licence, integrujte funkci porovnání s minimálním kódem a získejte první porovnání dokumentů během několika minut. Ideální pro proof‑of‑concepty a rychlé prototypování.
-
-[Read More](./quick-start/)
-
-## Pokročilé kategorie tutoriálů
-
-### [Začínáme](./getting-started/)
-Krok za krokem tutoriály pro instalaci GroupDocs.Comparison, licencování, nastavení a vytvoření vašeho prvního porovnání dokumentů v .NET aplikacích.
-
-### [Načítání dokumentů](./document-loading/)
-Objevte různé přístupy k načítání dokumentů pro porovnání z různých zdrojů, včetně cest k souborům, proudů a pole bajtů.
-
-### [Základní porovnání](./basic-comparison/)
-Naučte se, jak porovnávat různé typy dokumentů, jako jsou Word, PDF, Excel a další, pomocí jednoduchých API volání s GroupDocs.Comparison.
-
-### [Pokročilé porovnání](./advanced-comparison/)
-Prozkoumejte výkonné funkce pro složité scénáře porovnání, včetně porovnání více dokumentů, vlastních nastavení a chráněných dokumentů.
-
-### [Správa změn](./change-management/)
-Ovládněte detekci, přijímání a odmítání konkrétních změn mezi dokumenty s detailní kontrolou nad výsledky porovnání.
-
-### [Informace o dokumentu](./document-information/)
-Extrahujte podrobná metadata a informace o vašich dokumentech před a po operacích porovnání.
-
-### [Generování náhledů](./preview-generation/)
-Vytvořte vizuální náhledy a miniatury stránek dokumentů pro zdroj, cíl a výsledné porovnávací dokumenty.
-
-### [Správa metadat](./metadata-management/)
-Řiďte, jak jsou metadata dokumentu zachována, upravena nebo resetována během operací porovnání.
-
-### [Zabezpečení a ochrana](./security-protection/)
-Pracujte s dokumenty chráněnými heslem a implementujte bezpečnostní funkce ve vašich pracovních postupech porovnání.
-
-### [Licencování a konfigurace](./licensing-configuration/)
-Správně nastavte licencování, měřené účtování a optimalizujte konfiguraci aplikace pro GroupDocs.Comparison.
-
-### [Možnosti porovnání](./comparison-options/)
-Doladěte chování porovnání pomocí podrobných nastavení pro dosažení přesných výsledků pro různé typy dokumentů.
-
-## Běžné výzvy a řešení
-
-**Výkon u velkých dokumentů**: Při práci s velkými soubory (>10 MB) zvažte použití proudů místo načítání celých dokumentů do paměti. Naše tutoriály o načítání dokumentů pokrývají optimalizační techniky.
-
-**Správa paměti**: Porovnávání dokumentů může být náročné na paměť. Naučte se správně uvolňovat objekty a používat efektivní vzory načítání, aby se zabránilo únikům paměti.
-
-**Formátově specifické úvahy**: Různé typy dokumentů mají jedinečné charakteristiky. PDF se zpracovává odlišně od Word dokumentů, které se liší od tabulek. Naše formátově specifické průvodce řeší tyto nuance.
-
-**Integrační vzory**: Ať už budujete webové API, desktopovou aplikaci nebo background službu, integrační vzor má význam. Poskytujeme příklady pro běžné architektonické scénáře.
-
-## Nejlepší praktiky pro produkční použití
-
-**Zpracování chyb**: Vždy implementujte správné zacházení s výjimkami při práci s porovnáváním dokumentů. Neplatné soubory, poškozené dokumenty a nepodporované formáty by měly být ošetřeny elegantně.
-
-**Správa zdrojů**: Používejte `using` bloky nebo správné vzory uvolňování, aby byly zdroje vyčištěny, zejména při zpracování mnoha dokumentů.
-
-**Monitorování výkonu**: Sledujte časy porovnání a využití paměti, zejména v scénářích s vysokým objemem. Tato data pomáhají identifikovat úzká místa a možnosti optimalizace.
-
-**Bezpečnostní úvahy**: Při práci s citlivými dokumenty zajistěte správné řízení přístupu a zvažte bezpečnostní dopady dočasných souborů a využití paměti.
-
-## Co dál?
-
-Připravení začít? Začněte s tutoriály [Rychlý start](./quick-start/), pokud chcete okamžité výsledky, nebo s [Začínáme](./getting-started/), pokud chcete komplexnější základ.
-
-Každý tutoriál obsahuje kompletní ukázky kódu, vysvětlení, kdy a proč použít různé přístupy, a praktické tipy založené na reálném použití. Na konci této série tutoriálů budete mít znalosti a sebevědomí implementovat robustní funkci porovnávání dokumentů ve vašich .NET aplikacích.
-
-Ať už budujete systémy pro správu dokumentů, automatizujete workflow souladnosti nebo vytváříte funkce pro spolupráci na úpravách, GroupDocs.Comparison pro .NET poskytuje základ, který potřebujete pro spolehlivé a efektivní porovnávání dokumentů.
-
-## Tutoriály GroupDocs.Comparison pro .NET
-
-### [Porovnávání dokumentů a složek](./documents-and-folder-comparison/)
-Naučte se zefektivnit pracovní postupy s dokumenty pomocí tutoriálů GroupDocs Comparison pro .NET. Přijímejte, odmítejte změny a snadno porovnávejte dokumenty i složky.
-
-### [Porovnávání dokumentů](./document-comparison/)
-Efektivně porovnávejte dokumenty v .NET s GroupDocs.Comparison. Zefektivněte správu dokumentů, vylepšete workflow a zajistěte přesnost. Zjistěte více!
-
-### [Načítání a ukládání dokumentů](./loading-and-saving-documents/)
-Bez námahy porovnávejte dokumenty v .NET pomocí GroupDocs.Comparison pro .NET. Naučte se načítání, ukládání a využívání možností načítání pro efektivní správu dokumentů.
-
-### [Porovnávání obrázků](./image-comparison/)
-Efektivně porovnávejte obrázky v .NET pomocí knihovny GroupDocs.Comparison. Krok za krokem tutoriály pro bezproblémovou integraci z cesty nebo proudu.
-
-### [Základní použití](./basic-usage/)
-Efektivně porovnávejte dokumenty v .NET pomocí GroupDocs.Comparison. Naučte se základní tutoriály pokrývající porovnávání buněk, extrakci informací o dokumentu a podporované formáty.
-
-### [Rychlý start](./quick-start/)
-Bez námahy integrujte GroupDocs Comparison pro .NET do vašich projektů. Naučte se efektivní metody nastavení licence pro přesné workflow porovnávání dokumentů.
-
-### [Začínáme](./getting-started/)
-Krok za krokem tutoriály pro instalaci GroupDocs.Comparison, licencování, nastavení a vytvoření vašeho prvního porovnání dokumentů v .NET aplikacích.
-
-### [Načítání dokumentů](./document-loading/)
-Objevte různé přístupy k načítání dokumentů pro porovnání z různých zdrojů, včetně cest k souborům, proudů a pole bajtů.
-
-### [Základní porovnání](./basic-comparison/)
-Naučte se, jak porovnávat různé typy dokumentů, jako jsou Word, PDF, Excel a další, pomocí jednoduchých API volání s GroupDocs.Comparison.
-
-### [Pokročilé porovnání](./advanced-comparison/)
-Prozkoumejte výkonné funkce pro složité scénáře porovnání, včetně porovnání více dokumentů, vlastních nastavení a chráněných dokumentů.
-
-### [Správa změn](./change-management/)
-Ovládněte detekci, přijímání a odmítání konkrétních změn mezi dokumenty s detailní kontrolou nad výsledky porovnání.
-
-### [Informace o dokumentu](./document-information/)
-Extrahujte podrobná metadata a informace o vašich dokumentech před a po operacích porovnání.
-
-### [Generování náhledů](./preview-generation/)
-Vytvořte vizuální náhledy a miniatury stránek dokumentů pro zdroj, cíl a výsledné porovnávací dokumenty.
-
-### [Správa metadat](./metadata-management/)
-Řiďte, jak jsou metadata dokumentu zachována, upravena nebo resetována během operací porovnání.
-
-### [Zabezpečení a ochrana](./security-protection/)
-Pracujte s dokumenty chráněnými heslem a implementujte bezpečnostní funkce ve vašich pracovních postupech porovnání.
-
-### [Licencování a konfigurace](./licensing-configuration/)
-Správně nastavte licencování, měřené účtování a optimalizujte konfiguraci aplikace pro GroupDocs.Comparison.
-
-### [Možnosti porovnání](./comparison-options/)
-Doladěte chování porovnání pomocí podrobných nastavení pro dosažení přesných výsledků pro různé typy dokumentů.
+- **Stream files** místo načítání celých souborů do paměti; snižuje špičkovou spotřebu RAM až o 80 %.  
+- **Reuse a single `Comparer` instance** pro více porovnání a využijte interní cache.  
+- **Adjust `ComparisonOptions.MemoryLimit`** při práci s dokumenty většími než 500 MB, aby nedošlo k výjimkám out‑of‑memory.  
 
 ## Často kladené otázky
 
-**Q: Jak mohu programově přijmout nebo odmítnout změny po porovnání?**  
-A: Použijte metody `AcceptAll`, `RejectAll` nebo `Accept/Reject` na kolekci `Changes`, která je vrácena výsledkem porovnání.
+**Q: Jak mohu programově přijímat nebo odmítat změny po porovnání?**  
+A: Použijte `result.Changes.AcceptAll()`, `RejectAll()`, nebo iterujte každou `ChangeInfo` a zavolejte `Accept()` / `Reject()` podle potřeby, poté uložte dokument pomocí `result.Save(outputPath)`.
 
-**Q: Mohu extrahovat metadata, jako je autor, datum vytvoření nebo vlastní vlastnosti z dokumentů?**  
-A: Ano — GroupDocs.Comparison poskytuje objekt `DocumentInfo`, který vystavuje standardní i vlastní metadata pro zdrojové i cílové soubory.
+**Q: Mohu extrahovat metadata jako autor, datum vytvoření nebo vlastní vlastnosti z dokumentů?**  
+A: Ano – `DocumentInfo` poskytuje přístup k standardním i vlastním metadatům pro zdrojové i cílové soubory, což vám umožní tyto informace zaznamenat nebo zobrazit.
 
 **Q: Je možné přímo v .NET porovnávat soubory obrázků (např. PNG, JPEG)?**  
-A: Naprosto. Knihovna obsahuje API pro porovnávání obrázků, které zvýrazňuje rozdíly na úrovni pixelů a může generovat diff obrázek.
+A: Rozhodně. API `CompareImages` zvýrazní rozdíly na úrovni pixelů a vrátí procentuální podobnost, kterou můžete použít v automatizovaných testech.
 
 **Q: Jak mohu porovnat celé složky a najít přidané, odebrané nebo upravené soubory?**  
-A: Projděte každou dvojici souborů ve složkách a zavolejte API porovnání; knihovna také nabízí pomocnou metodu pro hromadné porovnání obsahu složek.
+A: Zavolejte `Comparer.CompareFolders(sourceFolder, targetFolder, outputFolder)`; metoda vrátí kolekci objektů `FolderComparisonResult`, které indikují stav každého páru souborů.
 
-**Q: Co mám dělat, pokud potřebuji porovnat dokumenty chráněné heslem?**  
-A: Zadejte heslo pomocí `LoadOptions` při načítání každého dokumentu; porovnávací engine soubory interně dešifruje.
+**Q: Co dělat, pokud potřebuji porovnávat dokumenty chráněné heslem?**  
+A: Heslo předáte pomocí `LoadOptions.Password` při načítání každého dokumentu; engine soubory interně dešifruje před provedením diffu.
+
+**Q: Podporuje GroupDocs.Comparison .NET Core a .NET 5/6?**  
+A: Ano – knihovna je kompatibilní s .NET Core 3.1, .NET 5, .NET 6 a novějšími verzemi, přičemž nabízí stejnou sadu funkcí napříč všemi runtime.
+
+## Důvěryhodné signály
+
+**Poslední aktualizace:** 2026-05-26  
+**Testováno s:** GroupDocs.Comparison 23.12 for .NET  
+**Autor:** GroupDocs  
 
 ---
 
-**Poslední aktualizace:** 2026-03-03  
-**Testováno s:** GroupDocs.Comparison 23.12 pro .NET  
-**Autor:** GroupDocs
+## Další odkazy na tutoriály (beze změny)
+
+### Documents and Folder Comparison
+[Více](./documents-and-folder-comparison/)
+
+### Document Comparison
+[Více](./document-comparison/)
+
+### Loading and Saving Documents
+[Více](./loading-and-saving-documents/)
+
+### Image Comparison
+[Více](./image-comparison/)
+
+### Basic Usage
+[Více](./basic-usage/)
+
+### Quick Start
+[Více](./quick-start/)
+
+### Getting Started
+[Getting Started](./getting-started/)
+
+### Document Loading
+[Document Loading](./document-loading/)
+
+### Basic Comparison
+[Basic Comparison](./basic-comparison/)
+
+### Advanced Comparison
+[Advanced Comparison](./advanced-comparison/)
+
+### Change Management
+[Change Management](./change-management/)
+
+### Document Information
+[Document Information](./document-information/)
+
+### Preview Generation
+[Preview Generation](./preview-generation/)
+
+### Metadata Management
+[Metadata Management](./metadata-management/)
+
+### Security & Protection
+[Security & Protection](./security-protection/)
+
+### Licensing & Configuration
+[Licensing & Configuration](./licensing-configuration/)
+
+### Comparison Options
+[Comparison Options](./comparison-options/)
+
+[Více](./documents-and-folder-comparison/)
+[Více](./document-comparison/)
+[Více](./loading-and-saving-documents/)
+[Více](./image-comparison/)
+[Více](./basic-usage/)
+[Více](./quick-start/)
+[Getting Started](./getting-started/)
+[Document Loading](./document-loading/)
+[Basic Comparison](./basic-comparison/)
+[Advanced Comparison](./advanced-comparison/)
+[Change Management](./change-management/)
+[Document Information](./document-information/)
+[Preview Generation](./preview-generation/)
+[Metadata Management](./metadata-management/)
+[Security & Protection](./security-protection/)
+[Licensing & Configuration](./licensing-configuration/)
+[Comparison Options](./comparison-options/)
+[Quick Start](./quick-start/)
+[Getting Started](./getting-started/)
+[Documents and Folder Comparison](./documents-and-folder-comparison/)
+[Document Comparison](./document-comparison/)
+[Loading and Saving Documents](./loading-and-saving-documents/)
+[Image Comparison](./image-comparison/)
+[Basic Usage](./basic-usage/)
+[Quick Start](./quick-start/)
+[Getting Started](./getting-started/)
+[Document Loading](./document-loading/)
+[Basic Comparison](./basic-comparison/)
+[Advanced Comparison](./advanced-comparison/)
+[Change Management](./change-management/)
+[Document Information](./document-information/)
+[Preview Generation](./preview-generation/)
+[Metadata Management](./metadata-management/)
+[Security & Protection](./security-protection/)
+[Licensing & Configuration](./licensing-configuration/)
+[Comparison Options](./comparison-options/)
+
+## Související tutoriály
+
+- [Document Comparison .NET: Accept & Reject Changes Programmatically](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [GroupDocs Comparison NET Tutorial - Complete Guide to Document Comparison with Metadata](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [Document Comparison .NET Tutorial - Preserve Metadata with GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

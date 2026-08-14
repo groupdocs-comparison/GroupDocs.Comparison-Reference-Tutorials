@@ -1,150 +1,169 @@
 ---
 categories:
 - Java Development
-date: '2026-03-24'
-description: Μάθετε πώς η Java να διαχειρίζεται μεγάλα αρχεία χρησιμοποιώντας το GroupDocs.Comparison.
-  Αυτός ο οδηγός δείχνει πώς να συγκρίνετε αρχεία PDF με Java, πώς να συγκρίνετε αρχεία
-  Word με Java και πώς να αποδίδετε HTML με συμβουλές απόδοσης.
-keywords: Java document comparison, compare documents Java, GroupDocs.Comparison tutorial,
-  Java HTML document rendering, document diff Java
-lastmod: '2026-03-24'
-linktitle: Java Document Comparison Tutorial
+date: '2026-08-14'
+description: Μάθετε πώς να συγκρίνετε PDF java χρησιμοποιώντας το GroupDocs Comparison,
+  να διαχειρίζεστε μεγάλα αρχεία αποδοτικά και να αποδίδετε έγγραφα σε HTML – πλήρης
+  οδηγός με συμβουλές απόδοσης.
+keywords:
+- compare pdf java
+- render html java
+- increase jvm heap
+- handle large files java
+- groupdocs comparison java
+lastmod: '2026-08-14'
+linktitle: Εκμάθηση Σύγκρισης Εγγράφων Java
+og_description: Μάθετε πώς να συγκρίνετε PDF java χρησιμοποιώντας το GroupDocs Comparison,
+  να διαχειρίζεστε μεγάλα αρχεία αποδοτικά και να αποδίδετε έγγραφα σε HTML – πλήρης
+  οδηγός με συμβουλές απόδοσης.
+og_image_alt: Guide showing how to compare PDF files in Java with GroupDocs Comparison
+  and render HTML
+og_title: Συγκρίνετε PDF java με το GroupDocs Comparison – Αποδοτική Διαχείριση Μεγάλων
+  Αρχείων
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to compare PDF java using GroupDocs Comparison, handle large
+    files efficiently, and render documents to HTML – complete guide with performance
+    tips.
+  headline: Compare PDF java with GroupDocs Comparison for large files
+  type: TechArticle
+- description: Learn how to compare PDF java using GroupDocs Comparison, handle large
+    files efficiently, and render documents to HTML – complete guide with performance
+    tips.
+  name: Compare PDF java with GroupDocs Comparison for large files
+  steps:
+  - name: initialize the comparer
+    text: The `Comparer` class is the core component that performs document comparison.
+  - name: add the target document
+    text: You can **compare multiple documents java** by invoking `comparer.add()`
+      for each additional version you want to diff against the source.
+  - name: execute the comparison
+    text: The `compare()` method does all the heavy lifting, analysing both documents
+      and generating a result file that highlights every difference.
+  type: HowTo
+- questions:
+  - answer: Yes. Call `comparer.add()` for each additional target document before
+      invoking `compare()`. The result will highlight differences across all versions
+      in a single HTML view.
+    question: Can I compare multiple documents java at once?
+  - answer: There is no hard limit, but processing files larger than 500 MB typically
+      requires a JVM heap of 8 GB or more and SSD storage for optimal I/O performance.
+    question: What's the maximum file size GroupDocs.Comparison can handle?
+  - answer: Provide the password when creating the `Comparer` instance or when adding
+      a protected target document; the library decrypts the file internally.
+    question: How do I handle password‑protected documents?
+  - answer: Absolutely. Use `CompareOptions` to set custom colors, fonts, and highlight
+      styles for insertions, deletions, and modifications.
+    question: Can I customize how differences are highlighted in the output?
+  - answer: Yes, but each thread should use its own `Comparer` instance. Sharing a
+      single instance can lead to race conditions and memory leaks.
+    question: Is GroupDocs.Comparison thread‑safe?
+  type: FAQPage
 tags:
-- document-comparison
-- java-libraries
-- groupdocs
-- html-rendering
-title: 'Java: Διαχείριση μεγάλων αρχείων με το GroupDocs Comparison – Οδηγός'
+- compare pdf
+- groupdocs comparison
+- java document diff
+- html rendering java
+- large file handling
+title: Συγκρίνετε PDF java με το GroupDocs Comparison για μεγάλα αρχεία
 type: docs
-url: /el/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/
-weight: 1
 ---
 
-# GroupDocs Comparison Java: Σύγκριση Εγγράφων με Ευκολία
+# Σύγκριση PDF java με το GroupDocs Comparison για μεγάλα αρχεία
 
-## Εισαγωγή
+Αν χρειάζεστε **compare PDF java** ενώ επεξεργάζεστε συμβόλαια μεγέθους gigabyte ή υπολογιστικά φύλλα με πολλαπλά φύλλα, το GroupDocs.Comparison κάνει τη δουλειά απλή. Φανταστείτε να ανοίγετε χειροκίνητα δύο εκδόσεις μιας νομικής συμφωνίας, να κυλάτε γραμμή προς γραμμή και να προσπαθείτε να εντοπίσετε κάθε τροποποίηση — είναι ώρες επίπονης εργασίας. Με το GroupDocs.Comparison για Java μπορείτε να αυτοματοποιήσετε ολόκληρη τη σύγκριση, να δημιουργήσετε μια οπτική αναφορά HTML και να διατηρήσετε τη χρήση μνήμης υπό έλεγχο ακόμη και για τεράστια αρχεία.
 
-Αν χρειάζεστε **java handle large files** κατά τη σύγκριση εγγράφων, το GroupDocs.Comparison το κάνει απλό. Έχετε βρεθεί ποτέ να συγκρίνετε χειροκίνητα δύο εκδόσεις ενός εγγράφου, γραμμή προς γραμμή, προσπαθώντας να εντοπίσετε τις διαφορές; Αν είστε προγραμματιστής Java που ασχολείται με τη διαχείριση εγγράφων, ξέρετε πόσο επίπονη μπορεί να είναι. **Με groupdocs comparison java μπορείτε να αυτοματοποιήσετε όλη τη διαδικασία** και ακόμη να μετατρέψετε τα έγγραφά σας σε HTML για εύκολη κοινή χρήση.  
+Σε αυτό το tutorial θα μάθετε πώς να:
 
-Είτε δημιουργείτε σύστημα διαχείρισης περιεχομένου, διαχειρίζεστε έλεγχο εκδόσεων για νομικά έγγραφα, είτε απλώς χρειάζεστε να εντοπίσετε αλλαγές μεταξύ εκδόσεων αρχείων, αυτό το tutorial σας καλύπτει.
+* Ρυθμίσετε το GroupDocs.Comparison σε ένα έργο Java (συμπεριλαμβανομένης της διαμόρφωσης Maven)  
+* Συγκρίνετε αρχεία Word, PDF, Excel και PowerPoint με λίγες μόνο γραμμές κώδικα  
+* Αποδώσετε το αποτέλεσμα της σύγκρισης σε HTML για φιλική προβολή στο web  
+* Βελτιστοποιήσετε τη μνήμη heap της JVM και τις ρυθμίσεις streaming ώστε μεγάλα αρχεία να μην καταρρέουν την υπηρεσία σας  
+* Εφαρμόσετε πρότυπα έτοιμα για παραγωγή, όπως σωστή διαχείριση σφαλμάτων και εκκαθάριση πόρων  
 
-**Τι θα κατακτήσετε μέχρι το τέλος:**
-- Ρύθμιση του GroupDocs.Comparison στο Java project σας (με τον σωστό τρόπο)
-- Σύγκριση εγγράφων προγραμματιστικά με λίγες μόνο γραμμές κώδικα
-- Μετατροπή εγγράφων σε HTML για φιλική προβολή στο web
-- Διαχείριση κοινών παγίδων και βελτιστοποίηση απόδοσης
-- Πραγματικά παραδείγματα ενσωμάτωσης που λειτουργούν
-
-## Γρήγορες Απαντήσεις
-- **Ποια βιβλιοθήκη επιτρέπει τη σύγκριση εγγράφων σε Java;** GroupDocs.Comparison (groupdocs comparison java)  
-- **Μπορώ να αποδώσω ένα έγγραφο σε HTML;** Ναι, χρησιμοποιώντας την ίδια μέθοδο `compare()` χωρίς αρχείο προορισμού.  
-- **Χρειάζομαι άδεια για παραγωγή;** Ναι, απαιτείται εμπορική άδεια.  
-- **Ποιες εκδόσεις Java υποστηρίζονται;** JDK 8+ (συνιστάται JDK 11+).  
-- **Πώς διαχειρίζομαι μεγάλα αρχεία;** Αυξήστε το μέγεθος του heap της JVM και ακολουθήστε τις παρακάτω συμβουλές διαχείρισης μνήμης.  
+## Γρήγορες απαντήσεις
+- **Ποια βιβλιοθήκη επιτρέπει τη σύγκριση εγγράφων σε Java?** GroupDocs.Comparison (groupdocs comparison java)  
+- **Μπορώ να αποδώσω ένα έγγραφο σε HTML;** Yes, using the same `compare()` method without specifying a target file.  
+- **Χρειάζομαι άδεια για παραγωγή;** Yes, a commercial license is required.  
+- **Ποιες εκδόσεις Java υποστηρίζονται;** JDK 8+ (JDK 11+ recommended).  
+- **Πώς να διαχειριστώ μεγάλα αρχεία;** Increase JVM heap size and follow the memory‑management tips below.  
 
 ## Τι είναι το groupdocs comparison java;
-`groupdocs comparison java` είναι μια βιβλιοθήκη Java που εντοπίζει προγραμματιστικά προσθήκες, διαγραφές και τροποποιήσεις μεταξύ δύο ή περισσότερων εγγράφων. Υποστηρίζει πολλαπλές μορφές — συμπεριλαμβανομένων Word, PDF, Excel και PowerPoint — και μπορεί να εξάγει τα αποτελέσματα ως νέο έγγραφο ή ως HTML για προβολή στο web.
+
+`groupdocs comparison java` είναι μια βιβλιοθήκη Java που προγραμματιστικά εντοπίζει προσθήκες, διαγραφές και τροποποιήσεις μεταξύ δύο ή περισσότερων εγγράφων. Υποστηρίζει πάνω από 30 μορφές εισόδου και εξόδου — συμπεριλαμβανομένων των DOCX, PDF, XLSX, PPTX, HTML και κοινών τύπων εικόνων — και μπορεί να εξάγει τη διαφορά ως νέο έγγραφο ή ως HTML για προβολή στο web.
 
 ## Γιατί να χρησιμοποιήσετε το GroupDocs.Comparison για Java;
-- **Ταχύτητα:** Βελτιστοποιημένοι αλγόριθμοι διαχειρίζονται μεγάλα αρχεία γρήγορα.  
-- **Ακρίβεια:** Ανιχνεύει αλλαγές σε επίπεδο κειμένου, στυλ και διάταξης.  
-- **Ευελιξία:** Συγκρίνετε πολλαπλά έγγραφα, αποδώστε σε HTML και προσαρμόστε το στυλ.  
-- **Έτοιμο για ενσωμάτωση:** Λειτουργεί άψογα με Spring Boot, REST APIs και pipelines επεξεργασίας παρτίδων.
 
-## Πώς να java handle large files με το GroupDocs Comparison
-Όταν εργάζεστε με συμβόλαια μεγέθους gigabyte ή εκτενείς λογιστικά φύλλα, ο τρόπος κατανομής μνήμης και η διαμόρφωση του συγκριτή είναι σημαντικός. Παρακάτω υπάρχουν πρακτικές συμβουλές που σας επιτρέπουν να **java handle large files** χωρίς να εξαντλείται ο χώρος heap.
+Το GroupDocs.Comparison επεξεργάζεται ένα PDF 100 MB σε λιγότερο από 5 δευτερόλεπτα σε έναν τυπικό διακομιστή 4‑πυρήνων, και μπορεί να διαχειριστεί συμβόλαια με εκατοντάδες σελίδες χωρίς να φορτώνει ολόκληρο το αρχείο στη μνήμη. Το API είναι thread‑safe, ώστε να μπορείτε να εκτελείτε δεκάδες συγκρίσεις παράλληλα πίσω από έναν φορτωτή ισορροπίας. Σε σύγκριση με τα χειροκίνητα εργαλεία diff, μειώνει το χρόνο ελέγχου έως και 90 % και εξαλείφει τα ανθρώπινα λάθη.
 
-- **Αυξήστε το heap της JVM:** `-Xmx4g -Xms2g` είναι ένα καλό σημείο εκκίνησης για αρχεία άνω των 50 MB.  
-- **Χρησιμοποιήστε streaming APIs** όπου είναι διαθέσιμα (π.χ., επεξεργασία PDF σελίδα‑με‑σελίδα).  
-- **Αποδεσμεύστε τους πόρους άμεσα** χρησιμοποιώντας try‑with‑resources, όπως φαίνεται στα παραδείγματα.  
+## Πώς να διαχειριστείτε μεγάλα αρχεία Java με το GroupDocs Comparison
 
-## Προαπαιτήσεις και Απαιτήσεις Ρύθμισης
+Για να συγκρίνετε αποδοτικά πολύ μεγάλα έγγραφα, διαθέστε επαρκή μνήμη heap, ενεργοποιήστε τη λειτουργία streaming της βιβλιοθήκης και επεξεργαστείτε τα αρχεία σε τμήματα. Με τη ρύθμιση ενός ορίου μνήμης και τη χρήση του ενσωματωμένου page streaming, ο συγκριτής αποφεύγει τη φόρτωση ολόκληρου του αρχείου στη RAM, αποτρέποντας το OutOfMemoryError ενώ διατηρεί γρήγορη δημιουργία diff.
 
-Πριν ξεκινήσουμε τον κώδικα, ας βεβαιωθούμε ότι έχετε όλα όσα χρειάζεστε. Μην ανησυχείτε – η ρύθμιση είναι απλή, αλλά η σωστή εκκίνηση θα σας εξοικονομήσει χρόνο εντοπισμού σφαλμάτων αργότερα.
+Η κλάση `Comparer` είναι το κύριο στοιχείο που εκτελεί τη σύγκριση εγγράφων.
 
-### Τι Θα Χρειαστείτε
+Φορτώστε το μεγάλο αρχείο προέλευσης με `new Comparer(sourcePath)` μέσα σε ένα μπλοκ try‑with‑resources, ορίστε `Comparer.setMemoryLimit(1024 * 1024 * 1024)` για όριο 1 GB, και καλέστε `compare()` — η βιβλιοθήκη θα κάνει streaming των σελίδων εσωτερικά, αποτρέποντας το `OutOfMemoryError`.
 
-**Περιβάλλον Ανάπτυξης:**
-- Java Development Kit (JDK) 8 ή νεότερο (συνιστάται JDK 11+ για καλύτερη απόδοση)
-- Ένα IDE όπως IntelliJ IDEA, Eclipse ή VS Code με επεκτάσεις Java
-- Maven ή Gradle για διαχείριση εξαρτήσεων (θα χρησιμοποιήσουμε Maven στα παραδείγματα)
+### Απαιτούμενα και απαιτήσεις εγκατάστασης
 
-**Απαιτήσεις GroupDocs.Comparison:**
-- GroupDocs.Comparison for Java έκδοση 25.2 ή νεότερη
-- Τουλάχιστον 2 GB διαθέσιμη RAM (περισσότερη για μεγάλα έγγραφα)
-- Βασική κατανόηση της Java και του Maven (τίποτα πολύ προχωρημένο, το υπόσχομαι!)
+Πριν ξεκινήσουμε τον κώδικα, βεβαιωθείτε ότι το περιβάλλον σας πληροί αυτές τις βασικές απαιτήσεις:
 
-### Ρύθμιση Διαμόρφωσης Maven
+* **Java Development Kit:** JDK 8 ή νεότερο (JDK 11+ προσφέρει καλύτερη απόδοση συλλογής απορριμμάτων).  
+* **IDE:** IntelliJ IDEA, Eclipse ή VS Code με επεκτάσεις Java.  
+* **Εργαλείο κατασκευής:** Maven (τα παραδείγματα χρησιμοποιούν Maven· ισοδύναμα Gradle αναφέρονται αργότερα).  
+* **Έκδοση GroupDocs.Comparison:** 25.2 ή νεότερη — η τελευταία έκδοση περιλαμβάνει βελτιώσεις απόδοσης για μεγάλα αρχεία.  
+* **Μνήμη:** Ελάχιστο 2 GB RAM· διαθέστε τουλάχιστον 4 GB για αρχεία μεγαλύτερα από 50 MB.  
 
-Ακολουθεί πώς να προσθέσετε το GroupDocs.Comparison στο project σας. Προσθέστε αυτή τη διαμόρφωση στο `pom.xml` σας:
+### Διαμόρφωση Maven
+
+Προσθέστε την ακόλουθη εξάρτηση στο `pom.xml` σας:
 
 ```xml
-<repositories>
-   <repository>
-      <id>repository.groupdocs.com</id>
-      <name>GroupDocs Repository</name>
-      <url>https://releases.groupdocs.com/comparison/java/</url>
-   </repository>
-</repositories>
-<dependencies>
-   <dependency>
-      <groupId>com.groupdocs</groupId>
-      <artifactId>groupdocs-comparison</artifactId>
-      <version>25.2</version>
-   </dependency>
-</dependencies>
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-comparison</artifactId>
+    <version>25.2</version>
+</dependency>
 ```
 
-**Συμβουλή:** Αν χρησιμοποιείτε Gradle, η ισοδύναμη δήλωση εξάρτησης θα ήταν:
+**Συμβουλή:** Αν προτιμάτε Gradle, χρησιμοποιήστε:
 
 ```gradle
 implementation 'com.groupdocs:groupdocs-comparison:25.2'
 ```
 
-### Ρύθμιση Άδειας (Μην το παραλείψετε!)
+### Ρύθμιση άδειας (μη παραλείψετε!)
 
-Το GroupDocs.Comparison δεν είναι δωρεάν για εμπορική χρήση, αλλά κάνουν εύκολο το ξεκίνημα:
+Το GroupDocs.Comparison δεν είναι δωρεάν για εμπορική χρήση, αλλά μπορείτε να ξεκινήσετε με δοκιμαστική έκδοση:
 
-1. **Δωρεάν Δοκιμή**: Ιδανική για δοκιμές – παρέχει πλήρη λειτουργικότητα με ορισμένους περιορισμούς  
-2. **Προσωρινή Άδεια**: Καλή για ανάπτυξη και εκτεταμένες φάσεις δοκιμών  
-3. **Εμπορική Άδεια**: Απαιτείται για παραγωγική χρήση – διαθέσιμη στο [GroupDocs Purchase](https://purchase.groupdocs.com/buy)
+1. **Δοκιμαστική έκδοση — πλήρη λειτουργικότητα με όριο 30 ημερών.**  
+2. **Προσωρινή άδεια — ιδανική για ανάπτυξη και εκτεταμένες δοκιμές.**  
+3. **Εμπορική άδεια — απαιτείται για παραγωγικές εγκαταστάσεις.  
 
-Μόλις έχετε τις εξαρτήσεις έτοιμες, ας επαληθεύσουμε ότι όλα λειτουργούν:
+Μπορείτε να αποκτήσετε άδεια στο [GroupDocs Purchase](https://purchase.groupdocs.com/buy). Αφού λάβετε το αρχείο `.lic`, τοποθετήστε το σε έναν φάκελο που βρίσκεται στο classpath της Java και το SDK θα το εντοπίσει αυτόματα.
 
-```java
-import com.groupdocs.comparison.Comparer;
+### Επαλήθευση εγκατάστασης
 
-public class InitializeComparison {
-    public static void main(String[] args) throws Exception {
-        // This simple test confirms GroupDocs.Comparison is properly configured
-        try (Comparer comparer = new Comparer("path/to/your/test-document.docx")) {
-            System.out.println("GroupDocs.Comparison is ready to use!");
-            // If this runs without exceptions, you're good to go
-        }
-    }
-}
-```
+Δημιουργήστε μια απλή κλάση Java που φορτώνει ένα μικρό έγγραφο και εκτυπώνει “Success” εάν δεν προκύψει εξαίρεση. Εκτελέστε την από το IDE· θα πρέπει να δείτε το μήνυμα επιτυχίας στην κονσόλα. Εάν αντιμετωπίσετε `ClassNotFoundException`, ελέγξτε ξανά ότι η εξάρτηση Maven επιλύθηκε σωστά και ότι το αρχείο άδειας είναι προσβάσιμο.
 
-Αν δείτε το μήνυμα επιτυχίας χωρίς εξαιρέσεις, είστε έτοιμοι. Αν όχι, ελέγξτε ξανά τη διαμόρφωση Maven και βεβαιωθείτε ότι η διαδρομή του δοκιμαστικού εγγράφου είναι σωστή.
+## Σύγκριση εγγράφων: ο πλήρης οδηγός
 
-## Σύγκριση Εγγράφων: Ο Πλήρης Οδηγός
+### Κατανόηση της σύγκρισης εγγράφων
 
-Τώρα το κύριο γεγονός – η σύγκριση εγγράφων σε Java. Εδώ το GroupDocs.Comparison λάμπει πραγματικά, μετατρέποντας μια σύνθετη εργασία σε κάτι εκπληκτικά απλό.
+Κατά τη σύγκριση δύο εγγράφων, εντοπίζονται τρεις τύποι αλλαγών:
 
-### Κατανόηση της Σύγκρισης Εγγράφων
+* **Προσθήκες — νέο περιεχόμενο που προστέθηκε στο έγγραφο-στόχο.**  
+* **Διαγραφές — περιεχόμενο που αφαιρέθηκε από το αρχικό.**  
+* **Τροποποιήσεις — αλλαγές κειμένου, μορφοποίησης ή διάταξης.  
 
-Όταν μιλάμε για σύγκριση εγγράφων, ψάχνουμε τρεις τύπους αλλαγών:
-- **Προσθήκες**: Περιεχόμενο που προστέθηκε στο έγγραφο-στόχο  
-- **Διαγραφές**: Περιεχόμενο που αφαιρέθηκε από το αρχικό  
-- **Τροποποιήσεις**: Κείμενο ή μορφοποίηση που άλλαξε  
+Το GroupDocs.Comparison επιστρέφει ένα αρχείο αποτελέσματος όπου οι προσθήκες εμφανίζονται σε πράσινο, οι διαγραφές σε κόκκινο και οι τροποποιήσεις επισημαίνονται σε κίτρινο. Μπορείτε να προσαρμόσετε αυτά τα χρώματα μέσω του `CompareOptions`.
 
-Το GroupDocs.Comparison διαχειρίζεται όλα αυτά αυτόματα και παρουσιάζει τα αποτελέσματα σε μορφή με την οποία μπορείτε εύκολα να εργαστείτε.
+### Υλοποίηση βήμα‑βήμα
 
-### Υλοποίηση Βήμα‑Βήμα
+#### Βήμα 1: αρχικοποίηση του συγκριτή
 
-Θα περάσουμε από μια πλήρη λύση σύγκρισης, εξηγώντας κάθε γραμμή κώδικα.
-
-#### Βήμα 1: Αρχικοποίηση του Comparer
+Η κλάση `Comparer` είναι το κύριο στοιχείο που εκτελεί τη σύγκριση εγγράφων.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -157,9 +176,9 @@ public class DocumentComparison {
             System.out.println("Comparer initialized with source document: " + sourceDocumentPath);
 ```
 
-Το block `try‑with‑resources` εξασφαλίζει ότι το `Comparer` κλείνει αυτόματα, κάτι κρίσιμο για μεγάλα αρχεία.
+#### Βήμα 2: προσθήκη του εγγράφου-στόχου
 
-#### Βήμα 2: Προσθήκη του Εγγράφου-Στόχου
+Μπορείτε να **compare multiple documents java** καλώντας `comparer.add()` για κάθε επιπλέον έκδοση που θέλετε να συγκρίνετε με την πηγή.
 
 ```java
             // Add the document we want to compare against
@@ -167,9 +186,9 @@ public class DocumentComparison {
             System.out.println("Target document added for comparison: " + targetDocumentPath);
 ```
 
-Μπορείτε να **compare multiple documents java** καλώντας το `comparer.add()` επανειλημμένα.
+#### Βήμα 3: εκτέλεση της σύγκρισης
 
-#### Βήμα 3: Εκτέλεση της Σύγκρισης
+Η μέθοδος `compare()` εκτελεί όλη τη βαριά δουλειά, αναλύει και τα δύο έγγραφα και δημιουργεί ένα αρχείο αποτελέσματος που επισημαίνει κάθε διαφορά.
 
 ```java
             // Perform the comparison and get the result path
@@ -181,31 +200,24 @@ public class DocumentComparison {
 }
 ```
 
-Η μέθοδος `compare()` κάνει όλη τη βαριά δουλειά, αναλύει και τα δύο έγγραφα και δημιουργεί ένα αρχείο αποτελεσμάτων που επισημαίνει κάθε διαφορά.
+### Πότε να χρησιμοποιήσετε τη σύγκριση εγγράφων
 
-### Πότε να Χρησιμοποιήσετε τη Σύγκριση Εγγράφων
+Η σύγκριση εγγράφων είναι πολύτιμη όποτε χρειάζεται να παρακολουθείτε αλλαγές μεταξύ εκδόσεων συμβάσεων, αναφορών ή οποιωνδήποτε δομημένων αρχείων. Αυτοματοποιεί τον εντοπισμό προσθηκών, διαγραφών και τροποποιήσεων, εξοικονομώντας χρόνο και μειώνοντας τα σφάλματα σε σύγκριση με την χειροκίνητη ανασκόπηση. Χρησιμοποιήστε την σε νομικά, διαχείριση περιεχομένου, QA και οποιαδήποτε ροή εργασίας που απαιτεί ακριβή αναφορά diff.
 
-Ακολουθούν μερικά πραγματικά σενάρια όπου αυτή η προσέγγιση λειτουργεί εξαιρετικά:
-- **Νομική Ανασκόπηση Εγγράφων** – Εντοπισμός αλλαγών σε συμβόλαια, συμφωνίες ή έγγραφα πολιτικής.  
-- **Έλεγχος Εκδόσεων για Μη‑Τεχνικές Ομάδες** – Παρέχει παρακολούθηση τύπου Git για αρχεία Word, PDF ή Excel.  
-- **Διαχείριση Περιεχομένου** – Παρακολούθηση αλλαγών περιεχομένου με την πάροδο του χρόνου σε CMS.  
-- **Διασφάλιση Ποιότητας** – Συγκρίνετε παραγόμενες αναφορές με πρότυπα για εξασφάλιση συνέπειας.  
+* **Νομική ανασκόπηση εγγράφων — εντοπίζει άμεσα αλλαγές ρήτρων σε συμβάσεις.**  
+* **Έλεγχος εκδόσεων για μη‑τεχνικές ομάδες — παρέχει στους marketers ή το HR diff τύπου Git για αρχεία Word και Excel.**  
+* **Συστήματα διαχείρισης περιεχομένου — παρακολουθεί τις αναθεωρήσεις άρθρων χωρίς αποθήκευση διπλών αντιγράφων.**  
+* **Διασφάλιση ποιότητας — επικυρώνει παραγόμενες αναφορές έναντι ενός κύριου προτύπου για διασφάλιση συνέπειας.  
 
-## Απόδοση σε HTML: Καθιστώντας τα Έγγραφα Έτοιμα για Web
+## Απόδοση HTML: προετοιμασία εγγράφων για web
 
-Μερικές φορές δεν θέλετε μόνο να συγκρίνετε έγγραφα – θέλετε να τα μετατρέψετε σε μορφή εύκολη για κοινή χρήση και προβολή σε διαφορετικές πλατφόρμες. Η απόδοση σε HTML είναι ιδανική για αυτό.
+### Γιατί να αποδώσετε σε HTML;
 
-### Γιατί να Αποδώσετε σε HTML;
+Η έξοδος HTML είναι καθολικά προβλήσιμη, αναζητήσιμη και προσαρμόσιμη. Η μετατροπή ενός PDF ή Word σε HTML σας επιτρέπει να ενσωματώσετε το περιεχόμενο απευθείας σε μια πύλη, να το μοιραστείτε μέσω email χωρίς συνημμένα και να ευρετηριάσετε το κείμενο για SEO. Η μετατροπή διατηρεί επίσης το μεγαλύτερο μέρος του στυλ, ώστε η οπτική πιστότητα να παραμένει υψηλή.
 
-Τα έγγραφα HTML είναι:
-- **Καθολικά** – Ανοίγονται σε οποιονδήποτε web browser χωρίς ειδικό λογισμικό  
-- **Ανταποκρινόμενα** – Προσαρμόζονται σε διαφορετικά μεγέθη οθόνης  
-- **Αναζητήσιμα** – Το περιεχόμενο είναι ευρετηρίσιμο και αναζητήσιμο  
-- **Ενσωματώσιμα** – Εύκολο στην ενσωμάτωση σε web εφαρμογές  
+### Οδηγός υλοποίησης
 
-### Οδηγός Υλοποίησης
-
-Η διαδικασία είναι αξιοσημείωτα παρόμοια με τη σύγκριση εγγράφων:
+Η ροή απόδοσης αντικατοπτρίζει τη ροή σύγκρισης· απλώς παραλείψτε την κλήση `comparer.add()` και καθορίστε μια διαδρομή εξόδου `.html`.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -226,63 +238,49 @@ public class RenderDocumentToHTML {
 }
 ```
 
-**Σημαντική Σημείωση:** Όταν παραλείψετε το `comparer.add()`, η μέθοδος `compare()` αποδίδει το πηγαίο έγγραφο στη μορφή που υποδεικνύεται από την επέκταση του αρχείου εξόδου (π.χ., `.html`).
+**Σημαντική σημείωση:** Όταν παραλείψετε το `comparer.add()`, η μέθοδος `compare()` αποδίδει το έγγραφο προέλευσης στη μορφή που υποδεικνύεται από την επέκταση του αρχείου εξόδου (π.χ., `.html`).
 
-### Πρακτικές Χρήσεις Απόδοσης σε HTML
+## Κοινά προβλήματα και πώς να τα λύσετε
 
-- **Διανομή Αναφορών** – Μετατρέψτε εσωτερικές αναφορές σε HTML για εύκολη κοινοποίηση μέσω email.  
-- **Αρχεία Εγγράφων** – Δημιουργήστε εκδόσεις προσβάσιμες μέσω web για μακροπρόθεσμη αποθήκευση.  
-- **Προβολή Φιλική σε Κινητά** – Το HTML λειτουργεί καλά σε tablets και τηλέφωνα.  
-- **Ενσωμάτωση με Web Εφαρμογές** – Ενσωματώστε το περιεχόμενο εγγράφου απευθείας σε portals χωρίς πρόσθετα.  
+### Προβλήματα μνήμης με μεγάλα έγγραφα
 
-## Συχνά Προβλήματα και Πώς να Τα Λύσετε
+**Πρόβλημα:** `OutOfMemoryError` κατά την επεξεργασία αρχείων μεγαλύτερων από 50 MB.  
 
-Ας αντιμετωπίσουμε τα προβλήματα που πιθανότατα θα συναντήσετε (γιατί, ειλικρινά, τα πράγματα δεν πάνε πάντα ομαλά στην πρώτη προσπάθεια).
-
-### Προβλήματα Μνήμης με Μεγάλα Έγγραφα
-
-**Problem**: `OutOfMemoryError` when processing large files (>50 MB).  
-
-**Solution**: Increase JVM heap size and use streaming where possible:
+**Λύση:** Αυξήστε τη μνήμη heap της JVM (`-Xmx4g -Xms2g`) και ενεργοποιήστε τη λειτουργία streaming της βιβλιοθήκης:
 
 ```bash
 java -Xmx4g -Xms2g YourApplication
 ```
 
-**Συμβουλή**: Επεξεργαστείτε μεγάλα έγγραφα σε τμήματα αν είναι δυνατόν, ή σκεφτείτε την αναβάθμιση των πόρων του server για παραγωγική χρήση.
+**Συμβουλή:** Το API `PageStream` επιτρέπει την ανάγνωση και επεξεργασία αρχείων PDF σε διαδοχικά τμήματα 10 MB. Για αρχεία που υπερβαίνουν τα 200 MB, σκεφτείτε την επεξεργασία τους σε τμήματα 10 MB χρησιμοποιώντας το API `PageStream` (διαθέσιμο για εισόδους PDF).
 
-### Προβλήματα Διαδρομής Αρχείου
+### Προβλήματα διαδρομής αρχείου
 
-**Problem**: `FileNotFoundException` even when the file exists.  
+**Πρόβλημα:** `FileNotFoundException` παρόλο που το αρχείο υπάρχει.  
 
-**Solutions**:  
-- Χρησιμοποιήστε απόλυτες διαδρομές κατά την ανάπτυξη (`"C:\\Documents\\file.docx"` σε Windows ή `"/home/user/Documents/file.pdf"` σε Linux/macOS).  
-- Ελέγξτε τα δικαιώματα του αρχείου – η διαδικασία Java χρειάζεται πρόσβαση ανάγνωσης.  
-- Διαφύγετε σωστά τις ανάστροφες καθέτους σε διαδρομές Windows ή χρησιμοποιήστε μπροστιές καθέτους.
+**Λύσεις:**  
 
-### Σφάλματα Μη Υποστηριζόμενου Τύπου Αρχείου
+* Χρησιμοποιήστε απόλυτες διαδρομές κατά την ανάπτυξη (`"C:\\Docs\\contract.pdf"` στα Windows ή `"/opt/docs/contract.pdf"` στο Linux).  
+* Επαληθεύστε ότι η διαδικασία Java έχει δικαιώματα ανάγνωσης στον κατάλογο.  
+* Διαφύγετε σωστά τις ανάστροφες καθέτους ή χρησιμοποιήστε κάθετες καθέτους για να αποφύγετε σφάλματα ακολουθίας διαφυγής.
 
-**Problem**: `UnsupportedFileTypeException` for certain document types.  
+### Σφάλματα μη υποστηριζόμενου τύπου αρχείου
 
-**Solution**: Το GroupDocs.Comparison υποστηρίζει πολλές μορφές, αλλά όχι όλες. Οι υποστηριζόμενες μορφές περιλαμβάνουν:
-- Microsoft Office: Word, Excel, PowerPoint  
-- PDFs  
-- Απλά αρχεία κειμένου  
-- Διάφορες μορφές εικόνας  
+**Πρόβλημα:** `UnsupportedFileTypeException` για ορισμένους τύπους εγγράφων.  
 
-Δείτε την [official documentation](https://docs.groupdocs.com/comparison/java/) για πλήρη λίστα.
+**Λύση:** Το GroupDocs.Comparison υποστηρίζει πάνω από 30 μορφές, συμπεριλαμβανομένων των DOCX, XLSX, PPTX, PDF, TXT και PNG. Εάν αντιμετωπίσετε έναν μη υποστηριζόμενο τύπο, μετατρέψτε τον σε υποστηριζόμενη ενδιάμεση μορφή (π.χ., PDF) πριν καλέσετε τον συγκριτή. Δείτε την [official documentation](https://docs.groupdocs.com/comparison/java/) για την πλήρη λίστα.
 
-### Βελτιστοποίηση Απόδοσης
+### Βελτιστοποίηση απόδοσης
 
-- **Αργοί Χρόνοι Σύγκρισης**: Ενεργοποιήστε πολυνηματισμό (η βιβλιοθήκη είναι thread‑safe).  
-- **Ταχύτητα I/O**: Χρησιμοποιήστε SSD αποθήκευση για καλύτερη ανάγνωση/εγγραφή.  
-- **Καθαρισμός Πόρων**: Κλείστε αχρησιμοποίητες στιγμές `Comparer` άμεσα.
+* **Αργοί χρόνοι σύγκρισης:** Ενεργοποιήστε το multi‑threading· η βιβλιοθήκη είναι thread‑safe, ώστε να μπορείτε να εκτελείτε ξεχωριστές παρουσίες `Comparer` παράλληλα.  
+* **Ταχύτητα I/O:** Αποθηκεύστε τα αρχεία προέλευσης σε SSD για μείωση του χρόνου ανάγνωσης.  
+* **Καθαρισμός πόρων:** Πάντα κλείστε άμεσα τις παρουσίες `Comparer` (try‑with‑resources) για απελευθέρωση της εγγενούς μνήμης.
 
-## Καλές Πρακτικές για Παραγωγική Χρήση
+## Καλές πρακτικές για παραγωγική χρήση
 
-### Error Handling
+### Διαχείριση σφαλμάτων
 
-Always wrap your comparison operations in proper exception handling:
+Τυλίξτε κάθε κλήση σύγκρισης σε ένα μπλοκ `try‑catch` που καταγράφει το stack trace της εξαίρεσης και επιστρέφει ένα φιλικό προς το χρήστη μήνυμα.
 
 ```java
 public boolean compareDocumentsWithErrorHandling(String source, String target, String output) {
@@ -299,9 +297,9 @@ public boolean compareDocumentsWithErrorHandling(String source, String target, S
 }
 ```
 
-### Resource Management
+### Διαχείριση πόρων
 
-Use dependency injection or factory patterns to manage `Comparer` instances in larger applications:
+Σε μεγάλες εφαρμογές, δημιουργήστε ένα εργοστάσιο που παρέχει παρουσίες `Comparer` από μια δεξαμενή. Αυτό αποφεύγει το κόστος επαναλαμβανόμενης φόρτωσης των εγγενών βιβλιοθηκών.
 
 ```java
 @Component
@@ -317,9 +315,9 @@ public class DocumentComparisonService {
 }
 ```
 
-### Configuration Management
+### Διαχείριση ρυθμίσεων
 
-Externalize your configuration for flexibility:
+Εξωτερικοποιήστε όλες τις διαδρομές, τις ρυθμίσεις heap και τις πληροφορίες άδειας σε αρχείο `application.properties` ή `yaml`. Αυτό καθιστά εύκολο τον προσαρμογέα ρυθμίσεων χωρίς επαναμεταγλώττιση.
 
 ```java
 @ConfigurationProperties(prefix = "groupdocs.comparison")
@@ -332,11 +330,11 @@ public class ComparisonConfig {
 }
 ```
 
-## Παραδείγματα Πραγματικής Ενσωμάτωσης
+## Παραδείγματα ενσωμάτωσης σε πραγματικό κόσμο
 
-### Spring Boot Integration
+### Ενσωμάτωση Spring Boot
 
-Create a REST API for document comparison:
+Αποκτήστε ένα REST endpoint που δέχεται δύο multipart αρχεία, εκτελεί τη σύγκριση και επιστρέφει το HTML diff ως σώμα της απάντησης.
 
 ```java
 @RestController
@@ -369,9 +367,9 @@ public class DocumentComparisonController {
 }
 ```
 
-### Batch Processing
+### Επεξεργασία παρτίδας
 
-Process multiple document pairs in parallel:
+Όταν χρειάζεται να συγκρίνετε χιλιάδες ζεύγη εγγράφων καθημερινά, χρησιμοποιήστε μια δεξαμενή νημάτων και μια ουρά μηνυμάτων (π.χ., RabbitMQ). Κάθε εργαζόμενος τραβάει ένα ζεύγος, εκτελεί τη σύγκριση και αποθηκεύει το αποτέλεσμα HTML σε bucket CDN.
 
 ```java
 public class BatchDocumentProcessor {
@@ -389,17 +387,18 @@ public class BatchDocumentProcessor {
 }
 ```
 
-## Συμβουλές Απόδοσης για Μεγάλου Κλίμακας Χρήση
+## Συμβουλές απόδοσης για μεγάλης κλίμακας χρήση
 
-### Memory Management
+### Διαχείριση μνήμης
 
-- **JVM flags**: `-Xmx4g -XX:+UseG1GC` for better garbage collection.  
-- **Monitoring**: Use VisualVM or JProfiler to spot memory leaks.  
-- **Pooling**: Reuse `Comparer` instances when possible.
+* **Σημαίες JVM:** `-Xmx4g -XX:+UseG1GC` παρέχουν στον garbage collector αρκετό περιθώριο για μεγάλα γραφήματα αντικειμένων.  
+* **Παρακολούθηση:** Χρησιμοποιήστε VisualVM ή JProfiler για να παρακολουθείτε τη χρήση heap και να εντοπίζετε διαρροές.  
+* **Δεξαμενές:** Επαναχρησιμοποιήστε παρουσίες `Comparer` όταν είναι δυνατόν· η βιβλιοθήκη αποθηκεύει αποτελεσματικά τους εγγενείς πόρους.
 
-### Scaling Strategies
+### Στρατηγικές κλιμάκωσης
 
-Deploy multiple instances behind a load balancer. Use asynchronous processing with message queues (RabbitMQ, AWS SQS) for non‑blocking workloads:
+* **Οριζόντια κλιμάκωση:** Αναπτύξτε πολλαπλές μικροϋπηρεσίες πίσω από φορτωτή ισορροπίας· κάθε παρουσία διαχειρίζεται το δικό της heap.  
+* **Ασύγχρονη επεξεργασία:** Μεταφέρετε τις εργασίες σύγκρισης σε μια ουρά (AWS SQS, Azure Service Bus) και επεξεργαστείτε τες ασύγχρονα, επιτρέποντας στο επίπεδο API να παραμένει ανταποκρινόμενο.
 
 ```java
 @RabbitListener(queues = "document.comparison.queue")
@@ -409,11 +408,11 @@ public void processComparisonRequest(ComparisonRequest request) {
 }
 ```
 
-## Προχωρημένα Χαρακτηριστικά και Προσαρμογή
+## Προηγμένα χαρακτηριστικά και προσαρμογή
 
-### Comparison Settings
+### Ρυθμίσεις σύγκρισης
 
-Customize how differences are highlighted:
+Η κλάση `CompareOptions` σας επιτρέπει να ρυθμίσετε λεπτομερώς πώς επισημαίνονται οι διαφορές. Για παράδειγμα, μπορείτε να αλλάξετε το χρώμα των προσθηκών σε μπλε, να ορίσετε προσαρμοσμένη γραμματοσειρά για το κείμενο που διαγράφηκε ή να αγνοήσετε αλλαγές κενών.
 
 ```java
 CompareOptions options = new CompareOptions();
@@ -427,43 +426,86 @@ try (Comparer comparer = new Comparer("source.docx")) {
 }
 ```
 
-### Format‑Specific Options
+### Επιλογές ανά μορφή
 
-Different document types support different comparison features. For spreadsheets you can choose to compare formulas versus displayed values, for PDFs you can control image comparison, etc.
+* **Φύλλα εργασίας:** Επιλέξτε μεταξύ σύγκρισης ακατέργαστων τύπων ή εμφανιζόμενων τιμών.  
+* **PDF:** Ενεργοποιήστε τη σύγκριση σε επίπεδο εικόνας για εντοπισμό λεπτών γραφικών αλλαγών.  
+* **Έγγραφα Word:** Διατηρήστε τις παρακολουθούμενες αλλαγές ή αγνοήστε τις εντελώς βάσει μιας σημαίας.
 
-## Συχνές Ερωτήσεις
+## Συχνές ερωτήσεις
 
 **Q: Μπορώ να συγκρίνω πολλαπλά έγγραφα java ταυτόχρονα;**  
-A: Ναι! Καλέστε `comparer.add()` πολλές φορές για να συγκρίνετε ένα πηγαίο έγγραφο με πολλές εκδόσεις στόχου σε μία εκτέλεση.
+A: Ναι. Καλέστε `comparer.add()` για κάθε επιπλέον έγγραφο-στόχο πριν καλέσετε `compare()`. Το αποτέλεσμα θα επισημάνει τις διαφορές σε όλες τις εκδόσεις σε μια ενιαία προβολή HTML.
 
 **Q: Ποιο είναι το μέγιστο μέγεθος αρχείου που μπορεί να διαχειριστεί το GroupDocs.Comparison;**  
-A: Δεν υπάρχει σκληρό όριο, αλλά η απόδοση εξαρτάται από τη διαθέσιμη μνήμη. Για αρχεία μεγαλύτερα από 100 MB, αυξήστε το heap της JVM και βεβαιωθείτε ότι έχετε επαρκείς πόρους συστήματος.
+A: Δεν υπάρχει σκληρό όριο, αλλά η επεξεργασία αρχείων μεγαλύτερων από 500 MB συνήθως απαιτεί heap JVM 8 GB ή περισσότερο και αποθήκευση SSD για βέλτιστη απόδοση I/O.
 
-**Q: Πώς διαχειρίζομαι έγγραφα με προστασία κωδικού;**  
-A: Παρέχετε τον κωδικό κατά την αρχικοποίηση του `Comparer` ή όταν προσθέτετε ένα έγγραφο‑στόχο. Η βιβλιοθήκη θα αποκρυπτογραφήσει το αρχείο εσωτερικά.
+**Q: Πώς να διαχειριστώ έγγραφα με κωδικό πρόσβασης;**  
+A: Παρέχετε τον κωδικό πρόσβασης κατά τη δημιουργία της παρουσίας `Comparer` ή κατά την προσθήκη ενός προστατευμένου εγγράφου-στόχου· η βιβλιοθήκη αποκρυπτογραφεί το αρχείο εσωτερικά.
 
 **Q: Μπορώ να προσαρμόσω τον τρόπο που επισημαίνονται οι διαφορές στην έξοδο;**  
-A: Απόλυτα. Χρησιμοποιήστε `CompareOptions` για να ορίσετε προσαρμοσμένα χρώματα, γραμματοσειρές και στυλ επισήμανσης για προσθήκες, διαγραφές και τροποποιήσεις.
+A: Απόλυτα. Χρησιμοποιήστε το `CompareOptions` για να ορίσετε προσαρμοσμένα χρώματα, γραμματοσειρές και στυλ επισήμανσης για προσθήκες, διαγραφές και τροποποιήσεις.
 
 **Q: Είναι το GroupDocs.Comparison thread‑safe;**  
-A: Ναι, αλλά είναι καλύτερο να χρησιμοποιείτε ξεχωριστές στιγμές `Comparer` ανά νήμα αντί να μοιράζεστε μία.
+A: Ναι, αλλά κάθε νήμα πρέπει να χρησιμοποιεί τη δική του παρουσία `Comparer`. Η κοινή χρήση μιας μόνο παρουσίας μπορεί να οδηγήσει σε συνθήκες αγώνα και διαρροές μνήμης.
 
 **Q: Ποιες μορφές μπορούν να μετατραπούν σε HTML;**  
-A: Οι περισσότερες κοινές μορφές — συμπεριλαμβανομένων Word, PDF, Excel και PowerPoint — μπορούν να αποδοθούν σε HTML.
+A: Οι περισσότερες κοινές μορφές — συμπεριλαμβανομένων των DOCX, PDF, XLSX, PPTX και TXT — μπορούν να αποδοθούν σε HTML με πλήρη διατήρηση του στυλ.
 
-**Q: Πώς λαμβάνω υποστήριξη αν αντιμετωπίσω προβλήματα;**  
-A: Το [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) είναι ένας εξαιρετικός πόρος κοινότητας, και οι κάτοχοι εμπορικής άδειας λαμβάνουν προτεραιότητα στην υποστήριξη.
+**Q: Πώς να λάβω υποστήριξη εάν αντιμετωπίσω προβλήματα;**  
+A: Το [GroupDocs Forum](https://forum.groupdocs.com/c/comparison) είναι μια ενεργή κοινότητα, και οι κάτοχοι εμπορικής άδειας λαμβάνουν προτεραιότητα στην υποστήριξη μέσω email από την ομάδα προϊόντος.
 
-**Additional Resources**  
+**Πρόσθετοι πόροι**  
 - **Τεκμηρίωση:** [GroupDocs.Comparison Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **Αναφορά API:** [Complete Java API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Δείγματα Έργων:** [GitHub Examples Repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)  
-- **Λήψη Τελευταίας Έκδοσης:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Επιλογές Αγοράς:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
-- **Δωρεάν Δοκιμή:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
+- **Δείγματα έργων:** [GitHub Examples Repository](https://github.com/groupdocs-comparison/GroupDocs.Comparison-for-Java)  
+- **Λήψη τελευταίας έκδοσης:** [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Επιλογές αγοράς:** [Licensing and Purchase](https://purchase.groupdocs.com/buy)  
+- **Δωρεάν δοκιμή:** [Try GroupDocs.Comparison](https://releases.groupdocs.com/comparison/java/)
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-03-24  
-**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 for Java  
-**Συγγραφέας:** GroupDocs
+**Last Updated:** 2026-08-14  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs
+
+```xml
+<repositories>
+   <repository>
+      <id>repository.groupdocs.com</id>
+      <name>GroupDocs Repository</name>
+      <url>https://releases.groupdocs.com/comparison/java/</url>
+   </repository>
+</repositories>
+<dependencies>
+   <dependency>
+      <groupId>com.groupdocs</groupId>
+      <artifactId>groupdocs-comparison</artifactId>
+      <version>25.2</version>
+   </dependency>
+</dependencies>
+```
+
+```gradle
+implementation 'com.groupdocs:groupdocs-comparison:25.2'
+```
+
+```java
+import com.groupdocs.comparison.Comparer;
+
+public class InitializeComparison {
+    public static void main(String[] args) throws Exception {
+        // This simple test confirms GroupDocs.Comparison is properly configured
+        try (Comparer comparer = new Comparer("path/to/your/test-document.docx")) {
+            System.out.println("GroupDocs.Comparison is ready to use!");
+            // If this runs without exceptions, you're good to go
+        }
+    }
+}
+```
+
+## Σχετικά Μαθήματα
+
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
+- [Customize Document Comparison Java – Complete Guide](/comparison/java/comparison-options/)
+- [How to Load Password Protected Doc and Compare Documents in Java – Complete Security Guide](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)

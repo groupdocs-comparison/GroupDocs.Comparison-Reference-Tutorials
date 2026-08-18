@@ -594,11 +594,6 @@ A: DOCX, PDF, और XLSX जैसे रिच ऑफिस फ़ॉर्म
 - [बिना प्रतिबद्धता के आज़माएँ](https://releases.groupdocs.com/comparison/java/)  
 - [मूल्यांकन लाइसेंस का अनुरोध करें](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## संबंधित ट्यूटोरियल
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)  

@@ -377,8 +377,3 @@ Ahora tienes una guía completa y lista para producción sobre **java compare pd
 **Última actualización:** 2026-03-27  
 **Probado con:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

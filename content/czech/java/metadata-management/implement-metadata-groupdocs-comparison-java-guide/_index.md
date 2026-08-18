@@ -591,11 +591,6 @@ A: Bohaté kancelářské formáty jako DOCX, PDF a XLSX zachovávají nejvíce 
 - [Vyzkoušet bez závazku](https://releases.groupdocs.com/comparison/java/)  
 - [Požádat o evaluační licenci](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Související tutoriály
 
 - [Nastavení licence GroupDocs Comparison Java – Kompletní průvodce konfigurací URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)  

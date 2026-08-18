@@ -591,11 +591,6 @@ Recuerde, no está solo en este camino. La comunidad de GroupDocs es activa y ú
 - [Probar sin compromiso](https://releases.groupdocs.com/comparison/java/)
 - [Solicitar licencia de evaluación](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriales relacionados
 
 - [Guía de configuración de licencia Java de GroupDocs Comparison - Guía completa de configuración de URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

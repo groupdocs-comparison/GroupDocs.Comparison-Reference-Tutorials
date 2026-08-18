@@ -593,11 +593,6 @@ A: I formati office ricchi come DOCX, PDF e XLSX conservano la maggior parte dei
 - [Prova senza impegno](https://releases.groupdocs.com/comparison/java/)
 - [Richiedi licenza di valutazione](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial correlati
 
 - [Guida completa all'installazione della licenza Java di GroupDocs Comparison - Configurazione URL completa](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

@@ -593,11 +593,6 @@ A: Rijke kantoorformaten zoals DOCX, PDF en XLSX behouden de meeste metadata (au
 - [Try Without Commitment](https://releases.groupdocs.com/comparison/java/)
 - [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Gerelateerde Tutorials
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

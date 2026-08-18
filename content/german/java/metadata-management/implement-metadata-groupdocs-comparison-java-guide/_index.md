@@ -593,11 +593,6 @@ A: Reichhaltige Office‑Formate wie DOCX, PDF und XLSX bewahren die meisten Met
 - [Ohne Verpflichtung testen](https://releases.groupdocs.com/comparison/java/)
 - [Evaluierungslizenz anfordern](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Verwandte Tutorials
 
 - [GroupDocs Comparison Java Lizenz-Setup – Vollständiger URL-Konfigurationsleitfaden](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

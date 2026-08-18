@@ -377,8 +377,3 @@ A: 可以，只要能從雲端提供者取得 `InputStream`，GroupDocs 即可�
 **最後更新：** 2026-04-25  
 **測試版本：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -593,11 +593,6 @@ R: Formatos de escritório ricos como DOCX, PDF e XLSX preservam a maioria dos m
 - [Experimentar sem compromisso](https://releases.groupdocs.com/comparison/java/)
 - [Solicitar licença de avaliação](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriais relacionados
 
 - [Configuração de licença do GroupDocs Comparison Java – Guia completo de configuração de URL]( /comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/ )

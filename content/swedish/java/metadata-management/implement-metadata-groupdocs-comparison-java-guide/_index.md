@@ -593,11 +593,6 @@ A: Rika kontorsformat som DOCX, PDF och XLSX bevarar mest metadata (författare,
 - [Try Without Commitment](https://releases.groupdocs.com/comparison/java/)
 - [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Relaterade handledningar
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

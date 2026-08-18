@@ -591,11 +591,6 @@ A: 富文档格式如 DOCX、PDF、XLSX 能够保留最多的元数据（作者�
 - [Try Without Commitment](https://releases.groupdocs.com/comparison/java/)
 - [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 相关教程
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

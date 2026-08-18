@@ -400,8 +400,3 @@ Bây giờ bạn đã có mọi thứ cần thiết để **groupdocs comparison
 **Cập nhật lần cuối:** 2026-04-25  
 **Kiểm tra với:** GroupDocs.Comparison 25.2  
 **Tác giả:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

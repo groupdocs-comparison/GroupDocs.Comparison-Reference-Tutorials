@@ -593,11 +593,6 @@ A: Format kantor kaya seperti DOCX, PDF, dan XLSX mempertahankan metadata paling
 - [Coba Tanpa Komitmen](https://releases.groupdocs.com/comparison/java/)  
 - [Minta Lisensi Evaluasi](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial Terkait
 
 - [Panduan Pengaturan Lisensi GroupDocs Comparison Java - Panduan Konfigurasi URL Lengkap](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

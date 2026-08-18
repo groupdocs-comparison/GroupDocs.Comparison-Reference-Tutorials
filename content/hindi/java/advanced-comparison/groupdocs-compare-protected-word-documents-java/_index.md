@@ -398,8 +398,3 @@ comparer.compare(outputStream, options);
 **Last Updated:** 2026-04-25  
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

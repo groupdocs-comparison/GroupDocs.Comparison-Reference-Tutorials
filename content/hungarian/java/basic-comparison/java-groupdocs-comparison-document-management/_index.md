@@ -373,8 +373,3 @@ Most már egy teljes, termelésre kész útmutatóval rendelkezel a **java compa
 **Utolsó frissítés:** 2026-03-27  
 **Tesztelt verzió:** GroupDocs.Comparison 25.2  
 **Szerző:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

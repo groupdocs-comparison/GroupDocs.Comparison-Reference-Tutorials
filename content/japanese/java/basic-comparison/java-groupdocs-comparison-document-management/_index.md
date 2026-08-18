@@ -370,8 +370,3 @@ A: はい。`PreviewOptions` に特定の `pageNumbers` 配列を設定して、
 **最終更新日:** 2026-03-27  
 **テスト環境:** GroupDocs.Comparison 25.2  
 **作者:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

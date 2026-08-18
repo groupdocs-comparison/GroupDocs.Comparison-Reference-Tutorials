@@ -399,8 +399,3 @@ comparer.compare(outputStream, options);
 **最后更新：** 2026-04-25  
 **测试环境：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

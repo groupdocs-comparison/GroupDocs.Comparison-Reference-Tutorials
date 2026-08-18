@@ -585,11 +585,6 @@ A: Rich office formats like DOCX, PDF, and XLSX preserve the most metadata (auth
 - [Try Without Commitment](https://releases.groupdocs.com/comparison/java/)
 - [Request Evaluation License](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Related Tutorials
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

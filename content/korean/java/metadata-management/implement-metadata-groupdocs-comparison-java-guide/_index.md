@@ -592,11 +592,6 @@ A: DOCX, PDF, XLSX와 같은 풍부한 오피스 형식은 저자, 개정, 사�
 - [무조건 체험](https://releases.groupdocs.com/comparison/java/)  
 - [평가 라이선스 요청](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 관련 튜토리얼
 
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

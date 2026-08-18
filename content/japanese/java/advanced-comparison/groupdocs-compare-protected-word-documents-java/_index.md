@@ -400,8 +400,3 @@ A: 可能です。クラウドプロバイダーから取得した `InputStream`
 **最終更新日:** 2026-04-25  
 **テスト環境:** GroupDocs.Comparison 25.2  
 **著者:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

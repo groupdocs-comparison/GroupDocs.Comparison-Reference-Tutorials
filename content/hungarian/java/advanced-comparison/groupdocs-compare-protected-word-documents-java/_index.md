@@ -402,8 +402,3 @@ A: Igen, amennyiben tud biztosítani egy `InputStream`-et a felhőszolgáltatój
 **Utolsó frissítés:** 2026-04-25  
 **Tesztelve:** GroupDocs.Comparison 25.2  
 **Szerző:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

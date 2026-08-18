@@ -591,11 +591,6 @@ A: Bogate formaty biurowe, takie jak DOCX, PDF i XLSX, zachowują najwięcej met
 - [Wypróbuj bez zobowiązań](https://releases.groupdocs.com/comparison/java/)
 - [Poproś o licencję ewaluacyjną](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Powiązane samouczki
 
 - [Konfiguracja licencji GroupDocs Comparison Java - Kompletny przewodnik po konfiguracji URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

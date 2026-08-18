@@ -379,8 +379,3 @@ Masz teraz kompletny, gotowy do produkcji przewodnik po **java compare pdf files
 **Last Updated:** 2026-03-27  
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

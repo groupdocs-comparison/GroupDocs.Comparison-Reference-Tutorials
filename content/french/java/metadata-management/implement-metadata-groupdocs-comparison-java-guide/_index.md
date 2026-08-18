@@ -591,11 +591,6 @@ R : Les formats bureautiques riches comme DOCX, PDF et XLSX conservent le plus
 - [Essayer sans engagement](https://releases.groupdocs.com/comparison/java/)
 - [Demander une licence d’évaluation](https://purchase.groupdocs.com/temporary-license/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriels associés
 
 - [Guide complet de configuration de licence GroupDocs Comparison Java - Guide complet de configuration d’URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

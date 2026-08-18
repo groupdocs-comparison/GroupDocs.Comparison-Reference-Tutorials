@@ -1,70 +1,113 @@
 ---
 categories:
 - Java Development
-date: '2026-02-23'
-description: Tìm hiểu cách so sánh tài liệu trong Java bằng API GroupDocs.Comparison,
-  bao gồm so sánh nhiều tệp và tài liệu được bảo mật bằng mật khẩu. Hướng dẫn từng
-  bước với mã nguồn, các thực tiễn tốt nhất và khắc phục sự cố.
-keywords: Java document comparison tutorial, GroupDocs Java API guide, compare documents
-  in java, java compare multiple files, java compare password protected, Java file
-  comparison library, how to compare Word documents in Java
-lastmod: '2026-02-23'
-linktitle: Java Document Comparison Tutorial
+date: '2026-06-21'
+description: Tìm hiểu cách so sánh tài liệu trong Java bằng GroupDocs.Comparison API,
+  bao gồm so sánh nhiều tệp bằng Java và tài liệu được bảo vệ bằng mật khẩu. Hướng
+  dẫn từng bước với code, best practices, và troubleshooting.
+keywords:
+- java compare pdf files
+- java compare word documents
+- compare documents in java
+lastmod: '2026-06-21'
+linktitle: Hướng dẫn so sánh tài liệu Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-21'
+  description: Learn how to compare documents in java using GroupDocs.Comparison API,
+    including java compare multiple files and password‑protected docs. Step‑by‑step
+    guide with code, best practices, and troubleshooting.
+  headline: java compare pdf files – GroupDocs API Complete Guide
+  type: TechArticle
+- description: Learn how to compare documents in java using GroupDocs.Comparison API,
+    including java compare multiple files and password‑protected docs. Step‑by‑step
+    guide with code, best practices, and troubleshooting.
+  name: java compare pdf files – GroupDocs API Complete Guide
+  steps:
+  - name: Import the Required Classes
+    text: '`Comparer`, `ComparisonOptions`, `LoadOptions`, and `MetadataSource` are
+      the core classes you’ll interact with.'
+  - name: Create the Comparer Instance
+    text: The `Comparer` class is the entry point for all comparison operations. It
+      implements `AutoCloseable`, so using try‑with‑resources guarantees that native
+      resources are released promptly.
+  - name: Add Target Documents for Comparison
+    text: You can compare a single source against multiple targets in one call. Each
+      call to `add()` registers an additional document. **Here’s something cool:**
+      you can mix formats—compare a PDF source with a DOCX target, and the library
+      will normalize both to an internal representation before diffing.
+  - name: Configure Metadata Handling and Execute Comparison
+    text: ComparisonOptions configures how the comparison is performed, including
+      output format and metadata handling. We now set the metadata source to **SOURCE**,
+      specify the output path, and run the comparison. **What’s happening?** 1. All
+      added documents are compared against the source in a single pass. 2
+  type: HowTo
+- questions:
+  - answer: Absolutely. Add each target with `comparer.add()` before calling `compare()`;
+      the library will generate a single diff that highlights changes across all targets.
+    question: Can I compare more than two documents at once?
+  - answer: Over 50 formats, including DOCX, PDF, XLSX, PPTX, TXT, HTML, and many
+      image types. See the official docs for the full list.
+    question: What file formats does GroupDocs.Comparison support?
+  - answer: Use `LoadOptions` to pass the password when constructing the `Comparer`.
+      The library decrypts internally, keeping the clear text out of your code.
+    question: How do I handle password‑protected documents?
+  - answer: A single `Comparer` instance is not thread‑safe, but you can safely create
+      separate instances per thread or use a thread‑local pool.
+    question: Is GroupDocs.Comparison thread‑safe?
+  - answer: Increase JVM heap, process files in batches, enable asynchronous execution,
+      and reuse `Comparer` objects when possible.
+    question: How can I improve performance for large documents?
+  type: FAQPage
 tags:
 - document-comparison
 - groupdocs
 - java-tutorial
 - api-integration
-title: So sánh tài liệu trong Java – Hướng dẫn đầy đủ API GroupDocs
+title: So sánh tệp PDF bằng Java – Hướng dẫn đầy đủ GroupDocs API
 type: docs
 url: /vi/java/basic-comparison/java-document-comparison-groupdocs-metadata-source/
 weight: 1
 ---
 
-# so sánh tài liệu trong java – Hướng dẫn đầy đủ API GroupDocs
+# java so sánh tệp pdf – Hướng dẫn đầy đủ API GroupDocs
 
 ## Giới thiệu
 
-Bạn đã bao giờ phải so sánh thủ công hai tài liệu từng dòng một, chỉ để bỏ lỡ những khác biệt quan trọng? Bạn không phải là người duy nhất. **so sánh tài liệu trong java** là một thách thức phổ biến, đặc biệt khi bạn cần bảo toàn siêu dữ liệu, xử lý các tệp được bảo vệ bằng mật khẩu, hoặc so sánh nhiều tệp cùng lúc.
-
-**Thực tế là**: hầu hết các nhà phát triển gặp khó khăn vì họ hoặc tự xây dựng từ đầu (mất rất nhiều thời gian) hoặc dùng các công cụ diff cơ bản mà bỏ qua định dạng, siêu dữ liệu và cài đặt bảo mật. Đó là lúc **GroupDocs.Comparison for Java** xuất hiện.
-
-Trong hướng dẫn toàn diện này, bạn sẽ khám phá cách triển khai so sánh tài liệu mạnh mẽ trong các ứng dụng Java của mình. Chúng tôi sẽ bao phủ mọi thứ từ cài đặt cơ bản đến xử lý siêu dữ liệu nâng cao, cộng thêm các ví dụ thực tế mà bạn có thể sử dụng ngay trong môi trường production. Khi hoàn thành, bạn sẽ biết cách:
-
-- Cài đặt GroupDocs.Comparison trong dự án Java của bạn (rất dễ dàng)  
-- **so sánh tài liệu trong java** đồng thời bảo toàn tính toàn vẹn của siêu dữ liệu  
-- Xử lý các kịch bản **java compare multiple files** và **java compare password protected**  
-- Tối ưu hiệu năng cho việc xử lý tài liệu quy mô lớn  
-
-Sẵn sàng biến việc so sánh tài liệu thành việc nhẹ nhàng trong các ứng dụng Java? Hãy cùng bắt đầu!
+Nếu bạn cần **java compare pdf files** nhanh chóng, chính xác và không mất định dạng hoặc siêu dữ liệu, bạn đã đến đúng nơi. Kiểm tra thủ công cạnh nhau dễ gây lỗi, đặc biệt khi làm việc với hợp đồng, bản tóm tắt pháp lý hoặc một loạt lớn các báo cáo. GroupDocs.Comparison for Java loại bỏ việc đoán mò bằng cách cung cấp một API cấp cao hiểu cấu trúc nội bộ của PDF, tài liệu Word, bảng tính và nhiều định dạng khác. Trong hướng dẫn này, bạn sẽ học cách thiết lập thư viện, xử lý các tệp được bảo vệ bằng mật khẩu, so sánh nhiều tài liệu trong một lần chạy và tinh chỉnh hiệu năng cho các tải công việc sản xuất. Cuối cùng, bạn sẽ có thể tích hợp một engine so sánh đáng tin cậy vào bất kỳ dịch vụ Java nào chỉ với vài dòng mã.
 
 ## Câu trả lời nhanh
-- **Thư viện nào cho phép tôi so sánh tài liệu trong java?** GroupDocs.Comparison for Java  
-- **Tôi có thể so sánh nhiều tệp cùng lúc không?** Có – chỉ cần thêm bao nhiêu tài liệu mục tiêu tùy ý  
-- **Làm sao xử lý tài liệu được bảo vệ bằng mật khẩu?** Sử dụng `LoadOptions` kèm mật khẩu tài liệu  
-- **Có cần giấy phép cho môi trường production không?** Giấy phép GroupDocs hợp lệ sẽ loại bỏ watermark và các giới hạn  
-- **Yêu cầu phiên bản Java nào?** JDK 8+, khuyến nghị JDK 11+  
 
-## **so sánh tài liệu trong java** là gì?
-So sánh tài liệu trong Java có nghĩa là phát hiện chương trình các khác biệt — thay đổi văn bản, chỉnh sửa định dạng, hoặc cập nhật siêu dữ liệu — giữa hai hoặc nhiều tệp bằng một thư viện hiểu cấu trúc tài liệu. GroupDocs.Comparison trừu tượng hoá độ phức tạp, cung cấp một API đơn giản để tạo tài liệu diff, làm nổi bật mọi thay đổi.
+- **What library lets me compare documents in java?** GroupDocs.Comparison for Java.  
+- **Can I compare multiple files at once?** Có – thêm bất kỳ số lượng tài liệu đích nào trước khi thực hiện so sánh.  
+- **How do I handle password‑protected docs?** Truyền mật khẩu qua `LoadOptions` khi tạo `Comparer`.  
+- **Do I need a license for production?** Giấy phép GroupDocs hợp lệ sẽ loại bỏ watermark và bỏ giới hạn sử dụng.  
+- **What Java version is required?** JDK 8+ hoạt động, nhưng JDK 11+ được khuyến nghị để có hiệu năng tốt hơn.
 
-## Tại sao nên dùng GroupDocs.Comparison for Java?
-- **Hỗ trợ đa dạng định dạng** – DOCX, PDF, XLSX, PPTX, TXT và nhiều hơn nữa  
-- **Xử lý siêu dữ liệu** – chọn siêu dữ liệu nguồn, mục tiêu, hoặc không có siêu dữ liệu cho kết quả  
-- **Hỗ trợ mật khẩu** – mở các tệp được bảo vệ mà không cần giải mã thủ công  
-- **Hiệu năng mở rộng** – xử lý batch, thực thi async, và thiết kế tiết kiệm bộ nhớ  
+## **compare documents in java** là gì?
+
+**Compare documents in java** là quá trình phát hiện và làm nổi bật các khác biệt—văn bản, định dạng, hình ảnh hoặc siêu dữ liệu—giữa hai hoặc nhiều tệp một cách lập trình, sử dụng thư viện phân tích cấu trúc tài liệu gốc. GroupDocs.Comparison cung cấp một tài liệu diff đánh dấu trực quan các chèn, xóa và thay đổi kiểu, giúp việc xem xét nhanh chóng và đáng tin cậy.
+
+## Tại sao nên sử dụng GroupDocs.Comparison cho Java?
+
+GroupDocs.Comparison cho Java cung cấp một giải pháp toàn diện, sẵn sàng cho môi trường sản xuất cho việc so sánh tài liệu trên nhiều định dạng. Nó hỗ trợ hơn 50 loại tệp, cung cấp kiểm soát siêu dữ liệu chi tiết, xử lý các tệp được mã hoá ngay từ đầu, và được thiết kế cho các kịch bản tải cao, làm cho nó trở thành lựa chọn lý tưởng cho các ứng dụng doanh nghiệp yêu cầu so sánh đáng tin cậy, nhanh chóng và an toàn.
+
+- **Broad format support** – hơn 50 định dạng đầu vào và đầu ra, bao gồm DOCX, PDF, XLSX, PPTX và TXT.  
+- **Metadata control** – chọn SOURCE, TARGET hoặc NONE để quyết định siêu dữ liệu của tài liệu nào sẽ xuất hiện trong kết quả.  
+- **Password handling** – mở các tệp được mã hoá mà không cần giải mã thủ công.  
+- **Scalable performance** – xử lý hàng loạt, API bất đồng bộ và streaming tiết kiệm bộ nhớ cho phép bạn xử lý hàng ngàn trang mỗi phút trên phần cứng tiêu chuẩn.  
 
 ## Yêu cầu trước
 
-- **Môi trường Java:** JDK 8+ (khuyến nghị JDK 11+), IDE yêu thích, Maven (hoặc Gradle)  
-- **Thư viện GroupDocs.Comparison:** Phiên bản 25.2 trở lên (luôn lấy phiên bản mới nhất)  
-- **Giấy phép:** Dùng thử miễn phí, giấy phép tạm thời 30 ngày, hoặc giấy phép thương mại  
+- **Java Environment:** JDK 8+ (JDK 11+ được khuyến nghị), bất kỳ IDE nào, Maven hoặc Gradle để quản lý phụ thuộc.  
+- **GroupDocs.Comparison Library:** Phiên bản 25.2 hoặc mới hơn (luôn sử dụng bản phát hành mới nhất).  
+- **License:** Dùng thử miễn phí, giấy phép tạm thời 30 ngày, hoặc giấy phép thương mại cho môi trường sản xuất.  
 
-## Cài đặt GroupDocs.Comparison trong dự án
+## Cài đặt GroupDocs.Comparison trong dự án của bạn
 
 ### Cấu hình Maven
 
-Đầu tiên – thêm repository và dependency của GroupDocs vào `pom.xml`. Đây là phần mà nhiều tutorial làm phức tạp, nhưng thực tế rất đơn giản:
+Thêm repository GroupDocs và dependency Comparison vào file `pom.xml` của bạn. Bước này thường được phức tạp hóa trong các hướng dẫn khác, nhưng thực chất chỉ ba dòng:
 
 ```xml
 <repositories>
@@ -84,39 +127,36 @@ So sánh tài liệu trong Java có nghĩa là phát hiện chương trình các
 </dependencies>
 ```
 
-**Mẹo:** Luôn kiểm tra số phiên bản mới nhất trên [trang phát hành của GroupDocs](https://releases.groupdocs.com/comparison/java/). Các phiên bản mới thường bao gồm cải thiện hiệu năng và sửa lỗi giúp bạn tránh được nhiều rắc rối.
+**Mẹo:** Kiểm tra phiên bản mới nhất trên [trang phát hành GroupDocs](https://releases.groupdocs.com/comparison/java/). Các bản phát hành mới thường bổ sung hỗ trợ định dạng và tối ưu hiệu năng, có thể giảm thời gian xử lý tới 20 %.
 
-### Đặt giấy phép
+### Cách lấy giấy phép
 
-Đây là điều mà hầu hết các nhà phát triển không nhận ra: bạn có thể bắt đầu thử nghiệm GroupDocs.Comparison ngay lập tức với bản dùng thử miễn phí. Không cần thẻ tín dụng, không ràng buộc.
+Bạn có thể bắt đầu thử nghiệm ngay lập tức với bản dùng thử miễn phí. Không cần thẻ tín dụng.
 
-**Các lựa chọn của bạn:**
-1. **Dùng thử miễn phí** – hoàn hảo cho việc thử nghiệm và các dự án nhỏ. Chỉ cần tải về và bắt đầu viết code!  
-2. **Giấy phép tạm thời** – cần thời gian đánh giá lâu hơn? Nhận giấy phép tạm thời 30 ngày [tại đây](https://purchase.groupdocs.com/temporary-license/)  
-3. **Giấy phép thương mại** – sẵn sàng cho production? Xem bảng giá [tại đây](https://purchase.groupdocs.com/buy)
+**Các tùy chọn của bạn:**
+1. **Free Trial** – lý tưởng cho các bằng chứng khái niệm và thử nghiệm quy mô nhỏ.  
+2. **Temporary License** – khóa 30 ngày để đánh giá kéo dài, có sẵn [tại đây](https://purchase.groupdocs.com/temporary-license/).  
+3. **Commercial License** – mở khóa sử dụng không giới hạn và loại bỏ watermark; chi tiết mua hàng được liệt kê [tại đây](https://purchase.groupdocs.com/buy).
 
-Bản dùng thử bao gồm mọi tính năng nhưng sẽ thêm watermark vào các tệp đầu ra. Đối với phát triển và thử nghiệm, điều này thường chấp nhận được.
+Bản dùng thử bao gồm mọi tính năng; giới hạn duy nhất là watermark hiển thị trên các tài liệu so sánh được tạo.
 
-## Triển khai so sánh tài liệu: Hướng dẫn chi tiết
+## Triển khai so sánh tài liệu: Hướng dẫn đầy đủ
 
-Bây giờ là phần chính! Chúng ta sẽ xây dựng một giải pháp so sánh tài liệu hoàn chỉnh từng bước. Đừng lo – chúng tôi sẽ giải thích không chỉ “cách làm” mà còn “lý do” cho mỗi quyết định.
+### Hiểu nguồn siêu dữ liệu (Điều này quan trọng!)
 
-### Hiểu về nguồn siêu dữ liệu (Rất quan trọng!)
+MetadataSource là một enum xác định siêu dữ liệu của tài liệu nào sẽ được giữ lại trong kết quả so sánh. Khi bạn **java compare pdf files**, bạn phải quyết định siêu dữ liệu (tác giả, ngày tạo, thuộc tính tùy chỉnh) của tài liệu nào sẽ tồn tại trong đầu ra. GroupDocs.Comparison cung cấp ba lựa chọn:
 
-Trước khi bắt đầu code, hãy nói về một vấn đề khiến nhiều nhà phát triển bối rối: nguồn siêu dữ liệu. Khi bạn **so sánh tài liệu trong java**, bạn cần quyết định siêu dữ liệu (tác giả, ngày tạo, thuộc tính tùy chỉnh, v.v.) của tài liệu nào sẽ được bảo toàn trong kết quả.
+- **SOURCE** – giữ siêu dữ liệu từ tệp gốc.  
+- **TARGET** – áp dụng siêu dữ liệu từ tệp bạn đang so sánh.  
+- **NONE** – loại bỏ toàn bộ siêu dữ liệu để có kết quả sạch, ẩn danh.
 
-GroupDocs.Comparison cung cấp ba tùy chọn:
-- **SOURCE** – dùng siêu dữ liệu từ tài liệu gốc  
-- **TARGET** – dùng siêu dữ liệu từ tài liệu bạn đang so sánh với  
-- **NONE** – loại bỏ toàn bộ siêu dữ liệu khỏi kết quả  
-
-Đối với hầu hết các ứng dụng doanh nghiệp, bạn sẽ muốn sử dụng **SOURCE** để duy trì tính nhất quán.
+Trong hầu hết các kịch bản kiểm tra audit, **SOURCE** là mặc định an toàn nhất vì nó bảo tồn nguồn gốc của tài liệu gốc.
 
 ### Triển khai từng bước
 
-Chúng ta sẽ tạo một utility có thể tái sử dụng trong bất kỳ dự án nào.
-
 #### Bước 1: Nhập các lớp cần thiết
+
+`Comparer`, `ComparisonOptions`, `LoadOptions`, và `MetadataSource` là các lớp cốt lõi mà bạn sẽ tương tác với.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -128,7 +168,7 @@ import java.io.IOException;
 
 #### Bước 2: Tạo đối tượng Comparer
 
-Đây là nơi phép màu bắt đầu. Lớp `Comparer` là điểm vào chính cho mọi thao tác so sánh:
+Lớp `Comparer` là điểm vào cho tất cả các thao tác so sánh. Nó triển khai `AutoCloseable`, vì vậy việc sử dụng try‑with‑resources đảm bảo các tài nguyên gốc được giải phóng kịp thời.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
@@ -136,15 +176,15 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source.docx")) {
 }
 ```
 
-**Tại sao dùng try‑with‑resources?** Lớp `Comparer` triển khai `AutoCloseable`, nghĩa là nó sẽ tự động giải phóng tài nguyên khi kết thúc. Điều này ngăn ngừa rò rỉ bộ nhớ – rất quan trọng khi xử lý nhiều tài liệu.
+#### Bước 3: Thêm tài liệu đích để so sánh
 
-#### Bước 3: Thêm tài liệu mục tiêu để so sánh
+Bạn có thể so sánh một nguồn duy nhất với nhiều tài liệu đích trong một lần gọi. Mỗi lần gọi `add()` sẽ đăng ký một tài liệu bổ sung.
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
 ```
 
-**Điều thú vị:** bạn thực sự có thể thêm nhiều tài liệu mục tiêu và so sánh chúng tất cả so với nguồn trong một lần thực thi. Chỉ cần gọi `add()` nhiều lần:
+**Điều thú vị:** bạn có thể trộn các định dạng—so sánh nguồn PDF với đích DOCX, và thư viện sẽ chuẩn hoá cả hai thành một biểu diễn nội bộ trước khi thực hiện diff.
 
 ```java
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target1.docx");
@@ -152,9 +192,9 @@ comparer.add("YOUR_DOCUMENT_DIRECTORY/target2.docx");
 comparer.add("YOUR_DOCUMENT_DIRECTORY/target3.docx");
 ```
 
-#### Bước 4: Cấu hình xử lý siêu dữ liệu và thực thi so sánh
+#### Bước 4: Cấu hình xử lý siêu dữ liệu và thực hiện so sánh
 
-Ở đây chúng ta thiết lập nguồn siêu dữ liệu và chạy quá trình so sánh thực tế:
+ComparisonOptions cấu hình cách thực hiện so sánh, bao gồm định dạng đầu ra và xử lý siêu dữ liệu. Bây giờ chúng ta đặt nguồn siêu dữ liệu thành **SOURCE**, chỉ định đường dẫn đầu ra và chạy so sánh.
 
 ```java
 final Path resultPath = comparer.compare("output/comparison_result.docx",
@@ -163,14 +203,14 @@ final Path resultPath = comparer.compare("output/comparison_result.docx",
                 .build());
 ```
 
-**Điều gì đang xảy ra?** Chúng ta yêu cầu GroupDocs:
-1. So sánh tất cả các tài liệu đã thêm với nguồn  
-2. Lưu kết quả vào đường dẫn đã chỉ định  
-3. Sử dụng siêu dữ liệu của tài liệu **SOURCE** trong kết quả cuối cùng  
+**Điều gì đang xảy ra?**  
+1. Tất cả các tài liệu đã thêm được so sánh với nguồn trong một lần duy nhất.  
+2. Kết quả được lưu vào `outputPath`.  
+3. Đầu ra kế thừa siêu dữ liệu của nguồn, đảm bảo tính nhất quán trong audit.
 
-### Ví dụ hoàn chỉnh
+### Ví dụ hoàn chỉnh hoạt động
 
-Hãy gộp lại thành một phương thức bạn có thể dùng ngay:
+Dưới đây là một phương thức sẵn sàng sử dụng, bao gồm toàn bộ quy trình. Dán nó vào một lớp tiện ích và gọi từ lớp dịch vụ của bạn.
 
 ```java
 public class DocumentComparison {
@@ -198,12 +238,10 @@ public class DocumentComparison {
 
 ## Những lỗi thường gặp và cách tránh
 
-Sau khi hỗ trợ hàng trăm nhà phát triển triển khai so sánh tài liệu, tôi đã thấy các vấn đề lặp lại. Dưới đây là những lỗi lớn (và cách khắc phục):
-
 ### Vấn đề đường dẫn tệp
 
-**Vấn đề**: `FileNotFoundException` mặc dù tệp tồn tại  
-**Giải pháp**: Luôn sử dụng đường dẫn tuyệt đối hoặc giải quyết đúng các đường dẫn tương đối
+**Vấn đề:** `FileNotFoundException` mặc dù tệp tồn tại.  
+**Giải pháp:** Giải quyết các đường dẫn tương đối dựa trên thư mục làm việc của ứng dụng hoặc sử dụng đường dẫn tuyệt đối.
 
 ```java
 // Instead of this:
@@ -215,8 +253,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### Vấn đề quản lý bộ nhớ
 
-**Vấn đề**: Lỗi hết bộ nhớ khi so sánh tài liệu lớn  
-**Giải pháp**: Tăng kích thước heap JVM và sử dụng quản lý tài nguyên đúng cách
+**Vấn đề:** Lỗi hết bộ nhớ khi xử lý PDF lớn.  
+**Giải pháp:** Tăng heap JVM (`-Xmx2g` hoặc cao hơn) và sử dụng chế độ streaming của thư viện, xử lý tệp theo từng khối.
 
 ```bash
 # Add these JVM arguments when running your application
@@ -225,8 +263,8 @@ String sourcePath = Paths.get("documents", "source.docx").toAbsolutePath().toStr
 
 ### Xử lý siêu dữ liệu không đúng
 
-**Vấn đề**: Mất siêu dữ liệu quan trọng trong quá trình so sánh  
-**Giải pháp**: Luôn đặt rõ loại siêu dữ liệu – đừng dựa vào giá trị mặc định
+**Vấn đề:** Tài liệu kết quả mất tác giả và ngày tạo.  
+**Giải pháp:** Đặt rõ ràng `options.setMetadataSource(MetadataSource.SOURCE)`; mặc định có thể là `NONE` trong các phiên bản cũ.
 
 ```java
 // Always be explicit about metadata handling
@@ -235,10 +273,10 @@ SaveOptions saveOptions = new SaveOptions.Builder()
         .build();
 ```
 
-### Lỗi cấu hình giấy phép
+### Vấn đề cấu hình giấy phép
 
-**Vấn đề**: Watermark xuất hiện trong môi trường production  
-**Giải pháp**: Xác minh giấy phép đã được tải đúng trước khi tạo đối tượng `Comparer`
+**Vấn đề:** Watermark xuất hiện trong bản dựng sản xuất.  
+**Giải pháp:** Tải file giấy phép trước khi tạo bất kỳ đối tượng `Comparer` nào, thường trong một static initializer.
 
 ```java
 // Load license at application startup
@@ -246,13 +284,11 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Thực hành tốt cho môi trường production
+## Thực hành tốt cho môi trường sản xuất
 
-Dựa trên kinh nghiệm thực tế, dưới đây là các thực hành giúp giải pháp của bạn trở nên production‑ready:
+### Xử lý lỗi mạnh mẽ
 
-### Xử lý lỗi có ý nghĩa
-
-Đừng chỉ bắt ngoại lệ – hãy xử lý chúng một cách có ý nghĩa:
+Không bao giờ bỏ qua ngoại lệ; ghi log thông tin ngữ cảnh và ném lại khi cần thiết.
 
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
@@ -278,29 +314,25 @@ public ComparisonResult compareDocuments(String source, String target) {
 
 ### Tối ưu hiệu năng
 
-Đối với các kịch bản khối lượng lớn, hãy cân nhắc các tối ưu sau:
+Đối với môi trường tải cao:
 
-1. **Tái sử dụng đối tượng `Comparer`** khi có thể (nhưng cần chú ý tới tính thread‑safety)  
-2. **Xử lý tài liệu theo batch** để tránh quá tải tài nguyên hệ thống  
-3. **Sử dụng xử lý bất đồng bộ** cho các tài liệu lớn  
-4. **Giám sát việc sử dụng bộ nhớ** và điều chỉnh cài đặt JVM cho phù hợp  
+1. **Tái sử dụng đối tượng `Comparer`** khi xử lý nhiều tệp trong một luồng duy nhất.  
+2. **Xử lý hàng loạt tài liệu** để giảm tải I/O.  
+3. **Tận dụng thực thi bất đồng bộ** (`CompletableFuture`) cho giao diện người dùng hoặc phản hồi API không chặn.  
+4. **Tinh chỉnh cài đặt JVM** (`-Xms`, `-Xmx`, cờ GC) dựa trên mẫu bộ nhớ quan sát được.
 
-### Các cân nhắc bảo mật
+### Cân nhắc bảo mật
 
-Khi làm việc với tài liệu nhạy cảm:
+- Xác thực phần mở rộng tệp và loại MIME trước khi tải.  
+- Lưu mật khẩu trong kho bảo mật (ví dụ: HashiCorp Vault hoặc AWS Secrets Manager).  
+- Xóa các tệp tạm ngay sau khi so sánh hoàn tất.  
+- Tùy chọn mã hoá tài liệu diff được tạo nếu chứa dữ liệu nhạy cảm.
 
-- **Xác thực loại tệp** trước khi xử lý  
-- **Triển khai kiểm soát truy cập** thích hợp  
-- **Xóa ngay các tệp tạm** sau khi sử dụng  
-- **Xem xét mã hoá** kết quả so sánh  
-
-## Ứng dụng thực tế và các trường hợp sử dụng
-
-Hãy xem cách các nhà phát triển đang áp dụng GroupDocs.Comparison trong môi trường production:
+## Ứng dụng thực tế và trường hợp sử dụng
 
 ### Đánh giá tài liệu pháp lý
 
-Các công ty luật dùng so sánh tài liệu để theo dõi thay đổi trong hợp đồng và thỏa thuận pháp lý. Tính năng bảo toàn siêu dữ liệu rất quan trọng vì họ cần duy trì nguồn gốc tài liệu.
+Các công ty luật so sánh các phiên bản hợp đồng để đảm bảo không có điều khoản nào bị thay đổi một cách không mong muốn. Việc bảo tồn siêu dữ liệu đảm bảo tác giả gốc và thời gian tạo vẫn hiển thị trong diff.
 
 ```java
 // Typical legal document comparison workflow
@@ -320,9 +352,9 @@ public void reviewContractChanges(String originalContract, String revisedContrac
 }
 ```
 
-### Hệ thống quản lý nội dung (CMS)
+### Hệ thống quản lý nội dung
 
-Các nền tảng CMS dùng so sánh tài liệu để kiểm soát phiên bản và theo dõi thay đổi:
+Các nền tảng CMS sử dụng so sánh để triển khai kiểm soát phiên bản cho tài sản tải lên, cho phép biên tập viên thấy chính xác những gì đã thay đổi giữa các phiên bản.
 
 ```java
 public class CMSDocumentVersioning {
@@ -351,7 +383,7 @@ public class CMSDocumentVersioning {
 
 ### Phân tích tài liệu tài chính
 
-Các tổ chức tài chính sử dụng công cụ này cho tuân thủ quy định và tạo dấu vết kiểm toán:
+Các ngân hàng so sánh các hồ sơ tuân thủ và báo cáo kiểm toán, cần một bản ghi không thay đổi của mọi thay đổi để đáp ứng kiểm toán tuân thủ.
 
 ```java
 public AuditResult auditFinancialDocument(String originalReport, String submittedReport) {
@@ -370,13 +402,11 @@ public AuditResult auditFinancialDocument(String originalReport, String submitte
 }
 ```
 
-## Tối ưu hiệu năng và mở rộng quy mô
+## Tối ưu hiệu năng và mở rộng
 
-Khi bạn sẵn sàng xử lý khối lượng tài liệu lớn, các chiến lược sau sẽ giúp ứng dụng luôn phản hồi nhanh:
+### Quản lý bộ nhớ cho tệp khổng lồ
 
-### Quản lý bộ nhớ
-
-Các tài liệu lớn có thể nhanh chóng tiêu thụ bộ nhớ. Đây là cách xử lý hiệu quả:
+Khi tài liệu vượt quá vài trăm megabyte, hãy xem xét mẫu sau:
 
 ```java
 public class OptimizedDocumentProcessor {
@@ -402,9 +432,9 @@ public class OptimizedDocumentProcessor {
 }
 ```
 
-### Xử lý batch
+### Chiến lược xử lý hàng loạt
 
-Đối với việc so sánh nhiều tài liệu, xử lý batch là người bạn đồng hành:
+Xử lý tài liệu theo các nhóm logic (ví dụ: theo khách hàng hoặc theo ngày) để giữ dung lượng bộ nhớ dự đoán được.
 
 ```java
 public List<ComparisonResult> processBatch(List<DocumentPair> documentPairs) {
@@ -429,17 +459,9 @@ private ComparisonResult compareDocumentPair(DocumentPair pair) {
 
 ## Hướng dẫn khắc phục sự cố
 
-Khi có lỗi (và chúng đôi khi xảy ra), đây là danh sách kiểm tra để debug:
-
 ### Lỗi “Comparison Failed”
 
-**Nguyên nhân phổ biến nhất:**
-1. Định dạng tệp không được hỗ trợ  
-2. Tài liệu nguồn bị hỏng  
-3. Bộ nhớ không đủ  
-4. Vấn đề quyền truy cập tệp  
-
-**Các bước debug:**
+Nguyên nhân phổ biến bao gồm định dạng không được hỗ trợ, tệp hỏng, không đủ bộ nhớ heap, hoặc vấn đề quyền tệp. Thực hiện các bước sau:
 
 ```java
 // Add comprehensive logging to identify the issue
@@ -461,28 +483,26 @@ try (Comparer comparer = new Comparer(sourcePath)) {
 }
 ```
 
-### Vấn đề hiệu năng
+### Nút thắt hiệu năng
 
-Nếu quá trình so sánh mất quá nhiều thời gian:
+Nếu thời gian so sánh dài hơn dự kiến:
 
-1. **Kiểm tra kích thước tài liệu** – các tệp trên 100 MB có thể cần xử lý đặc biệt  
-2. **Giám sát bộ nhớ** – tăng heap nếu cần  
-3. **Kiểm tra hiệu năng I/O** – lưu trữ chậm có thể là nút thắt  
-4. **Xem xét định dạng tài liệu** – một số định dạng phức tạp hơn để xử lý  
+1. Kiểm tra kích thước tệp; các tệp > 100 MB có thể cần tùy chọn streaming riêng.  
+2. Tăng kích thước heap (`-Xmx4g` cho các công việc batch).  
+3. Đảm bảo hệ thống lưu trữ (SSD vs HDD) có thể duy trì tốc độ I/O cần thiết.  
+4. Ưu tiên các định dạng được hỗ trợ nguyên bản (ví dụ: DOCX hơn DOC nhị phân cũ) để giảm tải chuyển đổi.
 
-### Rò rỉ bộ nhớ
+### Dấu hiệu rò rỉ bộ nhớ
 
-Dấu hiệu có thể có rò rỉ bộ nhớ:
+- Chậm dần sau nhiều lần so sánh.  
+- Thường xuyên `OutOfMemoryError` mặc dù có đủ heap.  
+- Thời gian tạm dừng GC tăng cao.
 
-- Hiệu năng ứng dụng giảm dần theo thời gian  
-- `OutOfMemoryError` sau khi xử lý nhiều tài liệu  
-- Hoạt động garbage collection cao  
-
-**Giải pháp**: Luôn dùng try‑with‑resources và theo dõi ứng dụng bằng các công cụ profiling.
+**Giải pháp:** Luôn sử dụng try‑with‑resources cho `Comparer`, giám sát bằng công cụ profiler (VisualVM, YourKit), và tránh giữ tham chiếu tới các đối tượng `Document` lớn sau khi so sánh kết thúc.
 
 ## Xử lý tệp được bảo vệ bằng mật khẩu
 
-Nếu bạn cần **java compare password protected** tài liệu, hãy dùng `LoadOptions` khi mở nguồn hoặc mục tiêu:
+Khi bạn cần **java compare password protected** PDF hoặc tệp Word, cung cấp mật khẩu qua `LoadOptions`. LoadOptions là một đối tượng cấu hình cho phép bạn chỉ định mật khẩu và các tham số tải khác cho các tài liệu được bảo vệ:
 
 ```java
 LoadOptions loadOptions = new LoadOptions("your_password");
@@ -491,22 +511,24 @@ try (Comparer comparer = new Comparer("protected_document.docx", loadOptions)) {
 }
 ```
 
+**Mẹo bảo mật:** Lấy mật khẩu từ kho cấu hình được mã hoá tại thời gian chạy; không bao giờ nhúng chúng trong mã nguồn.
+
 ## Cách java compare password protected documents
 
-Các tệp được bảo vệ bằng mật khẩu phổ biến trong các ngành có quy định nghiêm ngặt. Bằng cách truyền mật khẩu qua `LoadOptions`, bạn giữ luồng so sánh không thay đổi đồng thời cho phép thư viện giải mã tệp một cách an toàn. Nhớ không bao giờ hard‑code mật khẩu; lưu chúng trong vault an toàn hoặc biến môi trường và truyền vào lúc runtime.
+Các tệp được bảo vệ bằng mật khẩu thường gặp trong các ngành được quy định. Bằng cách truyền mật khẩu qua `LoadOptions`, thư viện giải mã tệp ngay lập tức, thực hiện so sánh, và sau đó loại bỏ nội dung rõ ràng khỏi bộ nhớ. Cách tiếp cận này duy trì tuân thủ các chính sách bảo vệ dữ liệu. Nó cũng đảm bảo không có thông tin xác thực dư thừa còn lại trong log hoặc lưu trữ tạm thời.
 
 ## Cách xử lý tài liệu lớn java
 
-Khi tài liệu vượt vài trăm megabyte, bạn có thể gặp chậm trễ hoặc tiêu thụ bộ nhớ cao. Để giảm thiểu:
+Khi tài liệu lên tới vài trăm megabyte, việc áp dụng các chiến lược tiết kiệm bộ nhớ và cấu hình JVM phù hợp là rất quan trọng. Tăng kích thước heap, bật chế độ streaming của thư viện, và xem xét xử lý tệp theo các phần logic để tránh tải toàn bộ tài liệu vào bộ nhớ cùng một lúc. Những bước này giữ cho ứng dụng phản hồi nhanh và ngăn ngừa sự cố hết bộ nhớ.
 
-- **Tăng heap JVM** (`-Xmx`), đặc biệt cho các job batch.  
-- **Bật streaming** nếu có – GroupDocs.Comparison đã xử lý tệp theo khối, nhưng bạn cũng có thể giảm áp lực bộ nhớ bằng cách không tải toàn bộ tệp vào bộ nhớ.  
-- **Chạy so sánh bất đồng bộ** (xem ví dụ async ở trên) để UI luôn phản hồi.  
-- **Chia các PDF rất lớn** thành các phần logic trước khi so sánh nếu logic nghiệp vụ cho phép.
+- **Increase JVM heap** (`-Xmx8g` cho các batch rất lớn).  
+- **Enable streaming** – GroupDocs.Comparison xử lý tệp theo từng khối nội bộ; tránh tải toàn bộ tệp vào một `byte[]`.  
+- **Run comparisons asynchronously** để giữ dịch vụ của bạn phản hồi nhanh.  
+- **Consider splitting** các PDF khổng lồ thành các phần logic nếu logic nghiệp vụ cho phép, sau đó so sánh từng phần riêng biệt.
 
 ## Tích hợp với Spring Boot
 
-Đối với các nhà phát triển xây dựng microservice, hãy gói logic so sánh trong một Spring service bean:
+Đóng gói logic so sánh trong một bean dịch vụ Spring để cung cấp qua các endpoint REST hoặc messaging:
 
 ```java
 @Service
@@ -525,32 +547,38 @@ public class DocumentComparisonService {
 }
 ```
 
+**Tại sao Spring?** Nó cung cấp tiêm phụ thuộc, quản lý vòng đời, và cấu hình dễ dàng cho file giấy phép thông qua `@PostConstruct`.
+
 ## Câu hỏi thường gặp
 
-**Hỏi:** Có thể so sánh hơn hai tài liệu cùng lúc không?  
-**Đáp:** Chắc chắn! Thêm nhiều tài liệu mục tiêu bằng `comparer.add()` trước khi thực thi so sánh.
+**Q: Tôi có thể so sánh hơn hai tài liệu cùng một lúc không?**  
+A: Chắc chắn. Thêm mỗi tài liệu đích bằng `comparer.add()` trước khi gọi `compare()`; thư viện sẽ tạo một diff duy nhất hiển thị các thay đổi trên tất cả các đích.
 
-**Hỏi:** GroupDocs.Comparison hỗ trợ những định dạng tệp nào?  
-**Đáp:** Hỗ trợ DOCX, PDF, XLSX, PPTX, TXT và nhiều định dạng khác. Xem danh sách đầy đủ trong tài liệu chính thức.
+**Q: GroupDocs.Comparison hỗ trợ những định dạng tệp nào?**  
+A: Hơn 50 định dạng, bao gồm DOCX, PDF, XLSX, PPTX, TXT, HTML và nhiều loại hình ảnh. Xem tài liệu chính thức để biết danh sách đầy đủ.
 
-**Hỏi:** Làm sao xử lý tài liệu được bảo vệ bằng mật khẩu?  
-**Đáp:** Sử dụng lớp `LoadOptions` để cung cấp mật khẩu khi tạo đối tượng `Comparer` (xem ví dụ ở trên).
+**Q: Làm thế nào để xử lý tài liệu được bảo vệ bằng mật khẩu?**  
+A: Sử dụng `LoadOptions` để truyền mật khẩu khi khởi tạo `Comparer`. Thư viện giải mã nội bộ, giữ nội dung rõ ràng ra khỏi mã của bạn.
 
-**Hỏi:** GroupDocs.Comparison có thread‑safe không?  
-**Đáp:** Một đối tượng `Comparer` không thread‑safe, nhưng bạn có thể tạo nhiều đối tượng và chạy chúng song song trong các luồng khác nhau.
+**Q: GroupDocs.Comparison có an toàn khi đa luồng không?**  
+A: Một đối tượng `Comparer` duy nhất không an toàn đa luồng, nhưng bạn có thể tạo các đối tượng riêng cho mỗi luồng hoặc sử dụng pool thread‑local một cách an toàn.
 
-**Hỏi:** Làm sao cải thiện hiệu năng cho tài liệu lớn?  
-**Đáp:** Tăng heap JVM (`-Xmx`), xử lý bất đồng bộ, batch, và tái sử dụng đối tượng `Comparer` khi thích hợp.
+**Q: Làm sao tôi có thể cải thiện hiệu năng cho tài liệu lớn?**  
+A: Tăng heap JVM, xử lý tệp theo batch, bật thực thi bất đồng bộ, và tái sử dụng các đối tượng `Comparer` khi có thể.
 
 ## Tài nguyên bổ sung
 
-- [Tài liệu GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/) – tham chiếu API chi tiết và các ví dụ  
-- [Diễn đàn cộng đồng GroupDocs](https://forum.groupdocs.com/) – nhận hỗ trợ từ các nhà phát triển khác  
+- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/) – tài liệu tham chiếu API đầy đủ và các ví dụ nâng cao.  
+- [GroupDocs Community Forum](https://forum.groupdocs.com/) – hỗ trợ cộng đồng và các trường hợp sử dụng thực tế.
 
 ---
 
-**Cập nhật lần cuối:** 2026-02-23  
-**Kiểm thử với:** GroupDocs.Comparison 25.2  
-**Tác giả:** GroupDocs  
+**Cập nhật lần cuối:** 2026-06-21  
+**Kiểm tra với:** GroupDocs.Comparison 25.2  
+**Tác giả:** GroupDocs
 
----
+## Hướng dẫn liên quan
+
+- [compare pdf java – Hướng dẫn so sánh tài liệu Java – Hướng dẫn đầy đủ về tải và so sánh tài liệu](/comparison/java/document-loading/)
+- [Cách tải tài liệu được bảo vệ bằng mật khẩu và so sánh tài liệu trong Java – Hướng dẫn bảo mật đầy đủ](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
+- [Cách sử dụng GroupDocs: Stream so sánh tài liệu Java – Hướng dẫn đầy đủ](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

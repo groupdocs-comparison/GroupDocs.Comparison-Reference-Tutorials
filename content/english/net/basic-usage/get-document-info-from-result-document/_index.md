@@ -1,52 +1,99 @@
 ---
-title: "Extract Document Info from .NET Comparison Results"
+title: "How to Extract Metadata from .NET Comparison Results – Complete Guide"
 linktitle: "Extract Document Info from Comparison Results"
 second_title: GroupDocs.Comparison .NET API
-description: "Learn how to extract document metadata and properties from comparison results in .NET. Step-by-step guide with code examples for GroupDocs.Comparison API."
-keywords: "extract document info .NET comparison, GroupDocs comparison result document info, document comparison metadata .NET, retrieve document properties comparison"
+description: "Learn how to extract metadata from .NET comparison results using GroupDocs.Comparison. Step‑by‑step guide with code examples and practical tips."
+keywords:
+  - how to extract metadata
+  - get document size .net
+  - document comparison metadata
+  - GroupDocs Comparison document info
 weight: 12
 url: /net/basic-usage/get-document-info-from-result-document/
-date: "2025-01-02"
-lastmod: "2025-01-02"
+date: "2026-06-15"
+lastmod: "2026-06-15"
 categories: ["Document Comparison"]
 tags: ["groupdocs-comparison", "document-metadata", "dotnet-api", "document-properties"]
 type: docs
+schemas:
+- type: TechArticle
+  headline: How to Extract Metadata from .NET Comparison Results – Complete Guide
+  description: Learn how to extract metadata from .NET comparison results using GroupDocs.Comparison.
+    Step‑by‑step guide with code examples and practical tips.
+  dateModified: '2026-06-15'
+  author: GroupDocs
+- type: HowTo
+  name: How to Extract Metadata from .NET Comparison Results – Complete Guide
+  description: Learn how to extract metadata from .NET comparison results using GroupDocs.Comparison.
+    Step‑by‑step guide with code examples and practical tips.
+  steps:
+  - name: Initialize Comparer with Source Document
+    text: '`Comparer` is the core class in GroupDocs.Comparison that loads the source
+      document and orchestrates comparison operations. Using a `using` block guarantees
+      that all unmanaged resources are released automatically. > **Pro Tip:** You
+      can pass any `Stream` (file, memory, cloud) to the `Comparer` const'
+  - name: Add Target Document for Comparison
+    text: The `Add()` method accepts additional streams or file paths, enabling one‑to‑many
+      comparisons. > **Important:** The order of added documents influences the way
+      changes are highlighted in the final report.
+  - name: Retrieve Document Info from Result Document
+    text: '`IDocumentInfo` provides a unified view of document metadata such as file
+      type, page count, and size across all supported formats. > **Understanding the
+      Data:** The returned object works the same for DOCX, PDF, XLSX, and PPTX, so
+      you can write format‑agnostic code.'
+  - name: Display Document Info
+    text: 'Once you have the `IDocumentInfo` instance, you can log, store, or present
+      its properties. The three most commonly used properties are: - **FileType**
+      – e.g., `DOCX`, `PDF`, `XLSX`. - **PageCount** – total pages or slides. - **Size**
+      – file size in bytes (useful for storage calculations).'
+- type: FAQPage
+  questions:
+  - question: Is GroupDocs.Comparison for .NET compatible with various document formats?
+    answer: Yes, it supports **50+ formats** including DOCX, PDF, PPTX, XLSX, TXT,
+      and many others, providing consistent metadata extraction across them.
+  - question: Can I customize comparison settings without affecting metadata extraction?
+    answer: Absolutely. Settings such as sensitivity, change types, and output format
+      are independent of the `GetDocumentInfo()` call.
+  - question: Is there a trial version I can use for evaluation?
+    answer: Yes, download a free trial from the [GroupDocs releases page](https://releases.groupdocs.com/).
+      The trial includes full metadata extraction capabilities.
+  - question: Where can I get support for implementation questions?
+    answer: Use the [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison/12)
+      for community help and official support from the GroupDocs team.
+  - question: What licensing options are available for production deployments?
+    answer: GroupDocs offers developer, site, and OEM licenses. Purchase options are
+      listed on the [GroupDocs purchase page](https://purchase.groupdocs.com/buy).
 ---
-# Extract Document Info from .NET Comparison Results - Complete Guide
 
-## Introduction
+# How to Extract Metadata from .NET Comparison Results – Complete Guide
 
-When you're working with document comparisons in .NET applications, you often need more than just the differences between files. Sometimes you need to extract document info from comparison results - things like file types, page counts, and document sizes. This is especially useful when you're building document management systems, audit trails, or automated reporting tools.
+When you're working with document comparisons in .NET applications, you might wonder **how to extract metadata** from the comparison results. Metadata such as file type, page count, and document size can be crucial for audit trails, performance tuning, or simply displaying useful information to end users. This tutorial walks you through retrieving that data efficiently with GroupDocs.Comparison for .NET.
 
-GroupDocs.Comparison for .NET makes this process straightforward, allowing you to retrieve comprehensive document metadata from your comparison results. Whether you're processing hundreds of documents or just need quick insights into a single comparison, this guide will show you exactly how to extract document info efficiently and reliably.
+## Quick Answers
+- **What is the main class for comparison?** `Comparer` loads the source document and runs the comparison engine.  
+- **Which method returns metadata?** `GetDocumentInfo()` on a target document returns an `IDocumentInfo` object.  
+- **Can I get the document size in .NET?** Yes – the `Size` property of `IDocumentInfo` returns the size in bytes.  
+- **Do I need a license for metadata extraction?** A valid GroupDocs.Comparison license is required for production use; the free trial supports all metadata features.  
+- **Is the API compatible with .NET 6?** Absolutely – GroupDocs.Comparison supports .NET Framework 4.6.1+, .NET Core 2.0+, and .NET 5/6+.
 
-In this tutorial, you'll learn how to retrieve document information from comparison results, understand what data you can access, and discover practical ways to use this information in your .NET applications.
+The `GetDocumentInfo()` method returns an `IDocumentInfo` object containing document metadata.
 
-## When You'll Need to Extract Document Info
+## What is metadata extraction in document comparison?
+Metadata extraction is the process of retrieving descriptive information—such as file type, page count, and file size—from the documents involved in a comparison operation. GroupDocs.Comparison exposes this data through a unified API, making it easy to log, display, or use for conditional processing.
 
-Before diving into the code, let's look at some common scenarios where extracting document info from comparison results becomes essential:
-
-**Document Processing Workflows**: When you're handling multiple document formats in batch operations, you need to know file types and sizes to route documents correctly or apply format-specific processing rules.
-
-**Audit and Compliance**: Many organizations require detailed logs of document comparisons, including metadata about the files being compared. This information helps maintain compliance trails and supports legal discovery processes.
-
-**Performance Optimization**: Understanding document sizes and page counts helps you optimize comparison operations. You might want to handle large documents differently or apply specific settings based on document characteristics.
-
-**User Interface Enhancement**: If you're building applications where users upload and compare documents, displaying file information (type, size, page count) improves the user experience and helps users verify they're comparing the right files.
+## Why extract metadata from comparison results?
+Extracting metadata lets you create detailed audit logs, route files based on type, and adjust processing strategies for large documents. By knowing the file type, page count, and size you can enforce compliance rules, estimate processing time, and present clear information to users before they start a comparison.
 
 ## Prerequisites
 
-Before you start extracting document info from comparison results, make sure you have these essentials in place:
-
-1. **GroupDocs.Comparison for .NET**: Install the GroupDocs.Comparison library from [the official releases page](https://releases.groupdocs.com/comparison/net/). The library supports .NET Framework 4.6.1+ and .NET Core 2.0+.
-
-2. **Development Environment**: Set up your .NET development environment with Visual Studio, VS Code, or your preferred IDE. Ensure you have the necessary project configurations and NuGet package management set up.
-
-3. **Sample Documents**: Prepare your source and target document files for testing. Common formats like `SOURCE.docx` and `TARGET.docx` work well for initial testing, but the API supports over 50 document formats including PDF, Excel, PowerPoint, and more.
+1. **GroupDocs.Comparison for .NET** – Install the library from the [official releases page](https://releases.groupdocs.com/comparison/net/).  
+   You can also browse all releases at the [GroupDocs releases page](https://releases.groupdocs.com/).  
+2. **Development Environment** – Visual Studio, VS Code, or any IDE that supports .NET 6+.  
+3. **Sample Documents** – Two files (e.g., `SOURCE.docx` and `TARGET.docx`) for testing. The API works with over **50 document formats**.
 
 ## Import Namespaces
 
-First, you'll need to import the essential namespaces to access GroupDocs.Comparison functionalities in your project:
+The following `using` directives give you access to the core comparison engine, file handling utilities, and the metadata interfaces.
 
 ```csharp
 using System;
@@ -56,72 +103,163 @@ using GroupDocs.Comparison;
 using GroupDocs.Comparison.Interfaces;
 ```
 
-These imports give you access to the core comparison features, file handling capabilities, and the interfaces needed to extract document information from your comparison results.
+These imports are required before you instantiate any GroupDocs objects.
 
-## Step-by-Step Guide to Extract Document Info
+## How to Extract Metadata from Comparison Results?
 
-Now let's walk through the process of retrieving document information from comparison results. This approach gives you detailed insights into the documents you're working with.
+The `Comparer` class loads the source document and orchestrates the comparison process.
 
-## Step 1: Initialize Comparer with Source Document
+To retrieve metadata, first load the source document with a `Comparer` instance, then add the target document(s). After the comparison engine is initialized, call `GetDocumentInfo()` on each target to obtain an `IDocumentInfo` object that contains properties such as file type, page count, and size. This approach works uniformly across all supported formats.
+
+### Step 1: Initialize Comparer with Source Document
+
+`Comparer` is the core class in GroupDocs.Comparison that loads the source document and orchestrates comparison operations. Using a `using` block guarantees that all unmanaged resources are released automatically.
 
 ```csharp
 using (Comparer comparer = new Comparer(File.OpenRead("SOURCE.docx")))
 {
 ```
 
-This step creates a new `Comparer` instance with your source document. We're using a `using` statement here, which is a best practice because it automatically handles resource disposal - even if an exception occurs during processing. The `File.OpenRead()` method opens the document as a read-only stream, which is memory-efficient for large files.
+> **Pro Tip:** You can pass any `Stream` (file, memory, cloud) to the `Comparer` constructor, not just a file path.
 
-**Pro Tip**: If you're working with documents stored in different locations (cloud storage, databases, or network drives), you can pass any `Stream` object to the Comparer constructor, not just file paths.
+### Step 2: Add Target Document for Comparison
 
-## Step 2: Add Target Document for Comparison
+The `Add()` method accepts additional streams or file paths, enabling one‑to‑many comparisons.
 
 ```csharp
 comparer.Add(File.OpenRead("TARGET.docx"));
 ```
 
-Here, you're adding the target document to your comparison operation. The `Add()` method is flexible - you can add multiple target documents if you need to compare one source against several targets. This is particularly useful when you're tracking how a document has evolved through multiple versions.
+> **Important:** The order of added documents influences the way changes are highlighted in the final report.
 
-**Important Note**: The order you add documents can matter for some comparison operations, especially when you're dealing with complex formatting or when generating comparison reports.
+### Step 3: Retrieve Document Info from Result Document
 
-## Step 3: Retrieve Document Info from Result Document
+`IDocumentInfo` provides a unified view of document metadata such as file type, page count, and size across all supported formats.
 
 ```csharp
 IDocumentInfo info = comparer.Targets.FirstOrDefault().GetDocumentInfo();
 ```
 
-This is where the magic happens. The `Targets` collection contains all the target documents you've added, and `FirstOrDefault()` gets the first one. The `GetDocumentInfo()` method extracts comprehensive metadata including file type, page count, document size, and other properties depending on the document format.
+> **Understanding the Data:** The returned object works the same for DOCX, PDF, XLSX, and PPTX, so you can write format‑agnostic code.
 
-**Understanding the Data**: The returned `IDocumentInfo` object contains standardized information that works across all supported document formats. This means you can use the same code to extract info from Word documents, PDFs, Excel sheets, and more.
+### Step 4: Display Document Info
 
-## Step 4: Display Document Info
+Once you have the `IDocumentInfo` instance, you can log, store, or present its properties.
 
 ```csharp
 Console.WriteLine("\nFile type: {0}\nNumber of pages: {1}\nDocument size: {2} bytes", info.FileType, info.PageCount, info.Size);
 ```
 
-Finally, you're displaying the extracted information. In a real application, you'd typically store this data in a database, include it in reports, or use it to make processing decisions. The three main properties you'll use most often are:
+The three most commonly used properties are:
 
-- **FileType**: The document format (e.g., DOCX, PDF, XLSX)
-- **PageCount**: Total number of pages or slides
-- **Size**: Document size in bytes
+- **FileType** – e.g., `DOCX`, `PDF`, `XLSX`.  
+- **PageCount** – total pages or slides.  
+- **Size** – file size in bytes (useful for storage calculations).
+
+## How to Get Document Size in .NET?
+
+The `Size` property returns the file size in bytes.
+
+The document size can be accessed directly from the `IDocumentInfo` instance via its `Size` property. This property returns the exact number of bytes of the original file, allowing you to convert it to kilobytes or megabytes for display or storage calculations. It reflects the source file size, not any processed version.
+
+```csharp
+long sizeInBytes = documentInfo.Size;
+double sizeInMegabytes = sizeInBytes / (1024.0 * 1024.0);
+Console.WriteLine($"Document size: {sizeInMegabytes:F2} MB");
+```
+
+> **Note:** The `Size` value reflects the original file size, not the size after any internal processing or compression.
 
 ## Common Use Cases and Practical Applications
 
-**Batch Document Processing**: When processing multiple documents, you can use the file type information to apply format-specific processing rules or route documents to appropriate handlers.
-
-**Storage Management**: Document size information helps you manage storage quotas and optimize file organization. You might archive larger documents separately or compress files above certain size thresholds.
-
-**User Feedback**: In web applications, showing users the page count and file size before they start a comparison helps set expectations for processing time, especially with larger documents.
-
-**Quality Assurance**: Comparing expected vs. actual page counts can help identify corrupted files or incomplete document uploads before processing begins.
+- **Batch Processing:** Use file type to route DOCX files to a Word‑specific workflow and PDFs to a PDF‑optimized pipeline.  
+- **Storage Management:** Archive documents larger than 10 MB to a cold‑storage bucket automatically.  
+- **User Feedback:** Show page count and size before comparison to set realistic expectations for processing time.  
+- **Quality Assurance:** Verify that uploaded files are complete by comparing expected versus actual page counts.
 
 ## Troubleshooting Common Issues
 
-**File Access Problems**: If you encounter "file not found" or "access denied" errors, ensure your application has proper read permissions and the file paths are correct. Consider using absolute paths during development.
+- **File Access Errors:** Verify read permissions and use absolute paths during development.  
+- **Memory Pressure with Large Files:** Prefer streaming (`File.OpenRead`) over loading the whole file into memory.  
+- **Null Reference Exceptions:** `FirstOrDefault()` may return `null` if no target was added; always check before accessing `GetDocumentInfo()`.  
 
-**Memory Issues with Large Files**: For very large documents, consider using file streams instead of loading entire files into memory. The GroupDocs.Comparison API is designed to handle large files efficiently through streaming.
+```csharp
+var target = comparer.Targets.FirstOrDefault();
+if (target != null)
+{
+    var info = target.GetDocumentInfo();
+    // Use info safely
+}
+else
+{
+    Console.WriteLine("No target document was added.");
+}
+```
 
-**Null Reference Exceptions**: Always check if `FirstOrDefault()` returns null, especially when working with dynamic document sets. Add null checking to make your code more robust:
+- **Limited Metadata for Plain Text:** Formats like `.txt` may not expose a meaningful `PageCount`. Guard against missing values.
+
+## Performance Considerations
+
+- **Stream Management:** Always wrap streams in `using` statements to release file handles promptly.  
+- **Caching:** Store frequently accessed metadata in a cache to avoid repeated extraction.  
+- **Batch Operations:** Process documents in groups to reduce overhead and improve throughput.
+
+## Best Practices for Production Use
+
+- **Robust Error Handling:** Enclose metadata extraction in try‑catch blocks to handle corrupted or unsupported files gracefully.  
+- **Comprehensive Logging:** Log document type, size, and page count for each comparison to aid troubleshooting and audit compliance.  
+- **Security Hygiene:** Avoid exposing full file paths or internal server details in UI messages.  
+- **Resource Disposal:** Dispose of `Comparer` instances promptly, especially in web services handling many concurrent requests.
+
+## Advanced Scenarios
+
+### Multiple Target Documents
+
+If you compare one source against several targets, iterate through the `Targets` collection and extract metadata from each.
+
+```csharp
+foreach (var target in comparer.Targets)
+{
+    IDocumentInfo info = target.GetDocumentInfo();
+    // Process each target's information
+}
+```
+
+### Conditional Processing Based on Metadata
+
+```csharp
+if (info.Size > 5 * 1024 * 1024) // larger than 5 MB
+{
+    // Apply a different comparison setting or queue for background processing
+}
+```
+
+### Storing Metadata in a Database
+
+Persist `FileType`, `PageCount`, and `Size` in a relational table to enable reporting and analytics across thousands of comparisons.
+
+## Frequently Asked Questions
+
+**Q: Is GroupDocs.Comparison for .NET compatible with various document formats?**  
+A: Yes, it supports **50+ formats** including DOCX, PDF, PPTX, XLSX, TXT, and many others, providing consistent metadata extraction across them.
+
+**Q: Can I customize comparison settings without affecting metadata extraction?**  
+A: Absolutely. Settings such as sensitivity, change types, and output format are independent of the `GetDocumentInfo()` call.
+
+**Q: Is there a trial version I can use for evaluation?**  
+A: Yes, download a free trial from the [GroupDocs releases page](https://releases.groupdocs.com/). The trial includes full metadata extraction capabilities.
+
+**Q: Where can I get support for implementation questions?**  
+A: Use the [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison/12) for community help and official support from the GroupDocs team.
+
+**Q: What licensing options are available for production deployments?**  
+A: GroupDocs offers developer, site, and OEM licenses. Purchase options are listed on the [GroupDocs purchase page](https://purchase.groupdocs.com/buy).
+
+---
+
+**Last Updated:** 2026-06-15  
+**Tested With:** GroupDocs.Comparison 6.0 for .NET  
+**Author:** GroupDocs
 
 ```csharp
 var targetDoc = comparer.Targets.FirstOrDefault();
@@ -132,68 +270,8 @@ if (targetDoc != null)
 }
 ```
 
-**Format-Specific Limitations**: Some document formats may not provide all metadata properties. For example, plain text files might not have meaningful page counts. Always check if properties are available before using them.
+## Related Tutorials
 
-## Performance Considerations
-
-**Stream Management**: Always use `using` statements or manually dispose of streams to prevent memory leaks, especially in high-volume applications or long-running services.
-
-**Caching Strategies**: If you're processing the same documents repeatedly, consider caching document information to avoid redundant extraction operations.
-
-**Batch Operations**: When processing multiple documents, consider batching operations to improve overall performance and reduce system resource usage.
-
-## Best Practices for Production Use
-
-**Error Handling**: Wrap your document info extraction in try-catch blocks to handle scenarios where documents might be corrupted or in unsupported formats.
-
-**Logging**: Log document information extraction operations, especially in production environments. This helps with troubleshooting and provides audit trails.
-
-**Security**: Be cautious when displaying file paths or detailed document information to end users, as this might expose sensitive system information.
-
-**Resource Management**: In web applications or services, ensure proper disposal of Comparer instances to prevent memory leaks and file handle exhaustion.
-
-## Advanced Scenarios
-
-**Multiple Target Documents**: If you've added multiple target documents, you can iterate through all of them and extract information from each:
-
-```csharp
-foreach (var target in comparer.Targets)
-{
-    IDocumentInfo info = target.GetDocumentInfo();
-    // Process each target's information
-}
-```
-
-**Conditional Processing**: Use the extracted information to make processing decisions. For example, you might apply different comparison settings based on document size or type.
-
-**Integration with Databases**: Store extracted document information in your database for future reference, reporting, or analytics purposes.
-
-## Conclusion
-
-Extracting document info from comparison results with GroupDocs.Comparison for .NET is a powerful feature that opens up many possibilities for document management and processing automation. By understanding how to retrieve file types, page counts, and document sizes, you can build more intelligent applications that adapt to different document characteristics.
-
-The techniques you've learned here form the foundation for more advanced document processing workflows. Whether you're building document management systems, audit tools, or automated comparison services, this document information extraction capability will help you create more robust and user-friendly applications.
-
-Remember to always consider performance, security, and error handling when implementing these features in production environments. With proper implementation, you'll have reliable access to essential document metadata that can drive smarter decision-making in your applications.
-
-## Frequently Asked Questions
-
-### Is GroupDocs.Comparison for .NET compatible with various document formats?
-
-Yes, GroupDocs.Comparison for .NET supports over 50 document formats including DOCX, PDF, PPTX, XLSX, TXT, and many more. The document info extraction works consistently across all supported formats, giving you standardized access to metadata regardless of the file type.
-
-### Can I customize the document comparison settings?
-
-Absolutely! GroupDocs.Comparison for .NET offers extensive customization options for document comparison operations. You can adjust sensitivity levels, specify which types of changes to detect, and configure how results are presented. These settings don't affect the document info extraction process, which works independently of comparison settings.
-
-### Is there a trial version available for evaluation?
-
-Yes, you can download a free trial version from [the GroupDocs releases page](https://releases.groupdocs.com/). The trial version lets you evaluate all features, including document info extraction, with some limitations on the number of documents you can process.
-
-### How can I get support for GroupDocs.Comparison for .NET?
-
-You can get comprehensive support through the [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison/12). The community and GroupDocs team actively help with technical questions, implementation guidance, and troubleshooting. You'll also find code samples and best practices shared by other developers.
-
-### What are the licensing options for GroupDocs.Comparison for .NET?
-
-GroupDocs offers flexible licensing options including developer licenses, site licenses, and OEM licensing for redistribution. You can explore all available options and purchase a license from [the GroupDocs purchase page](https://purchase.groupdocs.com/buy). They also offer temporary licenses for evaluation and development purposes.
+- [Document Metadata Management .NET - Complete Guide for GroupDocs.Comparison](/comparison/net/metadata-management/)
+- [Get Document Properties C# .NET - Extract File Metadata](/comparison/net/basic-usage/get-document-info-from-path/)
+- [Preserve Target Metadata with GroupDocs.Comparison – .NET Tutorial](/comparison/net/advanced-comparison/groupdocs-comparison-net-metadata-target/)

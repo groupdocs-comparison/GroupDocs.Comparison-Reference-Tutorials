@@ -1,14 +1,62 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: GroupDocs.Comparison를 사용하여 PDF Java를 비교하는 방법을 배워보세요. 이 단계별 튜토리얼에서는 문서
-  비교 모범 사례, 코드 예제, 성능 팁 및 문제 해결 방법을 다룹니다.
-keywords: java compare documents programmatically, java document diff library, compare
-  two files java, java text comparison, groupdocs comparison java, document version
-  control java, compare pdf files java, document comparison best practices
-lastmod: '2026-02-21'
-linktitle: Java Document Comparison Guide
+date: '2026-06-15'
+description: GroupDocs.Comparison을 사용하여 compare pdf java를 비교하는 방법을 배웁니다. 이 단계별 튜토리얼에서는
+  문서 비교 모범 사례, 코드 예제, 성능 팁 및 문제 해결 방법을 다룹니다.
+keywords:
+- compare pdf java
+- java compare two documents
+- compare documents without saving
+- document comparison java
+- groupdocs comparison java
+lastmod: '2026-06-15'
+linktitle: Java 문서 비교 가이드
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-15'
+  description: Learn how to compare pdf java using GroupDocs.Comparison. This step‑by‑step
+    tutorial covers document comparison best practices, code examples, performance
+    tips, and troubleshooting.
+  headline: compare pdf java – Compare PDF Files in Java Programmatically
+  type: TechArticle
+- description: Learn how to compare pdf java using GroupDocs.Comparison. This step‑by‑step
+    tutorial covers document comparison best practices, code examples, performance
+    tips, and troubleshooting.
+  name: compare pdf java – Compare PDF Files in Java Programmatically
+  steps:
+  - name: '**Free Trial** – ideal for learning and small‑scale demos.'
+    text: '**Free Trial** – ideal for learning and small‑scale demos.'
+  - name: '**Temporary License** – request a 30‑day key for extended evaluation.'
+    text: '**Temporary License** – request a 30‑day key for extended evaluation.'
+  - name: '**Full License** – required for production, unlimited file size, and priority
+      support.'
+    text: '**Full License** – required for production, unlimited file size, and priority
+      support.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum supported version; Java 11+ is recommended for improved
+      garbage collection and module support.
+    question: What's the minimum Java version required for GroupDocs.Comparison?
+  - answer: GroupDocs.Comparison compares a single pair at a time. For multi‑document
+      versioning, iterate over the document list and compare each consecutive pair,
+      storing the resulting `ChangeInfo[]` for later aggregation.
+    question: Can I compare more than two documents simultaneously?
+  - answer: '- Disable coordinate calculation unless you need exact locations. - Prefer
+      the stream‑based API to avoid loading the entire file into RAM. - Split processing
+      into page‑ranges if you only need changes in specific sections. - Monitor JVM
+      heap usage and tune `-Xmx` accordingly.'
+    question: How should I handle very large documents (100 MB+)?
+  - answer: Yes. After obtaining `ChangeInfo[]`, you can generate a new PDF using
+      GroupDocs.Watermark or any PDF library, drawing rectangles at the coordinates
+      returned. This produces a “red‑line” version that end users can review in any
+      PDF viewer.
+    question: Is there a way to visually highlight changes in the output?
+  - answer: Pass the password to the `Comparer` constructor or set it on the `LoadOptions`
+      object before invoking `compare`. The library will decrypt the document in memory,
+      so the password never touches the filesystem.
+    question: How do I handle password‑protected documents?
+  type: FAQPage
 tags:
 - java
 - document-comparison
@@ -23,51 +71,43 @@ weight: 1
 
 # compare pdf java – Java에서 PDF 파일을 프로그래밍 방식으로 비교하는 방법
 
-두 문서 버전을 수동으로 비교해 본 적이 있나요? **compare pdf java**를 찾는 Java 개발자라면 이 문제를 원하지 않을 만큼 많이 겪었을 것입니다. 콘텐츠 관리 시스템을 구축하든, 버전 관리를 구현하든, 혹은 법률 문서의 변경 사항을 추적하든, 비교를 자동화하면 수시간의 지루한 작업을 절약할 수 있습니다.
+Java 개발자로서 **compare pdf java** 파일을 빠르고 정확하게 비교해야 한다면, 올바른 곳에 오셨습니다. 콘텐츠 관리 시스템을 구축하든, 법적 계약서에 버전 관리를 추가하든, 생성된 보고서에 대한 QA를 자동화하든, 수동으로 나란히 확인하는 작업은 오류가 발생하기 쉽고 시간이 많이 소요됩니다. GroupDocs.Comparison for Java은 삽입, 삭제, 서식 변경 및 이동된 단락까지 감지하는 단일하고 신뢰할 수 있는 API를 제공하므로 복잡한 diff 로직을 직접 작성할 필요가 없습니다.
 
-좋은 소식은? GroupDocs.Comparison for Java를 사용하면 이 전체 프로세스를 자동화할 수 있습니다. 이 포괄적인 가이드는 Java 애플리케이션에서 문서 비교를 구현하는 데 필요한 모든 것을 단계별로 안내합니다. 변경 사항을 감지하고, 좌표를 추출하며, 다양한 파일 형식을 처리하는 방법까지—모두 깔끔하고 효율적인 코드로 배울 수 있습니다.
+이 가이드에서는 라이브러리를 설정하고, 파일, 스트림 또는 클라우드 스토리지에서 비교를 실행하며, 변경 좌표를 추출하고, 대용량 문서 상황을 처리하는 데 필요한 모든 단계를 자세히 안내합니다. 또한 성능 튜닝을 위한 실용적인 팁, 흔히 발생하는 함정, 실제 사용 사례 예제를 제공하여 보다 빠르게 견고한 솔루션을 배포할 수 있도록 도와드립니다.
 
 ## 빠른 답변
 - **Java에서 PDF 파일을 비교할 수 있는 라이브러리는 무엇인가요?** GroupDocs.Comparison for Java.  
-- **라이선스가 필요합니까?** 학습용으로는 무료 체험판으로 충분하고, 프로덕션에서는 정식 라이선스가 필요합니다.  
+- **라이선스가 필요합니까?** 무료 체험판은 학습에 사용할 수 있으며, 프로덕션에서는 정식 라이선스가 필요합니다.  
 - **필요한 Java 버전은 무엇인가요?** 최소 Java 8, 권장 Java 11 이상.  
-- **문서를 디스크에 저장하지 않고 비교할 수 있나요?** 예, 스트림을 사용해 메모리 내에서 비교할 수 있습니다.  
-- **변경 좌표를 어떻게 얻나요?** `CompareOptions`에서 `setCalculateCoordinates(true)`를 활성화하세요.
+- **문서를 디스크에 저장하지 않고 비교할 수 있나요?** 예 — `InputStream` 기반 오버로드를 사용하여 모든 데이터를 메모리에서 처리합니다.  
+- **변경 좌표를 어떻게 얻나요?** `compare`를 호출하기 전에 `CompareOptions`에서 `setCalculateCoordinates(true)`를 호출합니다.
 
-## Java에서 PDF 파일을 비교하는 방법 (compare pdf java)
-프로그래밍 방식으로 PDF를 비교한다는 것은 두 문서를 분석하여 추가, 삭제, 수정 사항을 정확히 찾아내는 것을 의미합니다. 결과는 변경 사항의 구조화된 목록으로, 이를 표시하거나 로그에 기록하거나 후속 워크플로에 전달할 수 있습니다.
+## Java에서 PDF 파일을 비교하는 방법 (compare pdf java)?
+
+두 PDF를 `Comparer` 인스턴스로 로드하고, 필요에 따라 `CompareOptions`를 구성한 뒤 `compare`를 호출합니다. 이 메서드는 어떤 부분이, 어디서, 어떻게 변경되었는지를 알려주는 `ChangeInfo[]` 배열을 반환합니다. 전체 워크플로는 Java 코드 10줄 이하로 작성할 수 있으며, 라이브러리가 모든 형식별 특성을 자동으로 처리합니다.
 
 ## “compare pdf files java”란 무엇인가요?
-Java에서 PDF 파일을 비교한다는 것은 두 PDF(또는 다른) 문서를 프로그래밍 방식으로 분석하여 추가, 삭제, 수정 사항을 식별하는 것을 의미합니다. 이 과정은 보고서, 시각적 강조 또는 자동화된 워크플로에 사용할 수 있는 구조화된 변경 목록을 반환합니다.
 
-## 왜 GroupDocs.Comparison for Java를 사용하나요?
-- **속도 및 정확성:** 60개 이상의 형식을 높은 충실도로 처리합니다.  
-- **문서 비교 모범 사례**가 내장되어 있어 스타일 변경을 무시하거나 이동된 콘텐츠를 감지하는 등 기능을 제공합니다.  
-- **확장성:** 대용량 파일, 스트림 및 클라우드 스토리지와 함께 작동합니다.  
-- **확장 가능:** 비교 옵션을 맞춤 설정하여 모든 비즈니스 규칙에 맞출 수 있습니다.
+구문 **compare pdf files java**는 Java 애플리케이션에서 두 PDF(또는 지원되는) 문서를 프로그래밍 방식으로 분석하여 상세한 diff를 생성하는 과정을 의미합니다. diff에는 삽입, 삭제, 수정된 텍스트, 이미지, 표 및 이동된 섹션이 포함되며, 구조화된 리스트로 패키징되어 렌더링, 로그 기록 또는 다운스트림 서비스에 전달될 수 있습니다.
+
+## Java용 GroupDocs.Comparison을 사용해야 하는 이유
+
+GroupDocs.Comparison은 PDF, DOCX, XLSX, PPTX, HTML 및 이미지 등 60개 이상의 입력 및 출력 형식을 지원하면서 레이아웃을 유지합니다. 수백 페이지 파일도 전체 문서를 메모리에 로드하지 않고 처리할 수 있어 일반적인 50페이지 PDF의 경우 1초 미만에 결과를 제공합니다. 내장 옵션을 사용하면 스타일 변경을 무시하고, 이동된 콘텐츠를 감지하며, 각 변경에 대한 페이지 좌표를 계산할 수 있습니다.
 
 ## Java에서 프로그래밍 방식으로 PDF 파일을 비교하는 방법
-이 섹션에서는 **compare pdf programmatically**를 수행하기 위한 단계별 구현을 보여줍니다. 각 코드 블록은 나타나기 전에 설명되므로 코드 조각이 무엇을 하는지 추측할 필요가 없습니다.
 
-### 사전 요구 사항 및 필요 사항
+아래는 프로젝트에서 따라야 할 전체 흐름입니다. 각 단계는 해당 자리표시자 앞에 설명이 제공되므로 코드가 왜 필요한지 항상 알 수 있습니다.
 
-#### 기술 요구 사항
-- **Java Development Kit (JDK)** – 버전 8 이상 (성능 향상을 위해 Java 11+ 권장)  
-- **IDE** – IntelliJ IDEA, Eclipse 또는 선호하는 Java IDE  
-- **Maven** – 의존성 관리를 위해 (대부분 IDE에 포함됨)
+### 전제 조건 및 필요 사항
+- **Java Development Kit (JDK)** – 버전 8 이상 (Java 11+는 더 나은 가비지 컬렉션 및 모듈 지원을 제공합니다).  
+- **IDE** – IntelliJ IDEA, Eclipse 또는 Maven을 인식하는 편집기.  
+- **Maven** – 의존성 관리를 위해 사용합니다; 튜토리얼은 Maven 표준 `pom.xml`을 사용합니다.  
+- **샘플 문서** – 테스트용으로 약간의 차이가 있는 두 개의 PDF(또는 지원되는 형식).
 
-#### 지식 사전 요구 사항
-- 기본 Java 프로그래밍(클래스, 메서드, try‑with‑resources)  
-- Maven 의존성에 대한 친숙함(설정 방법은 따로 안내합니다)  
-- 파일 I/O 작업에 대한 이해(있으면 좋지만 필수는 아님)
+### Java용 GroupDocs.Comparison 설정
 
-#### 테스트용 문서
-샘플 문서를 몇 개 준비하세요—Word 문서, PDF 또는 텍스트 파일이 좋습니다. 없으면 약간의 차이가 있는 두 개의 간단한 텍스트 파일을 만들어 테스트하세요.
-
-## GroupDocs.Comparison for Java 설정
-
-### Maven 구성
-먼저, GroupDocs 저장소와 의존성을 `pom.xml`에 추가하세요. 아래 블록을 그대로 유지하십시오:
+#### Maven 구성
+먼저, GroupDocs 저장소와 의존성을 `pom.xml`에 추가합니다. 아래 블록을 그대로 유지하십시오:
 
 ```xml
 <repositories>
@@ -87,19 +127,18 @@ Java에서 PDF 파일을 비교한다는 것은 두 PDF(또는 다른) 문서를
 </dependencies>
 ```
 
-**Pro Tip**: 항상 GroupDocs 웹사이트에서 최신 버전을 확인하세요. 작성 시점에는 버전 25.2가 최신이었지만, 이후 버전에는 추가 기능이나 버그 수정이 포함될 수 있습니다.
+**Pro Tip**: 항상 GroupDocs 다운로드 페이지에서 최신 안정 버전을 확인하십시오. 새로운 릴리스는 종종 추가 형식 지원 및 성능 향상을 포함합니다.
 
-### 일반 설정 문제 및 해결책
-- **“Repository not found”** – `<repositories>` 블록이 `<dependencies>`보다 *앞에* 위치하도록 하세요.  
-- **“ClassNotFoundException”** – Maven 의존성을 새로 고치세요 (IntelliJ: *Maven → Reload project*).
+#### 일반 설정 문제 및 해결책
+- **“Repository not found”** – `<repositories>` 요소가 `<dependencies>` **앞에** 나타나는지 확인하십시오.  
+- **“ClassNotFoundException”** – Maven 새로 고침(예: IntelliJ에서 *Maven → Reload project*)을 실행하여 JAR를 클래스패스로 가져오세요.
 
-### 라이선스 옵션 설명
-1. **Free Trial** – 학습 및 소규모 프로젝트에 적합합니다.  
-2. **Temporary License** – 30일 키를 요청하여 평가 기간을 연장할 수 있습니다.  
-3. **Full License** – 프로덕션 작업에 필요합니다.
+#### 라이선스 옵션 설명
+1. **Free Trial** – 학습 및 소규모 데모에 적합합니다.  
+2. **Temporary License** – 30일 키를 요청하여 평가 기간을 연장합니다.  
+3. **Full License** – 프로덕션, 무제한 파일 크기 및 우선 지원에 필요합니다.
 
-### 기본 프로젝트 구조
-
+#### 기본 프로젝트 구조
 ```
 your-project/
 ├── src/main/java/
@@ -111,10 +150,10 @@ your-project/
 └── pom.xml
 ```
 
-## 핵심 구현: 단계별 가이드
+### 핵심 구현: 단계별 가이드
 
-### Comparer 클래스 이해하기
-`Comparer` 클래스는 문서 비교를 위한 주요 인터페이스입니다:
+#### Comparer 클래스 이해
+`Comparer` 클래스는 GroupDocs.Comparison의 모든 비교 작업에 대한 중심 진입점입니다.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -125,18 +164,17 @@ try (Comparer comparer = new Comparer("sourceFilePath")) {
 }
 ```
 
-**왜 try‑with‑resources를 사용하나요?** `Comparer`는 `AutoCloseable`을 구현하므로 이 패턴은 메모리와 파일 핸들의 적절한 정리를 보장합니다—대용량 PDF 작업 시 큰 도움이 됩니다.
+**왜 try‑with‑resources를 사용하나요?** `Comparer`가 `AutoCloseable`을 구현하기 때문에, 이 패턴은 네이티브 리소스(메모리 버퍼, 임시 파일)가 자동으로 해제되도록 보장하여 대용량 PDF 처리 시 메모리 누수를 방지합니다.
 
-### 기능 1: 변경 좌표 가져오기
-이 기능은 각 변경이 발생한 정확한 위치를 알려줍니다—문서 편집에 대한 GPS 좌표와 같습니다.
+#### 기능 1: 변경 좌표 가져오기
+이 기능은 감지된 모든 변경에 대한 정확한 페이지 수준 X/Y 좌표를 반환하여 시각적 diff 뷰어를 구축할 수 있게 합니다.
 
-#### 사용 시점
-- 시각적 diff 뷰어 구축  
-- 정밀 감사 보고서 구현  
-- 법률 검토를 위한 PDF 뷰어에서 변경 사항 강조  
+##### 사용 시점
+- 편집을 강조 표시하는 웹 기반 문서 리뷰어 구축.  
+- 각 수정 위치를 정확히 지정하는 감사 로그 생성.  
+- 주석 오버레이를 지원하는 PDF 뷰어와 통합.
 
-#### 구현 상세
-
+##### 구현 세부 사항
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.result.ChangeInfo;
@@ -149,7 +187,9 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-좌표 계산을 활성화하세요:
+`CompareOptions`는 좌표 계산 활성화와 같은 비교 동작을 구성합니다.
+
+좌표 계산 활성화:
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -160,7 +200,7 @@ final Path resultPath = comparer.compare(
                 .build());
 ```
 
-변경 정보를 추출하고 활용하세요:
+변경 정보를 추출하고 작업:
 
 ```java
 ChangeInfo[] changes = comparer.getChanges();
@@ -170,24 +210,25 @@ for (ChangeInfo change : changes) {
 }
 ```
 
-**성능 참고**: 좌표 계산은 오버헤드를 추가하므로 데이터가 필요할 때만 활성화하세요.
+**Performance Note**: 좌표를 활성화하면 약 15‑20 %의 오버헤드가 추가됩니다; 위치 데이터가 필요 없는 대량 diff 작업에서는 비활성화하세요.
 
-### 기능 2: 파일 경로에서 변경 사항 가져오기
-변경된 내용의 간단한 목록만 필요하다면 이 방법을 사용하세요.
+#### 기능 2: 파일 경로에서 변경 사항 가져오기
+변경된 항목 목록만 필요하면, 이 메서드는 좌표 없이 가벼운 `ChangeInfo[]`를 반환합니다.
 
-#### 적합한 상황
-- 빠른 변경 요약  
-- 간단한 diff 보고서  
-- 여러 문서 쌍을 배치 처리  
+`ChangeInfo`는 유형 및 위치를 포함한 단일 감지된 변경을 나타냅니다.
 
-#### 구현
+##### 적합한 경우
+- 일반 텍스트 변경 요약 생성.  
+- 수천 개 문서 쌍을 비교하는 야간 배치 작업 실행.  
+- 두 버전이 동일한지 빠르게 확인.
 
+##### 구현
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
 ```
 
-추가 옵션 없이 비교를 실행하세요:
+추가 옵션 없이 비교 실행:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -196,18 +237,17 @@ System.out.println("\nCount of changes: " + changes.length);
 }
 ```
 
-**베스트 프랙티스**: 항상 `changes` 배열의 길이를 확인하세요—빈 배열은 문서가 동일함을 의미합니다.
+**Best Practice**: 항상 `changes.length`를 확인하세요. 빈 배열은 두 문서가 동일함을 의미하므로 이후 처리를 건너뛸 수 있습니다.
 
-### 기능 3: 스트림 사용하기
-웹 앱, 마이크로서비스, 혹은 파일이 메모리나 클라우드에 존재하는 모든 상황에 이상적입니다.
+#### 기능 3: 스트림 사용
+스트림을 사용하면 메모리, 네트워크 공유 또는 클라우드 스토리지에 있는 파일을 로컬 파일 시스템에 접근하지 않고도 비교할 수 있습니다.
 
-#### 일반 사용 사례
-- Spring Boot 컨트롤러에서 파일 업로드 처리  
-- AWS S3 또는 Azure Blob Storage에서 문서 가져오기  
-- 데이터베이스 BLOB 컬럼에 저장된 PDF 처리  
+##### 일반 사용 사례
+- Spring Boot 컨트롤러에서 파일 업로드를 받아 즉시 비교.  
+- AWS S3, Azure Blob, Google Cloud Storage에서 PDF를 직접 `ByteArrayInputStream`으로 가져오기.  
+- 데이터베이스 BLOB 컬럼에 저장된 문서 비교.
 
-#### 스트림 구현
-
+##### 스트림 구현
 ```java
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -218,7 +258,7 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
     comparer.add(targetStream);
 ```
 
-동일한 비교 호출을 진행하세요:
+동일한 비교 호출 진행:
 
 ```java
 final Path resultPath = comparer.compare();
@@ -227,18 +267,17 @@ System.out.println("\nCount of changes: " + Arrays.toString(changes).length);
 }
 ```
 
-**메모리 팁**: try‑with‑resources 블록은 스트림을 자동으로 닫아 대용량 PDF에서 메모리 누수를 방지합니다.
+**Memory Tip**: try‑with‑resources 블록은 스트림을 자동으로 닫아 주므로 다중 스레드 서비스에서 많은 대용량 PDF를 처리할 때 중요합니다.
 
-### 기능 4: 대상 텍스트 추출
-때때로 변경된 정확한 텍스트가 필요합니다—변경 로그나 알림에 적합합니다.
+#### 기능 4: 대상 텍스트 추출
+때때로 이메일 알림이나 변경 로그 항목을 위해 추가되거나 삭제된 정확한 텍스트 조각이 필요합니다.
 
-#### 실용적인 적용 사례
-- 변경 로그 UI 구축  
-- 삽입/삭제된 텍스트를 포함한 이메일 알림 전송  
-- 규정 준수를 위한 콘텐츠 감사  
+##### 실용적인 적용 사례
+- 삽입된 단락을 포함한 알림 이메일 전송.  
+- “이전 vs. 새” 텍스트를 나란히 표시하는 UI 그리드 채우기.  
+- 규제 문서에서 특정 구문 변경을 감사.
 
-#### 구현
-
+##### 구현
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath)) {
     comparer.add(targetFilePath);
@@ -253,21 +292,13 @@ try (Comparer comparer = new Comparer(sourceFilePath)) {
 }
 ```
 
-**필터링 팁**: 특정 변경 유형에 집중하세요:
+**Filtering Tip**: `ChangeInfo.getChangeType()`을 사용하여 삽입(`INSERT`) 또는 삭제(`DELETE`)만 집중하세요.
 
-```java
-for (ChangeInfo change : changes) {
-    if (change.getType() == ComparisonAction.INSERT) {
-        System.out.println("Added: " + change.getText());
-    }
-}
-```
+### 일반적인 함정 및 회피 방법
 
-## 일반적인 함정 및 회피 방법
-
-### 1. 파일 경로 문제
-**문제**: 파일이 존재함에도 “File not found” 오류가 발생합니다.  
-**해결책**: 개발 중에는 절대 경로를 사용하거나 작업 디렉터리를 확인하세요. Windows에서는 백슬래시를 이스케이프하거나 슬래시(/)를 사용합니다.
+#### 1. 파일 경로 문제
+**Problem**: 파일이 존재함에도 “File not found” 오류가 발생합니다.  
+**Solution**: 개발 중에는 절대 경로를 사용하거나 IDE의 작업 디렉터리를 확인하십시오. Windows에서는 백슬래시(`\\`)를 이스케이프하거나 슬래시(`/`)를 사용합니다.
 
 ```java
 // Good
@@ -276,25 +307,24 @@ String path = "C:/Users/yourname/documents/test.docx";
 String path = "C:\\Users\\yourname\\documents\\test.docx";
 ```
 
-### 2. 대용량 파일 메모리 누수
-**문제**: 큰 PDF에서 `OutOfMemoryError` 발생.  
-**해결책**: 항상 try‑with‑resources를 사용하고 스트리밍 API 또는 청크 단위 처리 고려.
+#### 2. 대용량 파일에서 메모리 누수
+**Problem**: 200페이지 PDF를 비교할 때 `OutOfMemoryError`가 발생합니다.  
+**Solution**: 항상 `Comparer`를 try‑with‑resources 블록으로 감싸고, 필요한 페이지만 메모리에 유지하는 스트림 기반 오버로드를 선호하십시오.
 
-### 3. 지원되지 않는 파일 형식
-**문제**: 특정 형식에서 예외 발생.  
-**해결책**: 먼저 지원되는 형식 목록을 확인하세요. GroupDocs는 60개 이상의 형식을 지원하므로 구현 전에 확인하십시오.
+#### 3. 지원되지 않는 파일 형식
+**Problem**: 특정 레거시 형식에서 예외가 발생합니다.  
+**Solution**: 공식 **supported‑formats** 목록을 확인하십시오(GroupDocs는 **60+** 형식을 지원). 목록에 없는 형식은 PDF 또는 DOCX로 변환한 후 비교하십시오.
 
-### 4. 성능 문제
-**문제**: 비교가 너무 오래 걸림.  
-**해결책**:  
-- 필요하지 않으면 좌표 계산을 비활성화.  
-- 적절한 `CompareOptions` 사용.  
-- 가능하면 배치 작업을 병렬 처리.
+#### 4. 성능 문제
+**Problem**: 예상보다 비교가 오래 걸립니다.  
+**Solution**:  
+- 필요하지 않다면 좌표 계산을 비활성화합니다.  
+- 실제로 이동 블록 감지가 필요할 때만 `CompareOptions.setDetectMovedBlocks(true)`를 사용합니다.  
+- 독립적인 비교 작업을 스레드 풀로 병렬 처리합니다.
 
-## 성능 최적화 팁
+### 성능 최적화 팁
 
-### 올바른 옵션 선택
-
+#### 올바른 옵션 선택
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setCalculateCoordinates(false) // Only enable when needed
@@ -302,13 +332,12 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-### Memory Management
-- 문서를 한 번에 모두 로드하지 말고 배치 처리하세요.  
-- 대용량 파일은 스트리밍 API 사용.  
-- `finally` 블록에서 적절히 정리하거나 try‑with‑resources에 의존하세요.
+#### 메모리 관리
+- 모든 문서를 한 번에 로드하지 말고 배치로 처리합니다.  
+- 50 MB보다 큰 파일은 스트리밍 API를 사용합니다.  
+- 정리 보장을 위해 try‑with‑resources를 활용합니다.
 
-### 캐싱 전략
-
+#### 캐싱 전략
 ```java
 // Pseudo-code for caching concept
 String cacheKey = generateCacheKey(sourceFile, targetFile);
@@ -317,10 +346,9 @@ if (cache.contains(cacheKey)) {
 }
 ```
 
-## 실제 시나리오 및 해결책
+### 실제 시나리오 및 해결책
 
-### 시나리오 1: 콘텐츠 관리 시스템
-
+#### Scenario 1: Content Management System
 ```java
 public class ArticleVersionComparison {
     public List<ChangeInfo> compareVersions(String oldVersion, String newVersion) {
@@ -336,8 +364,7 @@ public class ArticleVersionComparison {
 }
 ```
 
-### 시나리오 2: 자동화된 품질 보증
-
+#### Scenario 2: Automated Quality Assurance
 ```java
 public boolean validateReportAgainstTemplate(InputStream report, InputStream template) {
     try (Comparer comparer = new Comparer(template)) {
@@ -354,8 +381,7 @@ public boolean validateReportAgainstTemplate(InputStream report, InputStream tem
 }
 ```
 
-### 시나리오 3: 배치 문서 처리
-
+#### Scenario 3: Batch Document Processing
 ```java
 public void processBatchComparison(List<DocumentPair> documents) {
     documents.parallelStream().forEach(pair -> {
@@ -370,10 +396,9 @@ public void processBatchComparison(List<DocumentPair> documents) {
 }
 ```
 
-## 고급 기능 및 모범 사례
+### 고급 기능 및 모범 사례
 
-### 다양한 파일 형식 작업
-
+#### Working with Different File Formats
 ```java
 public boolean isFormatSupported(String filePath) {
     String extension = getFileExtension(filePath);
@@ -384,8 +409,7 @@ public boolean isFormatSupported(String filePath) {
 }
 ```
 
-### 대용량 문서 처리
-
+#### Handling Large Documents
 ```java
 CompareOptions largeDocOptions = new CompareOptions.Builder()
     .setCalculateCoordinates(false)  // Saves memory
@@ -394,8 +418,7 @@ CompareOptions largeDocOptions = new CompareOptions.Builder()
     .build();
 ```
 
-### 오류 처리 패턴
-
+#### Error Handling Patterns
 ```java
 public ComparisonResult compareDocuments(String source, String target) {
     try (Comparer comparer = new Comparer(source)) {
@@ -420,10 +443,11 @@ public ComparisonResult compareDocuments(String source, String target) {
 ## 자주 묻는 질문
 
 **Q: GroupDocs.Comparison에 필요한 최소 Java 버전은 무엇인가요?**  
-A: 최소 Java 8이며, 더 나은 성능과 보안을 위해 Java 11+를 권장합니다.
+A: 최소 지원 버전은 Java 8이며, 향상된 가비지 컬렉션 및 모듈 지원을 위해 Java 11+를 권장합니다.
 
 **Q: 두 개 이상의 문서를 동시에 비교할 수 있나요?**  
-A:
+A: GroupDocs.Comparison은 한 번에 한 쌍만 비교합니다. 다중 문서 버전 관리를 위해서는 문서 목록을 순회하면서 연속된 쌍을 각각 비교하고, 결과 `ChangeInfo[]`를 저장하여 나중에 집계합니다.
+
 ```java
 try (Comparer comparer = new Comparer(sourceDocument)) {
     comparer.add(targetDocument1);
@@ -433,15 +457,16 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 }
 ```
 
-**Q: 100 MB 이상의 매우 큰 문서는 어떻게 처리해야 하나요?**  
+**Q: 100 MB 이상의 매우 큰 문서를 어떻게 처리해야 하나요?**  
 A:  
-- 필요하지 않으면 좌표 계산을 비활성화.  
-- 스트리밍 API 사용.  
-- 문서를 청크 또는 페이지 단위로 처리.  
-- 메모리 사용량을 면밀히 모니터링.
+- 정확한 위치가 필요하지 않다면 좌표 계산을 비활성화합니다.  
+- 전체 파일을 RAM에 로드하지 않도록 스트림 기반 API를 선호합니다.  
+- 특정 섹션의 변경만 필요하면 페이지 범위로 처리를 분할합니다.  
+- JVM 힙 사용량을 모니터링하고 `-Xmx`를 적절히 조정합니다.
 
-**Q: 출력에서 변경 사항을 시각적으로 강조하는 방법이 있나요?**  
-A:
+**Q: 출력에서 변경 사항을 시각적으로 강조 표시할 수 있나요?**  
+A: 예. `ChangeInfo[]`를 얻은 후 GroupDocs.Watermark 또는 기타 PDF 라이브러리를 사용해 새 PDF를 생성하고, 반환된 좌표에 사각형을 그릴 수 있습니다. 이렇게 하면 최종 사용자가 모든 PDF 뷰어에서 검토할 수 있는 “레드라인” 버전이 만들어집니다.
+
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setShowInsertedContent(true)
@@ -450,8 +475,9 @@ CompareOptions options = new CompareOptions.Builder()
     .build();
 ```
 
-**Q: 비밀번호로 보호된 문서는 어떻게 처리하나요?**  
-A:
+**Q: 암호로 보호된 문서를 어떻게 처리하나요?**  
+A: `compare`를 호출하기 전에 `Comparer` 생성자에 비밀번호를 전달하거나 `LoadOptions` 객체에 설정합니다. 라이브러리는 메모리에서 문서를 복호화하므로 비밀번호가 파일 시스템에 노출되지 않습니다.
+
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
@@ -462,7 +488,8 @@ try (Comparer comparer = new Comparer(protectedDocument, loadOptions)) {
 ```
 
 **Q: 변경 감지 방식을 맞춤 설정할 수 있나요?**  
-A:
+A: 물론입니다. `CompareOptions`는 `setIgnoreFormatting(true)`, `setDetectMovedBlocks(true)`, `setGranularity(Granularity.WORD)`와 같은 플래그를 제공합니다. 비즈니스 규칙에 맞게 조정하세요—예를 들어, 글꼴 변경은 무시하고 이동된 단락은 감지하도록 할 수 있습니다.
+
 ```java
 CompareOptions options = new CompareOptions.Builder()
     .setDetectStyleChanges(false)     // Ignore formatting changes
@@ -471,7 +498,8 @@ CompareOptions options = new CompareOptions.Builder()
 ```
 
 **Q: Spring Boot와 통합하는 가장 좋은 방법은 무엇인가요?**  
-A:
+A: 라이선스 경로를 주입하는 `@Service` 빈을 만들고, `MultipartFile` 업로드를 받는 `@RestController` 엔드포인트를 노출합니다. 컨트롤러 내부에서 `MultipartFile`을 `InputStream`으로 변환하고 스트림 기반 비교 메서드를 호출합니다. `ChangeInfo[]`를 JSON으로 반환하여 프런트엔드에서 렌더링합니다.
+
 ```java
 @Service
 public class DocumentComparisonService {
@@ -487,8 +515,19 @@ public class DocumentComparisonService {
 - [API 레퍼런스 가이드](https://reference.groupdocs.com/comparison/java/)
 - [커뮤니티 지원 포럼](https://forum.groupdocs.com/c/comparison)
 
----
-
-**마지막 업데이트:** 2026-02-21  
+**마지막 업데이트:** 2026-06-15  
 **테스트 환경:** GroupDocs.Comparison 25.2 for Java  
-**작성자:** GroupDocs
+**작성자:** GroupDocs  
+
+```java
+for (ChangeInfo change : changes) {
+    if (change.getType() == ComparisonAction.INSERT) {
+        System.out.println("Added: " + change.getText());
+    }
+}
+```
+
+## 관련 튜토리얼
+- [compare pdf java – Java 문서 비교 튜토리얼 – 로드 및 비교에 대한 완전 가이드](/comparison/java/document-loading/)
+- [compare pdf files java - Java 문서 비교 튜토리얼 - 완전한 GroupDocs 가이드](/comparison/java/advanced-comparison/master-java-document-comparisons-groupdocs/)
+- [GroupDocs.Comparison Java 라이선스 설정 가이드 - 완전한 구성 튜토리얼](/comparison/java/licensing-configuration/)

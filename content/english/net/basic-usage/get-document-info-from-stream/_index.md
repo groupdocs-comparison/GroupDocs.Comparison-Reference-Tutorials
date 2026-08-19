@@ -1,5 +1,5 @@
 ---
-title: "Extract Document Information from Streams with GroupDocs.Comparison (C#)"
+title: "Extract PDF Document Information from Streams with GroupDocs.Comparison (C#)"
 linktitle: "Extract Document Information .NET"
 description: "Learn how to read file metadata C# using GroupDocs.Comparison, extract file size stream and get document properties stream efficiently."
 keywords:
@@ -46,13 +46,13 @@ schemas:
       XLSX, PPTX, and many image types, making it suitable for virtually any document
       workflow.
   - question: Can I try GroupDocs.Comparison for .NET before purchasing?
-    answer: Absolutely. A free trial is available at [the website](https://releases.groupdocs.com/),
+    answer: Absolutely. A free trial is available at [GroupDocs.Comparison free trial page](https://releases.groupdocs.com/),
       allowing you to evaluate all features without a license.
   - question: Where can I find support for GroupDocs.Comparison for .NET?
     answer: You can get help in the [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison/12),
       where the community and product team respond to questions promptly.
   - question: Are temporary licenses available for testing?
-    answer: Yes. Temporary licenses can be obtained from [the licensing page](https://purchase.groupdocs.com/temporary-license/),
+    answer: Yes. Temporary licenses can be obtained from [temporary license page](https://purchase.groupdocs.com/temporary-license/),
       ideal for development and QA environments.
   - question: Is GroupDocs.Comparison for .NET suitable for enterprise deployments?
     answer: Definitely. It offers enterprise‑grade performance, extensive format support,
@@ -319,13 +319,13 @@ logger.LogInformation($"Document info extraction took {stopwatch.ElapsedMillisec
 A: Yes. The library supports **over 50 file formats**, including DOCX, PDF, XLSX, PPTX, and many image types, making it suitable for virtually any document workflow.
 
 **Q: Can I try GroupDocs.Comparison for .NET before purchasing?**  
-A: Absolutely. A free trial is available at [the website](https://releases.groupdocs.com/), allowing you to evaluate all features without a license.
+A: Absolutely. A free trial is available at [GroupDocs.Comparison free trial page](https://releases.groupdocs.com/), allowing you to evaluate all features without a license.
 
 **Q: Where can I find support for GroupDocs.Comparison for .NET?**  
 A: You can get help in the [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison/12), where the community and product team respond to questions promptly.
 
 **Q: Are temporary licenses available for testing?**  
-A: Yes. Temporary licenses can be obtained from [the licensing page](https://purchase.groupdocs.com/temporary-license/), ideal for development and QA environments.
+A: Yes. Temporary licenses can be obtained from [temporary license page](https://purchase.groupdocs.com/temporary-license/), ideal for development and QA environments.
 
 **Q: Is GroupDocs.Comparison for .NET suitable for enterprise deployments?**  
 A: Definitely. It offers enterprise‑grade performance, extensive format support, and robust error handling, all of which are essential for large‑scale production systems.

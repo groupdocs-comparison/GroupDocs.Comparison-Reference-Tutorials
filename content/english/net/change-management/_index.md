@@ -1,5 +1,5 @@
 ---
-title: "How to Accept Document Changes in C# with GroupDocs.Comparison .NET – Programmatic Change Management"
+title: "How to Programmatically Accept Document Changes in C# – Change Management Guide"
 linktitle: "Change Management Tutorials"
 description: "Learn how to accept document changes c# using GroupDocs.Comparison .NET. This guide covers automated workflows, revision tracking, and C# code examples."
 keywords:

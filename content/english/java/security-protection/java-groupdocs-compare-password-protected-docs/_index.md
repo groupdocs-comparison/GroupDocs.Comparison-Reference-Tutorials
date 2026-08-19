@@ -1,5 +1,5 @@
 ---
-title: "How to Securely Load and Compare Password‑Protected Documents in Java with GroupDocs.Comparison"
+title: "Securely Load and Compare Password‑Protected Documents in Java Using the GroupDocs.Comparison API"
 linktitle: "Compare Password Protected Documents Java"
 description: "Master secure document comparison in Java with GroupDocs. Learn how to compare password protected Java documents safely with best practices & troubleshooting tips."
 keywords:

@@ -1,5 +1,5 @@
 ---
-title: "Extract PDF Document Information from Streams with GroupDocs.Comparison (C#)"
+title: "Extract PDF Document Information from Streams using GroupDocs.Comparison GetDocumentInfo API (C#)"
 linktitle: "Extract Document Information .NET"
 description: "Learn how to read file metadata C# using GroupDocs.Comparison, extract file size stream and get document properties stream efficiently."
 keywords:

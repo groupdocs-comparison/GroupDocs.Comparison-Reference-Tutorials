@@ -1,5 +1,5 @@
 ---
-title: "Automate Accepting and Rejecting Changes with GroupDocs.Comparison for .NET"
+title: "Programmatically Accept and Reject Changes Using GroupDocs.Comparison for .NET"
 linktitle: "Document Comparison .NET Guide"
 description: "Learn how to automate document comparison in .NET with GroupDocs.Comparison, accepting and rejecting changes programmatically. Complete tutorial with real examples and troubleshooting tips."
 keywords:

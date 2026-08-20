@@ -456,5 +456,3 @@ try {
 - [compare pdf java – Εγχειρίδιο σύγκρισης εγγράφων Java – Πλήρης οδηγός φόρτωσης & σύγκρισης εγγράφων](/comparison/java/document-loading/)
 - [compare word docs java – Προηγμένη σύγκριση GroupDocs](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Σύγκριση προστατευμένων με κωδικό Word εγγράφων](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

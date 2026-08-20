@@ -452,5 +452,3 @@ A:
 - [compare pdf java – Java ドキュメント比較チュートリアル – ドキュメントのロードと比較の完全ガイド](/comparison/java/document-loading/)  
 - [compare word docs java – GroupDocs 高度比較](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)  
 - [GroupDocs Comparison Java – パスワード保護された Word ドキュメントの比較](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

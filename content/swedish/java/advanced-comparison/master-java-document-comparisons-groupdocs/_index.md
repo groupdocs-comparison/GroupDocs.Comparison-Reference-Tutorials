@@ -397,5 +397,3 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java-dokumentjämförelsehandledning – Komplett guide för laddning & jämförelse av dokument](/comparison/java/document-loading/)
 - [Hur man använder licens: GroupDocs Comparison Java URL‑konfigurationsguide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Jämför skyddade dokument – Komplett guide](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< blocks/products/products-backtop-button >}}

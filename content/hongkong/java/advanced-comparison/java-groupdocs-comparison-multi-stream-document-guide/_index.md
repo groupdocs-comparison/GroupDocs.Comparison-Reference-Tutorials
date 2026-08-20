@@ -482,5 +482,3 @@ A:
 - [compare pdf java – Java 文件比較教學 – 完整指南：載入與比較文件](/comparison/java/document-loading/)
 - [compare word docs java – GroupDocs 進階比較](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – 比較受密碼保護的 Word 文件](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

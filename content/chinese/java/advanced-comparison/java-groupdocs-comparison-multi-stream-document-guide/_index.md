@@ -450,5 +450,3 @@ A:
 - [compare pdf java – Java 文档比较教程 – 加载与比较文档的完整指南](/comparison/java/document-loading/)
 - [compare word docs java – GroupDocs 高级比较](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – 比较受密码保护的 Word 文档](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

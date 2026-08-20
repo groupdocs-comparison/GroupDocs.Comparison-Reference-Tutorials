@@ -452,5 +452,3 @@ You now have a complete, production‑ready roadmap for **how to use GroupDocs**
 - [compare pdf java – Java Belge Karşılaştırma Eğitimi – Belgeleri Yükleme ve Karşılaştırma Tam Kılavuzu](/comparison/java/document-loading/)
 - [compare word docs java – GroupDocs Gelişmiş Karşılaştırma](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Şifre Koruması Olan Word Belgelerini Karşılaştır](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

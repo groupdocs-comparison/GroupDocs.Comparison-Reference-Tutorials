@@ -484,5 +484,3 @@ Sie haben nun eine vollständige, produktionsreife Roadmap, um **wie man GroupDo
 - [PDF in Java vergleichen – Java-Dokumentvergleichs‑Tutorial – Vollständige Anleitung zum Laden & Vergleichen von Dokumenten](/comparison/java/document-loading/)
 - [Word‑Dokumente in Java vergleichen – GroupDocs Advanced Comparison](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Passwortgeschützte Word‑Dokumente vergleichen](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

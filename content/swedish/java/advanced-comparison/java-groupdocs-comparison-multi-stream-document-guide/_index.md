@@ -476,5 +476,3 @@ Du har nu en komplett, produktionsklar färdplan för **hur man använder GroupD
 - [jämför pdf java – Java-dokumentjämförelsehandledning – Komplett guide för inläsning & jämförelse av dokument](/comparison/java/document-loading/)
 - [jämför word-dokument java – GroupDocs avancerad jämförelse](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Jämför lösenordsskyddade Word-dokument](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-{{< blocks/products/products-backtop-button >}}

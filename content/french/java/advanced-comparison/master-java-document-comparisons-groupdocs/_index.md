@@ -304,8 +304,6 @@ R : Oui. Parcourez le tableau `ChangeInfo[]`, définissez chaque `ComparisonAc
 **Testé avec :** GroupDocs.Comparison 25.2  
 **Auteur :** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Tutoriel de comparaison de documents Java – Guide complet du chargement et de la comparaison de documents](/comparison/java/document-loading/)
 - [Comment utiliser la licence : Guide de configuration d’URL GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java : Comparer des documents protégés – Guide complet](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

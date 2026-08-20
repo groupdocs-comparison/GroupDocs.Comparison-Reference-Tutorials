@@ -302,8 +302,6 @@ A: はい。`ChangeInfo[]` 配列を走査し、各 `ComparisonAction` を `REJE
 **テスト環境:** GroupDocs.Comparison 25.2  
 **作者:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -397,9 +395,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java ドキュメント比較チュートリアル – 文書のロードと比較の完全ガイド](/comparison/java/document-loading/)
 - [ライセンスの使用方法: GroupDocs Comparison Java URL 設定ガイド](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: 保護された文書の比較 – 完全ガイド](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

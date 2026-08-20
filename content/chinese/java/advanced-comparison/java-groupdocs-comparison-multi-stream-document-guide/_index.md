@@ -451,7 +451,4 @@ A:
 - [compare word docs java – GroupDocs 高级比较](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – 比较受密码保护的 Word 文档](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

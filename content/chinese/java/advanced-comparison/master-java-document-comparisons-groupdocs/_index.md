@@ -300,8 +300,6 @@ A: 有。遍历 `ChangeInfo[]` 数组，将每个 `ComparisonAction` 设置为 `
 **测试版本:** GroupDocs.Comparison 25.2  
 **作者:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -395,9 +393,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java 文档比较教程 – 加载与比较文档完整指南](/comparison/java/document-loading/)
 - [如何使用许可证：GroupDocs Comparison Java URL 配置指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java：比较受保护文档 – 完整指南](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

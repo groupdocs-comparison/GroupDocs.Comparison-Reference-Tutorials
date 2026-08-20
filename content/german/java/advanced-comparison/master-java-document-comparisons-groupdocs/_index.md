@@ -304,8 +304,6 @@ A: Ja. Durchlaufen Sie das `ChangeInfo[]`‑Array, setzen Sie jedes `ComparisonA
 **Getestet mit:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java-Dokumentvergleich‑Tutorial – Vollständiger Leitfaden zum Laden & Vergleichen von Dokumenten](/comparison/java/document-loading/)
 - [Wie man Lizenz verwendet: GroupDocs Comparison Java URL‑Konfigurations‑Leitfaden](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Geschützte Dokumente vergleichen – Vollständiger Leitfaden](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

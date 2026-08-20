@@ -481,7 +481,4 @@ Ahora tienes una hoja de ruta completa y lista para producción para **how to us
 - [comparar documentos word java – Comparación avanzada de GroupDocs](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Comparar documentos Word protegidos con contraseña](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

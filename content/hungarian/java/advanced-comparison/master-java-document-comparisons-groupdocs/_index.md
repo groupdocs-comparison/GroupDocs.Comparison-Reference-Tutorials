@@ -304,8 +304,6 @@ V: Igen. Iteráljon a `ChangeInfo[]` tömbön, állítsa minden `ComparisonActio
 **Tesztelve ezzel:** GroupDocs.Comparison 25.2  
 **Szerző:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java Dokumentum-összehasonlítási útmutató – Teljes útmutató a dokumentumok betöltéséhez és összehasonlításához](/comparison/java/document-loading/)
 - [Hogyan használja a licencet: GroupDocs Comparison Java URL konfigurációs útmutató](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Védett dokumentumok összehasonlítása – Teljes útmutató](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

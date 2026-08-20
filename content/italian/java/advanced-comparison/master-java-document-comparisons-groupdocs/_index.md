@@ -304,8 +304,6 @@ R: Sì. Itera sull'array `ChangeInfo[]`, imposta ogni `ComparisonAction` su `REJ
 **Testato con:** GroupDocs.Comparison 25.2  
 **Autore:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Tutorial di confronto documenti Java – Guida completa al caricamento e al confronto dei documenti](/comparison/java/document-loading/)
 - [Guida alla configurazione dell'URL della licenza per GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Confronta documenti protetti – Guida completa](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

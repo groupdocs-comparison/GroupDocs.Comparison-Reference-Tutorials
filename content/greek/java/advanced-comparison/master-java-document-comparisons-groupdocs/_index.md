@@ -304,8 +304,6 @@ A: Ναι. Επανάληψη πάνω στον πίνακα `ChangeInfo[]`, ο�
 **Δοκιμάστηκε με:** GroupDocs.Comparison 25.2  
 **Συγγραφέας:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Οδηγός Σύγκρισης Εγγράφων Java – Πλήρης Οδηγός Φόρτωσης & Σύγκρισης Εγγράφων](/comparison/java/document-loading/)
 - [Πώς να Χρησιμοποιήσετε Άδεια: Οδηγός Διαμόρφωσης URL για GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Σύγκριση Προστατευμένων Εγγράφων – Πλήρης Οδηγός](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

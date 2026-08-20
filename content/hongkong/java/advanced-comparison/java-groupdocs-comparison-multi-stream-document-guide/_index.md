@@ -483,8 +483,4 @@ A:
 - [compare word docs java – GroupDocs 進階比較](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – 比較受密碼保護的 Word 文件](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

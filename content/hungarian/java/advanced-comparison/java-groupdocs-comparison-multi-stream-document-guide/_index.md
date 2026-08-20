@@ -475,7 +475,4 @@ Most már rendelkezik egy teljes, termelésre kész útitervvel a **GroupDocs ha
 - [word dokumentumok java összehasonlítása – GroupDocs Haladó Összehasonlítás](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)  
 - [GroupDocs Comparison Java – Jelszóval védett Word dokumentumok összehasonlítása](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

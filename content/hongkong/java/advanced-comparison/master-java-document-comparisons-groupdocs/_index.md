@@ -302,11 +302,6 @@ A: 有。遍歷 `ChangeInfo[]` 陣列，將每個 `ComparisonAction` 設為 `REJ
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
-
-
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -400,11 +395,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java 文件比較教學 – 完整載入與比較文件指南](/comparison/java/document-loading/)
 - [如何使用授權：GroupDocs Comparison Java URL 設定指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java：比較受保護文件 – 完整指南](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

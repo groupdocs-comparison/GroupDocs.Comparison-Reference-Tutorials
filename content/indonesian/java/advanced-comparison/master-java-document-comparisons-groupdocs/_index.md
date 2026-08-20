@@ -305,8 +305,6 @@ A: Ya. Iterasi array `ChangeInfo[]`, set setiap `ComparisonAction` ke `REJECT`, 
 **Diuji Dengan:** GroupDocs.Comparison 25.2  
 **Penulis:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -400,9 +398,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Tutorial Perbandingan Dokumen Java – Panduan Lengkap Memuat & Membandingkan Dokumen](/comparison/java/document-loading/)
 - [Cara Menggunakan Lisensi: Panduan Konfigurasi URL GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Membandingkan Dokumen Dilindungi – Panduan Lengkap](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

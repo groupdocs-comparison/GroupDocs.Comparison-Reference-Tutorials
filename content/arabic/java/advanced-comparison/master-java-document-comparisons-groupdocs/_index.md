@@ -302,8 +302,6 @@ try (Comparer comparer = new Comparer("contract_v1.docx")) {
 **تم الاختبار مع:** GroupDocs.Comparison 25.2  
 **المؤلف:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -397,9 +395,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – دليل مقارنة المستندات Java – دليل كامل للتحميل ومقارنة المستندات](/comparison/java/document-loading/)
 - [كيفية استخدام الترخيص: دليل تكوين عنوان URL لمقارنة GroupDocs Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: مقارنة المستندات المحمية – دليل كامل](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

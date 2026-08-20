@@ -486,8 +486,4 @@ Anda kini memiliki peta jalan lengkap dan siap produksi untuk **cara menggunakan
 - [bandingkan dokumen word java – GroupDocs Advanced Comparison](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Bandingkan Dokumen Word yang Dilindungi Kata Sandi](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

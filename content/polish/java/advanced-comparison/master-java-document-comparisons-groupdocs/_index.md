@@ -306,11 +306,6 @@ A: Tak. Przejdź iteracyjnie po tablicy `ChangeInfo[]`, ustaw każdy `Comparison
 **Testowano z:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
-
-
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -404,10 +399,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Samouczek porównywania dokumentów Java – Kompletny przewodnik po ładowaniu i porównywaniu dokumentów](/comparison/java/document-loading/)
 - [Jak używać licencji: Przewodnik konfiguracji URL GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Porównywanie chronionych dokumentów – Kompletny przewodnik](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

@@ -457,7 +457,4 @@ try {
 - [compare word docs java – Προηγμένη σύγκριση GroupDocs](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – Σύγκριση προστατευμένων με κωδικό Word εγγράφων](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

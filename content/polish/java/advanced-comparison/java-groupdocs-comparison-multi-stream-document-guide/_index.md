@@ -451,7 +451,4 @@ Masz teraz kompletną, gotową do produkcji mapę drogową, jak **jak używać G
 - [porównaj dokumenty word java – Zaawansowane porównanie GroupDocs](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)  
 - [GroupDocs Comparison Java – Porównaj zabezpieczone hasłem dokumenty Word](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

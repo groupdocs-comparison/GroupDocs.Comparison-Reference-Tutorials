@@ -304,8 +304,6 @@ C: Evet. `ChangeInfo[]` dizisini döngüyle gezerek her `ComparisonAction` değe
 **Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
 **Yazar:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java Belge Karşılaştırma Öğreticisi – Belgeleri Yükleme ve Karşılaştırma İçin Tam Kılavuz](/comparison/java/document-loading/)
 - [Lisans Kullanımı: GroupDocs Comparison Java URL Yapılandırma Kılavuzu](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Korunan Belgeleri Karşılaştırma – Tam Kılavuz](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

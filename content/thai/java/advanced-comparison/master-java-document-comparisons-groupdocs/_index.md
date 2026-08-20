@@ -300,8 +300,6 @@ A: มี ให้วนลูปผ่านอาร์เรย์ `ChangeIn
 **ทดสอบกับ:** GroupDocs.Comparison 25.2  
 **ผู้เขียน:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -395,9 +393,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [เปรียบเทียบ pdf java – บทแนะนำการเปรียบเทียบเอกสาร Java – คู่มือเต็มในการโหลดและเปรียบเทียบเอกสาร](/comparison/java/document-loading/)
 - [วิธีใช้ไลเซนส์: คู่มือการกำหนดค่า URL ของ GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: เปรียบเทียบเอกสารที่ป้องกัน – คู่มือเต็ม](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

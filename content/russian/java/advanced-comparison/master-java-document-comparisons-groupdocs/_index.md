@@ -304,8 +304,6 @@ A: Да. Пройдитесь по массиву `ChangeInfo[]`, установ
 **Тестировано с:** GroupDocs.Comparison 25.2  
 **Автор:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -399,9 +397,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – учебник по сравнению документов Java – Полное руководство по загрузке и сравнению документов](/comparison/java/document-loading/)
 - [Как использовать лицензию: Руководство по конфигурации URL для GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Сравнение защищённых документов – Полное руководство](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

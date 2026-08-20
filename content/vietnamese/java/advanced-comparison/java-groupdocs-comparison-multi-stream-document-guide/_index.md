@@ -455,7 +455,4 @@ Bạn giờ đã có một lộ trình đầy đủ, sẵn sàng cho production 
 - [so sánh word docs java – So sánh Nâng Cao GroupDocs](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)
 - [GroupDocs Comparison Java – So sánh Tài liệu Word được Bảo vệ Mật khẩu](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
 
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 {{< blocks/products/products-backtop-button >}}

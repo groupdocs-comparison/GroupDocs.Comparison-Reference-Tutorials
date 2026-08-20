@@ -306,11 +306,6 @@ A: Yes. Iterate over the `ChangeInfo[]` array, set each `ComparisonAction` to `R
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
-
-
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -404,11 +399,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use License: GroupDocs Comparison Java URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: Compare Protected Documents – Complete Guide](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

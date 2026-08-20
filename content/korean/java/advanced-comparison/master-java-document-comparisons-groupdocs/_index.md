@@ -302,8 +302,6 @@ A: 예. `ChangeInfo[]` 배열을 순회하면서 각 `ComparisonAction` 을 `REJ
 **테스트 환경:** GroupDocs.Comparison 25.2  
 **작성자:** GroupDocs  
 
-{{< blocks/products/pf/tutorial-page-section >}}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 import java.nio.file.Path;
@@ -397,9 +395,5 @@ public void processBatch(List<DocumentPair> pairs) {
 - [compare pdf java – Java 문서 비교 튜토리얼 – 로드 및 비교 완전 가이드](/comparison/java/document-loading/)
 - [License 사용 방법: GroupDocs Comparison Java URL 구성 가이드](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Comparison Java: 보호된 문서 비교 – 완전 가이드](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
 
 {{< blocks/products/products-backtop-button >}}

@@ -338,6 +338,6 @@ A: Definitely. It offers enterprise‑grade performance, extensive format suppor
 
 ## Related Tutorials
 
-{{< relref "comparison/net/basic-usage/get-document-info-from-path/_index.md" >}}
-{{< relref "comparison/net/metadata-management/_index.md" >}}
-{{< relref "comparison/net/loading-and-saving-documents/saving-documents-metadata-source/_index.md" >}}
+- [Get Document Properties C# .NET - Extract File Metadata](/comparison/net/basic-usage/get-document-info-from-path/)
+- [Document Metadata Management .NET - Complete Guide for GroupDocs.Comparison](/comparison/net/metadata-management/)
+- [Document Comparison .NET Tutorial - Preserve Metadata with GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)

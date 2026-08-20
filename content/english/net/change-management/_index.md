@@ -87,9 +87,9 @@ Automating the acceptance of changes eliminates the manual “track changes” b
 - **Compliance:** Generates revision reports that meet ISO 27001 and GDPR traceability requirements.
 
 ## Available Tutorials
-- [Master Document Change Management: Accept and Reject Edits with GroupDocs.Comparison .NET]({{< relref "groupdocs-comparison-net-accept-reject-changes/_index.md" >}})
-- [Master Document Revisions Efficiently with GroupDocs.Comparison .NET: A Comprehensive Guide]({{< relref "groupdocs-comparison-net-document-revisions-guide/_index.md" >}})
-- [Set Author of Changes in Document Comparison Using GroupDocs.Comparison for .NET]({{< relref "groupdocs-comparison-net-set-author-changes-document-comparison/_index.md" >}})
+- [Master Document Change Management: Accept and Reject Edits with GroupDocs.Comparison .NET](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [Master Document Revisions Efficiently with GroupDocs.Comparison .NET: A Comprehensive Guide](/comparison/net/change-management/groupdocs-comparison-net-document-revisions-guide/)
+- [Set Author of Changes in Document Comparison Using GroupDocs.Comparison for .NET](/comparison/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/)
 
 ## Prerequisites
 - .NET 6.0 or later (or .NET Framework 4.7.2+)  
@@ -199,6 +199,6 @@ Start by cloning the **Accept and Reject Edits** tutorial, then experiment with 
 
 ## Related Tutorials
 
-- [Document Comparison .NET: Accept & Reject Changes Programmatically]({{< relref "comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/_index.md" >}})
-- [Track Document Changes .NET - Complete Author Management Guide]({{< relref "comparison/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/_index.md" >}})
-- [Document Comparison Options .NET - Complete Configuration Guide]({{< relref "comparison/net/comparison-options/_index.md" >}})
+- [Document Comparison .NET: Accept & Reject Changes Programmatically](/comparison/net/change-management/groupdocs-comparison-net-accept-reject-changes/)
+- [Track Document Changes .NET - Complete Author Management Guide](/comparison/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/)
+- [Document Comparison Options .NET - Complete Configuration Guide](/comparison/net/comparison-options/)

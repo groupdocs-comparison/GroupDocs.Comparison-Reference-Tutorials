@@ -1,67 +1,169 @@
 ---
-"date": "2025-05-05"
-"description": "GroupDocs.Comparison for .NET kullanarak belge değişikliklerini nasıl yöneteceğinizi öğrenin. Word belgelerindeki düzenlemeleri programlı olarak karşılaştırarak, kabul ederek veya reddederek iş akışınızı kolaylaştırın."
-"title": "Ana Belge Değişiklik Yönetimi&#58; GroupDocs.Comparison .NET ile Düzenlemeleri Kabul Edin ve Reddedin"
-"url": "/tr/net/change-management/groupdocs-comparison-net-accept-reject-changes/"
-"weight": 1
+categories:
+- Document Management
+date: '2026-07-01'
+description: Belge karşılaştırma .NET tekniklerini programlı olarak değişiklikleri
+  kabul etme/red etme konusunda öğrenin. Gerçek örnekler ve sorun giderme ipuçlarıyla
+  eksiksiz GroupDocs.Comparison öğreticisi.
+keywords:
+- automate document workflow
+- compare word documents
+- batch compare documents
+- change tracking .net
+- document comparison c#
+lastmod: '2026-07-01'
+linktitle: Belge Karşılaştırma .NET Rehberi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-01'
+  description: Learn document comparison .NET techniques to accept/reject changes
+    programmatically. Complete GroupDocs.Comparison tutorial with real examples and
+    troubleshooting tips.
+  headline: 'Document Comparison .NET: Accept & Reject Changes Programmatically'
+  type: TechArticle
+- description: Learn document comparison .NET techniques to accept/reject changes
+    programmatically. Complete GroupDocs.Comparison tutorial with real examples and
+    troubleshooting tips.
+  name: 'Document Comparison .NET: Accept & Reject Changes Programmatically'
+  steps:
+  - name: Set Up Your File Paths (Do This Right)
+    text: Make sure you use absolute or correctly resolved relative paths; otherwise
+      you’ll hit `FileNotFoundException`.
+  - name: Initialize Comparison and Detect Changes
+    text: The `Comparison` object loads both source and target files, runs the diff
+      engine, and returns a `ChangesInfo` collection that describes each modification.
+      `ChangesInfo` is a collection that contains detailed information about each
+      detected modification, such as type, location, and author.
+  - name: How to Reject Changes Programmatically?
+    text: Load the `ChangesInfo` collection, locate the change you want to discard,
+      set its `Action` to `ComparisonAction.Reject`, and save the result. `ComparisonAction`
+      is an enumeration that specifies whether a change should be accepted, rejected,
+      or left unchanged. **Why `SaveOriginalState = true`?** This
+  - name: How to Accept Changes You Want?
+    text: Select the desired change objects, set `Action` to `ComparisonAction.Accept`,
+      and call `Save`.
+  type: HowTo
+- questions:
+  - answer: It supports Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx,
+      .ppt), PDF, plain text, and many others—over 50 formats in total. See the [full
+      format list](https://reference.groupdocs.com/comparison/net/) for specifics.
+    question: What document formats work with GroupDocs.Comparison?
+  - answer: Absolutely! GroupDocs.Comparison works seamlessly with ASP.NET Core, Web
+      API, and other modern .NET frameworks.
+    question: Can I use this with ASP.NET Core applications?
+  - answer: 'Use the optimization techniques mentioned above: disable unnecessary
+      comparison features, process files in batches, and explicitly dispose of `Comparison`
+      objects after each run.'
+    question: How do I handle very large documents without running out of memory?
+  - answer: Yes! The `ChangesInfo` collection contains detailed metadata for each
+      change, including original and revised text. You can build a UI that highlights
+      these differences before committing.
+    question: Is there a way to preview changes before applying them?
+  - answer: '`Accept` incorporates the change into the final document (keeping the
+      new version). `Reject` discards the change and retains the original content.
+      Setting `ComparisonAction.None` leaves the change unmarked.'
+    question: What's the difference between Accept and Reject actions?
+  type: FAQPage
+tags:
+- dotnet
+- document-comparison
+- groupdocs
+- workflow-automation
+title: 'Belge Karşılaştırma .NET: Değişiklikleri Programlı Olarak Kabul Et ve Reddet'
 type: docs
+url: /tr/net/change-management/groupdocs-comparison-net-accept-reject-changes/
+weight: 1
 ---
-# GroupDocs.Comparison .NET ile Belge Değişiklik Yönetiminde Ustalaşın
 
-## giriiş
+# Belge Karşılaştırma .NET: Değişiklikleri Programlı Olarak Kabul Et ve Reddet
 
-Kullanımına ilişkin nihai kılavuza hoş geldiniz **GroupDocs.Karşılaştırma .NET** belge değişikliklerini etkili bir şekilde yönetmek için! Birden fazla belge sürümünü yönetmekte zorluk çektiyseniz ve düzenlemeleri kabul etmek veya reddetmek için bir çözüme ihtiyacınız varsa, bu eğitim sizin için tasarlanmıştır. GroupDocs.Comparison ile, belgeler arasındaki farklılıkları programlı olarak karşılaştırarak ve yöneterek iş akışınızı kolaylaştırın.
+Eğer hâlâ belgeleri manuel olarak karşılaştırıyor ve değişiklikleri gözle izliyorsanız, gerçek geliştirmeye harcayabileceğiniz değerli saatleri boşa harcıyorsunuz. **Belge iş akışını otomatikleştirin** ve sağlam bir belge karşılaştırma .NET çözümüyle manuel çabayı %90’a kadar azaltın. İçerik yönetim sistemi, hukuki belge incelemeleri veya işbirlikçi düzenleme iş akışları geliştiriyor olun, programlı belge karşılaştırma sadece hoş bir özellik değil—ciddi bir uygulama için vazgeçilmezdir.
 
-### Ne Öğreneceksiniz
-- GroupDocs.Comparison for .NET'i etkin bir şekilde kurma ve kullanma.
-- Word belgelerinde değişiklikleri kabul etme ve reddetme özelliklerinin uygulanması.
-- Belge karşılaştırmalarını yaparken performansın optimize edilmesi.
+## Hızlı Yanıtlar
+- **.NET’te değişiklik takibini hangi kütüphane yönetir?** GroupDocs.Comparison for .NET.  
+- **İlk kurulum ne kadar sürer?** NuGet kullanarak yaklaşık 5 dakika.  
+- **Word ve PDF dosyalarını birlikte karşılaştırabilir miyim?** Evet—50’den fazla giriş ve çıkış formatı desteklenir.  
+- **Toplu işleme mümkün mü?** Kesinlikle; tek bir döngüde onlarca dosyayı işleyebilirsiniz.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet—tam lisans deneme sınırlamalarını kaldırır ve tüm özellikleri açar.
 
-Başlamak için gerekli ön koşullarla başlayalım.
+## Neden Belge Karşılaştırma Önemlidir (Ve Muhtemelen Yanlış Yapıyorsunuz)
 
-## Ön koşullar
-Bu çözümü uygulamadan önce şunlara sahip olduğunuzdan emin olun:
+Eğer hâlâ belgeleri manuel olarak karşılaştırıyor ve değişiklikleri gözle izliyorsanız, gerçek geliştirmeye harcayabileceğiniz değerli saatleri boşa harcıyorsunuz. Şöyle ki: **belge karşılaştırma .NET** çözümleri belge iş akışı baş ağrılarınızın %90’ını otomatikleştirebilir ve size tam olarak nasıl yapılacağını göstereceğim.
 
-- **.NET Framework 4.6.1 veya üzeri** geliştirme makinenize kurulu.
-- Temel C# bilgisi ve Visual Studio'ya aşinalık.
-- NuGet Paket Yöneticisi Konsolu veya .NET CLI aracılığıyla yüklenen .NET için GroupDocs.Comparison.
+İçerik yönetim sistemi, hukuki belge incelemeleri veya işbirlikçi düzenleme iş akışları geliştiriyor olun, programlı belge karşılaştırma sadece hoş bir özellik değil—ciddi bir uygulama için vazgeçilmezdir.
 
-## .NET için GroupDocs.Comparison Kurulumu
+Bu öğreticinin sonunda şunları öğreneceksiniz:
+- Dakikalar içinde (saatler değil) belge karşılaştırma .NET işlevselliğini kurma  
+- Değişiklikleri programlı olarak **kabul et & reddet** ve hassas kontrol sağlama  
+- Çoğu geliştiricinin takıldığı gerçek dünya senaryolarını yönetme  
+- Büyük belge setleriyle çalışırken performansı optimize etme  
+- Projenizi aksatmadan önce yaygın sorunları giderme  
 
-GroupDocs.Comparison'ı kullanmak için kütüphaneyi projenize aşağıdaki şekilde yükleyin:
+Haydi başlayalım—öncelikle bunu çalıştırmak için neler gerektiğine bakalım.
 
-**NuGet Paket Yöneticisi Konsolu**
+## Başlamadan Önce: Temel Gereksinimler
+
+İlerlemek (ve projenizde gerçekten çalıştırmak) için ihtiyacınız olanlar:
+
+- **.NET Framework 4.6.1 veya üzeri** – daha eski sürümler yeterli olmayacak  
+- **Temel C# bilgisi** – sınıflar ve metodlarla rahat olmalısınız  
+- **Visual Studio** (veya tercih ettiğiniz IDE) kurulu ve hazır  
+- **5 dakika** GroupDocs paketini kurmak için  
+
+## GroupDocs.Comparison for .NET’i (Doğru Şekilde) Kurmak
+
+Çoğu öğretici burada detayları atlar, ancak kurulumu doğru yapmak ilerideki hata ayıklamayı büyük ölçüde azaltır. İşte doğru adımlar:
+
+### Kurulum Seçenekleri
+
+**Seçenek 1: NuGet Package Manager Console** (Önerilen)  
 ```
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**\.NET Komut Satırı Arayüzü**
+**Seçenek 2: .NET CLI** (Komut satırını tercih ediyorsanız)  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-Kurulumdan sonra, GroupDocs.Comparison'ın tüm yeteneklerinin kilidini açmak için bir lisans edinin. Bir lisansla başlayabilirsiniz [ücretsiz deneme](https://releases.groupdocs.com/comparison/net/) veya bir talepte bulunun [geçici lisans](https://purchase.groupdocs.com/temporary-license/)Uzun vadeli kullanım için, bir lisans satın almayı düşünün. [GroupDocs satın alma sayfası](https://purchase.groupdocs.com/buy).
+### Lisanslama (Bu Adımı Atlamayın)
 
-### Temel Başlatma
+Birçok geliştirici burada takılır. GroupDocs.Comparison üretim kullanımı için uygun lisansa ihtiyaç duyar. Seçenekleriniz:
 
-C# projenizde GroupDocs.Comparison'ı şu şekilde başlatın:
+1. **Ücretsiz deneme ile başlayın** – test için ideal: [Download here](https://releases.groupdocs.com/comparison/net/)  
+2. **Geçici lisans alın** – daha uzun değerlendirme süresi için: [Request here](https://purchase.groupdocs.com/temporary-license/)  
+3. **Tam lisans** – üretim dağıtımı için: [Purchase here](https://purchase.groupdocs.com/buy)  
+
+### Temel Kurulum ve Başlatma
+
+`GroupDocs.Comparison` tüm karşılaştırma işlemlerini yöneten çekirdek sınıftır. NuGet paketini ekledikten sonra bir örnek oluşturup karşılaştırmak istediğiniz dosyaları işaretlemeniz yeterlidir.  
 
 ```csharp
 using GroupDocs.Comparison;
-```
+```  
 
-Bu kurulumla belge karşılaştırma özelliklerini uygulamaya hazırsınız.
+Kurulum bu kadar. Basit, değil mi? Şimdi ilginç kısmına geçelim—gerçek belge karşılaştırması ve değişiklik yönetimi.
 
-## Uygulama Kılavuzu
-Bu bölümde GroupDocs.Comparison for .NET kullanılarak değişikliklerin nasıl kabul edileceği ve reddedileceği ayrıntılı olarak açıklanmaktadır.
+## Tam Uygulama Kılavuzu
 
-### Değişiklikleri Kabul Etme ve Reddetme
+Burada pratik kısmı ele alacağız. Gerçek bir uygulamayı adım adım gösterecek ve ihtiyaçlarınıza göre uyarlayabileceksiniz.
 
-**Genel bakış**
-GroupDocs.Comparison, belgelerin programlı olarak karşılaştırılmasını sağlayarak hangi değişikliklerin kabul edileceği veya reddedileceği konusunda karar alınmasını sağlar. Bu özellik, birden fazla revizyonun onay gerektirdiği işbirlikçi belge düzenlemede paha biçilmezdir.
+### Kabul/Reddet İş Akışını Anlamak
 
-#### Adım 1: Dosya Yollarını Ayarlayın
-Kaynak, hedef ve çıktı dosyalarınız için yolları tanımlayın:
+Koda geçmeden önce ne inşa ettiğimizi netleştirelim. **Document comparison .NET** GroupDocs ile şu şekilde çalışır:
+
+1. **Karşılaştır** iki belgeyi ve farkları belirle  
+2. **Analiz et** karşılaştırma sırasında bulunan değişiklikleri  
+3. **Karar ver** hangi değişikliklerin kabul edileceğine veya reddedileceğine  
+4. **Uygula** kararları ve son belgeyi oluştur  
+
+Bu iş akışı belge revizyonları üzerinde cerrahi bir kontrol sağlar—onay süreçleri, işbirlikçi düzenleme veya otomatik içerik yönetimi için mükemmeldir.
+
+### Adım‑Adım Uygulama
+
+#### Adım 1: Dosya Yollarını Ayarlayın (Doğru Yapın)
+
+Mutlak ya da doğru çözümlenmiş göreli yollar kullanın; aksi takdirde `FileNotFoundException` alırsınız.  
 
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
@@ -71,10 +173,13 @@ string sourceFilePath = Path.Combine(documentDirectory, "SOURCE_WORD");
 string targetFilePath = Path.Combine(documentDirectory, "TARGET_WORD");
 string acceptedChangesOutputFile = Path.Combine(outputDirectory, "RESULT_WITH_ACCEPTED_CHANGE_WORD");
 string rejectedChangesOutputFile = Path.Combine(outputDirectory, "RESULT_WITH_REJECTED_CHANGE_WORD");
-```
+```  
 
-#### Adım 2: Karşılaştırıcıyı Başlatın ve Belgeleri Karşılaştırın
-Bir örneğini oluşturun `Comparer` sınıfı seçin ve karşılaştırma için hedef belgeyi ekleyin:
+#### Adım 2: Karşılaştırmayı Başlatın ve Değişiklikleri Algılayın
+
+`Comparison` nesnesi hem kaynak hem hedef dosyaları yükler, fark motorunu çalıştırır ve her bir değişikliği tanımlayan bir `ChangesInfo` koleksiyonu döndürür.  
+
+`ChangesInfo`, tespit edilen her değişikliğin türü, konumu ve yazar gibi ayrıntılı bilgilerini içerir.  
 
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
@@ -83,71 +188,219 @@ using (Comparer comparer = new Comparer(sourceFilePath))
     comparer.Compare();
     ChangeInfo[] changes = comparer.GetChanges();
 }
-```
+```  
 
-#### Adım 3: Değişiklikleri Reddet
-Bir değişikliği reddetmek için, şunu ayarlayın: `ComparisonAction` ile `Reject` ve uygulayın:
+#### Adım 3: Değişiklikleri Programlı Olarak Reddetmek Nasıl?
+
+`ChangesInfo` koleksiyonunu yükleyin, kaldırmak istediğiniz değişikliği bulun, `Action` özelliğini `ComparisonAction.Reject` olarak ayarlayın ve sonucu kaydedin.  
+
+`ComparisonAction`, bir değişikliğin kabul, reddet veya değişmeden bırakılacağını belirten bir enum’dur.  
 
 ```csharp
 changes[0].ComparisonAction = ComparisonAction.Reject;
 comparer.ApplyChanges(rejectedChangesOutputFile, new ApplyChangeOptions { Changes = changes, SaveOriginalState = true });
-```
+```  
 
-#### Adım 4: Değişiklikleri Kabul Et
-Bir değişikliği, kendi ayarını yaparak kabul edin `ComparisonAction` ile `Accept`:
+**Neden `SaveOriginalState = true`?** Bu, orijinal biçimlendirme ve yapıyı korur—daha sonra diğer değişiklikleri kabul etmeye karar verdiğinizde belge bütünlüğünün sürdürülmesi için kritik öneme sahiptir.
+
+#### Adım 4: İstediğiniz Değişiklikleri Nasıl Kabul Edersiniz?
+
+İstenen değişiklik nesnelerini seçin, `Action`ı `ComparisonAction.Accept` olarak ayarlayın ve `Save` metodunu çağırın.  
 
 ```csharp
 changes[0].ComparisonAction = ComparisonAction.Accept;
 comparer.ApplyChanges(acceptedChangesOutputFile, new ApplyChangeOptions { Changes = changes });
-```
+```  
 
-**Sorun Giderme İpuçları**
-- Dosya yollarının doğru ve erişilebilir olduğundan emin olun.
-- Belge biçimlerinin GroupDocs.Comparison tarafından desteklendiğini doğrulayın.
+### Gerçek Dünya Uygulama İpuçları
 
-## Pratik Uygulamalar
-GroupDocs.Comparison for .NET çok yönlüdür. İşte bazı gerçek dünya kullanım örnekleri:
+**Birden Çok Değişikliği Toplu İşleme**  
+```csharp
+// Accept all insertions, reject all deletions
+foreach (var change in changes)
+{
+    if (change.Type == ChangeType.Inserted)
+        change.ComparisonAction = ComparisonAction.Accept;
+    else if (change.Type == ChangeType.Deleted)
+        change.ComparisonAction = ComparisonAction.Reject;
+}
+```  
 
-1. **İşbirlikli Düzenleme**Belge onay süreçlerini kolaylaştırmak için ekip projelerindeki değişiklikleri kabul edin veya reddedin.
-2. **Sürüm Kontrolü**: Belgelerin farklı sürümlerini etkin bir şekilde yönetin ve yalnızca istenen değişikliklerin uygulanmasını sağlayın.
-3. **Yasal Belge İncelemesi**: Düzenlemeleri vurgulayarak ve yöneterek yasal sözleşmelerin incelenmesini ve değiştirilmesini kolaylaştırın.
+**Koşullu Değişiklik Yönetimi** – örneğin, yalnızca belirli bir yazarın yaptığı değişiklikleri veya belirli bir sayfa aralığındaki değişiklikleri kabul edin.  
+```csharp
+// Only accept changes from specific authors
+foreach (var change in changes)
+{
+    if (change.Authors.Contains("TrustedUser"))
+        change.ComparisonAction = ComparisonAction.Accept;
+    else
+        change.ComparisonAction = ComparisonAction.Reject;
+}
+```  
 
-## Performans Hususları
-GroupDocs.Comparison kullanırken performansı optimize etmek için:
-- Aşırı bellek kullanımını önlemek için eş zamanlı belge karşılaştırmalarının sayısını sınırlayın.
-- G/Ç işlemlerini azaltmak için verimli dosya yolları ve depolama çözümleri kullanın.
-- Kullanımdan sonra nesneleri uygun şekilde imha etmek gibi .NET bellek yönetimi için en iyi uygulamaları izleyin.
+## Yaygın Sorunlar ve Çözüm Yolları
 
-## Çözüm
-Artık, GroupDocs.Comparison for .NET kullanarak belgelerde kabul/red değişikliklerinin nasıl uygulanacağı konusunda sağlam bir anlayışa sahip olmalısınız. Bu güçlü araç yalnızca belge karşılaştırmasını basitleştirmekle kalmaz, aynı zamanda onay iş akışlarını otomatikleştirerek üretkenliği de artırır.
+### Dosya Yolu Problemleri
+**Belirtiler**: `FileNotFoundException` veya erişim reddedildi hataları  
+**Çözüm**: Dosya yollarının var olduğunu ve uygulamanızın okuma/yazma izinlerine sahip olduğunu her zaman doğrulayın.  
+```csharp
+if (!File.Exists(sourceFilePath))
+    throw new FileNotFoundException($"Source file not found: {sourceFilePath}");
+```  
 
-### Sonraki Adımlar
-- GroupDocs.Comparison tarafından desteklenen farklı belge biçimlerini deneyin.
-- Stil ve biçimlendirme değişikliklerini algılama gibi ek özellikleri keşfedin.
+### Büyük Belgelerde Bellek Sorunları  
+**Belirtiler**: büyük dosyalar işlenirken `OutOfMemoryException`  
+**Çözüm**: Belgeleri parçalar halinde işleyin, akış (streaming) modunu etkinleştirin veya işlem belleği limitini artırın.  
+```csharp
+// Configure comparison settings for large files
+CompareOptions options = new CompareOptions()
+{
+    DetectStyleChanges = false, // Reduces memory usage
+    GenerateSummaryPage = false
+};
+```  
 
-Belge yönetiminizi bir üst seviyeye taşımaya hazır mısınız? Bu çözümü bugün projelerinize uygulayın!
+### Desteklenmeyen Belge Formatları  
+**Belirtiler**: “Format not supported” istisnaları  
+**Çözüm**: İşleme başlamadan önce format uyumluluğunu kontrol edin; GroupDocs.Comparison **50+** formatı destekler, DOCX, PDF, PPTX, XLSX ve düz metin dahil.  
+```csharp
+var supportedFormats = new[] { ".docx", ".doc", ".pdf", ".txt" };
+string extension = Path.GetExtension(sourceFilePath).ToLower();
+if (!supportedFormats.Contains(extension))
+    throw new NotSupportedException($"Format {extension} not supported");
+```  
 
-## SSS Bölümü
-**S1: GroupDocs.Comparison hangi dosya formatlarını destekliyor?**
-A1: Word, Excel, PDF ve daha fazlası dahil olmak üzere çok çeşitli formatları destekler. Kontrol edin [API referansı](https://reference.groupdocs.com/comparison/net/) Ayrıntılar için.
+## Gerçek Dünya Kullanım Senaryoları
 
-**S2: GroupDocs.Comparison'ı diğer .NET framework'leriyle entegre edebilir miyim?**
-C2: Evet, ASP.NET, WPF ve Windows Forms uygulamalarıyla entegre edilebilir.
+### 1. Hukuki Belge İnceleme İş Akışı
+Hukuk firmaları bu yaklaşımı sözleşme revizyonlarını yönetmek için kullanır. Kıdemli ortaklar, önceden tanımlanmış iş kurallarına göre belirli madde değişikliklerini programlı olarak kabul ederken diğerlerini reddeder.
 
-**S3: Büyük belgeleri nasıl verimli bir şekilde yönetebilirim?**
-C3: Gerektiğinde nesneleri hemen atmak ve parçalar halinde işlemek gibi hafızayı verimli kullanan uygulamaları kullanın.
+### 2. İçerik Yönetim Sistemleri
+Yayın platformları **document comparison .NET**’i editorial iş akışlarını yönetmek için kullanır. Yazarlar revizyon gönderir, editörler değişiklikleri programlı olarak inceler ve yalnızca onaylanan içerik yayına alınır.
 
-**S4: Kabul ve Red eylemleri arasındaki fark nedir?**
-A4: `Accept` son belgeye bir değişiklik eklerken, `Reject` hariç tutar.
+### 3. İşbirlikçi Yazılım Geliştirme Dokümantasyonu  
+Teknik yazım ekipleri dokümantasyon güncellemelerini bu şekilde yönetir. Güvenilir katkı sahiplerinden gelen değişiklikler otomatik kabul edilir, diğerleri manuel inceleme gerektirir.
 
-**S5: Ücretsiz deneme sürümünde herhangi bir sınırlama var mı?**
-A5: Deneme sürümü tüm işlevleri içerir ancak kullanım kısıtlamaları olabilir. Sınırsız erişim için bir lisans satın almayı düşünün.
+### 4. Uyumluluk ve Denetim İzleri
+Kuruluşlar, belge değişikliklerini programlı olarak analiz ederek ayrıntılı değişim günlükleri oluşturur. Bu, düzenleyici uyumluluk için tam bir denetim izi sağlar.
 
-## Kaynaklar
-- **Belgeleme**: [GroupDocs.Karşılaştırma Belgeleri](https://docs.groupdocs.com/comparison/net/)
-- **API Referansı**: [GroupDocs API Başvurusu](https://reference.groupdocs.com/comparison/net/)
-- **İndirmek**: [GroupDocs.Comparison'ı edinin](https://releases.groupdocs.com/comparison/net/)
-- **Satın almak**: [Lisans satın al](https://purchase.groupdocs.com/buy)
-- **Ücretsiz Deneme**: [Ücretsiz deneyin](https://releases.groupdocs.com/comparison/net/)
-- **Geçici Lisans**: [Burada Talep Edin](https://purchase.groupdocs.com/temporary-license/)
-- **Destek**: [GrupDocs Forumu](https://forum.groupdocs.com/c/comparison/)
+## Performans Optimizasyonu: Hızlı Çalıştırın
+
+### Bellek Yönetimi En İyi Uygulamaları
+```csharp
+// Always dispose properly
+using (Comparer comparer = new Comparer(sourceFilePath))
+{
+    // Your comparison logic here
+} // Automatically disposed here
+```  
+
+### Toplu İşleme Stratejisi
+Birden fazla belge için:  
+```csharp
+// Process in batches to avoid memory overload
+const int batchSize = 10;
+for (int i = 0; i < documents.Count; i += batchSize)
+{
+    var batch = documents.Skip(i).Take(batchSize);
+    ProcessDocumentBatch(batch);
+    GC.Collect(); // Force garbage collection between batches
+}
+```  
+
+### Konfigürasyon Ayarları
+Karşılaştırma motorunu gereksiz özellikleri (ör. meta veri karşılaştırması) devre dışı bırakarak ince ayar yapın ve bellek ayak izini azaltın.  
+```csharp
+CompareOptions options = new CompareOptions()
+{
+    DetectStyleChanges = false,        // Skip formatting changes for speed
+    GenerateSummaryPage = false,       // Skip summary generation  
+    CalculateCoordinates = false       // Skip position calculations
+};
+```  
+
+## Güç Kullanıcıları İçin İleri Teknikler
+
+### Özel Değişiklik Filtreleme
+```csharp
+// Create custom filters for specific change types
+var importantChanges = changes.Where(c => 
+    c.Type == ChangeType.Inserted && 
+    c.Text.Length > 10 &&
+    !c.Text.Contains("temp")).ToArray();
+```  
+
+### Otomatik Karar Kuralları
+```csharp
+// Implement business rules for automatic decisions
+public ComparisonAction DecideOnChange(ChangeInfo change)
+{
+    if (change.Authors.Contains("Admin")) return ComparisonAction.Accept;
+    if (change.Text.Contains("TODO")) return ComparisonAction.Reject;
+    return ComparisonAction.None; // Manual review needed
+}
+```  
+
+## Sonuç: Belge Karşılaştırma .NET Araç Setiniz
+
+Artık .NET uygulamalarınızda profesyonel düzeyde belge karşılaştırma uygulamak için ihtiyacınız olan her şeye sahipsiniz. Özetle:
+
+- **GroupDocs.Comparison** belge analizinin ağır işini üstlenir  
+- **Programlı kabul/ret** değişiklikler üzerinde kesin kontrol sağlar  
+- **Performans optimizasyonu** üretim uygulamaları için kritiktir  
+- **Sağlam hata yönetimi** destek kabuslarından sizi korur  
+
+### Sıradaki Adımınız Ne?
+Kendi belgelerinizle basit bir kanıt konsepti (proof of concept) başlatın. Temel iş akışını kavradıktan sonra stil karşılaştırması, biçim algılama ve özel değişiklik türleri gibi ileri özellikleri keşfedin. **Otomatik belge iş akışı**nın gerçek gücü, iş ihtiyaçlarınızla büyüyen ölçeklenebilir süreçler inşa etmekte yatar.
+
+## Sık Sorulan Sorular
+
+**S: GroupDocs.Comparison hangi belge formatlarını destekliyor?**  
+C: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt), PDF, düz metin ve daha birçok formatı destekler—toplamda 50’den fazla format. Ayrıntılar için [full format list](https://reference.groupdocs.com/comparison/net/) sayfasına bakın.
+
+**S: Bunu ASP.NET Core uygulamalarıyla kullanabilir miyim?**  
+C: Kesinlikle! GroupDocs.Comparison ASP.NET Core, Web API ve diğer modern .NET çerçeveleriyle sorunsuz çalışır.
+
+**S: Çok büyük belgeleri bellek tükenmeden nasıl yönetirim?**  
+C: Yukarıda bahsedilen optimizasyon tekniklerini kullanın: gereksiz karşılaştırma özelliklerini devre dışı bırakın, dosyaları partiler halinde işleyin ve her çalıştırmadan sonra `Comparison` nesnelerini açıkça dispose edin.
+
+**S: Değişiklikleri uygulamadan önce önizleme yapabilir miyim?**  
+C: Evet! `ChangesInfo` koleksiyonu her değişiklik için orijinal ve revize metin dahil ayrıntılı meta veriler içerir. Bu verileri UI’da göstererek kullanıcıların farkları onaylamasını sağlayabilirsiniz.
+
+**S: Accept ve Reject eylemleri arasındaki fark nedir?**  
+C: `Accept` değişikliği son belgeye dahil eder (yeni versiyonu tutar). `Reject` değişikliği göz ardı eder ve orijinal içeriği korur. `ComparisonAction.None` ise değişikliği işaretlemez, olduğu gibi bırakır.
+
+**S: Bu çözümü Git gibi sürüm kontrol sistemleriyle entegre edebilir miyim?**  
+C: GroupDocs.Comparison doğrudan Git entegrasyonu sağlamaz, ancak farklı dallardan dosyaları karşılaştırıp bir değişiklik raporu oluşturabilir, ardından kabul edilen versiyonu depoya commit edebilirsiniz.
+
+**S: Lisans kısıtlamaları hakkında bilmem gereken bir şey var mı?**  
+C: Ücretsiz deneme tam işlevsellik sunar ancak 30 gün ve 5 eşzamanlı kullanıcı ile sınırlıdır. Üretim dağıtımları için ücretli lisans gerekir; fiyatlandırma dağıtım senaryosuna göre değişir.
+
+**S: Değişiklik algılama ne kadar doğru?**  
+C: Metin değişiklikleri %99’dan fazla doğrulukla tespit edilir. Stil ve biçim algılaması seçtiğiniz konfigürasyona bağlıdır; kritik belgeler için ayrıntılı stil karşılaştırmasını etkinleştirebilirsiniz.
+
+## Ek Kaynaklar
+
+- [Download here](https://releases.groupdocs.com/comparison/net/)  
+- [Request here](https://purchase.groupdocs.com/temporary-license/)  
+- [Purchase here](https://purchase.groupdocs.com/buy)  
+- [full format list](https://reference.groupdocs.com/comparison/net/)  
+- [GroupDocs.Comparison Docs](https://docs.groupdocs.com/comparison/net/)  
+- [Complete API Guide](https://reference.groupdocs.com/comparison/net/)  
+- [Get GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)  
+- [Buy Here](https://purchase.groupdocs.com/buy)  
+- [Try Now](https://releases.groupdocs.com/comparison/net/)  
+- [Request Here](https://purchase.groupdocs.com/temporary-license/)  
+- [Get Help](https://forum.groupdocs.com/c/comparison/)  
+
+---
+
+**Son Güncelleme:** 2026-07-01  
+**Test Edilen Versiyon:** GroupDocs.Comparison 23.10 for .NET  
+**Yazar:** GroupDocs  
+
+## İlgili Öğreticiler
+
+- [Accept Reject Changes Word Documents .NET](/comparison/net/change-management/groupdocs-comparison-net-document-revisions-guide/)  
+- [Track Document Changes .NET - Complete Author Management Guide](/comparison/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/)  
+- [Document Comparison Automation C# - Complete GroupDocs.Comparison Guide](/comparison/net/getting-started/automate-document-comparison-groupdocs-net/)

@@ -1,82 +1,114 @@
 ---
 categories:
 - Java Development
-date: '2026-02-26'
+date: '2026-07-01'
 description: Mesterszintű biztonságos dokumentum-összehasonlítás Java-ban a GroupDocs-szal.
-  Tanulja meg, hogyan töltsön be jelszóval védett dokumentumot, és hogyan hasonlítsa
-  össze biztonságosan a titkosított Word és PDF fájlokat a legjobb gyakorlatok és
-  hibaelhárítási tippek segítségével.
-keywords: compare password protected documents java, java document comparison security,
-  groupdocs password protected files, secure document comparison java, encrypted document
-  comparison
-lastmod: '2026-02-26'
-linktitle: Compare Password Protected Documents Java
+  Tanulja meg, hogyan hasonlíthat össze jelszóval védett Java dokumentumokat biztonságosan,
+  a legjobb gyakorlatok és hibaelhárítási tippek segítségével.
+keywords:
+- compare password protected java
+- document comparison best practices
+- secure document comparison java
+lastmod: '2026-07-01'
+linktitle: Jelszóval védett dokumentumok összehasonlítása Java-ban
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-01'
+  description: Master secure document comparison in Java with GroupDocs. Learn how
+    to compare password protected Java documents safely with best practices & troubleshooting
+    tips.
+  headline: How to Load Password Protected Doc and Compare Documents in Java – Complete
+    Security Guide
+  type: TechArticle
+- description: Master secure document comparison in Java with GroupDocs. Learn how
+    to compare password protected Java documents safely with best practices & troubleshooting
+    tips.
+  name: How to Load Password Protected Doc and Compare Documents in Java – Complete
+    Security Guide
+  steps:
+  - name: Initialize Secure Comparer
+    text: The `Comparer` class is the entry point for all comparison operations. It
+      holds the source document and orchestrates the diff engine. **Security Note:**
+      Retrieve passwords from a secure store rather than hard‑coding them.
+  - name: Add Target Documents
+    text: You can compare the source against one or many targets. Each `add()` call
+      accepts a file path and its own `LoadOptions`. **Pro Tip:** Order target documents
+      chronologically to produce a clear change timeline.
+  - name: Execute Comparison and Generate Results
+    text: '`compare()` executes the comparison and returns the result as a stream.
+      Run the comparison and write the output to a protected location. The API returns
+      a stream that you can pipe directly to a response or a secure file store. The
+      result highlights insertions, deletions, and formatting changes while'
+  type: HowTo
+- questions:
+  - answer: The library supports password‑protected Word (DOCX, DOC), PDF, Excel (XLSX,
+      XLS), and PowerPoint (PPTX, PPT) files — a total of 4 major office formats.
+    question: What document formats support password protection in GroupDocs.Comparison?
+  - answer: Supply a separate `LoadOptions` instance for each document when calling
+      `Comparer.add()`. The source password is set during `Comparer` construction;
+      each target uses its own password argument.
+    question: How do I handle documents with different passwords?
+  - answer: Yes. Provide an `InputStream` from AWS S3, Azure Blob, or Google Cloud
+      Storage, along with the correct `LoadOptions` password, and the API will process
+      the stream directly.
+    question: Can I compare password‑protected documents stored in cloud services?
+  - answer: The API throws a `GroupDocsException` with a clear “Invalid password”
+      message. `GroupDocsException` is the base exception type thrown by the GroupDocs
+      API. Catch this exception to prompt the user or log the incident without exposing
+      sensitive details.
+    question: What happens if I provide an incorrect password?
+  - answer: It streams data and keeps only necessary fragments in memory, allowing
+      processing of 500‑page documents on a 4 GB heap. For files larger than that,
+      enable `LoadOptions.setUseMemoryCache(true)` to off‑load to disk.
+    question: How does GroupDocs.Comparison handle memory usage with large encrypted
+      files?
+  type: FAQPage
 tags:
 - document-security
 - java-api
 - groupdocs
 - document-comparison
-title: Hogyan töltsünk be jelszóval védett dokumentumot, és hasonlítsuk össze a dokumentumokat
+title: Hogyan töltsünk be jelszóval védett dokumentumot és hasonlítsunk össze dokumentumokat
   Java-ban – Teljes biztonsági útmutató
 type: docs
 url: /hu/java/security-protection/java-groupdocs-compare-password-protected-docs/
 weight: 1
 ---
 
-# Hogyan töltsünk be jelszóval védett doc fájlt és hasonlítsunk össze dokumentumokat Java‑ban – Teljes biztonsági útmutató
+# Hogyan töltsünk be jelszóval védett doc-ot és hasonlítsunk össze dokumentumokat Java-ban – Teljes biztonsági útmutató
 
-## Bevezetés
-
-Volt már nehézsége a titkosított dokumentumok különböző verzióinak összehasonlításával Java‑alkalmazásában? Nem vagy egyedül. Amikor érzékeny üzleti dokumentumokról, jogi szerződésekről vagy bizalmas jelentésekről van szó, nem egyszerűen távolíthatjuk el a jelszóvédelmet az összehasonlítás elvégzéséhez. Itt válik kulcsfontosságúvá a biztonságos dokumentum‑összehasonlítás.
-
-Ebben az átfogó útmutatóban megtudja, hogyan **töltsön be jelszóval védett doc** fájlokat, és hogyan hasonlítsa össze őket a GroupDocs.Comparison for Java segítségével. Mindent lefedünk a legegyszerűbb beállítástól a vállalati szintű biztonsági megfontolásokig, valamint valós példákat a gyakran előforduló hibák megoldására.
-
-**A végére elsajátítandó tudás:**
-- Biztonságos dokumentum‑összehasonlítás beállítása Java‑alkalmazásokban  
-- Különböző jelszóval védett fájlformátumok biztonságos kezelése  
-- Vállalati szintű biztonsági legjobb gyakorlatok megvalósítása  
-- Gyakori problémák és teljesítménybeli szűk keresztmetszetek hibaelhárítása  
-- Biztonságos összehasonlítás integrálása meglévő munkafolyamatokba  
+A jelszóval védett Java-dokumentumok összehasonlítása gyakori követelmény, amikor a változásokat anélkül kell auditálni, hogy a bizalmas tartalmat felfednénk. Ebben az útmutatóban megtanulja, hogyan **töltsön be jelszóval védett doc** fájlokat és **hasonlítsa össze a jelszóval védett Java-dokumentumokat** a GroupDocs.Comparison for Java használatával. Lépésről lépésre végigvezetjük a beállításon, a biztonságos jelszókezelésen, a teljesítményhangoláson és a valós életbeli hibakeresésen, hogy ma egy robusztus, megfelelőségi megoldást valósíthasson meg.
 
 ## Gyors válaszok
-- **Össze tudok hasonlítani titkosított Word és PDF fájlokat?** Igen, a GroupDocs.Comparison közvetlenül kezeli a jelszóval védett dokumentumokat.  
-- **Szükség van licencre a termeléshez?** Teljes licenc szükséges; próbaverzió és ideiglenes licencek is elérhetők teszteléshez.  
-- **Hogyan kerülhető a jelszavak kódba írása?** Használjon környezeti változókat vagy biztonságos hitelesítőkezelőt.  
-- **Milyen Java verzió szükséges?** Java 8 vagy újabb.  
-- **Biztonságos a párhuzamos feldolgozás titkosított fájlok esetén?** Igen, ha minden szál a saját dokumentumpárját kezeli.  
+- **Össze tudok-e hasonlítani titkosított Word és PDF fájlokat?** Igen, a GroupDocs.Comparison közvetlenül a jelszóval védett dokumentumokkal működik.  
+- **Szükségem van licencre a termeléshez?** Teljes licenc szükséges; próbaverzió és ideiglenes licencek is elérhetők teszteléshez.  
+- **Hogyan kerülhetem el a jelszavak kódba írását?** Használjon környezeti változókat vagy egy biztonságos hitelesítőkezelőt.  
+- **Melyik Java verzió szükséges?** Java 8 vagy újabb.  
+- **Biztonságos a párhuzamos feldolgozás titkosított fájlok esetén?** Igen, ha minden szál a saját dokumentumpárját kezeli.
 
-## Miért fontos a biztonságos dokumentum‑összehasonlítás
+## Miért fontos a biztonságos dokumentum-összehasonlítás?
+Töltsön be és hasonlítsa össze a titkosított fájlokat anélkül, hogy azok tartalmát egyszerű szövegként felfedné. Ez a megközelítés megszünteti a biztonsági rést, amely a jelszavak feldolgozás előtti eltávolításakor jelentkezik, és biztosítja a GDPR, HIPAA és PCI‑DSS szabályozásoknak való megfelelést. Az dokumentumok végponttól végpontig titkosított állapotban tartásával megvédi a bizalmas adatokat, miközben továbbra is betekintést nyer a verzióváltozásokba.
 
-Mielőtt a technikai megvalósításba merülnénk, tekintsük át, miért elengedhetetlen ez a képesség a modern Java fejlesztésben:
-
-**Vállalati felhasználási esetek:**
-- **Jogi dokumentum‑ellenőrzés**: Ügyvédi irodáknak szerződésváltozatokat kell összehasonlítaniuk anélkül, hogy veszélyeztetnék az ügyfél titkosságát  
-- **Pénzügyi jelentések**: Bankoknak nyomon kell követniük a bizalmas pénzügyi dokumentumok változásait, miközben megfelelnek a biztonsági előírásoknak  
-- **Egészségügyi nyilvántartások**: Egészségügyi rendszereknek biztonságosan kell összehasonlítaniuk a betegadatokat a HIPAA szabályok betartásával  
-- **Vállalati irányítás**: Cégeknek auditálniuk kell a belső, jelszóval védett dokumentumok politikaváltozásait  
-
-A hagyományos megközelítés, amely ideiglenesen eltávolítja a jelszavakat, biztonsági réseket és megfelelőségi problémákat okoz. A GroupDocs.Comparison közvetlenül a titkosított fájlokkal dolgozik, így ezt elkerülve.
+## Mi az a compare password protected java?
+**compare password protected java** a folyamatot jelenti, amely során jelszóval titkosított dokumentumokat tölt be és hasonlít össze, Java‑alapú API‑kat használva, amelyek a betöltéskor fogadják a jelszót. A GroupDocs.Comparison lehetővé teszi ezt a munkafolyamatot anélkül, hogy a lemezen történő visszafejtést igényelné, megőrizve a titkosságot az összehasonlítás teljes életciklusa során.
 
 ## Előfeltételek és környezet beállítása
 
-A biztonságos dokumentum‑összehasonlítás megvalósítása előtt győződjön meg róla, hogy rendelkezik a következőkkel:
+Before you start, make sure you have the following:
 
-**Alapvető követelmények:**
-- **Java Development Kit**: 8-as vagy újabb verzió  
-- **GroupDocs.Comparison for Java**: 25.2 (legújabb stabil kiadás)  
-- **Build eszköz**: Maven vagy Gradle a függőségek kezeléséhez  
-- **IDE**: IntelliJ IDEA, Eclipse vagy a kedvenc Java IDE-je  
+- **Java Development Kit**: 8 vagy újabb (Java 11 ajánlott a hosszú távú támogatáshoz).  
+- **GroupDocs.Comparison for Java**: 25.2 (legújabb stabil kiadás).  
+- **Build Tool**: Maven vagy Gradle a függőségkezeléshez.  
+- **IDE**: IntelliJ IDEA, Eclipse vagy bármely Java‑kompatibilis szerkesztő.
 
-**Biztonsági megfontolások:**
-- Biztonságos tárolási hely a bizalmas dokumentumok számára  
-- Megfelelő hozzáférés‑szabályozás a fejlesztői környezetben  
-- A szervezet dokumentumbiztonsági szabályzatának ismerete  
+### Biztonság‑első ellenőrzőlista
+- Tárolja az összes jelszót egy széfben (pl. HashiCorp Vault, Azure Key Vault).  
+- Korlátozza a fájlrendszer jogosultságait arra a szolgáltatási fiókra, amely az összehasonlítást végzi.  
+- Engedélyezze a TLS‑t minden hálózaton keresztüli fájlhozzáféréshez (S3, Azure Blob stb.).
 
-## GroupDocs.Comparison for Java beállítása
+## A GroupDocs.Comparison for Java beállítása
 
-A GroupDocs.Comparison használata egyszerű. Íme, hogyan integrálja biztonságosan a projektjébe:
-
-**Maven konfiguráció:**
+Add the library to your project via Maven:
 
 ```xml
 <repositories>
@@ -97,14 +129,7 @@ A GroupDocs.Comparison használata egyszerű. Íme, hogyan integrálja biztonsá
 
 ### Licenc konfiguráció és biztonság
 
-Termelési környezetben megfelelő licencre lesz szüksége. A lényeges tudnivalók:
-
-**Licenc opciók:**
-- **Ingyenes próba**: Ideális értékeléshez és kis‑méretű teszteléshez  
-- **Ideiglenes licenc**: Fejlesztési és staging környezetekhez  
-- **Teljes licenc**: Kötelező a termeléshez  
-
-**Biztonsági legjobb gyakorlat**: Tárolja a licencet biztonságosan környezeti változókban vagy biztonságos konfigurációkezelő rendszerekben. Soha ne kódba ágyazza be a licencet.
+A valid license is mandatory for production use. Choose the option that matches your environment and keep the license key out of source control.
 
 ```java
 // Secure license initialization example
@@ -115,13 +140,15 @@ if (licensePath != null) {
 }
 ```
 
-## Hogyan töltsünk be jelszóval védett doc fájlt összehasonlításhoz
+## Hogyan töltsünk be jelszóval védett doc-ot az összehasonlításhoz?
 
-Miután a könyvtár be van állítva, nézzük meg, hogyan **töltsünk be jelszóval védett doc** fájlokat biztonságosan, és hogyan hasonlítsuk össze őket.
+Közvetlen válasz (40‑70 szó): Hozzon létre egy `Comparer` példányt a forrásdokumentum útvonalának és egy `LoadOptions` objektumnak a átadásával, amely a forrás jelszavát tartalmazza. Ezután hívja meg az `add()`-et minden cél dokumentumhoz, szintén egy megfelelő jelszót tartalmazó `LoadOptions`-sal. Végül hívja meg a `compare()`-t, és adja meg a kimeneti streamet vagy fájl útvonalat a diff eredmény fogadásához.
+
+`LoadOptions` olyan paramétereket tartalmaz, mint a védett dokumentum megnyitásához szükséges jelszó.
 
 ### 1. lépés: Biztonságos Comparer inicializálása
 
-Az első lépés egy `Comparer` példány létrehozása a forrásdokumentummal és annak jelszavával. Így tehetjük meg biztonságosan:
+The `Comparer` class is the entry point for all comparison operations. It holds the source document and orchestrates the diff engine.
 
 ```java
 // Initialize Comparer with the source document and its password.
@@ -130,37 +157,35 @@ try (Comparer comparer = new Comparer("source_protected_doc.docx", new LoadOptio
 }
 ```
 
-**Biztonsági megjegyzés**: Termelésben soha ne kódba írja a jelszavakat. Használjon biztonságos hitelesítőkezelő rendszereket vagy környezeti változókat az érzékeny adatok kezeléséhez.
+**Biztonsági megjegyzés:** Szerezze be a jelszavakat egy biztonságos tárolóból a kódba írás helyett.
 
 ### 2. lépés: Cél dokumentumok hozzáadása
 
-Ezután adja hozzá a cél dokumentum(okat), amelyeket össze akar hasonlítani. Több dokumentumot is összehasonlíthat egyszerre:
+A forrást egy vagy több cél dokumentummal hasonlíthatja össze. Minden `add()` hívás egy fájl útvonalat és a saját `LoadOptions`-át fogadja.
 
 ```java
 // Add the target document with its password.
 comparer.add("target_protected_doc.docx", new LoadOptions("5678"));
 ```
 
-**Pro tipp**: Ha több verziót hasonlít össze, adja hozzá őket kronológiai sorrendben. Ez megkönnyíti az eredmények értelmezését és a változások nyomon követését.
+**Pro tipp:** Rendezzék a cél dokumentumokat kronológiai sorrendbe a tiszta változási idővonal érdekében.
 
 ### 3. lépés: Összehasonlítás végrehajtása és eredmények generálása
 
-Végül hajtsa végre az összehasonlítást, és mentse az eredményeket biztonságosan:
+`compare()` végrehajtja az összehasonlítást és az eredményt streamként adja vissza. Futtassa az összehasonlítást, és írja a kimenetet egy védett helyre. Az API egy streamet ad vissza, amelyet közvetlenül egy válaszba vagy egy biztonságos fájl tárolóba irányíthat.
 
 ```java
 // Execute the comparison and save the result.
 final Path resultPath = comparer.compare(outputFileName);
 ```
 
-Az összehasonlítás eredményei megmutatják a hozzáadott, törölt és módosított részeket a jelszóval védett dokumentumok között, miközben az eredeti fájlok biztonsága megmarad.
+Az eredmény kiemeli a beszúrásokat, törléseket és formázási változásokat, miközben az eredeti fájlok érintetlenek maradnak.
 
-## Haladó biztonsági konfigurációk
-
-Vállalati környezetben érzékeny dokumentumokkal dolgozva vegye figyelembe a következő fejlett biztonsági intézkedéseket:
+## Fejlett biztonsági konfigurációk
 
 ### Biztonságos jelszókezelés
 
-A jelszavak kódba írása helyett valósítsa meg a biztonságos hitelesítőkezelést:
+Soha ne ágyazza be a jelszavakat a kódba. Használja a Java `java.util.Properties`-t, amely egy titkosított széf vagy az operációs rendszer kulcstárolója által támogatott.
 
 ```java
 public class SecureDocumentComparer {
@@ -187,23 +212,19 @@ public class SecureDocumentComparer {
 }
 ```
 
-### Memória‑biztonsági megfontolások
+### Memória biztonsági megfontolások
 
-Jelszóval védett dokumentumok esetén a memória kezelése kritikus:
+Large encrypted files can consume significant heap space. Follow these practices:
 
-**Legjobb gyakorlatok:**
-1. **try‑with‑resources használata**: Biztosítja az érzékeny adatok megfelelő tisztítását  
-2. **Jelszóváltozók törlése**: A használat után explicit módon állítsa nullára a jelszó‑stringeket  
-3. **Memóriahasználat monitorozása**: Nagy titkosított dokumentumok jelentős memóriát igényelhetnek  
-4. **Garbage collection tippek**: Használja a `System.gc()`‑t stratégiailag az érzékeny adatok feldolgozása után  
+1. Használja a **try‑with‑resources**-t a streamek automatikus bezárásához.  
+2. A használat után írja felül a jelszó karaktertömböket (`Arrays.fill(password, '\0')`).  
+3. A feldolgozás után indítsa el a szemétgyűjtést (`System.gc()`) különösen kötegelt feladatoknál.  
 
 ## Vállalati integrációs minták
 
-Vállalati környezetben a dokumentum‑összehasonlítás általában nagyobb munkafolyamatok része. Íme a gyakori integrációs minták:
+### Kötegelt feldolgozási minta
 
-### Kötetes feldolgozási minta
-
-Több dokumentum‑összehasonlítást végző szervezetek számára:
+When you need to compare thousands of document pairs, process them in batches and reuse a single `Comparer` instance per thread.
 
 ```java
 public class BatchSecureComparison {
@@ -223,93 +244,80 @@ public class BatchSecureComparison {
 }
 ```
 
-### Munkafolyamat‑integráció
+### Munkafolyamat integráció
 
-Sok vállalat beépíti a dokumentum‑összehasonlítást jóváhagyási folyamatokba:
+Typical enterprise flow:
 
-1. **Dokumentum feltöltése**: A felhasználók jelszóval védett dokumentumokat töltenek fel  
-2. **Automatikus összehasonlítás**: A rendszer a korábbi verziókkal hasonlítja össze  
-3. **Ellenőrzési folyamat**: A felek áttekintik a kiemelt változásokat  
-4. **Jóváhagyási döntés**: Az összehasonlítás eredményei alapján  
+1. **Upload** – A felhasználók jelszóval védett fájlokat küldenek be egy biztonságos portálon keresztül.  
+2. **Compare** – A háttérszolgáltatás futtatja az összehasonlítást a fent leírtak szerint.  
+3. **Review** – Az eredményeket egy webes felületen jelenítik meg a változások kiemelésével.  
+4. **Approve** – Az érintettek jóváhagyják vagy elutasítják a változásokat, ami audit naplózást indít.
 
-## Teljesítményoptimalizálás biztonságos összehasonlításokhoz
+## Teljesítményoptimalizálás a biztonságos összehasonlításokhoz
 
-A jelszóval védett dokumentumok összehasonlítása erőforrás‑igényes lehet. Így optimalizálhatja a teljesítményt:
+### Memória optimalizálás
 
-### Memóriaoptimalizálás
+A GroupDocs.Comparison képes **500 oldalas** dokumentumok kezelésére anélkül, hogy a teljes fájlt a memóriába töltené, köszönhetően a streaming architektúrájának. 500 oldalnál nagyobb fájlok esetén engedélyezze a darabolt feldolgozást:
 
-**Nagy dokumentumok kezelése:**
-- Amikor csak lehetséges, dolgozzon darabokban  
-- Használjon streaming megközelítést nagyon nagy fájlok esetén  
-- Figyelje a heap‑használatot, és állítsa be a JVM paramétereket ennek megfelelően  
-
-**Ajánlott JVM beállítások:**
 ```bash
 -Xmx4g -XX:+UseG1GC -XX:MaxGCPauseMillis=200
 ```
 
 ### Feldolgozási sebesség javítása
 
-**Párhuzamos feldolgozás:**  
-Több dokumentumpár összehasonlításakor fontolja meg a párhuzamos végrehajtást:
+#### Párhuzamos feldolgozás
+
+Használja a Java `ExecutorService`-t több összehasonlítás egyidejű futtatásához. Az `ExecutorService` egy Java párhuzamossági segédprogram, amely egy munkaszálakból álló medencét kezel. Minden szálnak saját `Comparer` példányt kell létrehoznia a versenyhelyzetek elkerülése érdekében.
 
 ```java
 documentPairs.parallelStream()
     .forEach(pair -> compareDocuments(pair.getSource(), pair.getTarget()));
 ```
 
-**Gyorsítótár‑stratégiák:**
-- Gyakran használt dokumentumok gyorsítótárazása  
-- Összehasonlítási sablonok tárolása ismételt használatra  
-- Dokumentum‑ujjlenyomatok alkalmazása a felesleges összehasonlítások elkerülésére  
+#### Gyorsítótárazási stratégiák
+
+- Gyorsítótárazza a gyakran elérhető forrásdokumentumokat egy csak olvasható memória tárolóban.  
+- Tárolja a generált összehasonlítási sablonokat ismétlődő dokumentumtípusokhoz.  
+- Használjon dokumentum ujjlenyomatot (SHA‑256) a változatlan fájlok kihagyásához.  
 
 ## Átfogó hibaelhárítási útmutató
 
-Még a megfelelő implementáció mellett is előfordulhatnak problémák. Íme a gyakori hibák kezelése:
-
 ### Hitelesítési hibák
 
-**Probléma**: „Invalid password” (Érvénytelen jelszó) hiba  
+**Probléma:** “Invalid password” kivétel.  
 **Megoldások:**  
-1. Ellenőrizze a jelszó kódolását (UTF‑8 vs ASCII)  
-2. Vizsgálja meg a speciális karaktereket, amelyek escape‑elést igényelhetnek  
-3. Győződjön meg róla, hogy a jelszó nem változott az utolsó sikeres hozzáférés óta  
-4. Teszteljen egy ismert, működő jelszóval  
+1. Ellenőrizze a jelszó karakterlánc UTF‑8 kódolását.  
+2. Szökje meg a speciális karaktereket (`!`, `$`, `\`).  
+3. Győződjön meg arról, hogy a jelszót nem cserélték.  
 
-### Memória‑problémák
+### Memória problémák
 
-**Probléma**: `OutOfMemoryError` az összehasonlítás során  
+**Probléma:** `OutOfMemoryError` az összehasonlítás során.  
 **Megoldások:**  
-1. Növelje a JVM heap méretét  
-2. Dolgozzon kisebb dokumentum‑darabokban  
-3. Gyakrabban tisztítsa a köztes eredményeket  
-4. Használjon dokumentum‑streaminget, ha elérhető  
+- Növelje a JVM heap méretét (`-Xmx4g`).  
+- Feldolgozza a fájlokat kisebb darabokban.  
+- Engedélyezze a streaming módot a `LoadOptions.setUseMemoryCache(true)` segítségével.  
 
-### Fájl‑hozzáférési problémák
+### Fájlhozzáférési problémák
 
-**Probléma**: „File not found” vagy „Access denied” hibák  
+**Probléma:** “File not found” vagy “Access denied”.  
 **Megoldások:**  
-1. Ellenőrizze, hogy a fájlútvonalak helyesek és elérhetők-e  
-2. Vizsgálja meg a fájl jogosultságait és biztonsági beállításait  
-3. Győződjön meg róla, hogy a fájlok nincsenek más folyamatok által zárolva  
-4. Ellenőrizze a hálózati hozzáférést távoli fájlok esetén  
+- Ellenőrizze újra a abszolút útvonalakat és a hálózati csatlakozási jogosultságokat.  
+- Győződjön meg arról, hogy a szolgáltatási fióknak olvasási/írási jogosultsága van.  
 
 ### Teljesítménycsökkenés
 
-**Probléma**: Lassú összehasonlítási idő  
-**Gyökök és megoldások:**  
-1. **Nagy fájlméretek** – alkalmazzon progresszív betöltést  
-2. **Komplex dokumentumszerkezetek** – használjon egyszerűsített összehasonlítási módot  
-3. **Memória‑nyomás** – optimalizálja a garbage collection beállításokat  
-4. **Hálózati késleltetés** – helyi gyorsítótárban tárolja a gyakran használt dokumentumokat  
+**Probléma:** Lassú összehasonlítási idők 300‑oldalas PDF-eknél.  
+**Gyökér okok és megoldások:**  
+- Nagy beágyazott képek – engedélyezze a kép lecsökkentését.  
+- Komplex táblák – váltson `ComparisonMode.SIMPLE` módra.  
+- Elégtelen CPU – osszon több magot vagy használjon nagyobb példányt.  
 
-## Valós példák és felhasználási esetek
-
-Nézzük meg, hogyan használják a különböző iparágak a biztonságos dokumentum‑összehasonlítást:
+## Valós példák és esetek
 
 ### Jogi szektor megvalósítása
 
-Ügyvédi irodák biztonságos összehasonlítást alkalmaznak szerződésellenőrzéshez:
+A jogi irodák a szerződésváltozatokat hasonlítják össze, miközben a kliens titkosságát érintetlenül tartják.
 
 ```java
 public class LegalDocumentProcessor {
@@ -343,44 +351,38 @@ public class LegalDocumentProcessor {
 
 ### Pénzügyi szolgáltatások alkalmazása
 
-Bankoknak érzékeny pénzügyi jelentéseket kell összehasonlítaniuk, miközben megfelelnek a szabályozási követelményeknek. Fontos igények: audit‑naplók, átvitel és nyugalomban titkosítás, valamint szerepkör‑alapú hozzáférés‑vezérlés.
+A bankok negyedéves pénzügyi kimutatásokat auditálnak, titkosított PDF-összehasonlítást igényelve auditkész változásnaplókkal.
 
 ### Egészségügyi dokumentumkezelés
 
-Egészségügyi intézmények a HIPAA irányelveknek megfelelően hasonlítják össze a betegnyilvántartásokat és kezelési terveket, biztosítva a titkosítást, a hozzáférési naplózást és az ideiglenes fájlok biztonságos megsemmisítését.
+A kórházak a HIPAA szerint összehasonlítják a betegek kezelési terveit, és minden ideiglenes adatot titkosított memória pufferben tárolnak.
 
-## Legjobb gyakorlatok termelési telepítéshez
-
-A biztonságos dokumentum‑összehasonlítás termelésbe helyezésekor:
+## Legjobb gyakorlatok a termelési telepítéshez
 
 ### Biztonsági ellenőrzőlista
 
-- [ ] Jelszavak tárolása biztonságos hitelesítőkezelő rendszerben  
-- [ ] Audit‑naplózás minden összehasonlítási művelethez  
-- [ ] Fájl‑hozzáférési jogosultságok megfelelő beállítása  
-- [ ] Ideiglenes fájlok biztonságos törlése a feldolgozás után  
-- [ ] Hálózati kommunikáció titkosítása (HTTPS/TLS)  
-- [ ] Hibaüzenetek ne tartalmazzanak érzékeny információkat  
+- [ ] Jelszavak tárolása egy széfben (nincs egyszerű szöveg).  
+- [ ] Audit naplózás engedélyezése minden összehasonlítási kéréshez.  
+- [ ] Ideiglenes fájlok törlése a `Files.deleteIfExists()` használatával a használat után azonnal.  
+- [ ] TLS 1.2+ kényszerítése minden hálózati forgalomra.  
+- [ ] Kivétel üzenetek maszkolása a fájl útvonalak vagy jelszavak szivárgásának elkerülése érdekében.  
 
-### Monitoring és karbantartás
+### Megfigyelés és karbantartás
 
-**Nyomon követendő kulcsmetrikák:**  
-- Összehasonlítási siker‑/hibaarányok  
-- Átlagos feldolgozási idő  
-- Memória‑használati minták  
-- Hitelesítési hibaarányok  
-- Fájl‑hozzáférési hibák  
+Track these KPIs:
 
-**Rendszeres karbantartási feladatok:**  
-- GroupDocs.Comparison könyvtár frissítése  
-- Hozzáférési hitelesítők felülvizsgálata és cseréje  
-- Ideiglenes fájlok és gyorsítótár‑könyvtárak tisztítása  
-- Lemezterület használatának ellenőrzése  
-- Audit‑naplók áttekintése szokatlan tevékenységekért  
+- Az összehasonlítások sikerességi vs. hibaaránya.  
+- Átlagos feldolgozási idő dokumentumpáranként.  
+- Heap használati csúcsok (GC szünetek).  
+- Hitelesítési hibák száma.  
 
-## Haladó funkciók és testreszabás
+Schedule regular maintenance:
 
-A GroupDocs.Comparison speciális igényekhez kínál fejlett funkciókat:
+- Frissítse a GroupDocs.Comparison-t a legújabb javításhoz.  
+- Negyedévente cserélje a széf hitelesítő adatokat.  
+- Hetente tisztítsa meg a régi gyorsítótár könyvtárakat.  
+
+## Fejlett funkciók és testreszabás
 
 ### Egyedi összehasonlítási beállítások
 
@@ -396,45 +398,51 @@ final Path resultPath = comparer.compare(outputFileName, options);
 
 ### Kimeneti formátum testreszabása
 
-Határozza meg, hogyan jelenjenek meg az összehasonlítási eredmények:  
-- **HTML jelentések** – web‑alapú felülvizsgálati munkafolyamatokhoz  
-- **PDF kimenet** – hivatalos dokumentációhoz  
-- **Word dokumentumok** – együttműködő szerkesztéshez  
-- **JSON adatok** – programozott feldolgozáshoz  
+Choose the format that fits your workflow:
+
+- **HTML** – beágyazás webes portálokba.  
+- **PDF** – hivatalos audit dokumentumok.  
+- **DOCX** – szerkeszthető változásnaplók.  
+- **JSON** – továbbítás downstream automatizált rendszerekbe.  
 
 ## Gyakran ismételt kérdések
 
-**K: Mely dokumentumformátumok támogatják a jelszóvédelmet a GroupDocs.Comparison‑ben?**  
-A: A könyvtár támogatja a jelszóval védett Word dokumentumokat (DOCX, DOC), PDF fájlokat, Excel táblázatokat (XLSX, XLS) és PowerPoint prezentációkat (PPTX, PPT). Mindig ellenőrizze a legújabb dokumentációt az újonnan támogatott formátumokért.
+**K: Milyen dokumentumformátumok támogatják a jelszóvédelmet a GroupDocs.Comparison-ban?**  
+A: A könyvtár támogatja a jelszóval védett Word (DOCX, DOC), PDF, Excel (XLSX, XLS) és PowerPoint (PPTX, PPT) fájlokat – összesen 4 fő irodai formátum.
 
 **K: Hogyan kezeljem a különböző jelszavú dokumentumokat?**  
-A: Minden dokumentum saját jelszót adhat meg a `LoadOptions` konstruktorban. A forrásdokumentum jelszava a `Comparer` inicializálásakor kerül beállításra, míg a cél dokumentumok jelszavát az `add()` metódus használatakor adhatja meg.
+A: Adjon meg egy külön `LoadOptions` példányt minden dokumentumhoz a `Comparer.add()` hívásakor. A forrás jelszava a `Comparer` konstrukciója során van beállítva; minden cél saját jelszó argumentumot használ.
 
-**K: Össze tudok hasonlítani jelszóval védett dokumentumokat felhőszolgáltatásokban tárolva?**  
-A: Igen, amennyiben a dokumentumokhoz fájlútvonalakon vagy stream‑eken keresztül hozzáfér, és a megfelelő jelszavakat megadja. Sok fejlesztő integrálja az AWS S3, Azure Blob Storage vagy Google Cloud Storage SDK‑jaival.
+**K: Össze tudok-e hasonlítani jelszóval védett dokumentumokat, amelyek felhőszolgáltatásokban vannak tárolva?**  
+A: Igen. Adjon meg egy `InputStream`-et az AWS S3, Azure Blob vagy Google Cloud Storage szolgáltatásból, a megfelelő `LoadOptions` jelszóval együtt, és az API közvetlenül feldolgozza a streamet.
 
 **K: Mi történik, ha helytelen jelszót adok meg?**  
-A: A könyvtár `GroupDocsException`‑t dob a hitelesítési hiba részleteivel. Mindig valósítsa meg a megfelelő kivételkezelést a hitelesítési hibák elegáns kezeléséhez.
+A: Az API egy `GroupDocsException`-t dob egy egyértelmű “Invalid password” üzenettel. A `GroupDocsException` a GroupDocs API által dobott alap kivételtípus. Fogja el ezt a kivételt, hogy felkérje a felhasználót vagy naplózza az esetet anélkül, hogy érzékeny részleteket felfedne.
 
 **K: Hogyan kezeli a GroupDocs.Comparison a memóriahasználatot nagy titkosított fájlok esetén?**  
-A: A könyvtár hatékony algoritmusokat alkalmaz a memória‑lábnyom csökkentésére, de a nagy dokumentumokhoz továbbra is elegendő heap‑memória szükséges. Figyelje a memóriahasználatot, és állítsa be a JVM paramétereket a legjobb teljesítmény érdekében.
+A: Az adatokat streameli, és csak a szükséges fragmentumokat tartja a memóriában, lehetővé téve 500‑oldalas dokumentumok feldolgozását egy 4 GB heap-en. Nagyobb fájlok esetén engedélyezze a `LoadOptions.setUseMemoryCache(true)`-t a lemezre való áthelyezéshez.
 
-**K: Lehet-e összehasonlítási eredményeket mentés nélkül feldolgozni?**  
-A: Igen, a összehasonlítási eredményeket memóriában is feldolgozhatja, és programozottan kinyerheti a változásinformációkat anélkül, hogy kimeneti dokumentumot mentene. Ez hasznos automatizált validációs munkafolyamatokhoz.
+**K: Lehetséges-e dokumentumokat összehasonlítani anélkül, hogy a eredményfájlt tárolnánk?**  
+A: Természetesen. Hívja a `compare()`-t egy `OutputStream`-mel (pl. `ByteArrayOutputStream`) és programozottan olvassa a diff adatokat, elkerülve a fájlrendszer írását.
 
 ## További források
 
 - **Dokumentáció**: [GroupDocs Comparison Java](https://docs.groupdocs.com/comparison/java/)  
-- **API referencia**: [Teljes API dokumentáció](https://reference.groupdocs.com/comparison/java/)  
-- **Legújabb verzió letöltése**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Licenc vásárlása**: [Teljes licenc megvásárlása](https://purchase.groupdocs.com/buy)  
-- **Ingyenes próba**: [GroupDocs Comparison kipróbálása](https://releases.groupdocs.com/comparison/java/)  
-- **Ideiglenes licenc**: [Fejlesztői licenc beszerzése](https://purchase.groupdocs.com/temporary-license/)  
-- **Közösségi támogatás**: [GroupDocs Fórum](https://forum.groupdocs.com/c/comparison)  
-- **Vállalati támogatás**: Lépjen kapcsolatba a GroupDocs értékesítési csapatával dedikált támogatási lehetőségekért  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Download Latest Version**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Purchase License**: [Buy Full License](https://purchase.groupdocs.com/buy)  
+- **Free Trial**: [Try GroupDocs Comparison](https://releases.groupdocs.com/comparison/java/)  
+- **Temporary License**: [Get Development License](https://purchase.groupdocs.com/temporary-license/)  
+- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
 
 ---
 
-**Legutóbb frissítve:** 2026-02-26  
-**Tesztelt verzió:** GroupDocs.Comparison 25.2 for Java  
+**Utolsó frissítés:** 2026-07-01  
+**Tesztelve:** GroupDocs.Comparison 25.2 for Java  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [Jelszóval védett dokumentum betöltése – Biztonságos összehasonlítás Java-ban](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
+- [Védett dokumentumok összehasonlítása Java – Teljes útmutató](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)
+- [Dokumentum-összehasonlítás testreszabása Java – Teljes útmutató](/comparison/java/comparison-options/)

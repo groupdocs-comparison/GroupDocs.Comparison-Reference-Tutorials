@@ -1,148 +1,493 @@
 ---
-"date": "2025-05-05"
-"description": "了解如何使用 GroupDocs.Comparison for .NET 简化 Word 中的文档修订流程。探索轻松接受或拒绝更改的方法。"
-"title": "使用 GroupDocs.Comparison .NET 高效掌握文档修订——综合指南"
-"url": "/zh/net/change-management/groupdocs-comparison-net-document-revisions-guide/"
-"weight": 1
+categories:
+- Document Processing
+date: '2026-07-06'
+description: 了解如何使用 GroupDocs.Comparison for .NET 接受 Word 更改 .NET。一步步的 C# 指南，帮助实现自动化修订管理和批量处理。
+keywords:
+- accept word changes .net
+- GroupDocs Comparison .NET
+- Word document revision automation
+lastmod: '2026-07-06'
+linktitle: 接受/拒绝 Word 更改 .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-06'
+  description: Learn how to accept word changes .net using GroupDocs.Comparison for
+    .NET. Step‑by‑step C# guide for automated revision management and bulk processing.
+  headline: 'Accept Word Changes .NET: Complete Developer’s Guide'
+  type: TechArticle
+- description: Learn how to accept word changes .net using GroupDocs.Comparison for
+    .NET. Step‑by‑step C# guide for automated revision management and bulk processing.
+  name: 'Accept Word Changes .NET: Complete Developer’s Guide'
+  steps:
+  - name: Load Your Document with Revisions
+    text: '**What''s happening here**: The `Add` method loads your source document.
+      This should be a Word document that already contains tracked changes (the red
+      and blue markup you see in Word).'
+  - name: Retrieve All Changes
+    text: 'Now comes the interesting part – getting a list of all the changes so you
+      can decide what to do with them: **What is ChangeInfo?** `ChangeInfo` is a lightweight
+      object that describes a single tracked change, including its type, location,
+      and original versus revised content. **Behind the scenes**: `G'
+  - name: Implement Your Accept/Reject Logic
+    text: 'Here''s where you get to implement your business logic. This is typically
+      where developers have the most questions, so let''s break it down: **Key concepts**:
+      - `ComparisonAction.Accept`: Incorporates the change into the final document
+      - `ComparisonAction.Reject`: Keeps the original text, discarding t'
+  type: HowTo
+- questions:
+  - answer: Yes, each `ChangeInfo` object contains the original and revised text,
+      allowing you to display a preview UI or log details before making a decision.
+    question: Can I preview changes before accepting or rejecting them?
+  - answer: Changes without an explicit action are ignored during `ApplyChanges()`.
+      Explicitly handling every change avoids accidental omissions.
+    question: What happens if I don't set `ComparisonAction` for some changes?
+  - answer: No. `ApplyChanges()` creates a new document with your decisions baked
+      in. Preserve the original file if you need a rollback path.
+    question: Can I undo changes after calling `ApplyChanges()`?
+  - answer: Yes, the API processes tracked changes independently of comments. Comments
+      are preserved in the output unless you explicitly remove them.
+    question: Does this work with documents that have both tracked changes and comments?
+  - answer: GroupDocs.Comparison handles most Word features, including tables, images,
+      and footnotes. For extremely large or highly nested objects, test a representative
+      sample and consider increasing the memory allocation.
+    question: How do I handle documents with complex formatting or embedded objects?
+  type: FAQPage
+tags:
+- GroupDocs
+- Word Documents
+- NET
+- Document Revisions
+- C#
+title: 接受 Word 更改 .NET：完整开发者指南
 type: docs
+url: /zh/net/change-management/groupdocs-comparison-net-document-revisions-guide/
+weight: 1
 ---
-# 使用 GroupDocs.Comparison .NET 掌握文档修订：分步指南
 
-## 介绍
-高效管理文档修订可能颇具挑战性，尤其是在您需要决定 Word 文档中哪些更改需要接受、哪些需要拒绝时。有了“GroupDocs.Comparison for .NET”，这一过程将变得无缝衔接。本教程将指导您如何使用 GroupDocs.Comparison 轻松处理文档修订。
+# 接受 Word 更改 .NET：完整开发者指南
 
-**您将学到什么：**
-- 如何将 GroupDocs.Comparison 集成到您的 .NET 项目中。
-- 接受和拒绝 Word 文档中特定更改的方法。
-- 优化修订管理流程的实用技巧。
+是否曾经手动点击 Word 文档中数百个已跟踪的更改？如果你正在构建文档管理系统、处理法律审查或管理协作编辑工作流，你一定深有体会。使用 GroupDocs.Comparison 的 **Accept word changes .net** 能将这种手动噩梦转化为几行 C# 代码。
 
-让我们深入探讨如何利用这个强大的库来提高生产力。首先，我们先设置环境和先决条件。
+## 快速答案
+- **本指南涵盖什么内容？** 使用 GroupDocs.Comparison for .NET 自动接受和拒绝 Word 修订。  
+- **支持哪些 .NET 版本？** .NET Framework 4.6.1+、.NET Core 2.0+、.NET 5/6/7。  
+- **我需要许可证吗？** 免费试用可用于开发；部署时需要正式许可证。  
+- **我可以一次处理多个文件吗？** 可以——本指南包含批量处理模式和内存友好提示。  
+- **在哪里可以找到 API 参考？** 在官方 GroupDocs.Comparison 文档站点。
 
-## 先决条件
-要继续本教程，请确保您已具备：
-- **库和依赖项**：需要 GroupDocs.Comparison for .NET（版本 25.4.0）。
-- **环境设置**：支持.NET框架的开发环境。
-- **知识库**：熟悉C#和基本文档处理概念。
+## 为什么这对开发者很重要
 
-## 为 .NET 设置 GroupDocs.Comparison
-要将 GroupDocs.Comparison 集成到您的项目中，您可以使用 NuGet 包管理器控制台或 .NET CLI。操作方法如下：
+如果你正在构建文档管理系统、处理法律审查或管理协作编辑工作流，你一定深有体会。以编程方式 **accept word changes .net** 能消除繁琐的手动审查，降低人为错误，并为企业级解决方案提供可扩展的自动化。
 
-**NuGet 包管理器控制台**
+## 前提条件和设置
+
+在我们进入代码之前，先确保你已经准备好所有必需的东西。相信我，提前做好准备可以避免后期的头疼。
+
+### 你需要的东西
+
+**开发环境：**
+- .NET Framework 4.6.1+ 或 .NET Core 2.0+（基本上，任何现代版本）
+- Visual Studio 或你喜欢的 C# IDE
+- 对 C# 和文件 I/O 操作有基本了解
+
+**库和依赖项：**
+- GroupDocs.Comparison for .NET（版本 25.4.0 或更高）
+- 访问带有已跟踪更改的 Word 文档（用于测试）
+
+### 安装 GroupDocs.Comparison
+
+安装非常简单，以下提供两种方法供你选择：
+
+**选项 1：NuGet 包管理器控制台**  
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**.NET CLI**
+**选项 2：.NET CLI**（如果你像我一样喜欢使用命令行）  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-### 许可证获取
-GroupDocs.Comparison 提供免费试用、临时许可证以及更多购买选项，方便您更广泛地使用。开始使用：
-1. **免费试用**：从下载试用版 [发布页面](https://releases。groupdocs.com/comparison/net/).
-2. **临时执照**：申请临时驾照 [临时执照页面](https://purchase.groupdocs.com/temporary-license/) 探索全部功能。
-3. **购买**：如需继续使用，请考虑从 [购买页面](https://purchase。groupdocs.com/buy).
+### 许可证注意事项（现实检查）
 
-### 初始化和设置
-以下是 C# 中的基本设置示例：
+让我们谈谈许可证，因为这总是会出现。GroupDocs.Comparison 在生产环境中不是免费的，但他们在让你快速上手方面相当合理：
+
+1. **免费试用**：非常适合开发和测试——可从[发布页面](https://releases.groupdocs.com/comparison/net/)获取  
+2. **临时许可证**：需要更多时间评估？可从[临时许可证页面](https://purchase.groupdocs.com/temporary-license/)获取临时许可证  
+3. **正式许可证**：当你准备好投入生产时，请查看[购买页面](https://purchase.groupdocs.com/buy)  
+
+**专业提示**：先使用试用版构建概念验证，然后获取临时许可证进行彻底测试，最后再购买。
+
+## 如何在 .NET 中接受 Word 更改？
+
+使用 `Comparer comparer = new Comparer();` 加载源 Word 文件，添加文档，决定保留哪些修订，然后调用 `ApplyChanges()` —— 只需几行代码。`Comparer` 类是加载文档并执行修订操作的核心引擎。这种单调用模式确保每个被接受的更改都合并到输出中，而被拒绝的更改被丢弃，从而为后续处理提供干净的最终版本。
+
+## 什么是 Comparer 类？
+
+`Comparer` 类是 GroupDocs.Comparison 的核心引擎，用于加载、分析并对 Word 文档应用修订操作。
+
+### 设置 Comparer
+
+这里就是魔法开始的地方。`Comparer` 对象是处理 Word 文档修订的主要工具：
+
 ```csharp
 using GroupDocs.Comparison;
 using GroupDocs.Comparison.Options;
 
-// 使用源文档路径初始化 Comparer 对象
+// Initialize Comparer object with source document path
 Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_revisions.docx");
 
-// 定义结果的输出目录
+// Define output directory for results
 string outputDirectoryAccepted = Path.Combine("YOUR_OUTPUT_DIRECTORY", "accepted_changes.docx");
-```
+```  
 
-## 实施指南
-### 接受和拒绝修订
-#### 概述
-此功能允许您以编程方式接受或拒绝 Word 文档中的更改。以下是分步指南：
+**重要提示**：将 `YOUR_DOCUMENT_DIRECTORY` 和 `YOUR_OUTPUT_DIRECTORY` 替换为实际路径。我知道这看起来很明显，但实际上经常会让人出错。
 
-**步骤 1：加载文档**
-首先，将您的文档加载到比较器对象中。
+## 理解 Word 文档修订
+
+在开始接受或拒绝更改之前，让我们先了解我们正在处理的内容。带有已跟踪更改的 Word 文档包含修订信息，GroupDocs.Comparison 可以读取并操作这些信息。
+
+## 步骤实现
+
+加载、检查、决定并应用——驱动任何自动化修订流水线的四步工作流。
+
+### 步骤 1：加载带有修订的文档
+
 ```csharp
 using GroupDocs.Comparison.Options;
 
-// 加载文档修订
+// Load document revisions
 comparer.Add("YOUR_DOCUMENT_DIRECTORY/source_revisions.docx");
-```
+```  
 
-#### 了解参数
-- **添加**：此方法加载源文档以供比较。
+**此处发生了什么**：`Add` 方法加载你的源文档。该文档应已包含已跟踪的更改（即在 Word 中看到的红色和蓝色标记）。
 
-**第 2 步：获取修订**
-检索所有更改以评估哪些更改需要接受或拒绝。
+### 步骤 2：检索所有更改
+
+现在进入有趣的部分——获取所有更改的列表，以便决定如何处理它们：
+
 ```csharp
-// 从已加载的文档中获取修订版本
+// Fetch revisions from loaded documents
 List<ChangeInfo> revisions = comparer.GetChanges();
-```
+```  
 
-#### 方法详细信息
-- **获取更改**：返回文档中检测到的更改（修订）的列表。
+**什么是 ChangeInfo？** `ChangeInfo` 是一个轻量级对象，描述单个已跟踪的更改，包括其类型、位置以及原始内容与修订后内容的对比。
 
-**步骤 3：接受/拒绝更改**
-决定保留哪些更改以及丢弃哪些更改。
+**内部工作原理**：`GetChanges()` 返回一个 `List<ChangeInfo>`，其中包含文档中每个已跟踪更改的详细信息。
+
+### 步骤 3：实现接受/拒绝逻辑
+
+这里是实现业务逻辑的地方。通常这是开发者最常有疑问的环节，我们来逐步拆解：
+
 ```csharp
-// 接受某些改变，拒绝其他改变
+// Accept certain changes, reject others
 foreach(var change in revisions)
 {
-    if (/* 接受条件 */)
+    if (/* condition to accept */)
         change.ComparisonAction = ComparisonAction.Accept;
     else
         change.ComparisonAction = ComparisonAction.Reject;
 }
 
-// 应用修订
+// Apply the revisions
 comparer.ApplyChanges(outputDirectoryAccepted);
-```
+```  
 
-#### 配置选项
-- **比较动作**：确定修订是否被接受或拒绝。
+**关键概念**：
+- `ComparisonAction.Accept`：将更改合并到最终文档中  
+- `ComparisonAction.Reject`：保留原始文本，丢弃建议的更改  
+- `ApplyChanges()`：实际处理你的接受/拒绝决策并生成输出文件  
 
-**故障排除提示**
-- 确保正确指定文档路径。
-- 处理与文件访问权限相关的异常。
+## 实际实现场景
 
-## 实际应用
-以下是此功能发挥作用的一些实际场景：
-1. **法律文件审查**：律师可以有效地接受/拒绝提议的编辑。
-2. **协作编辑**：团队可以简化 Word 文档中的反馈合并。
-3. **内容管理系统（CMS）**：自动化文档管理的修订处理。
+让我们来看一些实际场景，这些是你在生产工作流中可能想要 **accept word changes .net** 的常见情况：
 
-## 性能考虑
-为了优化使用 GroupDocs.Comparison 时的性能：
-- **资源使用情况**：监视比较操作期间的内存使用情况。
-- **最佳实践**：优化您的 .NET 代码以实现高效的内存管理，确保操作后正确处理资源。
+### 场景 1：自动接受格式更改
 
-## 结论
-恭喜！现在，您已经掌握了使用 GroupDocs.Comparison 管理 Word 文档修订的坚实基础。如需进一步探索，请尝试不同的配置选项，或将此功能集成到更广泛的应用程序中。
+也许你想自动接受所有格式更改，但手动审查内容更改：
 
-**后续步骤：**
-- 深入了解 [文档](https://docs.groupdocs.com/comparison/net/) 以获得高级功能。
-- 尝试自定义比较设置以满足您的特定需求。
+```csharp
+foreach(var change in revisions)
+{
+    // Accept formatting changes automatically
+    if (change.Type == ChangeType.StyleChanged || 
+        change.Type == ChangeType.FormatChanged)
+    {
+        change.ComparisonAction = ComparisonAction.Accept;
+    }
+    else
+    {
+        // Review content changes manually or based on other criteria
+        change.ComparisonAction = ComparisonAction.Reject; // or your custom logic
+    }
+}
+```  
 
-不要犹豫，实施这些策略并增强您的文档处理工作流程！
+### 场景 2：基于作者的过滤
 
-## 常见问题解答部分
-1. **什么是 GroupDocs.Comparison .NET？**
-   - 允许开发人员在 .NET 应用程序内比较文档和管理修订的库。
-2. **我可以将 GroupDocs.Comparison 用于非 Word 文件吗？**
-   - 是的，它支持各种文件格式，包括 PDF、Excel 电子表格等。
-3. **如何处理文档比较过程中的异常？**
-   - 实现 try-catch 块来管理与文件访问或不支持的操作相关的异常。
-4. **我可以处理的修订数量有限制吗？**
-   - GroupDocs.Comparison 有效地处理了大量的变化；但是，性能可能会因系统资源而异。
-5. **GroupDocs.Comparison 可以处理大型文档吗？**
-   - 是的，它旨在有效地管理大文件，但应考虑资源可用性。
+想要自动接受某些审阅者的更改，同时拒绝其他人的更改吗？
 
-## 资源
-- [文档](https://docs.groupdocs.com/comparison/net/)
-- [API 参考](https://reference.groupdocs.com/comparison/net/)
-- [下载 GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
-- [购买许可证](https://purchase.groupdocs.com/buy)
-- [免费试用](https://releases.groupdocs.com/comparison/net/)
-- [临时执照](https://purchase.groupdocs.com/temporary-license/)
-- [支持论坛](https://forum.groupdocs.com/c/comparison/)
+```csharp
+List<string> trustedReviewers = new List<string> { "john.doe", "jane.smith" };
+
+foreach(var change in revisions)
+{
+    if (trustedReviewers.Contains(change.Authors?.FirstOrDefault()?.Name?.ToLower()))
+    {
+        change.ComparisonAction = ComparisonAction.Accept;
+    }
+    else
+    {
+        change.ComparisonAction = ComparisonAction.Reject;
+    }
+}
+```  
+
+### 场景 3：文档管理系统的批量处理
+
+在工作流中处理多个文档：
+
+```csharp
+string[] documentPaths = Directory.GetFiles("input_folder", "*.docx");
+
+foreach (string docPath in documentPaths)
+{
+    using (Comparer comparer = new Comparer(docPath))
+    {
+        var changes = comparer.GetChanges();
+        
+        // Apply your business logic here
+        foreach(var change in changes)
+        {
+            // Your accept/reject logic
+            change.ComparisonAction = DetermineAction(change);
+        }
+        
+        string outputPath = Path.Combine("output_folder", Path.GetFileName(docPath));
+        comparer.ApplyChanges(outputPath);
+    }
+}
+```  
+
+## 常见陷阱及解决方案
+
+让我分享一些我遇到的坑（以及如何避免）：
+
+### 陷阱 1：文件访问问题
+
+**问题**：“文件正被另一个进程使用”错误。  
+**解决方案**：始终使用 `using` 语句正确释放资源：
+
+```csharp
+using (Comparer comparer = new Comparer(documentPath))
+{
+    // Your code here
+} // Automatically disposes and releases file handles
+```  
+
+### 陷阱 2：空修订列表
+
+**问题**：即使在 Word 中可以看到已跟踪的更改，`GetChanges()` 仍返回空列表。  
+**解决方案**：确保文档实际包含已跟踪的更改，而不仅仅是批注。同时确认文档未损坏。
+
+### 陷阱 3：输出路径问题
+
+**问题**：文件未在预期位置创建。  
+**解决方案**：始终使用 `Path.Combine()` 并确认目录存在：
+
+```csharp
+string outputDir = "YOUR_OUTPUT_DIRECTORY";
+if (!Directory.Exists(outputDir))
+    Directory.CreateDirectory(outputDir);
+
+string outputPath = Path.Combine(outputDir, "processed_document.docx");
+```  
+
+## 性能优化技巧
+
+在处理大量文档或大文件时，性能至关重要。以下是我的经验：
+
+### 内存管理
+
+```csharp
+// Good: Dispose of comparer objects properly
+using (Comparer comparer = new Comparer(documentPath))
+{
+    // Process document
+} // Automatic cleanup
+
+// Avoid: Creating multiple comparer instances without disposal
+```  
+
+### 批处理优化
+
+针对高容量场景：
+
+1. **分批处理**——不要一次加载数百个文档到内存中。  
+2. **监控内存使用**——使用性能计数器或 .NET 诊断工具跟踪消耗。  
+3. **实现重试逻辑**——大型文档有时因临时资源限制而在首次尝试时失败。
+
+### 资源监控
+
+```csharp
+// Monitor memory usage during processing
+long beforeMemory = GC.GetTotalMemory(false);
+
+// Your document processing code here
+
+long afterMemory = GC.GetTotalMemory(true);
+Console.WriteLine($"Memory used: {(afterMemory - beforeMemory) / 1024 / 1024} MB");
+```  
+
+## 故障排查指南
+
+### 问题：更改未被应用
+
+**症状**：输出文档与输入文档看起来完全相同。  
+**检查**：
+- 你是否真的在更改上设置了 `ComparisonAction`？  
+- 输出路径是否与输入路径不同？  
+- 是否有被吞掉的异常？
+
+### 问题：性能问题
+
+**症状**：处理时间远超预期。  
+**解决方案**：
+- 检查系统可用内存。  
+- 确保正确释放 `Comparer` 对象。  
+- 考虑将文档分成更小的批次处理。
+
+### 问题：许可证错误
+
+**症状**：“未找到许可证”或类似错误。  
+**解决方案**：
+- 验证许可证文件位置。  
+- 检查许可证有效期。  
+- 确保在代码中正确初始化许可证。
+
+## 高级用例
+
+### 自定义更改过滤
+
+想要对过滤逻辑进行高级定制吗？以下示例展示了基于多条件接受更改的方式：
+
+```csharp
+foreach(var change in revisions)
+{
+    bool shouldAccept = EvaluateChange(change);
+    change.ComparisonAction = shouldAccept ? 
+        ComparisonAction.Accept : 
+        ComparisonAction.Reject;
+}
+
+private bool EvaluateChange(ChangeInfo change)
+{
+    // Complex business logic here
+    // Could involve database lookups, external API calls, etc.
+    return true; // Your logic
+}
+```  
+
+### 与工作流系统集成
+
+如果你将其构建到更大的文档管理工作流中：
+
+```csharp
+public class DocumentRevisionProcessor
+{
+    public async Task<ProcessingResult> ProcessDocumentAsync(string documentPath, ProcessingOptions options)
+    {
+        try
+        {
+            using (Comparer comparer = new Comparer(documentPath))
+            {
+                var changes = comparer.GetChanges();
+                
+                // Apply your business rules
+                ApplyRevisionRules(changes, options);
+                
+                // Process and save
+                string outputPath = GenerateOutputPath(documentPath, options);
+                comparer.ApplyChanges(outputPath);
+                
+                return new ProcessingResult 
+                { 
+                    Success = true, 
+                    OutputPath = outputPath,
+                    ChangesProcessed = changes.Count
+                };
+            }
+        }
+        catch (Exception ex)
+        {
+            return new ProcessingResult 
+            { 
+                Success = false, 
+                Error = ex.Message 
+            };
+        }
+    }
+}
+```  
+
+## 总结
+
+现在，你已经拥有了以编程方式处理 Word 文档修订的坚实基础。能够 **accept word changes .net** 为自动化和工作流优化打开了大量可能性。
+
+**关键要点**：
+- 始终使用 `using` 语句正确释放 `Comparer` 对象。  
+- 在更改评估循环中实现业务逻辑。  
+- 考虑高容量处理的性能影响。  
+- 使用适当的错误处理和资源管理。
+
+**接下来可以探索的步骤**：
+- 尝试不同的更改类型和过滤条件。  
+- 将其集成到现有的文档管理系统中。  
+- 查看[完整文档](https://docs.groupdocs.com/comparison/net/)以了解高级功能。  
+- 考虑为团队构建 Web API 包装器。
+
+这种方法的优势在于可扩展。无论是处理单个文档还是成千上万，原则都是相同的。先从小规模开始，充分测试，然后随着需求增长逐步扩展实现。
+
+## 常见问题
+
+**问：我可以在接受或拒绝更改之前预览吗？**  
+**答**：是的，每个 `ChangeInfo` 对象包含原始和修订后的文本，您可以在做决定前显示预览 UI 或记录细节。
+
+**问：如果我没有为某些更改设置 `ComparisonAction` 会怎样？**  
+**答**：未显式设置操作的更改在 `ApplyChanges()` 时会被忽略。显式处理每个更改可避免意外遗漏。
+
+**问：调用 `ApplyChanges()` 后我能撤销更改吗？**  
+**答**：不能。`ApplyChanges()` 会生成一个已合并决策的新文档。如果需要回滚，请保留原始文件。
+
+**问：这是否适用于同时包含已跟踪更改和批注的文档？**  
+**答**：是的，API 会独立处理已跟踪更改，批注会在输出中保留，除非你显式删除它们。
+
+**问：如何处理具有复杂格式或嵌入对象的文档？**  
+**答**：GroupDocs.Comparison 能处理大多数 Word 功能，包括表格、图像和脚注。对于极大或高度嵌套的对象，请使用具有代表性的样本进行测试，并考虑增加内存分配。
+
+**问：我能处理存储在云端（SharePoint、OneDrive）的文档吗？**  
+**答**：需要先将文件下载到本地临时文件夹，运行比较后再上传回去。API 支持任何本地文件路径。
+
+## 资源和参考
+
+- [官方文档](https://docs.groupdocs.com/comparison/net/)  
+- [完整文档](https://docs.groupdocs.com/comparison/net/)  
+- [API 参考](https://reference.groupdocs.com/comparison/net/)  
+- [下载最新版本](https://releases.groupdocs.com/comparison/net/)  
+- [获取许可证](https://purchase.groupdocs.com/buy)  
+- [免费试用](https://releases.groupdocs.com/comparison/net/)  
+- [临时许可证](https://purchase.groupdocs.com/temporary-license/)  
+- [社区支持](https://forum.groupdocs.com/c/comparison/)
+
+---
+
+**最后更新：** 2026-07-06  
+**测试环境：** GroupDocs.Comparison 25.4.0 for .NET  
+**作者：** GroupDocs
+
+## 相关教程
+
+- [跟踪文档更改 .NET - 完整作者管理指南](/comparison/net/change-management/groupdocs-comparison-net-set-author-changes-document-comparison/)
+- [文档比较选项 .NET - 完整配置指南](/comparison/net/comparison-options/)
+- [文档比较 .NET 教程 - 完整加载与保存指南](/comparison/net/loading-and-saving-documents/)

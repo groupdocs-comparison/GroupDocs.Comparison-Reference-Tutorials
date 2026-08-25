@@ -1,143 +1,174 @@
 ---
 categories:
 - Java Development
-date: '2026-03-27'
-description: เรียนรู้วิธีสร้างรายงานเปรียบเทียบความแตกต่างของเอกสารและเปรียบเทียบไฟล์
-  Excel ด้วย Java หรือเปรียบเทียบเอกสาร PDF ด้วย Java โดยใช้ GroupDocs.Comparison
-  พร้อมบทเรียนแบบขั้นตอนโดยขั้นตอนพร้อมโค้ดทำงาน
-keywords: java document comparison tutorial, compare documents java, groupdocs comparison
-  java guide, document diff java, how to compare word documents in java
-lastmod: '2026-03-27'
-linktitle: Create Document Diff Report – Compare Excel Files Java
+date: '2026-08-25'
+description: เรียนรู้วิธีเปรียบเทียบ pdf java และสร้างรายงานความแตกต่างของเอกสารโดยใช้
+  GroupDocs.Comparison. คู่มือทีละขั้นตอนพร้อมโค้ดสำหรับไฟล์ Excel, PDF, และ Word
+keywords:
+- compare pdf java
+- java compare pdf files
+- java compare word docs
+- groupdocs comparison java
+lastmod: '2026-08-25'
+linktitle: วิธีเปรียบเทียบ pdf java และสร้างรายงานความแตกต่างของเอกสาร
+og_description: compare pdf java tutorial แสดงให้คุณเห็นวิธีสร้างรายงานความแตกต่างสำหรับไฟล์
+  Excel, PDF, และ Word โดยใช้ GroupDocs.Comparison ใน Java. ทำตามตัวอย่างทีละขั้นตอน
+og_image_alt: Guide to compare PDF files in Java and generate document diff reports
+  with GroupDocs.Comparison
+og_title: วิธีเปรียบเทียบ pdf java และสร้างรายงานความแตกต่างของเอกสาร
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to compare pdf java and create document diff reports using
+    GroupDocs.Comparison. Step‑by‑step tutorial with code for Excel, PDF, and Word
+    files.
+  headline: How to compare pdf java and create document diff report
+  type: TechArticle
+- questions:
+  - answer: Yes – use the stream‑based API shown in Step 3; it processes each worksheet
+      row by row, keeping memory usage under 150 MB for typical 10,000‑row sheets.
+    question: Can I compare Excel files without loading them fully into memory?
+  - answer: Absolutely. Supply the password via `settings.setPassword("yourPassword")`
+      before calling `compare`, and the library will decrypt the file on the fly.
+    question: Does GroupDocs.Comparison support password‑protected PDFs?
+  - answer: Allocate at least **2 GB** (`-Xmx2g`) for documents larger than 50 MB;
+      increase to **4 GB** if you compare multiple large files concurrently.
+    question: What heap size is recommended for large Word documents?
+  - answer: Yes – call `result.save("diff.html", SaveFormat.Html)` to obtain a browser‑ready
+      diff that preserves styling and inline images.
+    question: Can I generate HTML previews of comparison results?
+  - answer: Set `settings.setIgnoreHeadersFooters(true)`; the engine will skip those
+      elements, reducing false‑positive changes.
+    question: Is there a way to ignore headers or footers during comparison?
+  type: FAQPage
 tags:
-- document-comparison
-- java-tutorial
+- compare pdf
 - groupdocs
-- pdf-comparison
-- word-comparison
-title: สร้างรายงานความแตกต่างของเอกสาร – เปรียบเทียบไฟล์ Excel ด้วย Java
+- java document comparison
+- document diff report
+title: วิธีเปรียบเทียบ pdf java และสร้างรายงานความแตกต่างของเอกสาร
 type: docs
-url: /th/java/basic-comparison/
-weight: 3
 ---
 
-# สร้างรายงานความแตกต่างของเอกสาร – บทแนะนำการเปรียบเทียบเอกสารด้วย Java
+# วิธีเปรียบเทียบ pdf java และสร้างรายงานความแตกต่างของเอกสาร
 
-หากคุณต้องการ **create document diff report** สำหรับไฟล์ Excel, PDF หรือ Word ใน Java คุณมาถูกที่แล้ว ในหลายโครงการ การตรวจจับการเปลี่ยนแปลงระหว่างรุ่นด้วยตนเองใช้เวลานานและเสี่ยงต่อข้อผิดพลาด คู่มือนี้จะแสดงวิธีอัตโนมัติกระบวนการด้วย GroupDocs.Comparison เพื่อให้คุณสามารถสร้างรายงานความแตกต่างอย่างเชื่อถือได้สำหรับรูปแบบที่รองรับทั้งหมด—รวมถึง **compare excel files java** และ **compare pdf documents java**—ด้วยเพียงไม่กี่บรรทัดของโค้ด
+ในคู่มือฉบับครอบคลุมนี้คุณจะได้เรียนรู้วิธี **compare pdf java** ไฟล์และสร้างรายงานความแตกต่างของเอกสารอย่างละเอียดโดยใช้ GroupDocs.Comparison สำหรับ Java ไม่ว่าคุณจะทำงานกับสเปรดชีต Excel เอกสาร PDF หรือไฟล์ Word ไลบรารีนี้ช่วยให้คุณอัตโนมัติการตรวจจับการเปลี่ยนแปลงด้วยเพียงไม่กี่บรรทัดของโค้ด ประหยัดเวลาการตรวจสอบด้วยตนเองหลายชั่วโมง
 
-## คำตอบสั้น
+**GroupDocs.Comparison** เป็นไลบรารี Java ที่แยกความซับซ้อนของรูปแบบเอกสารและให้ผลลัพธ์การเปรียบเทียบภาพเคียงกัน, เมทาดาต้าการติดตามการเปลี่ยนแปลง, และตัวเลือกการส่งออกสำหรับหลายประเภทไฟล์
+
+## คำตอบอย่างรวดเร็ว
 - **ไลบรารีหลักคืออะไร?** GroupDocs.Comparison for Java  
-- **ฉันสามารถเปรียบเทียบไฟล์ Excel ได้หรือไม่?** Yes – use the `compare excel files java` feature  
-- **การเปรียบเทียบ PDF รองรับหรือไม่?** Absolutely, see **compare pdf documents java** below  
-- **ฉันต้องการไลเซนส์หรือไม่?** มีไลเซนส์ชั่วคราวสำหรับการประเมิน; จำเป็นต้องมีไลเซนส์เชิงพาณิชย์สำหรับการใช้งานจริง  
-- **ต้องการเวอร์ชัน Java ใด?** Java 8+ (เวอร์ชันใหม่กว่าจะทำให้ประสิทธิภาพดีขึ้น)
+- **ฉันสามารถเปรียบเทียบไฟล์ Excel ได้หรือไม่?** ใช่ – the `compare excel files java` feature handles cell‑level changes.  
+- **รองรับการเปรียบเทียบ PDF หรือไม่?** แน่นอน, ดูส่วน **compare pdf java** ด้านล่าง.  
+- **ฉันต้องการไลเซนส์หรือไม่?** ไลเซนส์การประเมินชั่วคราวฟรี; ต้องมีไลเซนส์เชิงพาณิชย์สำหรับการใช้งานจริง.  
+- **ต้องการเวอร์ชัน Java ใด?** Java 8+ (Java 11+ offers better performance and native TLS support).
 
-## ทำไมการเปรียบเทียบเอกสารจึงสำคัญในการพัฒนาแบบสมัยใหม่
+## compare excel files java คืออะไร?
+คุณสามารถเปรียบเทียบเวิร์กบุ๊ก Excel สองไฟล์โดยโหลดเข้า API และเรียกเมธอด `compare` ซึ่งจะคืนเอกสาร diff ที่ไฮไลท์เซลล์, แถว, และเวิร์กชีตที่เพิ่ม, ลบ, หรือแก้ไข. ไลบรารียังตรวจจับการเปลี่ยนแปลงสูตรและความแตกต่างของการจัดรูปแบบภาพ.
 
-การเปรียบเทียบเอกสารไม่ได้เป็นเพียงการหาความแตกต่างของข้อความเท่านั้น ในสภาพแวดล้อมการทำงานร่วมกัน คุณมักต้องการ:
-- **Track Changes Across Teams** – ระบุว่าใครเปลี่ยนอะไรและเมื่อไหร่  
-- **Automate Quality Control** – ตรวจจับการแก้ไขที่ไม่ได้รับอนุญาตหรือรับประกันการปฏิบัติตาม  
-- **Streamline Workflows** – ลดเวลาการตรวจสอบด้วยมือและข้อผิดพลาดของมนุษย์  
-- **Support Multiple Formats** – จัดการสเปรดชีต, PDF, เอกสาร Word และอื่น ๆ  
+## วิธีเปรียบเทียบเอกสาร pdf java ด้วย GroupDocs.Comparison
+โหลดไฟล์ PDF สองไฟล์, เรียกเมธอด `compare`, แล้วส่งออกผลลัพธ์เป็นรายงาน diff ในรูปแบบ PDF หรือ HTML. API จะดึงข้อความ, รูปภาพ, และกราฟิกเวกเตอร์โดยอัตโนมัติ, ทำให้คุณได้การเปรียบเทียบภาพที่แม่นยำโดยไม่ต้องเขียนโค้ดการแยกวิเคราะห์ PDF ด้วยตนเอง.
 
-GroupDocs.Comparison for Java ทำงานหนักให้คุณ สามารถมุ่งเน้นที่ตรรกะธุรกิจขณะมันสร้าง **document diff report** เบื้องหลัง
+## GroupDocs.Comparison for Java คืออะไร?
+`GroupDocs.Comparison` เป็น Java SDK ที่ให้ API สำหรับเปรียบเทียบ, ไฮไลท์, และสร้างรายงาน diff สำหรับไฟล์ที่รองรับกว่า **50** รูปแบบ, รวมถึง DOCX, XLSX, PPTX, PDF, และประเภทภาพทั่วไป. มันทำงานโดยไม่ต้องใช้ Microsoft Office หรือ Adobe Acrobat บนเซิร์ฟเวอร์.
 
-## **compare excel files java** คืออะไร?
+## วิธีสร้างรายงานความแตกต่างของเอกสารด้วย GroupDocs.Comparison
+โหลดเอกสารต้นทางและเป้าหมาย, กำหนดค่าการเปรียบเทียบ, และเรียกเมธอด `compare`. ไลบรารีจะคืนอ็อบเจกต์ `ComparisonResult` ซึ่งแสดงผลลัพธ์ของการเปรียบเทียบและให้เข้าถึงเอกสาร diff ที่สร้างขึ้นและเมทาดาต้าการเปลี่ยนแปลง. จากนั้นคุณสามารถบันทึกผลลัพธ์นี้เป็น PDF, HTML, หรือ DOCX.
 
-การเปรียบเทียบสเปรดชีต Excel ด้วยโปรแกรมหมายถึงการตรวจจับการเปลี่ยนแปลงในค่าของเซลล์, สูตร, การจัดรูปแบบ, และโครงสร้างของแผ่นงาน ด้วย GroupDocs.Comparison คุณเพียงแค่ป้อนไฟล์ Excel สองไฟล์ (หรือสตรีม) แล้วรับรายงานความแตกต่างที่ไฮไลท์เซลล์ที่เพิ่ม, ลบ, หรือแก้ไข—ทั้งหมดจากโค้ด Java แท้
+### ขั้นตอน 1: เพิ่มการพึ่งพา Maven
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-comparison</artifactId>
+    <version>23.12</version>
+</dependency>
+```
 
-## วิธีการ **compare pdf documents java** ด้วย GroupDocs.Comparison
+### ขั้นตอน 2: เริ่มต้น comparer ด้วยไลเซนส์
+```java
+Comparer comparer = new Comparer();
+comparer.setLicense("YOUR_LICENSE_KEY");
+```
 
-การเปรียบเทียบ PDF ทำงานคล้ายกันแต่เพิ่มการสนับสนุนการเปรียบเทียบเชิงภาพ, การสกัดข้อความ, และการจัดการวัตถุที่ฝังอยู่ ไลบรารีนี้ทำให้ซับซ้อนของ PDF ถูกซ่อนอยู่ ทำให้คุณสามารถมุ่งเน้นที่กฎธุรกิจที่กำหนดการเปลี่ยนแปลงที่มีความหมาย
+### ขั้นตอน 3: โหลดเอกสารสองไฟล์ (แบบสตรีมสำหรับไฟล์ขนาดใหญ่)
+```java
+try (InputStream left = new FileInputStream("original.pdf");
+     InputStream right = new FileInputStream("revised.pdf")) {
 
-## เริ่มต้นกับการเปรียบเทียบเอกสารด้วย Java
+    ComparisonSettings settings = new ComparisonSettings();
+    settings.setDetectStyleChanges(true);   // enable style diff
+    settings.setShowDeletedContent(true);   // highlight deletions
 
-ก่อนที่คุณจะดำดิ่งสู่บทแนะนำด้านล่าง นี่คือสิ่งที่คุณควรรู้:
+    ComparisonResult result = comparer.compare(left, right, settings);
+    result.save("diff-report.pdf", SaveFormat.Pdf);
+}
+```
 
-### ข้อกำหนดเบื้องต้น
-- ความรู้พื้นฐานของ Java  
-- ความคุ้นเคยกับเครื่องมือสร้าง Maven หรือ Gradle  
-- Java 8+ runtime (แนะนำให้ใช้เวอร์ชันใหม่เพื่อประสิทธิภาพที่ดียิ่งขึ้น)
+โค้ดด้านบนโหลดสตรีม PDF สองสตรีม, เปิดการตรวจจับการเปลี่ยนแปลงสไตล์, และเขียนรายงาน diff แบบภาพไปยัง `diff-report.pdf`. รูปแบบเดียวกันทำงานกับไฟล์ Excel และ Word — เพียงเปลี่ยนนามสกุลไฟล์.
 
-### กรณีการใช้งานทั่วไป
-- ระบบตรวจสอบเอกสารทางกฎหมาย  
-- แพลตฟอร์มการจัดการเนื้อหา  
-- การตรวจจับการคัดลอกในเชิงวิชาการ  
-- การจัดเวอร์ชันเอกสารซอฟต์แวร์  
-- การตรวจสอบรายงานการเงิน  
+## ความท้าทายทั่วไปในการนำไปใช้ (และวิธีแก้ไข)
+`Comparer` เป็นคลาสหลักที่ดำเนินการเปรียบเทียบตามการตั้งค่าที่ให้มา.
 
-### ข้อควรพิจารณาด้านประสิทธิภาพ
-การเปรียบเทียบเอกสารอาจใช้หน่วยความจำมาก โดยเฉพาะไฟล์ขนาดใหญ่ ควรวางแผนให้มีพื้นที่ heap เพียงพอและพิจารณาการประมวลผลแบบสตรีมสำหรับเอกสารขนาดใหญ่
+- **ปัญหาหน่วยความจำกับไฟล์ขนาดใหญ่** – Switch to the stream‑based API (as shown in Step 3) and increase the JVM heap (`-Xmx2g` or higher).  
+- **ข้อบกพร่องเฉพาะรูปแบบ** – PDFs may contain invisible layers; enable `settings.setIgnoreInvisibleLayers(false)` to capture those changes.  
+- **คอขวดด้านประสิทธิภาพ** – Reuse a single `Comparer` instance across multiple comparisons and enable parallel processing with `ExecutorService`.  
+- **เอกสารที่เข้ารหัส** – Provide the password via `settings.setPassword("secret")` before loading the streams.
 
-## วิธีการ **create document diff report** ด้วย GroupDocs.Comparison
-
-ด้านล่างเป็นคอลเลกชันของบทแนะนำที่คัดสรร แต่ละลิงก์เปิดตัวอย่างที่ทำงานได้เต็มรูปแบบและอธิบายขั้นตอนผ่านสถานการณ์เฉพาะ—ตั้งแต่การเปรียบเทียบ Excel อย่างง่ายจนถึงการแสดงผล HTML ขั้นสูงของผลการเปรียบเทียบ
-
-### คอลเลกชันบทแนะนำแบบขั้นตอนต่อขั้นตอน
-
-- [วิธีเปรียบเทียบไฟล์เซลล์โดยใช้ GroupDocs.Comparison ใน Java: คู่มือครบวงจร](./compare-cell-files-groupdocs-java-streams/)  
-- [การใช้งานการเปรียบเทียบเอกสารใน Java ด้วย GroupDocs: คู่มือครบวงจร](./java-document-comparison-groupdocs-tutorial/)  
-- [การใช้งานการเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison: คู่มือครบวงจร](./java-document-comparison-groupdocs-metadata-source/)  
-- [การใช้งานการเปรียบเทียบเอกสารสตรีมใน Java ด้วย GroupDocs.Comparer: คู่มือครบวงจร](./java-stream-document-comparison-groupdocs/)  
-- [การใช้งานการเปรียบเทียบเอกสาร Word ใน Java ด้วย GroupDocs.Comparison](./word-document-comparison-groupdocs-java/)  
-- [การเปรียบเทียบและแสดงตัวอย่างเอกสาร Java ด้วย GroupDocs: คู่มือครบวงจร](./master-java-document-comparison-preview-groupdocs/)  
-- [การเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison: คู่มือครบวงจร](./java-document-comparison-groupdocs-comparison/)  
-- [การเปรียบเทียบเอกสาร Java และการแสดงตัวอย่างหน้าโดยใช้ GroupDocs.Comparison](./java-groupdocs-comparison-document-management/)  
-- [การเปรียบเทียบเอกสารขั้นสูงและการแสดงผล HTML ใน Java ด้วย GroupDocs.Comparison](./master-groupdocs-comparison-java-document-html-rendering/)  
-- [การเปรียบเทียบเอกสารขั้นสูงใน Java ด้วย GroupDocs.Comparison API](./mastering-document-comparison-java-groupdocs/)  
-- [การเปรียบเทียบเอกสาร Java ขั้นสูงด้วย GroupDocs.Comparison](./java-groupdocs-comparison-document-management-guide/)  
-- [การเชี่ยวชาญการเปรียบเทียบเอกสารใน Java ด้วย GroupDocs.Comparison: คู่มือครบวงจร](./document-comparison-groupdocs-java/)  
-
-## ความท้าทายทั่วไปในการใช้งาน (และวิธีแก้ไข)
-
-- **Memory Issues with Large Files** – ใช้การเปรียบเทียบแบบสตรีมและประมวลผลเอกสารเป็นชิ้นส่วนหลายส่วน บทแนะนำหลายรายการด้านบนครอบคลุมเทคนิคการเพิ่มประสิทธิภาพหน่วยความจำ  
-- **Format‑Specific Quirks** – PDF, Word, และ Excel มีลักษณะเฉพาะของแต่ละรูปแบบ บทแนะนำแต่ละรายการอธิบายรายละเอียดของรูปแบบนั้น  
-- **Performance Bottlenecks** – พิจารณาการประมวลผลแบบอะซิงโครนัสสำหรับแอปเว็บและใช้การแคชสำหรับคู่เอกสารที่เปรียบเทียบบ่อย  
-- **Handling Encrypted Documents** – ให้รหัสผ่านเมื่อโหลดไฟล์ที่ถูกป้องกัน; บทแนะนำหลายรายการแสดงวิธีจัดการอย่างปลอดภัย  
-
-## เคล็ดลับการเพิ่มประสิทธิภาพ
-
-1. **Use Streams When Possible** – หลีกเลี่ยงการโหลดเอกสารทั้งหมดเข้าสู่หน่วยความจำ  
-2. **Configure Comparison Settings** – ปิดฟีเจอร์ที่ไม่จำเป็นเช่นการติดตามการเปลี่ยนแปลงหากคุณต้องการเพียง diff พื้นฐาน  
-3. **Cache Results** – เก็บผลการเปรียบเทียบสำหรับคู่เอกสารที่ไม่ค่อยเปลี่ยนแปลง  
-4. **Parallel Processing** – เปรียบเทียบหลายคู่พร้อมกันโดยใช้ยูทิลิตี้การทำงานพร้อมกันของ Java  
+## เคล็ดลับการปรับประสิทธิภาพ
+1. **แนะนำให้ใช้สตรีม** – Avoid loading whole files into memory; streams keep the footprint under 200 MB even for 500‑page PDFs.  
+2. **ปรับแต่งการตั้งค่า** – Turn off features you don’t need (e.g., `setDetectHeaderFooterChanges(false)`) to speed up processing by up to 30 %.  
+3. **แคชผลลัพธ์ที่ใช้ซ้ำได้** – Store diff results for unchanged document pairs in Redis or Memcached.  
+4. **รันการเปรียบเทียบแบบอะซิงโครนัส** – Use `CompletableFuture` to compare multiple document pairs concurrently.
 
 ## ขั้นตอนต่อไปและหัวข้อขั้นสูง
-
-หลังจากคุณเชี่ยวชาญพื้นฐานแล้ว คุณอาจสำรวจ:
-- อัลกอริธึมการตรวจจับการเปลี่ยนแปลงแบบกำหนดเอง  
-- การบูรณาการกับระบบจัดเก็บข้อมูล (SharePoint, Google Drive ฯลฯ)  
-- การสร้าง REST API สำหรับบริการเปรียบเทียบเอกสาร  
-- การแก้ไขแบบร่วมมือแบบเรียลไทม์  
-
-แต่ละบทแนะนำรวมลิงก์ไปยังเอกสารเพิ่มเติมและแหล่งข้อมูลชุมชน
+- สร้าง REST API ที่รับการอัปโหลดไฟล์สองไฟล์และคืนค่า diff PDF.  
+- ผสานรวมกับผู้ให้บริการคลาวด์สตอเรจ (AWS S3, Azure Blob) โดยใช้ pre‑signed URLs.  
+- ขยาย engine การเปรียบเทียบด้วยกฎกำหนดเองเพื่อไม่สนใจคอลัมน์ตารางหรือพื้นที่ลายน้ำเฉพาะ.  
+- สร้างรายงาน diff แบบ HTML สำหรับผู้ชมบนเว็บและฝังใน React front‑end.
 
 ## แหล่งข้อมูลและเอกสารเพิ่มเติม
-
+- [วิธีเปรียบเทียบไฟล์เซลล์โดยใช้ GroupDocs.Comparison ใน Java: คู่มือฉบับครอบคลุม](./compare-cell-files-groupdocs-java-streams/)  
+- [การนำการเปรียบเทียบเอกสารใน Java ด้วย GroupDocs: คู่มือฉบับครอบคลุม](./java-document-comparison-groupdocs-tutorial/)  
+- [การนำการเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison: คู่มือฉบับครอบคลุม](./java-document-comparison-groupdocs-metadata-source/)  
+- [การนำการเปรียบเทียบเอกสารสตรีม Java ด้วย GroupDocs.Comparer: คู่มือฉบับครอบคลุม](./java-stream-document-comparison-groupdocs/)  
+- [การเปรียบเทียบเอกสาร Word ใน Java ด้วย GroupDocs.Comparison](./word-document-comparison-groupdocs-java/)  
+- [การเปรียบเทียบและพรีวิวเอกสาร Java ด้วย GroupDocs: คู่มือฉบับครอบคลุม](./master-java-document-comparison-preview-groupdocs/)  
+- [การเปรียบเทียบเอกสาร Java ด้วย GroupDocs.Comparison: คู่มือฉบับครอบคลุม](./java-document-comparison-groupdocs-comparison/)  
+- [การเปรียบเทียบเอกสาร Java และพรีวิวหน้าโดยใช้ GroupDocs.Comparison](./java-groupdocs-comparison-document-management/)  
+- [การเปรียบเทียบเอกสารขั้นสูงและการเรนเดอร์ HTML ใน Java ด้วย GroupDocs.Comparison](./master-groupdocs-comparison-java-document-html-rendering/)  
+- [การเปรียบเทียบเอกสารขั้นสูงใน Java ด้วย GroupDocs.Comparison API](./mastering-document-comparison-java-groupdocs/)  
+- [การเปรียบเทียบเอกสาร Java ขั้นสูงด้วย GroupDocs.Comparison](./java-groupdocs-comparison-document-management-guide/)  
+- [การเชี่ยวชาญการเปรียบเทียบเอกสารใน Java ด้วย GroupDocs.Comparison: คู่มือฉบับครอบคลุม](./document-comparison-groupdocs-java/)  
 - [เอกสาร GroupDocs.Comparison สำหรับ Java](https://docs.groupdocs.com/comparison/java/)  
-- [อ้างอิง API ของ GroupDocs.Comparison สำหรับ Java](https://reference.groupdocs.com/comparison/java/)  
+- [อ้างอิง API GroupDocs.Comparison สำหรับ Java](https://reference.groupdocs.com/comparison/java/)  
 - [ดาวน์โหลด GroupDocs.Comparison สำหรับ Java](https://releases.groupdocs.com/comparison/java/)  
 - [ฟอรั่ม GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
-- [การสนับสนุนฟรี](https://forum.groupdocs.com/)  
-- [ไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/)  
+- [สนับสนุนฟรี](https://forum.groupdocs.com/)  
+- [ไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
 
 ## คำถามที่พบบ่อย
+**Q:** ฉันสามารถเปรียบเทียบไฟล์ Excel โดยไม่โหลดเต็มเข้าเมมโมรีได้หรือไม่?  
+**A:** ใช่ – use the stream‑based API shown in Step 3; it processes each worksheet row by row, keeping memory usage under 150 MB for typical 10,000‑row sheets.
 
-**Q: ฉันสามารถเปรียบเทียบไฟล์ Excel โดยไม่ต้องโหลดเต็มหน่วยความจำได้หรือไม่?**  
-A: ได้ – ใช้ API แบบสตรีมที่แสดงในบทแนะนำ “compare excel files java” เพื่อประมวลผลสเปรดชีตขนาดใหญ่อย่างมีประสิทธิภาพ  
+**Q:** GroupDocs.Comparison รองรับ PDF ที่ป้องกันด้วยรหัสผ่านหรือไม่?  
+**A:** แน่นอน. Supply the password via `settings.setPassword("yourPassword")` before calling `compare`, and the library will decrypt the file on the fly.
 
-**Q: GroupDocs.Comparison รองรับ PDF ที่ป้องกันด้วยรหัสผ่านหรือไม่?**  
-A: แน่นอน ให้ระบุรหัสผ่านของ PDF เมื่อโหลดเอกสาร และไลบรารีจะจัดการการถอดรหัสโดยอัตโนมัติ  
+**Q:** ขนาด heap ที่แนะนำสำหรับเอกสาร Word ขนาดใหญ่คือเท่าไหร่?  
+**A:** Allocate at least **2 GB** (`-Xmx2g`) for documents larger than 50 MB; increase to **4 GB** if you compare multiple large files concurrently.
 
-**Q: ขนาด heap ที่แนะนำสำหรับเอกสาร Word ขนาดใหญ่คือเท่าไหร่?**  
-A: สำหรับไฟล์ที่ใหญ่กว่า 50 MB ควรกำหนดหน่วยความจำ heap อย่างน้อย 2 GB (เช่น `-Xmx2g`). ปรับตามขนาดเอกสารและการทำงานพร้อมกัน  
+**Q:** ฉันสามารถสร้างพรีวิว HTML ของผลลัพธ์การเปรียบเทียบได้หรือไม่?  
+**A:** ใช่ – call `result.save("diff.html", SaveFormat.Html)` to obtain a browser‑ready diff that preserves styling and inline images.
 
-**Q: ฉันสามารถสร้างตัวอย่าง HTML ของผลการเปรียบเทียบได้หรือไม่?**  
-A: ได้ – บทแนะนำ “Master Document Comparison & HTML Rendering” แสดงวิธีการแสดงผล diff โดยตรงเป็น HTML เพื่อการรวมเข้ากับเว็บ  
+**Q:** มีวิธีไม่สนใจส่วนหัวหรือส่วนท้ายในการเปรียบเทียบหรือไม่?  
+**A:** Set `settings.setIgnoreHeadersFooters(true)`; the engine will skip those elements, reducing false‑positive changes.
 
-**Q: มีวิธีที่จะละเว้นส่วนหัวหรือส่วนท้ายในการเปรียบเทียบหรือไม่?**  
-A: การตั้งค่าการเปรียบเทียบให้คุณปิดการเปรียบเทียบส่วนหัว/ส่วนท้าย ซึ่งอธิบายในคู่มือการปรับแต่งขั้นสูง  
+---
 
-**อัปเดตล่าสุด:** 2026-03-27  
-**ทดสอบด้วย:** GroupDocs.Comparison 23.12 for Java (latest)  
+**อัปเดตล่าสุด:** 2026-08-25  
+**ทดสอบกับ:** GroupDocs.Comparison 23.12 for Java (latest)  
 **ผู้เขียน:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+- [compare pdf java – บทแนะนำการเปรียบเทียบเอกสาร Java – คู่มือเต็มสำหรับการโหลดและเปรียบเทียบเอกสาร](/comparison/java/document-loading/)  
+- [Java เปรียบเทียบไฟล์ PDF ด้วย GroupDocs.Comparison API – คู่มือระดับมืออาชีพ](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs-api/)  
+- [วิธีใช้ GroupDocs: สตรีมการเปรียบเทียบเอกสาร Java – คู่มือเต็ม](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

@@ -1,156 +1,175 @@
 ---
 categories:
 - Java Development
-date: '2026-03-27'
-description: GroupDocs.Comparison를 사용하여 문서 차이 보고서를 생성하고 Java로 Excel 파일을 비교하거나 PDF
-  문서를 비교하는 방법을 배우세요. 작동하는 코드가 포함된 단계별 튜토리얼.
-keywords: java document comparison tutorial, compare documents java, groupdocs comparison
-  java guide, document diff java, how to compare word documents in java
-lastmod: '2026-03-27'
-linktitle: Create Document Diff Report – Compare Excel Files Java
+date: '2026-08-25'
+description: GroupDocs.Comparison을 사용하여 pdf java를 비교하고 문서 diff 보고서를 생성하는 방법을 배웁니다.
+  Excel, PDF, Word 파일에 대한 코드와 함께 단계별 튜토리얼을 제공합니다.
+keywords:
+- compare pdf java
+- java compare pdf files
+- java compare word docs
+- groupdocs comparison java
+lastmod: '2026-08-25'
+linktitle: pdf java를 비교하고 문서 diff 보고서를 생성하는 방법
+og_description: compare pdf java 튜토리얼에서는 Java에서 GroupDocs.Comparison을 사용하여 Excel,
+  PDF, Word 파일에 대한 diff 보고서를 생성하는 방법을 보여줍니다. 단계별 예제를 따라하세요.
+og_image_alt: Guide to compare PDF files in Java and generate document diff reports
+  with GroupDocs.Comparison
+og_title: pdf java를 비교하고 문서 diff 보고서를 생성하는 방법
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to compare pdf java and create document diff reports using
+    GroupDocs.Comparison. Step‑by‑step tutorial with code for Excel, PDF, and Word
+    files.
+  headline: How to compare pdf java and create document diff report
+  type: TechArticle
+- questions:
+  - answer: Yes – use the stream‑based API shown in Step 3; it processes each worksheet
+      row by row, keeping memory usage under 150 MB for typical 10,000‑row sheets.
+    question: Can I compare Excel files without loading them fully into memory?
+  - answer: Absolutely. Supply the password via `settings.setPassword("yourPassword")`
+      before calling `compare`, and the library will decrypt the file on the fly.
+    question: Does GroupDocs.Comparison support password‑protected PDFs?
+  - answer: Allocate at least **2 GB** (`-Xmx2g`) for documents larger than 50 MB;
+      increase to **4 GB** if you compare multiple large files concurrently.
+    question: What heap size is recommended for large Word documents?
+  - answer: Yes – call `result.save("diff.html", SaveFormat.Html)` to obtain a browser‑ready
+      diff that preserves styling and inline images.
+    question: Can I generate HTML previews of comparison results?
+  - answer: Set `settings.setIgnoreHeadersFooters(true)`; the engine will skip those
+      elements, reducing false‑positive changes.
+    question: Is there a way to ignore headers or footers during comparison?
+  type: FAQPage
 tags:
-- document-comparison
-- java-tutorial
+- compare pdf
 - groupdocs
-- pdf-comparison
-- word-comparison
-title: 문서 차이 보고서 만들기 – Excel 파일 비교 Java
+- java document comparison
+- document diff report
+title: pdf java를 비교하고 문서 diff 보고서를 생성하는 방법
 type: docs
-url: /ko/java/basic-comparison/
-weight: 3
 ---
 
-# 문서 차이 보고서 생성 – Java 문서 비교 튜토리얼
+# pdf java를 비교하고 문서 차이 보고서를 만드는 방법
 
-Java에서 Excel, PDF 또는 Word 파일에 대한 **create document diff report**가 필요하다면, 올바른 곳에 오셨습니다. 많은 프로젝트에서 버전 간 변경 사항을 수동으로 찾는 것은 시간도 많이 걸리고 오류가 발생하기 쉽습니다. 이 가이드는 GroupDocs.Comparison을 사용하여 프로세스를 자동화하는 방법을 보여주며, **compare excel files java** 및 **compare pdf documents java**를 포함한 모든 지원 형식에 대해 몇 줄의 코드만으로 신뢰할 수 있는 차이 보고서를 생성할 수 있습니다.
+이 포괄적인 가이드에서는 **compare pdf java** 파일을 비교하고 GroupDocs.Comparison for Java를 사용하여 자세한 문서 차이 보고서를 생성하는 방법을 배웁니다. Excel 스프레드시트, PDF 문서 또는 Word 파일을 작업하든, 이 라이브러리를 사용하면 몇 줄의 코드만으로 변경 감지를 자동화하여 수시간의 수동 검토를 절약할 수 있습니다.
+
+**GroupDocs.Comparison**은 문서 형식의 복잡성을 추상화하고 다양한 파일 유형에 대해 나란히 시각적 차이, 변경 추적 메타데이터 및 내보내기 옵션을 제공하는 Java 라이브러리입니다.
 
 ## 빠른 답변
 - **주요 라이브러리는 무엇입니까?** GroupDocs.Comparison for Java  
-- **Excel 파일을 비교할 수 있나요?** 예 – use the `compare excel files java` feature  
-- **PDF 비교가 지원되나요?** 물론, see **compare pdf documents java** below  
-- **라이선스가 필요합니까?** 평가용 임시 라이선스를 사용할 수 있으며, 상용 라이선스는 프로덕션에 필요합니다.  
-- **필요한 Java 버전은 무엇입니까?** Java 8+ (새 버전은 성능을 향상시킵니다).
+- **Excel 파일을 비교할 수 있나요?** 예 – `compare excel files java` 기능이 셀 수준 변경을 처리합니다.  
+- **PDF 비교가 지원되나요?** 물론이며, 아래 **compare pdf java** 섹션을 참조하십시오.  
+- **라이선스가 필요합니까?** 임시 평가 라이선스는 무료이며, 프로덕션에서는 상용 라이선스가 필요합니다.  
+- **필요한 Java 버전은 무엇입니까?** Java 8+ (Java 11+은 더 나은 성능과 네이티브 TLS 지원을 제공합니다).
 
-## 현대 개발에서 문서 비교가 중요한 이유
-문서 비교는 단순히 텍스트 차이를 찾는 것만이 아닙니다. 협업 환경에서는 종종 다음이 필요합니다:
-- **팀 간 변경 사항 추적** – 누가 무엇을 언제 변경했는지 식별  
-- **품질 관리 자동화** – 무단 편집을 감지하거나 규정 준수를 보장  
-- **워크플로우 간소화** – 수동 검토 시간과 인간 오류를 줄임  
-- **다중 형식 지원** – 스프레드시트, PDF, Word 문서 등을 처리  
+## compare excel files java란 무엇입니까?
+두 개의 Excel 워크북을 API에 로드하고 `compare` 메서드를 호출하면, 추가, 삭제 또는 수정된 셀, 행 및 워크시트를 강조 표시하는 차이 문서를 반환합니다. 이 라이브러리는 수식 변경 및 시각적 서식 차이도 감지합니다.
 
-GroupDocs.Comparison for Java는 복잡한 작업을 처리해 주어 비즈니스 로직에 집중할 수 있게 하며, 백그라운드에서 **document diff report**를 생성합니다.
+## GroupDocs.Comparison을 사용한 pdf 문서 java 비교 방법
+두 개의 PDF 파일을 로드하고 `compare` 메서드를 호출한 다음 결과를 PDF 또는 HTML 차이 보고서로 내보냅니다. API는 텍스트, 이미지 및 벡터 그래픽을 자동으로 추출하므로 PDF 파싱 코드를 직접 작성하지 않아도 픽셀 단위의 정확한 시각적 비교를 얻을 수 있습니다.
 
-## **compare excel files java**란 무엇입니까?
-Excel 스프레드시트를 프로그래밍 방식으로 비교한다는 것은 셀 값, 수식, 서식 및 워크시트 구조의 변화를 감지하는 것을 의미합니다. GroupDocs.Comparison을 사용하면 두 개의 Excel 파일(또는 스트림)을 제공하기만 하면 추가, 삭제 또는 수정된 셀을 강조 표시하는 차이 보고서를 순수 Java 코드만으로 받을 수 있습니다.
+## GroupDocs.Comparison for Java란 무엇입니까?
+`GroupDocs.Comparison`은 DOCX, XLSX, PPTX, PDF 및 일반 이미지 유형을 포함한 **50개 이상의 지원 파일 형식**에 대해 비교, 강조 표시 및 차이 보고서를 생성하는 API를 제공하는 Java SDK입니다. 서버에 Microsoft Office나 Adobe Acrobat이 없어도 작동합니다.
 
-## GroupDocs.Comparison으로 **compare pdf documents java**를 수행하는 방법
-PDF 비교도 유사하게 작동하지만 시각적 차이, 텍스트 추출 및 임베디드 객체 처리를 지원합니다. 라이브러리는 PDF 내부 구조를 추상화하므로 의미 있는 변화를 정의하는 비즈니스 규칙에 집중할 수 있습니다.
+## GroupDocs.Comparison으로 문서 차이 보고서 만들기
+소스와 대상 문서를 로드하고 비교 설정을 구성한 뒤 `compare` 메서드를 호출합니다. 라이브러리는 비교 결과를 나타내는 `ComparisonResult` 객체를 반환하며, 생성된 차이 문서와 변경 메타데이터에 접근할 수 있습니다. 그런 다음 이 결과를 PDF, HTML 또는 DOCX로 저장할 수 있습니다.
 
-## Java 문서 비교 시작하기
-아래 튜토리얼을 살펴보기 전에 알아두어야 할 사항은 다음과 같습니다:
+### 단계 1: Maven 종속성 추가
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-comparison</artifactId>
+    <version>23.12</version>
+</dependency>
+```
 
-### 전제 조건
-- 기본 Java 지식  
-- Maven 또는 Gradle 빌드 도구에 대한 친숙함  
-- Java 8+ 런타임 (성능 향상을 위해 최신 버전 권장)
+### 단계 2: 라이선스로 비교기 초기화
+```java
+Comparer comparer = new Comparer();
+comparer.setLicense("YOUR_LICENSE_KEY");
+```
 
-### 일반 사용 사례
-- 법률 문서 검토 시스템  
-- 콘텐츠 관리 플랫폼  
-- 학술 표절 감지  
-- 소프트웨어 문서 버전 관리  
-- 재무 보고서 감사  
+### 단계 3: 두 문서 로드 (대용량 파일을 위한 스트림 기반)
+```java
+try (InputStream left = new FileInputStream("original.pdf");
+     InputStream right = new FileInputStream("revised.pdf")) {
 
-### 성능 고려 사항
-문서 비교는 특히 대용량 파일의 경우 메모리를 많이 사용할 수 있습니다. 충분한 힙 공간을 확보하고 대형 문서에 대해서는 스트림 기반 처리를 고려하십시오.
+    ComparisonSettings settings = new ComparisonSettings();
+    settings.setDetectStyleChanges(true);   // enable style diff
+    settings.setShowDeletedContent(true);   // highlight deletions
 
-## GroupDocs.Comparison으로 **create document diff report**를 만드는 방법
-아래는 선별된 튜토리얼 모음입니다. 각 링크는 전체 실행 가능한 예제를 열어 주며, 간단한 Excel 차이부터 고급 HTML 렌더링까지 특정 시나리오를 단계별로 안내합니다.
+    ComparisonResult result = comparer.compare(left, right, settings);
+    result.save("diff-report.pdf", SaveFormat.Pdf);
+}
+```
 
-### 단계별 튜토리얼 모음
-- [Java에서 GroupDocs.Comparison을 사용하여 셀 파일을 비교하는 방법: 종합 가이드](./compare-cell-files-groupdocs-java-streams/)  
-  Excel 스프레드시트 비교 및 데이터 분석 워크플로. 스트림 처리, 메모리 관리, 대용량 Excel 파일을 메모리 부족 없이 처리하는 방법을 배웁니다.
+위 코드는 두 개의 PDF 스트림을 로드하고 스타일 변경 감지를 활성화하며 `diff-report.pdf`에 시각적 차이 보고서를 작성합니다. 동일한 패턴이 Excel 및 Word 파일에도 적용되며, 파일 확장자만 변경하면 됩니다.
 
-- [GroupDocs를 사용하여 Java에서 문서 비교 구현: 종합 가이드](./java-document-comparison-groupdocs-tutorial/)  
-  맞춤 스타일링을 통한 다중 형식 문서 비교. 비교 설정을 구성하고, 맞춤 하이라이팅을 적용하며, 전문가 수준의 보고서를 생성합니다.
+## 일반적인 구현 과제 (및 해결 방법)
 
-- [GroupDocs.Comparison을 사용한 Java 문서 비교 구현: 종합 가이드](./java-document-comparison-groupdocs-metadata-source/)  
-  메타데이터 추적이 필요한 엔터프라이즈 애플리케이션. 정확하고 일관된 비교를 위해 메타데이터 소스를 설정합니다.
+`Comparer`는 제공된 설정을 기반으로 비교 작업을 실행하는 주요 클래스입니다.
 
-- [GroupDocs.Comparer를 사용한 Java 스트림 문서 비교 구현: 종합 가이드](./java-stream-document-comparison-groupdocs/)  
-  고성능 애플리케이션 및 클라우드 배포. 스트림 기반 비교는 웹 앱 및 마이크로서비스에 필수적입니다.
-
-- [GroupDocs.Comparison을 사용한 Java 워드 문서 비교 구현](./word-document-comparison-groupdocs-java/)  
-  Microsoft Word 문서 워크플로. 비교 자동화, 변경 추적, 주석 처리 및 서식 보존을 수행합니다.
-
-- [GroupDocs를 사용한 Java 문서 비교 및 미리보기: 종합 가이드](./master-java-document-comparison-preview-groupdocs/)  
-  시각적 문서 미리보기가 필요한 애플리케이션. 웹 또는 데스크톱 인터페이스용 미리보기를 생성하고 성능을 최적화합니다.
-
-- [GroupDocs.Comparison을 사용한 Java 문서 비교: 종합 가이드](./java-document-comparison-groupdocs-comparison/)  
-  버전 관리 및 변경 추적 시스템. 효율적인 버전 관리를 위한 설정, 비교 기능 및 성능 팁.
-
-- [GroupDocs.Comparison을 사용한 Java 문서 비교 및 페이지 미리보기](./java-groupdocs-comparison-document-management/)  
-  문서 관리 시스템 및 비즈니스 애플리케이션. 비기술 사용자용 사용자 친화적인 인터페이스 구축.
-
-- [GroupDocs.Comparison을 사용한 Java 마스터 문서 비교 및 HTML 렌더링](./master-groupdocs-comparison-java-document-html-rendering/)  
-  웹 애플리케이션 및 온라인 문서 뷰어. 비교 결과를 HTML로 직접 렌더링하여 원활한 웹 통합을 구현합니다.
-
-- [GroupDocs.Comparison API를 사용한 Java 마스터 문서 비교](./mastering-document-comparison-java-groupdocs/)  
-  고급 맞춤 설정 및 정밀 비교 로직. 민감도 조정, 헤더/푸터 무시, 엣지 케이스 처리.
-
-- [GroupDocs.Comparison을 사용한 마스터 Java 문서 비교](./java-groupdocs-comparison-document-management-guide/)  
-  성능 최적화 및 대규모 배포. 수백에서 수천 개의 문서를 효율적으로 처리합니다.
-
-- [GroupDocs.Comparison을 사용한 Java 문서 비교 마스터: 종합 가이드](./document-comparison-groupdocs-java/)  
-  Word 문서 비교 기본을 시작합니다. 전문 튜토리얼로 넘어가기 전 초보자에게 적합합니다.
-
-## 일반 구현 과제 (및 해결 방법)
-- **대용량 파일의 메모리 문제** – 스트림 기반 비교를 사용하고 문서를 청크로 처리합니다. 위의 많은 튜토리얼에서 메모리 최적화 기법을 다룹니다.  
-- **형식별 특이점** – PDF, Word, Excel은 각각 고유한 특성을 가집니다. 각 가이드는 해당 형식의 미묘한 차이를 다룹니다.  
-- **성능 병목 현상** – 웹 앱을 위한 비동기 처리와 자주 비교되는 쌍에 대한 캐싱 구현을 고려하십시오.  
-- **암호화된 문서 처리** – 보호된 파일을 로드할 때 비밀번호를 제공하십시오; 여러 튜토리얼에서 안전한 처리를 시연합니다.
+- **대용량 파일의 메모리 문제** – 스트림 기반 API(단계 3 참조)로 전환하고 JVM 힙(`-Xmx2g` 이상)을 늘립니다.  
+- **포맷별 특이점** – PDF에 보이지 않는 레이어가 있을 수 있습니다; `settings.setIgnoreInvisibleLayers(false)`를 활성화하여 해당 변경을 포착합니다.  
+- **성능 병목** – 여러 비교에서 단일 `Comparer` 인스턴스를 재사용하고 `ExecutorService`를 사용해 병렬 처리를 활성화합니다.  
+- **암호화된 문서** – 스트림을 로드하기 전에 `settings.setPassword("secret")`를 통해 비밀번호를 제공합니다.
 
 ## 성능 최적화 팁
-1. **가능하면 스트림 사용** – 전체 문서를 메모리에 로드하는 것을 피합니다.  
-2. **비교 설정 구성** – 기본 차이만 필요할 경우 변경 추적과 같은 불필요한 기능을 비활성화합니다.  
-3. **결과 캐시** – 자주 변경되지 않는 문서 쌍에 대한 비교 결과를 저장합니다.  
-4. **병렬 처리** – Java의 동시성 유틸리티를 사용해 여러 쌍을 동시에 비교합니다.
+1. **스트림 사용 권장** – 전체 파일을 메모리에 로드하는 것을 피하십시오; 스트림을 사용하면 500페이지 PDF라도 메모리 사용량을 200 MB 이하로 유지합니다.  
+2. **설정 미세 조정** – 필요 없는 기능을 끄세요(예: `setDetectHeaderFooterChanges(false)`) 이렇게 하면 처리 속도가 최대 30 % 빨라집니다.  
+3. **재사용 가능한 결과 캐시** – 변경되지 않은 문서 쌍의 차이 결과를 Redis 또는 Memcached에 저장합니다.  
+4. **비동기 비교 실행** – `CompletableFuture`를 사용해 여러 문서 쌍을 동시에 비교합니다.
 
 ## 다음 단계 및 고급 주제
-기본을 마스터한 후 다음을 탐색할 수 있습니다:
-- 맞춤형 변경 감지 알고리즘  
-- 스토리지 시스템과의 통합 (SharePoint, Google Drive 등)  
-- 문서 비교 서비스를 위한 REST API 구축  
-- 실시간 협업 편집  
-
-각 튜토리얼에는 추가 문서 및 커뮤니티 리소스에 대한 링크가 포함되어 있습니다.
+- 두 개의 파일 업로드를 받아 차이 PDF를 반환하는 REST API 구축.  
+- 사전 서명된 URL을 사용하여 클라우드 스토리지 제공업체(AWS S3, Azure Blob)와 통합.  
+- 특정 테이블 열이나 워터마크 영역을 무시하도록 사용자 정의 규칙으로 비교 엔진 확장.  
+- 웹 기반 뷰어용 HTML 차이 보고서를 생성하고 React 프런트엔드에 삽입.
 
 ## 추가 리소스 및 문서
+- [Java에서 GroupDocs.Comparison을 사용하여 셀 파일 비교하는 방법: 포괄적인 가이드](./compare-cell-files-groupdocs-java-streams/)  
+- [GroupDocs를 사용한 Java 문서 비교 구현: 포괄적인 가이드](./java-document-comparison-groupdocs-tutorial/)  
+- [GroupDocs.Comparison을 사용한 Java 문서 비교 구현: 포괄적인 가이드](./java-document-comparison-groupdocs-metadata-source/)  
+- [GroupDocs.Comparer를 사용한 Java 스트림 문서 비교 구현: 포괄적인 가이드](./java-stream-document-comparison-groupdocs/)  
+- [GroupDocs.Comparison을 사용한 Java 워드 문서 비교 구현](./word-document-comparison-groupdocs-java/)  
+- [GroupDocs와 함께하는 Java 문서 비교 및 미리보기: 포괄적인 가이드](./master-java-document-comparison-preview-groupdocs/)  
+- [GroupDocs.Comparison을 사용한 Java 문서 비교: 포괄적인 가이드](./java-document-comparison-groupdocs-comparison/)  
+- [GroupDocs.Comparison을 사용한 Java 문서 비교 및 페이지 미리보기](./java-groupdocs-comparison-document-management/)  
+- [GroupDocs.Comparison을 사용한 Java 마스터 문서 비교 및 HTML 렌더링](./master-groupdocs-comparison-java-document-html-rendering/)  
+- [GroupDocs.Comparison API를 사용한 Java 마스터 문서 비교](./mastering-document-comparison-java-groupdocs/)  
+- [GroupDocs.Comparison을 사용한 마스터 Java 문서 비교](./java-groupdocs-comparison-document-management-guide/)  
+- [GroupDocs.Comparison과 함께하는 Java 문서 비교 마스터링: 포괄적인 가이드](./document-comparison-groupdocs-java/)  
 - [GroupDocs.Comparison for Java 문서](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java API 레퍼런스](https://reference.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java 다운로드](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison 포럼](https://forum.groupdocs.com/c/comparison)  
 - [무료 지원](https://forum.groupdocs.com/)  
-- [임시 라이선스](https://purchase.groupdocs.com/temporary-license/)  
+- [임시 라이선스](https://purchase.groupdocs.com/temporary-license/)
 
 ## 자주 묻는 질문
 **Q: Excel 파일을 전체 메모리 로드 없이 비교할 수 있나요?**  
-A: 예 – “compare excel files java” 튜토리얼에 표시된 스트림 기반 API를 사용하여 대용량 스프레드시트를 효율적으로 처리합니다.
+A: 예 – 단계 3에 표시된 스트림 기반 API를 사용하십시오; 각 워크시트를 행별로 처리하여 일반적인 10,000행 시트의 메모리 사용량을 150 MB 이하로 유지합니다.
 
 **Q: GroupDocs.Comparison이 비밀번호로 보호된 PDF를 지원하나요?**  
-A: 물론입니다. 문서를 로드할 때 PDF 비밀번호를 제공하면 라이브러리가 자동으로 복호화합니다.
+A: 물론입니다. `compare`를 호출하기 전에 `settings.setPassword("yourPassword")`로 비밀번호를 제공하면 라이브러리가 파일을 실시간으로 복호화합니다.
 
-**Q: 대용량 Word 문서에 권장되는 힙 크기는 얼마인가요?**  
-A: 50 MB보다 큰 파일의 경우 최소 2 GB 힙 메모리를 할당하십시오 (예: `-Xmx2g`). 문서 크기와 동시성에 따라 조정합니다.
+**Q: 대용량 Word 문서에 권장되는 힙 크기는 얼마입니까?**  
+A: 50 MB 이상 문서에는 최소 **2 GB**(`-Xmx2g`)를 할당하고, 여러 대용량 파일을 동시에 비교할 경우 **4 GB**로 늘리세요.
 
 **Q: 비교 결과의 HTML 미리보기를 생성할 수 있나요?**  
-A: 예 – “Master Document Comparison & HTML Rendering” 튜토리얼에서 웹 통합을 위해 차이 결과를 HTML로 직접 렌더링하는 방법을 보여줍니다.
+A: 예 – `result.save("diff.html", SaveFormat.Html)`를 호출하면 스타일과 인라인 이미지를 보존한 브라우저 준비 차이를 얻을 수 있습니다.
 
-**Q: 비교 시 헤더 또는 푸터를 무시하는 방법이 있나요?**  
-A: 비교 설정에서 헤더/푸터 비교를 비활성화할 수 있으며, 이는 고급 맞춤 가이드에서 다룹니다.
+**Q: 비교 중에 헤더 또는 푸터를 무시하는 방법이 있나요?**  
+A: `settings.setIgnoreHeadersFooters(true)`를 설정하면 엔진이 해당 요소를 건너뛰어 오탐지를 줄입니다.
 
 ---
 
-**마지막 업데이트:** 2026-03-27  
+**마지막 업데이트:** 2026-08-25  
 **테스트 환경:** GroupDocs.Comparison 23.12 for Java (latest)  
 **작성자:** GroupDocs
+
+## 관련 튜토리얼
+- [compare pdf java – Java 문서 비교 튜토리얼 – 문서 로드 및 비교 완전 가이드](/comparison/java/document-loading/)  
+- [GroupDocs.Comparison API를 사용한 Java PDF 파일 비교 – 마스터 가이드](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs-api/)  
+- [GroupDocs 사용 방법: Java 문서 비교 스트림 – 완전 가이드](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

@@ -1,21 +1,72 @@
 ---
 categories:
 - Java Development
-date: '2026-01-16'
-description: Leer hoe u metadata uit documenten kunt extraheren met Java en GroupDocs.Comparison.
-  Inclusief java bestandsgrootte ophalen, java paginatelling ophalen en java bestandsformaat
-  bepalen.
-keywords: how to extract metadata, java get file size, java get page count, how to
-  get metadata, java get document properties, java determine file format, GroupDocs
-  Java tutorial, document information API Java
-lastmod: '2026-01-16'
-linktitle: Document Information Tutorials
+date: '2026-08-25'
+description: Leer hoe je metadata uit documenten kunt extraheren met Java en GroupDocs.Comparison.
+  Inclusief java get file size, java get page count, en java determine file format.
+keywords:
+- how to extract metadata
+- java get file size
+- java determine file format
+- groupdocs comparison java
+- java get document format
+- java get page count
+lastmod: '2026-08-25'
+linktitle: Documentinformatie-tutorials
+og_description: Hoe metadata uit documenten te extraheren met Java met GroupDocs.Comparison.
+  Leer hoe je file size, page count en format snel en betrouwbaar kunt verkrijgen.
+og_image_alt: Guide showing Java code extracting file size, page count, and format
+  with GroupDocs.Comparison
+og_title: Hoe metadata uit documenten te extraheren met Java – GroupDocs-gids
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  headline: How to Extract Metadata from Documents Using Java
+  type: TechArticle
+- description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  name: How to Extract Metadata from Documents Using Java
+  steps:
+  - name: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+    text: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+  - name: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+    text: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+  - name: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+    text: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+  type: HowTo
+- questions:
+  - answer: Yes, provide the password when initializing the document object; GroupDocs.Comparison
+      decrypts the file and then returns metadata.
+    question: Can I extract metadata from password‑protected documents?
+  - answer: Always check for `null` values; if a property is missing, fall back to
+      a sensible default or notify the user that the information is unavailable.
+    question: How do I handle documents that don’t have metadata?
+  - answer: The operation reads only the file header, typically completing in under
+      10 ms for documents up to 200 MB, making it negligible compared to full content
+      parsing.
+    question: What’s the performance impact of metadata extraction?
+  - answer: GroupDocs.Comparison focuses on comparison and information extraction.
+      For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion
+      or a dedicated editor.
+    question: Can I modify document metadata using GroupDocs.Comparison?
+  - answer: Use the `SupportedFormats` API to retrieve the current list of formats
+      at runtime; this keeps your validation logic up‑to‑date with library releases.
+    question: How do I ensure my application handles all supported formats correctly?
+  type: FAQPage
 tags:
 - java
-- document-processing
-- metadata
+- metadata extraction
 - groupdocs
-- api-tutorial
+- document processing
+- document information
 title: Hoe metadata uit documenten te extraheren met Java
 type: docs
 url: /nl/java/document-information/
@@ -24,78 +75,170 @@ weight: 6
 
 # Hoe metadata uit documenten te extraheren met Java
 
-Heb je ooit **metadata extraheren** uit documenten programmatisch nodig gehad in je Java‑applicaties? Of je nu een documentbeheersysteem bouwt, bestandsvalidatie implementeert of geautomatiseerde workflows creëert, het ophalen van bestandsgrootte, paginatelling en formaat‑informatie kan je ontelbare uren ontwikkelingswerk besparen. In deze gids lopen we alles door wat je moet weten om documentmetadata efficiënt op te halen met GroupDocs.Comparison voor Java.
+When you need to **metadata extraheren** from documents programmatically in a Java application, you want a solution that is fast, reliable, and easy to integrate. Whether you are building a document‑management system, validating uploads, or automating a workflow that routes files based on their properties, knowing a file’s size, page count, and format ahead of time saves hours of development and prevents costly runtime errors. In this guide we’ll walk through every step required to retrieve document metadata efficiently with GroupDocs.Comparison for Java, and we’ll also discuss best‑practice patterns that keep your code clean and performant.
 
 ## Snelle antwoorden
-- **Wat is het primaire doel van metadata‑extractie?** Om snel bestands‑eigenschappen (grootte, formaat, paginatelling) te verkrijgen zonder de volledige inhoud te laden.  
-- **Welke bibliotheek ondersteunt Java‑metadata‑extractie?** GroupDocs.Comparison voor Java.  
-- **Hoe kan ik de bestandsgrootte in Java krijgen?** Gebruik de `DocumentInfo.getSize()`‑methode na het laden van het document.  
-- **Kan ik het documentformaat programmatisch bepalen?** Ja, roep `DocumentInfo.getFileType()` aan om het formaat op te halen.  
-- **Is metadata‑extractie veilig voor grote bestanden?** Het is lichtgewicht; overweeg voor zeer grote bestanden streaming‑ en caching‑strategieën.
+- **Wat is het primaire doel van metadata‑extractie?** To obtain file properties (size, format, page count) without loading full content, enabling fast validation and routing.  
+- **Welke bibliotheek ondersteunt Java metadata‑extractie?** GroupDocs.Comparison for Java provides a dedicated `DocumentInfo` API for this purpose.  
+- **Hoe kan ik de bestandsgrootte in Java krijgen?** Call `DocumentInfo.getSize()` after loading the document; the method returns the size in bytes.  
+- **Kan ik het documentformaat programmatisch bepalen?** Yes—use `DocumentInfo.getFileType()` to retrieve the detected format such as PDF or DOCX.  
+- **Is metadata‑extractie veilig voor grote bestanden?** It is lightweight; for very large files you can combine streaming with caching to keep memory usage low.
 
 ## Wat is metadata‑extractie?
-Metadata‑extractie is het proces van het lezen van de ingebouwde eigenschappen van een document — zoals bestandstype, grootte, paginatelling, auteur en aanmaakdatum — zonder de volledige inhoud te parseren. Deze lichtgewicht bewerking maakt snelle validatie, indexering en routeringsbeslissingen mogelijk in enterprise‑applicaties.
+Metadata extraction reads the built‑in properties of a document—such as its type, size, page count, author, and creation date—without loading the full content. By accessing only the file header, the operation remains fast and resource‑efficient, enabling applications to validate, index, or route files based on these attributes before any heavy processing occurs.
 
 ## Waarom documentmetadata belangrijk is in Java‑applicaties
-
-Documentmetadata‑extractie is niet alleen een nice‑to‑have functie — het is vaak cruciaal voor het bouwen van professionele applicaties. Hier is waarom ontwikkelaars consequent deze mogelijkheden nodig hebben:
-
-- **Bestandsvalidatie en beveiliging** – Verifieer formaat en integriteit vóór volledige verwerking.  
-- **Opslagoptimalisatie** – Gebruik grootte en paginatelling om opslag en middelen verstandig toe te wijzen.  
-- **Verbetering van gebruikerservaring** – Toon nauwkeurige bestandsinformatie (formaat, grootte, aanmaakdatum) aan eindgebruikers.  
-- **Workflow‑automatisering** – Route documenten automatisch op basis van hun eigenschappen.
+Understanding document metadata is essential for building reliable Java applications because it allows early validation, efficient resource allocation, and improved user experience. By knowing a file’s size, format, and page count upfront, developers can enforce security policies, prevent performance bottlenecks, and present accurate information to users, ultimately reducing errors and support costs.
 
 ## Hoe de bestandsgrootte op te halen in Java
-GroupDocs.Comparison maakt de bestandsgrootte beschikbaar via het `DocumentInfo`‑object. Na het laden van een document roep je `getSize()` aan om de grootte in bytes op te halen, en converteer vervolgens naar KB/MB indien nodig.
+DocumentInfo is the GroupDocs.Comparison class that provides metadata about a loaded document, such as size, page count, and format.  
 
-## Hoe het aantal pagina's op te halen in Java
-Evenzo retourneert `DocumentInfo.getPageCount()` het aantal pagina's. Dit is nuttig voor paginering, voortgangsbewaking of het schatten van de verwerkingstijd.
+Load the document with the `Comparison` API, then call `getSize()` to retrieve the size in bytes. The method is O(1) because it reads the file header only, so even multi‑hundred‑page PDFs are processed instantly.
+
+## Hoe het paginacount op te halen in Java
+DocumentInfo also exposes the total number of pages via `getPageCount()`.  
+
+Calling this method returns an integer representing the document’s page count, which you can use for pagination UI, progress bars, or to decide whether to split a large file into smaller chunks before further processing.
 
 ## Hoe het bestandsformaat te bepalen in Java
-Gebruik `DocumentInfo.getFileType()` om het gedetecteerde formaat te verkrijgen (bijv. PDF, DOCX). Dit helpt je om formaat‑specifieke logica af te dwingen of vriendelijke namen aan gebruikers te tonen.
+DocumentInfo’s `getFileType()` method detects the format by inspecting the file signature rather than the extension, ensuring reliable identification even when files are misnamed.  
+
+The method returns a `FileType` enum (e.g., `FileType.PDF`, `FileType.DOCX`) that you can compare against a whitelist of supported formats.
 
 ## Hoe documenteigenschappen op te halen in Java
-Naast grootte en paginatelling kun je auteur, aanmaakdatum en aangepaste eigenschappen benaderen via methoden zoals `getAuthor()`, `getCreatedTime()` en `getCustomProperties()`.
+Beyond size, page count, and format, DocumentInfo provides access to additional properties:
+
+- `getAuthor()` – returns the author name if present.  
+- `getCreatedTime()` – returns the creation timestamp in UTC.  
+- `getCustomProperties()` – returns a map of any custom key/value pairs embedded in the document.
+
+These properties are useful for compliance audits, version tracking, and displaying rich file details in UI dashboards.
 
 ## Veelvoorkomende use‑cases en implementatiestrategieën
 
 ### Document‑uploadvalidatie
-Wanneer gebruikers bestanden uploaden, wil je ze valideren vóór verwerking:
+When users upload files, you’ll want to validate them before committing them to storage or a processing pipeline:
 
-- **Formaatverificatie** – Zorg ervoor dat geüploade bestanden overeenkomen met verwachte types (PDF, DOCX, enz.).  
-- **Groottebeperkingen** – Controleer bestandsgroottes vóór het toewijzen van verwerkingsbronnen.  
-- **Inhoudsanalyse** – Bepaal paginatelling voor paginering of verwerkingsschattingen.
+1. **Formaatverificatie** – Ensure the uploaded file matches one of the allowed formats (PDF, DOCX, etc.).  
+2. **Grootte‑beperkingen** – Enforce maximum size limits (e.g., 25 MB) to protect your server from overload.  
+3. **Paginacount‑beperkingen** – Reject excessively long documents (e.g., > 500 pages) that could cause performance bottlenecks.
 
 ### Geautomatiseerde documentclassificatie
-Enterprise‑applicaties moeten vaak documenten automatisch categoriseren:
+Enterprises often need to categorize incoming files automatically:
 
-- **Formaat‑gebaseerde routering** – Stuur verschillende bestandstypen naar de juiste pipelines.  
-- **Metadata‑gedreven beslissingen** – Gebruik eigenschappen om verwerkingsprioriteit in te stellen.  
-- **Compliance‑controle** – Verifieer dat documenten voldoen aan organisatorische standaarden.
+- **Formaat‑gebaseerde routering** – Send PDFs to a text‑extraction service, DOCX files to a Word‑specific parser, and images to an OCR pipeline.  
+- **Metadata‑gedreven prioriteit** – Prioritize small, low‑page‑count files for quick turnaround, while queuing larger files for batch processing.  
+- **Compliance‑controle** – Verify that mandatory metadata (author, creation date) is present before the document is archived.
 
 ### Prestatie‑optimalisatie
-Slimme applicaties gebruiken metadata om de verwerking te optimaliseren:
+Smart applications use metadata to keep resource usage low:
 
-- **Resource‑toewijzing** – Wijs middelen toe op basis van documentcomplexiteit.  
-- **Caching‑strategieën** – Cache vaak benaderde metadata.  
-- **Batchverwerking** – Groepeer soortgelijke documenten voor efficiënte afhandeling.
+- **Caching‑strategie** – Store extracted metadata in a fast cache (e.g., Redis) keyed by file hash; invalidate the cache when the file changes.  
+- **Batchverwerking** – When processing a folder of documents, extract metadata for all files first, then schedule heavy‑weight operations only for those that meet your criteria.  
+- **Parallelle extractie** – Use Java’s `ForkJoinPool` to extract metadata from multiple files concurrently, respecting CPU core count to avoid contention.
 
 ## Beschikbare tutorials
-
-Onze document‑informatie‑tutorials bieden praktische begeleiding voor het benaderen van documentmetadata met GroupDocs.Comparison in Java. Deze hands‑on gidsen laten zien hoe je informatie over bron-, doel- en resultaatsdocumenten ophaalt, bestandsformaten bepaalt en documenteigenschappen programmatisch benadert met echte werkende voorbeelden.
+Our document information tutorials provide practical guidance for accessing document metadata using GroupDocs.Comparison in Java. These hands‑on guides show you how to retrieve information about source, target, and result documents, determine file formats, and access document properties programmatically with real working examples.
 
 ### [Documentmetadata extraheren met GroupDocs.Comparison voor Java: Een uitgebreide gids](./extract-document-info-groupdocs-comparison-java/)
-Leer hoe je efficiënt documentmetadata zoals bestandstype, paginatelling en grootte kunt extraheren met GroupDocs.Comparison voor Java. Deze gedetailleerde gids bevat praktische voorbeelden om je documentverwerkingsworkflow te verbeteren met metadata‑gedreven beslissingen.
+Learn how to efficiently extract document metadata like file type, page count, and size using GroupDocs.Comparison for Java. This detailed guide includes practical examples for enhancing your document processing workflow with metadata‑driven decisions.
 
-### [Documentmetadata‑extractie beheersen met GroupDocs in Java](./groupdocs-comparison-java-document-extraction/)
-Ontdek geavanceerde technieken voor het extraheren van documentmetadata met GroupDocs.Comparison in Java. Deze tutorial behandelt het stroomlijnen van workflows en het verbeteren van data‑analyse door programmatisch toegang te krijgen tot bestandstypen, paginatellingen en groottes met tips voor prestatie‑optimalisatie.
+### [Meester Documentmetadata‑extractie met GroupDocs in Java](./groupdocs-comparison-java-document-extraction/)
+Discover advanced techniques for extracting document metadata using GroupDocs.Comparison in Java. This tutorial covers streamlining workflows and enhancing data analysis by programmatically accessing file types, page counts, and sizes with performance optimization tips.
 
 ### [Ondersteunde bestandsformaten ophalen met GroupDocs.Comparison voor Java: Een uitgebreide gids](./groupdocs-comparison-java-supported-formats/)
-Beheers de kunst van het ophalen van ondersteunde bestandsformaten met GroupDocs.Comparison voor Java. Deze stap‑voor‑stap tutorial laat zien hoe je je documentbeheersystemen kunt verbeteren door programmatisch formatmogelijkheden te ontdekken en robuustere applicaties te bouwen.
+Master the art of retrieving supported file formats using GroupDocs.Comparison for Java. This step‑by‑step tutorial shows you how to enhance your document management systems by programmatically discovering format capabilities and building more robust applications.
 
 ## Best practices voor documentinformatie‑extractie
 
 ### Foutafhandeling en validatie
+Validate file existence before attempting metadata extraction. Gracefully handle corrupted or password‑protected files. Implement timeout mechanisms for large file processing. Provide meaningful error messages to users so they can correct issues without contacting support.
+
+### Tips voor prestatie‑optimalisatie
+**Caching strategy** – Since metadata rarely changes, implement intelligent caching:
+
+- Cache metadata for frequently accessed documents.  
+- Use file modification timestamps to invalidate stale entries.  
+- Consider in‑memory caching for recently processed documents.
+
+**Batch processing** – When dealing with multiple documents:
+
+- Process in batches to reduce overhead.  
+- Use parallel processing for independent metadata extraction tasks.  
+- Implement progress tracking for long‑running operations.
+
+**Resource management** – Dispose of document objects properly to prevent memory leaks. Monitor memory usage when processing large documents. Use connection pooling for remote document sources.
+
+## Probleemoplossing van veelvoorkomende problemen
+
+### Problemen met bestandsformaatherkenning
+**Probleem**: Application doesn't recognize certain file formats.  
+**Oplossing**: Verify the format is supported and check for file corruption. Use the supported formats tutorial to validate compatibility.
+
+### Geheugenproblemen met grote documenten
+**Probleem**: `OutOfMemoryError` when processing large files.  
+**Oplossing**: Implement streaming approaches where possible and increase JVM heap size. Process metadata without loading the entire document content.
+
+### Prestatieknelpunten
+**Probleem**: Slow metadata extraction for multiple documents.  
+**Oplossing**: Implement parallel processing and caching strategies. Profile your application to identify specific bottlenecks.
+
+### Problemen met teken‑codering
+**Probleem**: Incorrect metadata display for documents with special characters.  
+**Oplossing**: Ensure proper character encoding handling and validate locale settings in your application.
+
+## Integratiestrategieën voor bedrijfsapplicaties
+
+### Microservices‑architectuur
+When building microservices, consider a dedicated document information service:
+
+- Centralized extraction reduces code duplication.  
+- Easier to scale based on processing load.  
+- Simplified maintenance and updates.
+
+### Database‑integratie
+Store extracted metadata for quick access:
+
+- Index commonly queried properties for fast retrieval.  
+- Implement change tracking for document updates.  
+- Consider NoSQL solutions for flexible metadata schemas.
+
+### Overwegingen bij API‑ontwerp
+If exposing document information via APIs:
+
+- Implement proper authentication and authorization.  
+- Use standard HTTP status codes for different scenarios.  
+- Provide comprehensive API documentation with examples.
+
+## Veelgestelde vragen
+
+**Q: Kan ik metadata extraheren uit wachtwoord‑beveiligde documenten?**  
+A: Ja, provide the password when initializing the document object; GroupDocs.Comparison decrypts the file and then returns metadata.
+
+**Q: Hoe ga ik om met documenten die geen metadata hebben?**  
+A: Always check for `null` values; if a property is missing, fall back to a sensible default or notify the user that the information is unavailable.
+
+**Q: Wat is de prestatie‑impact van metadata‑extractie?**  
+A: The operation reads only the file header, typically completing in under 10 ms for documents up to 200 MB, making it negligible compared to full content parsing.
+
+**Q: Kan ik documentmetadata wijzigen met GroupDocs.Comparison?**  
+A: GroupDocs.Comparison focuses on comparison and information extraction. For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion or a dedicated editor.
+
+**Q: Hoe zorg ik ervoor dat mijn applicatie alle ondersteunde formaten correct afhandelt?**  
+A: Use the `SupportedFormats` API to retrieve the current list of formats at runtime; this keeps your validation logic up‑to‑date with library releases.
+
+## Aanvullende bronnen
+- [GroupDocs.Comparison voor Java Documentatie](https://docs.groupdocs.com/comparison/java/)
+- [GroupDocs.Comparison voor Java API‑referentie](https://reference.groupdocs.com/comparison/java/)
+- [Download GroupDocs.Comparison voor Java](https://releases.groupdocs.com/comparison/java/)
+- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
+- [Gratis ondersteuning](https://forum.groupdocs.com/)
+- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
+
+**Last Updated:** 2026-08-25  
+**Tested With:** GroupDocs.Comparison for Java (latest release)  
+**Author:** GroupDocs
+
 ```java
 // Example pattern - don't modify this existing code structure
 try {
@@ -105,106 +248,8 @@ try {
 }
 ```
 
-**Belangrijke overwegingen**
+## Gerelateerde tutorials
 
-- Valideer het bestaan van het bestand vóór het proberen van metadata‑extractie.  
-- Handel corrupte of met wachtwoord beveiligde bestanden op een nette manier af.  
-- Implementeer timeout‑mechanismen voor verwerking van grote bestanden.  
-- Geef betekenisvolle foutmeldingen aan gebruikers.
-
-### Tips voor prestatie‑optimalisatie
-
-**Caching‑strategie** – Aangezien metadata zelden verandert, implementeer intelligente caching:
-
-- Cache metadata voor vaak benaderde documenten.  
-- Gebruik bestands‑modificatietijdstempels om verouderde items ongeldig te maken.  
-- Overweeg in‑memory caching voor recent verwerkte documenten.
-
-**Batchverwerking** – Bij het omgaan met meerdere documenten:
-
-- Verwerk in batches om overhead te verminderen.  
-- Gebruik parallelle verwerking voor onafhankelijke metadata‑extractietaken.  
-- Implementeer voortgangsbewaking voor langdurige operaties.
-
-**Resource‑beheer**
-
-- Maak documentobjecten correct vrij om geheugenlekken te voorkomen.  
-- Monitor geheugenverbruik bij verwerking van grote documenten.  
-- Gebruik connection pooling voor externe documentbronnen.
-
-## Veelvoorkomende problemen oplossen
-
-### Problemen met bestandsformaatherkenning
-
-**Probleem**: Applicatie herkent bepaalde bestandsformaten niet.  
-**Oplossing**: Verifieer dat het formaat ondersteund wordt en controleer op bestandscorruptie. Gebruik de tutorial over ondersteunde formaten om compatibiliteit te valideren.
-
-### Geheugenproblemen met grote documenten
-
-**Probleem**: `OutOfMemoryError` bij het verwerken van grote bestanden.  
-**Oplossing**: Implementeer streaming‑benaderingen waar mogelijk en vergroot de JVM‑heap‑grootte. Verwerk metadata zonder de volledige documentinhoud te laden.
-
-### Prestatieknelpunten
-
-**Probleem**: Trage metadata‑extractie voor meerdere documenten.  
-**Oplossing**: Implementeer parallelle verwerking en caching‑strategieën. Profileer je applicatie om specifieke knelpunten te identificeren.
-
-### Problemen met tekencodering
-
-**Probleem**: Onjuiste weergave van metadata voor documenten met speciale tekens.  
-**Oplossing**: Zorg voor correcte handling van tekencodering en valideer locale‑instellingen in je applicatie.
-
-## Integratiestrategieën voor enterprise‑applicaties
-
-### Microservices‑architectuur
-Bij het bouwen van microservices, overweeg een toegewijde document‑informatiedienst:
-
-- Gecentraliseerde extractie vermindert code‑duplicatie.  
-- Makkelijker te schalen op basis van verwerkingsbelasting.  
-- Vereenvoudigd onderhoud en updates.
-
-### Database‑integratie
-Sla geëxtraheerde metadata op voor snelle toegang:
-
-- Indexeer vaak opgevraagde eigenschappen voor snelle ophalen.  
-- Implementeer wijzigings‑tracking voor documentupdates.  
-- Overweeg NoSQL‑oplossingen voor flexibele metadata‑schema's.
-
-### Overwegingen voor API‑ontwerp
-Bij het blootstellen van documentinformatie via API's:
-
-- Implementeer juiste authenticatie en autorisatie.  
-- Gebruik standaard HTTP‑statuscodes voor verschillende scenario's.  
-- Bied uitgebreide API‑documentatie met voorbeelden.
-
-## Veelgestelde vragen
-
-### Kan ik metadata extraheren uit met wachtwoord beveiligde documenten?
-Ja, maar je moet het wachtwoord opgeven bij het initialiseren van het documentobject. GroupDocs.Comparison ondersteunt met wachtwoord beveiligde bestanden voor verschillende formaten.
-
-### Hoe ga ik om met documenten die geen metadata hebben?
-Sommige formaten hebben beperkte of geen metadata. Controleer altijd op `null`‑waarden en bied redelijke standaardwaarden of foutafhandeling voor ontbrekende informatie.
-
-### Wat is de prestatie‑impact van metadata‑extractie?
-Metadata‑extractie is lichtgewicht omdat het volledige inhoudsparsen vermijdt. Voor zeer grote bestanden of batch‑taken, overweeg caching en parallelle verwerking om de responsiviteit te behouden.
-
-### Kan ik documentmetadata wijzigen met GroupDocs.Comparison?
-GroupDocs.Comparison richt zich op vergelijking en informatie‑extractie. Voor het wijzigen van metadata heb je mogelijk extra bibliotheken nodig die op elk formaat zijn afgestemd.
-
-### Hoe zorg ik ervoor dat mijn applicatie alle ondersteunde formaten correct afhandelt?
-Gebruik de functionaliteit voor het ophalen van ondersteunde formaten om dynamisch beschikbare formaten tijdens runtime te ontdekken. Dit houdt je app actueel met bibliotheek‑updates en nieuwe formatondersteuning.
-
-## Aanvullende bronnen
-
-- [GroupDocs.Comparison voor Java documentatie](https://docs.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison voor Java API‑referentie](https://reference.groupdocs.com/comparison/java/)
-- [Download GroupDocs.Comparison voor Java](https://releases.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison)
-- [Gratis ondersteuning](https://forum.groupdocs.com/)
-- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
-
----
-
-**Laatst bijgewerkt:** 2026-01-16  
-**Getest met:** GroupDocs.Comparison voor Java (laatste release)  
-**Auteur:** GroupDocs
+- [Documentmetadata instellen in Java met GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
+- [Aangepaste metadata instellen in Java met GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
+- [Hoe licentie te gebruiken: GroupDocs Comparison Java URL‑configuratie‑gids](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

@@ -1,157 +1,219 @@
 ---
 categories:
 - Java Development
-date: '2026-02-28'
-description: GroupDocs.Comparison kullanarak Java belge karşılaştırmasını özelleştirmeyi
-  uzmanlıkla öğrenin. Hassasiyet ayarlarını, stil seçeneklerini ve gelişmiş yapılandırma
-  tekniklerini öğrenin.
-keywords: customize document comparison java, GroupDocs comparison settings Java,
-  document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
-  settings
-lastmod: '2026-02-28'
-linktitle: Comparison Options & Settings
+date: '2026-08-25'
+description: GroupDocs.Comparison kullanarak Java belge karşılaştırmasını nasıl özelleştireceğinizi
+  öğrenin. Hassasiyet ayarları, stil seçenekleri ve gelişmiş yapılandırma tekniklerini
+  keşfedin.
+keywords:
+- customize document comparison java
+- groupdocs comparison settings java
+- document comparison options tutorial
+- java pdf comparison styling
+- comparison sensitivity settings
+lastmod: '2026-08-25'
+linktitle: Karşılaştırma seçenekleri ve ayarları
+og_description: GroupDocs.Comparison ile Java belge karşılaştırmasını özelleştirin.
+  Hassasiyeti, stili ve yok sayma kalıplarını ayarlamayı öğrenerek performansı optimize
+  ederken kesin diff sonuçları elde edin.
+og_image_alt: Guide showing how to customize document comparison in Java using GroupDocs.Comparison
+og_title: Java belge karşılaştırmasını özelleştirin – tam kılavuz
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  headline: Customize document comparison java – complete guide
+  type: TechArticle
+- description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  name: Customize document comparison java – complete guide
+  steps:
+  - name: '**Start with default settings** – Run a comparison with out‑of‑the‑box
+      options first; often a single tweak solves the problem.'
+    text: '**Start with default settings** – Run a comparison with out‑of‑the‑box
+      options first; often a single tweak solves the problem.'
+  - name: '**Consider your audience** – Legal reviewers need different highlighting
+      than engineers. Align styling and sensitivity with user expectations.'
+    text: '**Consider your audience** – Legal reviewers need different highlighting
+      than engineers. Align styling and sensitivity with user expectations.'
+  - name: '**Test with representative documents** – Use real‑world files from your
+      domain; edge cases usually appear only with production‑like content.'
+    text: '**Test with representative documents** – Use real‑world files from your
+      domain; edge cases usually appear only with production‑like content.'
+  - name: '**Balance performance and accuracy** – Higher sensitivity improves detection
+      but can increase processing time on large files. Find the sweet spot for your
+      environment.'
+    text: '**Balance performance and accuracy** – Higher sensitivity improves detection
+      but can increase processing time on large files. Find the sweet spot for your
+      environment.'
+  - name: '**Maintain consistency across formats** – Ensure your styling rules work
+      uniformly for PDF, DOCX, XLSX, and other supported types.'
+    text: '**Maintain consistency across formats** – Ensure your styling rules work
+      uniformly for PDF, DOCX, XLSX, and other supported types.'
+  type: HowTo
+- questions:
+  - answer: Yes. Set `options.setDetectFormatting(false)` in the `ComparisonOptions`
+      object to turn off formatting checks while retaining full text‑level sensitivity.
+    question: Can I disable formatting detection while keeping text comparison?
+  - answer: Add regular expressions to the `ignorePatterns` collection of `ComparisonOptions`.
+      For example, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` skips
+      date strings.
+    question: How do I ignore specific words or patterns like timestamps?
+  - answer: Absolutely. `InsertedItemStyle` defines the visual appearance of added
+      content, while `DeletedItemStyle` defines the appearance of removed content.
+      Configure them with your preferred foreground/background colors before running
+      the comparison.
+    question: Is it possible to apply different colors for insertions vs. deletions?
+  - answer: High sensitivity increases CPU usage and memory consumption. For PDFs
+      over 200 pages, consider lowering sensitivity for non‑critical sections or processing
+      pages in parallel to keep runtimes under control.
+    question: What’s the impact of high sensitivity on large PDFs?
+  - answer: Yes. Instantiate a single `ComparisonOptions` object with your custom
+      settings and pass it to each `compare` call; this avoids repetitive configuration
+      overhead.
+    question: Can I reuse the same configuration across multiple comparison runs?
+  type: FAQPage
 tags:
-- document-comparison
-- java-tutorials
+- document comparison
+- java
 - groupdocs
 - customization
-title: Java'da Belge Karşılaştırmasını Özelleştirme – Tam Rehber
+- comparison options
+title: Java belge karşılaştırmasını özelleştirin – tam kılavuz
 type: docs
 url: /tr/java/comparison-options/
 weight: 11
 ---
 
-# Belge Karşılaştırma Java'yı Özelleştirme – Tam Kılavuz
+# Java belge karşılaştırmasını özelleştirme – tam kılavuz
 
-Belge karşılaştırmalarının her ufak biçimlendirme değişikliğini vurgulaması ya da önemli içerik farklarını kaçırmasıyla hiç zorlandınız mı? Yalnız değilsiniz. Çoğu geliştirici temel belge karşılaştırmasıyla başlar ancak neyin algılanacağını, değişikliklerin nasıl gösterileceğini ve karşılaştırma algoritmasının ne kadar hassas olması gerektiğini hızlıca fark eder. **Bu kılavuzda belge karşılaştırma java'yı nasıl özelleştireceğinizi** öğrenecek ve projenizin tam olarak istediği şekilde çalışmasını sağlayacaksınız.
+Bu kapsamlı öğreticide, **customize document comparison java** nasıl yapılacağını öğreneceksiniz, böylece GroupDocs.Comparison motoru tam olarak ilgilendiğiniz değişiklikleri vurgular, alakasız gürültüyü yok sayar ve sonuçları markanıza uygun bir tarzda sunar. İster bir yasal‑inceleme portalı, ister teknik dokümantasyon hattı, ister yüksek hacimli toplu işlemci oluşturuyor olun, aşağıdaki teknikler karşılaştırma davranışı üzerinde ayrıntılı kontrol sağlar.
 
-## Hızlı Yanıtlar
-- **“belge karşılaştırma java’yı özelleştirme” ne anlama geliyor?** GroupDocs.Comparison ayarlarını (hassasiyet, stil, yok sayma kuralları) Java uygulamanızın ihtiyaçlarına göre uyarlamak.  
-- **Bir lisansa ihtiyacım var mı?** Evet, üretim kullanımı için geçerli bir GroupDocs.Comparison for Java lisansı gereklidir.  
-- **Hangi formatlar destekleniyor?** PDF, DOCX, PPTX, XLSX ve birçok diğer yaygın ofis formatı.  
-- **Zaman damgalarını veya otomatik‑oluşturulan kimlikleri yok sayabilir miyim?** Kesinlikle – yok sayma desenleri kullanın veya bu tür gürültüyü filtrelemek için hassasiyeti ayarlayın.  
-- **Yüksek hassasiyet performansı etkiler mi?** Daha yüksek hassasiyet, büyük dosyalarda işleme süresini artırabilir; iş yükünüze göre ayarları dengeleyin.
+## Hızlı cevaplar
+- **customize document comparison java** ne anlama geliyor? Bu, GroupDocs.Comparison ayarlarını—duyarlılık, stil ve yok sayma kurallarını—Java uygulamanızın tam ihtiyaçlarına göre yapılandırmak anlamına gelir.  
+- **Bir lisansa ihtiyacım var mı?** Evet, üretim kullanımında geçerli bir GroupDocs.Comparison for Java lisansı gereklidir.  
+- **Hangi formatlar destekleniyor?** PDF, DOCX, PPTX, XLSX ve 45+ diğer yaygın ofis ve görüntü formatı.  
+- **Zaman damgalarını veya otomatik oluşturulan kimlikleri yok sayabilir miyim?** Kesinlikle – yok sayma desenleri kullanın veya bu tür gürültüyü filtrelemek için duyarlılığı ayarlayın.  
+- **Yüksek duyarlılık performansı etkiler mi?** Daha yüksek duyarlılık büyük dosyalarda CPU ve bellek kullanımını artırabilir; ayarları iş yükünüze göre dengeleyin.
 
-## “belge karşılaştırma java’yı özelleştirme” nedir?
-Java’da belge karşılaştırmayı özelleştirmek, GroupDocs.Comparison motorunu yalnızca sizin önemsediğiniz değişiklikleri algılayacak ve bu değişiklikleri net, inceleme‑dostu bir şekilde sunacak şekilde yapılandırmak demektir. Hassasiyet seviyelerini, stil kurallarını ve yok sayma desenlerini ayarlayarak karşılaştırma çıktısı üzerinde kesin kontrol elde edersiniz.
+## “customize document comparison java” nedir?
+**Java’da belge karşılaştırmasını özelleştirmek, GroupDocs.Comparison motorunu yalnızca sizin için önemli değişiklikleri algılayacak ve bu değişiklikleri net, inceleme‑dostu bir şekilde sunacak şekilde yapılandırmak anlamına gelir.**  
+Duyarlılık seviyelerini, stil kurallarını ve yok sayma desenlerini ayarlayarak diff çıktısı üzerinde hassas kontrol elde eder, inceleyicilerin gereksiz karmaşa olmadan en ilgili düzenlemeleri görmesini sağlarsınız.
 
-## Neden belge karşılaştırma java’yı özelleştirmelisiniz?
-- **Gürültüyü azaltın:** İnceleyicilerin önemsiz biçimlendirme ince ayarlarıyla boğulmasını önleyin.  
-- **Kritik düzenlemeleri vurgulayın:** Hukuki veya finansal değişikliklerin anında öne çıkmasını sağlayın.  
-- **Marka tutarlılığını koruyun:** Eklenen veya silinen içeriklere kuruluşunuzun renk ve yazı tiplerini uygulayın.  
-- **Performansı iyileştirin:** Büyük belge toplulukları için gereksiz kontrolleri atlayın.
+## Neden Java’da belge karşılaştırmasını özelleştirirsiniz?
+Karşılaştırmayı özelleştirmek, anlamlı değişikliklere odaklanmanızı ve önemsiz düzenlemeleri filtrelemenizi sağlar; bu da inceleyici yorgunluğunu azaltır ve karar‑verme sürecini hızlandırır.
 
-## Belge Karşılaştırma Seçeneklerini Ne Zaman Özelleştirmelisiniz
+- **Reduce noise:** İnceleyicilerin önemsiz biçimlendirme ayarlamalarıyla boğulmasını önleyin.  
+- **Highlight critical edits:** Hukuki veya finansal değişikliklerin anında öne çıkmasını sağlayın.  
+- **Maintain brand consistency:** Eklenen veya silinen içeriklere kuruluşunuzun renk ve yazı tiplerini uygulayın.  
+- **Improve performance:** Büyük belge partileri için gereksiz kontrolleri atlayarak CPU döngülerinden tasarruf edin.
 
-Teknik detaylara girmeden önce, karşılaştırma davranışını ne zaman ve neden özelleştirmek isteyeceğinizi anlayalım:
+## Ne zaman belge karşılaştırma seçeneklerini özelleştirmelisiniz?
+Varsayılan davranış çok fazla gürültü üretiyor veya kritik düzenlemeleri kaçırıyorsa, özellikle yüksek hacimli veya alan‑spesifik iş akışlarında seçenekleri özelleştirmelisiniz.
 
-**Yüksek Hacimli Belge İşleme** – Yüzlerce sözleşme veya raporu karşılaştırırken, inceleyicileri bunaltmayan tutarlı biçimlendirme ve net değişiklik vurgulama ihtiyacınız olur.
+- **High‑volume document processing** – yüzlerce sözleşme veya raporu karşılaştırmak, tutarlı biçimlendirme ve net değişiklik vurgulama gerektirir; işlem hattını yavaşlatmadan.  
+- **Legal document review** – hukuk firmaları kozmetik değişiklikleri yok saymalı, her maddi değişikliği yakalamalıdır.  
+- **Version control for technical documentation** – anlamlı içerik güncellemelerini izlemek, otomatik zaman damgalarını filtrelemek istersiniz.  
+- **Collaborative editing workflows** – birden çok yazar aynı dosyada çalışır; boşluk ayarlamalarını görsel karmaşa yaratmadan maddi düzenlemeleri ortaya çıkarmalısınız.
 
-**Hukuki Belge İncelemesi** – Hukuk firmaları, “değişiklik” tanımını kesin bir şekilde kontrol etmelidir – biçimlendirme ince ayarlarını yok sayarken her içerik değişikliğini yakalamak gerekir.
+## Karşılaştırma özelleştirmesi için yaygın senaryolar
+Gerçek dünya kullanım durumlarını anlamak, doğru seçenek kombinasyonunu seçmenize yardımcı olur:
 
-**Teknik Dokümantasyon Versiyon Kontrolü** – Yazılım ekipleri, otomatik zaman damgası güncellemeleri veya küçük biçimlendirme ayarlamalarını filtrelerken dokümantasyondaki anlamlı değişiklikleri izlemek ister.
+### Senaryo 1: sözleşme incelemesi
+Hukuk ekipleri her kelime değişikliğini görmek ister ancak yazı tipi veya satır aralığı ayarlamalarıyla ilgilenmez.
 
-**Ortak Düzenleme İş Akışları** – Birden fazla yazar aynı belge üzerinde çalıştığında, her boşluk ayarını gösteren bir karmaşa olmadan esas değişiklikleri vurgulamak istersiniz.
+**Ideal settings:** Yüksek metin duyarlılığı, biçimlendirme algılaması devre dışı, eklemeler/silmeler için özel renkler.
 
-## Karşılaştırma Özelleştirmesi İçin Yaygın Senaryolar
+### Senaryo 2: teknik dokümantasyon güncellemeleri
+API dokümanlarınız sık sık yenilenir, ancak her derleme bir zaman damgası ekler ve kod bloklarını yeniden biçimlendirir.
 
-Bu gerçek‑dünya kullanım durumlarını anlamak, ihtiyaçlarınıza uygun ayarları seçmenize yardımcı olacaktır:
+**Ideal settings:** Orta duyarlılık, zaman damgaları için yok sayma desenleri, kod bölümleri için ayrı stil.
 
-### Senaryo 1: Sözleşme İncelemesi
-Hukuk ekiplerinin sözleşme değişikliklerini incelemesi için bir sistem geliştiriyorsunuz. Her kelime değişikliğini görmek istiyorlar ancak yazı tipi değişiklikleri veya satır aralığı ayarlamalarıyla ilgilenmiyorlar.
+### Senaryo 3: rapor oluşturma
+Üç aylık finansal raporlar sayıları değiştirir ve yeni bölümler ekler, şablon aynı kalır.
 
-**İdeal Ayarlar**: Yüksek metin hassasiyeti, devre dışı bırakılmış biçimlendirme algılama, eklemeler ve silmeler için özel stil.
+**Ideal settings:** Tablo‑özel duyarlılık, sayısal değişiklik vurgulama, yeni bölümler için hafif stil.
 
-### Senaryo 2: Teknik Dokümantasyon Güncellemeleri  
-Ekibiniz, sık sık güncellenen API dokümantasyonunu yönetiyor. İçerik değişikliklerini yakalamak istiyor, ancak otomatik tarih damgalarını ve küçük biçimlendirme güncellemelerini yok saymak istiyor.
+## GroupDocs.Comparison ile Java’da PDF belgelerini karşılaştırma
+`ComparisonOptions` karşılaştırılan öğeleri ve farkların nasıl vurgulanacağını kontrol eden bir yapılandırma nesnesidir. PDF’nizi yükleyin, bir `ComparisonOptions` örneği yapılandırın ve karşılaştırmayı çalıştırın. Bu seçenekler, görüntü karşılaştırmasını etkinleştirip devre dışı bırakmanıza, metin‑çıkarma doğruluğunu ayarlamanıza ve PDF görüntüleyicilerinde iyi çalışan vurgulama renklerini seçmenize olanak tanır. Bu yaklaşım, çok sayfalı PDF’lerde bile işleme süresini makul tutarak kesin diff’ler üretir.
 
-**İdeal Ayarlar**: Orta hassasiyet, belirli metin desenlerini yok sayma, kod blokları için özel vurgulama.
+## Mevcut öğreticiler
 
-### Senaryo 3: Rapor Oluşturma
-Çeyrek raporları karşılaştırıyorsunuz; veriler değişiyor ancak şablon yapısı benzer kalıyor. Odak, sayısal değişiklikler ve yeni bölümler olmalı.
+### [Java belge karşılaştırmalarında eklenen öğe stillerini özelleştirme – GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-**İdeal Ayarlar**: Tablolar ve sayılar için özel hassasiyet, veri değişiklikleri için geliştirilmiş stil.
+GroupDocs.Comparison kullanarak Java belge karşılaştırmalarında eklenen öğe stillerini nasıl özelleştireceğinizi öğrenin. Bu öğretici, temel stil yapılandırmasından gelişmiş görüntü özelleştirmesine kadar her şeyi kapsar ve son kullanıcılarınız için netlik ve kullanılabilirliği artıran profesyonel‑görünümlü karşılaştırma çıktıları oluşturmanıza yardımcı olur.
 
-## PDF belgelerini java ile GroupDocs.Comparison kullanarak karşılaştırma
-Ana iş yükünüz PDF’ler ise aynı özelleştirme prensipleri geçerlidir. PDF‑özel davranışı ince ayarlamak için `ComparisonOptions` nesnesini kullanın – örneğin görüntü karşılaştırmasını etkinleştirme/devre dışı bırakma, metin çıkarma doğruluğunu kontrol etme ve PDF‑uyumlu vurgulama renkleri uygulama. Bu, en güvenilir farkı elde ederken işleme sürelerini makul tutmanızı sağlar.
-
-## Mevcut Eğitimler
-
-### [Customize Inserted Item Styles in Java Document Comparisons with GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
-
-Java belge karşılaştırmalarında eklenen öğe stillerini nasıl özelleştireceğinizi öğrenin. Bu eğitim, temel stil yapılandırmasından gelişmiş görüntü özelleştirmesine kadar her şeyi kapsar ve son kullanıcılarınız için netlik ve kullanılabilirliği artıran profesyonel görünümlü karşılaştırma çıktıları oluşturmanıza yardımcı olur.
-
-**Öğrenecekleriniz:**
+**What you'll learn**
 - Eklenen içerik için özel renk ve biçimlendirme yapılandırması  
-- Çeşitli değişiklik türleri için farklı görsel stiller ayarlama  
+- Çeşitli değişiklik tipleri için farklı görsel stiller ayarlama  
 - Farklı belge formatları arasında tutarlı stil uygulama  
 - İnceleme iş akışları için görsel netliği optimize etme  
 
-**Mükemmel İçin**: Markalı karşılaştırma çıktıları veya değişiklik takibi için belirli görsel gereksinimleri olan ekipler.
+**Perfect for** markalı karşılaştırma çıktıları veya değişiklik takibi için belirli görsel gereksinimleri olan ekipler.
 
-## Java Belge Karşılaştırma Özelleştirmesi İçin En İyi Uygulamalar
+## Java belge karşılaştırması özelleştirmesi için en iyi uygulamalar
 
-**Varsayılan Ayarlarla Başlayın** – Öncelikle kutudan çıkan yapılandırmayla test edin; çoğu zaman tek bir ayar sorunu çözer.
+1. **Start with default settings** – Önce kutudan çıkan seçeneklerle bir karşılaştırma çalıştırın; çoğu zaman tek bir ayar sorunu çözer.  
+2. **Consider your audience** – Hukuki inceleyiciler mühendislerden farklı vurgulama ister. Stil ve duyarlılığı kullanıcı beklentileriyle hizalayın.  
+3. **Test with representative documents** – Alanınıza ait gerçek dosyalar kullanın; kenar durumları genellikle üretim‑benzeri içeriklerde ortaya çıkar.  
+4. **Balance performance and accuracy** – Daha yüksek duyarlılık algıyı artırır ancak büyük dosyalarda işlem süresini uzatabilir. Ortamınız için ideal dengeyi bulun.  
+5. **Maintain consistency across formats** – Stil kurallarınızın PDF, DOCX, XLSX ve diğer desteklenen tiplerde aynı şekilde çalıştığından emin olun.
 
-**Hedef Kitlenizi Düşünün** – Hukuki inceleyiciler teknik yazarlardan farklı vurgulamalara ihtiyaç duyar. Stil ve hassasiyeti kullanıcı beklentileri ve iş akışlarıyla eşleştirin.
+## Yaygın yapılandırma zorlukları
 
-**Temsilci Belgelerle Test Edin** – Sadece basit test senaryoları yerine alanınıza ait gerçek‑dünya dosyalarını kullanın. Kenar durumlar genellikle üretim‑benzeri içeriklerde ortaya çıkar.
+- **Over‑sensitive detection** – Çok fazla önemsiz vurgulama mı? Duyarlılığı düşürün veya zaman damgaları gibi bilinen varyasyonlar için yok sayma desenleri ekleyin.  
+- **Missing important changes** – Kritik düzenlemeler işaretlenmiyorsa, duyarlılığı artırın veya tablolar ve gömülü nesnelerin karşılaştırma kapsamına alındığını doğrulayın.  
+- **Inconsistent styling** – Özel stiller tutarlı uygulanmıyor mu? Stil tanımlarının işlediğiniz her belge formatıyla uyumlu olduğundan emin olun.  
+- **Performance bottlenecks** – Büyük belgeler yüksek duyarlılıkta yavaşlayabilir. Dosyaları ön‑işleme tabi tutun veya karşılaştırmayı daha küçük parçalara bölün.
 
-**Performans‑Doğruluk Dengelemeleri** – Daha yüksek hassasiyet daha kesin algılamaya yol açar ancak büyük belgelerde işleme süresini yavaşlatabilir. Ortamınıza uygun ideal noktayı bulun.
+## Gelişmiş özelleştirme için uzman ipuçları
 
-**Belge Türleri Arasında Tutarlılık** – PDF, Word ve Excel dosyalarını karşılaştırıyorsanız, stil kurallarınızın tüm desteklenen formatlarda aynı şekilde çalıştığından emin olun.
+- **Combine techniques** – En iyi sonuçlar için özel stil, duyarlılık ayarı ve yok sayma desenlerini bir arada kullanın.  
+- **Save configurations as templates** – Tercih ettiğiniz `ComparisonOptions` nesnesini yeniden kullanılabilir bir şablon olarak saklayın ve projeler arasında uygulayın.  
+- **Monitor user feedback** – İnceleyicilerin geri bildirimlerini düzenli toplayın; stil veya duyarlılığı gerçek kullanım verilerine göre ayarlayın.  
+- **Document your settings** – Her seçeneğin neden seçildiğine dair kısa bir kayıt tutun; bu gelecekteki bakım ve yeni ekip üyelerinin hızlı adaptasyonu için kolaylık sağlar.  
 
-## Yaygın Yapılandırma Zorlukları
+## Yaygın sorunların giderilmesi
 
-**Aşırı Hassas Algılama** – Karşılaştırma çok fazla önemsiz değişikliği vurguluyorsa, hassasiyeti azaltın veya bilinen varyasyonlar (ör. zaman damgaları veya otomatik‑oluşturulan kimlikler) için yok sayma desenleri ekleyin.
+- **Changes not displaying as expected** – Özel stilinizin belge‑seviyesi biçimlendirme tarafından geçersiz kılınmadığını doğrulayın. Kural önceliğini gözden geçirin.  
+- **Performance degradation** – Daha az kritik değişiklik tipleri için duyarlılığı azaltın veya toplu işler için paralel işleme etkinleştirin.  
+- **Inconsistent results** – Gizli meta veriler, görünmez karakterler veya algoritmayı etkileyebilecek yapısal farklılıklar olup olmadığını kontrol edin.
 
-**Önemli Değişiklikler Kaçıyor** – Önemli değişiklikler algılanmıyorsa, hassasiyeti artırın veya öğelerin (tablolar, gömülü nesneler) karşılaştırma kapsamına alındığını doğrulayın.
+## Ek kaynaklar
 
-**Stil Tutarsızlığı** – Özel stiller her belge formatında aynı şekilde uygulanmıyorsa, stil tanımlarının işlediğiniz tüm formatlarla uyumlu olduğundan emin olun.
-
-**Performans Sorunları** – Büyük belgeler yüksek hassasiyetle yavaşlayabilir. Dosyaları ön işleme tabi tutmayı veya karşılaştırmayı parçalara bölmeyi düşünün.
-
-## İleri Düzey Özelleştirme İçin Profesyonel İpuçları
-
-- **Birden Çok Tekniği Birleştirin** – En iyi sonuçlar için özel stil, hassasiyet ayarı ve yok sayma desenlerini birlikte kullanın.  
-- **Başarılı Yapılandırmaları Kaydedin** – Tercih ettiğiniz ayarları şablon olarak saklayın ve projeler arasında yeniden kullanın.  
-- **Kullanıcı Geri Bildirimini İzleyin** – İnceleyicilerin geri bildirimlerini düzenli olarak toplayın; stil veya hassasiyeti gerçek‑dünya kullanımına göre ayarlayın.  
-- **Ayarlarınızı Belgelendirin** – Her seçeneğin neden seçildiğine dair kısa bir kayıt tutun; bu, gelecekteki bakım ve yeni ekip üyelerinin entegrasyonu için faydalıdır.
-
-## Yaygın Sorunların Çözümü
-
-- **Değişiklikler Beklenildiği Gibi Görünmüyor** – Özel stilinizin belge‑seviyesi biçimlendirme tarafından geçersiz kılınmadığını doğrulayın. Kural önceliğini kontrol edin.  
-- **Performans Düşüşü** – Daha az kritik değişiklik türleri için hassasiyeti azaltın veya toplu işler için paralel işleme etkinleştirin.  
-- **Tutarsız Sonuçlar** – Gizli meta veriler, görünmez karakterler veya yapısal farklar algoritmayı etkileyebilir; bunları kontrol edin.
-
-## Ek Kaynaklar
-
-- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison for Java API Reference](https://reference.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison for Java documentation](https://docs.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison for Java API reference](https://reference.groupdocs.com/comparison/java/)  
 - [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)  
-- [Free Support](https://forum.groupdocs.com/)  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison)  
+- [Free support](https://forum.groupdocs.com/)  
+- [Temporary license](https://purchase.groupdocs.com/temporary-license/)
 
 ## Sıkça Sorulan Sorular
 
-**S: Biçimlendirme algılamasını devre dışı bırakıp sadece metin karşılaştırması yapabilir miyim?**  
-C: Evet, `ComparisonOptions` nesnesinde biçimlendirme kontrollerini kapatabilir ve metin‑seviyesi hassasiyeti açık tutabilirsiniz.
+**Q: Metin karşılaştırmasını korurken biçimlendirme algılamasını devre dışı bırakabilir miyim?**  
+A: Evet. `ComparisonOptions` nesnesinde `options.setDetectFormatting(false)` ayarını yaparak biçimlendirme kontrollerini kapatabilir, tam metin‑seviyesi duyarlılığı koruyabilirsiniz.
 
-**S: Belirli kelimeleri veya zaman damgaları gibi desenleri nasıl yok sayarım?**  
-C: `ComparisonOptions` içindeki `ignorePatterns` koleksiyonunu kullanarak dışlanması gereken düzenli ifadeleri belirtebilirsiniz.
+**Q: Zaman damgaları gibi belirli kelimeleri veya desenleri nasıl yok sayarım?**  
+A: `ComparisonOptions` nesnesinin `ignorePatterns` koleksiyonuna düzenli ifadeler ekleyin. Örneğin, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` tarih dizelerini atlar.
 
-**S: Eklemeler ve silmeler için farklı renkler uygulamak mümkün mü?**  
-C: Kesinlikle. `InsertedItemStyle` ve `DeletedItemStyle` öğelerini tercih ettiğiniz ön‑/arkaplan renkleriyle yapılandırın.
+**Q: Eklemeler ve silmeler için farklı renkler uygulamak mümkün mü?**  
+A: Kesinlikle. `InsertedItemStyle` eklenen içeriğin görsel görünümünü, `DeletedItemStyle` ise silinen içeriğin görünümünü tanımlar. Karşılaştırmayı çalıştırmadan önce tercih ettiğiniz ön‑/arka plan renklerini ayarlayın.
 
-**S: Yüksek hassasiyet büyük PDF’lerde ne gibi bir etki yaratır?**  
-C: Yüksek hassasiyet CPU kullanımını ve bellek tüketimini artırır. Çok büyük PDF’lerde sayfaları paralel işleyebilir veya kritik olmayan bölümler için hassasiyeti düşürebilirsiniz.
+**Q: Yüksek duyarlılık büyük PDF’lerde ne gibi etkilere sahiptir?**  
+A: Yüksek duyarlılık CPU kullanımını ve bellek tüketimini artırır. 200 sayfayı aşan PDF’lerde kritik olmayan bölümler için duyarlılığı düşürmeyi veya sayfaları paralel işleyerek çalışma süresini kontrol altında tutmayı düşünün.
 
-**S: Aynı yapılandırmayı birden fazla karşılaştırma çalıştırmasında yeniden kullanabilir miyim?**  
-C: Evet, özel ayarlarınızı içeren tek bir `ComparisonOptions` nesnesi oluşturup her karşılaştırma çağrısında yeniden kullanabilirsiniz.
+**Q: Aynı yapılandırmayı birden fazla karşılaştırma çalıştırmasında yeniden kullanabilir miyim?**  
+A: Evet. Tek bir `ComparisonOptions` nesnesi oluşturup özel ayarlarınızı ona uygulayın ve her `compare` çağrısında bu nesneyi geçirin; böylece tekrar eden yapılandırma yükünden kaçınırsınız.
 
 ---
 
-**Son Güncelleme:** 2026-02-28  
-**Test Edilen Versiyon:** GroupDocs.Comparison for Java 23.11  
-**Yazar:** GroupDocs
+**Last Updated:** 2026-08-25  
+**Tested With:** GroupDocs.Comparison for Java 23.11  
+**Author:** GroupDocs
+
+## İlgili Öğreticiler
+
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)  
+- [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)  
+- [How to Use License: GroupDocs Comparison Java URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

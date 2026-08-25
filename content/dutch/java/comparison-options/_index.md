@@ -1,149 +1,219 @@
 ---
 categories:
 - Java Development
-date: '2026-02-28'
-description: Beheers hoe je documentvergelijking in Java kunt aanpassen met GroupDocs.Comparison.
-  Leer instellingen voor gevoeligheid, stijlopties en geavanceerde configuratietechnieken.
-keywords: customize document comparison java, GroupDocs comparison settings Java,
-  document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
-  settings
-lastmod: '2026-02-28'
-linktitle: Comparison Options & Settings
+date: '2026-08-25'
+description: Leer hoe je documentvergelijking java kunt aanpassen met GroupDocs.Comparison.
+  Ontdek instellingen voor gevoeligheid, stylingopties en geavanceerde configuratietechnieken.
+keywords:
+- customize document comparison java
+- groupdocs comparison settings java
+- document comparison options tutorial
+- java pdf comparison styling
+- comparison sensitivity settings
+lastmod: '2026-08-25'
+linktitle: Vergelijkingsopties & instellingen
+og_description: Pas documentvergelijking java aan met GroupDocs.Comparison. Leer hoe
+  je gevoeligheid, styling en negeerpatronen kunt aanpassen om nauwkeurige diff-resultaten
+  te krijgen en tegelijkertijd de prestaties te optimaliseren.
+og_image_alt: Guide showing how to customize document comparison in Java using GroupDocs.Comparison
+og_title: Documentvergelijking java aanpassen – volledige gids
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  headline: Customize document comparison java – complete guide
+  type: TechArticle
+- description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  name: Customize document comparison java – complete guide
+  steps:
+  - name: '**Start with default settings** – Run a comparison with out‑of‑the‑box
+      options first; often a single tweak solves the problem.'
+    text: '**Start with default settings** – Run a comparison with out‑of‑the‑box
+      options first; often a single tweak solves the problem.'
+  - name: '**Consider your audience** – Legal reviewers need different highlighting
+      than engineers. Align styling and sensitivity with user expectations.'
+    text: '**Consider your audience** – Legal reviewers need different highlighting
+      than engineers. Align styling and sensitivity with user expectations.'
+  - name: '**Test with representative documents** – Use real‑world files from your
+      domain; edge cases usually appear only with production‑like content.'
+    text: '**Test with representative documents** – Use real‑world files from your
+      domain; edge cases usually appear only with production‑like content.'
+  - name: '**Balance performance and accuracy** – Higher sensitivity improves detection
+      but can increase processing time on large files. Find the sweet spot for your
+      environment.'
+    text: '**Balance performance and accuracy** – Higher sensitivity improves detection
+      but can increase processing time on large files. Find the sweet spot for your
+      environment.'
+  - name: '**Maintain consistency across formats** – Ensure your styling rules work
+      uniformly for PDF, DOCX, XLSX, and other supported types.'
+    text: '**Maintain consistency across formats** – Ensure your styling rules work
+      uniformly for PDF, DOCX, XLSX, and other supported types.'
+  type: HowTo
+- questions:
+  - answer: Yes. Set `options.setDetectFormatting(false)` in the `ComparisonOptions`
+      object to turn off formatting checks while retaining full text‑level sensitivity.
+    question: Can I disable formatting detection while keeping text comparison?
+  - answer: Add regular expressions to the `ignorePatterns` collection of `ComparisonOptions`.
+      For example, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` skips
+      date strings.
+    question: How do I ignore specific words or patterns like timestamps?
+  - answer: Absolutely. `InsertedItemStyle` defines the visual appearance of added
+      content, while `DeletedItemStyle` defines the appearance of removed content.
+      Configure them with your preferred foreground/background colors before running
+      the comparison.
+    question: Is it possible to apply different colors for insertions vs. deletions?
+  - answer: High sensitivity increases CPU usage and memory consumption. For PDFs
+      over 200 pages, consider lowering sensitivity for non‑critical sections or processing
+      pages in parallel to keep runtimes under control.
+    question: What’s the impact of high sensitivity on large PDFs?
+  - answer: Yes. Instantiate a single `ComparisonOptions` object with your custom
+      settings and pass it to each `compare` call; this avoids repetitive configuration
+      overhead.
+    question: Can I reuse the same configuration across multiple comparison runs?
+  type: FAQPage
 tags:
-- document-comparison
-- java-tutorials
+- document comparison
+- java
 - groupdocs
 - customization
-title: Pas documentvergelijking in Java aan – Complete gids
+- comparison options
+title: Documentvergelijking java aanpassen – volledige gids
 type: docs
 url: /nl/java/comparison-options/
 weight: 11
 ---
 
-# Documentvergelijking Java aanpassen – Complete gids
+# Documentvergelijking aanpassen java – volledige gids
 
-Heb je ooit moeite gehad met documentvergelijkingen die elke kleine opmaakwijziging markeren of belangrijke inhoudsverschillen missen? Je bent niet de enige. De meeste ontwikkelaars beginnen met een eenvoudige documentvergelijking, maar realiseren zich al snel dat ze fijnmazige controle nodig hebben over wat wordt gedetecteerd, hoe wijzigingen worden weergegeven en hoe gevoelig het vergelijkingsalgoritme moet zijn. **In deze gids leer je hoe je document comparison java kunt aanpassen** zodat het precies werkt zoals jouw project vereist.
+In deze uitgebreide tutorial leer je hoe je **customize document comparison java** zodat de GroupDocs.Comparison-engine precies de wijzigingen markeert die voor jou belangrijk zijn, irrelevante ruis negeert en resultaten presenteert in een stijl die bij je merk past. Of je nu een juridisch‑reviewportaal, een technische documentatie‑pipeline of een high‑volume batch‑processor bouwt, de onderstaande technieken geven je fijnmazige controle over het vergelijkingsgedrag.
 
 ## Snelle antwoorden
-- **Wat betekent “customize document comparison java”?** Het afstemmen van GroupDocs.Comparison-instellingen (gevoeligheid, styling, negeer‑regels) op de behoeften van jouw Java‑applicatie.  
-- **Heb ik een licentie nodig?** Ja, een geldige GroupDocs.Comparison for Java‑licentie is vereist voor productiegebruik.  
-- **Welke formaten worden ondersteund?** PDF, DOCX, PPTX, XLSX en vele andere gangbare Office‑formaten.  
+- **Wat betekent “customize document comparison java”?** Het betekent het configureren van GroupDocs.Comparison-instellingen—gevoeligheid, styling en negeer‑regels om te voldoen aan de exacte behoeften van je Java‑applicatie.  
+- **Heb ik een licentie nodig?** Ja, een geldige GroupDocs.Comparison for Java-licentie is vereist voor productiegebruik.  
+- **Welke formaten worden ondersteund?** PDF, DOCX, PPTX, XLSX, en meer dan 45 andere veelvoorkomende kantoor‑ en afbeeldingsformaten.  
 - **Kan ik tijdstempels of automatisch gegenereerde ID’s negeren?** Absoluut – gebruik negeer‑patronen of pas de gevoeligheid aan om dergelijke ruis te filteren.  
-- **Wordt de prestaties beïnvloed door hoge gevoeligheid?** Een hogere gevoeligheid kan de verwerkingstijd van grote bestanden verhogen; stem de instellingen af op jouw werklast.
+- **Wordt de prestaties beïnvloed door hoge gevoeligheid?** Een hogere gevoeligheid kan het CPU‑ en geheugenverbruik bij grote bestanden verhogen; balanceer de instellingen op basis van je werklast.
 
 ## Wat is “customize document comparison java”?
-Het aanpassen van documentvergelijking in Java betekent het configureren van de GroupDocs.Comparison‑engine om alleen de wijzigingen te detecteren die voor jou relevant zijn en die wijzigingen op een duidelijke, reviewer‑vriendelijke manier weer te geven. Door gevoeligheidsniveaus, styling‑regels en negeer‑patronen aan te passen, krijg je nauwkeurige controle over de output van de vergelijking.
+**Het aanpassen van documentvergelijking in Java betekent het configureren van de GroupDocs.Comparison-engine om alleen de wijzigingen te detecteren die voor jou belangrijk zijn en die wijzigingen op een duidelijke, reviewer‑vriendelijke manier te presenteren.**  
+Door gevoeligheidsniveaus, styling‑regels en negeer‑patronen aan te passen, krijg je precieze controle over de diff‑output, zodat reviewers de meest relevante bewerkingen zien zonder onnodige rommel.
 
-## Waarom document comparison java aanpassen?
-- **Ruis verminderen:** Voorkom dat reviewers overweldigd worden door onbelangrijke opmaakaanpassingen.  
+## Waarom documentvergelijking aanpassen java?
+Het aanpassen van de vergelijking stelt je in staat je te concentreren op betekenisvolle wijzigingen terwijl triviale bewerkingen worden gefilterd, wat de vermoeidheid van reviewers vermindert en de besluitvorming versnelt.
+
+- **Ruis verminderen:** Voorkom dat reviewers overweldigd worden door onbeduidende opmaakaanpassingen.  
 - **Kritieke bewerkingen markeren:** Laat juridische of financiële wijzigingen onmiddellijk opvallen.  
-- **Merkconsistentie behouden:** Pas de kleuren en lettertypen van jouw organisatie toe op ingevoegde of verwijderde inhoud.  
-- **Prestaties verbeteren:** Sla onnodige controles over bij grote batches documenten.
+- **Merkconsistentie behouden:** Pas de kleuren en lettertypen van je organisatie toe op ingevoegde of verwijderde inhoud.  
+- **Prestaties verbeteren:** Sla onnodige controles over voor grote batches documenten, waardoor CPU‑cycli worden bespaard.
 
-## Wanneer documentvergelijkingsopties aanpassen
+## Wanneer documentvergelijkingsopties aanpassen?
+Je moet de opties aanpassen wanneer het standaardgedrag te veel ruis produceert of kritieke bewerkingen mist, vooral in high‑volume of domeinspecifieke workflows.
 
-Voordat we in de technische details duiken, laten we begrijpen wanneer en waarom je het vergelijkingsgedrag wilt aanpassen:
+- **High‑volume documentverwerking** – het vergelijken van honderden contracten of rapporten vereist consistente opmaak en duidelijke wijzigingsmarkering zonder de pipeline te vertragen.  
+- **Juridische documentreview** – advocatenkantoren moeten cosmetische wijzigingen negeren terwijl ze elke substantiële wijziging oppikken.  
+- **Versiebeheer voor technische documentatie** – je wilt betekenisvolle inhoudsupdates bijhouden terwijl je geautomatiseerde tijdstempels filtert.  
+- **Collaboratieve bewerkingsworkflows** – meerdere auteurs bewerken hetzelfde bestand; je moet substantiële bewerkingen zichtbaar maken zonder de weergave te vervuilen met spatie‑aanpassingen.
 
-**High‑Volume Document Processing** – Bij het vergelijken van honderden contracten of rapporten heb je consistente opmaak en duidelijke wijzigingsmarkeringen nodig die reviewers niet overweldigen.
+## Veelvoorkomende scenario's voor vergelijkingsaanpassing
 
-**Legal Document Review** – Advocatenkantoren hebben precieze controle nodig over wat een “wijziging” is – opmaakaanpassingen negeren terwijl elke inhoudsmodificatie wordt opgemerkt.
+Het begrijpen van praktijkgevallen helpt je de juiste combinatie van opties te kiezen:
 
-**Version Control for Technical Documentation** – Softwareteams moeten betekenisvolle wijzigingen in documentatie bijhouden terwijl ze geautomatiseerde tijdstempelupdates of kleine opmaakaanpassingen filteren.
+### Scenario 1: contractreview
+Juridische teams moeten elke woordwijziging zien, maar geven niet om lettertype‑ of regelafstand‑aanpassingen.
 
-**Collaborative Editing Workflows** – Wanneer meerdere auteurs aan hetzelfde document werken, wil je substantiële wijzigingen markeren zonder de weergave te overladen met elke spatie‑aanpassing.
+**Ideale instellingen:** Hoge tekstsensitiviteit, opmaakdetectie uitgeschakeld, aangepaste kleuren voor invoegingen/verwijderingen.
 
-## Veelvoorkomende scenario's voor vergelijking‑aanpassing
+### Scenario 2: updates van technische documentatie
+Je API‑documentatie wordt vaak vernieuwd, maar elke build voegt een tijdstempel toe en formatteert codeblokken opnieuw.
 
-Het begrijpen van deze praktijkvoorbeelden helpt je de juiste instellingen te kiezen voor jouw specifieke behoeften:
+**Ideale instellingen:** Medium sensitiviteit, negeer‑patronen voor tijdstempels, onderscheidende styling voor code‑secties.
 
-### Scenario 1: Contractbeoordeling
-Je bouwt een systeem voor juridische teams om contractwijzigingen te beoordelen. Ze moeten elke woordwijziging zien, maar geven geen omkijken naar lettertype‑wijzigingen of regelafstand‑aanpassingen.
+### Scenario 3: rapportgeneratie
+Kwartaalrapporten wijzigen cijfers en voegen nieuwe secties toe terwijl de sjabloon gelijk blijft.
 
-**Ideale instellingen**: Hoge tekstgevoeligheid, uitgeschakelde opmaakdetectie, aangepaste styling voor invoegingen en verwijderingen.
+**Ideale instellingen:** Tabel‑specifieke sensitiviteit, markering van numerieke wijzigingen, subtiele styling voor nieuwe secties.
 
-### Scenario 2: Updates van technische documentatie  
-Jouw team onderhoudt API‑documentatie die vaak wordt bijgewerkt. Je wilt inhoudsveranderingen detecteren, maar geautomatiseerde datumstempels en kleine opmaakupdates negeren.
-
-**Ideale instellingen**: Medium gevoeligheid, negeer specifieke tekstpatronen, aangepaste markering voor code‑blokken.
-
-### Scenario 3: Rapportgeneratie
-Je vergelijkt kwartaalrapporten waarbij de gegevens veranderen maar de sjabloonstructuur vergelijkbaar blijft. De focus moet liggen op numerieke wijzigingen en nieuwe secties.
-
-**Ideale instellingen**: Aangepaste gevoeligheid voor tabellen en cijfers, verbeterde styling voor dataveranderingen.
-
-## Hoe PDF‑documenten vergelijken in Java met GroupDocs.Comparison
-Als je primaire werklast PDF‑bestanden betreft, gelden dezelfde aanpassingsprincipes. Gebruik het `ComparisonOptions`‑object om PDF‑specifiek gedrag fijn af te stemmen — zoals het in‑ of uitschakelen van afbeeldingsvergelijking, het regelen van de nauwkeurigheid van teksteextractie, en het toepassen van PDF‑vriendelijke markeerkleuren. Dit zorgt ervoor dat je de meest betrouwbare diff krijgt terwijl de verwerkingstijd redelijk blijft.
+## Hoe PDF‑documenten vergelijken java met GroupDocs.Comparison
+`ComparisonOptions` is een configuratie‑object dat bepaalt welke elementen worden vergeleken en hoe verschillen worden gemarkeerd. Laad je PDF, configureer een `ComparisonOptions`‑instantie en voer de vergelijking uit. Met de opties kun je beeldvergelijking in‑ of uitschakelen, de nauwkeurigheid van tekste‑extractie instellen en highlight‑kleuren kiezen die goed werken in PDF‑viewers. Deze aanpak levert precieze diffs op terwijl de verwerkingstijd redelijk blijft, zelfs voor PDF’s van honderden pagina’s.
 
 ## Beschikbare tutorials
 
-### [Aangepaste stijlen voor ingevoegde items in Java‑documentvergelijkingen met GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
+### [Aangepaste stijlen voor ingevoegde items in Java documentvergelijkingen met GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-Leer hoe je stijlen voor ingevoegde items kunt aanpassen in Java‑documentvergelijkingen met GroupDocs.Comparison. Deze tutorial behandelt alles, van basis‑stylingconfiguratie tot geavanceerde weergave‑aanpassing, en helpt je professionele vergelijkingsoutput te maken die de duidelijkheid en bruikbaarheid voor eindgebruikers verbetert.
+Leer hoe je stijlen voor ingevoegde items kunt aanpassen in Java documentvergelijkingen met GroupDocs.Comparison. Deze tutorial behandelt alles van basis‑stylingconfiguratie tot geavanceerde weergave‑aanpassing, en helpt je professionele vergelijkingsoutput te creëren die de duidelijkheid en bruikbaarheid voor je eindgebruikers verbetert.
 
-**Wat je leert:**
-- Het configureren van aangepaste kleuren en opmaak voor ingevoegde inhoud  
-- Het instellen van verschillende visuele stijlen voor diverse wijzigingstypen  
-- Het implementeren van consistente styling over verschillende documentformaten  
-- Het optimaliseren van visuele duidelijkheid voor beoordelingsworkflows  
+**Wat je leert**
+- Aangepaste kleuren en opmaak configureren voor ingevoegde inhoud  
+- Verschillende visuele stijlen instellen voor diverse wijzigingstypen  
+- Consistente styling implementeren over verschillende documentformaten  
+- Visuele duidelijkheid optimaliseren voor review‑workflows  
 
-**Perfect voor**: Teams die merkgebonden vergelijkingsoutput nodig hebben of specifieke visuele eisen hebben voor wijzigingsvolging.
+**Ideaal voor** teams die merkgebonden vergelijkingsoutput of specifieke visuele eisen voor wijzigingstracking nodig hebben.
 
-## Best practices voor het aanpassen van Java‑documentvergelijking
+## Best practices voor Java documentvergelijkingsaanpassing
 
-**Begin met standaardinstellingen** – Test eerst met de out‑of‑the‑box‑configuratie; vaak lost één aanpassing het probleem op.  
-**Houd rekening met je doelgroep** – Juridische reviewers hebben andere markeringen nodig dan technische schrijvers. Stem je styling en gevoeligheid af op de verwachtingen en workflows van de gebruiker.  
-**Test met representatieve documenten** – Gebruik altijd real‑world bestanden uit jouw domein, niet alleen eenvoudige testcases. Randgevallen komen vaak pas naar voren bij productie‑achtige inhoud.  
-**Prestaties vs. nauwkeurigheid** – Een hogere gevoeligheid levert nauwkeurigere detectie op, maar kan de verwerking van grote documenten vertragen. Vind de optimale balans voor jouw omgeving.  
-**Consistentie over documenttypen** – Als je PDF’s, Word‑bestanden en Excel‑bladen vergelijkt, zorg er dan voor dat je styling‑regels uniform werken over alle ondersteunde formaten.
+1. **Begin met standaardinstellingen** – Voer eerst een vergelijking uit met de out‑of‑the‑box‑opties; vaak lost één aanpassing het probleem op.  
+2. **Houd rekening met je publiek** – Juridische reviewers hebben andere markeringen nodig dan engineers. Stem styling en sensitiviteit af op de verwachtingen van de gebruiker.  
+3. **Test met representatieve documenten** – Gebruik real‑world‑bestanden uit je domein; randgevallen verschijnen meestal alleen bij productie‑achtige inhoud.  
+4. **Balanceer prestaties en nauwkeurigheid** – Een hogere sensitiviteit verbetert detectie maar kan de verwerkingstijd bij grote bestanden verhogen. Vind de optimale balans voor jouw omgeving.  
+5. **Behoud consistentie over formaten** – Zorg ervoor dat je styling‑regels uniform werken voor PDF, DOCX, XLSX en andere ondersteunde types.
 
 ## Veelvoorkomende configuratie‑uitdagingen
 
-**Over‑gevoelige detectie** – Als je vergelijking te veel onbelangrijke wijzigingen markeert, verlaag dan de gevoeligheid of voeg negeer‑patronen toe voor bekende variaties (bijv. tijdstempels of automatisch gegenereerde ID’s).  
-**Belangrijke wijzigingen missen** – Wanneer significante aanpassingen niet worden gedetecteerd, verhoog dan de gevoeligheid of controleer of de elementen (tabellen, ingesloten objecten) zijn opgenomen in de vergelijkingsscope.  
-**Inconsistente styling** – Als aangepaste stijlen niet uniform worden toegepast, controleer dan of de stijldefinities compatibel zijn met elk documentformaat dat je verwerkt.  
-**Prestatie‑problemen** – Grote documenten met hoge gevoeligheid kunnen traag zijn. Overweeg om bestanden voor te verwerken of de vergelijking in delen op te splitsen.
+- **Over‑gevoelige detectie** – Te veel onbeduidende markeringen? Verlaag de sensitiviteit of voeg negeer‑patronen toe voor bekende variaties zoals tijdstempels.  
+- **Belangrijke wijzigingen missen** – Als kritieke bewerkingen niet gemarkeerd worden, verhoog de sensitiviteit of controleer of tabellen en ingesloten objecten zijn opgenomen in de vergelijkingsscope.  
+- **Inconsistente styling** – Aangepaste stijlen worden niet uniform toegepast? Controleer of stijldefinities compatibel zijn met elk documentformaat dat je verwerkt.  
+- **Prestatieknelpunten** – Grote documenten met hoge sensitiviteit kunnen vertragen. Overweeg het voorbewerken van bestanden of het splitsen van de vergelijking in kleinere delen.
 
 ## Pro‑tips voor geavanceerde aanpassing
 
-- **Combineer meerdere technieken** – Gebruik aangepaste styling, gevoeligheidsaanpassing en negeer‑patronen samen voor optimale resultaten.  
-- **Sla succesvolle configuraties op** – Bewaar je voorkeursinstellingen als sjablonen voor hergebruik in verschillende projecten.  
-- **Monitor gebruikersfeedback** – Verzamel regelmatig input van reviewers; pas styling of gevoeligheid aan op basis van real‑world gebruik.  
-- **Documenteer je instellingen** – Houd een beknopt overzicht bij van waarom elke optie is gekozen; dit helpt bij toekomstig onderhoud en onboarding.
+- **Combineer technieken** – Gebruik aangepaste styling, sensitiviteitsaanpassing en negeer‑patronen samen voor optimale resultaten.  
+- **Sla configuraties op als sjablonen** – Bewaar je voorkeurs‑`ComparisonOptions` in een herbruikbaar object om toe te passen over projecten.  
+- **Monitor gebruikersfeedback** – Verzamel regelmatig input van reviewers; pas styling of sensitiviteit aan op basis van real‑world‑gebruik.  
+- **Documenteer je instellingen** – Houd een beknopt overzicht bij van waarom elke optie is gekozen; dit vergemakkelijkt toekomstig onderhoud en onboarding.  
 
 ## Problemen oplossen bij veelvoorkomende issues
 
-- **Wijzigingen worden niet zoals verwacht weergegeven** – Controleer of je aangepaste styling niet wordt overschreven door document‑niveau opmaak. Controleer de prioriteit van de regels.  
-- **Prestatie‑degradatie** – Verlaag de gevoeligheid voor minder kritieke wijzigingstypen of schakel parallelle verwerking in voor batch‑taken.  
-- **Inconsistente resultaten** – Zoek naar verborgen metadata, onzichtbare tekens of structurele verschillen die het algoritme kunnen beïnvloeden.
+- **Wijzigingen worden niet zoals verwacht weergegeven** – Controleer of je aangepaste styling niet wordt overschreven door document‑niveau opmaak. Bekijk de prioriteit van regels.  
+- **Prestatie‑degradatie** – Verlaag de sensitiviteit voor minder kritieke wijzigingstypen of schakel parallelle verwerking in voor batch‑taken.  
+- **Inconsistente resultaten** – Zoek naar verborgen metadata, onzichtbare tekens of structurele verschillen die het algoritme kunnen beïnvloeden.  
 
 ## Aanvullende bronnen
 
-- [GroupDocs.Comparison voor Java-documentatie](https://docs.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison voor Java documentatie](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison voor Java API‑referentie](https://reference.groupdocs.com/comparison/java/)  
 - [Download GroupDocs.Comparison voor Java](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison‑forum](https://forum.groupdocs.com/c/comparison)  
+- [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison)  
 - [Gratis ondersteuning](https://forum.groupdocs.com/)  
-- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
+- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)  
 
 ## Veelgestelde vragen
 
-**Q: Kan ik opmaakdetectie uitschakelen terwijl ik tekstvergelijking behoud?**  
-A: Ja, je kunt de opmaakcontroles uitschakelen in het `ComparisonOptions`‑object en de tekst‑gevoeligheid ingeschakeld houden.
+**V: Kan ik opmaakdetectie uitschakelen terwijl ik tekstvergelijking behoud?**  
+A: Ja. Stel `options.setDetectFormatting(false)` in het `ComparisonOptions`‑object in om opmaakcontroles uit te schakelen terwijl je volledige tekst‑niveau sensitiviteit behoudt.
 
-**Q: Hoe negeer ik specifieke woorden of patronen zoals tijdstempels?**  
-A: Gebruik de `ignorePatterns`‑collectie in `ComparisonOptions` om reguliere expressies op te geven die uit de diff moeten worden uitgesloten.
+**V: Hoe negeer ik specifieke woorden of patronen zoals tijdstempels?**  
+A: Voeg reguliere expressies toe aan de `ignorePatterns`‑collectie van `ComparisonOptions`. Bijvoorbeeld, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` slaat datum‑strings over.
 
-**Q: Is het mogelijk om verschillende kleuren toe te passen voor invoegingen versus verwijderingen?**  
-A: Absoluut. Configureer `InsertedItemStyle` en `DeletedItemStyle` met je gewenste voor‑ en achtergrondkleuren.
+**V: Is het mogelijk verschillende kleuren toe te passen voor invoegingen versus verwijderingen?**  
+A: Absoluut. `InsertedItemStyle` definieert het visuele uiterlijk van toegevoegde inhoud, terwijl `DeletedItemStyle` het uiterlijk van verwijderde inhoud definieert. Configureer ze met je gewenste voor‑/achtergrondkleuren voordat je de vergelijking uitvoert.
 
-**Q: Wat is de impact van hoge gevoeligheid op grote PDF’s?**  
-A: Hoge gevoeligheid verhoogt het CPU‑gebruik en het geheugenverbruik. Voor zeer grote PDF’s kun je overwegen om pagina’s parallel te verwerken of de gevoeligheid te verlagen voor niet‑kritieke secties.
+**V: Wat is de impact van hoge sensitiviteit op grote PDF’s?**  
+A: Hoge sensitiviteit verhoogt CPU‑gebruik en geheugenverbruik. Voor PDF’s van meer dan 200 pagina’s, overweeg de sensitiviteit te verlagen voor niet‑kritieke secties of pagina’s parallel te verwerken om de runtimes onder controle te houden.
 
-**Q: Kan ik dezelfde configuratie hergebruiken voor meerdere vergelijkingsruns?**  
-A: Ja, maak één `ComparisonOptions`‑object aan met je aangepaste instellingen en hergebruik het voor elke vergelijkingsaanroep.
+**V: Kan ik dezelfde configuratie hergebruiken voor meerdere vergelijkingsruns?**  
+A: Ja. Instantieer een enkel `ComparisonOptions`‑object met je aangepaste instellingen en geef het door aan elke `compare`‑aanroep; dit voorkomt herhaalde configuratie‑overhead.
 
 ---
 
-**Laatst bijgewerkt:** 2026-02-28  
+**Laatst bijgewerkt:** 2026-08-25  
 **Getest met:** GroupDocs.Comparison for Java 23.11  
 **Auteur:** GroupDocs
+
+## Gerelateerde tutorials
+
+- [pdf java vergelijken – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)  
+- [Hoe GroupDocs te gebruiken: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)  
+- [Hoe licentie te gebruiken: GroupDocs Comparison Java URL Configuratiegids](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

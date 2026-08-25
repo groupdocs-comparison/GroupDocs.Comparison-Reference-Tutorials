@@ -1,170 +1,187 @@
 ---
 categories:
 - Java Development
-date: '2026-03-27'
-description: GroupDocs.Comparison kullanarak belge fark raporu oluşturmayı ve Java
-  ile Excel dosyalarını karşılaştırmayı ya da Java ile PDF belgelerini karşılaştırmayı
-  öğrenin. Çalışan kod içeren adım adım öğreticiler.
-keywords: java document comparison tutorial, compare documents java, groupdocs comparison
-  java guide, document diff java, how to compare word documents in java
-lastmod: '2026-03-27'
-linktitle: Create Document Diff Report – Compare Excel Files Java
+date: '2026-08-25'
+description: GroupDocs.Comparison ile excel files java nasıl karşılaştırılır ve bir
+  belge diff raporu oluşturulur öğrenin. PDF ve Word için adım adım kılavuz içerir.
+keywords:
+- compare excel files java
+- how to compare documents java
+- groupdocs comparison java tutorial
+- document diff report java
+- java document comparison
+lastmod: '2026-08-25'
+linktitle: excel files java nasıl karşılaştırılır ve diff raporu oluşturulur
+og_description: GroupDocs.Comparison ile excel files java nasıl karşılaştırılır ve
+  bir belge diff raporu oluşturulur öğrenin. PDF, Word ve Excel karşılaştırmalarını
+  kapsayan adım adım kılavuz.
+og_image_alt: 'Guide: compare excel files java using GroupDocs.Comparison with diff
+  report output'
+og_title: excel files java nasıl karşılaştırılır ve diff raporu oluşturulur
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to compare excel files java and generate a document diff
+    report with GroupDocs.Comparison. Includes step‑by‑step guide for PDF and Word.
+  headline: How to compare excel files java and generate a diff report
+  type: TechArticle
+- description: Learn how to compare excel files java and generate a document diff
+    report with GroupDocs.Comparison. Includes step‑by‑step guide for PDF and Word.
+  name: How to compare excel files java and generate a diff report
+  steps:
+  - name: '**Use streams whenever possible** – This prevents full‑document loading
+      and reduces heap pressure.'
+    text: '**Use streams whenever possible** – This prevents full‑document loading
+      and reduces heap pressure.'
+  - name: '**Fine‑tune comparison settings** – Disable features you don’t need (e.g.,
+      change tracking) to speed up processing.'
+    text: '**Fine‑tune comparison settings** – Disable features you don’t need (e.g.,
+      change tracking) to speed up processing.'
+  - name: '**Cache diff results** – Store outcomes for document pairs that rarely
+      change.'
+    text: '**Cache diff results** – Store outcomes for document pairs that rarely
+      change.'
+  - name: '**Leverage parallelism** – Compare multiple document pairs concurrently
+      using Java’s `ExecutorService`.'
+    text: '**Leverage parallelism** – Compare multiple document pairs concurrently
+      using Java’s `ExecutorService`.'
+  type: HowTo
+- questions:
+  - answer: Yes – use the stream‑based API shown in the “compare excel files java”
+      tutorials to process large spreadsheets efficiently.
+    question: Can I compare Excel files without loading them fully into memory?
+  - answer: Absolutely. Provide the PDF password when opening the document, and the
+      library handles decryption automatically.
+    question: Does GroupDocs.Comparison support password‑protected PDFs?
+  - answer: For files larger than 50 MB, allocate at least 2 GB of heap memory (e.g.,
+      `-Xmx2g`). Adjust based on document size and concurrency.
+    question: What heap size is recommended for large Word documents?
+  - answer: Yes – the “Master Document Comparison & HTML Rendering” tutorial demonstrates
+      rendering diff results directly to HTML for seamless web integration.
+    question: Can I generate HTML previews of comparison results?
+  - answer: The comparison settings let you disable header/footer comparison, covered
+      in the advanced customization guide.
+    question: Is there a way to ignore headers or footers during comparison?
+  type: FAQPage
 tags:
+- compare excel
 - document-comparison
 - java-tutorial
 - groupdocs
 - pdf-comparison
 - word-comparison
-title: Belge Fark Raporu Oluştur – Excel Dosyalarını Java ile Karşılaştır
+title: excel files java nasıl karşılaştırılır ve diff raporu oluşturulur
 type: docs
 url: /tr/java/basic-comparison/
 weight: 3
 ---
 
-# Belge Fark Raporu Oluştur – Java Belge Karşılaştırma Öğreticisi
+# Excel dosyalarını Java ile karşılaştırma ve bir fark raporu oluşturma
 
-Java'da Excel, PDF veya Word dosyaları için **belge fark raporu oluşturmanız** gerekiyorsa, doğru yere geldiniz. Birçok projede, revizyonlar arasındaki değişiklikleri manuel olarak tespit etmek zaman alıcı ve hataya açıktır. Bu kılavuz, süreci GroupDocs.Comparison ile nasıl otomatikleştireceğinizi gösterir, böylece sadece birkaç satır kodla **compare excel files java** ve **compare pdf documents java** dahil olmak üzere desteklenen herhangi bir format için güvenilir bir şekilde fark raporları oluşturabilirsiniz.
+Modern geliştirme ortamlarında, sürümler arasındaki değişiklikleri tespit etmek için genellikle **compare excel files java**'a ihtiyaç duyarsınız ve ardından paydaşlarla paylaşılabilecek net bir fark raporu üretirsiniz. Bu öğreticide, GroupDocs.Comparison for Java'yı nasıl kullanacağınızı gösteriyoruz—**50+ input and output formats**'ı destekleyen ve tüm dosyayı belleğe yüklemeden çok sayfalı belgeleri işleyebilen bir kütüphane. Excel, PDF ve Word dosyalarını karşılaştırmayı, görsel raporlar oluşturmayı ve çözümü herhangi bir Java 8+ uygulamasına entegre etmeyi öğreneceksiniz.
 
-## Hızlı Yanıtlar
-- **Ana kütüphane nedir?** GroupDocs.Comparison for Java  
-- **Excel dosyalarını karşılaştırabilir miyim?** Evet – use the `compare excel files java` feature  
-- **PDF karşılaştırması destekleniyor mu?** Kesinlikle, see **compare pdf documents java** below  
-- **Bir lisansa ihtiyacım var mı?** Değerlendirme için geçici bir lisans mevcuttur; üretim için ticari bir lisans gereklidir.  
-- **Hangi Java sürümü gereklidir?** Java 8+ (daha yeni sürümler performansı artırır)
+## Hızlı cevaplar
+- **Birincil kütüphane nedir?** GroupDocs.Comparison for Java  
+- **Excel dosyalarını karşılaştırabilir miyim?** Evet – `compare excel files java` özelliği hücreleri, formülleri ve biçimlendirmeyi işler.  
+- **PDF karşılaştırması destekleniyor mu?** Kesinlikle; aşağıdaki **compare pdf documents java** bölümüne bakın.  
+- **Lisans gerekli mi?** Geçici bir değerlendirme lisansı mevcuttur; üretim kullanımı için ticari lisans gereklidir.  
+- **Hangi Java sürümü gereklidir?** Java 8+ (daha yeni sürümler performans ve bellek yönetimini iyileştirir).
 
-## Modern Geliştirmede Belge Karşılaştırmanın Önemi
+## compare excel files java nedir?
+`compare excel files java` iki Excel çalışma kitabı arasındaki hücre değerleri, formüller, biçimlendirme ve çalışma sayfası yapısındaki farkları programlı olarak tespit etmenizi sağlar. API'ye iki dosya veya akış gönderirsiniz ve eklenen, kaldırılan veya değiştirilmiş hücreleri vurgulayan bir fark raporu alırsınız.
 
-Belge karşılaştırma sadece metin farklarını bulmakla ilgili değildir. İşbirlikçi ortamlarda genellikle şunlara ihtiyaç duyarsınız:
+## GroupDocs.Comparison ile pdf documents java nasıl karşılaştırılır
+İki PDF dosyasını yükleyin, karşılaştırma API'sini çağırın ve eklemeleri, silmeleri ve stil değişikliklerini işaretleyen görsel bir fark alın. Kütüphane metin, görüntü ve gömülü nesneleri otomatik olarak çıkarır, böylece PDF yapısını kendiniz ayrıştırmanız gerekmez.
 
-- **Takımlar Arasında Değişiklikleri İzle** – kim neyi ve ne zaman değiştirdiğini belirleyin  
-- **Kalite Kontrolünü Otomatikleştir** – yetkisiz düzenlemeleri yakalayın veya uyumluluğu sağlayın  
-- **İş Akışlarını Basitleştir** – manuel inceleme süresini ve insan hatasını azaltın  
-- **Birden Çok Formatı Destekle** – elektronik tablolar, PDF'ler, Word belgeleri ve daha fazlasını işleyin  
+## GroupDocs.Comparison ile belge fark raporu nasıl oluşturulur
+GroupDocs.Comparison, PDF, HTML veya DOCX gibi formatlarda kapsamlı bir fark raporu oluşturur. Fark raporu, tüm eklemeleri, silmeleri ve değişiklikleri görsel olarak işaretler, değişiklik sayılarını listeleyen bir özet tablo içerir ve kurumsal yönergelere uygun şekilde kendi stil, renk veya marka öğelerinizle özelleştirilebilir. Daha sonra raporu paydaşlarla paylaşabilir veya denetim amaçlı arşivleyebilirsiniz.
 
-GroupDocs.Comparison for Java ağır işi üstlenir, böylece iş mantığına odaklanabilirsiniz ve arka planda bir **belge fark raporu** oluşturur.
+## Java belge karşılaştırmaya başlarken
 
-## **compare excel files java** nedir?
+### Önkoşullar
+- Temel Java geliştirme becerileri  
+- Bağımlılık yönetimi için Maven veya Gradle  
+- Java 8+ çalışma zamanı (daha iyi GC performansı için Java 11 veya daha yenisi önerilir)
 
-Excel elektronik tablolarını programlı olarak karşılaştırmak, hücre değerleri, formüller, biçimlendirme ve çalışma sayfası yapılarındaki değişiklikleri tespit etmek anlamına gelir. GroupDocs.Comparison ile iki Excel dosyasını (veya akışını) basitçe beslersiniz ve eklenen, kaldırılan veya değiştirilmiş hücreleri vurgulayan bir fark raporu alırsınız — tamamen saf Java kodundan.
-
-## GroupDocs.Comparison ile **compare pdf documents java** nasıl yapılır
-
-PDF karşılaştırma benzer şekilde çalışır ancak görsel farklar, metin çıkarma ve gömülü nesnelerin işlenmesi desteği ekler. Kütüphane PDF iç yapısını soyutlar, böylece anlamlı bir değişikliği tanımlayan iş kurallarına odaklanabilirsiniz.
-
-## Java Belge Karşılaştırmaya Başlarken
-
-Aşağıdaki öğreticilere dalmadan önce, bilmeniz gerekenler:
-
-### Ön Koşullar
-- Temel Java bilgisi  
-- Maven veya Gradle yapı aracına aşinalık  
-- Java 8+ çalışma zamanı (daha iyi performans için daha yeni sürümler önerilir)
-
-### Ortak Kullanım Senaryoları
+### Yaygın kullanım senaryoları
 - Hukuki belge inceleme sistemleri  
-- İçerik yönetim platformları  
-- Akademik intihal tespiti  
-- Yazılım dokümantasyonu sürüm yönetimi  
-- Finansal rapor denetimi  
+- Sürüm takibi gerektiren içerik‑yönetim platformları  
+- Akademik intihal tespit araçları  
+- Finansal rapor denetim hatları  
+- Yazılım dokümantasyonu sürüm kontrolü
 
-### Performans Hususları
-Belge karşılaştırma, özellikle büyük dosyalarda bellek yoğun olabilir. Yeterli yığın alanı planlayın ve büyük belgeler için akış‑tabanlı işleme düşünün.
+### Performans hususları
+Büyük dosyaları karşılaştırmak bellek yoğun olabilir. Yeterli yığın alanı ayırın (ör. `-Xmx2g` 50 MB'den büyük dosyalar için) ve tüm belgeleri belleğe yüklemekten kaçınmak için akış‑tabanlı API'yi tercih edin.
 
-## GroupDocs.Comparison ile **create document diff report** nasıl oluşturulur
+## GroupDocs.Comparison kullanarak java belgelerini nasıl karşılaştırılır
+Kaynak ve hedef belgeleri yükleyin, istenen karşılaştırma ayarlarını yapılandırın ve `compare` metodunu çağırın. `compare` metodu analizi yürütür ve bir `ComparisonResult` nesnesi üretir. `ComparisonResult` nesnesi bulunan farkları kapsar ve sonucu PDF, HTML veya DOCX fark raporu olarak kaydedilebilecek veya görüntülenebilecek şekilde oluşturma yöntemleri sağlar.
 
-Aşağıda özenle derlenmiş bir öğretici koleksiyonu bulabilirsiniz. Her bağlantı, basit Excel farklarından karşılaştırma sonuçlarının gelişmiş HTML render'ına kadar belirli bir senaryoyu adım adım gösteren tam çalıştırılabilir bir örnek açar.
+## Yaygın uygulama zorlukları (ve nasıl çözülecek)
+- **Büyük dosyalarda bellek sorunları** – Akış‑tabanlı API'yi kullanın ve belgeleri parçalar halinde işleyin; aşağıdaki listedeki birçok öğreticide bu teknik gösterilmektedir.  
+- **Biçim‑özel tuhaflıklar** – PDF, Word ve Excel'in her biri benzersiz özelliklere sahiptir; her kılavuz kendi formatının inceliklerini ele alır.  
+- **Performans darboğazları** – Web hizmetleri için eşzamanlı olmayan işleme uygulayın ve değişmeyen belge çiftleri için karşılaştırma sonuçlarını önbelleğe alın.  
+- **Şifreli belgeler** – Korunan dosyaları yüklerken şifreleri sağlayın; kütüphane şifre çözmeyi otomatik olarak yönetir.
 
-### Adım‑Adım Öğretici Koleksiyonu
+## Performans iyileştirme ipuçları
+1. **Mümkün olduğunca akışları kullanın** – Bu, tam belge yüklemesini önler ve yığın baskısını azaltır.  
+2. **Karşılaştırma ayarlarını ince ayar yapın** – İhtiyacınız olmayan özellikleri devre dışı bırakın (ör. değişiklik izleme) işlem hızını artırmak için.  
+3. **Fark sonuçlarını önbelleğe alın** – Nadiren değişen belge çiftleri için sonuçları saklayın.  
+4. **Paralelliği kullanın** – Java’nın `ExecutorService`'iyle birden fazla belge çiftini aynı anda karşılaştırın.
 
-- [How to Compare Cell Files Using GroupDocs.Comparison in Java: A Comprehensive Guide](./compare-cell-files-groupdocs-java-streams/)  
-  Excel elektronik tablo karşılaştırması ve veri analizi iş akışları. Akış yönetimini, bellek yönetimini öğrenin ve büyük Excel dosyalarıyla bellek tükenmeden nasıl başa çıkılacağını keşfedin.
+## Sonraki adımlar ve ileri konular
+Temel konularda uzmanlaştıktan sonra şunları keşfedebilirsiniz:
 
-- [Implement Document Comparison in Java Using GroupDocs: A Comprehensive Guide](./java-document-comparison-groupdocs-tutorial/)  
-  Özel stil ile çok‑formatlı belge karşılaştırması. Karşılaştırma ayarlarını yapılandırın, özel vurgulama uygulayın ve profesyonel görünümlü raporlar oluşturun.
+- Alanınıza özel özelleştirilmiş değişiklik‑algoritmaları  
+- SharePoint veya Google Drive gibi bulut depolama hizmetleriyle entegrasyon  
+- Mikroservis mimarileri için karşılaştırma mantığını bir REST API aracılığıyla ortaya koyma  
+- Canlı fark güncellemeleriyle gerçek‑zamanlı işbirlikçi düzenleme  
 
-- [Implement Java Document Comparison Using GroupDocs.Comparison: A Comprehensive Guide](./java-document-comparison-groupdocs-metadata-source/)  
-  Meta veri takibi gerektiren kurumsal uygulamalar. Doğru ve tutarlı karşılaştırmalar için meta veri kaynaklarını ayarlayın.
+Aşağıdaki her öğretici, bu ileri senaryolara daha derinlemesine giren tam, çalıştırılabilir bir örneğe bağlanır.
 
-- [Implement Java Stream Document Comparison Using GroupDocs.Comparer: A Comprehensive Guide](./java-stream-document-comparison-groupdocs/)  
-  Yüksek performanslı uygulamalar ve bulut dağıtımları. Akış‑tabanlı karşılaştırma, web uygulamaları ve mikro hizmetler için kritik öneme sahiptir.
+## Adım‑adım öğretici koleksiyonu
+- [Java'da GroupDocs.Comparison ile Hücre Dosyalarını Karşılaştırma: Kapsamlı Kılavuz](./compare-cell-files-groupdocs-java-streams/)  
+- [GroupDocs Kullanarak Java'da Belge Karşılaştırması Uygulama: Kapsamlı Kılavuz](./java-document-comparison-groupdocs-tutorial/)  
+- [GroupDocs.Comparison ile Java Belge Karşılaştırması Uygulama: Kapsamlı Kılavuz](./java-document-comparison-groupdocs-metadata-source/)  
+- [GroupDocs.Comparer Kullanarak Java Akış Belge Karşılaştırması Uygulama: Kapsamlı Kılavuz](./java-stream-document-comparison-groupdocs/)  
+- [GroupDocs.Comparison ile Java'da Word Belge Karşılaştırması Uygulama](./word-document-comparison-groupdocs-java/)  
+- [GroupDocs ile Java Belge Karşılaştırması ve Önizleme: Kapsamlı Kılavuz](./master-java-document-comparison-preview-groupdocs/)  
+- [GroupDocs.Comparison ile Java Belge Karşılaştırması: Kapsamlı Kılavuz](./java-document-comparison-groupdocs-comparison/)  
+- [GroupDocs.Comparison ile Java Belge Karşılaştırması ve Sayfa Önizlemeleri](./java-groupdocs-comparison-document-management/)  
+- [GroupDocs.Comparison ile Java'da Belge Karşılaştırması ve HTML Renderleme](./master-groupdocs-comparison-java-document-html-rendering/)  
+- [GroupDocs.Comparison API Kullanarak Java'da Belge Karşılaştırması](./mastering-document-comparison-java-groupdocs/)  
+- [GroupDocs.Comparison ile Java Belge Karşılaştırması](./java-groupdocs-comparison-document-management-guide/)  
+- [GroupDocs.Comparison ile Java'da Belge Karşılaştırması Uzmanlığı: Kapsamlı Kılavuz](./document-comparison-groupdocs-java/)  
 
-- [Implement Word Document Comparison in Java Using GroupDocs.Comparison](./word-document-comparison-groupdocs-java/)  
-  Microsoft Word belge iş akışları. Karşılaştırmayı otomatikleştirin, değişiklik izlemeyi, yorumları yönetin ve biçimlendirmeyi koruyun.
-
-- [Java Document Comparison & Preview with GroupDocs: A Comprehensive Guide](./master-java-document-comparison-preview-groupdocs/)  
-  Görsel belge ön izlemeleri gerektiren uygulamalar. Ön izlemeler oluşturun ve web ya da masaüstü arayüzleri için performansı optimize edin.
-
-- [Java Document Comparison Using GroupDocs.Comparison: A Comprehensive Guide](./java-document-comparison-groupdocs-comparison/)  
-  Sürüm kontrolü ve değişiklik izleme sistemleri. Kurulum, karşılaştırma özellikleri ve verimli sürüm kontrolü için performans ipuçları.
-
-- [Java Document Comparison and Page Previews Using GroupDocs.Comparison](./java-groupdocs-comparison-document-management/)  
-  Belge yönetim sistemleri ve iş uygulamaları. Teknik olmayan kullanıcılar için kullanıcı dostu arayüzler oluşturun.
-
-- [Master Document Comparison & HTML Rendering in Java with GroupDocs.Comparison](./master-groupdocs-comparison-java-document-html-rendering/)  
-  Web uygulamaları ve çevrimiçi belge görüntüleyicileri. Karşılaştırma sonuçlarını doğrudan HTML'e render ederek sorunsuz web entegrasyonu sağlayın.
-
-- [Master Document Comparison in Java Using GroupDocs.Comparison API](./mastering-document-comparison-java-groupdocs/)  
-  Gelişmiş özelleştirme ve ince ayarlı karşılaştırma mantığı. Hassasiyeti ayarlayın, başlıkları/altbilgileri yok sayın ve uç durumları yönetin.
-
-- [Master Java Document Comparison Using GroupDocs.Comparison](./java-groupdocs-comparison-document-management-guide/)  
-  Performans optimizasyonu ve büyük ölçekli dağıtımlar. Yüzlerce ya da binlerce belgeyi verimli bir şekilde işleyin.
-
-- [Mastering Document Comparison in Java with GroupDocs.Comparison: A Comprehensive Guide](./document-comparison-groupdocs-java/)  
-  Word belge karşılaştırma temellerine giriş. Özel öğreticilere geçmeden önce yeni başlayanlar için idealdir.
-
-## Yaygın Uygulama Zorlukları (Ve Çözüm Yolları)
-
-- **Büyük Dosyalarda Bellek Sorunları** – Akış‑tabanlı karşılaştırma kullanın ve belgeleri parçalara bölerek işleyin. Yukarıdaki birçok öğretici bellek‑optimizasyon tekniklerini kapsar.  
-- **Formata Özgü Özellikler** – PDF, Word ve Excel her biri benzersiz özelliklere sahiptir. Her rehber, kendi formatının inceliklerini ele alır.  
-- **Performans Darboğazları** – Web uygulamaları için eşzamanlı olmayan işleme düşünün ve sık karşılaştırılan çiftler için önbellekleme uygulayın.  
-- **Şifreli Belgelerin İşlenmesi** – Korunan dosyaları yüklerken şifreleri sağlayın; birkaç öğretici güvenli işleme örnekleri sunar.
-
-## Performans Optimizasyon İpuçları
-
-1. **Mümkün olduğunda Akışları Kullanın** – Tüm belgeleri belleğe yüklemekten kaçının.  
-2. **Karşılaştırma Ayarlarını Yapılandırın** – Sadece temel bir fark gerekiyorsa değişiklik izleme gibi gereksiz özellikleri devre dışı bırakın.  
-3. **Sonuçları Önbellekle** – Sık değişmeyen belge çiftleri için karşılaştırma sonuçlarını saklayın.  
-4. **Paralel İşleme** – Java’nın eşzamanlılık araçlarını kullanarak birden fazla çifti aynı anda karşılaştırın.
-
-## Sonraki Adımlar ve İleri Konular
-
-Temelleri kavradıktan sonra şunları keşfedebilirsiniz:
-
-- Özel değişiklik algılama algoritmaları  
-- Depolama sistemleriyle entegrasyon (SharePoint, Google Drive vb.)  
-- Belge karşılaştırma hizmetleri için REST API'leri oluşturma  
-- Gerçek zamanlı işbirlikçi düzenleme  
-
-Her öğretici, daha fazla dokümantasyon ve topluluk kaynaklarına bağlantılar içerir.
-
-## Ek Kaynaklar ve Dokümantasyon
-
+## Ek kaynaklar ve dokümantasyon
 - [GroupDocs.Comparison for Java Dokümantasyonu](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java API Referansı](https://reference.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java'ı İndir](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)  
-- [Ücretsiz Destek](https://forum.groupdocs.com/)  
-- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)  
+- [Ücretsiz destek](https://forum.groupdocs.com/)  
+- [Geçici lisans](https://purchase.groupdocs.com/temporary-license/)  
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
-**Q: Excel dosyalarını tamamen belleğe yüklemeden karşılaştırabilir miyim?**  
-A: Evet – büyük elektronik tabloları verimli bir şekilde işlemek için “compare excel files java” öğreticilerinde gösterilen akış‑tabanlı API'yi kullanın.
+**S: Excel dosyalarını tamamen belleğe yüklemeden karşılaştırabilir miyim?**  
+C: Evet – büyük elektronik tabloları verimli bir şekilde işlemek için “compare excel files java” öğreticilerinde gösterilen akış‑tabanlı API'yi kullanın.
 
-**Q: GroupDocs.Comparison şifre korumalı PDF'leri destekliyor mu?**  
-A: Kesinlikle. Belgeyi yüklerken PDF şifresini sağlayın, kütüphane şifre çözmeyi otomatik olarak gerçekleştirir.
+**S: GroupDocs.Comparison şifre korumalı PDF'leri destekliyor mu?**  
+C: Kesinlikle. Belgeyi açarken PDF şifresini sağlayın, kütüphane şifre çözmeyi otomatik olarak yönetir.
 
-**Q: Büyük Word belgeleri için önerilen yığın (heap) boyutu nedir?**  
-A: 50 MB'den büyük dosyalar için en az 2 GB yığın belleği ayırın (ör. `-Xmx2g`). Belge boyutu ve eşzamanlılığa göre ayarlayın.
+**S: Büyük Word belgeleri için önerilen yığın boyutu nedir?**  
+C: 50 MB'den büyük dosyalar için en az 2 GB yığın belleği ayırın (ör. `-Xmx2g`). Belge boyutu ve eşzamanlılığa göre ayarlayın.
 
-**Q: Karşılaştırma sonuçlarının HTML ön izlemelerini oluşturabilir miyim?**  
-A: Evet – “Master Document Comparison & HTML Rendering” öğreticisi, fark sonuçlarını doğrudan HTML'e render ederek web entegrasyonu için gösterir.
+**S: Karşılaştırma sonuçlarının HTML önizlemelerini oluşturabilir miyim?**  
+C: Evet – “Master Document Comparison & HTML Rendering” öğreticisi, fark sonuçlarını doğrudan HTML'ye render ederek sorunsuz web entegrasyonu sağlar.
 
-**Q: Karşılaştırma sırasında başlıkları veya altbilgileri yok saymanın bir yolu var mı?**  
-A: Karşılaştırma ayarları, başlık/altbilgi karşılaştırmasını devre dışı bırakmanıza izin verir; bu, ileri özelleştirme kılavuzunda ele alınmıştır.
+**S: Karşılaştırma sırasında başlıkları veya altbilgileri yok saymanın bir yolu var mı?**  
+C: Karşılaştırma ayarları, gelişmiş özelleştirme kılavuzunda ele alınan başlık/altbilgi karşılaştırmasını devre dışı bırakmanıza izin verir.
 
----
-
-**Son Güncelleme:** 2026-03-27  
+**Son Güncelleme:** 2026-08-25  
 **Test Edilen Versiyon:** GroupDocs.Comparison 23.12 for Java (latest)  
 **Yazar:** GroupDocs
+
+## İlgili Öğreticiler
+- [compare pdf java – Java Belge Karşılaştırma Öğreticisi – Belgeleri Yükleme ve Karşılaştırma Tam Kılavuzu](/comparison/java/document-loading/)  
+- [compare word documents java – GroupDocs ile Java Word Belge Karşılaştırması](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)  
+- [GroupDocs Nasıl Kullanılır: Java Belge Karşılaştırma Akışları – Tam Kılavuz](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

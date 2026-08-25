@@ -1,134 +1,194 @@
 ---
 categories:
 - Java Development
-date: '2026-03-27'
-description: تعلم كيفية إنشاء تقرير اختلاف المستندات ومقارنة ملفات Excel باستخدام
-  Java أو مقارنة مستندات PDF باستخدام Java باستخدام GroupDocs.Comparison. دروس خطوة
-  بخطوة مع كود عملي.
-keywords: java document comparison tutorial, compare documents java, groupdocs comparison
-  java guide, document diff java, how to compare word documents in java
-lastmod: '2026-03-27'
-linktitle: Create Document Diff Report – Compare Excel Files Java
+date: '2026-08-25'
+description: تعلم كيفية مقارنة ملفات excel java وإنشاء تقرير diff report باستخدام
+  GroupDocs.Comparison. يتضمن دليلًا خطوة بخطوة لـ PDF و Word.
+keywords:
+- compare excel files java
+- how to compare documents java
+- groupdocs comparison java tutorial
+- document diff report java
+- java document comparison
+lastmod: '2026-08-25'
+linktitle: كيفية مقارنة ملفات excel java وإنشاء تقرير diff report
+og_description: تعلم كيفية مقارنة ملفات excel java وإنشاء تقرير diff report باستخدام
+  GroupDocs.Comparison. دليل خطوة بخطوة يغطي مقارنات PDF و Word و Excel.
+og_image_alt: 'Guide: compare excel files java using GroupDocs.Comparison with diff
+  report output'
+og_title: كيفية مقارنة ملفات excel java وإنشاء تقرير diff report
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to compare excel files java and generate a document diff
+    report with GroupDocs.Comparison. Includes step‑by‑step guide for PDF and Word.
+  headline: How to compare excel files java and generate a diff report
+  type: TechArticle
+- description: Learn how to compare excel files java and generate a document diff
+    report with GroupDocs.Comparison. Includes step‑by‑step guide for PDF and Word.
+  name: How to compare excel files java and generate a diff report
+  steps:
+  - name: '**Use streams whenever possible** – This prevents full‑document loading
+      and reduces heap pressure.'
+    text: '**Use streams whenever possible** – This prevents full‑document loading
+      and reduces heap pressure.'
+  - name: '**Fine‑tune comparison settings** – Disable features you don’t need (e.g.,
+      change tracking) to speed up processing.'
+    text: '**Fine‑tune comparison settings** – Disable features you don’t need (e.g.,
+      change tracking) to speed up processing.'
+  - name: '**Cache diff results** – Store outcomes for document pairs that rarely
+      change.'
+    text: '**Cache diff results** – Store outcomes for document pairs that rarely
+      change.'
+  - name: '**Leverage parallelism** – Compare multiple document pairs concurrently
+      using Java’s `ExecutorService`.'
+    text: '**Leverage parallelism** – Compare multiple document pairs concurrently
+      using Java’s `ExecutorService`.'
+  type: HowTo
+- questions:
+  - answer: Yes – use the stream‑based API shown in the “compare excel files java”
+      tutorials to process large spreadsheets efficiently.
+    question: Can I compare Excel files without loading them fully into memory?
+  - answer: Absolutely. Provide the PDF password when opening the document, and the
+      library handles decryption automatically.
+    question: Does GroupDocs.Comparison support password‑protected PDFs?
+  - answer: For files larger than 50 MB, allocate at least 2 GB of heap memory (e.g.,
+      `-Xmx2g`). Adjust based on document size and concurrency.
+    question: What heap size is recommended for large Word documents?
+  - answer: Yes – the “Master Document Comparison & HTML Rendering” tutorial demonstrates
+      rendering diff results directly to HTML for seamless web integration.
+    question: Can I generate HTML previews of comparison results?
+  - answer: The comparison settings let you disable header/footer comparison, covered
+      in the advanced customization guide.
+    question: Is there a way to ignore headers or footers during comparison?
+  type: FAQPage
 tags:
+- compare excel
 - document-comparison
 - java-tutorial
 - groupdocs
 - pdf-comparison
 - word-comparison
-title: إنشاء تقرير اختلاف المستند – مقارنة ملفات Excel باستخدام Java
+title: كيفية مقارنة ملفات excel java وإنشاء تقرير diff report
 type: docs
 url: /ar/java/basic-comparison/
 weight: 3
 ---
 
-# إنشاء تقرير اختلاف المستند – دليل مقارنة المستندات في Java
+# كيفية مقارنة ملفات إكسل جافا وإنشاء تقرير اختلاف
 
-إذا كنت بحاجة إلى **إنشاء تقرير اختلاف المستند** لملفات Excel أو PDF أو Word في Java، فقد وجدت المكان المناسب. في العديد من المشاريع، اكتشاف التغييرات يدويًا عبر الإصدارات يستغرق وقتًا طويلاً وعرضة للأخطاء. يوضح هذا الدليل كيفية أتمتة العملية باستخدام GroupDocs.Comparison، بحيث يمكنك توليد تقارير اختلاف موثوقة لأي تنسيق مدعوم—بما في ذلك **compare excel files java** و **compare pdf documents java**—ببضع أسطر من الشيفرة فقط.
+في التطوير الحديث غالبًا ما تحتاج إلى **compare excel files java** لاكتشاف التغييرات عبر الإصدارات، ثم إنتاج تقرير اختلاف واضح يمكن مشاركته مع أصحاب المصلحة. يوضح هذا الدليل كيفية استخدام GroupDocs.Comparison for Java—مكتبة تدعم **50+ input and output formats** ويمكنها معالجة مستندات مئات الصفحات دون تحميل الملف بالكامل في الذاكرة. ستتعلم مقارنة ملفات Excel وPDF وWord، إنشاء تقارير بصرية، وتكامل الحل مع أي تطبيق Java 8+.
 
 ## إجابات سريعة
 - **ما هي المكتبة الأساسية؟** GroupDocs.Comparison for Java  
-- **هل يمكنني مقارنة ملفات Excel؟** نعم – استخدم ميزة `compare excel files java`  
-- **هل تدعم مقارنة PDF؟** بالتأكيد، انظر **compare pdf documents java** أدناه  
-- **هل أحتاج إلى ترخيص؟** يتوفر ترخيص مؤقت للتقييم؛ يلزم ترخيص تجاري للإنتاج  
-- **ما نسخة Java المطلوبة؟** Java 8+ (الإصدارات الأحدث تحسن الأداء)
+- **هل يمكنني مقارنة ملفات إكسل؟** نعم – ميزة `compare excel files java` تتعامل مع الخلايا، الصيغ، والتنسيق.  
+- **هل يدعم مقارنة ملفات PDF؟** بالتأكيد؛ راجع قسم **compare pdf documents java** أدناه.  
+- **هل أحتاج إلى ترخيص؟** ترخيص تقييم مؤقت متاح؛ الترخيص التجاري مطلوب للاستخدام في الإنتاج.  
+- **ما إصدار جافا المطلوب؟** Java 8+ (الإصدارات الأحدث تحسن الأداء وإدارة الذاكرة).
 
-## لماذا مقارنة المستندات مهمة في التطوير الحديث
-مقارنة المستندات ليست مجرد العثور على اختلافات النص. في بيئات التعاون غالبًا ما تحتاج إلى:
-- **تتبع التغييرات عبر الفرق** – تحديد من غير ماذا ومتى  
-- **أتمتة مراقبة الجودة** – اكتشاف التعديلات غير المصرح بها أو ضمان الامتثال  
-- **تبسيط سير العمل** – تقليل وقت المراجعة اليدوية والأخطاء البشرية  
-- **دعم صيغ متعددة** – التعامل مع جداول البيانات، ملفات PDF، مستندات Word، وأكثر  
+## ما هو compare excel files java؟
+`compare excel files java` يتيح لك اكتشاف الاختلافات في قيم الخلايا، الصيغ، التنسيق، وبنية ورقة العمل بين دفترين Excel برمجيًا. ببساطة تمرّر ملفين أو تدفقات إلى الـ API وتستلم تقرير اختلاف يبرز الخلايا المضافة، المحذوفة، أو المعدلة.
 
-يقوم GroupDocs.Comparison for Java بالعمل الشاق، مما يتيح لك التركيز على منطق الأعمال بينما يولد **تقرير اختلاف المستند** خلف الكواليس.
+## كيفية مقارنة pdf documents java باستخدام GroupDocs.Comparison
+حمّل ملفي PDF، استدعِ API المقارنة، واسترجع تقرير اختلاف بصري يحدد الإضافات، الحذف، وتغييرات النمط. المكتبة تستخرج النصوص، الصور، والكائنات المدمجة تلقائيًا، لذا لا تحتاج إلى تحليل بنية PDF بنفسك.
 
-## ما هو **compare excel files java**؟
-مقارنة جداول Excel برمجيًا يعني اكتشاف التغييرات في قيم الخلايا، الصيغ، التنسيق، وهياكل أوراق العمل. باستخدام GroupDocs.Comparison، تقوم ببساطة بتمرير ملفي Excel (أو تدفقات) وتستلم تقرير اختلاف يبرز الخلايا المضافة أو المحذوفة أو المعدلة—كل ذلك من شيفرة Java صافية.
+## كيفية إنشاء تقرير اختلاف المستند باستخدام GroupDocs.Comparison
+GroupDocs.Comparison يولد تقرير اختلاف شامل بصيغ مثل PDF أو HTML أو DOCX. التقرير يميز بصريًا جميع الإضافات، الحذف، والتعديلات، ويتضمن جدول ملخص يعدد عدد التغييرات، ويمكن تخصيصه بأنماطك، ألوانك، أو علامتك التجارية لتتناسب مع إرشادات الشركة. يمكنك بعد ذلك مشاركة التقرير مع أصحاب المصلحة أو أرشفته لأغراض التدقيق.
 
-## كيفية **compare pdf documents java** مع GroupDocs.Comparison
-تعمل مقارنة PDF بطريقة مشابهة ولكنها تضيف دعمًا للاختلافات البصرية، استخراج النص، ومعالجة الكائنات المدمجة. تقوم المكتبة بتجريد تفاصيل PDF الداخلية، بحيث يمكنك التركيز على قواعد الأعمال التي تحدد التغيير ذو المعنى.
-
-## البدء مع مقارنة مستندات Java
-قبل الغوص في الدروس أدناه، إليك ما يجب أن تعرفه:
+## البدء في مقارنة مستندات جافا
 
 ### المتطلبات المسبقة
-- معرفة أساسية بـ Java  
-- الإلمام بأدوات بناء Maven أو Gradle  
-- بيئة تشغيل Java 8+ (الإصدارات الأحدث موصى بها لأداء أفضل)
+- مهارات تطوير جافا الأساسية  
+- Maven أو Gradle لإدارة التبعيات  
+- بيئة تشغيل Java 8+ (يوصى بـ Java 11 أو أحدث لأداء أفضل للـ GC)
 
 ### حالات الاستخدام الشائعة
 - أنظمة مراجعة المستندات القانونية  
-- منصات إدارة المحتوى  
-- كشف الانتحال الأكاديمي  
-- إصدار وثائق البرمجيات  
-- تدقيق التقارير المالية  
+- منصات إدارة المحتوى التي تحتاج إلى تتبع الإصدارات  
+- أدوات كشف الانتحال الأكاديمي  
+- خطوط تدفق تدقيق التقارير المالية  
+- التحكم في إصدارات وثائق البرمجيات
 
 ### اعتبارات الأداء
-يمكن أن تكون مقارنة المستندات مستهلكة للذاكرة، خاصةً مع الملفات الكبيرة. خطط لتوفير مساحة كافية للـ heap وفكر في المعالجة القائمة على التدفق للوثائق الضخمة.
+مقارنة الملفات الكبيرة قد تكون كثيفة الذاكرة. خصص مساحة كومة كافية (مثال، `-Xmx2g` للملفات > 50 MB) وفضّل API القائم على التدفق لتجنب تحميل المستندات بالكامل في الذاكرة.
 
-## كيفية **create document diff report** مع GroupDocs.Comparison
-فيما يلي مجموعة مختارة من الدروس. كل رابط يفتح مثالًا كاملًا قابلًا للتنفيذ يوجهك عبر سيناريو محدد—من اختلافات Excel البسيطة إلى عرض HTML المتقدم لنتائج المقارنة.
-
-### مجموعة دروس خطوة بخطوة
-- [كيفية مقارنة ملفات الخلايا باستخدام GroupDocs.Comparison في Java: دليل شامل](./compare-cell-files-groupdocs-java-streams/)  
-- [تنفيذ مقارنة المستندات في Java باستخدام GroupDocs: دليل شامل](./java-document-comparison-groupdocs-tutorial/)  
-- [تنفيذ مقارنة مستندات Java باستخدام GroupDocs.Comparison: دليل شامل](./java-document-comparison-groupdocs-metadata-source/)  
-- [تنفيذ مقارنة مستندات Java باستخدام التدفق باستخدام GroupDocs.Comparer: دليل شامل](./java-stream-document-comparison-groupdocs/)  
-- [تنفيذ مقارنة مستندات Word في Java باستخدام GroupDocs.Comparison](./word-document-comparison-groupdocs-java/)  
-- [مقارنة مستندات Java ومعاينتها باستخدام GroupDocs: دليل شامل](./master-java-document-comparison-preview-groupdocs/)  
-- [مقارنة مستندات Java باستخدام GroupDocs.Comparison: دليل شامل](./java-document-comparison-groupdocs-comparison/)  
-- [مقارنة مستندات Java ومعاينات الصفحات باستخدام GroupDocs.Comparison](./java-groupdocs-comparison-document-management/)  
-- [مقارنة المستندات المتقدمة وعرض HTML في Java باستخدام GroupDocs.Comparison](./master-groupdocs-comparison-java-document-html-rendering/)  
-- [مقارنة المستندات المتقدمة في Java باستخدام واجهة برمجة تطبيقات GroupDocs.Comparison](./mastering-document-comparison-java-groupdocs/)  
-- [إتقان مقارنة مستندات Java باستخدام GroupDocs.Comparison](./java-groupdocs-comparison-document-management-guide/)  
-- [إتقان مقارنة المستندات في Java مع GroupDocs.Comparison: دليل شامل](./document-comparison-groupdocs-java/)  
+## كيفية مقارنة المستندات java باستخدام GroupDocs.Comparison
+حمّل المستندات المصدر والهدف، اضبط إعدادات المقارنة المطلوبة، واستدعِ طريقة `compare`. طريقة `compare` تنفّذ التحليل وتنتج كائن `ComparisonResult`. كائن `ComparisonResult` يضم الاختلافات المكتشفة ويوفر طرقًا لتصوير النتيجة كملف PDF أو HTML أو DOCX يمكن حفظه أو عرضه.
 
 ## تحديات التنفيذ الشائعة (وكيفية حلها)
-- **مشكلات الذاكرة مع الملفات الكبيرة** – استخدم المقارنة القائمة على التدفق ومعالجة المستندات على أجزاء. تغطي العديد من الدروس أعلاه تقنيات تحسين الذاكرة.  
-- **خصائص خاصة بالصيغة** – لكل من PDF وWord وExcel خصائص فريدة. كل دليل يتناول تفاصيل صيغته.  
-- **عنق زجاجة الأداء** – فكر في المعالجة غير المتزامنة لتطبيقات الويب وطبق التخزين المؤقت للأزواج التي تُقارن بشكل متكرر.  
-- **معالجة المستندات المشفرة** – قدم كلمات المرور عند تحميل الملفات المحمية؛ توضح عدة دروس كيفية التعامل الآمن.  
+
+- **مشكلات الذاكرة مع الملفات الكبيرة** – استخدم API القائم على التدفق ومعالجة المستندات على أجزاء؛ العديد من الدروس في القائمة أدناه توضح هذه التقنية.  
+- **خصائص خاصة بالتنسيق** – PDF وWord وExcel لكل منها خصائص فريدة؛ كل دليل يتناول تفاصيل تنسيقه.  
+- **عنق زجاجة الأداء** – نفّذ المعالجة غير المتزامنة لخدمات الويب وخزن نتائج المقارنة للوثائق غير المتغيرة.  
+- **المستندات المشفرة** – قدم كلمات المرور عند تحميل الملفات المحمية؛ المكتبة تتعامل مع فك التشفير تلقائيًا.
 
 ## نصائح تحسين الأداء
-1. **استخدام التدفقات عندما يكون ذلك ممكنًا** – تجنب تحميل المستندات بالكامل في الذاكرة.  
-2. **تكوين إعدادات المقارنة** – تعطيل الميزات غير الضرورية مثل تتبع التغييرات إذا كنت تحتاج فقط إلى اختلاف أساسي.  
-3. **تخزين النتائج مؤقتًا** – احفظ نتائج المقارنة لأزواج المستندات التي لا تتغير كثيرًا.  
-4. **المعالجة المتوازية** – قارن عدة أزواج في وقت واحد باستخدام أدوات التزامن في Java.  
+
+1. **استخدم التدفقات كلما أمكن** – يمنع ذلك تحميل المستند بالكامل ويقلل من ضغط الذاكرة.  
+2. **ضبط إعدادات المقارنة بدقة** – عطل الميزات غير المطلوبة (مثل تتبع التغييرات) لتسريع المعالجة.  
+3. **خزن نتائج الاختلاف** – احفظ النتائج لأزواج المستندات التي نادراً ما تتغير.  
+4. **استفد من التوازي** – قارن عدة أزواج من المستندات في وقت واحد باستخدام `ExecutorService` في جافا.
 
 ## الخطوات التالية والمواضيع المتقدمة
-بعد إتقان الأساسيات، قد ترغب في استكشاف:
-- خوارزميات اكتشاف التغييرات المخصصة  
-- التكامل مع أنظمة التخزين (SharePoint، Google Drive، إلخ)  
-- بناء واجهات REST API لخدمات مقارنة المستندات  
-- التحرير التعاوني في الوقت الحقيقي  
 
-كل درس يتضمن روابط إلى مزيد من الوثائق وموارد المجتمع.
+بعد إتقان الأساسيات، قد تستكشف:
+
+- خوارزميات كشف التغييرات المخصصة المتوافقة مع مجال عملك  
+- التكامل مع خدمات التخزين السحابي مثل SharePoint أو Google Drive  
+- إتاحة منطق المقارنة عبر REST API لهندسة الميكروسيرفيسز  
+- تحرير تعاوني في الوقت الحقيقي مع تحديثات اختلاف مباشرة  
+
+كل دليل أدناه يربطك بمثال كامل قابل للتنفيذ يغوص أعمق في هذه السيناريوهات المتقدمة.
+
+## مجموعة دروس خطوة بخطوة
+
+- [كيفية مقارنة ملفات الخلايا باستخدام GroupDocs.Comparison في جافا: دليل شامل](./compare-cell-files-groupdocs-java-streams/)  
+- [تنفيذ مقارنة المستندات في جافا باستخدام GroupDocs: دليل شامل](./java-document-comparison-groupdocs-tutorial/)  
+- [تنفيذ مقارنة مستندات جافا باستخدام GroupDocs.Comparison: دليل شامل](./java-document-comparison-groupdocs-metadata-source/)  
+- [تنفيذ مقارنة مستندات التدفق في جافا باستخدام GroupDocs.Comparer: دليل شامل](./java-stream-document-comparison-groupdocs/)  
+- [تنفيذ مقارنة مستندات Word في جافا باستخدام GroupDocs.Comparison](./word-document-comparison-groupdocs-java/)  
+- [مقارنة مستندات جافا ومعاينتها باستخدام GroupDocs: دليل شامل](./master-java-document-comparison-preview-groupdocs/)  
+- [مقارنة مستندات جافا باستخدام GroupDocs.Comparison: دليل شامل](./java-document-comparison-groupdocs-comparison/)  
+- [مقارنة مستندات جافا ومعاينات الصفحات باستخدام GroupDocs.Comparison](./java-groupdocs-comparison-document-management/)  
+- [إتقان مقارنة المستندات وعرض HTML في جافا باستخدام GroupDocs.Comparison](./master-groupdocs-comparison-java-document-html-rendering/)  
+- [إتقان مقارنة المستندات في جافا باستخدام API GroupDocs.Comparison](./mastering-document-comparison-java-groupdocs/)  
+- [إتقان مقارنة مستندات جافا باستخدام GroupDocs.Comparison](./java-groupdocs-comparison-document-management-guide/)  
+- [إتقان مقارنة المستندات في جافا مع GroupDocs.Comparison: دليل شامل](./document-comparison-groupdocs-java/)  
 
 ## موارد إضافية ووثائق
-- [وثائق GroupDocs.Comparison لـ Java](https://docs.groupdocs.com/comparison/java/)  
-- [مرجع API لـ GroupDocs.Comparison لـ Java](https://reference.groupdocs.com/comparison/java/)  
-- [تحميل GroupDocs.Comparison لـ Java](https://releases.groupdocs.com/comparison/java/)  
+
+- [توثيق GroupDocs.Comparison لجافا](https://docs.groupdocs.com/comparison/java/)  
+- [مرجع API لـ GroupDocs.Comparison لجافا](https://reference.groupdocs.com/comparison/java/)  
+- [تحميل GroupDocs.Comparison لجافا](https://releases.groupdocs.com/comparison/java/)  
 - [منتدى GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
 - [دعم مجاني](https://forum.groupdocs.com/)  
 - [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)  
 
 ## الأسئلة المتكررة
-**س: هل يمكنني مقارنة ملفات Excel دون تحميلها بالكامل في الذاكرة؟**  
-**ج:** نعم – استخدم واجهة برمجة التطبيقات القائمة على التدفق الموضحة في دروس “compare excel files java” لمعالجة جداول البيانات الكبيرة بكفاءة.
 
-**س: هل يدعم GroupDocs.Comparison ملفات PDF المحمية بكلمة مرور؟**  
-**ج:** بالتأكيد. قدم كلمة مرور PDF عند تحميل المستند، وتتعامل المكتبة مع فك التشفير تلقائيًا.
+**س: هل يمكنني مقارنة ملفات إكسل دون تحميلها بالكامل في الذاكرة؟**  
+ج: نعم – استخدم API القائم على التدفق الموضح في دروس “compare excel files java” لمعالجة جداول البيانات الكبيرة بكفاءة.
 
-**س: ما حجم الـ heap الموصى به للملفات الكبيرة من Word؟**  
-**ج:** للملفات التي تتجاوز 50 ميغابايت، خصص على الأقل 2 جيجابايت من ذاكرة الـ heap (مثلاً `-Xmx2g`). اضبط الحجم بناءً على حجم المستند ومستوى التزامن.
+**س: هل يدعم GroupDocs.Comparison ملفات PDF محمية بكلمة مرور؟**  
+ج: بالتأكيد. قدم كلمة مرور PDF عند فتح المستند، وستتعامل المكتبة مع فك التشفير تلقائيًا.
 
-**س: هل يمكنني توليد معاينات HTML لنتائج المقارنة؟**  
-**ج:** نعم – يوضح درس “Master Document Comparison & HTML Rendering” كيفية عرض نتائج الاختلاف مباشرةً إلى HTML لتكامل الويب.
+**س: ما حجم الكومة الموصى به للوثائق الكبيرة من نوع Word؟**  
+ج: للملفات التي تزيد عن 50 MB، خصص على الأقل 2 GB من ذاكرة الكومة (مثال، `-Xmx2g`). اضبط الإعداد حسب حجم المستند ومستوى التوازي.
+
+**س: هل يمكنني إنشاء معاينات HTML لنتائج المقارنة؟**  
+ج: نعم – دليل “إتقان مقارنة المستندات وعرض HTML” يوضح كيفية عرض نتائج الاختلاف مباشرةً كملف HTML لتكامل سهل مع الويب.
 
 **س: هل هناك طريقة لتجاهل رؤوس أو تذييلات الصفحات أثناء المقارنة؟**  
-**ج:** تسمح إعدادات المقارنة بتعطيل مقارنة الرؤوس/التذييلات، كما هو موضح في دليل التخصيص المتقدم.
+ج: إعدادات المقارنة تسمح لك بتعطيل مقارنة الرأس/التذييل، كما هو موضح في دليل التخصيص المتقدم.
 
 ---
 
-**آخر تحديث:** 2026-03-27  
+**آخر تحديث:** 2026-08-25  
 **تم الاختبار مع:** GroupDocs.Comparison 23.12 for Java (latest)  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [compare pdf java – دليل مقارنة مستندات جافا – دليل كامل للتحميل ومقارنة المستندات](/comparison/java/document-loading/)  
+- [compare word documents java – مقارنة مستندات Word جافا مع GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)  
+- [كيفية استخدام GroupDocs: تدفقات مقارنة مستندات جافا – دليل كامل](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

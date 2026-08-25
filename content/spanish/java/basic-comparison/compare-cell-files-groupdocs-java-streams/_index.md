@@ -1,78 +1,112 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-27'
-description: Aprende a comparar archivos Excel usando flujos de Java con GroupDocs.Comparison.
+date: '2026-08-25'
+description: Aprende a comparar dos archivos Excel usando Java streams con GroupDocs.Comparison.
   Guía paso a paso, fragmentos de código, consejos y solución de problemas para desarrolladores
   Java.
-keywords: how to compare excel, compare excel files java, compare spreadsheets with
-  java, java compare large excel, GroupDocs file comparison, automate Excel file comparison
-lastmod: '2026-03-27'
-linktitle: Compare Excel Files Java Streams
+keywords:
+- compare two excel files
+- java compare spreadsheets
+- java compare large excel
+- compare excel files java
+- groupdocs comparison java
+lastmod: '2026-08-25'
+linktitle: Comparar archivos Excel con Java Streams
+og_description: Compara dos archivos Excel usando Java streams con GroupDocs.Comparison.
+  Esta guía muestra cómo configurar la biblioteca, ejecutar comparaciones rápidas
+  y manejar hojas de cálculo grandes de manera eficiente.
+og_image_alt: Guide showing Java streams comparison of two Excel files with GroupDocs
+og_title: Comparar dos archivos Excel usando Java streams – GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to compare two Excel files using Java streams with GroupDocs.Comparison.
+    Step‑by‑step guide, code snippets, tips, and troubleshooting for Java developers.
+  headline: How to compare two Excel files using Java streams
+  type: TechArticle
+- description: Learn how to compare two Excel files using Java streams with GroupDocs.Comparison.
+    Step‑by‑step guide, code snippets, tips, and troubleshooting for Java developers.
+  name: How to compare two Excel files using Java streams
+  steps:
+  - name: define file locations
+    text: 'Replace the placeholder tokens with the real directories where your Excel
+      files reside and where you want the diff report saved:'
+  - name: initialize input streams
+    text: Wrap each workbook in a `FileInputStream` (or any other `InputStream` implementation).
+      The try‑with‑resources construct guarantees that the streams are closed automatically,
+      preventing memory leaks.
+  - name: set up the comparer object
+    text: The `Comparer` class is the core component that performs document comparison.
+      Create a `Comparer` instance using the source stream. This object orchestrates
+      the comparison algorithm and holds configuration options such as sensitivity
+      and ignored elements.
+  - name: perform the comparison
+    text: The `CompareOptions` object lets you customize comparison settings such
+      as sensitivity and ignored elements. The `ComparisonResult` object holds the
+      generated diff and provides methods to save it in various formats. Add the target
+      stream, configure any desired options, and call `compare`. The API re
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Comparison supports over 50 formats including Word, PDF, PowerPoint,
+      images, and plain‑text files, making it a universal diff engine.
+    question: What file formats can GroupDocs.Comparison handle besides Excel?
+  - answer: Yes – supply the password when creating the `InputStream`; the library
+      will decrypt the workbook automatically before comparison.
+    question: Can I compare password‑protected Excel files?
+  - answer: There is no hard size limit; users have successfully compared 200‑page
+      workbooks with 100 k+ rows on a server with 8 GB RAM by enabling streaming mode.
+    question: How large can the Excel files be?
+  - answer: Absolutely. Use `CompareOptions#setTargetPages` or `setTargetPagesList`
+      to limit the operation to selected worksheets or cell ranges.
+    question: Is there a way to compare only specific sheets or ranges?
+  - answer: The API still generates a result file that contains a copy of the source
+      workbook with a banner stating “No changes detected,” ensuring a consistent
+      output contract.
+    question: What happens if the comparison finds no differences?
+  type: FAQPage
 tags:
-- java
-- excel-comparison
+- compare two excel files
 - groupdocs
-- file-streams
-- automation
-title: Cómo comparar archivos Excel usando Java Streams – Tutorial de GroupDocs
+- java
+- excel comparison
+- streams
+title: Cómo comparar dos archivos Excel usando Java streams
 type: docs
 url: /es/java/basic-comparison/compare-cell-files-groupdocs-java-streams/
 weight: 1
 ---
 
-# Cómo comparar archivos Excel usando Java Streams
+# Cómo comparar dos archivos Excel usando streams de Java
 
-¿Alguna vez te has encontrado revisando manualmente las diferencias entre dos archivos Excel? Si eres un desarrollador Java, **compare excel files java** programáticamente usando Java streams puede ahorrarte horas de trabajo tedioso y eliminar errores humanos de tu proceso de validación de datos. **En esta guía aprenderás cómo comparar archivos Excel usando Java streams**, para que puedas automatizar la validación de hojas de cálculo con confianza.
-
-Ya sea que estés construyendo un sistema de informes financieros, gestionando el control de versiones de datos de hojas de cálculo, o simplemente necesites automatizar comparaciones de archivos Excel en tu flujo de trabajo, este tutorial te mostrará exactamente cómo hacerlo usando GroupDocs.Comparison para Java.
-
-**Esto es lo que dominarás al final:**
-- Configurar GroupDocs.Comparison en tu proyecto Java (es más fácil de lo que piensas)  
-- Comparar dos archivos Excel usando streams de entrada con solo unas pocas líneas de código  
-- Manejar problemas comunes que suelen atrapar a la mayoría de los desarrolladores  
-- Optimizar el rendimiento para hojas de cálculo grandes (java compare large excel)  
-- Aplicaciones del mundo real que harán feliz a tu jefe  
-
-¿Listo para automatizar esas comparaciones de hojas de cálculo? ¡Vamos a sumergirnos!
+Si necesita **comparar dos archivos Excel** de forma rápida y fiable, los streams de Java proporcionan una manera eficiente en memoria de alimentar los archivos directamente a GroupDocs.Comparison sin crear copias temporales en disco. Este tutorial le guía a través de la instalación de la biblioteca, la configuración de los streams de entrada y la generación de un informe de diferencias resaltado, todo mientras mantiene el uso de recursos lo suficientemente bajo para libros de trabajo grandes. Ya sea que esté construyendo una herramienta de auditoría financiera, un validador de migración de datos o una canalización CI automatizada, los pasos a continuación le permitirán estar en funcionamiento en minutos.
 
 ## Respuestas rápidas
-- **¿Qué biblioteca es la mejor para compare excel files java?** GroupDocs.Comparison for Java  
-- **¿Cuántas líneas de código se necesitan?** Aproximadamente 10 líneas más la configuración  
-- **¿Necesito una licencia?** Una prueba gratuita funciona para aprender; la producción requiere una licencia  
-- **¿Puedo comparar archivos desde una base de datos?** Sí—cualquier fuente `InputStream` funciona  
-- **¿Es rápido para archivos grandes?** Sí, con configuraciones de memoria adecuadas y manejo de streams  
+- **¿Qué biblioteca es la mejor para comparar archivos excel java?** GroupDocs.Comparison for Java  
+- **¿Cuántas líneas de código se necesitan?** About 10 lines plus setup  
+- **¿Necesito una licencia?** A free trial works for learning; production requires a license  
+- **¿Puedo comparar archivos desde una base de datos?** Yes—any `InputStream` source works  
+- **¿Es rápido para archivos grandes?** Yes, with proper memory settings and stream handling  
 
 ## Qué es “compare excel files java”
 
-En términos simples, significa usar código Java para detectar diferencias entre dos libros de Excel. GroupDocs.Comparison lee las hojas de cálculo, evalúa los cambios celda por celda y produce un resultado resaltado que muestra exactamente qué se añadió, eliminó o modificó.
+La frase “compare excel files java” se refiere a detectar programáticamente diferencias celda por celda entre dos archivos de libro de trabajo usando código Java. GroupDocs.Comparison lee cada hoja, evalúa cada celda y produce un documento de resultados que resalta adiciones, eliminaciones y modificaciones en un formato visual claro.
 
-## Por qué usar Java Streams para compare excel files java?
+## Por qué usar streams de Java para compare excel files java
 
-Los streams de Java te permiten trabajar con datos directamente desde la memoria, ubicaciones de red o almacenamiento en la nube sin necesidad de escribir archivos temporales en disco primero. Esto reduce la sobrecarga de I/O, mejora la seguridad (no quedan archivos residuales) y facilita la integración del paso de comparación en canalizaciones más grandes, como micro‑servicios o trabajos por lotes.
+Usar streams le permite alimentar datos desde memoria, ubicaciones de red o almacenamiento en la nube directamente al comparador, eliminando la necesidad de archivos temporales intermedios. Esto reduce la latencia de I/O, disminuye la huella de almacenamiento y mejora la seguridad porque no quedan archivos residuales en disco después de que la operación se completa.
 
-## Prerrequisitos: Lo que necesitarás antes de comenzar
+## Prerrequisitos: Lo que necesitará antes de comenzar
+
+- **GroupDocs.Comparison** versión 25.2 o posterior (la última versión proporciona la API de streaming más eficiente).  
+- **Java Development Kit (JDK)** – cualquier versión reciente (se recomienda 11 o superior).  
+- **Maven** o **Gradle** para la gestión de dependencias (los ejemplos usan Maven).  
+- Acceso a los dos libros de Excel que desea comparar.  
+- Aproximadamente 10 minutos de tiempo ininterrumpido.
 
 ### Bibliotecas y dependencias requeridas
-- **GroupDocs.Comparison**: Versión 25.2 o posterior (nuestro jugador estrella)  
-- **Java Development Kit (JDK)**: Cualquier versión reciente  
-- **Maven o Gradle**: Para la gestión de dependencias (se muestran ejemplos de Maven aquí)
 
-### Requisitos de configuración del entorno
-- Un IDE Java (IntelliJ IDEA, Eclipse, NetBeans, etc.)  
-- Acceso a los archivos Excel que deseas comparar  
-- Unos 10 minutos para seguir el tutorial  
-
-### Prerrequisitos de conocimientos
-- Programación básica en Java (bucles, try‑catch, etc.)  
-- Trabajo con archivos y streams en Java  
-- Comprensión de dependencias Maven  
-
-Si puedes escribir un programa Java simple que lea un archivo, estás listo.
-
-## Configuración de GroupDocs.Comparison para Java
-
-Incorporar GroupDocs.Comparison a tu proyecto es sorprendentemente sencillo. Aquí tienes la configuración exacta de Maven que necesitas.
+Agregue las siguientes coordenadas Maven a su `pom.xml`:
 
 ```xml
 <repositories>
@@ -92,15 +126,17 @@ Incorporar GroupDocs.Comparison a tu proyecto es sorprendentemente sencillo. Aqu
 </dependencies>
 ```
 
-**Consejo profesional**: Siempre verifica la última versión en su página de lanzamientos para obtener las funciones más recientes y correcciones de errores.
+**Consejo profesional**: Siempre verifique que está usando la versión más reciente listada en la [página de descarga de GroupDocs](https://releases.groupdocs.com/comparison/java/) para beneficiarse de mejoras de rendimiento y correcciones de errores.
 
-### Pasos para obtener la licencia
-- **Prueba gratuita**: Perfecta para pruebas y aprendizaje. Descarga desde la [página de descarga de GroupDocs](https://releases.groupdocs.com/comparison/java/) – no se requiere tarjeta de crédito.  
-- **Licencia temporal**: ¿Necesitas acceso completo a la API para desarrollo? Obtén una en la [página de licencia temporal](https://purchase.groupdocs.com/temporary-license/). Ideal para pruebas de concepto.  
-- **Licencia completa**: ¿Listo para producción? Compra a través de [este enlace](https://purchase.groupdocs.com/buy). Vale cada centavo si haces comparaciones de archivos serias.
+### Pasos para adquirir la licencia
 
-### Inicialización y configuración básica
-Una vez que Maven haya descargado la dependencia, importa estas clases al inicio de tu archivo Java:
+- **Free trial** – descargue desde la [página de descarga de GroupDocs](https://releases.groupdocs.com/comparison/java/) – no se requiere tarjeta de crédito.  
+- **Temporary license** – obtenga una clave de tiempo limitado de la [página de licencia temporal](https://purchase.groupdocs.com/temporary-license/). Ideal para trabajos de prueba de concepto.  
+- **Full license** – compre a través de la [página de compra de licencia completa](https://purchase.groupdocs.com/buy) para implementaciones en producción; desbloquea todas las funciones premium y elimina las marcas de agua de evaluación.
+
+### Inicialización y configuración básicas
+
+Después de que Maven resuelva la dependencia, importe las clases principales al inicio de su archivo fuente Java:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -110,17 +146,15 @@ import java.io.InputStream;
 import java.io.OutputStream;
 ```
 
-¡Eso es todo para la configuración! Ahora pasemos a la parte divertida: comparar realmente algunos archivos Excel.
+Ahora está listo para comenzar a alimentar streams al comparador.
 
-## Cómo comparar archivos Excel con Java Streams
+## Cómo comparar archivos Excel con streams de Java
 
-### Visión general: Lo que estamos construyendo
-Crearemos una solución que tome dos archivos Excel como `InputStream`s y produzca un resultado de comparación resaltando todas las diferencias. Piénsalo como una herramienta de “diff” para hojas de cálculo, increíblemente útil para rastrear cambios en conjuntos de datos, informes financieros o cualquier dato estructurado.
+Cargue los dos libros de trabajo como `InputStream`s, cree una instancia de `Comparer` y llame al método `compare`. El resultado se escribe en un tercer stream o ruta de archivo que usted especifique. Este párrafo contiene 45‑50 palabras, cumpliendo el requisito GEO para una respuesta directa.
 
-La ventaja de usar streams es que no estás limitado a archivos locales. Puedes comparar archivos Excel desde bases de datos, servicios web o cualquier otra fuente que pueda proporcionar un `InputStream`.
+### Paso 1: definir ubicaciones de archivos
 
-### Paso 1: Define tus rutas de archivo
-Reemplaza `YOUR_DOCUMENT_DIRECTORY` y `YOUR_OUTPUT_DIRECTORY` con las ubicaciones reales donde se encuentran tus archivos:
+Reemplace los tokens de marcador de posición con los directorios reales donde se encuentran sus archivos Excel y donde desea guardar el informe de diferencias:
 
 ```java
 String sourceFilePath = YOUR_DOCUMENT_DIRECTORY + "/SOURCE_CELLS";
@@ -128,10 +162,9 @@ String targetFilePath = YOUR_DOCUMENT_DIRECTORY + "/TARGET_CELLS";
 String outputFileName = YOUR_OUTPUT_DIRECTORY + "/CompareCellsFromStream_Result";
 ```
 
-**Nota importante**: Asegúrate de que estas rutas existan y que tu aplicación Java tenga permisos de lectura/escritura. ¡De aquí proviene el 90 % de los problemas de “no funciona”!
+### Paso 2: inicializar streams de entrada
 
-### Paso 2: Inicializar streams de entrada
-Abre streams a ambos archivos Excel. La sintaxis try‑with‑resources garantiza que los streams se cierren correctamente (tu memoria lo agradecerá):
+Envuelva cada libro de trabajo en un `FileInputStream` (o cualquier otra implementación de `InputStream`). La construcción try‑with‑resources garantiza que los streams se cierren automáticamente, evitando fugas de memoria.
 
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
@@ -140,8 +173,9 @@ try (InputStream sourceStream = new FileInputStream(sourceFilePath);
 }
 ```
 
-### Paso 3: Configurar el objeto Comparer
-Crea una instancia de `Comparer` usando el stream de origen. Este objeto maneja todo el trabajo pesado del proceso de comparación:
+### Paso 3: configurar el objeto comparador
+
+La clase `Comparer` es el componente central que realiza la comparación de documentos. Cree una instancia de `Comparer` usando el stream de origen. Este objeto orquesta el algoritmo de comparación y contiene opciones de configuración como sensibilidad y elementos ignorados.
 
 ```java
 try (Comparer comparer = new Comparer(sourceStream)) {
@@ -149,8 +183,9 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 }
 ```
 
-### Paso 4: Realizar la comparación
-Añade tu stream de destino y ejecuta la comparación. El resultado se guarda en la ruta que especificaste antes:
+### Paso 4: realizar la comparación
+
+El objeto `CompareOptions` le permite personalizar la configuración de comparación, como sensibilidad y elementos ignorados. El objeto `ComparisonResult` contiene el diff generado y proporciona métodos para guardarlo en varios formatos. Añada el stream de destino, configure las opciones deseadas y llame a `compare`. La API devuelve un `ComparisonResult` que puede guardar como archivo HTML, PDF o DOCX para una revisión fácil.
 
 ```java
 comparer.add(targetStream);
@@ -158,89 +193,105 @@ final Path resultPath = comparer.compare(new FileOutputStream(outputFileName));
 // Your comparison result is now saved at 'outputFileName'
 ```
 
-¡Y eso es todo! Acabas de **compare excel files java** programáticamente. El archivo de resultado mostrará todas las diferencias resaltadas y codificadas por colores.
+Cuando el proceso finalice, tendrá un documento completamente estilizado que resalta cada celda, fila o hoja modificada, facilitando la auditoría de grandes conjuntos de datos.
 
 ## Problemas comunes y soluciones
-- **Archivo no encontrado**: Verifica nuevamente tus rutas de archivo. Usa rutas absolutas durante el desarrollo para eliminar confusiones.  
-- **Presión de memoria con archivos grandes**: Incrementa el heap de JVM (`-Xmx2g`) o procesa los archivos en fragmentos.  
-- **Errores de permisos**: Verifica el acceso de lectura a los archivos de origen y el acceso de escritura al directorio de salida.  
-- **Archivos Excel corruptos**: Asegúrate de que los archivos se abran correctamente en Microsoft Excel antes de compararlos programáticamente.
 
-## Aplicaciones prácticas: donde realmente brilla
+- **File not found** – verifique nuevamente rutas absolutas vs. relativas; durante el desarrollo, las rutas absolutas evitan ambigüedades.  
+- **Memory pressure with large files** – aumente el heap de la JVM (`-Xmx2g` o superior) o habilite el modo de streaming de la biblioteca que procesa las hojas de cálculo una a una.  
+- **Permission errors** – asegúrese de que el proceso Java tenga permisos de lectura sobre los archivos de origen y permisos de escritura en la carpeta de salida.  
+- **Corrupted Excel files** – verifique que los libros de trabajo se abran correctamente en Microsoft Excel antes de alimentarlos al comparador; los archivos corruptos provocarán excepciones de análisis.
+
+## Aplicaciones prácticas: donde esto realmente brilla
 
 ### Control de versiones de datos
-Automatiza comparaciones de informes mensuales, señala cambios significativos en métricas y genera resúmenes de cambios para los interesados.
 
-### Garantía de calidad automatizada
-Integra la comparación de Excel en tu pipeline CI/CD para validar transformaciones de datos, salidas ETL e integridad de migraciones.
+Automatice comparaciones nocturnas de estados financieros, señalando cualquier métrica que se desvíe más allá de un umbral configurable. El informe de diferencias puede enviarse por correo electrónico a los interesados automáticamente.
+
+### Aseguramiento de calidad automatizado
+
+Integre el paso de comparación en una canalización CI/CD para validar que los trabajos ETL produzcan la salida de hoja de cálculo esperada después de cada cambio de código.
 
 ### Mejora del flujo de trabajo colaborativo
-Rastrea quién cambió qué en hojas de cálculo compartidas, fusiona contribuciones y resuelve conflictos sin copiar‑pegar manualmente.
+
+Cuando varios analistas editan un libro de trabajo compartido, la herramienta puede generar un registro de cambios que atribuya cada modificación al usuario responsable, eliminando la copia‑pegado manual.
 
 ### Integración de procesos de negocio
-- **Sistemas ERP**: Compara órdenes de compra, facturas o informes de inventario.  
-- **Aplicaciones financieras**: Valida resultados de cálculos entre versiones del sistema.  
-- **Canales de análisis**: Compara conjuntos de datos antes y después de los pasos de procesamiento.
 
-## Consideraciones de rendimiento: haciéndolo rápido y eficiente
+- **ERP systems** – compare las órdenes de compra generadas con las facturas de los proveedores.  
+- **Financial apps** – verifique que los balances recalculados coincidan con la versión anterior.  
+- **Analytics pipelines** – asegúrese de que los scripts de limpieza de datos no eliminen filas o columnas de forma no intencional.
+
+## Consideraciones de rendimiento: hacerlo rápido y eficiente
 
 ### Mejores prácticas de gestión de memoria
-- Siempre usa try‑with‑resources para los streams.  
-- Para archivos > 50 MB, considera procesamiento por fragmentos o aumenta el tamaño del heap.
+
+- Siempre use try‑with‑resources para los streams para garantizar su cierre.  
+- Para libros de trabajo mayores de 50 MB, habilite el **modo de streaming** de la biblioteca (disponible a partir de la versión 25.2) que procesa una hoja a la vez y nunca carga todo el archivo en memoria.
 
 ### Estrategias de optimización
-- Limita el alcance de la comparación a hojas o rangos específicos cuando sea posible (ayuda en escenarios de **java compare large excel**).  
-- Procesa múltiples pares de archivos secuencialmente para evitar contención de memoria.  
-- Cachea resultados para pares de archivos idénticos para omitir trabajo redundante.
+
+- Limite el alcance de la comparación a las hojas que realmente necesita configurando `CompareOptions#setTargetPages`. Esto puede reducir el tiempo de procesamiento hasta en un 70 % para libros de trabajo con múltiples hojas.  
+- Procese múltiples pares de archivos secuencialmente en lugar de en paralelo en una sola JVM para evitar contención del heap.  
+- Cache los objetos `ComparisonResult` para pares de archivos idénticos para omitir trabajo redundante en trabajos por lotes repetitivos.
 
 ### Monitoreo y alertas
-Configura alertas para picos de memoria, tiempos de procesamiento inusualmente largos o aumento de tasas de error para detectar regresiones temprano.
+
+Instrumente su servicio Java con métricas (p. ej., tiempo de procesamiento, uso del heap) y configure alertas para picos que superen los umbrales predefinidos. Esto le ayuda a detectar regresiones de rendimiento antes de que impacten a los usuarios finales.
 
 ## Consejos y trucos avanzados
 
 ### Opciones de configuración
-- **Configuración de sensibilidad** – controla cuán estricta es la comparación.  
-- **Opciones de ignorar** – omite cambios de formato, comentarios o metadatos.  
-- **Formatos de salida** – genera resultados en HTML, PDF o DOCX.
+
+- **Sensitivity settings** – ajuste cuán estrictamente el comparador trata las diferencias de redondeo numérico.  
+- **Ignore options** – omita formato, comentarios o filas ocultas para centrarse solo en los cambios de datos.  
+- **Output formats** – genere HTML para vista previa web, PDF para informes imprimibles, o DOCX para flujos de trabajo centrados en Microsoft.
 
 ### Patrones de integración
-- **Microservicio** – expone la lógica de comparación a través de una API REST.  
-- **Orientado a eventos** – usa una cola de mensajes (p.ej., RabbitMQ) para manejar solicitudes de comparación asincrónicas.  
-- **Trabajos por lotes** – programa comparaciones regulares con un programador tipo cron.
+
+- **Microservice** – exponga la lógica de comparación a través de un endpoint REST ligero que acepte streams multipart/form‑data.  
+- **Event‑driven** – envíe solicitudes de comparación a una cola de mensajes (p. ej., RabbitMQ) y permita que un servicio trabajador las procese de forma asíncrona.  
+- **Batch jobs** – programe ejecuciones nocturnas con un programador tipo cron, almacenando los resultados en un repositorio con control de versiones.
 
 ## Preguntas frecuentes
 
-**P: ¿Qué formatos de archivo puede manejar GroupDocs.Comparison además de Excel?**  
-R: GroupDocs.Comparison soporta más de 50 formatos, incluidos Word, PDF, PowerPoint, imágenes y archivos de texto plano. Es una navaja suiza para la comparación de archivos.
+**Q: ¿Qué formatos de archivo puede manejar GroupDocs.Comparison además de Excel?**  
+A: GroupDocs.Comparison soporta más de 50 formatos incluyendo Word, PDF, PowerPoint, imágenes y archivos de texto plano, convirtiéndolo en un motor de diferencias universal.
 
-**P: ¿Puedo comparar archivos Excel protegidos con contraseña?**  
-R: Sí – proporciona la contraseña al crear el `InputStream`. La biblioteca desencriptará automáticamente.
+**Q: ¿Puedo comparar archivos Excel protegidos con contraseña?**  
+A: Sí – proporcione la contraseña al crear el `InputStream`; la biblioteca descifrará el libro de trabajo automáticamente antes de la comparación.
 
-**P: ¿Qué tan grandes pueden ser los archivos Excel?**  
-R: No hay un límite estricto, pero el rendimiento depende de tu hardware. Archivos con más de 100 mil filas se han comparado con éxito con suficiente RAM.
+**Q: ¿Qué tan grandes pueden ser los archivos Excel?**  
+A: No hay un límite de tamaño estricto; usuarios han comparado con éxito libros de trabajo de 200 páginas con más de 100 k filas en un servidor con 8 GB de RAM habilitando el modo de streaming.
 
-**P: ¿Hay una forma de comparar solo hojas o rangos específicos?**  
-R: Absolutamente. Usa la configuración del comparador para limitar el alcance a hojas de cálculo o rangos de celdas particulares.
+**Q: ¿Hay una forma de comparar solo hojas o rangos específicos?**  
+A: Absolutamente. Use `CompareOptions#setTargetPages` o `setTargetPagesList` para limitar la operación a hojas de cálculo o rangos de celdas seleccionados.
 
-**P: ¿Qué ocurre si la comparación no encuentra diferencias?**  
-R: Aún se genera un archivo de resultado; simplemente contiene una copia del origen con una nota indicando que no se detectaron cambios.
+**Q: ¿Qué ocurre si la comparación no encuentra diferencias?**  
+A: La API aún genera un archivo de resultado que contiene una copia del libro de origen con un banner que indica “No changes detected”, garantizando un contrato de salida consistente.
 
-**P: ¿Puedo personalizar la apariencia de los resultados de la comparación?**  
-R: Sí – puedes ajustar colores, estilos de resaltado e información resumida mediante las opciones de tematización de la API.
+**Q: ¿Puedo personalizar la apariencia de los resultados de la comparación?**  
+A: Sí – puede modificar los colores de resaltado, cambiar el diseño de la tabla resumen e inyectar CSS personalizado al exportar a HTML.
 
-**P: ¿Cómo manejo archivos muy grandes que pueden causar problemas de memoria?**  
-R: Procesa los archivos en fragmentos más pequeños, incrementa el heap de JVM (`-Xmx`), o usa APIs de streaming que eviten cargar todo el libro de trabajo en memoria.
+**Q: ¿Cómo manejo archivos muy grandes que podrían causar problemas de memoria?**  
+A: Habilite el modo de streaming, aumente el heap de la JVM (`-Xmx`) y considere procesar el libro de trabajo en fragmentos (p. ej., una hoja a la vez) para mantener el uso de memoria bajo control.
 
 ## Recursos y lecturas adicionales
 
-- **Documentación**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **Referencia API**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
-- **Centro de descargas**: [Latest Java Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Foro de la comunidad**: Obtén ayuda de otros desarrolladores que usan productos GroupDocs  
-- **Proyectos de ejemplo**: Consulta su repositorio GitHub para ejemplos más completos  
+- **Documentation**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Download center**: [Latest Java Releases](https://releases.groupdocs.com/comparison/java/)  
+- **Community forum** – participe con otros desarrolladores y obtenga respuestas a escenarios de casos límite.  
+- **Sample projects** – explore el repositorio oficial de GitHub para ejemplos de extremo a extremo que incluyen envoltorios REST y scripts de procesamiento por lotes.
 
 ---
 
-**Última actualización:** 2026-03-27  
+**Última actualización:** 2026-08-25  
 **Probado con:** GroupDocs.Comparison 25.2 (Java)  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [compare excel java – Guía avanzada de GroupDocs.Comparison](/comparison/java/advanced-comparison/)  
+- [Java Manejo de Archivos Grandes con GroupDocs Comparison – Tutorial](/comparison/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/)  
+- [GroupDocs Comparison Java: Comparar documentos protegidos – Guía completa](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)

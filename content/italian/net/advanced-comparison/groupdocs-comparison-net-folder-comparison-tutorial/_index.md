@@ -1,14 +1,89 @@
 ---
 categories:
 - File Comparison
-date: '2026-03-08'
-description: Scopri come confrontare cartelle in .NET usando GroupDocs.Comparison,
-  generare un report HTML o un log TXT e automatizzare la gestione dei file con esempi
-  pratici in C#.
-keywords: folder comparison .NET tutorial, GroupDocs comparison save TXT HTML, compare
-  directories C# code, .NET file comparison library, automated directory comparison
-lastmod: '2026-03-08'
-linktitle: How to Compare Folders in .NET
+date: '2026-07-20'
+description: Scopri come confrontare le cartelle in .NET, apprendi il confronto passo‑passo
+  con GroupDocs.Comparison, genera report HTML o TXT e automatizza la gestione dei
+  file con C#.
+keywords:
+- how to compare folders
+- compare two directories
+- compare directories c#
+- GroupDocs folder comparison
+- .NET file comparison
+lastmod: '2026-07-20'
+linktitle: Come confrontare le cartelle in .NET
+og_description: Come confrontare le cartelle in .NET con GroupDocs.Comparison. Ottieni
+  codice C# passo‑passo, log TXT, report HTML e consigli sulle prestazioni per il
+  confronto delle cartelle.
+og_image_alt: 'Developer guide: Compare folders in .NET using GroupDocs.Comparison'
+og_title: Come confrontare le cartelle in .NET – Guida completa
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  headline: How to Compare Folders in .NET – Guide with GroupDocs
+  type: TechArticle
+- description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  name: How to Compare Folders in .NET – Guide with GroupDocs
+  steps:
+  - name: Configure Your Comparison Options
+    text: The `FolderComparisonOptions` class lets you fine‑tune the comparison. **Definition
+      anchor:** `FolderComparisonOptions` defines all configurable settings for a
+      folder comparison operation. You’re telling GroupDocs.Comparison that you want
+      to compare entire directories (not individual files) and outp
+  - name: Initialize the Comparer Object
+    text: '**Definition anchor:** `Comparer` is the core class that performs the comparison
+      between source and target items. This is where the magic begins. You’re creating
+      a `Comparer` instance with your source folder as the baseline, then adding the
+      target folder for comparison. Think of it like saying “comp'
+  - name: Execute the Comparison and Save Results
+    text: That’s it! Your comparison results are now saved as a text file. The output
+      will include details about added, deleted, and modified files, making it easy
+      to understand what changed between the two directories.
+  - name: Configure HTML Comparison Options
+    text: '**Definition anchor:** `FolderComparisonExtension.Html` tells the API to
+      produce an HTML‑based report instead of plain text. The key difference here
+      is the `FolderComparisonExtension.Html` setting. This tells GroupDocs.Comparison
+      to generate a rich HTML report instead of plain text.'
+  - name: Initialize Comparer for HTML Output
+    text: Same pattern as before, but now configured for HTML output. The beauty of
+      GroupDocs.Comparison's API is its consistency—you use the same methods regardless
+      of output format.
+  - name: Generate and Save HTML Report
+    text: The HTML file you get is a complete, self‑contained report that you can
+      open in any web browser. It includes interactive elements, syntax highlighting
+      (for code files), and a clean, professional layout.
+  type: HowTo
+- questions:
+  - answer: Absolutely! GroupDocs.Comparison fully supports cross‑platform deployment
+      through .NET Core. It works seamlessly on Linux, macOS, and Windows environments.
+    question: Can I use GroupDocs.Comparison for .NET on Linux systems?
+  - answer: 'For large directories, implement these strategies: use asynchronous processing,
+      break comparisons into smaller batches, exclude unnecessary file types, and
+      monitor memory usage. Consider providing progress feedback to users for long‑running
+      operations.'
+    question: How should I handle very large directories with thousands of files?
+  - answer: While there’s no hard limit built into the library, performance depends
+      on your system resources (RAM, CPU, disk speed) and file sizes. Most systems
+      can handle thousands of files without issues, but very large datasets might
+      require optimisation strategies.
+    question: Is there a practical limit to the number of files I can compare?
+  - answer: The library cannot directly compare encrypted files. You’ll need to decrypt
+      files first if you have the appropriate permissions and credentials. Always
+      ensure you comply with your organisation’s security policies when handling encrypted
+      content.
+    question: Can GroupDocs.Comparison handle encrypted or password‑protected files?
+  - answer: Create console applications that use GroupDocs.Comparison, configure them
+      to return appropriate exit codes based on comparison results, and integrate
+      them into your build scripts. TXT output is particularly useful for parsing
+      results in automated environments.
+    question: How do I integrate folder comparison into automated CI/CD pipelines?
+  type: FAQPage
 tags:
 - groupdocs
 - folder-comparison
@@ -23,56 +98,40 @@ weight: 1
 
 # Come confrontare cartelle in .NET – Guida con GroupDocs
 
-Ti è mai capitato di controllare manualmente centinaia di file per individuare le differenze tra due directory? **In questo tutorial imparerai come confrontare cartelle in .NET usando GroupDocs.Comparison**. Che tu stia gestendo il deployment del codice, convalidando i backup o monitorando le modifiche di configurazione, il confronto di cartelle in .NET può farti risparmiare ore di lavoro noioso.
+Se hai bisogno di sapere **come confrontare cartelle** in .NET, sei nel posto giusto. In questo tutorial ti guideremo nell'utilizzo di GroupDocs.Comparison per rilevare automaticamente le differenze tra due directory, generare sia log TXT sia report HTML ricchi, e integrare il processo in applicazioni C# reali.
 
-**GroupDocs.Comparison for .NET** trasforma questo punto dolente in un processo semplice e automatizzato. Puoi confrontare intere strutture di directory, identificare le modifiche istantaneamente e esportare i risultati in formati adatti al tuo flusso di lavoro (TXT per i log, HTML per le revisioni visive).
-
-## Risposte Rapide
-- **Qual è lo scopo principale?** Automatizzare il confronto di cartelle e generare report dettagliati in TXT o HTML.  
+## Risposte rapide
+- **Qual è lo scopo principale?** Automatizzare il confronto delle cartelle e generare report dettagliati in TXT o HTML.  
 - **Quali formati di output sono supportati?** TXT per una facile analisi e HTML per generare un report visivo.  
-- **È necessaria una licenza?** Una prova gratuita è sufficiente per imparare; una licenza commerciale rimuove le filigrane per la produzione.  
+- **È necessaria una licenza?** Una prova gratuita è sufficiente per l'apprendimento; una licenza commerciale rimuove le filigrane per la produzione.  
 - **Posso eseguirlo su Linux?** Sì – GroupDocs.Comparison supporta .NET Core su Linux, macOS e Windows.  
 - **Quali versioni di .NET sono compatibili?** .NET Core 3.1+ e .NET 5/6/7/8.
 
-## Perché il Confronto di Cartelle è Importante per gli Sviluppatori .NET
+## Cosa imparerai in questa guida?
 
-Ti è mai capitato di controllare manualmente centinaia di file per individuare le differenze tra due directory? Non sei solo. Che tu stia gestendo il deployment del codice, convalidando i backup o monitorando le modifiche di configurazione, **il confronto di cartelle in .NET** può farti risparmiare ore di lavoro noioso.
+In questa guida imparerai a confrontare due directory in C# usando GroupDocs.Comparison, a generare sia report TXT che HTML, a gestire efficientemente strutture di cartelle di grandi dimensioni e a integrare il confronto nei pipeline CI/CD o negli script di verifica dei backup. Scoprirai anche come ottimizzare le prestazioni per set di dati massivi e personalizzare il layout del report HTML secondo le tue esigenze.
 
-**GroupDocs.Comparison for .NET** trasforma questo punto dolente in un processo semplice e automatizzato. Puoi confrontare intere strutture di directory, identificare le modifiche istantaneamente e esportare i risultati in formati adatti al tuo flusso di lavoro (TXT per i log, HTML per le revisioni visive).
+## Perché il confronto delle cartelle è importante per gli sviluppatori .NET
 
-In questo tutorial completo, scoprirai come implementare una funzionalità robusta di confronto di cartelle che gestisce tutto, dal semplice controllo di directory a scenari complessi di gestione file a livello enterprise.
+Il confronto delle cartelle ti evita di dover scansionare manualmente centinaia di file. Che tu stia validando distribuzioni, controllando backup o monitorando la deriva di configurazione, **confrontare directory C#** ti consente di individuare file aggiunti, rimossi o modificati in pochi secondi anziché ore.
 
-## Cosa Imparerai in Questa Guida
+## Prerequisiti e configurazione dell'ambiente
 
-Alla fine di questo tutorial, sarai in grado di implementare soluzioni di confronto di cartelle che:
+Prima di entrare nel vivo, assicuriamoci che tu abbia tutto il necessario. Non preoccuparti – la configurazione è semplice, e ti guiderò passo passo.
 
-- Confrontano directory di qualsiasi dimensione in modo efficiente  
-- Generano report dettagliati in formati TXT e HTML (incluso come **generare report HTML**)  
-- Gestiscono casi limite e considerazioni sulle prestazioni  
-- Si integrano senza problemi nelle tue applicazioni .NET esistenti  
-- Automatizzano attività ripetitive di gestione file  
+### Cosa ti serve
 
-Entriamo nei prerequisiti e prepariamoci al successo!
-
-## Prerequisiti e Configurazione dell'Ambiente
-
-Prima di passare alla parte pratica, assicuriamoci di avere tutto il necessario. Non preoccuparti – la configurazione è semplice, e ti guiderò passo passo.
-
-### Cosa Ti Serve
-
-**Librerie Richieste e Versioni**  
-- **GroupDocs.Comparison for .NET**: Versione 25.4.0 (l'ultima release stabile al 2025)  
+**Librerie richieste e versioni**  
+- **GroupDocs.Comparison for .NET**: Versione 25.4.0 (l'ultima release stabile al 2025) – supporta **oltre 50 formati di input e output** tra cui DOCX, PDF, HTML e tipi di immagine.  
 - **.NET Framework/SDK**: Compatibile con .NET Core 3.1+ e .NET 5/6/7/8  
-- **Ambiente di Sviluppo**: Visual Studio 2019+ (l'edizione Community funziona perfettamente)
+- **Ambiente di sviluppo**: Visual Studio 2019+ (l'edizione Community funziona perfettamente)
 
-**Prerequisiti di Conoscenza**  
-- Conoscenza di base della programmazione C# (se sai scrivere una semplice app console, sei a posto)  
+**Prerequisiti di conoscenza**  
+- Conoscenza di base della programmazione C# (se sai scrivere una semplice app console, sei pronto)  
 - Familiarità con le operazioni sul file system in .NET (lavorare con percorsi, directory, file)  
 - Comprensione della gestione dei pacchetti NuGet  
 
-### Controllo Rapido dell'Ambiente
-
-Ecco un modo semplice per verificare che il tuo ambiente sia pronto:
+### Controllo rapido dell'ambiente
 
 1. Apri l'IDE preferito (Visual Studio, VS Code o JetBrains Rider)  
 2. Crea una nuova applicazione console targeting .NET Core 3.1 o successivo  
@@ -80,13 +139,13 @@ Ecco un modo semplice per verificare che il tuo ambiente sia pronto:
 
 Se riesci a fare queste tre cose, sei pronto! Ora installiamo e configuriamo GroupDocs.Comparison.
 
-## Installazione e Configurazione di GroupDocs.Comparison
+## Installazione e configurazione di GroupDocs.Comparison
 
-Installare GroupDocs.Comparison nel tuo progetto è un gioco da ragazzi. Hai due metodi principali di installazione, e ti mostrerò entrambi.
+Mettere in funzione GroupDocs.Comparison nel tuo progetto è un gioco da ragazzi. Hai due metodi principali di installazione, e ti mostrerò entrambi.
 
-### Metodi di Installazione
+### Metodi di installazione
 
-**Opzione 1: Console del Gestore Pacchetti NuGet (Consigliato per gli utenti di Visual Studio)**
+**Opzione 1: Console del gestore pacchetti NuGet (Consigliato per gli utenti Visual Studio)**
 ```shell
 Install-Package GroupDocs.Comparison -Version 25.4.0
 ```
@@ -96,21 +155,21 @@ Install-Package GroupDocs.Comparison -Version 25.4.0
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-Suggerimento professionale: Specifica sempre la versione per garantire coerenza tra il tuo team e gli ambienti di distribuzione.
+Consiglio: specifica sempre la versione per garantire coerenza tra il tuo team e gli ambienti di distribuzione.
 
-### Comprendere le Opzioni di Licenza
+### Comprendere le opzioni di licenza
 
 GroupDocs.Comparison offre licenze flessibili che si adattano a diverse esigenze:
 
-- **Free Trial**: Perfetto per la valutazione – ti dà accesso a tutte le funzionalità con alcune limitazioni  
-- **Temporary License**: Ideale per progetti proof‑of‑concept – rimuove temporaneamente le restrizioni della versione di prova  
-- **Commercial License**: Funzionalità complete per applicazioni di produzione  
+- **Prova gratuita**: Perfetta per la valutazione – offre accesso a tutte le funzionalità con alcune limitazioni  
+- **Licenza temporanea**: Ideale per progetti proof‑of‑concept – rimuove temporaneamente le restrizioni della prova  
+- **Licenza commerciale**: Tutte le funzionalità per applicazioni di produzione  
 
-Per scopi di apprendimento, la prova gratuita è più che sufficiente. Potrai sempre effettuare l'upgrade in seguito quando sarai pronto a distribuire.
+Per scopi di apprendimento, la prova gratuita è più che sufficiente. Puoi sempre aggiornare in seguito quando sei pronto a distribuire.
 
-### Inizializzazione e Configurazione di Base
+### Inizializzazione e configurazione di base
 
-Ecco il tuo primo frammento di codice GroupDocs.Comparison. Questa configurazione semplice verifica che tutto funzioni correttamente:
+Ecco il tuo primo frammento di codice GroupDocs.Comparison. Questa semplice configurazione verifica che tutto funzioni correttamente:
 
 ```csharp
 using System;
@@ -130,25 +189,27 @@ class Program
 }
 ```
 
-Se questo codice viene eseguito senza errori, congratulazioni! Sei pronto per iniziare a costruire potenti funzionalità di confronto di cartelle.
+Se questo codice viene eseguito senza errori, congratulazioni! Sei pronto per iniziare a costruire potenti funzionalità di confronto delle cartelle.
 
-## Come Confrontare Cartelle e Salvare i Risultati come File TXT
+## Come confrontare cartelle e salvare i risultati come file TXT
 
 Iniziamo con l'approccio più semplice: confrontare due directory e salvare i risultati in un file di testo. Questo metodo è perfetto per script automatizzati, sistemi di logging o quando ti serve un formato di output semplice e analizzabile.
 
-### Perché Scegliere l'Output TXT?
+### Perché scegliere l'output TXT?
 
-I file di testo sono incredibilmente versatili. Sono leggeri, facili da analizzare programmaticamente, adatti al version control e possono essere visualizzati su qualsiasi sistema. Ideali per:
+I file di testo sono incredibilmente versatili. Sono leggeri, facili da analizzare programmaticamente, adatti al version‑control e possono essere visualizzati su qualsiasi sistema. Perfetti per:
 
 - Processi di build automatizzati  
-- Analisi di file di log  
+- Analisi dei file di log  
 - Strumenti da riga di comando  
 - Integrazione con altri sistemi  
 
-### Implementazione Passo‑Passo
+### Implementazione passo‑passo
 
-#### Passo 1: Configura le Opzioni di Confronto
+#### Passo 1: Configura le opzioni di confronto
 
+La classe `FolderComparisonOptions` ti consente di perfezionare il confronto.  
+**Definition anchor:** `FolderComparisonOptions` definisce tutte le impostazioni configurabili per un'operazione di confronto di cartelle.  
 ```csharp
 using System;
 using System.IO;
@@ -167,19 +228,20 @@ Options.CompareOptions compareOptionsTxt = new Options.CompareOptions
 };
 ```
 
-**Cosa sta succedendo?** Stai indicando a GroupDocs.Comparison che vuoi confrontare intere directory (non file singoli) e produrre i risultati in formato testo. L'impostazione `DirectoryCompare = true` è cruciale – abilita la funzionalità di confronto ricorsivo delle directory.
+Stai indicando a GroupDocs.Comparison che desideri confrontare intere directory (non file individuali) e produrre i risultati in formato testo. L'impostazione `DirectoryCompare = true` è fondamentale—abilita la funzionalità di confronto ricorsivo delle directory.
 
-#### Passo 2: Inizializza l'Oggetto Comparer
+#### Passo 2: Inizializza l'oggetto Comparer
 
+**Definition anchor:** `Comparer` è la classe principale che esegue il confronto tra gli elementi sorgente e destinazione.  
 ```csharp
 Comparer comparerTxt = new Comparer(sourceFolder, compareOptionsTxt);
 // Add target folder for comparison
 comparerTxt.Add(targetFolder, compareOptionsTxt);
 ```
 
-Qui inizia la magia. Stai creando un'istanza `Comparer` con la tua cartella sorgente come baseline, poi aggiungendo la cartella di destinazione per il confronto. È come dire “confronta tutto nella cartella B rispetto alla cartella A”.
+Qui inizia la magia. Stai creando un'istanza di `Comparer` con la tua cartella sorgente come base, poi aggiungendo la cartella di destinazione per il confronto. È come dire “confronta tutto nella cartella B con la cartella A.”
 
-#### Passo 3: Esegui il Confronto e Salva i Risultati
+#### Passo 3: Esegui il confronto e salva i risultati
 
 ```csharp
 string txtOutputFileName = Path.Combine(outputDirectory, "ComparisonResult.txt");
@@ -189,32 +251,31 @@ Console.WriteLine("TXT file with comparison results saved successfully.");
 Console.WriteLine($"Check your results at: {txtOutputFileName}");
 ```
 
-Fatto! I risultati del confronto sono ora salvati in un file di testo. L'output includerà dettagli su file aggiunti, eliminati e modificati, rendendo facile capire cosa è cambiato tra le due directory.
+Fatto! I risultati del confronto sono ora salvati in un file di testo. L'output includerà dettagli su file aggiunti, eliminati e modificati, facilitando la comprensione di ciò che è cambiato tra le due directory.
 
-### Comprendere il Formato di Output TXT
+### Comprendere il formato di output TXT
 
 Il file di testo generato tipicamente include:
 
-- **File aggiunti** – presenti nella destinazione ma non nella sorgente  
-- **File eliminati** – presenti nella sorgente ma non nella destinazione  
-- **File modificati** – presenti in entrambe le directory ma con contenuto diverso  
-- **Metadati dei file** – dimensione, date di modifica e altre informazioni rilevanti  
+- **File aggiunti** – presenti nel target ma non nella sorgente  
+- **File eliminati** – presenti nella sorgente ma non nel target  
+- **File modificati** – presenti in entrambe le directory ma con contenuti diversi  
+- **Metadati del file** – dimensione, date di modifica e altre informazioni rilevanti  
 
-## Come Confrontare Cartelle e Salvare i Risultati come File HTML
+## Come confrontare cartelle e salvare i risultati come file HTML
 
-Mentre i file TXT sono ottimi per l'automazione, l'output HTML brilla quando ti serve un report visivo e leggibile dall’uomo. I risultati di confronto HTML sono perfetti per revisioni di codice, presentazioni ai clienti o per condividere risultati con membri del team non tecnici.
+Mentre i file TXT sono ottimi per l'automazione, l'output HTML brilla quando hai bisogno di un report visivo e leggibile dall'uomo. I risultati del confronto HTML sono perfetti per revisioni di codice, presentazioni ai clienti o quando vuoi condividere i risultati con membri del team non tecnici.
 
-### Vantaggi dell'Output HTML (e Come **generare report HTML**)
+### Vantaggi dell'output HTML (e come **generare report HTML**)
 
 - **Evidenziazione visiva delle differenze** – vedi esattamente cosa è cambiato con differenze colorate  
 - **Navigazione interattiva** – clicca facilmente su file e cartelle  
 - **Presentazione professionale** – ideale per report e documentazione  
 - **Visualizzazione cross‑platform** – si apre in qualsiasi browser web  
 
-### Implementazione HTML Passo‑Passo
+#### Passo 1: Configura le opzioni di confronto HTML
 
-#### Passo 1: Configura le Opzioni di Confronto HTML
-
+**Definition anchor:** `FolderComparisonExtension.Html` indica all'API di produrre un report basato su HTML invece di testo semplice.  
 ```csharp
 // Set comparison options for HTML output
 Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
@@ -224,9 +285,9 @@ Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
 };
 ```
 
-La differenza chiave è l'impostazione `FolderComparisonExtension.Html`. Questo indica a GroupDocs.Comparison di generare un report HTML ricco invece di un semplice testo.
+La differenza chiave qui è l'impostazione `FolderComparisonExtension.Html`. Questo indica a GroupDocs.Comparison di generare un report HTML ricco invece di testo semplice.
 
-#### Passo 2: Inizializza il Comparer per Output HTML
+#### Passo 2: Inizializza il Comparer per l'output HTML
 
 ```csharp
 Comparer comparerHtml = new Comparer(sourceFolder, compareOptionsHtml);
@@ -234,9 +295,9 @@ Comparer comparerHtml = new Comparer(sourceFolder, compareOptionsHtml);
 comparerHtml.Add(targetFolder, compareOptionsHtml);
 ```
 
-Stesso schema di prima, ma ora configurato per output HTML. La bellezza dell'API di GroupDocs.Comparison è la sua coerenza – usi gli stessi metodi indipendentemente dal formato di output.
+Stesso schema di prima, ma ora configurato per l'output HTML. La bellezza dell'API di GroupDocs.Comparison è la sua coerenza—usi gli stessi metodi indipendentemente dal formato di output.
 
-#### Passo 3: Genera e Salva il Report HTML
+#### Passo 3: Genera e salva il report HTML
 
 ```csharp
 string htmlOutputFileName = Path.Combine(outputDirectory, "ComparisonResult.html");
@@ -246,64 +307,65 @@ Console.WriteLine("HTML file with comparison results saved successfully.");
 Console.WriteLine($"Open in browser: {htmlOutputFileName}");
 ```
 
-Il file HTML ottenuto è un report completo e autonomo che puoi aprire in qualsiasi browser. Include elementi interattivi, evidenziazione della sintassi (per i file di codice) e un layout pulito e professionale.
+Il file HTML ottenuto è un report completo e autonomo che puoi aprire in qualsiasi browser web. Include elementi interattivi, evidenziazione della sintassi (per file di codice) e un layout pulito e professionale.
 
-### Cosa Aspettarsi nel Report HTML
+### Cosa aspettarsi nel tuo report HTML
 
 Il tuo output HTML tipicamente includerà:
 
-- **Dashboard riepilogativa** – panoramica dei cambiamenti totali, file interessati e statistiche di confronto  
+- **Dashboard riepilogativo** – panoramica dei cambiamenti totali, file interessati e statistiche di confronto  
 - **Confronti affiancati** – vista diff visiva che mostra esattamente cosa è cambiato  
-- **Navigazione ad albero delle cartelle** – facile esplorazione della struttura di directory  
-- **Dettagli a livello di file** – confronti individuali con differenze evidenziate  
+- **Navigazione albero delle cartelle** – navigazione facile nella struttura delle directory  
+- **Dettagli a livello di file** – confronti di file individuali con differenze evidenziate  
 
-## Casi d'Uso Comuni e Applicazioni Reali
+## Casi d'uso comuni e applicazioni reali
 
-Capire quando e come usare il confronto di cartelle può migliorare notevolmente il tuo flusso di lavoro di sviluppo. Ecco alcuni scenari in cui questa funzionalità è indispensabile:
+Capire quando e come usare il confronto delle cartelle può migliorare notevolmente il tuo flusso di lavoro di sviluppo. Ecco alcuni scenari in cui questa funzionalità è indispensabile:
 
-### Revisione del Codice e Controllo Versioni
+### Revisione del codice e controllo di versione
 
-**Scenario**: Stai revisionando le modifiche tra due branch o confrontando versioni diverse del tuo codice.  
+**Scenario**: Stai revisionando le modifiche tra due branch o confrontando versioni diverse del tuo codebase.  
 
-**Perché il confronto di cartelle aiuta**: Invece di controllare file uno per uno, puoi vedere istantaneamente tutte le modifiche, aggiunte ed eliminazioni in tutta la struttura del progetto. L'output HTML è particolarmente utile qui – puoi condividere report diff visivi con il team.
+**Perché il confronto delle cartelle aiuta**: Invece di controllare i file uno per uno, puoi vedere istantaneamente tutte le modifiche, aggiunte ed eliminazioni in tutta la struttura del progetto. L'output HTML è particolarmente utile qui—puoi condividere report diff visivi con il tuo team.
 
-### Verifica del Backup dei Dati  
+### Verifica del backup dei dati  
 
-**Scenario**: Devi verificare che il processo di backup abbia copiato correttamente tutti i file e che non ci siano corruzioni.  
+**Scenario**: Devi verificare che il tuo processo di backup abbia copiato correttamente tutti i file e che non si siano verificati danni.  
 
-**Suggerimento di implementazione**: Usa l'output TXT per script di verifica automatizzati integrabili nel workflow di backup. Imposta avvisi quando vengono rilevate discrepanze.
+**Suggerimento di implementazione**: Usa l'output TXT per script di verifica automatizzati che possono essere integrati nel tuo workflow di backup. Configura avvisi quando vengono rilevate discrepanze.
 
-### Gestione della Configurazione tra Ambienti
+### Gestione della configurazione tra ambienti
 
-**Scenario**: Gestisci le configurazioni dell'applicazione tra ambienti di sviluppo, staging e produzione.  
+**Scenario**: Stai gestendo le configurazioni dell'applicazione tra ambienti di sviluppo, staging e produzione.  
 
-**Best practice**: Confronti regolari delle cartelle aiutano a individuare drift di configurazione prima che causino problemi in produzione. I report HTML sono perfetti per la documentazione di change‑management.
+**Best practice**: Confronti regolari delle cartelle aiutano a rilevare la deriva di configurazione prima che causi problemi in produzione. I report HTML sono perfetti per la documentazione del change‑management.
 
-### Controllo Versione dei Documenti
+### Controllo di versione dei documenti
 
-**Scenario**: Gestisci repository di documenti dove più membri del team apportano modifiche ai file.  
+**Scenario**: Stai gestendo repository di documenti dove più membri del team apportano modifiche ai file.  
 
-**Consiglio**: Combina il confronto di cartelle con task programmati per generare automaticamente report di cambiamento. È particolarmente utile per conformità e audit.
+**Pro tip**: Combina il confronto delle cartelle con attività programmate per generare automaticamente report di cambiamento. È particolarmente utile per scopi di conformità e audit.
 
-### Integrazione nel Pipeline CI/CD
+### Integrazione nei pipeline CI/CD
 
-**Scenario**: Vuoi rilevare e segnalare automaticamente le modifiche come parte del processo di deployment.  
+**Scenario**: Vuoi rilevare e segnalare automaticamente le modifiche come parte del tuo processo di distribuzione.  
 
-**Uso avanzato**: Integra il confronto di cartelle nel tuo pipeline di build per generare report di cambiamento per ogni deployment, facilitando decisioni di rollback e tracciamento delle modifiche.
+**Uso avanzato**: Integra il confronto delle cartelle nel tuo pipeline di build per generare report di cambiamento per ogni distribuzione, aiutando nelle decisioni di rollback e nel tracciamento delle modifiche.
 
-## Ottimizzazione delle Prestazioni e Best Practices
+## Ottimizzazione delle prestazioni e best practice
 
-Quando si lavora con strutture di directory molto grandi, le prestazioni diventano cruciali. Ecco strategie comprovate per mantenere i confronti di cartelle fluidi:
+Quando si lavora con strutture di directory di grandi dimensioni, le prestazioni diventano cruciali. Ecco strategie comprovate per mantenere i confronti delle cartelle fluidi:
 
-### Strategie di Ottimizzazione
+### Strategie di ottimizzazione
 
-1. **Smart Directory Selection**  
-   - Confronta solo le directory realmente necessarie all'analisi  
+1. **Selezione intelligente delle directory**  
+   - Confronta solo le directory che realmente devi analizzare  
    - Usa filtri per escludere file temporanei, log o altri contenuti irrilevanti  
    - Considera di suddividere confronti molto grandi in blocchi più piccoli e mirati  
 
-2. **Memory Management**  
+2. **Gestione della memoria**  
 
+**Definition anchor:** `Comparer.Dispose()` rilascia tutte le risorse non gestite detenute dal comparatore, prevenendo perdite di memoria.  
 ```csharp
 // Dispose of comparer objects properly
 using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
@@ -313,21 +375,21 @@ using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
 } // Automatically disposed here
 ```
 
-3. **Asynchronous Processing**  
-   Per confronti di grandi dimensioni, valuta l'implementazione di pattern async per evitare blocchi UI in applicazioni desktop o problemi di timeout in applicazioni web.
+3. **Elaborazione asincrona**  
+   Per confronti di grandi dimensioni, considera l'implementazione di pattern async per evitare blocchi dell'interfaccia utente nelle applicazioni desktop o problemi di timeout nelle applicazioni web.
 
-### Suggerimenti per il Monitoraggio delle Prestazioni
+### Suggerimenti per il monitoraggio delle prestazioni
 
-- Monitora l'uso di memoria durante confronti di grandi dimensioni  
-- Traccia i tempi di elaborazione per directory di diverse dimensioni  
-- Imposta aspettative realistiche per gli utenti in base alla complessità della directory  
-- Considera di fornire un'indicazione di avanzamento per operazioni a lunga durata  
+- Monitora l'uso della memoria durante grandi confronti  
+- Tieni traccia del tempo di elaborazione per diverse dimensioni di directory  
+- Stabilisci aspettative realistiche per gli utenti in base alla complessità delle directory  
+- Considera la segnalazione di avanzamento per operazioni a lunga durata  
 
-## Risoluzione dei Problemi Comuni
+## Risoluzione dei problemi comuni
 
-Anche con codice ben scritto, potresti incontrare alcune difficoltà. Ecco i problemi più comuni e le relative soluzioni:
+Anche con codice ben scritto, potresti incontrare alcune sfide. Ecco i problemi più comuni e le loro soluzioni:
 
-### Problemi di Accesso ai File e Permessi
+### Problemi di accesso ai file e permessi
 
 **Problema**: errori “Access denied” o “file in use”  
 
@@ -336,7 +398,7 @@ Anche con codice ben scritto, potresti incontrare alcune difficoltà. Ecco i pro
 - Verifica che i file non siano bloccati da altri processi  
 - Implementa una logica di retry per blocchi temporanei dei file  
 
-### Problemi di Percorso e Directory
+### Problemi di percorso e directory
 
 **Problema**: errori di percorso non valido o directory non trovata  
 
@@ -355,7 +417,7 @@ if (!Directory.Exists(targetFolder))
 }
 ```
 
-### Problemi di Memoria e Prestazioni
+### Problemi di memoria e prestazioni
 
 **Problema**: eccezioni di out of memory o prestazioni lente  
 
@@ -364,109 +426,115 @@ if (!Directory.Exists(targetFolder))
 - Escludi tipi di file non necessari dal confronto  
 - Monitora e ottimizza i pattern di utilizzo della memoria  
 
-### Problemi di Generazione dei File di Output
+### Problemi nella generazione dei file di output
 
 **Problema**: file di output non generati o corrotti  
 
-**Passaggi di troubleshooting**:  
+**Passaggi di risoluzione**:  
 - Verifica i permessi di scrittura nella directory di output  
-- Assicurati di avere spazio disco sufficiente  
+- Assicurati di avere spazio su disco sufficiente  
 - Controlla la presenza di caratteri non validi nei percorsi dei file  
 - Convalida che la directory di output esista prima del confronto  
 
-## Opzioni di Configurazione Avanzate
+## Opzioni di configurazione avanzate
 
-GroupDocs.Comparison offre numerose opzioni di configurazione che ti permettono di affinare il comportamento del confronto:
+GroupDocs.Comparison offre numerose opzioni di configurazione che ti permettono di perfezionare il comportamento del confronto:
 
-### Impostazioni di Sensibilità del Confronto
+### Impostazioni di sensibilità del confronto
 
-Puoi regolare la sensibilità del confronto a diversi tipi di cambiamenti:
+Puoi regolare la sensibilità del confronto a diversi tipi di modifiche:
 
-- **Gestione degli spazi bianchi** – ignora o includi le modifiche di spazi bianchi  
-- **Sensibilità al maiuscolo/minuscolo** – controlla se le differenze di caso sono considerate modifiche  
+- **Gestione spazi bianchi** – ignora o includi le modifiche agli spazi bianchi  
+- **Sensibilità al maiuscolo/minuscolo** – controlla se le differenze di case sono considerate modifiche  
 - **Normalizzazione dei terminatori di riga** – gestisci diversi formati di terminatori di riga  
 
-### Filtraggio per Tipo di File
+### Filtraggio per tipo di file
 
-Concentra i confronti su tipi di file specifici:
+Concentra i tuoi confronti su tipi di file specifici:
 
 ```csharp
 compareOptions.FileAuthorMetadata = false; // Ignore metadata changes
 compareOptions.GenerateFramePreview = true; // Generate preview frames
 ```
 
-### Formattazione Personalizzata dell'Output
+### Formattazione personalizzata dell'output
 
 Adatta il formato di output alle tue esigenze specifiche:
 
 - **Template personalizzati** – modifica lo stile dell'output HTML  
-- **Inclusione di metadati** – controlla quali informazioni sui file sono incluse  
-- **Granularità del diff** – scegli tra confronti a livello di file o di riga  
+- **Inclusione di metadati** – controlla quali informazioni del file sono incluse  
+- **Granularità del diff** – scegli tra confronti a livello di file o a livello di riga  
 
-## Conclusione e Prossimi Passi
+## Conclusione e prossimi passi
 
-Congratulazioni! Hai padroneggiato i fondamenti del confronto di cartelle usando GroupDocs.Comparison per .NET. Ora possiedi le competenze per:
+Congratulazioni! Hai padroneggiato i fondamenti del confronto delle cartelle usando GroupDocs.Comparison per .NET. Ora possiedi le competenze per:
 
-✅ Configurare e impostare GroupDocs.Comparison nei tuoi progetti  
-✅ Confrontare directory e generare report sia in TXT che in HTML (incluso come **generare report HTML**)  
-✅ Gestire le sfide comuni e ottimizzare le prestazioni  
-✅ Integrare il confronto di cartelle in applicazioni reali  
+- ✅ Configurare e impostare GroupDocs.Comparison nei tuoi progetti  
+- ✅ Confrontare directory e generare sia report TXT che HTML (incluso come **generare report HTML**)  
+- ✅ Gestire le sfide comuni e ottimizzare le prestazioni  
+- ✅ Integrare il confronto delle cartelle in applicazioni reali  
 
-### Qual è il Prossimo Passo?
+### Qual è il prossimo passo?
 
-Pronto a portare le tue abilità di confronto di cartelle al livello successivo? Considera di esplorare:
+Pronto a portare le tue capacità di confronto delle cartelle al livello successivo? Considera di esplorare:
 
 - **Opzioni di filtraggio avanzate** per confronti più mirati  
 - **Integrazione API** per servizi di confronto basati sul web  
 - **Elaborazione batch** per gestire più coppie di directory  
 - **Formati di report personalizzati** su misura per le esigenze della tua organizzazione  
 
-### Inizia a Implementare Oggi
+### Inizia a implementare oggi
 
-Il modo migliore per padroneggiare questi concetti è la pratica diretta. Scegli uno dei tuoi progetti attuali e individua dove il confronto di cartelle potrebbe semplificare il workflow. Inizia in piccolo, sperimenta con diversi formati di output e incorpora gradualmente funzionalità più avanzate.
+Il modo migliore per padroneggiare questi concetti è tramite pratica diretta. Scegli uno dei tuoi progetti attuali e individua dove il confronto delle cartelle potrebbe ottimizzare il tuo flusso di lavoro. Inizia in piccolo, sperimenta con diversi formati di output e incorpora gradualmente funzionalità più avanzate.
 
-Ricorda: ogni esperto è stato un principiante. Prenditi il tempo necessario, sperimenta liberamente e non esitare a consultare questa guida ogni volta che ti serve un promemoria!
+Ricorda: ogni esperto è stato una volta un principiante. Prenditi il tempo necessario, sperimenta liberamente e non esitare a consultare questa guida ogni volta che hai bisogno di un ripasso!
 
-## Domande Frequenti
+## Domande frequenti
 
-**Q: Posso usare GroupDocs.Comparison per .NET su sistemi Linux?**  
-A: Assolutamente! GroupDocs.Comparison supporta pienamente il deployment cross‑platform tramite .NET Core. Funziona senza problemi su Linux, macOS e Windows.
+**D: Posso usare GroupDocs.Comparison per .NET su sistemi Linux?**  
+R: Assolutamente! GroupDocs.Comparison supporta pienamente il deployment cross‑platform tramite .NET Core. Funziona senza problemi su ambienti Linux, macOS e Windows.
 
-**Q: Come devo gestire directory molto grandi con migliaia di file?**  
-A: Per directory di grandi dimensioni, applica queste strategie: utilizza l'elaborazione asincrona, suddividi i confronti in batch più piccoli, escludi tipi di file non necessari e monitora l'uso della memoria. Considera di fornire feedback di avanzamento agli utenti per operazioni a lunga durata.
+**D: Come devo gestire directory molto grandi con migliaia di file?**  
+R: Per directory di grandi dimensioni, implementa queste strategie: usa l'elaborazione asincrona, suddividi i confronti in batch più piccoli, escludi tipi di file non necessari e monitora l'uso della memoria. Considera di fornire feedback di avanzamento agli utenti per operazioni a lunga durata.
 
-**Q: Esiste un limite pratico al numero di file che posso confrontare?**  
-A: Sebbene la libreria non imponga un limite rigido, le prestazioni dipendono dalle risorse di sistema (RAM, CPU, velocità del disco) e dalle dimensioni dei file. La maggior parte dei sistemi gestisce migliaia di file senza problemi, ma dataset molto grandi potrebbero richiedere strategie di ottimizzazione.
+**D: Esiste un limite pratico al numero di file che posso confrontare?**  
+R: Sebbene la libreria non imponga un limite rigido, le prestazioni dipendono dalle risorse del tuo sistema (RAM, CPU, velocità del disco) e dalle dimensioni dei file. La maggior parte dei sistemi può gestire migliaia di file senza problemi, ma set di dati molto grandi potrebbero richiedere strategie di ottimizzazione.
 
-**Q: GroupDocs.Comparison può gestire file criptati o protetti da password?**  
-A: La libreria non può confrontare direttamente file criptati. È necessario decriptare i file prima, se si dispone delle autorizzazioni e credenziali appropriate. Assicurati sempre di rispettare le policy di sicurezza della tua organizzazione quando gestisci contenuti criptati.
+**D: GroupDocs.Comparison può gestire file crittografati o protetti da password?**  
+R: La libreria non può confrontare direttamente file crittografati. È necessario decrittare i file prima, se si dispone delle autorizzazioni e credenziali appropriate. Assicurati sempre di rispettare le politiche di sicurezza della tua organizzazione quando gestisci contenuti crittografati.
 
-**Q: Come integri il confronto di cartelle nei pipeline CI/CD automatizzati?**  
-A: Crea applicazioni console che usano GroupDocs.Comparison, configura il ritorno di codici di uscita appropriati in base ai risultati del confronto e integrale nei tuoi script di build. L'output TXT è particolarmente utile per il parsing dei risultati in ambienti automatizzati.
+**D: Come integro il confronto delle cartelle nei pipeline CI/CD automatizzati?**  
+R: Crea applicazioni console che usano GroupDocs.Comparison, configurale per restituire codici di uscita appropriati in base ai risultati del confronto e integrale nei tuoi script di build. L'output TXT è particolarmente utile per analizzare i risultati in ambienti automatizzati.
 
-**Q: Qual è la differenza tra le versioni trial e licenziate?**  
-A: La versione trial include tutte le funzionalità ma aggiunge filigrane all'output e presenta alcune limitazioni d'uso. Le versioni licenziate rimuovono queste restrizioni e sono adatte per l'uso in produzione.
+**D: Qual è la differenza tra le versioni di prova e quelle licenziate?**  
+R: La versione di prova include tutte le funzionalità ma aggiunge filigrane all'output e ha alcune limitazioni di utilizzo. Le versioni licenziate rimuovono queste restrizioni e sono adatte per l'uso in produzione.
 
-**Q: Posso personalizzare lo stile e il layout dell'output HTML?**  
-A: Sì, GroupDocs.Comparison fornisce opzioni per personalizzare l'output HTML. Puoi modificare i template, regolare lo styling e controllare quali informazioni sono incluse nei report.
+**D: Posso personalizzare lo stile e il layout dell'output HTML?**  
+R: Sì, GroupDocs.Comparison offre opzioni per personalizzare l'output HTML. Puoi modificare i template, regolare lo stile e controllare quali informazioni sono incluse nei report.
 
-**Q: Come gestisco i file che esistono in una directory ma non nell'altra?**  
-A: GroupDocs.Comparison identifica automaticamente e segnala queste differenze come file “aggiunti” o “eliminati”. Puoi configurare come queste differenze vengono presentate nel formato di output scelto.
+**D: Come gestisco i file che esistono in una directory ma non nell'altra?**  
+R: GroupDocs.Comparison identifica automaticamente e segnala queste differenze come file “aggiunti” o “eliminati”. Puoi configurare come queste differenze vengono presentate nel tuo formato di output.
 
-## Risorse Aggiuntive e Supporto
+## Risorse aggiuntive e supporto
 
 ### Documentazione
-- **Complete API Reference**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)
-- **Developer Guide**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
+- **Riferimento API completo**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)
+- **Guida per sviluppatori**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
 
-### Download e Licenza
-- **Latest Release**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
-- **Purchase Options**: [Buy Commercial License](https://purchase.groupdocs.com/buy)
-- **Free Trial**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)
-- **Temporary License**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
+### Download e licenza
+- **Ultima release**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)
+- **Opzioni di acquisto**: [Buy Commercial License](https://purchase.groupdocs.com/buy)
+- **Prova gratuita**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)
+- **Licenza temporanea**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
 
 ---
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Comparison 25.4.0 for .NET  
-**Author:** GroupDocs
+**Ultimo aggiornamento:** 2026-07-20  
+**Testato con:** GroupDocs.Comparison 25.4.0 per .NET  
+**Autore:** GroupDocs
+
+## Tutorial correlati
+
+- [GroupDocs Comparison .NET Quick Start - Guida completa all'installazione](/comparison/net/quick-start/)
+- [GroupDocs Comparison .NET Tutorial - Guida completa all'uso di base](/comparison/net/basic-usage/)
+- [Confronta più documenti .NET – Guida alle funzionalità avanzate e all'automazione](/comparison/net/advanced-comparison/)

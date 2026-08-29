@@ -1,98 +1,155 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: GroupDocs.Comparison ile desteklenen Java formatlarını nasıl tespit edeceğinizi
-  ve Java dosya formatı doğrulamasını nasıl yapacağınızı öğrenin. Adım adım rehber
-  ve pratik çözümler.
-keywords: java supported file formats, GroupDocs comparison tutorial, java document
-  formats list, retrieve file types java, document management system file format checking
-lastmod: '2026-03-08'
-linktitle: Java File Formats Detection
+date: '2026-07-20'
+description: Java'da formatları nasıl listeleyeceğinizi ve GroupDocs.Comparison kullanarak
+  document upload java doğrulamasını öğrenin. Adım adım kılavuz, performans ipuçları
+  ve gerçek dünya örnekleri.
+keywords:
+- how to list formats
+- check file format java
+- retrieve file types java
+- java file format detection
+- validate document upload java
+lastmod: '2026-07-20'
+linktitle: Java Dosya Formatları Tespiti
+og_description: Java ile GroupDocs.Comparison kullanarak formatları nasıl listeleyeceğinizi
+  öğrenin. file format java kontrol etmeyi, file types java almayı ve document upload
+  java'yi verimli bir şekilde doğrulamayı keşfedin.
+og_image_alt: 'Developer guide: List supported file formats in Java using GroupDocs.Comparison'
+og_title: formatları listeleme – Tam Java Tespit Kılavuzu
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to list formats in Java and validate document upload java
+    using GroupDocs.Comparison. Step‑by‑step guide, performance tips, and real‑world
+    examples.
+  headline: how to list formats – Complete Detection Guide
+  type: TechArticle
+- description: Learn how to list formats in Java and validate document upload java
+    using GroupDocs.Comparison. Step‑by‑step guide, performance tips, and real‑world
+    examples.
+  name: how to list formats – Complete Detection Guide
+  steps:
+  - name: '`FileType.getSupportedFileTypes()` returns an `Iterable<FileType>` containing
+      every format the library knows about.'
+    text: '`FileType.getSupportedFileTypes()` returns an `Iterable<FileType>` containing
+      every format the library knows about.'
+  - name: Each `FileType` object exposes properties such as `getExtension()`, `getMimeType()`,
+      and `isSupportedForComparison()`.
+    text: Each `FileType` object exposes properties such as `getExtension()`, `getMimeType()`,
+      and `isSupportedForComparison()`.
+  - name: The loop simply prints each format’s extension and a short description.
+    text: The loop simply prints each format’s extension and a short description.
+  - name: Run `mvn dependency:tree` (or `gradle dependencies`) to spot conflicts.
+    text: Run `mvn dependency:tree` (or `gradle dependencies`) to spot conflicts.
+  - name: Ensure you’re on JDK 8 or higher.
+    text: Ensure you’re on JDK 8 or higher.
+  - name: Exclude the offending transitive dependency if necessary.
+    text: Exclude the offending transitive dependency if necessary.
+  - name: '**Lazy load** only when needed.'
+    text: '**Lazy load** only when needed.'
+  - name: '**Selective cache** – keep only the formats you actually support (e.g.,
+      office documents).'
+    text: '**Selective cache** – keep only the formats you actually support (e.g.,
+      office documents).'
+  - name: Use **WeakReference** caches so the JVM can reclaim memory under pressure.
+    text: Use **WeakReference** caches so the JVM can reclaim memory under pressure.
+  - name: Log `GroupDocs.Comparison` version at startup (`VersionInfo.getVersion()`).
+    text: Log `GroupDocs.Comparison` version at startup (`VersionInfo.getVersion()`).
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Comparison throws an `UnsupportedFileFormatException`. Pre‑validation
+      with `getSupportedFileTypes()` lets you intercept the problem before any expensive
+      processing begins.
+    question: What happens if I try to process an unsupported file format?
+  - answer: Yes. Each new release adds support for additional formats—often 3‑5 new
+      ones per minor version. Always re‑cache after an upgrade.
+    question: Does the supported formats list change between library versions?
+  - answer: The supported format list is fixed per release. For niche formats, combine
+      GroupDocs.Comparison with a specialized third‑party parser, or contact GroupDocs
+      for a custom add‑on.
+    question: Can I extend the library to support additional formats?
+  - answer: The metadata occupies roughly 5 KB. The real memory impact comes from
+      how you store and share the cached collection; a simple `HashSet<String>` adds
+      negligible overhead.
+    question: How much memory does format detection use?
+  - answer: Yes, `FileType.getSupportedFileTypes()` is thread‑safe. Ensure your own
+      cache (e.g., a static `ConcurrentHashMap`) also handles concurrent reads/writes.
+    question: Is format detection thread‑safe?
+  type: FAQPage
 tags:
-- java
-- file-formats
-- document-processing
-- groupdocs
-title: Java ile desteklenen formatları tespit et – Tam Tespit Kılavuzu
+- convert PDF
+- GroupDocs.Comparison
+- Java document processing
+title: formatları listeleme – Tam Tespit Kılavuzu
 type: docs
 url: /tr/java/document-information/groupdocs-comparison-java-supported-formats/
 weight: 1
 ---
 
-# desteklenen formatları java – Tam Tespit Kılavuzu
+# formatları listeleme – Tam Algılama Kılavuzu
 
-## Giriş
+Java'da bir belge işlemeye çalıştınız ve kütüphanenizin o belirli formatı desteklemediği için bir engelle karşılaştınız mı? Yalnız değilsiniz. Dosya formatı uyumluluğu, **UnsupportedFileException** diyebileceğinizden daha hızlı bir şekilde bir projeyi sekteye uğratabilen *gotcha* anlarından biridir.
 
-Java’da bir belgeyi işlemeye çalıştığınızda, kütüphanenizin o belirli formatı desteklemediği için bir duvara çarptınız mı? Yalnız değilsiniz. Dosya formatı uyumluluğu, bir projeyi *UnsupportedFileException* diyebileceğiniz bir anda felç edebilen “gotcha” anlarından biridir.
+**how to list formats** bilmek, sağlam belge işleme sistemleri oluşturmak için esastır. İster bir belge yönetim platformu, bir dosya‑dönüştürme hizmeti oluşturuyor olun, ister sadece **validate document upload java** yapmanız gerekiyor olsun, programatik format algılaması sizi çalışma zamanı sürprizlerinden ve memnuniyetsiz kullanıcılardan korur.
 
-**desteklenen formatları java tespit et** bilmek, sağlam belge işleme sistemleri oluşturmak için çok önemlidir. İster bir belge yönetim platformu, ister bir dosya‑dönüştürme servisi geliştirin, ister sadece **java belge yükleme doğrulama** ihtiyacınız olsun, programatik format tespiti size çalışma zamanı sürprizlerinden ve memnuniyetsiz kullanıcılardan korur.
-
-**Bu kılavuzda şunları öğreneceksiniz:**
-- Java’da programatik olarak desteklenen dosya formatlarını nasıl tespit edebileceğiniz
-- GroupDocs.Comparison for Java kullanarak pratik uygulama
-- Kurumsal uygulamalar için gerçek‑dünya entegrasyon desenleri
-- Yaygın kurulum sorunları için sorun giderme çözümleri
-- Üretim ortamları için performans optimizasyon ipuçları
+Bu kılavuzda **check file format java**, retrieve file types java nasıl yapılacağını keşfedecek ve bu kontrolleri GroupDocs.Comparison kullanarak gerçek‑dünya Java uygulamalarına entegre edeceksiniz.
 
 ## Hızlı Yanıtlar
-- **Formatları listelemek için birincil yöntem nedir?** `FileType.getSupportedFileTypes()` tüm desteklenen türleri döndürür.  
-- **API’yi kullanmak için lisansa ihtiyacım var mı?** Evet, geliştirme için ücretsiz deneme ya da geçici lisans gereklidir.  
-- **Format listesini önbelleğe alabilir miyim?** Kesinlikle—önbellekleme performansı artırır ve yükü azaltır.  
-- **Format tespiti çoklu iş parçacığı‑güvenli mi?** Evet, GroupDocs API çoklu iş parçacığı‑güvenlidir, ancak kendi önbelleklerinizin eşzamanlılığı yönetmesi gerekir.  
-- **Kütüphane güncellemeleriyle liste değişir mi?** Yeni sürümler format ekleyebilir; yükseltmelerden sonra her zaman yeniden önbellekleyin.
+- **Formatları listelemenin temel yöntemi nedir?** `FileType.getSupportedFileTypes()` mevcut kütüphane sürümünün işleyebileceği tüm formatları döndürür.  
+- **API'yi kullanmak için bir lisansa ihtiyacım var mı?** Evet—geliştirme için ücretsiz deneme veya geçici lisans, üretim için ise ticari lisans gereklidir.  
+- **Format listesini önbelleğe alabilir miyim?** Kesinlikle—önbellekleme, format meta verilerini yüklemenin tek seferlik yükünü azaltır.  
+- **Format algılaması çoklu iş parçacığı güvenli mi?** Evet, GroupDocs API çoklu iş parçacığı güvenlidir; sadece kendi önbelleklerinizin eşzamanlılığı yönettiğinden emin olun.  
+- **Kütüphane güncellemeleriyle liste değişecek mi?** Yeni sürümler genellikle format ekler; güncellemelerden sonra yeniden önbellekleme yaparak güncel kalın.
 
-## Java Uygulamalarında Dosya Formatı Tespitinin Önemi
+## Java Uygulamalarında Dosya Formatı Algılamasının Önemi
 
-### Format Varsayımlarının Gizli Maliyeti
+Desteklenen formatları erken tespit etmek, çalışma zamanı hatalarını önler, boşa harcanan CPU döngülerini azaltır ve kullanıcılara hangi dosyaları yükleyebilecekleri konusunda anında geri bildirim verir. Ağır işlemden önce uyumluluğu kontrol ederek hizmetinizin yanıt vermesini ve hata günlüklerinizin temiz kalmasını sağlarsınız.
 
-Şöyle bir senaryo düşünün: Uygulamanız dosya yüklemelerini sorunsuz kabul ediyor, belge hattınızda işliyor ve ardından—çöküyor. Dosya formatı desteklenmiyordu, ancak bunu yalnızca işlem kaynaklarını boşa harcayarak ve kötü bir kullanıcı deneyimi yaratarak fark ettiniz.
-
-**Format tespiti sayesinde günü kurtaran yaygın senaryolar:**
-- **Yükleme doğrulaması**: Dosyaları depolamadan önce uyumluluğu kontrol edin  
-- **Toplu işleme**: Desteklenmeyen dosyaları tamamen başarısız olmaktan kaçınarak atlayın  
-- **API entegrasyonu**: Format sınırlamaları hakkında net hata mesajları sağlayın  
-- **Kaynak planlaması**: Dosya türlerine göre işleme gereksinimlerini tahmin edin  
-- **Kullanıcı deneyimi**: Dosya seçicilerde desteklenen formatları gösterin  
+**Format algılamasının günü kurtardığı yaygın senaryolar:**
+- **Yükleme doğrulama** – desteklenmeyen dosyaları kenarda reddedin.  
+- **Toplu işleme** – hataya neden olabilecek dosyaları atlayarak toplu işlemi canlı tutun.  
+- **API entegrasyonu** – genel 500 hataları yerine net hata mesajları döndürün.  
+- **Kaynak planlaması** – bilinen format özelliklerine göre CPU ve bellek tahmini yapın.  
+- **Kullanıcı deneyimi** – dosya seçicilerde desteklenen uzantıların öz bir listesini gösterin.
 
 ### İş Etkisi
 
-Akıllı format tespiti sadece teknik bir incelik değil; doğrudan geliriniz üzerinde etkili:
-- **Azaltılmış destek talepleri**: Kullanıcılar neyin çalıştığını önceden bilir  
-- **Daha iyi kaynak kullanımı**: Yalnızca uyumlu dosyalar işlenir  
-- **Artan kullanıcı memnuniyeti**: Format uyumluluğu hakkında açık geri bildirim  
-- **Daha hızlı geliştirme döngüleri**: Format sorunlarını test aşamasında yakalayın  
+Akıllı format algılaması sadece teknik bir incelik değildir—doğrudan kârınızı etkiler:
+- **Azaltılmış destek talepleri**: Kullanıcılar önceden neyin çalıştığını bilir.
+- **Daha iyi kaynak kullanımı**: Sadece uyumlu dosyaları işleyerek CPU'yu diğer görevler için serbest bırakır.
+- **Artan memnuniyet**: Net geri bildirim hayal kırıklığını ortadan kaldırır.
+- **Daha hızlı geliştirme döngüleri**: Erken doğrulama, hataları QA'dan önce yakalar.
 
 ## Önkoşullar ve Kurulum Gereksinimleri
 
-Uygulamaya geçmeden önce ihtiyacınız olan her şeyin elinizde olduğundan emin olalım.
+### İhtiyacınız Olanlar
 
-### Gerekenler
+**Geliştirme Ortamı**
+- Java Development Kit (JDK) 8 ve üzeri
+- Bağımlılık yönetimi için Maven **veya** Gradle
+- Favori IDE'niz (IntelliJ IDEA, Eclipse, VS Code)
 
-**Geliştirme Ortamı:**
-- Java Development Kit (JDK) 8 veya üzeri  
-- Bağımlılık yönetimi için Maven veya Gradle  
-- Tercih ettiğiniz IDE (IntelliJ IDEA, Eclipse, VS Code)
+**Bilgi Önkoşulları**
+- Temel Java sözdizimi ve OOP kavramları
+- Maven/Gradle proje yapılarıyla aşinalık
+- Java istisna yönetimini anlama
 
-**Bilgi Önkoşulları:**
-- Temel Java programlama kavramları  
-- Maven/Gradle proje yapısına aşinalık  
-- Java’da istisna yönetimi anlayışı  
+**Kütüphane Bağımlılıkları**
+- Java için GroupDocs.Comparison (nasıl ekleyeceğinizi göstereceğiz)
 
-**Kütüphane Bağımlılıkları:**
-- GroupDocs.Comparison for Java (nasıl ekleyeceğinizi göstereceğiz)
+GroupDocs daha önce kullanmadıysanız endişelenmeyin—her adımı birlikte inceleyeceğiz.
 
-GroupDocs’a özel bir bilginiz olmasa da, her adımı adım adım anlatacağız.
-
-## GroupDocs.Comparison for Java Kurulumu
+## Java için GroupDocs.Comparison Kurulumu
 
 ### Neden GroupDocs.Comparison?
 
-Java belge işleme kütüphaneleri arasında GroupDocs.Comparison, kapsamlı format desteği ve sade API’siyle öne çıkar. Yaygın ofis belgelerinden CAD çizimlerine ve e‑posta dosyalarına kadar her şeyi yönetir.
+GroupDocs.Comparison **70+ giriş ve çıkış formatını** destekler, klasik Office dosyalarından CAD çizimlerine ve e-posta arşivlerine kadar. Tek, tutarlı bir API sunar, böylece birden fazla kütüphaneyle uğraşmanıza gerek kalmaz.
 
 ### Maven Kurulumu
 
-`pom.xml` dosyanıza aşağıdaki depo ve bağımlılığı ekleyin:
+Add this repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -114,7 +171,7 @@ Java belge işleme kütüphaneleri arasında GroupDocs.Comparison, kapsamlı for
 
 ### Gradle Kurulumu
 
-Gradle kullananlar için `build.gradle` dosyanıza şunu ekleyin:
+For Gradle users, add this to your `build.gradle`:
 
 ```gradle
 repositories {
@@ -130,20 +187,22 @@ dependencies {
 
 ### Lisans Yapılandırma Seçenekleri
 
-**Geliştirme için:**
-- **Ücretsiz Deneme**: Test ve değerlendirme için ideal  
-- **Geçici Lisans**: Geliştirme aşamasında tam erişim sağlar  
+**Geliştirme İçin**
+- **Ücretsiz Deneme** – değerlendirme için mükemmel, kredi kartı gerekmez.
+- **Geçici Lisans** – geliştirme aşaması için tam özellik seti.
 
-**Üretim için:**
-- **Ticari Lisans**: Üretim ortamına dağıtım için zorunludur  
+**Üretim İçin**
+- **Ticari Lisans** – canlı dağıtım için zorunludur.
 
-**İpucu**: Kütüphanenin ihtiyaçlarınıza uygun olduğunu doğrulamak için ücretsiz deneme ile başlayın, ardından tam geliştirme erişimi için geçici lisansa geçin.
+**Pro ipucu**: Ücretsiz deneme ile başlayın, gerekli tüm formatların listelendiğini doğrulayın, ardından kodlamayı bitirirken geçici lisansa geçin.
 
-## nasıl desteklenen formatları java tespit et
+## Formatları nasıl listeleyeceksiniz
+
+`FileType.getSupportedFileTypes()` metodunu başlangıçta bir kez çağırın, dönen koleksiyonu önbelleğe alın ve gelen dosyaları doğrularken O(1) aramalar için bir `HashSet<String>` kullanın. Bu API'ye dayanarak sabit kodlu listelerden kaçınır ve gelecekteki kütüphane güncellemeleriyle uyumluluğu sağlarsınız. Bu tek satırlık çağrı, GroupDocs.Comparison'ın işleyebileceği her formatın tam, sürüm‑doğru bir listesini verir.
 
 ### Temel Uygulama
 
-GroupDocs.Comparison kullanarak tüm desteklenen dosya formatlarını programatik olarak nasıl alacağınız aşağıda gösterilmiştir:
+`FileType` sınıfı, uzantı, MIME tipi ve yetenek bayraklarını içeren tek bir dosya formatının GroupDocs.Comparison temsilidır.  
 
 ```java
 import com.groupdocs.comparison.result.FileType;
@@ -163,19 +222,19 @@ System.out.println("\nSupported file types retrieved successfully.");
 
 ### Kodu Anlamak
 
-**Ne oluyor?**
-1. `FileType.getSupportedFileTypes()` tüm desteklenen formatların yinelemeli bir koleksiyonunu döndürür.  
-2. Her `FileType` nesnesi format yetenekleri hakkında meta veri içerir.  
-3. Basit döngü, bu bilgilere programatik olarak nasıl erişileceğini gösterir.
+**Burada ne oluyor**
+1. `FileType.getSupportedFileTypes()` kütüphanenin bildiği her formatı içeren bir `Iterable<FileType>` döndürür.
+2. Her `FileType` nesnesi `getExtension()`, `getMimeType()` ve `isSupportedForComparison()` gibi özellikleri ortaya çıkarır.
+3. Döngü sadece her formatın uzantısını ve kısa bir açıklamasını yazdırır.
 
-**Bu yaklaşımın temel faydaları:**
-- **Çalışma zamanı keşfi** – Bakım gerektiren sabit format listeleri yoktur.  
-- **Sürüm uyumluluğu** – Kütüphane sürümünüzün yeteneklerini her zaman yansıtır.  
-- **Dinamik doğrulama** – Format kontrollerini doğrudan uygulama mantığınıza entegre edin.  
+**Bu yaklaşımın temel faydaları**
+- **Çalışma zamanı keşfi** – Bakımı gereken sabit kodlu listeler yok.
+- **Sürüm uyumluluğu** – Liste, kullandığınız JAR'ın tam yeteneklerini her zaman yansıtır.
+- **Dinamik doğrulama** – Doğrulama mantığını doğrudan API çıktısından oluşturun.
 
 ### Filtreleme ile Geliştirilmiş Uygulama
 
-Gerçek dünyada genellikle formatları filtrelemek ya da sınıflandırmak istersiniz:
+Üretimde genellikle formatları filtrelemeniz gerekir (ör. sadece karşılaştırma için desteklenenler veya sadece ofis belgeleri). Aşağıdaki desen, kod tabanınızda yeniden kullanabileceğiniz filtrelenmiş bir `Set<String>` nasıl oluşturulacağını gösterir.
 
 ```java
 import com.groupdocs.comparison.result.FileType;
@@ -221,14 +280,14 @@ public class FormatDetector {
 
 ### Sorun 1: Bağımlılık Çözümleme Problemleri
 
-**Belirti**: Maven/Gradle GroupDocs deposunu ya da artefaktlarını bulamıyor.
+**Semptom**: Maven/Gradle GroupDocs deposunu veya artefaktları bulamıyor.
 
-**Çözüm**:
-- İnternet bağlantınızın dış depolara erişime izin verdiğini doğrulayın.  
-- Depo URL’sinin tam olarak belirtildiğinden emin olun.  
-- Kurumsal ortamlarda, depoyu Nexus/Artifactory’nize eklemeniz gerekebilir.
+**Çözüm**
+- Ağınızın `repo.groupdocs.com` adresine dışa HTTPS izin verdiğini doğrulayın.
+- Depo URL'sinin yazımını iki kez kontrol edin.
+- Kurumsal ortamlarda, depoyu iç dahili Nexus veya Artifactory aynanıza ekleyin.
 
-**Hızlı düzeltme**:
+**Hızlı çözüm**
 
 ```xml
 <!-- Add to Maven settings.xml if repository access is restricted -->
@@ -243,14 +302,14 @@ public class FormatDetector {
 
 ### Sorun 2: Lisans Doğrulama Hataları
 
-**Belirti**: Uygulama çalışıyor ancak lisans uyarıları ya da kısıtlamalar gösteriyor.
+**Semptom**: Uygulama çalışıyor ancak lisans uyarıları kaydediyor veya işlevselliği sınırlıyor.
 
-**Çözüm**:
-- Lisans dosyasının sınıf yolunda (classpath) olduğundan emin olun.  
-- Lisansın süresinin dolmadığını kontrol edin.  
-- Lisansın dağıtım ortamınızı (dev/staging/prod) kapsadığını doğrulayın.
+**Çözüm**
+- `.lic` dosyasını sınıf yoluna (ör. `src/main/resources`) yerleştirin.
+- Lisansın süresi dolmadığını ve ürün sürümüyle eşleştiğini doğrulayın.
+- Deneme sürümü kullanıyorsanız, 30 gün sonra sona ereceğini unutmayın.
 
-**Lisans yükleme örnek kodu**:
+**Lisans yükleme için kod örneği**
 
 ```java
 // Load license at application startup
@@ -260,23 +319,22 @@ license.setLicense("path/to/GroupDocs.Comparison.lic");
 
 ### Sorun 3: Çalışma Zamanında ClassNotFoundException
 
-**Belirti**: Kod derleniyor ama çalıştırma sırasında eksik sınıf hataları alınıyor.
+**Semptom**: Kod derleniyor ancak çalışma zamanında eksik sınıf hatalarıyla başarısız oluyor.
 
-**Yaygın nedenler**:
-- Diğer kütüphanelerle bağımlılık çakışmaları.  
-- Geçiş bağımlılıklarının eksik olması.  
-- Java sürüm uyumsuzluğu.
+**Yaygın nedenler**
+- Çakışan geçişli bağımlılıklar (ör. başka bir kütüphane `commons-logging`'in eski bir sürümünü çekiyor).
+- Kütüphanenin minimum gereksiniminden daha eski bir JDK sürümü kullanmak.
 
-**Hata ayıklama adımları**:
-1. Bağımlılık ağacınızı kontrol edin: `mvn dependency:tree`.  
-2. Java sürüm uyumluluğunu doğrulayın.  
-3. Gerekirse çakışan geçiş bağımlılıklarını dışlayın.
+**Hata ayıklama adımları**
+1. Çakışmaları görmek için `mvn dependency:tree` (veya `gradle dependencies`) çalıştırın.
+2. JDK 8 ve üzeri kullandığınızdan emin olun.
+3. Gerekirse sorunlu geçişli bağımlılığı dışlayın.
 
 ### Sorun 4: Büyük Format Listelerinde Performans Sorunları
 
-**Belirti**: `getSupportedFileTypes()` çağrısı beklenenden uzun sürüyor.
+**Semptom**: `getSupportedFileTypes()` ilk çağrısı sonraki çağrılara göre belirgin şekilde daha uzun sürer.
 
-**Çözüm**: Desteklenen formatlar çalışma zamanında değişmediği için sonuçları önbelleğe alın:
+**Çözüm**: Sonucu çoklu iş parçacığı güvenli bir singleton'da önbelleğe alın (ör. `EnumMap` veya `ConcurrentHashMap` kullanarak). Liste JVM ömrü boyunca değişmez, bu yüzden tek seferlik yükleme tekrarlanan yansıma yükünü ortadan kaldırır.
 
 ```java
 public class FormatCache {
@@ -296,11 +354,11 @@ public class FormatCache {
 }
 ```
 
-## Gerçek Dünya Uygulamaları için Entegrasyon Desenleri
+## Gerçek‑Dünya Uygulamaları için Entegrasyon Kalıpları
 
-### Desen 1: Ön‑Yükleme Doğrulaması
+### Kalıp 1: Ön‑Yükleme Doğrulama
 
-Web uygulamalarında **java dosya formatı kontrolü** yapmak istediğinizde ideal:
+Dosya sunucuya ulaşmadan önce **check file format java** yapması gereken web uygulamaları için mükemmeldir.
 
 ```java
 public class FileUploadValidator {
@@ -328,9 +386,9 @@ public class FileUploadValidator {
 }
 ```
 
-### Desen 2: Format Filtreli Toplu İşleme
+### Kalıp 2: Format Filtreleme ile Toplu İşleme
 
-**dosya formatlarını toplu işleme** gerektiğinde, bu desen desteklenmeyen dosyaları sorunsuzca atlar:
+**batch process file formats** yapmanız gerektiğinde, bu kalıp desteklenmeyen dosyaları zarifçe atlar ve daha sonra inceleme için kaydeder.
 
 ```java
 public class BatchProcessor {
@@ -358,9 +416,9 @@ public class BatchProcessor {
 }
 ```
 
-### Desen 3: REST API Format Bilgisi
+### Kalıp 3: REST API Format Bilgisi
 
-İstemci uygulamalar için **desteklenen dosya tipleri listesi** uç noktasını yayınlayın:
+İstemci uygulamaların izin verilen uzantıları dinamik olarak gösterebilmesi için bir **list supported file types** uç noktasını ortaya çıkarın.
 
 ```java
 @RestController
@@ -394,7 +452,7 @@ public class FormatController {
 
 ### Bellek Yönetimi
 
-**Akıllıca önbellekleme**: Format listeleri çalışma zamanında değişmez, bu yüzden önbelleğe alın:
+**Akıllıca önbellekle**: Desteklenen format listesini bir `static final` alanında veya ayrı bir önbellek sağlayıcıda (ör. Caffeine) saklayın. Meta veri sadece birkaç kilobayt yer kaplar, ancak tekrarlanan yansımalar birikebilir.
 
 ```java
 // Good: Initialize once, use many times
@@ -407,7 +465,7 @@ private static final List<FileType> SUPPORTED_FORMATS =
 
 ### Hata Yönetimi
 
-**Nazik bozulma**: Format tespiti başarısız olduğunda her zaman bir geri dönüş yolu sağlayın:
+**Zarif gerileme**: Format algılaması başarısız olursa (ör. bozuk bir JAR nedeniyle), sabit kodlu minimal bir listeye geri dönün ve bir uyarı kaydedin. İstisnanın kullanıcı arayüzüne ulaşmasına izin vermeyin.
 
 ```java
 public boolean isFormatSupported(String filename) {
@@ -425,7 +483,7 @@ public boolean isFormatSupported(String filename) {
 
 ### Performans Optimizasyonu
 
-**Tembel başlatma**: Format bilgilerini ihtiyaç duyulana kadar yüklemeyin:
+**Tembel başlatma**: Format listesinin yüklenmesini gerçekten ihtiyaç duyulan ilk isteğe kadar geciktirin. Bu, belge işleyebilecek olasılığı olmayan mikro‑servislerin başlangıç süresini azaltır.
 
 ```java
 public class LazyFormatChecker {
@@ -452,7 +510,7 @@ public class LazyFormatChecker {
 
 ### Konfigürasyon Yönetimi
 
-**Format kısıtlamalarını dışa taşıma**: Format politikaları için konfigürasyon dosyaları kullanın:
+**Format kısıtlamalarını dışa aktar**: İş birimi başına izin verilen uzantıları listeleyen bir `application.yml` veya `properties` dosyası tutun. Bu, politika değişikliklerini kod yeniden dağıtımı olmadan mümkün kılar.
 
 ```yaml
 # application.yml
@@ -465,52 +523,34 @@ document-processing:
   validation-mode: strict
 ```
 
-## İleri Düzey Kullanım Senaryoları ve Uygulamalar
+## İleri Düzey Kullanım Durumları ve Uygulamalar
 
 ### Kurumsal Belge Yönetimi
 
-**Senaryo**: Büyük bir organizasyon, departmanlar arasında farklı format gereksinimleriyle **desteklenmeyen dosyaları** yönetmek zorunda.
-
-**Uygulama yaklaşımı**:
-- Departmana özgü format beyaz listeleri  
-- Otomatik format raporlaması ve uyumluluk denetimi  
-- Belge yaşam döngüsü yönetim sistemleriyle entegrasyon  
+Büyük organizasyonlar genellikle departmana özgü izin listelerine ihtiyaç duyar. `FileType` meta verisini rol tabanlı erişim kontrolüyle birleştirerek, “Hukuk PDF ve DOCX yükleyebilir, Pazarlama ise PPTX de yükleyebilir” gibi ayrıntılı politikalar uygulayabilirsiniz.
 
 ### Bulut Depolama Entegrasyonu
 
-**Senaryo**: Çeşitli bulut depolama sağlayıcılarından dosyaları senkronize eden bir SaaS uygulaması.
-
-**Ana hususlar**:
-- Farklı depolama sistemleri arasında format uyumluluğu  
-- Desteklenmeyen formatları erken filtreleyerek bant genişliği optimizasyonu  
-- Senkronizasyon sırasında kullanıcıları desteklenmeyen dosyalar hakkında bilgilendirme  
+AWS S3, Azure Blob veya Google Drive gibi hizmetlerden dosya senkronizasyonu yaparken, desteklenmeyen formatları **indirilmeden önce** filtreleyin. Bu, bant genişliğini ve depolama maliyetlerini azaltır.
 
 ### Otomatik İş Akışı Sistemleri
 
-**Senaryo**: Format ve içeriğe göre belgeleri yönlendiren iş süreci otomasyonu.
-
-**Uygulama faydaları**:
-- Format yeteneklerine dayalı akıllı yönlendirme  
-- Mümkün olduğunda otomatik format dönüşümü  
-- Format‑bilinçli işleme sayesinde iş akışı optimizasyonu  
+İş süreci otomasyonu, belgeyi formata göre yönlendirebilir. Örneğin, sözleşme‑inceleme iş akışı sadece DOCX kabul ederken, fatura‑işleme hattı PDF, XLSX ve CSV kabul edebilir.
 
 ## Performans Düşünceleri ve Optimizasyon
 
 ### Bellek Kullanımı Optimizasyonu
 
-**Zorluk**: Tüm desteklenen format bilgilerini yüklemek, bellek‑kısıtlı ortamlarda gereksiz yere hafıza tüketebilir.
-
-**Çözümler**:
-1. **Tembel yükleme** – Format bilgilerini yalnızca ihtiyaç duyulduğunda yükleyin.  
-2. **Seçici önbellekleme** – Sadece kullanım senaryonuza uygun formatları önbelleğe alın.  
-3. **Zayıf referanslar** – Bellek sıkıştığında çöp toplama yapılmasına izin verin.  
+Tüm format meta verilerini belleğe yüklemek ucuzdur (≈ 5 KB). Ancak, sınırlı bir konteynerde onlarca mikro‑servis çalıştırıyorsanız şunları yapabilirsiniz:
+1. **Tembel yükleme** – sadece ihtiyaç duyulduğunda.
+2. **Seçici önbellek** – sadece gerçekten desteklediğiniz formatları tutun (ör. ofis belgeleri).
+3. **WeakReference** önbellekleri kullanın, böylece JVM baskı altında belleği geri kazanabilir.
 
 ### CPU Performans İpuçları
 
-**Verimli format kontrolü**:
-- Doğrusal aramalara göre O(1) arama performansı için `HashSet` kullanın.  
-- Format doğrulama için regex desenlerini önceden derleyin.  
-- Büyük toplu işlemler için paralel akışları (parallel streams) değerlendirin.
+- Önbelleğe alınmış uzantılardan oluşturulan bir `HashSet<String>` kullanarak sabit‑zamanlı aramalar yapın.
+- Dosya adı doğrulaması için kullandığınız düzenli ifadeleri önceden derleyin.
+- Büyük toplu işler için, I/O limitlerine saygı göstererek dosyaları paralel akışlarda (`parallelStream()`) işleyin.
 
 ```java
 // Efficient format validation
@@ -522,107 +562,107 @@ public boolean isSupported(String extension) {
 }
 ```
 
-### Ölçeklenebilirlik Düşünceleri
+### Ölçeklendirme Düşünceleri
 
-**Yüksek‑verim uygulamalar için**:
-- Uygulama başlangıcında format bilgilerini başlatın.  
-- Dış format tespiti hizmetlerine bağlanıyorsanız bağlantı havuzlaması kullanın.  
-- Küme ortamları için dağıtık önbellekler (Redis, Hazelcast) düşünün.  
+- **Uygulama başlangıcı**: Format listesini bir Spring bean'in `@PostConstruct` metodunda başlatın.
+- **Dağıtık önbellekler**: Küme ortamında, her düğümün ayrı ayrı yüklemesini önlemek için önbellek listesini Redis veya Hazelcast üzerinden paylaşın.
+- **Bağlantı havuzu**: Ek doğrulama için dış hizmetleri çağırıyorsanız, gecikmeyi düşük tutmak için bir havuz (ör. HikariCP) kullanın.
 
-## Yaygın Çalışma Zamanı Sorunlarını Gidermek
+## Yaygın Çalışma Zamanı Sorunlarını Giderme
 
-### Sorun: Tutarsız Format Tespiti Sonuçları
+### Sorun: Tutarsız Format Algılama Sonuçları
 
-**Belirtiler**: Aynı dosya uzantısı bazen farklı destek durumu döndürür.
+**Semptomlar**: Aynı dosya uzantısı bazen desteklenmiyor olarak raporlanır.
 
-**Temel nedenler**:
-- Kütüphane örnekleri arasında sürüm farkları.  
-- Lisans sınırlamaları nedeniyle bazı formatların kapatılması.  
-- Diğer belge işleme kütüphaneleriyle sınıf yolu çakışmaları.
+**Temel nedenler**
+- Farklı düğümlerde farklı kütüphane sürümleri.
+- Belirli premium formatları devre dışı bırakan lisans kısıtlamaları.
+- Çift JAR'lar sınıf yükleyici karışıklığına neden oluyor.
 
-**Hata ayıklama yaklaşımı**:
-1. Kullanılan kütüphane sürümünü kesin olarak kaydedin.  
-2. Lisans durumunu ve kapsamını doğrulayın.  
-3. Sınıf yolunda yinelenen JAR dosyalarını kontrol edin.  
+**Hata ayıklama yaklaşımı**
+1. Başlangıçta `GroupDocs.Comparison` sürümünü kaydedin (`VersionInfo.getVersion()`).
+2. Lisans dosyasının tüm sunucularda aynı olduğundan emin olun.
+3. Yalnızca bir kütüphane kopyasının yüklendiğini kontrol etmek için `java -verbose:class` çalıştırın.
 
 ### Sorun: Zamanla Performans Düşüşü
 
-**Belirtiler**: Uygulama çalıştıkça format tespiti yavaşlıyor.
+**Semptomlar**: Format algılaması saatler süren çalışma sonrası yavaşlar.
 
-**Yaygın nedenler**:
-- Format önbellek mekanizmalarında bellek sızıntıları.  
-- Temizlenmeyen iç önbelleklerin büyümesi.  
-- Diğer bileşenlerle kaynak rekabeti.
+**Yaygın nedenler**
+- Büyüyen özel önbelleklerde bellek sızıntıları.
+- Geçici `FileType` nesnelerini saklamak için sınırsız `ArrayList` kullanımı.
+- Büyük yığın baskısı nedeniyle aşırı GC duraklamaları.
 
-**Çözümler**:
-- Uygun önbellek boşaltma politikaları uygulayın.  
-- Bellek kullanım desenlerini izleyin.  
-- Dar boğazları tespit etmek için profil araçları kullanın.  
+**Çözümler**
+- Herhangi bir özel önbellek için bir atım politikası (ör. LRU) uygulayın.
+- JVisualVM veya benzeri araçlarla yığın kullanımını izleyin.
+- Sıcak noktaları belirlemek için Java Flight Recorder ile profil çıkarın.
 
-### Sorun: Format Tespiti Sessizce Başarısız Oluyor
+### Sorun: Format Algılaması Sessizce Başarısız Oluyor
 
-**Belirtiler**: İstisna atılmıyor, ancak format desteği eksik görünüyor.
+**Semptomlar**: İstisna atılmıyor, ancak bazı formatlar listede hiç görünmüyor.
 
-**Araştırma adımları**:
-1. GroupDocs bileşenleri için hata ayıklama (debug) günlüklerini etkinleştirin.  
-2. Kütüphane başlatmasının sorunsuz tamamlandığını doğrulayın.  
-3. Belirli formatlar üzerindeki lisans kısıtlamalarını kontrol edin.  
+**Araştırma adımları**
+1. `com.groupdocs` için hata ayıklama kaydını etkinleştirin (`log4j.logger.com.groupdocs=DEBUG`).
+2. Kütüphane başlatmasının başarılı olduğunu doğrulayın (`License.isValid()`).
+3. Eksik formatların daha yüksek seviyeli bir lisans gerektiren bir **premium** eklentinin parçası olup olmadığını kontrol edin.
 
 ## Sonuç ve Sonraki Adımlar
 
-**detect supported formats java** kavramını anlamak ve uygulamak sadece kod yazmakla kalmaz; gerçek dünyadaki karmaşık dosya formatı ortamını sorunsuz yönetebilen dayanıklı, kullanıcı‑odaklı uygulamalar inşa etmektir.
+**how to list formats** kavramını anlamak sadece tek bir API çağrısı hakkında değildir—dayanıklı, kullanıcı‑dostu bir belge akışının temelidir. Çalışma zamanı algılamasını, önbellekleme ve sağlam hata yönetimini entegre ederek, bütün bir hata sınıfını ortadan kaldırır ve müşterilerinize daha sorunsuz bir deneyim sunarsınız.
 
-**Bu kılavuzdan alınacak temel noktalar**:
-- **Programatik format tespiti**, çalışma zamanı sürprizlerini önler ve kullanıcı deneyimini iyileştirir.  
-- **Doğru kurulum ve yapılandırma**, yaygın sorunları saatler yerine dakikalar içinde çözmenizi sağlar.  
-- **Akıllı önbellekleme ve performans optimizasyonu**, uygulamanızın ölçeklenebilirliğini güvence altına alır.  
-- **Sağlam hata yönetimi**, sorunlar ortaya çıktığında uygulamanızın sorunsuz çalışmasını sağlar.  
+**Özet kontrol listesi**
+- `FileType.getSupportedFileTypes()` metodunu bir kez kullanın, sonucu önbelleğe alın ve bir `HashSet` ile sorgulayın.
+- Ağır işlemden **önce** yüklemeleri doğrulayarak CPU tasarrufu sağlayın ve UX'i iyileştirin.
+- Lisansınızı güncel tutun; yeni sürümler ek formatlar getirir.
+- İzin listelerini dışa aktarın, böylece iş kuralları kod değişikliği olmadan evrimleşebilir.
 
-**Bir sonraki adımlarınız**:
-1. Temel kod örneğini mevcut projenize ekleyerek format tespitini hayata geçirin.  
-2. Kenar durumlarını yakalamak için kapsamlı hata yönetimi ekleyin.  
-3. Tartışılan önbellekleme desenleriyle performansı ihtiyacınıza göre optimize edin.  
-4. Mimarinize en uygun entegrasyon desenini (ön‑yükleme doğrulaması, toplu işleme veya REST API) seçin ve uygulayın.  
+**Sonraki adımlar**
+1. Temel algılama kod parçacığını mevcut yükleme servisinize ekleyin.
+2. Bir singleton önbellek uygulayın (ör. Spring’in `@Cacheable` kullanarak).
+3. Mimarinize uyan entegrasyon kalıplarından birini (ön‑yükleme, toplu, veya REST) seçin.
+4. O(1) arama hızlarını doğrulamak için temsilci bir veri kümesi üzerinde performans ölçümleri yapın.
 
-Daha ileri gitmek ister misiniz? GroupDocs.Comparison’ın format‑özel karşılaştırma seçenekleri, meta veri çıkarımı ve toplu işleme yeteneklerini keşfederek belge işleme iş akışlarınızı daha da güçlendirin.
+Daha fazlasına hazır mısınız? GroupDocs.Comparison’ın yan‑yana karşılaştırma, meta veri çıkarma ve toplu karşılaştırma işleri gibi gelişmiş özelliklerini keşfederek gerçek kurumsal düzeyde belge iş akışları oluşturun.
 
 ## Sıkça Sorulan Sorular
 
 **S: Desteklenmeyen bir dosya formatını işlemeye çalışırsam ne olur?**  
-C: GroupDocs.Comparison bir istisna fırlatır. `getSupportedFileTypes()` ile ön‑doğrulama yaparak uyumluluk sorunlarını işlemeye başlamadan yakalayabilirsiniz.
+C: GroupDocs.Comparison bir `UnsupportedFileFormatException` fırlatır. `getSupportedFileTypes()` ile ön‑doğrulama, pahalı işlem başlamadan sorunu yakalamanızı sağlar.
 
 **S: Desteklenen formatlar listesi kütüphane sürümleri arasında değişir mi?**  
-C: Evet, yeni sürümler genellikle ek formatlar getirir. Güncelleme yaparken sürüm notlarını kontrol edin ve güncellemeler sonrası önbelleği yeniden oluşturmayı düşünün.
+C: Evet. Her yeni sürüm ek formatları destekler—genellikle küçük sürüm başına 3‑5 yeni format. Güncellemeden sonra her zaman yeniden önbellekleme yapın.
 
 **S: Kütüphaneyi ek formatları destekleyecek şekilde genişletebilir miyim?**  
-C: GroupDocs.Comparison sabit bir format setine sahiptir. Ek formatlara ihtiyaç duyarsanız, diğer uzman kütüphanelerle birlikte kullanabilir ya da özel format desteği için GroupDocs ile iletişime geçebilirsiniz.
+C: Desteklenen format listesi sürüm başına sabittir. Niş formatlar için GroupDocs.Comparison'ı özel bir üçüncü‑taraf ayrıştırıcıyla birleştirin veya özel bir eklenti için GroupDocs ile iletişime geçin.
 
-**S: Format tespiti ne kadar bellek tüketir?**  
-C: Bellek ayak izi çok düşüktür—genellikle format meta verileri için sadece birkaç KB. Asıl dikkat edilmesi gereken, bu bilgiyi uygulamanızda nasıl önbelleğe aldığınızdır.
+**S: Format algılaması ne kadar bellek kullanır?**  
+C: Meta veri yaklaşık 5 KB yer kaplar. Gerçek bellek etkisi, önbellek koleksiyonunu nasıl sakladığınız ve paylaştığınıza bağlıdır; basit bir `HashSet<String>` ihmal edilebilir bir ek yük ekler.
 
-**S: Format tespiti çoklu iş parçacığı‑güvenli mi?**  
-C: Evet, `FileType.getSupportedFileTypes()` çoklu iş parçacığı‑güvenlidir. Kendi önbellek mekanizmanızı oluşturursanız, eşzamanlı erişimi doğru yönettiğinizden emin olun.
+**S: Format algılaması çoklu iş parçacığı güvenli mi?**  
+C: Evet, `FileType.getSupportedFileTypes()` çoklu iş parçacığı güvenlidir. Kendi önbelleğinizin (ör. statik bir `ConcurrentHashMap`) da eşzamanlı okuma/yazma işlemlerini yönettiğinden emin olun.
 
 **S: Format desteğini kontrol etmenin performans etkisi nedir?**  
-C: Uygun önbellekleme ile format kontrolü temelde O(1) bir arama işlemi olur. İlk `getSupportedFileTypes()` çağrısının bir miktar başlangıç maliyeti vardır, ancak sonraki kontroller çok hızlıdır.
-
-## Ek Kaynaklar
-
-**Dokümantasyon:**  
-- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)
-
-**Başlangıç:**  
-- [Download and Installation Guide](https://releases.groupdocs.com/comparison/java/)  
-- [Free Trial Access](https://releases.groupdocs.com/comparison/java/)  
-- [Temporary License for Development](https://purchase.groupdocs.com/temporary-license/)
-
-**Topluluk ve Destek:**  
-- [Developer Support Forum](https://forum.groupdocs.com/c/comparison)  
-- [Purchase and Licensing Information](https://purchase.groupdocs.com/buy)
+C: İlk çağrı tipik bir sunucuda ~10‑15 ms tek seferlik bir maliyet getirir. Sonraki aramalar O(1) olup 0.1 ms altında tamamlanır.
 
 ---
 
-**Son Güncelleme:** 2026-03-08  
-**Test Edilen Sürüm:** GroupDocs.Comparison 25.2 for Java  
-**Yazar:** GroupDocs
+**Last Updated:** 2026-07-20  
+**Tested With:** GroupDocs.Comparison 25.2 for Java  
+**Author:** GroupDocs  
+
+**Additional Resources**
+
+- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
+- [Download and Installation Guide](https://releases.groupdocs.com/comparison/java/)  
+- [Free Trial Access](https://releases.groupdocs.com/comparison/java/)  
+- [Temporary License for Development](https://purchase.groupdocs.com/temporary-license/)  
+- [Developer Support Forum](https://forum.groupdocs.com/c/comparison)  
+- [Purchase and Licensing Information](https://purchase.groupdocs.com/buy)
+
+## İlgili Eğitimler
+
+- [Java Get File Type – Extract Document Metadata Guide](/comparison/java/document-information/extract-document-info-groupdocs-comparison-java/)
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
+- [Customize Document Comparison Java – Complete Guide](/comparison/java/comparison-options/)

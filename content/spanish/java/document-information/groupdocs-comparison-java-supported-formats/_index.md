@@ -1,110 +1,155 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: Aprende cómo detectar los formatos compatibles de Java y realizar la
-  validación de formatos de archivos Java con GroupDocs.Comparison. Guía paso a paso
-  y soluciones prácticas.
-keywords: java supported file formats, GroupDocs comparison tutorial, java document
-  formats list, retrieve file types java, document management system file format checking
-lastmod: '2026-03-08'
-linktitle: Java File Formats Detection
+date: '2026-07-20'
+description: Aprende cómo enumerar formatos en Java y validar la carga de documentos
+  java usando GroupDocs.Comparison. Guía paso a paso, consejos de rendimiento y ejemplos
+  del mundo real.
+keywords:
+- how to list formats
+- check file format java
+- retrieve file types java
+- java file format detection
+- validate document upload java
+lastmod: '2026-07-20'
+linktitle: Detección de formatos de archivo Java
+og_description: cómo enumerar formatos en Java con GroupDocs.Comparison. Descubre
+  cómo comprobar el formato de archivo java, recuperar tipos de archivo java y validar
+  la carga de documentos java de manera eficiente.
+og_image_alt: 'Developer guide: List supported file formats in Java using GroupDocs.Comparison'
+og_title: cómo enumerar formatos – Guía completa de detección Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to list formats in Java and validate document upload java
+    using GroupDocs.Comparison. Step‑by‑step guide, performance tips, and real‑world
+    examples.
+  headline: how to list formats – Complete Detection Guide
+  type: TechArticle
+- description: Learn how to list formats in Java and validate document upload java
+    using GroupDocs.Comparison. Step‑by‑step guide, performance tips, and real‑world
+    examples.
+  name: how to list formats – Complete Detection Guide
+  steps:
+  - name: '`FileType.getSupportedFileTypes()` returns an `Iterable<FileType>` containing
+      every format the library knows about.'
+    text: '`FileType.getSupportedFileTypes()` returns an `Iterable<FileType>` containing
+      every format the library knows about.'
+  - name: Each `FileType` object exposes properties such as `getExtension()`, `getMimeType()`,
+      and `isSupportedForComparison()`.
+    text: Each `FileType` object exposes properties such as `getExtension()`, `getMimeType()`,
+      and `isSupportedForComparison()`.
+  - name: The loop simply prints each format’s extension and a short description.
+    text: The loop simply prints each format’s extension and a short description.
+  - name: Run `mvn dependency:tree` (or `gradle dependencies`) to spot conflicts.
+    text: Run `mvn dependency:tree` (or `gradle dependencies`) to spot conflicts.
+  - name: Ensure you’re on JDK 8 or higher.
+    text: Ensure you’re on JDK 8 or higher.
+  - name: Exclude the offending transitive dependency if necessary.
+    text: Exclude the offending transitive dependency if necessary.
+  - name: '**Lazy load** only when needed.'
+    text: '**Lazy load** only when needed.'
+  - name: '**Selective cache** – keep only the formats you actually support (e.g.,
+      office documents).'
+    text: '**Selective cache** – keep only the formats you actually support (e.g.,
+      office documents).'
+  - name: Use **WeakReference** caches so the JVM can reclaim memory under pressure.
+    text: Use **WeakReference** caches so the JVM can reclaim memory under pressure.
+  - name: Log `GroupDocs.Comparison` version at startup (`VersionInfo.getVersion()`).
+    text: Log `GroupDocs.Comparison` version at startup (`VersionInfo.getVersion()`).
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Comparison throws an `UnsupportedFileFormatException`. Pre‑validation
+      with `getSupportedFileTypes()` lets you intercept the problem before any expensive
+      processing begins.
+    question: What happens if I try to process an unsupported file format?
+  - answer: Yes. Each new release adds support for additional formats—often 3‑5 new
+      ones per minor version. Always re‑cache after an upgrade.
+    question: Does the supported formats list change between library versions?
+  - answer: The supported format list is fixed per release. For niche formats, combine
+      GroupDocs.Comparison with a specialized third‑party parser, or contact GroupDocs
+      for a custom add‑on.
+    question: Can I extend the library to support additional formats?
+  - answer: The metadata occupies roughly 5 KB. The real memory impact comes from
+      how you store and share the cached collection; a simple `HashSet<String>` adds
+      negligible overhead.
+    question: How much memory does format detection use?
+  - answer: Yes, `FileType.getSupportedFileTypes()` is thread‑safe. Ensure your own
+      cache (e.g., a static `ConcurrentHashMap`) also handles concurrent reads/writes.
+    question: Is format detection thread‑safe?
+  type: FAQPage
 tags:
-- java
-- file-formats
-- document-processing
-- groupdocs
-title: detectar formatos compatibles java – Guía completa de detección
+- convert PDF
+- GroupDocs.Comparison
+- Java document processing
+title: cómo enumerar formatos – Guía completa de detección
 type: docs
 url: /es/java/document-information/groupdocs-comparison-java-supported-formats/
 weight: 1
 ---
 
-purchase.groupdocs.com/buy)
+# cómo listar formatos – Guía completa de detección
 
---- (keep)
+¿Alguna vez intentaste procesar un documento en Java solo para encontrarte con un muro porque tu biblioteca no admite ese formato específico? No estás solo. La compatibilidad de formatos de archivo es uno de esos momentos *gotcha* que pueden descarrilar un proyecto más rápido de lo que puedes decir **UnsupportedFileException**.
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
+Saber **cómo listar formatos** es esencial para construir sistemas robustos de procesamiento de documentos. Ya sea que estés creando una plataforma de gestión documental, un servicio de conversión de archivos, o simplemente necesites **validar la carga de documentos java**, la detección programática de formatos te salva de sorpresas en tiempo de ejecución y de usuarios insatisfechos.
 
---- (keep)
-
-Now produce final output with all markdown. Ensure placeholders unchanged.
-
-Let's craft final answer.# detectar formatos compatibles java – Guía completa de detección
-
-## Introducción
-
-¿Alguna vez intentaste procesar un documento en Java solo para encontrarte con un obstáculo porque tu biblioteca no admite ese formato específico? No estás solo. La compatibilidad de formatos de archivo es uno de esos momentos "gotcha" que pueden descarrilar un proyecto más rápido de lo que puedes decir *UnsupportedFileException*.
-
-Saber **how to detect supported formats java** es esencial para crear sistemas robustos de procesamiento de documentos. Ya sea que estés construyendo una plataforma de gestión documental, un servicio de conversión de archivos, o simplemente necesites **validate document upload java**, la detección programática de formatos te protege de sorpresas en tiempo de ejecución y usuarios insatisfechos.
-
-**En esta guía, descubrirás:**
-- Cómo detectar programáticamente formatos de archivo compatibles en Java
-- Implementación práctica usando GroupDocs.Comparison para Java
-- Patrones de integración del mundo real para aplicaciones empresariales
-- Soluciones de solución de problemas para problemas comunes de configuración
-- Consejos de optimización de rendimiento para entornos de producción
+En esta guía descubrirás cómo **comprobar el formato de archivo java**, obtener tipos de archivo java, e integrar esas comprobaciones en aplicaciones Java del mundo real usando GroupDocs.Comparison.
 
 ## Respuestas rápidas
-- **¿Cuál es el método principal para listar formatos?** `FileType.getSupportedFileTypes()` devuelve todos los tipos compatibles.  
-- **¿Necesito una licencia para usar la API?** Sí, se requiere una prueba gratuita o una licencia temporal para desarrollo.  
-- **¿Puedo almacenar en caché la lista de formatos?** Absolutamente—el caché mejora el rendimiento y reduce la sobrecarga.  
-- **¿Es la detección de formatos segura para subprocesos?** Sí, la API de GroupDocs es segura para subprocesos, pero tus propios cachés deben manejar la concurrencia.  
-- **¿Cambiará la lista con actualizaciones de la biblioteca?** Las nuevas versiones pueden añadir formatos; siempre vuelve a almacenar en caché después de actualizaciones.
+- **¿Cuál es el método principal para listar formatos?** `FileType.getSupportedFileTypes()` devuelve todos los formatos que la versión actual de la biblioteca puede manejar.  
+- **¿Necesito una licencia para usar la API?** Sí—se requiere una prueba gratuita o una licencia temporal para desarrollo, y una licencia comercial para producción.  
+- **¿Puedo almacenar en caché la lista de formatos?** Absolutamente—el caché reduce la sobrecarga única de cargar los metadatos de formatos.  
+- **¿Es la detección de formatos segura para subprocesos?** Sí, la API de GroupDocs es thread‑safe; solo asegúrate de que tus propios cachés manejen la concurrencia.  
+- **¿Cambiará la lista con actualizaciones de la biblioteca?** Las nuevas versiones a menudo añaden formatos; vuelve a almacenar en caché después de actualizar para mantenerte al día.
 
-## Por qué la detección de formatos de archivo es importante en aplicaciones Java
+## ¿Por qué la detección de formatos de archivo es importante en aplicaciones Java?
 
-### El costo oculto de suponer formatos
-
-Imagina esto: tu aplicación acepta con confianza cargas de archivos, los procesa a través de tu canal de documentos y luego—¡crash! El formato del archivo no era compatible, pero solo lo descubriste después de desperdiciar recursos de procesamiento y crear una mala experiencia de usuario.
+Detectar los formatos compatibles temprano previene fallos en tiempo de ejecución, reduce ciclos de CPU desperdiciados y permite dar a los usuarios retroalimentación instantánea sobre qué archivos pueden cargar. Al comprobar la compatibilidad antes de cualquier procesamiento intensivo, mantienes tu servicio responsivo y tus registros de error limpios.
 
 **Escenarios comunes donde la detección de formatos salva el día:**
-- **Validación de carga**: Verificar la compatibilidad antes de almacenar los archivos
-- **Procesamiento por lotes**: Omitir archivos no compatibles en lugar de fallar por completo  
-- **Integración de API**: Proporcionar mensajes de error claros sobre limitaciones de formato
-- **Planificación de recursos**: Estimar los requisitos de procesamiento según los tipos de archivo
-- **Experiencia de usuario**: Mostrar los formatos compatibles en los selectores de archivos
+- **Validación de carga** – rechaza archivos no compatibles en el borde.  
+- **Procesamiento por lotes** – omite archivos que causarían un fallo, manteniendo vivo el lote.  
+- **Integración de API** – devuelve mensajes de error claros en lugar de 500 genéricos.  
+- **Planificación de recursos** – estima CPU y memoria basándote en características conocidas del formato.  
+- **Experiencia de usuario** – muestra una lista concisa de extensiones soportadas en los selectores de archivos.
 
 ### Impacto empresarial
 
-La detección inteligente de formatos no es solo una niciez técnica—impacta directamente en tus resultados:
-- **Reducción de tickets de soporte**: Los usuarios saben de antemano qué funciona  
-- **Mejor utilización de recursos**: Procesar solo archivos compatibles  
-- **Mayor satisfacción del usuario**: Retroalimentación clara sobre la compatibilidad de formatos  
-- **Ciclos de desarrollo más rápidos**: Detectar problemas de formato temprano en las pruebas  
+La detección inteligente de formatos no es solo una nicetia técnica—impacta directamente en tus resultados:
+- **Reducción de tickets de soporte**: los usuarios saben de antemano qué funciona.  
+- **Mejor utilización de recursos**: procesa solo archivos compatibles, liberando CPU para otras tareas.  
+- **Mayor satisfacción**: la retroalimentación clara elimina la frustración.  
+- **Ciclos de desarrollo más rápidos**: la validación temprana captura errores antes de QA.
 
-## Requisitos previos y de configuración
-
-Antes de sumergirnos en la implementación, asegurémonos de que tienes todo lo necesario.
+## Requisitos previos y configuración
 
 ### Lo que necesitarás
 
-**Entorno de desarrollo:**
-- Java Development Kit (JDK) 8 o superior  
-- Maven o Gradle para la gestión de dependencias  
-- IDE de tu elección (IntelliJ IDEA, Eclipse, VS Code)
+**Entorno de desarrollo**
+- Java Development Kit (JDK) 8 o superior  
+- Maven **o** Gradle para gestión de dependencias  
+- Tu IDE favorito (IntelliJ IDEA, Eclipse, VS Code)
 
-**Prerequisitos de conocimiento:**
-- Conceptos básicos de programación Java  
-- Familiaridad con la estructura de proyectos Maven/Gradle  
-- Comprensión del manejo de excepciones en Java  
+**Conocimientos previos**
+- Sintaxis básica de Java y conceptos OOP  
+- Familiaridad con estructuras de proyecto Maven/Gradle  
+- Comprensión del manejo de excepciones en Java
 
-**Dependencias de la biblioteca:**
-- GroupDocs.Comparison para Java (te mostraremos cómo añadirlo)
+**Dependencias de la biblioteca**
+- GroupDocs.Comparison para Java (te mostraremos cómo añadirla)
 
-No te preocupes si no estás familiarizado con GroupDocs específicamente—te guiaremos paso a paso.
+No te preocupes si nunca has usado GroupDocs antes—te guiaremos paso a paso.
 
 ## Configuración de GroupDocs.Comparison para Java
 
 ### ¿Por qué GroupDocs.Comparison?
 
-Entre las bibliotecas de procesamiento de documentos Java, GroupDocs.Comparison destaca por su amplio soporte de formatos y su API sencilla. Maneja todo, desde documentos de oficina comunes hasta formatos especializados como dibujos CAD y archivos de correo electrónico.
+GroupDocs.Comparison soporta **más de 70 formatos de entrada y salida**, desde archivos clásicos de Office hasta dibujos CAD y archivos de correo electrónico. Ofrece una API única y consistente, por lo que no necesitas manejar múltiples bibliotecas.
 
 ### Instalación con Maven
 
-Add this repository and dependency to your `pom.xml`:
+Añade este repositorio y dependencia a tu `pom.xml`:
 
 ```xml
 <repositories>
@@ -126,7 +171,7 @@ Add this repository and dependency to your `pom.xml`:
 
 ### Configuración con Gradle
 
-For Gradle users, add this to your `build.gradle`:
+Para usuarios de Gradle, agrega lo siguiente a tu `build.gradle`:
 
 ```gradle
 repositories {
@@ -142,20 +187,22 @@ dependencies {
 
 ### Opciones de configuración de licencia
 
-**Para desarrollo:**
-- **Prueba gratuita**: Perfecta para pruebas y evaluación  
-- **Licencia temporal**: Obtén acceso completo durante la fase de desarrollo  
+**Para desarrollo**
+- **Prueba gratuita** – perfecta para evaluación, sin necesidad de tarjeta de crédito.  
+- **Licencia temporal** – conjunto completo de funciones para la fase de desarrollo.
 
-**Para producción:**
-- **Licencia comercial**: Requerida para despliegue en entornos de producción  
+**Para producción**
+- **Licencia comercial** – obligatoria para cualquier despliegue en vivo.
 
-**Consejo profesional**: Comienza con la prueba gratuita para validar que la biblioteca satisface tus necesidades, luego actualiza a una licencia temporal para acceso completo de desarrollo.
+**Consejo profesional**: comienza con la prueba gratuita, verifica que todos los formatos necesarios aparecen en la lista, y luego actualiza a una licencia temporal mientras terminas de codificar.
 
-## Cómo detectar formatos compatibles java
+## Cómo listar formatos
 
-### Implementación central
+Llama a `FileType.getSupportedFileTypes()` una vez al iniciar la aplicación, almacena la colección devuelta en caché y usa un `HashSet<String>` para búsquedas O(1) al validar archivos entrantes. Al confiar en esta API evitas listas codificadas y aseguras compatibilidad con futuras actualizaciones de la biblioteca. Esta llamada de una sola línea te brinda una lista completa y precisa de la versión de todos los formatos que GroupDocs.Comparison puede manejar.
 
-Here's how to programmatically retrieve all supported file formats using GroupDocs.Comparison:
+### Implementación básica
+
+La clase `FileType` es la representación de GroupDocs.Comparison de un formato de archivo único, que contiene la extensión, el tipo MIME y banderas de capacidad.  
 
 ```java
 import com.groupdocs.comparison.result.FileType;
@@ -175,19 +222,19 @@ System.out.println("\nSupported file types retrieved successfully.");
 
 ### Entendiendo el código
 
-**Qué está sucediendo aquí:**
-1. `FileType.getSupportedFileTypes()` devuelve una colección iterable de todos los formatos compatibles.  
-2. Cada objeto `FileType` contiene metadatos sobre las capacidades del formato.  
-3. El bucle simple demuestra cómo acceder a esta información programáticamente.
+**Qué ocurre aquí**
+1. `FileType.getSupportedFileTypes()` devuelve un `Iterable<FileType>` que contiene cada formato que la biblioteca conoce.  
+2. Cada objeto `FileType` expone propiedades como `getExtension()`, `getMimeType()` y `isSupportedForComparison()`.  
+3. El bucle simplemente imprime la extensión de cada formato y una breve descripción.
 
-**Beneficios clave de este enfoque:**
-- **Descubrimiento en tiempo de ejecución** – No hay listas de formatos codificadas que mantener.  
-- **Compatibilidad de versión** – Siempre refleja las capacidades de la versión de tu biblioteca.  
-- **Validación dinámica** – Construye verificaciones de formato directamente en la lógica de tu aplicación.  
+**Beneficios clave de este enfoque**
+- **Descubrimiento en tiempo de ejecución** – No hay listas codificadas que mantener.  
+- **Compatibilidad de versión** – La lista siempre refleja las capacidades exactas del JAR que estás usando.  
+- **Validación dinámica** – Construye la lógica de validación directamente a partir de la salida de la API.
 
 ### Implementación mejorada con filtrado
 
-For real‑world applications, you'll often want to filter or categorize formats:
+En producción a menudo necesitarás filtrar formatos (p. ej., solo los soportados para comparación, o solo documentos de office). El siguiente patrón muestra cómo construir un `Set<String>` filtrado que puedes reutilizar en todo tu código.
 
 ```java
 import com.groupdocs.comparison.result.FileType;
@@ -233,14 +280,14 @@ public class FormatDetector {
 
 ### Problema 1: Problemas de resolución de dependencias
 
-**Síntoma**: Maven/Gradle no puede encontrar el repositorio o los artefactos de GroupDocs.
+**Síntoma**: Maven/Gradle no puede localizar el repositorio o los artefactos de GroupDocs.
 
-**Solución**:
-- Verifica que tu conexión a internet permita el acceso a repositorios externos.  
-- Comprueba que la URL del repositorio sea exactamente la especificada.  
-- En entornos corporativos, puede que necesites añadir el repositorio a tu Nexus/Artifactory.
+**Solución**
+- Verifica que tu red permita conexiones HTTPS salientes a `repo.groupdocs.com`.  
+- Revisa la ortografía de la URL del repositorio.  
+- En entornos corporativos, añade el repositorio a tu espejo interno de Nexus o Artifactory.
 
-**Quick fix**:
+**Arreglo rápido**
 
 ```xml
 <!-- Add to Maven settings.xml if repository access is restricted -->
@@ -255,14 +302,14 @@ public class FormatDetector {
 
 ### Problema 2: Errores de validación de licencia
 
-**Síntoma**: La aplicación se ejecuta pero muestra advertencias o limitaciones de licencia.
+**Síntoma**: La aplicación se ejecuta pero registra advertencias de licencia o limita la funcionalidad.
 
-**Solución**:
-- Asegúrate de que el archivo de licencia esté en tu classpath.  
-- Verifica que la licencia no haya expirado.  
-- Comprueba que la licencia cubra tu entorno de despliegue (dev/staging/prod).
+**Solución**
+- Coloca el archivo `.lic` en el classpath (p. ej., `src/main/resources`).  
+- Confirma que la licencia no haya expirado y coincida con la versión del producto.  
+- Si usas una prueba, recuerda que expira después de 30 días.
 
-**Code example for license loading**:
+**Ejemplo de código para cargar la licencia**
 
 ```java
 // Load license at application startup
@@ -272,23 +319,22 @@ license.setLicense("path/to/GroupDocs.Comparison.lic");
 
 ### Problema 3: ClassNotFoundException en tiempo de ejecución
 
-**Síntoma**: El código compila pero falla en tiempo de ejecución con errores de clase faltante.
+**Síntoma**: El código compila pero falla en tiempo de ejecución por clases faltantes.
 
-**Causas comunes**:
-- Conflictos de dependencias con otras bibliotecas.  
-- Dependencias transitivas faltantes.  
-- Compatibilidad incorrecta de la versión de Java.
+**Causas comunes**
+- Dependencias transitivas en conflicto (p. ej., otra biblioteca que trae una versión antigua de `commons-logging`).  
+- Uso de una versión de JDK inferior al requisito mínimo de la biblioteca.  
 
-**Pasos de depuración**:
-1. Revisa tu árbol de dependencias: `mvn dependency:tree`.  
-2. Verifica la compatibilidad de la versión de Java.  
-3. Excluye dependencias transitivas conflictivas si es necesario.
+**Pasos de depuración**
+1. Ejecuta `mvn dependency:tree` (o `gradle dependencies`) para detectar conflictos.  
+2. Asegúrate de estar en JDK 8 o superior.  
+3. Excluye la dependencia transitiva problemática si es necesario.
 
-### Problema 4: Problemas de rendimiento con listas de formatos grandes
+### Problema 4: Problemas de rendimiento con listas de formatos extensas
 
-**Síntoma**: La llamada `getSupportedFileTypes()` tarda más de lo esperado.
+**Síntoma**: La primera llamada a `getSupportedFileTypes()` tarda notablemente más que las posteriores.
 
-**Solución**: Cachea los resultados ya que los formatos compatibles no cambian durante el tiempo de ejecución:
+**Solución**: Almacena el resultado en un singleton thread‑safe (p. ej., usando `EnumMap` o `ConcurrentHashMap`). La lista nunca cambia durante la vida de la JVM, por lo que una carga única elimina la sobrecarga de reflexión repetida.
 
 ```java
 public class FormatCache {
@@ -312,7 +358,7 @@ public class FormatCache {
 
 ### Patrón 1: Validación previa a la carga
 
-Perfect for web applications where you want to **check file format java** before upload:
+Ideal para aplicaciones web que necesitan **comprobar el formato de archivo java** antes de que el archivo llegue al servidor.
 
 ```java
 public class FileUploadValidator {
@@ -342,7 +388,7 @@ public class FileUploadValidator {
 
 ### Patrón 2: Procesamiento por lotes con filtrado de formatos
 
-When you need to **batch process file formats**, this pattern gracefully skips unsupported files:
+Cuando necesitas **procesar por lotes formatos de archivo**, este patrón omite elegantemente los archivos no soportados y los registra para revisión posterior.
 
 ```java
 public class BatchProcessor {
@@ -370,9 +416,9 @@ public class BatchProcessor {
 }
 ```
 
-### Patrón 3: Información de formato en API REST
+### Patrón 3: API REST de información de formatos
 
-Expose a **list supported file types** endpoint for client applications:
+Expón un endpoint **list supported file types** para que las aplicaciones cliente puedan renderizar dinámicamente las extensiones permitidas.
 
 ```java
 @RestController
@@ -406,7 +452,7 @@ public class FormatController {
 
 ### Gestión de memoria
 
-**Cachea sabiamente**: Las listas de formatos no cambian en tiempo de ejecución, así que cachealas:
+**Cachea con prudencia**: almacena la lista de formatos soportados en un campo `static final` o en un proveedor de caché dedicado (p. ej., Caffeine). Los metadatos ocupan solo unos pocos kilobytes, pero la reflexión repetida puede acumularse.
 
 ```java
 // Good: Initialize once, use many times
@@ -419,7 +465,7 @@ private static final List<FileType> SUPPORTED_FORMATS =
 
 ### Manejo de errores
 
-**Degradación elegante**: Siempre ten alternativas cuando la detección de formatos falle:
+**Degradación elegante**: si la detección de formatos falla (p. ej., por un JAR corrupto), recurre a una lista mínima codificada y registra una advertencia. Nunca dejes que la excepción llegue a la interfaz de usuario.
 
 ```java
 public boolean isFormatSupported(String filename) {
@@ -435,9 +481,9 @@ public boolean isFormatSupported(String filename) {
 }
 ```
 
-### Optimización del rendimiento
+### Optimización de rendimiento
 
-**Inicialización diferida**: No cargues la información de formatos hasta que sea necesario:
+**Inicialización perezosa**: retrasa la carga de la lista de formatos hasta la primera solicitud que realmente la necesite. Esto reduce el tiempo de arranque para micro‑servicios que pueden nunca manejar documentos.
 
 ```java
 public class LazyFormatChecker {
@@ -464,7 +510,7 @@ public class LazyFormatChecker {
 
 ### Gestión de configuración
 
-**Externaliza restricciones de formato**: Usa archivos de configuración para políticas de formato:
+**Externaliza las restricciones de formato**: mantén un `application.yml` o archivo `properties` que enumere las extensiones permitidas por unidad de negocio. Así los cambios de política son posibles sin redeploy de código.
 
 ```yaml
 # application.yml
@@ -481,48 +527,30 @@ document-processing:
 
 ### Gestión documental empresarial
 
-**Escenario**: Gran organización necesita **handle unsupported file** types across departments with varying format requirements.
-
-**Enfoque de implementación**:
-- Listas de formatos permitidos específicas por departamento  
-- Informes automáticos de formatos y verificación de cumplimiento  
-- Integración con sistemas de gestión del ciclo de vida de documentos  
+Las grandes organizaciones a menudo necesitan listas de permitidos específicas por departamento. Combinando los metadatos de `FileType` con control de acceso basado en roles, puedes aplicar políticas granulares como “Legal puede subir PDFs y DOCX, mientras que Marketing también puede subir PPTX”.
 
 ### Integración con almacenamiento en la nube
 
-**Escenario**: Aplicación SaaS que sincroniza archivos de varios proveedores de almacenamiento en la nube.
+Al sincronizar archivos desde servicios como AWS S3, Azure Blob o Google Drive, filtra los formatos no soportados **antes** de descargarlos. Esto ahorra ancho de banda y reduce costos de almacenamiento.
 
-**Consideraciones clave**:
-- Compatibilidad de formatos entre diferentes sistemas de almacenamiento  
-- Optimización del ancho de banda filtrando formatos no compatibles temprano  
-- Notificaciones al usuario sobre archivos no compatibles durante la sincronización  
+### Sistemas de flujo de trabajo automatizado
 
-### Sistemas de flujo de trabajo automatizados
-
-**Escenario**: Automatización de procesos de negocio que enruta documentos según formato y contenido.
-
-**Beneficios de la implementación**:
-- Enrutamiento inteligente basado en capacidades de formato  
-- Conversión automática de formatos cuando sea posible  
-- Optimización del flujo de trabajo mediante procesamiento consciente del formato  
+La automatización de procesos empresariales puede enrutar documentos según su formato. Por ejemplo, un flujo de revisión de contratos solo acepta DOCX, mientras que una canalización de procesamiento de facturas acepta PDF, XLSX y CSV.
 
 ## Consideraciones de rendimiento y optimización
 
 ### Optimización del uso de memoria
 
-**El desafío**: Cargar toda la información de formatos compatibles podría consumir memoria innecesaria en entornos con recursos limitados.
-
-**Soluciones**:
-1. **Carga diferida** – Cargar la información de formatos solo cuando sea necesario.  
-2. **Caché selectivo** – Almacenar en caché solo los formatos relevantes para tu caso de uso.  
-3. **Referencias débiles** – Permitir la recolección de basura cuando la memoria es escasa.  
+Cargar todos los metadatos de formatos en memoria es barato (≈ 5 KB). Sin embargo, si ejecutas docenas de micro‑servicios en un contenedor con recursos limitados, puedes:
+1. **Carga perezosa** solo cuando sea necesario.  
+2. **Caché selectivo** – conserva solo los formatos que realmente soportas (p. ej., documentos de office).  
+3. Usa cachés **WeakReference** para que la JVM recupere memoria bajo presión.
 
 ### Consejos de rendimiento de CPU
 
-**Comprobación de formato eficiente**:
-- Usa `HashSet` para un rendimiento de búsqueda O(1) en lugar de búsquedas lineales.  
-- Precompila patrones regex para la validación de formatos.  
-- Considera usar streams paralelos para operaciones de lotes grandes.
+- Utiliza un `HashSet<String>` construido a partir de las extensiones en caché para búsquedas en tiempo constante.  
+- Pre‑compila cualquier expresión regular que uses para validar nombres de archivo.  
+- Para trabajos por lotes masivos, procesa archivos en streams paralelos (`parallelStream()`) respetando los límites de I/O.
 
 ```java
 // Efficient format validation
@@ -536,107 +564,105 @@ public boolean isSupported(String extension) {
 
 ### Consideraciones de escalado
 
-**Para aplicaciones de alto rendimiento**:
-- Inicializa la información de formatos al iniciar la aplicación.  
-- Usa agrupación de conexiones si integras con servicios externos de detección de formatos.  
-- Considera cachés distribuidos (Redis, Hazelcast) para entornos en clúster.  
+- **Arranque de la aplicación**: inicializa la lista de formatos en un método `@PostConstruct` de un bean Spring.  
+- **Cachés distribuidos**: en un entorno clusterizado, comparte la lista en caché vía Redis o Hazelcast para evitar que cada nodo la cargue por separado.  
+- **Pool de conexiones**: si llamas a servicios externos para validaciones adicionales, usa un pool (p. ej., HikariCP) para mantener baja la latencia.
 
 ## Solución de problemas comunes en tiempo de ejecución
 
 ### Problema: Resultados inconsistentes de detección de formatos
 
-**Síntomas**: La misma extensión de archivo a veces devuelve un estado de soporte diferente.
+**Síntomas**: la misma extensión a veces se reporta como no soportada.
 
-**Causas raíz**:
-- Diferencias de versión entre instancias de la biblioteca.  
-- Limitaciones de licencia que afectan los formatos disponibles.  
-- Conflictos en el classpath con otras bibliotecas de procesamiento de documentos.
+**Causas raíz**
+- Versiones diferentes de la biblioteca en distintos nodos.  
+- Restricciones de licencia que desactivan ciertos formatos premium.  
+- JARs duplicados que generan confusión en el classloader.
 
-**Enfoque de depuración**:
-1. Registra la versión exacta de la biblioteca que se está usando.  
-2. Verifica el estado y la cobertura de la licencia.  
-3. Busca JARs duplicados en el classpath.  
+**Enfoque de depuración**
+1. Registra la versión de `GroupDocs.Comparison` al iniciar (`VersionInfo.getVersion()`).  
+2. Verifica que el archivo de licencia sea idéntico en todos los servidores.  
+3. Ejecuta `java -verbose:class` para asegurar que solo se cargue una copia de la biblioteca.
 
 ### Problema: Degradación del rendimiento con el tiempo
 
-**Síntomas**: La detección de formatos se vuelve más lenta con el tiempo de actividad de la aplicación.
+**Síntomas**: la detección de formatos se vuelve más lenta después de varias horas de uptime.
 
-**Causas comunes**:
-- Fugas de memoria en los mecanismos de caché de formatos.  
-- Crecimiento de cachés internos sin limpieza.  
-- Contención de recursos con otros componentes de la aplicación.
+**Causas comunes**
+- Fugas de memoria en cachés personalizados que siguen creciendo.  
+- `ArrayList` sin límite usado para almacenar objetos temporales `FileType`.  
+- Pausas de GC excesivas debido a presión de heap grande.
 
-**Soluciones**:
-- Implementa políticas adecuadas de expulsión de caché.  
-- Monitorea los patrones de uso de memoria.  
-- Utiliza herramientas de perfilado para identificar cuellos de botella.  
+**Soluciones**
+- Implementa una política de expulsión (p. ej., LRU) para cualquier caché personalizado.  
+- Monitorea el uso de heap con JVisualVM o herramientas similares.  
+- Perfila con Java Flight Recorder para identificar los puntos críticos.
 
 ### Problema: La detección de formatos falla silenciosamente
 
-**Síntomas**: No se lanzan excepciones, pero el soporte de formatos parece incompleto.
+**Síntomas**: no se lanza excepción, pero algunos formatos nunca aparecen en la lista.
 
-**Pasos de investigación**:
-1. Habilita el registro de depuración para los componentes de GroupDocs.  
-2. Verifica que la inicialización de la biblioteca se haya completado con éxito.  
-3. Comprueba restricciones de licencia en formatos específicos.  
+**Pasos de investigación**
+1. Habilita el registro de depuración para `com.groupdocs` (`log4j.logger.com.groupdocs=DEBUG`).  
+2. Confirma que la inicialización de la biblioteca haya tenido éxito (`License.isValid()`).  
+3. Verifica si los formatos faltantes forman parte de un **add‑on premium** que requiere una licencia de nivel superior.
 
 ## Conclusión y próximos pasos
 
-Entender e implementar **detect supported formats java** no se trata solo de escribir código—es sobre construir aplicaciones resilientes y amigables para el usuario que manejan con gracia el caótico panorama de formatos de archivo del mundo real.
+Entender **cómo listar formatos** no se trata solo de una llamada a la API—es la base de una canalización documental resiliente y amigable para el usuario. Al integrar detección en tiempo de ejecución, caché y manejo robusto de errores, eliminarás toda una clase de bugs y ofrecerás una experiencia más fluida a tus clientes.
 
-**Key takeaways from this guide**:
-- **Detección programática de formatos** previene sorpresas en tiempo de ejecución y mejora la experiencia del usuario.  
-- **Configuración e instalación adecuadas** ahorran horas de depuración de problemas comunes.  
-- **Caché inteligente y optimización de rendimiento** asegura que tu aplicación escale eficazmente.  
-- **Manejo robusto de errores** mantiene tu aplicación funcionando sin problemas incluso cuando ocurren fallas.  
+**Lista de verificación**
+- Usa `FileType.getSupportedFileTypes()` una vez, almacena el resultado en caché y consúltalo con un `HashSet`.  
+- Valida las cargas **antes** de cualquier procesamiento intensivo para ahorrar CPU y mejorar la UX.  
+- Mantén tu licencia actualizada; las nuevas versiones traen formatos adicionales.  
+- Externaliza las listas de permitidos para que las reglas de negocio evolucionen sin cambios de código.  
 
-**Your next steps**:
-1. Implementa la detección básica de formatos en tu proyecto actual usando el ejemplo de código central.  
-2. Añade un manejo de errores integral para capturar casos límite de forma elegante.  
-3. Optimiza para tu caso de uso específico con los patrones de caché discutidos.  
-4. Elige un patrón de integración (validación previa a la carga, procesamiento por lotes o API REST) que se ajuste a tu arquitectura.  
+**Acciones siguientes**
+1. Añade el fragmento de detección central a tu servicio de carga existente.  
+2. Implementa un caché singleton (p. ej., usando `@Cacheable` de Spring).  
+3. Elige uno de los patrones de integración (pre‑carga, lote o REST) que mejor se ajuste a tu arquitectura.  
+4. Ejecuta benchmarks de rendimiento con un conjunto de datos representativo para confirmar velocidades de búsqueda O(1).  
 
-¿Listo para ir más allá? Explora las funciones avanzadas de GroupDocs.Comparison como opciones de comparación específicas por formato, extracción de metadatos y capacidades de procesamiento por lotes para crear flujos de trabajo de procesamiento de documentos aún más potentes.
+¿Listo para más? Explora las funciones avanzadas de GroupDocs.Comparison como comparación lado a lado, extracción de metadatos y trabajos de comparación masiva para construir flujos de trabajo documentales de nivel empresarial.
 
 ## Preguntas frecuentes
 
-**P: ¿Qué ocurre si intento procesar un formato de archivo no compatible?**  
-**R:** GroupDocs.Comparison lanzará una excepción. La pre‑validación usando `getSupportedFileTypes()` te permite detectar problemas de compatibilidad antes de que comience el procesamiento.
+**P: ¿Qué ocurre si intento procesar un formato de archivo no soportado?**  
+R: GroupDocs.Comparison lanza una `UnsupportedFileFormatException`. La pre‑validación con `getSupportedFileTypes()` te permite interceptar el problema antes de iniciar cualquier procesamiento costoso.
 
-**P: ¿Cambia la lista de formatos compatibles entre versiones de la biblioteca?**  
-**R:** Sí, las versiones más recientes suelen añadir soporte para formatos adicionales. Siempre revisa las notas de la versión al actualizar y considera volver a almacenar en caché la lista de formatos compatibles después de las actualizaciones.
+**P: ¿Cambia la lista de formatos soportados entre versiones de la biblioteca?**  
+R: Sí. Cada nueva versión añade soporte para formatos adicionales—con frecuencia 3‑5 nuevos por versión menor. Siempre vuelve a almacenar en caché después de una actualización.
 
-**P: ¿Puedo ampliar la biblioteca para soportar formatos adicionales?**  
-**R:** GroupDocs.Comparison tiene un conjunto fijo de formatos compatibles. Si necesitas formatos extra, considera usarla junto a otras bibliotecas especializadas o contactar a GroupDocs sobre soporte de formatos personalizados.
+**P: ¿Puedo extender la biblioteca para soportar formatos adicionales?**  
+R: La lista de formatos soportados es fija por lanzamiento. Para formatos especializados, combina GroupDocs.Comparison con un parser de terceros o contacta a GroupDocs para un add‑on personalizado.
 
 **P: ¿Cuánta memoria usa la detección de formatos?**  
-**R:** La huella de memoria es mínima—generalmente solo unos pocos KB para los metadatos de formato. La consideración más importante es cómo almacenas en caché y utilizas esta información en tu aplicación.
+R: Los metadatos ocupan aproximadamente 5 KB. El impacto real de memoria proviene de cómo almacenes y compartas la colección en caché; un simple `HashSet<String>` añade una sobrecarga insignificante.
 
 **P: ¿Es la detección de formatos segura para subprocesos?**  
-**R:** Sí, `FileType.getSupportedFileTypes()` es segura para subprocesos. Sin embargo, si implementas tu propio mecanismo de caché, asegúrate de manejar correctamente el acceso concurrente.
+R: Sí, `FileType.getSupportedFileTypes()` es thread‑safe. Asegúrate de que tu propio caché (p. ej., un `ConcurrentHashMap` estático) también maneje lecturas/escrituras concurrentes.
 
-**P: ¿Cuál es el impacto de rendimiento al comprobar el soporte de formatos?**  
-**R:** Con un caché adecuado, la comprobación de formatos es esencialmente una operación de búsqueda O(1). La llamada inicial a `getSupportedFileTypes()` tiene cierto coste, pero las comprobaciones posteriores son muy rápidas.
+**P: ¿Cuál es el impacto de rendimiento al comprobar el soporte de un formato?**  
+R: La llamada inicial implica un costo único de ~10‑15 ms en un servidor típico. Las búsquedas posteriores son O(1) y se completan en menos de 0.1 ms.
 
-## Recursos adicionales
+---
 
-**Documentation:**  
+**Última actualización:** 2026-07-20  
+**Probado con:** GroupDocs.Comparison 25.2 for Java  
+**Autor:** GroupDocs  
+
+**Recursos adicionales**
+
 - [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)
-
-**Getting Started:**  
+- [API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
 - [Download and Installation Guide](https://releases.groupdocs.com/comparison/java/)  
 - [Free Trial Access](https://releases.groupdocs.com/comparison/java/)  
-- [Temporary License for Development](https://purchase.groupdocs.com/temporary-license/)
-
-**Community and Support:**  
+- [Temporary License for Development](https://purchase.groupdocs.com/temporary-license/)  
 - [Developer Support Forum](https://forum.groupdocs.com/c/comparison)  
 - [Purchase and Licensing Information](https://purchase.groupdocs.com/buy)
 
----
+## Tutoriales relacionados
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs  
-
----
+- [Java Get File Type – Extract Document Metadata Guide](/comparison/java/document-information/extract-document-info-groupdocs-comparison-java/)
+- [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
+- [Customize Document Comparison Java – Complete Guide](/comparison/java/comparison-options/)

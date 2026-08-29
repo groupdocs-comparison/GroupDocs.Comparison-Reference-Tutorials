@@ -1,14 +1,89 @@
 ---
 categories:
 - File Comparison
-date: '2026-03-08'
-description: GroupDocs.Comparison kullanarak .NET’te klasörleri nasıl karşılaştıracağınızı
-  öğrenin, HTML raporu veya TXT günlüğü oluşturun ve pratik C# örnekleriyle dosya
-  yönetimini otomatikleştirin.
-keywords: folder comparison .NET tutorial, GroupDocs comparison save TXT HTML, compare
-  directories C# code, .NET file comparison library, automated directory comparison
-lastmod: '2026-03-08'
-linktitle: How to Compare Folders in .NET
+date: '2026-07-20'
+description: .NET'te klasörleri nasıl karşılaştıracağınızı öğrenin, GroupDocs.Comparison
+  ile adım adım klasör karşılaştırmayı keşfedin, HTML veya TXT raporları oluşturun
+  ve C# kullanarak dosya yönetimini otomatikleştirin.
+keywords:
+- how to compare folders
+- compare two directories
+- compare directories c#
+- GroupDocs folder comparison
+- .NET file comparison
+lastmod: '2026-07-20'
+linktitle: .NET'te Klasörleri Karşılaştırma
+og_description: GroupDocs.Comparison ile .NET'te klasörleri nasıl karşılaştıracağınızı
+  öğrenin. Adım adım C# kodu, TXT günlükleri, HTML raporları ve klasör karşılaştırması
+  için performans ipuçları alın.
+og_image_alt: 'Developer guide: Compare folders in .NET using GroupDocs.Comparison'
+og_title: .NET'te Klasörleri Karşılaştırma – Tam Rehber
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  headline: How to Compare Folders in .NET – Guide with GroupDocs
+  type: TechArticle
+- description: Learn how to compare folders in .NET, discover how to compare folders
+    step‑by‑step with GroupDocs.Comparison, generate HTML or TXT reports, and automate
+    file management using C#.
+  name: How to Compare Folders in .NET – Guide with GroupDocs
+  steps:
+  - name: Configure Your Comparison Options
+    text: The `FolderComparisonOptions` class lets you fine‑tune the comparison. **Definition
+      anchor:** `FolderComparisonOptions` defines all configurable settings for a
+      folder comparison operation. You’re telling GroupDocs.Comparison that you want
+      to compare entire directories (not individual files) and outp
+  - name: Initialize the Comparer Object
+    text: '**Definition anchor:** `Comparer` is the core class that performs the comparison
+      between source and target items. This is where the magic begins. You’re creating
+      a `Comparer` instance with your source folder as the baseline, then adding the
+      target folder for comparison. Think of it like saying “comp'
+  - name: Execute the Comparison and Save Results
+    text: That’s it! Your comparison results are now saved as a text file. The output
+      will include details about added, deleted, and modified files, making it easy
+      to understand what changed between the two directories.
+  - name: Configure HTML Comparison Options
+    text: '**Definition anchor:** `FolderComparisonExtension.Html` tells the API to
+      produce an HTML‑based report instead of plain text. The key difference here
+      is the `FolderComparisonExtension.Html` setting. This tells GroupDocs.Comparison
+      to generate a rich HTML report instead of plain text.'
+  - name: Initialize Comparer for HTML Output
+    text: Same pattern as before, but now configured for HTML output. The beauty of
+      GroupDocs.Comparison's API is its consistency—you use the same methods regardless
+      of output format.
+  - name: Generate and Save HTML Report
+    text: The HTML file you get is a complete, self‑contained report that you can
+      open in any web browser. It includes interactive elements, syntax highlighting
+      (for code files), and a clean, professional layout.
+  type: HowTo
+- questions:
+  - answer: Absolutely! GroupDocs.Comparison fully supports cross‑platform deployment
+      through .NET Core. It works seamlessly on Linux, macOS, and Windows environments.
+    question: Can I use GroupDocs.Comparison for .NET on Linux systems?
+  - answer: 'For large directories, implement these strategies: use asynchronous processing,
+      break comparisons into smaller batches, exclude unnecessary file types, and
+      monitor memory usage. Consider providing progress feedback to users for long‑running
+      operations.'
+    question: How should I handle very large directories with thousands of files?
+  - answer: While there’s no hard limit built into the library, performance depends
+      on your system resources (RAM, CPU, disk speed) and file sizes. Most systems
+      can handle thousands of files without issues, but very large datasets might
+      require optimisation strategies.
+    question: Is there a practical limit to the number of files I can compare?
+  - answer: The library cannot directly compare encrypted files. You’ll need to decrypt
+      files first if you have the appropriate permissions and credentials. Always
+      ensure you comply with your organisation’s security policies when handling encrypted
+      content.
+    question: Can GroupDocs.Comparison handle encrypted or password‑protected files?
+  - answer: Create console applications that use GroupDocs.Comparison, configure them
+      to return appropriate exit codes based on comparison results, and integrate
+      them into your build scripts. TXT output is particularly useful for parsing
+      results in automated environments.
+    question: How do I integrate folder comparison into automated CI/CD pipelines?
+  type: FAQPage
 tags:
 - groupdocs
 - folder-comparison
@@ -21,53 +96,35 @@ url: /tr/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tuto
 weight: 1
 ---
 
-10, CODE_BLOCK_11. Keep them unchanged.
+# .NET'te Klasörleri Nasıl Karşılaştırılır – GroupDocs ile Kılavuz
 
-Also ensure bold formatting preserved.
-
-Now produce final content.# Klasörleri .NET'te Karşılaştırma – GroupDocs ile Rehber
-
-İki dizin arasındaki farkları bulmak için yüzlerce dosyayı manuel olarak kontrol ettiğiniz oldu mu? **Bu öğreticide .NET'te GroupDocs.Comparison kullanarak klasörleri nasıl karşılaştıracağınızı öğreneceksiniz**. Kod dağıtımlarını yönetiyor, yedekleri doğruluyor veya yapılandırma değişikliklerini izliyor olun, .NET'te klasör karşılaştırması sıkıcı işleri saatlerce tasarruf ettirebilir.
-
-**GroupDocs.Comparison for .NET**, bu sorunu basit, otomatik bir sürece dönüştürür. Tüm dizin yapılarını karşılaştırabilir, değişiklikleri anında tespit edebilir ve sonuçları iş akışınıza uygun formatlarda dışa aktarabilirsiniz (kayıtlar için TXT, görsel incelemeler için HTML).
+Eğer .NET'te **klasörleri nasıl karşılaştıracağınızı** öğrenmek istiyorsanız, doğru yerdesiniz. Bu öğreticide GroupDocs.Comparison kullanarak iki dizin arasındaki farkları otomatik olarak tespit etmeyi, hem TXT günlüklerini hem de zengin HTML raporlarını oluşturmayı ve süreci gerçek dünya C# uygulamalarına entegre etmeyi adım adım göstereceğiz.
 
 ## Hızlı Yanıtlar
-- **Birincil amacı nedir?** Klasör karşılaştırmasını otomatikleştirmek ve ayrıntılı TXT veya HTML raporları oluşturmak.  
+- **Ana amaç nedir?** Klasör karşılaştırmasını otomatikleştirmek ve ayrıntılı TXT veya HTML raporları oluşturmak.  
 - **Hangi çıktı formatları destekleniyor?** Kolay ayrıştırma için TXT ve görsel rapor oluşturmak için HTML.  
-- **Lisans gerekiyor mu?** Öğrenme için ücretsiz deneme yeterlidir; üretim için ticari lisans su işaretlerini kaldırır.  
+- **Lisans gerekli mi?** Öğrenme için ücretsiz deneme yeterlidir; ticari lisans üretim ortamında filigranları kaldırır.  
 - **Bunu Linux'ta çalıştırabilir miyim?** Evet – GroupDocs.Comparison, Linux, macOS ve Windows üzerinde .NET Core'u destekler.  
-- **Hangi .NET sürümleri uyumludur?** .NET Core 3.1+ ve .NET 5/6/7/8.
+- **Hangi .NET sürümleri uyumlu?** .NET Core 3.1+ ve .NET 5/6/7/8.
 
-## .NET Geliştiricileri İçin Klasör Karşılaştırmasının Önemi
+## Bu Kılavuzda Neler Öğreneceksiniz?
 
-İki dizin arasındaki farkları bulmak için yüzlerce dosyayı manuel olarak kontrol ettiğiniz oldu mu? Yalnız değilsiniz. Kod dağıtımlarını yönetiyor, yedekleri doğruluyor veya yapılandırma değişikliklerini izliyor olun, **.NET'te klasör karşılaştırması** saatlerce sıkıcı işi tasarruf ettirebilir.
+Bu kılavuzda GroupDocs.Comparison kullanarak C#'ta iki dizini nasıl karşılaştıracağınızı, hem TXT hem de HTML raporları oluşturmayı, büyük klasör yapılarıyla verimli bir şekilde çalışmayı ve karşılaştırmayı CI/CD boru hatlarına veya yedek doğrulama betiklerine entegre etmeyi öğreneceksiniz. Ayrıca büyük veri setleri için performansı nasıl ayarlayacağınızı ve HTML rapor düzenini ihtiyaçlarınıza göre nasıl özelleştireceğinizi keşfedeceksiniz.
 
-**GroupDocs.Comparison for .NET**, bu sorunu basit, otomatik bir sürece dönüştürür. Tüm dizin yapılarını karşılaştırabilir, değişiklikleri anında tespit edebilir ve sonuçları iş akışınıza uygun formatlarda dışa aktarabilirsiniz (kayıtlar için TXT, görsel incelemeler için HTML).
+## .NET Geliştiricileri için Klasör Karşılaştırması Neden Önemlidir
 
-Bu kapsamlı öğreticide, basit dizin kontrollerinden karmaşık kurumsal düzey dosya yönetimi senaryolarına kadar her şeyi yöneten sağlam klasör karşılaştırma işlevselliğini nasıl uygulayacağınızı keşfedeceksiniz.
-
-## Bu Kılavuzda Öğrenecekleriniz
-
-Bu öğreticinin sonunda, klasör karşılaştırma çözümlerini güvenle uygulayabileceksiniz:
-
-- Her boyuttaki dizinleri verimli bir şekilde karşılaştırın  
-- TXT ve HTML formatlarında ayrıntılı raporlar oluşturun (**generate HTML report** dahil)  
-- Köşe durumlarını ve performans hususlarını yönetin  
-- Mevcut .NET uygulamalarınıza sorunsuz bir şekilde entegre edin  
-- Tekrarlayan dosya yönetimi görevlerini otomatikleştirin  
-
-Gereksinimlere dalalım ve başarı için sizi hazırlayalım!
+Klasör karşılaştırması, yüzlerce dosyayı manuel olarak taramaktan sizi kurtarır. Dağıtımları doğruluyor, yedekleri kontrol ediyor ya da yapılandırma sapmalarını izliyor olsanız, **C# tarzı dizin karşılaştırması** eklenen, kaldırılan veya değiştirilen dosyaları saatler yerine saniyeler içinde görmenizi sağlar.
 
 ## Önkoşullar ve Ortam Kurulumu
 
-Eğlenceli bölümlere geçmeden önce, ihtiyacınız olan her şeye sahip olduğunuzdan emin olalım. Endişelenmeyin – kurulum basittir ve her adımı size anlatacağım.
+Eğlenceli bölümlere geçmeden önce, ihtiyacınız olan her şeye sahip olduğunuzdan emin olalım. Endişelenmeyin – kurulum basittir ve sizi her adımda yönlendireceğim.
 
 ### Gerekenler
 
 **Gerekli Kütüphaneler ve Sürümler**  
-- **GroupDocs.Comparison for .NET**: Sürüm 25.4.0 (2025 itibarıyla en son kararlı sürüm)  
-- **.NET Framework/SDK**: .NET Core 3.1+ ve .NET 5/6/7/8 ile uyumlu  
-- **Geliştirme Ortamı**: Visual Studio 2019+ (Community sürümü mükemmel çalışır)
+- **GroupDocs.Comparison for .NET**: Sürüm 25.4.0 (2025 itibarıyla en son kararlı sürüm) – **50+ giriş ve çıkış formatını** destekler; DOCX, PDF, HTML ve görüntü türleri dahil.  
+- **.NET Framework/SDK**: .NET Core 3.1+ ve .NET 5/6/7/8 ile uyumludur  
+- **Geliştirme Ortamı**: Visual Studio 2019+ (Community sürümü sorunsuz çalışır)
 
 **Bilgi Önkoşulları**  
 - C# programlamaya temel bir anlayış (basit bir konsol uygulaması yazabiliyorsanız yeterli)  
@@ -76,17 +133,15 @@ Eğlenceli bölümlere geçmeden önce, ihtiyacınız olan her şeye sahip oldu�
 
 ### Hızlı Ortam Kontrolü
 
-Kurulumunuzun hazır olduğunu doğrulamanın basit bir yolu:
-
 1. Tercih ettiğiniz IDE'yi açın (Visual Studio, VS Code veya JetBrains Rider)  
 2. .NET Core 3.1 veya daha yeni bir hedefle yeni bir konsol uygulaması oluşturun  
 3. NuGet Package Manager'a erişebildiğinizden emin olun  
 
-Bu üç şeyi yapabiliyorsanız, hazırsınız! Şimdi GroupDocs.Comparison'ı kurup yapılandırmaya geçelim.
+Bu üç şeyi yapabiliyorsanız, hazırsınız! Şimdi GroupDocs.Comparison'ı kurup yapılandıralım.
 
 ## GroupDocs.Comparison'ı Kurma ve Yapılandırma
 
-Project'inizde GroupDocs.Comparison'ı kurup çalıştırmak çok kolay. İki ana kurulum yöntemi var ve ikisini de göstereceğim.
+GroupDocs.Comparison'ı projenizde çalıştırmak çok kolay. İki ana kurulum yöntemi var ve ikisini de göstereceğim.
 
 ### Kurulum Yöntemleri
 
@@ -100,21 +155,21 @@ Install-Package GroupDocs.Comparison -Version 25.4.0
 dotnet add package GroupDocs.Comparison --version 25.4.0
 ```
 
-Pro ipucu: Sürümü her zaman belirtin, böylece ekip ve dağıtım ortamları arasında tutarlılık sağlanır.
+İpucu: Sürümü her zaman belirtin, böylece ekip ve dağıtım ortamları arasında tutarlılık sağlanır.
 
-### Lisans Seçeneklerini Anlamak
+### Lisans Seçeneklerini Anlama
 
 GroupDocs.Comparison, farklı ihtiyaçlara uygun esnek lisanslama sunar:
 
-- **Free Trial**: Değerlendirme için mükemmel – bazı sınırlamalarla tüm özelliklere erişim sağlar  
-- **Temporary License**: Kanıt-konsept projeler için ideal – deneme kısıtlamalarını geçici olarak kaldırır  
-- **Commercial License**: Üretim uygulamaları için tam özellikler  
+- **Ücretsiz Deneme**: Değerlendirme için mükemmel – bazı sınırlamalarla tüm özelliklere erişim sağlar  
+- **Geçici Lisans**: Kavram kanıtı projeleri için ideal – deneme kısıtlamalarını geçici olarak kaldırır  
+- **Ticari Lisans**: Üretim uygulamaları için tam özellikler  
 
-Öğrenme amaçlı, ücretsiz deneme yeterlidir. Dağıtıma hazır olduğunuzda her zaman yükseltebilirsiniz.
+Öğrenme amaçlı ücretsiz deneme yeterlidir. Dağıtıma hazır olduğunuzda her zaman yükseltebilirsiniz.
 
 ### Temel Başlatma ve Kurulum
 
-İşte ilk GroupDocs.Comparison kod parçacığınız. Bu basit kurulum her şeyin doğru çalıştığını doğrular:
+İşte GroupDocs.Comparison kodunuzun ilk parçası. Bu basit kurulum her şeyin doğru çalıştığını doğrular:
 
 ```csharp
 using System;
@@ -134,24 +189,27 @@ class Program
 }
 ```
 
-Bu kod hatasız çalışırsa, tebrikler! Güçlü klasör karşılaştırma işlevselliği oluşturmaya hazırsınız.
+Bu kod hatasız çalışıyorsa, tebrikler! Güçlü klasör karşılaştırma işlevselliği oluşturmaya hazırsınız.
 
-## Klasörleri Karşılaştırma ve Sonuçları TXT Dosyası Olarak Kaydetme
+## Klasörleri Karşılaştırma ve Sonuçları TXT Dosyaları Olarak Kaydetme
 
 En basit yaklaşımla başlayalım: iki dizini karşılaştırmak ve sonuçları bir metin dosyası olarak kaydetmek. Bu yöntem otomatik betikler, günlük sistemleri veya basit, ayrıştırılabilir bir çıktı formatına ihtiyaç duyduğunuzda mükemmeldir.
 
 ### Neden TXT Çıktısı Seçilmeli?
 
-Metin dosyaları son derece çok yönlüdür. Hafiftir, programatik olarak ayrıştırması kolaydır, sürüm kontrolüne uygundur ve herhangi bir sistemde görüntülenebilir. Şunlar için idealdir:
+Metin dosyaları son derece çok yönlüdür. Hafiftir, programatik olarak ayrıştırması kolaydır, sürüm kontrolüne dosttur ve herhangi bir sistemde görüntülenebilir. Şunlar için mükemmeldir:
 
-- Otomatik derleme süreçleri
-- Günlük dosyası analizi
-- Komut satırı araçları
-- Diğer sistemlerle entegrasyon
+- Otomatik derleme süreçleri  
+- Günlük dosyası analizi  
+- Komut satırı araçları  
+- Diğer sistemlerle entegrasyon  
 
 ### Adım Adım Uygulama
 
 #### Adım 1: Karşılaştırma Seçeneklerinizi Yapılandırın
+
+`FolderComparisonOptions` sınıfı, karşılaştırmayı ince ayarlamanızı sağlar.  
+**Tanım referansı:** `FolderComparisonOptions`, bir klasör karşılaştırma işlemi için tüm yapılandırılabilir ayarları tanımlar.
 
 ```csharp
 using System;
@@ -171,9 +229,11 @@ Options.CompareOptions compareOptionsTxt = new Options.CompareOptions
 };
 ```
 
-**Burada ne oluyor?** GroupDocs.Comparison'a tüm dizinleri (tek tek dosyalar yerine) karşılaştırmak ve sonuçları metin formatında çıkarmak istediğinizi söylüyorsunuz. `DirectoryCompare = true` ayarı kritik; bu, özyinelemeli dizin karşılaştırma işlevselliğini etkinleştirir.
+GroupDocs.Comparison'a tüm dizinleri (tek tek dosyalar değil) karşılaştırmak ve sonuçları metin formatında çıkarmak istediğinizi söylüyorsunuz. `DirectoryCompare = true` ayarı kritik; yinelemeli dizin karşılaştırma işlevselliğini etkinleştirir.
 
 #### Adım 2: Comparer Nesnesini Başlatın
+
+**Tanım referansı:** `Comparer`, kaynak ve hedef öğeler arasındaki karşılaştırmayı gerçekleştiren temel sınıftır.
 
 ```csharp
 Comparer comparerTxt = new Comparer(sourceFolder, compareOptionsTxt);
@@ -181,7 +241,7 @@ Comparer comparerTxt = new Comparer(sourceFolder, compareOptionsTxt);
 comparerTxt.Add(targetFolder, compareOptionsTxt);
 ```
 
-Büyünün başladığı yer burası. Kaynak klasörünüzü temel alarak bir `Comparer` örneği oluşturuyor, ardından karşılaştırma için hedef klasörü ekliyorsunuz. Bunu, “klasör B'deki her şeyi klasör A'ya karşılaştır” demek gibi düşünün.
+Burası sihrin başladığı yer. Kaynak klasörünüzü temel alarak bir `Comparer` örneği oluşturuyor, ardından karşılaştırma için hedef klasörü ekliyorsunuz. Bunu, “klasör B'deki her şeyi klasör A'ya karşı karşılaştır” demek gibi düşünün.
 
 #### Adım 3: Karşılaştırmayı Çalıştırın ve Sonuçları Kaydedin
 
@@ -193,31 +253,31 @@ Console.WriteLine("TXT file with comparison results saved successfully.");
 Console.WriteLine($"Check your results at: {txtOutputFileName}");
 ```
 
-Hepsi bu! Karşılaştırma sonuçlarınız artık bir metin dosyası olarak kaydedildi. Çıktı, eklenen, silinen ve değiştirilmiş dosyalar hakkında ayrıntılar içerecek, iki dizin arasındaki değişiklikleri anlamayı kolaylaştıracak.
+Hepsi bu! Karşılaştırma sonuçlarınız artık bir metin dosyası olarak kaydedildi. Çıktı, eklenen, silinen ve değiştirilen dosyalar hakkında ayrıntılar içerecek, böylece iki dizin arasındaki değişiklikleri anlamak kolaylaşacak.
 
 ### TXT Çıktı Formatını Anlamak
 
 Oluşturulan metin dosyası genellikle şunları içerir:
 
-- **Added files** – hedefte mevcut ancak kaynakta olmayan dosyalar  
-- **Deleted files** – kaynakta mevcut ancak hedefte olmayan dosyalar  
-- **Modified files** – her iki dizinde de mevcut ancak içeriği farklı dosyalar  
-- **File metadata** – boyut, değiştirme tarihleri ve diğer ilgili bilgiler
+- **Eklenen dosyalar** – hedefte var ancak kaynakta yok  
+- **Silinen dosyalar** – kaynakta var ancak hedefte yok  
+- **Değiştirilen dosyalar** – her iki dizinde de var ancak içerikleri farklı  
+- **Dosya meta verileri** – boyut, değiştirme tarihleri ve diğer ilgili bilgiler
 
-## Klasörleri Karşılaştırma ve Sonuçları HTML Dosyası Olarak Kaydetme
+## Klasörleri Karşılaştırma ve Sonuçları HTML Dosyaları Olarak Kaydetme
 
-TXT dosyaları otomasyon için harika olsa da, HTML çıktısı görsel, insan‑okunabilir bir rapora ihtiyaç duyduğunuzda öne çıkar. HTML karşılaştırma sonuçları kod incelemeleri, müşteri sunumları veya bulguları teknik olmayan ekip üyeleriyle paylaşmak için mükemmeldir.
+TXT dosyaları otomasyon için harika olsa da, HTML çıktısı görsel, insan‑okunabilir bir rapora ihtiyaç duyduğunuzda öne çıkar. HTML karşılaştırma sonuçları kod incelemeleri, müşteri sunumları veya bulguları teknik olmayan ekip üyeleriyle paylaşmak istediğinizde mükemmeldir.
 
-### HTML Çıktısının Avantajları (ve **generate HTML report** Nasıl Yapılır?)
+### HTML Çıktısının Avantajları (ve **HTML raporu nasıl oluşturulur**)
 
-- **Visual diff highlighting** – renk kodlu farklarla tam olarak ne değiştiğini görün  
-- **Interactive navigation** – dosya ve klasörler arasında kolayca tıklayarak gezinin  
-- **Professional presentation** – raporlar ve dokümantasyon için ideal  
-- **Cross‑platform viewing** – herhangi bir web tarayıcısında açılır  
-
-### Adım Adım HTML Uygulaması
+- **Görsel fark vurgulama** – renk kodlu farklarla tam olarak ne değiştiğini görün  
+- **Etkileşimli gezinme** – dosya ve klasörler arasında kolayca tıklayın  
+- **Profesyonel sunum** – raporlar ve dokümantasyon için ideal  
+- **Çapraz platform görüntüleme** – herhangi bir web tarayıcısında açılır  
 
 #### Adım 1: HTML Karşılaştırma Seçeneklerini Yapılandırın
+
+**Tanım referansı:** `FolderComparisonExtension.Html`, API'ye düz metin yerine HTML tabanlı bir rapor üretmesini söyler.
 
 ```csharp
 // Set comparison options for HTML output
@@ -228,9 +288,9 @@ Options.CompareOptions compareOptionsHtml = new Options.CompareOptions
 };
 ```
 
-Buradaki temel fark, `FolderComparisonExtension.Html` ayarıdır. Bu, GroupDocs.Comparison'a düz metin yerine zengin bir HTML raporu oluşturmasını söyler.
+Buradaki temel fark, `FolderComparisonExtension.Html` ayarıdır. Bu, GroupDocs.Comparison'a düz metin yerine zengin bir HTML raporu üretmesini söyler.
 
-#### Adım 2: HTML Çıktısı İçin Comparer'ı Başlatın
+#### Adım 2: HTML Çıktısı için Comparer'ı Başlatın
 
 ```csharp
 Comparer comparerHtml = new Comparer(sourceFolder, compareOptionsHtml);
@@ -240,7 +300,7 @@ comparerHtml.Add(targetFolder, compareOptionsHtml);
 
 Öncekine benzer bir desen, ancak şimdi HTML çıktısı için yapılandırılmış. GroupDocs.Comparison API'sinin güzelliği tutarlılığıdır—çıktı formatından bağımsız olarak aynı yöntemleri kullanırsınız.
 
-#### Adım 3: HTML Raporu Oluşturun ve Kaydedin
+#### Adım 3: HTML Raporunu Oluşturun ve Kaydedin
 
 ```csharp
 string htmlOutputFileName = Path.Combine(outputDirectory, "ComparisonResult.html");
@@ -256,57 +316,54 @@ Aldığınız HTML dosyası, herhangi bir web tarayıcısında açabileceğiniz 
 
 HTML çıktınız genellikle şunları içerir:
 
-- **Summary dashboard** – toplam değişikliklerin, etkilenen dosyaların ve karşılaştırma istatistiklerinin genel görünümü  
-- **Side‑by‑side comparisons** – neyin değiştiğini tam olarak gösteren görsel diff görünümü  
-- **Folder tree navigation** – dizin yapısı içinde kolay gezinme  
-- **File‑level details** – vurgulanan farklarla bireysel dosya karşılaştırmaları  
+- **Özet kontrol paneli** – toplam değişiklikler, etkilenen dosyalar ve karşılaştırma istatistiklerinin genel görünümü  
+- **Yan yana karşılaştırmalar** – neyin değiştiğini gösteren görsel fark görünümü  
+- **Klasör ağacı navigasyonu** – dizin yapısında kolay gezinme  
+- **Dosya düzeyinde ayrıntılar** – vurgulanan farklarla bireysel dosya karşılaştırmaları  
 
-## Yaygın Kullanım Senaryoları ve Gerçek‑Dünya Uygulamaları
+## Yaygın Kullanım Senaryoları ve Gerçek Dünya Uygulamaları
 
 Klasör karşılaştırmanın ne zaman ve nasıl kullanılacağını anlamak, geliştirme iş akışınızı önemli ölçüde iyileştirebilir. İşte bu işlevin çok değerli olduğu bazı senaryolar:
 
 ### Kod İncelemesi ve Sürüm Kontrolü
 
 **Senaryo**: İki dal arasındaki değişiklikleri inceliyor veya kod tabanınızın farklı sürümlerini karşılaştırıyorsunuz.  
-
-**Klasör karşılaştırmasının faydası**: Dosyaları tek tek kontrol etmek yerine, tüm proje yapısındaki tüm değişiklikleri, eklemeleri ve silmeleri anında görebilirsiniz. HTML çıktısı burada özellikle yararlıdır—görsel diff raporlarını ekibinizle paylaşabilirsiniz.
+**Klasör karşılaştırmasının faydası**: Dosyaları tek tek kontrol etmek yerine, tüm proje yapınızda yapılan tüm değişiklikleri, eklemeleri ve silmeleri anında görebilirsiniz. HTML çıktısı burada özellikle faydalıdır—görsel fark raporlarını ekibinizle paylaşabilirsiniz.
 
 ### Veri Yedekleme Doğrulaması  
 
-**Senaryo**: Yedekleme sürecinizin tüm dosyaları doğru bir şekilde kopyaladığını ve hiçbir bozulma olmadığını doğrulamanız gerekiyor.  
-
+**Senaryo**: Yedekleme sürecinizin tüm dosyaları doğru bir şekilde kopyaladığını ve bozulma olmadığını doğrulamanız gerekiyor.  
 **Uygulama ipucu**: Yedekleme iş akışınıza entegre edilebilecek otomatik doğrulama betikleri için TXT çıktısını kullanın. Tutarsızlıklar tespit edildiğinde uyarılar ayarlayın.
 
 ### Ortamlar Arası Yapılandırma Yönetimi
 
 **Senaryo**: Uygulama yapılandırmalarını geliştirme, test ve üretim ortamları arasında yönetiyorsunuz.  
-
-**En iyi uygulama**: Düzenli klasör karşılaştırmaları, yapılandırma sapmalarını üretim sorunlarına yol açmadan yakalamaya yardımcı olur. HTML raporları değişim yönetimi dokümantasyonu için mükemmeldir.
+**En iyi uygulama**: Düzenli klasör karşılaştırmaları, yapılandırma sapmalarını üretim sorunlarına yol açmadan yakalamanıza yardımcı olur. HTML raporları değişim yönetimi dokümantasyonu için mükemmeldir.
 
 ### Belge Sürüm Kontrolü
 
-**Senaryo**: Birden fazla ekip üyesinin dosyalarda değişiklik yaptığı belge depolarını yönetiyorsunuz.  
-
+**Senaryo**: Birden çok ekip üyesinin dosyalara değişiklik yaptığı belge depolarını yönetiyorsunuz.  
 **Pro ipucu**: Klasör karşılaştırmasını zamanlanmış görevlerle birleştirerek otomatik değişim raporları oluşturun. Bu, uyumluluk ve denetim amaçları için özellikle faydalıdır.
 
 ### CI/CD Boru Hattı Entegrasyonu
 
-**Senaryo**: Dağıtım sürecinizin bir parçası olarak değişiklikleri otomatik olarak tespit etmek ve raporlamak istiyorsunuz.  
-
-**İleri kullanım**: Klasör karşılaştırmasını derleme boru hattınıza entegre ederek her dağıtım için değişim raporları oluşturun; bu, geri alma kararları ve değişim takibi için yardımcı olur.
+**Senaryo**: Dağıtım sürecinizin bir parçası olarak değişiklikleri otomatik olarak tespit edip raporlamak istiyorsunuz.  
+**İleri kullanım**: Her dağıtım için değişim raporları oluşturmak üzere klasör karşılaştırmasını derleme boru hattınıza entegre edin; bu, geri alma kararları ve değişim takibi için yardımcı olur.
 
 ## Performans Optimizasyonu ve En İyi Uygulamalar
 
-Büyük dizin yapılarıyla çalışırken performans kritik hale gelir. Klasör karşılaştırmalarınızın sorunsuz çalışmasını sağlamak için kanıtlanmış stratejiler:
+Büyük dizin yapılarıyla çalışırken performans kritik hale gelir. Klasör karşılaştırmalarınızı sorunsuz çalıştırmak için kanıtlanmış stratejiler şunlardır:
 
 ### Optimizasyon Stratejileri
 
 1. **Akıllı Dizin Seçimi**  
    - Yalnızca analiz etmeniz gereken dizinleri karşılaştırın  
    - Geçici dosyaları, günlükleri veya diğer alakasız içerikleri dışlamak için filtreler kullanın  
-   - Çok büyük karşılaştırmaları daha küçük, odaklanmış parçalara bölmeyi düşünün  
+   - Çok büyük karşılaştırmaları daha küçük, odaklanmış bölümlere ayırmayı düşünün  
 
 2. **Bellek Yönetimi**  
+
+**Tanım referansı:** `Comparer.Dispose()` karşılaştırıcı tarafından tutulan tüm yönetilmeyen kaynakları serbest bırakır, bellek sızıntılarını önler.
 
 ```csharp
 // Dispose of comparer objects properly
@@ -327,23 +384,21 @@ using (Comparer comparer = new Comparer(sourceFolder, compareOptions))
 - Kullanıcılar için dizin karmaşıklığına dayalı gerçekçi beklentiler belirleyin  
 - Uzun süren işlemler için ilerleme raporlamasını düşünün
 
-## Yaygın Sorunları Giderme
+## Yaygın Sorunların Çözümü
 
 İyi yazılmış kodla bile bazı zorluklarla karşılaşabilirsiniz. İşte en yaygın sorunlar ve çözümleri:
 
-### Dosya Erişim ve İzin Sorunları
+### Dosya Erişimi ve İzin Sorunları
 
 **Problem**: “Erişim reddedildi” veya “dosya kullanımda” hataları  
-
 **Çözüm**:  
 - Uygulamanızın uygun izinlerle çalıştığından emin olun  
 - Dosyaların diğer süreçler tarafından kilitlenmediğini kontrol edin  
-- Geçici dosya kilitleri için yeniden deneme mantığını uygulayın
+- Geçici dosya kilitleri için yeniden deneme mantığı uygulayın
 
 ### Yol ve Dizin Sorunları
 
 **Problem**: Geçersiz yol hataları veya dizin bulunamadı  
-
 **Çözüm**:  
 
 ```csharp
@@ -362,33 +417,31 @@ if (!Directory.Exists(targetFolder))
 ### Bellek ve Performans Sorunları
 
 **Problem**: Bellek yetersizliği istisnaları veya yavaş performans  
-
 **Çözümler**:  
 - Büyük karşılaştırmaları daha küçük partilere bölün  
-- Gereksiz dosya türlerini karşılaştırmadan hariç tutun  
+- Karşılaştırmadan gereksiz dosya türlerini hariç tutun  
 - Bellek kullanım desenlerini izleyin ve optimize edin
 
 ### Çıktı Dosyası Oluşturma Sorunları
 
-**Problem**: Çıktı dosyaları oluşturulmadı veya bozuk  
-
-**Giderme adımları**:  
+**Problem**: Çıktı dosyaları oluşturulmadı veya bozuldu  
+**Sorun giderme adımları**:  
 - Çıktı dizininde yazma izinlerini doğrulayın  
 - Yeterli disk alanı olduğundan emin olun  
-- Dosya yollarında geçersiz karakterler olup olmadığını kontrol edin  
+- Dosya yollarındaki geçersiz karakterleri kontrol edin  
 - Karşılaştırmadan önce çıktı dizininin var olduğunu doğrulayın
 
 ## Gelişmiş Yapılandırma Seçenekleri
 
-GroupDocs.Comparison, karşılaştırma davranışını ince ayar yapmanızı sağlayan çok sayıda yapılandırma seçeneği sunar:
+GroupDocs.Comparison, karşılaştırma davranışını ince ayarlamanızı sağlayan birçok yapılandırma seçeneği sunar:
 
-### Karşılaştırma Hassasiyeti Ayarları
+### Karşılaştırma Hassasiyet Ayarları
 
 Karşılaştırmanın farklı değişiklik türlerine ne kadar duyarlı olacağını ayarlayabilirsiniz:
 
-- **Whitespace handling** – boşluk değişikliklerini yok say veya dahil et  
-- **Case sensitivity** – büyük/küçük harf farklarının değişiklik olarak kabul edilip edilmeyeceğini kontrol et  
-- **Line ending normalization** – farklı satır sonu formatlarını yönet  
+- **Boşluk yönetimi** – boşluk değişikliklerini yok say veya dahil et  
+- **Büyük/küçük harf duyarlılığı** – harf farklarının değişiklik olarak kabul edilip edilmeyeceğini kontrol et  
+- **Satır sonu normalleştirme** – farklı satır sonu biçimlerini yönet
 
 ### Dosya Türü Filtreleme
 
@@ -401,76 +454,84 @@ compareOptions.GenerateFramePreview = true; // Generate preview frames
 
 ### Özel Çıktı Biçimlendirme
 
-Çıktı formatını ihtiyaçlarınıza göre özelleştirin:
+Çıktı formatını özel ihtiyaçlarınıza göre uyarlayın:
 
-- **Custom templates** – HTML çıktısı stilini değiştirin  
-- **Metadata inclusion** – hangi dosya bilgilerinin dahil edileceğini kontrol edin  
-- **Diff granularity** – dosya‑seviyesi veya satır‑seviyesi karşılaştırmalar arasında seçim yapın
+- **Özel şablonlar** – HTML çıktısının stilini değiştir  
+- **Meta veri ekleme** – hangi dosya bilgilerinin dahil edileceğini kontrol et  
+- **Fark ayrıntısı** – dosya düzeyi veya satır düzeyi karşılaştırmalar arasında seçim yap
 
 ## Sonuç ve Sonraki Adımlar
 
-Tebrikler! GroupDocs.Comparison for .NET kullanarak klasör karşılaştırmanın temellerini öğrendiniz. Artık şu becerilere sahipsiniz:
+Tebrikler! .NET için GroupDocs.Comparison kullanarak klasör karşılaştırmanın temellerini öğrendiniz. Artık şu becerilere sahipsiniz:
 
-✅ Project'lerinizde GroupDocs.Comparison'ı kurup yapılandırın  
-✅ Dizinleri karşılaştırın ve hem TXT hem de HTML raporları oluşturun (**generate HTML report** dahil)  
-✅ Yaygın zorlukları yönetin ve performansı optimize edin  
-✅ Klasör karşılaştırmasını gerçek‑dünya uygulamalarına entegre edin  
+✅ Projelerinizde GroupDocs.Comparison'ı kurup yapılandırmak  
+✅ Dizinleri karşılaştırmak ve hem TXT hem de HTML raporları oluşturmak (**HTML raporu nasıl oluşturulur** dahil)  
+✅ Yaygın zorlukları ele almak ve performansı optimize etmek  
+✅ Klasör karşılaştırmayı gerçek dünya uygulamalarına entegre etmek  
 
-### Sıradaki Adım Ne?
+### Sonraki Adım Ne?
 
 Klasör karşılaştırma becerilerinizi bir sonraki seviyeye taşımaya hazır mısınız? Şunları keşfetmeyi düşünün:
 
-- **Advanced filtering options** – daha hedefli karşılaştırmalar için gelişmiş filtreleme seçenekleri  
-- **API integration** – web‑tabanlı karşılaştırma hizmetleri için API entegrasyonu  
-- **Batch processing** – birden fazla dizin çiftini işlemek için toplu işleme  
-- **Custom reporting formats** – organizasyonunuzun ihtiyaçlarına göre özelleştirilmiş raporlama formatları  
+- **Gelişmiş filtreleme seçenekleri** daha hedefli karşılaştırmalar için  
+- **API entegrasyonu** web tabanlı karşılaştırma hizmetleri için  
+- **Toplu işleme** birden çok dizin çiftini yönetmek için  
+- **Özel raporlama formatları** kuruluşunuzun ihtiyaçlarına göre uyarlanmış  
 
 ### Bugün Uygulamaya Başlayın
 
-Bu kavramları ustalaşmanın en iyi yolu uygulamalı pratiktir. Mevcut projelerinizden birini seçin ve klasör karşılaştırmanın iş akışınızı nasıl kolaylaştırabileceğini belirleyin. Küçük başlayın, farklı çıktı formatlarıyla denemeler yapın ve yavaş yavaş daha gelişmiş özellikleri entegre edin.
+Bu kavramları öğrenmenin en iyi yolu uygulamalı pratiktir. Mevcut projelerinizden birini seçin ve klasör karşılaştırmanın iş akışınızı nasıl kolaylaştırabileceğini belirleyin. Küçük başlayın, farklı çıktı formatlarıyla deney yapın ve yavaş yavaş daha gelişmiş özellikleri dahil edin.
 
-Unutmayın: her uzman bir zamanlar yeni başlamıştır. Zaman ayırın, özgürce deneyin ve bu kılavuza ihtiyaç duyduğunuzda başvurmakta tereddüt etmeyin!
+Unutmayın: her uzman bir zamanlar yeni başlamıştır. Zaman ayırın, özgürce deney yapın ve ihtiyacınız olduğunda bu kılavuza başvurmaktan çekinmeyin!
 
 ## Sıkça Sorulan Sorular
 
-**S: GroupDocs.Comparison for .NET'i Linux sistemlerinde kullanabilir miyim?**  
+**S: GroupDocs.Comparison'ı .NET üzerinde Linux sistemlerinde kullanabilir miyim?**  
 C: Kesinlikle! GroupDocs.Comparison, .NET Core aracılığıyla çapraz platform dağıtımını tam olarak destekler. Linux, macOS ve Windows ortamlarında sorunsuz çalışır.
 
-**S: Binlerce dosyası olan çok büyük dizinlerle nasıl başa çıkmalıyım?**  
-C: Büyük dizinler için şu stratejileri uygulayın: asenkron işleme kullanın, karşılaştırmaları daha küçük partilere bölün, gereksiz dosya türlerini hariç tutun ve bellek kullanımını izleyin. Uzun süren işlemler için kullanıcıya ilerleme geri bildirimi sağlamayı düşünün.
+**S: Binlerce dosyaya sahip çok büyük dizinlerle nasıl başa çıkmalıyım?**  
+C: Büyük dizinler için şu stratejileri uygulayın: asenkron işleme, karşılaştırmaları daha küçük partilere bölme, gereksiz dosya türlerini dışlama ve bellek kullanımını izleme. Uzun süren işlemler için kullanıcıya ilerleme geri bildirimi sağlamayı düşünün.
 
 **S: Karşılaştırabileceğim dosya sayısı için pratik bir limit var mı?**  
-C: Kütüphanede sabit bir limit olmamakla birlikte, performans sistem kaynaklarınıza (RAM, CPU, disk hızı) ve dosya boyutlarına bağlıdır. Çoğu sistem binlerce dosyayı sorunsuz işleyebilir, ancak çok büyük veri setleri optimizasyon stratejileri gerektirebilir.
+C: Kütüphanede sabit bir limit olmasa da, performans sistem kaynaklarınıza (RAM, CPU, disk hızı) ve dosya boyutlarına bağlıdır. Çoğu sistem binlerce dosyayı sorunsuz işleyebilir, ancak çok büyük veri setleri optimizasyon stratejileri gerektirebilir.
 
 **S: GroupDocs.Comparison şifreli veya parola korumalı dosyaları işleyebilir mi?**  
-C: Kütüphane şifreli dosyaları doğrudan karşılaştıramaz. Uygun izin ve kimlik bilgilerine sahipseniz önce dosyaları deşifre etmeniz gerekir. Şifreli içerikle çalışırken her zaman kurumunuzun güvenlik politikalarına uyduğunuzdan emin olun.
+C: Kütüphane şifreli dosyaları doğrudan karşılaştıramaz. Uygun izin ve kimlik bilgilerine sahipseniz dosyaları önce çözmeniz gerekir. Şifreli içerikle çalışırken her zaman kuruluşunuzun güvenlik politikalarına uyduğunuzdan emin olun.
 
 **S: Klasör karşılaştırmayı otomatik CI/CD boru hatlarına nasıl entegre ederim?**  
-C: GroupDocs.Comparison kullanan konsol uygulamaları oluşturun, karşılaştırma sonuçlarına göre uygun çıkış kodları döndürecek şekilde yapılandırın ve bunları derleme betiklerinize entegre edin. TXT çıktısı, otomatik ortamda sonuçları ayrıştırmak için özellikle yararlıdır.
+C: GroupDocs.Comparison kullanan konsol uygulamaları oluşturun, karşılaştırma sonuçlarına göre uygun çıkış kodları döndürecek şekilde yapılandırın ve bunları derleme betiklerinize entegre edin. TXT çıktısı, otomatik ortamda sonuçları ayrıştırmak için özellikle faydalıdır.
 
 **S: Deneme ve lisanslı sürümler arasındaki fark nedir?**  
-C: Deneme sürümü tüm işlevselliği içerir ancak çıktıya su işareti ekler ve bazı kullanım sınırlamaları vardır. Lisanslı sürümler bu kısıtlamaları kaldırır ve üretim kullanımına uygundur.
+C: Deneme sürümü tüm işlevselliği içerir ancak çıktıya filigran ekler ve bazı kullanım sınırlamaları vardır. Lisanslı sürümler bu kısıtlamaları kaldırır ve üretim kullanımına uygundur.
 
 **S: HTML çıktısının stilini ve düzenini özelleştirebilir miyim?**  
-C: Evet, GroupDocs.Comparison HTML çıktısını özelleştirme seçenekleri sunar. Şablonları değiştirebilir, stil ayarlarını düzenleyebilir ve raporlarda hangi bilgilerin yer alacağını kontrol edebilirsiniz.
+C: Evet, GroupDocs.Comparison HTML çıktısını özelleştirme seçenekleri sunar. Şablonları değiştirebilir, stil ayarlarını düzenleyebilir ve raporlara hangi bilgilerin dahil edileceğini kontrol edebilirsiniz.
 
 **S: Bir dizinde var olup diğerinde olmayan dosyalarla nasıl başa çıkılır?**  
-C: GroupDocs.Comparison bu farkları otomatik olarak “eklenen” veya “silinen” dosyalar olarak tanımlar ve raporlar. Bu farkların çıktı formatınızda nasıl sunulacağını yapılandırabilirsiniz.
+C: GroupDocs.Comparison bu farkları otomatik olarak “eklenen” veya “silinen” dosyalar olarak tanır ve raporlar. Bu farkların çıktınızda nasıl sunulacağını yapılandırabilirsiniz.
 
 ## Ek Kaynaklar ve Destek
 
 ### Dokümantasyon
 
-- **Complete API Reference**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)  
-- **Developer Guide**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
+- **Tam API Referansı**: [GroupDocs.Comparison .NET API Documentation](https://docs.groupdocs.com/comparison/net/)  
+- **Geliştirici Kılavuzu**: [GroupDocs Developer Resources](https://reference.groupdocs.com/comparison/net/)
 
 ### İndirme ve Lisanslama
 
-- **Latest Release**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)  
-- **Purchase Options**: [Buy Commercial License](https://purchase.groupdocs.com/buy)  
-- **Free Trial**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)  
-- **Temporary License**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
+- **En Son Sürüm**: [Download GroupDocs.Comparison](https://releases.groupdocs.com/comparison/net/)  
+- **Satın Alma Seçenekleri**: [Buy Commercial License](https://purchase.groupdocs.com/buy)  
+- **Ücretsiz Deneme**: [Start Your Free Trial](https://releases.groupdocs.com/comparison/net/)  
+- **Geçici Lisans**: [Request Evaluation License](https://purchase.groupdocs.com/temporary-license)
 
-**Son Güncelleme:** 2026-03-08  
+---
+
+**Son Güncelleme:** 2026-07-20  
 **Test Edilen Versiyon:** GroupDocs.Comparison 25.4.0 for .NET  
 **Yazar:** GroupDocs
+
+## İlgili Eğitimler
+
+- [GroupDocs Comparison .NET Quick Start - Complete Setup Guide](/comparison/net/quick-start/)  
+- [GroupDocs Comparison .NET Tutorial - Complete Basic Usage Guide](/comparison/net/basic-usage/)  
+- [Compare Multiple Documents .NET – Advanced Features & Automation Guide](/comparison/net/advanced-comparison/)

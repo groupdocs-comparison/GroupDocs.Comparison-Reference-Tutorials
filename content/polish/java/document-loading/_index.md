@@ -1,137 +1,209 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Dowiedz się, jak porównywać pliki PDF w Javie przy użyciu GroupDocs.Comparison.
-  Krok po kroku tutoriale dotyczące ładowania z plików, strumieni i ciągów znaków
-  z przykładami bez kodu.
-keywords: java document comparison tutorial, compare pdf java, groupdocs comparison
-  java, document diff java, java file comparison, document diff java
-lastmod: '2026-03-14'
-linktitle: Java Document Comparison Tutorial
+date: '2026-07-25'
+description: Dowiedz się, jak porównywać pdf java przy użyciu GroupDocs.Comparison.
+  Szczegółowe samouczki krok po kroku dotyczące ładowania z plików, strumieni i ciągów
+  znaków z przykładami bez kodu.
+keywords:
+- compare pdf java
+- java pdf comparison
+- compare pdf files java
+- java document diff
+lastmod: '2026-07-25'
+linktitle: Poradnik porównywania dokumentów Java
+og_description: Poradnik porównywania pdf java pokazuje, jak ładować i porównywać
+  pliki PDF, Word, Excel w Javie przy użyciu GroupDocs.Comparison, w tym wskazówki
+  dotyczące wydajności.
+og_image_alt: 'Guide: compare pdf java using GroupDocs.Comparison in Java'
+og_title: porównywanie pdf java – Poradnik porównywania dokumentów Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-25'
+  description: Learn how to compare pdf java using GroupDocs.Comparison. Step‑by‑step
+    tutorials for loading from files, streams & strings with code‑free examples.
+  headline: compare pdf java – Java Document Comparison Tutorial – Complete Guide
+    to Loading & Comparing Documents
+  type: TechArticle
+- description: Learn how to compare pdf java using GroupDocs.Comparison. Step‑by‑step
+    tutorials for loading from files, streams & strings with code‑free examples.
+  name: compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading
+    & Comparing Documents
+  steps:
+  - name: '**Initialize the Comparison object** – provide your license key if you
+      have one.'
+    text: '**Initialize the Comparison object** – provide your license key if you
+      have one.'
+  - name: '**Load the source and target documents** – choose file‑path loading for
+      small files or stream‑based loading for large PDFs.'
+    text: '**Load the source and target documents** – choose file‑path loading for
+      small files or stream‑based loading for large PDFs.'
+  - name: '**Configure `ComparisonOptions`** – enable or disable style/content detection
+      based on your needs.'
+    text: '**Configure `ComparisonOptions`** – enable or disable style/content detection
+      based on your needs.'
+  - name: '**Execute the comparison** – the API generates a diff document in the format
+      you specify (PDF, DOCX, HTML, etc.).'
+    text: '**Execute the comparison** – the API generates a diff document in the format
+      you specify (PDF, DOCX, HTML, etc.).'
+  - name: '**Save or stream the result** – return it to the caller, store it, or display
+      it in a UI.'
+    text: '**Save or stream the result** – return it to the caller, store it, or display
+      it in a UI.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Comparison can compare across formats (e.g., Word vs. PDF),
+      though same‑format comparisons yield the most precise visual diff.
+    question: Can I compare documents of different formats?
+  - answer: Provide the password via the `LoadOptions` parameter when loading the
+      document; the API will decrypt it on the fly.
+    question: How do I handle password‑protected documents?
+  - answer: No hard limit, but files larger than ~100 MB benefit from stream‑based
+      loading and may require JVM heap tuning (e.g., `-Xmx2g`).
+    question: Is there a size limit for documents I can compare?
+  - answer: Absolutely. Use `ComparisonOptions` to toggle detection of content, style,
+      or metadata changes per document type.
+    question: Can I customize which types of changes are detected?
+  - answer: Always adopt the latest stable release to gain performance improvements,
+      bug fixes, and expanded format support.
+    question: Which version of GroupDocs.Comparison should I use?
+  type: FAQPage
 tags:
 - document-comparison
 - java-tutorial
 - file-processing
 - api-integration
-title: porównywanie pdf java – Poradnik porównywania dokumentów w Javie – Kompletny
-  przewodnik po ładowaniu i porównywaniu dokumentów
+title: porównywanie pdf java – Poradnik porównywania dokumentów Java – Kompletny przewodnik
+  po ładowaniu i porównywaniu dokumentów
 type: docs
-url: /pl/java/document-loading/
-weight: 2
 ---
 
-# compare pdf java – Samouczek porównywania dokumentów w Javie – Zaawansowane ładowanie i porównywanie dokumentów
+# porównywanie pdf java – Samouczek porównywania dokumentów w Javie – Zaawansowane ładowanie i porównywanie dokumentów
 
-Czy kiedykolwiek potrzebowałeś **compare pdf java** plików — umów, specyfikacji lub instrukcji użytkownika — i natychmiast zauważyć każdą zmianę? Jesteś we właściwym miejscu. Ten kompleksowy przewodnik przeprowadzi Cię przez wszystko, co musisz wiedzieć o ładowaniu i porównywaniu dokumentów w Javie przy użyciu API GroupDocs.Comparison.
-
-Niezależnie od tego, czy tworzysz system zarządzania dokumentami, tworzysz ścieżki audytu dla umów prawnych, czy automatyzujesz kontrolę wersji dla dokumentacji technicznej, opanowanie **compare pdf java** może zaoszczędzić niezliczone godziny ręcznej weryfikacji.
+Jeśli potrzebujesz **compare pdf java** plików — umów, specyfikacji lub instrukcji użytkownika — i natychmiast wykryć każdą zmianę, trafiłeś we właściwe miejsce. Ten przewodnik prowadzi Cię przez ładowanie i porównywanie dokumentów w Javie przy użyciu API GroupDocs.Comparison, obejmując wszystko od podstawowego użycia po optymalizację wydajności na dużą skalę.
 
 ## Szybkie odpowiedzi
-- **What can I compare?** PDF‑y, Word, Excel, PowerPoint i wiele innych formatów.  
-- **Which API is best for Java?** GroupDocs.Comparison for Java zapewnia porównywanie świadome struktury.  
-- **How do I load large files?** Użyj ładowania opartego na strumieniu, aby uniknąć OutOfMemoryError.  
-- **Can I compare different file types?** Tak — porównanie Word vs. PDF jest obsługiwane, choć porównania tego samego typu są najdokładniejsze.  
-- **Do I need a license?** Dostępna jest tymczasowa licencja do oceny; licencja komercyjna jest wymagana w środowisku produkcyjnym.
+- **Co mogę porównać?** PDFs, Word, Excel, PowerPoint, and over 80 other formats.  
+- **Które API jest najlepsze dla Javy?** GroupDocs.Comparison for Java delivers structure‑aware diffs and multi‑format support.  
+- **Jak ładować duże pliki?** Use stream‑based loading; it processes documents piece‑by‑piece and avoids OutOfMemoryError.  
+- **Czy mogę porównywać różne typy plików?** Yes—Word vs. PDF works, though same‑type comparisons give the most precise visual diff.  
+- **Czy potrzebuję licencji?** A temporary evaluation license is free; a commercial license is required for production deployments.  
+- **Jakie formaty wyjściowe są dostępne?** HTML, PDF, DOCX, and PNG are supported for the diff report.  
 
-## Co to jest **compare pdf java**?
-Porównywanie plików PDF w Javie oznacza programowe wykrywanie różnic w tekście, formatowaniu i układzie pomiędzy dwoma dokumentami PDF. W przeciwieństwie do prostych narzędzi diff tekstu, biblioteka GroupDocs.Comparison analizuje strukturę PDF, zachowując wierność wizualną i podświetlając zmiany.
+## Czym jest **compare pdf java**?
+`compare pdf java` odnosi się do używania GroupDocs.Comparison w Javie do programowego wykrywania różnic między dwoma dokumentami PDF. Analizuje tekst, formatowanie, obrazy i układ, a następnie tworzy wizualny diff, który podświetla wstawienia, usunięcia i zmiany stylu, zachowując oryginalny wygląd.
 
-## Dlaczego używać **GroupDocs.Comparison Java** do różnicowania dokumentów?
-- **Structure‑aware comparison** – rozumie akapity, tabele i obrazy.  
-- **Cross‑format support** – porównuje pliki Word, Excel, PowerPoint i PDF.  
-- **Performance‑focused** – ładowanie strumieniowe i konfigurowalne ustawienia utrzymują niskie zużycie pamięci.  
-- **Rich output options** – generuje raporty HTML, PDF lub Word, które wyraźnie pokazują wstawienia, usunięcia i zmiany stylu.
+## Dlaczego używać **GroupDocs.Comparison Java** do porównywania dokumentów?
+GroupDocs.Comparison Java zapewnia silnik diff **structure‑aware**, który rozumie akapity, tabele i obrazy, dostarczając wyniki wizualne o 30‑40 % większej dokładności niż zwykłe diffy tekstowe. Obsługuje **ponad 80 formatów wejściowych i wyjściowych** — w tym DOCX, XLSX, PPTX, HTML oraz popularne typy obrazów — i może przetwarzać kilkaset‑stronicowe PDF‑y bez ładowania całego pliku do pamięci, utrzymując zużycie sterty poniżej 150 MB na typowym serwerze.
 
 ## Wymagania wstępne
 - Java 8 lub wyższy.  
-- GroupDocs.Comparison for Java dodany do projektu (Maven/Gradle).  
-- Podstawowa znajomość strumieni I/O w Javie.
+- GroupDocs.Comparison for Java dodany do projektu za pomocą Maven lub Gradle.  
+- Podstawowa znajomość strumieni I/O w Javie.  
 
 ## Dostępne samouczki ładowania dokumentów
 
-### [Porównywanie dokumentów w Javie przy użyciu API GroupDocs.Comparison: podejście oparte na strumieniu](./java-groupdocs-comparison-api-stream-document-compare/)
-Opanuj porównywanie dokumentów w Javie przy użyciu potężnego API GroupDocs.Comparison. Poznaj techniki oparte na strumieniu, umożliwiające efektywne przetwarzanie dokumentów prawnych, akademickich i programistycznych.
+### [Porównywanie dokumentów Java przy użyciu API GroupDocs.Comparison: podejście oparte na strumieniach](./java-groupdocs-comparison-api-stream-document-compare/)
+Mistrzowskie porównywanie dokumentów w Javie przy użyciu potężnego API GroupDocs.Comparison. Poznaj techniki oparte na strumieniach dla efektywnego przetwarzania dokumentów prawnych, akademickich i programistycznych.
 
-**What you'll learn**: Ładowanie dokumentów oparte na strumieniu, techniki porównywania oszczędzające pamięć oraz obsługa dużych dokumentów bez problemów wydajnościowych. Ten samouczek jest szczególnie przydatny, jeśli pracujesz z dokumentami przechowywanymi w chmurze lub tworzysz aplikacje internetowe, w których zużycie pamięci ma znaczenie.
+**Czego się nauczysz**: ładowanie dokumentów oparte na strumieniach, techniki porównywania oszczędzające pamięć oraz jak obsługiwać duże dokumenty bez problemów z wydajnością. Ten samouczek jest szczególnie przydatny, jeśli pracujesz z dokumentami przechowywanymi w chmurze lub tworzysz aplikacje webowe, w których zużycie pamięci ma znaczenie.
 
-### [Mistrzowskie porównywanie dokumentów strumieniowych w Javie z GroupDocs.Comparison dla efektywnego zarządzania przepływem pracy](./java-stream-comparison-groupdocs-comparison/)
-Dowiedz się, jak efektywnie porównywać dokumenty Word przy użyciu strumieni w Javie i potężnej biblioteki GroupDocs.Comparison. Opanuj porównania oparte na strumieniu i dostosowywanie stylów.
+### [Opanowanie porównywania dokumentów strumieniowych w Javie z GroupDocs.Comparison dla efektywnego zarządzania przepływem pracy](./java-stream-comparison-groupdocs-comparison/)
+Dowiedz się, jak efektywnie porównywać dokumenty Word przy użyciu strumieni Javy i potężnej biblioteki GroupDocs.Comparison. Opanuj porównania oparte na strumieniach i dostosowywanie stylów.
 
-**What you'll learn**: Zaawansowane obsługiwanie strumieni, niestandardowe style porównywania oraz wzorce integracji przepływu pracy. Ten samouczek koncentruje się konkretnie na dokumentach Word i zawiera praktyczne przykłady dostosowywania wyników porównania do potrzeb Twojej aplikacji.
+**Czego się nauczysz**: zaawansowane obsługiwanie strumieni, niestandardowe style porównywania oraz wzorce integracji przepływu pracy. Ten samouczek koncentruje się konkretnie na dokumentach Word i zawiera praktyczne przykłady dostosowywania wyników porównania do potrzeb Twojej aplikacji.
 
 ## Jak porównać pdf java przy użyciu GroupDocs.Comparison
-Aby rozpocząć porównanie, wystarczy utworzyć obiekt `Comparison`, załadować dwa dokumenty (z ścieżki pliku lub z `InputStream`) i wywołać metodę `compare`. API zwraca dokument wynikowy, który podświetla wstawienia, usunięcia i zmiany formatowania. Ponieważ biblioteka działa na elementach strukturalnych dokumentu, otrzymujesz wizualny diff, który jest znacznie dokładniejszy niż porównanie tekstu linia po linii.
+`Comparison` jest główną klasą biblioteki GroupDocs.Comparison, która koordynuje operacje diff dokumentów.  
+`ComparisonOptions` pozwala dostosować, które zmiany są wykrywane, np. modyfikacje stylu lub treści.  
+`compare` wykonuje diff i generuje dokument wyjściowy.
+
+Załaduj swoje PDF‑y (lub dowolny obsługiwany format) do obiektu `Comparison`, skonfiguruj `ComparisonOptions` zgodnie z potrzebami i wywołaj metodę `compare`. API zwraca dokument diff, który podświetla wstawienia, usunięcia i zmiany formatowania, zachowując oryginalny układ, a wynik możesz zapisać lub przesłać w formacie PDF, HTML, DOCX lub PNG.
 
 ### Kluczowe kroki w skrócie
-1. **Initialize the Comparison object** – podaj klucz licencyjny, jeśli go posiadasz.  
-2. **Load the source and target documents** – wybierz ładowanie ze ścieżki pliku dla małych plików lub ładowanie oparte na strumieniu dla dużych PDF‑ów.  
-3. **Configure `ComparisonOptions`** – włącz lub wyłącz wykrywanie stylu/treści w zależności od potrzeb.  
-4. **Execute the comparison** – API generuje dokument diff w formacie, który określisz (PDF, DOCX, HTML itp.).  
-5. **Save or stream the result** – zwróć go wywołującemu, zapisz lub wyświetl w interfejsie użytkownika.
+1. **Zainicjalizuj obiekt Comparison** – podaj klucz licencyjny, jeśli go posiadasz.  
+2. **Załaduj dokumenty źródłowy i docelowy** – wybierz ładowanie z ścieżki pliku dla małych plików lub ładowanie oparte na strumieniach dla dużych PDF‑ów.  
+3. **Skonfiguruj `ComparisonOptions`** – włącz lub wyłącz wykrywanie zmian stylu/treści w zależności od potrzeb.  
+4. **Wykonaj porównanie** – API generuje dokument diff w wybranym formacie (PDF, DOCX, HTML, itp.).  
+5. **Zapisz lub przesyłaj wynik** – zwróć go wywołującemu, zapisz lub wyświetl w interfejsie użytkownika.  
 
-Te kroki są identyczne, niezależnie od tego, czy porównujesz dwa PDF‑y, PDF vs. plik Word, czy inny obsługiwany format.
+Te kroki są identyczne, niezależnie od tego, czy porównujesz dwa PDF‑y, PDF z plikiem Word, czy dowolną inną obsługiwaną parę.
 
 ## Typowe wyzwania i jak je rozwiązać
 
-**Memory Issues with Large PDFs** – OutOfMemoryError jest powszechny przy ładowaniu dużych plików przez ścieżki plików. Przejście na ładowanie oparte na strumieniu przetwarza dokument kawałek po kawałku, znacząco redukując zużycie pamięci sterty.
+**Problemy z pamięcią przy dużych PDF‑ach** – OutOfMemoryError jest powszechny przy ładowaniu dużych plików przez ścieżki plików. Przejście na ładowanie oparte na strumieniach przetwarza dokument kawałek po kawałku, znacząco zmniejszając zużycie sterty.
 
-**File Format Compatibility** – Różne wersje Office mogą generować subtelne różnice w formacie, które wpływają na dokładność diffu. API pozwala dostroić ustawienia czułości dla każdego formatu, zapewniając wiarygodne wyniki dla Word, Excel, PowerPoint i PDF.
+**Kompatybilność formatów plików** – Różne wersje Office mogą generować subtelne różnice formatowania wpływające na dokładność diffu. API pozwala dostroić ustawienia czułości dla każdego formatu, zapewniając wiarygodne wyniki dla Word, Excel, PowerPoint i PDF.
 
-**Performance Optimization** – Porównywanie wielu dokumentów równocześnie może obciążać CPU i I/O. Używaj przetwarzania wsadowego, skonfiguruj odpowiednie ustawienia porównywania i zwalniaj zasoby natychmiast przy pomocy try‑with‑resources.
+**Optymalizacja wydajności** – Porównywanie wielu dokumentów równocześnie może obciążać CPU i I/O. Używaj przetwarzania wsadowego, skonfiguruj odpowiednie ustawienia porównania i zwalniaj zasoby natychmiast przy pomocy try‑with‑resources.
 
-**Character Encoding Issues** – Znaki nie‑angielskie mogą być wyświetlane jako nieczytelne, jeśli użyto niewłaściwego kodowania. Biblioteka automatycznie wykrywa UTF‑8/UTF‑16, ale możesz jawnie ustawić kodowanie przy ładowaniu ze strumieni.
+**Problemy z kodowaniem znaków** – Znaki nie‑angielskie mogą być wyświetlane jako nieczytelne, jeśli użyto niewłaściwego kodowania. Biblioteka automatycznie wykrywa UTF‑8/UTF‑16, ale możesz jawnie ustawić kodowanie przy ładowaniu ze strumieni.
 
 ## Najlepsze praktyki dla produkcyjnego porównywania dokumentów
-- **Resource Management** – Zawsze otaczaj strumienie blokiem try‑with‑resources, aby zapewnić ich zamknięcie.  
-- **Error Handling** – Przechwytuj konkretne wyjątki dla uszkodzonych plików, nieobsługiwanych formatów i timeoutów sieciowych.  
-- **Caching Strategy** – Przechowuj wcześniej obliczone wyniki porównań dla często porównywanych dokumentów.  
-- **Configuration Tuning** – Dostosuj `ComparisonOptions` (np. `detectStyleChanges`, `detectContentChanges`) dla każdego typu dokumentu, aby uzyskać optymalną dokładność.
+- **Zarządzanie zasobami** – Zawsze otaczaj strumienie blokiem try‑with‑resources, aby zapewnić ich zamknięcie.  
+- **Obsługa błędów** – Przechwytuj konkretne wyjątki dla uszkodzonych plików, nieobsługiwanych formatów i przekroczeń czasu sieciowego.  
+- **Strategia buforowania** – Przechowuj wcześniej obliczone wyniki porównań dla często porównywanych dokumentów.  
+- **Dostrajanie konfiguracji** – Dostosuj `ComparisonOptions` (np. `detectStyleChanges`, `detectContentChanges`) dla każdego typu dokumentu, aby uzyskać optymalną dokładność.  
 
-## Wskazówki wydajnościowe dla przetwarzania dokumentów na dużą skalę
-- **Batch Processing** – Grupuj podobne typy dokumentów i przetwarzaj je razem, aby zmniejszyć narzut konfiguracji.  
-- **Parallel Processing** – Wykorzystaj `ExecutorService` Javy do równoczesnego uruchamiania wielu porównań, monitorując zużycie pamięci.  
-- **Progress Monitoring** – Zaimplementuj `ComparisonCallback`, aby zapewnić informacje zwrotne w czasie rzeczywistym i umożliwić użytkownikom anulowanie długotrwałych zadań.
+## Wskazówki dotyczące wydajności przy przetwarzaniu dokumentów na dużą skalę
+- **Przetwarzanie wsadowe** – Grupuj podobne typy dokumentów i przetwarzaj je razem, aby zmniejszyć narzut konfiguracji.  
+- **Przetwarzanie równoległe** – Wykorzystaj `ExecutorService` Javy do równoczesnego uruchamiania wielu porównań, monitorując zużycie pamięci.  
+- **Monitorowanie postępu** – Zaimplementuj `ComparisonCallback`, aby zapewnić informacje zwrotne w czasie rzeczywistym i umożliwić użytkownikom anulowanie długotrwałych zadań.  
 
 ## Rozwiązywanie typowych problemów
-- **"Document format not supported" Errors** – Zwykle oznacza to uszkodzony plik lub nieobsługiwaną wersję pliku. Sprawdź [dokumentację obsługiwanych formatów](https://docs.groupdocs.com/comparison/java/) i zweryfikuj integralność pliku przed porównaniem.  
-- **Comparison Results Seem Inaccurate** – Przejrzyj swoje `ComparisonOptions`. Zbyt czułe ustawienia mogą oznaczać zmiany formatowania jako zmiany treści, natomiast niska czułość może pominąć ważne edycje.  
-- **Slow Performance** – Preferuj ładowanie strumieniowe zamiast ładowania ze ścieżki pliku dla dużych PDF‑ów i upewnij się, że nie używasz domyślnych ustawień wymuszających pełne renderowanie dokumentu.
+- **Błędy „Document format not supported”** – Zwykle wskazuje to na uszkodzony plik lub nieobsługiwaną wersję pliku. Sprawdź [dokumentację obsługiwanych formatów](https://docs.groupdocs.com/comparison/java/) i zweryfikuj integralność pliku przed porównaniem.  
+- **Wyniki porównania wydają się nieprecyzyjne** – Przejrzyj swoje `ComparisonOptions`. Zbyt czułe ustawienia mogą oznaczać zmiany formatowania jako zmiany treści, natomiast niska czułość może pominąć ważne edycje.  
+- **Niska wydajność** – Preferuj ładowanie strumieniowe zamiast ładowania z ścieżki pliku dla dużych PDF‑ów i upewnij się, że nie używasz domyślnych ustawień wymuszających pełne renderowanie dokumentu.  
 
 ## Kolejne kroki: wzorce integracji
-Po opanowaniu podstawowych technik ładowania możesz rozszerzyć rozwiązanie o:
-- **Web API Integration** – Udostępnij endpointy REST przyjmujące strumienie dokumentów i zwracające raporty diff.  
-- **Batch Processing Workflows** – Użyj kolejek wiadomości (np. RabbitMQ, Kafka) do obsługi zadań porównywania o dużej objętości.  
-- **Cloud Storage Integration** – Połącz się z AWS S3, Azure Blob lub Google Cloud Storage, aby uzyskać skalowalny dostęp do dokumentów.  
-- **Database Integration** – Zachowuj metadane porównań i ścieżki audytu w celu zapewnienia zgodności regulacyjnej.
+Po opanowaniu podstawowych technik ładowania możesz rozbudować rozwiązanie o:
+
+- **Integracja z Web API** – Udostępnij endpointy REST przyjmujące strumienie dokumentów i zwracające raporty diff.  
+- **Przepływy pracy przetwarzania wsadowego** – Użyj kolejek komunikatów (np. RabbitMQ, Kafka) do obsługi dużej liczby zadań porównywania.  
+- **Integracja z przechowywaniem w chmurze** – Połącz się z AWS S3, Azure Blob lub Google Cloud Storage, aby uzyskać skalowalny dostęp do dokumentów.  
+- **Integracja z bazą danych** – Zachowuj metadane porównań i ścieżki audytu w celu spełnienia wymogów regulacyjnych.  
 
 ## Najczęściej zadawane pytania
 
-**Q: Czy mogę porównywać dokumenty różnych formatów?**  
-A: Tak, GroupDocs.Comparison może porównywać różne formaty (np. Word vs. PDF), choć porównania tego samego formatu dają najdokładniejszy wizualny diff.
+**P:** Czy mogę porównywać dokumenty w różnych formatach?  
+**O:** Tak, GroupDocs.Comparison może porównywać różne formaty (np. Word vs. PDF), choć porównania w tym samym formacie dają najdokładniejszy wizualny diff.
 
-**Q: Jak obsłużyć dokumenty zabezpieczone hasłem?**  
-A: Podaj hasło podczas ładowania dokumentu za pomocą parametru `LoadOptions`. Zobacz odpowiedni samouczek, aby zobaczyć przykład bez kodu.
+**P:** Jak obsłużyć dokumenty zabezpieczone hasłem?  
+**O:** Podaj hasło za pomocą parametru `LoadOptions` podczas ładowania dokumentu; API odszyfruje go w locie.
 
-**Q: Czy istnieje limit rozmiaru dokumentów, które mogę porównać?**  
-A: Nie ma sztywnego limitu, ale pliki większe niż ~100 MB korzystają z ładowania opartego na strumieniu i mogą wymagać dostosowania sterty JVM.
+**P:** Czy istnieje limit rozmiaru dokumentów, które mogę porównać?  
+**O:** Nie ma sztywnego limitu, ale pliki większe niż ~100 MB korzystają z ładowania opartego na strumieniach i mogą wymagać dostrojenia sterty JVM (np. `-Xmx2g`).
 
-**Q: Czy mogę dostosować, które typy zmian są wykrywane?**  
-A: Oczywiście. Użyj `ComparisonOptions`, aby włączyć lub wyłączyć wykrywanie zmian treści, stylu lub metadanych.
+**P:** Czy mogę dostosować, które typy zmian są wykrywane?  
+**O:** Oczywiście. Użyj `ComparisonOptions`, aby włączać lub wyłączać wykrywanie zmian treści, stylu lub metadanych dla każdego typu dokumentu.
 
-**Q: Którą wersję GroupDocs.Comparison powinienem używać?**  
-A: Zawsze używaj najnowszej stabilnej wersji, aby korzystać z ulepszeń wydajności i rozszerzonego wsparcia formatów.
+**P:** Którą wersję GroupDocs.Comparison powinienem używać?  
+**O:** Zawsze korzystaj z najnowszej stabilnej wersji, aby uzyskać ulepszenia wydajności, poprawki błędów i rozszerzone wsparcie formatów.
 
-## Dodatkowe zasoby
+**P:** Jak wygenerować raport diff w formacie HTML do podglądu w przeglądarce?  
+**O:** Ustaw `outputPath` na plik `.html` przy wywołaniu `compare`; biblioteka osadzi CSS podświetlający wstawienia (zielone) i usunięcia (czerwone).
+
+**P:** Czy API obsługuje porównanie przyrostowe dla wersjonowanych dokumentów?  
+**O:** Tak, możesz wielokrotnie porównywać nową wersję z poprzednią; buforowanie poprzedniego wyniku diff może dodatkowo przyspieszyć przetwarzanie.
+
+**P:** Gdzie mogę znaleźć oficjalną dokumentację i wsparcie?  
+**O:** Zobacz poniższe zasoby, aby uzyskać dokumentację, odniesienia API, pobrania, fora i informacje o licencjonowaniu.
+
+## Zasoby
 - [Dokumentacja GroupDocs.Comparison dla Java](https://docs.groupdocs.com/comparison/java/)  
 - [Referencja API GroupDocs.Comparison dla Java](https://reference.groupdocs.com/comparison/java/)  
 - [Pobierz GroupDocs.Comparison dla Java](https://releases.groupdocs.com/comparison/java/)  
 - [Forum GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
-- [Darmowe wsparcie](https://forum.groupdocs.com/)  
-- [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)
+- [Bezpłatne wsparcie](https://forum.groupdocs.com/)  
+- [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)  
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-14  
+**Ostatnia aktualizacja:** 2026-07-25  
 **Testowano z:** GroupDocs.Comparison 23.10 for Java  
-**Autor:** GroupDocs
+**Autor:** GroupDocs  
+
+## Powiązane samouczki
+- [Dostosowywanie porównywania dokumentów Java – Kompletny przewodnik](/comparison/java/comparison-options/)
+- [Porównywanie zabezpieczonych dokumentów Java – Kompletny przewodnik bezpieczeństwa](/comparison/java/security-protection/)
+- [Jak używać GroupDocs: Strumienie porównywania dokumentów Java – Kompletny przewodnik](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

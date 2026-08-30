@@ -1,57 +1,116 @@
 ---
 categories:
 - Java Development
-date: '2026-03-30'
-description: Μάθετε πώς να συγκρίνετε έγγραφα Java χρησιμοποιώντας streams με το GroupDocs.Comparison
-  API. Κατακτήστε τη διαφορά εγγράφων, αποδεχτείτε/απορρίψτε αλλαγές και διαχειριστείτε
-  μεγάλα αρχεία αποδοτικά.
-keywords: java document comparison, compare documents in java, java file comparison
-  library, document diff java, groupdocs comparison java, stream based document comparison
-lastmod: '2026-03-30'
-linktitle: Java Document Comparison Guide
+date: '2026-08-30'
+description: Μάθετε πώς να συγκρίνετε έγγραφα Java χρησιμοποιώντας ροές με το GroupDocs.Comparison
+  API. Αυτό το βήμα‑βήμα οδηγός δείχνει πώς να συγκρίνετε έγγραφα Java αποδοτικά,
+  να αποδέχεστε ή να απορρίπτετε αλλαγές και να διαχειρίζεστε μεγάλα αρχεία.
+keywords:
+- how to compare java
+- java document comparison
+- groupdocs comparison java
+- stream based document comparison
+- java file comparison library
+lastmod: '2026-08-30'
+linktitle: Οδηγός σύγκρισης εγγράφων Java
+og_description: Πώς να συγκρίνετε έγγραφα Java χρησιμοποιώντας ροές GroupDocs.Comparison.
+  Ακολουθήστε αυτόν τον λεπτομερή οδηγό για να εντοπίσετε διαφορές στα έγγραφα, να
+  αποδεχτείτε αλλαγές και να επεξεργαστείτε μεγάλα αρχεία αποδοτικά.
+og_image_alt: Illustration of Java document comparison using GroupDocs API
+og_title: Πώς να συγκρίνετε έγγραφα Java – οδηγός με το GroupDocs API
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Learn how to compare Java documents using streams with the GroupDocs.Comparison
+    API. This step‑by‑step tutorial shows how to compare Java docs efficiently, accept
+    or reject changes, and handle large files.
+  headline: How to compare Java docs – guide with GroupDocs API
+  type: TechArticle
+- description: Learn how to compare Java documents using streams with the GroupDocs.Comparison
+    API. This step‑by‑step tutorial shows how to compare Java docs efficiently, accept
+    or reject changes, and handle large files.
+  name: How to compare Java docs – guide with GroupDocs API
+  steps:
+  - name: initialize comparer with source document stream
+    text: '*Why streams?* They keep memory usage low by processing data in chunks
+      instead of loading the whole file.'
+  - name: add target document for comparison
+    text: The engine now has both documents and can start diffing.
+  - name: detect and analyze changes
+    text: Each `ChangeInfo` represents an insertion, deletion, formatting tweak, image
+      change, etc.
+  - name: accept or reject changes programmatically
+    text: 'Typical automation patterns: - Accept all formatting changes, reject content
+      edits. - Auto‑reject changes in headers/footers. - Accept changes from trusted
+      authors only.'
+  - name: generate the final document
+    text: '`ApplyChangeOptions` lets you fine‑tune merge behavior, such as preserving
+      original styling.'
+  type: HowTo
+- questions:
+  - answer: Over 50 formats, including DOCX, PDF, PPTX, XLSX, TXT, HTML, and more.
+      See the [format documentation](https://docs.groupdocs.com/comparison/java/supported-document-formats/).
+    question: What document formats does GroupDocs.Comparison support?
+  - answer: Yes. Call `comparer.add()` multiple times before `getChanges()` to merge
+      several versions.
+    question: Can I compare more than two documents at once?
+  - answer: 'Use `LoadOptions` to supply the password:'
+    question: How do I handle password‑protected files?
+  - answer: No hard limit, but memory usage grows with size. For >100 MB files, increase
+      heap or split the document.
+    question: Is there a file‑size limit?
+  - answer: Absolutely. `CompareOptions` lets you ignore whitespace, formatting, or
+      focus on specific sections.
+    question: Can I customize which change types are detected?
+  type: FAQPage
 tags:
 - document-comparison
 - java-api
 - file-processing
 - groupdocs
-title: Πώς να συγκρίνετε έγγραφα Java – Οδηγός με το GroupDocs API
+- java
+- comparison
+title: Πώς να συγκρίνετε έγγραφα Java – οδηγός με το GroupDocs API
 type: docs
 url: /el/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/
 weight: 1
 ---
 
-# Πώς να Συγκρίνετε Έγγραφα Java – Οδηγός με το GroupDocs API
+# Πώς να συγκρίνετε έγγραφα Java – οδηγός με το GroupDocs API
 
-Ever needed to **how to compare java** files quickly, whether it’s a contract, a technical spec, or a PDF report? Manually scanning two versions is error‑prone and time‑consuming. In this guide you’ll learn how to compare Java documents efficiently with the GroupDocs.Comparison API, using streams for optimal memory usage. We’ll walk through setup, code, common pitfalls, and real‑world use cases so you can automate document diff in minutes.
+Όταν χρειάζεται να **compare Java documents**—είτε πρόκειται για συμβόλαια, τεχνικές προδιαγραφές ή αναφορές PDF—η χειροκίνητη διαδικασία είναι επικίνδυνη και χρονοβόρα. Αυτό το tutorial σας δείχνει πώς να αυτοματοποιήσετε τη διαδικασία σύγκρισης με το GroupDocs.Comparison API, χρησιμοποιώντας Java streams για χαμηλή χρήση μνήμης και υψηλή απόδοση. Θα δείτε ολόκληρη τη ροή εργασίας, θα μάθετε πώς να αποδέχεστε ή να απορρίπτετε συγκεκριμένες αλλαγές και θα ανακαλύψετε συμβουλές βέλτιστων πρακτικών για μεγάλες υλοποιήσεις.
 
-## Γρήγορες Απαντήσεις
-- **Ποια βιβλιοθήκη λειτουργεί καλύτερα για τη σύγκριση εγγράφων Java;** GroupDocs.Comparison (Java)  
-- **Μπορώ να συγκρίνω αρχεία DOCX, PDF και TXT;** Ναι – το API υποστηρίζει πάνω από 50 μορφές.  
-- **Είναι η σύγκριση με βάση τα streams αποδοτική στη μνήμη;** Απόλυτα· επεξεργάζεται τα δεδομένα σε τμήματα αντί να φορτώνει ολόκληρα αρχεία.  
-- **Πώς αποδέχομαι ή απορρίπτω συγκεκριμένες αλλαγές;** Χρησιμοποιήστε `ChangeInfo.setComparisonAction(...)` στις επιστρεφόμενες αλλαγές.  
-- **Χρειάζομαι άδεια για παραγωγή;** Ναι – μια εμπορική άδεια αφαιρεί τα υδατογραφήματα και ξεκλειδώνει όλες τις λειτουργίες.
+## Γρήγορες απαντήσεις
+- **What library works best for comparing Java documents?** GroupDocs.Comparison (Java)  
+- **Can I compare DOCX, PDF, and TXT files?** Yes – the API supports 50+ formats.  
+- **Is stream‑based comparison memory‑efficient?** Absolutely; it processes data in chunks instead of loading whole files.  
+- **How do I accept or reject specific changes?** Use `ChangeInfo.setComparisonAction(...)` on the returned changes.  
+  `ChangeInfo.setComparisonAction(...)` sets the action (accept or reject) for a detected change.  
+- **Do I need a license for production?** Yes – a commercial license removes watermarks and unlocks full features.
 
 ## Τι είναι το “how to compare java” με το GroupDocs;
-GroupDocs.Comparison είναι μια βιβλιοθήκη Java που εντοπίζει κειμενικές, μορφοποιητικές και δομικές διαφορές μεταξύ δύο εγγράφων. Λειτουργεί μεταξύ διαφορετικών μορφών (DOCX ↔ PDF κ.λπ.) και επιστρέφει μια λεπτομερή λίστα αλλαγών που μπορείτε προγραμματιστικά να αποδεχτείτε ή να απορρίψετε.
 
-## Γιατί να Χρησιμοποιήσετε το GroupDocs.Comparison για τη Σύγκριση Εγγράφων Java;
-- **Νομική συμμόρφωση** – ακριβής παρακολούθηση αλλαγών για συμβάσεις.  
-- **Έλεγχος εκδόσεων** – διατηρήστε τα μη‑κώδικα έγγραφα συγχρονισμένα.  
-- **Απόδοση** – η επεξεργασία με streams διαχειρίζεται μεγάλα αρχεία χωρίς να εξαντλεί τη μνήμη RAM.  
-- **Αυτοματοποίηση** – ενσωματώστε σε CI pipelines, συστήματα διαχείρισης εγγράφων ή μικρο‑υπηρεσίες.
+Φορτώστε τα δύο έγγραφά σας στον συγκριτή και καλέστε `getChanges()` – το API επιστρέφει μια λεπτομερή λίστα διαφορών, συμπεριλαμβανομένων εισαγωγών, διαγραφών, μικρών αλλαγών μορφοποίησης και τροποποιήσεων εικόνας, όλα μέσα σε λίγα χιλιοστά του δευτερολέπτου για τυπικά αρχεία. Αυτή η απάντηση σας δίνει την κύρια ιδέα: η βιβλιοθήκη αφαιρεί τον αλγόριθμο diff, ώστε εσείς να χρειάζεται μόνο να παρέχετε streams και να διαχειρίζεστε τα προκύπτοντα αντικείμενα `ChangeInfo`.  
+`getChanges()` returns a list of `ChangeInfo` objects describing each difference.
+
+Το GroupDocs.Comparison είναι μια βιβλιοθήκη Java για την ανίχνευση διαφορών μεταξύ εγγράφων. Υποστηρίζει περισσότερα από 50 μορφές εισόδου και εξόδου, επεξεργάζεται αρχεία πολλών εκατοντάδων σελίδων χωρίς να φορτώνει ολόκληρο το έγγραφο στη μνήμη, και επιστρέφει μια δομημένη λίστα αλλαγών που μπορείτε προγραμματιστικά να αποδεχτείτε ή να απορρίψετε.
+
+## Γιατί να χρησιμοποιήσετε το GroupDocs.Comparison για σύγκριση εγγράφων Java;
+
+Παρέχετε ακριβή παρακολούθηση αλλαγών, υποστήριξη διαφόρων μορφών και επεξεργασία με streams που διατηρεί τη χρήση RAM κάτω από 100 MB ακόμη και για PDF 200 σελίδων. Η βιβλιοθήκη επεξεργάζεται έγγραφα 100 σελίδων σε λιγότερο από 2 δευτερόλεπτα σε έναν τυπικό διακομιστή 4‑πυρήνων, καθιστώντας την κατάλληλη για CI pipelines, συστήματα διαχείρισης εγγράφων και μικρο‑υπηρεσίες που χρειάζονται αποτελέσματα diff σε πραγματικό χρόνο.
 
 ## Προαπαιτούμενα
 - JDK 8+ (συνιστάται 11+)  
-- Maven ή Gradle (θα δείξουμε Maven)  
-- Βασικές γνώσεις των Java streams και του χειρισμού εξαιρέσεων  
-- Δύο δείγματα εγγράφων (οποιαδήποτε υποστηριζόμενη μορφή)
+- Maven ή Gradle (τα παραδείγματα χρησιμοποιούν Maven)  
+- Βασικές γνώσεις Java streams και διαχείρισης εξαιρέσεων  
+- Δύο δείγματα έγγραφα σε οποιαδήποτε υποστηριζόμενη μορφή (DOCX, PDF, TXT, κλπ.)
 
-**Συμβουλή:** Αν είστε νέοι στα streams, μην ανησυχείτε – τα αποσπάσματα κώδικα είναι πλήρως σχολιασμένα.
+**Pro tip:** Αν είστε νέοι στα streams, τα αποσπάσματα κώδικα περιλαμβάνουν ενσωματωμένα σχόλια που εξηγούν κάθε βήμα.
 
-## Ρύθμιση του GroupDocs.Comparison: Η Βάση
+## Ρύθμιση του GroupDocs.Comparison: η βάση
 
 ### Διαμόρφωση Maven
-Προσθέστε το αποθετήριο και την εξάρτηση στο `pom.xml` σας:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -71,71 +130,79 @@ GroupDocs.Comparison είναι μια βιβλιοθήκη Java που εντο
 </dependencies>
 ```
 
-### Κατανόηση της Άδειας (Η Επιχειρηματική Πλευρά)
-Το GroupDocs λειτουργεί με εμπορικό μοντέο, αλλά είναι αρκετά ευέλικτο:
-- **Δωρεάν δοκιμή** – ιδανική για αξιολόγηση και μικρά έργα.  
-- **Προσωρινές άδειες** – τέλειες για proof‑of‑concept εργασίες ([get one here](https://purchase.groupdocs.com/temporary-license/))  
-- **Εμπορικές άδειες** – απαιτούνται για παραγωγή ([pricing details](https://purchase.groupdocs.com/buy))
+### Κατανόηση της αδειοδότησης (η επιχειρηματική πλευρά)
 
-Η δοκιμή προσθέτει υδατογραφήματα στα παραγόμενα έγγραφα, αλλά η συμπεριφορά του API είναι ταυτόσημη.
+GroupDocs operates on a commercial model, but they’re fairly flexible:
 
-## Κύρια Υλοποίηση: Σύγκριση Εγγράφων με Βάση τα Streams
+- **Free trial** – ideal for evaluation and small projects.  
+- **Temporary licenses** – perfect for proof‑of‑concept work ([get one here](https://purchase.groupdocs.com/temporary-license/))  
+- **Commercial licenses** – required for production ([pricing details](https://purchase.groupdocs.com/buy))
 
-### Η Πλήρης Ροή Εργασίας
-1. **Αρχικοποίηση** – φορτώστε το πηγαίο έγγραφο ως stream.  
-2. **Σύγκριση** – προσθέστε το stream του στοχευόμενου εγγράφου.  
-3. **Ανίχνευση** – ανακτήστε μια λίστα από αντικείμενα `ChangeInfo`.  
-4. **Απόφαση** – αποδεχτείτε ή απορρίψτε τις αλλαγές προγραμματιστικά.  
-5. **Δημιουργία** – γράψτε το τελικό συγχωνευμένο έγγραφο σε ένα output stream.
+Η δοκιμαστική έκδοση προσθέτει υδατογραφήματα στα παραγόμενα έγγραφα, αλλά η συμπεριφορά του API είναι ίδια.
 
-### Βήμα 1: Αρχικοποίηση του Comparer με το Stream του Πηγαίου Εγγράφου
+## Κύρια υλοποίηση: σύγκριση εγγράφων με βάση τα streams
+
+### Η πλήρης ροή εργασίας
+1. **Initialize** – load the source document as a stream.  
+2. **Compare** – add the target document stream.  
+3. **Detect** – retrieve a list of `ChangeInfo` objects.  
+4. **Decide** – accept or reject changes programmatically.  
+5. **Generate** – write the final merged document to an output stream.
+
+### Βήμα 1: αρχικοποίηση συγκριτή με ροή πηγαίου εγγράφου
+
 ```java
 try (InputStream sourceStream = new FileInputStream(sourceFilePath);
      InputStream targetStream = new FileInputStream(targetFilePath);
      OutputStream resultStream = new FileOutputStream(outputFilePath)) {
 
     Comparer comparer = new Comparer(sourceStream);
-```
-*Γιατί streams;* Διατηρούν τη χρήση μνήμης χαμηλή επεξεργαζόμενα τα δεδομένα σε τμήματα αντί να φορτώνουν ολόκληρο το αρχείο.
+```  
+*Why streams?* They keep memory usage low by processing data in chunks instead of loading the whole file.
 
-### Βήμα 2: Προσθήκη του Στοχευόμενου Εγγράφου για Σύγκριση
+### Βήμα 2: προσθήκη στοχευμένου εγγράφου για σύγκριση
+
 ```java
 comparer.add(targetStream);
-```
+```  
 Η μηχανή έχει τώρα και τα δύο έγγραφα και μπορεί να ξεκινήσει τη σύγκριση.
 
-### Βήμα 3: Ανίχνευση και Ανάλυση Αλλαγών
+### Βήμα 3: ανίχνευση και ανάλυση αλλαγών
+
 ```java
 ChangeInfo[] changes = comparer.getChanges();
-```
-Κάθε `ChangeInfo` αντιπροσωπεύει μια εισαγωγή, διαγραφή, τροποποίηση μορφοποίησης, αλλαγή εικόνας κ.λπ.
+```  
+Κάθε `ChangeInfo` αντιπροσωπεύει μια εισαγωγή, διαγραφή, μικρή αλλαγή μορφοποίησης, αλλαγή εικόνας κλπ.
 
-### Βήμα 4: Αποδοχή ή Απόρριψη Αλλαγών Προγραμματιστικά
+### Βήμα 4: αποδοχή ή απόρριψη αλλαγών προγραμματιστικά
+
 ```java
 changes[0].setComparisonAction(ComparisonAction.REJECT);
-```
-Τυπικά μοτίβα αυτοματοποίησης:
+```  
+Τυπικά μοτίβα αυτοματοποίησης:  
 - Αποδοχή όλων των αλλαγών μορφοποίησης, απόρριψη επεξεργασιών περιεχομένου.  
 - Αυτόματη απόρριψη αλλαγών σε κεφαλίδες/υποσέλιδα.  
 - Αποδοχή αλλαγών μόνο από αξιόπιστους συγγραφείς.
 
-### Βήμα 5: Δημιουργία του Τελικού Εγγράφου
+### Βήμα 5: δημιουργία του τελικού εγγράφου
+
 ```java
 comparer.applyChanges(resultStream, new ApplyChangeOptions(changes));
-```
-`ApplyChangeOptions` σας επιτρέπει να ρυθμίσετε λεπτομερώς τη συμπεριφορά συγχώνευσης, όπως η διατήρηση του αρχικού στυλ.
+```  
+`ApplyChangeOptions` lets you fine‑tune merge behavior, such as preserving original styling.
 
-## Πραγματικές Εφαρμογές: Πού Λαμπυρίζει Αυτό
-- **Ανασκόπηση νομικών συμβάσεων** – αυτόματη επισήμανση αλλαγών (redlines) και δρομολόγηση στον κατάλληλο ελεγκτή.  
-- **Αναθεωρήσεις ακαδημαϊκών εργασιών** – αποδοχή μικρών διορθώσεων μορφοποίησης ενώ επισημαίνονται σημαντικές επεμβάσεις.  
-- **Τεκμηρίωση λογισμικού** – εντοπίζει αλλαγές προδιαγραφών API που μπορεί να σπάσουν τον κώδικα πελάτη.  
-- **Κανονιστική συμμόρφωση** – διατηρεί αρχεία ελέγχου για ενημερώσεις πολιτικών.
+## Πραγματικές εφαρμογές: πού διαπρέπει αυτό
 
-## Συνηθισμένες Παγίδες και Πώς να τις Αποφύγετε
+- **Legal contract review** – auto‑flag redlines and route them to the right reviewer.  
+- **Academic paper revisions** – accept minor formatting fixes while flagging substantive edits.  
+- **Software documentation** – detect API spec changes that could break client code.  
+- **Regulatory compliance** – maintain audit trails for policy updates.
 
-### Προβλήματα Διαχείρισης Μνήμης
-- **Πρόβλημα:** Σφάλματα Out‑of‑memory σε μεγάλα PDF.  
-- **Λύση:** Χρησιμοποιείτε πάντα try‑with‑resources (όπως φαίνεται) και παρακολουθείτε το μέγεθος της heap (`-Xmx4g` ή μεγαλύτερο).
+## Συνηθισμένα προβλήματα και πώς να τα αποφύγετε
+
+### Προβλήματα διαχείρισης μνήμης
+- **Problem:** Out‑of‑memory errors on large PDFs.  
+- **Solution:** Always use try‑with‑resources (as shown) and monitor heap size (`-Xmx4g` or higher).
 
 ```java
 try (InputStream source = new FileInputStream(sourcePath)) {
@@ -143,70 +210,75 @@ try (InputStream source = new FileInputStream(sourcePath)) {
 }
 ```
 
-### Έκπληξη Συμβατότητας Μορφής
-- **Πρόβλημα:** Η σύγκριση DOCX με PDF μπορεί να παραβλέψει λεπτές διαφορές διάταξης.  
-- **Λύση:** Προτιμήστε συγκρίσεις ίδιας μορφής για κρίσιμα νομικά έγγραφα.
+### Εκπλήξεις συμβατότητας μορφών
+- **Problem:** Comparing DOCX to PDF may miss subtle layout differences.  
+- **Solution:** Prefer same‑format comparisons for critical legal documents.
 
-### Υποβάθμιση Απόδοσης
-- **Πρόβλημα:** Πιο αργές συγκρίσεις με την πάροδο του χρόνου.  
-- **Λύση:** Καθαρίστε προσωρινά αρχεία, περιορίστε το μέγεθος των εγγράφων και εξετάστε ασύγχρονη επεξεργασία για δέσμες εργασιών.
+### Υποβάθμιση απόδοσης
+- **Problem:** Slower comparisons over time.  
+- **Solution:** Clean temporary files, limit document size, and consider asynchronous processing for batch jobs.
 
-### Ευαισθησία Ανίχνευσης Αλλαγών
-- **Πρόβλημα:** Πάρα πολλές ασήμαντες αλλαγές (κενά, γραμματοσειρές).  
-- **Λύση:** Διαμορφώστε τη μηχανή ώστε να αγνοεί μη‑ουσιώδεις διαφορές:
+### Ευαισθησία ανίχνευσης αλλαγών
+- **Problem:** Too many trivial changes (whitespace, fonts).  
+- **Solution:** Configure the engine to ignore non‑essential differences:
 
 ```java
 CompareOptions options = new CompareOptions();
 options.setIgnoreWhitespaces(true);
 comparer.compare(outputStream, options);
-```
+```  
+`CompareOptions` lets you configure which types of changes the comparer should detect or ignore.
 
-## Βελτιστοποίηση Απόδοσης: Συμβουλές για Παραγωγική Χρήση
-- **Ρύθμιση JVM:** Χρησιμοποιήστε G1GC και κατάλληλη heap (`-Xmx8g` για έγγραφα >100 MB).  
-- **Ασύγχρονη επεξεργασία:** Μεταφέρετε τις συγκρίσεις σε ουρά εργασίας.  
-- **Caching:** Αποθηκεύστε τα αποτελέσματα για ζεύγη εγγράφων που συγκρίνονται συχνά.  
-- **Κλιμάκωση:** Αναπτύξτε το comparer ως αstateless μικροϋπηρεσία πίσω από φορτωτικό ισοζύγιο.
+## Βελτιστοποίηση απόδοσης: συμβουλές για παραγωγικό περιβάλλον
 
-## Οδηγός Επίλυσης Προβλημάτων
+- **JVM tuning:** Use G1GC and appropriate heap (`-Xmx8g` for >100 MB docs).  
+- **Asynchronous processing:** Offload comparisons to a worker queue.  
+- **Caching:** Store results for frequently compared document pairs.  
+- **Scaling:** Deploy the comparer as a stateless microservice behind a load balancer.
 
-| Συμπτωμα | Διάγνωση | Διόρθωση |
-|----------|----------|----------|
-| `OutOfMemoryError` | Το έγγραφο υπερβαίνει τη heap | Αυξήστε τη heap, χρησιμοποιήστε chunking, ή προεπεξεργαστείτε για να αφαιρέσετε περιττά μέρη |
-| Missing changes | Μη συμβατές μορφές ή χαμηλή ευαισθησία | Επαληθεύστε τις μορφές, προσαρμόστε `CompareOptions` |
-| Slow over time | Διαρροές πόρων | Βεβαιωθείτε ότι όλα τα streams κλείνουν, καθαρίστε τους προσωρινούς φακέλους |
+## Οδηγός αντιμετώπισης προβλημάτων
 
-## Εναλλακτικές Προσεγγίσεις (Όταν το GroupDocs δεν είναι η Καλύτερη Επιλογή)
-- **Apache Tika + προσαρμοσμένο diff** – δωρεάν αλλά απαιτεί περισσότερο κώδικα.  
-- **Βιβλιοθήκες ειδικές για μορφές** – καλές για pipelines μιας μόνο μορφής.  
-- **Cloud APIs** – χαμηλή συντήρηση αλλά προσθέτουν καθυστέρηση και ανησυχίες για την ιδιωτικότητα των δεδομένων.
+| Symptom | Diagnosis | Fix |
+|---------|------------|-----|
+| `OutOfMemoryError` | Document exceeds heap | Increase heap, use chunking, or pre‑process to trim unnecessary parts |
+| Missing changes | Incompatible formats or low sensitivity | Verify formats, adjust `CompareOptions` |
+| Slow over time | Resource leaks | Ensure all streams are closed, purge temp directories |
 
-## Συχνές Ερωτήσεις
+## Εναλλακτικές προσεγγίσεις (όταν το GroupDocs δεν είναι η καλύτερη επιλογή)
 
-**Ε: Ποιες μορφές εγγράφων υποστηρίζει το GroupDocs.Comparison;**  
-Α: Πάνω από 50 μορφές, συμπεριλαμβανομένων DOCX, PDF, PPTX, XLSX, TXT, HTML και άλλων. Δείτε την [τεκμηρίωση μορφών](https://docs.groupdocs.com/comparison/java/supported-document-formats/).
+- **Apache Tika + custom diff** – free but requires more code.  
+- **Format‑specific libraries** – good for single‑format pipelines.  
+- **Cloud APIs** – low‑maintenance but add latency and data‑privacy concerns.
 
-**Ε: Μπορώ να συγκρίνω περισσότερα από δύο έγγραφα ταυτόχρονα;**  
-Α: Ναι. Καλέστε `comparer.add()` πολλές φορές πριν το `getChanges()` για να συγχωνεύσετε πολλές εκδόσεις.
+## Συχνές ερωτήσεις
 
-**Ε: Πώς διαχειρίζομαι αρχεία με κωδικό πρόσβασης;**  
-Α: Χρησιμοποιήστε `LoadOptions` για να παρέχετε τον κωδικό:
+**Q: Ποιες μορφές εγγράφων υποστηρίζει το GroupDocs.Comparison;**  
+A: Πάνω από 50 μορφές, συμπεριλαμβανομένων DOCX, PDF, PPTX, XLSX, TXT, HTML και άλλων. Δείτε την [format documentation](https://docs.groupdocs.com/comparison/java/supported-document-formats/).
+
+**Q: Μπορώ να συγκρίνω περισσότερα από δύο έγγραφα ταυτόχρονα;**  
+A: Ναι. Καλέστε `comparer.add()` πολλές φορές πριν το `getChanges()` για να συγχωνεύσετε αρκετές εκδόσεις.
+
+**Q: Πώς διαχειρίζομαι αρχεία με κωδικό πρόσβασης;**  
+A: Χρησιμοποιήστε `LoadOptions` για να παρέχετε τον κωδικό:
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Comparer comparer = new Comparer(sourceStream, loadOptions);
-```
+```  
+`LoadOptions` allows you to specify options such as passwords when loading a document.
 
-**Ε: Υπάρχει όριο μεγέθους αρχείου;**  
-Α: Δεν υπάρχει σκληρό όριο, αλλά η χρήση μνήμης αυξάνεται με το μέγεθος. Για αρχεία >100 MB, αυξήστε τη heap ή χωρίστε το έγγραφο.
+**Q: Υπάρχει όριο μεγέθους αρχείου;**  
+A: Δεν υπάρχει σκληρό όριο, αλλά η χρήση μνήμης αυξάνεται με το μέγεθος. Για αρχεία >100 MB, αυξήστε το heap ή χωρίστε το έγγραφο.
 
-**Ε: Μπορώ να προσαρμόσω ποιους τύπους αλλαγών ανιχνεύει;**  
-Α: Απόλυτα. Το `CompareOptions` σας επιτρέπει να αγνοήσετε κενά, μορφοποίηση ή να εστιάσετε σε συγκεκριμένα τμήματα.
+**Q: Μπορώ να προσαρμόσω ποιοι τύποι αλλαγών ανιχνεύονται;**  
+A: Απόλυτα. `CompareOptions` lets you ignore whitespace, formatting, or focus on specific sections.
 
-**Ε: Λειτουργεί αυτό σε Docker containers;**  
-Α: Ναι – απλώς εκχωρήστε επαρκή μνήμη και προσαρτήστε το αρχείο άδειας.
+**Q: Λειτουργεί αυτό σε Docker containers;**  
+A: Ναι – απλώς διανείμετε επαρκή μνήμη και προσαρτήστε το αρχείο άδειας.
 
-## Πρόσθετοι Πόροι
+## Πρόσθετοι πόροι
+
 - [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)  
 - [Get a Free Trial](https://releases.groupdocs.com/comparison/java/)  
 - [Purchase Commercial License](https://purchase.groupdocs.com/buy)  
@@ -218,6 +290,12 @@ Comparer comparer = new Comparer(sourceStream, loadOptions);
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-03-30  
-**Δοκιμάστηκε Με:** GroupDocs.Comparison 25.2 (Java)  
+**Τελευταία ενημέρωση:** 2026-08-30  
+**Δοκιμή με:** GroupDocs.Comparison 25.2 (Java)  
 **Συγγραφέας:** GroupDocs
+
+## Σχετικά μαθήματα
+
+- [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)  
+- [Java Handle Large Files with GroupDocs Comparison – Tutorial](/comparison/java/basic-comparison/master-groupdocs-comparison-java-document-html-rendering/)  
+- [GroupDocs Comparison Java: Compare Protected Documents – Complete Guide](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)

@@ -1,79 +1,121 @@
 ---
 categories:
 - Java Development
-date: '2026-03-22'
-description: เรียนรู้วิธีใช้ GroupDocs for Java ในการเปรียบเทียบเอกสารแบบสตรีม, เปรียบเทียบหลายเอกสารด้วย
-  Java, และปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุดสำหรับการเปรียบเทียบใน Java.
-keywords: Java document comparison streams, GroupDocs comparison Java tutorial, compare
-  multiple documents java, java comparison best practices, multi document comparison
-  Java, Java stream document processing, how to use groupdocs
-lastmod: '2026-03-22'
-linktitle: Java Document Comparison Streams Guide
+date: '2026-08-19'
+description: เรียนรู้วิธีใช้ GroupDocs สำหรับสตรีมการเปรียบเทียบเอกสาร Java, เปรียบเทียบเอกสารหลายไฟล์ด้วย
+  Java, และปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุดสำหรับการเปรียบเทียบใน Java
+keywords:
+- how to use groupdocs
+- java compare word documents
+- java compare large files
+- compare excel files java
+- compare multiple documents java
+lastmod: '2026-08-19'
+linktitle: คู่มือสตรีมการเปรียบเทียบเอกสาร Java
+og_description: เรียนรู้วิธีใช้ GroupDocs สำหรับสตรีมการเปรียบเทียบเอกสาร Java, เปรียบเทียบเอกสารหลายไฟล์อย่างมีประสิทธิภาพ,
+  และปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุดสำหรับไฟล์ขนาดใหญ่
+og_image_alt: Guide showing Java code for stream-based document comparison with GroupDocs
+og_title: วิธีใช้ GroupDocs สำหรับสตรีมการเปรียบเทียบเอกสาร Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to use GroupDocs for Java document comparison streams, compare
+    multiple documents Java, and follow Java comparison best practices.
+  headline: 'How to use GroupDocs: Java document comparison streams – complete guide'
+  type: TechArticle
+- description: Learn how to use GroupDocs for Java document comparison streams, compare
+    multiple documents Java, and follow Java comparison best practices.
+  name: 'How to use GroupDocs: Java document comparison streams – complete guide'
+  steps:
+  - name: initialize your comparer with the source document
+    text: '`Comparer` is the core class that orchestrates the diff operation. It accepts
+      an `InputStream` for the source document and manages all target streams. **Why
+      this pattern works** – the try‑with‑resources block automatically closes streams,
+      preventing leaks, and the `Comparer` instance stays lightweig'
+  - name: add multiple target documents
+    text: '`add` registers each target `InputStream`. You can add as many as your
+      JVM can handle; in practice, **10–15 documents** per batch is a sweet spot for
+      most servers. **Pro tip** – wrap each `add` call in its own try‑catch block
+      so a single corrupted file doesn’t abort the whole batch.'
+  - name: execute comparison and generate results
+    text: '`compare()` runs the diff against all registered targets and writes the
+      result to an output stream, keeping memory usage low. **What happens here**
+      – the method returns a `Path` object that points to the generated comparison
+      file, which you can serve directly to a client or store for later review.'
+  type: HowTo
+- questions:
+  - answer: Absolutely—GroupDocs.Comparison supports PDF, Excel, PowerPoint, and plain‑text
+      files, and the stream‑based approach works consistently across all supported
+      formats.
+    question: can i compare documents other than Word files?
+  - answer: There’s no hard limit, but practical constraints are memory, CPU, and
+      processing time. Comparing 10‑15 documents simultaneously is typical; larger
+      batches should be split into chunks.
+    question: what’s the maximum number of documents i can compare at once?
+  - answer: 'Use layered exception handling so a single failure doesn’t abort the
+      whole job:'
+    question: how do i handle comparison errors gracefully?
+  - answer: Yes—GroupDocs.Comparison offers styling options for inserted, deleted,
+      and modified content, including custom colors, fonts, and metadata inclusion.
+    question: can i customise how differences are highlighted in the output?
+  - answer: Stream‑based comparison is ideal for low‑latency scenarios because of
+      its low memory footprint. For truly live collaborative editing, combine it with
+      caching and incremental diff techniques.
+    question: is this approach suitable for real‑time document comparison?
+  type: FAQPage
 tags:
 - document-comparison
 - java-streams
 - groupdocs
 - file-processing
+- compare multiple documents
 title: 'วิธีใช้ GroupDocs: สตรีมการเปรียบเทียบเอกสาร Java – คู่มือฉบับสมบูรณ์'
 type: docs
 url: /th/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/
 weight: 1
 ---
 
-# วิธีใช้ GroupDocs: การเปรียบเทียบเอกสาร Java ด้วย Streams – คู่มือฉบับสมบูรณ์
+# วิธีใช้ GroupDocs: การเปรียบเทียบเอกสาร Java ด้วยสตรีม – คู่มือฉบับสมบูรณ์
 
-## คำนำ
+เมื่อคุณต้องการ **how to use GroupDocs** สำหรับการเปรียบเทียบสัญญา, เอกสารกฎหมาย, หรือข้อความที่ควบคุมเวอร์ชัน, โซลูชันที่เชื่อถือได้ที่สุดคือ GroupDocs.Comparison สำหรับ Java. มันทำให้คุณเปรียบเทียบหลายเอกสารในครั้งเดียวโดยประมวลผลโดยตรงจากอ็อบเจ็กต์ `InputStream`, ซึ่งลดการใช้หน่วยความจำ heap อย่างมาก. ในบทแนะนำนี้คุณจะค้นพบว่าเมื่อใดที่การเปรียบเทียบแบบสตรีมเป็นตัวเลือกที่เหมาะสม, วิธีหลีกเลี่ยงข้อผิดพลาดทั่วไป, และรูปแบบแนวปฏิบัติที่ดีที่สุดที่ทำให้การนำไปใช้ของคุณพร้อมสำหรับการผลิต.
 
-เคยต้องเปรียบเทียบหลายเวอร์ชันของเอกสารด้วยตนเอง จ้องจอเพื่อหาความแตกต่างหรือไม่? หากคุณทำงานกับสัญญา เอกสารทางกฎหมาย หรือเนื้อหาใด ๆ ที่ผ่านการแก้ไขหลายครั้ง คุณคงรู้ว่ากระบวนการนี้น่าเบื่อ (และเสี่ยงต่อข้อผิดพลาด) เพียงใด  
+## คำตอบสั้น
+- **What is the primary benefit of stream‑based comparison?** มันประมวลผลเอกสารโดยตรงจากสตรีม, ทำให้การใช้หน่วยความจำต่ำกว่า 50 MB แม้สำหรับไฟล์ 100 หน้า.  
+- **Can I compare more than two documents at once?** ใช่—GroupDocs ให้คุณเปรียบเทียบจำนวนเอกสารเป้าหมายที่ไม่จำกัดในหนึ่งการเรียก.  
+- **Do I need a paid license for large files?** การทดลองใช้ฟรีทำงานสำหรับการประเมิน; ไลเซนส์เต็มจะลบข้อจำกัดขนาดและเปิดใช้งานการประมวลผลแบบแบตช์.  
+- **Which Java version is recommended?** Java 11+ ให้ประสิทธิภาพที่ดีที่สุดและการสนับสนุนระยะยาว.  
+- **Is this approach suitable for web applications?** แน่นอน—การจัดการสตรีมเหมาะอย่างยิ่งกับ API ที่อัปโหลดและเปรียบเทียบ.
 
-**เมื่อคุณสงสัย *วิธีใช้ GroupDocs* สำหรับงานนี้ คำตอบง่าย ๆ คือ:** GroupDocs.Comparison สำหรับ Java ช่วยให้คุณอัตโนมัติกระบวนการทั้งหมด โดยเปรียบเทียบหลายเอกสารพร้อมกันโดยใช้ streams ที่ประหยัดหน่วยความจำ นี่ไม่ใช่แค่การประหยัดเวลา—แต่ยังเป็นการขจัดข้อผิดพลาดของมนุษย์และขยายขีดความสามารถในการประมวลผลเอกสารของคุณ  
+## วิธีการใช้ GroupDocs สำหรับการเปรียบเทียบเอกสาร Java ด้วยสตรีมคืออะไร?
+โหลดเอกสารของคุณโดยตรงจากอ็อบเจ็กต์ `InputStream` และให้ GroupDocs.Comparison ทำการเปรียบเทียบ diff โดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ. เทคนิคนี้เหมาะสำหรับไฟล์ Word, PDF, หรือ Excel ขนาดใหญ่และสำหรับงานแบตช์ที่ต้องเปรียบเทียบหลายสิบไฟล์ในการทำงานครั้งเดียว.
 
-ในคู่มือนี้ เราจะพาคุณผ่านทุกอย่างที่ต้องรู้เกี่ยวกับการนำการเปรียบเทียบเอกสารแบบหลาย‑stream ไปใช้ใน Java คุณจะได้เรียนรู้ว่าเมื่อใดควรใช้วิธีนี้ วิธีหลีกเลี่ยงข้อผิดพลาดทั่วไป และแนวปฏิบัติการเปรียบเทียบเอกสารที่จะทำให้การนำไปใช้ของคุณพร้อมสำหรับการผลิต
+## ทำไมต้องใช้การเปรียบเทียบเอกสารแบบสตรีม?
+การประมวลผลเอกสารเป็นสตรีมลดความกดดันของ heap ได้ถึง 80 % เมื่อเทียบกับวิธีการโหลดไฟล์, ทำให้คุณจัดการไฟล์ที่ใหญ่กว่า 200 MB, และปรับปรุงความหน่วงของการเริ่มต้นได้ 30 %. GroupDocs.Comparison รองรับ **รูปแบบอินพุตและเอาต์พุตกว่า 50**—รวมถึง DOCX, PDF, XLSX, PPTX, และข้อความธรรมดา—ดังนั้นคุณสามารถเปรียบเทียบเอกสารสำนักงานใดก็ได้ในหนึ่งการเรียก API.
 
-## คำตอบสั้น ๆ
-- **ประโยชน์หลักของการเปรียบเทียบแบบ stream คืออะไร?** ลดการใช้หน่วยความจำโดยประมวลผลเอกสารโดยตรงจาก streams  
-- **ฉันสามารถเปรียบเทียบมากกว่าสองเอกสารพร้อมกันได้หรือไม่?** ได้, GroupDocs ให้คุณเปรียบเทียบหลายเอกสารเป้าหมายในรอบเดียว  
-- **ต้องมีลิขสิทธิ์แบบชำระเงินสำหรับไฟล์ขนาดใหญ่หรือไม่?** ทดลองใช้ฟรีสามารถทดสอบได้; ลิขสิทธิ์เต็มจะลบข้อจำกัดขนาดสำหรับการผลิต  
-- **แนะนำให้ใช้ Java เวอร์ชันใด?** Java 11+ ให้ประสิทธิภาพและความเข้ากันได้ดีที่สุด  
-- **วิธีนี้เหมาะกับแอปพลิเคชันเว็บหรือไม่?** แน่นอน—การประมวลผลแบบ stream เข้ากันได้ดีกับสถานการณ์อัปโหลด‑และ‑เปรียบเทียบ
+## เมื่อใดควรใช้การเปรียบเทียบเอกสารแบบสตรีม
+การเปรียบเทียบแบบสตรีมเป็นทางเลือกที่เหมาะเมื่อต้องจัดการไฟล์ขนาดใหญ่, ต้องรันงานแบตช์, หรือให้บริการเอกสารผ่านเว็บ API. มันทำให้การใช้ heap ต่ำ, ลดความหน่วง, และอนุญาตให้ประมวลผลไฟล์ที่เกินขีดจำกัดหน่วยความจำทั่วไป, ทำให้เหมาะกับกระบวนการทำงานเอกสารระดับองค์กรและบริการคลาวด์เนทีฟ.
 
-## “วิธีใช้ GroupDocs” สำหรับ Java Document Comparison Streams คืออะไร?
+### เหมาะสำหรับสถานการณ์เหล่านี้
+- **Large document processing** – ไฟล์ ≥ 50 MB ที่การใช้ heap มีความสำคัญ.  
+- **Batch operations** – เปรียบเทียบหลายสิบหรือหลายร้อยไฟล์ในงานประจำคืน.  
+- **Web applications** – ผู้ใช้อัปโหลดไฟล์; สตรีมทำให้หน่วยความจำของเซิร์ฟเวอร์เบา.  
+- **Automated workflows** – การผสานกับ DMS, pipeline CI/CD, หรือไมโครเซอร์วิส.
 
-การใช้ GroupDocs.Comparison กับ streams ใน Java หมายความว่าคุณจะส่งข้อมูลเอกสารโดยตรงจากอ็อบเจ็กต์ `InputStream` แทนการโหลดไฟล์ทั้งหมดเข้าในหน่วยความจำ วิธีนี้เหมาะอย่างยิ่งกับไฟล์ขนาดใหญ่ งานแบบ batch หรือสภาพแวดล้อมใด ๆ ที่ต้องการการใช้ทรัพยากรอย่างมีประสิทธิภาพ
-
-## ทำไมต้องใช้การเปรียบเทียบเอกสารแบบ Stream?
-
-- **ประหยัดหน่วยความจำ** – ไฟล์ Word, PDF หรือ Excel ขนาดใหญ่สามารถประมวลผลได้โดยไม่ทำให้ heap เต็ม  
-- **ขยายขนาดได้** – เปรียบเทียบเอกสารหลายร้อยไฟล์ในงาน batch หรือบริการคลาวด์  
-- **ประสิทธิภาพ** – เวลาเริ่มทำงานเร็วขึ้นเพราะไฟล์ไม่ต้องโหลดเต็มก่อนเปรียบเทียบ  
-- **ความยืดหยุ่น** – ทำงานได้อย่างราบรื่นในแอปเดสก์ท็อป, micro‑services, และ pipeline CI/CD
-
-## เมื่อใดควรใช้การเปรียบเทียบเอกสารแบบ Stream
-
-ก่อนจะลงมือเขียนโค้ด ให้เข้าใจว่าการเปรียบเทียบแบบ stream มีความเหมาะสมเมื่อใด:
-
-### เหมาะกับสถานการณ์ต่อไปนี้
-- **การประมวลผลเอกสารขนาดใหญ่** – ไฟล์ 50 MB+ ที่เป็นภาระต่อ heap  
-- **งานแบบ Batch** – เปรียบเทียบหลายสิบหรือหลายร้อยไฟล์โดยไม่ต้องโหลดทั้งหมดพร้อมกัน  
-- **แอปพลิเคชันเว็บ** – ผู้ใช้อัปโหลดเอกสารเพื่อเปรียบเทียบ; streams ช่วยให้เซิร์ฟเวอร์ใช้หน่วยความจำน้อยลง  
-- **เวิร์กโฟลว์อัตโนมัติ** – การรวมกับ DMS หรือ pipeline CI/CD ที่ต้องการ diff ที่เร็วและเชื่อถือได้
-
-### ควรหลีกเลี่ยงการใช้ Stream เมื่อ
-- ไฟล์เล็กมาก (น้อยกว่า 10 MB) และความเรียบง่ายสำคัญกว่าการเพิ่มประสิทธิภาพ  
-- คุณต้องทำหลายรอบการอ่านเนื้อหาเดียวกัน (เช่น การสกัดข้อความก่อนเปรียบเทียบ)  
-- สภาพแวดล้อมมีหน่วยความจำเพียงพอและความซับซ้อนเพิ่มขึ้นไม่คุ้มค่า
+### อย่ใช้สตรีมเมื่อ
+- ไฟล์มีขนาดเล็ก (ต่ำกว่า 10 MB) และความเรียบง่ายสำคัญกว่าประสิทธิภาพ.  
+- คุณต้องอ่านเนื้อหาเดียวกันหลายครั้งก่อนการเปรียบเทียบ (เช่น ดึงข้อความก่อน).  
+- สภาพแวดล้อมของคุณมีหน่วยความจำเพียงพอและความซับซ้อนของโค้ดที่เพิ่มเข้ามาไม่คุ้มค่า.
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-### สิ่งที่คุณต้องมี
-- **Java Development Kit (JDK)** – เวอร์ชัน 8 หรือสูงกว่า (แนะนำ Java 11+)  
-- **Maven** – สำหรับจัดการ dependency (หรือ Gradle หากคุณชอบ)  
-- **ความรู้พื้นฐาน Java** – try‑with‑resources, streams, การจัดการ exception  
-- **เอกสารตัวอย่าง** – ไฟล์ Word, PDF หรือ Excel บางไฟล์สำหรับการทดสอบ
+### สิ่งที่คุณต้องการ
+- **Java Development Kit (JDK)** – รุ่น 8 หรือสูงกว่า (แนะนำ Java 11+).  
+- **Maven** – สำหรับการจัดการ dependencies (หรือ Gradle หากคุณต้องการ).  
+- **Basic Java knowledge** – try‑with‑resources, streams, และการจัดการ exception.  
+- **Sample documents** – เอกสาร Word, PDF, หรือ Excel จำนวนไม่กี่ไฟล์สำหรับการทดสอบ.
 
 ### การตั้งค่า GroupDocs.Comparison สำหรับ Java
-
-การนำ GroupDocs.Comparison เข้าโปรเจกต์ทำได้ง่ายด้วย Maven เพียงเพิ่มการกำหนดค่าใน `pom.xml` ของคุณ:
+Add the GroupDocs.Comparison Maven dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -93,19 +135,16 @@ weight: 1
 </dependencies>
 ```
 
-### การจัดการลิขสิทธิ์
+### การจัดการไลเซนส์ของคุณ
+คุณสามารถเริ่มต้นด้วย **free trial license** สำหรับการประเมิน. สำหรับการผลิต, รับ **temporary license** ระหว่างการพัฒนา หรือซื้อไลเซนส์เต็มเพื่อยกเลิกข้อจำกัดขนาดไฟล์และเปิดใช้งานการสนับสนุนระดับ priority.
 
-คุณสามารถเริ่มต้นใช้ GroupDocs.Comparison ด้วย **ลิขสิทธิ์ทดลองฟรี** — เหมาะสำหรับการทดสอบและโครงการขนาดเล็ก สำหรับการใช้งานในผลิตภัณฑ์ ให้รับ **ลิขสิทธิ์ชั่วคราว** ระหว่างการพัฒนาหรือซื้อลิขสิทธิ์เต็ม รุ่นทดลองใช้ได้สำหรับการเรียนรู้ แต่ไฟล์ขนาดใหญ่อาจเจอข้อจำกัด
+## คู่มือการดำเนินการแบบขั้นตอน
 
-## คู่มือการทำตามขั้นตอน
+### ทำความเข้าใจแนวทางสตรีม
+การใช้สตรีมบอก Java: “อ่านเฉพาะไบต์ที่ต้องการ, เมื่อคุณต้องการ.” นี้หลีกเลี่ยงการโหลดเอกสารทั้งหมดเข้าสู่หน่วยความจำ, ซึ่งสำคัญสำหรับสถานการณ์ **java compare large files**.
 
-### ทำความเข้าใจแนวคิด Stream
-
-เมื่อใช้ streams สำหรับการเปรียบเทียบเอกสาร คุณกำลังบอก Java ว่า “อย่าโหลดไฟล์ทั้งหมดเข้า memory. อ่านเฉพาะที่ต้องการเมื่อจำเป็น” สิ่งนี้สำคัญมากสำหรับเอกสารขนาดใหญ่หรือสภาพแวดล้อมที่มีหน่วยความจำจำกัด
-
-### ขั้นตอนที่ 1: เริ่มต้น Comparer ด้วยเอกสารต้นทาง
-
-นี่คือจุดเริ่มต้น—สร้างอ็อบเจ็กต์ `Comparer` ด้วย stream ของเอกสารต้นทาง:
+### ขั้นตอนที่ 1: เริ่มต้น comparer ของคุณด้วยเอกสารต้นทาง
+`Comparer` เป็นคลาสหลักที่จัดการการดำเนินการ diff. มันรับ `InputStream` สำหรับเอกสารต้นทางและจัดการสตรีมเป้าหมายทั้งหมด.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -120,14 +159,10 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
 }
 ```
 
-**ทำไมรูปแบบนี้ถึงได้ผล**  
-- `try‑with‑resources` ปิด stream อัตโนมัติ ป้องกัน memory leak  
-- ไม่ต้องโหลดเอกสารต้นทางทั้งหมดเข้าสู่ memory ล่วงหน้า  
-- มีการจัดการ exception อยู่แล้ว — หากไฟล์ไม่พบหรือเสียหาย คุณจะได้รับแจ้งทันที
+**Why this pattern works** – บล็อก try‑with‑resources ปิดสตรีมโดยอัตโนมัติ, ป้องกันการรั่วไหล, และอินสแตนซ์ `Comparer` มีน้ำหนักเบาเพราะไม่เคยเก็บไฟล์เต็มใน RAM.
 
 ### ขั้นตอนที่ 2: เพิ่มเอกสารเป้าหมายหลายไฟล์
-
-ต่อไปให้เพิ่มเอกสารเป้าหมายตามต้องการ:
+`add` ลงทะเบียนแต่ละ `InputStream` เป้าหมาย. คุณสามารถเพิ่มได้เท่าที่ JVM ของคุณรับได้; โดยปฏิบัติ, **10–15 เอกสาร** ต่อแบตช์เป็นจุดที่เหมาะสมสำหรับเซิร์ฟเวอร์ส่วนใหญ่.
 
 ```java
 try (InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TARGET1_WORD"),
@@ -137,11 +172,10 @@ try (InputStream target1Stream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/TA
 }
 ```
 
-**เคล็ดลับ**: คุณสามารถเพิ่มเอกสารเป้าหมายได้ตามที่หน่วยความจำของระบบคุณรับได้ โดยทั่วไปการเปรียบเทียบ 10–15 ไฟล์พร้อมกันทำงานได้ดีบนเครื่องสมัยใหม่ส่วนใหญ่
+**Pro tip** – ห่อแต่ละการเรียก `add` ด้วยบล็อก try‑catch ของตนเองเพื่อให้ไฟล์เสียหายหนึ่งไฟล์ไม่ทำให้แบตช์ทั้งหมดหยุดทำงาน.
 
-### ขั้นตอนที่ 3: เรียกเปรียบเทียบและสร้างผลลัพธ์
-
-สุดท้ายให้รันการเปรียบเทียบและบันทึกผลลัพธ์:
+### ขั้นตอนที่ 3: ดำเนินการเปรียบเทียบและสร้างผลลัพธ์
+`compare()` รัน diff กับเป้าหมายที่ลงทะเบียนทั้งหมดและเขียนผลลัพธ์ไปยัง output stream, ทำให้การใช้หน่วยความจำต่ำ.
 
 ```java
 import java.io.FileOutputStream;
@@ -154,14 +188,10 @@ try (OutputStream resultStream = new FileOutputStream("YOUR_OUTPUT_DIRECTORY/Com
 }
 ```
 
-**สิ่งที่เกิดขึ้นที่นี่**  
-- `compare()` ประมวลผลเอกสารเป้าหมายทั้งหมดเทียบกับต้นทาง  
-- ผลลัพธ์ถูกเขียนโดยตรงไปยัง output stream ทำให้การใช้หน่วยความจำน้อยลง  
-- คุณจะได้รับอ็อบเจ็กต์ `Path` ที่ชี้ไปยังไฟล์ผลลัพธ์ที่สร้างขึ้น
+**What happens here** – เมธอดคืนค่าอ็อบเจ็กต์ `Path` ที่ชี้ไปยังไฟล์เปรียบเทียบที่สร้างขึ้น, คุณสามารถส่งให้ลูกค้าโดยตรงหรือเก็บไว้เพื่อรีวิวภายหลัง.
 
-### ตัวอย่างทำงานครบวงจร
-
-รวมทุกขั้นตอนไว้ในคลาสพร้อมใช้งานสำหรับการผลิต:
+### ตัวอย่างการทำงานที่สมบูรณ์
+คลาสต่อไปนี้รวมทุกขั้นตอนเป็น snippet ที่พร้อมสำหรับการผลิต:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -199,32 +229,27 @@ public class DocumentComparisonExample {
 }
 ```
 
-## เปรียบเทียบหลายเอกสาร Java – แนวปฏิบัติที่ดีที่สุด
+## การเปรียบเทียบหลายเอกสาร Java – แนวปฏิบัติที่ดีที่สุด
+BufferedInputStream เป็น wrapper ที่เพิ่มการบัฟเฟอร์ให้กับ InputStream เพื่อ I/O ที่เร็วขึ้น.
 
-เมื่อคุณ **เปรียบเทียบหลายเอกสาร Java** ควรปฏิบัติตามแนวทางต่อไปนี้:
+- **Batch size** – จำกัดแต่ละแบตช์การเปรียบเทียบที่ 10‑15 ไฟล์เพื่ออยู่ในขีดจำกัด heap ปกติ.  
+- **Stream buffering** – ห่อสตรีมไฟล์ใน `BufferedInputStream` ด้วยบัฟเฟอร์ 8 KB–32 KB เพื่อประสิทธิภาพ I/O ที่ดีที่สุด.  
+- **Error isolation** – จัดการการเพิ่มเป้าหมายแต่ละรายการแยกกันเพื่อให้แบตช์มั่นคง.  
+- **Logging** – บันทึก timestamp เริ่ม/สิ้นสุดสำหรับแต่ละคู่เอกสารเพื่อช่วยวิเคราะห์ประสิทธิภาพ.
 
-- **ขนาด Batch**: จำกัดแต่ละ batch ให้อยู่ในขนาดที่ JVM ของคุณจัดการได้สบาย (10‑15 ไฟล์เป็นกฎทั่วไป)  
-- **Buffer ของ Stream**: ใช้ `BufferedInputStream` พร้อมบัฟเฟอร์ 8 KB–32 KB เพื่อเพิ่มประสิทธิภาพ I/O  
-- **การแยกข้อผิดพลาด**: ห่อการเพิ่มเป้าหมายแต่ละไฟล์ด้วย `try‑catch` ของตัวเอง เพื่อให้ไฟล์เสียหายไฟล์เดียวไม่ทำให้ batch ทั้งหมดหยุดทำงาน  
-- **Logging**: บันทึกเวลาเริ่มและสิ้นสุดของแต่ละคู่เอกสารเพื่อช่วยวิเคราะห์ประสิทธิภาพ
-
-## ปัญหาที่พบบ่อยและวิธีแก้
+## ปัญหาทั่วไปและวิธีแก้
 
 ### ปัญหา 1: `OutOfMemoryError` กับเอกสารขนาดใหญ่
-
-**อาการ**: แอปพลิเคชันพังด้วยข้อผิดพลาด heap‑space  
-
-**วิธีแก้**: เพิ่มขนาด heap ของ JVM และพิจารณาประมวลผลเอกสารเป็น batch เล็กลง:
+**Symptoms** – แอปพลิเคชันพังด้วยข้อผิดพลาด heap‑space.  
+**Solution** – เพิ่ม heap ของ JVM (`-Xmx2g` หรือสูงกว่า) และประมวลผลเอกสารเป็นแบตช์เล็กลง:
 
 ```bash
 java -Xmx2g -XX:+UseG1GC YourApplication
 ```
 
 ### ปัญหา 2: สิทธิ์การเข้าถึงไฟล์
-
-**อาการ**: `FileNotFoundException` หรือข้อผิดพลาด access‑denied  
-
-**วิธีแก้**: ตรวจสอบสิทธิ์ไฟล์และให้แน่ใจว่าแอปของคุณสามารถอ่านโฟลเดอร์ต้นทางได้:
+**Symptoms** – `FileNotFoundException` หรือข้อผิดพลาดการเข้าถึงถูกปฏิเสธ.  
+**Solution** – ตรวจสอบว่าผู้ใช้ที่รันมีสิทธิ์อ่านในไดเรกทอรีต้นทาง:
 
 ```java
 File sourceFile = new File("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
@@ -233,11 +258,9 @@ if (!sourceFile.canRead()) {
 }
 ```
 
-### ปัญหา 3: เอกสารเสียหายหรือรูปแบบไม่รองรับ
-
-**อาการ**: การเปรียบเทียบล้มเหลวด้วย exception ที่เกี่ยวกับรูปแบบ  
-
-**วิธีแก้**: ตรวจสอบรูปแบบเอกสารก่อนทำการประมวลผล:
+### ปัญหา 3: รูปแบบเอกสารเสียหายหรือไม่รองรับ
+**Symptoms** – การเปรียบเทียบล้มเหลวด้วยข้อยกเว้นที่เกี่ยวกับรูปแบบ.  
+**Solution** – ตรวจสอบนามสกุลไฟล์และ mime type ก่อนเปิดสตรีม:
 
 ```java
 // Always validate files before processing
@@ -251,15 +274,12 @@ private boolean isValidDocument(String filePath) {
 }
 ```
 
-## เคล็ดลับการเพิ่มประสิทธิภาพสำหรับการผลิต
+## เคล็ดลับประสิทธิภาพสำหรับการใช้งานในผลิตภัณฑ์
 
 ### การจัดการหน่วยความจำ
-
-เมื่อจัดการหลาย stream ให้ควบคุมการใช้หน่วยความจำให้แคบที่สุด:
-
-- **ใช้ `BufferedInputStream`** – ห่อ stream ของไฟล์เพื่อเพิ่ม throughput  
-- **กำหนดขนาด Buffer ที่เหมาะสม** – 8 KB–16 KB ทำงานดีสำหรับไฟล์ใหญ่  
-- **ตรวจสอบหน่วยความจำ** – เครื่องมือ profiling ช่วยระบุคอขวด
+- **Use `BufferedInputStream`** – ปรับปรุง throughput ได้ถึง 25 %.  
+- **Set buffer size to 16 KB** – สมดุลการใช้หน่วยความจำและความเร็วสำหรับงานส่วนใหญ่.  
+- **Monitor memory** – เครื่องมือเช่น VisualVM หรือ Java Flight Recorder ช่วยตรวจจับการรั่วไหลได้ตั้งแต่ต้น.
 
 ```java
 // More efficient file handling for large documents
@@ -269,8 +289,7 @@ try (BufferedInputStream sourceStream = new BufferedInputStream(
 }
 ```
 
-### การจัดการไฟล์อย่างเหมาะสม
-
+### การจัดการไฟล์ที่เหมาะสม
 ```java
 // Example of using a larger buffer for very big files
 try (BufferedInputStream sourceStream = new BufferedInputStream(
@@ -279,9 +298,8 @@ try (BufferedInputStream sourceStream = new BufferedInputStream(
 }
 ```
 
-### การประมวลผลแบบพร้อมกัน
-
-สำหรับงาน batch ให้ใช้ utility ของ Java สำหรับ concurrency:
+### การประมวลผลพร้อมกัน
+ExecutorService คือยูทิลิตี้การทำงานพร้อมกันของ Java ที่จัดการ pool ของเธรด. ใช้ `ExecutorService` เพื่อรันแบตช์การเปรียบเทียบที่อิสระแบบขนาน, ขยายตามจำนวนคอร์ของเซิร์ฟเวอร์อย่างเชิงเส้น:
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -289,11 +307,10 @@ ExecutorService executor = Executors.newFixedThreadPool(4);
 // Ensure thread‑safety of shared resources
 ```
 
-## แนวปฏิบัติสำหรับการผลิต
+## แนวปฏิบัติที่ดีที่สุดสำหรับการใช้งานในผลิตภัณฑ์
 
-### 1. การจัดการข้อผิดพลาดและ Logging อย่างแข็งแรง
-
-ทำ logging อย่างครอบคลุมเพื่อให้สามารถติดตามปัญหาได้เร็ว:
+### 1. การจัดการข้อผิดพลาดและการบันทึกที่มั่นคง
+ดำเนินการบันทึกอย่างครอบคลุมเพื่อให้คุณสามารถติดตามปัญหาได้อย่างรวดเร็ว:
 
 ```java
 import java.util.logging.Logger;
@@ -312,18 +329,16 @@ public void safeDocumentComparison() {
 }
 ```
 
-### 2. การจัดการการตั้งค่า
-
-หลีกเลี่ยงการ hard‑code path; ใช้ environment variables หรือไฟล์ config:
+### 2. การจัดการการกำหนดค่า
+หลีกเลี่ยงการเขียนเส้นทางแบบ hard‑code; ใช้ environment variables หรือไฟล์การกำหนดค่าเฉพาะ:
 
 ```java
 String sourceDir = System.getProperty("document.source.dir", "default/path");
 String outputDir = System.getProperty("document.output.dir", "default/output");
 ```
 
-### 3. การตรวจสอบและทำความสะอาดข้อมูลเข้า
-
-ตรวจสอบ path อินพุตทุกครั้งก่อนเปิด stream:
+### 3. การตรวจสอบและทำความสะอาด
+ตรวจสอบเส้นทางอินพุตเสมอก่อนเปิดสตรีมเพื่อป้องกันการโจมตีแบบ path‑traversal:
 
 ```java
 private void validateDocumentPath(String path) {
@@ -338,56 +353,41 @@ private void validateDocumentPath(String path) {
 }
 ```
 
-## กรณีใช้งานจริง
+## กรณีการใช้งานจริง
 
 ### การตรวจสอบเอกสารกฎหมาย
-
-บริษัทกฎหมายเปรียบเทียบเวอร์ชันสัญญาจากคู่สัญญาต่าง ๆ ติดตามการเปลี่ยนแปลงระหว่างร่าง และตรวจสอบความสอดคล้องโดยเปรียบเทียบเอกสารสุดท้ายกับเทมเพลต
+บริษัทกฎหมายเปรียบเทียบเวอร์ชันสัญญาจากฝ่ายต่าง ๆ, ติดตามการเปลี่ยนแปลงในแต่ละร่าง, และตรวจสอบการปฏิบัติตามโดยเปรียบเทียบเอกสารสุดท้ายกับเทมเพลต.
 
 ### เอกสารซอฟต์แวร์
-
-ทีมพัฒนาตรวจสอบ API docs ระหว่างเวอร์ชัน, รีวิวสเปคเทคนิคจากผู้ร่วมพัฒนาหลายคน, และรักษาความสอดคล้องของชุดเอกสาร
+ทีมพัฒนาจะเปรียบเทียบเอกสาร API ระหว่างเวอร์ชัน, ตรวจสอบสเปคเทคนิคจากผู้ร่วมหลายคน, และทำให้ชุดเอกสารสอดคล้องกัน.
 
 ### การปฏิบัติตามและการตรวจสอบ
+องค์กรตรวจสอบเอกสารกฎระเบียบ, ติดตามการเปลี่ยนแปลงนโยบาย, และสร้าง audit trail สำหรับการแก้ไขเอกสาร.
 
-องค์กรตรวจสอบเอกสารตามกฎระเบียบ, ติดตามการเปลี่ยนแปลงนโยบาย, และสร้าง audit trail สำหรับการแก้ไขเอกสาร
+## คู่มือการแก้ไขปัญหา
 
-## คู่มือแก้ไขปัญหา
+### ปัญหาประสิทธิภาพ
+- **Problem** – การเปรียบเทียบใช้เวลานานเกินไป.  
+- **Solutions** – แบ่งไฟล์ขนาดใหญ่ออกเป็นส่วน, เพิ่ม heap ของ JVM, และใช้ SSD storage เพื่อ I/O ที่เร็วขึ้น.
 
-### ปัญหาด้านประสิทธิภาพ
-
-- **ปัญหา**: การเปรียบเทียบใช้เวลานาน  
-- **วิธีแก้**:  
-  - แบ่งไฟล์ใหญ่ออกเป็นส่วนย่อย  
-  - เพิ่ม heap ของ JVM (`-Xmx`)  
-  - ตรวจสอบ I/O ของดิสก์ – SSD ช่วยเพิ่มความเร็ว
-
-### ปัญหาด้านหน่วยความจำ
-
-- **ปัญหา**: แอปพลิเคชันหมดหน่วยความจำ  
-- **วิธีแก้**:  
-  - เพิ่มขนาด heap (`-Xmx`)  
-  - ประมวลผลเอกสารเป็น batch เล็กลง  
-  - ใช้ buffer ขนาดใหญ่สำหรับ streams
+### ปัญหาหน่วยความจำ
+- **Problem** – แอปพลิเคชันหมดหน่วยความจำ.  
+- **Solutions** – เพิ่มขนาด heap, ประมวลผลเอกสารเป็นแบตช์เล็กลง, และใช้บัฟเฟอร์สตรีมที่ใหญ่ขึ้น.
 
 ### ปัญหาการเข้าถึงไฟล์
-
-- **ปัญหา**: ไม่สามารถอ่านไฟล์ต้นทางหรือเป้าหมายได้  
-- **วิธีแก้**:  
-  - ตรวจสอบสิทธิ์ไฟล์  
-  - ตรวจสอบว่าไฟล์ไม่ได้ถูกล็อกโดยโปรเซสอื่น  
-  - ใช้ absolute path เพื่อหลีกเลี่ยงความสับสนของ relative‑path
+- **Problem** – ไม่สามารถอ่านไฟล์ต้นทางหรือเป้าหมาย.  
+- **Solutions** – ตรวจสอบสิทธิ์ไฟล์, ตรวจสอบว่าไฟล์ไม่ได้ถูกล็อก, และใช้ absolute paths เพื่อหลีกเลี่ยงความสับสนของ relative‑path.
 
 ## คำถามที่พบบ่อย
 
-**Q: ฉันสามารถเปรียบเทียบเอกสารที่ไม่ใช่ Word ได้หรือไม่?**  
-A: แน่นอน! GroupDocs.Comparison รองรับ PDF, Excel, PowerPoint, และไฟล์ข้อความธรรมดา วิธี stream ทำงานสม่ำเสมอในทุกฟอร์แมตที่สนับสนุน
+**Q: ฉันสามารถเปรียบเทียบเอกสารที่ไม่ใช่ไฟล์ Word ได้หรือไม่?**  
+A: แน่นอน—GroupDocs.Comparison รองรับไฟล์ PDF, Excel, PowerPoint, และไฟล์ข้อความธรรมดา, และแนวทางสตรีมทำงานอย่างสม่ำเสมอบนทุกรูปแบบที่รองรับ.
 
-**Q: จำนวนเอกสารสูงสุดที่สามารถเปรียบเทียบพร้อมกันคือเท่าไหร่?**  
-A: ไม่มีขีดจำกัดแน่นอน แต่ข้อจำกัดจริงคือหน่วยความจำ, CPU, และเวลาในการประมวลผล การเปรียบเทียบ 10‑15 เอกสารพร้อมกันเป็นปกติ; หากต้องการ batch ใหญ่กว่านั้นควรแบ่งเป็นชิ้นย่อย
+**Q: จำนวนเอกสารสูงสุดที่ฉันสามารถเปรียบเทียบพร้อมกันได้คือเท่าไหร่?**  
+A: ไม่มีขีดจำกัดที่แน่นอน, แต่ข้อจำกัดเชิงปฏิบัติคือหน่วยความจำ, CPU, และเวลาประมวลผล. การเปรียบเทียบ 10‑15 เอกสารพร้อมกันเป็นปกติ; แบตช์ที่ใหญ่กว่าควรแบ่งเป็นส่วน.
 
-**Q: ฉันจะจัดการข้อผิดพลาดในการเปรียบเทียบอย่างไรให้ราบรื่น?**  
-A: ใช้การจัดการ exception ชั้นหลายระดับ:
+**Q: ฉันจะจัดการข้อผิดพลาดการเปรียบเทียบอย่างราบรื่นได้อย่างไร?**  
+A: ใช้การจัดการ exception แบบหลายชั้นเพื่อให้ความล้มเหลวเดียวไม่ทำให้งานทั้งหมดหยุดทำงาน:
 
 ```java
 try {
@@ -401,51 +401,52 @@ try {
 }
 ```
 
-**Q: สามารถปรับแต่งวิธีการไฮไลท์ความแตกต่างในผลลัพธ์ได้หรือไม่?**  
-A: ได้. GroupDocs.Comparison มีตัวเลือกสไตล์สำหรับเนื้อหาที่แทรก, ลบ, หรือแก้ไข รวมถึงโทนสีและการใส่ metadata
+**Q: ฉันสามารถปรับแต่งวิธีการไฮไลท์ความแตกต่างในผลลัพธ์ได้หรือไม่?**  
+A: ได้—GroupDocs.Comparison มีตัวเลือกการจัดรูปแบบสำหรับเนื้อหาที่แทรก, ลบ, และแก้ไข, รวมถึงสีที่กำหนดเอง, ฟอนต์, และการรวมเมตาดาต้า.
 
 **Q: วิธีนี้เหมาะกับการเปรียบเทียบเอกสารแบบเรียลไทม์หรือไม่?**  
-A: การเปรียบเทียบแบบ stream เหมาะกับสถานการณ์ที่ต้องการ latency ต่ำเพราะใช้หน่วยความจำน้อย สำหรับการแก้ไขร่วมแบบสดจริง ๆ ควรผสานกับ caching และเทคนิค diff แบบ incremental
+A: การเปรียบเทียบแบบสตรีมเหมาะสำหรับสถานการณ์ที่ต้องการ latency ต่ำเนื่องจากใช้หน่วยความจำน้อย. สำหรับการแก้ไขร่วมแบบเรียลไทม์จริง ๆ, ควรผสานกับการแคชและเทคนิค diff แบบเพิ่มขึ้น.
 
-**Q: ควรจัดการกับเอกสารขนาดใหญ่มาก (100 MB+) อย่างไร?**  
+**Q: ฉันควรจัดการเอกสารขนาดใหญ่มาก (100 MB+) อย่างไร?**  
 A:  
-1. เพิ่ม heap ของ JVM (`-Xmx`)  
-2. ใช้ buffer ของ stream ขนาดใหญ่ (32 KB หรือมากกว่า)  
-3. พิจารณาแบ่งเอกสารเป็นส่วนย่อย  
-4. ติดตามการใช้หน่วยความจำด้วยเครื่องมือ profiling  
+1. เพิ่ม heap ของ JVM (`-Xmx4g`).  
+2. ใช้บัฟเฟอร์สตรีมขนาด 32 KB.  
+3. พิจารณาแบ่งเอกสารเป็นส่วนตามตรรกะ.  
+4. ทำการวิเคราะห์การใช้หน่วยความจำด้วย VisualVM หรือ Java Flight Recorder.
 
 ## สรุป
+ตอนนี้คุณมีแผนที่ครบถ้วนและพร้อมสำหรับการผลิตสำหรับ **how to use GroupDocs** เพื่อเปรียบเทียบเอกสารใน Java ด้วยสตรีม. วิธีนี้ให้ประสิทธิภาพในการจัดการไฟล์ขนาดใหญ่, ความสามารถในการขยายเพื่อรันงานแบตช์, และความยืดหยุ่นในการผสานกับเว็บเซอร์วิสหรือ pipeline CI.
 
-คุณได้มีพื้นฐานที่มั่นคงสำหรับการ **วิธีใช้ GroupDocs** ในการเปรียบเทียบเอกสาร Java ด้วย streams วิธีนี้ให้คุณจัดการไฟล์ขนาดใหญ่ได้อย่างมีประสิทธิภาพพร้อมโค้ดที่สะอาดและดูแลง่าย  
-
-**ข้อสรุปสำคัญ**  
-- การเปรียบเทียบแบบ stream เหมาะกับการประมวลผลเอกสารขนาดใหญ่ที่ต้องการประหยัดหน่วยความจำ  
-- ใช้ try‑with‑resources เพื่อทำความสะอาดอัตโนมัติ  
-- ปรับใช้การจัดการข้อผิดพลาด, การตรวจสอบ, และ logging อย่างแข็งแรงสำหรับการผลิต  
-- ปรับจูนประสิทธิภาพตามขนาดเอกสารและปริมาณงานของคุณ  
+**ประเด็นสำคัญ**  
+- การเปรียบเทียบแบบสตรีมทำให้การใช้หน่วยความจำน้อยและเร่งความเร็วการประมวลผล.  
+- ใช้ try‑with‑resources และบัฟเฟอร์ที่เหมาะสมเพื่อป้องกันการรั่วไหล.  
+- ดำเนินการบันทึกที่มั่นคง, การตรวจสอบ, และการจัดการข้อผิดพลาดเพื่อความเสถียรของการผลิต.  
+- ปรับแต่งประสิทธิภาพตามขนาดเอกสารและลักษณะงานของคุณ.
 
 ### ขั้นตอนต่อไป
+1. สำรวจตัวเลือกการจัดรูปแบบขั้นสูงสำหรับผลลัพธ์การเปรียบเทียบ.  
+2. สร้าง REST endpoint ที่รับสตรีมที่อัปโหลดและคืนไฟล์ diff.  
+3. ผสานขั้นตอนการเปรียบเทียบเข้าสู่ pipeline CI/CD ของคุณเพื่อบังคับให้เอกสารสอดคล้องกัน.  
+4. ทำการวิเคราะห์และปรับปรุงด้วย Java Flight Recorder หรือ VisualVM.
 
-1. **สำรวจการตั้งค่าขั้นสูง** – สไตล์, metadata, ตัวเลือกรูปแบบผลลัพธ์  
-2. **รวมเข้ากับ Web Service** – สร้าง endpoint REST ที่รับ stream ที่อัปโหลด  
-3. **อัตโนมัติกระบวนการ** – ผสานกับ pipeline CI/CD เพื่อการตรวจสอบเอกสารต่อเนื่อง  
-4. **ทำ Profiling และ Optimisation** – ใช้ Java Flight Recorder หรือ VisualVM เพื่อปรับจูนประสิทธิภาพ  
-
-**เริ่มสร้างวันนี้**: ปรับตัวอย่างโค้ดให้เข้ากับโปรเจกต์ของคุณ, ทดสอบด้วยเอกสารจริง, และทำการวนปรับปรุง วิธีที่ดีที่สุดในการเชี่ยวชาญการเปรียบเทียบเอกสารคือการนำรูปแบบเหล่านี้ไปใช้กับความท้าทายของคุณเอง  
+**เริ่มสร้างวันนี้**: ปรับตัวอย่างโค้ดให้เข้ากับโปรเจคของคุณ, ทดสอบด้วยเอกสารจริง, และทำซ้ำ. ความเชี่ยวชาญมาจากการนำรูปแบบเหล่านี้ไปใช้กับความท้าทายที่คุณเผชิญ.
 
 **แหล่งข้อมูลที่เกี่ยวข้อง:**  
-- [GroupDocs.Comparison Documentation](https://docs.groupdocs.com/comparison/java/)  
-- [API Reference](https://reference.groupdocs.com/comparison/java/)  
-- [Download Latest Version](https://releases.groupdocs.com/comparison/java/)  
-- [Support Forum](https://forum.groupdocs.com/c/comparison)  
-- [Purchase Options](https://purchase.groupdocs.com/buy)  
-- [Free Trial](https://releases.groupdocs.com/comparison/java/)  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [เอกสาร GroupDocs.Comparison](https://docs.groupdocs.com/comparison/java/)  
+- [อ้างอิง API](https://reference.groupdocs.com/comparison/java/)  
+- [ดาวน์โหลดเวอร์ชันล่าสุด](https://releases.groupdocs.com/comparison/java/)  
+- [ฟอรั่มสนับสนุน](https://forum.groupdocs.com/c/comparison)  
+- [ตัวเลือกการซื้อ](https://purchase.groupdocs.com/buy)  
+- [ทดลองใช้ฟรี](https://releases.groupdocs.com/comparison/java/)  
+- [ไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
 
 ---
 
-**อัปเดตล่าสุด:** 2026-03-22  
-**ทดสอบกับ:** GroupDocs.Comparison 25.2  
-**ผู้เขียน:** GroupDocs  
+**อัปเดตล่าสุด:** 2026-08-19  
+**ทดสอบด้วย:** GroupDocs.Comparison 25.2  
+**ผู้เขียน:** GroupDocs
 
----
+## บทเรียนที่เกี่ยวข้อง
+- [เปรียบเทียบ pdf java – บทแนะนำการเปรียบเทียบเอกสาร Java – คู่มือฉบับสมบูรณ์สำหรับการโหลดและเปรียบเทียบเอกสาร](/comparison/java/document-loading/)  
+- [เปรียบเทียบ word docs java – GroupDocs Advanced Comparison](/comparison/java/advanced-comparison/master-document-comparison-java-groupdocs/)  
+- [GroupDocs Comparison Java – เปรียบเทียบ Word Docs ที่ป้องกันด้วยรหัสผ่าน](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)

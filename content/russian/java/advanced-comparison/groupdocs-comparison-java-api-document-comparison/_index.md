@@ -417,11 +417,6 @@ A: Движок обнаруживает изменения в значения�
 **Тестировано с:** GroupDocs.Comparison 25.2  
 **Автор:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Связанные руководства
 
 - [Как сравнить Excel файлы с помощью Java Streams – руководство GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)  

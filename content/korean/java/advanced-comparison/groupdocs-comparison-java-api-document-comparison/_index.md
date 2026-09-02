@@ -415,11 +415,6 @@ A: 엔진은 셀 값, 수식 및 서식 변화를 **99.9 %** 정확도로 감�
 **테스트 환경:** GroupDocs.Comparison 25.2  
 **작성자:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 관련 튜토리얼
 
 - [Java 스트림을 사용한 Excel 파일 비교 방법 – GroupDocs 튜토리얼](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

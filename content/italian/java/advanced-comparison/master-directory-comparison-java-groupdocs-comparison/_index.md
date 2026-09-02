@@ -79,10 +79,6 @@ title: Confronta cartelle Java – guida all'uso di GroupDocs.Comparison
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Confronta cartelle Java – guida all'uso di GroupDocs.Comparison
 
 Hai mai trascorso ore a controllare manualmente quali file sono cambiati tra due versioni di un progetto? Non sei solo. **GroupDocs.Comparison for Java** rende questo compito noioso un gioco da ragazzi consentendo di confrontare due cartelle con una singola chiamata API. In questo tutorial imparerai a **confrontare cartelle java** in modo efficace, dalla configurazione iniziale all'ottimizzazione avanzata delle prestazioni per enormi codebase.
@@ -663,11 +659,3 @@ options.setIgnoreFormatting(true);
 - [Configurazione licenza GroupDocs Java – Guida completa per sviluppatori](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [confronta pdf java – Tutorial di confronto documenti Java – Guida completa al caricamento e al confronto dei documenti](/comparison/java/document-loading/)
 - [Come usare GroupDocs: Stream di confronto documenti Java – Guida completa](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

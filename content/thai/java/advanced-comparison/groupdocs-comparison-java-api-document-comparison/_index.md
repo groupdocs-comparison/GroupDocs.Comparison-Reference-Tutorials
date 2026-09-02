@@ -398,11 +398,6 @@ A: The engine detects changes in cell values, formulas, and formatting with **99
 **ทดสอบกับ:** GroupDocs.Comparison 25.2  
 **ผู้เขียน:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## บทแนะนำที่เกี่ยวข้อง
 
 - [วิธีเปรียบเทียบไฟล์ Excel ด้วย Java Streams – บทแนะนำ GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

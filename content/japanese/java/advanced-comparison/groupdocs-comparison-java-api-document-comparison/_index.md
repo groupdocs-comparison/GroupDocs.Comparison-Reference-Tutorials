@@ -426,11 +426,6 @@ A: エンジンはセルの値、数式、書式設定の変更を **99.9 %** 
 **テスト環境:** GroupDocs.Comparison 25.2  
 **作者:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 関連チュートリアル
 
 - [Java ストリームを使用した Excel ファイルの比較方法 – GroupDocs チュートリアル](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

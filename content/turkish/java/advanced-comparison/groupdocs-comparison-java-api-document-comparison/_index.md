@@ -417,11 +417,6 @@ Servisi mevcut uygulamanızın küçük bir modülüne entegre ederek başlayın
 **Test Edilen:** GroupDocs.Comparison 25.2  
 **Yazar:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## İlgili Eğitimler
 
 - [Java Akışları Kullanarak Excel Dosyalarını Nasıl Karşılaştırılır – GroupDocs Eğitimi](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

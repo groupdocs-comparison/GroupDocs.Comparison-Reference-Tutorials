@@ -398,8 +398,3 @@ A: Ano, pokud můžete poskytnout `InputStream` od vašeho cloudového poskytova
 **Poslední aktualizace:** 2026-04-25  
 **Testováno s:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

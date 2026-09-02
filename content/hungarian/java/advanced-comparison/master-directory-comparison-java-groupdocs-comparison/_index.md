@@ -79,10 +79,6 @@ title: Mappák összehasonlítása Java – útmutató a GroupDocs.Comparison ha
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Mappák összehasonlítása Java – útmutató a GroupDocs.Comparison használatával
 
 Eltöltöttél már órákat kézzel ellenőrizve, mely fájlok változtak két projektverzió között? Nem vagy egyedül. **GroupDocs.Comparison for Java** megkönnyíti ezt a fárasztó feladatot, lehetővé téve, hogy egyetlen API hívással két mappát hasonlíts össze. Ebben az útmutatóban megtanulod, hogyan **compare folders java** hatékonyan, az első beállítástól a nagy kódbázisokhoz való fejlett teljesítményoptimalizálásig.
@@ -662,10 +658,3 @@ options.setIgnoreFormatting(true);
 - [GroupDocs licenc beállítása Java – Teljes fejlesztői útmutató](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java dokumentum összehasonlítás oktatóanyag – Teljes útmutató a betöltéshez és a dokumentumok összehasonlításához](/comparison/java/document-loading/)
 - [Hogyan használjuk a GroupDocs‑t: Java dokumentum összehasonlítás streamek – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

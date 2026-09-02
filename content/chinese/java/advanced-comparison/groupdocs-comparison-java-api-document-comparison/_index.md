@@ -418,11 +418,6 @@ A: 引擎以 **99.9 %** 的准确率检测单元格值、公式和格式的变
 **测试环境：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 相关教程
 
 - [如何使用 Java Streams 比较 Excel 文件 – GroupDocs 教程](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

@@ -378,8 +378,3 @@ Anda sekarang memiliki panduan lengkap yang siap produksi untuk **java compare p
 **Terakhir Diperbarui:** 2026-03-27  
 **Diuji Dengan:** GroupDocs.Comparison 25.2  
 **Penulis:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

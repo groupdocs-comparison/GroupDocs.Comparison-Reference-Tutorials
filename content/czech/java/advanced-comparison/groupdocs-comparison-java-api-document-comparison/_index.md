@@ -416,11 +416,6 @@ Začněte integrací služby do malého modulu vaší existující aplikace; oka
 **Testováno s:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Související tutoriály
 
 - [Jak porovnat Excel soubory pomocí Java Streams – GroupDocs tutoriál](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

@@ -78,10 +78,6 @@ title: Compare folders java – GroupDocs.Comparison을 사용한 가이드
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 폴더 비교 java – GroupDocs.Comparison 사용 가이드
 
 프로젝트 버전 두 개 사이에서 어떤 파일이 변경되었는지 수동으로 확인하는 데 몇 시간을 보낸 적이 있나요? 당신만 그런 것이 아닙니다. **GroupDocs.Comparison for Java**는 단일 API 호출로 두 폴더를 비교할 수 있게 하여 이 지루한 작업을 손쉽게 만들어 줍니다. 이 튜토리얼에서는 **compare folders java**를 효과적으로 수행하는 방법을 초기 설정부터 대규모 코드베이스를 위한 고급 성능 튜닝까지 배울 수 있습니다.
@@ -662,10 +658,3 @@ options.setIgnoreFormatting(true);
 - [GroupDocs 라이선스 Java 설정 – 전체 개발자 가이드](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java 문서 비교 튜토리얼 – 로드 및 비교 문서에 대한 완전 가이드](/comparison/java/document-loading/)
 - [GroupDocs 사용 방법: Java 문서 비교 스트림 – 전체 가이드](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

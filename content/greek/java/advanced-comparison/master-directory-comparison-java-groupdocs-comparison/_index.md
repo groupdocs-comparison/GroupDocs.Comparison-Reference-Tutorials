@@ -79,10 +79,6 @@ title: Σύγκριση φακέλων java – οδηγός χρήσης GroupD
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Σύγκριση φακέλων java – οδηγός χρήσης του GroupDocs.Comparison
 
 Έχετε ξοδέψει ώρες ελέγχοντας χειροκίνητα ποια αρχεία έχουν αλλάξει μεταξύ δύο εκδόσεων ενός έργου; Δεν είστε μόνοι. **GroupDocs.Comparison for Java** κάνει αυτή τη βαρετή εργασία εύκολη, επιτρέποντάς σας να συγκρίνετε δύο φακέλους με μία μόνο κλήση API. Σε αυτό το tutorial θα μάθετε πώς να **compare folders java** αποτελεσματικά, από την αρχική ρύθμιση μέχρι την προχωρημένη βελτιστοποίηση απόδοσης για τεράστιες βάσεις κώδικα.
@@ -663,11 +659,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs License Java – Complete Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

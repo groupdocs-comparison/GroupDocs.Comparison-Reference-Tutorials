@@ -79,10 +79,6 @@ title: Java klasörlerini karşılaştırma – GroupDocs.Comparison ile rehber
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Klasörleri karşılaştırma java – GroupDocs.Comparison kullanarak rehber
 
 İki proje sürümü arasında hangi dosyaların değiştiğini manuel olarak saatlerce kontrol ettiniz mi? Yalnız değilsiniz. **GroupDocs.Comparison for Java** tek bir API çağrısı ile iki klasörü karşılaştırmanıza olanak tanıyarak bu zahmetli görevi çok kolaylaştırır. Bu öğreticide, **compare folders java**'yu etkili bir şekilde nasıl yapacağınızı, başlangıç kurulumundan büyük kod tabanları için gelişmiş performans ayarlarına kadar öğreneceksiniz.
@@ -663,11 +659,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs License Java – Complete Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

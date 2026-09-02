@@ -417,11 +417,6 @@ Inizia integrando il servizio in un piccolo modulo della tua applicazione esiste
 **Testato con:** GroupDocs.Comparison 25.2  
 **Autore:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutorial correlati
 
 - [Come confrontare file Excel usando Java Streams – Tutorial GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

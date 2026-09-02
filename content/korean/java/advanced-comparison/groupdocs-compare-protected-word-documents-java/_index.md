@@ -398,8 +398,3 @@ A: 예, 클라우드 제공업체에서 `InputStream`을 제공할 수만 있다
 **마지막 업데이트:** 2026-04-25  
 **테스트 환경:** GroupDocs.Comparison 25.2  
 **작성자:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

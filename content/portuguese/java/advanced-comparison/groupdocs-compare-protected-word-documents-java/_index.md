@@ -399,8 +399,3 @@ R: Sim, desde que você possa fornecer um `InputStream` do seu provedor de nuvem
 **Última atualização:** 2026-04-25  
 **Testado com:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -78,10 +78,6 @@ title: So sánh thư mục Java – hướng dẫn sử dụng GroupDocs.Compari
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # So sánh thư mục java – hướng dẫn sử dụng GroupDocs.Comparison
 
 Bạn đã bao giờ mất hàng giờ kiểm tra thủ công những tệp nào đã thay đổi giữa hai phiên bản dự án chưa? Bạn không phải là người duy nhất. **GroupDocs.Comparison for Java** giúp công việc tẻ nhạt này trở nên dễ dàng bằng cách cho phép bạn so sánh hai thư mục chỉ với một lời gọi API. Trong hướng dẫn này, bạn sẽ học cách **so sánh thư mục java** một cách hiệu quả, từ thiết lập ban đầu đến tối ưu hiệu năng cho các codebase quy mô lớn.
@@ -662,11 +658,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs License Java – Complete Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

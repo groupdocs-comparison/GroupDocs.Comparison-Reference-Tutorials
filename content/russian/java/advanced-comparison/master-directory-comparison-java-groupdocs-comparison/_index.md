@@ -78,10 +78,6 @@ title: Сравнение папок Java – руководство по исп
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Сравнение папок Java – руководство по использованию GroupDocs.Comparison
 
 Проводили ли вы часы, вручную проверяя, какие файлы изменились между двумя версиями проекта? Вы не одиноки. **GroupDocs.Comparison for Java** делает эту утомительную задачу простой, позволяя сравнивать две папки одним вызовом API. В этом руководстве вы узнаете, как эффективно **compare folders java**, от первоначальной настройки до продвинутой оптимизации производительности для огромных кодовых баз.
@@ -641,10 +637,3 @@ options.setIgnoreFormatting(true);
 - [Настройка лицензии GroupDocs Java – Полное руководство разработчика](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Руководство по сравнению документов Java – Полное руководство по загрузке и сравнению документов](/comparison/java/document-loading/)
 - [Как использовать GroupDocs: Потоки сравнения документов Java – Полное руководство](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

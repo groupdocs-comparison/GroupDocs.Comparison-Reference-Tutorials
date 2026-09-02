@@ -415,11 +415,6 @@ A: इंजन सेल वैल्यूज़, फ़ॉर्मूले,
 **टेस्टेड विथ:** GroupDocs.Comparison 25.2  
 **लेखक:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## संबंधित ट्यूटोरियल्स
 
 - [Java Streams का उपयोग करके Excel फ़ाइलों की तुलना कैसे करें – GroupDocs ट्यूटोरियल](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

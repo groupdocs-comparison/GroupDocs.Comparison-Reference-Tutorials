@@ -415,11 +415,6 @@ Bắt đầu bằng cách tích hợp dịch vụ vào một mô-đun nhỏ củ
 **Kiểm tra với:** GroupDocs.Comparison 25.2  
 **Tác giả:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Hướng dẫn liên quan
 
 - [Cách so sánh tệp Excel bằng Java Streams – Hướng dẫn GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

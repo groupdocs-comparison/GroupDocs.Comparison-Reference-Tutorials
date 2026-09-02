@@ -378,8 +378,3 @@ Vous disposez maintenant d'un guide complet, prêt pour la production, sur **jav
 **Dernière mise à jour :** 2026-03-27  
 **Testé avec :** GroupDocs.Comparison 25.2  
 **Auteur :** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

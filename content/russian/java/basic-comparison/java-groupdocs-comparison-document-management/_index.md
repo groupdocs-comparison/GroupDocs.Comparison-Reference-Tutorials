@@ -373,8 +373,3 @@ comparer.add(targetStream);
 **Последнее обновление:** 2026-03-27  
 **Тестировано с:** GroupDocs.Comparison 25.2  
 **Автор:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

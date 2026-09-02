@@ -378,8 +378,3 @@ A: 예—`PreviewOptions`에 특정 `pageNumbers` 배열을 설정하면 필요�
 **마지막 업데이트:** 2026-03-27  
 **테스트 환경:** GroupDocs.Comparison 25.2  
 **작성자:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -79,10 +79,6 @@ title: Bandingkan folder java – panduan menggunakan GroupDocs.Comparison
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Bandingkan folder java – panduan menggunakan GroupDocs.Comparison
 
 Pernah menghabiskan berjam‑jam memeriksa secara manual file mana yang berubah antara dua versi proyek? Anda tidak sendirian. **GroupDocs.Comparison untuk Java** membuat tugas membosankan ini menjadi mudah dengan memungkinkan Anda membandingkan dua folder dengan satu panggilan API. Dalam tutorial ini Anda akan belajar cara **membandingkan folder java** secara efektif, mulai dari penyiapan awal hingga penyetelan kinerja lanjutan untuk basis kode yang besar.
@@ -663,11 +659,3 @@ options.setIgnoreFormatting(true);
 - [Panduan Lengkap Lisensi GroupDocs Java – Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Tutorial Perbandingan Dokumen Java – Panduan Lengkap Memuat & Membandingkan Dokumen](/comparison/java/document-loading/)
 - [Cara Menggunakan GroupDocs: Stream Perbandingan Dokumen Java – Panduan Lengkap](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

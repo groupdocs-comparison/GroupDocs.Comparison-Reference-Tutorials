@@ -416,11 +416,6 @@ Vous disposez maintenant d’une solution complète, prête pour la production, 
 **Testé avec :** GroupDocs.Comparison 25.2  
 **Auteur :** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutoriels associés
 
 - [Comment comparer des fichiers Excel en utilisant les flux Java – Tutoriel GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

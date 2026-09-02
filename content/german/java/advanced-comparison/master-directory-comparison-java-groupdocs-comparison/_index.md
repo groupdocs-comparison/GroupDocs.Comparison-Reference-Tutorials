@@ -78,10 +78,6 @@ title: Ordner in Java vergleichen – Anleitung mit GroupDocs.Comparison
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Ordner vergleichen in Java – Anleitung mit GroupDocs.Comparison
 
 Haben Sie schon Stunden damit verbracht, manuell zu prüfen, welche Dateien zwischen zwei Projektversionen geändert wurden? Sie sind nicht allein. **GroupDocs.Comparison for Java** macht diese mühsame Aufgabe zum Kinderspiel, indem es Ihnen ermöglicht, zwei Ordner mit einem einzigen API-Aufruf zu vergleichen. In diesem Tutorial lernen Sie, wie man **compare folders java** effektiv nutzt, von der ersten Einrichtung bis hin zur fortgeschrittenen Leistungsoptimierung für massive Codebasen.
@@ -662,11 +658,3 @@ options.setIgnoreFormatting(true);
 - [Einrichtung GroupDocs Lizenz Java – Vollständiger Entwicklerleitfaden](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Dokumentenvergleich Tutorial – Vollständige Anleitung zum Laden & Vergleichen von Dokumenten](/comparison/java/document-loading/)
 - [Wie man GroupDocs verwendet: Java Dokumentenvergleich Streams – Vollständige Anleitung](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

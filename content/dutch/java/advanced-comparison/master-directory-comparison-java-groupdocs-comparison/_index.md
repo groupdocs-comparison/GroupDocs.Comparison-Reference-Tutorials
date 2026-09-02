@@ -78,10 +78,6 @@ title: Vergelijk folders java – gids met GroupDocs.Comparison
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Vergelijk mappen java – handleiding met GroupDocs.Comparison
 
 Heb je ooit uren besteed aan handmatig controleren welke bestanden zijn gewijzigd tussen twee projectversies? Je bent niet de enige. **GroupDocs.Comparison for Java** maakt deze saaie taak een fluitje van een cent door je twee mappen te laten vergelijken met één API‑aanroep. In deze tutorial leer je hoe je **compare folders java** effectief kunt gebruiken, van de eerste installatie tot geavanceerde prestatie‑afstemming voor enorme codebases.
@@ -662,11 +658,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs Licentie Java – Complete Ontwikkelaarsgids](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Gids voor Laden & Vergelijken van Documenten](/comparison/java/document-loading/)
 - [Hoe GroupDocs te gebruiken: Java Document Comparison Streams – Complete Gids](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

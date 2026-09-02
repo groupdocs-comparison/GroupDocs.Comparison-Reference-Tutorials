@@ -418,11 +418,6 @@ Begin met het integreren van de service in een klein module van je bestaande app
 **Tested With:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Gerelateerde tutorials
 
 - [Hoe Excel‑bestanden vergelijken met Java Streams – GroupDocs Tutorial](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

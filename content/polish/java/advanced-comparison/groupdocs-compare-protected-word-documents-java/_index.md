@@ -395,8 +395,3 @@ A: Tak, pod warunkiem że możesz dostarczyć `InputStream` z dostawcy chmury, G
 **Ostatnia aktualizacja:** 2026-04-25  
 **Testowano z:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -378,8 +378,3 @@ Du har nu en komplett, produktionsklar guide för **java compare pdf files** med
 **Senast uppdaterad:** 2026-03-27  
 **Testad med:** GroupDocs.Comparison 25.2  
 **Författare:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

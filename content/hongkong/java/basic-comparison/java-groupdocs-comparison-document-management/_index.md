@@ -376,8 +376,3 @@ A：是的，只要在 `PreviewOptions` 中設定特定的 `pageNumbers` 陣列�
 **最後更新：** 2026-03-27  
 **測試環境：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

@@ -78,10 +78,6 @@ title: Porovnat složky java – průvodce používáním GroupDocs.Comparison
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Porovnání složek java – průvodce používáním GroupDocs.Comparison
 
 Už jste strávili hodiny ručním kontrolováním, které soubory se změnily mezi dvěma verzemi projektu? Nejste v tom sami. **GroupDocs.Comparison for Java** tuto nudnou úlohu usnadňuje tím, že umožňuje porovnat dvě složky jedním voláním API. V tomto tutoriálu se naučíte, jak **compare folders java** efektivně, od počátečního nastavení až po pokročilé ladění výkonu pro obrovské kódové základny.
@@ -692,10 +688,3 @@ options.setIgnoreFormatting(true);
 - [Nastavení licence GroupDocs Java – Kompletní vývojářský průvodce](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Kompletní průvodce načítáním a porovnáváním dokumentů](/comparison/java/document-loading/)
 - [Jak používat GroupDocs: Java Document Comparison Streams – Kompletní průvodce](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

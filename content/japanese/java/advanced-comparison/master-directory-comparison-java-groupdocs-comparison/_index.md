@@ -76,10 +76,6 @@ title: フォルダー比較（Java） – GroupDocs.Comparison を使用した�
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # フォルダー比較 java – GroupDocs.Comparison を使用したガイド
 
 何時間も手作業で2つのプロジェクトバージョン間で変更されたファイルを確認したことがありますか？ あなたは一人ではありません。**GroupDocs.Comparison for Java** は、単一の API 呼び出しで2つのフォルダーを比較できるため、この面倒な作業を楽にします。このチュートリアルでは、**compare folders java** を効果的に行う方法を、初期設定から大規模コードベース向けの高度なパフォーマンスチューニングまで学びます。
@@ -699,10 +695,3 @@ options.setIgnoreFormatting(true);
 - [GroupDocs ライセンス Java 設定 – 完全開発者ガイド](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java ドキュメント比較チュートリアル – ドキュメントのロードと比較の完全ガイド](/comparison/java/document-loading/)
 - [GroupDocs の使用方法: Java ドキュメント比較ストリーム – 完全ガイド](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -78,10 +78,6 @@ title: قارن المجلدات java – دليل باستخدام GroupDocs.Co
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # مقارنة المجلدات java – دليل باستخدام GroupDocs.Comparison
 
 هل قضيت ساعات في فحص الملفات التي تغيرت يدويًا بين إصداري مشروع؟ لست وحدك. **GroupDocs.Comparison for Java** يجعل هذه المهمة المملة سهلة من خلال السماح لك بمقارنة مجلدين باستدعاء API واحد. في هذا البرنامج التعليمي ستتعلم كيفية **مقارنة المجلدات java** بفعالية، من الإعداد الأولي إلى تحسين الأداء المتقدم للقاعدة الضخمة من الشيفرات.
@@ -662,11 +658,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs License Java – Complete Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

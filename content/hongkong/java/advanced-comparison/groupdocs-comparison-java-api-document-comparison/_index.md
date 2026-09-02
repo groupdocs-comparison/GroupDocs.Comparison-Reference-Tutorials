@@ -413,11 +413,6 @@ A: 引擎以 **99.9 %** 的準確度偵測儲存格值、公式與格式的變
 **測試版本：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 相關教學
 
 - [如何使用 Java Streams 比較 Excel 檔案 – GroupDocs 教學](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)  

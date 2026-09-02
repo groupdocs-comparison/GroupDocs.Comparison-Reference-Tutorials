@@ -76,10 +76,6 @@ title: 比较文件夹 java – 使用 GroupDocs.Comparison 的指南
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 比较文件夹 java – 使用 GroupDocs.Comparison 的指南
 
 是否曾花费数小时手动检查两个项目版本之间哪些文件发生了变化？你并不孤单。**GroupDocs.Comparison for Java** 通过让你只需一次 API 调用即可比较两个文件夹，使这项繁琐的任务变得轻而易举。在本教程中，你将学习如何有效地 **compare folders java**，从初始设置到大规模代码库的高级性能调优。
@@ -660,11 +656,3 @@ options.setIgnoreFormatting(true);
 - [Setup GroupDocs License Java – Complete Developer Guide](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [compare pdf java – Java Document Comparison Tutorial – Complete Guide to Loading & Comparing Documents](/comparison/java/document-loading/)
 - [How to Use GroupDocs: Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

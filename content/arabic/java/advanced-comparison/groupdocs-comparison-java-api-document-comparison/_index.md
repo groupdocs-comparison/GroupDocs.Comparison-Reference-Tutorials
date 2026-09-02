@@ -398,11 +398,6 @@ A: يكتشف المحرك التغييرات في قيم الخلايا، ال�
 **تم الاختبار مع:** GroupDocs.Comparison 25.2  
 **المؤلف:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## دروس ذات صلة
 - [كيفية مقارنة ملفات Excel باستخدام تدفقات Java – دليل GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)
 - [إنشاء تقرير اختلاف المستند – مقارنة ملفات Excel Java](/comparison/java/basic-comparison/)

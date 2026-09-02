@@ -424,11 +424,6 @@ Mulailah dengan mengintegrasikan layanan ke dalam modul kecil aplikasi Anda yang
 **Diuji dengan:** GroupDocs.Comparison 25.2  
 **Penulis:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutorial Terkait
 
 - [Cara Membandingkan File Excel Menggunakan Java Streams – Tutorial GroupDocs](/comparison/java/basic-comparison/compare-cell-files-groupdocs-java-streams/)

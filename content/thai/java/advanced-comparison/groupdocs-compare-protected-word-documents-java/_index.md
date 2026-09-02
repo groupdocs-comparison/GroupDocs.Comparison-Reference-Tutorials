@@ -374,8 +374,3 @@ A: ได้, ตราบใดที่คุณสามารถให้ `I
 **อัปเดตล่าสุด:** 2026-04-25  
 **ทดสอบกับ:** GroupDocs.Comparison 25.2  
 **ผู้เขียน:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

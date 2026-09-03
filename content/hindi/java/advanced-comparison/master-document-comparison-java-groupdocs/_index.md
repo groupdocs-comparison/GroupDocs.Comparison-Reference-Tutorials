@@ -408,11 +408,6 @@ public class ComparisonController {
 **परीक्षण किया गया:** GroupDocs.Comparison 25.2 for Java  
 **लेखक:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## संबंधित ट्यूटोरियल्स
 
 - [स्ट्रीम के साथ compare word documents java – GroupDocs गाइड](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

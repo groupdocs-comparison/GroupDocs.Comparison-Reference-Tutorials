@@ -281,10 +281,6 @@ Seguendo questa guida ora sai **how to compare documents** utilizzando un flusso
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## Tutorial correlati
 

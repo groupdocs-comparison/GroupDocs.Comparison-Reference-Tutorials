@@ -412,11 +412,6 @@ public class ComparisonController {
 **تم الاختبار مع:** GroupDocs.Comparison 25.2 for Java  
 **المؤلف:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## الدروس ذات الصلة
 
 - [قارن مستندات Word Java باستخدام التدفقات – دليل GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

@@ -74,10 +74,6 @@ title: Как получить количество страниц pdf в Java �
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Как получить количество страниц PDF в Java и извлечь метаданные документа
 
 Если вам нужен **java pdf page count** без открытия документа, вы попали в нужное место. Независимо от того, создаёте ли вы систему управления документами, проверяете загрузки или автоматизируете конвейер контента, программное извлечение типа файла, размера и количества страниц экономит время и снижает количество ошибок. В этом руководстве мы покажем, как использовать GroupDocs.Comparison for Java для **java get file type**, **java read file size** и **java get page count**, а также дадим рекомендации по лучшим практикам обработки граничных случаев и больших файлов.
@@ -464,8 +460,3 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

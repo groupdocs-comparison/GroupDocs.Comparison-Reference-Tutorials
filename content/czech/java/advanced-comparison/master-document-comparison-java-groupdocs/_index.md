@@ -418,11 +418,6 @@ Nyní máte kompletní, připravený plán pro implementaci porovnávání dokum
 **Testováno s:** GroupDocs.Comparison 25.2 for Java  
 **Autor:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Související tutoriály
 
 - [Porovnat Word dokumenty java pomocí streamů – průvodce GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

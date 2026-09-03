@@ -73,10 +73,6 @@ title: Πώς να λάβετε java pdf page count και να εξάγετε d
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να λάβετε τον αριθμό σελίδων PDF σε Java και να εξάγετε μεταδεδομένα εγγράφου
 
 Αν χρειάζεστε **java pdf page count** χωρίς να ανοίξετε ένα έγγραφο, βρίσκεστε στο σωστό μέρος. Είτε δημιουργείτε σύστημα διαχείρισης εγγράφων, είτε επικυρώνετε μεταφορτώσεις, είτε αυτοματοποιείτε μια αλυσίδα περιεχομένου, η εξαγωγή του τύπου αρχείου, του μεγέθους και του αριθμού σελίδων προγραμματιστικά εξοικονομεί χρόνο και μειώνει τα σφάλματα. Σε αυτόν τον οδηγό θα σας δείξουμε πώς να χρησιμοποιήσετε το GroupDocs.Comparison για Java για **java get file type**, **java read file size**, και **java get page count**, καθώς και συμβουλές βέλτιστων πρακτικών για τη διαχείριση ειδικών περιπτώσεων και μεγάλων αρχείων.
@@ -464,8 +460,3 @@ A: Απόλυτα, εφόσον κάθε νήμα δημιουργεί το δι
 - [Λήψη τύπου αρχείου Java – Εξαγωγή μεταδεδομένων εγγράφου με GroupDocs](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
 - [Ορισμός μεταδεδομένων εγγράφου σε Java με GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Ορισμός προσαρμοσμένων μεταδεδομένων Java με GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

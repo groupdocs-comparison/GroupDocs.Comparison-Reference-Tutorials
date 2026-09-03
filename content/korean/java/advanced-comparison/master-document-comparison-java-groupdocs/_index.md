@@ -414,11 +414,6 @@ A: 예, 유효한 상업용 라이선스가 있으면 가능합니다. 체험판
 **테스트 환경:** GroupDocs.Comparison 25.2 for Java  
 **작성자:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 관련 튜토리얼
 
 - [Compare word documents java with streams – GroupDocs guide](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

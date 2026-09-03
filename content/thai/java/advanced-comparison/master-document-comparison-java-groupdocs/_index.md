@@ -414,11 +414,6 @@ A: ได้, โดยต้องมีไลเซนส์เชิงพา
 **Tested With:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## บทแนะนำที่เกี่ยวข้อง
 
 - [เปรียบเทียบเอกสาร Word java ด้วย streams – คู่มือ GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

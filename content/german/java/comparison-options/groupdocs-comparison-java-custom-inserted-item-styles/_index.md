@@ -378,11 +378,6 @@ Großartige Dokumentvergleiche verwandeln rohe Diffs in umsetzbare Erkenntnisse 
 **Getestet mit:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

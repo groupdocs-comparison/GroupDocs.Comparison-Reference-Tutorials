@@ -408,11 +408,6 @@ A: Yes, with a valid commercial license. The trial version is for evaluation onl
 **Tested With:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Related Tutorials
 
 - [Compare word documents java with streams – GroupDocs guide](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

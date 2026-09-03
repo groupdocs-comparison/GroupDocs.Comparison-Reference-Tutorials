@@ -75,10 +75,6 @@ title: Hogyan lehet lekérdezni a java pdf page count-et és kinyerni a document
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan lehet lekérni a java pdf oldalszámot és kinyerni a dokumentum metaadatait
 
 Ha **java pdf page count**-ra van szükséged anélkül, hogy megnyitnád a dokumentumot, jó helyen vagy. Akár dokumentumkezelő rendszert építesz, feltöltéseket validálsz, vagy egy tartalomcsővezeték automatizálásán dolgozol, a fájltípus, méret és oldalszám programozott kinyerése időt takarít meg és csökkenti a hibákat. Ebben az útmutatóban végigvezetünk a GroupDocs.Comparison for Java használatán, hogy **java get file type**, **java read file size** és **java get page count** funkciókat alkalmazd, valamint a legjobb gyakorlatokat mutatjuk be a szélsőséges esetek és nagy fájlok kezelésére.
@@ -467,8 +463,3 @@ V: Igen, amennyiben minden szál saját `Comparer` példányt hoz létre. Ne oss
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

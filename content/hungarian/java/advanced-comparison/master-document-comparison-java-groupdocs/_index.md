@@ -417,11 +417,6 @@ A: Igen, érvényes kereskedelmi licenccel. A próbaverzió csak értékelésre 
 **Tested With:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Kapcsolódó oktatóanyagok
 
 - [Word dokumentumok összehasonlítása java-val stream-ekkel – GroupDocs útmutató](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

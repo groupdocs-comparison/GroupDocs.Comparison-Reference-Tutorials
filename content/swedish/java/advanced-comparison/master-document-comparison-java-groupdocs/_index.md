@@ -414,11 +414,6 @@ A: Ja, med en giltig kommersiell licens. Provversionen är endast för utvärder
 **Testat med:** GroupDocs.Comparison 25.2 för Java  
 **Författare:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Relaterade handledningar
 
 - [Jämför Word-dokument java med strömmar – GroupDocs‑guide](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

@@ -374,11 +374,6 @@ C: [GroupDocs Destek Forumu](https://forum.groupdocs.com) topluluk desteği içi
 **Test Edilen Versiyon:** GroupDocs.Comparison 25.2  
 **Yazar:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

@@ -73,10 +73,6 @@ title: Jak získat java pdf page count a extrahovat document metadata
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jak získat počet stránek PDF v Javě a extrahovat metadata dokumentu
 
 Pokud potřebujete **java pdf page count** bez otevření dokumentu, jste na správném místě. Ať už budujete systém pro správu dokumentů, validujete nahrávané soubory nebo automatizujete obsahový pipeline, programové získání typu souboru, velikosti a počtu stránek šetří čas a snižuje chyby. V tomto průvodci vás provedeme používáním GroupDocs.Comparison pro Javu k **java get file type**, **java read file size** a **java get page count**, plus tipy pro nejlepší postupy při řešení okrajových případů a velkých souborů.
@@ -464,8 +460,3 @@ A: Rozhodně, pokud každé vlákno vytvoří vlastní instanci `Comparer`. Nesd
 - [Get File Type Java – Extract Document Metadata with GroupDocs](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

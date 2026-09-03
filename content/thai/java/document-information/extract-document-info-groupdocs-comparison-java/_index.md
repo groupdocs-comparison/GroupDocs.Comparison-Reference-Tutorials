@@ -73,10 +73,6 @@ title: วิธีรับจำนวนหน้าของ java pdf แล
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีการรับจำนวนหน้าของ PDF ด้วย Java และสกัดข้อมูลเมตาด็อกิวเมนต์
 
 หากคุณต้องการ **java pdf page count** โดยไม่ต้องเปิดเอกสาร คุณมาถูกที่แล้ว ไม่ว่าคุณจะกำลังสร้างระบบจัดการเอกสาร, ตรวจสอบการอัปโหลด, หรืออัตโนมัติขั้นตอนการประมวลผลเนื้อหา การสกัดประเภทไฟล์, ขนาด, และจำนวนหน้าโดยโปรแกรมช่วยประหยัดเวลาและลดข้อผิดพลาด ในคู่มือนี้เราจะพาคุณผ่านการใช้ GroupDocs.Comparison for Java เพื่อ **java get file type**, **java read file size**, และ **java get page count**, พร้อมเคล็ดลับการปฏิบัติที่ดีที่สุดสำหรับการจัดการกรณีขอบและไฟล์ขนาดใหญ่
@@ -465,8 +461,3 @@ A: แน่นอน, ตราบใดที่แต่ละเธรดส
 - [รับประเภทไฟล์ Java – สกัดเมตาดาต้าเอกสารด้วย GroupDocs](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)  
 - [ตั้งค่าเมตาดาต้าเอกสารใน Java ด้วย GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)  
 - [ตั้งค่าเมตาดาต้ากำหนดเองใน Java ด้วย GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

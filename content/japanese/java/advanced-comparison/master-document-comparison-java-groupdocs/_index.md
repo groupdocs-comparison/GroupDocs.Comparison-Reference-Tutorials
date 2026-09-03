@@ -408,11 +408,6 @@ A: はい、有効な商用ライセンスが必要です。トライアル版�
 **テスト環境:** GroupDocs.Comparison 25.2 for Java  
 **作者:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 関連チュートリアル
 
 - [ストリームを使用した Java の Word 文書比較 – GroupDocs ガイド](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

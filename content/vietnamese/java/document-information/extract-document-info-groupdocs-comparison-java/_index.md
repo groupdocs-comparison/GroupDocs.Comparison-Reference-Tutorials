@@ -73,10 +73,6 @@ title: Cách lấy số trang pdf java và trích xuất siêu dữ liệu tài 
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách lấy số trang pdf java và trích xuất siêu dữ liệu tài liệu
 
 Nếu bạn cần **java pdf page count** mà không mở tài liệu, bạn đang ở đúng nơi. Cho dù bạn đang xây dựng hệ thống quản lý tài liệu, xác thực các tệp tải lên, hoặc tự động hoá quy trình nội dung, việc trích xuất loại tệp, kích thước và số trang một cách lập trình sẽ tiết kiệm thời gian và giảm lỗi. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn cách sử dụng GroupDocs.Comparison for Java để **java get file type**, **java read file size**, và **java get page count**, cùng các mẹo thực tiễn để xử lý các trường hợp đặc biệt và tệp lớn.
@@ -464,8 +460,3 @@ A: Hoàn toàn an toàn, miễn là mỗi luồng tạo riêng một thể hiệ
 - [Lấy loại tệp Java – Trích xuất siêu dữ liệu tài liệu với GroupDocs](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
 - [Thiết lập siêu dữ liệu tài liệu trong Java với GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Thiết lập siêu dữ liệu tùy chỉnh Java với GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

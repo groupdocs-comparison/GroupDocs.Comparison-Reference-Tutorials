@@ -402,11 +402,6 @@ A: 可以，前提是拥有有效的商业许可证。试用版仅用于评估�
 **测试环境：** GroupDocs.Comparison 25.2 for Java  
 **作者：** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 相关教程
 - [使用流比较 Java Word 文档 – GroupDocs 指南](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)
 - [compare pdf java – Java 文档比较教程 – 完整的加载与比较文档指南](/comparison/java/document-loading/)

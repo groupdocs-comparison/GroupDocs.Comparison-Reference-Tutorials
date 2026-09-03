@@ -73,10 +73,6 @@ title: java pdf page count nasıl alınır ve belge meta verileri nasıl çıkar
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java PDF sayfa sayısını nasıl alır ve belge meta verilerini çıkarırız
 
 Bir belgeyi açmadan **java pdf page count**'a ihtiyacınız varsa, doğru yerdesiniz. Belge yönetim sistemi oluşturuyor, yüklemeleri doğruluyor veya içerik hattını otomatikleştiriyor olun, dosya türünü, boyutunu ve sayfa sayısını programlı olarak çıkarmak zaman kazandırır ve hataları azaltır. Bu rehberde GroupDocs.Comparison for Java kullanarak **java get file type**, **java read file size** ve **java get page count** işlemlerini nasıl yapacağınızı, kenar durumları ve büyük dosyalarla başa çıkma konusunda en iyi uygulama ipuçlarını anlatacağız.
@@ -465,8 +461,3 @@ C: Kesinlikle; her thread kendi `Comparer` örneğini oluşturduğu sürece güv
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

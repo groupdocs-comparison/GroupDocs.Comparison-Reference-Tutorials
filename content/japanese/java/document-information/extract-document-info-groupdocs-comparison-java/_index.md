@@ -71,10 +71,6 @@ title: java pdf page count と document metadata を取得・抽出する方法
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # java pdf ページ数の取得とドキュメントメタデータの抽出方法
 
 ドキュメントを開かずに **java pdf page count** が必要な場合、ここが適切な場所です。ドキュメント管理システムの構築、アップロードの検証、またはコンテンツパイプラインの自動化を行う場合でも、ファイルタイプ、サイズ、ページ数をプログラムで抽出することで時間を節約し、エラーを減らすことができます。このガイドでは、GroupDocs.Comparison for Java を使用して **java get file type**、**java read file size**、**java get page count** を実行する方法と、エッジケースや大容量ファイルを扱う際のベストプラクティスをご紹介します。
@@ -462,8 +458,3 @@ A: はい、各スレッドが独自の `Comparer` インスタンスを作成�
 - [Get File Type Java – GroupDocs でドキュメントメタデータを抽出](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
 - [GroupDocs.Comparison を使用した Java のドキュメントメタデータ設定](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [GroupDocs Comparison を使用した Java のカスタムメタデータ設定](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

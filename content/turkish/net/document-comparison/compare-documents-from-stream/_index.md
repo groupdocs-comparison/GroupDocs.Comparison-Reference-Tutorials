@@ -279,10 +279,6 @@ Bu kılavuzu izleyerek **how to compare documents** işlemini .NET’te bellek�
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## İlgili Eğitimler
 

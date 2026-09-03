@@ -76,10 +76,6 @@ title: Cómo obtener el recuento de páginas PDF en Java y extraer los metadatos
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cómo obtener java pdf page count y extraer los metadatos del documento
 
 Si necesitas **java pdf page count** sin abrir un documento, estás en el lugar correcto. Ya sea que estés construyendo un sistema de gestión de documentos, validando cargas o automatizando una canalización de contenido, extraer el tipo de archivo, el tamaño y el recuento de páginas de forma programática ahorra tiempo y reduce errores. En esta guía te mostraremos cómo usar GroupDocs.Comparison para Java para **java get file type**, **java read file size** y **java get page count**, además de consejos de buenas prácticas para manejar casos límite y archivos grandes.
@@ -468,8 +464,3 @@ R: Absolutamente, siempre que cada hilo cree su propia instancia de `Comparer`. 
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

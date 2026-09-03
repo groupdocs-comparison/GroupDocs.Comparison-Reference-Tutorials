@@ -277,10 +277,6 @@ Stosując się do tego przewodnika, teraz wiesz **how to compare documents** uż
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## Powiązane samouczki
 

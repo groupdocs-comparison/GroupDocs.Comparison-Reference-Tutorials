@@ -415,11 +415,6 @@ R : Oui, avec une licence commerciale valide. La version d’essai est uniquem
 **Tested With:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriels associés
 
 - [Comparer des documents Word java avec des flux – Guide GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

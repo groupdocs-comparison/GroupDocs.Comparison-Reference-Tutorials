@@ -378,11 +378,6 @@ A: [GroupDocs Support‑forum](https://forum.groupdocs.com) är den primära pla
 **Testat med:** GroupDocs.Comparison 25.2  
 **Författare:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

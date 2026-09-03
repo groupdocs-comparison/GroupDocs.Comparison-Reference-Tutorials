@@ -375,11 +375,6 @@ R : Le [forum de support GroupDocs](https://forum.groupdocs.com) est le princi
 **Testé avec :** GroupDocs.Comparison 25.2  
 **Auteur :** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

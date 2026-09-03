@@ -280,10 +280,6 @@ Door deze gids te volgen weet u nu **how to compare documents** te gebruiken met
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## Gerelateerde tutorials
 

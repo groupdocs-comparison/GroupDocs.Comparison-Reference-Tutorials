@@ -413,11 +413,6 @@ A: Sí, con una licencia comercial válida. La versión de prueba es solo para e
 **Probado con:** GroupDocs.Comparison 25.2 para Java  
 **Autor:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriales relacionados
 
 - [Comparar documentos Word java con streams – Guía GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

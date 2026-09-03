@@ -409,11 +409,6 @@ A: Ya, dengan lisensi komersial yang valid. Versi percobaan hanya untuk evaluasi
 **Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
 **Penulis:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial Terkait
 
 - [Bandingkan dokumen word java dengan stream – Panduan GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

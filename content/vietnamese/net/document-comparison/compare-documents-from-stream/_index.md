@@ -279,10 +279,6 @@ Bằng cách làm theo hướng dẫn này, bạn đã biết **cách so sánh t
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## Hướng dẫn liên quan
 

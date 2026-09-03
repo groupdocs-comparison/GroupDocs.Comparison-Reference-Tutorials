@@ -69,10 +69,6 @@ title: 如何取得 Java PDF 頁數並擷取文件中繼資料
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何取得 java pdf 頁數 並提取文件中繼資料
 
 如果你需要 **java pdf page count** 而不必開啟文件，你來對地方了。無論是建置文件管理系統、驗證上傳檔案，或是自動化內容管線，程式化取得檔案類型、大小與頁數都能節省時間並降低錯誤。本指南將帶你使用 GroupDocs.Comparison for Java 來 **java get file type**、**java read file size**、以及 **java get page count**，並提供處理邊緣案例與大型檔案的最佳實踐技巧。
@@ -461,8 +457,3 @@ A: 完全安全，只要每個執行緒自行建立 `Comparer` 實例，切勿�
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

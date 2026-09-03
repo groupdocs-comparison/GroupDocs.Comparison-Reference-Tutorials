@@ -276,10 +276,6 @@ A: 官方 [support forum](https://forum.groupdocs.com/c/comparison/12) 由 Group
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## 相关教程
 

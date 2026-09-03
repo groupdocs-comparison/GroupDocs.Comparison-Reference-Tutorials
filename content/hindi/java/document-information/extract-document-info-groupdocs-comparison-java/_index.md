@@ -73,10 +73,6 @@ title: Java PDF पेज काउंट प्राप्त करने औ
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # जावा पीडीएफ पेज काउंट कैसे प्राप्त करें और दस्तावेज़ मेटाडेटा निकालें
 
 यदि आपको दस्तावेज़ को खोले बिना **java pdf page count** चाहिए, तो आप सही जगह पर हैं। चाहे आप एक दस्तावेज़ प्रबंधन प्रणाली बना रहे हों, अपलोड की वैधता जांच रहे हों, या कंटेंट पाइपलाइन को स्वचालित कर रहे हों, फ़ाइल प्रकार, आकार और पेज काउंट को प्रोग्रामेटिकली निकालना समय बचाता है और त्रुटियों को कम करता है। इस गाइड में हम आपको GroupDocs.Comparison for Java का उपयोग करके **java get file type**, **java read file size**, और **java get page count** करने की प्रक्रिया दिखाएंगे, साथ ही किनारे के मामलों और बड़े फ़ाइलों को संभालने के सर्वोत्तम अभ्यास टिप्स भी देंगे।
@@ -464,8 +460,3 @@ A: बिल्कुल, बशर्ते प्रत्येक थ्र�
 - [फ़ाइल प्रकार जावा प्राप्त करें – GroupDocs के साथ दस्तावेज़ मेटाडेटा निकालें](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
 - [GroupDocs.Comparison के साथ जावा में दस्तावेज़ मेटाडेटा सेट करें](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [GroupDocs Comparison के साथ जावा में कस्टम मेटाडेटा सेट करें](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

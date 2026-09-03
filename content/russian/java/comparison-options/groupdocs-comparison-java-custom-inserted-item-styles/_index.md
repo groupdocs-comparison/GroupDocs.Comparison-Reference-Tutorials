@@ -375,11 +375,6 @@ A: Основным местом для получения помощи от с�
 **Тестировано с:** GroupDocs.Comparison 25.2  
 **Автор:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

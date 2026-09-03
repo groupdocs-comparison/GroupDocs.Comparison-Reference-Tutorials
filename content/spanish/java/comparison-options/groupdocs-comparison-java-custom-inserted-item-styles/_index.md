@@ -377,11 +377,6 @@ A: El [Foro de Soporte de GroupDocs](https://forum.groupdocs.com) es el lugar pr
 **Probado con:** GroupDocs.Comparison 25.2  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

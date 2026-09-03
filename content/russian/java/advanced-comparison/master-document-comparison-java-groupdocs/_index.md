@@ -399,11 +399,6 @@ public class ComparisonController {
 **Тестировано с:** GroupDocs.Comparison 25.2 for Java  
 **Автор:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Связанные руководства
 - [Сравнение word документов java с потоками – руководство GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)
 - [compare pdf java – руководство по сравнению Java документов – Полное руководство по загрузке и сравнению документов](/comparison/java/document-loading/)

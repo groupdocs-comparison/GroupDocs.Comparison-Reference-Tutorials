@@ -378,11 +378,6 @@ So sánh tài liệu xuất sắc biến các diff thô thành những thông ti
 **Kiểm thử với:** GroupDocs.Comparison 25.2  
 **Tác giả:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

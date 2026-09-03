@@ -275,10 +275,6 @@ A: 公式の [support forum](https://forum.groupdocs.com/c/comparison/12) では
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## 関連チュートリアル
 

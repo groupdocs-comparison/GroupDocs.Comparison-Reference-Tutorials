@@ -413,11 +413,6 @@ A: Ja, met een geldige commerciële licentie. De proefversie is alleen voor eval
 **Getest met:** GroupDocs.Comparison 25.2 for Java  
 **Auteur:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Gerelateerde tutorials
 
 - [Vergelijk Word-documenten java met streams – GroupDocs gids](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

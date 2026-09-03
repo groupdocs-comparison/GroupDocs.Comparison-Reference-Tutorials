@@ -73,10 +73,6 @@ title: كيفية الحصول على عدد صفحات pdf في java واستخ
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية الحصول على عدد صفحات PDF في جافا واستخراج بيانات تعريف المستند
 
 إذا كنت بحاجة إلى **java pdf page count** دون فتح المستند، فأنت في المكان الصحيح. سواءً كنت تبني نظام إدارة مستندات، أو تتحقق من صحة التحميلات، أو تقوم بأتمتة خط أنابيب المحتوى، فإن استخراج نوع الملف وحجمه وعدد الصفحات برمجيًا يوفر الوقت ويقلل الأخطاء. في هذا الدليل سنرشدك لاستخدام GroupDocs.Comparison for Java للحصول على **java get file type**، **java read file size**، و **java get page count**، بالإضافة إلى نصائح أفضل الممارسات للتعامل مع الحالات الحدية والملفات الكبيرة.
@@ -465,8 +461,3 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

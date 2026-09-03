@@ -374,11 +374,6 @@ A: 可前往 [GroupDocs Support Forum](https://forum.groupdocs.com) 取得社群
 **測試版本：** GroupDocs.Comparison 25.2  
 **作者：** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```java
 import com.groupdocs.comparison.Comparer;
 

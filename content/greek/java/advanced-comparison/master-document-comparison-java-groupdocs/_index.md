@@ -403,11 +403,6 @@ A: Ναι, με έγκυρη εμπορική άδεια. Η δοκιμαστι�
 **Δοκιμή Με:** GroupDocs.Comparison 25.2 for Java  
 **Συγγραφέας:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Σχετικά Μαθήματα
 
 - [Σύγκριση εγγράφων word java με streams – Οδηγός GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

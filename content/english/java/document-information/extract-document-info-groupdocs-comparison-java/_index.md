@@ -75,10 +75,6 @@ title: How to get java pdf page count and extract document metadata
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # How to get java pdf page count and extract document metadata
 
 If you need to **java pdf page count** without opening a document, you’re in the right place. Whether you’re building a document management system, validating uploads, or automating a content pipeline, extracting file type, size, and page count programmatically saves time and reduces errors. In this guide we’ll walk you through using GroupDocs.Comparison for Java to **java get file type**, **java read file size**, and **java get page count**, plus best‑practice tips for handling edge cases and large files.
@@ -467,8 +463,3 @@ A: Absolutely, as long as each thread creates its own `Comparer` instance. Do no
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

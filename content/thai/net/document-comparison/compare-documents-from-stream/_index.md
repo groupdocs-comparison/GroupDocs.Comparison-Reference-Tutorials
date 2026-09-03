@@ -278,10 +278,6 @@ A: ฟอรั่มสนับสนุนอย่างเป็นทา�
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## บทเรียนที่เกี่ยวข้อง
 

@@ -414,11 +414,6 @@ A: Tak, przy ważnej licencji komercyjnej. Wersja próbna służy wyłącznie do
 **Testowano z:** GroupDocs.Comparison 25.2 for Java  
 **Autor:** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Powiązane tutoriale
 
 - [Porównaj dokumenty Word java ze strumieniami – przewodnik GroupDocs](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

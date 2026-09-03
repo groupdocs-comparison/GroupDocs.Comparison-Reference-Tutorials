@@ -406,11 +406,6 @@ A: 可以，前提是擁有有效的商業授權。試用版僅供評估使用�
 **測試環境：** GroupDocs.Comparison 25.2 for Java  
 **作者：** GroupDocs
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 相關教學
 
 - [使用串流比較 Word 文件 Java – GroupDocs 指南](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

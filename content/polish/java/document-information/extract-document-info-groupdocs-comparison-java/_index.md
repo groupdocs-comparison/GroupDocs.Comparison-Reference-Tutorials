@@ -73,10 +73,6 @@ title: Jak uzyskać java pdf page count i wyodrębnić document metadata
 type: docs
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jak uzyskać liczbę stron pdf w Javie i wyodrębnić metadane dokumentu
 
 Jeśli potrzebujesz **java pdf page count** bez otwierania dokumentu, jesteś we właściwym miejscu. Niezależnie od tego, czy budujesz system zarządzania dokumentami, weryfikujesz przesyłane pliki, czy automatyzujesz pipeline treści, programowe wyodrębnianie typu pliku, rozmiaru i liczby stron oszczędza czas i zmniejsza liczbę błędów. W tym przewodniku pokażemy, jak używać GroupDocs.Comparison for Java do **java get file type**, **java read file size** i **java get page count**, a także podpowiemy najlepsze praktyki obsługi przypadków brzegowych i dużych plików.
@@ -465,8 +461,3 @@ O: Zdecydowanie, pod warunkiem że każdy wątek tworzy własną instancję `Com
 - [Set Document metadata in Java with GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
 - [Set Custom Metadata Java with GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

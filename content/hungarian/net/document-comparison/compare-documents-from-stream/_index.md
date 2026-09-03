@@ -282,10 +282,6 @@ Ezzel az útmutatóval most már tudod, **hogyan hasonlítsuk össze a dokumentu
 using System;
 using System.IO;
 ```
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ## Kapcsolódó oktatóanyagok
 

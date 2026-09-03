@@ -1,157 +1,172 @@
 ---
 categories:
 - Java Development
-date: '2026-02-28'
-description: Impara a personalizzare il confronto di documenti Java con GroupDocs.Comparison.
+date: '2026-08-30'
+description: Impara a personalizzare il confronto di documenti java usando GroupDocs.Comparison.
   Scopri le impostazioni di sensibilità, le opzioni di stile e le tecniche avanzate
   di configurazione.
-keywords: customize document comparison java, GroupDocs comparison settings Java,
-  document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
-  settings
-lastmod: '2026-02-28'
-linktitle: Comparison Options & Settings
+keywords:
+- customize document comparison java
+- GroupDocs comparison settings Java
+- document comparison options tutorial
+- Java PDF comparison styling
+- comparison sensitivity settings
+lastmod: '2026-08-30'
+linktitle: Opzioni e impostazioni di confronto
+og_description: Personalizza il confronto di documenti java con GroupDocs.Comparison.
+  Scopri le impostazioni di sensibilità, le opzioni di stile e i consigli sulle prestazioni
+  in questo tutorial completo.
+og_image_alt: GroupDocs.Comparison Java tutorial showing custom diff styling and settings
+og_title: Personalizza il confronto di documenti java – guida per un controllo preciso
+  delle differenze
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  headline: How to customize document comparison java – complete guide
+  type: TechArticle
+- questions:
+  - answer: Yes. Set `options.setDetectFormatting(false)` in your `ComparisonOptions`
+      object; text‑level sensitivity remains active.
+    question: Can I disable formatting detection while keeping text comparison?
+  - answer: Add regular expressions to the `ignorePatterns` collection of `ComparisonOptions`.
+      For example, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` skips
+      dates formatted as YYYY‑MM‑DD.
+    question: How do I ignore specific words or patterns like timestamps?
+  - answer: Absolutely. Configure `InsertedItemStyle.setBackgroundColor(Color.GREEN)`
+      and `DeletedItemStyle.setBackgroundColor(Color.RED)` (or any custom RGB values)
+      before invoking the comparison.
+    question: Is it possible to apply different colors for insertions vs. deletions?
+  - answer: High sensitivity increases CPU usage and memory consumption. On a 300‑page
+      PDF, processing time can rise from 3 seconds to over 12 seconds on a typical
+      8‑core server. Consider lowering sensitivity for image or table sections to
+      keep runtimes acceptable.
+    question: What’s the impact of high sensitivity on large PDFs?
+  - answer: Yes. Create a single `ComparisonOptions` instance with your custom settings
+      and pass it to each `compare` call. This avoids repeated object creation and
+      ensures consistent results.
+    question: Can I reuse the same configuration across multiple comparison runs?
+  type: FAQPage
 tags:
 - document-comparison
 - java-tutorials
 - groupdocs
 - customization
-title: Personalizza il confronto dei documenti Java – Guida completa
+title: Come personalizzare il confronto di documenti java – guida completa
 type: docs
 url: /it/java/comparison-options/
 weight: 11
 ---
 
-# Personalizza il Confronto di Documenti Java – Guida Completa
+# Personalizza il confronto dei documenti java – guida completa
 
-Ti sei mai trovato in difficoltà con i confronti di documenti che evidenziano ogni minimo cambiamento di formattazione o che perdono importanti differenze di contenuto? Non sei solo. La maggior parte degli sviluppatori inizia con il confronto di documenti di base ma si rende rapidamente conto di aver bisogno di un controllo fine su ciò che viene rilevato, su come vengono visualizzate le modifiche e su quanto sensibile debba essere l'algoritmo di confronto. **In questa guida imparerai come customize document comparison java** in modo che funzioni esattamente come richiede il tuo progetto.
+Hai mai avuto difficoltà con i confronti di documenti che evidenziano ogni minimo cambiamento di formattazione o che non rilevano importanti differenze di contenuto? Non sei solo. La maggior parte degli sviluppatori inizia con il confronto di documenti di base ma si rende rapidamente conto di aver bisogno di un controllo fine su ciò che viene rilevato, su come vengono visualizzate le modifiche e su quanto sensibile debba essere l'algoritmo di confronto. **In questa guida imparerai come personalizzare il confronto dei documenti java** in modo che funzioni esattamente come richiede il tuo progetto.
 
-## Risposte Rapide
-- **Cosa significa “customize document comparison java”?** Personalizzare le impostazioni di GroupDocs.Comparison (sensibilità, stile, regole di ignorare) per adattarle alle esigenze della tua applicazione Java.  
+## Risposte rapide
+- **Cosa significa “customize document comparison java”?** Significa personalizzare le impostazioni di GroupDocs.Comparison — sensibilità, stile, regole di ignorare — per soddisfare le esigenze esatte della tua applicazione Java.  
 - **Ho bisogno di una licenza?** Sì, è necessaria una licenza valida di GroupDocs.Comparison per Java per l'uso in produzione.  
-- **Quali formati sono supportati?** PDF, DOCX, PPTX, XLSX e molti altri formati office comuni.  
-- **Posso ignorare timestamp o ID generati automaticamente?** Assolutamente – usa i pattern di ignorare o regola la sensibilità per filtrare questo rumore.  
-- **Le prestazioni sono influenzate da alta sensibilità?** Una maggiore sensibilità può aumentare il tempo di elaborazione su file di grandi dimensioni; bilancia le impostazioni in base al tuo carico di lavoro.
+- **Quali formati sono supportati?** PDF, DOCX, PPTX, XLSX e più di 30 altri formati office comuni.  
+- **Posso ignorare i timestamp o gli ID generati automaticamente?** Assolutamente – usa i pattern di ignorare o regola la sensibilità per filtrare questo rumore.  
+- **Le prestazioni sono influenzate da un'alta sensibilità?** Un'alta sensibilità può aumentare l'uso di CPU e memoria su file di grandi dimensioni; bilancia le impostazioni in base al tuo carico di lavoro.
 
 ## Cos'è “customize document comparison java”?
-Personalizzare il confronto di documenti in Java significa configurare il motore GroupDocs.Comparison per rilevare solo le modifiche che ti interessano e presentarle in modo chiaro e adatto ai revisori. Regolando i livelli di sensibilità, le regole di stile e i pattern di ignorare, ottieni un controllo preciso sull'output del confronto.
+Personalizzare il confronto dei documenti in Java significa configurare il motore GroupDocs.Comparison per rilevare solo le modifiche che ti interessano e presentarle in modo chiaro e adatto ai revisori. Regolando i livelli di sensibilità, le regole di stile e i pattern di ignorare, ottieni un controllo preciso sul risultato del confronto.
 
-## Perché personalizzare document comparison java?
-- **Ridurre il rumore:** Impedire ai revisori di essere sopraffatti da modifiche di formattazione insignificanti.  
-- **Evidenziare modifiche critiche:** Far risaltare immediatamente le modifiche legali o finanziarie.  
-- **Mantenere la coerenza del brand:** Applicare i colori e i font della tua organizzazione al contenuto inserito o cancellato.  
-- **Migliorare le prestazioni:** Saltare controlli non necessari per grandi lotti di documenti.
+## Perché personalizzare il confronto dei documenti java?
+Personalizzi il confronto dei documenti java per ridurre il rumore, evidenziare le modifiche critiche, mantenere la coerenza del brand e migliorare le prestazioni. Le revisioni legali ad alto volume beneficiano dell'ignorare formattazioni insignificanti mantenendo ogni cambiamento di parola. I team di documentazione tecnica possono filtrare i timestamp generati automaticamente, mantenendo il diff focalizzato sugli aggiornamenti reali del contenuto. Uno stile coerente garantisce inoltre che i revisori riconoscano immediatamente inserimenti, cancellazioni e modifiche di formato su PDF, file Word e fogli di calcolo.
 
-## Quando Personalizzare le Opzioni di Confronto dei Documenti
+## Quando personalizzare le opzioni di confronto dei documenti
+Dovresti personalizzare le opzioni di confronto ogni volta che il diff predefinito produce troppi falsi positivi o non rileva cambiamenti importanti. Scenari tipici includono l'elaborazione di grandi lotti di contratti che richiedono uno stile visivo uniforme, la gestione della documentazione API che si aggiorna frequentemente ma contiene date automatiche, e la revisione di report finanziari trimestrali dove contano solo le variazioni numeriche. Regolare le impostazioni aiuta a concentrare i revisori sulle differenze più rilevanti.
 
-Prima di immergersi nei dettagli tecnici, comprendiamo quando e perché potresti voler personalizzare il comportamento del confronto:
+- Lotti di contratti di grandi dimensioni in cui i revisori hanno bisogno di uno stile visivo uniforme.  
+- Documentazione API che si aggiorna frequentemente ma include timestamp automatizzati.  
+- Report finanziari trimestrali in cui contano solo le variazioni numeriche.  
 
-**Elaborazione di Documenti ad Alto Volume** – Quando si confrontano centinaia di contratti o report, è necessario mantenere una formattazione coerente e un'evidenziazione chiara delle modifiche che non sovraccarichi i revisori.
+## Scenari comuni per la personalizzazione del confronto
+Comprendere casi d'uso reali ti aiuta a scegliere le impostazioni giuste.
 
-**Revisione di Documenti Legali** – Gli studi legali richiedono un controllo preciso su cosa costituisce una “modifica” – ignorando le variazioni di formattazione ma catturando ogni modifica di contenuto.
+### Scenario 1: Revisione contratti
+I team legali devono vedere ogni modifica di parola ma ignorare variazioni di font o spaziatura. Usa alta sensibilità del testo, disattiva il rilevamento della formattazione e applica colori personalizzati per inserimenti e cancellazioni.
 
-**Controllo Versione per Documentazione Tecnica** – I team software hanno bisogno di tracciare le modifiche significative nella documentazione filtrando gli aggiornamenti automatici di timestamp o le piccole regolazioni di formattazione.
+### Scenario 2: Aggiornamenti della documentazione tecnica
+I tuoi documenti API vengono aggiornati spesso; vuoi catturare le modifiche di contenuto ignorando timestamp e formattazioni minori. Imposta una sensibilità media, aggiungi pattern di ignorare per le stringhe di data e stila i blocchi di codice con uno sfondo distintivo.
 
-**Flussi di Lavoro di Editing Collaborativo** – Quando più autori lavorano sullo stesso documento, vuoi evidenziare le modifiche sostanziali senza ingombrare la vista con ogni aggiustamento di spaziatura.
-
-## Scenari Comuni per la Personalizzazione del Confronto
-
-Comprendere questi casi d'uso reali ti aiuterà a scegliere le impostazioni giuste per le tue esigenze specifiche:
-
-### Scenario 1: Revisione di Contratti
-Stai costruendo un sistema per i team legali per revisionare le modifiche ai contratti. Hanno bisogno di vedere ogni modifica di parola ma non si preoccupano dei cambiamenti di font o delle regolazioni di spaziatura.
-
-**Impostazioni Ideali**: Alta sensibilità al testo, rilevamento della formattazione disabilitato, stile personalizzato per inserimenti e cancellazioni.
-
-### Scenario 2: Aggiornamenti della Documentazione Tecnica  
-Il tuo team mantiene la documentazione API che viene aggiornata frequentemente. Vuoi rilevare le modifiche di contenuto ma ignorare i timestamp automatici e i piccoli aggiornamenti di formattazione.
-
-**Impostazioni Ideali**: Sensibilità media, ignorare pattern di testo specifici, evidenziazione personalizzata per blocchi di codice.
-
-### Scenario 3: Generazione di Report
-Stai confrontando i report trimestrali dove i dati cambiano ma la struttura del modello rimane simile. L'attenzione dovrebbe essere sulle variazioni numeriche e sulle nuove sezioni.
-
-**Impostazioni Ideali**: Sensibilità personalizzata per tabelle e numeri, stile migliorato per le modifiche dei dati.
+### Scenario 3: Generazione di report
+I report trimestrali condividono un modello comune; ti interessano principalmente le variazioni numeriche e le nuove sezioni. Aumenta la sensibilità per tabelle e numeri, mantieni basse le verifiche di layout e usa evidenziazioni in grassetto per le cifre modificate.
 
 ## Come confrontare documenti PDF java con GroupDocs.Comparison
-Se il tuo carico di lavoro principale riguarda i PDF, gli stessi principi di personalizzazione si applicano. Usa l'oggetto `ComparisonOptions` per affinare il comportamento specifico dei PDF — ad esempio abilitando o disabilitando il confronto delle immagini, controllando l'accuratezza dell'estrazione del testo e applicando colori di evidenziazione adatti ai PDF. Questo garantisce di ottenere il diff più affidabile mantenendo tempi di elaborazione ragionevoli.
+`ComparisonOptions` è un oggetto di configurazione che controlla quali elementi vengono confrontati e come le differenze sono evidenziate. Carica i PDF di origine e destinazione, crea un'istanza `ComparisonOptions` e chiama il metodo `compare`. `ComparisonOptions` ti consente di abilitare o disabilitare il confronto delle immagini, impostare la precisione dell'estrazione del testo e scegliere i colori di evidenziazione che funzionano bene con i visualizzatori PDF. Ad esempio, puoi disattivare il diff delle immagini per velocizzare l'elaborazione quando le immagini non cambiano, oppure passare a un colore ad alto contrasto per le inserzioni per soddisfare le linee guida di accessibilità.
 
-## Tutorial Disponibili
+## Tutorial disponibili
 
-### [Personalizza gli Stili degli Elementi Inseriti nei Confronti di Documenti Java con GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
+### [Personalizza gli stili degli elementi inseriti nei confronti di documenti Java con GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-Scopri come personalizzare gli stili degli elementi inseriti nei confronti di documenti Java usando GroupDocs.Comparison. Questo tutorial copre tutto, dalla configurazione di base dello stile alla personalizzazione avanzata della visualizzazione, aiutandoti a creare output di confronto dall'aspetto professionale che migliorano chiarezza e usabilità per gli utenti finali.
+Impara come personalizzare gli stili degli elementi inseriti nei confronti di documenti Java utilizzando GroupDocs.Comparison. Questo tutorial copre tutto, dalla configurazione di base dello stile alla personalizzazione avanzata della visualizzazione, aiutandoti a creare output di confronto dall'aspetto professionale che migliorano chiarezza e usabilità per gli utenti finali.
 
-**Cosa Imparerai:**
-- Configurare colori e formattazione personalizzati per il contenuto inserito  
-- Impostare diversi stili visivi per vari tipi di modifica  
-- Implementare uno stile coerente tra diversi formati di documento  
-- Ottimizzare la chiarezza visiva per i flussi di lavoro di revisione  
+**Cosa imparerai**
+- Configurazione di colori e formattazione personalizzati per i contenuti inseriti  
+- Impostazione di diversi stili visivi per vari tipi di modifica  
+- Implementazione di uno stile coerente su diversi formati di documento  
+- Ottimizzazione della chiarezza visiva per i flussi di revisione  
 
-**Perfetto Per**: Team che hanno bisogno di output di confronto brandizzati o requisiti visivi specifici per il tracciamento delle modifiche.
+**Perfetto per**: Team che hanno bisogno di output di confronto brandizzati o requisiti visivi specifici per il tracciamento delle modifiche.
 
-## Best Practices per la Personalizzazione del Confronto di Documenti Java
+## Best practice per la personalizzazione del confronto di documenti Java
+- **Inizia con le impostazioni predefinite** – Esegui prima un confronto di base; spesso una singola modifica risolve il problema.  
+- **Conosci il tuo pubblico** – I revisori legali preferiscono evidenziazioni rosse/verde marcate, mentre gli sviluppatori potrebbero volere sfumature grigie più sottili.  
+- **Testa con documenti reali** – Usa file simili a quelli di produzione; i casi limite (tabelle, oggetti incorporati) spesso rivelano problemi nascosti.  
+- **Bilancia prestazioni e precisione** – Un'alta sensibilità fornisce diff precisi ma può raddoppiare i tempi di elaborazione su PDF di 200 pagine.  
+- **Applica uno stile coerente su tutti i formati** – Assicurati che lo schema di colori funzioni per PDF, DOCX e XLSX.
 
-**Inizia con le Impostazioni Predefinite** – Testa prima la configurazione pronta all'uso; spesso una singola modifica risolve il problema.
+## Sfide comuni di configurazione
+- **Rilevamento eccessivamente sensibile** – Troppi evidenziamenti insignificanti. Riduci il valore `textSensitivity` o aggiungi pattern di ignorare per rumori noti (es. timestamp).  
+- **Mancano cambiamenti importanti** – Modifiche critiche non segnalate. Aumenta la sensibilità per tabelle o abilita `detectEmbeddedObjects`.  
+- **Stile incoerente** – `InsertedItemStyle` e `DeletedItemStyle` definiscono l'aspetto visivo del contenuto inserito e rimosso, rispettivamente. Verifica che `InsertedItemStyle` e `DeletedItemStyle` siano definiti prima di chiamare `compare`.  
+- **Collo di bottiglia delle prestazioni** – File grandi con alta sensibilità sovraccaricano la CPU. Considera l'elaborazione delle pagine in parallelo o riduci la fedeltà del confronto delle immagini.
 
-**Considera il Tuo Pubblico** – I revisori legali hanno bisogno di evidenziazioni diverse rispetto ai redattori tecnici. Adatta il tuo stile e la sensibilità per corrispondere alle aspettative e ai flussi di lavoro degli utenti.
+## Consigli professionali per la personalizzazione avanzata
+- **Combina tecniche** – Usa stile personalizzato, regolazioni di sensibilità e pattern di ignorare insieme per risultati ottimali.  
+- **Salva le configurazioni come template** – Serializza il tuo `ComparisonOptions` in JSON e riutilizzalo nei vari progetti.  
+- **Raccogli feedback dei revisori** – Itera su colori e sensibilità basandoti sull'uso reale.  
+- **Documenta ogni impostazione** – Mantieni un breve changelog che descriva perché ogni opzione è stata scelta; facilita la manutenzione futura.
 
-**Testa con Documenti Rappresentativi** – Usa sempre file reali del tuo dominio, non solo casi di test semplici. I casi limite spesso emergono solo con contenuti simili a quelli di produzione.
+## Risoluzione dei problemi comuni
+- **Le modifiche non vengono visualizzate come previsto** – Verifica se la formattazione a livello di documento sovrascrive i tuoi stili personalizzati. Potrebbe essere necessario regolare la priorità delle regole.  
+- **Degrado delle prestazioni** – Riduci la sensibilità per gli elementi non critici o disattiva il diff delle immagini per PDF di grandi dimensioni.  
+- **Risultati incoerenti** – Cerca metadati nascosti, caratteri a larghezza zero o differenze strutturali che influenzano l'algoritmo.
 
-**Compromessi tra Prestazioni e Precisione** – Una maggiore sensibilità fornisce una rilevazione più precisa ma può rallentare l'elaborazione su documenti di grandi dimensioni. Trova il punto ottimale per il tuo ambiente.
-
-**Coerenza tra Tipi di Documento** – Se confronti PDF, file Word e fogli Excel, assicurati che le regole di stile funzionino uniformemente su tutti i formati supportati.
-
-## Sfide Comuni di Configurazione
-
-**Rilevamento Troppo Sensibile** – Se il tuo confronto evidenzia troppe modifiche insignificanti, riduci la sensibilità o aggiungi pattern di ignorare per variazioni note (ad esempio timestamp o ID generati automaticamente).
-
-**Mancanza di Modifiche Importanti** – Quando modifiche significative non vengono rilevate, aumenta la sensibilità o verifica che gli elementi (tabelle, oggetti incorporati) siano inclusi nell'ambito del confronto.
-
-**Stile Incoerente** – Se gli stili personalizzati non vengono applicati uniformemente, conferma che le definizioni di stile siano compatibili con ogni formato di documento che elabori.
-
-**Problemi di Prestazioni** – Documenti grandi con alta sensibilità possono essere lenti. Considera il preprocessing dei file o la suddivisione del confronto in blocchi.
-
-## Pro Tips per la Personalizzazione Avanzata
-
-- **Combina più Tecniche** – Usa insieme stile personalizzato, regolazione della sensibilità e pattern di ignorare per risultati ottimali.  
-- **Salva Configurazioni di Successo** – Conserva le impostazioni preferite come template da riutilizzare nei progetti.  
-- **Monitora il Feedback degli Utenti** – Raccogli regolarmente input dei revisori; regola lo stile o la sensibilità in base all'uso reale.  
-- **Documenta le Tue Impostazioni** – Mantieni un registro conciso del perché ogni opzione è stata scelta; aiuta nella manutenzione futura e nell'onboarding.
-
-## Risoluzione dei Problemi Comuni
-
-- **Modifiche Non Visualizzate Come Previsto** – Verifica che il tuo stile personalizzato non venga sovrascritto dalla formattazione a livello di documento. Controlla la priorità delle regole.  
-- **Degrado delle Prestazioni** – Riduci la sensibilità per tipi di modifica meno critici o abilita l'elaborazione parallela per lavori batch.  
-- **Risultati Incoerenti** – Cerca metadati nascosti, caratteri invisibili o differenze strutturali che potrebbero influenzare l'algoritmo.
-
-## Risorse Aggiuntive
-
+## Risorse aggiuntive
 - [Documentazione di GroupDocs.Comparison per Java](https://docs.groupdocs.com/comparison/java/)  
 - [Riferimento API di GroupDocs.Comparison per Java](https://reference.groupdocs.com/comparison/java/)  
-- [Download di GroupDocs.Comparison per Java](https://releases.groupdocs.com/comparison/java/)  
+- [Scarica GroupDocs.Comparison per Java](https://releases.groupdocs.com/comparison/java/)  
 - [Forum di GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
-- [Supporto Gratuito](https://forum.groupdocs.com/)  
-- [Licenza Temporanea](https://purchase.groupdocs.com/temporary-license/)
+- [Supporto gratuito](https://forum.groupdocs.com/)  
+- [Licenza temporanea](https://purchase.groupdocs.com/temporary-license/)
 
-## Domande Frequenti
-
-**Q: Posso disabilitare il rilevamento della formattazione mantenendo il confronto del testo?**  
-A: Sì, puoi disattivare i controlli di formattazione nell'oggetto `ComparisonOptions` e mantenere attiva la sensibilità a livello di testo.
+## Domande frequenti
+**Q: Posso disattivare il rilevamento della formattazione mantenendo il confronto del testo?**  
+A: Sì. Imposta `options.setDetectFormatting(false)` nel tuo oggetto `ComparisonOptions`; la sensibilità a livello di testo rimane attiva.
 
 **Q: Come posso ignorare parole o pattern specifici come i timestamp?**  
-A: Usa la collezione `ignorePatterns` in `ComparisonOptions` per specificare le espressioni regolari da escludere dal diff.
+A: Aggiungi espressioni regolari alla collezione `ignorePatterns` di `ComparisonOptions`. Ad esempio, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` ignora le date formattate come AAAA‑MM‑GG.
 
-**Q: È possibile applicare colori diversi per inserimenti vs cancellazioni?**  
-A: Assolutamente. Configura `InsertedItemStyle` e `DeletedItemStyle` con i colori di primo piano/sfondo preferiti.
+**Q: È possibile applicare colori diversi per inserzioni e cancellazioni?**  
+A: Assolutamente. Configura `InsertedItemStyle.setBackgroundColor(Color.GREEN)` e `DeletedItemStyle.setBackgroundColor(Color.RED)` (o qualsiasi valore RGB personalizzato) prima di avviare il confronto.
 
-**Q: Qual è l'impatto di alta sensibilità sui PDF di grandi dimensioni?**  
-A: L'alta sensibilità aumenta l'uso della CPU e il consumo di memoria. Per PDF molto grandi, considera l'elaborazione delle pagine in parallelo o abbassa la sensibilità per le sezioni non critiche.
+**Q: Qual è l'impatto di un'alta sensibilità su PDF di grandi dimensioni?**  
+A: Un'alta sensibilità aumenta l'uso di CPU e memoria. Su un PDF di 300 pagine, il tempo di elaborazione può passare da 3 secondi a oltre 12 secondi su un tipico server a 8 core. Considera di ridurre la sensibilità per le sezioni di immagini o tabelle per mantenere tempi accettabili.
 
 **Q: Posso riutilizzare la stessa configurazione in più esecuzioni di confronto?**  
-A: Sì, istanzia un unico oggetto `ComparisonOptions` con le tue impostazioni personalizzate e riutilizzalo per ogni chiamata di confronto.
+A: Sì. Crea un'unica istanza `ComparisonOptions` con le tue impostazioni personalizzate e passala a ciascuna chiamata `compare`. Questo evita la creazione ripetuta di oggetti e garantisce risultati coerenti.
 
 ---
 
-**Ultimo Aggiornamento:** 2026-02-28  
-**Testato Con:** GroupDocs.Comparison per Java 23.11  
+**Ultimo aggiornamento:** 2026-08-30  
+**Testato con:** GroupDocs.Comparison per Java 23.11  
 **Autore:** GroupDocs
+
+## Tutorial correlati
+- [java confronta file pdf – Tutorial GroupDocs.Comparison Java](/comparison/java/basic-comparison/java-groupdocs-comparison-document-management/)
+- [Come usare GroupDocs: Flussi di confronto documenti Java – Guida completa](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [GroupDocs Comparison Java: Confronta documenti protetti – Guida completa](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)

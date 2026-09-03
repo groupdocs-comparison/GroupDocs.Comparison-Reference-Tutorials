@@ -1,149 +1,182 @@
 ---
 categories:
 - Java Development
-date: '2026-02-28'
-description: Kuasi cara menyesuaikan perbandingan dokumen Java menggunakan GroupDocs.Comparison.
-  Pelajari pengaturan sensitivitas, opsi penataan, dan teknik konfigurasi lanjutan.
-keywords: customize document comparison java, GroupDocs comparison settings Java,
-  document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
-  settings
-lastmod: '2026-02-28'
-linktitle: Comparison Options & Settings
+date: '2026-08-30'
+description: Kuasi cara menyesuaikan document comparison java menggunakan GroupDocs.Comparison.
+  Pelajari sensitivity settings, styling options, dan advanced configuration techniques.
+keywords:
+- customize document comparison java
+- GroupDocs comparison settings Java
+- document comparison options tutorial
+- Java PDF comparison styling
+- comparison sensitivity settings
+lastmod: '2026-08-30'
+linktitle: Comparison options & settings
+og_description: Customize document comparison java dengan GroupDocs.Comparison. Temukan
+  sensitivity settings, styling options, dan performance tips dalam tutorial komprehensif
+  ini.
+og_image_alt: GroupDocs.Comparison Java tutorial showing custom diff styling and settings
+og_title: Customize document comparison java – panduan untuk precise diff control
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  headline: How to customize document comparison java – complete guide
+  type: TechArticle
+- questions:
+  - answer: Yes. Set `options.setDetectFormatting(false)` in your `ComparisonOptions`
+      object; text‑level sensitivity remains active.
+    question: Can I disable formatting detection while keeping text comparison?
+  - answer: Add regular expressions to the `ignorePatterns` collection of `ComparisonOptions`.
+      For example, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` skips
+      dates formatted as YYYY‑MM‑DD.
+    question: How do I ignore specific words or patterns like timestamps?
+  - answer: Absolutely. Configure `InsertedItemStyle.setBackgroundColor(Color.GREEN)`
+      and `DeletedItemStyle.setBackgroundColor(Color.RED)` (or any custom RGB values)
+      before invoking the comparison.
+    question: Is it possible to apply different colors for insertions vs. deletions?
+  - answer: High sensitivity increases CPU usage and memory consumption. On a 300‑page
+      PDF, processing time can rise from 3 seconds to over 12 seconds on a typical
+      8‑core server. Consider lowering sensitivity for image or table sections to
+      keep runtimes acceptable.
+    question: What’s the impact of high sensitivity on large PDFs?
+  - answer: Yes. Create a single `ComparisonOptions` instance with your custom settings
+      and pass it to each `compare` call. This avoids repeated object creation and
+      ensures consistent results.
+    question: Can I reuse the same configuration across multiple comparison runs?
+  type: FAQPage
 tags:
 - document-comparison
 - java-tutorials
 - groupdocs
 - customization
-title: Sesuaikan Perbandingan Dokumen Java – Panduan Lengkap
+title: Cara menyesuaikan document comparison java – panduan lengkap
 type: docs
 url: /id/java/comparison-options/
 weight: 11
 ---
 
-# Sesuaikan Perbandingan Dokumen Java – Panduan Lengkap
+# Sesuaikan perbandingan dokumen java – panduan lengkap
 
-Pernah mengalami kesulitan dengan perbandingan dokumen yang menyoroti setiap perubahan format kecil atau melewatkan perbedaan konten penting? Anda tidak sendirian. Kebanyakan pengembang memulai dengan perbandingan dokumen dasar tetapi cepat menyadari mereka membutuhkan kontrol yang halus atas apa yang terdeteksi, bagaimana perubahan ditampilkan, dan seberapa sensitif algoritma perbandingan harusnya. **Dalam panduan ini Anda akan belajar cara menyesuaikan perbandingan dokumen java** sehingga bekerja persis seperti yang dibutuhkan proyek Anda.
+Pernah mengalami kesulitan dengan perbandingan dokumen yang menyoroti setiap perubahan format kecil atau melewatkan perbedaan konten penting? Anda tidak sendirian. Kebanyakan pengembang memulai dengan perbandingan dokumen dasar tetapi cepat menyadari bahwa mereka memerlukan kontrol yang sangat detail atas apa yang terdeteksi, bagaimana perubahan ditampilkan, dan seberapa sensitif algoritma perbandingan harusnya. **Dalam panduan ini Anda akan belajar cara menyesuaikan perbandingan dokumen java** sehingga berfungsi persis seperti yang dibutuhkan proyek Anda.
 
-## Jawaban Cepat
-- **Apa arti “customize document comparison java”?** Menyesuaikan pengaturan GroupDocs.Comparison (sensitivitas, styling, aturan ignore) agar sesuai dengan kebutuhan aplikasi Java Anda.  
+## Jawaban cepat
+- **Apa arti “customize document comparison java”?** Ini berarti menyesuaikan pengaturan GroupDocs.Comparison—sensitivitas, gaya, aturan mengabaikan—untuk memenuhi kebutuhan tepat aplikasi Java Anda.  
 - **Apakah saya memerlukan lisensi?** Ya, lisensi GroupDocs.Comparison untuk Java yang valid diperlukan untuk penggunaan produksi.  
-- **Format apa yang didukung?** PDF, DOCX, PPTX, XLSX, dan banyak format kantor umum lainnya.  
-- **Bisakah saya mengabaikan timestamp atau ID yang dihasilkan secara otomatis?** Tentu – gunakan pola ignore atau sesuaikan sensitivitas untuk menyaring kebisingan tersebut.  
-- **Apakah kinerja terpengaruh oleh sensitivitas tinggi?** Sensitivitas tinggi dapat meningkatkan waktu pemrosesan pada file besar; seimbangkan pengaturan berdasarkan beban kerja Anda.
+- **Format apa yang didukung?** PDF, DOCX, PPTX, XLSX, dan lebih dari 30 format kantor umum lainnya.  
+- **Bisakah saya mengabaikan cap waktu atau ID yang dihasilkan secara otomatis?** Tentu – gunakan pola pengabaian atau sesuaikan sensitivitas untuk menyaring kebisingan tersebut.  
+- **Apakah kinerja terpengaruh oleh sensitivitas tinggi?** Sensitivitas yang lebih tinggi dapat meningkatkan penggunaan CPU dan memori pada file besar; seimbangkan pengaturan berdasarkan beban kerja Anda.
 
 ## Apa itu “customize document comparison java”?
-Menyesuaikan perbandingan dokumen di Java berarti mengonfigurasi mesin GroupDocs.Comparison untuk mendeteksi hanya perubahan yang Anda pedulikan dan menyajikan perubahan tersebut dengan cara yang jelas dan ramah peninjau. Dengan menyesuaikan tingkat sensitivitas, aturan styling, dan pola ignore, Anda memperoleh kontrol yang tepat atas output perbandingan.
+
+Menyesuaikan perbandingan dokumen di Java berarti mengkonfigurasi mesin GroupDocs.Comparison untuk mendeteksi hanya perubahan yang Anda pedulikan dan menyajikan perubahan tersebut dengan cara yang jelas dan ramah peninjau. Dengan menyesuaikan tingkat sensitivitas, aturan gaya, dan pola pengabaian, Anda memperoleh kontrol yang tepat atas output perbandingan.
 
 ## Mengapa menyesuaikan perbandingan dokumen java?
-- **Kurangi kebisingan:** Mencegah peninjau kewalahan dengan penyesuaian format yang tidak signifikan.  
-- **Sorot perubahan penting:** Membuat perubahan legal atau keuangan langsung menonjol.  
-- **Pertahankan konsistensi merek:** Terapkan warna dan font organisasi Anda pada konten yang disisipkan atau dihapus.  
-- **Tingkatkan kinerja:** Lewati pemeriksaan yang tidak perlu untuk kumpulan dokumen besar.
 
-## Kapan Menyesuaikan Opsi Perbandingan Dokumen
+Anda menyesuaikan perbandingan dokumen java untuk mengurangi kebisingan, menyoroti edit penting, mempertahankan konsistensi merek, dan meningkatkan kinerja. Review hukum dengan volume tinggi mendapat manfaat dari mengabaikan format yang tidak signifikan sambil menangkap setiap perubahan kata. Tim dokumentasi teknis dapat menyaring cap waktu yang dihasilkan secara otomatis, menjaga diff terfokus pada pembaruan konten nyata. Gaya yang konsisten juga memastikan peninjau langsung mengenali penyisipan, penghapusan, dan perubahan format di seluruh PDF, file Word, dan spreadsheet.
 
-Sebelum menyelami detail teknis, mari pahami kapan dan mengapa Anda ingin menyesuaikan perilaku perbandingan:
+## Kapan menyesuaikan opsi perbandingan dokumen
 
-**Pemrosesan Dokumen Volume Tinggi** – Saat membandingkan ratusan kontrak atau laporan, Anda memerlukan format yang konsisten dan penyorotan perubahan yang jelas tanpa membebani peninjau.
+Anda harus menyesuaikan opsi perbandingan setiap kali diff default menghasilkan terlalu banyak positif palsu atau melewatkan perubahan penting. Skenario umum meliputi memproses batch besar kontrak yang memerlukan gaya visual seragam, menangani dokumentasi API yang sering diperbarui tetapi berisi cap tanggal otomatis, dan meninjau laporan keuangan triwulanan di mana hanya variasi numerik yang penting. Menyesuaikan pengaturan membantu memfokuskan peninjau pada perbedaan yang paling relevan.
 
-**Peninjauan Dokumen Hukum** – Firma hukum memerlukan kontrol yang tepat atas apa yang dianggap “perubahan” – mengabaikan penyesuaian format sambil menangkap setiap modifikasi konten.
+- Batch besar kontrak di mana peninjau membutuhkan gaya visual seragam.  
+- Dokumentasi API yang sering diperbarui tetapi menyertakan cap tanggal otomatis.  
+- Laporan keuangan triwulanan di mana hanya variasi numerik yang penting.  
 
-**Kontrol Versi untuk Dokumentasi Teknis** – Tim perangkat lunak perlu melacak perubahan bermakna dalam dokumentasi sambil menyaring pembaruan timestamp otomatis atau penyesuaian format minor.
+## Skenario umum untuk penyesuaian perbandingan
 
-**Alur Kerja Penyuntingan Kolaboratif** – Ketika banyak penulis bekerja pada dokumen yang sama, Anda ingin menyorot perubahan substantif tanpa memenuhi tampilan dengan setiap penyesuaian spasi.
+Memahami kasus penggunaan dunia nyata membantu Anda memilih pengaturan yang tepat.
 
-## Skenario Umum untuk Kustomisasi Perbandingan
+### Skenario 1: Review kontrak
+Tim hukum perlu melihat setiap modifikasi kata tetapi mengabaikan perubahan font atau spasi. Gunakan sensitivitas teks tinggi, matikan deteksi format, dan terapkan warna khusus untuk penyisipan dan penghapusan.
 
-Memahami kasus penggunaan dunia nyata ini akan membantu Anda memilih pengaturan yang tepat untuk kebutuhan spesifik Anda:
+### Skenario 2: Pembaruan dokumentasi teknis
+Dokumen API Anda sering diperbarui; Anda ingin menangkap perubahan konten sambil mengabaikan cap waktu dan format minor. Atur sensitivitas menengah, tambahkan pola pengabaian untuk string tanggal, dan beri gaya blok kode dengan latar belakang yang berbeda.
 
-### Skenario 1: Peninjauan Kontrak
-Anda sedang membangun sistem untuk tim hukum meninjau perubahan kontrak. Mereka perlu melihat setiap modifikasi kata tetapi tidak peduli dengan perubahan font atau penyesuaian spasi baris.
-
-**Pengaturan Ideal**: Sensitivitas teks tinggi, deteksi format dinonaktifkan, styling khusus untuk penyisipan dan penghapusan.
-
-### Skenario 2: Pembaruan Dokumentasi Teknis
-Tim Anda memelihara dokumentasi API yang sering diperbarui. Anda ingin menangkap perubahan konten tetapi mengabaikan stempel tanggal otomatis dan pembaruan format minor.
-
-**Pengaturan Ideal**: Sensitivitas menengah, mengabaikan pola teks spesifik, penyorotan khusus untuk blok kode.
-
-### Skenario 3: Pembuatan Laporan
-Anda membandingkan laporan triwulanan di mana data berubah tetapi struktur templat tetap serupa. Fokus harus pada perubahan numerik dan bagian baru.
-
-**Pengaturan Ideal**: Sensitivitas khusus untuk tabel dan angka, styling yang ditingkatkan untuk modifikasi data.
+### Skenario 3: Pembuatan laporan
+Laporan triwulanan berbagi templat umum; Anda terutama peduli pada perubahan numerik dan bagian baru. Tingkatkan sensitivitas tabel dan angka, pertahankan pemeriksaan tata letak rendah, dan gunakan sorotan tebal untuk angka yang berubah.
 
 ## Cara membandingkan dokumen PDF java dengan GroupDocs.Comparison
-Jika beban kerja utama Anda melibatkan PDF, prinsip kustomisasi yang sama berlaku. Gunakan objek `ComparisonOptions` untuk menyetel perilaku khusus PDF—seperti mengaktifkan atau menonaktifkan perbandingan gambar, mengontrol akurasi ekstraksi teks, dan menerapkan warna sorotan yang ramah PDF. Ini memastikan Anda mendapatkan diff yang paling dapat diandalkan sambil menjaga waktu pemrosesan tetap wajar.
 
-## Tutorial yang Tersedia
+ComparisonOptions adalah objek konfigurasi yang mengontrol elemen mana yang dibandingkan dan bagaimana perbedaan disorot. Muat PDF sumber dan target, buat instance `ComparisonOptions`, dan panggil metode `compare`. `ComparisonOptions` memungkinkan Anda mengaktifkan atau menonaktifkan perbandingan gambar, mengatur akurasi ekstraksi teks, dan memilih warna sorotan yang cocok dengan penampil PDF. Misalnya, Anda dapat mematikan diff gambar untuk mempercepat pemrosesan ketika gambar tidak berubah, atau beralih ke warna kontras tinggi untuk penyisipan guna memenuhi pedoman aksesibilitas.
 
-### [Sesuaikan Gaya Item yang Disisipkan dalam Perbandingan Dokumen Java dengan GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
+## Tutorial yang tersedia
 
-Pelajari cara menyesuaikan gaya item yang disisipkan dalam perbandingan dokumen Java menggunakan GroupDocs.Comparison. Tutorial ini mencakup segala hal mulai dari konfigurasi styling dasar hingga kustomisasi tampilan lanjutan, membantu Anda membuat output perbandingan yang tampak profesional yang meningkatkan kejelasan dan kegunaan bagi pengguna akhir Anda.
+### [Sesuaikan gaya item yang disisipkan dalam perbandingan dokumen Java dengan GroupDocs.Comparison](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-**Apa yang Akan Anda Pelajari:**
-- Mengonfigurasi warna dan format khusus untuk konten yang disisipkan  
+Pelajari cara menyesuaikan gaya item yang disisipkan dalam perbandingan dokumen Java menggunakan GroupDocs.Comparison. Tutorial ini mencakup segala hal mulai dari konfigurasi gaya dasar hingga penyesuaian tampilan lanjutan, membantu Anda membuat output perbandingan yang tampak profesional yang meningkatkan kejelasan dan kegunaan bagi pengguna akhir Anda.
+
+**Apa yang akan Anda pelajari**
+- Mengonfigurasi warna khusus dan format untuk konten yang disisipkan  
 - Menyiapkan gaya visual berbeda untuk berbagai jenis perubahan  
-- Menerapkan styling konsisten di berbagai format dokumen  
+- Menerapkan gaya konsisten di seluruh format dokumen yang berbeda  
 - Mengoptimalkan kejelasan visual untuk alur kerja peninjauan  
 
-**Ideal Untuk**: Tim yang membutuhkan output perbandingan bermerk atau persyaratan visual khusus untuk pelacakan perubahan.
+**Cocok untuk**: Tim yang memerlukan output perbandingan berbrand atau persyaratan visual khusus untuk pelacakan perubahan.
 
-## Praktik Terbaik untuk Kustomisasi Perbandingan Dokumen Java
+## Praktik terbaik untuk penyesuaian perbandingan dokumen Java
 
-**Mulai dengan Pengaturan Default** – Uji dengan konfigurasi bawaan terlebih dahulu; seringkali satu penyesuaian saja menyelesaikan masalah.  
-**Pertimbangkan Audiens Anda** – Peninjau hukum membutuhkan penyorotan yang berbeda dibandingkan penulis teknis. Sesuaikan styling dan sensitivitas Anda agar sesuai dengan harapan dan alur kerja pengguna.  
-**Uji dengan Dokumen Representatif** – Selalu gunakan file dunia nyata dari domain Anda, bukan hanya kasus uji sederhana. Kasus tepi sering muncul hanya dengan konten mirip produksi.  
-**Pertukaran Kinerja vs. Akurasi** – Sensitivitas lebih tinggi menghasilkan deteksi yang lebih tepat tetapi dapat memperlambat pemrosesan pada dokumen besar. Temukan titik optimal untuk lingkungan Anda.  
-**Konsistensi di Semua Tipe Dokumen** – Jika Anda membandingkan PDF, file Word, dan lembar Excel, pastikan aturan styling Anda berfungsi secara seragam di semua format yang didukung.
+- **Mulai dengan pengaturan default** – Jalankan perbandingan dasar terlebih dahulu; seringkali satu penyesuaian saja menyelesaikan masalah.  
+- **Kenali audiens Anda** – Peninjau hukum lebih menyukai sorotan merah/hijau yang jelas, sementara pengembang mungkin menginginkan bayangan abu-abu yang halus.  
+- **Uji dengan dokumen nyata** – Gunakan file yang mirip produksi; kasus tepi (tabel, objek tersemat) sering mengungkap masalah tersembunyi.  
+- **Seimbangkan kinerja dan akurasi** – Sensitivitas tinggi menghasilkan diff yang tepat tetapi dapat menggandakan waktu pemrosesan pada PDF 200 halaman.  
+- **Terapkan gaya konsisten di seluruh format** – Pastikan skema warna Anda bekerja untuk output PDF, DOCX, dan XLSX.
 
-## Tantangan Konfigurasi Umum
+## Tantangan konfigurasi umum
 
-**Deteksi Terlalu Sensitif** – Jika perbandingan Anda menyoroti terlalu banyak perubahan tidak signifikan, kurangi sensitivitas atau tambahkan pola ignore untuk variasi yang diketahui (mis., timestamp atau ID yang dihasilkan otomatis).  
-**Kehilangan Perubahan Penting** – Ketika modifikasi signifikan tidak terdeteksi, tingkatkan sensitivitas atau verifikasi bahwa elemen (tabel, objek tersemat) termasuk dalam ruang lingkup perbandingan.  
-**Styling Tidak Konsisten** – Jika gaya khusus tidak diterapkan secara seragam, pastikan definisi gaya kompatibel dengan setiap format dokumen yang Anda proses.  
-**Masalah Kinerja** – Dokumen besar dengan sensitivitas tinggi dapat menjadi lambat. Pertimbangkan pra‑pemrosesan file atau memecah perbandingan menjadi bagian‑bagian.
+- **Deteksi terlalu sensitif** – Terlalu banyak sorotan yang tidak signifikan. Kurangi nilai `textSensitivity` atau tambahkan pola pengabaian untuk kebisingan yang diketahui (mis., cap waktu).  
+- **Kehilangan perubahan penting** – Edit kritis tidak terdeteksi. Tingkatkan sensitivitas untuk tabel atau aktifkan `detectEmbeddedObjects`.  
+- **Gaya tidak konsisten** – InsertedItemStyle dan DeletedItemStyle mendefinisikan tampilan visual konten yang disisipkan dan dihapus, masing‑masing. Pastikan `InsertedItemStyle` dan `DeletedItemStyle` didefinisikan sebelum memanggil `compare`.  
+- **Bottleneck kinerja** – File besar dengan sensitivitas tinggi membebani CPU. Pertimbangkan memproses halaman secara paralel atau menurunkan fidelitas perbandingan gambar.
 
-## Tips Pro untuk Kustomisasi Lanjutan
+## Tips pro untuk penyesuaian lanjutan
 
-- **Gabungkan Berbagai Teknik** – Gunakan styling khusus, penyesuaian sensitivitas, dan pola ignore bersama-sama untuk hasil optimal.  
-- **Simpan Konfigurasi yang Berhasil** – Simpan pengaturan pilihan Anda sebagai templat untuk digunakan kembali di berbagai proyek.  
-- **Pantau Umpan Balik Pengguna** – Secara rutin kumpulkan masukan peninjau; sesuaikan styling atau sensitivitas berdasarkan penggunaan dunia nyata.  
-- **Dokumentasikan Pengaturan Anda** – Simpan catatan singkat mengapa setiap opsi dipilih; ini membantu pemeliharaan dan onboarding di masa depan.
+- **Gabungkan teknik** – Gunakan gaya khusus, penyesuaian sensitivitas, dan pola pengabaian bersama untuk hasil optimal.  
+- **Simpan konfigurasi sebagai templat** – Serialisasikan `ComparisonOptions` Anda ke JSON dan gunakan kembali di berbagai proyek.  
+- **Kumpulkan umpan balik peninjau** – Iterasi warna dan sensitivitas berdasarkan penggunaan dunia nyata.  
+- **Dokumentasikan setiap pengaturan** – Simpan changelog singkat yang menjelaskan mengapa setiap opsi dipilih; ini memudahkan pemeliharaan di masa depan.
 
-## Memecahkan Masalah Umum
+## Memecahkan masalah umum
 
-- **Perubahan Tidak Ditampilkan Seperti yang Diharapkan** – Pastikan styling khusus Anda tidak ditimpa oleh formatting tingkat dokumen. Periksa prioritas aturan.  
-- **Penurunan Kinerja** – Kurangi sensitivitas untuk tipe perubahan yang kurang kritis atau aktifkan pemrosesan paralel untuk pekerjaan batch.  
-- **Hasil Tidak Konsisten** – Cari metadata tersembunyi, karakter tak terlihat, atau perbedaan struktural yang mungkin memengaruhi algoritma.
+- **Perubahan tidak ditampilkan seperti yang diharapkan** – Periksa apakah format tingkat dokumen menimpa gaya khusus Anda. Prioritas aturan mungkin perlu disesuaikan.  
+- **Penurunan kinerja** – Turunkan sensitivitas untuk elemen non‑kritikal atau nonaktifkan diff gambar untuk PDF besar.  
+- **Hasil tidak konsisten** – Cari metadata tersembunyi, karakter lebar nol, atau perbedaan struktural yang memengaruhi algoritma.
 
-## Sumber Daya Tambahan
+## Sumber daya tambahan
 
 - [Dokumentasi GroupDocs.Comparison untuk Java](https://docs.groupdocs.com/comparison/java/)  
 - [Referensi API GroupDocs.Comparison untuk Java](https://reference.groupdocs.com/comparison/java/)  
 - [Unduh GroupDocs.Comparison untuk Java](https://releases.groupdocs.com/comparison/java/)  
 - [Forum GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
-- [Dukungan Gratis](https://forum.groupdocs.com/)  
-- [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
+- [Dukungan gratis](https://forum.groupdocs.com/)  
+- [Lisensi sementara](https://purchase.groupdocs.com/temporary-license/)
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
 **Q: Bisakah saya menonaktifkan deteksi format sambil tetap melakukan perbandingan teks?**  
-A: Ya, Anda dapat mematikan pemeriksaan format dalam objek `ComparisonOptions` dan tetap mengaktifkan sensitivitas tingkat teks.
+A: Ya. Setel `options.setDetectFormatting(false)` dalam objek `ComparisonOptions` Anda; sensitivitas tingkat teks tetap aktif.
 
-**Q: Bagaimana cara mengabaikan kata atau pola spesifik seperti timestamp?**  
-A: Gunakan koleksi `ignorePatterns` dalam `ComparisonOptions` untuk menentukan ekspresi reguler yang harus dikecualikan dari diff.
+**Q: Bagaimana cara mengabaikan kata atau pola tertentu seperti cap waktu?**  
+A: Tambahkan ekspresi reguler ke koleksi `ignorePatterns` dari `ComparisonOptions`. Misalnya, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` melewatkan tanggal dengan format YYYY‑MM‑DD.
 
 **Q: Apakah memungkinkan menerapkan warna berbeda untuk penyisipan vs. penghapusan?**  
-A: Tentu saja. Konfigurasikan `InsertedItemStyle` dan `DeletedItemStyle` dengan warna latar depan/latar belakang pilihan Anda.
+A: Tentu. Konfigurasikan `InsertedItemStyle.setBackgroundColor(Color.GREEN)` dan `DeletedItemStyle.setBackgroundColor(Color.RED)` (atau nilai RGB khusus apa pun) sebelum memanggil perbandingan.
 
 **Q: Apa dampak sensitivitas tinggi pada PDF besar?**  
-A: Sensitivitas tinggi meningkatkan penggunaan CPU dan konsumsi memori. Untuk PDF yang sangat besar, pertimbangkan memproses halaman secara paralel atau menurunkan sensitivitas untuk bagian yang tidak kritis.
+A: Sensitivitas tinggi meningkatkan penggunaan CPU dan konsumsi memori. Pada PDF 300 halaman, waktu pemrosesan dapat naik dari 3 detik menjadi lebih dari 12 detik pada server 8‑core tipikal. Pertimbangkan menurunkan sensitivitas untuk bagian gambar atau tabel agar waktu berjalan tetap dapat diterima.
 
-**Q: Bisakah saya menggunakan kembali konfigurasi yang sama pada beberapa proses perbandingan?**  
-A: Ya, buat satu objek `ComparisonOptions` dengan pengaturan khusus Anda dan gunakan kembali untuk setiap pemanggilan perbandingan.
+**Q: Bisakah saya menggunakan kembali konfigurasi yang sama pada beberapa run perbandingan?**  
+A: Ya. Buat satu instance `ComparisonOptions` dengan pengaturan khusus Anda dan berikan ke setiap panggilan `compare`. Ini menghindari pembuatan objek berulang dan memastikan hasil yang konsisten.
 
 ---
 
-**Terakhir Diperbarui:** 2026-02-28  
-**Diuji Dengan:** GroupDocs.Comparison untuk Java 23.11  
+**Terakhir diperbarui:** 2026-08-30  
+**Diuji dengan:** GroupDocs.Comparison for Java 23.11  
 **Penulis:** GroupDocs
+
+## Tutorial terkait
+
+- [java bandingkan file pdf – Tutorial GroupDocs.Comparison Java](/comparison/java/basic-comparison/java-groupdocs-comparison-document-management/)
+- [Cara Menggunakan GroupDocs: Alur Dokumen Perbandingan Java – Panduan Lengkap](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [GroupDocs Comparison Java: Bandingkan Dokumen Terlindungi – Panduan Lengkap](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)

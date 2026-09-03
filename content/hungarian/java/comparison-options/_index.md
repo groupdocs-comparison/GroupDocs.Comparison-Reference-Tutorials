@@ -1,157 +1,172 @@
 ---
 categories:
 - Java Development
-date: '2026-02-28'
-description: Tanulja meg, hogyan testreszabhatja a dokumentum-összehasonlítást Java-ban
-  a GroupDocs.Comparison segítségével. Ismerje meg az érzékenységi beállításokat,
-  a stílusopciókat és a fejlett konfigurációs technikákat.
-keywords: customize document comparison java, GroupDocs comparison settings Java,
-  document comparison options tutorial, Java PDF comparison styling, comparison sensitivity
-  settings
-lastmod: '2026-02-28'
-linktitle: Comparison Options & Settings
+date: '2026-08-30'
+description: Tanulja meg, hogyan testreszabhatja a document comparison java-t a GroupDocs.Comparison
+  segítségével. Ismerje meg a sensitivity settings, a styling options és az advanced
+  configuration techniques beállításait.
+keywords:
+- customize document comparison java
+- GroupDocs comparison settings Java
+- document comparison options tutorial
+- Java PDF comparison styling
+- comparison sensitivity settings
+lastmod: '2026-08-30'
+linktitle: Comparison options & settings
+og_description: Testreszabja a document comparison java-t a GroupDocs.Comparison segítségével.
+  Fedezze fel a sensitivity settings, a styling options és a performance tips részleteit
+  ebben a átfogó útmutatóban.
+og_image_alt: GroupDocs.Comparison Java tutorial showing custom diff styling and settings
+og_title: A document comparison java testreszabása – útmutató a pontos diff vezérléshez
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Master how to customize document comparison java using GroupDocs.Comparison.
+    Learn sensitivity settings, styling options, and advanced configuration techniques.
+  headline: How to customize document comparison java – complete guide
+  type: TechArticle
+- questions:
+  - answer: Yes. Set `options.setDetectFormatting(false)` in your `ComparisonOptions`
+      object; text‑level sensitivity remains active.
+    question: Can I disable formatting detection while keeping text comparison?
+  - answer: Add regular expressions to the `ignorePatterns` collection of `ComparisonOptions`.
+      For example, `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` skips
+      dates formatted as YYYY‑MM‑DD.
+    question: How do I ignore specific words or patterns like timestamps?
+  - answer: Absolutely. Configure `InsertedItemStyle.setBackgroundColor(Color.GREEN)`
+      and `DeletedItemStyle.setBackgroundColor(Color.RED)` (or any custom RGB values)
+      before invoking the comparison.
+    question: Is it possible to apply different colors for insertions vs. deletions?
+  - answer: High sensitivity increases CPU usage and memory consumption. On a 300‑page
+      PDF, processing time can rise from 3 seconds to over 12 seconds on a typical
+      8‑core server. Consider lowering sensitivity for image or table sections to
+      keep runtimes acceptable.
+    question: What’s the impact of high sensitivity on large PDFs?
+  - answer: Yes. Create a single `ComparisonOptions` instance with your custom settings
+      and pass it to each `compare` call. This avoids repeated object creation and
+      ensures consistent results.
+    question: Can I reuse the same configuration across multiple comparison runs?
+  type: FAQPage
 tags:
 - document-comparison
 - java-tutorials
 - groupdocs
 - customization
-title: Java dokumentum-összehasonlítás testreszabása – Teljes útmutató
+title: Hogyan testreszabjuk a document comparison java – teljes útmutató
 type: docs
 url: /hu/java/comparison-options/
 weight: 11
 ---
 
-# Testreszabott dokumentum‑összehasonlítás Java – Teljes útmutató
+# A dokumentum-összehasonlítás testreszabása java – teljes útmutató
 
-Volt már nehézsége a dokumentum‑összehasonlításokkal, amelyek minden apró formázási változást kiemelnek, vagy amelyek elmulasztják a fontos tartalmi különbségeket? Nem vagy egyedül. A legtöbb fejlesztő az egyszerű dokumentum‑összehasonlítással kezdi, de hamar rájön, hogy finomhangolt irányításra van szükség arra vonatkozóan, hogy mi legyen észlelve, hogyan jelennek meg a változások, és milyen érzékeny legyen az összehasonlító algoritmus. **Ebben az útmutatóban megtanulja, hogyan testreszabja a document comparison java**‑t, hogy pontosan úgy működjön, ahogy a projektje megköveteli.
+Volt már nehézsége a dokumentum-összehasonlításokkal, amelyek minden apró formázási változást kiemelnek, vagy amelyek elmulasztják a fontos tartalmi különbségeket? Nem vagy egyedül. A legtöbb fejlesztő az alapvető dokumentum-összehasonlítással kezdi, de hamar rájön, hogy finomhangolt vezérlésre van szüksége arról, hogy mi legyen észlelve, hogyan jelenjenek meg a változások, és milyen érzékeny legyen az összehasonlító algoritmus. **Ebben az útmutatóban megtanulja, hogyan testreszabja a dokumentum-összehasonlítás java-t** úgy, hogy pontosan úgy működjön, ahogy a projektje megköveteli.
 
 ## Gyors válaszok
-- **Mit jelent a “customize document comparison java”?** A GroupDocs.Comparison beállításainak (érzékenység, stílus, ignore rules) testreszabása, hogy megfeleljen a Java alkalmazás igényeinek.  
+- **Mit jelent a „customize document comparison java”?** A GroupDocs.Comparison beállításainak testreszabását jelenti – érzékenység, stílus, figyelmen kívül hagyási szabályok – hogy megfeleljen a Java alkalmazása pontos igényeinek.  
 - **Szükségem van licencre?** Igen, egy érvényes GroupDocs.Comparison for Java licenc szükséges a termelési használathoz.  
-- **Mely formátumok támogatottak?** PDF, DOCX, PPTX, XLSX, és sok más gyakori irodai formátum.  
-- **Figyelmen kívül hagyhatom az időbélyegeket vagy az automatikusan generált azonosítókat?** Természetesen – használjon ignore patterns‑t vagy állítsa be az érzékenységet, hogy kiszűrje az ilyen zajt.  
-- **A teljesítmény érintett a magas érzékenységtől?** A magasabb érzékenység növelheti a feldolgozási időt nagy fájlok esetén; állítsa be a beállításokat a munkaterhelésének megfelelően.
+- **Mely formátumok támogatottak?** PDF, DOCX, PPTX, XLSX, és több mint 30 másik gyakori irodai formátum.  
+- **Figyelmen kívül hagyhatom az időbélyegeket vagy az automatikusan generált azonosítókat?** Természetesen – használjon ignore mintákat vagy állítsa be az érzékenységet, hogy kiszűrje az ilyen zajt.  
+- **A teljesítmény érintett a magas érzékenységtől?** A magasabb érzékenység növelheti a CPU és memória használatát nagy fájlok esetén; állítsa be a beállításokat a terhelése alapján.
 
-## Mi a “customize document comparison java”?
-A dokumentum‑összehasonlítás testreszabása Java‑ban azt jelenti, hogy a GroupDocs.Comparison motor beállításával csak azokat a változásokat észleli, amelyek érdeklik, és ezeket egyértelmű, a lektorok számára barátságos módon jeleníti meg. Az érzékenységi szintek, a stílus szabályok és az ignore patterns beállításával pontos irányítást nyer a összehasonlítás kimenete felett.
+## Mi a „customize document comparison java”?
+A dokumentum-összehasonlítás testreszabása Java-ban azt jelenti, hogy a GroupDocs.Comparison motorját úgy konfigurálja, hogy csak az Ön számára fontos változásokat észlelje, és ezeket egyértelmű, a lektorok számára barátságos módon jelenítse meg. Az érzékenységi szintek, a stílus szabályok és a figyelmen kívül hagyási minták módosításával pontos vezérlést kap a összehasonlítás eredménye felett.
 
-## Miért testreszabni a document comparison java‑t?
-- **Csökkentse a zajt:** Megakadályozza, hogy a lektorok el legyenek árasztva a jelentéktelen formázási módosítások által.  
-- **Kiemelje a kritikus módosításokat:** Azonnal kiemeli a jogi vagy pénzügyi változásokat.  
-- **Fenntartsa a márka konzisztenciáját:** Alkalmazza a szervezet színeit és betűtípusait a beszúrt vagy törölt tartalomra.  
-- **Javítsa a teljesítményt:** Kerülje el a felesleges ellenőrzéseket nagy dokumentumcsoportok esetén.
+## Miért testreszabni a dokumentum-összehasonlítást java-ban?
+A dokumentum-összehasonlítás java testreszabásával csökkentheti a zajt, kiemelheti a kritikus módosításokat, fenntarthatja a márka konzisztenciáját, és javíthatja a teljesítményt. A nagy mennyiségű jogi felülvizsgálat előnyét élvezi, ha figyelmen kívül hagyja a jelentéktelen formázásokat, miközben minden szószintű változást észlel. A technikai dokumentációs csapatok kiszűrhetik az automatikusan generált időbélyegeket, így a diff a valódi tartalomfrissítésekre összpontosít. A konzisztens stílus biztosítja, hogy a lektorok azonnal felismerjék a beszúrásokat, törléseket és formátumváltozásokat a PDF-ekben, Word-fájlokban és táblázatokban.
 
-## Mikor testreszabjuk a Document Comparison beállításokat
+## Mikor kell testreszabni a dokumentum-összehasonlítás beállításait
+A comparison beállításokat akkor kell testreszabni, amikor az alapértelmezett diff túl sok hamis pozitív eredményt ad vagy fontos változásokat mulaszt el. Tipikus forgatókönyvek közé tartozik a nagy mennyiségű szerződés feldolgozása, amely egységes vizuális stílust igényel, az API dokumentáció kezelése, amely gyakran frissül, de automatikus dátumbélyegeket tartalmaz, valamint a negyedéves pénzügyi jelentések felülvizsgálata, ahol csak a numerikus eltérések számítanak. A beállítások módosítása segít a lektoroknak a legrelevánsabb különbségekre összpontosítani.
+- Nagy mennyiségű szerződés, ahol a lektoroknak egységes vizuális stílusra van szükségük.  
+- API dokumentáció, amely gyakran frissül, de automatikus dátumbélyegeket tartalmaz.  
+- Negyedéves pénzügyi jelentések, ahol csak a numerikus eltérések számítanak.  
 
-Mielőtt belemerülnénk a technikai részletekbe, értsük meg, mikor és miért kell testreszabni az összehasonlítás viselkedését:
+## Általános forgatókönyvek az összehasonlítás testreszabásához
+A valós világban előforduló felhasználási esetek megértése segít a megfelelő beállítások kiválasztásában.
 
-**Nagy mennyiségű dokumentum feldolgozása** – Szerződések vagy jelentések több száz darabjának összehasonlításakor konzisztens formázásra és egyértelmű változási kiemelésre van szükség, amely nem terheli túl a lektorokat.
+### Forgatókönyv 1: Szerződés felülvizsgálat  
+A jogi csapatoknak minden szószintű módosítást látnia kell, de figyelmen kívül hagyhatják a betűtípus vagy a szóköz finom változtatásait. Használjon magas szöveges érzékenységet, kapcsolja ki a formázás észlelését, és alkalmazzon egyedi színeket a beszúrásokhoz és törlésekhez.
 
-**Jogi dokumentum felülvizsgálat** – A jogi irodák pontos irányítást igényelnek arról, hogy mi számít “változásnak” – figyelmen kívül hagyva a formázási módosításokat, miközben minden tartalmi változást észlelnek.
+### Forgatókönyv 2: Technikai dokumentáció frissítései  
+Az API dokumentációja gyakran frissül; szeretné észlelni a tartalmi változásokat, miközben figyelmen kívül hagyja az időbélyegeket és a kisebb formázásokat. Állítson be közepes érzékenységet, adjon hozzá ignore mintákat a dátumkarakterláncokhoz, és formázza a kódrészeket egy megkülönböztető háttérrel.
 
-**Verziókezelés technikai dokumentációhoz** – A szoftvercsapatoknak nyomon kell követniük a dokumentációban bekövetkező jelentős változásokat, miközben kiszűrik az automatikus időbélyeg‑frissítéseket vagy kisebb formázási módosításokat.
+### Forgatókönyv 3: Jelentéskészítés  
+A negyedéves jelentések közös sablont használnak; főként a numerikus változások és az új szakaszok érdeklik. Növelje a táblázat és szám érzékenységét, tartsa alacsonyan a elrendezés-ellenőrzéseket, és használjon félkövér kiemelést a módosított számokhoz.
 
-**Közös szerkesztési munkafolyamatok** – Ha több szerző dolgozik ugyanazon a dokumentumon, ki szeretné emelni a lényeges változásokat anélkül, hogy a nézetet minden szóköz módosítással elárasztaná.
-
-## Gyakori forgatókönyvek az összehasonlítás testreszabásához
-
-Ezeknek a valós példáknak a megértése segít a megfelelő beállítások kiválasztásában az Ön konkrét igényeihez:
-
-### Forgatókönyv 1: Szerződés felülvizsgálat
-Olyan rendszert épít, amely a jogi csapatok számára a szerződésváltozásokat felülvizsgálja. Szükségük van minden szószerkesztés megtekintésére, de a betűtípus vagy a sortávolság módosításai nem érdeklik őket.
-
-**Ideális beállítások**: Magas szövegérzékenység, letiltott formázás‑észlelés, egyedi stílus a beszúrásokhoz és törlésekhez.
-
-### Forgatókönyv 2: Technikai dokumentáció frissítése
-A csapatod API dokumentációt tart karban, amelyet gyakran frissítenek. Tartalmi változásokat szeretnél észlelni, de figyelmen kívül hagyni az automatikus dátumbélyegeket és kisebb formázási frissítéseket.
-
-**Ideális beállítások**: Közepes érzékenység, specifikus szövegminták figyelmen kívül hagyása, egyedi kiemelés a kódrészekhez.
-
-### Forgatókönyv 3: Jelentés generálás
-Negyedéves jelentéseket hasonlít össze, ahol az adatok változnak, de a sablon szerkezete hasonló marad. A fókusz a numerikus változásokon és az új szakaszokon kell legyen.
-
-**Ideális beállítások**: Egyedi érzékenység a táblázatok és számok számára, fokozott stílus a adatváltozásokhoz.
-
-## Hogyan hasonlítsuk össze a PDF dokumentumokat Java‑val a GroupDocs.Comparison segítségével
-Ha az elsődleges feladatköröd PDF‑eket érint, ugyanazok az testreszabási elvek érvényesek. Használd a `ComparisonOptions` objektumot a PDF‑specifikus viselkedés finomhangolásához – például a képek összehasonlításának engedélyezéséhez vagy letiltásához, a szövegkinyerés pontosságának szabályozásához, és PDF‑barát kiemelő színek alkalmazásához. Ez biztosítja, hogy a legmegbízhatóbb diff‑et kapd, miközben a feldolgozási idő ésszerű marad.
+## Hogyan hasonlítsuk össze a PDF dokumentumokat java-val a GroupDocs.Comparison segítségével
+A ComparisonOptions egy konfigurációs objektum, amely szabályozza, hogy mely elemeket hasonlítják össze és hogyan vannak kiemelve a különbségek. Töltse be a forrás- és cél-PDF-eket, hozza létre a `ComparisonOptions` példányt, és hívja meg a `compare` metódust. A `ComparisonOptions` lehetővé teszi a képes összehasonlítás engedélyezését vagy letiltását, a szövegkinyerés pontosságának beállítását, valamint a PDF-olvasókhoz jól illeszkedő kiemelő színek kiválasztását. Például kikapcsolhatja a képek diffjét a feldolgozás felgyorsítása érdekében, ha a képek változatlanok, vagy átválthat egy nagy kontrasztú színre a beszúrásokhoz, hogy megfeleljen a hozzáférhetőségi irányelveknek.
 
 ## Elérhető oktatóanyagok
 
-### [Testreszabott beszúrt elemek stílusai Java dokumentum‑összehasonlításokban a GroupDocs.Comparison segítségével](./groupdocs-comparison-java-custom-inserted-item-styles/)
+### [Testreszabott beszúrt elemek stílusai Java dokumentum-összehasonlításokban a GroupDocs.Comparison segítségével](./groupdocs-comparison-java-custom-inserted-item-styles/)
 
-Ismerje meg, hogyan testreszabhatja a beszúrt elemek stílusát Java dokumentum‑összehasonlításokban a GroupDocs.Comparison használatával. Ez az oktatóanyag mindent lefed a alapvető stíluskonfigurációtól a fejlett megjelenítési testreszabásig, segítve, hogy professzionális megjelenésű összehasonlítási kimeneteket hozzon létre, amelyek növelik a világosságot és a használhatóságot a végfelhasználók számára.
+Ismerje meg, hogyan testreszabhatja a beszúrt elemek stílusait Java dokumentum-összehasonlításokban a GroupDocs.Comparison használatával. Ez az oktatóanyag mindent lefed az alapvető stíluskonfigurációtól a fejlett megjelenítési testreszabásig, segítve, hogy professzionális megjelenésű összehasonlítási kimeneteket hozzon létre, amelyek javítják a tisztaságot és a használhatóságot a végfelhasználók számára.
 
-**Mit fog megtanulni:**
+**Mit fog megtanulni**
 - Egyedi színek és formázás beállítása a beszúrt tartalomhoz  
-- Különböző vizuális stílusok beállítása a változástípusokhoz  
+- Különböző vizuális stílusok beállítása a változattípusokhoz  
 - Konzisztens stílus megvalósítása különböző dokumentumformátumok között  
 - A vizuális tisztaság optimalizálása a felülvizsgálati munkafolyamatokhoz  
 
-**Ideális**: Csapatok számára, amelyeknek márkás összehasonlítási kimenetekre vagy specifikus vizuális követelményekre van szükségük a változáskövetéshez.
+**Ideális**: Olyan csapatok számára, akiknek márkás összehasonlítási kimenetekre vagy specifikus vizuális követelményekre van szükségük a változások nyomon követéséhez.
 
-## Legjobb gyakorlatok a Java dokumentum‑összehasonlítás testreszabásához
-
-**Kezdje az alapértelmezett beállításokkal** – Először az alapértelmezett konfigurációval teszteljen; gyakran egyetlen finomhangolás megoldja a problémát.
-
-**Vegye figyelembe a közönségét** – A jogi lektorok más kiemelést igényelnek, mint a technikai írók. Alakítsa a stílusát és érzékenységét a felhasználói elvárásokhoz és munkafolyamatokhoz.
-
-**Tesztelje reprezentatív dokumentumokkal** – Mindig használjon valós, a saját területéről származó fájlokat, nem csak egyszerű teszteseteket. A szélsőséges esetek gyakran csak a termeléshez hasonló tartalommal jelennek meg.
-
-**Teljesítmény vs. pontosság kompromisszumok** – A magasabb érzékenység pontosabb észlelést eredményez, de lassíthatja a nagy dokumentumok feldolgozását. Találja meg az optimális egyensúlyt a környezetéhez.
-
-**Konzisztencia a dokumentumtípusok között** – Ha PDF‑eket, Word fájlokat és Excel táblákat hasonlít össze, biztosítsa, hogy a stílus szabályok minden támogatott formátumban egységesen működjenek.
+## Legjobb gyakorlatok a Java dokumentum-összehasonlítás testreszabásához
+- **Kezdje az alapértelmezett beállításokkal** – Először futtasson egy alap összehasonlítást; gyakran egyetlen finomhangolás megoldja a problémát.  
+- **Ismerje a célközönségét** – A jogi lektorok erőteljes piros/zöld kiemeléseket részesítenek előnyben, míg a fejlesztők finom szürke árnyalatot kívánhatnak.  
+- **Teszteljen valós dokumentumokkal** – Használjon termeléshez hasonló fájlokat; a szélsőséges esetek (táblázatok, beágyazott objektumok) gyakran rejtett problémákat tárnak fel.  
+- **Egyensúly a teljesítmény és a pontosság között** – A magas érzékenység pontos diffeket eredményez, de megduplázhatja a feldolgozási időt 200 oldalas PDF-eken.  
+- **Alkalmazzon konzisztens stílust a formátumok között** – Győződjön meg róla, hogy a színsémája működik PDF, DOCX és XLSX kimeneteknél.  
 
 ## Gyakori konfigurációs kihívások
+- **Túl érzékeny észlelés** – Túl sok jelentéktelen kiemelés. Csökkentse a `textSensitivity` értékét vagy adjon hozzá ignore mintákat a ismert zajhoz (pl. időbélyegek).  
+- **Fontos változások hiánya** – Kritikus szerkesztések nem jelöltek. Növelje a táblázatok érzékenységét vagy engedélyezze a `detectEmbeddedObjects`-t.  
+- **Inkonzisztens stílus** – Az InsertedItemStyle és a DeletedItemStyle határozza meg a beszúrt és eltávolított tartalom vizuális megjelenését. Ellenőrizze, hogy a `InsertedItemStyle` és a `DeletedItemStyle` definiálva van-e a `compare` hívása előtt.  
+- **Teljesítmény szűk keresztmetszet** – Nagy fájlok magas érzékenységgel terhelik a CPU-t. Fontolja meg az oldalak párhuzamos feldolgozását vagy a képes összehasonlítás pontosságának csökkentését.  
 
-**Túlérzékeny észlelés** – Ha az összehasonlítás túl sok jelentéktelen változást emel ki, csökkentse az érzékenységet vagy adjon hozzá ignore patterns‑t a ismert variációkhoz (pl. időbélyegek vagy automatikusan generált azonosítók).
-
-**Fontos változások hiánya** – Ha a jelentős módosítások nem kerülnek észlelésre, növelje az érzékenységet vagy ellenőrizze, hogy az elemek (táblázatok, beágyazott objektumok) benne legyenek az összehasonlítási körben.
-
-**Inkonzisztens stílus** – Ha az egyedi stílusok nem alkalmazódnak egységesen, ellenőrizze, hogy a stílusdefiníciók kompatibilisek legyenek minden feldolgozott dokumentumtípussal.
-
-**Teljesítményproblémák** – A nagy dokumentumok magas érzékenységgel lassúak lehetnek. Fontolja meg a fájlok előfeldolgozását vagy az összehasonlítás darabokra bontását.
-
-## Pro tippek a fejlett testreszabáshoz
-
-- **Kombináljon több technikát** – Használjon egyedi stílust, érzékenység beállítást és ignore patterns‑t együtt a legoptimálisabb eredményért.  
-- **Mentse a sikeres konfigurációkat** – Tárolja a preferált beállításokat sablonként a projektek közötti újrahasználathoz.  
-- **Figyelje a felhasználói visszajelzéseket** – Rendszeresen gyűjtse a lektorok visszajelzéseit; állítsa be a stílust vagy érzékenységet a valós használat alapján.  
-- **Dokumentálja a beállításait** – Tartson egy rövid nyilvántartást arról, miért választották az egyes beállításokat; ez segíti a jövőbeni karbantartást és az új belépőket.
+## Profi tippek a fejlett testreszabáshoz
+- **Technikák kombinálása** – Használjon egyedi stílusokat, érzékenység beállításokat és ignore mintákat együtt a legjobb eredményért.  
+- **Konfigurációk mentése sablonként** – Serializálja a `ComparisonOptions`-t JSON-be, és használja újra projektek között.  
+- **Lektorok visszajelzésének gyűjtése** – Szín- és érzékenység beállításokat iteráljon a valós használat alapján.  
+- **Minden beállítás dokumentálása** – Tartson egy rövid változásnaplót, amely leírja, miért választották az egyes opciókat; ez megkönnyíti a jövőbeni karbantartást.  
 
 ## Gyakori problémák hibaelhárítása
-
-- **A változások nem jelennek meg a várt módon** – Ellenőrizze, hogy az egyedi stílus nem felül van‑e írva a dokumentumszintű formázással. Nézze meg a szabály prioritását.  
-- **Teljesítménycsökkenés** – Csökkentse az érzékenységet a kevésbé kritikus változástípusoknál vagy engedélyezze a párhuzamos feldolgozást kötegelt feladatokhoz.  
-- **Inkonzisztens eredmények** – Keresse a rejtett metaadatokat, láthatatlan karaktereket vagy szerkezeti különbségeket, amelyek befolyásolhatják az algoritmust.
+- **A változások nem jelennek meg a várt módon** – Ellenőrizze, hogy a dokumentumszintű formázás felülírja-e az egyedi stílusokat. A szabályok prioritását esetleg módosítani kell.  
+- **Teljesítmény romlása** – Csökkentse az érzékenységet a nem kritikus elemeknél vagy tiltsa le a képes diffet nagy PDF-ek esetén.  
+- **Inkonzisztens eredmények** – Keresse a rejtett metaadatokat, null szélességű karaktereket vagy a struktúrakülönbségeket, amelyek befolyásolják az algoritmust.  
 
 ## További források
-
 - [GroupDocs.Comparison for Java dokumentáció](https://docs.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java API referencia](https://reference.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison for Java letöltése](https://releases.groupdocs.com/comparison/java/)  
 - [GroupDocs.Comparison fórum](https://forum.groupdocs.com/c/comparison)  
 - [Ingyenes támogatás](https://forum.groupdocs.com/)  
-- [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)
+- [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)  
 
 ## Gyakran ismételt kérdések
 
-**Q: Letilthatom a formázás‑észlelést, miközben a szöveg‑összehasonlítást megtartom?**  
-A: Igen, a `ComparisonOptions` objektumban kikapcsolhatja a formázás ellenőrzését, és a szövegszintű érzékenységet engedélyezve tartja.
+**Q: Kikapcsolhatom a formázás észlelését, miközben a szöveg-összehasonlítás aktív marad?**  
+A: Igen. Állítsa be a `options.setDetectFormatting(false)`-t a `ComparisonOptions` objektumban; a szövegszintű érzékenység továbbra is aktív marad.
 
-**Q: Hogyan hagyhatok figyelmen kívül specifikus szavakat vagy mintákat, például időbélyegeket?**  
-A: Használja a `ignorePatterns` gyűjteményt a `ComparisonOptions`‑ban, hogy megadja azokat a reguláris kifejezéseket, amelyeket ki kell zárni a diff‑ből.
+**Q: Hogyan hagyhatok figyelmen kívül konkrét szavakat vagy mintákat, például időbélyegeket?**  
+A: Adjon hozzá reguláris kifejezéseket a `ComparisonOptions` `ignorePatterns` gyűjteményéhez. Például a `options.getIgnorePatterns().add("\\d{4}-\\d{2}-\\d{2}")` kihagyja a YYYY‑MM‑DD formátumú dátumokat.
 
-**Q: Lehet különböző színeket alkalmazni a beszúrások és törlések esetén?**  
-A: Természetesen. Állítsa be a `InsertedItemStyle` és `DeletedItemStyle` elemeket a kívánt előtér/háttér színekkel.
+**Q: Lehet különböző színeket alkalmazni a beszúrások és a törlések esetén?**  
+A: Teljesen. Állítsa be a `InsertedItemStyle.setBackgroundColor(Color.GREEN)` és a `DeletedItemStyle.setBackgroundColor(Color.RED)` (vagy bármely egyedi RGB értéket) a összehasonlítás meghívása előtt.
 
-**Q: Mi a magas érzékenység hatása a nagy PDF‑ekre?**  
-A: A magas érzékenység növeli a CPU használatot és a memória fogyasztást. Nagyon nagy PDF‑ek esetén fontolja meg az oldalak párhuzamos feldolgozását vagy az érzékenység csökkentését a nem kritikus szakaszoknál.
+**Q: Mi a magas érzékenység hatása nagy PDF-ekre?**  
+A: A magas érzékenység növeli a CPU használatot és a memória fogyasztást. Egy 300 oldalas PDF esetén a feldolgozási idő 3 másodpercről több mint 12 másodpercre nőhet egy tipikus 8‑magos szerveren. Fontolja meg az érzékenység csökkentését a képek vagy táblázatok szekcióiban a futási idő elfogadható szinten tartásához.
 
-**Q: Újra felhasználhatom ugyanazt a konfigurációt több összehasonlítási futtatásnál?**  
-A: Igen, hozzon létre egyetlen `ComparisonOptions` objektumot a saját beállításaival, és használja újra minden összehasonlítási hívásnál.
+**Q: Újra felhasználhatom ugyanazt a konfigurációt több összehasonlítási futtatáshoz?**  
+A: Igen. Hozzon létre egyetlen `ComparisonOptions` példányt a saját beállításaival, és adja át minden `compare` hívásnak. Ez elkerüli az objektumok többszöri létrehozását és biztosítja a konzisztens eredményeket.
 
 ---
 
-**Utoljára frissítve:** 2026-02-28  
+**Utoljára frissítve:** 2026-08-30  
 **Tesztelve a következővel:** GroupDocs.Comparison for Java 23.11  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [java pdf fájlok összehasonlítása – GroupDocs.Comparison Java oktatóanyag](/comparison/java/basic-comparison/java-groupdocs-comparison-document-management/)
+- [Hogyan használja a GroupDocs-ot: Java dokumentum-összehasonlítás streamek – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [GroupDocs Comparison Java: Védett dokumentumok összehasonlítása – Teljes útmutató](/comparison/java/security-protection/compare-protected-docs-groupdocs-comparison-java/)

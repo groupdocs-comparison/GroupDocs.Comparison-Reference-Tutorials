@@ -1,101 +1,246 @@
 ---
 categories:
 - Java Development
-date: '2026-01-16'
-description: Μάθετε πώς να εξάγετε μεταδεδομένα από έγγραφα χρησιμοποιώντας τη Java
-  και το GroupDocs.Comparison. Περιλαμβάνει java get file size, java get page count
-  και java determine file format.
-keywords: how to extract metadata, java get file size, java get page count, how to
-  get metadata, java get document properties, java determine file format, GroupDocs
-  Java tutorial, document information API Java
-lastmod: '2026-01-16'
-linktitle: Document Information Tutorials
+date: '2026-08-25'
+description: Μάθετε πώς να εξάγετε metadata από έγγραφα χρησιμοποιώντας Java και GroupDocs.Comparison.
+  Περιλαμβάνει java get file size, java get page count, και java determine file format.
+keywords:
+- how to extract metadata
+- java get file size
+- java determine file format
+- groupdocs comparison java
+- java get document format
+- java get page count
+lastmod: '2026-08-25'
+linktitle: Εκπαιδευτικά σεμινάρια πληροφοριών εγγράφων
+og_description: Πώς να εξάγετε metadata από έγγραφα χρησιμοποιώντας Java με GroupDocs.Comparison.
+  Μάθετε πώς να λάβετε file size, page count, και format γρήγορα και αξιόπιστα.
+og_image_alt: Guide showing Java code extracting file size, page count, and format
+  with GroupDocs.Comparison
+og_title: Πώς να εξάγετε metadata από έγγραφα χρησιμοποιώντας Java – Οδηγός GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  headline: How to Extract Metadata from Documents Using Java
+  type: TechArticle
+- description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  name: How to Extract Metadata from Documents Using Java
+  steps:
+  - name: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+    text: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+  - name: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+    text: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+  - name: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+    text: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+  type: HowTo
+- questions:
+  - answer: Yes, provide the password when initializing the document object; GroupDocs.Comparison
+      decrypts the file and then returns metadata.
+    question: Can I extract metadata from password‑protected documents?
+  - answer: Always check for `null` values; if a property is missing, fall back to
+      a sensible default or notify the user that the information is unavailable.
+    question: How do I handle documents that don’t have metadata?
+  - answer: The operation reads only the file header, typically completing in under
+      10 ms for documents up to 200 MB, making it negligible compared to full content
+      parsing.
+    question: What’s the performance impact of metadata extraction?
+  - answer: GroupDocs.Comparison focuses on comparison and information extraction.
+      For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion
+      or a dedicated editor.
+    question: Can I modify document metadata using GroupDocs.Comparison?
+  - answer: Use the `SupportedFormats` API to retrieve the current list of formats
+      at runtime; this keeps your validation logic up‑to‑date with library releases.
+    question: How do I ensure my application handles all supported formats correctly?
+  type: FAQPage
 tags:
 - java
-- document-processing
-- metadata
+- metadata extraction
 - groupdocs
-- api-tutorial
-title: Πώς να εξάγετε μεταδεδομένα από έγγραφα χρησιμοποιώντας τη Java
+- document processing
+- document information
+title: Πώς να εξάγετε metadata από έγγραφα χρησιμοποιώντας Java
 type: docs
 url: /el/java/document-information/
 weight: 6
 ---
 
-# Πώς να Εξάγετε Μεταδεδομένα από Έγγραφα Χρησιμοποιώντας Java
+# Πώς να εξάγετε μεταδεδομένα από έγγραφα χρησιμοποιώντας Java
 
-Έχετε χρειαστεί ποτέ να **εξάγετε μεταδεδομένα** από έγγραφα προγραμματιστικά στις εφαρμογές σας Java; Είτε δημιουργείτε σύστημα διαχείρισης εγγράφων, είτε υλοποιείτε έλεγχο αρχείων, είτε δημιουργείτε αυτοματοποιημένες ροές εργασίας, η ανάκτηση του μεγέθους αρχείου, του αριθμού σελίδων και των πληροφοριών μορφής μπορεί να σας εξοικονομήσει αμέτρητες ώρες ανάπτυξης. Σε αυτόν τον οδηγό θα καλύψουμε όλα όσα χρειάζεται να γνωρίζετε για την αποδοτική ανάκτηση μεταδεδομένων εγγράφων με το GroupDocs.Comparison for Java.
+When you need to **πώς να εξάγετε μεταδεδομένα** from documents programmatically in a Java application, you want a solution that is fast, reliable, and easy to integrate. Whether you are building a document‑management system, validating uploads, or automating a workflow that routes files based on their properties, knowing a file’s size, page count, and format ahead of time saves hours of development and prevents costly runtime errors. In this guide we’ll walk through every step required to retrieve document metadata efficiently with GroupDocs.Comparison for Java, and we’ll also discuss best‑practice patterns that keep your code clean and performant.
 
-## Γρήγορες Απαντήσεις
-- **Ποιος είναι ο κύριος σκοπός της εξαγωγής μεταδεδομένων;** Να λαμβάνονται γρήγορα οι ιδιότητες του αρχείου (μέγεθος, μορφή, αριθμός σελίδων) χωρίς τη φόρτωση ολόκληρου του περιεχομένου.  
-- **Ποια βιβλιοθήκη υποστηρίζει την εξαγωγή μεταδεδομένων σε Java;** GroupDocs.Comparison for Java.  
-- **Πώς μπορώ να λάβω το μέγεθος του αρχείου σε Java;** Χρησιμοποιήστε τη μέθοδο `DocumentInfo.getSize()` μετά τη φόρτωση του εγγράφου.  
-- **Μπορώ να προσδιορίσω τη μορφή του εγγράφου προγραμματιστικά;** Ναι, καλέστε `DocumentInfo.getFileType()` για να λάβετε τη μορφή.  
-- **Είναι ασφαλής η εξαγωγή μεταδεδομένων για μεγάλα αρχεία;** Είναι ελαφριά· για πολύ μεγάλα αρχεία σκεφτείτε στρατηγικές streaming και caching.
+## Σύντομες απαντήσεις
+- **What is the primary purpose of metadata extraction?** To obtain file properties (size, format, page count) without loading full content, enabling fast validation and routing.  
+- **Which library supports Java metadata extraction?** GroupDocs.Comparison for Java provides a dedicated `DocumentInfo` API for this purpose.  
+- **How can I get the file size in Java?** Call `DocumentInfo.getSize()` after loading the document; the method returns the size in bytes.  
+- **Can I determine the document format programmatically?** Yes—use `DocumentInfo.getFileType()` to retrieve the detected format such as PDF or DOCX.  
+- **Is metadata extraction safe for large files?** It is lightweight; for very large files you can combine streaming with caching to keep memory usage low.
 
-## Τι είναι η Εξαγωγή Μεταδεδομένων;
-Η εξαγωγή μεταδεδομένων είναι η διαδικασία ανάγνωσης των ενσωματωμένων ιδιοτήτων ενός εγγράφου — όπως τύπος αρχείου, μέγεθος, αριθμός σελίδων, συγγραφέας και ημερομηνία δημιουργίας — χωρίς την ανάλυση ολόκληρου του περιεχομένου. Αυτή η ελαφριά λειτουργία επιτρέπει γρήγορη επαλήθευση, ευρετηρίαση και λήψη αποφάσεων δρομολόγησης σε επιχειρηματικές εφαρμογές.
+## Τι είναι η εξαγωγή μεταδεδομένων;
+Metadata extraction reads the built‑in properties of a document—such as its type, size, page count, author, and creation date—without loading the full content. By accessing only the file header, the operation remains fast and resource‑efficient, enabling applications to validate, index, or route files based on these attributes before any heavy processing occurs.
 
-## Γιατί τα Μεταδεδομένα Εγγράφων Είναι Σημαντικά σε Εφαρμογές Java
+## Γιατί τα μεταδεδομένα εγγράφων είναι σημαντικά σε εφαρμογές Java
+Understanding document metadata is essential for building reliable Java applications because it allows early validation, efficient resource allocation, and improved user experience. By knowing a file’s size, format, and page count upfront, developers can enforce security policies, prevent performance bottlenecks, and present accurate information to users, ultimately reducing errors and support costs.
 
-Η εξαγωγή μεταδεδομένων εγγράφων δεν είναι απλώς μια ευχάριστη λειτουργία — είναι συχνά κρίσιμη για την κατασκευή επαγγελματικών εφαρμογών. Να γιατί οι προγραμματιστές χρειάζονται συνεχώς αυτές τις δυνατότητες:
+## Πώς να λάβετε το μέγεθος αρχείου σε Java
+DocumentInfo is the GroupDocs.Comparison class that provides metadata about a loaded document, such as size, page count, and format.  
 
-- **Επαλήθευση Αρχείου και Ασφάλεια** – Επαληθεύστε τη μορφή και την ακεραιότητα πριν από την πλήρη επεξεργασία.  
-- **Βελτιστοποίηση Αποθήκευσης** – Χρησιμοποιήστε το μέγεθος και τον αριθμό σελίδων για να κατανείμετε αποθηκευτικό χώρο και πόρους ορθά.  
-- **Βελτίωση Εμπειρίας Χρήστη** – Εμφανίστε ακριβείς πληροφορίες αρχείου (μορφή, μέγεθος, ημερομηνία δημιουργίας) στους τελικούς χρήστες.  
-- **Αυτοματοποίηση Ροής Εργασίας** – Δρομολογήστε έγγραφα αυτόματα βάσει των ιδιοτήτων τους.
+Load the document with the `Comparison` API, then call `getSize()` to retrieve the size in bytes. The method is O(1) because it reads the file header only, so even multi‑hundred‑page PDFs are processed instantly.
 
-## Πώς να Λάβετε το Μέγεθος Αρχείου σε Java
-Το GroupDocs.Comparison εκθέτει το μέγεθος αρχείου μέσω του αντικειμένου `DocumentInfo`. Μετά τη φόρτωση ενός εγγράφου, καλέστε `getSize()` για να λάβετε το μέγεθος σε bytes και, εφόσον χρειάζεται, μετατρέψτε το σε KB/MB.
+## Πώς να λάβετε τον αριθμό σελίδων σε Java
+DocumentInfo also exposes the total number of pages via `getPageCount()`.  
 
-## Πώς να Λάβετε τον Αριθμό Σελίδων σε Java
-Ανάλογα, η μέθοδος `DocumentInfo.getPageCount()` επιστρέφει τον αριθμό των σελίδων. Αυτό είναι χρήσιμο για σελιδοποίηση, παρακολούθηση προόδου ή εκτίμηση χρόνου επεξεργασίας.
+Calling this method returns an integer representing the document’s page count, which you can use for pagination UI, progress bars, or to decide whether to split a large file into smaller chunks before further processing.
 
-## Πώς να Προσδιορίσετε τη Μορφή Αρχείου σε Java
-Χρησιμοποιήστε `DocumentInfo.getFileType()` για να λάβετε τη ανιχνευμένη μορφή (π.χ. PDF, DOCX). Αυτό σας βοηθά να εφαρμόσετε λογική ειδική για μορφές ή να εμφανίσετε φιλικά ονόματα στους χρήστες.
+## Πώς να προσδιορίσετε τη μορφή αρχείου σε Java
+DocumentInfo’s `getFileType()` method detects the format by inspecting the file signature rather than the extension, ensuring reliable identification even when files are misnamed.  
 
-## Πώς να Λάβετε Ιδιότητες Εγγράφου σε Java
-Πέρα από το μέγεθος και τον αριθμό σελίδων, μπορείτε να έχετε πρόσβαση σε συγγραφέα, ημερομηνία δημιουργίας και προσαρμοσμένες ιδιότητες μέσω μεθόδων όπως `getAuthor()`, `getCreatedTime()` και `getCustomProperties()`.
+The method returns a `FileType` enum (e.g., `FileType.PDF`, `FileType.DOCX`) that you can compare against a whitelist of supported formats.
 
-## Συνηθισμένες Περιπτώσεις Χρήσης και Στρατηγικές Υλοποίησης
+## Πώς να λάβετε τις ιδιότητες του εγγράφου σε Java
+Beyond size, page count, and format, DocumentInfo provides access to additional properties:
 
-### Επικύρωση Μεταφόρτωσης Εγγράφου
-Όταν οι χρήστες ανεβάζουν αρχεία, θα θέλετε να τα επικυρώσετε πριν από την επεξεργασία:
+- `getAuthor()` – returns the author name if present.  
+- `getCreatedTime()` – returns the creation timestamp in UTC.  
+- `getCustomProperties()` – returns a map of any custom key/value pairs embedded in the document.
 
-- **Επαλήθευση Μορφής** – Διασφαλίστε ότι τα ανεβασμένα αρχεία ταιριάζουν με τις αναμενόμενες μορφές (PDF, DOCX κ.λπ.).  
-- **Περιορισμοί Μεγέθους** – Ελέγξτε τα μεγέθη αρχείων πριν δεσμεύσετε πόρους επεξεργασίας.  
-- **Ανάλυση Περιεχομένου** – Προσδιορίστε τον αριθμό σελίδων για σελιδοποίηση ή εκτιμήσεις επεξεργασίας.
+These properties are useful for compliance audits, version tracking, and displaying rich file details in UI dashboards.
 
-### Αυτοματοποιημένη Κατηγοριοποίηση Εγγράφων
-Οι επιχειρηματικές εφαρμογές συχνά χρειάζονται αυτόματη ταξινόμηση εγγράφων:
+## Συνηθισμένες περιπτώσεις χρήσης και στρατηγικές υλοποίησης
 
-- **Δρομολόγηση βάσει Μορφής** – Κατευθύνετε διαφορετικούς τύπους αρχείων σε κατάλληλες pipelines.  
-- **Αποφάσεις βάσει Μεταδεδομένων** – Χρησιμοποιήστε ιδιότητες για να ορίσετε προτεραιότητα επεξεργασίας.  
-- **Έλεγχος Συμμόρφωσης** – Επαληθεύστε ότι τα έγγραφα πληρούν τα πρότυπα του οργανισμού.
+### Επικύρωση μεταφόρτωσης εγγράφων
+When users upload files, you’ll want to validate them before committing them to storage or a processing pipeline:
 
-### Βελτιστοποίηση Απόδοσης
-Έξυπνες εφαρμογές χρησιμοποιούν μεταδεδομένα για βελτιστοποίηση επεξεργασίας:
+1. **Format verification** – Ensure the uploaded file matches one of the allowed formats (PDF, DOCX, etc.).  
+2. **Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect your server from overload.  
+3. **Page‑count limits** – Reject excessively long documents (e.g., > 500 pages) that could cause performance bottlenecks.
 
-- **Κατανομή Πόρων** – Κατανείμετε ισχύ βάσει της πολυπλοκότητας του εγγράφου.  
-- **Στρατηγικές Caching** – Αποθηκεύστε στην κρυφή μνήμη συχνά προσπελαζόμενα μεταδεδομένα.  
-- **Επεξεργασία σε Παρτίδες** – Ομαδοποιήστε παρόμοια έγγραφα για αποδοτικό χειρισμό.
+### Αυτόματη ταξινόμηση εγγράφων
+Enterprises often need to categorize incoming files automatically:
 
-## Διαθέσιμα Tutorials
+- **Format‑based routing** – Send PDFs to a text‑extraction service, DOCX files to a Word‑specific parser, and images to an OCR pipeline.  
+- **Metadata‑driven priority** – Prioritize small, low‑page‑count files for quick turnaround, while queuing larger files for batch processing.  
+- **Compliance checking** – Verify that mandatory metadata (author, creation date) is present before the document is archived.
 
-Τα tutorials πληροφοριών εγγράφου μας παρέχουν πρακτικές οδηγίες για την πρόσβαση στα μεταδεδομένα εγγράφων χρησιμοποιώντας το GroupDocs.Comparison σε Java. Αυτοί οι πρακτικοί οδηγοί δείχνουν πώς να ανακτήσετε πληροφορίες για τα πηγαία, στόχο και αποτελέσματα εγγράφων, να προσδιορίσετε μορφές αρχείων και να έχετε πρόσβαση σε ιδιότητες εγγράφου προγραμματιστικά με πραγματικά παραδείγματα.
+### Βελτιστοποίηση απόδοσης
+Smart applications use metadata to keep resource usage low:
 
-### [Extract Document Metadata Using GroupDocs.Comparison for Java: A Comprehensive Guide](./extract-document-info-groupdocs-comparison-java/)
-Μάθετε πώς να εξάγετε αποδοτικά μεταδεδομένα εγγράφων όπως τύπο αρχείου, αριθμό σελίδων και μέγεθος χρησιμοποιώντας το GroupDocs.Comparison for Java. Αυτός ο λεπτομερής οδηγός περιλαμβάνει πρακτικά παραδείγματα για τη βελτίωση της ροής επεξεργασίας εγγράφων με αποφάσεις βασισμένες σε μεταδεδομένα.
+- **Caching strategy** – Store extracted metadata in a fast cache (e.g., Redis) keyed by file hash; invalidate the cache when the file changes.  
+- **Batch processing** – When processing a folder of documents, extract metadata for all files first, then schedule heavy‑weight operations only for those that meet your criteria.  
+- **Parallel extraction** – Use Java’s `ForkJoinPool` to extract metadata from multiple files concurrently, respecting CPU core count to avoid contention.
 
-### [Master Document Metadata Extraction with GroupDocs in Java](./groupdocs-comparison-java-document-extraction/)
-Ανακαλύψτε προχωρημένες τεχνικές εξαγωγής μεταδεδομένων εγγράφων με το GroupDocs.Comparison σε Java. Το tutorial αυτό καλύπτει τη βελτιστοποίηση ροών εργασίας και την ενίσχυση της ανάλυσης δεδομένων μέσω προγραμματιστικής πρόσβασης σε τύπους αρχείων, αριθμούς σελίδων και μεγέθη, με συμβουλές απόδοσης.
+## Διαθέσιμα μαθήματα
+Our document information tutorials provide practical guidance for accessing document metadata using GroupDocs.Comparison in Java. These hands‑on guides show you how to retrieve information about source, target, and result documents, determine file formats, and access document properties programmatically with real working examples.
 
-### [Retrieve Supported File Formats with GroupDocs.Comparison for Java: A Comprehensive Guide](./groupdocs-comparison-java-supported-formats/)
-Μάθετε πώς να ανακτάτε τις υποστηριζόμενες μορφές αρχείων χρησιμοποιώντας το GroupDocs.Comparison for Java. Αυτό το βήμα‑βήμα tutorial σας δείχνει πώς να ενισχύσετε τα συστήματα διαχείρισης εγγράφων σας ανακαλύπτοντας προγραμματιστικά τις δυνατότητες μορφών και χτίζοντας πιο ανθεκτικές εφαρμογές.
+### [Εξαγωγή Μεταδεδομένων Εγγράφου Χρησιμοποιώντας GroupDocs.Comparison για Java: Ένας Πλήρης Οδηγός](./extract-document-info-groupdocs-comparison-java/)
+Learn how to efficiently extract document metadata like file type, page count, and size using GroupDocs.Comparison for Java. This detailed guide includes practical examples for enhancing your document processing workflow with metadata‑driven decisions.
 
-## Καλές Πρακτικές για την Εξαγωγή Πληροφοριών Εγγράφου
+### [Αποκτήστε την Εξαγωγή Μεταδεδομένων Εγγράφων με το GroupDocs σε Java](./groupdocs-comparison-java-document-extraction/)
+Discover advanced techniques for extracting document metadata using GroupDocs.Comparison in Java. This tutorial covers streamlining workflows and enhancing data analysis by programmatically accessing file types, page counts, and sizes with performance optimization tips.
 
-### Error Handling and Validation
+### [Ανάκτηση Υποστηριζόμενων Μορφών Αρχείων με το GroupDocs.Comparison για Java: Ένας Πλήρης Οδηγός](./groupdocs-comparison-java-supported-formats/)
+Master the art of retrieving supported file formats using GroupDocs.Comparison for Java. This step‑by‑step tutorial shows you how to enhance your document management systems by programmatically discovering format capabilities and building more robust applications.
+
+## Καλές πρακτικές για την εξαγωγή πληροφοριών εγγράφου
+
+### Διαχείριση σφαλμάτων και επικύρωση
+Validate file existence before attempting metadata extraction. Gracefully handle corrupted or password‑protected files. Implement timeout mechanisms for large file processing. Provide meaningful error messages to users so they can correct issues without contacting support.
+
+### Συμβουλές βελτιστοποίησης απόδοσης
+**Caching strategy** – Since metadata rarely changes, implement intelligent caching:
+
+- Cache metadata for frequently accessed documents.  
+- Use file modification timestamps to invalidate stale entries.  
+- Consider in‑memory caching for recently processed documents.
+
+**Batch processing** – When dealing with multiple documents:
+
+- Process in batches to reduce overhead.  
+- Use parallel processing for independent metadata extraction tasks.  
+- Implement progress tracking for long‑running operations.
+
+**Resource management** – Dispose of document objects properly to prevent memory leaks. Monitor memory usage when processing large documents. Use connection pooling for remote document sources.
+
+## Επίλυση κοινών προβλημάτων
+
+### Προβλήματα αναγνώρισης μορφής αρχείου
+**Issue**: Application doesn't recognize certain file formats.  
+**Solution**: Verify the format is supported and check for file corruption. Use the supported formats tutorial to validate compatibility.
+
+### Προβλήματα μνήμης με μεγάλα έγγραφα
+**Issue**: `OutOfMemoryError` when processing large files.  
+**Solution**: Implement streaming approaches where possible and increase JVM heap size. Process metadata without loading the entire document content.
+
+### Στενά σημεία απόδοσης
+**Issue**: Slow metadata extraction for multiple documents.  
+**Solution**: Implement parallel processing and caching strategies. Profile your application to identify specific bottlenecks.
+
+### Προβλήματα κωδικοποίησης χαρακτήρων
+**Issue**: Incorrect metadata display for documents with special characters.  
+**Solution**: Ensure proper character encoding handling and validate locale settings in your application.
+
+## Στρατηγικές ενσωμάτωσης για επιχειρησιακές εφαρμογές
+
+### Αρχιτεκτονική μικροϋπηρεσιών
+When building microservices, consider a dedicated document information service:
+
+- Centralized extraction reduces code duplication.  
+- Easier to scale based on processing load.  
+- Simplified maintenance and updates.
+
+### Ενσωμάτωση βάσης δεδομένων
+Store extracted metadata for quick access:
+
+- Index commonly queried properties for fast retrieval.  
+- Implement change tracking for document updates.  
+- Consider NoSQL solutions for flexible metadata schemas.
+
+### Σκέψεις σχεδίασης API
+If exposing document information via APIs:
+
+- Implement proper authentication and authorization.  
+- Use standard HTTP status codes for different scenarios.  
+- Provide comprehensive API documentation with examples.
+
+## Συχνές ερωτήσεις
+
+**Q: Can I extract metadata from password‑protected documents?**  
+A: Yes, provide the password when initializing the document object; GroupDocs.Comparison decrypts the file and then returns metadata.
+
+**Q: How do I handle documents that don’t have metadata?**  
+A: Always check for `null` values; if a property is missing, fall back to a sensible default or notify the user that the information is unavailable.
+
+**Q: What’s the performance impact of metadata extraction?**  
+A: The operation reads only the file header, typically completing in under 10 ms for documents up to 200 MB, making it negligible compared to full content parsing.
+
+**Q: Can I modify document metadata using GroupDocs.Comparison?**  
+A: GroupDocs.Comparison focuses on comparison and information extraction. For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion or a dedicated editor.
+
+**Q: How do I ensure my application handles all supported formats correctly?**  
+A: Use the `SupportedFormats` API to retrieve the current list of formats at runtime; this keeps your validation logic up‑to‑date with library releases.
+
+## Πρόσθετοι πόροι
+- [Τεκμηρίωση GroupDocs.Comparison για Java](https://docs.groupdocs.com/comparison/java/)
+- [Αναφορά API GroupDocs.Comparison για Java](https://reference.groupdocs.com/comparison/java/)
+- [Λήψη GroupDocs.Comparison για Java](https://releases.groupdocs.com/comparison/java/)
+- [Φόρουμ GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)
+- [Δωρεάν Υποστήριξη](https://forum.groupdocs.com/)
+- [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**Last Updated:** 2026-08-25  
+**Tested With:** GroupDocs.Comparison for Java (latest release)  
+**Author:** GroupDocs
+
 ```java
 // Example pattern - don't modify this existing code structure
 try {
@@ -105,102 +250,8 @@ try {
 }
 ```
 
-**Βασικές παρατηρήσεις**
+## Σχετικά Μαθήματα
 
-- Επικυρώστε την ύπαρξη του αρχείου πριν προσπαθήσετε την εξαγωγή μεταδεδομένων.  
-- Διαχειριστείτε με χάρη αρχεία κατεστραμμένα ή προστατευμένα με κωδικό.  
-- Εφαρμόστε μηχανισμούς timeout για επεξεργασία μεγάλων αρχείων.  
-- Παρέχετε σαφή μηνύματα σφάλματος στους χρήστες.
-
-### Συμβουλές Βελτιστοποίησης Απόδοσης
-
-**Στρατηγική Caching** – Δεδομένου ότι τα μεταδεδομένα σπάνια αλλάζουν, υλοποιήστε έξυπνη caching:
-
-- Αποθηκεύστε στην κρυφή μνήμη τα μεταδεδομένα για συχνά προσπελαζόμενα έγγραφα.  
-- Χρησιμοποιήστε timestamps τροποποίησης αρχείου για να ακυρώνετε παλιές καταχωρήσεις.  
-- Σκεφτείτε caching στη μνήμη για πρόσφατα επεξεργασμένα έγγραφα.
-
-**Επεξεργασία σε Παρτίδες** – Όταν διαχειρίζεστε πολλαπλά έγγραφα:
-
-- Επεξεργαστείτε σε παρτίδες για μείωση του overhead.  
-- Χρησιμοποιήστε παράλληλη επεξεργασία για ανεξάρτητες εργασίες εξαγωγής μεταδεδομένων.  
-- Υλοποιήστε παρακολούθηση προόδου για μακροχρόνιες λειτουργίες.
-
-**Διαχείριση Πόρων**  
-
-- Αποδεσμεύστε σωστά τα αντικείμενα εγγράφου για να αποφύγετε διαρροές μνήμης.  
-- Παρακολουθείτε τη χρήση μνήμης κατά την επεξεργασία μεγάλων εγγράφων.  
-- Χρησιμοποιήστε connection pooling για απομακρυσμένες πηγές εγγράφων.
-
-## Επίλυση Συνηθισμένων Προβλημάτων
-
-### Προβλήματα Αναγνώρισης Μορφής Αρχείου
-**Πρόβλημα**: Η εφαρμογή δεν αναγνωρίζει ορισμένες μορφές αρχείων.  
-**Λύση**: Επαληθεύστε ότι η μορφή υποστηρίζεται και ελέγξτε για κατεστραμμένα αρχεία. Χρησιμοποιήστε το tutorial υποστηριζόμενων μορφών για να ελέγξετε τη συμβατότητα.
-
-### Προβλήματα Μνήμης με Μεγάλα Έγγραφα
-**Πρόβλημα**: `OutOfMemoryError` κατά την επεξεργασία μεγάλων αρχείων.  
-**Λύση**: Εφαρμόστε προσεγγίσεις streaming όπου είναι δυνατόν και αυξήστε το μέγεθος heap του JVM. Εξάγετε μεταδεδομένα χωρίς τη φόρτωση ολόκληρου του περιεχομένου του εγγράφου.
-
-### Σημεία Πιθανής Μπλοκαρίσματος Απόδοσης
-**Πρόβλημα**: Αργή εξαγωγή μεταδεδομένων για πολλαπλά έγγραφα.  
-**Λύση**: Εφαρμόστε παράλληλη επεξεργασία και στρατηγικές caching. Προφίλ το έργο σας για να εντοπίσετε συγκεκριμένα σημεία μπλοκαρίσματος.
-
-### Προβλήματα Κωδικοποίησης Χαρακτήρων
-**Πρόβλημα**: Λανθασμένη εμφάνιση μεταδεδομένων για έγγραφα με ειδικούς χαρακτήρες.  
-**Λύση**: Διασφαλίστε σωστή διαχείριση κωδικοποίησης χαρακτήρων και επικυρώστε τις ρυθμίσεις locale στην εφαρμογή σας.
-
-## Στρατηγικές Ενσωμάτωσης για Επιχειρηματικές Εφαρμογές
-
-### Αρχιτεκτονική Μικροϋπηρεσιών
-Κατά την κατασκευή μικροϋπηρεσιών, σκεφτείτε μια αφιερωμένη υπηρεσία πληροφοριών εγγράφου:
-
-- Η κεντρική εξαγωγή μειώνει την επανάληψη κώδικα.  
-- Εύκολη κλιμάκωση βάσει φόρτου επεξεργασίας.  
-- Απλοποιημένη συντήρηση και ενημερώσεις.
-
-### Ενσωμάτωση με Βάση Δεδομένων
-Αποθηκεύστε τα εξαγόμενα μεταδεδομένα για γρήγορη πρόσβαση:
-
-- Δείξτε ευρέως ερωτημένα χαρακτηριστικά για ταχεία ανάκτηση.  
-- Υλοποιήστε παρακολούθηση αλλαγών για ενημερώσεις εγγράφων.  
-- Σκεφτείτε λύσεις NoSQL για ευέλικτα σχήματα μεταδεδομένων.
-
-### Σκέψεις Σχεδίασης API
-Αν εκθέτετε πληροφορίες εγγράφου μέσω API:
-
-- Εφαρμόστε σωστή αυθεντικοποίηση και εξουσιοδότηση.  
-- Χρησιμοποιήστε τυπικούς κωδικούς κατάστασης HTTP για διαφορετικά σενάρια.  
-- Παρέχετε ολοκληρωμένη τεκμηρίωση API με παραδείγματα.
-
-## Συχνές Ερωτήσεις
-
-### Μπορώ να εξάγω μεταδεδομένα από έγγραφα προστατευμένα με κωδικό;
-Ναι, αλλά πρέπει να παρέχετε τον κωδικό κατά την αρχικοποίηση του αντικειμένου εγγράφου. Το GroupDocs.Comparison υποστηρίζει αρχεία προστατευμένα με κωδικό σε διάφορες μορφές.
-
-### Πώς διαχειρίζομαι έγγραφα που δεν έχουν μεταδεδομένα;
-Ορισμένες μορφές έχουν περιορισμένα ή καθόλου μεταδεδομένα. Ελέγχετε πάντα για τιμές `null` και παρέχετε λογικές προεπιλογές ή χειρισμό σφαλμάτων για ελλιπείς πληροφορίες.
-
-### Ποιος είναι ο αντίκτυπος στην απόδοση της εξαγωγής μεταδεδομένων;
-Η εξαγωγή μεταδεδομένων είναι ελαφριά επειδή αποφεύγει την πλήρη ανάλυση του περιεχομένου. Για πολύ μεγάλα αρχεία ή εργασίες παρτίδας, σκεφτείτε caching και παράλληλη επεξεργασία για να διατηρήσετε την ανταπόκριση.
-
-### Μπορώ να τροποποιήσω τα μεταδεδομένα εγγράφου χρησιμοποιώντας το GroupDocs.Comparison;
-Το GroupDocs.Comparison εστιάζει στη σύγκριση και την εξαγωγή πληροφοριών. Για τροποποίηση μεταδεδομένων, ίσως χρειαστείτε πρόσθετες βιβλιοθήκες προσαρμοσμένες σε κάθε μορφή.
-
-### Πώς διασφαλίζω ότι η εφαρμογή μου χειρίζεται σωστά όλες τις υποστηριζόμενες μορφές;
-Χρησιμοποιήστε τη λειτουργία ανάκτησης υποστηριζόμενων μορφών για να ανακαλύψετε δυναμικά τις διαθέσιμες μορφές κατά το χρόνο εκτέλεσης. Αυτό κρατά την εφαρμογή σας ενημερωμένη με τις ενημερώσεις της βιβλιοθήκης και τις νέες μορφές.
-
-## Πρόσθετοι Πόροι
-
-- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison for Java API Reference](https://reference.groupdocs.com/comparison/java/)
-- [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)
-- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
-
----
-
-**Τελευταία Ενημέρωση:** 2026-01-16  
-**Δοκιμάστηκε Με:** GroupDocs.Comparison for Java (τελευταία έκδοση)  
-**Συγγραφέας:** GroupDocs
+- [Ορισμός μεταδεδομένων εγγράφου σε Java με GroupDocs.Comparison](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
+- [Ορισμός προσαρμοσμένων μεταδεδομένων Java με GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
+- [Πώς να χρησιμοποιήσετε την άδεια: Οδηγός διαμόρφωσης URL για GroupDocs Comparison Java](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

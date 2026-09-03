@@ -1,88 +1,108 @@
 ---
 categories:
 - Java Development
-date: '2026-03-24'
-description: GroupDocs.Comparison을 사용하여 Java에서 파일 유형을 가져오고 문서 메타데이터를 추출하는 방법을 배우세요.
-  간단한 코드 예제와 문제 해결 팁을 통해 페이지 수, 크기 등을 확인할 수 있습니다.
-keywords: java document metadata extraction, groupdocs comparison tutorial, extract
-  file properties java, document info java api, how to get document metadata in java
-lastmod: '2026-03-24'
-linktitle: Java Document Metadata Extraction
+date: '2026-08-25'
+description: GroupDocs.Comparison을 사용하여 Java에서 PDF 페이지 수를 가져오고 문서 메타데이터를 추출하는 방법을
+  배웁니다. file type, size, page count 등을 간결한 코드 예제와 문제 해결 팁으로 확인하세요.
+keywords:
+- java pdf page count
+- get file type java
+- detect file type java
+- read file size java
+- java extract file properties
+lastmod: '2026-08-25'
+linktitle: Java 문서 메타데이터 추출
+og_description: GroupDocs.Comparison을 사용하여 Java에서 PDF 페이지 수와 문서 메타데이터를 빠르게 가져옵니다.
+  간단한 코드로 file type, size 및 page count를 확인하세요.
+og_image_alt: Guide showing Java code to extract PDF page count and metadata with
+  GroupDocs.Comparison
+og_title: Java PDF 페이지 수를 가져오고 문서 메타데이터를 추출하는 방법
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to java pdf page count and extract document metadata in Java
+    using GroupDocs.Comparison. Retrieve file type, size, page count, and more with
+    concise code examples and troubleshooting tips.
+  headline: How to get java pdf page count and extract document metadata
+  type: TechArticle
+- description: Learn how to java pdf page count and extract document metadata in Java
+    using GroupDocs.Comparison. Retrieve file type, size, page count, and more with
+    concise code examples and troubleshooting tips.
+  name: How to get java pdf page count and extract document metadata
+  steps:
+  - name: Maven configuration
+    text: 'Add the GroupDocs.Comparison dependency to your `pom.xml`. Place the snippet
+      inside the `<dependencies>` section: **Pro tip**: Always verify the latest version
+      on the GroupDocs website—using an outdated version can cause compatibility warnings
+      and missing features.'
+  - name: License setup (don’t skip this!)
+    text: GroupDocs.Comparison requires a valid license for production use. 1. **Free
+      trial** – ideal for testing and small projects. Download from the [free trial
+      page](https://releases.groupdocs.com/comparison/java/). 2. **Temporary license**
+      – useful for development and evaluation. Apply for a temporary li
+  - name: Verify your setup
+    text: 'Create a simple test class to ensure the library loads correctly: If the
+      program runs without exceptions, you’re ready to extract metadata.'
+  type: HowTo
+- questions:
+  - answer: Yes, provide the password via `LoadOptions` when constructing the `Comparer`
+      instance.
+    question: Can I extract metadata from password‑protected documents?
+  - answer: GroupDocs.Comparison supports 50+ formats, including DOCX, PDF, XLSX,
+      PPTX, TXT, RTF, HTML, and many image types.
+    question: What file formats are supported for metadata extraction?
+  - answer: Standard `DocumentInfo` covers built‑in properties; for custom properties
+      you’ll need to combine GroupDocs with the Office Open XML SDK or a similar library.
+    question: Is there a way to extract custom properties from Office documents?
+  - answer: Use try‑with‑resources, process files one at a time, and allocate sufficient
+      JVM heap (e.g., `-Xmx2g`). The library streams large files, so you rarely need
+      to load the entire document into memory.
+    question: How do I handle very large files without running out of memory?
+  - answer: Yes, download the file to a temporary local path or stream it directly
+      into a `ByteArrayInputStream` before passing it to `Comparer`.
+    question: Can this work with documents stored in cloud storage?
+  type: FAQPage
 tags:
+- java pdf page count
 - groupdocs
-- document-processing
-- metadata-extraction
-- java-tutorial
-title: Java 파일 유형 가져오기 – 문서 메타데이터 추출 가이드
+- metadata extraction
+- java tutorial
+title: Java PDF 페이지 수를 가져오고 문서 메타데이터를 추출하는 방법
 type: docs
-url: /ko/java/document-information/extract-document-info-groupdocs-comparison-java/
-weight: 1
 ---
 
-# Java 파일 유형 가져오기 – 문서 메타데이터 추출 가이드
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-문서를 열지 않고도 파일 정보를 빠르게 가져와야 할 때가 있나요? 문서 관리 시스템을 구축하거나 업로드를 검증하거나 워크플로를 자동화할 때, **you can java get file type** 를 몇 줄의 코드만으로 수행하고 다른 주요 속성을 가져올 수 있습니다. 이 가이드에서는 GroupDocs.Comparison for Java를 사용하여 **java get file type**, **java read file size**, **java get page count** 를 수행하는 방법과 **java extract pdf metadata** 팁 및 엣지 케이스 처리 방법을 보여드립니다.
+# java pdf 페이지 수를 가져오고 문서 메타데이터를 추출하는 방법
+
+문서를 열지 않고 **java pdf page count**가 필요하다면, 여기가 바로 적절한 곳입니다. 문서 관리 시스템을 구축하거나, 업로드를 검증하거나, 콘텐츠 파이프라인을 자동화할 때, 파일 유형, 크기 및 페이지 수를 프로그래밍 방식으로 추출하면 시간 절약과 오류 감소에 도움이 됩니다. 이 가이드에서는 GroupDocs.Comparison for Java를 사용하여 **java get file type**, **java read file size**, **java get page count**를 수행하는 방법과 엣지 케이스 및 대용량 파일을 처리하기 위한 모범 사례 팁을 안내합니다.
 
 ## 빠른 답변
-- **java 파일 유형을 가져오기 위해 사용할 수 있는 라이브러리는?** GroupDocs.Comparison for Java.  
-- **java extract pdf metadata도 할 수 있나요?** Yes – the same API works for PDFs and many other formats.  
-- **라이선스가 필요합니까?** 개발에는 트라이얼 또는 임시 라이선스가 작동하고, 프로덕션에는 정식 라이선스가 필요합니다.  
-- **필요한 Java 버전은?** JDK 8+ (JDK 11+ 권장).  
-- **코드가 스레드‑안전한가요?** 스레드당 별도의 `Comparer` 인스턴스를 생성하세요.  
+- **java get file type을 사용할 수 있는 라이브러리는 무엇인가요?** GroupDocs.Comparison for Java.  
+- **java extract pdf metadata도 할 수 있나요?** 예 – 동일한 API가 PDF 및 여러 다른 형식에서도 작동합니다.  
+- **라이선스가 필요합니까?** 개발용으로는 체험판 또는 임시 라이선스를 사용할 수 있으며, 프로덕션에서는 정식 라이선스가 필요합니다.  
+- **필요한 Java 버전은 무엇인가요?** JDK 8+ (JDK 11+ 권장).  
+- **코드가 스레드‑안전합니까?** 스레드당 별도의 `Comparer` 인스턴스를 생성하십시오.  
 
-## java 파일 유형을 가져오고 문서 메타데이터를 추출하는 방법
-코드에 들어가기 전에, **java file type detection** 이 왜 중요한지와 가져오는 메타데이터(파일 유형, 페이지 수, 파일 크기)가 실제 시나리오에 어떻게 활용될 수 있는지 설명하겠습니다.
+## 왜 문서 메타데이터를 추출해야 하나요?
 
-## 왜 문서 메타데이터를 추출해야 할까요?
-
-코드에 들어가기 전에, 실제 애플리케이션에서 이것이 왜 중요한지 이야기해 보겠습니다:
-
-- **Document Management Systems** – 속성을 기반으로 파일을 자동으로 분류하고 인덱싱합니다.  
-- **File Upload Validation** – 처리 전에 파일 유형과 크기를 확인합니다.  
-- **Content Analysis** – 길이, 형식 또는 기타 기준에 따라 문서를 필터링하고 정렬합니다.  
-- **Legal & Compliance** – 문서가 특정 요구 사항을 충족하는지 확인합니다.  
-- **Performance Optimization** – 특정 기준을 만족하는 파일만 사전 처리합니다.
-
-핵심은? 메타데이터 추출을 통해 문서를 어떻게 처리할지 더 스마트한 결정을 내릴 수 있습니다.
+문서 메타데이터를 추출하면 파일의 유형, 크기 및 페이지 수를 프로그래밍 방식으로 확인할 수 있어 자동 검증, 인덱싱 및 워크플로우 결정을 가능하게 합니다. 지원되지 않는 형식은 즉시 거부하고, 대용량 파일은 별도의 처리 큐로 라우팅하거나, 문서 컬렉션을 요약하는 보고서를 생성할 수 있습니다. 실제 상황에서는 수천 개 파일에 대한 수작업을 줄이고, 규정 준수 검사를 개선하며, 배치 작업 속도를 높입니다.
 
 ## 이 가이드에서 배울 내용
 
-이 튜토리얼을 마치면 다음을 할 수 있게 됩니다:
+이 튜토리얼에서는 GroupDocs.Comparison for Java를 설정하고, **java pdf page count**를 가져오며, 파일 유형 및 크기를 얻고, 일반적인 오류를 처리하는 방법을 배워서 메타데이터 추출을 모든 Java 애플리케이션에 통합할 수 있습니다. 또한 대용량 문서를 다룰 때 리소스 관리, 오류 처리 및 성능 튜닝을 위한 모범 사례 패턴도 확인할 수 있습니다.
 
-- 프로젝트에 GroupDocs.Comparison for Java을 설정합니다.  
-- **java get file type** 및 기타 필수 문서 속성을 몇 줄의 코드만으로 가져옵니다.  
-- 비즈니스 로직을 위해 **java read file size**와 **java get page count**를 사용합니다.  
-- 다양한 파일 형식 및 엣지 케이스를 처리합니다.  
-- 발생할 수 있는 일반적인 문제를 해결합니다.  
-- 프로덕션 환경을 위한 모범 사례를 구현합니다.
+## 전제 조건: 시작하기 전에 필요한 것
 
-## 사전 요구 사항: 시작하기 전에 필요한 것
+JDK 8 이상, Maven(의존성 관리), IntelliJ IDEA, Eclipse 또는 VS Code와 같은 IDE가 필요하며, 코드 예제를 실행하려면 GroupDocs.Comparison 라이선스(체험판 또는 정식)가 필요합니다. 이 라이브러리는 Java 8+를 지원하는 모든 플랫폼에서 작동하며, 분석하려는 문서가 들어 있는 폴더에 대한 읽기/쓰기 권한이 있어야 합니다.
 
-### 필수 소프트웨어 및 도구
-
-- **Java Development Kit (JDK)** – 버전 8 이상 (더 나은 성능을 위해 JDK 11+ 권장).  
-- **Maven** – 의존성 관리 및 프로젝트 빌드용.  
-- **IDE** – IntelliJ IDEA, Eclipse, VS Code 등 Java IDE 중 하나.
-
-### 지식 사전 요구 사항
-
-Java 전문가일 필요는 없지만, 다음에 대한 기본적인 이해가 있으면 좋습니다:
-
-- Java 구문 및 객체‑지향 개념.  
-- Maven 의존성 관리(우리는 이를 안내합니다).  
-- Try‑with‑resources 구문(올바른 리소스 관리를 위해).
-
-### 왜 GroupDocs.Comparison인가?
-
-왜 GroupDocs.Comparison을 메타데이터 추출에 사용하는지 궁금할 수 있습니다. 이 라이브러리는 주로 문서 비교로 알려져 있지만, 뛰어난 문서 정보 추출 기능도 제공합니다. 또한 나중에 비교 기능이 필요해도 이미 설정이 완료된 상태입니다!
-
-## GroupDocs.Comparison for Java 설정하기
-
-프로젝트를 올바르게 구성해 보겠습니다. 이 단계는 매우 중요합니다 – 의존성을 잘못 설정하면 개발자가 흔히 겪는 문제 중 하나입니다.
+## GroupDocs.Comparison for Java 설정
 
 ### 단계 1: Maven 구성
 
-`pom.xml` 파일에 다음을 추가하세요(올바른 섹션에 배치해야 합니다):
+`pom.xml`에 GroupDocs.Comparison 의존성을 추가하십시오. `<dependencies>` 섹션 안에 아래 스니펫을 넣으세요:
 
 ```xml
 <repositories>
@@ -101,19 +121,19 @@ Java 전문가일 필요는 없지만, 다음에 대한 기본적인 이해가 �
 </dependencies>
 ```
 
-**Pro tip**: 항상 GroupDocs 웹사이트에서 최신 버전 번호를 확인하세요 – 오래된 버전을 사용하면 호환성 문제가 발생할 수 있습니다.
+**Pro tip**: 항상 GroupDocs 웹사이트에서 최신 버전을 확인하십시오—구버전을 사용하면 호환성 경고와 기능 누락이 발생할 수 있습니다.
 
 ### 단계 2: 라이선스 설정 (절대 건너뛰지 마세요!)
 
-GroupDocs.Comparison은 무료 라이브러리가 아니지만, 다음 옵션이 있습니다:
+GroupDocs.Comparison은 프로덕션 사용을 위해 유효한 라이선스가 필요합니다.
 
-1. **Free Trial**: 테스트 및 소규모 프로젝트에 적합합니다. [free trial page](https://releases.groupdocs.com/comparison/java/)에서 다운로드하세요  
-2. **Temporary License**: 개발 및 평가에 좋습니다. [here](https://purchase.groupdocs.com/temporary-license/)에서 신청하세요  
-3. **Full License**: 프로덕션 사용용. [Purchase here](https://purchase.groupdocs.com/buy)에서 구매하세요
+1. **Free trial** – 테스트 및 소규모 프로젝트에 적합합니다. [free trial page](https://releases.groupdocs.com/comparison/java/)에서 다운로드하십시오.  
+2. **Temporary license** – 개발 및 평가에 유용합니다. 임시 라이선스는 [here](https://purchase.groupdocs.com/temporary-license/)에서 신청하십시오.  
+3. **Full license** – 상업적 배포에 필요합니다. [Purchase a license](https://purchase.groupdocs.com/buy)에서 구매하십시오.
 
 ### 단계 3: 설정 확인
 
-모든 것이 정상 작동하는지 확인하기 위해 간단한 테스트 클래스를 생성하세요:
+라이브러리가 올바르게 로드되는지 확인하기 위해 간단한 테스트 클래스를 만들십시오:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -126,13 +146,13 @@ public class SetupTest {
 }
 ```
 
-## 구현 가이드: 문서 메타데이터 추출 단계별
+프로그램이 예외 없이 실행되면 메타데이터를 추출할 준비가 된 것입니다.
 
-이제 재미있는 부분입니다 – 실제로 유용한 코드를 작성해 보겠습니다!
+## 구현 가이드: 문서 메타데이터 단계별 추출
 
 ### java get file type – Comparer 객체 초기화
 
-`Comparer` 클래스는 문서 정보에 접근하는 게이트웨이입니다. 올바르게 설정하는 방법은 다음과 같습니다:
+Comparer는 문서를 로드하고 메타데이터에 접근할 수 있게 해주는 주요 클래스입니다.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -146,13 +166,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 ```
 
 **무슨 일이 일어나고 있나요?**  
-- 메모리 누수를 방지하기 위해 try‑with‑resources를 사용하고 있습니다(매우 중요!).  
-- 경로는 실제 문서를 가리켜야 합니다.  
-- 오류 처리는 파일을 찾을 수 없거나 접근 문제와 같은 이슈를 포착합니다.
+- try‑with‑resources 블록은 `Comparer` 인스턴스를 자동으로 닫아 메모리 누수를 방지합니다.  
+- `loadOptions` 객체는 이후에 비밀번호가 보호된 파일이나 사용자 지정 로드 설정을 위해 확장할 수 있습니다.
 
 ### 문서 정보 객체 가져오기
 
-다음으로, 모든 메타데이터를 포함하는 문서 정보 객체를 가져옵니다:
+DocumentInfo는 파일 유형, 크기, 페이지 수와 같은 문서에서 추출된 속성을 읽기 전용으로 제공합니다.
 
 ```java
 import com.groupdocs.comparison.interfaces.IDocumentInfo;
@@ -167,13 +186,12 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 ```
 
 **핵심 포인트:**  
-- `getSource()`는 소스 문서를 가져옵니다.  
-- `getDocumentInfo()`는 모든 메타데이터를 포함하는 인터페이스를 반환합니다.  
-- 또 다른 try‑with‑resources로 적절히 정리합니다.
+- `getSource()`는 소스 문서 래퍼를 반환합니다.  
+- `getDocumentInfo()`는 추출된 모든 메타데이터를 읽기 전용으로 제공합니다.
 
 ### 유용한 정보 추출
 
-이제 실제 메타데이터를 가져옵니다:
+`FileType`은 문서의 감지된 형식을 나타내며, `getSize()`는 바이트 길이를 반환합니다.
 
 ```java
 try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.docx")) {
@@ -195,13 +213,13 @@ try (Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_document.d
 ```
 
 **각 메서드가 반환하는 값:**  
-- `getFileType().getFileFormat()`: 파일 형식(DOCX, PDF, TXT 등).  
-- `getPageCount()`: 전체 페이지 수 – 흔히 필요한 **java get page count** 입니다.  
-- `getSize()`: 바이트 단위 파일 크기 – **java read file size** 작업에 유용합니다.
+- `getFileType().getFileFormat()` → DOCX, PDF, TXT와 같은 파일 형식.  
+- `getPageCount()` → 전체 페이지 수, 즉 자주 필요한 **java pdf page count**.  
+- `getSize()` → 바이트 단위 파일 크기, **java read file size** 확인에 유용합니다.
 
-## 실제 예시: 전체 구현
+## 실제 예제: 전체 구현
 
-프로젝트에서 실제로 사용할 수 있는 보다 견고한 예시입니다:
+아래는 모든 요소를 결합한 프로덕션 준비된 코드 스니펫입니다. 파일을 로드하고 세 가지 핵심 속성을 추출한 뒤 콘솔에 출력하는 예시입니다.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -254,10 +272,10 @@ public class DocumentMetadataExtractor {
 
 ## 일반적인 문제와 해결책
 
-### 문제 1: "File Not Found" 오류
+### 문제 1: “File not found” 오류
 
-**증상**: Comparer 초기화 시 예외 발생  
-**해결책**: 파일 경로와 존재 여부를 항상 확인하세요:
+**증상**: `Comparer` 초기화 시 예외 발생.  
+**해결책**: `Comparer` 인스턴스를 만들기 전에 항상 파일 경로를 검증하십시오:
 
 ```java
 Path filePath = Paths.get(documentPath);
@@ -269,10 +287,10 @@ if (!Files.isReadable(filePath)) {
 }
 ```
 
-### 문제 2: 대용량 파일 메모리 문제
+### 문제 2: 대용량 파일의 메모리 문제
 
-**증상**: OutOfMemoryError 또는 성능 저하  
-**해결책**: 파일을 개별적으로 처리하고 적절한 리소스 정리를 보장하세요:
+**증상**: 수백 페이지 PDF를 처리할 때 `OutOfMemoryError` 또는 성능 저하.  
+**해결책**: 파일을 하나씩 처리하고, try‑with‑resources를 사용하며, JVM 힙을 늘리는 것을 고려하십시오(`-Xmx2g`는 최대 2 GB). GroupDocs.Comparison은 전체 문서를 메모리에 로드하지 않고도 2 GB까지의 파일을 처리할 수 있습니다.
 
 ```java
 // Always use try-with-resources
@@ -284,8 +302,8 @@ try (Comparer comparer = new Comparer(filePath)) {
 
 ### 문제 3: 지원되지 않는 파일 형식
 
-**증상**: 특정 파일을 처리하려 할 때 예외 발생  
-**해결책**: 먼저 지원되는 형식을 확인하세요:
+**증상**: 라이브러리가 알 수 없는 확장자를 만나면 예외 발생.  
+**해결책**: 처리하기 전에 지원되는 형식 목록을 확인하십시오. GroupDocs.Comparison은 DOCX, PDF, XLSX, PPTX, TXT, RTF, HTML 등을 포함한 **50개 이상의 입력 및 출력 형식**을 지원합니다.
 
 ```java
 public static boolean isSupportedFormat(String filePath) {
@@ -294,10 +312,10 @@ public static boolean isSupportedFormat(String filePath) {
 }
 ```
 
-### 문제 4: 프로덕션 라이선스 문제
+### 문제 4: 프로덕션 환경의 라이선스 문제
 
-**증상**: 워터마크 또는 기능 제한  
-**해결책**: 라이선스가 올바르게 적용되었는지 확인하세요:
+**증상**: 워터마크가 표시되거나 일부 API가 비활성화됨.  
+**해결책**: 애플리케이션 시작 시 라이선스 파일이 올바르게 로드되었는지, 라이선스 버전이 라이브러리 버전과 일치하는지 확인하십시오.
 
 ```java
 // Apply license at application startup
@@ -309,7 +327,7 @@ license.setLicense("path/to/your/license.lic");
 
 ### 1. 리소스 관리
 
-자동 정리를 위해 항상 try‑with‑resources를 사용하세요:
+`Comparer`와 관련 스트림을 자동으로 정리하려면 항상 try‑with‑resources를 사용하십시오:
 
 ```java
 // Good - resources cleaned up automatically
@@ -327,7 +345,7 @@ IDocumentInfo info = comparer.getSource().getDocumentInfo();
 
 ### 2. 오류 처리 전략
 
-포괄적인 오류 처리를 구현하세요:
+메타데이터 추출을 하나의 `try` 블록으로 감싸고 상세 오류 정보를 로그에 기록하십시오. 이렇게 하면 문제 해결이 쉬워지고 애플리케이션이 예기치 않게 중단되는 것을 방지할 수 있습니다.
 
 ```java
 public DocumentInfo extractSafely(String filePath) {
@@ -348,7 +366,7 @@ public DocumentInfo extractSafely(String filePath) {
 
 ### 3. 성능 최적화
 
-여러 파일을 처리할 때는 배치 처리를 고려하세요:
+배치를 처리할 때는 스레드‑로컬 `ComparerFactory`를 재사용하여 객체 생성을 반복하지 않도록 하고, 동시 스레드 수를 CPU 코어 수로 제한하여 처리량을 극대화하십시오.
 
 ```java
 public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
@@ -359,96 +377,93 @@ public List<DocumentInfo> processDocumentBatch(List<String> filePaths) {
 }
 ```
 
-## 언제 이 방법을 사용하고 다른 접근법을 선택할지
+## 이 방법을 사용할 때와 다른 접근 방식
 
-**GroupDocs.Comparison을 사용할 때:**  
-- 다양한 Office 형식에서 신뢰할 수 있는 메타데이터 추출이 필요할 때.  
-- 나중에 문서 비교 기능이 필요할 수도 있을 때.  
-- 정확한 페이지 카운팅이 필요한 복잡한 문서를 다룰 때.
+**GroupDocs.Comparison을 사용할 경우:**  
+- 다양한 Office 및 이미지 형식에 대해 신뢰할 수 있는 메타데이터 추출이 필요할 때.  
+- 이후에 문서 비교 기능이 필요할 것으로 예상될 때, 동일한 `Comparer` 클래스로 두 기능을 모두 지원하기 때문입니다.  
+- 문서가 100페이지를 초과하고 렌더링 없이 정확한 페이지 수가 필요할 때.
 
-**다른 방법을 고려할 때:**  
-- 기본 파일 정보만 필요할 경우(`java.nio.file.Files`를 사용해 크기와 날짜를 확인).  
-- 간단한 텍스트 파일을 다룰 경우(내장 Java API만으로 충분).  
-- 예산이 큰 제약인 경우(오픈소스 대안을 먼저 검토).
+**대안을 고려할 경우:**  
+- 파일 크기나 확장자 확인만 필요할 경우—`java.nio.file.Files.probeContentType`와 `Files.size`이면 충분합니다.  
+- 예산 제한으로 상용 라이선스를 구매할 수 없을 때—Apache Tika와 같은 오픈소스 라이브러리는 기본 메타데이터를 제공하지만 GroupDocs만큼 포괄적인 형식 지원은 없습니다.
 
 ## 문제 해결 가이드
 
-### 이슈: 코드가 컴파일되지만 런타임 예외 발생
+### 문제: 코드가 컴파일되지만 런타임 예외 발생
 
-**다음 항목을 확인하세요:**  
-1. 라이선스가 올바르게 구성되었나요?  
-2. 올바른 파일 경로를 사용하고 있나요?  
-3. 파일에 대한 읽기 권한이 있나요?  
-4. 파일 형식이 실제로 지원되나요?
+**다음 항목을 확인하십시오:**  
+1. 라이선스가 올바르게 적용되었나요?  
+2. 절대 경로나 클래스패스 리소스를 사용하고 있나요?  
+3. 프로세스에 파일에 대한 읽기 권한이 있나요?  
+4. 파일 형식이 지원 형식 표에 나열되어 있나요?
 
-### 이슈: 메모리 사용량이 계속 증가
+### 문제: 메모리 사용량이 계속 증가
 
 **해결책:**  
-1. try‑with‑resources를 사용하고 있는지 확인하세요.  
-2. 여러 파일을 동시에 로드하지 말고 하나씩 처리하세요.  
-3. 객체를 유지하고 있는 정적 참조가 있는지 확인하세요.
+1. 모든 `Comparer`를 try‑with‑resources 블록 안에서 생성했는지 확인하십시오.  
+2. 파일을 한 번에 많이 로드하지 말고 순차적으로 처리하십시오.  
+3. JVM 힙을 늘리는 것은 절대 필요할 때만 하고, 스트리밍 API를 우선 사용하십시오.
 
-### 이슈: 일부 메타데이터 필드가 null 반환
+### 문제: 일부 메타데이터 필드가 null 반환
 
-**다음 경우에 정상입니다:**  
-- 해당 유형의 메타데이터가 없는 파일.  
-- 손상되었거나 불완전한 파일.  
-- 지원되지 않는 파일 형식 변형.  
-
-메타데이터를 사용하기 전에 항상 null 값을 확인하세요.
+요청된 속성이 없는 파일(예: 일반 텍스트 파일은 페이지 수가 없음)에서는 정상적인 현상입니다. 값을 사용하기 전에 항상 null 체크를 수행하십시오.
 
 ## 결론 및 다음 단계
 
-이제 GroupDocs.Comparison for Java를 사용하여 문서 메타데이터를 추출하는 탄탄한 기반을 갖추었습니다! 다음 내용을 다루었습니다:
+이제 GroupDocs.Comparison for Java를 사용하여 **java pdf page count**, 파일 유형 및 크기 등 문서 메타데이터를 추출하기 위한 탄탄한 기반을 갖추었습니다. 라이브러리 설정, 핵심 속성 조회, 일반적인 함정 처리 및 프로덕션 수준 모범 사례 적용 방법을 배웠습니다.
 
-✅ 라이브러리 및 의존성 올바르게 설정  
-✅ **java get file type** 및 **java read file size**, **java get page count**와 같은 주요 문서 속성  
-✅ 일반적인 오류 및 엣지 케이스 처리  
-✅ 프로덕션 환경을 위한 모범 사례  
-✅ 일반적인 문제에 대한 문제 해결 가이드
+### 다음 단계는?
 
-### 다음은?
+- 버전 간 변경 사항을 감지하기 위해 **document comparison** API를 살펴보세요.  
+- 메타데이터 추출을 **Spring Boot** REST 서비스에 통합하여 온‑디맨드 분석을 제공하십시오.  
+- 대용량 작업을 위해 큐 시스템(예: RabbitMQ)과 함께 **batch processing**을 구현하십시오.  
+- 회사 고유 메타데이터가 필요할 경우 Office 파일에 대한 **custom property extraction**을 탐구하십시오.
 
-메타데이터 추출을 마스터했으니 다음을 탐색해 보세요:  
-
-- 변경 사항 추적을 위한 **Document comparison features**.  
-- 웹 애플리케이션을 위한 **Integration with Spring Boot**.  
-- 여러 파일을 효율적으로 처리하는 **Batch processing**.  
-- **java extract pdf metadata**를 포함한 특정 파일 유형에 대한 **Custom metadata extraction**.
-
-더 깊이 파고들고 싶나요? 고급 기능과 예제가 포함된 [official GroupDocs documentation](https://docs.groupdocs.com/comparison/java/)을 확인하세요.
+보다 자세한 내용은 [official GroupDocs documentation](https://docs.groupdocs.com/comparison/java/)와 전체 API 레퍼런스를 확인하십시오.
 
 ## 자주 묻는 질문
 
 **Q: 암호로 보호된 문서에서 메타데이터를 추출할 수 있나요?**  
-A: 예, `Comparer` 객체를 초기화할 때 비밀번호를 제공해야 합니다. 로드 옵션을 받는 오버로드된 생성자를 사용하세요.
+A: 예, `Comparer` 인스턴스를 생성할 때 `LoadOptions`를 통해 비밀번호를 제공하면 됩니다.
 
-**Q: 메타데이터 추출이 지원되는 파일 형식은 무엇인가요?**  
-A: GroupDocs.Comparison은 DOCX, PDF, XLSX, PPTX, TXT, RTF 등 대부분의 일반 문서 형식을 지원합니다. 전체 목록은 문서를 확인하세요.
+**Q: 메타데이터 추출을 지원하는 파일 형식은 무엇인가요?**  
+A: GroupDocs.Comparison은 DOCX, PDF, XLSX, PPTX, TXT, RTF, HTML 및 다양한 이미지 형식을 포함한 50개 이상의 형식을 지원합니다.
 
 **Q: Office 문서에서 사용자 정의 속성을 추출할 방법이 있나요?**  
-A: 기본 문서 정보는 주로 표준 속성을 다룹니다. 사용자 정의 속성은 추가 GroupDocs 라이브러리를 탐색하거나 다른 도구와 결합해야 할 수 있습니다.
+A: 표준 `DocumentInfo`는 기본 속성을 포함합니다; 사용자 정의 속성을 추출하려면 GroupDocs와 Office Open XML SDK 또는 유사한 라이브러리를 결합해야 합니다.
 
 **Q: 메모리 부족 없이 매우 큰 파일을 처리하려면 어떻게 해야 하나요?**  
-A: 항상 try‑with‑resources를 사용하고, 파일을 개별적으로 처리하며, 배치 처리 시 스트리밍 방식을 고려하세요. 또한 JVM에 충분한 힙 공간이 있는지 확인하세요.
+A: try‑with‑resources를 사용하고 파일을 하나씩 처리하며 충분한 JVM 힙을 할당하십시오(예: `-Xmx2g`). 라이브러리는 대용량 파일을 스트리밍하므로 전체 문서를 메모리에 로드할 필요가 거의 없습니다.
 
 **Q: 클라우드 스토리지에 저장된 문서에서도 사용할 수 있나요?**  
-A: 예, 먼저 파일을 로컬에 다운로드하거나 스트림 기반 접근 방식을 사용해야 합니다. GroupDocs는 로컬 파일 및 스트림을 지원합니다.
+A: 예, 파일을 임시 로컬 경로에 다운로드하거나 `ByteArrayInputStream`으로 직접 스트리밍한 뒤 `Comparer`에 전달하면 됩니다.
 
 **Q: 라이선스 오류가 발생하면 어떻게 해야 하나요?**  
-A: 애플리케이션 시작 시 라이선스를 올바르게 적용했는지, 라이선스가 만료되지 않았는지 확인하세요. 문제가 지속되면 GroupDocs 지원팀에 문의하세요.
+A: 라이선스 파일 경로가 정확한지, 라이선스 버전이 라이브러리 버전과 일치하는지, 라이선스가 만료되지 않았는지 확인하십시오. 문제가 지속되면 GroupDocs 지원팀에 문의하십시오.
 
 **Q: 멀티스레드 애플리케이션에서 사용해도 안전한가요?**  
-A: 예, 스레드당 별도의 `Comparer` 인스턴스를 생성하세요. 인스턴스를 스레드 간에 공유하지 마세요.
+A: 각 스레드가 자체 `Comparer` 인스턴스를 생성하는 한 전혀 문제 없습니다. 단일 인스턴스를 여러 스레드가 공유하지 마십시오.
 
-**추가 리소스**  
+**추가 자료**  
 - **Documentation**: [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
-- **Community Support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
-- **Free Trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
+- **API reference**: [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Community support**: [GroupDocs Forum](https://forum.groupdocs.com/c/comparison)  
+- **Free trial**: [Download and Test](https://releases.groupdocs.com/comparison/java/)
 
----  
+---
 
-**Last Updated:** 2026-03-24  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs
+**마지막 업데이트:** 2026-08-25  
+**테스트 환경:** GroupDocs.Comparison 25.2  
+**작성자:** GroupDocs
+
+## 관련 튜토리얼
+
+- [Java 파일 유형 가져오기 – GroupDocs로 문서 메타데이터 추출](/comparison/java/document-information/groupdocs-comparison-java-document-extraction/)
+- [Java에서 GroupDocs.Comparison으로 문서 메타데이터 설정](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
+- [Java에서 GroupDocs Comparison으로 사용자 정의 메타데이터 설정](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

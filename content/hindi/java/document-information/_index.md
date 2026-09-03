@@ -1,95 +1,249 @@
 ---
 categories:
 - Java Development
-date: '2026-01-16'
-description: जावा और GroupDocs.Comparison का उपयोग करके दस्तावेज़ों से मेटाडेटा निकालना
-  सीखें। इसमें जावा द्वारा फ़ाइल आकार प्राप्त करना, पृष्ठ गिनती प्राप्त करना, और फ़ाइल
-  फ़ॉर्मेट निर्धारित करना शामिल है।
-keywords: how to extract metadata, java get file size, java get page count, how to
-  get metadata, java get document properties, java determine file format, GroupDocs
-  Java tutorial, document information API Java
-lastmod: '2026-01-16'
-linktitle: Document Information Tutorials
+date: '2026-08-25'
+description: Java और GroupDocs.Comparison का उपयोग करके दस्तावेज़ों से metadata निकालना
+  सीखें। इसमें java get file size, java get page count, और java determine file format
+  शामिल हैं।
+keywords:
+- how to extract metadata
+- java get file size
+- java determine file format
+- groupdocs comparison java
+- java get document format
+- java get page count
+lastmod: '2026-08-25'
+linktitle: दस्तावेज़ जानकारी ट्यूटोरियल्स
+og_description: Java के साथ GroupDocs.Comparison का उपयोग करके दस्तावेज़ों से metadata
+  निकालना। file size, page count, और format को तेज़ और विश्वसनीय तरीके से प्राप्त
+  करना सीखें।
+og_image_alt: Guide showing Java code extracting file size, page count, and format
+  with GroupDocs.Comparison
+og_title: Java का उपयोग करके दस्तावेज़ों से metadata निकालने का तरीका – GroupDocs
+  गाइड
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-25'
+  description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  headline: How to Extract Metadata from Documents Using Java
+  type: TechArticle
+- description: Learn how to extract metadata from documents using Java and GroupDocs.Comparison.
+    Includes java get file size, java get page count, and java determine file format.
+  name: How to Extract Metadata from Documents Using Java
+  steps:
+  - name: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+    text: '**Format verification** – Ensure the uploaded file matches one of the allowed
+      formats (PDF, DOCX, etc.).'
+  - name: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+    text: '**Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect
+      your server from overload.'
+  - name: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+    text: '**Page‑count limits** – Reject excessively long documents (e.g., > 500
+      pages) that could cause performance bottlenecks.'
+  type: HowTo
+- questions:
+  - answer: Yes, provide the password when initializing the document object; GroupDocs.Comparison
+      decrypts the file and then returns metadata.
+    question: Can I extract metadata from password‑protected documents?
+  - answer: Always check for `null` values; if a property is missing, fall back to
+      a sensible default or notify the user that the information is unavailable.
+    question: How do I handle documents that don’t have metadata?
+  - answer: The operation reads only the file header, typically completing in under
+      10 ms for documents up to 200 MB, making it negligible compared to full content
+      parsing.
+    question: What’s the performance impact of metadata extraction?
+  - answer: GroupDocs.Comparison focuses on comparison and information extraction.
+      For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion
+      or a dedicated editor.
+    question: Can I modify document metadata using GroupDocs.Comparison?
+  - answer: Use the `SupportedFormats` API to retrieve the current list of formats
+      at runtime; this keeps your validation logic up‑to‑date with library releases.
+    question: How do I ensure my application handles all supported formats correctly?
+  type: FAQPage
 tags:
 - java
-- document-processing
-- metadata
+- metadata extraction
 - groupdocs
-- api-tutorial
-title: जावा का उपयोग करके दस्तावेज़ों से मेटाडेटा कैसे निकालें
+- document processing
+- document information
+title: Java का उपयोग करके दस्तावेज़ों से metadata निकालने का तरीका
 type: docs
 url: /hi/java/document-information/
 weight: 6
 ---
 
-# जावा का उपयोग करके दस्तावेज़ों से मेटाडेटा निकालना कैसे
+# जावा का उपयोग करके दस्तावेज़ों से मेटाडाटा निकालना कैसे
 
-क्या आपको कभी अपने जावा एप्लिकेशन में प्रोग्रामेटिक रूप से दस्तावेज़ों से **मेटाडेटा निकालने का तरीका** चाहिए था? चाहे आप एक दस्तावेज़ प्रबंधन प्रणाली बना रहे हों, फ़ाइल वैधता लागू कर रहे हों, या स्वचालित कार्यप्रवाह बना रहे हों, फ़ाइल आकार, पृष्ठ गिनती, और फ़ॉर्मेट जानकारी निकालना आपके विकास प्रयास के अनगिनत घंटे बचा सकता है। इस गाइड में हम GroupDocs.Comparison for Java के साथ दस्तावेज़ मेटाडेटा को कुशलतापूर्वक प्राप्त करने के सभी आवश्यक पहलुओं को समझेंगे।
+जब आपको जावा एप्लिकेशन में प्रोग्रामेटिक रूप से **मेटाडाटा निकालना** दस्तावेज़ों से चाहिए, तो आप एक ऐसा समाधान चाहते हैं जो तेज़, भरोसेमंद और एकीकृत करने में आसान हो। चाहे आप दस्तावेज़‑प्रबंधन प्रणाली बना रहे हों, अपलोड्स को वैध कर रहे हों, या ऐसी वर्कफ़्लो को स्वचालित कर रहे हों जो फ़ाइलों को उनके गुणों के आधार पर रूट करती है, फ़ाइल का आकार, पृष्ठ संख्या और फ़ॉर्मेट पहले से जानना विकास के घंटों को बचाता है और महंगे रन‑टाइम त्रुटियों को रोकता है। इस गाइड में हम GroupDocs.Comparison for Java के साथ दस्तावेज़ मेटाडाटा को कुशलतापूर्वक प्राप्त करने के लिए आवश्यक सभी चरणों को समझेंगे, और साथ ही सर्वोत्तम‑प्रैक्टिस पैटर्न पर चर्चा करेंगे जो आपका कोड साफ़ और प्रदर्शन‑उपयुक्त रखता है।
 
 ## त्वरित उत्तर
-- **मेटाडेटा निष्कर्षण का मुख्य उद्देश्य क्या है?** पूर्ण सामग्री लोड किए बिना फ़ाइल गुण (आकार, फ़ॉर्मेट, पृष्ठ गिनती) को जल्दी प्राप्त करना।  
-- **जावा मेटाडेटा निष्कर्षण को कौन सी लाइब्रेरी समर्थन करती है?** GroupDocs.Comparison for Java।  
-- **जावा में फ़ाइल आकार कैसे प्राप्त करें?** दस्तावेज़ लोड करने के बाद `DocumentInfo.getSize()` मेथड का उपयोग करें।  
-- **क्या मैं प्रोग्रामेटिक रूप से दस्तावेज़ फ़ॉर्मेट निर्धारित कर सकता हूँ?** हाँ, फ़ॉर्मेट प्राप्त करने के लिए `DocumentInfo.getFileType()` कॉल करें।  
-- **क्या बड़े फ़ाइलों के लिए मेटाडेटा निष्कर्षण सुरक्षित है?** यह हल्का है; बहुत बड़े फ़ाइलों के लिए स्ट्रीमिंग और कैशिंग रणनीतियों पर विचार करें।
+- **What is the primary purpose of metadata extraction?** To obtain file properties (size, format, page count) without loading full content, enabling fast validation and routing.  
+- **Which library supports Java metadata extraction?** GroupDocs.Comparison for Java provides a dedicated `DocumentInfo` API for this purpose.  
+- **How can I get the file size in Java?** Call `DocumentInfo.getSize()` after loading the document; the method returns the size in bytes.  
+- **Can I determine the document format programmatically?** Yes—use `DocumentInfo.getFileType()` to retrieve the detected format such as PDF or DOCX.  
+- **Is metadata extraction safe for large files?** It is lightweight; for very large files you can combine streaming with caching to keep memory usage low.
 
-## मेटाडेटा निष्कर्षण क्या है?
-मेटाडेटा निष्कर्षण वह प्रक्रिया है जिसमें दस्तावेज़ की अंतर्निहित गुणों—जैसे फ़ाइल प्रकार, आकार, पृष्ठ गिनती, लेखक, और निर्माण तिथि—को पूरी सामग्री को पार्स किए बिना पढ़ा जाता है। यह हल्का ऑपरेशन एंटरप्राइज़ एप्लिकेशनों में तेज़ वैधता, अनुक्रमण, और रूटिंग निर्णयों को सक्षम बनाता है।
+## मेटाडाटा निष्कर्षण क्या है?
+Metadata extraction reads the built‑in properties of a document—such as its type, size, page count, author, and creation date—without loading the full content. By accessing only the file header, the operation remains fast and resource‑efficient, enabling applications to validate, index, or route files based on these attributes before any heavy processing occurs.
 
-## जावा एप्लिकेशनों में दस्तावेज़ मेटाडेटा क्यों महत्वपूर्ण है
-दस्तावेज़ मेटाडेटा निष्कर्षण केवल एक अतिरिक्त सुविधा नहीं है—यह अक्सर पेशेवर‑स्तर के एप्लिकेशनों को बनाने के लिए महत्वपूर्ण होता है। यहाँ कारण हैं कि डेवलपर्स को लगातार इन क्षमताओं की आवश्यकता क्यों होती है:
-- **फ़ाइल वैधता और सुरक्षा** – पूर्ण प्रोसेसिंग से पहले फ़ॉर्मेट और अखंडता की पुष्टि करें।  
-- **स्टोरेज अनुकूलन** – आकार और पृष्ठ गिनती का उपयोग करके स्टोरेज और संसाधनों को समझदारी से आवंटित करें।  
-- **उपयोगकर्ता अनुभव सुधार** – अंतिम उपयोगकर्ताओं को सटीक फ़ाइल जानकारी (फ़ॉर्मेट, आकार, निर्माण तिथि) दिखाएँ।  
-- **वर्कफ़्लो स्वचालन** – उनकी गुणों के आधार पर दस्तावेज़ों को स्वचालित रूप से रूट करें।
+## जावा अनुप्रयोगों में दस्तावेज़ मेटाडाटा क्यों महत्वपूर्ण है
+Understanding document metadata is essential for building reliable Java applications because it allows early validation, efficient resource allocation, and improved user experience. By knowing a file’s size, format, and page count upfront, developers can enforce security policies, prevent performance bottlenecks, and present accurate information to users, ultimately reducing errors and support costs.
 
 ## जावा में फ़ाइल आकार कैसे प्राप्त करें
-GroupDocs.Comparison `DocumentInfo` ऑब्जेक्ट के माध्यम से फ़ाइल आकार को उजागर करता है। दस्तावेज़ लोड करने के बाद, `getSize()` कॉल करके आकार बाइट्स में प्राप्त करें, फिर आवश्यकता अनुसार KB/MB में परिवर्तित करें।
+DocumentInfo is the GroupDocs.Comparison class that provides metadata about a loaded document, such as size, page count, and format.  
 
-## जावा में पृष्ठ गिनती कैसे प्राप्त करें
-इसी प्रकार, `DocumentInfo.getPageCount()` पृष्ठों की संख्या लौटाता है। यह पेजिनेशन, प्रगति ट्रैकिंग, या प्रोसेसिंग समय का अनुमान लगाने में उपयोगी है।
+Load the document with the `Comparison` API, then call `getSize()` to retrieve the size in bytes. The method is O(1) because it reads the file header only, so even multi‑hundred‑page PDFs are processed instantly.
+
+## जावा में पृष्ठ गणना कैसे प्राप्त करें
+DocumentInfo also exposes the total number of pages via `getPageCount()`.  
+
+Calling this method returns an integer representing the document’s page count, which you can use for pagination UI, progress bars, or to decide whether to split a large file into smaller chunks before further processing.
 
 ## जावा में फ़ाइल फ़ॉर्मेट कैसे निर्धारित करें
-`DocumentInfo.getFileType()` का उपयोग करके पता लगाए गए फ़ॉर्मेट (जैसे PDF, DOCX) प्राप्त करें। यह आपको फ़ॉर्मेट‑विशिष्ट लॉजिक लागू करने या उपयोगकर्ताओं को मित्रवत नाम दिखाने में मदद करता है।
+DocumentInfo’s `getFileType()` method detects the format by inspecting the file signature rather than the extension, ensuring reliable identification even when files are misnamed.  
+
+The method returns a `FileType` enum (e.g., `FileType.PDF`, `FileType.DOCX`) that you can compare against a whitelist of supported formats.
 
 ## जावा में दस्तावेज़ गुण कैसे प्राप्त करें
-आकार और पृष्ठ गिनती के अलावा, आप `getAuthor()`, `getCreatedTime()`, और `getCustomProperties()` जैसे मेथड्स के माध्यम से लेखक, निर्माण तिथि, और कस्टम गुणों तक पहुंच सकते हैं।
+Beyond size, page count, and format, DocumentInfo provides access to additional properties:
 
-## सामान्य उपयोग केस और कार्यान्वयन रणनीतियाँ
+- `getAuthor()` – returns the author name if present.  
+- `getCreatedTime()` – returns the creation timestamp in UTC.  
+- `getCustomProperties()` – returns a map of any custom key/value pairs embedded in the document.
 
-### दस्तावेज़ अपलोड वैधता
-जब उपयोगकर्ता फ़ाइलें अपलोड करते हैं, तो आपको प्रोसेसिंग से पहले उन्हें वैधता जांचनी होगी:
-- **फ़ॉर्मेट सत्यापन** – सुनिश्चित करें कि अपलोड की गई फ़ाइलें अपेक्षित प्रकारों (PDF, DOCX, आदि) से मेल खाती हैं।  
-- **आकार प्रतिबंध** – प्रोसेसिंग संसाधनों को आवंटित करने से पहले फ़ाइल आकार जांचें।  
-- **सामग्री विश्लेषण** – पेजिनेशन या प्रोसेसिंग अनुमान के लिए पृष्ठ गिनती निर्धारित करें।
+These properties are useful for compliance audits, version tracking, and displaying rich file details in UI dashboards.
+
+## सामान्य उपयोग मामलों और कार्यान्वयन रणनीतियाँ
+
+### दस्तावेज़ अपलोड सत्यापन
+When users upload files, you’ll want to validate them before committing them to storage or a processing pipeline:
+
+1. **Format verification** – Ensure the uploaded file matches one of the allowed formats (PDF, DOCX, etc.).  
+2. **Size constraints** – Enforce maximum size limits (e.g., 25 MB) to protect your server from overload.  
+3. **Page‑count limits** – Reject excessively long documents (e.g., > 500 pages) that could cause performance bottlenecks.
 
 ### स्वचालित दस्तावेज़ वर्गीकरण
-एंटरप्राइज़ एप्लिकेशनों को अक्सर दस्तावेज़ों को स्वचालित रूप से वर्गीकृत करने की आवश्यकता होती है:
-- **फ़ॉर्मेट‑आधारित रूटिंग** – विभिन्न फ़ाइल प्रकारों को उपयुक्त पाइपलाइन में निर्देशित करें।  
-- **मेटाडेटा‑आधारित निर्णय** – गुणों का उपयोग करके प्रोसेसिंग प्राथमिकता सेट करें।  
-- **अनुपालन जांच** – सुनिश्चित करें कि दस्तावेज़ संगठनात्मक मानकों को पूरा करते हैं।
+Enterprises often need to categorize incoming files automatically:
+
+- **Format‑based routing** – Send PDFs to a text‑extraction service, DOCX files to a Word‑specific parser, and images to an OCR pipeline.  
+- **Metadata‑driven priority** – Prioritize small, low‑page‑count files for quick turnaround, while queuing larger files for batch processing.  
+- **Compliance checking** – Verify that mandatory metadata (author, creation date) is present before the document is archived.
 
 ### प्रदर्शन अनुकूलन
-स्मार्ट एप्लिकेशन मेटाडेटा का उपयोग करके प्रोसेसिंग को अनुकूलित करते हैं:
-- **संसाधन आवंटन** – दस्तावेज़ जटिलता के आधार पर शक्ति आवंटित करें।  
-- **कैशिंग रणनीतियाँ** – अक्सर एक्सेस किए जाने वाले मेटाडेटा को कैश करें।  
-- **बैच प्रोसेसिंग** – समान दस्तावेज़ों को समूहित करके कुशल हैंडलिंग करें।
+Smart applications use metadata to keep resource usage low:
+
+- **Caching strategy** – Store extracted metadata in a fast cache (e.g., Redis) keyed by file hash; invalidate the cache when the file changes.  
+- **Batch processing** – When processing a folder of documents, extract metadata for all files first, then schedule heavy‑weight operations only for those that meet your criteria.  
+- **Parallel extraction** – Use Java’s `ForkJoinPool` to extract metadata from multiple files concurrently, respecting CPU core count to avoid contention.
 
 ## उपलब्ध ट्यूटोरियल
-हमारे दस्तावेज़ जानकारी ट्यूटोरियल GroupDocs.Comparison का उपयोग करके जावा में दस्तावेज़ मेटाडेटा तक पहुंचने के लिए व्यावहारिक मार्गदर्शन प्रदान करते हैं। ये हैंड‑ऑन गाइड दिखाते हैं कि स्रोत, लक्ष्य, और परिणाम दस्तावेज़ों की जानकारी कैसे प्राप्त करें, फ़ाइल फ़ॉर्मेट निर्धारित करें, और वास्तविक कार्यशील उदाहरणों के साथ प्रोग्रामेटिक रूप से दस्तावेज़ गुणों तक पहुंचें।
+Our document information tutorials provide practical guidance for accessing document metadata using GroupDocs.Comparison in Java. These hands‑on guides show you how to retrieve information about source, target, and result documents, determine file formats, and access document properties programmatically with real working examples.
 
-### [GroupDocs.Comparison for Java का उपयोग करके दस्तावेज़ मेटाडेटा निकालना: एक व्यापक गाइड](./extract-document-info-groupdocs-comparison-java/)
-GroupDocs.Comparison for Java का उपयोग करके फ़ाइल प्रकार, पृष्ठ गिनती, और आकार जैसे दस्तावेज़ मेटाडेटा को कुशलतापूर्वक निकालना सीखें। यह विस्तृत गाइड मेटाडेटा‑आधारित निर्णयों के साथ आपके दस्तावेज़ प्रोसेसिंग वर्कफ़्लो को सुधारने के लिए व्यावहारिक उदाहरण शामिल करता है।
+### [GroupDocs.Comparison for Java का उपयोग करके दस्तावेज़ मेटाडाटा निकालना: एक व्यापक गाइड](./extract-document-info-groupdocs-comparison-java/)
+Learn how to efficiently extract document metadata like file type, page count, and size using GroupDocs.Comparison for Java. This detailed guide includes practical examples for enhancing your document processing workflow with metadata‑driven decisions.
 
-### [जावा में GroupDocs के साथ दस्तावेज़ मेटाडेटा निष्कर्षण में महारत हासिल करें](./groupdocs-comparison-java-document-extraction/)
-जावा में GroupDocs.Comparison का उपयोग करके दस्तावेज़ मेटाडेटा निकालने की उन्नत तकनीकों की खोज करें। यह ट्यूटोरियल वर्कफ़्लो को सुव्यवस्थित करने और फ़ाइल प्रकार, पृष्ठ गिनती, और आकार को प्रोग्रामेटिक रूप से एक्सेस करके डेटा विश्लेषण को सुधारने के लिए प्रदर्शन अनुकूलन टिप्स प्रदान करता है।
+### [GroupDocs के साथ जावा में दस्तावेज़ मेटाडाटा निष्कर्षण में महारत](./groupdocs-comparison-java-document-extraction/)
+Discover advanced techniques for extracting document metadata using GroupDocs.Comparison in Java. This tutorial covers streamlining workflows and enhancing data analysis by programmatically accessing file types, page counts, and sizes with performance optimization tips.
 
-### [GroupDocs.Comparison for Java के साथ समर्थित फ़ाइल फ़ॉर्मेट प्राप्त करें: एक व्यापक गाइड](./groupdocs-comparison-java-supported-formats/)
-GroupDocs.Comparison for Java का उपयोग करके समर्थित फ़ाइल फ़ॉर्मेट प्राप्त करने की कला में निपुण बनें। यह चरण‑दर‑चरण ट्यूटोरियल दिखाता है कि कैसे प्रोग्रामेटिक रूप से फ़ॉर्मेट क्षमताओं की खोज करके और अधिक मजबूत एप्लिकेशन बनाकर अपने दस्तावेज़ प्रबंधन सिस्टम को सुधारें।
+### [GroupDocs.Comparison for Java के साथ समर्थित फ़ाइल फ़ॉर्मेट प्राप्त करना: एक व्यापक गाइड](./groupdocs-comparison-java-supported-formats/)
+Master the art of retrieving supported file formats using GroupDocs.Comparison for Java. This step‑by‑step tutorial shows you how to enhance your document management systems by programmatically discovering format capabilities and building more robust applications.
 
 ## दस्तावेज़ जानकारी निष्कर्षण के लिए सर्वोत्तम प्रथाएँ
 
-### Error Handling and Validation
+### त्रुटि संभालना और सत्यापन
+Validate file existence before attempting metadata extraction. Gracefully handle corrupted or password‑protected files. Implement timeout mechanisms for large file processing. Provide meaningful error messages to users so they can correct issues without contacting support.
+
+### प्रदर्शन अनुकूलन सुझाव
+**Caching strategy** – Since metadata rarely changes, implement intelligent caching:
+
+- Cache metadata for frequently accessed documents.  
+- Use file modification timestamps to invalidate stale entries.  
+- Consider in‑memory caching for recently processed documents.
+
+**Batch processing** – When dealing with multiple documents:
+
+- Process in batches to reduce overhead.  
+- Use parallel processing for independent metadata extraction tasks.  
+- Implement progress tracking for long‑running operations.
+
+**Resource management** – Dispose of document objects properly to prevent memory leaks. Monitor memory usage when processing large documents. Use connection pooling for remote document sources.
+
+## सामान्य समस्याओं का निवारण
+
+### फ़ाइल फ़ॉर्मेट पहचान समस्याएँ
+**Issue**: Application doesn't recognize certain file formats.  
+**Solution**: Verify the format is supported and check for file corruption. Use the supported formats tutorial to validate compatibility.
+
+### बड़े दस्तावेज़ों के साथ मेमोरी समस्याएँ
+**Issue**: `OutOfMemoryError` when processing large files.  
+**Solution**: Implement streaming approaches where possible and increase JVM heap size. Process metadata without loading the entire document content.
+
+### प्रदर्शन बाधाएँ
+**Issue**: Slow metadata extraction for multiple documents.  
+**Solution**: Implement parallel processing and caching strategies. Profile your application to identify specific bottlenecks.
+
+### अक्षर एन्कोडिंग समस्याएँ
+**Issue**: Incorrect metadata display for documents with special characters.  
+**Solution**: Ensure proper character encoding handling and validate locale settings in your application.
+
+## एंटरप्राइज़ अनुप्रयोगों के लिए एकीकरण रणनीतियाँ
+
+### माइक्रोसर्विस आर्किटेक्चर
+When building microservices, consider a dedicated document information service:
+
+- Centralized extraction reduces code duplication.  
+- Easier to scale based on processing load.  
+- Simplified maintenance and updates.
+
+### डेटाबेस एकीकरण
+Store extracted metadata for quick access:
+
+- Index commonly queried properties for fast retrieval.  
+- Implement change tracking for document updates.  
+- Consider NoSQL solutions for flexible metadata schemas.
+
+### API डिज़ाइन विचार
+If exposing document information via APIs:
+
+- Implement proper authentication and authorization.  
+- Use standard HTTP status codes for different scenarios.  
+- Provide comprehensive API documentation with examples.
+
+## अक्सर पूछे जाने वाले प्रश्न
+
+**Q: Can I extract metadata from password‑protected documents?**  
+A: Yes, provide the password when initializing the document object; GroupDocs.Comparison decrypts the file and then returns metadata.
+
+**Q: How do I handle documents that don’t have metadata?**  
+A: Always check for `null` values; if a property is missing, fall back to a sensible default or notify the user that the information is unavailable.
+
+**Q: What’s the performance impact of metadata extraction?**  
+A: The operation reads only the file header, typically completing in under 10 ms for documents up to 200 MB, making it negligible compared to full content parsing.
+
+**Q: Can I modify document metadata using GroupDocs.Comparison?**  
+A: GroupDocs.Comparison focuses on comparison and information extraction. For metadata modification you’ll need a format‑specific library such as GroupDocs.Conversion or a dedicated editor.
+
+**Q: How do I ensure my application handles all supported formats correctly?**  
+A: Use the `SupportedFormats` API to retrieve the current list of formats at runtime; this keeps your validation logic up‑to‑date with library releases.
+
+## अतिरिक्त संसाधन
+- [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)
+- [GroupDocs.Comparison for Java API Reference](https://reference.groupdocs.com/comparison/java/)
+- [Download GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)
+- [GroupDocs.Comparison Forum](https://forum.groupdocs.com/c/comparison)
+- [Free Support](https://forum.groupdocs.com/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+
+---
+
+**अंतिम अपडेट:** 2026-08-25  
+**परीक्षित संस्करण:** GroupDocs.Comparison for Java (latest release)  
+**लेखक:** GroupDocs
+
 ```java
 // Example pattern - don't modify this existing code structure
 try {
@@ -99,94 +253,8 @@ try {
 }
 ```
 
-**मुख्य विचार**
-- मेटाडेटा निष्कर्षण का प्रयास करने से पहले फ़ाइल अस्तित्व की पुष्टि करें।  
-- भ्रष्ट या पासवर्ड‑सुरक्षित फ़ाइलों को सहजता से संभालें।  
-- बड़े फ़ाइल प्रोसेसिंग के लिए टाइमआउट मैकेनिज़्म लागू करें।  
-- उपयोगकर्ताओं को सार्थक त्रुटि संदेश प्रदान करें।
+## संबंधित ट्यूटोरियल
 
-### Performance Optimization Tips
-
-**कैशिंग रणनीति** – चूंकि मेटाडेटा शायद ही बदलता है, बुद्धिमान कैशिंग लागू करें:
-- अक्सर एक्सेस किए जाने वाले दस्तावेज़ों के लिए मेटाडेटा को कैश करें।  
-- फ़ाइल संशोधन टाइमस्टैम्प का उपयोग करके पुरानी एंट्रीज़ को अमान्य करें।  
-- हाल ही में प्रोसेस किए गए दस्तावेज़ों के लिए इन‑मेमोरी कैशिंग पर विचार करें।
-
-**बैच प्रोसेसिंग** – कई दस्तावेज़ों से निपटते समय:
-- ओवरहेड कम करने के लिए बैच में प्रोसेस करें।  
-- स्वतंत्र मेटाडेटा निष्कर्षण कार्यों के लिए समानांतर प्रोसेसिंग का उपयोग करें।  
-- लंबी अवधि चलने वाले ऑपरेशनों के लिए प्रगति ट्रैकिंग लागू करें।
-
-**संसाधन प्रबंधन**
-- मेमोरी लीक रोकने के लिए दस्तावेज़ ऑब्जेक्ट्स को सही ढंग से डिस्पोज़ करें।  
-- बड़े दस्तावेज़ प्रोसेस करते समय मेमोरी उपयोग की निगरानी करें।  
-- रिमोट दस्तावेज़ स्रोतों के लिए कनेक्शन पूलिंग का उपयोग करें।
-
-## सामान्य समस्याओं का निवारण
-
-### फ़ाइल फ़ॉर्मेट पहचान समस्याएँ
-**समस्या**: एप्लिकेशन कुछ फ़ाइल फ़ॉर्मेट को पहचान नहीं रहा है।  
-**समाधान**: जांचें कि फ़ॉर्मेट समर्थित है और फ़ाइल भ्रष्ट नहीं है। संगतता सत्यापित करने के लिए समर्थित फ़ॉर्मेट ट्यूटोरियल का उपयोग करें।
-
-### बड़े दस्तावेज़ों में मेमोरी समस्याएँ
-**समस्या**: बड़े फ़ाइलों को प्रोसेस करते समय `OutOfMemoryError`।  
-**समाधान**: जहाँ संभव हो स्ट्रीमिंग दृष्टिकोण लागू करें और JVM हीप आकार बढ़ाएँ। पूरी दस्तावेज़ सामग्री लोड किए बिना मेटाडेटा प्रोसेस करें।
-
-### प्रदर्शन बाधाएँ
-**समस्या**: कई दस्तावेज़ों के लिए मेटाडेटा निष्कर्षण धीमा है।  
-**समाधान**: समानांतर प्रोसेसिंग और कैशिंग रणनीतियों को लागू करें। विशिष्ट बाधाओं की पहचान के लिए अपने एप्लिकेशन का प्रोफ़ाइल बनाएं।
-
-### कैरेक्टर एन्कोडिंग समस्याएँ
-**समस्या**: विशेष अक्षरों वाले दस्तावेज़ों के लिए मेटाडेटा प्रदर्शित करने में त्रुटि।  
-**समाधान**: उचित कैरेक्टर एन्कोडिंग हैंडलिंग सुनिश्चित करें और अपने एप्लिकेशन में लोकेल सेटिंग्स को सत्यापित करें।
-
-## एंटरप्राइज़ एप्लिकेशनों के लिए एकीकरण रणनीतियाँ
-
-### माइक्रोसर्विसेज आर्किटेक्चर
-माइक्रोसर्विसेज बनाते समय, एक समर्पित दस्तावेज़ जानकारी सेवा पर विचार करें:
-- केंद्रीकृत निष्कर्षण कोड डुप्लिकेशन को कम करता है।  
-- प्रोसेसिंग लोड के आधार पर स्केल करना आसान है।  
-- रखरखाव और अपडेट सरल होते हैं।
-
-### डेटाबेस एकीकरण
-त्वरित एक्सेस के लिए निकाला गया मेटाडेटा स्टोर करें:
-- तेज़ पुनर्प्राप्ति के लिए सामान्यतः क्वेरी किए गए गुणों को इंडेक्स करें।  
-- दस्तावेज़ अपडेट के लिए परिवर्तन ट्रैकिंग लागू करें।  
-- लचीले मेटाडेटा स्कीमा के लिए NoSQL समाधान पर विचार करें।
-
-### API डिज़ाइन विचार
-यदि APIs के माध्यम से दस्तावेज़ जानकारी प्रदान कर रहे हैं:
-- उचित प्रमाणीकरण और प्राधिकरण लागू करें।  
-- विभिन्न परिदृश्यों के लिए मानक HTTP स्टेटस कोड का उपयोग करें।  
-- उदाहरणों के साथ व्यापक API दस्तावेज़ प्रदान करें।
-
-## अक्सर पूछे जाने वाले प्रश्न
-
-### क्या मैं पासवर्ड‑सुरक्षित दस्तावेज़ों से मेटाडेटा निकाल सकता हूँ?
-हाँ, लेकिन दस्तावेज़ ऑब्जेक्ट को इनिशियलाइज़ करते समय आपको पासवर्ड प्रदान करना होगा। GroupDocs.Comparison विभिन्न फ़ॉर्मेट में पासवर्ड‑सुरक्षित फ़ाइलों का समर्थन करता है।
-
-### मैं उन दस्तावेज़ों को कैसे संभालूँ जिनमें मेटाडेटा नहीं है?
-कुछ फ़ॉर्मेट में सीमित या कोई मेटाडेटा नहीं होता। हमेशा `null` मानों की जाँच करें और अनुपलब्ध जानकारी के लिए समझदार डिफ़ॉल्ट या त्रुटि हैंडलिंग प्रदान करें।
-
-### मेटाडेटा निष्कर्षण का प्रदर्शन पर क्या प्रभाव पड़ता है?
-मेटाडेटा निष्कर्षण हल्का है क्योंकि यह पूरी सामग्री पार्सिंग से बचता है। बहुत बड़े फ़ाइलों या बैच जॉब्स के लिए, प्रतिक्रियाशीलता बनाए रखने के लिए कैशिंग और समानांतर प्रोसेसिंग पर विचार करें।
-
-### क्या मैं GroupDocs.Comparison का उपयोग करके दस्तावेज़ मेटाडेटा संशोधित कर सकता हूँ?
-GroupDocs.Comparison तुलना और जानकारी निष्कर्षण पर केंद्रित है। मेटाडेटा संशोधन के लिए, आपको प्रत्येक फ़ॉर्मेट के लिए उपयुक्त अतिरिक्त लाइब्रेरी की आवश्यकता हो सकती है।
-
-### मैं कैसे सुनिश्चित करूँ कि मेरा एप्लिकेशन सभी समर्थित फ़ॉर्मेट को सही ढंग से संभालता है?
-समर्थित फ़ॉर्मेट पुनर्प्राप्ति कार्यक्षमता का उपयोग करके रनटाइम पर उपलब्ध फ़ॉर्मेट को गतिशील रूप से खोजें। इससे आपका एप्लिकेशन लाइब्रेरी अपडेट और नए फ़ॉर्मेट समर्थन के साथ अद्यतित रहता है।
-
-## अतिरिक्त संसाधन
-- [GroupDocs.Comparison for Java दस्तावेज़ीकरण](https://docs.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison for Java API रेफ़रेंस](https://reference.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison for Java डाउनलोड करें](https://releases.groupdocs.com/comparison/java/)  
-- [GroupDocs.Comparison फ़ोरम](https://forum.groupdocs.com/c/comparison)  
-- [नि:शुल्क समर्थन](https://forum.groupdocs.com/)  
-- [अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/)  
-
----
-
-**अंतिम अपडेट:** 2026-01-16  
-**परीक्षित संस्करण:** GroupDocs.Comparison for Java (नवीनतम रिलीज़)  
-**लेखक:** GroupDocs
+- [जावा में GroupDocs.Comparison के साथ दस्तावेज़ मेटाडाटा सेट करें](/comparison/java/metadata-management/implement-metadata-groupdocs-comparison-java-guide/)
+- [GroupDocs Comparison के साथ जावा में कस्टम मेटाडाटा सेट करें](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
+- [GroupDocs Comparison जावा URL कॉन्फ़िगरेशन गाइड: लाइसेंस कैसे उपयोग करें](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)

@@ -1,133 +1,194 @@
 ---
 categories:
 - Java Development
-date: '2026-04-01'
-description: Kuasi cara mengatur metadata khusus Java menggunakan GroupDocs.Comparison.
-  Pelajari cara menambahkan properti khusus, mengonfigurasi kebijakan retensi, dan
-  menangani metadata dalam perbandingan dokumen.
+date: '2026-09-05'
+description: Pelajari cara mengatur properti khusus java dengan GroupDocs.Comparison,
+  menambahkan metadata khusus, mengonfigurasi retensi, dan menangani perbandingan
+  dokumen secara efisien.
 keywords:
-- set custom metadata java
-- document metadata java
+- custom properties java
 - metadata management java
-lastmod: '2026-04-01'
+- document comparison java
+- groupdocs comparison java
+lastmod: '2026-09-05'
 linktitle: Tutorial Manajemen Metadata
+og_description: Pelajari cara mengatur properti khusus java dengan GroupDocs.Comparison.
+  Panduan ini menunjukkan cara menambahkan, menggabungkan, dan mempertahankan metadata
+  dalam perbandingan dokumen Java.
+og_image_alt: Guide to setting custom properties java with GroupDocs.Comparison
+og_title: Cara mengatur properti khusus java menggunakan GroupDocs.Comparison
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-05'
+  description: Learn how to set custom properties java with GroupDocs.Comparison,
+    add custom metadata, configure retention, and handle document comparisons efficiently.
+  headline: How to set custom properties java using GroupDocs.Comparison
+  type: TechArticle
+- description: Learn how to set custom properties java with GroupDocs.Comparison,
+    add custom metadata, configure retention, and handle document comparisons efficiently.
+  name: How to set custom properties java using GroupDocs.Comparison
+  steps:
+  - name: Deciding which metadata fields to keep or discard.
+    text: Deciding which metadata fields to keep or discard.
+  - name: Merging conflicting values according to your business rules.
+    text: Merging conflicting values according to your business rules.
+  - name: Exposing the final set of properties in the comparison report so users can
+      see the full picture.
+    text: Exposing the final set of properties in the comparison report so users can
+      see the full picture.
+  type: HowTo
+- questions:
+  - answer: Yes, the library will still compare the content. However, if your UI relies
+      on metadata for audit trails, you should implement fallback logic (e.g., use
+      file creation dates).
+    question: Can I use GroupDocs.Comparison to compare documents that contain no
+      metadata?
+  - answer: Use the `DocumentProperty` API provided by GroupDocs.Comparison to create
+      a new property, assign a value, and then include the document in the comparison
+      workflow.
+    question: How do I add a custom metadata field to a DOCX file before comparison?
+  - answer: Absolutely—you can configure a metadata filter list that tells the comparison
+      engine which properties to ignore or retain.
+    question: Is it possible to exclude certain metadata properties from the comparison
+      results?
+  - answer: Processing extensive metadata can increase memory usage and CPU time.
+      Profile your implementation and consider loading only the required fields or
+      caching frequent lookups.
+    question: What performance impact should I expect when handling large metadata
+      sets?
+  - answer: While the library focuses on a single comparison operation, you can implement
+      versioning by storing metadata snapshots in a database and referencing them
+      across runs.
+    question: Does GroupDocs.Comparison support metadata versioning across multiple
+      comparison runs?
+  type: FAQPage
 tags:
 - metadata-management
 - document-comparison
 - java-tutorial
 - groupdocs
-title: Mengatur Metadata Kustom Java – Panduan Tutorial Lengkap
+title: Cara mengatur properti khusus java menggunakan GroupDocs.Comparison
 type: docs
-url: /id/java/metadata-management/
-weight: 8
 ---
 
-# Atur Custom Metadata Java – Panduan Tutorial Lengkap
+# Cara mengatur properti khusus java menggunakan GroupDocs.Comparison
 
-Saat Anda membangun solusi perbandingan dokumen di Java, **set custom metadata java** bukan hanya fitur yang menyenangkan—itu penting untuk mempertahankan konteks, data kepatuhan, dan informasi alur kerja antar versi. Dalam panduan ini kami akan menjelaskan mengapa metadata penting, konsep inti dalam mengelolanya dengan GroupDocs.Comparison, dan langkah praktis yang dapat Anda lakukan hari ini untuk menyematkan properti kustom langsung ke dalam pipeline perbandingan Anda.
+Saat Anda membangun solusi perbandingan dokumen dalam Java, **custom properties java** bukan hanya fitur yang menyenangkan—itu penting untuk mempertahankan konteks, data kepatuhan, dan informasi alur kerja di seluruh versi. Dalam panduan ini kami akan menjelaskan mengapa metadata penting, memperkenalkan konsep inti di balik pengelolaannya dengan GroupDocs.Comparison, dan memandu Anda melalui langkah‑praktis yang dapat Anda lakukan hari ini untuk menyematkan properti khusus langsung ke dalam pipeline perbandingan Anda.
 
 ## Jawaban Cepat
 - **Apa manfaat utama mengelola metadata?** Itu mempertahankan konteks penting—penulis, versi, dan detail bisnis—sehingga hasil perbandingan tetap bermakna.  
-- **Perpustakaan mana yang mendukung penanganan metadata di Java?** GroupDocs.Comparison untuk Java.  
+- **Perpustakaan mana yang mendukung penanganan metadata di Java?** GroupDocs.Comparison for Java.  
 - **Apakah saya memerlukan lisensi untuk penggunaan produksi?** Ya, lisensi GroupDocs.Comparison yang valid diperlukan.  
-- **Bisakah saya mengatur custom metadata di dokumen Java?** Tentu—Anda dapat mendefinisikan, membaca, dan menggabungkan properti kustom secara programatik.  
-- **Apakah pendekatan ini kompatibel dengan banyak format file?** Ya, berfungsi dengan PDF, DOCX, XLSX, dan banyak format populer lainnya.
+- **Bisakah saya mengatur metadata khusus dalam dokumen Java?** Tentu—Anda dapat mendefinisikan, membaca, dan menggabungkan properti khusus secara programatis.  
+- **Apakah pendekatan ini kompatibel dengan banyak format file?** Ya, ini bekerja dengan PDF, DOCX, XLSX, dan banyak format populer lainnya.
 
-## Mengapa set custom metadata java?
+## Cara mengatur custom properties java dengan GroupDocs.Comparison
 
-Saat Anda membandingkan dokumen secara programatik, Anda tidak hanya melihat perbedaan teks; Anda juga berurusan dengan sekumpulan properti yang menggambarkan *siapa* yang membuat file, *kapan* terakhir diedit, dan tag bisnis‑spesifik yang Anda tambahkan. **set custom metadata java** yang tepat memastikan pemangku kepentingan dapat langsung melihat asal‑usul setiap perubahan, memenuhi persyaratan audit, dan menggerakkan otomatisasi hilir seperti perutean atau notifikasi.
+Muat dua dokumen Anda, konfigurasikan opsi perbandingan, sisipkan properti khusus, jalankan perbandingan, dan akhirnya baca metadata yang digabungkan dari hasil—semua dalam beberapa langkah sederhana. Pola jawaban langsung ini memungkinkan Anda mulai menulis kode segera tanpa harus mencari melalui dokumentasi API.
 
 ## Apa itu manajemen metadata dokumen di Java?
 
-Manajemen metadata dokumen berarti mempertahankan, memperbarui, dan mengendalikan properti yang melekat pada sebuah file. Dalam GroupDocs.Comparison, ini diterjemahkan menjadi:
+Manajemen metadata dokumen di Java melibatkan penanganan sistematis baik properti bawaan maupun khusus yang menggambarkan asal file, versi, dan konteks bisnis. Dengan mempertahankan, memperbarui, dan menggabungkan atribut-atribut ini Anda memastikan setiap dokumen mempertahankan informasi asal yang penting sepanjang proses, yang krusial untuk kepatuhan, audit, dan otomatisasi hilir.
 
+Dalam GroupDocs.Comparison, ini berarti:
 1. Memutuskan bidang metadata mana yang akan dipertahankan atau dibuang.  
-2. Menggabungkan nilai yang konflik sesuai aturan bisnis Anda.  
-3. Menyajikan set properti akhir dalam laporan perbandingan sehingga pengguna dapat melihat gambaran lengkap.
+2. Menggabungkan nilai yang konflik sesuai dengan aturan bisnis Anda.  
+3. Menampilkan set properti akhir dalam laporan perbandingan sehingga pengguna dapat melihat gambaran lengkap.
 
-## Kasus Penggunaan Umum untuk Manajemen Metadata
+## Mengapa mengatur custom properties java?
 
-**Version Control Integration** – Pertahankan nomor versi, ID penulis, dan status persetujuan tetap utuh saat membandingkan dua revisi.
+Menyematkan **custom properties java** memastikan setiap hasil perbandingan membawa informasi penting bisnis yang diandalkan organisasi Anda—seperti kode departemen, tag regulasi, atau status tinjauan. Ini tidak hanya memenuhi persyaratan audit tetapi juga mendukung otomatisasi hilir seperti routing, notifikasi, dan analitik.
 
-**Compliance & Audit Trails** – Sertakan tanda tangan digital, cap waktu, dan tag regulasi sehingga auditor dapat melacak setiap perubahan.
+## Apa itu manajemen metadata di Java?
 
-**Collaborative Workflows** – Pertahankan bidang kustom seperti “status review”, “departemen”, atau “prioritas” yang menggerakkan proses tim.
+Manajemen metadata di Java mengacu pada penanganan sistematis properti dokumen—baik bawaan (author, creation date) maupun bidang khusus yang Anda definisikan sendiri. Ini memungkinkan Anda mempertahankan data asal tetap utuh sepanjang pipeline pemrosesan, menjamin bahwa sistem hilir menerima catatan yang lengkap dan dapat dipercaya.
 
-**Content Management Systems** – Pastikan metadata yang digunakan untuk pengindeksan pencarian, kategorisasi, dan perutean tetap ada setelah langkah perbandingan.
+## Kasus penggunaan umum untuk manajemen metadata
 
-## Tutorial Manajemen Metadata Kami
+- **Integrasi kontrol versi** – Pertahankan nomor versi, ID penulis, dan status persetujuan tetap utuh saat membandingkan dua revisi.  
+- **Kepatuhan & jejak audit** – Sertakan tanda tangan digital, cap waktu, dan tag regulasi sehingga auditor dapat melacak setiap perubahan.  
+- **Alur kerja kolaboratif** – Pertahankan bidang khusus seperti “review status,” “department,” atau “priority” yang menggerakkan proses tim.  
+- **Sistem manajemen konten** – Pastikan metadata yang digunakan untuk pengindeksan pencarian, kategorisasi, dan routing bertahan melalui langkah perbandingan.
+
+## Tutorial manajemen metadata kami
 
 Tutorial langkah‑demi‑langkah kami menyediakan solusi praktis untuk tantangan metadata paling umum yang akan Anda temui saat bekerja dengan GroupDocs.Comparison di Java. Setiap panduan mencakup contoh kode yang berfungsi dan membahas skenario implementasi dunia nyata.
 
-### [Implement Document Metadata with GroupDocs.Comparison in Java: A Complete Guide](./implement-metadata-groupdocs-comparison-java-guide/)
+### [Implement Document Metadata dengan GroupDocs.Comparison di Java: Panduan Lengkap](./implement-metadata-groupdocs-comparison-java-guide/)
 
-Panduan dasar ini membawa Anda melalui konsep penting manajemen metadata dalam perbandingan dokumen. Anda akan belajar cara mengonfigurasi penanganan metadata dasar, memahami berbagai tipe properti dokumen yang tersedia, dan menerapkan strategi preservasi metadata yang tepat.
+Tutorial dasar ini memandu Anda melalui konsep penting manajemen metadata dalam perbandingan dokumen. Anda akan belajar cara mengkonfigurasi penanganan metadata dasar, memahami berbagai jenis properti dokumen yang tersedia, dan menerapkan strategi pelestarian metadata yang tepat.
 
-**Apa yang akan Anda kuasai:**
-- Menyiapkan konfigurasi metadata untuk operasi perbandingan  
-- Memahami properti metadata bawaan vs. kustom  
-- Menerapkan prioritas sumber metadata  
+**Apa yang akan Anda kuasai**
+- Menyiapkan konfigurasi metadata untuk operasi perbandingan
+- Memahami properti metadata bawaan vs. khusus
+- Menerapkan prioritas sumber metadata
 - Menangani konflik metadata selama penggabungan dokumen  
 
-### [Set Custom Metadata in Java Documents Using GroupDocs.Comparison: A Step‑By‑Step Guide](./groupdocs-comparison-java-custom-metadata-guide/)
+### [Set Custom Metadata dalam Dokumen Java Menggunakan GroupDocs.Comparison: Panduan Langkah‑ demi‑Langkah](./groupdocs-comparison-java-custom-metadata-guide/)
 
-Manajemen metadata lanjutan sering memerlukan penambahan properti bisnis‑spesifik yang melampaui set bawaan. Tutorial ini menunjukkan cara membuat, memvalidasi, dan menyerialkan metadata kustom sehingga terintegrasi mulus dengan pipeline pemrosesan Anda yang ada.
+Manajemen metadata lanjutan sering memerlukan penambahan properti khusus bisnis yang melampaui set bawaan. Tutorial ini menunjukkan cara membuat, memvalidasi, dan menyerialkan metadata khusus sehingga terintegrasi mulus dengan pipeline pemrosesan Anda yang ada.
 
-**Apa yang akan Anda pelajari:**
-- Membuat dan mengelola bidang metadata kustom  
-- Menerapkan validasi metadata dan pemeriksaan tipe  
-- Membuat templat metadata untuk penanganan properti yang konsisten  
-- Mengintegrasikan metadata kustom dengan hasil perbandingan  
+**Apa yang akan Anda pelajari**
+- Membuat dan mengelola bidang metadata khusus
+- Menerapkan validasi metadata dan pemeriksaan tipe
+- Membangun templat metadata untuk penanganan properti yang konsisten
+- Mengintegrasikan metadata khusus dengan hasil perbandingan  
 
-## Cara mengatur custom metadata java dengan GroupDocs.Comparison
+## Cara mengatur custom properties java – panduan langkah‑demi‑langkah
 
-Berikut adalah walkthrough singkat dan percakapan tentang langkah‑langkah kunci yang akan Anda ambil dalam proyek Java apa pun yang perlu **set custom metadata java**. Sementara potongan kode tetap tidak berubah dari tutorial asli, penjelasan di sekitarnya memberi Anda gambaran lebih jelas mengapa setiap langkah penting.
+Berikut adalah panduan singkat dan percakapan tentang langkah‑langkah kunci yang akan Anda ambil dalam proyek Java apa pun yang perlu **set custom properties java**. Penjelasan di sekitarnya memberi Anda gambaran yang lebih jelas tentang *mengapa* setiap langkah penting.
 
-### 1. Tentukan Strategi Metadata Anda
+### 1. definisikan strategi metadata Anda
 
-Mulailah dengan mencatat properti yang kritis untuk aplikasi Anda—misalnya, `Author`, `ReviewStatus`, `Department`. Tentukan mana yang wajib, mana yang opsional, dan bagaimana konflik harus diselesaikan ketika dua dokumen berisi nilai yang berbeda.
+Mulailah dengan mencantumkan properti yang penting bagi aplikasi Anda—misalnya `Author`, `ReviewStatus`, `Department`. Tentukan mana yang wajib, mana yang opsional, dan bagaimana konflik harus diselesaikan ketika dua dokumen berisi nilai yang berbeda.
 
-> **Pro tip:** Jaga daftar tetap singkat dan terfokus. Metadata berlebih menambah beban pemrosesan tanpa manfaat nyata.
+> **Pro tip:** Pertahankan daftar singkat dan terfokus. Metadata berlebih menambah beban pemrosesan tanpa manfaat nyata.
 
-### 2. Konfigurasikan Opsi GroupDocs.Comparison
+### 2. konfigurasikan opsi GroupDocs.Comparison
 
 Saat Anda membuat objek `Comparison`, Anda dapat melewatkan instance `ComparisonOptions` yang memberi tahu mesin bidang metadata mana yang harus dipertahankan, diabaikan, atau digabungkan.
 
-> **Why this matters:** Dengan secara eksplisit mengonfigurasi opsi, Anda menghindari perilaku default “salin‑semua” yang dapat menghasilkan hasil berlebih.
+> **Mengapa ini penting:** Dengan secara eksplisit mengkonfigurasi opsi, Anda menghindari perilaku default “salin‑semua” yang dapat menghasilkan hasil yang berlebihan.
 
-### 3. Tambahkan Properti Kustom secara Programatik
+**Definition anchor:** `ComparisonOptions` adalah kelas konfigurasi yang mengontrol bagaimana GroupDocs.Comparison memproses dokumen, termasuk penanganan metadata, tata letak halaman, dan deteksi perubahan.
 
-Gunakan API `DocumentProperty` untuk menyuntikkan metadata kustom ke setiap dokumen *sebelum* menjalankan perbandingan. Ini memastikan properti tersebut melewati pipeline perbandingan dan muncul di laporan akhir.
+### 3. tambahkan properti khusus secara programatis
 
-> **Common pitfall:** Lupa menetapkan tipe data properti dapat menyebabkan kesalahan serialisasi nanti. Selalu tentukan tipe yang tepat (mis., `String`, `Date`, `Integer`).
+Gunakan API `DocumentProperty` untuk menyuntikkan metadata khusus ke setiap dokumen *sebelum* Anda menjalankan perbandingan. Ini memastikan properti tersebut melewati pipeline perbandingan dan muncul di laporan akhir.
 
-### 4. Jalankan Perbandingan dan Ambil Hasil
+> **Kesalahan umum:** Lupa menetapkan tipe data properti dapat menyebabkan kesalahan serialisasi nanti. Selalu tentukan tipe yang benar (mis., `String`, `Date`, `Integer`).
 
-Setelah perbandingan selesai, Anda dapat mengekstrak metadata yang digabungkan dari `ComparisonResult`. Objek ini memberi Anda tampilan terpadu semua properti yang dipertahankan, siap untuk ditampilkan atau disimpan.
+**Definition anchor:** `DocumentProperty` mewakili satu entri metadata—nama, nilai, dan tipe datanya—yang terlampir pada dokumen dalam GroupDocs.Comparison.
 
-> **Performance note:** Jika Anda memproses batch besar, pertimbangkan untuk menyimpan cache metadata yang sering dipakai atau batasi jumlah bidang kustom untuk mengurangi konsumsi memori.
+### 4. jalankan perbandingan dan ambil hasil
 
-## Praktik Terbaik untuk Manajemen Metadata Dokumen Java
+Setelah perbandingan selesai, ekstrak metadata yang digabungkan dari `ComparisonResult`. Objek ini memberi Anda tampilan terpadu semua properti yang dipertahankan, siap untuk ditampilkan atau disimpan.
 
-- **Rencanakan Lebih Awal:** Definisikan skema metadata yang jelas sebelum mulai menulis kode.  
-- **Defensive Coding:** Selalu periksa nilai `null` dan sediakan nilai default yang masuk akal.  
-- **Pantau Kinerja:** Profilkan penanganan metadata secara terpisah dari perbandingan konten.  
-- **Uji dengan Dokumen Nyata:** File dunia nyata sering mengandung properti yang hilang atau rusak—kode Anda harus dapat menanganinya dengan elegan.  
+> **Catatan kinerja:** Jika Anda memproses batch besar, pertimbangkan untuk menyimpan cache metadata yang sering digunakan atau membatasi jumlah bidang khusus untuk mengurangi konsumsi memori.
 
-## Memecahkan Masalah Metadata Umum
+**Definition anchor:** `ComparisonResult` mengenkapsulasi hasil operasi perbandingan, termasuk dokumen yang dihasilkan, log perubahan, dan set metadata yang terkonsolidasi.
 
-- **Properti Hilang:** Gunakan cap waktu sistem file atau minta pengguna memasukkan nilai yang hilang.  
-- **Masalah Encoding:** Pastikan aplikasi Java Anda menggunakan UTF‑8 di seluruh tempat, terutama saat membaca/menulis properti string kustom.  
-- **Payload Metadata Besar:** Muat hanya properti yang Anda perlukan; abaikan blob biner besar kecuali diperlukan.  
-- **Inkonstensi Antar Format:** Normalisasi nama properti (mis., `Author` vs. `Creator`) ke representasi internal umum sebelum perbandingan.  
+## Praktik terbaik untuk manajemen metadata dokumen Java
 
-## Teknik Konfigurasi Metadata Lanjutan
+- **Plan early:** Definisikan skema metadata yang jelas sebelum Anda mulai menulis kode.  
+- **Defensive coding:** Selalu periksa nilai `null` dan berikan nilai default yang masuk akal.  
+- **Monitor performance:** Profil penanganan metadata secara terpisah dari perbandingan konten.  
+- **Test with real documents:** File dunia nyata sering mengandung properti yang hilang atau rusak—kode Anda harus menangani mereka dengan baik.  
 
-- **Aturan Retensi Kondisional:** Gunakan logika bisnis untuk mempertahankan atau membuang metadata berdasarkan peran pengguna atau sensitivitas dokumen.  
-- **Pipeline Transformasi:** Terapkan validator, enrichers, atau translator pada metadata sebelum mencapai mesin perbandingan.  
-- **Serialisasi Kustom:** Untuk objek kompleks (mis., JSON blob), implementasikan serializer kustom yang mengubahnya menjadi format string yang dapat diproses oleh mesin perbandingan.
+## Memecahkan masalah umum metadata
 
-## Sumber Daya Tambahan
+- **Missing properties:** Gunakan kembali cap waktu sistem file atau minta pengguna menyediakan nilai yang hilang.  
+- **Encoding problems:** Pastikan aplikasi Java Anda menggunakan UTF‑8 di seluruh tempat, terutama saat membaca/menulis properti string khusus.  
+- **Large metadata payloads:** Muat hanya properti yang Anda butuhkan; abaikan blob biner besar kecuali diperlukan.  
+- **Cross‑format inconsistencies:** Normalisasi nama properti (mis., `Author` vs. `Creator`) ke representasi internal umum sebelum perbandingan.  
+
+## Teknik konfigurasi metadata lanjutan
+
+- **Conditional retention rules:** Gunakan logika bisnis untuk mempertahankan atau membuang metadata berdasarkan peran pengguna atau sensitivitas dokumen.  
+- **Transformation pipelines:** Terapkan validator, enrichers, atau translator pada metadata sebelum mencapai mesin perbandingan.  
+- **Custom serialization:** Untuk objek kompleks (mis., JSON blobs), implementasikan serializer khusus yang mengubahnya menjadi format string yang dapat ditangani mesin perbandingan.  
+
+## Sumber daya tambahan
 
 - [Dokumentasi GroupDocs.Comparison untuk Java](https://docs.groupdocs.com/comparison/java/)
 - [Referensi API GroupDocs.Comparison untuk Java](https://reference.groupdocs.com/comparison/java/)
@@ -136,25 +197,31 @@ Setelah perbandingan selesai, Anda dapat mengekstrak metadata yang digabungkan d
 - [Dukungan Gratis](https://forum.groupdocs.com/)
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**Q:** **Bisakah saya menggunakan GroupDocs.Comparison untuk membandingkan dokumen yang tidak mengandung metadata?**  
-**A:** Ya, perpustakaan tetap akan membandingkan konten. Namun, jika UI Anda mengandalkan metadata untuk jejak audit, Anda harus menerapkan logika fallback (mis., gunakan tanggal pembuatan file).
+**Q: Bisakah saya menggunakan GroupDocs.Comparison untuk membandingkan dokumen yang tidak mengandung metadata?**  
+A: Ya, perpustakaan tetap akan membandingkan konten. Namun, jika UI Anda bergantung pada metadata untuk jejak audit, Anda harus menerapkan logika fallback (mis., gunakan tanggal pembuatan file).
 
-**Q:** **Bagaimana cara menambahkan bidang metadata kustom ke file DOCX sebelum perbandingan?**  
-**A:** Gunakan API `DocumentProperty` yang disediakan oleh GroupDocs.Comparison untuk membuat properti baru, menetapkan nilai, dan kemudian memasukkan dokumen ke dalam alur kerja perbandingan.
+**Q: Bagaimana cara menambahkan bidang metadata khusus ke file DOCX sebelum perbandingan?**  
+A: Gunakan API `DocumentProperty` yang disediakan oleh GroupDocs.Comparison untuk membuat properti baru, menetapkan nilai, dan kemudian memasukkan dokumen ke dalam alur kerja perbandingan.
 
-**Q:** **Apakah mungkin mengecualikan properti metadata tertentu dari hasil perbandingan?**  
-**A:** Tentu—Anda dapat mengonfigurasi daftar filter metadata yang memberi tahu mesin perbandingan properti mana yang harus diabaikan atau dipertahankan.
+**Q: Apakah memungkinkan untuk mengecualikan properti metadata tertentu dari hasil perbandingan?**  
+A: Tentu—Anda dapat mengkonfigurasi daftar filter metadata yang memberi tahu mesin perbandingan properti mana yang harus diabaikan atau dipertahankan.
 
-**Q:** **Dampak kinerja apa yang harus saya harapkan saat menangani set metadata besar?**  
-**A:** Memproses metadata ekstensif dapat meningkatkan penggunaan memori dan waktu CPU. Profilkan implementasi Anda dan pertimbangkan memuat hanya bidang yang diperlukan atau menyimpan cache pencarian yang sering dipakai.
+**Q: Dampak kinerja apa yang harus saya harapkan saat menangani set metadata besar?**  
+A: Memproses metadata yang luas dapat meningkatkan penggunaan memori dan waktu CPU. Profil implementasi Anda dan pertimbangkan memuat hanya bidang yang diperlukan atau menyimpan cache pencarian yang sering.
 
-**Q:** **Apakah GroupDocs.Comparison mendukung versioning metadata lintas beberapa run perbandingan?**  
-**A:** Meskipun perpustakaan berfokus pada satu operasi perbandingan, Anda dapat mengimplementasikan versioning dengan menyimpan snapshot metadata di basis data dan merujuknya di seluruh run.
+**Q: Apakah GroupDocs.Comparison mendukung versioning metadata di beberapa kali perbandingan?**  
+A: Meskipun perpustakaan berfokus pada satu operasi perbandingan, Anda dapat mengimplementasikan versioning dengan menyimpan snapshot metadata di basis data dan merujuknya di seluruh run.
 
 ---
 
-**Last Updated:** 2026-04-01  
-**Tested With:** GroupDocs.Comparison for Java 24.0  
-**Author:** GroupDocs
+**Terakhir diperbarui:** 2026-09-05  
+**Diuji dengan:** GroupDocs.Comparison for Java 24.0  
+**Penulis:** GroupDocs
+
+## Tutorial Terkait
+
+- [Set Custom Metadata Java dengan GroupDocs Comparison](/comparison/java/metadata-management/groupdocs-comparison-java-custom-metadata-guide/)
+- [Ekstrak Informasi Dokumen Groupdocs Comparison Java](/comparison/java/document-information/extract-document-info-groupdocs-comparison-java/)
+- [Perbandingan Dokumen Groupdocs Java](/comparison/java/basic-comparison/document-comparison-groupdocs-java/)

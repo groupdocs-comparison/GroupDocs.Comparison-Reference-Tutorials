@@ -1,137 +1,202 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-04-04'
-description: Leer hoe je een preview van documenten genereert in Java met GroupDocs.Comparison.
-  Stapsgewijze gids met codevoorbeelden, best practices en praktische tips.
+date: '2026-09-10'
+description: Leer hoe je docx naar afbeelding kunt converteren en documentpreviews
+  kunt genereren in Java met GroupDocs.Comparison, met stap‑voor‑stap code, prestatie‑tips
+  en caching‑strategieën.
 keywords:
+- convert docx to image
 - how to generate preview
-- document preview Java
-- GroupDocs.Comparison preview
-lastmod: '2026-04-04'
-linktitle: Java Documentvoorvertoningsgeneratie
+- preview pdf java
+- preview for comparison
+- generate preview image java
+lastmod: '2026-09-10'
+linktitle: Java Document Preview Generatie
+og_description: Leer hoe je docx naar afbeelding kunt converteren en documentpreviews
+  kunt genereren in Java met GroupDocs.Comparison, met code‑voorbeelden, tips en caching‑strategieën.
+og_image_alt: 'Developer guide: convert docx to image and preview documents in Java
+  with GroupDocs.Comparison'
+og_title: Hoe docx naar afbeelding converteren en een preview weergeven in Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to convert docx to image and generate document previews in
+    Java using GroupDocs.Comparison, with step‑by‑step code, performance tips, and
+    caching strategies.
+  headline: How to convert docx to image and preview it in Java
+  type: TechArticle
+- description: Learn how to convert docx to image and generate document previews in
+    Java using GroupDocs.Comparison, with step‑by‑step code, performance tips, and
+    caching strategies.
+  name: How to convert docx to image and preview it in Java
+  steps:
+  - name: set up the project
+    text: Add the GroupDocs.Comparison JAR to your `pom.xml` (or include the JAR directly
+      if you’re not using Maven). Then place your license file in the classpath.
+  - name: initialize the Comparison object
+    text: '`Comparison` is the core class in GroupDocs.Comparison that loads a document
+      and provides preview and comparison operations. Create an instance pointing
+      to the source document; this object will be used for all preview calls.'
+  - name: generate a source document preview
+    text: Call the `getPreview(int pageNumber, int width, int height)` method on the
+      `Comparison` object, specifying the page index and desired image size. The method
+      returns a `byte[]` that you can write to a file or stream directly to the client.
+  - name: generate a target document preview
+    text: Load the target document in a similar way and request its preview. This
+      is useful when you want to show “before” and “after” thumbnails side by side.
+  - name: generate a comparison result preview
+    text: After performing the comparison, invoke `getResultPreview(int pageNumber,
+      int width, int height)` to obtain an image that highlights differences (insertions,
+      deletions, formatting changes). This visual cue helps users understand what
+      changed without opening the full document.
+  - name: clean up resources
+    text: Always call `comparison.close()` (or use a try‑with‑resources block) to
+      free native memory and file handles. > **Pro tip:** Store generated previews
+      in a CDN or local cache keyed by a hash of the source file. This avoids regenerating
+      the same thumbnail on every request.
+  type: HowTo
+- questions:
+  - answer: Yes. Provide the password when opening the document with the `Comparison`
+      constructor, then call the preview methods as usual.
+    question: Can I generate previews for password‑protected documents?
+  - answer: Use the overload of `getPreview(int pageNumber, int width, int height)`
+      to request only the pages you need.
+    question: How do I limit preview generation to a specific page range?
+  - answer: Absolutely, as long as each thread works with its own `Comparison` instance
+      or you synchronize access to shared resources.
+    question: Is it safe to generate previews in a multi‑threaded web service?
+  - answer: PNG and JPEG are supported out of the box. Choose PNG for lossless quality,
+      JPEG for smaller file size.
+    question: What image formats can I output?
+  - answer: Generate thumbnails only for the first few pages or the pages the user
+      is likely to view, and cache the results for subsequent requests.
+    question: How can I improve performance for large PDFs (hundreds of pages)?
+  type: FAQPage
 tags:
-- document-preview
-- java-api
+- convert docx
+- document preview
+- java api
 - groupdocs-comparison
-- pdf-preview
-title: Hoe een preview genereren in Java met GroupDocs.Comparison
+- pdf preview
+title: Hoe docx naar afbeelding converteren en een preview weergeven in Java
 type: docs
 url: /nl/java/preview-generation/
 weight: 7
 ---
 
-# Hoe een preview genereren in Java met GroupDocs.Comparison
+# Hoe docx naar afbeelding te converteren en een preview te tonen in Java
 
-Het genereren van een visuele preview van een document is een belangrijke functie voor moderne Java‑toepassingen—of je nu een documentbeheersysteem, een vergelijkingshulpmiddel of een andere oplossing bouwt die bestandsinhoud in één oogopslag moet tonen. In deze tutorial leer je **hoe je een preview genereert** snel en efficiënt met GroupDocs.Comparison voor Java. We lopen door source-, target- en result‑previews, verkennen aangepaste formaatopties en behandelen best practices voor geheugenbeheer zodat je app snel en betrouwbaar blijft.
+Een visuele preview van een document genereren—of het nu een DOCX, PDF of PPTX is—is essentieel voor moderne Java‑applicaties zoals documentbeheersystemen, vergelijkingshulpmiddelen of elke oplossing die snel een blik op de bestandsinhoud wil werpen. In deze tutorial leer je **hoe docx naar afbeelding te converteren** en betrouwbare previews te maken met GroupDocs.Comparison voor Java. We behandelen bron‑, doel‑ en resultaat‑previews, aangepaste formaatopties, best practices voor geheugenbeheer en caching‑strategieën zodat je app snel en schaalbaar blijft.
 
 ## Snelle antwoorden
 - **Wat betekent “preview”?** Een lichtgewicht afbeelding (PNG/JPEG) die de eerste pagina of een geselecteerde pagina van een document weergeeft.  
-- **Welke formaten worden ondersteund?** PDF, DOCX, XLSX, PPTX en nog veel meer gangbare office‑formaten.  
+- **Welke formaten worden ondersteund?** PDF, DOCX, XLSX, PPTX en nog veel meer gangbare officeformaten.  
 - **Heb ik een licentie nodig?** Een tijdelijke ontwikkelingslicentie is vereist; een volledige licentie is nodig voor productie.  
-- **Hoe kan ik de prestaties verbeteren?** Gebruik caching, genereer thumbnails op de kleinste aanvaardbare grootte en maak bronnen direct vrij.  
-- **Is geheugenopschoning belangrijk?** Ja—sluit altijd comparison‑objecten om lekken in scenario’s met hoge doorvoer te voorkomen.
+- **Hoe kan ik de prestaties verbeteren?** Gebruik caching, genereer miniaturen op de kleinste acceptabele grootte, en maak bronnen snel vrij.  
+- **Is geheugenopruiming belangrijk?** Ja—sluit altijd comparison‑objecten om lekken in scenario's met hoge doorvoer te voorkomen.
 
-## Wat betekent “hoe een preview genereren” in de context van GroupDocs.Comparison?
-Wanneer we het hebben over **hoe je een preview genereert**, verwijzen we naar het proces waarbij een documentpagina wordt omgezet in een afbeelding met behulp van de GroupDocs.Comparison‑API. Deze afbeelding kan vervolgens worden weergegeven in een web‑UI, opgeslagen als thumbnail, of toegevoegd aan e‑mailmeldingen. De API verbergt de complexiteit van het omgaan met verschillende bestandsformaten en biedt een consistente manier om previews te produceren voor alle ondersteunde typen.
+## Wat betekent “preview genereren” in de context van GroupDocs.Comparison?
+Een documentpagina omzetten naar een afbeelding met GroupDocs.Comparison is de standaardmethode om visuele miniaturen te maken voor elk ondersteund bestandstype. De API verwerkt format‑specifieke rendering intern, zodat je een kant‑klaar PNG of JPEG ontvangt zonder eigen parsers te schrijven.
 
 ## Waarom GroupDocs.Comparison gebruiken voor preview‑generatie?
-- **Unified API** – Eén set methoden werkt voor PDF’s, Word, Excel, PowerPoint en meer.  
-- **High fidelity** – Gerenderde afbeeldingen behouden de oorspronkelijke lay-out, lettertypen en kleuren.  
-- **Scalable** – Ingebouwd geheugenbeheer en streamingondersteuning voor grote bestanden.  
-- **Customizable** – Beheer afbeeldingsgrootte, formaat en paginabereik om aan je UI‑behoeften te voldoen.
+GroupDocs.Comparison kan preview‑afbeeldingen genereren voor **50+** invoer‑ en uitvoerformaten—including DOCX, PDF, XLSX, PPTX en HTML—terwijl lay‑out, lettertypen en kleuren behouden blijven. Het verwerkt bestanden met honderden pagina's zonder het volledige document in het geheugen te laden, en levert hoogwaardige miniaturen in minder dan een seconde op typische serverhardware.
 
 ## Vereisten
 - Java 8 of hoger.  
-- GroupDocs.Comparison voor Java‑bibliotheek (download de nieuwste JAR van de officiële site).  
+- GroupDocs.Comparison for Java‑bibliotheek (download de nieuwste JAR van de officiële site).  
 - Een geldige GroupDocs.Comparison‑licentie (tijdelijke licentie werkt voor ontwikkeling).
 
-## Stapsgewijze handleiding voor het genereren van previews
+## Stapsgewijze handleiding om previews te genereren
 
-### Stap 1: Het project opzetten
-Voeg de GroupDocs.Comparison‑JAR toe aan je `pom.xml` (of voeg de JAR direct toe als je geen Maven gebruikt). Plaats vervolgens je licentiebestand in het classpath.
+### Stap 1: het project instellen
+Voeg de GroupDocs.Comparison JAR toe aan je `pom.xml` (of include de JAR direct als je geen Maven gebruikt). Plaats vervolgens je licentiebestand in de classpath.
 
-### Stap 2: Het Comparison‑object initialiseren
-Maak een `Comparison`‑instantie aan die naar het bron‑document wijst. Dit object wordt gebruikt om zowel bron‑ als result‑previews te genereren.
+### Stap 2: initialiseert het Comparison‑object
+`Comparison` is de kernklasse in GroupDocs.Comparison die een document laadt en preview‑ en vergelijkingsbewerkingen biedt. Maak een instantie die naar het bron‑document wijst; dit object wordt gebruikt voor alle preview‑aanroepen.
 
-### Stap 3: Een preview van het bron‑document genereren
-Roep de `getPreview()`‑methode aan op het `Comparison`‑object, waarbij je de paginanaam en gewenste afbeeldingsgrootte opgeeft. De methode retourneert een `byte[]` die je naar een bestand kunt schrijven of direct naar de client kunt streamen.
+### Stap 3: genereer een preview van het bron‑document
+Roep de `getPreview(int pageNumber, int width, int height)`‑methode aan op het `Comparison`‑object, waarbij je het paginanummer en de gewenste afbeeldingsgrootte opgeeft. De methode retourneert een `byte[]` die je direct naar een bestand kunt schrijven of naar de client kunt streamen.
 
-### Stap 4: Een preview van het doel‑document genereren
-Laad het doel‑document op een vergelijkbare manier en vraag de preview op. Dit is handig wanneer je “voor” en “na” thumbnails naast elkaar wilt tonen.
+### Stap 4: genereer een preview van het doel‑document
+Laad het doel‑document op dezelfde manier en vraag de preview op. Dit is handig wanneer je “voor” en “na” miniaturen naast elkaar wilt tonen.
 
-### Stap 5: Een preview van het vergelijkingresultaat genereren
-Na het uitvoeren van de vergelijking, roep `getResultPreview()` aan om een afbeelding te verkrijgen die verschillen markeert (invoegingen, verwijderingen, opmaakwijzigingen). Deze visuele aanwijzing helpt gebruikers te begrijpen wat er is veranderd zonder het volledige document te openen.
+### Stap 5: genereer een preview van het vergelijkingresultaat
+Na het uitvoeren van de vergelijking, roep `getResultPreview(int pageNumber, int width, int height)` aan om een afbeelding te verkrijgen die verschillen (invoegingen, verwijderingen, opmaakwijzigingen) markeert. Deze visuele aanwijzing helpt gebruikers te begrijpen wat er is veranderd zonder het volledige document te openen.
 
-### Stap 6: Resources opruimen
+### Stap 6: resources opruimen
 Roep altijd `comparison.close()` aan (of gebruik een try‑with‑resources‑blok) om native geheugen en bestands‑handles vrij te geven.
 
-> **Pro tip:** Sla gegenereerde previews op in een CDN of lokale cache, geïndexeerd op een hash van het bronbestand. Dit voorkomt het opnieuw genereren van dezelfde thumbnail bij elk verzoek.
+> **Pro tip:** Sla gegenereerde previews op in een CDN of lokale cache met als sleutel een hash van het bronbestand. Dit voorkomt dat dezelfde miniatuur bij elk verzoek opnieuw wordt gegenereerd.
 
-## Veelvoorkomende gebruikssituaties
-- **Documentbeheersystemen** – Toon thumbnail‑roosters voor snelle bestandsidentificatie.  
-- **Vergelijkingsapplicaties** – Toon naast elkaar voor/na‑afbeeldingen met gemarkeerde wijzigingen.  
+## Veelvoorkomende use‑cases
+- **Documentbeheersystemen** – Toon miniatuur‑rasters voor snelle bestandsidentificatie.  
+- **Vergelijkingsapplicaties** – Toon naast‑elkaar voor‑en‑na‑afbeeldingen met gemarkeerde wijzigingen.  
 - **Goedkeuringsworkflows** – Laat beoordelaars snel de inhoud van een document bekijken zonder het volledige bestand te downloaden.  
 - **Contentportalen** – Bied visueel browsen van geüploade assets, wat de gebruikersbetrokkenheid verbetert.
 
 ## Implementatie‑best practices
-- **Memory Management:** Maak altijd `Comparison`‑objecten vrij. In services met hoog volume, wikkel preview‑generatie in een pool om native resources te hergebruiken.  
-- **Format Optimization:** Gebruik PNG voor verliesloze kwaliteit wanneer de preview scherp moet zijn (bijv. PDF’s met vector‑graphics). Kies JPEG voor snellere laadtijd wanneer bandbreedte beperkt is.  
-- **Caching Strategy:** Implementeer een eenvoudige key‑value‑store (Redis, Memcached of bestandssysteem) waarbij de sleutel een hash is van de inhoud van het document en de waarde de gegenereerde preview‑bytes.  
-- **Error Handling:** Vang `Exception` af rond preview‑aanroepen en retourneer een placeholder‑afbeelding als het formaat niet wordt ondersteund of het bestand corrupt is.  
-- **Thread Safety:** De API is thread‑safe voor alleen‑lezen‑operaties; echter, het gelijktijdig creëren van meerdere `Comparison`‑instanties op hetzelfde bestand kan bestands‑lockconflicten veroorzaken. Gebruik afzonderlijke streams of kopieer het bestand eerst.
+- **Geheugenbeheer:** Maak altijd `Comparison`‑objecten vrij. In diensten met hoog volume, wikkel preview‑generatie in een pool om native bronnen te hergebruiken.  
+- **Formaatoptimalisatie:** Gebruik PNG voor verliesvrije kwaliteit wanneer de preview scherp moet zijn (bijv. PDF’s met vectorafbeeldingen). Kies JPEG voor snellere laadtijd wanneer bandbreedte beperkt is.  
+- **Caching‑strategie:** Implementeer een eenvoudige key‑value‑store (Redis, Memcached of bestandssysteem) waarbij de sleutel een hash van de documentinhoud is en de waarde de gegenereerde preview‑bytes.  
+- **Foutafhandeling:** Vang `Exception` rond preview‑aanroepen en retourneer een placeholder‑afbeelding als het formaat niet wordt ondersteund of het bestand corrupt is.  
+- **Thread‑veiligheid:** De API is thread‑safe voor alleen‑lezen‑operaties; echter, het gelijktijdig aanmaken van meerdere `Comparison`‑instanties op hetzelfde bestand kan bestands‑lockconflicten veroorzaken. Gebruik aparte streams of kopieer het bestand eerst.
 
 ## Beschikbare tutorials
 
-### [GroupDocs.Comparison voor Java beheersen: moeiteloze document‑previewgeneratie](./groupdocs-comparison-java-generate-previews/)
+### [Beheersen van GroupDocs.Comparison voor Java: moeiteloze documentpreview‑generatie](./groupdocs-comparison-java-generate-previews/)
 
-Deze uitgebreide tutorial leidt je stap voor stap door het implementeren van document‑previewgeneratie vanaf nul. Je leert hoe je previews maakt voor verschillende documenttypen, afbeeldingsinstellingen aanpast en veelvoorkomende implementatie‑uitdagingen aanpakt.
+Deze uitgebreide tutorial leidt je stap voor stap door het implementeren van documentpreview‑generatie vanaf nul. Je leert hoe je previews maakt voor verschillende documenttypen, afbeeldingsinstellingen aanpast en veelvoorkomende implementatie‑uitdagingen aanpakt.
 
-**Wat wordt behandeld:**
-- Het opzetten van GroupDocs.Comparison voor preview‑generatie  
-- Het maken van bron-, doel‑ en result‑documentpreviews  
-- Aangepaste preview‑opties en -groottes implementeren  
+**Wat wordt behandeld**
+- GroupDocs.Comparison instellen voor preview‑generatie  
+- Bron‑, doel‑ en resultaat‑documentpreviews maken  
+- Aangepaste preview‑opties en afmetingen implementeren  
 - Best practices voor resource‑beheer en opruimen  
 - Praktijkvoorbeelden van code die je direct kunt gebruiken  
 
-Perfect voor ontwikkelaars die een volledig begrip van preview‑functionaliteit willen en werkende code‑voorbeelden nodig hebben om in hun projecten te implementeren.
-
-## Aan de slag‑bronnen
+## Aan de slag bronnen
 
 ### Essentiële documentatie
-- [GroupDocs.Comparison voor Java-documentatie](https://docs.groupdocs.com/comparison/java/) - Complete API‑documentatie met gedetailleerde uitleg  
-- [GroupDocs.Comparison voor Java API‑referentie](https://reference.groupdocs.com/comparison/java/) - Technische referentie voor alle klassen en methoden  
+- [GroupDocs.Comparison voor Java‑documentatie](https://docs.groupdocs.com/comparison/java/)  
+- [GroupDocs.Comparison voor Java API‑referentie](https://reference.groupdocs.com/comparison/java/)  
 
 ### Downloads en installatie
-- [Download GroupDocs.Comparison voor Java](https://releases.groupdocs.com/comparison/java/) - Laatste bibliotheekreleases en installatiepakketten  
-- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/) - Verkrijg een tijdelijke licentie voor ontwikkeling en testen  
+- [GroupDocs.Comparison voor Java downloaden](https://releases.groupdocs.com/comparison/java/)  
+- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)  
 
 ### Community‑ondersteuning
-- [GroupDocs.Comparison‑forum](https://forum.groupdocs.com/c/comparison) - Actieve community‑discussies en technische ondersteuning  
-- [Gratis ondersteuning](https://forum.groupdocs.com/) - Algemene GroupDocs‑community‑ondersteuning en bronnen  
+- [GroupDocs.Comparison forum](https://forum.groupdocs.com/c/comparison)  
+- [Gratis ondersteuning](https://forum.groupdocs.com/)  
 
 ## Veelgestelde vragen
 
-**V: Kan ik previews genereren voor met wachtwoord beveiligde documenten?**  
-A: Ja. Geef het wachtwoord op bij het openen van het document met de `Comparison`‑constructor, en roep vervolgens de preview‑methoden zoals gewoonlijk aan.
+**Q:** Kan ik previews genereren voor met wachtwoord beveiligde documenten?  
+**A:** Ja. Geef het wachtwoord door bij het openen van het document met de `Comparison`‑constructor, en roep vervolgens de preview‑methoden aan zoals gebruikelijk.
 
-**V: Hoe beperk ik preview‑generatie tot een specifiek paginabereik?**  
-A: Gebruik de overload van `getPreview(int pageNumber, int width, int height)` om alleen de benodigde pagina’s op te vragen.
+**Q:** Hoe beperk ik preview‑generatie tot een specifiek paginabereik?  
+**A:** Gebruik de overload van `getPreview(int pageNumber, int width, int height)` om alleen de pagina’s op te vragen die je nodig hebt.
 
-**V: Is het veilig om previews te genereren in een multi‑threaded webservice?**  
-A: Absoluut, zolang elke thread werkt met zijn eigen `Comparison`‑instantie of je de toegang tot gedeelde resources synchroniseert.
+**Q:** Is het veilig om previews te genereren in een multi‑threaded webservice?  
+**A:** Absoluut, zolang elke thread werkt met zijn eigen `Comparison`‑instantie of je de toegang tot gedeelde bronnen synchroniseert.
 
-**V: Welke afbeeldingsformaten kan ik outputten?**  
-A: PNG en JPEG worden standaard ondersteund. Kies PNG voor verliesloze kwaliteit, JPEG voor een kleinere bestandsgrootte.
+**Q:** Welke afbeeldingsformaten kan ik exporteren?  
+**A:** PNG en JPEG worden standaard ondersteund. Kies PNG voor verliesvrije kwaliteit, JPEG voor een kleinere bestandsgrootte.
 
-**V: Hoe kan ik de prestaties verbeteren voor grote PDF’s (honderden pagina’s)?**  
-A: Genereer thumbnails alleen voor de eerste paar pagina’s of de pagina’s die de gebruiker waarschijnlijk zal bekijken, en cache de resultaten voor latere verzoeken.
+**Q:** Hoe kan ik de prestaties verbeteren voor grote PDF’s (honderden pagina’s)?  
+**A:** Genereer miniaturen alleen voor de eerste paar pagina’s of voor de pagina’s die de gebruiker waarschijnlijk bekijkt, en cache de resultaten voor latere verzoeken.
 
 ## Conclusie
-Nu heb je een goed begrip van **hoe je preview‑afbeeldingen** genereert in Java met GroupDocs.Comparison. Door de bovenstaande stappen te volgen, de best‑practice‑tips toe te passen en gebruik te maken van de verstrekte bronnen, kun je snelle, betrouwbare document‑thumbnails toevoegen aan elke Java‑gebaseerde oplossing. Verken de gekoppelde tutorial voor diepere code‑voorbeelden en begin vandaag nog met het integreren van visuele previews in je applicatie.
+Nu heb je een solide begrip van **hoe docx naar afbeelding te converteren** en preview‑afbeeldingen te genereren in Java met GroupDocs.Comparison. Door de bovenstaande stappen te volgen, de best‑practice‑tips toe te passen en de verstrekte bronnen te benutten, kun je snelle, betrouwbare documentminiaturen toevoegen aan elke Java‑gebaseerde oplossing. Bekijk de gekoppelde tutorial voor diepere code‑voorbeelden en begin vandaag nog met het integreren van visuele previews in je applicatie.
 
 ---
 
-**Laatst bijgewerkt:** 2026-04-04  
-**Getest met:** GroupDocs.Comparison 5.0 (Java)  
-**Auteur:** GroupDocs
+**Last Updated:** 2026-09-10  
+**Tested With:** GroupDocs.Comparison 5.0 (Java)  
+**Author:** GroupDocs
+
+## Gerelateerde tutorials
+
+- [PDF‑preview maken Java – Java Document Preview Generator](/comparison/java/preview-generation/groupdocs-comparison-java-generate-previews/)
+- [Hoe licentie te gebruiken: GroupDocs Comparison Java URL‑configuratie‑gids](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Java GroupDocs Comparison API Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)

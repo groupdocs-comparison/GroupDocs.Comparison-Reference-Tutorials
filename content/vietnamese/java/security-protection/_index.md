@@ -1,162 +1,210 @@
 ---
 categories:
 - Java Development
-date: '2026-04-04'
-description: Tìm hiểu cách so sánh tài liệu được bảo vệ trong Java bằng GroupDocs.Comparison.
-  Các hướng dẫn đầy đủ, ví dụ mã và các thực tiễn bảo mật tốt nhất.
+date: '2026-09-10'
+description: Tìm hiểu cách so sánh tài liệu được bảo vệ Java bằng GroupDocs.Comparison.
+  Các hướng dẫn đầy đủ, ví dụ mã và các thực hành bảo mật tốt nhất.
 keywords:
 - compare protected documents java
 - password management java
 - document security
 - groupdocs comparison java
-lastmod: '2026-04-04'
-linktitle: Bảo mật và Bảo vệ Tài liệu Java
+- store passwords securely java
+lastmod: '2026-09-10'
+linktitle: Bảo mật & bảo vệ tài liệu Java
+og_description: So sánh tài liệu được bảo vệ Java với GroupDocs.Comparison. Tìm hiểu
+  cách xử lý mật khẩu, các thực hành tốt nhất và mẹo tối ưu hiệu năng trong hướng
+  dẫn toàn diện này.
+og_image_alt: Guide showing secure comparison of password‑protected documents using
+  GroupDocs.Comparison for Java
+og_title: So sánh tài liệu được bảo vệ Java – Hướng dẫn so sánh an toàn
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to compare protected documents java using GroupDocs.Comparison.
+    Complete tutorials, code examples & security best practices.
+  headline: Compare protected documents Java – Complete security guide
+  type: TechArticle
+- description: Learn how to compare protected documents java using GroupDocs.Comparison.
+    Complete tutorials, code examples & security best practices.
+  name: Compare protected documents Java – Complete security guide
+  steps:
+  - name: '**Custom load options** – Fine‑tune how protected documents are loaded
+      by creating custom `LoadOptions` for each file type.'
+    text: '**Custom load options** – Fine‑tune how protected documents are loaded
+      by creating custom `LoadOptions` for each file type.'
+  - name: '**Security context management** – Implement a security context that reuses
+      credentials across multiple comparison calls within a user session.'
+    text: '**Security context management** – Implement a security context that reuses
+      credentials across multiple comparison calls within a user session.'
+  - name: '**Integration patterns** – For web apps, store the authenticated user’s
+      password in a secure session store to avoid repeated prompts.'
+    text: '**Integration patterns** – For web apps, store the authenticated user’s
+      password in a secure session store to avoid repeated prompts.'
+  - name: '**Testing strategy** – Build a suite of unit tests covering edge cases
+      such as special characters, empty passwords, and mixed‑type document pairs.'
+    text: '**Testing strategy** – Build a suite of unit tests covering edge cases
+      such as special characters, empty passwords, and mixed‑type document pairs.'
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Comparison lets you specify separate passwords for each
+      document when loading them.
+    question: Can I compare documents that use different passwords for source and
+      target?
+  - answer: Storing passwords in environment variables is a common practice, but for
+      higher security you should use a dedicated secret manager or encrypted vault.
+    question: Is it safe to store passwords in environment variables?
+  - answer: After generating the diff, you can save the output to a password‑protected
+      file using the library’s `SaveOptions` with a new password.
+    question: How do I ensure the comparison result is also protected?
+  - answer: Absolutely. Excel files are handled the same way as Word and PDF – just
+      provide the correct password in the load options.
+    question: Does the library support comparing encrypted Excel files?
+  - answer: The library supports Java 8 and newer. Using the latest LTS version (e.g.,
+      Java 17) is recommended for performance and security updates.
+    question: What Java version is required?
+  type: FAQPage
 tags:
 - document-security
 - password-protection
 - java-comparison
 - groupdocs
-title: So sánh Tài liệu Bảo vệ Java – Hướng dẫn Bảo mật Toàn diện
+- secure document processing
+title: So sánh tài liệu được bảo vệ Java – Hướng dẫn bảo mật toàn diện
 type: docs
 url: /vi/java/security-protection/
 weight: 9
 ---
 
-# So sánh tài liệu được bảo vệ Java – Hướng dẫn bảo mật toàn diện
+# So sánh tài liệu được bảo vệ Java – Hướng dẫn bảo mật hoàn chỉnh
 
-Làm việc với các tài liệu nhạy cảm yêu cầu bảo vệ bằng mật khẩu? Bạn không đơn độc. Nhiều nhà phát triển cần **compare protected documents java** trong khi vẫn duy trì bảo mật chặt chẽ. Dù bạn đang xây dựng hệ thống quản lý tài liệu, công cụ tuân thủ, hay ứng dụng kiểm soát phiên bản, việc so sánh an toàn thường là yêu cầu quan trọng. Trong hướng dẫn này, chúng tôi sẽ đi qua mọi thứ bạn cần biết để so sánh tài liệu được bảo vệ phía Java bằng GroupDocs.Comparison.
+Khi bạn cần **compare protected documents java**—ví dụ, để xác minh rằng một hợp đồng mới ký phù hợp với mẫu gốc—bảo mật không thể là thứ nghĩ sau. Trong hướng dẫn này, bạn sẽ khám phá cách tải tệp được mã hoá, xác thực bằng mật khẩu đúng, và tạo báo cáo diff trong khi giữ mọi byte dữ liệu mật giữ an toàn. Chúng tôi sẽ hướng dẫn toàn bộ quy trình sử dụng GroupDocs.Comparison for Java, thảo luận các chiến lược quản lý mật khẩu, và chia sẻ các mẹo tối ưu hiệu năng cho các kịch bản quy mô lớn.
 
 ## Câu trả lời nhanh
-- **Thư viện nào xử lý so sánh tài liệu được bảo vệ?** GroupDocs.Comparison for Java.  
-- **Tôi có cần giấy phép không?** Giấy phép tạm thời hoạt động cho việc đánh giá; giấy phép đầy đủ cần thiết cho môi trường sản xuất.  
-- **Tôi có thể so sánh PDF và Word cùng lúc không?** Có – API hỗ trợ định dạng hỗn hợp với các mật khẩu khác nhau.  
-- **Làm sao để giữ mật khẩu an toàn?** Sử dụng biến môi trường hoặc trình quản lý bí mật; không bao giờ hard‑code chúng.  
-- **Xử lý hàng loạt có khả thi không?** Chắc chắn – bạn có thể tự động xử lý mật khẩu cho các so sánh quy mô lớn.
+- **What library handles protected document comparison?** GroupDocs.Comparison for Java.  
+- **Do I need a license?** A temporary license works for evaluation; a full license is required for production.  
+- **Can I compare PDFs and Word files together?** Yes – the API supports mixed formats with different passwords.  
+- **How do I keep passwords safe?** Use environment variables or a secret manager; never hard‑code them.  
+- **Is batch processing possible?** Absolutely – you can automate password handling for bulk comparisons.
 
-## So sánh tài liệu được bảo vệ Java là gì?
-So sánh tài liệu được bảo vệ phía Java có nghĩa là tải các tệp đã mã hoá, xác thực bằng mật khẩu đúng, và tạo báo cáo diff mà không lộ nội dung gốc. Quá trình phải tôn trọng kiểm soát truy cập, quản lý bộ nhớ một cách an toàn, và tùy chọn tạo kết quả so sánh được bảo vệ.
+## “compare protected documents java” là gì?
+So sánh tài liệu được bảo vệ theo cách Java có nghĩa là tải các tệp được mã hoá, xác thực bằng mật khẩu đúng, và tạo báo cáo diff mà không lộ nội dung gốc. Quá trình phải tôn trọng kiểm soát truy cập, quản lý bộ nhớ một cách an toàn, và tùy chọn tạo ra kết quả so sánh được bảo vệ, đồng thời duy trì độ trung thực của tài liệu và khả năng kiểm toán.
 
-## Tại sao nên sử dụng GroupDocs.Comparison cho so sánh an toàn?
-- **API thống nhất** cho Word, PDF, Excel và hơn thế nữa.  
-- **Xử lý mật khẩu tích hợp** cho cả mật khẩu người dùng và chủ sở hữu.  
-- **Kiểm soát bảo mật chi tiết** như ghi nhật ký audit và mã hoá kết quả.  
-- **Hiệu năng mở rộng** với streaming và tùy chọn async.
+## Tại sao sử dụng GroupDocs.Comparison cho so sánh an toàn?
+GroupDocs.Comparison for Java cung cấp một API thống nhất duy nhất cho phép mở, giải mã và so sánh hơn **30 định dạng tệp** như PDF, DOCX, XLSX, PPTX và HTML trong một lần gọi. Nó tự động xử lý mật khẩu người dùng và chủ sở hữu, cung cấp ghi log kiểm toán tích hợp, và có thể mã hoá tệp diff bằng mật khẩu bạn đặt. Xử lý dạng stream giữ mức sử dụng bộ nhớ dưới **200 MB** ngay cả với PDF 500 trang.
 
 ## Yêu cầu trước
-- Java 8 hoặc cao hơn.  
-- Thư viện GroupDocs.Comparison for Java (tải xuống từ các liên kết bên dưới).  
-- Truy cập vào các tệp nguồn và đích đã được bảo vệ.  
-- Lưu trữ an toàn cho mật khẩu (biến môi trường, Azure Key Vault, AWS Secrets Manager, v.v.).
+- Java 8 or higher (Java 17 LTS is recommended for optimal security updates).  
+- GroupDocs.Comparison for Java library (download from the links below).  
+- Access to the protected source and target files.  
+- Secure storage for passwords (environment variables, Azure Key Vault, AWS Secrets Manager, etc.).
 
 ## Cách so sánh tài liệu được bảo vệ Java
-Dưới đây là ba hướng dẫn tập trung giúp bạn qua các kịch bản phổ biến. Chọn cái phù hợp với trường hợp sử dụng của bạn:
+Để thực hiện so sánh tài liệu được bảo vệ, tải mỗi tệp với mật khẩu tương ứng bằng cách sử dụng `LoadOptions`, sau đó gọi phương thức `compare` của lớp `Comparison`. API trả về một tài liệu diff có thể được lưu với tùy chọn mã hoá. Quy trình này hoạt động cho các cặp đơn lẻ cũng như các thao tác hàng loạt khi kết hợp với logic vòng lặp.
 
-### [Cách so sánh tài liệu được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison trong Java](./compare-protected-docs-groupdocs-comparison-java/)
+### [Cách so sánh tài liệu được bảo vệ bằng mật khẩu sử dụng GroupDocs.Comparison trong Java](./compare-protected-docs-groupdocs-comparison-java/)
 Hoàn hảo cho các nhà phát triển cần xử lý nhiều loại tài liệu với các mức bảo vệ khác nhau. Hướng dẫn này bao gồm:
 - Thiết lập quy trình so sánh an toàn  
 - Xử lý các định dạng tệp khác nhau (Word, PDF, Excel)  
 - Quản lý nhiều kịch bản mật khẩu  
 - Triển khai xử lý lỗi mạnh mẽ  
 
-**Khi nào nên sử dụng**: Bạn đang xây dựng các ứng dụng doanh nghiệp xử lý các loại tài liệu hỗn hợp với các yêu cầu bảo mật khác nhau.
+**Khi nào nên dùng**: Bạn đang xây dựng các ứng dụng doanh nghiệp xử lý các loại tài liệu hỗn hợp với các yêu cầu bảo mật khác nhau.
 
-### [Cách so sánh tài liệu Word được bảo vệ bằng mật khẩu bằng GroupDocs.Comparison cho Java](./compare-password-protected-word-docs-groupdocs-java/)
-Tập trung cụ thể vào tài liệu Microsoft Word, hướng dẫn này đào sâu vào:
-- Các tính năng bảo mật riêng của Word  
+### [Cách so sánh tài liệu Word được bảo vệ bằng mật khẩu sử dụng GroupDocs.Comparison cho Java](./compare-password-protected-word-docs-groupdocs-java/)
+Tập trung cụ thể vào tài liệu Microsoft Word, hướng dẫn này đi sâu vào:
+- Các tính năng bảo mật đặc thù của Word  
 - Tối ưu hiệu năng cho các tệp Word lớn  
-- Xử lý các phiên bản tài liệu và thay đổi được theo dõi  
+- Xử lý các phiên bản tài liệu và các thay đổi được theo dõi  
 - Bảo tồn định dạng trong tài liệu được bảo vệ  
 
-**Khi nào nên sử dụng**: Ứng dụng của bạn chủ yếu làm việc với tài liệu Word trong môi trường doanh nghiệp hoặc pháp lý.
+**Khi nào nên dùng**: Ứng dụng của bạn chủ yếu làm việc với tài liệu Word trong môi trường doanh nghiệp hoặc pháp lý.
 
-### [Làm chủ so sánh tài liệu được bảo vệ bằng mật khẩu trong Java với GroupDocs.Comparison](./java-groupdocs-compare-password-protected-docs/)
+### [Thành thạo so sánh tài liệu được bảo vệ bằng mật khẩu trong Java với GroupDocs.Comparison](./java-groupdocs-compare-password-protected-docs/)
 Hướng dẫn toàn diện nhất cho các trường hợp sử dụng nâng cao:
-- Triển khai chính sách bảo mật tùy chỉnh  
+- Triển khai các chính sách bảo mật tùy chỉnh  
 - Tích hợp với hệ thống xác thực  
 - Cài đặt so sánh nâng cao cho các tệp được bảo vệ  
 - Xây dựng API an toàn xung quanh việc so sánh tài liệu  
 
-**Khi nào nên sử dụng**: Bạn cần bảo mật cấp doanh nghiệp và tích hợp với cơ sở hạ tầng xác thực hiện có.
+**Khi bạn cần điều này**: Bạn cần bảo mật cấp doanh nghiệp và tích hợp với hạ tầng xác thực hiện có.
 
 ## Các thực hành tốt nhất cho so sánh tài liệu an toàn
 
 ### 1. Chiến lược quản lý mật khẩu Java
 - **Never hard‑code passwords** in source code.  
-- Lưu trữ thông tin đăng nhập trong biến môi trường, tệp cấu hình được mã hoá, hoặc trình quản lý bí mật chuyên dụng.  
-- Thay đổi mật khẩu định kỳ, đặc biệt đối với các dịch vụ chạy lâu dài.  
+- Store credentials in environment variables, encrypted configuration files, or a dedicated secret manager.  
+- Rotate passwords regularly, especially for long‑running services.  
 
 ### 2. Quản lý tài nguyên
-```java
-// Always use try-with-resources for automatic cleanup
-try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
-    // Comparison operations
-} // Comparer is automatically disposed
-```
+`LoadOptions` là lớp cho phép GroupDocs.Comparison mở một tệp được bảo vệ. Đối tượng `LoadOptions` cho phép bạn chỉ định mật khẩu, đặt giới hạn sử dụng bộ nhớ, và chọn chế độ streaming. Sử dụng đúng cách ngăn toàn bộ tài liệu được tải vào RAM, điều này quan trọng đối với các PDF được mã hoá lớn.
+
+`SaveOptions` xác định cách lưu kết quả so sánh, bao gồm định dạng và tùy chọn bảo vệ bằng mật khẩu. Bạn có thể lưu đầu ra thành tệp được bảo vệ bằng mật khẩu bằng cách sử dụng `SaveOptions` của thư viện với mật khẩu mới.
 
 ### 3. Xử lý lỗi cho các kịch bản bảo mật
-Lên kế hoạch cho các ngoại lệ liên quan đến bảo mật thường gặp:
-- Thử nhập mật khẩu không hợp lệ  
-- Tài liệu bị hỏng hoặc bị can thiệp  
-- Quyền truy cập không đủ  
-- Hết thời gian chờ mạng khi truy cập tài liệu  
+Plan for common security‑related exceptions:
+- **Invalid password attempts**  
+- **Corrupted or tampered documents**  
+- **Insufficient permissions**  
+- **Network timeouts during document access**  
 
-### 4. Kiểm toán và ghi nhật ký
-Theo dõi các hoạt động so sánh để tuân thủ:
-- Ghi nhật ký các so sánh thành công **không** lộ dữ liệu nhạy cảm.  
-- Ghi lại các lần xác thực thất bại.  
-- Giám sát các mẫu truy cập bất thường.  
-- Duy trì lịch sử so sánh để kiểm toán.
+### 4. Kiểm toán và ghi log
+Keep track of comparison operations for compliance:
+- Log successful comparisons **without** exposing sensitive data.  
+- Record failed authentication attempts.  
+- Monitor unusual access patterns.  
+- Maintain a comparison history for audit purposes.
 
-## Các cân nhắc về hiệu suất và bảo mật
+## Các cân nhắc về hiệu năng và bảo mật
 
 ### Sử dụng bộ nhớ
-Tài liệu được bảo vệ thường cần bộ nhớ bổ sung để giải mã. Để hiệu quả:
-- **Stream large files** thay vì tải toàn bộ vào bộ nhớ.  
-- **Paginate** các so sánh tài liệu khổng lồ khi có thể.  
-- Sử dụng **temporary files** một cách an toàn nếu bộ nhớ bị giới hạn.  
+Protected documents often require extra memory for decryption. To stay efficient:
+- **Stream large files** instead of loading them entirely into memory.  
+- **Paginate** massive document comparisons when possible.  
+- Use **temporary files** securely if memory is constrained.  
 
 ### Tốc độ xử lý
-Bảo mật tạo ra chi phí thêm, nhưng bạn có thể tối ưu:
-- **Cache decrypted content** một cách an toàn cho các so sánh lặp lại.  
-- Tận dụng **parallel processing** cho các thao tác hàng loạt.  
-- Sử dụng **asynchronous APIs** để UI luôn phản hồi.  
+Security adds overhead, but you can optimize:
+- **Cache decrypted content** securely for repeated comparisons.  
+- Leverage **parallel processing** for batch operations.  
+- Use **asynchronous APIs** to keep UI responsive.  
 
-### Đánh đổi bảo mật vs. hiệu suất
-- **In‑memory operations** nhanh hơn nhưng kém an toàn hơn cho dữ liệu cực kỳ nhạy cảm.  
-- **Temporary file cleanup** gây một chút chi phí hiệu suất nhưng tăng cường bảo mật.  
-- **Higher encryption levels** làm tăng thời gian xử lý; chọn mức phù hợp với mức độ rủi ro của bạn.  
+### Đánh đổi giữa bảo mật và hiệu năng
+- **In‑memory operations** are faster but less secure for highly sensitive data.  
+- **Temporary file cleanup** adds a small performance cost but improves security.  
+- **Higher encryption levels** increase processing time; choose the level that matches your risk profile.  
 
 ## Khắc phục các vấn đề thường gặp
 
-### Lỗi “Invalid Password”
-**Problem**: Password errors appear even with correct credentials.  
-**Solutions**:
-- Xác minh mã hoá mật khẩu (UTF‑8 vs. ASCII).  
-- Escape các ký tự đặc biệt có thể bị shell hoặc URL diễn giải.  
-- Đảm bảo tài liệu không bị hỏng trong quá trình truyền.  
+### Lỗi “Invalid password”
+**Vấn đề**: Password errors appear even with correct credentials.  
+**Giải pháp**:
+- Verify password encoding (UTF‑8 vs. ASCII).  
+- Escape special characters that may be interpreted by the shell or URL.  
+- Ensure the document wasn’t corrupted during transfer.  
 
 ### Vấn đề bộ nhớ với các tệp được bảo vệ lớn
-**Problem**: `OutOfMemoryError` khi xử lý các tài liệu được mã hoá lớn.  
-**Solutions**:
-- Tăng kích thước heap JVM, ví dụ `-Xmx4g`.  
-- Chuyển sang phương pháp so sánh streaming do API cung cấp.  
-- Xử lý tài liệu theo từng khối nếu thư viện hỗ trợ.  
+**Vấn đề**: `OutOfMemoryError` when processing big encrypted documents.  
+**Giải pháp**:
+- Increase JVM heap size, e.g., `-Xmx4g`.  
+- Switch to streaming comparison methods provided by the API.  
+- Process documents in chunks if the library supports it.  
 
-### Suy giảm hiệu suất
-**Problem**: Comparison takes significantly longer with password‑protected files.  
-**Solutions**:
-- Profile ứng dụng để xác định các nút thắt.  
-- Cache các tài liệu thường xuyên so sánh một cách an toàn.  
-- Điều chỉnh cài đặt so sánh (ví dụ, bỏ qua metadata) để tăng tốc.  
+### Suy giảm hiệu năng
+**Vấn đề**: Comparison takes significantly longer with password‑protected files.  
+**Giải pháp**:
+- Profile the application to locate bottlenecks.  
+- Cache frequently compared documents securely.  
+- Tune comparison settings (e.g., ignore metadata) to speed up processing.  
 
 ## Mẹo chuyên sâu cho người dùng nâng cao
-1. **Custom Load Options** – Tinh chỉnh cách tải tài liệu được bảo vệ bằng cách tạo `LoadOptions` tùy chỉnh cho mỗi loại tệp.  
-2. **Security Context Management** – Triển khai ngữ cảnh bảo mật tái sử dụng thông tin đăng nhập qua nhiều lần gọi so sánh trong một phiên người dùng.  
-3. **Integration Patterns** – Đối với ứng dụng web, lưu mật khẩu người dùng đã xác thực trong kho lưu trữ phiên bảo mật để tránh yêu cầu nhập lại.  
-4. **Testing Strategy** – Xây dựng bộ kiểm thử đơn vị bao phủ các trường hợp biên như ký tự đặc biệt, mật khẩu rỗng, và các cặp tài liệu hỗn hợp.  
+1. **Custom load options** – Tinh chỉnh cách tải tài liệu được bảo vệ bằng cách tạo `LoadOptions` tùy chỉnh cho mỗi loại tệp.  
+2. **Security context management** – Triển khai ngữ cảnh bảo mật tái sử dụng thông tin đăng nhập qua nhiều lần gọi so sánh trong một phiên người dùng.  
+3. **Integration patterns** – Đối với ứng dụng web, lưu mật khẩu người dùng đã xác thực trong kho lưu trữ phiên an toàn để tránh yêu cầu nhập lại.  
+4. **Testing strategy** – Xây dựng bộ kiểm thử đơn vị bao phủ các trường hợp biên như ký tự đặc biệt, mật khẩu rỗng, và các cặp tài liệu hỗn hợp.  
 
 ## Bắt đầu ngay hôm nay
-Sẵn sàng triển khai so sánh tài liệu an toàn trong ứng dụng Java của bạn? Bắt đầu với hướng dẫn thân thiện cho người mới ở trên, sau đó khám phá hướng dẫn nâng cao khi nhu cầu tăng lên. Nhớ: bắt đầu đơn giản—đầu tiên làm cho việc so sánh tài liệu được bảo vệ cơ bản hoạt động, rồi mới thêm các tính năng bảo mật nâng cao.  
+Ready to implement secure document comparison in your Java application? Begin with the beginner‑friendly tutorial above, then explore the advanced guide as your needs grow. Remember: start simple—get a basic protected‑document comparison working first, then layer on the advanced security features.
 
 ## Tài nguyên bổ sung
 - [Tài liệu GroupDocs.Comparison cho Java](https://docs.groupdocs.com/comparison/java/)  
@@ -168,25 +216,43 @@ Sẵn sàng triển khai so sánh tài liệu an toàn trong ứng dụng Java c
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể so sánh các tài liệu sử dụng mật khẩu khác nhau cho nguồn và đích không?**  
-**A:** Có. GroupDocs.Comparison cho phép bạn chỉ định mật khẩu riêng cho mỗi tài liệu khi tải chúng.
+**Q: Can I compare documents that use different passwords for source and target?**  
+A: Yes. GroupDocs.Comparison lets you specify separate passwords for each document when loading them.
 
-**Q: Lưu mật khẩu trong biến môi trường có an toàn không?**  
-**A:** Lưu mật khẩu trong biến môi trường là thực hành phổ biến, nhưng để bảo mật cao hơn bạn nên sử dụng trình quản lý bí mật chuyên dụng hoặc kho lưu trữ mã hoá.
+**Q: Is it safe to store passwords in environment variables?**  
+A: Storing passwords in environment variables is a common practice, but for higher security you should use a dedicated secret manager or encrypted vault.
 
-**Q: Làm sao để đảm bảo kết quả so sánh cũng được bảo vệ?**  
-**A:** Sau khi tạo diff, bạn có thể lưu đầu ra vào tệp được bảo vệ bằng mật khẩu bằng cách sử dụng `SaveOptions` của thư viện với mật khẩu mới.
+**Q: How do I ensure the comparison result is also protected?**  
+A: After generating the diff, you can save the output to a password‑protected file using the library’s `SaveOptions` with a new password.
 
-**Q: Thư viện có hỗ trợ so sánh các tệp Excel được mã hoá không?**  
-**A:** Chắc chắn. Các tệp Excel được xử lý tương tự như Word và PDF – chỉ cần cung cấp mật khẩu đúng trong tùy chọn tải.
+**Q: Does the library support comparing encrypted Excel files?**  
+A: Absolutely. Excel files are handled the same way as Word and PDF – just provide the correct password in the load options.
 
-**Q: Yêu cầu phiên bản Java nào?**  
-**A:** Thư viện hỗ trợ Java 8 và các phiên bản mới hơn. Sử dụng phiên bản LTS mới nhất (ví dụ Java 17) được khuyến nghị để có hiệu năng và cập nhật bảo mật.  
+**Q: What Java version is required?**  
+A: The library supports Java 8 and newer. Using the latest LTS version (e.g., Java 17) is recommended for performance and security updates.
 
 ---
 
-**Cập nhật lần cuối:** 2026-04-04  
-**Kiểm tra với:** GroupDocs.Comparison for Java 23.9 (phiên bản mới nhất tại thời điểm viết)  
+**Cập nhật lần cuối:** 2026-09-10  
+**Kiểm tra với:** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
 **Tác giả:** GroupDocs  
 
----
+```java
+// Always use try-with-resources for automatic cleanup
+try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
+    // Comparison operations
+} // Comparer is automatically disposed
+```
+
+## Các hướng dẫn liên quan
+
+- [Tải và so sánh an toàn tài liệu được bảo vệ bằng mật khẩu trong Java sử dụng API GroupDocs.Comparison](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
+- [so sánh docx được bảo vệ bằng mật khẩu – Tải tài liệu được bảo vệ – So sánh an toàn trong Java](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
+- [GroupDocs Comparison Java – So sánh tài liệu Word được bảo vệ bằng mật khẩu](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

@@ -1,22 +1,75 @@
 ---
 categories:
 - Java Development
-date: '2026-04-04'
-description: Dowiedz się, jak porównywać zabezpieczone dokumenty w Javie przy użyciu
-  GroupDocs.Comparison. Kompletny tutorial, przykłady kodu i najlepsze praktyki bezpieczeństwa.
+date: '2026-09-10'
+description: Dowiedz się, jak porównywać chronione dokumenty Java przy użyciu GroupDocs.Comparison.
+  Kompletny zestaw tutoriali, przykłady kodu i security best practices.
 keywords:
 - compare protected documents java
 - password management java
 - document security
 - groupdocs comparison java
-lastmod: '2026-04-04'
+- store passwords securely java
+lastmod: '2026-09-10'
 linktitle: Bezpieczeństwo i ochrona dokumentów Java
+og_description: Porównuj chronione dokumenty Java z GroupDocs.Comparison. Dowiedz
+  się o password handling, best practices i performance tips w tym kompleksowym tutorialu.
+og_image_alt: Guide showing secure comparison of password‑protected documents using
+  GroupDocs.Comparison for Java
+og_title: Porównywanie chronionych dokumentów Java – Przewodnik bezpiecznego porównywania
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to compare protected documents java using GroupDocs.Comparison.
+    Complete tutorials, code examples & security best practices.
+  headline: Compare protected documents Java – Complete security guide
+  type: TechArticle
+- description: Learn how to compare protected documents java using GroupDocs.Comparison.
+    Complete tutorials, code examples & security best practices.
+  name: Compare protected documents Java – Complete security guide
+  steps:
+  - name: '**Custom load options** – Fine‑tune how protected documents are loaded
+      by creating custom `LoadOptions` for each file type.'
+    text: '**Custom load options** – Fine‑tune how protected documents are loaded
+      by creating custom `LoadOptions` for each file type.'
+  - name: '**Security context management** – Implement a security context that reuses
+      credentials across multiple comparison calls within a user session.'
+    text: '**Security context management** – Implement a security context that reuses
+      credentials across multiple comparison calls within a user session.'
+  - name: '**Integration patterns** – For web apps, store the authenticated user’s
+      password in a secure session store to avoid repeated prompts.'
+    text: '**Integration patterns** – For web apps, store the authenticated user’s
+      password in a secure session store to avoid repeated prompts.'
+  - name: '**Testing strategy** – Build a suite of unit tests covering edge cases
+      such as special characters, empty passwords, and mixed‑type document pairs.'
+    text: '**Testing strategy** – Build a suite of unit tests covering edge cases
+      such as special characters, empty passwords, and mixed‑type document pairs.'
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Comparison lets you specify separate passwords for each
+      document when loading them.
+    question: Can I compare documents that use different passwords for source and
+      target?
+  - answer: Storing passwords in environment variables is a common practice, but for
+      higher security you should use a dedicated secret manager or encrypted vault.
+    question: Is it safe to store passwords in environment variables?
+  - answer: After generating the diff, you can save the output to a password‑protected
+      file using the library’s `SaveOptions` with a new password.
+    question: How do I ensure the comparison result is also protected?
+  - answer: Absolutely. Excel files are handled the same way as Word and PDF – just
+      provide the correct password in the load options.
+    question: Does the library support comparing encrypted Excel files?
+  - answer: The library supports Java 8 and newer. Using the latest LTS version (e.g.,
+      Java 17) is recommended for performance and security updates.
+    question: What Java version is required?
+  type: FAQPage
 tags:
 - document-security
 - password-protection
 - java-comparison
 - groupdocs
-title: Porównaj chronione dokumenty Java – Kompletny przewodnik bezpieczeństwa
+- secure document processing
+title: Porównywanie chronionych dokumentów Java – Kompletny przewodnik bezpieczeństwa
 type: docs
 url: /pl/java/security-protection/
 weight: 9
@@ -24,147 +77,140 @@ weight: 9
 
 # Porównywanie chronionych dokumentów Java – Kompletny przewodnik bezpieczeństwa
 
-Pracujesz z wrażliwymi dokumentami wymagającymi ochrony hasłem? Nie jesteś sam. Wielu programistów musi **compare protected documents java** zachowując wysokie bezpieczeństwo. Niezależnie od tego, czy tworzysz system zarządzania dokumentami, narzędzie zgodności, czy aplikację do kontroli wersji, bezpieczne porównywanie jest często kluczowym wymogiem. W tym przewodniku przeprowadzimy Cię przez wszystko, co musisz wiedzieć, aby porównać chronione dokumenty po stronie Java przy użyciu GroupDocs.Comparison.
+Kiedy potrzebujesz **compare protected documents java** — na przykład, aby zweryfikować, że nowo podpisany kontrakt odpowiada oryginalnemu szablonowi — bezpieczeństwo nie może być dodatkiem. W tym samouczku dowiesz się, jak ładować zaszyfrowane pliki, uwierzytelniać się przy użyciu właściwych haseł i generować raport różnic, jednocześnie chroniąc każdy bajt poufnych danych. Przejdziemy przez pełny przepływ pracy z użyciem GroupDocs.Comparison for Java, omówimy strategie zarządzania hasłami i podzielimy się wskazówkami dotyczącymi optymalizacji wydajności w dużych scenariuszach.
 
 ## Szybkie odpowiedzi
 - **Jaką bibliotekę obsługuje porównywanie chronionych dokumentów?** GroupDocs.Comparison for Java.  
-- **Czy potrzebuję licencji?** A temporary license works for evaluation; a full license is required for production.  
-- **Czy mogę porównywać pliki PDF i Word razem?** Yes – the API supports mixed formats with different passwords.  
-- **Jak bezpiecznie przechowywać hasła?** Use environment variables or a secret manager; never hard‑code them.  
-- **Czy przetwarzanie wsadowe jest możliwe?** Absolutely – you can automate password handling for bulk comparisons.
+- **Czy potrzebuję licencji?** Tymczasowa licencja działa w trybie ewaluacji; pełna licencja jest wymagana w produkcji.  
+- **Czy mogę porównywać pliki PDF i Word razem?** Tak – API obsługuje mieszane formaty z różnymi hasłami.  
+- **Jak bezpiecznie przechowywać hasła?** Używaj zmiennych środowiskowych lub menedżera tajemnic; nigdy nie koduj ich na stałe.  
+- **Czy przetwarzanie wsadowe jest możliwe?** Zdecydowanie – możesz zautomatyzować obsługę haseł przy masowych porównaniach.
 
-## Czym jest „compare protected documents java”?
-Porównywanie chronionych dokumentów w Javie oznacza ładowanie zaszyfrowanych plików, uwierzytelnianie przy użyciu właściwych haseł oraz generowanie raportu różnic bez ujawniania oryginalnej zawartości. Proces musi respektować kontrolę dostępu, bezpiecznie zarządzać pamięcią i opcjonalnie generować chroniony wynik porównania.
+## Co to jest „compare protected documents java”?
+Porównywanie chronionych dokumentów w Javie oznacza ładowanie zaszyfrowanych plików, uwierzytelnianie przy użyciu właściwych haseł i generowanie raportu różnic bez ujawniania oryginalnej treści. Proces musi respektować kontrolę dostępu, bezpiecznie zarządzać pamięcią i opcjonalnie tworzyć chroniony wynik porównania, przy jednoczesnym zachowaniu integralności dokumentu i możliwości audytu.
 
 ## Dlaczego używać GroupDocs.Comparison do bezpiecznego porównywania?
-- **Unified API** for Word, PDF, Excel, and more.  
-- **Built‑in password handling** for both user and owner passwords.  
-- **Fine‑grained security controls** such as audit logging and result encryption.  
-- **Scalable performance** with streaming and async options.
+GroupDocs.Comparison for Java oferuje jednorodne API, które otwiera, odszyfrowuje i porównuje ponad **30 formatów plików**, takich jak PDF, DOCX, XLSX, PPTX i HTML w jednym wywołaniu. Automatycznie obsługuje hasła użytkownika i właściciela, zapewnia wbudowane logowanie audytu i może zaszyfrować plik różnicowy hasłem, które ustawisz. Przetwarzanie strumieniowe utrzymuje zużycie pamięci poniżej **200 MB**, nawet przy PDF‑ach o 500 stronach.
 
 ## Wymagania wstępne
-- Java 8 or higher.  
-- GroupDocs.Comparison for Java library (download from the links below).  
-- Access to the protected source and target files.  
-- Secure storage for passwords (environment variables, Azure Key Vault, AWS Secrets Manager, etc.).
+- Java 8 lub wyższa (zalecany jest Java 17 LTS dla optymalnych aktualizacji bezpieczeństwa).  
+- Biblioteka GroupDocs.Comparison for Java (pobierz z poniższych linków).  
+- Dostęp do chronionych plików źródłowych i docelowych.  
+- Bezpieczne przechowywanie haseł (zmienne środowiskowe, Azure Key Vault, AWS Secrets Manager itp.).
 
-## Jak porównać chronione dokumenty w Java
-Poniżej znajdziesz trzy skoncentrowane samouczki, które przeprowadzą Cię przez typowe scenariusze. Wybierz ten, który odpowiada Twojemu przypadkowi użycia:
+## Jak porównać chronione dokumenty Java
+Aby wykonać porównanie chronionego dokumentu, załaduj każdy plik z odpowiednim hasłem przy użyciu `LoadOptions`, a następnie wywołaj metodę `compare` klasy `Comparison`. API zwraca dokument różnicowy, który można zapisać z opcjonalnym szyfrowaniem. Ten przepływ pracy działa zarówno dla pojedynczych par, jak i operacji wsadowych po połączeniu z logiką pętli.
 
 ### [Jak porównać dokumenty chronione hasłem przy użyciu GroupDocs.Comparison w Javie](./compare-protected-docs-groupdocs-comparison-java/)
 
-Idealny dla programistów, którzy muszą obsługiwać wiele typów dokumentów o różnych poziomach ochrony. Ten samouczek obejmuje:
-- Setting up secure comparison workflows  
-- Handling various file formats (Word, PDF, Excel)  
-- Managing multiple password scenarios  
-- Implementing robust error handling  
+Perfekcyjny dla programistów, którzy muszą obsługiwać wiele typów dokumentów o różnych poziomach ochrony. Ten samouczek obejmuje:
+- Ustawianie bezpiecznych przepływów porównywania  
+- Obsługa różnych formatów plików (Word, PDF, Excel)  
+- Zarządzanie wieloma scenariuszami haseł  
+- Implementacja solidnej obsługi błędów  
 
-**When to use this**: Budujesz aplikacje korporacyjne przetwarzające mieszane typy dokumentów o różnych wymaganiach bezpieczeństwa.
+**Kiedy używać**: Tworzysz aplikacje korporacyjne, które przetwarzają mieszane typy dokumentów o różnych wymaganiach bezpieczeństwa.
 
-### [Jak porównać dokumenty Word chronione hasłem przy użyciu GroupDocs.Comparison dla Java](./compare-password-protected-word-docs-groupdocs-java/)
+### [Jak porównać dokumenty Word chronione hasłem przy użyciu GroupDocs.Comparison for Java](./compare-password-protected-word-docs-groupdocs-java/)
 
-Skoncentrowany konkretnie na dokumentach Microsoft Word, ten przewodnik zagłębia się w:
-- Word‑specific security features  
-- Optimizing performance for large Word files  
-- Handling document revisions and tracked changes  
-- Preserving formatting in protected documents  
+Skoncentrowany specjalnie na dokumentach Microsoft Word, ten przewodnik zagłębia się w:
+- Funkcje bezpieczeństwa specyficzne dla Word  
+- Optymalizacja wydajności dla dużych plików Word  
+- Obsługa wersji dokumentu i zmian śledzonych  
+- Zachowanie formatowania w chronionych dokumentach  
 
-**When to use this**: Twoja aplikacja głównie obsługuje dokumenty Word w środowiskach korporacyjnych lub prawnych.
+**Kiedy używać**: Twoja aplikacja głównie obsługuje dokumenty Word w środowiskach korporacyjnych lub prawnych.
 
-### [Mistrzowskie porównywanie dokumentów chronionych hasłem w Javie z GroupDocs.Comparison](./java-groupdocs-compare-password-protected-docs/)
+### [Mistrzostwo w porównywaniu dokumentów chronionych hasłem w Javie z GroupDocs.Comparison](./java-groupdocs-compare-password-protected-docs/)
 
 Najbardziej kompleksowy samouczek dla zaawansowanych przypadków użycia:
-- Custom security policies implementation  
-- Integration with authentication systems  
-- Advanced comparison settings for protected files  
-- Building secure APIs around document comparison  
+- Implementacja niestandardowych polityk bezpieczeństwa  
+- Integracja z systemami uwierzytelniania  
+- Zaawansowane ustawienia porównywania dla chronionych plików  
+- Budowanie bezpiecznych API wokół porównywania dokumentów  
 
-**When to use this**: Potrzebujesz zabezpieczeń klasy korporacyjnej i integracji z istniejącą infrastrukturą uwierzytelniania.
+**Kiedy używać**: Potrzebujesz bezpieczeństwa klasy korporacyjnej i integracji z istniejącą infrastrukturą uwierzytelniania.
 
-## Najlepsze praktyki bezpiecznego porównywania dokumentów
+## Najlepsze praktyki dla bezpiecznego porównywania dokumentów
 
-### 1. Strategie zarządzania hasłami w Java
-- **Never hard‑code passwords** in source code.  
-- Store credentials in environment variables, encrypted configuration files, or a dedicated secret manager.  
-- Rotate passwords regularly, especially for long‑running services.  
+### 1. Strategie zarządzania hasłami w Javie
+- **Nigdy nie koduj na stałe haseł** w kodzie źródłowym.  
+- Przechowuj poświadczenia w zmiennych środowiskowych, zaszyfrowanych plikach konfiguracyjnych lub dedykowanym menedżerze tajemnic.  
+- Regularnie zmieniaj hasła, szczególnie w przypadku usług działających długotrwale.
 
-### 2. Resource Management
-```java
-// Always use try-with-resources for automatic cleanup
-try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
-    // Comparison operations
-} // Comparer is automatically disposed
-```
+### 2. Zarządzanie zasobami
+`LoadOptions` to klasa, która informuje GroupDocs.Comparison, jak otworzyć chroniony plik. Obiekt `LoadOptions` pozwala określić hasło, ustawić limity zużycia pamięci i wybrać tryb strumieniowy. Poprawne użycie zapobiega ładowaniu całego dokumentu do RAM, co jest kluczowe przy dużych zaszyfrowanych PDF‑ach.
+
+`SaveOptions` definiuje sposób zapisu wyniku porównania, w tym format i opcjonalną ochronę hasłem. Możesz zapisać wynik do pliku chronionego hasłem, używając `SaveOptions` biblioteki z nowym hasłem.
 
 ### 3. Obsługa błędów w scenariuszach bezpieczeństwa
-Planuj typowe wyjątki związane z bezpieczeństwem:
-- Invalid password attempts  
-- Corrupted or tampered documents  
-- Insufficient permissions  
-- Network timeouts during document access  
+Planuj obsługę typowych wyjątków związanych z bezpieczeństwem:
+- Nieprawidłowe próby wprowadzenia hasła  
+- Uszkodzone lub sfałszowane dokumenty  
+- Niewystarczające uprawnienia  
+- Przekroczenia limitu czasu sieci podczas dostępu do dokumentu  
 
 ### 4. Audyt i logowanie
 Śledź operacje porównywania w celu zapewnienia zgodności:
-- Log successful comparisons **without** exposing sensitive data.  
-- Record failed authentication attempts.  
-- Monitor unusual access patterns.  
-- Maintain a comparison history for audit purposes.
+- Loguj udane porównania **bez** ujawniania wrażliwych danych.  
+- Rejestruj nieudane próby uwierzytelnienia.  
+- Monitoruj nietypowe wzorce dostępu.  
+- Utrzymuj historię porównań do celów audytu.
 
 ## Rozważania dotyczące wydajności i bezpieczeństwa
 
-### Użycie pamięci
+### Zużycie pamięci
 Chronione dokumenty często wymagają dodatkowej pamięci do odszyfrowania. Aby pozostać wydajnym:
-- **Stream large files** instead of loading them entirely into memory.  
-- **Paginate** massive document comparisons when possible.  
-- Use **temporary files** securely if memory is constrained.
+- **Strumieniuj duże pliki** zamiast ładować je w całości do pamięci.  
+- **Paginuj** masowe porównania dokumentów, gdy to możliwe.  
+- Używaj **plików tymczasowych** w sposób bezpieczny, jeśli pamięć jest ograniczona.
 
-### Szybkość przetwarzania
+### Prędkość przetwarzania
 Bezpieczeństwo wprowadza narzut, ale możesz zoptymalizować:
-- **Cache decrypted content** securely for repeated comparisons.  
-- Leverage **parallel processing** for batch operations.  
-- Use **asynchronous APIs** to keep UI responsive.
+- **Cache'uj odszyfrowaną zawartość** w sposób bezpieczny dla powtarzanych porównań.  
+- Wykorzystaj **przetwarzanie równoległe** dla operacji wsadowych.  
+- Używaj **asynchronicznych API**, aby UI pozostało responsywne.
 
-### Kompleksowość bezpieczeństwa a wydajności
-- **In‑memory operations** are faster but less secure for highly sensitive data.  
-- **Temporary file cleanup** adds a small performance cost but improves security.  
-- **Higher encryption levels** increase processing time; choose the level that matches your risk profile.
+### Kompromisy między bezpieczeństwem a wydajnością
+- **Operacje w pamięci** są szybsze, ale mniej bezpieczne dla wysoce wrażliwych danych.  
+- **Czyszczenie plików tymczasowych** dodaje niewielki koszt wydajności, ale zwiększa bezpieczeństwo.  
+- **Wyższe poziomy szyfrowania** zwiększają czas przetwarzania; wybierz poziom odpowiadający Twojemu profilowi ryzyka.
 
 ## Rozwiązywanie typowych problemów
 
-### Błędy „Invalid Password”
-**Problem**: Password errors appear even with correct credentials.  
-**Solutions**:
-- Verify password encoding (UTF‑8 vs. ASCII).  
-- Escape special characters that may be interpreted by the shell or URL.  
-- Ensure the document wasn’t corrupted during transfer.
+### Błędy „Invalid password”
+**Problem**: Błędy haseł pojawiają się nawet przy prawidłowych poświadczeniach.  
+**Rozwiązania**:
+- Sprawdź kodowanie hasła (UTF‑8 vs. ASCII).  
+- Ucieknij znaki specjalne, które mogą być interpretowane przez powłokę lub URL.  
+- Upewnij się, że dokument nie został uszkodzony podczas transferu.
 
 ### Problemy z pamięcią przy dużych chronionych plikach
-**Problem**: `OutOfMemoryError` when processing big encrypted documents.  
-**Solutions**:
-- Increase JVM heap size, e.g., `-Xmx4g`.  
-- Switch to streaming comparison methods provided by the API.  
-- Process documents in chunks if the library supports it.
+**Problem**: `OutOfMemoryError` podczas przetwarzania dużych zaszyfrowanych dokumentów.  
+**Rozwiązania**:
+- Zwiększ rozmiar sterty JVM, np. `-Xmx4g`.  
+- Przejdź na metody porównywania strumieniowego udostępnione przez API.  
+- Przetwarzaj dokumenty w częściach, jeśli biblioteka to obsługuje.
 
 ### Spadek wydajności
-**Problem**: Comparison takes significantly longer with password‑protected files.  
-**Solutions**:
-- Profile the application to locate bottlenecks.  
-- Cache frequently compared documents securely.  
-- Tune comparison settings (e.g., ignore metadata) to speed up processing.
+**Problem**: Porównywanie trwa znacznie dłużej przy plikach chronionych hasłem.  
+**Rozwiązania**:
+- Profiluj aplikację, aby zlokalizować wąskie gardła.  
+- Cache'uj bezpiecznie często porównywane dokumenty.  
+- Dostosuj ustawienia porównywania (np. ignoruj metadane), aby przyspieszyć przetwarzanie.
 
-## Porady dla zaawansowanych użytkowników
-
-1. **Custom Load Options** – Fine‑tune how protected documents are loaded by creating custom `LoadOptions` for each file type.  
-2. **Security Context Management** – Implement a security context that reuses credentials across multiple comparison calls within a user session.  
-3. **Integration Patterns** – For web apps, store the authenticated user’s password in a secure session store to avoid repeated prompts.  
-4. **Testing Strategy** – Build a suite of unit tests covering edge cases such as special characters, empty passwords, and mixed‑type document pairs.
+## Profesjonalne wskazówki dla zaawansowanych użytkowników
+1. **Niestandardowe opcje ładowania** – Dostosuj sposób ładowania chronionych dokumentów, tworząc własne `LoadOptions` dla każdego typu pliku.  
+2. **Zarządzanie kontekstem bezpieczeństwa** – Implementuj kontekst bezpieczeństwa, który ponownie używa poświadczeń w wielu wywołaniach porównania w ramach sesji użytkownika.  
+3. **Wzorce integracji** – Dla aplikacji webowych przechowuj hasło uwierzytelnionego użytkownika w bezpiecznym magazynie sesji, aby uniknąć powtarzających się monitów.  
+4. **Strategia testowania** – Zbuduj zestaw testów jednostkowych obejmujących przypadki brzegowe, takie jak znaki specjalne, puste hasła i pary dokumentów różnych typów.
 
 ## Rozpocznij już dziś
-Gotowy, aby wdrożyć bezpieczne porównywanie dokumentów w swojej aplikacji Java? Zacznij od przyjaznego dla początkujących samouczka powyżej, a następnie odkrywaj zaawansowany przewodnik w miarę rosnących potrzeb. Pamiętaj: zacznij od prostego — najpierw uruchom podstawowe porównywanie chronionych dokumentów, a potem dodaj zaawansowane funkcje bezpieczeństwa.
+Gotowy, aby wdrożyć bezpieczne porównywanie dokumentów w swojej aplikacji Java? Zacznij od przyjaznego dla początkujących samouczka powyżej, a następnie poznaj zaawansowany przewodnik w miarę rosnących potrzeb. Pamiętaj: zacznij od prostego — najpierw uruchom podstawowe porównanie chronionego dokumentu, a potem dodaj zaawansowane funkcje bezpieczeństwa.
 
 ## Dodatkowe zasoby
 - [Dokumentacja GroupDocs.Comparison for Java](https://docs.groupdocs.com/comparison/java/)  
-- [Referencja API GroupDocs.Comparison for Java](https://reference.groupdocs.com/comparison/java/)  
+- [Reference API GroupDocs.Comparison for Java](https://reference.groupdocs.com/comparison/java/)  
 - [Pobierz GroupDocs.Comparison for Java](https://releases.groupdocs.com/comparison/java/)  
 - [Forum GroupDocs.Comparison](https://forum.groupdocs.com/c/comparison)  
 - [Bezpłatne wsparcie](https://forum.groupdocs.com/)  
@@ -172,25 +218,49 @@ Gotowy, aby wdrożyć bezpieczne porównywanie dokumentów w swojej aplikacji Ja
 
 ## Najczęściej zadawane pytania
 
-**Q: Czy mogę porównywać dokumenty, które używają różnych haseł dla źródła i celu?**  
-A: Yes. GroupDocs.Comparison lets you specify separate passwords for each document when loading them.
+**P: Czy mogę porównywać dokumenty, które używają różnych haseł dla źródła i celu?**  
+**O:** Tak. GroupDocs.Comparison pozwala określić osobne hasła dla każdego dokumentu podczas ich ładowania.
 
-**Q: Czy bezpiecznie jest przechowywać hasła w zmiennych środowiskowych?**  
-A: Storing passwords in environment variables is a common practice, but for higher security you should use a dedicated secret manager or encrypted vault.
+**P: Czy bezpiecznie jest przechowywać hasła w zmiennych środowiskowych?**  
+**O:** Przechowywanie haseł w zmiennych środowiskowych jest powszechną praktyką, ale dla wyższego bezpieczeństwa powinieneś używać dedykowanego menedżera tajemnic lub zaszyfrowanego skarbca.
 
-**Q: Jak zapewnić, że wynik porównania jest również chroniony?**  
-A: After generating the diff, you can save the output to a password‑protected file using the library’s `SaveOptions` with a new password.
+**P: Jak zapewnić, że wynik porównania jest również chroniony?**  
+**O:** Po wygenerowaniu różnicy możesz zapisać wynik do pliku chronionego hasłem, używając `SaveOptions` biblioteki z nowym hasłem.
 
-**Q: Czy biblioteka obsługuje porównywanie zaszyfrowanych plików Excel?**  
-A: Absolutely. Excel files are handled the same way as Word and PDF – just provide the correct password in the load options.
+**P: Czy biblioteka obsługuje porównywanie zaszyfrowanych plików Excel?**  
+**O:** Absolutnie. Pliki Excel są obsługiwane tak samo jak Word i PDF — wystarczy podać właściwe hasło w opcjach ładowania.
 
-**Q: Jakiej wersji Java wymaga?**  
-A: The library supports Java 8 and newer. Using the latest LTS version (e.g., Java 17) is recommended for performance and security updates.
+**P: Jaka wersja Javy jest wymagana?**  
+**O:** Biblioteka obsługuje Java 8 i nowsze. Zalecane jest użycie najnowszej wersji LTS (np. Java 17) ze względu na wydajność i aktualizacje bezpieczeństwa.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-04-04  
-**Testowano z:** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
+**Ostatnia aktualizacja:** 2026-09-10  
+**Testowano z:** GroupDocs.Comparison for Java 23.9 (najnowsza w momencie pisania)  
 **Autor:** GroupDocs  
 
----
+
+
+
+
+
+```java
+// Always use try-with-resources for automatic cleanup
+try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
+    // Comparison operations
+} // Comparer is automatically disposed
+```
+
+## Powiązane samouczki
+
+- [Bezpieczne ładowanie i porównywanie dokumentów chronionych hasłem w Javie przy użyciu API GroupDocs.Comparison](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
+- [compare password protected docx – Ładowanie dokumentu chronionego hasłem – Bezpieczne porównywanie w Javie](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
+- [GroupDocs Comparison Java – Porównywanie dokumentów Word chronionych hasłem](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

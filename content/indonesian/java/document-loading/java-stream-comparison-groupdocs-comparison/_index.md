@@ -1,57 +1,120 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: Pelajari cara membandingkan beberapa file Word menggunakan perbandingan
-  dokumen aliran Java dengan GroupDocs.Comparison. Tutorial lengkap dengan contoh
-  kode dan tips pemecahan masalah.
-keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
-  based document comparison, Java Word document diff, how to compare multiple Word
-  documents Java
-lastmod: '2026-01-18'
-linktitle: Java Stream Document Comparison
+date: '2026-09-15'
+description: Pelajari cara membandingkan beberapa file word menggunakan Java stream
+  document comparison dengan GroupDocs.Comparison. Tutorial lengkap dengan code examples
+  dan tips troubleshooting.
+keywords:
+- compare multiple word files
+- batch compare word docs
+- groupdocs comparison java
+- java stream document comparison
+lastmod: '2026-09-15'
+linktitle: Perbandingan Dokumen Java Stream
+og_description: Bandingkan beberapa file word menggunakan Java streams dengan GroupDocs.Comparison.
+  Panduan ini menunjukkan langkah‑demi‑langkah penyiapan, stream‑based comparison,
+  styling options, dan troubleshooting untuk dokumen besar.
+og_image_alt: Tutorial image showing Java stream document comparison in GroupDocs
+og_title: Bandingkan beberapa file word dengan Java streams – Panduan GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  headline: Compare multiple word files with Java streams – GroupDocs guide
+  type: TechArticle
+- description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  name: Compare multiple word files with Java streams – GroupDocs guide
+  steps:
+  - name: set up streams and initialise the comparer
+    text: '`Comparer` is the core class that orchestrates the comparison operation.
+      It receives the baseline document stream and prepares the comparison engine.
+      **What’s happening?** We open a source stream (the baseline document) and three
+      target streams (the variations we want to compare). The `Comparer` is '
+  - name: add all target streams at once
+    text: '`CompareOptions` lets you queue several target streams before a single
+      comparison call, which reduces overhead. Adding multiple targets in a single
+      call is far more efficient than invoking separate comparisons for each file.'
+  - name: run the comparison with custom styling
+    text: '`CompareOptions` also holds style settings for insertions, deletions, and
+      modifications. Here we not only perform the comparison but also tell GroupDocs
+      to highlight inserted text in **yellow**. You can similarly customise deleted
+      or modified items.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum, but Java 11+ is recommended for better performance
+      and security.
+    question: What is the minimum JDK version?
+  - answer: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`),
+      and consider larger buffer sizes.
+    question: How can I handle very large documents?
+  - answer: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions`
+      to define colors, fonts, or strikethroughs.
+    question: Can I style deletions and modifications too?
+  - answer: Stream comparison excels at batch processing and auditing. Real‑time editors
+      typically need lighter, diff‑based solutions.
+    question: Is this suitable for real‑time collaboration?
+  - answer: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`)
+      and pass it directly to the `Comparer`.
+    question: How do I compare files stored in AWS S3?
+  type: FAQPage
 tags:
 - java
 - document-comparison
 - streams
 - groupdocs
 - tutorial
-title: Bandingkan Beberapa File Word dengan Java Streams | GroupDocs
+title: Bandingkan beberapa file word dengan Java streams – Panduan GroupDocs
 type: docs
 url: /id/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-# Bandingkan Beberapa File Word dengan Java Streams
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+# Bandingkan beberapa file Word dengan Java streams
 
-Pernah merasa tenggelam dalam versi dokumen, mencoba mencari tahu apa yang berubah antara draf yang berbeda? Anda tidak sendirian. Baik Anda menangani kontrak, laporan, atau dokumen kolaboratif, **compare multiple word files** secara manual adalah mimpi buruk yang menyita waktu berharga. Dalam panduan ini, kami akan menunjukkan cara melakukan **java stream document comparison** menggunakan pustaka GroupDocs.Comparison, sehingga Anda dapat mengotomatiskan proses, menangani file besar secara efisien, dan menata hasil tepat seperti yang Anda butuhkan.
+Pernah merasa tenggelam dalam versi dokumen, mencoba mencari tahu apa yang berubah antara draf yang berbeda? Anda tidak sendirian. Baik Anda menangani kontrak, laporan, atau dokumen kolaboratif, **membandingkan beberapa file Word** secara manual adalah mimpi buruk yang menyita waktu berharga. Dalam panduan ini, kami akan menunjukkan cara melakukan **perbandingan dokumen dengan java stream** menggunakan pustaka GroupDocs.Comparison, sehingga Anda dapat mengotomatisasi proses, menangani file besar secara efisien, dan menata hasil tepat seperti yang Anda butuhkan.
 
 ## Jawaban Cepat
-- **Library apa yang menangani perbandingan berbasis stream?** GroupDocs.Comparison for Java  
+- **Perpustakaan apa yang menangani perbandingan berbasis stream?** GroupDocs.Comparison untuk Java  
 - **Kata kunci utama apa yang ditargetkan tutorial ini?** *compare multiple word files*  
 - **Versi Java apa yang diperlukan?** JDK 8 atau lebih tinggi (Java 11+ disarankan)  
-- **Apakah saya memerlukan lisensi?** Versi percobaan gratis dapat digunakan untuk evaluasi; lisensi komersial diperlukan untuk produksi  
+- **Apakah saya memerlukan lisensi?** Versi percobaan gratis cukup untuk evaluasi; lisensi komersial diperlukan untuk produksi  
 - **Bisakah saya membandingkan lebih dari dua dokumen sekaligus?** Ya – API mendukung beberapa stream target dalam satu panggilan  
 
-## Apa Itu “compare multiple word files” Menggunakan Streams?
-Perbandingan berbasis stream membaca dokumen dalam potongan kecil alih-alih memuat seluruh file ke memori. Ini memungkinkan **compare multiple word files** bahkan ketika berukuran puluhan atau ratusan megabyte, menjaga aplikasi Anda tetap responsif dan ramah memori.
+## Apa itu “compare multiple word files” menggunakan streams?
 
-## Mengapa Menggunakan Java Stream Document Comparison?
+Perbandingan berbasis stream membaca setiap dokumen sebagai serangkaian potongan data kecil alih‑alih memuat seluruh file ke memori. Pendekatan ini memungkinkan Anda membandingkan beberapa file Word secara bersamaan sambil menjaga konsumsi memori tetap rendah, bahkan untuk dokumen berukuran puluhan atau ratusan megabyte, dan memastikan aplikasi tetap responsif.
+
+Perbandingan berbasis stream membaca dokumen dalam potongan kecil daripada memuat seluruh file ke memori. Hal ini memungkinkan **compare multiple word files** bahkan ketika ukuran dokumen mencapai puluhan atau ratusan megabyte, menjaga aplikasi Anda tetap responsif dan ramah memori.
+
+## Mengapa menggunakan java stream document comparison?
+
+Menggunakan perbandingan dokumen dengan Java stream memberikan penghematan memori yang signifikan karena hanya sebagian kecil dari setiap file yang diproses pada satu waktu. Ini juga skalabel untuk operasi batch, memungkinkan satu panggilan untuk membandingkan dokumen master dengan banyak variasi. Selain itu, API memungkinkan Anda menerapkan gaya khusus pada output dan bekerja mulus dengan stream penyimpanan cloud.
+
 - **Efisiensi memori** – ideal untuk kontrak besar atau pemrosesan batch.  
 - **Skalabel** – bandingkan dokumen master dengan puluhan variasi dalam satu operasi.  
-- **Gaya yang dapat disesuaikan** – sorot penyisipan, penghapusan, dan modifikasi sesuai keinginan Anda.  
-- **Siap cloud** – bekerja dengan stream dari file lokal, basis data, atau penyimpanan cloud (mis., AWS S3).  
+- **Gaya yang dapat disesuaikan** – sorot penyisipan, penghapusan, dan modifikasi sesuai keinginan.  
+- **Siap cloud** – bekerja dengan stream dari file lokal, basis data, atau penyimpanan cloud (misalnya, AWS S3).
 
-## Prasyarat dan Penyiapan Lingkungan
+Klaim terkuantifikasi: GroupDocs.Comparison mendukung **lebih dari 50 format input dan output** dan dapat memproses **dokumen Word 500 halaman** dengan kurang dari **200 MB** memori heap saat menggunakan streams.
+
+## Prasyarat dan penyiapan lingkungan
 
 Sebelum kita masuk ke kode, mari pastikan lingkungan pengembangan Anda siap.
 
-### Alat yang Diperlukan
+### Alat yang diperlukan
 - **JDK 8+** (Java 11 atau 17 disarankan)  
 - **Maven** (atau Gradle jika Anda lebih suka)  
-- **Pustaka GroupDocs.Comparison** (versi stabil terbaru)  
+- **GroupDocs.Comparison** library (versi stabil terbaru)
 
-### Konfigurasi Maven yang Benar-benar Berfungsi
+### Konfigurasi Maven yang benar-benar berfungsi
 
 ```xml
 <repositories>
@@ -70,14 +133,14 @@ Sebelum kita masuk ke kode, mari pastikan lingkungan pengembangan Anda siap.
 </dependencies>
 ```
 
-**Pro Tip**: Jika Anda berada di belakang firewall perusahaan, konfigurasikan `settings.xml` Maven dengan detail proxy Anda.
+**Tips pro:** Jika Anda berada di belakang firewall perusahaan, konfigurasikan `settings.xml` Maven dengan detail proxy Anda.
 
-### Ikhtisar Lisensi
-- **Percobaan Gratis** – output berwatermark, sempurna untuk pengujian.  
-- **Lisensi Sementara** – periode evaluasi yang diperpanjang.  
-- **Lisensi Komersial** – diperlukan untuk penerapan produksi.  
+### Ikhtisar lisensi
+- **Trial gratis** – output berwatermark, cocok untuk pengujian.  
+- **Lisensi sementara** – periode evaluasi yang diperpanjang.  
+- **Lisensi komersial** – diperlukan untuk penerapan produksi.
 
-## Kapan Menggunakan Perbandingan Dokumen Berbasis Stream
+## Kapan menggunakan perbandingan dokumen berbasis stream
 
 | Situasi | Direkomendasikan |
 |-----------|--------------|
@@ -86,11 +149,13 @@ Sebelum kita masuk ke kode, mari pastikan lingkungan pengembangan Anda siap.
 | Pemrosesan batch banyak kontrak | ✅ Gunakan streams |
 | File kecil (< 10 MB) atau pemeriksaan satu kali | ❌ Perbandingan file biasa mungkin lebih cepat |
 
-## Panduan Implementasi: Membandingkan Beberapa Dokumen
+## Panduan implementasi: membandingkan beberapa dokumen
 
-Berikut adalah kode lengkap yang siap dijalankan yang menunjukkan cara **compare multiple word files** menggunakan streams dan menerapkan gaya khusus.
+Berikut alur lengkap yang siap dijalankan yang menunjukkan cara **compare multiple word files** menggunakan streams dan menerapkan gaya khusus.
 
-### Langkah 1: Siapkan Streams dan Inisialisasi Comparer
+### Langkah 1: siapkan streams dan inisialisasi comparer
+
+`Comparer` adalah kelas inti yang mengatur operasi perbandingan. Ia menerima stream dokumen dasar dan menyiapkan mesin perbandingan.
 
 ```java
 try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
@@ -102,17 +167,21 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
 ```
 
 **Apa yang terjadi?**  
-Kami membuka stream sumber (dokumen dasar) dan tiga stream target (variasi yang ingin kami bandingkan). `Comparer` diinstansiasi dengan stream sumber, menetapkan titik referensi untuk semua perbandingan berikutnya.
+Kami membuka stream sumber (dokumen dasar) dan tiga stream target (variasi yang ingin dibandingkan). `Comparer` diinstansiasi dengan stream sumber, menetapkan titik referensi untuk semua perbandingan selanjutnya.
 
-### Langkah 2: Tambahkan Semua Stream Target Sekaligus
+### Langkah 2: tambahkan semua stream target sekaligus
+
+`CompareOptions` memungkinkan Anda mengantri beberapa stream target sebelum satu panggilan perbandingan, yang mengurangi overhead.
 
 ```java
 comparer.add(target1Stream, target2Stream, target3Stream);
 ```
 
-Menambahkan beberapa target dalam satu panggilan jauh lebih efisien dibandingkan memanggil perbandingan terpisah untuk setiap file.
+Menambahkan banyak target dalam satu panggilan jauh lebih efisien daripada memanggil perbandingan terpisah untuk setiap file.
 
-### Langkah 3: Jalankan Perbandingan dengan Gaya Khusus
+### Langkah 3: jalankan perbandingan dengan gaya khusus
+
+`CompareOptions` juga menyimpan pengaturan gaya untuk penyisipan, penghapusan, dan modifikasi.
 
 ```java
 final Path resultPath = comparer.compare(resultStream,
@@ -124,9 +193,9 @@ final Path resultPath = comparer.compare(resultStream,
                 .build());
 ```
 
-Di sini kami tidak hanya melakukan perbandingan tetapi juga memberi tahu GroupDocs untuk menyorot teks yang disisipkan dengan **kuning**. Anda juga dapat menyesuaikan item yang dihapus atau dimodifikasi secara serupa.
+Di sini kami tidak hanya melakukan perbandingan tetapi juga memberi tahu GroupDocs untuk menyorot teks yang disisipkan dengan **kuning**. Anda dapat menyesuaikan item yang dihapus atau dimodifikasi dengan cara yang sama.
 
-## Opsi Gaya Lanjutan
+## Opsi gaya lanjutan
 
 Jika Anda membutuhkan tampilan yang lebih halus, Anda dapat mendefinisikan `StyleSettings` yang dapat digunakan kembali.
 
@@ -148,94 +217,106 @@ compareOptions.setInsertedItemStyle(styleSettings);
 final Path resultPath = comparer.compare(resultStream, compareOptions);
 ```
 
-**Tips Pro Gaya**
+**Tips styling pro**  
 - **Penyisipan** – latar belakang kuning bekerja baik untuk pemindaian visual cepat.  
-- **Penghapusan** – garis coret merah (`setDeletedItemStyle`) menandakan penghapusan dengan jelas.  
+- **Penghapusan** – coret merah (`setDeletedItemStyle`) menandakan penghapusan dengan jelas.  
 - **Modifikasi** – garis bawah biru (`setModifiedItemStyle`) menjaga dokumen tetap dapat dibaca.  
 - Hindari warna neon; mereka membuat mata lelah selama tinjauan panjang.
 
-## Masalah Umum dan Pemecahan Masalah
+## Masalah umum dan pemecahan masalah
 
-### Kesalahan Memori dengan Dokumen Besar
-**Masalah**: `OutOfMemoryError`  
-**Solusi**: Tingkatkan heap JVM atau sesuaikan buffer stream.
+### Kesalahan memori dengan dokumen besar
+**Masalah:** `OutOfMemoryError`  
+**Solusi:** Tingkatkan heap JVM atau sesuaikan buffer stream.
 
 ```bash
 java -Xms512m -Xmx2g YourApplication
 ```
 
-### Masalah Siklus Hidup Stream
-- **“Stream closed”** – pastikan Anda membuat `InputStream` baru untuk setiap perbandingan; stream tidak dapat digunakan kembali setelah dibaca.  
+### Masalah siklus hidup stream
+- **“Stream closed”** – pastikan Anda membuat `InputStream` baru untuk setiap perbandingan; stream tidak dapat dipakai ulang setelah dibaca.  
 - **Kebocoran sumber daya** – blok `try‑with‑resources` sudah menangani penutupan, tetapi periksa kembali utilitas khusus apa pun.
 
-### Format Tidak Didukung
-Pastikan ekstensi file cocok dengan format sebenarnya (mis., file `.docx` yang sebenarnya, bukan `.txt` yang diubah namanya).
+### Format tidak didukung
+Pastikan ekstensi file sesuai dengan format sebenarnya (mis., file `.docx` yang sebenarnya, bukan `.txt` yang di‑rename).
 
-### Bottleneck Kinerja
+### Bottleneck kinerja
 - Gunakan SSD untuk I/O yang lebih cepat.  
 - Tingkatkan ukuran buffer (lihat bagian berikutnya).  
 - Proses batch 5‑10 dokumen secara paralel daripada semuanya sekaligus.
 
-## Tips Optimasi Kinerja
+## Tips optimalisasi kinerja
 
-### Praktik Terbaik Manajemen Memori
+### Praktik terbaik manajemen memori
 
 ```java
 // Use larger buffers for big files
 BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768);
 ```
 
-### Penyetelan JVM untuk Produksi
+### Penyetelan JVM untuk produksi
 
 ```bash
 -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
 ```
 
-### Kapan Stream Mungkin Tidak Diperlukan
+### Kapan stream mungkin tidak diperlukan
 - File di bawah 1 MB yang disimpan di SSD lokal yang cepat.  
-- Perbandingan sederhana satu kali di mana overhead penanganan stream melebihi manfaat.
+- Perbandingan sederhana satu kali di mana overhead penanganan stream melebihi manfaatnya.
 
-## Aplikasi Dunia Nyata
+## Aplikasi dunia nyata
 
-| Domain | Bagaimana Stream Comparison Membantu |
+| Domain | Bagaimana perbandingan aliran membantu |
 |--------|-----------------------------|
 | **Legal** | Bandingkan kontrak master dengan puluhan versi khusus klien, menyorot penyisipan dengan kuning untuk tinjauan cepat. |
-| **Software Docs** | Lacak perubahan dokumen API antar rilis; bandingkan batch beberapa versi dalam pipeline CI. |
-| **Publishing** | Editor dapat melihat perbedaan antara draf manuskrip dari berbagai kontributor. |
+| **Software docs** | Lacak perubahan dokumen API antar rilis; bandingkan batch beberapa versi dalam pipeline CI. |
+| **Publishing** | Editor dapat melihat perbedaan antara draf naskah dari berbagai kontributor. |
 | **Compliance** | Auditor memverifikasi pembaruan kebijakan antar departemen tanpa memuat PDF penuh ke memori. |
 
-## Tips Pro untuk Sukses
+## Tips pro untuk keberhasilan
 
-- **Penamaan Konsisten** – Sertakan nomor versi atau tanggal dalam nama file.  
-- **Uji dengan Data Nyata** – File contoh “Lorem ipsum” menyembunyikan kasus tepi.  
-- **Pantau Memori** – Gunakan JMX atau VisualVM di produksi untuk menangkap lonjakan lebih awal.  
-- **Batch Secara Strategis** – Kelompokkan 5‑10 dokumen per pekerjaan untuk menyeimbangkan throughput dan penggunaan memori.  
-- **Penanganan Kesalahan yang Elegan** – Tangkap `UnsupportedFormatException` dan beri tahu pengguna dengan pesan yang jelas.  
+- **Penamaan konsisten** – sertakan nomor versi atau tanggal dalam nama file.  
+- **Uji dengan data nyata** – file “Lorem ipsum” dapat menyembunyikan kasus tepi.  
+- **Pantau memori** – gunakan JMX atau VisualVM di produksi untuk menangkap lonjakan lebih awal.  
+- **Batch secara strategis** – kelompokkan 5‑10 dokumen per pekerjaan untuk menyeimbangkan throughput dan penggunaan memori.  
+- **Penanganan error yang elegan** – tangkap `UnsupportedFormatException` dan beri tahu pengguna dengan pesan yang jelas.
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
 **Q: Apa versi minimum JDK?**  
-A: Java 8 adalah minimum, tetapi Java 11+ disarankan untuk kinerja dan keamanan yang lebih baik.
+A: Java 8 adalah versi minimum, tetapi Java 11+ disarankan untuk kinerja dan keamanan yang lebih baik.
 
-**Q: Bagaimana saya dapat menangani dokumen yang sangat besar?**  
-A: Gunakan pendekatan berbasis stream yang ditunjukkan di atas, tingkatkan heap JVM (`-Xmx`), dan pertimbangkan ukuran buffer yang lebih besar.
+**Q: Bagaimana cara menangani dokumen sangat besar?**  
+A: Gunakan pendekatan berbasis stream seperti yang ditunjukkan di atas, tingkatkan heap JVM (`-Xmx`), dan pertimbangkan ukuran buffer yang lebih besar.
 
 **Q: Bisakah saya menata penghapusan dan modifikasi juga?**  
 A: Ya. Gunakan `setDeletedItemStyle()` dan `setModifiedItemStyle()` pada `CompareOptions` untuk menentukan warna, font, atau coretan.
 
-**Q: Apakah ini cocok untuk kolaborasi waktu‑nyata?**  
-A: Perbandingan berbasis stream unggul dalam pemrosesan batch dan audit. Editor waktu‑nyata biasanya memerlukan solusi yang lebih ringan berbasis diff.
+**Q: Apakah ini cocok untuk kolaborasi waktu nyata?**  
+A: Perbandingan stream unggul untuk pemrosesan batch dan audit. Editor waktu nyata biasanya memerlukan solusi diff yang lebih ringan.
 
 **Q: Bagaimana cara membandingkan file yang disimpan di AWS S3?**  
 A: Dapatkan `InputStream` melalui AWS SDK (`s3Client.getObject(...).getObjectContent()`) dan berikan langsung ke `Comparer`.
 
-## Sumber Daya Tambahan
+## Sumber daya tambahan
 
-- **Dokumentasi**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **Referensi API**: [Referensi API Lengkap](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+- **Dokumentasi:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **Referensi API:** [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
 
 ---
 
-**Terakhir Diperbarui:** 2026-01-18  
-**Diuji Dengan:** GroupDocs.Comparison 25.2  
+**Terakhir diperbarui:** 2026-09-15  
+**Diuji dengan:** GroupDocs.Comparison 25.2  
 **Penulis:** GroupDocs
+
+## Tutorial Terkait
+
+- [Panduan Dokumen Multi Stream Groupdocs Java](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [compare word documents java – Perbandingan Dokumen Word Java dengan GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
+- [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

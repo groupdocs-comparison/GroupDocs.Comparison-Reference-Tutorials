@@ -70,7 +70,7 @@ tags:
 - streams
 - groupdocs
 - tutorial
-title: Use GroupDocs.Comparison to compare multiple Word files with Java streams – Guide
+title: Learn to compare multiple Word files with Java streams using GroupDocs.Comparison – Step‑by‑step guide
 type: docs
 url: /java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1

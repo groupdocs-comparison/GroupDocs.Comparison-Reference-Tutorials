@@ -76,13 +76,13 @@ tags:
 - .NET tutorial
 - document management
 - C# comparison
-title: How to preserve metadata with GroupDocs.Comparison in .NET
+title: How to preserve metadata in .NET
 type: docs
 url: /net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# How to preserve metadata with GroupDocs.Comparison in .NET
+# How to preserve metadata in .NET
 
 In this tutorial you’ll learn **how to preserve metadata** when comparing two documents with GroupDocs.Comparison for .NET. Preserving metadata is essential for legal compliance, audit trails, and collaborative workflows, and the library gives you fine‑grained control over which document’s metadata survives the comparison result.
 
@@ -164,14 +164,14 @@ Let’s make sure everything’s working with a simple test:
 using System.IO;
 using GroupDocs.Comparison;
 
-string sourceFilePath = "source.docx";
-string targetFilePath = "target.docx";
+string sourceFile = "source.docx";
+string targetFile = "target.docx";
 
 // Initialize the Comparer object.
-using (Comparer comparer = new Comparer(sourceFilePath))
+using (Comparer comparer = new Comparer(sourceFile))
 {
     // Add the target document for comparison.
-    comparer.Add(targetFilePath);
+    comparer.Add(targetFile);
 }
 ```  
 

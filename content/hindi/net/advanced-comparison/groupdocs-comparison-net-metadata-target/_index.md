@@ -1,101 +1,163 @@
 ---
 categories:
 - Document Comparison
-date: '2026-03-06'
+date: '2026-09-15'
 description: GroupDocs.Comparison for .NET का उपयोग करके दस्तावेज़ तुलना के दौरान
-  लक्ष्य मेटाडेटा को सुरक्षित रखने के तरीके सीखें। C# उदाहरणों के साथ चरण-दर-चरण मार्गदर्शिका।
-keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
-  document comparison, metadata preservation tutorial
-lastmod: '2026-03-06'
-linktitle: Metadata Preservation Tutorial
+  मेटाडेटा को कैसे संरक्षित किया जाए, जानें। C# उदाहरणों, सर्वोत्तम प्रथाओं और वास्तविक
+  उपयोग मामलों के साथ चरण-दर-चरण मार्गदर्शिका।
+keywords:
+- how to preserve metadata
+- GroupDocs.Comparison metadata preservation
+- .NET document comparison
+- metadata handling in .NET
+lastmod: '2026-09-15'
+linktitle: मेटाडेटा संरक्षण ट्यूटोरियल
+og_description: GroupDocs.Comparison का उपयोग करके .NET में दस्तावेज़ तुलना के दौरान
+  मेटाडेटा को कैसे संरक्षित किया जाए, जानें। सर्वोत्तम प्रथाओं, समस्या निवारण सुझावों
+  और वास्तविक उदाहरणों के साथ विस्तृत ट्यूटोरियल का पालन करें।
+og_image_alt: Developer guide showing metadata preservation with GroupDocs.Comparison
+  in a .NET application
+og_title: GroupDocs.Comparison के साथ .NET में मेटाडेटा कैसे संरक्षित करें
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to preserve metadata during document comparison using GroupDocs.Comparison
+    for .NET. Step‑by‑step guide with C# examples, best practices, and real‑world
+    use cases.
+  headline: How to preserve metadata with GroupDocs.Comparison in .NET
+  type: TechArticle
+- description: Learn how to preserve metadata during document comparison using GroupDocs.Comparison
+    for .NET. Step‑by‑step guide with C# examples, best practices, and real‑world
+    use cases.
+  name: How to preserve metadata with GroupDocs.Comparison in .NET
+  steps:
+  - name: Initialize your comparer object
+    text: '`Comparer` is the core class that orchestrates the comparison process.
+      It loads the source file, tracks changes, and generates the output. **Why use
+      `using` statements?** They automatically dispose of resources, preventing memory
+      leaks when processing large documents. Trust me, you’ll thank yourself'
+  - name: Add the target document
+    text: '`Comparer.Add` registers the file that contains the modifications you want
+      to compare against. **Common mistake**: Confusing source and target. Think of
+      it this way—source is your “original,” target is your “updated version.”'
+  - name: Set the metadata type (the magic happens here)
+    text: '`CloneMetadataType` is a property of `ComparisonOptions` that determines
+      which document’s metadata is cloned into the result. **What’s happening?** `CloneMetadataType
+      = MetadataType.Target` tells GroupDocs.Comparison: “Hey, I want to keep the
+      target document’s metadata in my final result.”'
+  type: HowTo
+- questions:
+  - answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+    question: Can I preserve metadata from multiple target documents when comparing?
+  - answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+    question: What happens if the target document lacks some metadata fields?
+  - answer: 'LoadOptions specifies settings such as passwords for opening protected
+      documents. Use a `LoadOptions` object with the password, then pass it to the
+      `Comparer` constructor: ```csharp var loadOptions = new LoadOptions() { Password
+      = "your_password" }; using (var comparer = new Comparer(sourceFile, loadOptions))
+      { // comparison logic here } ```'
+    question: How do I handle password‑protected documents?
+  - answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+    question: Is there a way to preserve only selected metadata properties?
+  - answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
+    question: Which document formats support metadata preservation?
+  type: FAQPage
 tags:
+- metadata preservation
 - GroupDocs.Comparison
-- metadata-preservation
-- dotnet-tutorial
-- document-management
-title: GroupDocs.Comparison के साथ लक्ष्य मेटाडेटा सुरक्षित रखें – .NET ट्यूटोरियल
+- .NET tutorial
+- document management
+- C# comparison
+title: GroupDocs.Comparison के साथ .NET में मेटाडेटा कैसे संरक्षित करें
 type: docs
 url: /hi/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# GroupDocs.Comparison के साथ लक्ष्य मेटाडाटा को संरक्षित करें – .NET ट्यूटोरियल
+# GroupDocs.Comparison के साथ .NET में मेटाडेटा को संरक्षित कैसे करें
+
+इस ट्यूटोरियल में आप **मेटाडेटा को संरक्षित करने** का तरीका सीखेंगे जब आप GroupDocs.Comparison for .NET के साथ दो दस्तावेज़ों की तुलना करते हैं। मेटाडेटा को संरक्षित करना कानूनी अनुपालन, ऑडिट ट्रेल और सहयोगी वर्कफ़्लो के लिए आवश्यक है, और लाइब्रेरी आपको यह नियंत्रित करने की सूक्ष्म क्षमता देती है कि तुलना परिणाम में किस दस्तावेज़ का मेटाडेटा बना रहता है।
 
 ## परिचय
 
-क्या आपने कभी दो दस्तावेज़ों की तुलना की है और प्रक्रिया में महत्वपूर्ण मेटाडाटा खो दिया? आप अकेले नहीं हैं। जब आपको .NET एप्लिकेशन में दस्तावेज़ों की तुलना करते समय **target metadata को संरक्षित करें** की आवश्यकता होती है, तो कार्य जटिल लग सकता है—पर ऐसा नहीं होना चाहिए।
+क्या आपने कभी दो दस्तावेज़ों की तुलना की है और प्रक्रिया में महत्वपूर्ण मेटाडेटा खो दिया? आप अकेले नहीं हैं। जब आपको .NET एप्लिकेशन में दस्तावेज़ों की तुलना करते समय **लक्ष्य मेटाडेटा को संरक्षित** करने की आवश्यकता होती है, तो यह काम जटिल लग सकता है—लेकिन ऐसा नहीं होना चाहिए।
 
-GroupDocs.Comparison for .NET आपको यह तय करने देता है कि तुलना परिणाम में किस दस्तावेज़ का मेटाडाटा बना रहेगा। चाहे आप दस्तावेज़‑प्रबंधन प्रणाली बना रहे हों, कानूनी अनुबंधों को संभाल रहे हों, या सहयोगी सामग्री का प्रबंधन कर रहे हों, आप हर बार सही स्रोत दस्तावेज़ से मेटाडाटा चाहते हैं।
-
-इस ट्यूटोरियल में आप सीखेंगे कि तुलना के दौरान **target metadata को संरक्षित** कैसे करें, सामान्य गलतियों से बचें, और वास्तविक‑दुनिया के परिदृश्यों में समाधान को लागू करें।
+GroupDocs.Comparison for .NET आपको यह तय करने देता है कि तुलना परिणाम में किस दस्तावेज़ का मेटाडेटा बना रहेगा। चाहे आप दस्तावेज़‑प्रबंधन प्रणाली बना रहे हों, कानूनी अनुबंध संभाल रहे हों, या सहयोगी सामग्री प्रबंधित कर रहे हों, आपको हर बार सही स्रोत दस्तावेज़ से मेटाडेटा चाहिए होगा।
 
 ## त्वरित उत्तर
-- **“preserve target metadata” का क्या अर्थ है?** यह तुलना परिणाम उत्पन्न करते समय लक्ष्य के रूप में निर्दिष्ट दस्तावेज़ से मेटाडाटा (लेखक, निर्माण तिथि, कस्टम प्रॉपर्टीज़ आदि) को रखता है।  
+- **“लक्ष्य मेटाडेटा को संरक्षित” का क्या मतलब है?** यह तुलना परिणाम उत्पन्न करते समय उस दस्तावेज़ (लक्ष्य) से मेटाडेटा (लेखक, निर्माण तिथि, कस्टम प्रॉपर्टीज़ आदि) को रखता है जिसे आप लक्ष्य के रूप में निर्दिष्ट करते हैं।  
 - **कौन सा GroupDocs.Comparison संस्करण आवश्यक है?** संस्करण 25.4.0 या बाद का।  
 - **क्या मैं इसे .NET Core के साथ उपयोग कर सकता हूँ?** हाँ – .NET Core 2.0+ या .NET Framework 4.6.1+।  
-- **क्या उत्पादन के लिए लाइसेंस आवश्यक है?** उत्पादन के लिए एक व्यावसायिक लाइसेंस आवश्यक है; सीखने के लिए एक मुफ्त ट्रायल काम करता है।  
-- **क्या यह सुविधा PDF और DOCX के साथ काम करेगी?** हाँ – सभी प्रमुख Office और PDF फ़ॉर्मेट मेटाडाटा संरक्षण का समर्थन करते हैं।
+- **उत्पादन के लिए लाइसेंस आवश्यक है?** उत्पादन के लिए एक व्यावसायिक लाइसेंस आवश्यक है; सीखने के लिए एक मुफ्त ट्रायल काम करता है।  
+- **क्या यह फीचर PDF और DOCX के साथ काम करेगा?** हाँ – सभी प्रमुख Office और PDF फ़ॉर्मेट मेटाडेटा संरक्षण का समर्थन करते हैं।
 
-## मेटाडाटा संरक्षण क्यों महत्वपूर्ण है
+## मेटाडेटा संरक्षण क्यों महत्वपूर्ण है
 
-कोड में कूदने से पहले, चलिए बात करते हैं कि लक्ष्य मेटाडाटा को संरक्षित करना क्यों महत्वपूर्ण है। दस्तावेज़ मेटाडाटा केवल “अच्छा” नहीं है—यह अक्सर कानूनी रूप से आवश्यक या व्यापार‑संबंधी महत्वपूर्ण होता है:
+कोड में कूदने से पहले, चलिए समझते हैं कि लक्ष्य मेटाडेटा को संरक्षित करना क्यों ज़रूरी है। दस्तावेज़ मेटाडेटा सिर्फ “अच्छा है” नहीं है—यह अक्सर कानूनी रूप से आवश्यक या व्यवसाय‑क्रिटिकल होता है:
 
-- **कानूनी दस्तावेज़** – वकील‑ग्राहक विशेषाधिकार संकेतकों को बनाए रखना आवश्यक है।  
-- **कॉरपोरेट फ़ाइलें** – अनुपालन टैग और अनुमोदन श्रृंखलाओं को रखना आवश्यक है।  
-- **शैक्षणिक पत्र** – लेखक का उल्लेख और संशोधन इतिहास आवश्यक है।  
-- **तकनीकी दस्तावेज़** – संस्करण नियंत्रण और समीक्षा स्थिति महत्वपूर्ण है।
+- **कानूनी दस्तावेज़** – वकील‑ग्राहक विशेषाधिकार चिह्नों को बनाए रखें।  
+- **कॉर्पोरेट फ़ाइलें** – अनुपालन टैग और अनुमोदन श्रृंखलाओं को रखें।  
+- **शैक्षणिक पेपर** – लेखक का उल्लेख और संशोधन इतिहास आवश्यक है।  
+- **तकनीकी दस्तावेज़ीकरण** – संस्करण नियंत्रण और समीक्षा स्थिति महत्वपूर्ण है।
 
-उचित हैंडलिंग के बिना, आप अनजाने में वह जानकारी हटा सकते हैं जो स्थापित करने में महीनों लगे। यही वह जगह है जहाँ **target metadata को संरक्षित** विकल्प चमकता है।
+यदि सही ढंग से नहीं संभाला गया, तो आप अनजाने में वह जानकारी हटा सकते हैं जो महीनों में स्थापित हुई थी। यहीं पर **लक्ष्य मेटाडेटा को संरक्षित** विकल्प काम आता है।
 
 ## पूर्वापेक्षाएँ
 
 ### आवश्यक लाइब्रेरी और संस्करण
-- **GroupDocs.Comparison for .NET**: संस्करण 25.4.0 या बाद (पहले संस्करणों में मेटाडाटा विकल्प सीमित हैं)।  
-- **.NET Framework**: 4.6.1 या उच्चतर, या .NET Core 2.0+।
+- **GroupDocs.Comparison for .NET**: संस्करण 25.4.0 या बाद का (पहले संस्करणों में मेटाडेटा विकल्प सीमित हैं)।  
+- **.NET Framework**: 4.6.1 या उससे ऊपर, या .NET Core 2.0+।
 
 ### पर्यावरण सेटअप
 - Visual Studio (या कोई भी C# IDE जो आप पसंद करते हैं)।  
-- बुनियादी C# ज्ञान (बहुत उन्नत नहीं, वादा!).  
+- बेसिक C# ज्ञान (बहुत उन्नत नहीं, वादा!).  
 - परीक्षण के लिए दो नमूना दस्तावेज़ (Word *.docx* बहुत अच्छा काम करता है)।
 
 ### ज्ञान पूर्वापेक्षाएँ
-आपको GroupDocs विशेषज्ञ होने की आवश्यकता नहीं है, लेकिन आपको इन चीज़ों में सहज होना चाहिए:
+आपको GroupDocs विशेषज्ञ होने की ज़रूरत नहीं है, लेकिन आपको इन चीज़ों में सहज होना चाहिए:
 - C# `using` स्टेटमेंट्स और फ़ाइल हैंडलिंग।  
-- बुनियादी दस्तावेज़‑प्रसंस्करण अवधारणाएँ।  
-- मेटाडाटा वास्तव में क्या है (लेखक, शीर्षक, कस्टम प्रॉपर्टीज़ आदि)।
+- बेसिक दस्तावेज़‑प्रोसेसिंग अवधारणाएँ।  
+- मेटाडेटा वास्तव में क्या है (लेखक, शीर्षक, कस्टम प्रॉपर्टीज़ आदि)।
 
-तैयार हैं? चलिए इसे सेटअप करते हैं।
+तैयार हैं? चलिए सेटअप करते हैं।
 
-## GroupDocs.Comparison for .NET सेटअप
+## GroupDocs.Comparison for .NET की सेटअप
 
-GroupDocs.Comparison को स्थापित करना सीधा है, लेकिन कुछ बातों का ध्यान रखना आवश्यक है।
+GroupDocs.Comparison को इंस्टॉल करना सीधा है, लेकिन कुछ छोटी‑छोटी बातों का ध्यान रखना पड़ता है।
 
-### इंस्टॉलेशन विकल्प
+### स्थापना विकल्प
 
-**NuGet पैकेज मैनेजर कंसोल** (सबसे आसान तरीका):
+**NuGet Package Manager Console** (सबसे आसान तरीका):  
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**.NET CLI** (यदि आप कमांड लाइन पसंद करते हैं):
+**.NET CLI** (यदि आप कमांड लाइन पसंद करते हैं):  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-**प्रो टिप**: अपने प्रोजेक्ट में अनपेक्षित ब्रेकिंग बदलावों से बचने के लिए हमेशा संस्करण निर्दिष्ट करें।
+**प्रो टिप**: अनपेक्षित ब्रेकिंग चेंजेज़ से बचने के लिए हमेशा संस्करण निर्दिष्ट करें।
 
 ### लाइसेंस प्राप्ति
 
-यहीं पर कई डेवलपर्स शुरुआती में फँस जाते हैं। GroupDocs.Comparison मुफ्त नहीं है, लेकिन आपके पास विकल्प हैं:
-- **Free Trial** – 30 दिनों के लिए पूरी कार्यक्षमता, मूल्यांकन के लिए उत्तम।  
-- **Temporary License** – यदि आपको अधिक समय चाहिए तो विस्तारित मूल्यांकन अवधि।  
-- **Commercial License** – उत्पादन उपयोग के लिए (विभिन्न मूल्य स्तर उपलब्ध)।
+यहाँ कई डेवलपर्स शुरुआती में अटक जाते हैं। GroupDocs.Comparison मुफ्त नहीं है, लेकिन आपके पास विकल्प हैं:
 
-यदि आप अभी सीख रहे हैं तो लाइसेंसिंग की चिंता न करें—ट्रायल संस्करण में सभी **target metadata को संरक्षित** सुविधाएँ शामिल हैं।
+- **फ्री ट्रायल** – 30 दिनों के लिए पूरी कार्यक्षमता, मूल्यांकन के लिए परफेक्ट।  
+- **टेम्पररी लाइसेंस** – यदि आपको अधिक समय चाहिए तो विस्तारित मूल्यांकन अवधि।  
+- **कमर्शियल लाइसेंस** – उत्पादन उपयोग के लिए (विभिन्न प्राइसिंग टियर्स उपलब्ध)।
 
-### बुनियादी सेटअप सत्यापन
+यदि आप अभी सीख रहे हैं तो लाइसेंस की चिंता न करें—ट्रायल संस्करण में सभी **लक्ष्य मेटाडेटा को संरक्षित** फीचर शामिल हैं।
 
-आइए एक सरल परीक्षण के साथ सुनिश्चित करें कि सब कुछ काम कर रहा है:
+### बेसिक सेटअप सत्यापन
+
+आइए एक सरल टेस्ट से सुनिश्चित करें कि सब कुछ काम कर रहा है:  
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -109,59 +171,65 @@ using (Comparer comparer = new Comparer(sourceFilePath))
     // Add the target document for comparison.
     comparer.Add(targetFilePath);
 }
-```
+```  
 
-यदि यह बिना त्रुटियों के संकलित हो जाता है, तो आप आगे बढ़ सकते हैं। यदि नहीं, तो अपने पैकेज इंस्टॉलेशन और `using` स्टेटमेंट्स को दोबारा जांचें।
+यदि यह बिना त्रुटियों के कंपाइल हो जाता है, तो आप तैयार हैं। यदि नहीं, तो अपने पैकेज इंस्टॉलेशन और `using` स्टेटमेंट्स को दोबारा जांचें।
 
-## लक्ष्य मेटाडाटा को कैसे संरक्षित करें
+## लक्ष्य मेटाडेटा को कैसे संरक्षित करें
 
-अब मुख्य भाग—दस्तावेज़ तुलना के दौरान वास्तव में मेटाडाटा को संरक्षित करना। यही वह जगह है जहाँ GroupDocs.Comparison वास्तव में चमकता है।
+अपने स्रोत और लक्ष्य फ़ाइलें लोड करें, फिर API को बताएं कि अंतिम आउटपुट में लक्ष्य का मेटाडेटा रखें।
 
-### मेटाडाटा प्रवाह को समझना
+**सीधा उत्तर (40‑70 शब्द):**  
+लक्ष्य मेटाडेटा को संरक्षित करने के लिए, `Comparer` को स्रोत दस्तावेज़ के साथ इंस्टैंशिएट करें, `Add` के माध्यम से लक्ष्य दस्तावेज़ जोड़ें, `ComparisonOptions` पर `CloneMetadataType = MetadataType.Target` सेट करें, और अंत में `Compare` कॉल करें। यह GroupDocs.Comparison को लक्ष्य फ़ाइल से लेखक, निर्माण तिथि, कस्टम प्रॉपर्टीज़ और सभी अन्य मेटाडेटा को उत्पन्न परिणाम में कॉपी करने को कहता है।
+
+### मेटाडेटा प्रवाह को समझना
 
 एक सामान्य तुलना के दौरान:
 
-1. **Source document** बेस कंटेंट प्रदान करता है।  
-2. **Target document** तुलना के लिए परिवर्तन प्रदान करता है।  
-3. **output document** दोनों को मिलाता है, लेकिन किसका मेटाडाटा जीतता है?
+1. **स्रोत दस्तावेज़** बेस कंटेंट प्रदान करता है।  
+2. **लक्ष्य दस्तावेज़** तुलना के लिए परिवर्तन प्रदान करता है।  
+3. **आउटपुट दस्तावेज़** दोनों को मिलाता है, लेकिन किसका मेटाडेटा जीतता है?
 
-डिफ़ॉल्ट रूप से, GroupDocs.Comparison स्रोत दस्तावेज़ का मेटाडाटा उपयोग करता है। **target metadata को संरक्षित** करने के लिए, आपको API को स्पष्ट रूप से बताना होगा।
+डिफ़ॉल्ट रूप से, GroupDocs.Comparison स्रोत दस्तावेज़ का मेटाडेटा उपयोग करता है। **लक्ष्य मेटाडेटा को संरक्षित** करने के लिए आपको API को स्पष्ट रूप से बताना होगा।
 
-### चरण‑दर‑चरण कार्यान्वयन
+### स्टेप‑बाय‑स्टेप इम्प्लीमेंटेशन
 
-#### चरण 1: अपने Comparer ऑब्जेक्ट को इनिशियलाइज़ करें
+#### स्टेप 1: अपने comparer ऑब्जेक्ट को इनिशियलाइज़ करें
 
-यह “baseline” दस्तावेज़ स्थापित करता है—जिसके खिलाफ आप तुलना कर रहे हैं:
+`Comparer` वह कोर क्लास है जो तुलना प्रक्रिया को ऑर्केस्ट्रेट करता है। यह स्रोत फ़ाइल लोड करता है, बदलाव ट्रैक करता है, और आउटपुट जनरेट करता है।  
+
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
     // All comparison operations happen within this scope
 }
-```
+```  
 
-**`using` स्टेटमेंट्स** क्यों उपयोग करें? वे स्वचालित रूप से संसाधनों को डिस्पोज़ करते हैं, बड़े दस्तावेज़ों को प्रोसेस करते समय मेमोरी लीक को रोकते हैं। भरोसा करें, 50 MB Word फ़ाइलों से निपटते समय आप बाद में खुद को धन्यवाद देंगे।
+**`using` स्टेटमेंट्स क्यों उपयोग करें?** वे स्वचालित रूप से रिसोर्सेज़ को डिस्पोज़ कर देते हैं, जिससे बड़े दस्तावेज़ों को प्रोसेस करते समय मेमोरी लीक नहीं होती। बाद में 50 MB Word फ़ाइलों से निपटते समय आप खुद का धन्यवाद करेंगे।
 
-#### चरण 2: लक्ष्य दस्तावेज़ जोड़ें
+#### स्टेप 2: लक्ष्य दस्तावेज़ जोड़ें
 
-Comparer को बताएं कि कौन सा दस्तावेज़ वह परिवर्तन रखता है जिसे आप विश्लेषण करना चाहते हैं:
+`Comparer.Add` वह फ़ाइल रजिस्टर करता है जिसमें वह संशोधन होते हैं जिनसे आप तुलना करना चाहते हैं।  
+
 ```csharp
 comparer.Add(targetFilePath);
-```
+```  
 
-**सामान्य गलती**: स्रोत और लक्ष्य को भ्रमित करना। इस तरह सोचें—source आपका “मूल” है, target आपका “अपडेटेड संस्करण” है।
+**आम गलती**: स्रोत और लक्ष्य को उलट देना। इसे इस तरह सोचें—स्रोत आपका “ऑरिजिनल” है, लक्ष्य आपका “अपडेटेड वर्ज़न” है।
 
-#### चरण 3: मेटाडाटा प्रकार सेट करें (जादू यहाँ होता है)
+#### स्टेप 3: मेटाडेटा प्रकार सेट करें (यहाँ जादू होता है)
 
-आउटपुट में कौन सा दस्तावेज़ का मेटाडाटा रखा जाना चाहिए, यह निर्दिष्ट करें:
+`CloneMetadataType` `ComparisonOptions` की एक प्रॉपर्टी है जो निर्धारित करती है कि परिणाम में किस दस्तावेज़ का मेटाडेटा क्लोन किया जाएगा।  
+
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
-```
+```  
 
-**क्या हो रहा है?** `CloneMetadataType = MetadataType.Target` GroupDocs.Comparison को बताता है: “अरे, मैं अपने अंतिम परिणाम में लक्ष्य दस्तावेज़ का मेटाडाटा रखना चाहता हूँ।”
+**क्या हो रहा है?** `CloneMetadataType = MetadataType.Target` GroupDocs.Comparison को बताता है: “हे, मैं अंतिम परिणाम में लक्ष्य दस्तावेज़ का मेटाडेटा रखना चाहता हूँ।”
 
-### पूर्ण कार्यशील उदाहरण
+## पूरा कार्यशील उदाहरण
 
-यहाँ सब कुछ एक चलाने योग्य प्रोग्राम में एक साथ है:
+यहाँ सब कुछ एक रन करने योग्य प्रोग्राम में एक साथ है:  
 ```csharp
 using System;
 using System.IO;
@@ -197,37 +265,37 @@ class Program
         }
     }
 }
-```
+```  
 
-### सामान्य pitfalls से बचें
+## से बचने के लिए सामान्य जाल
 
-**File Path Issues** – हमेशा पूर्ण पथ उपयोग करें या सुनिश्चित करें कि आपकी फ़ाइलें कार्य निर्देशिका में हों:
+**फ़ाइल पाथ समस्याएँ** – हमेशा पूर्ण पाथ उपयोग करें या सुनिश्चित करें कि फ़ाइलें कार्यशील डायरेक्टरी में हों:  
 ```csharp
 // Good
 string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
 
 // Risky (might work locally but fail in production)
 string sourceFile = "source.docx";
-```
+```  
 
-**Memory Management** – बड़े दस्तावेज़ों के लिए, हमेशा `Comparer` ऑब्जेक्ट्स को `using` स्टेटमेंट्स में रैप करें।
+**मेमोरी प्रबंधन** – बड़े दस्तावेज़ों के लिए हमेशा `Comparer` ऑब्जेक्ट्स को `using` स्टेटमेंट्स में रैप करें।
 
-**Version Compatibility** – विभिन्न GroupDocs.Comparison रिलीज़ अलग‑अलग मेटाडाटा विकल्प प्रदान करती हैं—सर्वोत्तम परिणामों के लिए 25.4.0 या उससे नए संस्करण का उपयोग करें।
+**वर्ज़न संगतता** – विभिन्न GroupDocs.Comparison रिलीज़ अलग‑अलग मेटाडेटा विकल्प उजागर करती हैं—सबसे अच्छे परिणामों के लिए 25.4.0 या नया उपयोग करें।
 
-## उन्नत मेटाडाटा परिदृश्य
+## उन्नत मेटाडेटा परिदृश्य
 
-### कब उपयोग करें Target बनाम Source मेटाडाटा
+### लक्ष्य बनाम स्रोत मेटाडेटा कब उपयोग करें
 
-| परिदृश्य | **Target** मेटाडाटा को प्राथमिकता दें | **Source** मेटाडाटा को प्राथमिकता दें |
+| परिदृश्य | **लक्ष्य** मेटाडेटा को प्राथमिकता दें | **स्रोत** मेटाडेटा को प्राथमिकता दें |
 |----------|----------------------------|----------------------------|
 | अपडेटेड लेखक जानकारी चाहिए | ✅ | ❌ |
-| मूल दस्तावेज़ का कानूनी प्राधिकार है | ❌ | ✅ |
+| मूल दस्तावेज़ का कानूनी प्राधान्य है | ❌ | ✅ |
 | कस्टम प्रॉपर्टीज़ केवल नए फ़ाइल में जोड़ी गई हैं | ✅ | ❌ |
-| आप “मास्टर” दस्तावेज़ का इतिहास रखना चाहते हैं | ❌ | ✅ |
+| “मास्टर” दस्तावेज़ का इतिहास रखना चाहते हैं | ❌ | ✅ |
 
 ### कई लक्ष्य दस्तावेज़ों को संभालना
 
-आप कई लक्ष्य फ़ाइलों के खिलाफ तुलना कर सकते हैं जबकि पहले जोड़े गए लक्ष्य से मेटाडाटा संरक्षित रहता है:
+आप कई लक्ष्यों के खिलाफ तुलना कर सकते हैं जबकि पहले जोड़े गए लक्ष्य से मेटाडेटा संरक्षित रहता है:  
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -241,13 +309,13 @@ using (Comparer comparer = new Comparer(sourceFilePath))
         CloneMetadataType = MetadataType.Target 
     });
 }
-```
+```  
 
-## व्यावहारिक अनुप्रयोग और उपयोग केस
+## व्यावहारिक अनुपयोग और उपयोग केस
 
 ### कानूनी दस्तावेज़ प्रबंधन
 
-Law firms often need to compare contract versions while preserving specific metadata markers:
+कानूनी फर्मों को अक्सर अनुबंध संस्करणों की तुलना करनी पड़ती है जबकि विशिष्ट मेटाडेटा मार्कर संरक्षित रखने होते हैं:  
 ```csharp
 // Preserve client metadata from updated contract
 using (Comparer comparer = new Comparer("original_contract.docx"))
@@ -259,11 +327,11 @@ using (Comparer comparer = new Comparer("original_contract.docx"))
         CloneMetadataType = MetadataType.Target  // Keep client's metadata
     });
 }
-```
+```  
 
-### शैक्षणिक और शोध सहयोग
+### शैक्षणिक और अनुसंधान सहयोग
 
-When multiple researchers collaborate, you want to preserve the most recent author information:
+जब कई शोधकर्ता सहयोग करते हैं, तो आप सबसे हालिया लेखक जानकारी को संरक्षित करना चाहते हैं:  
 ```csharp
 // Keep metadata from the researcher's latest submission
 using (Comparer comparer = new Comparer("draft_paper.docx"))
@@ -275,11 +343,11 @@ using (Comparer comparer = new Comparer("draft_paper.docx"))
         CloneMetadataType = MetadataType.Target  // Preserve researcher metadata
     });
 }
-```
+```  
 
-### कॉरपोरेट अनुपालन कार्यप्रवाह
+### कॉर्पोरेट अनुपालन कार्यप्रवाह
 
-In regulated industries, maintaining compliance metadata is critical:
+नियामक उद्योगों में, अनुपालन मेटाडेटा को बनाए रखना अत्यंत महत्वपूर्ण है:  
 ```csharp
 // Preserve compliance tags from updated policy document
 using (Comparer comparer = new Comparer("old_policy.docx"))
@@ -291,13 +359,13 @@ using (Comparer comparer = new Comparer("old_policy.docx"))
         CloneMetadataType = MetadataType.Target  // Keep compliance metadata
     });
 }
-```
+```  
 
 ## सामान्य समस्याओं का निवारण
 
-### “File Not Found” त्रुटियाँ
+### “फ़ाइल नहीं मिली” त्रुटियाँ
 
-The most common issue. Debug with explicit checks:
+सबसे आम समस्या। स्पष्ट चेक के साथ डिबग करें:  
 ```csharp
 string sourceFile = "source.docx";
 
@@ -314,11 +382,11 @@ if (!File.Exists(targetFile))
     Console.WriteLine($"Target file not found: {Path.GetFullPath(targetFile)}");
     return;
 }
-```
+```  
 
-### बड़े दस्तावेज़ों में मेमोरी समस्याएँ
+### बड़े दस्तावेज़ों के साथ मेमोरी समस्याएँ
 
-For documents over 10 MB, consider these optimizations:
+10 MB से बड़े दस्तावेज़ों के लिए ये ऑप्टिमाइज़ेशन देखें:  
 ```csharp
 // Use explicit disposal for large documents
 using (var comparer = new Comparer(sourceFile))
@@ -336,11 +404,11 @@ using (var comparer = new Comparer(sourceFile))
     GC.Collect();
     GC.WaitForPendingFinalizers();
 }
-```
+```  
 
 ### अनुमति और एक्सेस समस्याएँ
 
-When working with protected files or network shares:
+सुरक्षित फ़ाइलों या नेटवर्क शेयरों के साथ काम करते समय:  
 ```csharp
 try
 {
@@ -363,13 +431,14 @@ catch (IOException ex)
     Console.WriteLine("File I/O error occurred.");
     Console.WriteLine($"Details: {ex.Message}");
 }
-```
+```  
 
 ## प्रदर्शन विचार और सर्वोत्तम प्रथाएँ
 
 ### मेमोरी प्रबंधन
 
-GroupDocs.Comparison can be memory‑intensive. Use `using` statements to guarantee disposal:
+GroupDocs.Comparison 100‑पेज PDF प्रोसेस करते समय **300 MB RAM** तक उपयोग कर सकता है। `using` स्टेटमेंट्स का उपयोग करके डिस्पोज़ सुनिश्चित करें और मेमोरी तुरंत मुक्त करें।  
+
 ```csharp
 // Good - automatic resource cleanup
 using (var comparer = new Comparer(sourceFile))
@@ -381,13 +450,13 @@ using (var comparer = new Comparer(sourceFile))
 var comparer = new Comparer(sourceFile);
 // ... comparison logic
 // comparer.Dispose(); // Easy to forget!
-```
+```  
 
-**दस्तावेज़ों को बैच में प्रोसेस करें** – यदि आप कई फ़ाइलों की तुलना कर रहे हैं, तो मेमोरी उपयोग कम रखने के लिए उन्हें छोटे समूहों में संभालें।
+**बैच में दस्तावेज़ प्रोसेस करें** – यदि आप कई फ़ाइलों की तुलना कर रहे हैं, तो उन्हें छोटे समूहों में संभालें ताकि मेमोरी उपयोग कम रहे।
 
-### बेहतर प्रतिक्रिया के लिए Async ऑपरेशन्स
+### बेहतर प्रतिक्रिया के लिए असिंक्रोनस ऑपरेशन्स
 
-For desktop or web apps, wrap comparison in an async method:
+डेस्कटॉप या वेब ऐप्स के लिए, तुलना को एक async मेथड में रैप करें:  
 ```csharp
 public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
 {
@@ -411,19 +480,19 @@ public async Task<bool> CompareDocumentsAsync(string source, string target, stri
         }
     });
 }
-```
+```  
 
 ### फ़ाइल आकार दिशानिर्देश
 
 - **छोटा (< 1 MB)** – सीधे प्रोसेस करें।  
-- **मध्यम (1‑10 MB)** – UI को उत्तरदायी रखने के लिए प्रोग्रेस दिखाएँ।  
-- **बड़ा (> 10 MB)** – हमेशा async प्रोसेसिंग उपयोग करें और ऊपर दिखाए गए अनुसार स्पष्ट GC पर विचार करें।
+- **मध्यम (1‑10 MB)** – UI को रिस्पॉन्सिव रखने के लिए प्रोग्रेस दिखाएँ।  
+- **बड़ा (> 10 MB)** – हमेशा async प्रोसेसिंग उपयोग करें और ऊपर दिखाए अनुसार स्पष्ट GC पर विचार करें।
 
 ## बड़े सिस्टम के साथ एकीकरण
 
 ### ASP.NET Core एकीकरण
 
-Below is a ready‑to‑use controller that accepts two uploaded files, runs the comparison, and returns the result while **preserving target metadata**:
+नीचे एक तैयार‑करने‑योग्य कंट्रोलर है जो दो अपलोडेड फ़ाइलें लेता है, तुलना चलाता है, और **लक्ष्य मेटाडेटा को संरक्षित** करते हुए परिणाम लौटाता है:  
 ```csharp
 [ApiController]
 [Route("api/[controller]")]
@@ -468,47 +537,54 @@ public class DocumentComparisonController : ControllerBase
         }
     }
 }
-```
+```  
 
 ## अक्सर पूछे जाने वाले प्रश्न
 
-**प्र: क्या मैं तुलना करते समय कई लक्ष्य दस्तावेज़ों से मेटाडाटा संरक्षित कर सकता हूँ?**  
-उ: जब आप कई लक्ष्य फ़ाइलें जोड़ते हैं, तो GroupDocs.Comparison पहले जोड़े गए **पहले** लक्ष्य दस्तावेज़ का मेटाडाटा उपयोग करता है। वह दस्तावेज़ पहले जोड़ें जिसका मेटाडाटा आप रखना चाहते हैं।
+**प्रश्न: क्या मैं कई लक्ष्य दस्तावेज़ों से मेटाडेटा संरक्षित कर सकता हूँ?**  
+उत्तर: जब आप कई लक्ष्य फ़ाइलें जोड़ते हैं, तो GroupDocs.Comparison **पहली** जोड़ी गई लक्ष्य फ़ाइल का मेटाडेटा उपयोग करता है। वह दस्तावेज़ पहले जोड़ें जिसका मेटाडेटा आप रखना चाहते हैं।
 
-**प्र: यदि लक्ष्य दस्तावेज़ में कुछ मेटाडाटा फ़ील्ड नहीं हैं तो क्या होता है?**  
-उ: केवल वही मेटाडाटा जो लक्ष्य में मौजूद है, आउटपुट में कॉपी किया जाएगा। अनुपलब्ध फ़ील्ड बस छोड़ दिए जाते हैं; तुलना फिर भी सफल होती है।
+**प्रश्न: यदि लक्ष्य दस्तावेज़ में कुछ मेटाडेटा फ़ील्ड नहीं हैं तो क्या होगा?**  
+उत्तर: केवल वही मेटाडेटा जो लक्ष्य में मौजूद है, आउटपुट में कॉपी किया जाएगा। अनुपलब्ध फ़ील्ड बस छोड़ दी जाएँगी; तुलना फिर भी सफल होगी।
 
-**प्र: मैं पासवर्ड‑सुरक्षित दस्तावेज़ों को कैसे संभालूँ?**  
-उ: Use a `LoadOptions` object with the password, then pass it to the `Comparer` constructor:
+**प्रश्न: पासवर्ड‑प्रोटेक्टेड दस्तावेज़ों को कैसे संभालें?**  
+उत्तर: `LoadOptions` पासवर्ड जैसी सेटिंग्स निर्दिष्ट करता है।  
+पासवर्ड के साथ `LoadOptions` ऑब्जेक्ट बनाएं, फिर उसे `Comparer` कन्स्ट्रक्टर में पास करें:  
 ```csharp
 var loadOptions = new LoadOptions() { Password = "your_password" };
 using (var comparer = new Comparer(sourceFile, loadOptions))
 {
     // comparison logic here
 }
-```
+```  
 
-**प्र: क्या केवल चयनित मेटाडाटा प्रॉपर्टीज़ को संरक्षित करने का कोई तरीका है?**  
-उ: वर्तमान API चुने हुए स्रोत (Target या Source) से **सभी** मेटाडाटा संरक्षित करता है। सूक्ष्म नियंत्रण के लिए आपको तुलना के बाद प्रॉपर्टीज़ निकालनी होंगी और मैन्युअली पुनः लागू करनी होंगी।
+**प्रश्न: क्या केवल चयनित मेटाडेटा प्रॉपर्टीज़ को ही संरक्षित किया जा सकता है?**  
+उत्तर: वर्तमान API चुने हुए स्रोत (Target या Source) से **सभी** मेटाडेटा संरक्षित करता है। ग्रैन्युलर कंट्रोल के लिए आपको तुलना के बाद प्रॉपर्टीज़ निकालकर मैन्युअली पुनः लागू करनी होंगी।
 
-**प्र: कौन से दस्तावेज़ फ़ॉर्मेट मेटाडाटा संरक्षण का समर्थन करते हैं?**  
-उ: अधिकांश सामान्य व्यावसायिक फ़ॉर्मेट—DOCX, PDF, PPTX, XLSX, और कई अन्य—मेटाडाटा संरक्षण का समर्थन करते हैं। पूरी सूची के लिए आधिकारिक दस्तावेज़ देखें।
+**प्रश्न: कौन से दस्तावेज़ फ़ॉर्मेट मेटाडेटा संरक्षण का समर्थन करते हैं?**  
+उत्तर: अधिकांश सामान्य व्यापार फ़ॉर्मेट—DOCX, PDF, PPTX, XLSX, और कई अन्य—मेटाडेटा संरक्षण का समर्थन करते हैं। पूरी सूची के लिए आधिकारिक दस्तावेज़ देखें।
 
-**प्र: यदि मुझे समस्याएँ आती हैं तो मैं मदद कहाँ प्राप्त कर सकता हूँ?**  
-उ: समुदाय सहायता के लिए [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) पर जाएँ, या यदि आपके पास व्यावसायिक लाइसेंस है तो सीधे GroupDocs सपोर्ट से संपर्क करें।
+**प्रश्न: यदि समस्या आए तो मदद कहाँ मिलेगी?**  
+उत्तर: समुदाय सहायता के लिए [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) देखें, या यदि आपके पास व्यावसायिक लाइसेंस है तो सीधे GroupDocs सपोर्ट से संपर्क करें।
 
 ## अतिरिक्त संसाधन
 
-- **Official Documentation**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
-- **API Reference**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
-- **Download Latest Version**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
-- **Free Trial**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
-- **Purchase Options**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
+- **आधिकारिक दस्तावेज़**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
+- **API रेफ़रेंस**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- **नवीनतम संस्करण डाउनलोड**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
+- **फ्री ट्रायल**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
+- **खरीद विकल्प**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
 
 ---
 
-**अंतिम अपडेट:** 2026-03-06  
+**अंतिम अपडेट:** 2026-09-15  
 **परीक्षण किया गया:** GroupDocs.Comparison 25.4.0 for .NET  
 **लेखक:** GroupDocs  
 
 ---
+
+## संबंधित ट्यूटोरियल
+
+- [GroupDocs Comparison NET Tutorial - Complete Guide to Document Comparison with Metadata](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)
+- [How to Extract Metadata from .NET Comparison Results – Complete Guide](/comparison/net/basic-usage/get-document-info-from-result-document/)
+- [Document Comparison .NET - How to Save Metadata Target](/comparison/net/loading-and-saving-documents/saving-documents-metadata-target/)

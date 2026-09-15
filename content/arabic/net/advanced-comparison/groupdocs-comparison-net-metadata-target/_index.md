@@ -1,60 +1,121 @@
 ---
 categories:
 - Document Comparison
-date: '2026-03-06'
-description: تعلم كيفية الحفاظ على بيانات التعريف المستهدفة أثناء مقارنة المستندات
-  باستخدام GroupDocs.Comparison لـ .NET. دليل خطوة بخطوة مع أمثلة بلغة C#.
-keywords: preserve target metadata, GroupDocs.Comparison metadata preservation, .NET
-  document comparison, metadata preservation tutorial
-lastmod: '2026-03-06'
-linktitle: Metadata Preservation Tutorial
+date: '2026-09-15'
+description: تعلم كيفية الحفاظ على البيانات الوصفية أثناء مقارنة المستندات باستخدام
+  GroupDocs.Comparison لـ .NET. دليل خطوة بخطوة مع أمثلة C#، وأفضل الممارسات، وحالات
+  الاستخدام الواقعية.
+keywords:
+- how to preserve metadata
+- GroupDocs.Comparison metadata preservation
+- .NET document comparison
+- metadata handling in .NET
+lastmod: '2026-09-15'
+linktitle: دليل الحفاظ على البيانات الوصفية
+og_description: اكتشف كيفية الحفاظ على البيانات الوصفية أثناء مقارنة المستندات في
+  .NET باستخدام GroupDocs.Comparison. اتبع دليلًا مفصلاً يتضمن أفضل الممارسات، ونصائح
+  استكشاف الأخطاء وإصلاحها، وأمثلة واقعية.
+og_image_alt: Developer guide showing metadata preservation with GroupDocs.Comparison
+  in a .NET application
+og_title: كيفية الحفاظ على البيانات الوصفية باستخدام GroupDocs.Comparison في .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to preserve metadata during document comparison using GroupDocs.Comparison
+    for .NET. Step‑by‑step guide with C# examples, best practices, and real‑world
+    use cases.
+  headline: How to preserve metadata with GroupDocs.Comparison in .NET
+  type: TechArticle
+- description: Learn how to preserve metadata during document comparison using GroupDocs.Comparison
+    for .NET. Step‑by‑step guide with C# examples, best practices, and real‑world
+    use cases.
+  name: How to preserve metadata with GroupDocs.Comparison in .NET
+  steps:
+  - name: Initialize your comparer object
+    text: '`Comparer` is the core class that orchestrates the comparison process.
+      It loads the source file, tracks changes, and generates the output. **Why use
+      `using` statements?** They automatically dispose of resources, preventing memory
+      leaks when processing large documents. Trust me, you’ll thank yourself'
+  - name: Add the target document
+    text: '`Comparer.Add` registers the file that contains the modifications you want
+      to compare against. **Common mistake**: Confusing source and target. Think of
+      it this way—source is your “original,” target is your “updated version.”'
+  - name: Set the metadata type (the magic happens here)
+    text: '`CloneMetadataType` is a property of `ComparisonOptions` that determines
+      which document’s metadata is cloned into the result. **What’s happening?** `CloneMetadataType
+      = MetadataType.Target` tells GroupDocs.Comparison: “Hey, I want to keep the
+      target document’s metadata in my final result.”'
+  type: HowTo
+- questions:
+  - answer: When you add several target files, GroupDocs.Comparison uses the metadata
+      from the **first** target document added. Add the document whose metadata you
+      want to keep first in the chain.
+    question: Can I preserve metadata from multiple target documents when comparing?
+  - answer: Only the metadata that exists in the target will be copied to the output.
+      Missing fields are simply omitted; the comparison still succeeds.
+    question: What happens if the target document lacks some metadata fields?
+  - answer: 'LoadOptions specifies settings such as passwords for opening protected
+      documents. Use a `LoadOptions` object with the password, then pass it to the
+      `Comparer` constructor: ```csharp var loadOptions = new LoadOptions() { Password
+      = "your_password" }; using (var comparer = new Comparer(sourceFile, loadOptions))
+      { // comparison logic here } ```'
+    question: How do I handle password‑protected documents?
+  - answer: The current API preserves **all** metadata from the chosen source (Target
+      or Source). For granular control you’d need to extract the properties after
+      comparison and re‑apply them manually.
+    question: Is there a way to preserve only selected metadata properties?
+  - answer: Most common business formats—DOCX, PDF, PPTX, XLSX, and many others—support
+      metadata preservation. See the official docs for the full list.
+    question: Which document formats support metadata preservation?
+  type: FAQPage
 tags:
+- metadata preservation
 - GroupDocs.Comparison
-- metadata-preservation
-- dotnet-tutorial
-- document-management
-title: حفظ بيانات التعريف الهدف باستخدام GroupDocs.Comparison – دليل .NET
+- .NET tutorial
+- document management
+- C# comparison
+title: كيفية الحفاظ على البيانات الوصفية باستخدام GroupDocs.Comparison في .NET
 type: docs
 url: /ar/net/advanced-comparison/groupdocs-comparison-net-metadata-target/
 weight: 1
 ---
 
-# الحفاظ على بيانات التعريف الهدف مع GroupDocs.Comparison – دليل .NET
+# كيفية الحفاظ على البيانات الوصفية مع GroupDocs.Comparison في .NET
 
-## المقدمة
+في هذا البرنامج التعليمي ستتعلم **كيفية الحفاظ على البيانات الوصفية** عند مقارنة مستندين باستخدام GroupDocs.Comparison لـ .NET. الحفاظ على البيانات الوصفية ضروري للامتثال القانوني، وسجلات التدقيق، وسير العمل التعاوني، وتوفر المكتبة لك تحكمًا دقيقًا في أي مستند تحتفظ ببياناته الوصفية في نتيجة المقارنة.
 
-هل قمت يومًا بمقارنة مستندين فقط لتفقد بيانات التعريف المهمة في العملية؟ لست وحدك. عندما تحتاج إلى **preserve target metadata** أثناء مقارنة المستندات في تطبيق .NET، قد يبدو الأمر صعبًا—ولكن لا يجب أن يكون كذلك.
+## مقدمة
 
-يتيح لك GroupDocs.Comparison for .NET تحديد أي مستند سيحتفظ ببيانات التعريف الخاصة به في نتيجة المقارنة. سواء كنت تبني نظام إدارة مستندات، أو تتعامل مع عقود قانونية، أو تدير محتوى تعاوني، فإنك ستحتاج إلى بيانات التعريف من المستند المصدر الصحيح في كل مرة.
+هل سبق لك مقارنة مستندين وفقدان البيانات الوصفية المهمة في العملية؟ لست وحدك. عندما تحتاج إلى **الحفاظ على بيانات التعريف الهدف** أثناء مقارنة المستندات في تطبيق .NET، قد يبدو الأمر صعبًا—ولكن لا يجب أن يكون كذلك.
 
-في هذا الدليل ستتعلم كيفية **preserve target metadata** أثناء المقارنة، وتجنب الأخطاء الشائعة، وتطبيق الحل في سيناريوهات واقعية.
+يتيح لك GroupDocs.Comparison لـ .NET تحديد أي مستند تحتفظ بياناته الوصفية في نتيجة المقارنة. سواء كنت تبني نظام إدارة مستندات، أو تتعامل مع عقود قانونية، أو تدير محتوى تعاوني، فستحتاج إلى البيانات الوصفية من المستند المصدر الصحيح في كل مرة.
 
 ## إجابات سريعة
-- **ماذا يعني “preserve target metadata”؟** يحتفظ ببيانات التعريف (المؤلف، تاريخ الإنشاء، الخصائص المخصصة، إلخ) من المستند الذي تحدده كهدف عند إنشاء نتيجة المقارنة.  
-- **ما هو إصدار GroupDocs.Comparison المطلوب؟** الإصدار 25.4.0 أو أحدث.  
-- **هل يمكنني استخدامه مع .NET Core؟** نعم – .NET Core 2.0+ أو .NET Framework 4.6.1+.  
-- **هل تحتاج إلى ترخيص للإنتاج؟** يلزم ترخيص تجاري للإنتاج؛ النسخة التجريبية المجانية تكفي للتعلم.  
-- **هل تعمل الميزة مع PDF و DOCX؟** نعم – جميع صيغ Office و PDF الرئيسية تدعم حفظ بيانات التعريف.
+- **ماذا يعني “preserve target metadata”؟** يحتفظ بالبيانات الوصفية (المؤلف، تاريخ الإنشاء، الخصائص المخصصة، إلخ) من المستند الذي تحدده كهدف عند إنشاء نتيجة المقارنة.  
+- **ما نسخة GroupDocs.Comparison المطلوبة؟** الإصدار 25.4.0 أو أحدث.  
+- **هل يمكنني استخدام هذا مع .NET Core؟** نعم – .NET Core 2.0+ أو .NET Framework 4.6.1+.  
+- **هل تحتاج إلى ترخيص للإنتاج؟** يلزم ترخيص تجاري للإنتاج؛ نسخة تجريبية مجانية تكفي للتعلم.  
+- **هل تعمل الميزة مع PDF و DOCX؟** نعم – جميع صيغ Office و PDF الرئيسية تدعم الحفاظ على البيانات الوصفية.
 
-## لماذا حفظ بيانات التعريف مهم
+## لماذا الحفاظ على البيانات الوصفية مهم
 
-قبل الانتقال إلى الكود، دعنا نتحدث عن سبب أهمية حفظ بيانات التعريف الهدف. بيانات تعريف المستند ليست مجرد “إضافة لطيفة”—بل غالبًا ما تكون مطلوبة قانونيًا أو حيوية للأعمال:
+قبل الانتقال إلى الكود، دعونا نتحدث عن سبب أهمية الحفاظ على بيانات التعريف الهدف. البيانات الوصفية للمستند ليست مجرد “إضافة طيبة”—غالبًا ما تكون مطلوبة قانونيًا أو حرجة للأعمال:
 
 - **المستندات القانونية** – تحتاج إلى الاحتفاظ بعلامات سرية المحاماة‑العميل.  
-- **ملفات الشركات** – يجب الاحتفاظ بوسوم الامتثال وسلاسل الموافقة.  
+- **الملفات المؤسسية** – يجب الحفاظ على علامات الامتثال وسلاسل الموافقة.  
 - **الأوراق الأكاديمية** – إسناد المؤلف وتاريخ المراجعات أمران أساسيان.  
 - **الوثائق التقنية** – التحكم في الإصدارات وحالة المراجعة مهمان.
 
-بدون معالجة صحيحة، قد تقوم عن طريق الخطأ بإزالة معلومات استغرق تأسيسها شهورًا. هنا يبرز دور خيار **preserve target metadata**.
+بدون معالجة صحيحة، قد تقوم عن طريق الخطأ بإزالة معلومات استغرق تأسيسها أشهر. هنا يبرز خيار **preserve target metadata**.
 
 ## المتطلبات المسبقة
 
-### المكتبات والإصدارات المطلوبة
-- **GroupDocs.Comparison for .NET**: الإصدار 25.4.0 أو أحدث (الإصدارات السابقة لديها خيارات محدودة لبيانات التعريف).  
+### المكتبات المطلوبة والإصدارات
+- **GroupDocs.Comparison لـ .NET**: الإصدار 25.4.0 أو أحدث (الإصدارات السابقة لديها خيارات بيانات وصفية محدودة).  
 - **.NET Framework**: 4.6.1 أو أعلى، أو .NET Core 2.0+.
 
 ### إعداد البيئة
-- Visual Studio (أو أي بيئة تطوير C# تفضلها).  
+- Visual Studio (أو أي بيئة تطوير متكاملة C# تفضلها).  
 - معرفة أساسية بـ C# (لا شيء معقد، وعد!).  
 - مستندان تجريبيان للاختبار (Word *.docx* يعمل بشكل ممتاز).
 
@@ -62,40 +123,41 @@ weight: 1
 ليس عليك أن تكون خبيرًا في GroupDocs، لكن يجب أن تكون مرتاحًا مع:
 - عبارات `using` في C# ومعالجة الملفات.  
 - مفاهيم أساسية لمعالجة المستندات.  
-- ما هي بيانات التعريف فعليًا (المؤلف، العنوان، الخصائص المخصصة، إلخ).
+- ما هي البيانات الوصفية فعليًا (المؤلف، العنوان، الخصائص المخصصة، إلخ).
 
-جاهز؟ لنقم بالإعداد.
+جاهز؟ لنقم بإعداد ذلك.
 
 ## إعداد GroupDocs.Comparison لـ .NET
 
-تثبيت GroupDocs.Comparison سهل، لكن هناك بعض النقاط التي يجب الانتباه إليها.
+تثبيت GroupDocs.Comparison سهل، لكن هناك بعض الأمور التي يجب الانتباه إليها.
 
 ### خيارات التثبيت
 
-**NuGet Package Manager Console** (أسهل طريقة):
+**NuGet Package Manager Console** (أسهل طريقة):  
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**.NET CLI** (إذا كنت تفضل سطر الأوامر):
+**.NET CLI** (إذا كنت تفضل سطر الأوامر):  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-**نصيحة احترافية**: دائمًا حدد الإصدار لتجنب تغييرات كسرية غير متوقعة في مشروعك.
+**نصيحة احترافية**: دائمًا حدد الإصدار لتجنب تغييرات غير متوقعة قد تكسر مشروعك.
 
 ### الحصول على الترخيص
 
-هنا حيث يواجه العديد من المطورين صعوبة في البداية. GroupDocs.Comparison ليس مجانيًا، لكن لديك خيارات:
-- **نسخة تجريبية مجانية** – وظائف كاملة لمدة 30 يوم، مثالية للتقييم.  
-- **ترخيص مؤقت** – فترة تقييم ممتدة إذا كنت بحاجة إلى مزيد من الوقت.  
-- **ترخيص تجاري** – للاستخدام في الإنتاج (تتوفر مستويات أسعار مختلفة).
+هنا يواجه العديد من المطورين صعوبة في البداية. GroupDocs.Comparison ليس مجانيًا، لكن لديك خيارات:
 
-لا تقلق بشأن الترخيص الآن إذا كنت تتعلم فقط—النسخة التجريبية تشمل جميع ميزات **preserve target metadata**.
+- **نسخة تجريبية مجانية** – وظائف كاملة لمدة 30 يومًا، مثالية للتقييم.  
+- **ترخيص مؤقت** – فترة تقييم ممتدة إذا كنت تحتاج إلى مزيد من الوقت.  
+- **ترخيص تجاري** – للاستخدام في الإنتاج (متوفر مستويات أسعار مختلفة).
+
+لا تقلق بشأن الترخيص الآن إذا كنت تتعلم فقط—نسخة التجربة تشمل جميع ميزات **preserve target metadata**.
 
 ### التحقق من الإعداد الأساسي
 
-لنتأكد من أن كل شيء يعمل باختبار بسيط:
+دعنا نتأكد من أن كل شيء يعمل باختبار بسيط:  
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
@@ -109,58 +171,61 @@ using (Comparer comparer = new Comparer(sourceFilePath))
     // Add the target document for comparison.
     comparer.Add(targetFilePath);
 }
-```
+```  
 
-إذا تم تجميعه بدون أخطاء، فأنت جاهز. إذا لم يحدث ذلك، تحقق مرة أخرى من تثبيت الحزمة وعبارات `using`.
+إذا تم تجميعه بدون أخطاء، فأنت جاهز للانطلاق. إذا لم يحدث ذلك، تحقق مرة أخرى من تثبيت الحزمة وعبارات `using`.
 
-## كيفية حفظ بيانات التعريف الهدف
+## كيفية الحفاظ على بيانات تعريف الهدف
 
-الآن إلى الجزء الرئيسي—حفظ بيانات التعريف فعليًا أثناء مقارنة المستندات. هنا يبرز أداء GroupDocs.Comparison.
+حمّل ملفات المصدر والهدف، ثم أخبر الـ API بالحفاظ على بيانات تعريف الهدف في النتيجة النهائية.
 
-### فهم تدفق بيانات التعريف
+**الإجابة المباشرة (40‑70 كلمة):**  
+للحفاظ على بيانات التعريف الهدف، أنشئ كائن `Comparer` مع مستند المصدر، أضف مستند الهدف عبر `Add`، عيّن `CloneMetadataType = MetadataType.Target` في `ComparisonOptions`، وأخيرًا استدعِ `Compare`. هذا يخبر GroupDocs.Comparison بنسخ المؤلف، تاريخ الإنشاء، الخصائص المخصصة، وجميع البيانات الوصفية الأخرى من ملف الهدف إلى النتيجة المُولدة.
 
-أثناء مقارنة نمطية:
-1. **المستند المصدر** يوفر المحتوى الأساسي.  
-2. **المستند الهدف** يوفر التغييرات للمقارنة.  
-3. **المستند الناتج** يجمع بينهما، لكن أي بيانات تعريف تفوز؟
+### فهم تدفق البيانات الوصفية
 
-بشكل افتراضي، يستخدم GroupDocs.Comparison بيانات تعريف المستند المصدر. لتطبيق **preserve target metadata**، يجب إبلاغ الـ API صراحةً.
+أثناء مقارنة نموذجية:
+1. **مستند المصدر** يوفر المحتوى الأساسي.  
+2. **مستند الهدف** يوفر التغييرات للمقارنة ضدها.  
+3. **مستند الإخراج** يجمع بينهما، لكن أي بيانات وصفية تنتصر؟
+
+بشكل افتراضي، يستخدم GroupDocs.Comparison بيانات وصفية مستند المصدر. للحفاظ على بيانات تعريف الهدف، تحتاج إلى إبلاغ الـ API صراحةً.
 
 ### تنفيذ خطوة بخطوة
 
 #### الخطوة 1: تهيئة كائن المقارن الخاص بك
 
-هذا يحدد المستند “الأساسي”—المستند الذي تقارنه ضده:
+`Comparer` هو الفئة الأساسية التي تنسق عملية المقارنة. يقوم بتحميل ملف المصدر، تتبع التغييرات، وتوليد الإخراج.  
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
     // All comparison operations happen within this scope
 }
-```
+```  
 
-**لماذا نستخدم عبارات `using`؟** لأنها تقوم تلقائيًا بتحرير الموارد، مما يمنع تسرب الذاكرة عند معالجة مستندات كبيرة. صدقني، ستشكر نفسك لاحقًا عند التعامل مع ملفات Word بحجم 50 ميغابايت.
+**لماذا تستخدم عبارات `using`؟** فهي تقوم تلقائيًا بتحرير الموارد، مما يمنع تسرب الذاكرة عند معالجة مستندات كبيرة. صدقني، ستشكر نفسك لاحقًا عند التعامل مع ملفات Word بحجم 50 ميغابايت.
 
-#### الخطوة 2: إضافة المستند الهدف
+#### الخطوة 2: إضافة مستند الهدف
 
-أخبر المقارن أي مستند يحتوي على التغييرات التي تريد تحليلها:
+`Comparer.Add` يسجل الملف الذي يحتوي على التعديلات التي تريد المقارنة ضدها.  
 ```csharp
 comparer.Add(targetFilePath);
-```
+```  
 
-**خطأ شائع**: الخلط بين المصدر والهدف. فكر بهذه الطريقة—المصدر هو “الأصلي”، والهدف هو “الإصدار المحدث”.
+**خطأ شائع**: الخلط بين المصدر والهدف. فكر فيها بهذه الطريقة—المصدر هو “الأصلي”، والهدف هو “الإصدار المحدث”.
 
-#### الخطوة 3: تعيين نوع بيانات التعريف (هنا يحدث السحر)
+#### الخطوة 3: تعيين نوع البيانات الوصفية (السحر يحدث هنا)
 
-حدد أي مستند يجب أن يحتفظ ببيانات التعريف في الناتج:
+`CloneMetadataType` هي خاصية في `ComparisonOptions` تحدد أي مستند تُستنسخ بياناته الوصفية إلى النتيجة.  
 ```csharp
 comparer.Compare(outputFileName, new SaveOptions() { CloneMetadataType = MetadataType.Target });
-```
+```  
 
-**ما الذي يحدث؟** `CloneMetadataType = MetadataType.Target` يخبر GroupDocs.Comparison: “أريد الاحتفاظ ببيانات تعريف المستند الهدف في النتيجة النهائية.”
+**ما الذي يحدث؟** `CloneMetadataType = MetadataType.Target` يخبر GroupDocs.Comparison: “أريد الحفاظ على بيانات تعريف مستند الهدف في نتيجتي النهائية.”
 
-### مثال عملي كامل
+## مثال عملي كامل
 
-إليك كل شيء معًا في برنامج قابل للتنفيذ:
+إليك كل شيء معًا في برنامج قابل للتنفيذ:  
 ```csharp
 using System;
 using System.IO;
@@ -196,36 +261,37 @@ class Program
         }
     }
 }
-```
+```  
 
-### الأخطاء الشائعة التي يجب تجنبها
-- **مشكلات مسار الملف** – استخدم دائمًا المسارات الكاملة أو تأكد من وجود ملفاتك في دليل العمل:
+## الأخطاء الشائعة التي يجب تجنبها
+
+- **مشكلات مسار الملف** – استخدم دائمًا مسارات كاملة أو تأكد من أن ملفاتك موجودة في دليل العمل:  
 ```csharp
 // Good
 string sourceFile = Path.Combine(Directory.GetCurrentDirectory(), "docs", "source.docx");
 
 // Risky (might work locally but fail in production)
 string sourceFile = "source.docx";
-```
+```  
 
-- **إدارة الذاكرة** – للمستندات الكبيرة، احرص دائمًا على تغليف كائنات `Comparer` بعبارات `using`.
+- **إدارة الذاكرة** – للمستندات الكبيرة، احرص دائمًا على تغليف كائنات `Comparer` بعبارات `using`.  
 
-- **توافق الإصدارات** – إصدارات GroupDocs.Comparison المختلفة تعرض خيارات بيانات تعريف مختلفة—التزم بالإصدار 25.4.0 أو أحدث للحصول على أفضل النتائج.
+- **توافق الإصدارات** – إصدارات GroupDocs.Comparison المختلفة تعرض خيارات بيانات وصفية مختلفة—التزم بالإصدار 25.4.0 أو أحدث للحصول على أفضل النتائج.
 
-## سيناريوهات متقدمة لبيانات التعريف
+## سيناريوهات متقدمة للبيانات الوصفية
 
-### متى تستخدم بيانات التعريف الهدف مقابل المصدر
+### متى تستخدم بيانات الهدف مقابل بيانات المصدر
 
-| السيناريو | يفضل بيانات التعريف **الهدف** | يفضل بيانات التعريف **المصدر** |
+| السيناريو | يفضل بيانات **الهدف** | يفضل بيانات **المصدر** |
 |----------|----------------------------|----------------------------|
 | مطلوب تحديث معلومات المؤلف | ✅ | ❌ |
 | المستند الأصلي له أولوية قانونية | ❌ | ✅ |
-| تمّت إضافة خصائص مخصصة فقط في الملف الأحدث | ✅ | ❌ |
-| تريد الاحتفاظ بتاريخ المستند “الرئيسي” | ❌ | ✅ |
+| تم إضافة خصائص مخصصة فقط في الملف الأحدث | ✅ | ❌ |
+| تريد الحفاظ على تاريخ المستند “الرئيسي” | ❌ | ✅ |
 
 ### التعامل مع مستندات هدف متعددة
 
-يمكنك مقارنة عدة أهداف مع الحفاظ على بيانات التعريف من أول هدف تضيفه:
+يمكنك المقارنة مع عدة أهداف مع الاستمرار في الحفاظ على البيانات الوصفية من أول هدف تضيفه:  
 ```csharp
 using (Comparer comparer = new Comparer(sourceFilePath))
 {
@@ -239,12 +305,13 @@ using (Comparer comparer = new Comparer(sourceFilePath))
         CloneMetadataType = MetadataType.Target 
     });
 }
-```
+```  
 
-## التطبيقات العملية وحالات الاستخدام
+## تطبيقات عملية وحالات استخدام
 
 ### إدارة المستندات القانونية
-غالبًا ما تحتاج مكاتب المحاماة إلى مقارنة إصدارات العقود مع الحفاظ على علامات بيانات التعريف المحددة:
+
+غالبًا ما تحتاج مكاتب المحاماة إلى مقارنة إصدارات العقود مع الحفاظ على علامات بيانات وصفية محددة:  
 ```csharp
 // Preserve client metadata from updated contract
 using (Comparer comparer = new Comparer("original_contract.docx"))
@@ -256,10 +323,11 @@ using (Comparer comparer = new Comparer("original_contract.docx"))
         CloneMetadataType = MetadataType.Target  // Keep client's metadata
     });
 }
-```
+```  
 
 ### التعاون الأكاديمي والبحثي
-عند تعاون عدة باحثين، تريد الحفاظ على أحدث معلومات المؤلف:
+
+عند تعاون عدة باحثين، تريد الحفاظ على أحدث معلومات المؤلف:  
 ```csharp
 // Keep metadata from the researcher's latest submission
 using (Comparer comparer = new Comparer("draft_paper.docx"))
@@ -271,10 +339,11 @@ using (Comparer comparer = new Comparer("draft_paper.docx"))
         CloneMetadataType = MetadataType.Target  // Preserve researcher metadata
     });
 }
-```
+```  
 
 ### سير عمل الامتثال المؤسسي
-في الصناعات المنظمة، الحفاظ على بيانات تعريف الامتثال أمر حاسم:
+
+في الصناعات المنظمة، الحفاظ على بيانات وصفية للامتثال أمر حاسم:  
 ```csharp
 // Preserve compliance tags from updated policy document
 using (Comparer comparer = new Comparer("old_policy.docx"))
@@ -286,12 +355,13 @@ using (Comparer comparer = new Comparer("old_policy.docx"))
         CloneMetadataType = MetadataType.Target  // Keep compliance metadata
     });
 }
-```
+```  
 
 ## استكشاف الأخطاء الشائعة
 
 ### أخطاء “الملف غير موجود”
-أكثر المشاكل شيوعًا. قم بالتصحيح باستخدام فحوصات صريحة:
+
+أكثر الأخطاء شيوعًا. قم بالتصحيح باستخدام فحوصات صريحة:  
 ```csharp
 string sourceFile = "source.docx";
 
@@ -308,10 +378,11 @@ if (!File.Exists(targetFile))
     Console.WriteLine($"Target file not found: {Path.GetFullPath(targetFile)}");
     return;
 }
-```
+```  
 
 ### مشاكل الذاكرة مع المستندات الكبيرة
-للمستندات التي يزيد حجمها عن 10 ميغابايت، ضع في اعتبارك هذه التحسينات:
+
+للمستندات التي تزيد عن 10 ميغابايت، فكر في هذه التحسينات:  
 ```csharp
 // Use explicit disposal for large documents
 using (var comparer = new Comparer(sourceFile))
@@ -329,10 +400,11 @@ using (var comparer = new Comparer(sourceFile))
     GC.Collect();
     GC.WaitForPendingFinalizers();
 }
-```
+```  
 
 ### مشاكل الأذونات والوصول
-عند العمل مع ملفات محمية أو مشاركات شبكة:
+
+عند العمل مع ملفات محمية أو مشاركات شبكة:  
 ```csharp
 try
 {
@@ -355,12 +427,13 @@ catch (IOException ex)
     Console.WriteLine("File I/O error occurred.");
     Console.WriteLine($"Details: {ex.Message}");
 }
-```
+```  
 
 ## اعتبارات الأداء وأفضل الممارسات
 
 ### إدارة الذاكرة
-GroupDocs.Comparison يمكن أن يكون مستهلكًا للذاكرة. استخدم عبارات `using` لضمان تحرير الموارد:
+
+يمكن أن يستهلك GroupDocs.Comparison ما يصل إلى **300 ميغابايت من RAM** عند معالجة PDF من 100 صفحة. استخدم عبارات `using` لضمان تحرير الموارد وتحرير الذاكرة بسرعة.  
 ```csharp
 // Good - automatic resource cleanup
 using (var comparer = new Comparer(sourceFile))
@@ -372,12 +445,13 @@ using (var comparer = new Comparer(sourceFile))
 var comparer = new Comparer(sourceFile);
 // ... comparison logic
 // comparer.Dispose(); // Easy to forget!
-```
+```  
 
-**معالجة المستندات على دفعات** – إذا كنت تقارن العديد من الملفات، عالجها في مجموعات أصغر للحفاظ على استهلاك الذاكرة منخفضًا.
+**معالجة المستندات على دفعات** – إذا كنت تقارن العديد من الملفات، عالجها في مجموعات أصغر للحفاظ على انخفاض استهلاك الذاكرة.
 
 ### عمليات غير متزامنة لتحسين الاستجابة
-لتطبيقات سطح المكتب أو الويب، غلف المقارنة في طريقة غير متزامنة:
+
+لتطبيقات سطح المكتب أو الويب، غلف المقارنة في طريقة غير متزامنة:  
 ```csharp
 public async Task<bool> CompareDocumentsAsync(string source, string target, string output)
 {
@@ -401,17 +475,19 @@ public async Task<bool> CompareDocumentsAsync(string source, string target, stri
         }
     });
 }
-```
+```  
 
 ### إرشادات حجم الملف
+
 - **صغير (< 1 ميغابايت)** – معالجة مباشرة.  
 - **متوسط (1‑10 ميغابايت)** – إظهار تقدم للحفاظ على استجابة واجهة المستخدم.  
-- **كبير (> 10 ميغابايت)** – استخدم دائمًا معالجة غير متزامنة وفكر في استدعاء جمع القمامة صراحةً كما هو موضح أعلاه.
+- **كبير (> 10 ميغابايت)** – استخدم دائمًا معالجة غير متزامنة وفكر في جمع القمامة الصريح كما هو موضح أعلاه.
 
 ## التكامل مع الأنظمة الأكبر
 
 ### تكامل ASP.NET Core
-فيما يلي وحدة تحكم جاهزة للاستخدام تقبل ملفين مرفوعين، تجري المقارنة، وتعيد النتيجة مع **preserving target metadata**:
+
+فيما يلي وحدة تحكم جاهزة للاستخدام تقبل ملفين مرفوعين، تجري المقارنة، وتعيد النتيجة مع **الحفاظ على بيانات تعريف الهدف**:  
 ```csharp
 [ApiController]
 [Route("api/[controller]")]
@@ -456,45 +532,53 @@ public class DocumentComparisonController : ControllerBase
         }
     }
 }
-```
+```  
 
 ## الأسئلة المتكررة
 
-**س: هل يمكنني حفظ بيانات التعريف من مستندات هدف متعددة عند المقارنة؟**  
-**ج:** عندما تضيف عدة ملفات هدف، يستخدم GroupDocs.Comparison بيانات التعريف من **أول** مستند هدف تم إضافته. أضف المستند الذي تريد الاحتفاظ ببيانات تعريفه أولاً في السلسلة.
+س: هل يمكنني الحفاظ على البيانات الوصفية من مستندات هدف متعددة عند المقارنة؟  
+ج: عندما تضيف عدة ملفات هدف، يستخدم GroupDocs.Comparison البيانات الوصفية من **أول** ملف هدف مضاف. أضف المستند الذي تريد الاحتفاظ ببياناته الوصفية أولاً في السلسلة.
 
-**س: ماذا يحدث إذا كان المستند الهدف يفتقر إلى بعض حقول بيانات التعريف؟**  
-**ج:** يتم نسخ فقط بيانات التعريف الموجودة في الهدف إلى الناتج. الحقول المفقودة تُهمل؛ وتستمر المقارنة بنجاح.
+س: ماذا يحدث إذا كان مستند الهدف يفتقر إلى بعض حقول البيانات الوصفية؟  
+ج: سيتم نسخ فقط البيانات الوصفية الموجودة في الهدف إلى الإخراج. الحقول المفقودة تُحذف ببساطة؛ لا تزال المقارنة ناجحة.
 
-**س: كيف أتعامل مع المستندات المحمية بكلمة مرور؟**  
-**ج:** استخدم كائن `LoadOptions` مع كلمة المرور، ثم مرره إلى مُنشئ `Comparer`:
+س: كيف أتعامل مع المستندات المحمية بكلمة مرور؟  
+ج: يحدد LoadOptions الإعدادات مثل كلمات المرور لفتح المستندات المحمية. استخدم كائن `LoadOptions` مع كلمة المرور، ثم مرره إلى مُنشئ `Comparer`:  
 ```csharp
 var loadOptions = new LoadOptions() { Password = "your_password" };
 using (var comparer = new Comparer(sourceFile, loadOptions))
 {
     // comparison logic here
 }
-```
+```  
 
-**س: هل هناك طريقة لحفظ خصائص بيانات التعريف المختارة فقط؟**  
-**ج:** الـ API الحالي يحفظ **جميع** بيانات التعريف من المصدر المختار (Target أو Source). للتحكم الدقيق تحتاج إلى استخراج الخصائص بعد المقارنة وإعادة تطبيقها يدويًا.
+س: هل هناك طريقة للحفاظ فقط على خصائص بيانات وصفية محددة؟  
+ج: الـ API الحالي يحافظ على **جميع** البيانات الوصفية من المصدر المختار (الهدف أو المصدر). للحصول على تحكم دقيق، ستحتاج إلى استخراج الخصائص بعد المقارنة وإعادة تطبيقها يدويًا.
 
-**س: أي صيغ المستندات تدعم حفظ بيانات التعريف؟**  
-**ج:** معظم صيغ الأعمال الشائعة—DOCX, PDF, PPTX, XLSX، والعديد غيرها—تدعم حفظ بيانات التعريف. راجع الوثائق الرسمية للقائمة الكاملة.
+س: أي صيغ المستندات تدعم الحفاظ على البيانات الوصفية؟  
+ج: معظم صيغ الأعمال الشائعة—DOCX، PDF، PPTX، XLSX، والعديد غيرها—تدعم الحفاظ على البيانات الوصفية. راجع الوثائق الرسمية للقائمة الكاملة.
 
-**س: أين يمكنني الحصول على المساعدة إذا واجهت مشاكل؟**  
-**ج:** زر [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison) للحصول على مساعدة المجتمع، أو اتصل بدعم GroupDocs مباشرة إذا كان لديك ترخيص تجاري.
+س: أين يمكنني الحصول على المساعدة إذا واجهت مشاكل؟  
+ج: زر [منتدى دعم GroupDocs](https://forum.groupdocs.com/c/comparison) للحصول على مساعدة المجتمع، أو تواصل مباشرة مع دعم GroupDocs إذا كان لديك ترخيص تجاري.
 
 ## موارد إضافية
 
 - **الوثائق الرسمية**: [GroupDocs.Comparison for .NET Docs](https://docs.groupdocs.com/comparison/net/)  
-- **مرجع الـ API**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
+- **مرجع API**: [Complete API Reference](https://reference.groupdocs.com/comparison/net/)  
 - **تحميل أحدث نسخة**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/net/)  
 - **نسخة تجريبية مجانية**: [Start Your Trial](https://releases.groupdocs.com/comparison/net/)  
 - **خيارات الشراء**: [Licensing and Pricing](https://purchase.groupdocs.com/buy)
 
 ---
 
-**آخر تحديث:** 2026-03-06  
-**تم الاختبار مع:** GroupDocs.Comparison 25.4.0 for .NET  
-**المؤلف:** GroupDocs
+**آخر تحديث:** 2026-09-15  
+**تم الاختبار مع:** GroupDocs.Comparison 25.4.0 لـ .NET  
+**المؤلف:** GroupDocs  
+
+---
+
+## دروس ذات صلة
+
+- [دليل GroupDocs Comparison NET - دليل كامل لمقارنة المستندات مع البيانات الوصفية](/comparison/net/metadata-management/guide-groupdocs-comparison-net-metadata-setting/)  
+- [كيفية استخراج البيانات الوصفية من نتائج مقارنة .NET – دليل كامل](/comparison/net/basic-usage/get-document-info-from-result-document/)  
+- [مقارنة المستندات .NET - كيفية حفظ بيانات تعريف الهدف](/comparison/net/loading-and-saving-documents/saving-documents-metadata-target/)

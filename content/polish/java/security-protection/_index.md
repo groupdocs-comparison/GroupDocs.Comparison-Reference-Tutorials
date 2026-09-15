@@ -239,11 +239,6 @@ Gotowy, aby wdrożyć bezpieczne porównywanie dokumentów w swojej aplikacji Ja
 **Testowano z:** GroupDocs.Comparison for Java 23.9 (najnowsza w momencie pisania)  
 **Autor:** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -256,11 +251,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [Bezpieczne ładowanie i porównywanie dokumentów chronionych hasłem w Javie przy użyciu API GroupDocs.Comparison](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [compare password protected docx – Ładowanie dokumentu chronionego hasłem – Bezpieczne porównywanie w Javie](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – Porównywanie dokumentów Word chronionych hasłem](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

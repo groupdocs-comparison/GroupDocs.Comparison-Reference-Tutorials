@@ -240,11 +240,6 @@ A: The library supports Java 8 and newer. Using the latest LTS version (e.g., 
 **Tested With:** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
 **Author:** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -257,11 +252,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [Securely Load and Compare Password‑Protected Documents in Java Using the GroupDocs.Comparison API](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [compare password protected docx – Load Password Protected Document – Secure Comparison in Java](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – Compare Password Protected Word Docs](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

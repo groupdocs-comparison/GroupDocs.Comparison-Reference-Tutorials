@@ -239,11 +239,6 @@ A: La libreria supporta Java 8 e versioni successive. L’utilizzo dell’ulti
 **Tested With:** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
 **Author:** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -256,11 +251,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [Carica e confronta in modo sicuro documenti protetti da password in Java usando l’API GroupDocs.Comparison](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [compare password protected docx – Carica documento protetto da password – Confronto sicuro in Java](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – Confronta documenti Word protetti da password](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

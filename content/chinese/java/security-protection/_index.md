@@ -238,11 +238,6 @@ A: 该库支持 Java 8 及以上。建议使用最新的 LTS 版本（例如 J
 **测试环境：** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
 **作者：** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -255,11 +250,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [使用 GroupDocs.Comparison API 在 Java 中安全加载和比较受密码保护的文档](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [compare password protected docx – 加载受密码保护的文档 – 在 Java 中进行安全比较](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – 比较受密码保护的 Word 文档](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

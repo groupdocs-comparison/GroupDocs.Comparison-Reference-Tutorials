@@ -238,11 +238,6 @@ A: लाइब्रेरी Java 8 और उससे ऊपर का स
 **परीक्षण किया गया:** GroupDocs.Comparison for Java 23.9 (latest at time of writing)  
 **लेखक:** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -255,11 +250,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [Java में GroupDocs.Comparison API का उपयोग करके पासवर्ड‑सुरक्षित दस्तावेज़ों को सुरक्षित रूप से लोड और तुलना करें](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [compare password protected docx – पासवर्ड‑सुरक्षित दस्तावेज़ लोड करें – Java में सुरक्षित तुलना](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – पासवर्ड‑सुरक्षित Word दस्तावेज़ों की तुलना](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

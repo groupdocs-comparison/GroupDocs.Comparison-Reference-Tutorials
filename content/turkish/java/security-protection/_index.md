@@ -238,11 +238,6 @@ Java uygulamanızda güvenli belge karşılaştırmasını uygulamaya hazır mı
 **Test Edilen Versiyon:** GroupDocs.Comparison for Java 23.9 (yazım zamanındaki en son)  
 **Yazar:** GroupDocs  
 
-
-
-
-
-
 ```java
 // Always use try-with-resources for automatic cleanup
 try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
@@ -255,11 +250,3 @@ try (Comparer comparer = new Comparer(sourcePath, loadOptions)) {
 - [GroupDocs.Comparison API Kullanarak Java'da Şifre Koruması Olan Belgeleri Güvenli Bir Şekilde Yükleme ve Karşılaştırma](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
 - [Şifre Koruması Olan docx'i karşılaştır – Şifre Koruması Olan Belgeyi Yükle – Java'da Güvenli Karşılaştırma](/comparison/java/security-protection/compare-password-protected-word-docs-groupdocs-java/)
 - [GroupDocs Comparison Java – Şifre Koruması Olan Word Belgelerini Karşılaştır](/comparison/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

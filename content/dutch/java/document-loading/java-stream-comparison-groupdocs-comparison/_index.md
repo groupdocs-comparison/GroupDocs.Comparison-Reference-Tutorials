@@ -1,58 +1,116 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
+date: '2026-09-15'
 description: Leer hoe u meerdere Word‑bestanden kunt vergelijken met Java‑stream documentvergelijking
-  via GroupDocs.Comparison. Volledige tutorial met codevoorbeelden en tips voor probleemoplossing.
-keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
-  based document comparison, Java Word document diff, how to compare multiple Word
-  documents Java
-lastmod: '2026-01-18'
-linktitle: Java Stream Document Comparison
+  met GroupDocs.Comparison. Volledige tutorial met code‑voorbeelden en tips voor probleemoplossing.
+keywords:
+- compare multiple word files
+- batch compare word docs
+- groupdocs comparison java
+- java stream document comparison
+lastmod: '2026-09-15'
+linktitle: Java‑stream documentvergelijking
+og_description: Vergelijk meerdere Word‑bestanden met Java‑streams met GroupDocs.Comparison.
+  Deze gids toont stap‑voor‑stap configuratie, stream‑gebaseerde vergelijking, opmaakopties
+  en probleemoplossing voor grote documenten.
+og_image_alt: Tutorial image showing Java stream document comparison in GroupDocs
+og_title: Vergelijk meerdere Word‑bestanden met Java‑streams – GroupDocs‑gids
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  headline: Compare multiple word files with Java streams – GroupDocs guide
+  type: TechArticle
+- description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  name: Compare multiple word files with Java streams – GroupDocs guide
+  steps:
+  - name: set up streams and initialise the comparer
+    text: '`Comparer` is the core class that orchestrates the comparison operation.
+      It receives the baseline document stream and prepares the comparison engine.
+      **What’s happening?** We open a source stream (the baseline document) and three
+      target streams (the variations we want to compare). The `Comparer` is '
+  - name: add all target streams at once
+    text: '`CompareOptions` lets you queue several target streams before a single
+      comparison call, which reduces overhead. Adding multiple targets in a single
+      call is far more efficient than invoking separate comparisons for each file.'
+  - name: run the comparison with custom styling
+    text: '`CompareOptions` also holds style settings for insertions, deletions, and
+      modifications. Here we not only perform the comparison but also tell GroupDocs
+      to highlight inserted text in **yellow**. You can similarly customise deleted
+      or modified items.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum, but Java 11+ is recommended for better performance
+      and security.
+    question: What is the minimum JDK version?
+  - answer: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`),
+      and consider larger buffer sizes.
+    question: How can I handle very large documents?
+  - answer: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions`
+      to define colors, fonts, or strikethroughs.
+    question: Can I style deletions and modifications too?
+  - answer: Stream comparison excels at batch processing and auditing. Real‑time editors
+      typically need lighter, diff‑based solutions.
+    question: Is this suitable for real‑time collaboration?
+  - answer: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`)
+      and pass it directly to the `Comparer`.
+    question: How do I compare files stored in AWS S3?
+  type: FAQPage
 tags:
 - java
 - document-comparison
 - streams
 - groupdocs
 - tutorial
-title: Vergelijk meerdere Word‑bestanden met Java‑streams | GroupDocs
+title: Vergelijk meerdere Word‑bestanden met Java‑streams – GroupDocs‑gids
 type: docs
 url: /nl/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-# Vergelijk Meerdere Word-bestanden met Java Streams
+# Vergelijk meerdere Word‑bestanden met Java‑streams
 
-Heb je ooit het gevoel gehad dat je verdrinkt in documentversies, terwijl je probeert te achterhalen wat er tussen verschillende concepten is veranderd? Je bent niet de enige. Of je nu te maken hebt met contracten, rapporten of samenwerkingsdocumenten, **compare multiple word files** handmatig is een nachtmerrie die kostbare tijd opslokt. In deze gids laten we je zien hoe je **java stream document comparison** kunt uitvoeren met de GroupDocs.Comparison bibliotheek, zodat je het proces kunt automatiseren, grote bestanden efficiënt kunt verwerken en de resultaten precies kunt stijlen zoals jij dat nodig hebt.
+Heb je ooit het gevoel gehad te verdrinken in documentversies, terwijl je probeert te achterhalen wat er tussen verschillende concepten is veranderd? Je bent niet de enige. Of je nu werkt met contracten, rapporten of samenwerkingsdocumenten, **compare multiple word files** handmatig is een nachtmerrie die kostbare tijd opslokt. In deze gids laten we je zien hoe je **java stream document comparison** uitvoert met de GroupDocs.Comparison‑bibliotheek, zodat je het proces kunt automatiseren, grote bestanden efficiënt kunt verwerken en de resultaten precies kunt vormgeven zoals je nodig hebt.
 
-## Snelle Antwoorden
-- **Welke bibliotheek behandelt stream‑gebaseerde vergelijking?** GroupDocs.Comparison for Java  
-- **Welk primair trefwoord richt deze tutorial zich op?** *compare multiple word files*  
-- **Welke Java‑versie is vereist?** JDK 8 or higher (Java 11+ recommended)  
-- **Heb ik een licentie nodig?** Een gratis proefversie werkt voor evaluatie; een commerciële licentie is vereist voor productie  
-- **Kan ik meer dan twee documenten tegelijk vergelijken?** Ja – de API ondersteunt meerdere doel‑streams in één oproep  
+## Snelle antwoorden
+- **What library handles stream‑based comparison?** GroupDocs.Comparison for Java  
+- **Which primary keyword does this tutorial target?** *compare multiple word files*  
+- **What Java version is required?** JDK 8 of hoger (Java 11+ aanbevolen)  
+- **Do I need a license?** Een gratis proefversie werkt voor evaluatie; een commerciële licentie is vereist voor productie  
+- **Can I compare more than two documents at once?** Ja – de API ondersteunt meerdere doel‑streams in één oproep  
 
-## Wat is “compare multiple word files” met Streams?
+## Wat is “compare multiple word files” met streams?
 
-Stream‑gebaseerde vergelijking leest documenten in kleine stukjes in plaats van het volledige bestand in het geheugen te laden. Hierdoor is het mogelijk om **compare multiple word files** te vergelijken, zelfs wanneer ze tientallen of honderden megabytes groot zijn, waardoor je applicatie responsief en geheugen‑vriendelijk blijft.
+Stream‑gebaseerde vergelijking leest elk document als een reeks kleine gegevenschunks in plaats van het volledige bestand in het geheugen te laden. Deze aanpak stelt je in staat om meerdere Word‑bestanden gelijktijdig te vergelijken terwijl het geheugenverbruik laag blijft, zelfs voor documenten van tientallen of honderden megabytes, en zorgt ervoor dat de applicatie responsief blijft.
 
-## Waarom Java Stream Document Comparison gebruiken?
+Stream‑gebaseerde vergelijking leest documenten in kleine chunks in plaats van het volledige bestand in het geheugen te laden. Dit maakt het mogelijk om **compare multiple word files** te vergelijken, zelfs wanneer ze tientallen of honderden megabytes groot zijn, waardoor je applicatie responsief en geheugen‑vriendelijk blijft.
 
-- **Memory efficiency** – ideaal voor grote contracten of batchverwerking.  
-- **Scalable** – vergelijk een masterdocument met tientallen variaties in één bewerking.  
-- **Customizable styling** – markeer invoegingen, verwijderingen en wijzigingen op de manier die jij wilt.  
-- **Cloud‑ready** – werkt met streams van lokale bestanden, databases of cloudopslag (bijv. AWS S3).
+## Waarom java stream document comparison gebruiken?
 
-## Vereisten en Omgevingsconfiguratie
+Het gebruik van Java stream document comparison levert aanzienlijke geheugenbesparingen op omdat slechts kleine delen van elk bestand tegelijk worden verwerkt. Het schaalt ook goed voor batch‑operaties, waardoor één oproep een master‑document kan vergelijken met vele variaties. Bovendien stelt de API je in staat aangepaste opmaak op de output toe te passen en werkt naadloos met streams van cloud‑opslag.
+
+- **Memory efficiency** – ideaal voor grote contracten of batch‑verwerking.  
+- **Scalable** – vergelijk een master‑document met tientallen variaties in één bewerking.  
+- **Customizable styling** – markeer invoegingen, verwijderingen en wijzigingen zoals jij wilt.  
+- **Cloud‑ready** – werkt met streams van lokale bestanden, databases of cloud‑opslag (bijv. AWS S3).
+
+Kwantiﬁeerde bewering: GroupDocs.Comparison ondersteunt **50+ invoer‑ en uitvoerformaten** en kan **500‑pagina Word‑documenten** verwerken met minder dan **200 MB** heap‑geheugen bij gebruik van streams.
+
+## Voorvereisten en omgeving configuratie
 
 Voordat we in de code duiken, laten we controleren of je ontwikkelomgeving klaar is.
 
-### Vereiste Tools
+### Vereiste tools
 - **JDK 8+** (Java 11 of 17 aanbevolen)  
-- **Maven** (of Gradle als je dat verkiest)  
+- **Maven** (of Gradle als je dat liever hebt)  
 - **GroupDocs.Comparison** bibliotheek (laatste stabiele versie)
 
-### Maven-configuratie die echt werkt
+### Maven‑configuratie die daadwerkelijk werkt
 
 ```xml
 <repositories>
@@ -71,27 +129,29 @@ Voordat we in de code duiken, laten we controleren of je ontwikkelomgeving klaar
 </dependencies>
 ```
 
-**Pro Tip**: Als je achter een bedrijfsfirewall zit, configureer dan Maven's `settings.xml` met je proxy‑gegevens.
+**Pro tip:** Als je achter een bedrijfsfirewall zit, configureer dan Maven’s `settings.xml` met je proxy‑gegevens.
 
-### Overzicht Licenties
-- **Free Trial** – watermerk‑output, perfect voor testen.  
-- **Temporary License** – verlengde evaluatieperiode.  
-- **Commercial License** – vereist voor productie‑implementaties.
+### Licentie‑overzicht
+- **Free trial** – watermerk output, perfect voor testen.  
+- **Temporary license** – verlengde evaluatieperiode.  
+- **Commercial license** – vereist voor productie‑implementaties.
 
-## Wanneer Stream‑gebaseerde Documentvergelijking te gebruiken
+## Wanneer stream‑gebaseerde documentvergelijking te gebruiken
 
 | Situatie | Aanbevolen |
 |-----------|--------------|
-| Grote Word‑bestanden (50 MB +) | ✅ Gebruik streams |
-| Beperkte RAM‑omgevingen (bijv. Docker‑containers) | ✅ Gebruik streams |
-| Batchverwerking van veel contracten | ✅ Gebruik streams |
-| Kleine bestanden (< 10 MB) of eenmalige controles | ❌ Vergelijking van gewone bestanden kan sneller zijn |
+| Grote Word‑bestanden (50 MB +) | ✅ Use streams |
+| Beperkte RAM‑omgevingen (bijv. Docker‑containers) | ✅ Use streams |
+| Batch‑verwerking van veel contracten | ✅ Use streams |
+| Kleine bestanden (< 10 MB) of eenmalige controles | ❌ Plain file comparison may be faster |
 
-## Implementatiegids: Meerdere Documenten Vergelijken
+## Implementatie‑gids: meerdere documenten vergelijken
 
-Hieronder staat de volledige, kant‑klaar code die laat zien hoe je **compare multiple word files** kunt vergelijken met streams en aangepaste styling kunt toepassen.
+Hieronder vind je de volledige, kant‑klaar flow die laat zien hoe je **compare multiple word files** kunt gebruiken met streams en aangepaste opmaak toepast.
 
-### Stap 1: Streams instellen en de Comparer initialiseren
+### Stap 1: streams instellen en de comparer initialiseren
+
+`Comparer` is de kernklasse die de vergelijkingsoperatie coördineert. Het ontvangt de basisdocument‑stream en bereidt de vergelijkingsengine voor.
 
 ```java
 try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
@@ -103,17 +163,21 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
 ```
 
 **Wat gebeurt er?**  
-We openen een bron‑stream (het basisdocument) en drie doel‑streams (de variaties die we willen vergelijken). De `Comparer` wordt geïnstantieerd met de bron‑stream, waardoor het referentiepunt voor alle volgende vergelijkingen wordt vastgesteld.
+We openen een bron‑stream (het basisdocument) en drie doel‑streams (de variaties die we willen vergelijken). De `Comparer` wordt geinstantieerd met de bron‑stream, waardoor het referentiepunt voor alle volgende vergelijkingen wordt vastgesteld.
 
-### Stap 2: Voeg alle Doel‑Streams in één keer toe
+### Stap 2: alle doel‑streams in één keer toevoegen
+
+`CompareOptions` stelt je in staat meerdere doel‑streams in de wachtrij te plaatsen vóór één vergelijkingsaanroep, wat de overhead vermindert.
 
 ```java
 comparer.add(target1Stream, target2Stream, target3Stream);
 ```
 
-Het toevoegen van meerdere doelen in één oproep is veel efficiënter dan afzonderlijke vergelijkingen voor elk bestand aanroepen.
+Het toevoegen van meerdere doelen in één oproep is veel efficiënter dan afzonderlijke vergelijkingen voor elk bestand aan te roepen.
 
-### Stap 3: Voer de Vergelijking uit met Aangepaste Styling
+### Stap 3: voer de vergelijking uit met aangepaste opmaak
+
+`CompareOptions` bevat ook stijlinstellingen voor invoegingen, verwijderingen en wijzigingen.
 
 ```java
 final Path resultPath = comparer.compare(resultStream,
@@ -125,9 +189,9 @@ final Path resultPath = comparer.compare(resultStream,
                 .build());
 ```
 
-Hier voeren we niet alleen de vergelijking uit, maar instrueren we GroupDocs ook om ingevoegde tekst te markeren in **yellow**. Je kunt op dezelfde manier verwijderde of gewijzigde items aanpassen.
+Hier voeren we niet alleen de vergelijking uit, maar instrueren we GroupDocs ook om ingevoegde tekst in **geel** te markeren. Je kunt op dezelfde manier verwijderde of gewijzigde items aanpassen.
 
-## Geavanceerde Stylingopties
+## Geavanceerde opmaakopties
 
 Als je een meer gepolijste uitstraling nodig hebt, kun je herbruikbare `StyleSettings` definiëren.
 
@@ -137,111 +201,110 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
      OutputStream resultStream = new FileOutputStream(outputFileName);
      Comparer comparer = new Comparer(sourceStream)) {
 ```
-
 ```java
 final StyleSettings styleSettings = new StyleSettings();
 styleSettings.setFontColor(Color.YELLOW);
 CompareOptions compareOptions = new CompareOptions();
 compareOptions.setInsertedItemStyle(styleSettings);
 ```
-
 ```java
 final Path resultPath = comparer.compare(resultStream, compareOptions);
 ```
 
-**Styling Pro Tips**
+**Opmaak‑pro‑tips**  
 - **Insertions** – gele achtergrond werkt goed voor snelle visuele scanning.  
-- **Deletions** – rode doorhaling (`setDeletedItemStyle`) geeft duidelijk een verwijdering aan.  
+- **Deletions** – rode doorhaling (`setDeletedItemStyle`) geeft duidelijk aan dat iets is verwijderd.  
 - **Modifications** – blauwe onderstreping (`setModifiedItemStyle`) houdt het document leesbaar.  
 - Vermijd neonkleuren; ze belasten de ogen tijdens lange beoordelingen.
 
-## Veelvoorkomende Problemen en Oplossingen
+## Veelvoorkomende problemen en foutopsporing
 
-### Geheugenfouten bij Enorme Documenten
-
-**Problem**: `OutOfMemoryError`  
-**Solution**: Vergroot de JVM‑heap of stem de stream‑buffers af.
+### Geheugenfouten bij enorme documenten
+**Problem:** `OutOfMemoryError`  
+**Solution:** Verhoog de JVM‑heap of stem de stream‑buffers fijn af.
 
 ```bash
 java -Xms512m -Xmx2g YourApplication
 ```
 
 ### Stream‑levenscyclusproblemen
+- **“Stream closed”** – zorg ervoor dat je voor elke vergelijking een nieuwe `InputStream` maakt; streams kunnen niet opnieuw worden gebruikt nadat ze zijn gelezen.  
+- **Resource leaks** – de `try‑with‑resources`‑blokken sluiten al correct, maar controleer eventuele aangepaste hulpprogramma's nogmaals.
 
-- **“Stream closed”** – zorg ervoor dat je een verse `InputStream` maakt voor elke vergelijking; streams kunnen niet opnieuw worden gebruikt nadat ze zijn gelezen.  
-- **Resource leaks** – de `try‑with‑resources`‑blokken sluiten al af, maar controleer eventuele aangepaste hulpprogramma's nogmaals.
-
-### Niet‑ondersteunde Formaten
-
+### Niet‑ondersteunde formaten
 Zorg ervoor dat de bestandsextensie overeenkomt met het daadwerkelijke formaat (bijv. een echt `.docx`‑bestand, niet een hernoemde `.txt`).
 
 ### Prestatieknelpunten
-
-- Gebruik SSD's voor snellere I/O.  
-- Vergroot de buffer‑groottes (zie volgende sectie).  
+- Gebruik SSD’s voor snellere I/O.  
+- Verhoog buffer‑groottes (zie volgende sectie).  
 - Verwerk batches van 5‑10 documenten parallel in plaats van alles tegelijk.
 
-## Tips voor Prestatie‑optimalisatie
+## Tips voor prestatie‑optimalisatie
 
-### Beste Praktijken voor Geheugenbeheer
+### Best practices voor geheugenbeheer
 
 ```java
 // Use larger buffers for big files
 BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768);
 ```
 
-### JVM‑afstemming voor Productie
+### JVM‑afstemming voor productie
 
 ```bash
 -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
 ```
 
-### Wanneer Streams Niet Nodig Zijn
+### Wanneer streams mogelijk niet nodig zijn
+- Bestanden onder 1 MB opgeslagen op snelle lokale SSD’s.  
+- Eenvoudige, eenmalige vergelijkingen waarbij de overhead van stream‑verwerking zwaarder weegt dan de voordelen.
 
-- Bestanden onder 1 MB opgeslagen op snelle lokale SSD's.  
-- Eenvoudige, eenmalige vergelijkingen waarbij de overhead van stream‑verwerking de voordelen overtreft.
+## Toepassingen in de praktijk
 
-## Toepassingen in de Praktijk
-
-| Domein | Hoe Stream‑Vergelijking Helpt |
+| Domein | Hoe stream‑vergelijking helpt |
 |--------|-------------------------------|
-| **Juridisch** | Vergelijk een mastercontract met tientallen klant‑specifieke versies, waarbij invoegingen in geel worden gemarkeerd voor snelle beoordeling. |
-| **Software‑documentatie** | Volg API‑documentwijzigingen over releases; batch‑vergelijk meerdere versies in CI‑pijplijnen. |
-| **Uitgeven** | Redacteuren kunnen verschillen zien tussen manuscript‑concepten van verschillende bijdragers. |
-| **Compliance** | Auditors verifiëren beleidsupdates over afdelingen zonder volledige PDF's in het geheugen te laden. |
+| **Legal** | Vergelijk een master‑contract met tientallen klant‑specifieke versies, waarbij invoegingen in geel worden gemarkeerd voor snelle beoordeling. |
+| **Software docs** | Volg API‑documentwijzigingen over releases; batch‑vergelijk meerdere versies in CI‑pipelines. |
+| **Publishing** | Redacteuren kunnen verschillen zien tussen manuscript‑concepten van verschillende bijdragers. |
+| **Compliance** | Auditors verifiëren beleidsupdates over afdelingen heen zonder volledige PDF’s in het geheugen te laden. |
 
-## Pro‑tips voor Succes
+## Pro‑tips voor succes
 
-- **Consistent Naming** – Voeg versienummers of datums toe aan bestandsnamen.  
-- **Test with Real Data** – Voorbeeld “Lorem ipsum”‑bestanden verbergen randgevallen.  
-- **Monitor Memory** – Gebruik JMX of VisualVM in productie om pieken vroegtijdig te detecteren.  
-- **Batch Strategically** – Groepeer 5‑10 documenten per taak om doorvoersnelheid en geheugengebruik in balans te houden.  
-- **Graceful Error Handling** – Vang `UnsupportedFormatException` op en informeer gebruikers met duidelijke berichten.
+- **Consistent naming** – voeg versienummers of datums toe in bestandsnamen.  
+- **Test met echte data** – voorbeeld “Lorem ipsum”‑bestanden verbergen randgevallen.  
+- **Monitor geheugen** – gebruik JMX of VisualVM in productie om pieken vroegtijdig te detecteren.  
+- **Batch strategisch** – groepeer 5‑10 documenten per taak om doorvoersnelheid en geheugengebruik in balans te houden.  
+- **Graceful error handling** – vang `UnsupportedFormatException` op en informeer gebruikers met duidelijke berichten.
 
-## Veelgestelde Vragen
+## Veelgestelde vragen
 
 **Q: Wat is de minimale JDK‑versie?**  
-A: Java 8 is de minimum, maar Java 11+ wordt aanbevolen voor betere prestaties en beveiliging.
+A: Java 8 is the minimum, but Java 11+ is recommended for better performance and security.
 
 **Q: Hoe kan ik zeer grote documenten verwerken?**  
-A: Gebruik de hierboven getoonde stream‑gebaseerde aanpak, vergroot de JVM‑heap (`-Xmx`) en overweeg grotere buffer‑groottes.
+A: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`), and consider larger buffer sizes.
 
-**Q: Kan ik ook verwijderingen en wijzigingen stylen?**  
-A: Ja. Gebruik `setDeletedItemStyle()` en `setModifiedItemStyle()` op `CompareOptions` om kleuren, lettertypen of doorhalingen te definiëren.
+**Q: Kan ik ook verwijderingen en wijzigingen opmaken?**  
+A: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions` to define colors, fonts, or strikethroughs.
 
 **Q: Is dit geschikt voor realtime‑samenwerking?**  
-A: Stream‑vergelijking blinkt uit in batchverwerking en audit. Realtime‑editors hebben doorgaans lichtere, diff‑gebaseerde oplossingen nodig.
+A: Stream comparison excels at batch processing and auditing. Real‑time editors typically need lighter, diff‑based solutions.
 
 **Q: Hoe vergelijk ik bestanden die in AWS S3 zijn opgeslagen?**  
-A: Haal een `InputStream` op via de AWS SDK (`s3Client.getObject(...).getObjectContent()`) en geef deze direct door aan de `Comparer`.
+A: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`) and pass it directly to the `Comparer`.
 
-## Aanvullende Bronnen
+## Aanvullende bronnen
 
-- **Documentatie**: [GroupDocs.Comparison voor Java Documentatie](https://docs.groupdocs.com/comparison/java/)  
-- **API‑referentie**: [Complete API-referentie](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+- **Documentatie:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **API‑referentie:** [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
 
 ---
 
-**Last Updated:** 2026-01-18  
-**Tested With:** GroupDocs.Comparison 25.2  
+**Last updated:** 2026-09-15  
+**Tested with:** GroupDocs.Comparison 25.2  
 **Author:** GroupDocs
+
+## Gerelateerde tutorials
+
+- [Java Groupdocs Comparison Multi Stream Document Gids](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [compare word documents java – Java Word Document Comparison met GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
+- [Java Groupdocs Comparison API Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)

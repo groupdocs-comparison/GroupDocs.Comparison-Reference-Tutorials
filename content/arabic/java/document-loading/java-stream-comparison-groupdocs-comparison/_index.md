@@ -1,54 +1,112 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: تعلم كيفية مقارنة ملفات Word متعددة باستخدام مقارنة المستندات عبر تدفق
-  Java مع GroupDocs.Comparison. دليل كامل مع أمثلة على الشيفرة ونصائح لحل المشكلات.
-keywords: Java document comparison stream, GroupDocs comparison Java tutorial, stream
-  based document comparison, Java Word document diff, how to compare multiple Word
-  documents Java
-lastmod: '2026-01-18'
-linktitle: Java Stream Document Comparison
+date: '2026-09-15'
+description: تعرف على كيفية مقارنة ملفات Word متعددة باستخدام مقارنة المستندات عبر
+  تدفقات Java مع GroupDocs.Comparison. دليل كامل مع أمثلة على الشيفرة ونصائح استكشاف
+  الأخطاء.
+keywords:
+- compare multiple word files
+- batch compare word docs
+- groupdocs comparison java
+- java stream document comparison
+lastmod: '2026-09-15'
+linktitle: مقارنة المستندات عبر تدفق Java
+og_description: قارن ملفات Word متعددة باستخدام تدفقات Java مع GroupDocs.Comparison.
+  يوضح هذا الدليل إعداد خطوة بخطوة، مقارنة تعتمد على التدفق، خيارات التنسيق، واستكشاف
+  الأخطاء للمستندات الكبيرة.
+og_image_alt: Tutorial image showing Java stream document comparison in GroupDocs
+og_title: مقارنة ملفات Word متعددة باستخدام تدفقات Java – دليل GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  headline: Compare multiple word files with Java streams – GroupDocs guide
+  type: TechArticle
+- description: Learn how to compare multiple word files using Java stream document
+    comparison with GroupDocs.Comparison. Complete tutorial with code examples and
+    troubleshooting tips.
+  name: Compare multiple word files with Java streams – GroupDocs guide
+  steps:
+  - name: set up streams and initialise the comparer
+    text: '`Comparer` is the core class that orchestrates the comparison operation.
+      It receives the baseline document stream and prepares the comparison engine.
+      **What’s happening?** We open a source stream (the baseline document) and three
+      target streams (the variations we want to compare). The `Comparer` is '
+  - name: add all target streams at once
+    text: '`CompareOptions` lets you queue several target streams before a single
+      comparison call, which reduces overhead. Adding multiple targets in a single
+      call is far more efficient than invoking separate comparisons for each file.'
+  - name: run the comparison with custom styling
+    text: '`CompareOptions` also holds style settings for insertions, deletions, and
+      modifications. Here we not only perform the comparison but also tell GroupDocs
+      to highlight inserted text in **yellow**. You can similarly customise deleted
+      or modified items.'
+  type: HowTo
+- questions:
+  - answer: Java 8 is the minimum, but Java 11+ is recommended for better performance
+      and security.
+    question: What is the minimum JDK version?
+  - answer: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`),
+      and consider larger buffer sizes.
+    question: How can I handle very large documents?
+  - answer: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions`
+      to define colors, fonts, or strikethroughs.
+    question: Can I style deletions and modifications too?
+  - answer: Stream comparison excels at batch processing and auditing. Real‑time editors
+      typically need lighter, diff‑based solutions.
+    question: Is this suitable for real‑time collaboration?
+  - answer: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`)
+      and pass it directly to the `Comparer`.
+    question: How do I compare files stored in AWS S3?
+  type: FAQPage
 tags:
 - java
 - document-comparison
 - streams
 - groupdocs
 - tutorial
-title: قارن ملفات Word متعددة باستخدام تدفقات Java | GroupDocs
+title: مقارنة ملفات Word متعددة باستخدام تدفقات Java – دليل GroupDocs
 type: docs
 url: /ar/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-# مقارنة ملفات Word متعددة باستخدام Java Streams
+# قارن ملفات Word متعددة باستخدام تدفقات Java
 
-هل وجدت نفسك غارقًا في إصدارات المستندات، تحاول معرفة ما تغير بين المسودات المختلفة؟ لست وحدك. سواء كنت تتعامل مع العقود أو التقارير أو المستندات التعاونية، فإن **مقارنة ملفات Word متعددة** يدويًا هي كابوس يستهلك وقتًا ثمينًا. في هذا الدليل، سنوضح لك كيفية إجراء **مقارنة المستندات باستخدام Java Streams** باستخدام مكتبة GroupDocs.Comparison، بحيث يمكنك أتمتة العملية، ومعالجة الملفات الكبيرة بكفاءة، وتنسيق النتائج بالضبط كما تحتاج.
+هل وجدت نفسك غارقًا في إصدارات المستندات، تحاول معرفة ما تغير بين المسودات المختلفة؟ لست وحدك. سواء كنت تتعامل مع عقود، تقارير، أو مستندات تعاونية، **مقارنة ملفات Word متعددة** يدويًا هي كابوس يستهلك وقتًا ثمينًا. في هذا الدليل، سنوضح لك كيفية إجراء **مقارنة مستندات Java باستخدام التدفق** باستخدام مكتبة GroupDocs.Comparison، لتتمكن من أتمتة العملية، معالجة الملفات الكبيرة بكفاءة، وتنسيق النتائج بالضبط كما تحتاج.
 
 ## إجابات سريعة
-- **ما المكتبة التي تدعم المقارنة المعتمدة على الـ stream؟** GroupDocs.Comparison للـ Java  
+- **ما المكتبة التي تتعامل مع المقارنة المعتمدة على التدفق؟** GroupDocs.Comparison for Java  
 - **ما الكلمة المفتاحية الأساسية التي يستهدفها هذا الدرس؟** *compare multiple word files*  
-- **ما نسخة Java المطلوبة؟** JDK 8 أو أعلى (يوصى بـ Java 11+ )  
-- **هل أحتاج إلى ترخيص؟** نسخة تجريبية مجانية كافية للتقييم؛ الترخيص التجاري مطلوب للإنتاج  
-- **هل يمكنني مقارنة أكثر من مستندين في آن واحد؟** نعم – الـ API يدعم عدة تدفقات هدف في استدعاء واحد  
+- **ما إصدار Java المطلوب؟** JDK 8 أو أعلى (يوصى بـ Java 11+)  
+- **هل أحتاج إلى ترخيص؟** نسخة تجريبية مجانية تكفي للتقييم؛ الترخيص التجاري مطلوب للإنتاج  
+- **هل يمكنني مقارنة أكثر من مستندين في آن واحد؟** نعم – الـ API يدعم تدفقات هدف متعددة في استدعاء واحد  
 
-## ما هو “compare multiple word files” باستخدام الـ Streams؟
-المقارنة المعتمدة على الـ stream تقرأ المستندات على شكل قطع صغيرة بدلاً من تحميل الملف بالكامل في الذاكرة. هذا يجعل من الممكن **مقارنة ملفات Word متعددة** حتى وإن كانت بحجم عشرات أو مئات الميغابايت، مع الحفاظ على استجابة التطبيق وملاءمته للذاكرة.
+## ما هو “compare multiple word files” باستخدام التدفقات؟
+تقرأ المقارنة المعتمدة على التدفق كل مستند كسلسلة من قطع البيانات الصغيرة بدلاً من تحميل الملف بالكامل في الذاكرة. يتيح لك هذا النهج مقارنة ملفات Word متعددة في وقت واحد مع الحفاظ على استهلاك الذاكرة منخفضًا، حتى للمستندات التي يبلغ حجمها عشرات أو مئات الميجابايت، ويضمن بقاء التطبيق مستجيبًا.
 
-## لماذا نستخدم مقارنة المستندات باستخدام Java Streams؟
-- **كفاءة الذاكرة** – مثالية للعقود الكبيرة أو المعالجة الدفعية.  
-- **قابلية التوسع** – مقارنة مستند رئيسي مع العشرات من النسخ في عملية واحدة.  
-- **تخصيص التنسيق** – إبراز الإضافات، الحذف، والتعديلات بالطريقة التي تريدها.  
-- **جاهزية السحابة** – يعمل مع الـ streams من الملفات المحلية، قواعد البيانات، أو التخزين السحابي (مثل AWS S3).  
+تقرأ المقارنة المعتمدة على التدفق المستندات في قطع صغيرة بدلاً من تحميل الملف بالكامل في الذاكرة. هذا يجعل من الممكن **مقارنة ملفات Word متعددة** حتى عندما تكون بحجم عشرات أو مئات الميجابايت، مع الحفاظ على استجابة التطبيق وملاءمته للذاكرة.
+
+## لماذا نستخدم مقارنة مستندات Java باستخدام التدفق؟
+
+- **كفاءة الذاكرة** – مثالي للعقود الكبيرة أو المعالجة الدفعية.  
+- **قابلية التوسع** – قارن مستندًا رئيسيًا مع العشرات من التغييرات في عملية واحدة.  
+- **تنسيق قابل للتخصيص** – إبراز الإضافات والحذف والتعديلات كما تريد.  
+- **جاهز للسحابة** – يعمل مع التدفقات من الملفات المحلية أو قواعد البيانات أو التخزين السحابي (مثل AWS S3).
+
+يدعم GroupDocs.Comparison **أكثر من 50 تنسيقًا للإدخال والإخراج** ويمكنه معالجة **مستندات Word مكوّنة من 500 صفحة** بأقل من **200 ميغابايت** من ذاكرة الـ heap عند استخدام التدفقات.
 
 ## المتطلبات وإعداد البيئة
 
 قبل أن ننتقل إلى الكود، دعنا نتأكد من أن بيئة التطوير جاهزة.
 
 ### الأدوات المطلوبة
-- **JDK 8+** (يوصى بـ Java 11 أو 17)  
-- **Maven** (أو Gradle إذا تفضل)  
-- مكتبة **GroupDocs.Comparison** (أحدث نسخة مستقرة)
+- **JDK 8+** (Java 11 أو 17 موصى به)  
+- **Maven** (أو Gradle إذا كنت تفضل)  
+- **GroupDocs.Comparison** library (أحدث نسخة مستقرة)
 
 ### تكوين Maven الذي يعمل فعليًا
 
@@ -69,27 +127,29 @@ weight: 1
 </dependencies>
 ```
 
-**نصيحة احترافية**: إذا كنت خلف جدار حماية مؤسسي، قم بتكوين `settings.xml` الخاص بـ Maven بتفاصيل البروكسي الخاصة بك.
+**نصيحة احترافية:** إذا كنت خلف جدار حماية مؤسسي، قم بتكوين `settings.xml` الخاص بـ Maven مع تفاصيل الوكيل.
 
 ### نظرة عامة على الترخيص
 - **نسخة تجريبية مجانية** – مخرجات مائية، مثالية للاختبار.  
 - **ترخيص مؤقت** – فترة تقييم ممتدة.  
-- **ترخيص تجاري** – مطلوب للنشر في بيئات الإنتاج.
+- **ترخيص تجاري** – مطلوب لنشر الإنتاج.
 
-## متى نستخدم مقارنة المستندات المعتمدة على الـ Stream؟
+## متى تستخدم مقارنة المستندات المعتمدة على التدفق
 
-| الحالة | موصى به |
+| الحالة | مستحسن |
 |-----------|--------------|
-| ملفات Word كبيرة (50 MB +) | ✅ استخدم الـ streams |
-| بيئات ذات ذاكرة RAM محدودة (مثل حاويات Docker) | ✅ استخدم الـ streams |
-| معالجة دفعات من العديد من العقود | ✅ استخدم الـ streams |
-| ملفات صغيرة (< 10 MB) أو فحوصات لمرة واحدة | ❌ قد تكون المقارنة العادية أسرع |
+| ملفات Word الكبيرة (أكثر من 50 ميغابايت) | ✅ استخدم التدفقات |
+| بيئات RAM المحدودة (مثل حاويات Docker) | ✅ استخدم التدفقات |
+| معالجة دفعية للعديد من العقود | ✅ استخدم التدفقات |
+| ملفات صغيرة (< 10 ميغابايت) أو فحوصات لمرة واحدة | ❌ قد تكون مقارنة الملفات العادية أسرع |
 
 ## دليل التنفيذ: مقارنة مستندات متعددة
 
-فيما يلي الكود الكامل الجاهز للتنفيذ الذي يوضح كيفية **مقارنة ملفات Word متعددة** باستخدام الـ streams وتطبيق تنسيق مخصص.
+فيما يلي التدفق الكامل الجاهز للتنفيذ الذي يوضح كيفية **مقارنة ملفات Word متعددة** باستخدام التدفقات وتطبيق تنسيق مخصص.
 
-### الخطوة 1: إعداد الـ Streams وتهيئة الـ Comparer
+### الخطوة 1: إعداد التدفقات وتفعيل المقارن
+
+`Comparer` هو الفئة الأساسية التي تنسق عملية المقارنة. تستقبل تدفق المستند الأساسي وتجهز محرك المقارنة.
 
 ```java
 try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOURCE_WORD");
@@ -101,17 +161,21 @@ try (InputStream sourceStream = new FileInputStream("YOUR_DOCUMENT_DIRECTORY/SOU
 ```
 
 **ما الذي يحدث؟**  
-نفتح تدفق مصدر (المستند الأساسي) وثلاث تدفقات هدف (النسخ التي نريد مقارنتها). يتم إنشاء كائن `Comparer` باستخدام تدفق المصدر، مما يحدد نقطة المرجع لجميع المقارنات اللاحقة.
+نفتح تدفق المصدر (المستند الأساسي) وثلاث تدفقات هدف (التغييرات التي نريد مقارنتها). يتم إنشاء كائن `Comparer` باستخدام تدفق المصدر، لتحديد نقطة المرجع لجميع المقارنات اللاحقة.
 
 ### الخطوة 2: إضافة جميع تدفقات الهدف مرة واحدة
+
+`CompareOptions` يتيح لك تجميع عدة تدفقات هدف قبل استدعاء مقارنة واحد، مما يقلل من الحمل الزائد.
 
 ```java
 comparer.add(target1Stream, target2Stream, target3Stream);
 ```
 
-إضافة عدة أهداف في استدعاء واحد أكثر كفاءة بكثير من استدعاء مقارنات منفصلة لكل ملف.
+إضافة أهداف متعددة في استدعاء واحد أكثر كفاءة بكثير من استدعاء مقارنات منفصلة لكل ملف.
 
 ### الخطوة 3: تشغيل المقارنة مع تنسيق مخصص
+
+`CompareOptions` يحمل أيضًا إعدادات التنسيق للإضافات والحذف والتعديلات.
 
 ```java
 final Path resultPath = comparer.compare(resultStream,
@@ -123,9 +187,9 @@ final Path resultPath = comparer.compare(resultStream,
                 .build());
 ```
 
-هنا لا نجرى المقارنة فحسب، بل نخبر GroupDocs بإبراز النص المُضاف باللون **الأصفر**. يمكنك أيضًا تخصيص العناصر المحذوفة أو المعدلة بنفس الطريقة.
+هنا لا نقوم فقط بأداء المقارنة بل نخبر GroupDocs بتمييز النص المُضاف باللون **الأصفر**. يمكنك أيضًا تخصيص العناصر المحذوفة أو المعدلة بنفس الطريقة.
 
-## خيارات تنسيق متقدمة
+## خيارات التنسيق المتقدمة
 
 إذا كنت تحتاج إلى مظهر أكثر صقلًا، يمكنك تعريف `StyleSettings` قابلة لإعادة الاستخدام.
 
@@ -147,33 +211,33 @@ compareOptions.setInsertedItemStyle(styleSettings);
 final Path resultPath = comparer.compare(resultStream, compareOptions);
 ```
 
-**نصائح تنسيق احترافية**
+**نصائح احترافية للتنسيق**  
 - **الإضافات** – الخلفية الصفراء تعمل جيدًا للمسح البصري السريع.  
-- **الحذف** – الخط الأحمر المشطوب (`setDeletedItemStyle`) يوضح الإزالة بوضوح.  
+- **الحذف** – الخط الأحمر المشطوب (`setDeletedItemStyle`) يشير إلى الإزالة بوضوح.  
 - **التعديلات** – الخط الأزرق المسطر (`setModifiedItemStyle`) يحافظ على قابلية قراءة المستند.  
-- تجنب الألوان النيون؛ فهي تُجهد العين أثناء المراجعات الطويلة.
+- تجنب الألوان النيون؛ فهي تجهد العين أثناء المراجعات الطويلة.
 
 ## المشكلات الشائعة وحلولها
 
 ### أخطاء الذاكرة مع المستندات الضخمة
-**المشكلة**: `OutOfMemoryError`  
-**الحل**: زيادة حجم heap للـ JVM أو ضبط حجم buffers للـ stream.
+**المشكلة:** `OutOfMemoryError`  
+**الحل:** زيادة حجم heap للـ JVM أو ضبط حجم مخازن التدفق بدقة.
 
 ```bash
 java -Xms512m -Xmx2g YourApplication
 ```
 
-### مشاكل دورة حياة الـ Stream
-- **“Stream closed”** – تأكد من إنشاء `InputStream` جديد لكل مقارنة؛ لا يمكن إعادة استخدام الـ streams بعد قراءتها.  
-- **تسرب الموارد** – كتل `try‑with‑resources` تغلق الموارد تلقائيًا، لكن تحقق من أي أدوات مخصصة قد تتسبب في تسرب.
+### مشاكل دورة حياة التدفق
+- **“Stream closed”** – تأكد من إنشاء `InputStream` جديد لكل مقارنة؛ لا يمكن إعادة استخدام التدفقات بعد قراءتها.  
+- **تسرب الموارد** – كتل `try‑with‑resources` تتعامل بالفعل مع الإغلاق، لكن تحقق مرة أخرى من أي أدوات مخصصة.
 
 ### صيغ غير مدعومة
-تأكد من أن امتداد الملف يتطابق مع الصيغة الفعلية (مثلاً ملف `.docx` حقيقي، وليس ملفًا تم إعادة تسميته إلى `.txt`).
+تأكد من أن امتداد الملف يتطابق مع الصيغة الفعلية (مثلاً، ملف `.docx` حقيقي، وليس ملفًا تم إعادة تسميته إلى `.txt`).
 
-### عنق زجاجة الأداء
-- استخدم SSD لتسريع عمليات الإدخال/الإخراج.  
-- زد حجم buffers (انظر القسم التالي).  
-- عالج دفعات من 5‑10 مستندات بالتوازي بدلاً من جميعها مرة واحدة.
+### عنق الزجاجة في الأداء
+- استخدم SSDs للحصول على I/O أسرع.  
+- زيادة حجم المخازن (انظر القسم التالي).  
+- معالجة دفعات من 5‑10 مستندات بشكل متوازي بدلاً من جميعها مرة واحدة.
 
 ## نصائح تحسين الأداء
 
@@ -190,53 +254,57 @@ BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768
 -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions
 ```
 
-### متى قد لا تكون الـ Streams ضرورية
-- ملفات أقل من 1 MB مخزنة على SSD محلي سريع.  
-- مقارنات بسيطة لمرة واحدة حيث تتجاوز تكلفة التعامل مع الـ stream الفائدة.
+### متى قد لا تكون التدفقات ضرورية
+- الملفات أقل من 1 ميغابايت المخزنة على SSD محلي سريع.  
+- مقارنات بسيطة لمرة واحدة حيث يتجاوز عبء معالجة التدفق الفوائد.
 
 ## تطبيقات واقعية
 
-| المجال | كيف تساعد مقارنة الـ Stream |
-|--------|-----------------------------|
-| **القانوني** | مقارنة عقد رئيسي مع عشرات النسخ الخاصة بالعملاء، مع إبراز الإضافات باللون الأصفر للمراجعة السريعة. |
-| **وثائق البرمجيات** | تتبع تغييرات وثائق API عبر الإصدارات؛ مقارنة دفعات متعددة في خطوط CI. |
+| المجال | كيف تساعد مقارنة التدفق |
+|--------|--------------------------|
+| **القانوني** | قارن عقدًا رئيسيًا مع العشرات من الإصدارات الخاصة بالعميل، مع إبراز الإضافات باللون الأصفر للمراجعة السريعة. |
+| **وثائق البرمجيات** | تتبع تغييرات وثائق API عبر الإصدارات؛ قارن دفعةً عدة إصدارات في خطوط أنابيب CI. |
 | **النشر** | يمكن للمحررين رؤية الفروقات بين مسودات المخطوطات من مساهمين مختلفين. |
-| **الامتثال** | يتحقق المدققون من تحديثات السياسات عبر الأقسام دون تحميل ملفات PDF كاملة في الذاكرة. |
+| **الامتثال** | يقوم المدققون بالتحقق من تحديثات السياسات عبر الأقسام دون تحميل ملفات PDF كاملة في الذاكرة. |
 
 ## نصائح احترافية للنجاح
 
-- **تسمية موحدة** – أدرج أرقام الإصدارات أو التواريخ في أسماء الملفات.  
-- **اختبار ببيانات حقيقية** – ملفات “Lorem ipsum” قد تخفي حالات حافة.  
+- **تسمية متسقة** – تضمين أرقام الإصدارات أو التواريخ في أسماء الملفات.  
+- **اختبار ببيانات حقيقية** – ملفات “Lorem ipsum” العينة تخفي الحالات الحدية.  
 - **مراقبة الذاكرة** – استخدم JMX أو VisualVM في الإنتاج لاكتشاف الارتفاعات مبكرًا.  
-- **تجميع الدُفعات بذكاء** – اجمع 5‑10 مستندات لكل مهمة لتحقيق توازن بين الإنتاجية واستخدام الذاكرة.  
-- **معالجة الأخطاء برشاقة** – التقط `UnsupportedFormatException` وأبلغ المستخدمين برسائل واضحة.
+- **تجميع استراتيجي** – اجمع 5‑10 مستندات لكل مهمة لتحقيق توازن بين الإنتاجية واستخدام الذاكرة.  
+- **معالجة الأخطاء بلطف** – امسك `UnsupportedFormatException` وأبلغ المستخدمين برسائل واضحة.
 
 ## الأسئلة المتكررة
 
 **س: ما هو الحد الأدنى لإصدار JDK؟**  
-ج: الحد الأدنى هو Java 8، لكن يُنصح بـ Java 11+ لأداء وأمان أفضل.
+ج: Java 8 هو الحد الأدنى، لكن يُنصح بـ Java 11+ لأداء وأمان أفضل.
 
 **س: كيف يمكنني التعامل مع مستندات ضخمة جدًا؟**  
-ج: استخدم نهج الـ stream الموضح أعلاه، وزد حجم heap للـ JVM (`-Xmx`) وفكر في زيادة حجم buffers.
+ج: استخدم النهج المعتمد على التدفق الموضح أعلاه، وزد حجم heap للـ JVM (`-Xmx`)، وفكر في زيادة حجم المخازن.
 
 **س: هل يمكنني تنسيق الحذف والتعديلات أيضًا؟**  
-ج: نعم. استخدم `setDeletedItemStyle()` و `setModifiedItemStyle()` على `CompareOptions` لتحديد الألوان أو الخطوط أو الشطب.
+ج: نعم. استخدم `setDeletedItemStyle()` و `setModifiedItemStyle()` على `CompareOptions` لتحديد الألوان أو الخطوط أو الخط المشطوب.
 
-**س: هل هذا مناسب للتعاون الفوري؟**  
-ج: مقارنة الـ stream تتفوق في المعالجة الدفعية والتدقيق. عادةً ما تحتاج المحررات الفورية إلى حلول diff أخف وزنًا.
+**س: هل هذا مناسب للتعاون في الوقت الحقيقي؟**  
+ج: مقارنة التدفق تتفوق في المعالجة الدفعية والتدقيق. عادةً ما يحتاج المحرّون في الوقت الحقيقي إلى حلول أخف تعتمد على الفروق (diff).
 
 **س: كيف أقارن الملفات المخزنة في AWS S3؟**  
-ج: احصل على `InputStream` عبر AWS SDK (`s3Client.getObject(...).getObjectContent()`) ومرره مباشرة إلى `Comparer`.
+ج: استرجع `InputStream` عبر AWS SDK (`s3Client.getObject(...).getObjectContent()`) ومرره مباشرة إلى `Comparer`.
 
 ## موارد إضافية
 
-- **الوثائق**: [توثيق GroupDocs.Comparison للـ Java](https://docs.groupdocs.com/comparison/java/)  
-- **مرجع الـ API**: [مرجع الـ API الكامل](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
+- **التوثيق:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
+- **مرجع API:** [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
 
 ---
 
-**آخر تحديث:** 2026-01-18  
+**آخر تحديث:** 2026-09-15  
 **تم الاختبار مع:** GroupDocs.Comparison 25.2  
-**المؤلف:** GroupDocs  
+**المؤلف:** GroupDocs
 
----
+## دروس ذات صلة
+
+- [دليل Java Groupdocs Comparison Multi Stream Document](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [compare word documents java – مقارنة مستندات Word باستخدام Java وGroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
+- [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)

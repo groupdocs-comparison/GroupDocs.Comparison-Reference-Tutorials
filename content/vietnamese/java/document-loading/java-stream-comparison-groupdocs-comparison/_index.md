@@ -74,9 +74,6 @@ url: /vi/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # So sánh nhiều tệp Word bằng Java streams
 
 Bạn đã bao giờ cảm thấy ngập trong các phiên bản tài liệu, cố gắng tìm ra những gì đã thay đổi giữa các bản nháp khác nhau chưa? Bạn không phải là người duy nhất. Dù bạn đang làm việc với hợp đồng, báo cáo hay tài liệu cộng tác, **so sánh nhiều tệp Word** một cách thủ công là một cơn ác mộng tiêu tốn thời gian quý báu. Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách thực hiện **so sánh tài liệu bằng java stream** sử dụng thư viện GroupDocs.Comparison, để bạn có thể tự động hoá quy trình, xử lý các tệp lớn một cách hiệu quả và tạo kiểu kết quả chính xác như mong muốn.
@@ -312,8 +309,3 @@ A: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObject
 - [Java Groupdocs Comparison Multi Stream Document Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – Java Word Document Comparison with GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

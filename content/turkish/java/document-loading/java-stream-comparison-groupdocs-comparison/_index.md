@@ -74,9 +74,6 @@ url: /tr/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # Java akışlarıyla birden fazla Word dosyasını karşılaştırın
 
 Kendinizi belge sürümlerinin içinde boğulmuş ve farklı taslaklar arasında neyin değiştiğini anlamaya çalışırken buldunuz mu? Yalnız değilsiniz. Sözleşmeler, raporlar veya ortak belgelerle uğraşıyor olun, **compare multiple word files** manuel olarak yapmak, değerli zamanınızı tüketen bir kabus. Bu rehberde, GroupDocs.Comparison kütüphanesini kullanarak **java stream document comparison** nasıl yapacağınızı göstereceğiz, böylece süreci otomatikleştirebilir, büyük dosyaları verimli bir şekilde işleyebilir ve sonuçları tam istediğiniz gibi biçimlendirebilirsiniz.
@@ -301,8 +298,3 @@ C: AWS SDK (`s3Client.getObject(...).getObjectContent()`) aracılığıyla bir `
 - [Java Groupdocs Comparison Çoklu Akış Belge Rehberi](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – GroupDocs ile Java Word Belge Karşılaştırması](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison API Akış Belge Karşılaştırması](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

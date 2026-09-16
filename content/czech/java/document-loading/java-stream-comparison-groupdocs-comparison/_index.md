@@ -74,9 +74,6 @@ url: /cs/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # Porovnat více souborů Word pomocí Java streamů
 
 Už jste se někdy topili v verzích dokumentů a snažili se zjistit, co se změnilo mezi různými návrhy? Nejste sami. Ať už pracujete s kontrakty, zprávami nebo spolupracujícími dokumenty, **porovnat více souborů Word** ručně je noční můra, která pohlcuje cenný čas. V tomto průvodci vám ukážeme, jak provést **java stream document comparison** pomocí knihovny GroupDocs.Comparison, abyste mohli proces automatizovat, efektivně pracovat s velkými soubory a stylovat výsledky přesně tak, jak potřebujete.
@@ -319,8 +316,3 @@ A: Získejte `InputStream` pomocí AWS SDK (`s3Client.getObject(...).getObjectCo
 - [Průvodce porovnáním více dokumentů pomocí streamů v Java Groupdocs](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [Porovnat Word dokumenty v Javě – Java Word Document Comparison with GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison API Porovnání dokumentu pomocí streamu](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

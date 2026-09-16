@@ -74,9 +74,6 @@ url: /pt/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # Comparar vários arquivos Word com streams Java
 
 Já se pegou afogado em versões de documentos, tentando descobrir o que mudou entre diferentes rascunhos? Você não está sozinho. Seja lidando com contratos, relatórios ou documentos colaborativos, **compare multiple word files** manualmente é um pesadelo que consome tempo valioso. Neste guia, mostraremos como realizar **java stream document comparison** usando a biblioteca GroupDocs.Comparison, para que você possa automatizar o processo, lidar com arquivos grandes de forma eficiente e estilizar os resultados exatamente como precisar.
@@ -313,8 +310,3 @@ A: Recupere um `InputStream` via o AWS SDK (`s3Client.getObject(...).getObjectCo
 - [Guia Java Groupdocs Comparison Multi Stream Document](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – Comparação de Documentos Word Java com GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

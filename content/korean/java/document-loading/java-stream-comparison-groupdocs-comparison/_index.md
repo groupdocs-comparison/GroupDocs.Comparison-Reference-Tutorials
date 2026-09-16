@@ -72,9 +72,6 @@ url: /ko/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # Java 스트림을 사용한 다중 워드 파일 비교
 
 문서 버전이 너무 많아 어떤 초안에서 무엇이 바뀌었는지 파악하느라 고생한 적이 있나요? 당신만 그런 것이 아닙니다. 계약서, 보고서, 협업 문서 등 어떤 종류든 **다중 워드 파일을 수동으로 비교**하는 일은 귀중한 시간을 잡아먹는 악몽입니다. 이 가이드에서는 GroupDocs.Comparison 라이브러리를 사용해 **java stream document comparison**을 수행하는 방법을 보여드리며, 프로세스를 자동화하고 대용량 파일을 효율적으로 처리하며 결과를 원하는 대로 스타일링할 수 있습니다.
@@ -312,9 +309,3 @@ A: AWS SDK를 통해 `InputStream`을 가져오세요(`s3Client.getObject(...).g
 - [Java Groupdocs Comparison Multi Stream Document Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – Java Word Document Comparison with GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

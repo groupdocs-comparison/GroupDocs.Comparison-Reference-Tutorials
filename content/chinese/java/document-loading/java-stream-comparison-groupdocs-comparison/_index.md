@@ -70,9 +70,6 @@ url: /zh/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # 使用 Java 流比较多个 Word 文件
 
 是否曾经在大量文档版本中苦苦挣扎，想弄清楚不同草稿之间的变化？你并不孤单。无论是合同、报告还是协作文档，**比较多个 Word 文件** 手动进行是一场噩梦，耗费宝贵时间。在本指南中，我们将展示如何使用 GroupDocs.Comparison 库进行 **Java 流文档比较**，从而实现自动化处理、高效处理大文件，并按需自定义结果样式。
@@ -310,9 +307,3 @@ BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768
 - [Java Groupdocs Comparison Multi Stream Document Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – Java Word Document Comparison with GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -70,9 +70,6 @@ url: /ja/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # Java ストリームで複数の Word ファイルを比較する
 
 文書のバージョンが山積みになり、異なるドラフト間で何が変わったのかを把握しようとして苦労したことはありませんか？ あなただけではありません。契約書、レポート、共同作成ドキュメントなど、**複数の Word ファイルを手動で比較**するのは時間を食う悪夢です。このガイドでは、GroupDocs.Comparison ライブラリを使用した **java stream document comparison** の方法を紹介し、プロセスを自動化し、大容量ファイルを効率的に処理し、結果を必要なスタイルで出力できるようにします。
@@ -277,24 +274,24 @@ BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768
 - **Batch strategically** – ジョブあたり 5〜10 文書に分割し、スループットとメモリ使用のバランスを取る。  
 - **Graceful error handling** – `UnsupportedFormatException` を捕捉し、ユーザーに分かりやすいメッセージを提示。  
 
-## Frequently asked questions
+## よくある質問
 
-**Q: What is the minimum JDK version?**  
-A: Java 8 is the minimum, but Java 11+ is recommended for better performance and security.
+**Q: 必要なJDKの最小バージョンは何ですか？**
+A: 最小バージョンはJava 8ですが、パフォーマンスとセキュリティの観点からJava 11以降の使用が推奨されます。
 
-**Q: How can I handle very large documents?**  
-A: Use the stream‑based approach shown above, increase JVM heap (`-Xmx`), and consider larger buffer sizes.
+**Q: 非常に大きなドキュメントを扱うにはどうすればよいですか？**
+A: 上記で紹介したストリームベースのアプローチを使用し、JVMヒープサイズ（`-Xmx`）を増やした上で、バッファサイズを大きくすることも検討してください。
 
-**Q: Can I style deletions and modifications too?**  
-A: Yes. Use `setDeletedItemStyle()` and `setModifiedItemStyle()` on `CompareOptions` to define colors, fonts, or strikethroughs.
+**Q: 削除や変更箇所にスタイルを適用することはできますか？**
+A: はい、可能です。`CompareOptions`の`setDeletedItemStyle()`および`setModifiedItemStyle()`を使用して、色、フォント、取り消し線などを定義できます。
 
-**Q: Is this suitable for real‑time collaboration?**  
-A: Stream comparison excels at batch processing and auditing. Real‑time editors typically need lighter, diff‑based solutions.
+**Q: リアルタイムの共同編集に適していますか？**
+A: ストリーム比較は、バッチ処理や監査（オーディット）に最適です。一方、リアルタイム編集には、通常、より軽量な差分（diff）ベースのソリューションが適しています。
 
-**Q: How do I compare files stored in AWS S3?**  
-A: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObjectContent()`) and pass it directly to the `Comparer`.
+**Q: AWS S3に保存されたファイルを比較するにはどうすればよいですか？**
+A: AWS SDKを使用して`InputStream`を取得し（`s3Client.getObject(...).getObjectContent()`）、それを直接`Comparer`に渡してください。
 
-## Additional resources
+## その他のリソース
 
 - **Documentation:** [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
 - **API reference:** [Complete API Reference](https://www.groupdocs.com/content/reports/documentation/api-reference/groupdocs-comparison-for-java-api)
@@ -310,9 +307,3 @@ A: Retrieve an `InputStream` via the AWS SDK (`s3Client.getObject(...).getObject
 - [Java Groupdocs Comparison Multi Stream Document Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – Java Word Document Comparison with GroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

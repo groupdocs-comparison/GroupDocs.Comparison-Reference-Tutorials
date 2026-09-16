@@ -74,9 +74,6 @@ url: /ar/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # قارن ملفات Word متعددة باستخدام تدفقات Java
 
 هل وجدت نفسك غارقًا في إصدارات المستندات، تحاول معرفة ما تغير بين المسودات المختلفة؟ لست وحدك. سواء كنت تتعامل مع عقود، تقارير، أو مستندات تعاونية، **مقارنة ملفات Word متعددة** يدويًا هي كابوس يستهلك وقتًا ثمينًا. في هذا الدليل، سنوضح لك كيفية إجراء **مقارنة مستندات Java باستخدام التدفق** باستخدام مكتبة GroupDocs.Comparison، لتتمكن من أتمتة العملية، معالجة الملفات الكبيرة بكفاءة، وتنسيق النتائج بالضبط كما تحتاج.
@@ -311,8 +308,3 @@ BufferedInputStream bufferedSource = new BufferedInputStream(sourceStream, 32768
 - [دليل Java Groupdocs Comparison Multi Stream Document](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – مقارنة مستندات Word باستخدام Java وGroupDocs](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison Api Stream Document Compare](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -71,9 +71,6 @@ url: /zh-hant/java/document-loading/java-stream-comparison-groupdocs-comparison/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 # 比較多個 Word 檔案（使用 Java 串流）
 
 你是否曾被大量文件版本淹沒，想弄清楚不同草稿之間的變更？你並不孤單。無論是合約、報告，或是協作文件，手動 **compare multiple word files** 簡直是噩夢，會耗費大量時間。在本指南中，我們將示範如何使用 GroupDocs.Comparison 函式庫執行 **java stream document comparison**，讓你自動化流程、高效處理大型檔案，並依需求自訂結果樣式。
@@ -303,8 +300,3 @@ A: 透過 AWS SDK 取得 `InputStream`（`s3Client.getObject(...).getObjectConte
 - [Java Groupdocs Comparison 多串流文件指南](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 - [compare word documents java – 使用 GroupDocs 的 Java Word 文件比較](/comparison/java/basic-comparison/word-document-comparison-groupdocs-java/)
 - [Java Groupdocs Comparison API 串流文件比較](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

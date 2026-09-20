@@ -1,68 +1,151 @@
 ---
 categories:
 - Java Development
-date: '2026-03-30'
-description: Lär dig hur du använder licens i GroupDocs Comparison Java med URL‑konfiguration.
-  Steg‑för‑steg‑guide för automatiserad licensiering, felsökning och bästa praxis.
-keywords: GroupDocs Comparison Java license setup, Java document comparison licensing,
-  automated license management Java, GroupDocs Java URL configuration, GroupDocs licensing
-  best practices
-lastmod: '2026-03-30'
-linktitle: Java License Setup via URL
+date: '2026-09-20'
+description: Lär dig hur du konfigurerar licens för GroupDocs Comparison Java med
+  en URL. Steg‑för‑steg‑guiden täcker automated licensing, environment variables,
+  troubleshooting och best practices.
+keywords:
+- how to configure license
+- license env variable
+- automatic license updates
+- GroupDocs Comparison Java licensing
+- URL based license
+lastmod: '2026-09-20'
+linktitle: Java‑licensinställning via URL
+og_description: Hur du konfigurerar licens för GroupDocs Comparison Java med en URL.
+  Lär dig automated license updates, env‑variable setup och secure best practices
+  på några minuter.
+og_image_alt: 'Guide: configure GroupDocs Comparison Java license via URL'
+og_title: Hur man konfigurerar licens för GroupDocs Comparison Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to configure license for GroupDocs Comparison Java using
+    a URL. Step‑by‑step guide covers automated licensing, environment variables, troubleshooting,
+    and best practices.
+  headline: How to configure license for GroupDocs Comparison Java
+  type: TechArticle
+- description: Learn how to configure license for GroupDocs Comparison Java using
+    a URL. Step‑by‑step guide covers automated licensing, environment variables, troubleshooting,
+    and best practices.
+  name: How to configure license for GroupDocs Comparison Java
+  steps:
+  - name: '**Read the license URL from an environment variable** – this keeps the
+      URL out of source control and lets you change it per environment.'
+    text: '**Read the license URL from an environment variable** – this keeps the
+      URL out of source control and lets you change it per environment.'
+  - name: '**Create a `URL` object** and open an `InputStream` to download the license
+      file.'
+    text: '**Create a `URL` object** and open an `InputStream` to download the license
+      file.'
+  - name: '**Instantiate the `License` class** and call its `setLicense` method with
+      the stream.'
+    text: '**Instantiate the `License` class** and call its `setLicense` method with
+      the stream.'
+  - name: '**Handle exceptions** to fall back to a cached copy or log the failure
+      for monitoring.'
+    text: '**Handle exceptions** to fall back to a cached copy or log the failure
+      for monitoring.'
+  - name: Open the URL in a browser from the target host.
+    text: Open the URL in a browser from the target host.
+  - name: Verify proxy settings and firewall rules.
+    text: Verify proxy settings and firewall rules.
+  - name: Check SSL certificates if using HTTPS.
+    text: Check SSL certificates if using HTTPS.
+  - name: Confirm the license file isn’t corrupted.
+    text: Confirm the license file isn’t corrupted.
+  - name: Ensure the license hasn’t expired.
+    text: Ensure the license hasn’t expired.
+  - name: Verify the license scope matches your product usage.
+    text: Verify the license scope matches your product usage.
+  type: HowTo
+- questions:
+  - answer: For long‑running services, fetch on startup and schedule a refresh every
+      24 hours. Short‑lived jobs can fetch once per execution.
+    question: How often should I fetch the license from the URL?
+  - answer: Implement a fallback to a cached local copy or a secondary URL. Graceful
+      error handling keeps the application functional.
+    question: What if the license URL is temporarily unavailable?
+  - answer: Yes. The same URL‑based pattern works with GroupDocs.Viewer, GroupDocs.Annotation,
+      and other libraries that expose a `License` class.
+    question: Can I use this approach with other GroupDocs products?
+  - answer: Store separate URLs in environment‑specific variables (e.g., `GROUPDOCS_LICENSE_URL_DEV`).
+      Your configuration class reads the appropriate variable based on the runtime
+      profile.
+    question: How do I manage different licenses for dev, test, and prod?
+  - answer: The overhead is minimal—typically under 200 ms. Use caching and proper
+      HTTP settings to keep any impact negligible.
+    question: Does fetching the license impact performance?
+  type: FAQPage
 tags:
-- groupdocs
-- java-licensing
-- document-comparison
+- license configuration
+- GroupDocs Comparison
+- Java licensing
+- URL license
 - automation
-title: 'Hur man använder licensen: GroupDocs Comparison Java URL‑konfigurationsguide'
+title: Hur man konfigurerar licens för GroupDocs Comparison Java
 type: docs
 url: /sv/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-# Fullständig guide för GroupDocs Comparison Java licensinställning
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## Varför detta är viktigt för dina Java-projekt
+# Hur man konfigurerar licens för GroupDocs Comparison Java
 
-Om du letar efter **how to use license** i dina Java‑projekt är du inte ensam. Många Java‑utvecklare kämpar med manuell licenshantering som fördröjer distributioner och medför onödig risk. Denna guide visar dig ett rent, automatiserat sätt att konfigurera GroupDocs.Comparison‑licenser via en URL, och förvandlar ett smärtsamt manuellt steg till en pålitlig, hands‑free‑process.
+Om du behöver **hur man konfigurerar licens** för ett Java‑projekt som använder GroupDocs.Comparison, är du på rätt plats. Denna handledning guidar dig genom att hämta en licens från en fjärr‑URL, tillämpa den vid körning och säkra processen med miljövariabler. I slutet har du en hands‑free, produktionsklar licenslösning som uppdateras automatiskt och minskar manuella steg.
 
 ## Snabba svar
-- **Vad är URL‑baserad licensiering?** Den låter din applikation hämta den senaste GroupDocs‑licensen från en webbadress vid körning.  
+- **Vad är URL‑baserad licensiering?** Det låter din applikation ladda ner den senaste GroupDocs‑licensen från en webbadress vid körning.  
 - **Behöver jag en lokal licensfil?** Nej, licensen hämtas direkt från den URL du anger.  
 - **Vilken Java‑version krävs?** JDK 8 eller högre.  
-- **Kan jag säkra licens‑URL:en?** Ja — använd HTTPS och lagra URL:en i miljövariabler.  
-- **Vad händer om URL:en är oåtkomlig?** Implementera fallback‑logik eller cacha den senaste giltiga licensen.
+- **Kan jag säkra licens‑URL:en?** Ja—använd HTTPS och lagra URL:en i en `license env variable`.  
+- **Vad händer om URL:en är oåtkomlig?** Implementera reservlogik eller cacha den senaste giltiga licensen för att hålla appen igång.
 
-## Hur man använder licens med URL i Java
+## Hur man konfigurerar licens med URL i Java?
 
-Innan vi dyker ner i koden, låt oss sammanfatta varför URL‑baserad licensiering ofta är det smarta valet för moderna Java‑applikationer:
+Läs in licensen från den fjärradress, tillämpa den med `License`‑klassen och hantera fel på ett smidigt sätt—allt på under 20 rader kod. Detta direkta tillvägagångssätt säkerställer att din applikation alltid körs med en giltig licens utan omdistribution, och det fungerar på alla plattformar som kan nå URL:en.
 
-- **Automatiska uppdateringar** – Din app får alltid den nyaste licensen utan omdistribution.  
-- **Miljöflexibilitet** – Perfekt för moln‑ eller container‑baserade distributioner där fil‑lagring är begränsad.  
-- **Centraliserad hantering** – En URL kan betjäna många instanser, vilket förenklar administrationen.  
-- **Säkerhetsfördelar** – Minskar risken att av misstag begå in en licensfil till källkontrollen.
+### Definitionsankare
+`License`‑klassen är GroupDocs.Comparisons kärnkomponent för att tillämpa en licens vid körning. Den läser licensdata från ett `InputStream` och validerar den mot din produktedition.
+
+### Steg‑för‑steg implementation
+
+1. **Läs licens‑URL:en från en miljövariabel** – detta håller URL:en utanför källkodskontrollen och låter dig ändra den per miljö.  
+2. **Skapa ett `URL`‑objekt** och öppna ett `InputStream` för att ladda ner licensfilen.  
+3. **Instansiera `License`‑klassen** och anropa dess `setLicense`‑metod med strömmen.  
+4. **Hantera undantag** för att falla tillbaka till en cachad kopia eller logga felet för övervakning.  
+
+> **Proffstips:** Cacha licensen lokalt i 24 timmar för att undvika upprepade nätverksanrop och minska latensen.
+
+## Varför detta tillvägagångssätt är viktigt
+
+GroupDocs.Comparison stödjer **50+ in‑ och utdataformat** och kan bearbeta **dokument med flera hundra sidor** utan att ladda hela filen i minnet. Att använda URL‑baserad licensiering låter dig:
+
+- **Automatiskt ta emot licensuppdateringar** – den senaste licensen hämtas varje gång appen startas, vilket eliminerar manuell fildistribution.  
+- **Centralisera licenshantering** – en enda URL betjänar alla instanser i utvecklings-, test- och produktionsmiljöer.  
+- **Förbättra säkerheten** – håll licensen utanför filsystemet och skydda URL:en med HTTPS och miljövariabler.
 
 ## Förutsättningar och miljöinställning
 
 ### Vad du behöver
 - **Java Development Kit**: JDK 8 eller högre  
-- **Maven**: För beroendehantering (Gradle fungerar också)  
-- **GroupDocs.Comparison Library**: Version 25.2 eller senare  
-- **Giltig licens**: Test‑, tillfällig‑ eller produktionslicens  
-- **Nätverksåtkomst**: Förmåga att nå licens‑URL:en från din körmiljö  
+- **Maven** (eller Gradle) för beroendehantering  
+- **GroupDocs.Comparison‑bibliotek**: version 25.2 eller senare  
+- **En giltig GroupDocs‑licens** (test, tillfällig eller produktions)  
+- **Nätverksåtkomst** till licens‑URL:en från körningsmiljön  
 
 ### Kunskapsförutsättningar
-Du bör vara bekväm med:
-- Grundläggande Java‑programmering  
-- Maven‑projektstruktur  
-- Java‑strömmar och undantagshantering  
-- Enkla nätverkskoncept (URL:er, HTTP)
+- Grundläggande Java‑programmering och undantagshantering  
+- Bekantskap med Maven `pom.xml`‑filer  
+- Förståelse för URL:er, HTTP och miljövariabler  
 
-## Konfigurera GroupDocs.Comparison för Java
+## Maven‑konfiguration gjort enkelt
 
-### Maven‑konfiguration gjort enkelt
-
-Att få GroupDocs.Comparison in i ditt projekt är enkelt. Lägg till följande konfiguration i din `pom.xml`:
+Lägg till GroupDocs.Comparison‑beroendet i din `pom.xml`:
 
 ```xml
 <repositories>
@@ -82,27 +165,22 @@ Att få GroupDocs.Comparison in i ditt projekt är enkelt. Lägg till följande 
 </dependencies>
 ```
 
-**Pro Tip**: Kontrollera alltid den senaste versionen i GroupDocs‑arkivet. Att använda föråldrade versioner kan leda till kompatibilitetsproblem och saknade funktioner.
+**Proffstips:** Använd alltid den senaste versionen från GroupDocs‑arkivet; nyare releaser lägger till formatstöd och prestandaförbättringar.
 
-### Skaffa din licens klar
+## Förbered din licens
 
-Här kan du skaffa din GroupDocs.Comparison‑licens:
+- **Gratis provperiod** – skaffa en provlicens från sidan [GroupDocs Comparison Java trial license](https://releases.groupdocs.com/comparison/java/).  
+- **Tillfällig licens** – begär en tidsbegränsad nyckel från [temporary license request page](https://purchase.groupdocs.com/temporary-license/).  
+- **Produktionslicens** – köp en full licens via sidan [purchase a production license](https://purchase.groupdocs.com/buy).  
 
-- **Free Trial**: Perfekt för testning och utvärdering – hämta den [här](https://releases.groupdocs.com/comparison/java/)
-- **Temporary License**: Behöver du mer tid för utveckling? Ansök [här](https://purchase.groupdocs.com/temporary-license/)
-- **Production License**: Redo att gå live? Köp [här](https://purchase.groupdocs.com/buy)
+Värd `.lic`‑filen på en säker webbserver, molnlagringsbucket eller intern filtjänst som kan nås via HTTPS.
 
-När du har din licensfil, hosta den någonstans som är åtkomlig via URL (intern server, molnlagring osv.).
+## Förstå kärnkomponenterna
 
-## Steg‑för‑steg‑implementeringsguide
+URL‑licensfunktionen eliminerar hårdkodade filsökvägar. Istället läser applikationen licensen från en fjärrplats, vilket gör distributioner till containrar eller serverlösa miljöer smidigare.
 
-### Förstå kärnkomponenterna
-
-URL‑licensieringsfunktionen låter din applikation hämta och tillämpa licenser dynamiskt, vilket eliminerar hårdkodade filsökvägar och möjliggör smidigare distributioner.
-
-### Steg 1: Importera nödvändiga klasser
-
-Börja med att importera de nödvändiga Java‑klasserna:
+### Importera nödvändiga klasser
+Importera de klasser som behövs för licenshantering.
 
 ```java
 import com.groupdocs.comparison.license.License;
@@ -110,11 +188,8 @@ import java.io.InputStream;
 import java.net.URL;
 ```
 
-Dessa importeringar ger dig allt som behövs: `License` för licenshantering, `InputStream` för att hantera licensdata och `URL` för att hämta från webblokationer.
-
-### Steg 2: Skapa din konfigurationsklass
-
-Ställ in ett rent konfigurationssätt:
+### Skapa din konfigurationsklass
+Definiera en konfigurationsklass som kapslar in logiken för att ladda licensen.
 
 ```java
 class Utils {
@@ -122,11 +197,8 @@ class Utils {
 }
 ```
 
-**Why This Works**: Centralisering av URL:en gör det enkelt att byta mellan miljöer (dev, staging, prod) utan att röra kärnlogiken.
-
-### Steg 3: Implementera logiken för att hämta licensen
-
-Här är kärnan i lösningen:
+### Implementera licens‑hämtlogiken
+Implementera metoden som hämtar och tillämpar licensen från URL:en.
 
 ```java
 try {
@@ -141,109 +213,107 @@ try {
 }
 ```
 
-**What Happens**: Koden skapar ett `URL`‑objekt, öppnar en input‑stream för att ladda ner licensen och tillämpar den med `License`‑klassen. Enkelt, men kraftfullt.
+## Använda en licens‑miljövariabel
+
+Att lagra licens‑URL:en i en miljövariabel (t.ex. `GROUPDOCS_LICENSE_URL`) förhindrar oavsiktliga incheckningar av känsliga URL:er och följer twelve‑factor‑app‑principerna. Hämta den i Java med `System.getenv("GROUPDOCS_LICENSE_URL")`.
+
+## Aktivera automatiska licensuppdateringar
+
+Schemalägg ett bakgrundsjobb (t.ex. med `ScheduledExecutorService`) för att hämta licensen igen var 24 timme. Detta säkerställer att eventuella förnyelser eller uppgraderingar tillämpas utan att starta om tjänsten, vilket ger **automatiska licensuppdateringar**.
 
 ## Vanliga fallgropar och hur man undviker dem
 
-### Nätverksanslutningsproblem
-- **Problem**: Licens‑URL:en är inte nåbar från distributionsmiljön.  
-- **Lösning**: Testa URL‑åtkomst från målservern, inte bara från din arbetsstation.
+- **Nätverksanslutningsproblem** – verifiera URL:en från produktionsvärden, inte bara din arbetsstation.  
+- **Skadad licensfil** – säkerställ att värdtjänsten levererar filen som binär och inte ändrar radslut.  
+- **Brandväggsrestriktioner** – samarbeta med ditt säkerhetsteam för att vitlista licensdomänen eller värd den internt.  
+- **Cache‑problem** – lägg till en query‑string som `?v=timestamp` eller konfigurera `Cache‑Control`‑rubriker för att tvinga nya hämtningar.  
 
-### Ogiltigt licensformat
-- **Problem**: Licensfilen blir korrupt under överföringen.  
-- **Lösning**: Verifiera filens integritet och säkerställ att värdtjänsten inte ändrar binärdata.
+## Verkliga implementationsscenario
 
-### Säkerhetsrestriktioner
-- **Problem**: Brandväggar blockerar externa URL:er.  
-- **Lösning**: Samarbeta med IT för att vitlista URL:en eller hosta licensen på en intern server.
-
-### Cache‑problem
-- **Problem**: Uppdaterade licenser hämtas inte på grund av cache.  
-- **Lösning**: Använd cache‑busting‑frågesträngar eller konfigurera korrekta cache‑control‑rubriker.
-
-## Verkliga implementeringsscenarier
-
-### Scenario 1: Mikrotjänstarkitektur
-Flera tjänster delar samma licens‑URL, vilket eliminerar duplicerade filer i containrar.
-
-### Scenario 2: Molnbaserade applikationer
-Distributioner på AWS, Azure eller GCP kan hämta licensen vid start utan att paketera den i container‑avbilden.
-
-### Scenario 3: Automatiserade CI/CD‑pipelines
-Din byggpipeline använder automatiskt den senaste licensen och tar bort manuella steg.
+- **Mikrotjänstarkitektur** – alla tjänster hämtar samma licens‑URL, vilket tar bort duplicerade filer från varje container‑image.  
+- **Moln‑native distributioner** – serverlösa funktioner hämtar licensen vid kall start, vilket håller distributionspaketet lättviktigt.  
+- **CI/CD‑pipelines** – byggagenter hämtar automatiskt den senaste licensen, vilket eliminerar manuella steg innan integrationstester körs.  
 
 ## Säkerhetsbästa praxis för produktion
 
-- **Use HTTPS** för alla licens‑URL:er.  
-- **Store URLs in environment variables** eller hemliga hanterare (AWS Secrets Manager, Azure Key Vault).  
-- **Avoid committing URLs** till källkontrollen.  
-- **Log fetch attempts** för spårbarhet och sätt upp larm för ovanliga mönster.  
+- Använd **HTTPS** för varje licens‑URL.  
+- Lagra URL:er i **secret managers** (AWS Secrets Manager, Azure Key Vault) och läs dem vid körning.  
+- Checka aldrig in URL:er eller licensfiler i versionskontrollen.  
+- Logga varje hämtningsförsök (utan att avslöja URL:en) för revisionsspår och konfigurera larm för fel.  
 
-## Tips för prestandaoptimering
+## Prestandaoptimeringstips
 
-- **Cache the license locally** med en rimlig TTL för att undvika upprepade nätverksanrop.  
-- **Enable connection pooling** och ange rimliga timeout‑värden.  
-- **Close streams** omedelbart för att förhindra resurssläpp.
+- **Cacha licensen lokalt** med en rimlig TTL (t.ex. 24 timmar) för att undvika upprepad nätverkslatens.  
+- Aktivera **connection pooling** och sätt rimliga tidsgränser på HTTP‑klienten.  
+- Stäng alltid **streams** i ett `finally`‑block eller använd try‑with‑resources för att förhindra resurssläpp.  
 
 ## Avancerad felsökningsguide
 
 ### Felsökning av anslutningsproblem
-1. Öppna URL:en i en webbläsare för att verifiera åtkomst.  
-2. Kontrollera proxy‑ eller brandväggsinställningar.  
-3. Validera SSL‑certifikat för HTTPS‑URL:er.
+1. Öppna URL:en i en webbläsare från målhosten.  
+2. Verifiera proxyinställningar och brandväggsregler.  
+3. Kontrollera SSL‑certifikat om du använder HTTPS.  
 
 ### Hantera licensvalideringsfel
-1. Bekräfta att licensfilen inte är korrupt.  
-2. Verifiera att licensen inte har gått ut.  
-3. Säkerställ att licensens omfattning matchar din användning.
+1. Bekräfta att licensfilen inte är skadad.  
+2. Säkerställ att licensen inte har gått ut.  
+3. Verifiera att licensens omfattning matchar din produktanvändning.  
 
-### Prestandafelsökning
-1. Mät hämtningens latens.  
-2. Övervaka minnesförbrukning medan strömmar hanteras.  
-3. Granska nätverkstrafik för onödiga upprepade förfrågningar.
+### Prestandafelning
+1. Mät nedladdningslatens med en enkel timer.  
+2. Övervaka minnesanvändning medan strömmen läses.  
+3. Granska nätverkstrafik för onödiga upprepade förfrågningar.  
 
-## Omfattande FAQ
+## Vanliga frågor
 
 **Q: Hur ofta bör jag hämta licensen från URL:en?**  
-**A:** För långlivade tjänster, hämta vid start och schemalägg periodiska uppdateringar (t.ex. var 24 timme). Kortlivade processer kan hämta en gång per körning.
+A: För långlivade tjänster, hämta vid start och schemalägg en uppdatering var 24 timme. Kortlivade jobb kan hämta en gång per körning.
 
 **Q: Vad händer om licens‑URL:en är tillfälligt otillgänglig?**  
-**A:** Implementera en fallback — cacha den senaste giltiga licensen lokalt eller ha en reserv‑URL. Graceful felhantering säkerställer att din app fortsätter fungera.
+A: Implementera en reservlösning till en cachad lokal kopia eller en sekundär URL. Smidig felhantering håller applikationen funktionell.
 
 **Q: Kan jag använda detta tillvägagångssätt med andra GroupDocs‑produkter?**  
-**A:** Ja. Samma URL‑baserade licensieringsmönster gäller för andra GroupDocs‑bibliotek som stödjer `License`‑klassen.
+A: Ja. Samma URL‑baserade mönster fungerar med GroupDocs.Viewer, GroupDocs.Annotation och andra bibliotek som exponerar en `License`‑klass.
 
 **Q: Hur hanterar jag olika licenser för dev, test och prod?**  
-**A:** Lagra separata URL:er i miljöspecifika variabler och låt din konfigurationsklass läsa rätt URL vid körning.
+A: Lagra separata URL:er i miljöspecifika variabler (t.ex. `GROUPDOCS_LICENSE_URL_DEV`). Din konfigurationsklass läser rätt variabel baserat på körningsprofilen.
 
 **Q: Påverkar hämtning av licensen prestandan?**  
-**A:** Påslaget är minimalt. Använd caching och effektiva HTTP‑inställningar för att hålla eventuell påverkan försumbar.
+A: Belastningen är minimal—vanligtvis under 200 ms. Använd caching och korrekta HTTP‑inställningar för att hålla eventuell påverkan försumbar.
 
-## Avslutning: Dina nästa steg
+## Avslutning: dina nästa steg
 
-Du har nu en komplett, produktionsklar metod för **how to use license** med GroupDocs.Comparison i Java. Börja med en enkel implementation, lägg sedan till caching, säkerhet och övervakning när du går mot produktion.
+Du har nu en komplett, produktionsklar metod för **hur man konfigurerar licens** med GroupDocs.Comparison i Java. Börja med den grundläggande implementeringen, lägg sedan till caching, säker lagring och schemalagda uppdateringar när du går mot produktion.
 
 ### Viktiga slutsatser
 - URL‑baserad licensiering automatiserar uppdateringar och förenklar distribution.  
-- Korrekt felhantering och säkerhet är avgörande för produktion.  
-- Prestanda är enkelt att optimera med caching och connection pooling.  
+- Säkra URL:en med HTTPS och miljövariabler.  
+- Använd caching och connection pooling för att hålla prestandan optimal.  
 
-Redo att prova? Distribuera kodsnutten, peka `LICENSE_URL` mot din hostade licensfil och njut av en problemfri licensieringsupplevelse.
+Distribuera koden, peka `GROUPDOCS_LICENSE_URL` på din hostade licensfil och njut av en problemfri licensupplevelse.
 
 ## Ytterligare resurser
 
-### Dokumentation och support
-- **Documentation**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)
-- **API Reference**: [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)
-- **Community Support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)
-
-### Nedladdningar och licensiering
-- **Latest Downloads**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)
-- **Purchase License**: [Buy GroupDocs](https://purchase.groupdocs.com/buy)
-- **Trial Access**: Tillgänglig via länkarna i avsnittet för förutsättningar
+- **Dokumentation**: [GroupDocs Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **API‑referens**: [GroupDocs API Reference](https://reference.groupdocs.com/comparison/java/)  
+- **Community‑support**: [GroupDocs Support Forum](https://forum.groupdocs.com/c/comparison)  
+- **Senaste nedladdningar**: [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/)  
+- **Köp licens**: [Buy GroupDocs](https://purchase.groupdocs.com/buy)  
 
 ---
 
-**Last Updated:** 2026-03-30  
+**Last Updated:** 2026-09-20  
 **Tested With:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
+
+## Relaterade handledningar
+
+- [Groupdocs Comparison License Setup Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
+- [Java Document Comparison Groupdocs Tutorial](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
+- [Groupdocs Comparison Java Api Document Comparison](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

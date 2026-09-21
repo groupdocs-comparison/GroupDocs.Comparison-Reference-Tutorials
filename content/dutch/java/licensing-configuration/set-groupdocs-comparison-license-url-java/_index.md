@@ -90,10 +90,6 @@ url: /nl/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hoe licentie te configureren voor GroupDocs Comparison Java
 
 Als je **hoe licentie te configureren** nodig hebt voor een Java‑project dat GroupDocs.Comparison gebruikt, ben je op de juiste plek. Deze tutorial leidt je door het ophalen van een licentie van een externe URL, het toepassen ervan tijdens runtime, en het beveiligen van het proces met omgevingsvariabelen. Aan het einde heb je een hands‑free, productie‑klare licentieoplossing die automatisch wordt bijgewerkt en handmatige stappen vermindert.
@@ -311,9 +307,3 @@ Implementeer de code, wijs `GROUPDOCS_LICENSE_URL` naar je gehoste licentiebesta
 - [Groupdocs Comparison Licentie Setup Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Document Vergelijking Groupdocs Tutorial](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API Document Vergelijking](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

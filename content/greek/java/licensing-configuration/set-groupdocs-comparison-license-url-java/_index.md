@@ -90,10 +90,6 @@ url: /el/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να διαμορφώσετε την άδεια για το GroupDocs Comparison Java
 
 Αν χρειάζεστε **πώς να διαμορφώσετε την άδεια** για ένα έργο Java που χρησιμοποιεί το GroupDocs.Comparison, βρίσκεστε στο σωστό μέρος. Αυτό το tutorial σας καθοδηγεί στη λήψη μιας άδειας από απομακρυσμένο URL, στην εφαρμογή της κατά το runtime, και στην ασφάλιση της διαδικασίας με μεταβλητές περιβάλλοντος. Στο τέλος, θα έχετε μια λύση αδειοδότησης χωρίς παρέμβαση, έτοιμη για παραγωγή, που ενημερώνεται αυτόματα και μειώνει τα χειροκίνητα βήματα.
@@ -292,8 +288,3 @@ try {
 - [Ρύθμιση άδειας Groupdocs Comparison Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Document Comparison Groupdocs Tutorial](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API Σύγκριση Εγγράφων](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

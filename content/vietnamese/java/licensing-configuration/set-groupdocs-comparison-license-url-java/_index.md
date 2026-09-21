@@ -90,10 +90,6 @@ url: /vi/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách cấu hình giấy phép cho GroupDocs Comparison Java
 
 Nếu bạn cần **cách cấu hình giấy phép** cho một dự án Java sử dụng GroupDocs.Comparison, bạn đang ở đúng nơi. Hướng dẫn này sẽ chỉ cho bạn cách lấy giấy phép từ một URL từ xa, áp dụng nó tại thời gian chạy, và bảo mật quy trình bằng các biến môi trường. Khi kết thúc, bạn sẽ có một giải pháp cấp phép tự động, sẵn sàng cho sản xuất, cập nhật tự động và giảm các bước thủ công.
@@ -311,9 +307,3 @@ Triển khai mã, trỏ `GROUPDOCS_LICENSE_URL` tới tệp giấy phép đượ
 - [Cài đặt giấy phép Groupdocs Comparison Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Hướng dẫn so sánh tài liệu Java bằng Groupdocs](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [So sánh tài liệu API Java Groupdocs Comparison](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

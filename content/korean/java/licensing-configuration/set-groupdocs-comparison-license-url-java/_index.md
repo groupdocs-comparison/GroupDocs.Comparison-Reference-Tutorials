@@ -88,10 +88,6 @@ url: /ko/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs Comparison Java 라이선스 구성 방법
 
 GroupDocs.Comparison을 사용하는 Java 프로젝트의 **라이선스 구성 방법**이 필요하다면, 여기가 바로 맞는 곳입니다. 이 튜토리얼에서는 원격 URL에서 라이선스를 가져오고, 런타임에 적용하며, 환경 변수를 사용해 프로세스를 보호하는 방법을 단계별로 안내합니다. 마지막까지 진행하면 자동으로 업데이트되고 수동 작업을 줄이는 핸즈프리 프로덕션 준비 라이선스 솔루션을 갖게 됩니다.
@@ -312,8 +308,3 @@ A: 오버헤드는 최소이며 일반적으로 200 ms 이하입니다. 캐싱
 - [Groupdocs Comparison 라이선스 설정 Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java 문서 비교 Groupdocs 튜토리얼](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API 문서 비교](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

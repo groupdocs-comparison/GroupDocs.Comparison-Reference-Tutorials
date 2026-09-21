@@ -90,10 +90,6 @@ url: /ru/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Как настроить лицензию для GroupDocs Comparison Java
 
 Если вам нужно **как настроить лицензию** для Java‑проекта, использующего GroupDocs.Comparison, вы попали по адресу. Этот учебник проведёт вас через получение лицензии с удалённого URL, её применение во время выполнения и обеспечение процесса переменными окружения. К концу вы получите полностью автоматизированное, готовое к продакшн решениe лицензирования, которое обновляется автоматически и уменьшает количество ручных действий.
@@ -311,8 +307,3 @@ try {
 - [Настройка лицензии Groupdocs Comparison Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Учебник по сравнению документов Java Groupdocs](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API сравнение документов](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

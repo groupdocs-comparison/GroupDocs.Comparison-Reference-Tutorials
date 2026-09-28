@@ -64,10 +64,6 @@ url: /id/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Automasi Perbandingan Dokumen .NET
 
 ## Biaya Tersembunyi dari Peninjauan Dokumen Manual
@@ -511,8 +507,3 @@ A: GroupDocs.Comparison dapat menangani dokumen yang dilindungi kata sandi; Anda
 - [bandingkan dokumen .net – Tutorial Lengkap GroupDocs.Comparison](/comparison/net/)  
 - [Cara Memvalidasi Format File dengan GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)  
 - [Cara Membandingkan Dokumen Word Secara Otomatis di .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

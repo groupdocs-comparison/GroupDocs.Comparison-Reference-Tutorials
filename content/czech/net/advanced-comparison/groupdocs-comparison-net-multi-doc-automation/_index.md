@@ -62,10 +62,6 @@ url: /cs/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Automatizace porovnávání dokumentů .NET
 
 ## Skrytá cena manuálního přezkoumání dokumentů
@@ -514,9 +510,3 @@ A: GroupDocs.Comparison dokáže pracovat s heslem chráněnými dokumenty; sta�
 - [compare documents .net – Kompletní GroupDocs.Comparison tutoriál](/comparison/net/)
 - [Jak validovat formáty souborů s GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)
 - [Jak automaticky porovnat Word dokumenty v .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -62,10 +62,6 @@ url: /ko/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 문서 비교 .NET 자동화
 
 ## 수동 문서 검토의 숨겨진 비용
@@ -524,8 +520,3 @@ public class ComparisonRecord
 - [compare documents .net – 전체 GroupDocs.Comparison 튜토리얼](/comparison/net/)
 - [GroupDocs.Comparison .NET으로 파일 형식 검증하는 방법](/comparison/net/basic-usage/get-supported-formats/)
 - [.NET에서 Word 문서를 자동으로 비교하는 방법](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

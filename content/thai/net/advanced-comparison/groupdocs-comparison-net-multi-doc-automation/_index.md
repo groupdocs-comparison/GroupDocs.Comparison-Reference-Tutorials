@@ -62,10 +62,6 @@ url: /th/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # การเปรียบเทียบเอกสาร .NET อัตโนมัติ
 
 ## ต้นทุนที่ซ่อนอยู่ของการตรวจสอบเอกสารด้วยมือ
@@ -538,8 +534,3 @@ A: GroupDocs.Comparison สามารถจัดการไฟล์ที�
 - [compare documents .net – Complete GroupDocs.Comparison Tutorial](/comparison/net/)  
 - [วิธีตรวจสอบฟอร์แมตไฟล์ด้วย GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)  
 - [วิธีเปรียบเทียบเอกสาร Word อัตโนมัติใน .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

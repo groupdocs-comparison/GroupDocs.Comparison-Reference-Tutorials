@@ -86,10 +86,6 @@ url: /ja/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs Comparison Java のライセンス構成方法
 
 GroupDocs.Comparison を使用する Java プロジェクトの **ライセンス構成方法** が必要な場合、ここが適切な場所です。このチュートリアルでは、リモート URL からライセンスを取得し、実行時に適用し、環境変数でプロセスを保護する方法を説明します。最後まで読むと、手動作業を削減し、自動的に更新される本番環境対応のライセンスソリューションが手に入ります。
@@ -307,8 +303,3 @@ A: オーバーヘッドは最小で、通常 200 ms 未満です。キャッ�
 - [Groupdocs Comparison ライセンス設定 Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java ドキュメント比較 Groupdocs チュートリアル](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API ドキュメント比較](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

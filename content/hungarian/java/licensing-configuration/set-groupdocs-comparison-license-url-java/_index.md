@@ -90,10 +90,6 @@ url: /hu/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan konfiguráljuk a licencet a GroupDocs Comparison Java-hoz
 
 Ha **hogyan konfiguráljuk a licencet** egy Java projekthez, amely a GroupDocs.Comparison-t használja, jó helyen vagy. Ez az útmutató végigvezet a licenc távoli URL-ről történő lekérésén, futásidőben történő alkalmazásán, és a folyamat környezeti változókkal való biztosításán. A végére egy kéz nélküli, termelésre kész licencmegoldást kapsz, amely automatikusan frissül és csökkenti a manuális lépéseket.
@@ -310,8 +306,3 @@ Telepítse a kódot, állítsa be a `GROUPDOCS_LICENSE_URL`‑t a hosztolt licen
 - [Groupdocs Comparison Licenc Beállítása Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Dokumentum Összehasonlítás Groupdocs Oktatóanyag](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API Dokumentum Összehasonlítás](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

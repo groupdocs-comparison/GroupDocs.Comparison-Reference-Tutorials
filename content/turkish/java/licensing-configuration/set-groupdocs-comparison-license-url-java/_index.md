@@ -90,10 +90,6 @@ url: /tr/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs Comparison Java için lisansı nasıl yapılandırılır
 
 GroupDocs.Comparison kullanan bir Java projesi için **lisansı nasıl yapılandırılır** öğrenmeniz gerekiyorsa, doğru yerdesiniz. Bu öğretici, lisansı uzak bir URL'den almayı, çalışma zamanında uygulamayı ve süreci ortam değişkenleriyle güvence altına almayı adım adım gösterir. Sonunda, otomatik olarak güncellenen ve manuel adımları azaltan, eller serbest, üretim‑hazır bir lisanslama çözümüne sahip olacaksınız.
@@ -311,9 +307,3 @@ Kodu dağıtın, `GROUPDOCS_LICENSE_URL`'yi barındırdığınız lisans dosyas�
 - [Groupdocs Comparison Lisans Kurulumu Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Belge Karşılaştırma Groupdocs Öğreticisi](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API Belge Karşılaştırması](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

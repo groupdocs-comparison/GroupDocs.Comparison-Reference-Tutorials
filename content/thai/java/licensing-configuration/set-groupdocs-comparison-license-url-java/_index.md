@@ -89,10 +89,6 @@ url: /th/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีกำหนดค่าใบอนุญาตสำหรับ GroupDocs Comparison Java
 
 หากคุณต้องการ **วิธีกำหนดค่าใบอนุญาต** สำหรับโครงการ Java ที่ใช้ GroupDocs.Comparison คุณมาถูกที่แล้ว บทแนะนำนี้จะพาคุณผ่านการดึงใบอนุญาตจาก URL ระยะไกล การนำไปใช้ในขณะรันไทม์ และการรักษาความปลอดภัยของกระบวนการด้วยตัวแปรสภาพแวดล้อม เมื่อเสร็จสิ้น คุณจะได้โซลูชันการจัดการใบอนุญาตที่พร้อมใช้งานในสภาพการผลิตโดยอัตโนมัติและลดขั้นตอนที่ต้องทำด้วยมือ
@@ -292,8 +288,3 @@ A: ภาระโดยรวมเล็กน้อย—โดยทั่�
 - [การตั้งค่าใบอนุญาต Groupdocs Comparison Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [บทแนะนำการเปรียบเทียบเอกสาร Java Groupdocs](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API การเปรียบเทียบเอกสาร](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

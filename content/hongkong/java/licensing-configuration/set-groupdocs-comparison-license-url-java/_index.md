@@ -86,10 +86,6 @@ url: /zh-hant/java/licensing-configuration/set-groupdocs-comparison-license-url-
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何為 GroupDocs Comparison Java 配置許可證
 
 如果您需要為使用 GroupDocs.Comparison 的 Java 專案 **配置許可證**，您來對地方了。本教學將帶您了解如何從遠端 URL 取得許可證、在執行時套用，以及使用環境變數保護此過程。完成後，您將擁有一個免手動、適合生產環境的許可證解決方案，能自動更新並減少手動步驟。
@@ -307,9 +303,3 @@ A: 開銷極小——通常低於 200 ms。使用快取與適當的 HTTP 設�
 - [Groupdocs Comparison 許可證設定 Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java 文件比較 Groupdocs 教學](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API 文件比較](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

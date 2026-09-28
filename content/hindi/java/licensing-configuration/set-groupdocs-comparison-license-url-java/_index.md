@@ -90,10 +90,6 @@ url: /hi/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs Comparison Java के लिए लाइसेंस कैसे कॉन्फ़िगर करें
 
 यदि आपको GroupDocs.Comparison का उपयोग करने वाले Java प्रोजेक्ट के लिए **लाइसेंस कैसे कॉन्फ़िगर करें** की आवश्यकता है, तो आप सही जगह पर हैं। यह ट्यूटोरियल आपको रिमोट URL से लाइसेंस प्राप्त करने, रनटाइम पर लागू करने, और पर्यावरण वेरिएबल्स के साथ प्रक्रिया को सुरक्षित करने के चरण दिखाता है। अंत तक, आपके पास एक हैंड‑फ़्री, प्रोडक्शन‑रेडी लाइसेंसिंग समाधान होगा जो स्वचालित रूप से अपडेट होता है और मैन्युअल कदमों को कम करता है।
@@ -311,9 +307,3 @@ A: ओवरहेड न्यूनतम है—आमतौर पर 200�
 - [Groupdocs Comparison लाइसेंस सेटअप Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java दस्तावेज़ तुलना Groupdocs ट्यूटोरियल](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java API दस्तावेज़ तुलना](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

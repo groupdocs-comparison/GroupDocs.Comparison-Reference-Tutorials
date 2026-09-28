@@ -89,10 +89,6 @@ url: /ar/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية تكوين الترخيص لـ GroupDocs Comparison Java
 
 إذا كنت بحاجة إلى **كيفية تكوين الترخيص** لمشروع Java يستخدم GroupDocs.Comparison، فأنت في المكان الصحيح. يشرح هذا البرنامج التعليمي كيفية جلب الترخيص من عنوان URL بعيد، وتطبيقه أثناء التشغيل، وتأمين العملية باستخدام متغيرات البيئة. في النهاية، ستحصل على حل ترخيص جاهز للإنتاج دون تدخل يدوي، يتحدث تلقائيًا ويقلل الخطوات اليدوية.
@@ -297,8 +293,3 @@ try {
 - [Groupdocs Comparison License Setup Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Document Comparison Groupdocs Tutorial](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java Api Document Comparison](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

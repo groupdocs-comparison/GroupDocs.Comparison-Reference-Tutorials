@@ -88,10 +88,6 @@ url: /zh/java/licensing-configuration/set-groupdocs-comparison-license-url-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何为 GroupDocs Comparison Java 配置许可证
 
 如果您需要为使用 GroupDocs.Comparison 的 Java 项目 **配置许可证**，您来对地方了。本教程将指导您从远程 URL 获取许可证、在运行时应用它，并使用环境变量确保过程安全。完成后，您将拥有一个免人工、可投入生产的许可证解决方案，能够自动更新并减少手动步骤。
@@ -309,8 +305,3 @@ try {
 - [Groupdocs Comparison License Setup Java](/comparison/java/licensing-configuration/groupdocs-comparison-license-setup-java/)
 - [Java Document Comparison Groupdocs Tutorial](/comparison/java/basic-comparison/java-document-comparison-groupdocs-tutorial/)
 - [Groupdocs Comparison Java Api Document Comparison](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

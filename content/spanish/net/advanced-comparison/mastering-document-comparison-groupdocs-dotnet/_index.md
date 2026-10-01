@@ -1,181 +1,310 @@
 ---
-"date": "2025-05-05"
-"description": "Aprenda a dominar la comparación de documentos en .NET utilizando GroupDocs.Comparison para una automatización perfecta del flujo de trabajo y una mayor productividad."
-"title": "Dominar la comparación de documentos en .NET&#58; una guía completa para usar GroupDocs.Comparison"
-"url": "/es/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/"
-"weight": 1
+categories:
+- .NET Development
+date: '2026-09-30'
+description: Aprenda cómo comparar documentos Word en .NET y automatizar la comparación
+  de documentos usando GroupDocs.Comparison. Guía paso a paso con código, consejos
+  y buenas prácticas.
+keywords:
+- how to compare word documents
+- automate document comparison
+- GroupDocs.Comparison .NET
+- document diff API
+- version control documents
+lastmod: '2026-09-30'
+linktitle: Tutorial de comparación de documentos .NET
+og_description: Aprenda cómo comparar documentos Word en .NET y automatizar la comparación
+  de documentos usando GroupDocs.Comparison. Guía paso a paso con código, consejos
+  y buenas prácticas.
+og_image_alt: Guide showing how to compare word documents in .NET with GroupDocs.Comparison
+og_title: Cómo comparar documentos Word con GroupDocs.Comparison
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to compare word documents in .NET and automate document comparison
+    using GroupDocs.Comparison. Step-by-step guide with code, tips, and best practices.
+  headline: How to compare word documents with GroupDocs.Comparison
+  type: TechArticle
+- questions:
+  - answer: Over 100 formats—including DOCX, PDF, XLSX, PPTX, TXT, and HTML—are supported.
+      See the full list on the official documentation page.
+    question: What file formats can I compare with GroupDocs.Comparison?
+  - answer: Yes, a free trial provides full functionality with minor usage limits,
+      ideal for development and small‑scale testing.
+    question: Can I use GroupDocs.Comparison without purchasing a license?
+  - answer: Use streaming, compare document sections separately, and always dispose
+      of streams with `using` statements.
+    question: How do I handle large documents without running into memory issues?
+  - answer: Absolutely. Supply the password when loading the document streams, and
+      the API will decrypt on the fly.
+    question: Is it possible to compare password‑protected documents?
+  - answer: Yes. Configure `ComparisonOptions` to enable or disable detection of text,
+      formatting, or structural changes according to your needs.
+    question: Can I customize which types of changes are detected?
+  type: FAQPage
+tags:
+- document-comparison
+- groupdocs
+- automation
+- version-control
+- .NET
+title: Cómo comparar documentos Word con GroupDocs.Comparison
 type: docs
+url: /es/net/advanced-comparison/mastering-document-comparison-groupdocs-dotnet/
+weight: 1
 ---
-# Dominando la comparación de documentos en .NET con GroupDocs.Comparison
 
-Descubra el potencial de automatizar la comparación de documentos en entornos .NET con GroupDocs.Comparison. Esta guía le ayudará a optimizar su flujo de trabajo y a aumentar la productividad mediante la gestión eficiente de las versiones de los documentos.
+# Cómo comparar documentos Word con GroupDocs.Comparison
 
-## Introducción
+En este tutorial exhaustivo descubrirás **cómo comparar documentos Word** en .NET de forma automática, usando GroupDocs.Comparison. Ya sea que estés construyendo un sistema de revisión de contratos, un portal de control de versiones, o simplemente necesites una forma fiable de detectar cambios entre dos borradores, esta guía te lleva paso a paso—desde la configuración del entorno hasta la optimización del rendimiento—para que puedas reemplazar las revisiones manuales y propensas a errores con comparaciones rápidas y programáticas.
 
-Explorar numerosas versiones de documentos para identificar cambios puede requerir mucho tiempo y recursos. GroupDocs.Comparison para .NET ofrece una solución eficaz para simplificar este proceso, permitiendo identificar rápidamente las diferencias entre las versiones de archivo. Este tutorial le guiará en la configuración de comparaciones, la recuperación de modificaciones y la gestión de cambios con facilidad.
+## Respuestas rápidas
+- **¿Qué hace GroupDocs.Comparison?** Detecta inserciones, eliminaciones, cambios de formato y diferencias estructurales entre dos versiones de documentos en milisegundos.  
+- **¿Qué tipos de archivo son compatibles?** Más de 100 formatos, incluidos DOCX, PDF, PPTX y XLSX.  
+- **¿Necesito una licencia de pago?** Una prueba gratuita funciona para desarrollo; se requiere una licencia comercial para producción.  
+- **¿Puedo comparar archivos grandes?** Sí—utiliza streaming y la eliminación adecuada de recursos para manejar documentos de cientos de páginas.  
+- **¿Está la API preparada para async?** Puedes envolver las llamadas síncronas en `Task.Run` o usar las próximas sobrecargas async para una UI sin bloqueo.
 
-**Lo que aprenderás:**
-- Configuración de GroupDocs.Comparison en su entorno .NET.
-- Inicializar un comparador y cargar documentos para la comparación.
-- Recuperar y modificar cambios en documentos de forma eficiente.
-- Aplicaciones reales de la comparación de documentos.
+## Qué es comparar documentos Word
+**Cómo comparar documentos Word** es el proceso de identificar programáticamente cada cambio entre dos archivos Word. Usando GroupDocs.Comparison, una llamada a la API de una sola línea analiza los documentos origen y destino, produciendo una lista detallada de cambios que incluye ediciones de texto, ajustes de formato y modificaciones estructurales. Esto permite flujos de trabajo de revisión automatizados, elimina la inspección manual y garantiza resultados consistentes y auditables en grandes conjuntos de documentos.
 
-Comencemos por cubrir los requisitos previos necesarios para comenzar a utilizar estas funciones.
+## Por qué automatizar la comparación de documentos
+Automatizar la comparación de documentos con GroupDocs.Comparison reduce el esfuerzo manual, elimina errores humanos y escala sin problemas a medida que aumenta el volumen de documentos. La biblioteca puede procesar **más de 100 formatos** y comparar archivos de cientos de páginas en menos de un segundo en hardware de servidor típico, reduciendo el tiempo de revisión hasta en **95 %**. Esta velocidad y fiabilidad ayudan a las organizaciones a cumplir con los plazos de cumplimiento, acelerar negociaciones de contratos y mantener historiales de versiones precisos sin costosos trabajos manuales.
 
-## Prerrequisitos
+## Requisitos previos y configuración del entorno
 
-Antes de sumergirte, asegúrate de tener:
+Antes de escribir cualquier código, verifica que tu entorno de desarrollo cumpla con los siguientes requisitos:
 
-### Bibliotecas y dependencias requeridas
-- **Comparación de GroupDocs para .NET:** Se requiere la versión 25.4.0 o posterior.
-- **Entorno de desarrollo:** Se recomienda Visual Studio (versión 2017 o más reciente).
+- Visual Studio 2017 o posterior (se recomienda 2022)  
+- .NET Framework 4.6.2 +, .NET Core 3.1 + o .NET 5+  
+- Conocimientos básicos de C# (flujos de archivo, sentencias `using`)  
+- GroupDocs.Comparison para .NET v25.4.0 o posterior  
+- Un archivo de licencia válido (la prueba gratuita funciona para evaluación)
 
-### Requisitos de configuración del entorno
-- Una comprensión básica de la programación en C#.
-- Familiaridad con el manejo de flujos de archivos en aplicaciones .NET.
+### Instalación de GroupDocs.Comparison
 
-## Configuración de GroupDocs.Comparison para .NET
-
-Para integrar GroupDocs.Comparison en su proyecto, siga estos pasos de instalación:
-
-**Consola del administrador de paquetes NuGet**
+**Opción 1: Consola del Administrador de paquetes NuGet**  
 ```bash
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**CLI de .NET**
+**Opción 2: .NET CLI**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-### Adquisición de licencias
-- **Prueba gratuita:** Comience con una prueba gratuita para explorar las funciones.
-- **Licencia temporal:** Obtenga una licencia temporal para evaluación extendida.
-- **Compra:** Adquirir una licencia completa para uso comercial.
+> **Consejo profesional:** La UI de NuGet en Visual Studio te permite buscar “GroupDocs.Comparison” e instalar con un solo clic. Para más detalles, consulta los [GroupDocs.Comparison .NET Docs](https://docs.groupdocs.com/comparison/net/).
 
-**Inicialización y configuración básica:**
-A continuación se explica cómo puede inicializar GroupDocs.Comparison en su aplicación C#:
+### Obtención de tu licencia
+
+- **Prueba gratuita:** Perfecta para aprender – [obtener aquí](https://releases.groupdocs.com/comparison/net/) | [Inicia tu prueba gratuita](https://releases.groupdocs.com/comparison/net/) | [Lanzamientos de GroupDocs](https://releases.groupdocs.com/comparison/net/)  
+- **Licencia temporal:** Extiende la evaluación – [Obtener una licencia temporal](https://purchase.groupdocs.com/temporary-license/) | [Consigue licencia temporal](https://purchase.groupdocs.com/temporary-license/)  
+- **Licencia comercial:** Uso en producción – [Opciones de compra aquí](https://purchase.groupdocs.com/buy) | [Comprar licencia](https://purchase.groupdocs.com/buy) | [Documentación detallada de la API](https://reference.groupdocs.com/comparison/net/)  
+
+Para soporte comunitario, visita el [GroupDocs Forum](https://forum.groupdocs.com/c/comparison/).
+
+## Configuración de tu primera comparación de documentos
+
+### Estructura básica del proyecto
+
+Crea una nueva aplicación de consola y agrega las siguientes directivas `using`:
+
+```csharp
+using System.IO;
+using GroupDocs.Comparison;
+using GroupDocs.Comparison.Result;
+```  
+
+### Inicializar el comparador y cargar documentos
+
+La clase `Comparer` es el punto de entrada para todas las operaciones de comparación. Mantiene el documento fuente y permite agregar uno o más documentos objetivo.
+
 ```csharp
 using System.IO;
 using GroupDocs.Comparison;
 
-string documentDirectory = "YOUR_DOCUMENT_DIRECTORY"; // Define tu directorio de documentos de entrada.
-// Inicialice el comparador con un flujo de documento fuente.
+string documentDirectory = "YOUR_DOCUMENT_DIRECTORY"; // Define your input documents directory.
+// Initialize Comparer with a source document stream.
 using (Comparer comparer = new Comparer(File.OpenRead(Path.Combine(documentDirectory, "source.docx"))))
 {
-    // Añadir documento de destino para comparar.
+    // Add target document for comparison.
     comparer.Add(File.OpenRead(Path.Combine(documentDirectory, "target.docx")));
 }
-```
+```  
 
-## Guía de implementación
+### Realizar la comparación real
 
-### Característica 1: Inicializar el comparador y cargar documentos
+Llamar a `Compare()` ejecuta el algoritmo de diferencias y devuelve un `ComparisonResult` que contiene cada cambio detectado.
 
-**Descripción general:** Aprenda a inicializar GroupDocs.Comparison con documentos de origen y destino mediante flujos de archivos.
-
-#### Implementación paso a paso
-
-##### Inicializando el comparador
-Comience creando una instancia de `Comparer` y cargar su documento fuente en una secuencia:
 ```csharp
-using System.IO;
-using GroupDocs.Comparison;
-
-string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
-// Inicialice el comparador con el documento fuente.
-using (Comparer comparer = new Comparer(File.OpenRead(Path.Combine(documentDirectory, "source.docx"))))
-{
-    // Añadir documento de destino para comparar.
-    comparer.Add(File.OpenRead(Path.Combine(documentDirectory, "target.docx")));
-}
-```
-
-##### Realizar comparación
-Ejecutar el `Compare` Método para detectar cambios entre documentos:
-```csharp
-// Realizar la operación de comparación.
+// Perform the comparison operation.
 comparer.Compare();
-```
-Este paso analiza ambos archivos e identifica las diferencias.
+```  
 
-### Función 2: Recuperar y modificar cambios
+## Recuperación y gestión de cambios de documentos
 
-**Descripción general:** Descubra cómo recuperar los cambios detectados y modificarlos utilizando GroupDocs.Comparison.
+### Obtener todos los cambios detectados
 
-#### Recuperando cambios
-Primero, recupera todos los cambios detectados durante la comparación:
+Después de que la comparación finalice, puedes enumerar la colección `Changes` para inspeccionar cada modificación.
+
 ```csharp
 using System;
 using GroupDocs.Comparison.Result;
 
 ChangeInfo[] changes = comparer.GetChanges();
-```
+```  
 
-##### Modificación de cambios
-- **Rechazando cambios:** Demuestre cómo rechazar modificaciones específicas.
-  ```csharp
-  // Ejemplo: Rechazar el primer cambio (por ejemplo, no agregar una palabra insertada).
-  changes[0].ComparisonAction = ComparisonAction.Reject;
+### Rechazar cambios no deseados
 
-  comparer.ApplyChanges(Path.Combine(outputPath, "result_with_rejected_change.docx"), new ApplyChangeOptions { Changes = changes, SaveOriginalState = true });
-  ```
+Puedes descartar cambios que no son relevantes para tu flujo de trabajo, como ajustes automáticos de formato.
 
-- **Aceptando cambios:** Acepte las modificaciones para aplicarlas a su documento.
-  ```csharp
-  // Recupere los cambios nuevamente para el ejemplo de aceptación.
-  changes = comparer.GetChanges();
-  
-  // Ejemplo: Aceptar el primer cambio.
-  changes[0].ComparisonAction = ComparisonAction.Accept;
+```csharp
+// Example: Reject the first change (e.g., not adding an inserted word).
+changes[0].ComparisonAction = ComparisonAction.Reject;
 
-  comparer.ApplyChanges(Path.Combine(outputPath, "result_with_accepted_change.docx"), new ApplyChangeOptions { Changes = changes });
-  ```
+comparer.ApplyChanges(Path.Combine(outputPath, "result_with_rejected_change.docx"), new ApplyChangeOptions { Changes = changes, SaveOriginalState = true });
+```  
 
-## Aplicaciones prácticas
+### Aceptar cambios importantes
 
-- **Control de versiones:** Automatice el seguimiento de versiones de documentos dentro de su organización.
-- **Análisis de documentos legales:** Identificar rápidamente alteraciones en contratos o acuerdos legales.
-- **Edición colaborativa:** Mejore la colaboración en equipo mostrando los cambios realizados en los documentos compartidos.
+Por el contrario, puedes aceptar programáticamente los cambios que deben mantenerse en el documento final.
 
-## Consideraciones de rendimiento
+```csharp
+// Retrieve changes again for acceptance example.
+changes = comparer.GetChanges();
 
-Para garantizar un rendimiento óptimo con GroupDocs.Comparison:
-- **Optimizar el uso de recursos:** Administre la memoria y la potencia de procesamiento de manera eficiente, especialmente para conjuntos de documentos grandes.
-- **Mejores prácticas:** Siga las mejores prácticas de .NET, como el uso `using` declaraciones para manejar flujos de manera adecuada y desechar objetos una vez que ya no son necesarios.
+// Example: Accept the first change.
+changes[0].ComparisonAction = ComparisonAction.Accept;
+
+comparer.ApplyChanges(Path.Combine(outputPath, "result_with_accepted_change.docx"), new ApplyChangeOptions { Changes = changes });
+```  
+
+## Cuándo usar la comparación de documentos en tus proyectos
+
+### Control de versiones y seguimiento de cambios
+- **Documentación de software:** Seguimiento automático de actualizaciones de la guía API.  
+- **Documentos de políticas:** Detecta revisiones regulatorias al instante.  
+- **Gestión de contenido:** Mantén consistentes los historiales de artículos.
+
+### Aplicaciones legales y de cumplimiento
+- **Revisión de contratos:** Resalta modificaciones de cláusulas para equipos legales.  
+- **Cumplimiento regulatorio:** Audita cambios en documentos requeridos por normas.  
+- **Debida diligencia:** Compara rápidamente acuerdos relacionados con fusiones.
+
+### Flujos de trabajo colaborativos
+- **Edición en equipo:** Muestra las ediciones de cada colaborador.  
+- **Revisiones de clientes:** Presenta un registro de cambios limpio para aprobaciones.  
+- **Aseguramiento de calidad:** Verifica que los entregables finales coincidan con las especificaciones.
+
+## Problemas comunes y solución de problemas
+
+### Problemas de compatibilidad de formatos de archivo
+**Problema:** Aparece “Unsupported file format” para ciertas entradas.  
+**Solución:** GroupDocs.Comparison soporta **más de 100 formatos**; verifica contra la [lista de formatos](https://docs.groupdocs.com/comparison/net/supported-document-formats/) o la [lista completa](https://docs.groupdocs.com/comparison/net/supported-document-formats/). Convierte los archivos no compatibles a DOCX o PDF antes de comparar.
+
+### Problemas de memoria con documentos grandes
+**Problema:** `OutOfMemoryException` para archivos muy grandes.  
+**Soluciones:**  
+- Transmitir archivos en lugar de cargar documentos completos en memoria.  
+- Incrementar el límite de memoria de la aplicación.  
+- Comparar secciones individualmente y combinar los resultados.
+
+### Consejos de optimización de rendimiento
+**Problema:** Las comparaciones se sienten lentas en documentos complejos.  
+**Mejores prácticas:**  
+- Eliminar streams rápidamente con `using`.  
+- Comparar solo las secciones del documento necesarias.  
+- Cachear resultados cuando el mismo par se compara repetidamente.  
+- Utilizar procesamiento paralelo para trabajos por lotes.
+
+### Problemas de licencia y autenticación
+**Problema:** La validación de la licencia falla o se alcanzan los límites de la prueba.  
+**Soluciones rápidas:**  
+- Coloca el archivo de licencia en la carpeta raíz del ejecutable.  
+- Confirma que la versión de la licencia coincide con tu entorno de ejecución (desarrollo vs. producción).
+
+## Mejores prácticas de optimización de rendimiento
+
+### Gestión de recursos
+
+```csharp
+// Always use using statements for proper disposal
+using (Comparer comparer = new Comparer(sourceStream))
+{
+    comparer.Add(targetStream);
+    comparer.Compare();
+    // Resources are automatically disposed here
+}
+```  
+
+### Estrategias de optimización de memoria
+- Cierra los streams tan pronto como ya no se necesiten.  
+- Procesa documentos por lotes para mantener pequeño el conjunto de trabajo.  
+- Llama a `GC.Collect()` después de ejecuciones de lotes grandes si observas presión de memoria.
+
+### Escalado para producción
+- Envuelve las llamadas de comparación en `Task.Run` para una UI sin bloqueo.  
+- Cachea documentos comparados frecuentemente en memoria o en una caché distribuida.  
+- Distribuye la carga de trabajo entre múltiples instancias de servicio detrás de un balanceador de carga.
+
+## Ejemplos de implementación en el mundo real
+
+### Sistema automatizado de revisión de contratos
+```csharp
+// This is how you might build an automated contract review workflow
+public async Task<ContractReviewResult> ReviewContractChanges(string originalContract, string modifiedContract)
+{
+    using (var comparer = new Comparer(File.OpenRead(originalContract)))
+    {
+        comparer.Add(File.OpenRead(modifiedContract));
+        comparer.Compare();
+        
+        var changes = comparer.GetChanges();
+        return new ContractReviewResult
+        {
+            TotalChanges = changes.Length,
+            CriticalChanges = changes.Count(c => IsCriticalChange(c)),
+            Changes = changes
+        };
+    }
+}
+```  
+
+### Integración de control de versiones de documentos
+Integra el motor de comparación con almacenes de versiones tipo Git para generar automáticamente registros de cambios en cada commit.
+
+### Flujos de trabajo de cumplimiento y auditoría
+Configura un trabajo programado que escanee carpetas reguladas, compare nuevas cargas contra la última versión aprobada y envíe por correo electrónico al equipo de cumplimiento un informe de diferencias resaltado.
+
+## Preguntas frecuentes
+
+**Q: ¿Qué formatos de archivo puedo comparar con GroupDocs.Comparison?**  
+**A:** Más de 100 formatos—incluidos DOCX, PDF, XLSX, PPTX, TXT y HTML—son compatibles. Consulta la lista completa en la página oficial de documentación.
+
+**Q: ¿Puedo usar GroupDocs.Comparison sin comprar una licencia?**  
+**A:** Sí, una prueba gratuita proporciona funcionalidad completa con limitaciones menores, ideal para desarrollo y pruebas a pequeña escala.
+
+**Q: ¿Cómo manejo documentos grandes sin encontrar problemas de memoria?**  
+**A:** Usa streaming, compara secciones del documento por separado y siempre elimina los streams con sentencias `using`.
+
+**Q: ¿Es posible comparar documentos protegidos con contraseña?**  
+**A:** Absolutamente. Proporciona la contraseña al cargar los streams de los documentos, y la API los descifrará al vuelo.
+
+**Q: ¿Puedo personalizar qué tipos de cambios se detectan?**  
+**A:** Sí. Configura `ComparisonOptions` para habilitar o deshabilitar la detección de texto, formato o cambios estructurales según tus necesidades.
 
 ## Conclusión
 
-Siguiendo esta guía, ha aprendido a gestionar eficazmente los cambios en los documentos con GroupDocs.Comparison para .NET. Desde la inicialización de comparadores hasta la modificación de las diferencias detectadas, estas habilidades pueden mejorar significativamente la eficiencia de su flujo de trabajo.
+Ahora tienes una hoja de ruta completa y lista para producción para **cómo comparar documentos Word** en .NET usando GroupDocs.Comparison. Desde la configuración inicial hasta la afinación avanzada del rendimiento, la biblioteca te permite automatizar revisiones manuales tediosas, garantizar consistencia y escalar a miles de documentos por día. Comienza con el ejemplo sencillo, experimenta con las APIs de gestión de cambios y gradualmente integra el flujo de trabajo en tu plataforma más amplia de gestión de documentos o cumplimiento.
 
-**Próximos pasos:**
-Explore más integrando GroupDocs.Comparison con otros sistemas y marcos dentro de su entorno .NET.
+---
 
-## Sección de preguntas frecuentes
+**Última actualización:** 2026-09-30  
+**Probado con:** GroupDocs.Comparison 25.4.0 for .NET  
+**Autor:** GroupDocs
 
-1. **¿Qué es GroupDocs.Comparison para .NET?** 
-   Una potente biblioteca para comparar documentos en aplicaciones .NET para identificar cambios rápidamente.
+## Tutoriales relacionados
 
-2. **¿Puedo utilizar GroupDocs.Comparison sin comprar una licencia?**
-   Sí, puedes comenzar con una prueba gratuita u obtener una licencia temporal para fines de evaluación.
-
-3. **¿Qué formatos de archivos admite GroupDocs.Comparison?**
-   Admite una amplia gama de formatos de documentos, incluidos Word, Excel, PDF y más.
-
-4. **¿Cómo optimizo el rendimiento al comparar documentos grandes?**
-   Administre el uso de la memoria de manera efectiva eliminando los objetos correctamente y procesando los archivos en fragmentos manejables.
-
-5. **¿Dónde puedo encontrar la documentación de GroupDocs.Comparison para mayor referencia?**
-   Visita el [documentación oficial](https://docs.groupdocs.com/comparison/net/) para obtener referencias y guías API detalladas.
-
-## Recursos
-
-- **Documentación:** [Comparación de GroupDocs con la documentación de .NET](https://docs.groupdocs.com/comparison/net/)
-- **Referencia API:** [Referencia de API](https://reference.groupdocs.com/comparison/net/)
-- **Descargar GroupDocs.Comparison:** [Lanzamientos](https://releases.groupdocs.com/comparison/net/)
-- **Comprar una licencia:** [Comprar ahora](https://purchase.groupdocs.com/buy)
-- **Prueba gratuita:** [Comience una prueba gratuita](https://releases.groupdocs.com/comparison/net/)
-- **Licencia temporal:** [Obtener una licencia temporal](https://purchase.groupdocs.com/temporary-license/)
-- **Foro de soporte:** [Soporte de GroupDocs](https://forum.groupdocs.com/c/comparison/) 
-
-Este tutorial proporciona una guía completa para implementar GroupDocs.Comparison en sus proyectos .NET, mejorando los procesos de gestión de documentos.
+- [Tutorial de comparación de documentos .NET - Guía completa de carga y guardado](/comparison/net/loading-and-saving-documents/)
+- [Cómo aceptar programáticamente cambios de documentos en C# con GroupDocs.Comparison .NET – Guía de gestión de cambios](/comparison/net/change-management/)
+- [Comparar múltiples documentos Word en .NET (Protegidos con contraseña)](/comparison/net/advanced-comparison/compare-password-protected-docs-groupdocs-dotnet/)

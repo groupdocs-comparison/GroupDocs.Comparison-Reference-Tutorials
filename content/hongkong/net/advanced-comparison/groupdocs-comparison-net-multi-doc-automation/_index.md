@@ -60,10 +60,6 @@ url: /zh-hant/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automat
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 文件比較 .NET 自動化
 
 ## 手動文件審查的隱藏成本
@@ -512,9 +508,3 @@ A: GroupDocs.Comparison can handle password‑protected documents; you just need
 - [compare documents .net – Complete GroupDocs.Comparison Tutorial](/comparison/net/)
 - [How to Validate File Formats with GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)
 - [How to Compare Word Documents Automatically in .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

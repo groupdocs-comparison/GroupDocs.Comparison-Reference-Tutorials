@@ -60,10 +60,6 @@ url: /ja/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # ドキュメント比較 .NET 自動化
 
 ## 手動ドキュメントレビューの隠れたコスト
@@ -513,9 +509,3 @@ A: GroupDocs.Comparison はパスワード保護されたドキュメントを�
 - [compare documents .net – 完全な GroupDocs.Comparison チュートリアル](/comparison/net/)
 - [GroupDocs.Comparison .NET でファイル形式を検証する方法](/comparison/net/basic-usage/get-supported-formats/)
 - [Word ドキュメントを .NET で自動比較する方法](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

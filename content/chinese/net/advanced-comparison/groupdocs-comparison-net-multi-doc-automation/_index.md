@@ -60,10 +60,6 @@ url: /zh/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 文档比较 .NET 自动化
 
 ## 手动文档审查的隐藏成本
@@ -526,8 +522,3 @@ public class ComparisonRecord
 - [compare documents .net – Complete GroupDocs.Comparison Tutorial](/comparison/net/)
 - [How to Validate File Formats with GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)
 - [How to Compare Word Documents Automatically in .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

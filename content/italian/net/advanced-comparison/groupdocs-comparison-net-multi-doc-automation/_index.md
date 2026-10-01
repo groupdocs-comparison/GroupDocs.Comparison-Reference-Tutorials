@@ -64,10 +64,6 @@ url: /it/net/advanced-comparison/groupdocs-comparison-net-multi-doc-automation/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Confronto documenti .NET automazione
 
 ## Il costo nascosto della revisione manuale dei documenti
@@ -516,9 +512,3 @@ R: GroupDocs.Comparison può gestire documenti protetti; è sufficiente fornire 
 - [confronta documenti .net – Tutorial completo GroupDocs.Comparison](/comparison/net/)
 - [Come validare i formati file con GroupDocs.Comparison .NET](/comparison/net/basic-usage/get-supported-formats/)
 - [Come confrontare automaticamente documenti Word in .NET](/comparison/net/basic-comparison/automate-word-compare-groupdocs-net-tutorial/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

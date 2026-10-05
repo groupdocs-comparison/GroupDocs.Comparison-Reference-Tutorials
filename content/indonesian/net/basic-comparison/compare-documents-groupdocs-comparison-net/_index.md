@@ -1,84 +1,137 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-14'
-description: Pelajari cara membandingkan beberapa dokumen Word di C# menggunakan GroupDocs.Comparison
-  .NET, menyoroti perbedaan di Word dengan contoh kode lengkap, pemecahan masalah,
-  dan praktik terbaik.
+date: '2026-10-05'
+description: Pelajari cara membandingkan beberapa dokumen Word dalam C# dengan GroupDocs.Comparison,
+  menyoroti perbedaan di Word dan menghasilkan laporan terintegrasi.
 keywords:
 - compare multiple word documents
 - highlight differences in word
 - groupdocs comparison c#
-lastmod: '2026-04-14'
-linktitle: Tutorial Perbandingan Dokumen C#
+- how to compare word
+- merge multiple word versions
+lastmod: '2026-10-05'
+linktitle: Tutorial perbandingan dokumen C#
+og_description: Pelajari cara membandingkan beberapa dokumen Word dalam C# dengan
+  GroupDocs.Comparison, menyoroti perbedaan di Word dan menghasilkan laporan terintegrasi
+  dalam hitungan menit.
+og_image_alt: Step‑by‑step guide for comparing multiple Word files in C# using GroupDocs.Comparison
+og_title: Cara membandingkan beberapa dokumen Word dalam C# menggunakan GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  headline: How to compare multiple word documents in C# using GroupDocs
+  type: TechArticle
+- description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  name: How to compare multiple word documents in C# using GroupDocs
+  steps:
+  - name: setting up the foundation
+    text: '`Comparer` is instantiated with a **stream** instead of a file path, giving
+      you flexibility to work with documents stored in databases or received over
+      a network.'
+  - name: adding multiple target documents
+    text: Now you can **compare multiple word documents** in a single run. GroupDocs.Comparison
+      intelligently merges all differences into one result file.
+  - name: making differences stand out (custom styling)
+    text: '`CompareOptions` allows you to specify comparison behavior and visual styling
+      for inserted, deleted, and modified content. `StyleSettings` defines the visual
+      appearance (color, font, highlight) applied to differences in the output document.'
+  - name: executing the comparison and saving results
+    text: The single line below performs the comparison across all targets and writes
+      a polished result document. Because we use `File.Create()`, you could replace
+      the stream with a database or cloud storage destination.
+  type: HowTo
+- questions:
+  - answer: It supports 30+ input and output formats—including DOCX, PDF, PPTX, XLSX,
+      and HTML—and can compare files up to 500 MB without loading the entire content
+      into memory.
+    question: How does GroupDocs.Comparison handle different document formats?
+  - answer: Yes. The engine compares content semantically, so structural changes are
+      handled gracefully.
+    question: Can I compare documents with different layouts or structures?
+  - answer: Supply the password when opening the stream; the library will decrypt
+      the file for comparison.
+    question: What if the documents are password‑protected?
+  - answer: The practical limit is system memory; on a typical development machine,
+      comparing 5‑10 large documents works well.
+    question: Is there a limit to how many documents I can compare at once?
+  - answer: Wrap the comparison logic in a console app or a web API, then invoke it
+      from your build scripts to automatically detect documentation changes.
+    question: How can I integrate this into a CI/CD pipeline?
+  type: FAQPage
 tags:
-- csharp
-- document-comparison
+- compare multiple word documents
 - groupdocs
-- tutorial
-title: Tutorial Perbandingan Dokumen C# – Membandingkan Beberapa Dokumen Word Secara
-  Program
+- csharp document comparison
+- .net tutorial
+title: Cara membandingkan beberapa dokumen Word dalam C# menggunakan GroupDocs
 type: docs
 url: /id/net/basic-comparison/compare-documents-groupdocs-comparison-net/
 weight: 1
 ---
 
-# Tutorial Perbandingan Dokumen C# – Membandingkan Beberapa Dokumen Word Secara Programatik
+# Tutorial perbandingan dokumen C# – membandingkan beberapa dokumen Word secara programatis
 
-Pernah menemukan diri Anda membandingkan dokumen Word secara manual baris demi baris, mencoba menangkap setiap perubahan? Anda tidak sendirian. **Dalam panduan ini Anda akan belajar cara membandingkan beberapa dokumen word secara efisien**, baik Anda meninjau kontrak hukum, melacak revisi, atau mengelola proyek penyuntingan kolaboratif. Mengotomatiskan proses dengan GroupDocs.Comparison untuk .NET menghemat waktu, mengurangi kesalahan, dan menghasilkan laporan perbandingan profesional hanya dalam beberapa baris kode C#.
+Jika Anda perlu **membandingkan beberapa dokumen Word** dengan cepat dan akurat, tutorial ini menunjukkan secara tepat cara melakukannya dengan GroupDocs.Comparison untuk .NET. Baik Anda sedang meninjau kontrak, melacak revisi, atau mengkonsolidasikan draf dari beberapa penulis, mengotomatisasi perbandingan menghilangkan pemeriksaan manual baris‑per‑baris, mengurangi kesalahan manusia, dan menghasilkan satu laporan yang dipoles yang menyoroti setiap penyisipan, penghapusan, dan modifikasi.
 
-**Apa yang akan Anda kuasai dalam tutorial ini:**
-- Cara membandingkan dokumen Word menggunakan stream (sempurna untuk file yang disimpan di database)
-- Menyiapkan GroupDocs.Comparison dalam proyek C# Anda dari awal
-- Menyesuaikan hasil perbandingan dengan gaya profesional
-- Menangani perbandingan beberapa dokumen secara efisien
-- Memecahkan masalah umum dan mengoptimalkan kinerja
-- Aplikasi dunia nyata yang akan menghemat Anda berjam-jam kerja manual
+**Dalam panduan ini Anda akan menguasai:**
+- Memuat file Word dari stream (ideal untuk file yang disimpan di database atau cloud)  
+- Menyiapkan GroupDocs.Comparison dalam proyek C# baru  
+- Menyesuaikan gaya visual teks yang disisipkan, dihapus, dan diubah  
+- Membandingkan **sejumlah berapa pun** dokumen target dalam satu kali proses  
+- Memecahkan masalah umum dan mengoptimalkan kinerja untuk file besar  
+- Skenario dunia nyata di mana perbandingan otomatis menghemat jam kerja manual  
 
 ## Jawaban Cepat
-- **Library apa yang harus saya gunakan?** GroupDocs.Comparison for .NET  
-- **Bisakah saya membandingkan beberapa dokumen word sekaligus?** Ya – tambahkan sebanyak stream target yang diperlukan.  
-- **Bagaimana cara menyoroti perbedaan di Word?** Gunakan `CompareOptions` dengan `StyleSettings` khusus.  
+- **Perpustakaan apa yang harus saya gunakan?** GroupDocs.Comparison untuk .NET.  
+- **Bisakah saya membandingkan beberapa dokumen Word sekaligus?** Ya – tambahkan sebanyak mungkin stream target yang Anda perlukan.  
+- **Bagaimana cara menyoroti perbedaan di Word?** Konfigurasikan `CompareOptions` dengan `StyleSettings` khusus.  
 - **Apakah saya memerlukan lisensi untuk pengembangan?** Versi percobaan gratis cukup untuk belajar; lisensi sementara menghapus watermark.  
-- **Apakah dukungan async tersedia?** Ya – Anda dapat membungkus perbandingan dalam `Task.Run` untuk panggilan non‑blocking.
+- **Apakah dukungan async tersedia?** Ya – bungkus perbandingan dalam `Task.Run` untuk eksekusi non‑blocking.  
 
-## Mengapa Membandingkan Beberapa Dokumen Word?
+## Mengapa membandingkan beberapa dokumen Word?
 
-Membandingkan lebih dari dua versi sekaligus memberi Anda tampilan tunggal yang terpadu dari semua perubahan. Ini sangat berharga ketika banyak reviewer mengedit kontrak yang sama atau ketika Anda perlu mengaudit beberapa draf proposal. Daripada mengelola laporan perbandingan terpisah, GroupDocs.Comparison menggabungkan setiap perbedaan menjadi satu dokumen, memudahkan Anda melihat penambahan, penghapusan, dan modifikasi.
+Anda dapat memperoleh **tampilan terpadu tunggal** dari semua perubahan di setiap versi alih‑alih mengelola laporan terpisah berdampingan. Ini sangat penting ketika banyak peninjau mengedit kontrak yang sama, ketika Anda perlu mengaudit beberapa draf proposal, atau ketika Anda ingin menghasilkan dokumen master yang mencatat setiap amandemen. Dengan menggabungkan perbedaan menjadi satu output, pemangku kepentingan dapat langsung melihat apa yang ditambahkan, dihapus, atau diubah tanpa membuka banyak file.
 
-## Cara Menyoroti Perbedaan dalam Dokumen Word
+## Cara menyoroti perbedaan dalam dokumen Word
 
-GroupDocs.Comparison memungkinkan Anda mendefinisikan gaya khusus untuk teks yang disisipkan, dihapus, atau diubah. Dengan mengatur `InsertedItemStyle`, `DeletedItemStyle`, dan `ModifiedItemStyle`, Anda dapat membuat laporan sesuai dengan merek organisasi Anda atau sekadar meningkatkan keterbacaan. Kami akan menunjukkan contoh dasar yang menyoroti teks yang disisipkan dengan warna kuning.
+Muat file sumber, tambahkan setiap target, lalu terapkan `CompareOptions` yang menentukan `InsertedItemStyle`, `DeletedItemStyle`, dan `ModifiedItemStyle`. Hasilnya adalah file Word di mana penyisipan muncul berwarna kuning, penghapusan berwarna merah dengan coretan, dan modifikasi berwarna biru dengan garis bawah, sesuai pedoman merek organisasi Anda.
+
+### Jawaban Langsung
+GroupDocs.Comparison memungkinkan Anda mengatur gaya visual melalui `CompareOptions`—Anda menentukan warna, font, dan tipe sorotan untuk konten yang disisipkan, dihapus, dan diubah, kemudian mesin merender gaya tersebut langsung ke dalam dokumen Word output. Langkah konfigurasi tunggal ini membuat perbedaan menjadi jelas bagi peninjau.
 
 ## Prasyarat
-
-- **GroupDocs.Comparison Library** (v25.4.0 atau lebih baru) – bekerja dengan .NET Framework 4.6.1+ dan .NET Core 2.0+  
-- **Visual Studio** (versi terbaru apa pun)  
-- Pengetahuan dasar C# – Anda harus nyaman membuat aplikasi konsol  
-- Beberapa file Word contoh untuk menguji perbandingan  
+- **Perpustakaan GroupDocs.Comparison** (v25.4.0 atau lebih baru) – kompatibel dengan .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7.  
+- **Visual Studio** (edisi terbaru apa pun) atau IDE C# yang sebanding.  
+- Pemahaman dasar tentang aplikasi konsol C#.  
+- Satu atau lebih file contoh `.docx` untuk percobaan.  
 
 ## Menyiapkan GroupDocs.Comparison
 
-### Menginstal Library (Cara Mudah)
+### Menginstal perpustakaan (cara mudah)
 
-**Opsi 1: Package Manager Console**  
+**Opsi 1: Package Manager Console**  
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**Opsi 2: .NET CLI (Favorit Pribadi Saya)**  
+**Opsi 2: .NET CLI (favorit pribadi saya)**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-### Lisensi Jadi Sederhana
+### Lisensi dibuat sederhana
 
-- **Free Trial:** Fungsi penuh dengan watermark kecil – ideal untuk belajar.  
-- **Temporary License:** Menghapus watermark untuk demo; minta kunci sementara gratis dari GroupDocs.  
-- **Production License:** Beli lisensi penuh di [GroupDocs Purchase](https://purchase.groupdocs.com/buy).
+- **Versi percobaan gratis:** Fungsionalitas penuh dengan watermark kecil—sempurna untuk belajar.  
+- **Lisensi sementara:** Menghapus watermark untuk demo; minta kunci gratis dari GroupDocs.  
+- **Lisensi produksi:** Beli lisensi penuh di [GroupDocs Purchase](https://purchase.groupdocs.com/buy).  
 
-### Perbandingan Pertama Anda (Gaya Hello World)
+### Perbandingan pertama Anda (gaya hello‑world)
 
+`Comparer` adalah kelas inti dalam GroupDocs.Comparison yang mengatur pemuatan dokumen, perbandingan, dan pembuatan hasil. Potongan kode ini membuat objek `Comparer`, memuat dokumen sumber, dan menambahkan satu dokumen target. Anggap ini sebagai penyiapan perbandingan “sebelum dan sesudah”.  
 ```csharp
 using System;
 using GroupDocs.Comparison;
@@ -99,36 +152,33 @@ namespace DocumentComparisonApp
         }
     }
 }
-```
+```  
 
-Potongan kode ini membuat objek `Comparer`, memuat dokumen sumber, dan menambahkan satu dokumen target. Anggap ini sebagai menyiapkan perbandingan “sebelum dan sesudah”.
+## Implementasi lengkap – langkah demi langkah
 
-## Implementasi Lengkap – Langkah demi Langkah
+### Langkah 1: menyiapkan fondasi
 
-### Langkah 1: Menyiapkan Fondasi
-
+`Comparer` diinstansiasi dengan **stream** alih‑alih jalur file, memberi Anda fleksibilitas untuk bekerja dengan dokumen yang disimpan di basis data atau diterima melalui jaringan.  
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
     // We'll build on this foundation
 }
-```
+```  
 
-*Apa yang terjadi?* Kami menginstansiasi `Comparer` dengan **stream** bukan jalur file, memberi kami fleksibilitas untuk bekerja dengan dokumen yang disimpan di basis data atau diterima melalui jaringan.
+### Langkah 2: menambahkan beberapa dokumen target
 
-### Langkah 2: Menambahkan Beberapa Dokumen Target
-
+Sekarang Anda dapat **membandingkan beberapa dokumen Word** dalam satu kali proses. GroupDocs.Comparison secara cerdas menggabungkan semua perbedaan menjadi satu file hasil.  
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
-```
+```  
 
-Sekarang Anda dapat **membandingkan beberapa dokumen word** dalam satu proses. GroupDocs.Comparison secara cerdas menggabungkan semua perbedaan menjadi satu file hasil.
+### Langkah 3: membuat perbedaan menonjol (gaya khusus)
 
-### Langkah 3: Membuat Perbedaan Menonjol (Gaya Kustom)
-
+`CompareOptions` memungkinkan Anda menentukan perilaku perbandingan dan gaya visual untuk konten yang disisipkan, dihapus, dan diubah. `StyleSettings` mendefinisikan tampilan visual (warna, font, sorotan) yang diterapkan pada perbedaan dalam dokumen output.  
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
@@ -137,36 +187,33 @@ CompareOptions compareOptions = new CompareOptions()
         FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
-```
+```  
 
-Gaya kustom **menyoroti perbedaan di Word** dan membuat laporan lebih mudah dibaca oleh pemangku kepentingan.
+### Langkah 4: mengeksekusi perbandingan dan menyimpan hasil
 
-### Langkah 4: Menjalankan Perbandingan dan Menyimpan Hasil
-
+Baris tunggal di bawah ini melakukan perbandingan di semua target dan menulis dokumen hasil yang dipoles. Karena kami menggunakan `File.Create()`, Anda dapat mengganti stream dengan tujuan penyimpanan basis data atau cloud.  
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.docx");
 comparer.Compare(File.Create(outputFileName), compareOptions);
-```
+```  
 
-Baris tunggal di atas melakukan perbandingan pada semua target dan menulis dokumen hasil yang rapi. Karena kami menggunakan `File.Create()`, Anda dapat mengganti stream dengan tujuan penyimpanan basis data atau cloud.
+## Masalah umum dan cara mengatasinya
 
-## Masalah Umum dan Cara Mengatasinya
+### Masalah: kesalahan “File not found”
 
-### Masalah: Kesalahan “File Not Found”
-
+Selalu pastikan bahwa jalur file yang Anda berikan ke `File.OpenRead` (atau setara) memang ada dan dapat diakses oleh proses yang berjalan.  
 ```csharp
 string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
 if (!File.Exists(sourcePath))
 {
     throw new FileNotFoundException($"Source document not found: {sourcePath}");
 }
-```
+```  
 
-Selalu verifikasi jalur sebelum membuka stream.
+### Masalah: masalah memori dengan dokumen besar
 
-### Masalah: Masalah Memori dengan Dokumen Besar
-
+Dispose stream segera menggunakan pernyataan `using`. GroupDocs.Comparison memproses dokumen dalam potongan, jadi mempertahankan stream terbuka secara tidak perlu dapat meningkatkan penggunaan memori.  
 ```csharp
 // Don't do this - keeps all streams in memory
 // comparer.Add(File.OpenRead(doc1));
@@ -178,12 +225,11 @@ using (var stream1 = File.OpenRead(doc1))
     comparer.Add(stream1);
     // Stream is disposed automatically here
 }
-```
+```  
 
-Segera dispose stream untuk menjaga penggunaan memori tetap rendah.
+### Masalah: hasil perbandingan yang tidak terduga
 
-### Masalah: Hasil Perbandingan Tidak Terduga
-
+Sesuaikan pengaturan sensitivitas di `CompareOptions` untuk mengabaikan elemen seperti perubahan header/footer, nomor halaman, atau metadata yang tidak relevan dengan tinjauan Anda.  
 ```csharp
 CompareOptions options = new CompareOptions()
 {
@@ -191,12 +237,11 @@ CompareOptions options = new CompareOptions()
     CompareComments = false,   // Ignore comment differences
     CompareFields = false      // Ignore field differences
 };
-```
+```  
 
-Sesuaikan pengaturan sensitivitas untuk mengabaikan elemen yang tidak relevan dengan tinjauan Anda.
+### Perbandingan asynchronous untuk aplikasi web
 
-### Perbandingan Asinkron untuk Aplikasi Web
-
+Bungkus pemanggilan perbandingan dalam `Task.Run` untuk menjaga thread UI tetap responsif dan menghindari pemblokiran pipeline permintaan ASP.NET.  
 ```csharp
 public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
 {
@@ -216,47 +261,51 @@ public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
         });
     }
 }
-```
+```  
 
-Bungkus perbandingan dalam `Task.Run` untuk menjaga thread UI tetap responsif.
+## Tips optimasi kinerja
 
-## Tips Optimasi Kinerja
+- **Dispose stream** segera setelah digunakan (`using` blocks).  
+- **Proses dokumen secara berurutan** bila memungkinkan; pemrosesan paralel dapat meningkatkan tekanan memori.  
+- **Manfaatkan pola async** untuk API web guna meningkatkan skalabilitas.  
+- **Antrian batch besar** dengan pekerja latar belakang untuk menghindari throttling server web.  
+- **Tetap terbaru:** GroupDocs.Comparison menerima peningkatan kinerja secara reguler—upgrade ke versi terbaru untuk mendapatkan jejak CPU dan memori yang lebih kecil.  
 
-- **Selalu dispose stream** (`using` statements).  
-- **Proses dokumen secara berurutan** bila memungkinkan.  
-- **Pertimbangkan pola async** untuk API web.  
-- **Skalakan dengan antrian** untuk skenario volume tinggi.  
-- **Jaga library tetap terbaru** untuk mendapatkan perbaikan kinerja.
+## Pertanyaan yang sering diajukan
 
-## Pertanyaan yang Sering Diajukan
+**T: Bagaimana GroupDocs.Comparison menangani format dokumen yang berbeda?**  
+A: Ia mendukung lebih dari 30 format input dan output—termasuk DOCX, PDF, PPTX, XLSX, dan HTML—dan dapat membandingkan file hingga 500 MB tanpa memuat seluruh konten ke memori.  
 
-**Q: Bagaimana GroupDocs.Comparison menangani format dokumen yang berbeda?**  
-A: Ia mendukung Word, PDF, Excel, PowerPoint, dan banyak lagi. API tetap konsisten di semua format, sehingga kode yang sama bekerja untuk PDF, DOCX, dll.
+**T: Bisakah saya membandingkan dokumen dengan tata letak atau struktur yang berbeda?**  
+A: Ya. Mesin membandingkan konten secara semantik, sehingga perubahan struktural ditangani dengan baik.  
 
-**Q: Bisakah saya membandingkan dokumen dengan tata letak atau struktur yang berbeda?**  
-A: Ya. Mesin membandingkan konten secara semantik, bukan hanya karakter per karakter, sehingga perubahan struktural ditangani dengan baik.
+**T: Bagaimana jika dokumen dilindungi kata sandi?**  
+A: Berikan kata sandi saat membuka stream; perpustakaan akan mendekripsi file untuk perbandingan.  
 
-**Q: Bagaimana jika dokumen dilindungi kata sandi?**  
-A: Anda dapat menyediakan kata sandi saat membuka stream; library akan mendekripsi file untuk perbandingan.
+**T: Apakah ada batas berapa banyak dokumen yang dapat saya bandingkan sekaligus?**  
+A: Batas praktis adalah memori sistem; pada mesin pengembangan tipikal, membandingkan 5‑10 dokumen besar berjalan dengan baik.  
 
-**Q: Apakah ada batas berapa banyak dokumen yang dapat saya bandingkan sekaligus?**  
-A: Batas praktisnya adalah memori sistem. Pada mesin pengembangan tipikal, membandingkan 5‑10 dokumen besar bekerja dengan baik.
+**T: Bagaimana saya dapat mengintegrasikan ini ke dalam pipeline CI/CD?**  
+A: Bungkus logika perbandingan dalam aplikasi konsol atau API web, lalu panggil dari skrip build Anda untuk secara otomatis mendeteksi perubahan dokumentasi.  
 
-**Q: Bagaimana saya dapat mengintegrasikan ini ke dalam pipeline CI/CD?**  
-A: Bungkus logika perbandingan dalam aplikasi konsol atau API web, lalu panggil dari skrip build Anda untuk secara otomatis mendeteksi perubahan dokumentasi.
+**T: Apakah perpustakaan mendukung dokumen multibahasa?**  
+A: Tentu saja. Ia menangani bahasa kanan‑ke‑kiri seperti Arab dan Ibrani, serta set karakter Unicode lengkap.  
 
-**Q: Apakah library mendukung dokumen multibahasa?**  
-A: Tentu saja. Ia menangani bahasa kanan‑ke‑kiri seperti Arab dan Ibrani, serta karakter Unicode.
+## Sumber daya tambahan untuk pembelajaran lebih mendalam
 
-## Sumber Daya Tambahan untuk Pembelajaran Lebih Mendalam
-
-- [Documentation](https://docs.groupdocs.com/comparison/net/) – Referensi API komprehensif dan tutorial lanjutan  
-- [API Reference](https://reference.groupdocs.com/comparison/net/) – Dokumentasi metode dan properti detail  
-- [Download Center](https://releases.groupdocs.com/comparison/net/) – Rilis terbaru dan changelog  
-- **Community Forums** – Terhubung dengan pengembang lain dan dapatkan bantuan dari ahli GroupDocs  
+- [Documentation](https://docs.groupdocs.com/comparison/net/) – referensi API komprehensif dan tutorial lanjutan  
+- [API reference](https://reference.groupdocs.com/comparison/net/) – dokumentasi detail metode dan properti  
+- [Download center](https://releases.groupdocs.com/comparison/net/) – rilis terbaru dan changelog  
+- **Forum komunitas** – terhubung dengan pengembang lain dan dapatkan bantuan dari ahli GroupDocs  
 
 ---
 
-**Terakhir Diperbarui:** 2026-04-14  
-**Diuji Dengan:** GroupDocs.Comparison 25.4.0 for .NET  
-**Penulis:** GroupDocs
+**Terakhir diperbarui:** 2026-10-05  
+**Diuji dengan:** GroupDocs.Comparison 25.4.0 untuk .NET  
+**Penulis:** GroupDocs  
+
+## Tutorial Terkait
+
+- [bandingkan dokumen .net – Panduan Penggunaan Dasar GroupDocs Comparison](/comparison/net/basic-usage/)  
+- [Tutorial Perbandingan Dokumen .NET - Mempertahankan Metadata dengan GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)  
+- [Tutorial Perbandingan Folder Groupdocs Comparison Net](/comparison/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/)

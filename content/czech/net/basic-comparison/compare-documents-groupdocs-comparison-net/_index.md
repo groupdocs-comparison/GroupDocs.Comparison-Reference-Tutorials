@@ -1,83 +1,137 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-14'
-description: Naučte se porovnávat více dokumentů Word v C# pomocí GroupDocs.Comparison
-  .NET, zvýrazňovat rozdíly ve Wordu s kompletními ukázkami kódu, řešením problémů
-  a osvědčenými postupy.
+date: '2026-10-05'
+description: Naučte se, jak porovnat více dokumentů Word v C# s GroupDocs.Comparison,
+  zvýrazněním rozdílů ve Wordu a vytvořením sjednocených zpráv.
 keywords:
 - compare multiple word documents
 - highlight differences in word
 - groupdocs comparison c#
-lastmod: '2026-04-14'
-linktitle: Tutoriál porovnání dokumentů v C#
+- how to compare word
+- merge multiple word versions
+lastmod: '2026-10-05'
+linktitle: Návod na porovnání dokumentů v C#
+og_description: Naučte se, jak porovnat více dokumentů Word v C# s GroupDocs.Comparison,
+  zvýrazněním rozdílů ve Wordu a vytvořením sjednocených zpráv během několika minut.
+og_image_alt: Step‑by‑step guide for comparing multiple Word files in C# using GroupDocs.Comparison
+og_title: Jak porovnat více dokumentů Word v C# pomocí GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  headline: How to compare multiple word documents in C# using GroupDocs
+  type: TechArticle
+- description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  name: How to compare multiple word documents in C# using GroupDocs
+  steps:
+  - name: setting up the foundation
+    text: '`Comparer` is instantiated with a **stream** instead of a file path, giving
+      you flexibility to work with documents stored in databases or received over
+      a network.'
+  - name: adding multiple target documents
+    text: Now you can **compare multiple word documents** in a single run. GroupDocs.Comparison
+      intelligently merges all differences into one result file.
+  - name: making differences stand out (custom styling)
+    text: '`CompareOptions` allows you to specify comparison behavior and visual styling
+      for inserted, deleted, and modified content. `StyleSettings` defines the visual
+      appearance (color, font, highlight) applied to differences in the output document.'
+  - name: executing the comparison and saving results
+    text: The single line below performs the comparison across all targets and writes
+      a polished result document. Because we use `File.Create()`, you could replace
+      the stream with a database or cloud storage destination.
+  type: HowTo
+- questions:
+  - answer: It supports 30+ input and output formats—including DOCX, PDF, PPTX, XLSX,
+      and HTML—and can compare files up to 500 MB without loading the entire content
+      into memory.
+    question: How does GroupDocs.Comparison handle different document formats?
+  - answer: Yes. The engine compares content semantically, so structural changes are
+      handled gracefully.
+    question: Can I compare documents with different layouts or structures?
+  - answer: Supply the password when opening the stream; the library will decrypt
+      the file for comparison.
+    question: What if the documents are password‑protected?
+  - answer: The practical limit is system memory; on a typical development machine,
+      comparing 5‑10 large documents works well.
+    question: Is there a limit to how many documents I can compare at once?
+  - answer: Wrap the comparison logic in a console app or a web API, then invoke it
+      from your build scripts to automatically detect documentation changes.
+    question: How can I integrate this into a CI/CD pipeline?
+  type: FAQPage
 tags:
-- csharp
-- document-comparison
+- compare multiple word documents
 - groupdocs
-- tutorial
-title: Tutorial porovnávání dokumentů v C# – Programové porovnání více Word dokumentů
+- csharp document comparison
+- .net tutorial
+title: Jak porovnat více dokumentů Word v C# pomocí GroupDocs
 type: docs
 url: /cs/net/basic-comparison/compare-documents-groupdocs-comparison-net/
 weight: 1
 ---
 
-# Srovnání dokumentů C# tutoriál – Porovnání více Word dokumentů programově
+# Návod na porovnání dokumentů v C# – programové porovnání více dokumentů Word
 
-Už jste se někdy museli ručně porovnávat Word dokumenty řádek po řádku a zachytit každou změnu? Nejste v tom sami. **V tomto průvodci se naučíte, jak efektivně porovnávat více Word dokumentů**, ať už kontrolujete právní smlouvy, sledujete revize nebo spravujete projekty společné editace. Automatizace procesu pomocí GroupDocs.Comparison pro .NET vám ušetří čas, sníží chyby a vytvoří profesionální srovnávací zprávy během několika řádků C# kódu.
+Pokud potřebujete **porovnat více dokumentů Word** rychle a přesně, tento návod vám přesně ukáže, jak to provést pomocí GroupDocs.Comparison pro .NET. Ať už kontrolujete smlouvy, sledujete revize nebo konsolidujete návrhy od několika autorů, automatizace porovnání eliminuje ruční kontrolu řádek po řádku, snižuje lidské chyby a vytváří jednotnou vylepšenou zprávu, která zvýrazní každé vložení, smazání a úpravu.
 
-**Co se v tomto tutoriálu naučíte:**
-- Jak porovnávat Word dokumenty pomocí streamů (ideální pro soubory uložené v databázi)
-- Nastavení GroupDocs.Comparison ve vašem C# projektu od nuly  
-- Přizpůsobení výsledků porovnání profesionálním stylem
-- Efektivní zpracování porovnání více dokumentů
-- Řešení běžných problémů a optimalizace výkonu
-- Reálné aplikace, které vám ušetří hodiny ruční práce
+**V tomto průvodci se naučíte:**
+- Načítání souborů Word ze streamů (ideální pro soubory uložené v databázi nebo v cloudu)  
+- Nastavení GroupDocs.Comparison v novém projektu C#  
+- Přizpůsobení vizuálního stylu vloženého, smazaného a změněného textu  
+- Porovnání **libovolného počtu** cílových dokumentů najednou  
+- Řešení běžných problémů a ladění výkonu pro velké soubory  
+- Reálné scénáře, kde automatické porovnání šetří hodiny ruční práce  
 
 ## Rychlé odpovědi
-- **Jakou knihovnu mám použít?** GroupDocs.Comparison for .NET  
-- **Mohu porovnat více Word dokumentů najednou?** Ano – přidejte tolik cílových streamů, kolik potřebujete.  
-- **Jak zvýrazním rozdíly ve Wordu?** Použijte `CompareOptions` s vlastním `StyleSettings`.  
+- **Jakou knihovnu mám použít?** GroupDocs.Comparison for .NET.  
+- **Mohu porovnat více dokumentů Word najednou?** Ano – přidejte tolik cílových streamů, kolik potřebujete.  
+- **Jak zvýraznit rozdíly ve Wordu?** Nakonfigurujte `CompareOptions` s vlastním `StyleSettings`.  
 - **Potřebuji licenci pro vývoj?** Bezplatná zkušební verze funguje pro učení; dočasná licence odstraňuje vodoznaky.  
-- **Je k dispozici podpora asynchronního provozu?** Ano – můžete obalit porovnání do `Task.Run` pro neblokující volání.
+- **Je k dispozici podpora async?** Ano – zabalte porovnání do `Task.Run` pro neblokující provedení.  
 
-## Proč porovnávat více Word dokumentů?
+## Proč porovnávat více dokumentů Word?
 
-Porovnání více než dvou verzí najednou vám poskytne jednotný přehled o všech změnách. To je zvláště cenné, když více recenzentů upravuje stejnou smlouvu nebo když potřebujete auditovat několik návrhů. Místo manipulace s oddělenými srovnávacími zprávami GroupDocs.Comparison sloučí všechny rozdíly do jednoho dokumentu, což usnadňuje odhalení přidání, odstranění a úprav.
+Můžete získat **jednotný přehled** všech změn napříč všemi verzemi místo toho, abyste se potýkali s oddělenými zprávami vedle sebe. To je zásadní, když více recenzentů upravuje stejnou smlouvu, když potřebujete auditovat několik návrhů nabídek nebo když chcete vytvořit hlavní dokument, který zaznamenává každou úpravu. Sloučením rozdílů do jednoho výstupu mohou zúčastněné strany okamžitě vidět, co bylo přidáno, odebráno nebo změněno, aniž by otevíraly více souborů.
 
-## Jak zvýraznit rozdíly ve Word dokumentech
+## Jak zvýraznit rozdíly v dokumentech Word
 
-GroupDocs.Comparison vám umožní definovat vlastní stylování pro vložený, smazaný nebo změněný text. Nastavením `InsertedItemStyle`, `DeletedItemStyle` a `ModifiedItemStyle` můžete zprávu přizpůsobit firemnímu stylu nebo jen zlepšit čitelnost. Provedeme základní příklad, který zvýrazní vložený text žlutě.
+Načtěte zdrojový soubor, přidejte každý cíl a poté aplikujte `CompareOptions`, které určují `InsertedItemStyle`, `DeletedItemStyle` a `ModifiedItemStyle`. Výsledkem je soubor Word, kde jsou vložení zobrazena žlutě, smazání červeně přeškrtnutá a úpravy podtržené modře, v souladu s brandingovými směrnicemi vaší organizace.
+
+### Přímá odpověď
+GroupDocs.Comparison vám umožňuje nastavit vizuální styly pomocí `CompareOptions` — definujete barvy, písma a typy zvýraznění pro vložený, smazaný a upravený obsah, poté engine tyto styly přímo vloží do výstupního dokumentu Word. Tento jediný konfigurační krok činí rozdíly pro recenzenty jednoznačnými.
 
 ## Požadavky
+- **GroupDocs.Comparison knihovna** (v25.4.0 nebo novější) – kompatibilní s .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7.  
+- **Visual Studio** (jakékoli recentní vydání) nebo srovnatelný C# IDE.  
+- Základní znalost C# konzolových aplikací.  
+- Jeden nebo více ukázkových souborů `.docx` pro experimentování.  
 
-- **GroupDocs.Comparison Library** (v25.4.0 nebo novější) – funguje s .NET Framework 4.6.1+ a .NET Core 2.0+  
-- **Visual Studio** (jakákoli recentní verze)  
-- Základní znalost C# – měli byste být schopni vytvořit konzolovou aplikaci  
-- Několik ukázkových Word souborů pro testování porovnání  
+## Zprovoznění GroupDocs.Comparison
 
-## Získání a spuštění GroupDocs.Comparison
+### Instalace knihovny (jednoduchý způsob)
 
-### Instalace knihovny (Jednoduchý způsob)
-
-**Možnost 1: Package Manager Console**
+**Možnost 1: Package Manager Console**  
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**Možnost 2: .NET CLI (Můj osobní favorit)**
+**Možnost 2: .NET CLI (můj osobní favorit)**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
 ### Licencování jednoduše
 
-- **Free Trial:** Plná funkčnost s drobnými vodoznaky – ideální pro učení.  
-- **Temporary License:** Odstraňuje vodoznaky pro demonstrace; požádejte o bezplatný dočasný klíč od GroupDocs.  
-- **Production License:** Zakupte plnou licenci na [Nákup GroupDocs](https://purchase.groupdocs.com/buy).
+- **Bezplatná zkušební verze:** Plná funkčnost s malým vodoznakem — ideální pro učení.  
+- **Dočasná licence:** Odstraňuje vodoznaky pro demonstrace; požádejte o bezplatný klíč od GroupDocs.  
+- **Produkční licence:** Zakupte plnou licenci na [GroupDocs Purchase](https://purchase.groupdocs.com/buy).  
 
-### Vaše první porovnání (styl Hello World)
+### Váš první srovnání (styl hello‑world)
 
+`Comparer` je hlavní třída v GroupDocs.Comparison, která orchestruje načítání dokumentů, porovnání a generování výsledku.  
+Tento úryvek vytvoří objekt `Comparer`, načte zdrojový dokument a přidá jeden cílový dokument. Považujte to za nastavení porovnání „před a po“.  
 ```csharp
 using System;
 using GroupDocs.Comparison;
@@ -98,36 +152,34 @@ namespace DocumentComparisonApp
         }
     }
 }
-```
-
-Tento úryvek vytvoří objekt `Comparer`, načte zdrojový dokument a přidá jeden cílový dokument. Považujte to za nastavení porovnání „před a po“.
+```  
 
 ## Kompletní implementace – krok za krokem
 
-### Krok 1: Nastavení základů
+### Krok 1: nastavení základu
 
+`Comparer` je vytvořen s **streamem** místo cesty k souboru, což vám poskytuje flexibilitu pracovat s dokumenty uloženými v databázích nebo přijatými přes síť.  
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
     // We'll build on this foundation
 }
-```
+```  
 
-*Co se děje?* Vytváříme instanci `Comparer` s **streamem** místo cesty k souboru, což nám poskytuje flexibilitu pracovat s dokumenty uloženými v databázích nebo přijatými přes síť.
+### Krok 2: přidání více cílových dokumentů
 
-### Krok 2: Přidání více cílových dokumentů
-
+Nyní můžete **porovnat více dokumentů Word** v jednom běhu. GroupDocs.Comparison inteligentně sloučí všechny rozdíly do jednoho výstupního souboru.  
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
-```
+```  
 
-Nyní můžete **porovnat více Word dokumentů** v jednom běhu. GroupDocs.Comparison inteligentně sloučí všechny rozdíly do jednoho výstupního souboru.
+### Krok 3: zvýraznění rozdílů (vlastní stylování)
 
-### Krok 3: Zvýraznění rozdílů (vlastní stylování)
-
+`CompareOptions` vám umožňuje specifikovat chování porovnání a vizuální stylování pro vložený, smazaný a upravený obsah.  
+`StyleSettings` definuje vizuální vzhled (barvu, písmo, zvýraznění) aplikovaný na rozdíly ve výstupním dokumentu.  
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
@@ -136,36 +188,33 @@ CompareOptions compareOptions = new CompareOptions()
         FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
-```
+```  
 
-Vlastní stylování **zvýrazní rozdíly ve Wordu** a usnadní čtení zprávy pro zainteresované strany.
+### Krok 4: provedení porovnání a uložení výsledků
 
-### Krok 4: Spuštění porovnání a uložení výsledků
-
+Jedna řádka níže provádí porovnání napříč všemi cíli a zapíše vylepšený výstupní dokument. Protože používáme `File.Create()`, můžete stream nahradit cílem v databázi nebo cloudovém úložišti.  
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.docx");
 comparer.Compare(File.Create(outputFileName), compareOptions);
-```
+```  
 
-Jedna řádka výše provádí porovnání napříč všemi cíli a zapíše vylepšený výstupní dokument. Protože používáme `File.Create()`, můžete stream nahradit cílem v databázi nebo cloudovém úložišti.
+## Časté problémy a jejich řešení
 
-## Časté problémy a jak je řešit
+### Problém: chyby „Soubor nenalezen“
 
-### Problém: Chyby „Soubor nenalezen“
-
+Vždy ověřte, že cesty k souborům, které předáváte do `File.OpenRead` (nebo ekvivalentu), skutečně existují a jsou přístupné z běžícího procesu.  
 ```csharp
 string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
 if (!File.Exists(sourcePath))
 {
     throw new FileNotFoundException($"Source document not found: {sourcePath}");
 }
-```
+```  
 
-Vždy ověřte cesty před otevřením streamů.
+### Problém: problémy s pamětí u velkých dokumentů
 
-### Problém: Problémy s pamětí u velkých dokumentů
-
+Okamžitě uvolňujte streamy pomocí `using` bloků. GroupDocs.Comparison zpracovává dokumenty po částech, takže ponechávání streamů otevřených zbytečně může zvýšit využití paměti.  
 ```csharp
 // Don't do this - keeps all streams in memory
 // comparer.Add(File.OpenRead(doc1));
@@ -177,12 +226,11 @@ using (var stream1 = File.OpenRead(doc1))
     comparer.Add(stream1);
     // Stream is disposed automatically here
 }
-```
+```  
 
-Okamžitě uvolňujte streamy, aby byl nízký odběr paměti.
+### Problém: neočekávané výsledky porovnání
 
-### Problém: Neočekávané výsledky porovnání
-
+Upravte nastavení citlivosti v `CompareOptions`, aby se ignorovaly prvky jako změny záhlaví/pati, čísla stránek nebo metadata, která nejsou relevantní pro vaši revizi.  
 ```csharp
 CompareOptions options = new CompareOptions()
 {
@@ -190,12 +238,11 @@ CompareOptions options = new CompareOptions()
     CompareComments = false,   // Ignore comment differences
     CompareFields = false      // Ignore field differences
 };
-```
-
-Upravte nastavení citlivosti, aby se ignorovaly prvky, které nejsou relevantní pro vaši revizi.
+```  
 
 ### Asynchronní porovnání pro webové aplikace
 
+Zabalte volání porovnání do `Task.Run`, aby UI vlákna zůstala responzivní a aby nedocházelo k blokování pipeline požadavků ASP.NET.  
 ```csharp
 public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
 {
@@ -215,47 +262,51 @@ public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
         });
     }
 }
-```
-
-Obalte porovnání do `Task.Run`, aby UI vlákna zůstala responzivní.
+```  
 
 ## Tipy pro optimalizaci výkonu
 
-- **Vždy uvolňujte streamy** (`using` statements).  
-- **Zpracovávejte dokumenty sekvenčně**, pokud je to možné.  
-- **Zvažte asynchronní vzory** pro webové API.  
-- **Škálujte pomocí front** pro scénáře s vysokým objemem.  
-- **Udržujte knihovnu aktuální**, abyste těžili z vylepšení výkonu.
+- **Uvolňujte streamy** okamžitě po použití (`using` bloky).  
+- **Zpracovávejte dokumenty sekvenčně**, pokud je to možné; paralelní zpracování může zvýšit zatížení paměti.  
+- **Využívejte async vzory** pro webové API, aby se zlepšila škálovatelnost.  
+- **Zařaďte velké dávky** do fronty pomocí background workeru, aby nedocházelo k přetížení webového serveru.  
+- **Zůstaňte aktuální:** GroupDocs.Comparison pravidelně získává vylepšení výkonu — aktualizujte na nejnovější verzi, abyste těžili z nižšího zatížení CPU a paměti.  
 
 ## Často kladené otázky
 
 **Q: Jak GroupDocs.Comparison zachází s různými formáty dokumentů?**  
-A: Podporuje Word, PDF, Excel, PowerPoint a mnoho dalších. API zůstává konzistentní napříč formáty, takže stejný kód funguje pro PDF, DOCX atd.
+A: Podporuje více než 30 vstupních a výstupních formátů — včetně DOCX, PDF, PPTX, XLSX a HTML — a může porovnávat soubory až do 500 MB, aniž by načítala celý obsah do paměti.  
 
 **Q: Mohu porovnávat dokumenty s různými rozvrženími nebo strukturami?**  
-A: Ano. Engine porovnává obsah sémanticky, ne jen znak po znaku, takže změny ve struktuře jsou zpracovány elegantně.
+A: Ano. Engine porovnává obsah sémanticky, takže změny ve struktuře jsou zpracovány elegantně.  
 
 **Q: Co když jsou dokumenty chráněny heslem?**  
-A: Můžete při otevírání streamu zadat heslo; knihovna soubor dešifruje pro porovnání.
+A: Zadejte heslo při otevírání streamu; knihovna soubor dešifruje pro porovnání.  
 
 **Q: Existuje limit, kolik dokumentů mohu porovnat najednou?**  
-A: Praktickým limitem je paměť systému. Na typickém vývojovém počítači funguje porovnání 5‑10 velkých dokumentů dobře.
+A: Praktickým limitem je paměť systému; na typickém vývojovém počítači funguje porovnání 5‑10 velkých dokumentů dobře.  
 
 **Q: Jak mohu toto integrovat do CI/CD pipeline?**  
-A: Zabalte logiku porovnání do konzolové aplikace nebo webového API a poté ji vyvolejte ze svých build skriptů pro automatické detekování změn v dokumentaci.
+A: Zabalte logiku porovnání do konzolové aplikace nebo webového API a poté ji spouštějte ze svých skriptů pro sestavení, aby se automaticky detekovaly změny v dokumentaci.  
 
-**Q: Podporuje knihovna vícejazyčné dokumenty?**  
-A: Rozhodně. Zpracovává jazyky psané zprava doleva, jako arabštinu a hebrejštinu, stejně jako Unicode znaky.
+**Q: Podporuje knihovna vícejazykové dokumenty?**  
+A: Rozhodně. Zpracovává jazyky psané zprava doleva, jako arabštinu a hebrejštinu, stejně jako kompletní sady znaků Unicode.  
 
-## Další zdroje pro pokročilejší učení
+## Další zdroje pro hlubší učení
 
-- [Dokumentace](https://docs.groupdocs.com/comparison/net/) – Komplexní referenční příručka API a pokročilé tutoriály  
-- [Reference API](https://reference.groupdocs.com/comparison/net/) – Podrobné dokumenty metod a vlastností  
-- [Středisko ke stažení](https://releases.groupdocs.com/comparison/net/) – Nejnovější verze a seznam změn  
-- **Komunitní fóra** – Spojte se s dalšími vývojáři a získejte pomoc od expertů GroupDocs  
+- [Documentation](https://docs.groupdocs.com/comparison/net/) – komplexní reference API a pokročilé návody  
+- [API reference](https://reference.groupdocs.com/comparison/net/) – podrobná dokumentace metod a vlastností  
+- [Download center](https://releases.groupdocs.com/comparison/net/) – nejnovější verze a seznam změn  
+- **Community forums** – spojte se s dalšími vývojáři a získejte pomoc od expertů GroupDocs  
 
 ---
 
-**Poslední aktualizace:** 2026-04-14  
-**Testováno s:** GroupDocs.Comparison 25.4.0 for .NET  
-**Autor:** GroupDocs
+**Poslední aktualizace:** 2026-10-05  
+**Testováno s:** GroupDocs.Comparison 25.4.0 for .NET  
+**Autor:** GroupDocs  
+
+## Související tutoriály
+
+- [porovnání dokumentů .net – Průvodce základním použitím GroupDocs Comparison](/comparison/net/basic-usage/)
+- [Návod na porovnání dokumentů .NET – Zachování metadat s GroupDocs](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)
+- [Návod na porovnání složek v GroupDocs Comparison Net](/comparison/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/)

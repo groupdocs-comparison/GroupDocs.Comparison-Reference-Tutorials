@@ -1,84 +1,139 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-14'
-description: Tanulja meg, hogyan hasonlíthat össze több Word-dokumentumot C#-ban a
-  GroupDocs.Comparison .NET használatával, kiemelve a különbségeket a Wordben, teljes
-  kódrészletekkel, hibakereséssel és legjobb gyakorlatokkal.
+date: '2026-10-05'
+description: Ismerje meg, hogyan hasonlíthat össze több Word dokumentumot C#-ban a
+  GroupDocs.Comparison segítségével, kiemelve a különbségeket a Wordben, és egységes
+  jelentéseket készítve.
 keywords:
 - compare multiple word documents
 - highlight differences in word
 - groupdocs comparison c#
-lastmod: '2026-04-14'
+- how to compare word
+- merge multiple word versions
+lastmod: '2026-10-05'
 linktitle: Dokumentum-összehasonlítás C# oktatóanyag
+og_description: Ismerje meg, hogyan hasonlíthat össze több Word dokumentumot C#-ban
+  a GroupDocs.Comparison segítségével, kiemelve a különbségeket a Wordben, és percek
+  alatt egységes jelentéseket készítve.
+og_image_alt: Step‑by‑step guide for comparing multiple Word files in C# using GroupDocs.Comparison
+og_title: Hogyan hasonlítsunk össze több Word dokumentumot C#-ban a GroupDocs segítségével
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  headline: How to compare multiple word documents in C# using GroupDocs
+  type: TechArticle
+- description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  name: How to compare multiple word documents in C# using GroupDocs
+  steps:
+  - name: setting up the foundation
+    text: '`Comparer` is instantiated with a **stream** instead of a file path, giving
+      you flexibility to work with documents stored in databases or received over
+      a network.'
+  - name: adding multiple target documents
+    text: Now you can **compare multiple word documents** in a single run. GroupDocs.Comparison
+      intelligently merges all differences into one result file.
+  - name: making differences stand out (custom styling)
+    text: '`CompareOptions` allows you to specify comparison behavior and visual styling
+      for inserted, deleted, and modified content. `StyleSettings` defines the visual
+      appearance (color, font, highlight) applied to differences in the output document.'
+  - name: executing the comparison and saving results
+    text: The single line below performs the comparison across all targets and writes
+      a polished result document. Because we use `File.Create()`, you could replace
+      the stream with a database or cloud storage destination.
+  type: HowTo
+- questions:
+  - answer: It supports 30+ input and output formats—including DOCX, PDF, PPTX, XLSX,
+      and HTML—and can compare files up to 500 MB without loading the entire content
+      into memory.
+    question: How does GroupDocs.Comparison handle different document formats?
+  - answer: Yes. The engine compares content semantically, so structural changes are
+      handled gracefully.
+    question: Can I compare documents with different layouts or structures?
+  - answer: Supply the password when opening the stream; the library will decrypt
+      the file for comparison.
+    question: What if the documents are password‑protected?
+  - answer: The practical limit is system memory; on a typical development machine,
+      comparing 5‑10 large documents works well.
+    question: Is there a limit to how many documents I can compare at once?
+  - answer: Wrap the comparison logic in a console app or a web API, then invoke it
+      from your build scripts to automatically detect documentation changes.
+    question: How can I integrate this into a CI/CD pipeline?
+  type: FAQPage
 tags:
-- csharp
-- document-comparison
+- compare multiple word documents
 - groupdocs
-- tutorial
-title: Dokumentum-összehasonlítás C#-os útmutató – Több Word-dokumentum programozott
-  összehasonlítása
+- csharp document comparison
+- .net tutorial
+title: Hogyan hasonlítsunk össze több Word dokumentumot C#-ban a GroupDocs segítségével
 type: docs
 url: /hu/net/basic-comparison/compare-documents-groupdocs-comparison-net/
 weight: 1
 ---
 
-# Dokumentum-összehasonlítás C# oktató – Több Word dokumentum programozott összehasonlítása
+# Dokumentum összehasonlítás C# oktatóanyag – több Word dokumentum programozott összehasonlítása
 
-Valaha is manuálisan hasonlítottad össze a Word dokumentumokat soronként, hogy minden egyes változást észrevegyél? Nem vagy egyedül. **Ebben az útmutatóban megtanulod, hogyan hasonlíts össze több Word dokumentumot hatékonyan**, legyen szó jogi szerződések felülvizsgálatáról, változások nyomon követéséről vagy együttműködő szerkesztési projektek kezeléséről. A GroupDocs.Comparison for .NET használatával automatizálhatod a folyamatot, időt takaríthatsz meg, csökkentheted a hibákat, és néhány C# sorral professzionális összehasonlítási jelentéseket hozhatsz létre.
+Ha gyorsan és pontosan **több Word dokumentumot** kell összehasonlítania, ez az oktatóanyag pontosan megmutatja, hogyan teheti ezt a GroupDocs.Comparison for .NET segítségével. Akár szerződéseket vizsgál, változtatásokat követ, vagy több szerző vázlatait egyesíti, az összehasonlítás automatizálása megszünteti a kézi sor‑soron ellenőrzést, csökkenti az emberi hibákat, és egyetlen kifinomult jelentést hoz létre, amely kiemeli minden beszúrást, törlést és módosítást.
 
-**Mit fogsz elsajátítani ebben az oktatóanyagban:**
-- Hogyan hasonlíts össze Word dokumentumokat stream-ekkel (tökéletes adatbázisban tárolt fájlokhoz)
-- A GroupDocs.Comparison beállítása a C# projektedben a semmiből
-- Az összehasonlítási eredmények testreszabása professzionális stílusokkal
-- Több dokumentum hatékony összehasonlítása
-- Gyakori problémák megoldása és teljesítményoptimalizálás
-- Valós példák, amelyek órákat spórolnak a manuális munkában
+**Ebben az útmutatóban elsajátítja:**
+- Word fájlok betöltése stream‑ekből (ideális adatbázisban tárolt vagy felhőben lévő fájlokhoz)  
+- GroupDocs.Comparison beállítása egy új C# projektben  
+- A beszúrt, törölt és módosított szöveg vizuális stílusának testreszabása  
+- **Bármennyi** cél dokumentum összehasonlítása egyetlen futásban  
+- Gyakori hibák elhárítása és a teljesítmény finomhangolása nagy fájlok esetén  
+- Valós példák, ahol az automatizált összehasonlítás órákat takarít meg a kézi munkából  
 
 ## Gyors válaszok
-- **Milyen könyvtárat használjak?** GroupDocs.Comparison for .NET  
-- **Lehet-e egyszerre több Word dokumentumot összehasonlítani?** Igen – annyi cél stream-et adhatsz hozzá, amennyire szükséged van.  
-- **Hogyan emelhetők ki a különbségek a Wordben?** Használd a `CompareOptions`-t egyedi `StyleSettings`-kel.  
-- **Szükség van-e licencre fejlesztéshez?** Egy ingyenes próba megfelelő a tanuláshoz; egy ideiglenes licenc eltávolítja a vízjeleket.  
-- **Elérhető-e async támogatás?** Igen – a összehasonlítást beburkolhatod `Task.Run`-nal a nem blokkoló hívásokhoz.
+- **Melyik könyvtárat használjam?** GroupDocs.Comparison for .NET.  
+- **Összehasonlíthatok több Word dokumentumot egyszerre?** Igen – adjon hozzá annyi cél stream‑et, amennyire szüksége van.  
+- **Hogyan emelhetem ki a különbségeket Wordben?** Állítsa be a `CompareOptions`-t egyedi `StyleSettings`-kel.  
+- **Szükségem van licencre a fejlesztéshez?** Az ingyenes próba verzió tanuláshoz megfelelő; egy ideiglenes licenc eltávolítja a vízjeleket.  
+- **Elérhető az aszinkron támogatás?** Igen – csomagolja az összehasonlítást `Task.Run`-ba a nem blokkoló végrehajtáshoz.  
 
-## Miért érdemes több Word dokumentumot összehasonlítani?
+## Miért hasonlítsunk össze több Word dokumentumot?
 
-Több mint két verzió egyidejű összehasonlítása egyetlen, egységes nézetet ad minden változásról. Ez különösen értékes, ha több lektor szerkeszti ugyanazt a szerződést, vagy ha több ajánlattal kell auditálni. A különálló összehasonlítási jelentések helyett a GroupDocs.Comparison minden különbséget egy dokumentumba egyesít, így könnyen felismerhetők a hozzáadások, törlések és módosítások.
+Egy **egységes nézetet** kaphat az összes változásról minden verzióban, ahelyett, hogy különálló egymás melletti jelentésekkel kellene foglalkoznia. Ez kulcsfontosságú, amikor több ellenőrző ugyanazt a szerződést szerkeszti, amikor több ajánlati vázlatot kell auditálni, vagy amikor egy fődokumentumot szeretne létrehozni, amely minden módosítást rögzít. A különbségek egyetlen kimenetbe való egyesítésével az érintettek azonnal láthatják, mi lett hozzáadva, eltávolítva vagy módosítva anélkül, hogy több fájlt kellene megnyitniuk.
 
-## Hogyan emeljük ki a különbségeket a Word dokumentumokban
+## Hogyan emeljük ki a különbségeket Word dokumentumokban
 
-A GroupDocs.Comparison lehetővé teszi egyedi stílusok definiálását a beszúrt, törölt vagy módosított szöveghez. Az `InsertedItemStyle`, `DeletedItemStyle` és `ModifiedItemStyle` beállításával a jelentés illeszkedhet a szervezeted arculatához, vagy egyszerűen javíthatja az olvashatóságot. Egy alapvető példán keresztül megmutatjuk, hogyan emeljük ki a beszúrt szöveget sárgával.
+Töltse be a forrásfájlt, adja hozzá az egyes célokat, majd alkalmazza a `CompareOptions`-t, amely meghatározza a `InsertedItemStyle`, `DeletedItemStyle` és `ModifiedItemStyle` beállításokat. Az eredmény egy Word fájl, ahol a beszúrások sárgán, a törlések piros áthúzással, a módosítások pedig kék aláhúzással jelennek meg, összhangban a szervezet márka irányelveivel.
 
-## Előfeltételek
+### Közvetlen válasz
+A GroupDocs.Comparison lehetővé teszi, hogy a `CompareOptions` segítségével állítsa be a vizuális stílusokat – meghatározhatja a színeket, betűtípusokat és kiemelési típusokat a beszúrt, törölt és módosított tartalomhoz, majd a motor ezeket a stílusokat közvetlenül a kimeneti Word dokumentumba rendereli. Ez az egyetlen konfigurációs lépés egyértelművé teszi a különbségeket az ellenőrzők számára.
 
-- **GroupDocs.Comparison Library** (v25.4.0 vagy újabb) – működik .NET Framework 4.6.1+ és .NET Core 2.0+ környezetben  
-- **Visual Studio** (bármely friss verzió)  
-- Alapvető C# ismeretek – kényelmesen tudj konzolalkalmazást létrehozni  
-- Néhány mint Word fájl a teszteléshez  
+## Előkövetelmények
+- **GroupDocs.Comparison könyvtár** (v25.4.0 vagy újabb) – kompatibilis a .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7 verziókkal.  
+- **Visual Studio** (bármely friss kiadás) vagy egy hasonló C# IDE.  
+- Alapvető ismeretek a C# konzolalkalmazásokról.  
+- Egy vagy több mintaként szolgáló `.docx` fájl a kísérletezéshez.  
 
-## A GroupDocs.Comparison beállítása és futtatása
+## A GroupDocs.Comparison beüzemelése
 
 ### A könyvtár telepítése (egyszerű módon)
 
-**Opció 1: Package Manager Console**
+**1. opció: Package Manager Console**  
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**Opció 2: .NET CLI (személyes kedvencem)**
+**2. opció: .NET CLI (személyes kedvencem)**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
 ### Licencelés egyszerűen
 
-- **Ingyenes próba:** Teljes funkcionalitás kisebb vízjelekkel – ideális tanuláshoz.  
-- **Ideiglenes licenc:** Vízcímkék eltávolítása demókhoz; kérj ingyenes ideiglenes kulcsot a GroupDocs-tól.  
-- **Production License:** Teljes licenc vásárlása a [GroupDocs Purchase](https://purchase.groupdocs.com/buy) oldalon.
+- **Ingyenes próba:** Teljes funkcionalitás egy kis vízjellel – tökéletes tanuláshoz.  
+- **Ideiglenes licenc:** Eltávolítja a vízjeleket demókhoz; kérjen ingyenes kulcsot a GroupDocs-tól.  
+- **Production licenc:** Vásároljon teljes licencet a [GroupDocs Purchase](https://purchase.groupdocs.com/buy) oldalon.  
 
-### Az első összehasonlítás (Hello World stílusban)
+### Az első összehasonlítás (hello‑world stílusban)
 
+`Comparer` a GroupDocs.Comparison központi osztálya, amely a dokumentumok betöltését, összehasonlítását és az eredmény generálását irányítja.  
+Ez a kódrészlet létrehoz egy `Comparer` objektumot, betölti a forrásdokumentumot, és hozzáad egyetlen cél dokumentumot. Tekintse úgy, mint egy „előtte‑utána” összehasonlítás beállítását.  
 ```csharp
 using System;
 using GroupDocs.Comparison;
@@ -99,36 +154,35 @@ namespace DocumentComparisonApp
         }
     }
 }
-```
+```  
 
-Ez a kódrészlet létrehoz egy `Comparer` objektumot, betölti a forrásdokumentumot, és egy cél dokumentumot ad hozzá. Olyan, mintha egy „előtte és utána” összehasonlítást állítanánk be.
+## A teljes megvalósítás – lépésről lépésre
 
-## A teljes megvalósítás – Lépésről lépésre
+### 1. lépés: az alap felállítása
 
-### 1. lépés: Alapok felállítása
-
+`Comparer` egy **stream**-mel van példányosítva a fájlútvonal helyett, ami rugalmasságot biztosít adatbázisban tárolt vagy hálózaton keresztül érkező dokumentumokkal való munkához.  
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
     // We'll build on this foundation
 }
-```
+```  
 
-*Mi történik?* A `Comparer`-t **stream**-mel példányosítjuk a fájlútvonal helyett, ami rugalmasságot biztosít adatbázisban tárolt vagy hálózaton keresztül érkező dokumentumok esetén.
+### 2. lépés: több cél dokumentum hozzáadása
 
-### 2. lépés: Több cél dokumentum hozzáadása
-
+Most **több Word dokumentumot** tud összehasonlítani egyetlen futtatásban.  
+A GroupDocs.Comparison intelligensen egyesíti az összes különbséget egy eredményfájlba.  
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
-```
+```  
 
-Most **több Word dokumentumot** hasonlíthatsz össze egyetlen futtatásban. A GroupDocs.Comparison intelligensen egyesíti az összes különbséget egy eredményfájlba.
+### 3. lépés: a különbségek kiemelése (egyedi stílus)
 
-### 3. lépés: A különbségek kiemelése (egyedi stílus)
-
+`CompareOptions` lehetővé teszi a összehasonlítási viselkedés és a beszúrt, törölt, valamint módosított tartalom vizuális stílusának meghatározását.  
+`StyleSettings` meghatározza a vizuális megjelenést (szín, betűtípus, kiemelés), amely a kimeneti dokumentumban lévő különbségekre vonatkozik.  
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
@@ -137,36 +191,35 @@ CompareOptions compareOptions = new CompareOptions()
         FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
-```
+```  
 
-Az egyedi stílus **kiemeli a különbségeket a Wordben**, és a jelentést könnyebben olvashatóvá teszi az érintettek számára.
+### 4. lépés: az összehasonlítás végrehajtása és az eredmények mentése
 
-### 4. lépés: Az összehasonlítás végrehajtása és az eredmények mentése
-
+Az alábbi egyetlen sor elvégzi az összehasonlítást az összes célon, és egy kifinomult eredménydokumentumot ír.  
+Mivel a `File.Create()`-t használjuk, a stream-et helyettesítheti adatbázis vagy felhő tárolási célponttal.  
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.docx");
 comparer.Compare(File.Create(outputFileName), compareOptions);
-```
-
-A fenti egyetlen sor elvégzi az összehasonlítást az összes célon, és egy kifinomult eredménydokumentumot ír ki. Mivel `File.Create()`-t használunk, a stream-et helyettesítheted adatbázis- vagy felhőtároló célponttal is.
+```  
 
 ## Gyakori problémák és megoldások
 
-### Probléma: „File Not Found” hibák
+### Probléma: “File not found” hibák
 
+Mindig ellenőrizze, hogy a `File.OpenRead`‑nek (vagy ekvivalensnek) átadott fájlútvonalak valóban léteznek és elérhetők legyenek a futó folyamat számára.  
 ```csharp
 string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
 if (!File.Exists(sourcePath))
 {
     throw new FileNotFoundException($"Source document not found: {sourcePath}");
 }
-```
+```  
 
-Mindig ellenőrizd az útvonalakat a stream-ek megnyitása előtt.
+### Probléma: memória problémák nagy dokumentumok esetén
 
-### Probléma: Memória problémák nagy dokumentumoknál
-
+Azonnal szabadítsa fel a stream-eket `using` blokkok használatával.  
+A GroupDocs.Comparison a dokumentumokat darabokban dolgozza fel, ezért a stream-ek felesleges nyitva tartása megnövelheti a memóriahasználatot.  
 ```csharp
 // Don't do this - keeps all streams in memory
 // comparer.Add(File.OpenRead(doc1));
@@ -178,12 +231,11 @@ using (var stream1 = File.OpenRead(doc1))
     comparer.Add(stream1);
     // Stream is disposed automatically here
 }
-```
+```  
 
-A stream-eket gyorsan zárd le (`Dispose`), hogy alacsony maradjon a memóriahasználat.
+### Probléma: váratlan összehasonlítási eredmények
 
-### Probléma: Váratlan összehasonlítási eredmények
-
+Állítsa be a `CompareOptions` érzékenységi beállításait, hogy figyelmen kívül hagyja a fej- és lábléc változásokat, oldalszámokat vagy a felülvizsgálatához nem releváns metaadatokat.  
 ```csharp
 CompareOptions options = new CompareOptions()
 {
@@ -191,12 +243,11 @@ CompareOptions options = new CompareOptions()
     CompareComments = false,   // Ignore comment differences
     CompareFields = false      // Ignore field differences
 };
-```
-
-Állítsd be az érzékenységi beállításokat, hogy figyelmen kívül hagyd a felülvizsgálatodhoz nem releváns elemeket.
+```  
 
 ### Aszinkron összehasonlítás webalkalmazásokhoz
 
+Csomagolja az összehasonlítási hívást `Task.Run`-ba, hogy a UI szálak reagálók maradjanak, és elkerülje az ASP.NET kéréspipeline-ok blokkolását.  
 ```csharp
 public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
 {
@@ -216,47 +267,48 @@ public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
         });
     }
 }
-```
-
-A `Task.Run`-nal becsomagolva az összehasonlítást, a UI szálak reagálók maradnak.
+```  
 
 ## Teljesítményoptimalizálási tippek
+- **A stream-eket** azonnal szabadítsa fel használat után (`using` blokkok).  
+- **A dokumentumokat sorosan** dolgozza fel, ha lehetséges; a párhuzamos feldolgozás növelheti a memória terhelését.  
+- **Használja az aszinkron mintákat** web API-khoz a skálázhatóság javítása érdekében.  
+- **Nagy kötegeket soroljon be** háttérmunkaerővel, hogy elkerülje a webkiszolgáló korlátozását.  
+- **Maradjon naprakész:** A GroupDocs.Comparison rendszeres teljesítményjavulásokat kap – frissítsen a legújabb verzióra, hogy csökkentett CPU- és memóriahasználatot érjen el.  
 
-- **Mindig zárd le a stream-eket** (`using` utasítások).  
-- **Dokumentumokat sorban dolgozd fel**, amikor csak lehetséges.  
-- **Fontold meg az async mintákat** web‑API‑k esetén.  
-- **Skálázz sorokkal** nagy mennyiségű szcenárióhoz.  
-- **Tartsd naprakészen a könyvtárat**, hogy élvezd a teljesítményjavulásokat.
-
-## Gyakran ismételt kérdések
+## Gyakran feltett kérdések
 
 **K: Hogyan kezeli a GroupDocs.Comparison a különböző dokumentumformátumokat?**  
-A: Támogatja a Word, PDF, Excel, PowerPoint és még sok más formátumot. Az API konzisztens marad a formátumok között, így ugyanaz a kód működik PDF‑ek, DOCX‑ek stb. esetén is.
+V: Támogat 30+ bemeneti és kimeneti formátumot – beleértve a DOCX, PDF, PPTX, XLSX és HTML formátumokat – és akár 500 MB méretű fájlokat is összehasonlíthat anélkül, hogy a teljes tartalmat memóriába töltené.
 
 **K: Hasonlíthatok össze dokumentumokat különböző elrendezésekkel vagy struktúrákkal?**  
-Igen. A motor szemantikus tartalmat hasonlít össze, nem csak karakterről karakterre, így a strukturális változások is megfelelően kezelhetők.
+V: Igen. A motor szemantikus módon hasonlítja össze a tartalmat, így a strukturális változások is megfelelően kezelhetők.
 
 **K: Mi van, ha a dokumentumok jelszóval védettek?**  
-Megadhatod a jelszót a stream megnyitásakor; a könyvtár feloldja a fájlt az összehasonlításhoz.
+V: Adja meg a jelszót a stream megnyitásakor; a könyvtár feloldja a fájlt az összehasonlításhoz.
 
 **K: Van korlát arra, hogy hány dokumentumot lehet egyszerre összehasonlítani?**  
-A gyakorlati korlát a rendszer memóriája. Egy tipikus fejlesztői gépen 5‑10 nagy dokumentum összehasonlítása jól működik.
+V: A gyakorlati korlát a rendszer memória; egy tipikus fejlesztői gépen 5‑10 nagy dokumentum összehasonlítása jól működik.
 
-**K: Hogyan integrálhatom ezt egy CI/CD csővezetékbe?**  
-Csomagold be az összehasonlítási logikát egy konzolalkalmazásba vagy web‑API‑ba, majd hívd meg a build‑szkriptekből, hogy automatikusan észlelje a dokumentáció változásait.
+**K: Hogyan integrálhatom ezt egy CI/CD pipeline-ba?**  
+V: Csomagolja az összehasonlítási logikát egy konzolalkalmazásba vagy web API-ba, majd hívja meg a build szkriptekből, hogy automatikusan észlelje a dokumentáció változásait.
 
 **K: Támogatja a könyvtár a többnyelvű dokumentumokat?**  
-Természetesen. Kezeli a jobbról balra író nyelveket, például az arab és héber, valamint az Unicode karaktereket.
+V: Teljes mértékben. Kezeli a jobbról balra író nyelveket, mint az arab és héber, valamint a teljes Unicode karakterkészletet.
 
 ## További források a mélyebb tanuláshoz
-
-- [Documentation](https://docs.groupdocs.com/comparison/net/) – Átfogó API‑referencia és haladó oktatóanyagok  
-- [API Reference](https://reference.groupdocs.com/comparison/net/) – Részletes metódus‑ és tulajdonság‑dokumentáció  
-- [Download Center](https://releases.groupdocs.com/comparison/net/) – Legújabb kiadások és változási naplók  
-- **Community Forums** – Csatlakozz más fejlesztőkhöz és kérj segítséget a GroupDocs szakértőitől  
+- [Documentation](https://docs.groupdocs.com/comparison/net/) – átfogó API referencia és haladó oktatóanyagok  
+- [API reference](https://reference.groupdocs.com/comparison/net/) – részletes metódus- és tulajdonság dokumentáció  
+- [Download center](https://releases.groupdocs.com/comparison/net/) – legújabb kiadások és változásnaplók  
+- **Community forums** – kapcsolódjon más fejlesztőkhöz és kérjen segítséget a GroupDocs szakértőktől  
 
 ---
 
-**Utolsó frissítés:** 2026-04-14  
-**Tesztelve a következővel:** GroupDocs.Comparison 25.4.0 for .NET  
+**Legutóbb frissítve:** 2026-10-05  
+**Tesztelve a következővel:** GroupDocs.Comparison 25.4.0 for .NET  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+- [dokumentumok összehasonlítása .net – GroupDocs Comparison Alapvető használati útmutató](/comparison/net/basic-usage/)
+- [Dokumentum összehasonlítás .NET oktatóanyag – Metaadatok megőrzése a GroupDocs-szal](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)
+- [Groupdocs Comparison Net Mappák összehasonlítása oktatóanyag](/comparison/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/)

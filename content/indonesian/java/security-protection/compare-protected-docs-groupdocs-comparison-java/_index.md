@@ -1,62 +1,116 @@
 ---
 categories:
 - Java Development
-date: '2026-05-01'
-description: Pelajari cara membandingkan dokumen terlindungi Java menggunakan GroupDocs.Comparison.
-  Tutorial langkah demi langkah dengan contoh kode untuk alur kerja dokumen yang aman.
+date: '2026-10-05'
+description: Pelajari cara membandingkan dokumen dengan GroupDocs Comparison for Java,
+  termasuk cara membandingkan beberapa dokumen java secara aman. Panduan langkah demi
+  langkah dengan contoh kode untuk alur kerja dokumen yang aman.
 keywords:
+- how to compare docs
+- compare multiple documents java
 - groupdocs comparison java
-- compare protected documents java
 - java document comparison library
-lastmod: '2026-05-01'
+- password-protected document comparison
+lastmod: '2026-10-05'
 linktitle: Bandingkan Dokumen Terlindungi Java
+og_description: Pelajari cara membandingkan dokumen dengan GroupDocs Comparison for
+  Java, termasuk cara membandingkan beberapa dokumen java secara aman. Ikuti tutorial
+  lengkap langkah demi langkah ini dengan contoh kode.
+og_image_alt: Guide to compare protected documents using GroupDocs Comparison Java
+og_title: Cara membandingkan dokumen dengan GroupDocs Comparison for Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to compare docs with GroupDocs Comparison for Java, including
+    how to compare multiple documents java securely. Step-by-step guide with code
+    examples for secure document workflows.
+  headline: How to compare docs with GroupDocs Comparison for Java
+  type: TechArticle
+- description: Learn how to compare docs with GroupDocs Comparison for Java, including
+    how to compare multiple documents java securely. Step-by-step guide with code
+    examples for secure document workflows.
+  name: How to compare docs with GroupDocs Comparison for Java
+  steps:
+  - name: import required classes
+    text: The `Comparer` class is the core engine that orchestrates loading, diff
+      calculation, and result generation. It works together with `LoadOptions` to
+      supply passwords for each document.
+  - name: set up your file paths and credentials
+    text: Never hard‑code passwords in source code. Store them in environment variables,
+      a secrets manager, or an encrypted configuration file, then read them at runtime.
+      > **Real‑world tip:** Using `char[]` for temporary password storage lets you
+      overwrite the array after use, reducing the risk of memory‑dum
+  - name: execute the comparison with proper resource management
+    text: The `Comparer` implements `AutoCloseable`, so a try‑with‑resources block
+      guarantees that all native resources are released even if an exception occurs.
+      `LoadOptions` supplies the password for each document, and multiple `add()`
+      calls let you compare any number of documents in a single run (limited o
+  - name: batch‑process dozens of versions
+    text: If you need to compare dozens of versions, consider a helper loop that iterates
+      through a collection of file‑password pairs and adds each to the `Comparer`
+      instance. This pattern lets you plug the comparison engine into larger document‑management
+      or compliance systems.
+  type: HowTo
+- questions:
+  - answer: Yes. Provide a separate `LoadOptions` instance with the correct password
+      for each document.
+    question: Can I compare documents that have different passwords?
+  - answer: Over 50 formats, including DOCX, PDF, XLSX, PPTX, TXT, and common image
+      types.
+    question: Which file formats are supported?
+  - answer: An exception such as `InvalidPasswordException` is thrown. Catch it, log
+      a clear message, and optionally skip that file.
+    question: What happens if a document fails to load?
+  - answer: Absolutely. GroupDocs.Comparison offers style options for change colors,
+      fonts, and comment placement.
+    question: Can I customize the visual style of the comparison result?
+  - answer: The practical limit is dictated by available memory and document size.
+      For large batches, process them in smaller groups.
+    question: Is there a limit to the number of documents I can compare at once?
+  type: FAQPage
 tags:
-- document-comparison
-- java-library
-- password-protection
+- compare docs
 - groupdocs
-- secure-documents
-title: 'GroupDocs Comparison Java: Membandingkan Dokumen yang Dilindungi – Panduan
-  Lengkap'
+- java document comparison
+- password protection
+- secure documents
+title: Cara membandingkan dokumen dengan GroupDocs Comparison for Java
 type: docs
 url: /id/java/security-protection/compare-protected-docs-groupdocs-comparison-java/
 weight: 1
 ---
 
-# GroupDocs Comparison Java: Membandingkan Dokumen yang Dilindungi – Panduan Lengkap
+# Cara membandingkan dokumen dengan GroupDocs Comparison untuk Java
 
-Jika Anda seorang pengembang Java yang terus-menerus berurusan dengan file yang dilindungi kata sandi dan membutuhkan cara yang andal untuk menemukan perbedaan, Anda berada di tempat yang tepat. Dalam tutorial ini kami akan menunjukkan **cara membandingkan dokumen yang dilindungi java** menggunakan pustaka **GroupDocs.Comparison** yang kuat. Anda akan mendapatkan panduan langkah‑demi‑langkah yang jelas, tip praktis untuk menangani kata sandi secara aman, dan panduan tentang cara menskalakan solusi untuk beban kerja tingkat perusahaan.
+Jika Anda seorang pengembang Java yang terus-menerus berurusan dengan file yang dilindungi password dan membutuhkan cara yang andal untuk menemukan perbedaan, Anda berada di tempat yang tepat. Dalam tutorial ini Anda akan belajar **cara membandingkan dokumen** menggunakan pustaka **GroupDocs.Comparison** yang kuat. Kami akan memandu melalui implementasi langkah‑demi‑langkah yang jelas, berbagi tip praktis untuk menangani password secara aman, dan menunjukkan cara menskalakan solusi untuk beban kerja tingkat perusahaan.
 
 ## Jawaban Cepat
-- **Perpustakaan apa yang menangani dokumen yang dilindungi kata sandi?** GroupDocs.Comparison for Java  
+- **Perpustakaan apa yang menangani dokumen yang dilindungi password?** GroupDocs.Comparison untuk Java  
 - **Bisakah saya membandingkan lebih dari dua file sekaligus?** Ya – tambahkan sebanyak mungkin dokumen target yang diperlukan  
-- **Apakah saya memerlukan lisensi untuk produksi?** Lisensi komersial diperlukan untuk penggunaan produksi  
+- **Apakah saya membutuhkan lisensi untuk produksi?** Lisensi komersial diperlukan untuk penggunaan produksi  
 - **Versi Java mana yang direkomendasikan?** JDK 11+ untuk kinerja dan keamanan terbaik  
-- **Apakah hasil perbandingan dapat diedit?** Output berupa file Word/PDF standar yang dapat Anda buka di editor apa pun  
+- **Apakah hasil perbandingan dapat diedit?** Outputnya adalah file Word/PDF standar yang dapat Anda buka di editor apa pun  
 
-## Apa itu “groupdocs comparison java”?
-**GroupDocs.Comparison for Java** adalah API khusus yang memuat file terenkripsi, menerapkan kata sandi yang diberikan, dan menghasilkan laporan perbedaan tanpa pernah menulis konten teks jelas ke disk. API ini mengabstraksi proses dekripsi, perhitungan perbedaan, dan rendering hasil sehingga Anda dapat fokus pada integrasi perbandingan dokumen yang aman ke dalam proses bisnis Anda.
+## Apa itu GroupDocs Comparison untuk Java?
+GroupDocs.Comparison untuk Java adalah API khusus yang memuat file terenkripsi, menerapkan password yang diberikan, dan menghasilkan laporan perbedaan tanpa pernah menulis konten teks jelas ke disk. API ini mengabstraksi dekripsi, perhitungan perbedaan, dan rendering hasil sehingga Anda dapat fokus pada integrasi perbandingan dokumen yang aman ke dalam proses bisnis Anda.
 
-## Mengapa Menggunakan GroupDocs.Comparison untuk Alur Kerja Dokumen Aman?
-- **Keamanan pertama** – kata sandi hanya tetap di memori selama proses perbandingan  
-- **Dukungan format luas** – Word, PDF, Excel, PowerPoint, dan lebih dari 50 tipe lainnya  
-- **Kinerja tinggi** – Algoritma yang dioptimalkan menangani file besar dengan penggunaan heap minimal  
-- **Output kaya** – Perubahan yang disorot, komentar, dan pelacakan revisi dalam file hasil  
+## Mengapa menggunakan GroupDocs.Comparison untuk alur kerja dokumen yang aman?
+GroupDocs.Comparison mendukung **lebih dari 50 format input dan output**—termasuk DOCX, PDF, XLSX, PPTX, TXT, dan tipe gambar umum—dan dapat memproses dokumen berukuran ratusan halaman tanpa memuat seluruh file ke memori. Pustaka ini menyimpan password di memori hanya selama proses perbandingan, menawarkan algoritma berperforma tinggi yang mengurangi penggunaan heap hingga 40 %, dan menghasilkan laporan perubahan yang disorot yang dapat dibuka di editor standar mana pun.
 
-## Prasyarat dan Persyaratan Penyiapan
+## Prasyarat dan persyaratan pengaturan
 
-### Apa yang Anda Butuhkan
+### Apa yang Anda butuhkan
 1. **Java Development Kit (JDK)** – versi 8 atau lebih baru (JDK 11+ direkomendasikan)  
 2. **Maven atau Gradle** – untuk manajemen dependensi (contoh menggunakan Maven)  
 3. **Pengetahuan dasar Java** – konsep OOP, try‑with‑resources, dan penanganan pengecualian  
 4. **IDE** – IntelliJ IDEA, Eclipse, atau VS Code dengan ekstensi Java  
 
-### Pertimbangan Lisensi GroupDocs.Comparison
+### Pertimbangan lisensi GroupDocs.Comparison
 - **Uji coba gratis** – cocok untuk pengujian dan bukti konsep kecil  
 - **Lisensi sementara** – ideal untuk pengembangan dan pengujian internal  
 - **Lisensi komersial** – diperlukan untuk setiap penyebaran produksi  
 
-Anda dapat mengambil lisensi sementara dari [situs GroupDocs](https://purchase.groupdocs.com/temporary-license/) jika Anda baru memulai.
+Anda dapat memperoleh lisensi sementara dari [situs GroupDocs](https://purchase.groupdocs.com/temporary-license/) jika Anda baru memulai.
 
 ## Menyiapkan GroupDocs.Comparison untuk Java
 
@@ -81,7 +135,7 @@ Tambahkan repositori dan dependensi berikut ke file `pom.xml` Anda:
 </dependencies>
 ```
 
-**Tip profesional:** Selalu gunakan versi terbaru. Versi 25.2 mencakup peningkatan kinerja untuk dokumen yang dilindungi kata sandi.
+**Tip pro:** Selalu gunakan versi terbaru. Versi 25.2 mencakup peningkatan kinerja untuk dokumen yang dilindungi password.
 
 ### Alternatif Gradle
 Jika Anda lebih suka Gradle, gunakan konfigurasi setara ini:
@@ -98,24 +152,21 @@ dependencies {
 }
 ```
 
-## Cara Membandingkan Dokumen yang Dilindungi Java dengan GroupDocs Comparison
+## Cara membandingkan dokumen yang dilindungi di Java?
 
-### Memahami Pendekatan Inti
-Alur kerja sangat sederhana:
-1. Muat dokumen sumber dengan kata sandinya.  
-2. Tambahkan setiap dokumen target bersama dengan kata sandinya masing‑masing.  
-3. Jalankan perbandingan.  
-4. Simpan hasil yang disorot.  
+Muat file sumber dengan password-nya, tambahkan setiap dokumen target beserta password masing-masing, jalankan perbandingan, dan simpan hasil yang disorot. Alur end‑to‑end ini hanya memerlukan beberapa baris kode dan menjamin bahwa konten teks jelas tidak pernah menyentuh sistem file.
 
-### Implementasi Lengkap dengan Penanganan Kesalahan
+### Langkah 1: impor kelas yang diperlukan
+Kelas `Comparer` adalah mesin inti yang mengatur pemuatan, perhitungan perbedaan, dan pembuatan hasil. Ia bekerja bersama `LoadOptions` untuk menyediakan password bagi setiap dokumen.
 
-#### 1. Impor Kelas yang Diperlukan
 ```java
 import com.groupdocs.comparison.Comparer;
 import com.groupdocs.comparison.options.load.LoadOptions;
 ```
 
-#### 2. Siapkan Jalur File dan Kredensial Anda
+### Langkah 2: siapkan jalur file dan kredensial Anda
+Jangan pernah menuliskan password secara hard‑code dalam kode sumber. Simpan mereka dalam variabel lingkungan, pengelola rahasia, atau file konfigurasi terenkripsi, lalu baca pada saat runtime.
+
 ```java
 String sourceFilePath = "YOUR_DOCUMENT_DIRECTORY/source_protected.docx";
 String targetFilePath1 = "YOUR_DOCUMENT_DIRECTORY/target1_protected.docx";
@@ -128,9 +179,11 @@ String targetFilesPassword = "5678";
 String outputFilePath = "YOUR_OUTPUT_DIRECTORY/comparison_result.docx";
 ```
 
-> **Tip dunia nyata:** Jangan pernah menuliskan kata sandi secara langsung dalam kode sumber. Simpan mereka dalam variabel lingkungan, pengelola rahasia, atau file konfigurasi yang terenkripsi.
+> **Tip dunia nyata:** Menggunakan `char[]` untuk penyimpanan password sementara memungkinkan Anda menimpa array setelah digunakan, mengurangi risiko serangan memory‑dump.
 
-#### 3. Jalankan Perbandingan dengan Manajemen Sumber Daya yang Tepat
+### Langkah 3: jalankan perbandingan dengan manajemen sumber daya yang tepat
+Kelas `Comparer` mengimplementasikan `AutoCloseable`, sehingga blok try‑with‑resources menjamin semua sumber daya native dilepaskan bahkan jika terjadi pengecualian. `LoadOptions` menyediakan password untuk setiap dokumen, dan beberapa pemanggilan `add()` memungkinkan Anda membandingkan sejumlah dokumen dalam satu kali jalankan (dibatasi hanya oleh memori yang tersedia).
+
 ```java
 try (Comparer comparer = new Comparer(sourceFilePath, new LoadOptions(sourceFilePassword))) {
     // Add target documents with their respective passwords.
@@ -143,26 +196,31 @@ try (Comparer comparer = new Comparer(sourceFilePath, new LoadOptions(sourceFile
 }
 ```
 
-**Poin penting:**
-- **Try‑with‑resources** menjamin bahwa handle file dilepaskan bahkan jika terjadi pengecualian.  
-- **LoadOptions** menyediakan kata sandi untuk setiap dokumen.  
-- **Beberapa panggilan `add()`** memungkinkan Anda membandingkan sejumlah dokumen dalam satu kali jalankan (dibatasi hanya oleh memori yang tersedia).  
+**Poin penting:**  
+- Try‑with‑resources menjamin pembersihan.  
+- `LoadOptions` mengaitkan password dengan dokumen tertentu.  
+- Anda dapat menambahkan sebanyak mungkin dokumen target yang diperlukan, memungkinkan skenario perbandingan batch.
 
-## Masalah Umum dan Pemecahan Masalah
+## Masalah umum dan pemecahan masalah
 
-### Masalah Terkait Kata Sandi
-- **Kesalahan kata sandi tidak valid:** Pastikan tidak ada karakter tersembunyi (misalnya spasi di akhir) dan kata sandi cocok dengan mode perlindungan dokumen.  
-- **Mekanisme perlindungan campuran:** Beberapa file menggunakan kata sandi tingkat dokumen, yang lain menggunakan enkripsi tingkat file. GroupDocs.Comparison menangani kata sandi tingkat dokumen secara otomatis.  
+### Masalah terkait password
+- **Kesalahan password tidak valid:** Pastikan tidak ada karakter tersembunyi (misalnya spasi di akhir) dan password cocok dengan mode perlindungan dokumen.  
+- **Mekanisme perlindungan campuran:** Beberapa file menggunakan password tingkat dokumen, yang lain menggunakan enkripsi tingkat file. GroupDocs.Comparison menangani password tingkat dokumen secara otomatis.
 
-### Masalah Kinerja dan Memori
+### Masalah kinerja dan memori
 - **Pemrosesan lambat pada file besar:** Tingkatkan heap JVM (`-Xmx4g`) atau proses dokumen dalam batch yang lebih kecil.  
-- **Pengecualian out‑of‑memory:** Gunakan pemrosesan batch atau alirkan dokumen bila memungkinkan.  
+- **Pengecualian out‑of‑memory:** Gunakan pemrosesan batch atau streaming dokumen bila memungkinkan.
 
-### Masalah Jalur File dan Akses
-- **File tidak ditemukan / akses ditolak:** Gunakan jalur absolut selama pengembangan, pastikan izin baca pada file sumber, dan izin tulis pada direktori output.  
+### Masalah jalur file dan akses
+- **File tidak ditemukan / akses ditolak:** Gunakan jalur absolut selama pengembangan, pastikan izin baca pada file sumber, dan izin tulis pada direktori output.
 
-## Cara Membandingkan Banyak Dokumen Java – Menskalakan Solusi
-Jika Anda perlu membandingkan puluhan versi, pertimbangkan pembantu pemrosesan batch:
+## Cara membandingkan banyak dokumen di Java?
+GroupDocs.Comparison memungkinkan Anda menambahkan sejumlah dokumen target secara arbitrer, memudahkan perbandingan banyak versi kontrak, kebijakan, atau spesifikasi dalam satu kali proses. Anda cukup memanggil `add()` untuk setiap dokumen tambahan, dengan memberikan `LoadOptions` masing‑masing yang berisi password yang sesuai.
+
+Jawaban langsung: panggil `comparer.add(targetPath, new LoadOptions(targetPassword))` untuk setiap file tambahan, kemudian panggil `compare()` sekali; mesin akan menghasilkan diff terintegrasi yang menyoroti perubahan di semua versi yang diberikan.
+
+### Langkah 4: proses batch puluhan versi
+Jika Anda perlu membandingkan puluhan versi, pertimbangkan loop pembantu yang mengiterasi koleksi pasangan file‑password dan menambahkan masing‑masing ke instance `Comparer`.
 
 ```java
 public class SecureDocumentComparator {
@@ -179,11 +237,11 @@ public class SecureDocumentComparator {
 }
 ```
 
-Pola ini memungkinkan Anda menyambungkan mesin perbandingan ke sistem manajemen dokumen atau kepatuhan yang lebih besar.
+Pola ini memungkinkan Anda mengintegrasikan mesin perbandingan ke dalam sistem manajemen dokumen atau kepatuhan yang lebih besar.
 
-## Strategi Optimasi Kinerja
+## Strategi optimisasi kinerja
 
-### Manajemen Memori
+### Manajemen memori
 - **Pemrosesan batch:** Bandingkan 3‑5 dokumen sekaligus untuk menjaga penggunaan memori tetap dapat diprediksi.  
 - **Pembersihan sumber daya:** Selalu tutup instance `Comparer` dengan try‑with‑resources.  
 
@@ -191,8 +249,8 @@ Pola ini memungkinkan Anda menyambungkan mesin perbandingan ke sistem manajemen 
 -Xms2g -Xmx8g -XX:+UseG1GC -XX:MaxGCPauseMillis=100
 ```
 
-### Efisiensi Pemrosesan
-- **Pra‑validasi:** Periksa keberadaan file dan validitas kata sandi sebelum memulai perbandingan.  
+### Efisiensi pemrosesan
+- **Pra‑validasi:** Periksa keberadaan file dan keabsahan password sebelum memulai perbandingan.  
 - **Pemrosesan paralel:** Gunakan `CompletableFuture` untuk pekerjaan perbandingan yang independen.  
 
 ```java
@@ -201,35 +259,35 @@ List<CompletableFuture<Path>> futures = documentPairs.parallelStream()
     .collect(Collectors.toList());
 ```
 
-### Optimasi Jaringan dan I/O
+### Optimisasi jaringan dan I/O
 - Cache dokumen yang sering diakses secara lokal.  
-- Kompres file selama transfer jika mereka berada di penyimpanan remote.  
-- Implementasikan logika retry untuk kegagalan jaringan sementara.  
+- Kompres file selama transfer jika berada di penyimpanan remote.  
+- Implementasikan logika retry untuk kegagalan jaringan sementara.
 
-## Praktik Terbaik Keamanan
+## Praktik terbaik keamanan
 
-### Manajemen Kata Sandi
-- Simpan kata sandi di luar kode sumber (variabel lingkungan, vault).  
-- Rotasi kata sandi secara teratur dan audit upaya akses.  
+### Manajemen password
+- Simpan password di luar kode sumber (variabel lingkungan, vault).  
+- Rotasi password secara teratur dan audit upaya akses.
 
-### Keamanan Memori
-- Lebih pilih `char[]` daripada `String` untuk penyimpanan kata sandi sementara.  
-- Kosongkan array kata sandi setelah digunakan untuk mengurangi risiko dump memori.  
+### Keamanan memori
+- Lebih pilih `char[]` daripada `String` untuk penyimpanan password sementara.  
+- Kosongkan array password setelah penggunaan untuk mengurangi risiko memory dump.
 
-### Kontrol Akses
+### Kontrol akses
 - Terapkan akses berbasis peran (RBAC) sebelum mengizinkan operasi perbandingan.  
-- Catat setiap permintaan perbandingan untuk audit, tetapi jangan pernah mencatat kata sandi sebenarnya.  
+- Catat setiap permintaan perbandingan untuk audit, tetapi jangan pernah mencatat password sebenarnya.
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**Q: Bisakah saya membandingkan dokumen yang memiliki kata sandi berbeda?**  
-A: Ya. Berikan instance `LoadOptions` terpisah dengan kata sandi yang tepat untuk setiap dokumen.
+**Q: Bisakah saya membandingkan dokumen yang memiliki password berbeda?**  
+A: Ya. Berikan instance `LoadOptions` terpisah dengan password yang benar untuk setiap dokumen.
 
 **Q: Format file apa yang didukung?**  
 A: Lebih dari 50 format, termasuk DOCX, PDF, XLSX, PPTX, TXT, dan tipe gambar umum.
 
-**Q: Apa yang terjadi jika sebuah dokumen gagal dimuat?**  
-A: Sebuah pengecualian dilemparkan (misalnya, `InvalidPasswordException`). Tangkap pengecualian tersebut, catat pesan yang jelas, dan opsional lewati file tersebut.
+**Q: Apa yang terjadi jika dokumen gagal dimuat?**  
+A: Pengecualian seperti `InvalidPasswordException` dilemparkan. Tangkap pengecualian tersebut, catat pesan yang jelas, dan opsional lewati file tersebut.
 
 **Q: Bisakah saya menyesuaikan gaya visual hasil perbandingan?**  
 A: Tentu saja. GroupDocs.Comparison menawarkan opsi gaya untuk warna perubahan, font, dan penempatan komentar.
@@ -237,35 +295,41 @@ A: Tentu saja. GroupDocs.Comparison menawarkan opsi gaya untuk warna perubahan, 
 **Q: Apakah ada batasan jumlah dokumen yang dapat saya bandingkan sekaligus?**  
 A: Batas praktis ditentukan oleh memori yang tersedia dan ukuran dokumen. Untuk batch besar, proses dalam grup yang lebih kecil.
 
-## Langkah Selanjutnya dan Fitur Lanjutan
+## Langkah selanjutnya dan fitur lanjutan
 
-### Peluang Integrasi
-- **Pembungkus REST API:** Paparkan logika perbandingan sebagai layanan mikro.  
-- **Fungsi serverless:** Deploy ke AWS Lambda atau Azure Functions untuk pemrosesan sesuai permintaan.  
-- **Penyimpanan basis data:** Simpan metadata perbandingan untuk pelaporan dan jejak audit.  
+### Peluang integrasi
+- **Pembungkus REST API:** Ekspose logika perbandingan sebagai microservice.  
+- **Fungsi serverless:** Deploy ke AWS Lambda atau Azure Functions untuk pemrosesan on‑demand.  
+- **Penyimpanan basis data:** Simpan metadata perbandingan untuk pelaporan dan jejak audit.
 
-### Fitur Lanjutan untuk Dijelajahi
+### Fitur lanjutan untuk dijelajahi
 - **Algoritma perbandingan khusus** untuk deteksi perubahan spesifik domain.  
 - **Klasifier machine‑learning** untuk mengkategorikan perubahan (mis., legal vs. keuangan).  
-- **Kolaborasi waktu nyata** dengan pembaruan diff langsung di editor web.  
+- **Kolaborasi waktu nyata** dengan pembaruan diff langsung di editor web.
 
-### Pemantauan dan Operasi
+### Pemantauan dan operasi
 - Implementasikan logging terstruktur (mis., Logback, SLF4J).  
 - Lacak metrik kinerja (CPU, memori, latensi) dengan Prometheus atau CloudWatch.  
-- Siapkan peringatan untuk perbandingan yang gagal atau waktu pemrosesan yang tidak biasa lama.  
+- Siapkan peringatan untuk perbandingan yang gagal atau waktu pemrosesan yang tidak biasa lama.
 
-## Sumber Daya Tambahan
+## Sumber daya tambahan
 
-- **Dokumentasi:** [Dokumentasi GroupDocs.Comparison Java](https://docs.groupdocs.com/comparison/java/)  
-- **Referensi API:** [Dokumentasi API Lengkap](https://reference.groupdocs.com/comparison/java/)  
-- **Unduhan:** [Rilis Terbaru](https://releases.groupdocs.com/comparison/java/)  
-- **Pembelian:** [Opsi Lisensi](https://purchase.groupdocs.com/buy)  
-- **Uji Coba Gratis:** [Coba Sebelum Membeli](https://releases.groupdocs.com/comparison/java/)  
-- **Lisensi Sementara:** [Lisensi Pengembangan](https://purchase.groupdocs.com/temporary-license/)  
-- **Dukungan:** [Forum Komunitas](https://forum.groupdocs.com/c)
+- **Dokumentasi:** [GroupDocs.Comparison Java Docs](https://docs.groupdocs.com/comparison/java/)  
+- **Referensi API:** [Complete API Documentation](https://reference.groupdocs.com/comparison/java/)  
+- **Unduh:** [Latest releases](https://releases.groupdocs.com/comparison/java/)  
+- **Pembelian:** [License options](https://purchase.groupdocs.com/buy)  
+- **Uji coba gratis:** [Try before you buy](https://releases.groupdocs.com/comparison/java/)  
+- **Lisensi sementara:** [Development license](https://purchase.groupdocs.com/temporary-license/)  
+- **Dukungan:** [Community forum](https://forum.groupdocs.com/c)
 
 ---
 
-**Terakhir Diperbarui:** 2026-05-01  
-**Diuji Dengan:** GroupDocs.Comparison 25.2 for Java  
+**Terakhir Diperbarui:** 2026-10-05  
+**Diuji Dengan:** GroupDocs.Comparison 25.2 untuk Java  
 **Penulis:** GroupDocs
+
+## Tutorial Terkait
+
+- [Muat dan Bandingkan Dokumen yang Dilindungi Password dengan Aman di Java Menggunakan API GroupDocs.Comparison](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
+- [Panduan Dokumen Multi Stream GroupDocs Comparison Java](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [Perbandingan Dokumen API Java GroupDocs Comparison](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)

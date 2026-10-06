@@ -1,84 +1,137 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-14'
-description: C#'ta GroupDocs.Comparison .NET kullanarak birden fazla Word belgesini
-  nasıl karşılaştıracağınızı öğrenin; Word'de farkları vurgulayan tam kod örnekleri,
-  sorun giderme ve en iyi uygulamalar.
+date: '2026-10-05'
+description: GroupDocs.Comparison ile C#'ta birden fazla Word belgesini nasıl karşılaştıracağınızı
+  öğrenin, Word'deki farkları vurgulayın ve birleşik raporlar oluşturun.
 keywords:
 - compare multiple word documents
 - highlight differences in word
 - groupdocs comparison c#
-lastmod: '2026-04-14'
-linktitle: Belge Karşılaştırma C# Öğreticisi
+- how to compare word
+- merge multiple word versions
+lastmod: '2026-10-05'
+linktitle: Belge karşılaştırma C# öğreticisi
+og_description: GroupDocs.Comparison ile C#'ta birden fazla Word belgesini nasıl karşılaştıracağınızı
+  öğrenin, Word'deki farkları vurgulayın ve dakikalar içinde birleşik raporlar oluşturun.
+og_image_alt: Step‑by‑step guide for comparing multiple Word files in C# using GroupDocs.Comparison
+og_title: C#'ta GroupDocs kullanarak birden fazla Word belgesini karşılaştırma
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  headline: How to compare multiple word documents in C# using GroupDocs
+  type: TechArticle
+- description: Learn how to compare multiple word documents in C# with GroupDocs.Comparison,
+    highlighting differences in Word and generating unified reports.
+  name: How to compare multiple word documents in C# using GroupDocs
+  steps:
+  - name: setting up the foundation
+    text: '`Comparer` is instantiated with a **stream** instead of a file path, giving
+      you flexibility to work with documents stored in databases or received over
+      a network.'
+  - name: adding multiple target documents
+    text: Now you can **compare multiple word documents** in a single run. GroupDocs.Comparison
+      intelligently merges all differences into one result file.
+  - name: making differences stand out (custom styling)
+    text: '`CompareOptions` allows you to specify comparison behavior and visual styling
+      for inserted, deleted, and modified content. `StyleSettings` defines the visual
+      appearance (color, font, highlight) applied to differences in the output document.'
+  - name: executing the comparison and saving results
+    text: The single line below performs the comparison across all targets and writes
+      a polished result document. Because we use `File.Create()`, you could replace
+      the stream with a database or cloud storage destination.
+  type: HowTo
+- questions:
+  - answer: It supports 30+ input and output formats—including DOCX, PDF, PPTX, XLSX,
+      and HTML—and can compare files up to 500 MB without loading the entire content
+      into memory.
+    question: How does GroupDocs.Comparison handle different document formats?
+  - answer: Yes. The engine compares content semantically, so structural changes are
+      handled gracefully.
+    question: Can I compare documents with different layouts or structures?
+  - answer: Supply the password when opening the stream; the library will decrypt
+      the file for comparison.
+    question: What if the documents are password‑protected?
+  - answer: The practical limit is system memory; on a typical development machine,
+      comparing 5‑10 large documents works well.
+    question: Is there a limit to how many documents I can compare at once?
+  - answer: Wrap the comparison logic in a console app or a web API, then invoke it
+      from your build scripts to automatically detect documentation changes.
+    question: How can I integrate this into a CI/CD pipeline?
+  type: FAQPage
 tags:
-- csharp
-- document-comparison
+- compare multiple word documents
 - groupdocs
-- tutorial
-title: Belge Karşılaştırma C# Öğreticisi – Birden Fazla Word Belgesini Programlı Olarak
-  Karşılaştırma
+- csharp document comparison
+- .net tutorial
+title: C#'ta GroupDocs kullanarak birden fazla Word belgesini karşılaştırma
 type: docs
 url: /tr/net/basic-comparison/compare-documents-groupdocs-comparison-net/
 weight: 1
 ---
 
-# Belge Karşılaştırma C# Eğitimi – Birden Çok Word Belgesini Programlı Olarak Karşılaştırma
+# Belge karşılaştırma C# öğreticisi – birden fazla Word belgesini programlı olarak karşılaştırma
 
-Hiç Word belgelerini satır satır manuel olarak karşılaştırıp her bir değişikliği yakalamaya çalıştığınız oldu mu? Yalnız değilsiniz. **Bu rehberde birden çok Word belgesini verimli bir şekilde nasıl karşılaştıracağınızı öğreneceksiniz**, ister yasal sözleşmeleri inceleyin, revizyonları takip edin, ister işbirlikçi düzenleme projelerini yönetin. GroupDocs.Comparison for .NET ile süreci otomatikleştirmek zaman kazandırır, hataları azaltır ve sadece birkaç C# satırıyla profesyonel karşılaştırma raporları üretir.
+Birden fazla Word belgesini hızlı ve doğru bir şekilde **karşılaştırmanız** gerekiyorsa, bu öğretici GroupDocs.Comparison for .NET ile bunu tam olarak nasıl yapacağınızı gösterir. Sözleşmeleri inceliyor, revizyonları izliyor veya birden fazla yazarın taslaklarını birleştiriyor olsanız, karşılaştırmanın otomatikleştirilmesi manuel satır‑satır kontrolleri ortadan kaldırır, insan hatasını azaltır ve her ekleme, silme ve değişikliği vurgulayan tek bir şık rapor üretir.
 
-**Bu öğreticide öğrenecekleriniz:**
-- Veritabanında saklanan dosyalar için mükemmel olan akışları (streams) kullanarak Word belgelerini karşılaştırma
-- C# projenizde GroupDocs.Comparison'ı sıfırdan kurma  
-- Profesyonel stil ile karşılaştırma sonuçlarını özelleştirme
-- Birden çok belge karşılaştırmasını verimli bir şekilde yönetme
-- Yaygın sorunları giderme ve performans optimizasyonu
-- Manuel çalışmaya harcayacağınız saatleri tasarruf ettirecek gerçek dünya uygulamaları
+**Bu rehberde şunları öğreneceksiniz:**
+- Akışlardan Word dosyalarını yükleme (veritabanında depolanan veya bulut dosyaları için ideal)
+- Yeni bir C# projesinde GroupDocs.Comparison kurma
+- Eklenen, silinen ve değiştirilen metnin görsel stilini özelleştirme
+- Tek bir geçişte **herhangi bir sayıda** hedef belgeyi karşılaştırma
+- Yaygın sorunları giderme ve büyük dosyalar için performansı ayarlama
+- Otomatik karşılaştırmanın saatlerce manuel işi tasarruf sağladığı gerçek dünya senaryoları
 
-## Hızlı Yanıtlar
-- **Hangi kütüphaneyi kullanmalıyım?** GroupDocs.Comparison for .NET  
-- **Birden çok Word belgesini aynı anda karşılaştırabilir miyim?** Evet – ihtiyacınız kadar hedef akışı ekleyin.  
-- **Word'de farkları nasıl vurgularım?** Özel `StyleSettings` ile `CompareOptions` kullanın.  
-- **Geliştirme için lisansa ihtiyacım var mı?** Öğrenme için ücretsiz deneme yeterli; geçici bir lisans su işaretlerini kaldırır.  
-- **Async desteği var mı?** Evet – karşılaştırmayı `Task.Run` içinde sararak bloklamayan çağrılar yapabilirsiniz.
+## Hızlı cevaplar
+- **Hangi kütüphaneyi kullanmalıyım?** GroupDocs.Comparison for .NET.  
+- **Aynı anda birden fazla Word belgesini karşılaştırabilir miyim?** Evet – ihtiyacınız kadar hedef akış ekleyin.  
+- **Word'de farkları nasıl vurgularım?** Özel `StyleSettings` ile `CompareOptions` yapılandırın.  
+- **Geliştirme için lisansa ihtiyacım var mı?** Öğrenme için ücretsiz deneme çalışır; geçici bir lisans filigranları kaldırır.  
+- **Async desteği mevcut mu?** Evet – karşılaştırmayı `Task.Run` içinde sararak bloklamayan yürütme sağlayabilirsiniz.  
 
-## Neden Birden Çok Word Belgesini Karşılaştırmalıyız?
+## Neden birden fazla Word belgesini karşılaştırmalıyız?
 
-Aynı anda iki versiyonun üzeri birden fazla sürümü karşılaştırmak, tüm değişikliklerin tek, birleşik bir görünümünü sunar. Bu, aynı sözleşmeyi birden çok gözden geçiren kişiler olduğunda veya birkaç teklif taslağını denetlemeniz gerektiğinde özellikle değerlidir. Ayrı karşılaştırma raporlarıyla uğraşmak yerine GroupDocs.Comparison tüm farkları tek bir belgeye birleştirir, eklemeleri, silmeleri ve değişiklikleri kolayca görmenizi sağlar.
+Tüm sürümler arasındaki tüm değişikliklerin **tek bir birleşik görünümünü** elde edebilirsiniz, ayrı yan‑yana raporlarla uğraşmak yerine. Bu, aynı sözleşmeyi birden fazla inceleyen kişi olduğunda, birkaç teklif taslağını denetlemeniz gerektiğinde veya her değişikliği kaydeden bir ana belge oluşturmak istediğinizde kritik öneme sahiptir. Farkları tek bir çıktıya birleştirerek, paydaşlar birden fazla dosya açmadan eklenen, kaldırılan veya değiştirilenleri anında görebilir.
 
-## Word Belgelerinde Farkları Nasıl Vurgularız
+## Word belgelerinde farkları nasıl vurgularım
 
-GroupDocs.Comparison, eklenen, silinen veya değiştirilen metin için özel stil tanımlamanıza olanak tanır. `InsertedItemStyle`, `DeletedItemStyle` ve `ModifiedItemStyle` ayarlarıyla raporu kuruluşunuzun marka kimliğine uygun hale getirebilir veya sadece okunabilirliği artırabilirsiniz. Aşağıda eklenen metni sarı renkle vurgulayan temel bir örnek göstereceğiz.
+Kaynak dosyayı yükleyin, her hedefi ekleyin ve ardından `InsertedItemStyle`, `DeletedItemStyle` ve `ModifiedItemStyle` belirten `CompareOptions` uygulayın. Sonuç, eklemelerin sarı, silmelerin kırmızı üstü çizili ve değişikliklerin mavi altı çizili göründüğü, kuruluşunuzun marka yönergelerine uygun bir Word dosyasıdır.
+
+### Doğrudan cevap
+GroupDocs.Comparison, `CompareOptions` aracılığıyla görsel stiller ayarlamanıza izin verir—eklenen, silinen ve değiştirilmiş içerik için renkleri, yazı tiplerini ve vurgulama türlerini tanımlarsınız, ardından motor bu stilleri doğrudan çıktı Word belgesine işler. Bu tek yapılandırma adımı, farkları inceleyenler için açıkça ayırt edilebilir kılar.
 
 ## Önkoşullar
+- **GroupDocs.Comparison kütüphanesi** (v25.4.0 veya daha yeni) – .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5/6/7 ile uyumlu.  
+- **Visual Studio** (herhangi bir yeni sürüm) veya benzer bir C# IDE.  
+- C# konsol uygulamalarıyla temel aşinalık.  
+- Deneyimlemek için bir veya daha fazla örnek `.docx` dosyası.  
 
-- **GroupDocs.Comparison Kütüphanesi** (v25.4.0 veya üzeri) – .NET Framework 4.6.1+ ve .NET Core 2.0+ ile çalışır  
-- **Visual Studio** (herhangi bir güncel sürüm)  
-- Temel C# bilgisi – bir konsol uygulaması oluşturabilmelisiniz  
-- Karşılaştırmayı test etmek için birkaç örnek Word dosyası  
+## GroupDocs.Comparison'ı kurup çalıştırma
 
-## GroupDocs.Comparison'ı Kurup Çalıştırma
+### Kütüphaneyi kurma (kolay yol)
 
-### Kütüphaneyi Yükleme (Kolay Yöntem)
-
-**Seçenek 1: Paket Yöneticisi Konsolu**
+**Seçenek 1: Package Manager Console**  
 ```plaintext
 Install-Package GroupDocs.Comparison -Version 25.4.0
-```
+```  
 
-**Seçenek 2: .NET CLI (Benim Favorim)**
+**Seçenek 2: .NET CLI (benim kişisel favorim)**  
 ```bash
 dotnet add package GroupDocs.Comparison --version 25.4.0
-```
+```  
 
-### Lisanslama Basitleştirildi
+### Lisanslama basitleştirildi
 
-- **Ücretsiz Deneme:** Küçük su işaretleriyle tam işlevsellik – öğrenme için ideal.  
-- **Geçici Lisans:** Demolar için su işaretlerini kaldırır; GroupDocs'tan ücretsiz geçici bir anahtar talep edin.  
-- **Üretim Lisansı:** Tam lisansı [GroupDocs Satın Alma](https://purchase.groupdocs.com/buy) adresinden satın alın.
+- **Ücretsiz deneme:** Küçük bir filigranla tam işlevsellik—öğrenme için mükemmel.  
+- **Geçici lisans:** Demolar için filigranları kaldırır; GroupDocs'tan ücretsiz bir anahtar isteyin.  
+- **Üretim lisansı:** Tam lisansı [GroupDocs Purchase](https://purchase.groupdocs.com/buy) adresinden satın alın.  
 
-### İlk Karşılaştırmanız (Hello World Stili)
+### İlk karşılaştırmanız (hello‑world stili)
 
+`Comparer`, belge yükleme, karşılaştırma ve sonuç üretimini yöneten GroupDocs.Comparison'ın temel sınıfıdır.  
+Bu snippet bir `Comparer` nesnesi oluşturur, bir kaynak belge yükler ve tek bir hedef belge ekler. Bunu bir “öncesi ve sonrası” karşılaştırması kurmak olarak düşünün.  
 ```csharp
 using System;
 using GroupDocs.Comparison;
@@ -99,36 +152,34 @@ namespace DocumentComparisonApp
         }
     }
 }
-```
+```  
 
-Bu kod parçacığı bir `Comparer` nesnesi oluşturur, kaynak belgeyi yükler ve tek bir hedef belge ekler. Bunu “öncesi ve sonrası” karşılaştırması kurmak gibi düşünebilirsiniz.
+## Tam uygulama – adım adım
 
-## Tam Uygulama – Adım Adım
+### Adım 1: temeli kurma
 
-### Adım 1: Temeli Oluşturma
-
+`Comparer`, dosya yolu yerine bir **akış** ile örneklenir, bu da veritabanlarında depolanan veya ağ üzerinden alınan belgelerle çalışmanız için esneklik sağlar.  
 ```csharp
 string documentDirectory = "YOUR_DOCUMENT_DIRECTORY";
 using (Comparer comparer = new Comparer(File.OpenRead(System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx"))))
 {
     // We'll build on this foundation
 }
-```
+```  
 
-*Ne oluyor?* `Comparer`'ı **dosya yolu yerine bir akış** ile örnekliyoruz; bu sayede veritabanında saklanan ya da ağ üzerinden gelen belgelerle çalışmak esnek hale geliyor.
+### Adım 2: birden fazla hedef belge ekleme
 
-### Adım 2: Birden Çok Hedef Belge Ekleme
-
+Artık tek bir çalıştırmada **birden fazla Word belgesini** karşılaştırabilirsiniz. GroupDocs.Comparison, tüm farkları akıllıca tek bir sonuç dosyasında birleştirir.  
 ```csharp
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET2_WORD.docx")));
 comparer.Add(File.OpenRead(System.IO.Path.Combine(documentDirectory, "TARGET3_WORD.docx")));
-```
+```  
 
-Artık tek bir çalıştırmada **birden çok Word belgesini** karşılaştırabilirsiniz. GroupDocs.Comparison tüm farkları akıllıca birleştirerek tek bir sonuç dosyası üretir.
+### Adım 3: farkları öne çıkarma (özel stil)
 
-### Adım 3: Farkları Öne Çıkarma (Özel Stil)
-
+`CompareOptions`, eklenen, silinen ve değiştirilmiş içerik için karşılaştırma davranışı ve görsel stil belirlemenizi sağlar.  
+`StyleSettings`, çıktı belgesindeki farklara uygulanan görsel görünümü (renk, yazı tipi, vurgulama) tanımlar.  
 ```csharp
 CompareOptions compareOptions = new CompareOptions()
 {
@@ -137,36 +188,33 @@ CompareOptions compareOptions = new CompareOptions()
         FontColor = System.Drawing.Color.Yellow  // Highlight inserted text in yellow
     }
 };
-```
+```  
 
-Özel stil **Word'de farkları vurgular** ve raporu paydaşlar için daha okunabilir hâle getirir.
+### Adım 4: karşılaştırmayı yürütme ve sonuçları kaydetme
 
-### Adım 4: Karşılaştırmayı Çalıştırma ve Sonuçları Kaydetme
-
+Aşağıdaki tek satır, tüm hedefler arasında karşılaştırmayı gerçekleştirir ve şık bir sonuç belgesi yazar. `File.Create()` kullandığımız için akışı bir veritabanı veya bulut depolama hedefiyle değiştirebilirsiniz.  
 ```csharp
 string outputDirectory = "YOUR_OUTPUT_DIRECTORY";
 string outputFileName = System.IO.Path.Combine(outputDirectory, "RESULT_WORD.docx");
 comparer.Compare(File.Create(outputFileName), compareOptions);
-```
+```  
 
-Yukarıdaki tek satır, tüm hedefler üzerinde karşılaştırmayı gerçekleştirir ve şık bir sonuç belgesi yazar. `File.Create()` kullandığımız için akışı bir veritabanı ya da bulut depolama hedefiyle değiştirebilirsiniz.
+## Yaygın sorunlar ve çözümleri
 
-## Yaygın Sorunlar ve Çözüm Yolları
+### Sorun: “Dosya bulunamadı” hataları
 
-### Sorun: "File Not Found" Hataları
-
+`File.OpenRead` (veya eşdeğeri) ile gönderdiğiniz dosya yollarının gerçekten mevcut ve çalışan süreçten erişilebilir olduğundan emin olun.  
 ```csharp
 string sourcePath = System.IO.Path.Combine(documentDirectory, "SOURCE_WORD.docx");
 if (!File.Exists(sourcePath))
 {
     throw new FileNotFoundException($"Source document not found: {sourcePath}");
 }
-```
+```  
 
-Akışları açmadan önce yolları mutlaka kontrol edin.
+### Sorun: büyük belgelerde bellek sorunları
 
-### Sorun: Büyük Belgelerde Bellek Problemleri
-
+`using` ifadeleriyle akışları hemen serbest bırakın. GroupDocs.Comparison belgeleri parçalar halinde işler, bu yüzden akışları gereksiz yere açık tutmak bellek kullanımını artırabilir.  
 ```csharp
 // Don't do this - keeps all streams in memory
 // comparer.Add(File.OpenRead(doc1));
@@ -178,12 +226,11 @@ using (var stream1 = File.OpenRead(doc1))
     comparer.Add(stream1);
     // Stream is disposed automatically here
 }
-```
+```  
 
-Bellek kullanımını düşük tutmak için akışları hemen `Dispose` edin.
+### Sorun: beklenmeyen karşılaştırma sonuçları
 
-### Sorun: Beklenmedik Karşılaştırma Sonuçları
-
+`CompareOptions` içindeki hassasiyet ayarlarını, incelemenizle ilgili olmayan başlık/altbilgi değişiklikleri, sayfa numaraları veya meta verileri yok sayacak şekilde ayarlayın.  
 ```csharp
 CompareOptions options = new CompareOptions()
 {
@@ -191,12 +238,11 @@ CompareOptions options = new CompareOptions()
     CompareComments = false,   // Ignore comment differences
     CompareFields = false      // Ignore field differences
 };
-```
+```  
 
-İnceleme için alakasız öğeleri göz ardı etmek üzere hassasiyet ayarlarını değiştirin.
+### Web uygulamaları için asenkron karşılaştırma
 
-### Web Uygulamaları için Asenkron Karşılaştırma
-
+Karşılaştırma çağrısını `Task.Run` içinde sararak UI iş parçacıklarının yanıt vermesini sağlayın ve ASP.NET istek hatlarını engellemekten kaçının.  
 ```csharp
 public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
 {
@@ -216,47 +262,51 @@ public async Task<string> CompareDocumentsAsync(Stream source, Stream[] targets)
         });
     }
 }
-```
+```  
 
-UI iş parçacıklarının yanıt vermesini sağlamak için karşılaştırmayı `Task.Run` içinde sarın.
+## Performans optimizasyon ipuçları
 
-## Performans Optimizasyon İpuçları
+- **Akışları** kullanımdan hemen sonra serbest bırakın (`using` blokları).  
+- **Belgeleri sıralı işleyin** mümkün olduğunda; paralel işleme bellek baskısını artırabilir.  
+- **Web API'leri için async desenlerini kullanın** ölçeklenebilirliği artırmak için.  
+- **Büyük toplu işleri** arka plan çalışanı ile kuyruğa alın, web sunucusunun kısıtlamasını önlemek için.  
+- **Güncel kalın:** GroupDocs.Comparison düzenli performans iyileştirmeleri alır—CPU ve bellek ayak izlerini azaltmak için en son sürüme yükseltin.  
 
-- **Akışları her zaman `using` ifadeleriyle serbest bırakın**.  
-- **Mümkün olduğunca belgeleri sıralı işleyin**.  
-- **Web API'ler için async desenlerini düşünün**.  
-- **Yüksek hacimli senaryolar için kuyrukları kullanın**.  
-- **Kütüphaneyi güncel tutun**; performans iyileştirmelerinden faydalanın.
+## Sıkça sorulan sorular
 
-## Sık Sorulan Sorular
-
-**S: GroupDocs.Comparison farklı belge formatlarını nasıl ele alıyor?**  
-C: Word, PDF, Excel, PowerPoint ve daha fazlasını destekler. API formatlar arasında tutarlı kalır, bu yüzden aynı kod PDF, DOCX vb. için de çalışır.
+**S: GroupDocs.Comparison farklı belge formatlarını nasıl ele alır?**  
+C: 30+ giriş ve çıkış formatını destekler—DOCX, PDF, PPTX, XLSX ve HTML dahil—ve dosyaları tüm içeriği belleğe yüklemeden 500 MB'a kadar karşılaştırabilir.  
 
 **S: Farklı düzen veya yapıya sahip belgeleri karşılaştırabilir miyim?**  
-C: Evet. Motor içeriği anlamsal olarak karşılaştırır, sadece karakter‑karakter değil, yapısal değişiklikler de sorunsuz işlenir.
+C: Evet. Motor içeriği anlamsal olarak karşılaştırır, bu yüzden yapısal değişiklikler sorunsuz şekilde işlenir.  
 
-**S: Belgeler şifreli ise ne olur?**  
-C: Akışı açarken şifreyi sağlayabilirsiniz; kütüphane dosyayı karşılaştırma için çözer.
+**S: Belgeler şifre korumalıysa ne olur?**  
+C: Akışı açarken şifreyi sağlayın; kütüphane karşılaştırma için dosyayı çözer.  
 
-**S: Aynı anda kaç belge karşılaştırabilirim?**  
-C: Pratik limit sistem belleğidir. Tipik bir geliştirme makinesinde 5‑10 büyük belge rahatlıkla karşılaştırılabilir.
+**S: Aynı anda kaç belgeyi karşılaştırabileceğim konusunda bir sınırlama var mı?**  
+C: Pratik sınırlama sistem belleğidir; tipik bir geliştirme makinesinde 5‑10 büyük belgeyi karşılaştırmak iyi çalışır.  
 
-**S: Bunu bir CI/CD boru hattına nasıl entegre ederim?**  
-C: Karşılaştırma mantığını bir konsol uygulaması ya da web API olarak paketleyin, ardından build script'lerinizden çağırarak dokümantasyon değişikliklerini otomatik tespit edin.
+**S: Bunu bir CI/CD hattına nasıl entegre edebilirim?**  
+C: Karşılaştırma mantığını bir konsol uygulaması veya web API'si içinde sarın, ardından yapı betiklerinizden çağırarak belge değişikliklerini otomatik olarak tespit edin.  
 
 **S: Kütüphane çok dilli belgeleri destekliyor mu?**  
-C: Kesinlikle. Arapça ve İbranice gibi sağ‑to‑sol dilleri ve Unicode karakterleri sorunsuz işler.
+C: Kesinlikle. Arapça ve İbranice gibi sağ‑dan‑sol dilleri ve tam Unicode karakter setlerini işler.  
 
-## Daha Derin Öğrenme İçin Ek Kaynaklar
+## Daha derin öğrenme için ek kaynaklar
 
-- [Dokümantasyon](https://docs.groupdocs.com/comparison/net/) – Kapsamlı API referansı ve ileri düzey öğreticiler  
-- [API Referansı](https://reference.groupdocs.com/comparison/net/) – Ayrıntılı metod ve özellik belgeleri  
-- [İndirme Merkezi](https://releases.groupdocs.com/comparison/net/) – En yeni sürümler ve değişiklik günlükleri  
-- **Topluluk Forumları** – Diğer geliştiricilerle bağlantı kurun ve GroupDocs uzmanlarından yardım alın  
+- [Dokümantasyon](https://docs.groupdocs.com/comparison/net/) – kapsamlı API referansı ve ileri düzey öğreticiler  
+- [API referansı](https://reference.groupdocs.com/comparison/net/) – detaylı metod ve özellik dokümanları  
+- [İndirme merkezi](https://releases.groupdocs.com/comparison/net/) – en son sürümler ve değişiklik günlüğü  
+- **Topluluk forumları** – diğer geliştiricilerle bağlantı kurun ve GroupDocs uzmanlarından yardım alın  
 
 ---
 
-**Son Güncelleme:** 2026-04-14  
-**Test Edilen Sürüm:** GroupDocs.Comparison 25.4.0 for .NET  
+**Son güncelleme:** 2026-10-05  
+**Test edildiği sürüm:** GroupDocs.Comparison 25.4.0 for .NET  
 **Yazar:** GroupDocs
+
+## İlgili Öğreticiler
+
+- [belge karşılaştırma .net – GroupDocs Comparison Temel Kullanım Kılavuzu](/comparison/net/basic-usage/)
+- [Document Comparison .NET Öğreticisi - GroupDocs ile Meta Veriyi Koru](/comparison/net/loading-and-saving-documents/saving-documents-metadata-source/)
+- [Groupdocs Comparison Net Klasör Karşılaştırma Öğreticisi](/comparison/net/advanced-comparison/groupdocs-comparison-net-folder-comparison-tutorial/)

@@ -1,36 +1,38 @@
 ---
 categories:
 - Java Development
-date: '2026-05-26'
-description: Lär dig hur du konfigurerar en centraliserad licenshanterare för GroupDocs
-  med Java‑strömmar. Inkluderar steg‑för‑steg‑kod, felsökning och bästa praxis för
-  2026.
+date: '2026-10-15'
+description: Lär dig hur du ställer in GroupDocs license stream i Java med en centralized
+  manager, med step‑by‑step guidance, troubleshooting, och best practices för 2026.
 keywords:
+- set groupdocs license stream
 - centralized license manager
 - stream‑based licensing
 - GroupDocs Java licensing
-lastmod: '2026-05-26'
-linktitle: GroupDocs Licens Java‑handledning
+lastmod: '2026-10-15'
+linktitle: GroupDocs License Java Tutorial
+og_description: Ställ in GroupDocs license stream i Java med en centralized manager.
+  Följ den här 2026 guide för secure, container‑friendly licensing och troubleshooting.
+og_image_alt: Guide showing Java code for loading GroupDocs license from a stream
+og_title: Hur man ställer in GroupDocs license stream i Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-26'
-  description: Learn how to set up a centralized license manager for GroupDocs using
-    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
-    for 2026.
-  headline: 'GroupDocs Java: Centralized License Manager via Stream'
+  dateModified: '2026-10-15'
+  description: Learn how to set GroupDocs license stream in Java with a centralized
+    manager, including troubleshooting and best practices.
+  headline: How to set GroupDocs license stream in Java
   type: TechArticle
-- description: Learn how to set up a centralized license manager for GroupDocs using
-    Java streams. Includes step‑by‑step code, troubleshooting, and best practices
-    for 2026.
-  name: 'GroupDocs Java: Centralized License Manager via Stream'
+- description: Learn how to set GroupDocs license stream in Java with a centralized
+    manager, including troubleshooting and best practices.
+  name: How to set GroupDocs license stream in Java
   steps:
-  - name: Verify License File Integrity
+  - name: Verify license file integrity
     text: Check that the XML is well‑formed and matches the license you purchased.
       A corrupted file will raise a `LicenseException`.
-  - name: Debug Stream Creation
+  - name: Debug stream creation
     text: Print the size of the byte array (`licenseBytes.length`) before passing
       it to `setLicense()`; a size of zero indicates an empty stream.
-  - name: Test License Application
+  - name: Test license application
     text: Run a simple comparison task after loading the license. If the output contains
       watermarks, the license was not applied correctly.
   type: HowTo
@@ -57,50 +59,42 @@ tags:
 - java-licensing
 - document-processing
 - stream-api
-title: 'GroupDocs Java: Centraliserad licenshanterare via Stream'
+- license-management
+title: Hur man ställer in GroupDocs license stream i Java
 type: docs
 url: /sv/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-# Centraliserad licenshanterare för GroupDocs Java via ström
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Om du integrerar **GroupDocs.Comparison for Java** i en modern applikation, är det mest pålitliga sättet att hantera licensiering med en **centraliserad licenshanterare** som fungerar med Java‑strömmar. Detta tillvägagångssätt låter dig läsa in licensen från filer, classpath‑resurser, URL:er eller säkra valv—vilket eliminerar hårdkodade sökvägar och förbättrar säkerheten. Under de kommande minuterna kommer du att se varför en centraliserad hanterare är viktig, hur du implementerar den, och hur du undviker fallgropar som många utvecklare stöter på.
+# Hur man ställer in GroupDocs-licensström i Java
+
+Om du integrerar **GroupDocs.Comparison for Java** i en modern applikation är det mest pålitliga sättet att hantera licensiering med en **centraliserad licenshanterare** som fungerar med Java‑strömmar. Detta tillvägagångssätt låter dig läsa in licensen från filer, classpath‑resurser, URL:er eller säkra valv—vilket eliminerar hårdkodade sökvägar och förbättrar säkerheten.
 
 ## Snabba svar
-- **Vad är en centraliserad licenshanterare?** Det är en återanvändbar komponent som läser in och tillämpar GroupDocs‑licensen för hela applikationen, vanligtvis som en singleton eller Spring‑bean.  
+- **Vad är en centraliserad licenshanterare?** Det är en återanvändbar komponent som laddar och tillämpar GroupDocs‑licensen för hela applikationen, vanligtvis som en singleton eller Spring‑bean.  
 - **Varför använda strömmar för licensiering?** Strömmar låter dig läsa licensen från vilken källa som helst (fil, classpath, URL, valv) utan att lagra den på disk, vilket ökar säkerheten och kompatibiliteten i containrar.  
-- **När bör jag byta från fil‑baserad till ström‑baserad?** När du när som helst distribuerar till Docker, Kubernetes eller någon molnmiljö där montering av filer är opraktiskt.  
-- **Hur undviker jag minnesläckor?** Omge InputStream med ett try‑with‑resources‑block eller stäng den explicit efter anrop av `setLicense()`.  
+- **När bör jag byta från fil‑baserad till ström‑baserad?** När som helst du distribuerar till Docker, Kubernetes eller någon molnmiljö där montering av filer är besvärligt.  
+- **Hur undviker jag minnesläckor?** Omge InputStream i ett try‑with‑resources‑block eller stäng den explicit efter att ha anropat `setLicense()`.  
 - **Kan jag ändra licensen vid körning?** Ja—anropa `setLicense()` med en ny ström när du behöver byta licens för en hyresgäst eller funktionsuppsättning.
 
 ## Vad är en centraliserad licenshanterare?
-
-En **centraliserad licenshanterare** är en enda klass eller tjänst som kapslar in all logik för att läsa in, tillämpa och uppdatera GroupDocs‑licensen. Genom att hålla denna logik på ett ställe eliminerar du duplicerad kod, förenklar konfigurationsändringar och garanterar att varje del av din applikation använder samma giltiga licens.
+En **centraliserad licenshanterare** är en enda klass eller tjänst som kapslar in all logik för att ladda, tillämpa och uppdatera GroupDocs‑licensen. Genom att hålla denna logik på ett ställe eliminerar du duplicerad kod, förenklar konfigurationsändringar och garanterar att varje del av din applikation använder samma giltiga licens.
 
 ## Varför välja ström‑baserad licensiering?
-
-Att använda en ström för att läsa in GroupDocs‑licensen ger flera konkreta fördelar jämfört med det klassiska fil‑sökvägs‑tillvägagångssättet. Det frikopplar licensens plats från applikationen, möjliggör säker hantering i minnet, fungerar sömlöst i containeriserade miljöer och tillåter dynamiska licensändringar vid körning, vilket tillsammans förbättrar flexibilitet, säkerhet och skalbarhet.
-
-Att läsa in licensen via en ström ger dig **fyra konkreta fördelar** jämfört med den traditionella fil‑sökvägsmetoden:
-
-1. **Miljöflexibilitet** – Hämta licensen från miljövariabler, hemliga hanterare eller databaser, så att samma binär fungerar i dev, test och prod utan kodändringar.  
-2. **Förbättrad säkerhet** – Licensen rör aldrig filsystemet; den lever endast i minnet, vilket minskar attackytan.  
-3. **Container‑vänlighet** – I Docker eller Kubernetes kan du injicera licensen som en hemlighet eller konfigurationskarta, vilket undviker volym‑monteringar.  
-4. **Dynamisk licensiering** – Multi‑tenant SaaS‑plattformar kan byta licenser i farten per hyresgäst, vilket möjliggör funktion‑baserad fakturering.
-
-_GroupDocs.Comparison stödjer **70+** dokumentformat (PDF, DOCX, XLSX, PPTX, HTML, bilder osv.) och kan bearbeta filer med flera hundra sidor utan att läsa in hela dokumentet i minnet, vilket gör ström‑baserad licensiering till en naturlig lösning för hög‑genomströmningstjänster._
+Att använda en ström för att ladda GroupDocs‑licensen ger flera konkreta fördelar jämfört med den klassiska fil‑sökvägsmetoden. Det frikopplar licensens plats från applikationen, möjliggör säker hantering i minnet, fungerar sömlöst i containeriserade miljöer och tillåter dynamiska licensbyten vid körning, vilket tillsammans förbättrar flexibilitet, säkerhet och skalbarhet.
 
 ## Förutsättningar och miljöinställning
 
 ### Nödvändiga bibliotek och versioner
-
 - **GroupDocs.Comparison for Java** – version **25.2** eller senare (den senaste 2026‑utgåvan).  
 - **Java Development Kit (JDK)** – version **8+** (JDK 11+ rekommenderas för bättre modulstöd).  
 - **Maven eller Gradle** – för beroendehantering (exemplen nedan använder Maven).
 
 ### Maven‑konfiguration
-
 ```xml
 <repositories>
    <repository>
@@ -120,15 +114,13 @@ _GroupDocs.Comparison stödjer **70+** dokumentformat (PDF, DOCX, XLSX, PPTX, HT
 ```
 
 ### Skaffa din licens
-
 1. **Börja med den kostnadsfria provperioden** – du får full API‑åtkomst i 30 dagar.  
-2. **Begär en tillfällig licens** – idealisk för utökad utvärdering i CI‑pipelines.  
+2. **Begär en tillfällig licens** – idealisk för förlängd utvärdering i CI‑pipelines.  
 3. **Köp en produktionslicens** – krävs för kommersiella distributioner och tar bort utvärderingsvattenstämplar.
 
-*Pro‑tips*: Lagra den råa licenssträngen i en hemlig hanterare (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) och hämta den vid körning. Detta håller licensen utanför källkontrollen och filsystemet.
+*Pro tip*: Spara den råa licenssträngen i en hemlig hanterare (AWS Secrets Manager, Azure Key Vault, HashiCorp Vault) och hämta den vid körning. Detta håller licensen utanför versionskontroll och filsystemet.
 
 ## Verifiera din licenskälla
-
 Innan du skapar en ström, se till att källan du avser att läsa från är nåbar. En saknad fil eller en otillgänglig URL är den vanligaste orsaken till licensfel.
 
 ```java
@@ -139,10 +131,9 @@ if (new File("YOUR_DOCUMENT_DIRECTORY/LicensePath.lic").exists()) {
 }
 ```
 
-> **Varför detta är viktigt** – Att upptäcka en saknad källa tidigt förhindrar runtime‑`LicenseException`‑fel som kan stoppa dokumentbearbetning.
+> **Varför detta är viktigt** – Att tidigt upptäcka en saknad källa förhindrar `LicenseException`‑fel vid körning som kan stoppa dokumentbehandling.
 
-## Skapa Input‑strömmen korrekt
-
+## Skapa inmatningsströmmen korrekt
 `InputStream` är en abstrakt Java‑klass som representerar en källa av byte för att läsa data.
 
 Du kan omvandla många olika källor till en `InputStream`:
@@ -166,9 +157,8 @@ try {
 
 Var och en av dessa returnerar en ny ström som kan skickas direkt till GroupDocs `License`‑objektet.
 
-## Tillämpa licensen
-
-`License` är GroupDocs‑klassen som ansvarar för att läsa in och tillämpa en licens på SDK:n.
+## Applicera licensen
+`License` är GroupDocs‑klassen som ansvarar för att ladda och tillämpa en licens på SDK:n.
 
 ```java
 try {
@@ -181,8 +171,7 @@ try {
 
 > **Viktigt** – `setLicense()` konsumerar hela strömmen, så strömmen måste vara placerad i början varje gång du anropar den. Återanvändning av samma uttömda ström kommer att orsaka ett fel “License file is empty”.
 
-## Resurshantering (Kritiskt!)
-
+## Resurshantering (kritisk!)
 Låt aldrig strömmar ligga kvar i minnet. I långlivade tjänster kan en oavslutad ström orsaka subtilt minnestryck och så småningom utlösa `OutOfMemoryError`.
 
 ```java
@@ -199,10 +188,9 @@ finally {
 ```
 
 ## Bygga den centraliserade licenshanteraren
+`LicenseManager` är en anpassad verktygsklass som kapslar in laddning och inställning av GroupDocs‑licensen.
 
-`LicenseManager` är en anpassad verktygsklass som kapslar in läsning och sättning av GroupDocs‑licensen.
-
-Kapsla in de föregående stegen i en återanvändbar singleton. Nedan är en koncis implementation som fungerar med ren Java, Spring eller någon DI‑container.
+`LicenseManager`‑klassen är ett lätt omslag som centraliserar alla licensoperationer, och exponerar en enda `initializeLicense()`‑metod för applikationsstart samt en `setLicense(InputStream stream)`‑metod för förändringar vid körning.
 
 ```java
 public class LicenseManager {
@@ -217,12 +205,11 @@ public class LicenseManager {
 }
 ```
 
-> **Tips** – Anropa `LicenseManager.initializeLicense()` en gång under applikationens start (t.ex. i en `ServletContextListener`, en Spring `@PostConstruct` eller en `main()`‑metod). Efterföljande komponenter kan helt enkelt förlita sig på att licensen redan är aktiv.
+> **Tips** – Anropa `LicenseManager.initializeLicense()` en gång under applikationsstart (t.ex. i en `ServletContextListener`, en Spring `@PostConstruct`, eller en `main()`‑metod). Efterföljande komponenter kan helt enkelt förlita sig på att licensen redan är aktiv.
 
 ## Vanliga fallgropar och lösningar
 
 ### Problem 1: “License file not found”
-
 **Orsak** – Skillnader i arbetskatalog mellan IDE, CI och produktionscontainrar.  
 **Lösning** – Föredra absoluta sökvägar eller classpath‑resurser, och logga den lösta sökvägen för felsökning.
 
@@ -231,7 +218,6 @@ InputStream stream = getClass().getClassLoader().getResourceAsStream("licenses/l
 ```
 
 ### Problem 2: Minnesläckor från oavslutade strömmar
-
 **Lösning** – Använd Javas try‑with‑resources (tillgängligt sedan Java 7) för att garantera stängning.
 
 ```java
@@ -244,7 +230,6 @@ try (InputStream stream = new FileInputStream(licenseFile)) {
 ```
 
 ### Problem 3: Ogiltigt licensformat
-
 **Lösning** – Verifiera att filen är UTF‑8‑kodad och innehåller exakt den XML‑struktur som levereras av GroupDocs. När du konstruerar en ström från en `String`, omslut den med `new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8))`.
 
 ```java
@@ -253,16 +238,14 @@ InputStream stream = new ByteArrayInputStream(licenseBytes);
 ```
 
 ## Bästa praxis för produktionsapplikationer
-
 1. **Centralisera all licenskod** – håll den i en enda `LicenseManager`‑klass för att undvika duplicering.  
 2. **Miljö‑specifik konfiguration** – använd miljövariabler i dev, säkra valv i prod och CI‑hemligheter för automatiserade tester.  
-3. **Graceful Degradation** – logga licensfel och falla eventuellt tillbaka till utvärderingsläge med en tydlig varning till slutanvändarna.  
-4. **Cacha licensen** – efter den första lyckade inläsningen, lagra byte‑arrayen i minnet för att undvika upprepad I/O vid varje begäran.  
+3. **Gracefull nedtrappning** – logga licensfel och fall tillbaka till utvärderingsläge med en tydlig varning till slutanvändare.  
+4. **Cacha licensen** – efter den första lyckade laddningen, lagra byte‑arrayen i minnet för att undvika upprepad I/O vid varje begäran.  
 
-## Verkliga implementationsscenario
+## Reella implementationsscenario
 
 ### Scenario 1: Mikrotjänstarkitektur
-
 ```java
 // Retrieve license from config service
 String licenseData = configService.getLicense();
@@ -270,10 +253,9 @@ byte[] licenseBytes = Base64.getDecoder().decode(licenseData);
 InputStream stream = new ByteArrayInputStream(licenseBytes);
 ```
 
-Varje mikrotjänst läser in licensen från en delad hemlig lagring under sin bootstrap‑fas, vilket säkerställer konsekvent licensiering över nätverket utan filsystem‑beroenden.
+Varje mikrotjänst laddar licensen från en delad hemlig lagring under sin uppstartsfas, vilket säkerställer konsekvent licensiering över hela nätverket utan filsystem‑beroenden.
 
 ### Scenario 2: Multi‑tenant‑applikationer
-
 ```java
 public void setTenantLicense(String tenantId) {
     InputStream licenseStream = licenseRepository.getLicenseStream(tenantId);
@@ -281,10 +263,9 @@ public void setTenantLicense(String tenantId) {
 }
 ```
 
-Hyresgäst‑specifika licenser kan hämtas från en databastabell, omvandlas till en ström och tillämpas i farten innan ett dokument bearbetas för den hyresgästen.
+Hyresgäst‑specifika licenser kan hämtas från en databastabell, omvandlas till en ström och appliceras i farten innan ett dokument bearbetas för den hyresgästen.
 
 ### Scenario 3: Automatiserade test‑pipelines
-
 ```java
 @BeforeEach
 void setupTestLicense() {
@@ -294,16 +275,14 @@ void setupTestLicense() {
 }
 ```
 
-CI‑pipelines hämtar licensen från en krypterad miljövariabel, tillämpar den en gång per testkörning och kastar sedan den in‑memory‑kopian, vilket håller CI‑miljön ren.
+CI‑pipelines hämtar licensen från en krypterad miljövariabel, applicerar den en gång per testkörning och kastar sedan den in‑memory‑kopian, vilket håller CI‑miljön ren.
 
 ## Prestandaöverväganden och optimering
-
-- **Cacha licensen** efter den första inläsningen; efterföljande anrop till `setLicense()` kan återanvända den cachade byte‑arrayen, vilket eliminerar disk‑ eller nätverkslatens.  
-- **Använd buffrade strömmar** (`BufferedInputStream`) när du läser stora licensfiler från fjärr‑URL:er för att minska I/O‑överhead.  
-- **Sätt licensen tidigt** (t.ex. i en `static`‑initializer) så att dokumentbearbetning startar med en giltig licens, vilket undviker den lilla engångskostnaden under den första begäran.
+- **Cacha licensen** efter den första laddningen; efterföljande anrop till `setLicense()` kan återanvända den cachade byte‑arrayen, vilket eliminerar disk‑ eller nätverkslatens.  
+- **Använd buffrade strömmar** (`BufferedInputStream`) när du läser stora licensfiler från fjärr‑URL:er för att minska I/O‑kostnaden.  
+- **Ställ in licensen tidigt** (t.ex. i en `static`‑initialiserare) så att dokumentbehandling startar med en giltig licens, vilket undviker den lilla engångskostnaden under den första begäran.
 
 ### Återförsökslogik för nätverkskällor
-
 ```java
 int maxRetries = 3;
 for (int i = 0; i < maxRetries; i++) {
@@ -317,22 +296,20 @@ for (int i = 0; i < maxRetries; i++) {
 }
 ```
 
-Implementera exponentiell back‑off när du hämtar licensen från en fjärr‑endpoint. Detta förhindrar tillfälliga nätverksstörningar från att krascha din tjänst.
+Implementera exponentiell back‑off när du hämtar licensen från en fjärr‑endpoint. Detta förhindrar tillfälliga nätverksfel från att krascha din tjänst.
 
 ## Felsökningsguide
 
 ### Steg 1: Verifiera licensfilens integritet
-
 ```java
 System.out.println("License file exists: " + licenseFile.exists());
 System.out.println("License file size: " + licenseFile.length() + " bytes");
 System.out.println("Can read file: " + licenseFile.canRead());
 ```
 
-Kontrollera att XML‑filen är väl‑formad och matchar den licens du köpt. En korrupt fil kommer att utlösa ett `LicenseException`.
+Kontrollera att XML‑filen är välformad och matchar den licens du köpt. En korrupt fil kommer att kasta ett `LicenseException`.
 
-### Steg 2: Felsök ström‑skapande
-
+### Steg 2: Felsök strömskapande
 ```java
 // Add logging to understand what's happening
 System.out.println("License file exists: " + licenseFile.exists());
@@ -342,8 +319,7 @@ System.out.println("Can read file: " + licenseFile.canRead());
 
 Skriv ut storleken på byte‑arrayen (`licenseBytes.length`) innan du skickar den till `setLicense()`; en storlek på noll indikerar en tom ström.
 
-### Steg 3: Testa licenstillämpning
-
+### Steg 3: Testa licensapplikation
 ```java
 try {
     License license = new License();
@@ -355,50 +331,50 @@ try {
 }
 ```
 
-Kör en enkel jämförelsuppgift efter att licensen har lästs in. Om resultatet innehåller vattenstämplar har licensen inte tillämpats korrekt.
+Kör en enkel jämförelsuppgift efter att licensen har laddats. Om utdata innehåller vattenstämplar har licensen inte applicerats korrekt.
 
-## Vanliga frågor
+## Vanliga frågor och svar
 
 **Q: Kan jag använda samma licensström flera gånger?**  
 A: Nej. När en ström har lästs är den uttömd. Skapa en ny ström varje gång eller cacha den råa byte‑arrayen och omslut den i en ny `ByteArrayInputStream`.
 
-**Q: Vad händer om jag inte sätter en licens?**  
-A: GroupDocs körs i utvärderingsläge, lägger in vattenstämplar och begränsar antalet bearbetade sidor.
+**Q: Vad händer om jag inte ställer in en licens?**  
+A: GroupDocs körs i utvärderingsläge, lägger till vattenstämplar och begränsar antalet bearbetade sidor.
 
 **Q: Är ström‑baserad licensiering säkrare än fil‑baserad?**  
-A: Ja. Genom att läsa in licensen direkt från minnet undviker du att lämna en läsbar fil på disk, vilket minskar risken för oavsiktlig exponering.
+A: Ja. Genom att ladda licensen direkt från minnet undviker du att lämna en läsbar fil på disk, vilket minskar risken för oavsiktlig exponering.
 
 **Q: Kan jag byta licenser vid körning?**  
-A: Absolut. Anropa `LicenseManager.setLicense(newStream)` när du behöver byta aktiv licens – till exempel per hyresgäst eller per funktionslicens.
+A: Absolut. Anropa `LicenseManager.setLicense(newStream)` när du behöver byta den aktiva licensen—t.ex. per hyresgäst eller per funktionslicens.
 
 **Q: Hur hanterar jag licensiering i en klustrad miljö?**  
-A: Varje nod måste läsa in licensen oberoende. Använd en delad konfigurationstjänst (Consul, Spring Cloud Config) eller miljövariabler så att varje instans får samma licensdata.
+A: Varje nod måste ladda licensen oberoende. Använd en delad konfigurationstjänst (Consul, Spring Cloud Config) eller miljövariabler så att varje instans får samma licensdata.
 
 **Q: Vad är prestandapåverkan av att använda strömmar?**  
-A: Försumbar. Licensen sätts vanligtvis en gång vid start; strömläsningen förbrukar bara några kilobyte, mycket mindre än de megabyte som bearbetas under dokumentjämförelse.
+A: Försumbar. Licensen sätts vanligtvis en gång vid start; strömläsningen förbrukar bara några kilobyte, långt mindre än de megabyte som bearbetas under dokumentjämförelse.
 
 ## Slutsats
-
-Du har nu en **centraliserad licenshanterare** byggd på Java‑strömmar, vilket ger dig den flexibilitet, säkerhet och skalbarhet som krävs för moderna moln‑native distributioner. Genom att följa stegen, bästa praxis och felsökningstips i den här guiden kan du tryggt tillämpa GroupDocs‑licensiering över containrar, mikrotjänster och multi‑tenant‑arkitekturer utan huvudvärk från fil‑baserade sökvägar.
+Du har nu en **centraliserad licenshanterare** byggd på Java‑strömmar, vilket ger dig den flexibilitet, säkerhet och skalbarhet som krävs för moderna moln‑native distributioner. Genom att följa stegen, bästa praxis och felsökningstips i denna guide kan du tryggt tillämpa GroupDocs‑licensiering över containrar, mikrotjänster och multi‑tenant‑arkitekturer utan huvudvärk från fil‑baserade sökvägar.
 
 ## Ytterligare resurser
+- [GroupDocs.Comparison för Java-dokumentation](https://docs.groupdocs.com/comparison/java/)
+- [Fullständig API‑referensguide](https://reference.groupdocs.com/comparison/java/)
+- [GroupDocs‑utgåvor](https://releases.groupdocs.com/comparison/java/)
+- [Köp GroupDocs‑licens](https://purchase.groupdocs.com/buy)
+- [GroupDocs‑communityforum](https://forum.groupdocs.com/c/comparison)
 
-- **Dokumentation**: [GroupDocs.Comparison for Java Documentation](https://docs.groupdocs.com/comparison/java/)  
-- **API‑referens**: [Complete API Reference Guide](https://reference.groupdocs.com/comparison/java/)  
-- **Ladda ner senaste versionen**: [GroupDocs Releases](https://releases.groupdocs.com/comparison/java/)  
-- **Köp licens**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Få support**: [GroupDocs Community Forum](https://forum.groupdocs.com/c/comparison)
-
----
-
-**Senast uppdaterad:** 2026-05-26  
-**Testat med:** GroupDocs.Comparison 25.2 (Java)  
+**Senast uppdaterad:** 2026-10-15  
+**Testad med:** GroupDocs.Comparison 25.2 (Java)  
 **Författare:** GroupDocs  
 
----
-
 ## Relaterade handledningar
+- [GroupDocs.Comparison Java Licensinställningsguide - Komplett konfigurationshandledning](/comparison/java/licensing-configuration/)
+- [GroupDocs Comparison Java Licensinställning - Komplett URL‑konfigurationsguide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Hur man använder GroupDocs - Java Dokumentjämförelse‑strömmar – Komplett guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
 
-- [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)  
-- [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)  
-- [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

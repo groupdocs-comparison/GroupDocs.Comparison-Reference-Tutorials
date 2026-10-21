@@ -1,23 +1,24 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2026-06-21
-description: 了解如何使用 GroupDocs.Comparison API 对 Word、PDF、Excel 等文档格式进行比较。针对 .NET 与
-  Java 开发者的逐步教程，提供代码示例、格式支持和性能细节。
+date: 2026-10-21
+description: 了解 GroupDocs.Comparison API 教程，适用于 .NET 和 Java，展示如何快速、准确地比较 PDF、Word、Excel
+  等文件。
 is_root: true
 keywords:
-- groupdocs comparison api
-- document diff tool
+- groupdocs comparison api tutorial
 - compare pdf files
-- compare word documents
-- groupdocs api tutorial
+- document diff tool
+lastmod: 2026-10-21
 linktitle: GroupDocs.Comparison 教程与示例
+og_description: GroupDocs.Comparison API 教程帮助您在 .NET 和 Java 中比较 PDF、Word、Excel 等文件，提供快速、准确的差异结果，并具备内置安全性。
+og_image_alt: 'Developer guide: GroupDocs.Comparison API tutorial for .NET and Java'
+og_title: GroupDocs.Comparison API 教程（适用于 .NET 和 Java）
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
-  description: Learn how to compare Word, PDF, Excel & other document formats with
-    GroupDocs.Comparison API for document comparison. Step‑by‑step tutorials for .NET
-    & Java developers with code examples, format support, and performance details.
-  headline: GroupDocs.Comparison API Tutorials & Developer Guide
+  dateModified: '2026-10-21'
+  description: Discover the GroupDocs.Comparison API tutorial for .NET and Java, showing
+    how to compare PDF, Word, Excel and other files quickly and accurately.
+  headline: GroupDocs.Comparison API tutorial for .NET and Java
   type: TechArticle
 - questions:
   - answer: It detects and highlights changes between two documents of the same or
@@ -34,56 +35,59 @@ schemas:
       of the comparison result.
     question: Is there a way to generate visual previews?
   type: FAQPage
-title: GroupDocs.Comparison API 教程与开发者指南
+tags:
+- compare pdf
+- groupdocs comparison
+- .net document comparison
+- java document comparison
+- document diff
+title: GroupDocs.Comparison API 教程（适用于 .NET 和 Java）
 type: docs
 url: /zh/
 weight: 11
 ---
 
-# GroupDocs.Comparison API 教程与开发者指南
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+
+# GroupDocs.Comparison API 教程（适用于 .NET 和 Java）
 
 ![GroupDocs.Comparison 横幅](./groupdocs-comparison-net.svg)
 [GroupDocs.Comparison 横幅](./groupdocs-comparison-net.svg)
 
-Welcome to the **complete guide to document comparison** with the **GroupDocs.Comparison API**! Our comprehensive tutorials show you how to efficiently identify differences between documents in various formats including **Word, PDF, Excel, PowerPoint, images, and more**. Whether you’re building a .NET web service or a Java desktop application, this guide gives you the practical steps you need to integrate powerful document comparison features quickly.
+欢迎使用 **文档比较完整指南**，该指南基于 **GroupDocs.Comparison API**。此 **GroupDocs.Comparison API 教程** 将引导您比较 Word、PDF、Excel、PowerPoint、图像以及许多其他格式，无论您是构建 .NET Web 服务还是 Java 桌面应用程序。您将获得一步一步的说明、最佳实践提示和性能指导，以便在几分钟内为项目添加可靠的差异功能。
 
 ## 快速答案
-- **What does GroupDocs.Comparison API do?** It detects and highlights changes between two documents of the same or different formats.  
-- **Which platforms are supported?** .NET (Framework, .NET Core, .NET 5/6) and Java (8+).  
-- **Do I need a license for development?** A free trial works for evaluation; a commercial license is required for production.  
-- **Can I compare password‑protected files?** Yes – the API accepts passwords for opening secured documents.  
-- **Is there a way to generate visual previews?** Absolutely, the API can create side‑by‑side or overlay preview images of the comparison result.  
-- **How can I compare entire folders?** Use the folder‑comparison feature to process multiple files in one call, perfect for batch validation.  
+- **GroupDocs.Comparison API 的作用是什么？** 它检测并突出显示两个文档（相同或不同格式）之间的更改。  
+- **支持哪些平台？** .NET（Framework、.NET Core、.NET 5/6）和 Java（8+）。  
+- **开发是否需要许可证？** 免费试用可用于评估；生产环境需要商业许可证。  
+- **可以比较受密码保护的文件吗？** 可以——API 接受用于打开受保护文档的密码。  
+- **有没有生成可视化预览的方法？** 当然，API 可以创建并排或叠加的比较结果预览图像。  
+- **如何比较整个文件夹？** 使用文件夹比较功能一次处理多个文件，适合批量验证。  
 
 ## 什么是 GroupDocs.Comparison API？
-The `GroupDocs.Comparison API` is a set of libraries that let developers programmatically compare the content, layout, and formatting of documents. It supports over 100 file types, delivers detailed change logs, and provides options to accept or reject modifications through code.
+`GroupDocs.Comparison API` 是一套库，允许开发者以编程方式比较文档的内容、布局和格式。它支持 **50+ 输入和输出格式**，提供详细的更改日志，并提供通过代码接受或拒绝修改的选项。
 
 ## 为什么使用 GroupDocs.Comparison API？
-GroupDocs.Comparison API enables developers to programmatically detect and highlight differences across a wide range of document types, offering high accuracy, flexible output formats, and secure processing while requiring no external Office installations. It streamlines review workflows, reduces manual effort, and integrates easily into .NET and Java applications.
-
-- **Multi‑format Support** – Compare Word, PDF, Excel, PowerPoint, images, emails, and many more without converting files first.  
-- **Rich Change Detection** – See insertions, deletions, formatting tweaks, and style changes highlighted automatically.  
-- **Programmatic Change Management** – Accept or reject specific changes in your workflow, perfect for review systems.  
-- **Secure Handling** – Work with encrypted or password‑protected documents safely.  
-- **High Performance** – Optimized algorithms handle large files and bulk folder comparisons efficiently.
+GroupDocs.Comparison API 在超过 **100 种文件类型** 上实现行业领先的准确率（99 % 更改检测），能够在 **3 秒内处理 500 页 PDF**，并内置对受密码保护文件的安全支持。它无需外部 Office 安装，提供广泛的自定义功能，且可在 .NET 和 Java 平台上运行，是企业级文档比较的理想选择。
 
 ## GroupDocs.Comparison API 如何处理大文档？
-GroupDocs.Comparison processes documents using a streaming architecture that reads data in chunks, keeping memory consumption under 50 MB even for 500‑page PDFs. The built‑in folder‑comparison feature processes files sequentially, allowing you to compare thousands of documents without exhausting server resources.
+GroupDocs.Comparison 使用流式架构分块读取数据，即使是 **500 页 PDF** 也能将内存消耗保持在 **50 MB** 以下。内置的文件夹比较功能按顺序处理文件，允许您在不耗尽服务器资源的情况下比较成千上万的文档。
 
 ## 如何使用 GroupDocs.Comparison API 比较两个文档？
-The `Comparer` class is the core component that loads source and target documents and performs the comparison operation. Load the source and target files with the `Comparer` class, call `Compare`, and then save the result with `Save`. This three‑step flow—load, compare, save—covers 99 % of comparison scenarios and works for any supported format, providing a clear and maintainable implementation for developers.
+`Comparer` 类是执行文档比较的核心组件。使用 `Comparer` 类加载源文件和目标文件，调用 `Compare`，然后使用 `Save` 保存结果。这三个步骤——加载、比较、保存——覆盖了大多数比较场景，适用于任何受支持的格式，为开发者提供清晰且易于维护的实现方式。
 
 ## GroupDocs.Comparison API 支持哪些文件格式？
-GroupDocs.Comparison supports **50+ input and output formats**, including DOCX, DOC, ODT, RTF, TXT, XLSX, XLS, ODS, CSV, PPTX, PPT, ODP, PDF, PDF/A, JPG, PNG, BMP, GIF, TIFF, EML, MSG, HTML, EPUB, DJVU, and many others. The API automatically detects each format, eliminating the need for pre‑conversion and ensuring seamless comparison across diverse file types.
+GroupDocs.Comparison 支持 **50+ 输入和输出格式**，包括 DOCX、DOC、ODT、RTF、TXT、XLSX、XLS、ODS、CSV、PPTX、PPT、ODP、PDF、PDF/A、JPG、PNG、BMP、GIF、TIFF、EML、MSG、HTML、EPUB、DJVU 等等。API 自动检测每种格式，无需预先转换，确保在各种文件类型之间实现无缝比较。
 
 ## 为什么选择 GroupDocs.Comparison API 而不是其他比较工具？
-GroupDocs.Comparison delivers industry‑leading accuracy (99 % change detection) across more than 100 formats, processes 500‑page documents in under 3 seconds, and includes built‑in security for password‑protected files. It requires no external software such as Microsoft Office, offers extensive customization options, and provides robust APIs for both .NET and Java, making it a superior choice for enterprise‑grade document comparison.
+GroupDocs.Comparison 在超过 **100 种格式** 上实现行业领先的准确率（99 % 更改检测），能够在 **3 秒内处理 500 页文档**，并内置对受密码保护文件的安全支持。它无需 Microsoft Office 等外部软件，提供广泛的自定义选项，并为 .NET 与 Java 提供强大的 API，是企业级文档比较的卓越选择。
 
-## GroupDocs.Comparison for .NET 教程
+## GroupDocs.Comparison .NET 教程
 
 {{% alert color="primary" %}}
-Master document comparison in your .NET applications with our step‑by‑step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer‑focused guides cover everything from basic setup to advanced integration scenarios.
-{{% /alert %}}
+在您的 .NET 应用程序中通过我们的分步教程实现文档比较的主控功能。学习如何使用 C# 为 Word、PDF、Excel 等格式实现专业的文档比较功能。我们的开发者指南覆盖从基础设置到高级集成的全部内容。{{% /alert %}}
 
 ### 必备 .NET 教程
 
@@ -91,38 +95,37 @@ Master document comparison in your .NET applications with our step‑by‑step t
 <div class="col-md-6">
 
 #### 入门
-- [Quick Start Guide](./net/quick-start/) – Set up and run your first comparison in minutes.  
-- [Installation & Setup](./net/getting-started/) – Configure your development environment.  
-- [Licensing Options](./net/licensing-configuration/) – Understand licensing and deployment options.
+- [快速入门指南](./net/quick-start/) – 在几分钟内设置并运行您的首次比较。  
+- [安装与设置](./net/getting-started/) – 配置开发环境。  
+- [授权选项](./net/licensing-configuration/) – 了解授权和部署选项。
 
 #### 核心功能
-- [Document Loading](./net/document-loading/) – Learn different ways to load documents.  
-- [Basic Comparison](./net/basic-comparison/) – Implement simple comparison operations.  
-- [Advanced Comparison](./net/advanced-comparison/) – Master complex comparison scenarios.  
-- [Change Management](./net/change-management/) – Accept or reject specific changes.
+- [文档加载](./net/document-loading/) – 学习加载文档的不同方式。  
+- [基础比较](./net/basic-comparison/) – 实现简单的比较操作。  
+- [高级比较](./net/advanced-comparison/) – 掌握复杂的比较场景。  
+- [更改管理](./net/change-management/) – 接受或拒绝特定更改。
 
 </div>
 <div class="col-md-6">
 
 #### 高级功能
-- [Preview Generation](./net/preview-generation/) – Create visual previews of comparison results.  
-- [Metadata Management](./net/metadata-management/) – Control document properties.  
-- [Security & Protection](./net/security-protection/) – Work with protected documents.  
-- [Comparison Options](./net/comparison-options/) – Customize comparison behavior.
+- [预览生成](./net/preview-generation/) – 创建比较结果的可视化预览。  
+- [元数据管理](./net/metadata-management/) – 控制文档属性。  
+- [安全与保护](./net/security-protection/) – 处理受保护的文档。  
+- [比较选项](./net/comparison-options/) – 自定义比较行为。
 
-#### 专用比较
-- [Image Comparison](./net/image-comparison/) – Compare images with pixel‑perfect accuracy.  
-- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) – Compare entire directories.  
-- [Document Information](./net/document-information/) – Extract and analyze document metadata.
+#### 专业比较
+- [图像比较](./net/image-comparison/) – 以像素级精度比较图像。  
+- [文档与文件夹比较](./net/documents-and-folder-comparison/) – 比较整个目录。  
+- [文档信息](./net/document-information/) – 提取并分析文档元数据。
 
 </div>
 </div>
 
-## GroupDocs.Comparison for Java 教程
+## GroupDocs.Comparison Java 教程
 
 {{% alert color="primary" %}}
-Implement powerful document comparison capabilities in your Java applications with our comprehensive tutorials. Learn to integrate GroupDocs.Comparison for Java into enterprise systems, web applications, and desktop software with clear, practical examples.
-{{% /alert %}}
+在您的 Java 应用程序中通过我们的完整教程实现强大的文档比较功能。学习将 GroupDocs.Comparison for Java 集成到企业系统、Web 应用和桌面软件中，提供清晰、实用的示例。{{% /alert %}}
 
 ### 必备 Java 教程
 
@@ -130,29 +133,27 @@ Implement powerful document comparison capabilities in your Java applications wi
 <div class="col-md-6">
 
 #### 入门
-- [Licensing Options](./java/licensing-configuration) – Understand deployment licensing.
+- [授权选项](./java/licensing-configuration) – 了解部署授权。
 
 #### 核心功能
-- [Document Loading](./java/document-loading/) – Load documents from various sources.  
-- [Basic Comparison](./java/basic-comparison/) – Implement fundamental comparison.  
-- [Advanced Comparison](./java/advanced-comparison/) – Handle complex comparison scenarios.
+- [文档加载](./java/document-loading/) – 从各种来源加载文档。  
+- [基础比较](./java/basic-comparison/) – 实现基本比较。  
+- [高级比较](./java/advanced-comparison/) – 处理复杂的比较场景。
 
 </div>
 <div class="col-md-6">
 
 #### 高级功能
-- [Preview Generation](./java/preview-generation/) – Generate visual comparison previews.  
-- [Metadata Management](./java/metadata-management/) – Control document metadata.  
-- [Security & Protection](./java/security-protection/) – Compare protected documents.  
-- [Comparison Options](./java/comparison-options/) – Fine‑tune comparison settings.  
-- [Document Information](./java/document-information) – Extract and display metadata.
+- [预览生成](./java/preview-generation/) – 生成可视化比较预览。  
+- [元数据管理](./java/metadata-management/) – 控制文档元数据。  
+- [安全与保护](./java/security-protection/) – 比较受保护的文档。  
+- [比较选项](./java/comparison-options/) – 微调比较设置。  
+- [文档信息](./java/document-information) – 提取并显示元数据。
 
 </div>
 </div>
 
 ## 支持的文档格式
-
-GroupDocs.Comparison supports a wide range of document formats:
 
 | 类别 | 格式 |
 |----------|---------|
@@ -166,43 +167,51 @@ GroupDocs.Comparison supports a wide range of document formats:
 
 ## 开发者资源
 
-- [API Documentation](https://reference.groupdocs.com/comparison/) – Detailed API references.  
-- [GitHub Examples](https://github.com/groupdocs-comparison/) – Repository of code examples.  
-- [Developer Blog](https://blog.groupdocs.com/category/comparison/) – Latest updates and tutorials.  
-- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) – Get help from our experts.
+- [API 文档](https://reference.groupdocs.com/comparison/) – 详细的 API 参考。  
+- [GitHub 示例](https://github.com/groupdocs-comparison/) – 代码示例仓库。  
+- [开发者博客](https://blog.groupdocs.com/category/comparison/) – 最新更新和教程。  
+- [免费支持论坛](https://forum.groupdocs.com/c/comparison/) – 获取专家帮助。
 
-## GroupDocs.Comparison API 的常见用例
-- **Legal document review** – Quickly highlight changes between contract revisions.  
-- **Financial reporting** – Detect alterations in Excel or PDF statements before publishing.  
-- **Content management systems** – Provide end‑users with visual diff tools for Word or PowerPoint files.  
-- **Automated QA** – Compare generated PDFs against baseline templates in CI pipelines.  
-- **Regulatory compliance** – Verify that policy documents have not been unintentionally modified.
+## GroupDocs.Comparison API 的常见使用场景
 
-## 立即开始
+- **法律文档审查** – 快速突出显示合同修订之间的更改。  
+- **财务报告** – 在发布前检测 Excel 或 PDF 报表的更改。  
+- **内容管理系统** – 为终端用户提供 Word 或 PowerPoint 文件的可视化差异工具。  
+- **自动化质量保证** – 在 CI 流水线中将生成的 PDF 与基准模板进行比较。  
+- **合规监管** – 验证政策文档未被意外修改。
 
-Explore our tutorials to start implementing professional document comparison features in your applications. GroupDocs.Comparison provides a powerful, flexible API that seamlessly integrates with your .NET and Java projects.
+## 今日开始使用
 
-[Download Free Trial](https://releases.groupdocs.com/comparison) | [Get Temporary License](https://purchase.groupdocs.com/temporary-license)
+探索我们的教程，立即在您的应用程序中实现专业的文档比较功能。GroupDocs.Comparison 提供强大且灵活的 API，能够无缝集成到您的 .NET 和 Java 项目中。
+
+[下载免费试用版](https://releases.groupdocs.com/comparison) | [获取临时授权](https://purchase.groupdocs.com/temporary-license)
 
 ## 常见问题
 
-**问：** Can I use the GroupDocs.Comparison API in a commercial product?  
-**答：** Yes, a valid commercial license is required for production deployments. A free trial is available for evaluation.
+**Q:** 我可以在商业产品中使用 GroupDocs.Comparison API 吗？  
+**A:** 是的，生产部署需要有效的商业授权。可使用免费试用进行评估。
 
-**问：** Does the API support password‑protected files?  
-**答：** Absolutely. You can supply the document password when loading the source files.
+**Q:** API 是否支持受密码保护的文件？  
+**A:** 当然。加载源文件时可以提供文档密码。
 
-**问：** Which .NET versions are compatible?  
-**答：** The API works with .NET Framework 4.5+, .NET Core 3.1+, .NET 5, and .NET 6+.
+**Q:** 哪些 .NET 版本兼容？  
+**A:** API 支持 .NET Framework 4.5+、.NET Core 3.1+、.NET 5 和 .NET 6+。
 
-**问：** How does the API handle large documents or bulk folder comparisons?  
-**答：** It uses streaming and optimized algorithms to keep memory usage low, and you can compare entire directories with the folder‑comparison feature.
+**Q:** API 如何处理大文档或批量文件夹比较？  
+**A:** 它使用流式处理和优化算法保持低内存使用，并可通过文件夹比较功能一次比较整个目录。
 
-**问：** Is there a way to customize the visual style of the comparison output?  
-**答：** Yes, the Comparison Options let you define colors, markup styles, and output formats for the generated diff.
+**Q:** 是否可以自定义比较输出的视觉样式？  
+**A:** 可以，比较选项允许您为生成的差异定义颜色、标记样式和输出格式。
 
 ---
 
-**最后更新：** 2026-06-21  
+**最后更新：** 2026-10-21  
 **测试环境：** GroupDocs.Comparison 24.0 (latest stable)  
 **作者：** GroupDocs
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

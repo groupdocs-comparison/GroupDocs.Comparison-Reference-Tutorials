@@ -1,25 +1,31 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2026-06-21
-description: GroupDocs.Comparison API ile belge karşılaştırması yaparak Word, PDF,
-  Excel ve diğer belge formatlarını nasıl karşılaştıracağınızı öğrenin. .NET ve Java
-  geliştiricileri için adım adım eğitimler, kod örnekleri, format desteği ve performans
-  detayları.
+date: 2026-10-21
+description: GroupDocs.Comparison API öğreticisini .NET ve Java için öğrenin; Word,
+  PDF, Excel ve diğer belgeleri yüksek doğruluk ve hızlı performansla nasıl karşılaştıracağınızı
+  gösterir.
 is_root: true
 keywords:
-- groupdocs comparison api
-- document diff tool
-- compare pdf files
+- groupdocs comparison api tutorial
+- document comparison .net
+- compare pdf java
+- groupdocs api guide
 - compare word documents
-- groupdocs api tutorial
-linktitle: GroupDocs.Comparison Eğitimleri ve Örnekleri
+lastmod: 2026-10-21
+linktitle: GroupDocs.Comparison Öğreticileri ve Örnekleri
+og_description: GroupDocs.Comparison API öğreticisini .NET ve Java için öğrenin; Word,
+  PDF, Excel ve diğer belgeleri yüksek doğruluk ve hızlı performansla nasıl karşılaştıracağınızı
+  gösterir.
+og_image_alt: Developer guide banner for GroupDocs.Comparison API showing document
+  comparison workflow
+og_title: GroupDocs.Comparison API öğreticisi – .NET ve Java’da belgeleri karşılaştırma
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
-  description: Learn how to compare Word, PDF, Excel & other document formats with
-    GroupDocs.Comparison API for document comparison. Step‑by‑step tutorials for .NET
-    & Java developers with code examples, format support, and performance details.
-  headline: GroupDocs.Comparison API Tutorials & Developer Guide
+  dateModified: '2026-10-21'
+  description: Learn the GroupDocs.Comparison API tutorial for .NET and Java, showing
+    how to compare Word, PDF, Excel and other documents with high accuracy and fast
+    performance.
+  headline: 'GroupDocs.Comparison API tutorial: compare docs in .NET Java'
   type: TechArticle
 - questions:
   - answer: It detects and highlights changes between two documents of the same or
@@ -36,175 +42,173 @@ schemas:
       of the comparison result.
     question: Is there a way to generate visual previews?
   type: FAQPage
-title: GroupDocs.Comparison API Eğitimleri ve Geliştirici Kılavuzu
+tags:
+- document comparison
+- groupdocs comparison
+- .net tutorial
+- java tutorial
+- api guide
+title: 'GroupDocs.Comparison API öğreticisi: .NET ve Java’da belgeleri karşılaştırma'
 type: docs
 url: /tr/
 weight: 11
 ---
 
-# GroupDocs.Comparison API Eğitimleri ve Geliştirici Kılavuzu
+# GroupDocs.Comparison API öğreticisi: .NET ve Java'da belgeleri karşılaştırma
 
-![GroupDocs.Comparison Afişi](./groupdocs-comparison-net.svg)
-[GroupDocs.Comparison Afişi](./groupdocs-comparison-net.svg)
+![GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)
+[GroupDocs.Comparison Banner](./groupdocs-comparison-net.svg)
 
-GroupDocs.Comparison API ile **belge karşılaştırma için tam kılavuz** hoş geldiniz! Kapsamlı eğitimlerimiz, **Word, PDF, Excel, PowerPoint, görüntüler ve daha fazlası** dahil olmak üzere çeşitli formatlardaki belgeler arasındaki farkları verimli bir şekilde belirlemenizi gösterir. .NET web servisi ya da Java masaüstü uygulaması geliştiriyor olun, bu kılavuz güçlü belge karşılaştırma özelliklerini hızlı bir şekilde entegre etmeniz için gerekli pratik adımları sunar.
+Welcome to the **belge karşılaştırma için tam kılavuz** with the **GroupDocs.Comparison API**. In this GroupDocs.Comparison API tutorial you’ll discover how to programmatically compare Word, PDF, Excel, PowerPoint, images and many other formats from both .NET and Java environments. The tutorial walks you through setup, core concepts, performance tips, and real‑world use cases so you can add reliable diff functionality to your applications today.
 
-## Hızlı Yanıtlar
-- **GroupDocs.Comparison API ne yapar?** İki aynı ya da farklı formatta belge arasındaki değişiklikleri algılar ve vurgular.  
-- **Hangi platformlar destekleniyor?** .NET (Framework, .NET Core, .NET 5/6) ve Java (8+).  
-- **Geliştirme için lisansa ihtiyacım var mı?** Değerlendirme için ücretsiz deneme yeterlidir; üretim için ticari lisans gereklidir.  
-- **Şifre korumalı dosyaları karşılaştırabilir miyim?** Evet – API, güvenli belgeleri açmak için şifreleri kabul eder.  
-- **Görsel önizlemeler oluşturmanın bir yolu var mı?** Kesinlikle, API karşılaştırma sonucunun yan yana veya üst üste önizleme görüntülerini oluşturabilir.  
-- **Tüm klasörleri nasıl karşılaştırabilirim?** Bir çağrıda birden fazla dosyayı işlemek için klasör‑karşılaştırma özelliğini kullanın, toplu doğrulama için mükemmeldir.  
+## Hızlı yanıtlar
+- **GroupDocs.Comparison API ne yapar?** It detects and highlights changes between two documents of the same or different formats.  
+- **Hangi platformlar destekleniyor?** .NET (Framework, .NET Core, .NET 5/6) and Java (8+).  
+- **Geliştirme için lisansa ihtiyacım var mı?** A free trial works for evaluation; a commercial license is required for production.  
+- **Şifre korumalı dosyaları karşılaştırabilir miyim?** Yes – the API accepts passwords for opening secured documents.  
+- **Görsel ön izlemeler oluşturmanın bir yolu var mı?** Absolutely, the API can create side‑by‑side or overlay preview images of the comparison result.  
+- **Tüm klasörleri nasıl karşılaştırabilirim?** Use the folder‑comparison feature to process multiple files in one call, perfect for batch validation.  
 
-## GroupDocs.Comparison API Nedir?
-`GroupDocs.Comparison API`, geliştiricilerin belgelerin içeriğini, düzenini ve biçimlendirmesini programlı olarak karşılaştırmalarını sağlayan bir dizi kütüphanedir. 100'den fazla dosya türünü destekler, ayrıntılı değişiklik günlükleri sunar ve kod aracılığıyla değişiklikleri kabul etme veya reddetme seçenekleri sağlar.
+## GroupDocs.Comparison API nedir?
+GroupDocs.Comparison API is a collection of .NET and Java libraries that let you programmatically compare the content, layout and formatting of two documents. It supports over 100 file types, delivers a detailed change log, and can output the result as a new document, image or PDF. The API works without requiring Microsoft Office or other third‑party software, making it ideal for server‑side processing.
 
-## Neden GroupDocs.Comparison API Kullanmalısınız?
-GroupDocs.Comparison API, geliştiricilerin çok çeşitli belge türleri arasında farkları programlı olarak algılamasını ve vurgulamasını sağlar; yüksek doğruluk, esnek çıktı formatları ve güvenli işleme sunar ve harici Office kurulumları gerektirmez. İnceleme iş akışlarını hızlandırır, manuel çabayı azaltır ve .NET ve Java uygulamalarına kolayca entegre olur.
-
-- **Çoklu format desteği** – Dosyaları önceden dönüştürmeden Word, PDF, Excel, PowerPoint, görüntüler, e‑postalar ve daha fazlasını karşılaştırın.  
-- **Zengin değişiklik algılama** – Ekleme, silme, biçimlendirme ayarlamaları ve stil değişikliklerini otomatik olarak vurgulanmış olarak görün.  
-- **Programlı değişiklik yönetimi** – İş akışınızda belirli değişiklikleri kabul edin veya reddedin, inceleme sistemleri için mükemmeldir.  
-- **Güvenli işleme** – Şifrelenmiş veya şifre korumalı belgelerle güvenli bir şekilde çalışın.  
-- **Yüksek performans** – Optimize edilmiş algoritmalar büyük dosyaları ve toplu klasör karşılaştırmalarını verimli bir şekilde işler.  
+## Neden GroupDocs.Comparison API kullanmalısınız?
+GroupDocs.Comparison API processes documents with a streaming architecture that keeps memory usage under 50 MB even for 500‑page PDFs, and it can compare thousands of files in a folder with less than 3 seconds per 100‑page document. It offers **50+ input and output formats**, **99 % change‑detection accuracy**, built‑in password handling, and full customization of visual diff styles—making it a faster, more secure alternative to manual review tools.
 
 ## GroupDocs.Comparison API büyük belgeleri nasıl işler?
-GroupDocs.Comparison, belgeleri parçalar halinde okuyan bir akış mimarisi kullanarak işler; 500 sayfalık PDF'lerde bile bellek tüketimini 50 MB'nin altında tutar. Yerleşik klasör‑karşılaştırma özelliği dosyaları sıralı olarak işler, binlerce belgeyi sunucu kaynaklarını tüketmeden karşılaştırmanıza olanak tanır.
+`LoadOptions` lets you configure document loading behavior, such as enabling memory‑saving mode.  
+GroupDocs.Comparison API reads source files in small chunks, keeping memory consumption below 50 MB regardless of document size. The built‑in folder‑comparison processes files sequentially, enabling comparison of thousands of documents without exhausting resources. You can also enable the `LoadOptions` `EnableMemorySaving` flag to further reduce RAM usage while preserving full‑accuracy diff results.
 
-## GroupDocs.Comparison API ile iki belgeyi nasıl karşılaştırılır?
-`Comparer` sınıfı, kaynak ve hedef belgeleri yükleyen ve karşılaştırma işlemini gerçekleştiren temel bileşendir. `Comparer` sınıfı ile kaynak ve hedef dosyaları yükleyin, `Compare` metodunu çağırın ve ardından sonucu `Save` ile kaydedin. Bu üç adımlı akış—yükle, karşılaştır, kaydet—karşılaştırma senaryolarının %99'unu kapsar ve desteklenen herhangi bir formatta çalışır, geliştiriciler için net ve sürdürülebilir bir uygulama sağlar.
+## GroupDocs.Comparison API kullanarak iki belgeyi nasıl karşılaştırabilirsiniz?
+`Comparer` is the main class that performs document comparison.  
+Load your source and target files with the `Comparer` class, call `Compare`, and then save the result with `Save`. The `Comparer` class is the core component that orchestrates loading, diff calculation and output generation. This three‑step flow—load, compare, save—covers 99 % of comparison scenarios and works for any supported format, providing a clear and maintainable implementation for developers.
 
-## GroupDocs.Comparison API hangi dosya formatlarını destekliyor?
-GroupDocs.Comparison, **50+ giriş ve çıkış formatı** destekler; DOCX, DOC, ODT, RTF, TXT, XLSX, XLS, ODS, CSV, PPTX, PPT, ODP, PDF, PDF/A, JPG, PNG, BMP, GIF, TIFF, EML, MSG, HTML, EPUB, DJVU ve daha birçok formatı içerir. API, her formatı otomatik olarak algılar, ön‑dönüşüm ihtiyacını ortadan kaldırır ve çeşitli dosya türleri arasında sorunsuz karşılaştırma sağlar.
+## GroupDocs.Comparison API hangi dosya formatlarını destekler?
+GroupDocs.Comparison API supports **50+ input and output formats**, including DOCX, DOC, ODT, RTF, TXT, XLSX, XLS, ODS, CSV, PPTX, PPT, ODP, PDF, PDF/A, JPG, PNG, BMP, GIF, TIFF, EML, MSG, HTML, EPUB, DJVU and many more. The API automatically detects each format, eliminating the need for pre‑conversion and ensuring seamless comparison across diverse file types.
 
-## Neden GroupDocs.Comparison API diğer karşılaştırma araçlarından tercih edilmeli?
-GroupDocs.Comparison, 100'den fazla formatta sektör lideri doğruluk (%99 değişiklik algılama) sağlar, 500 sayfalık belgeleri 3 saniyenin altında işler ve şifre korumalı dosyalar için yerleşik güvenlik içerir. Microsoft Office gibi harici bir yazılım gerektirmez, kapsamlı özelleştirme seçenekleri sunar ve .NET ile Java için sağlam API'ler sağlar; bu da onu kurumsal düzeyde belge karşılaştırması için üstün bir seçim yapar.
+## Neden GroupDocs.Comparison API diğer karşılaştırma araçlarına tercih edilmeli?
+GroupDocs.Comparison API delivers industry‑leading accuracy (99 % change detection) across more than 100 formats, processes 500‑page documents in under 3 seconds, and includes built‑in security for password‑protected files. It requires no external software such as Microsoft Office, offers extensive customization options, and provides robust APIs for both .NET and Java, making it a superior choice for enterprise‑grade document comparison.
 
-## .NET için GroupDocs.Comparison Eğitimleri
+## .NET için GroupDocs.Comparison öğreticileri
 
 {{% alert color="primary" %}}
-Adım adım eğitimlerimizle .NET uygulamalarınızda belge karşılaştırmasını ustalaştırın. Word, PDF, Excel ve diğer formatlar için C# kullanarak profesyonel belge karşılaştırma özelliklerini nasıl uygulayacağınızı öğrenin. Geliştirici odaklı kılavuzlarımız temel kurulumdan gelişmiş entegrasyon senaryolarına kadar her şeyi kapsar.
+Master document comparison in your .NET applications with our step‑by‑step tutorials. Learn how to implement professional document comparison features for Word, PDF, Excel, and other formats using C#. Our developer‑focused guides cover everything from basic setup to advanced integration scenarios.
 {{% /alert %}}
 
-### Temel .NET Eğitimleri
+### Temel .NET öğreticileri
 
 <div class="row">
 <div class="col-md-6">
 
 #### Başlarken
-- [Quick Start Guide](./net/quick-start/) – Dakikalar içinde ilk karşılaştırmanızı kurun ve çalıştırın.  
-- [Installation & Setup](./net/getting-started/) – Geliştirme ortamınızı yapılandırın.  
-- [Licensing Options](./net/licensing-configuration/) – Lisanslama ve dağıtım seçeneklerini anlayın.
+- [Quick Start Guide](./net/quick-start/) – Set up and run your first comparison in minutes.  
+- [Installation & Setup](./net/getting-started/) – Configure your development environment.  
+- [Licensing Options](./net/licensing-configuration/) – Understand licensing and deployment options.
 
-#### Temel İşlevsellik
-- [Document Loading](./net/document-loading/) – Belgeleri yüklemenin farklı yollarını öğrenin.  
-- [Basic Comparison](./net/basic-comparison/) – Basit karşılaştırma işlemlerini uygulayın.  
-- [Advanced Comparison](./net/advanced-comparison/) – Karmaşık karşılaştırma senaryolarında uzmanlaşın.  
-- [Change Management](./net/change-management/) – Belirli değişiklikleri kabul edin veya reddedin.
+#### Temel işlevsellik
+- [Document Loading](./net/document-loading/) – Learn different ways to load documents.  
+- [Basic Comparison](./net/basic-comparison/) – Implement simple comparison operations.  
+- [Advanced Comparison](./net/advanced-comparison/) – Master complex comparison scenarios.  
+- [Change Management](./net/change-management/) – Accept or reject specific changes.
 
 </div>
 <div class="col-md-6">
 
-#### Gelişmiş Özellikler
-- [Preview Generation](./net/preview-generation/) – Karşılaştırma sonuçlarının görsel önizlemelerini oluşturun.  
-- [Metadata Management](./net/metadata-management/) – Belge özelliklerini yönetin.  
-- [Security & Protection](./net/security-protection/) – Korunan belgelerle çalışın.  
-- [Comparison Options](./net/comparison-options/) – Karşılaştırma davranışını özelleştirin.
+#### Gelişmiş özellikler
+- [Preview Generation](./net/preview-generation/) – Create visual previews of comparison results.  
+- [Metadata Management](./net/metadata-management/) – Control document properties.  
+- [Security & Protection](./net/security-protection/) – Work with protected documents.  
+- [Comparison Options](./net/comparison-options/) – Customize comparison behavior.
 
-#### Uzmanlaştırılmış Karşılaştırmalar
-- [Image Comparison](./net/image-comparison/) – Görüntüleri piksel mükemmelliğinde karşılaştırın.  
-- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) – Tüm dizinleri karşılaştırın.  
-- [Document Information](./net/document-information/) – Belge meta verilerini çıkarın ve analiz edin.
+#### Uzmanlaşmış karşılaştırmalar
+- [Image Comparison](./net/image-comparison/) – Compare images with pixel‑perfect accuracy.  
+- [Documents and Folder Comparison](./net/documents-and-folder-comparison/) – Compare entire directories.  
+- [Document Information](./net/document-information/) – Extract and analyze document metadata.
 
 </div>
 </div>
 
-## Java için GroupDocs.Comparison Eğitimleri
+## Java için GroupDocs.Comparison öğreticileri
 
 {{% alert color="primary" %}}
-Kapsamlı eğitimlerimizle Java uygulamalarınıza güçlü belge karşılaştırma yetenekleri ekleyin. GroupDocs.Comparison for Java'ı kurumsal sistemlere, web uygulamalarına ve masaüstü yazılımlara net ve pratik örneklerle entegre etmeyi öğrenin.
+Implement powerful document comparison capabilities in your Java applications with our comprehensive tutorials. Learn to integrate GroupDocs.Comparison for Java into enterprise systems, web applications, and desktop software with clear, practical examples.
 {{% /alert %}}
 
-### Temel Java Eğitimleri
+### Temel Java öğreticileri
 
 <div class="row">
 <div class="col-md-6">
 
 #### Başlarken
-- [Licensing Options](./java/licensing-configuration) – Dağıtım lisanslamasını anlayın.
+- [Licensing Options](./java/licensing-configuration) – Understand deployment licensing.
 
-#### Temel İşlevsellik
-- [Document Loading](./java/document-loading/) – Belgeleri çeşitli kaynaklardan yükleyin.  
-- [Basic Comparison](./java/basic-comparison/) – Temel karşılaştırmayı uygulayın.  
-- [Advanced Comparison](./java/advanced-comparison/) – Karmaşık karşılaştırma senaryolarını yönetin.
+#### Temel işlevsellik
+- [Document Loading](./java/document-loading/) – Load documents from various sources.  
+- [Basic Comparison](./java/basic-comparison/) – Implement fundamental comparison.  
+- [Advanced Comparison](./java/advanced-comparison/) – Handle complex comparison scenarios.
 
 </div>
 <div class="col-md-6">
 
-#### Gelişmiş Özellikler
-- [Preview Generation](./java/preview-generation/) – Görsel karşılaştırma önizlemeleri oluşturun.  
-- [Metadata Management](./java/metadata-management/) – Belge meta verilerini yönetin.  
-- [Security & Protection](./java/security-protection/) – Korunan belgeleri karşılaştırın.  
-- [Comparison Options](./java/comparison-options/) – Karşılaştırma ayarlarını ince ayar yapın.  
-- [Document Information](./java/document-information) – Meta verileri çıkarın ve gösterin.
+#### Gelişmiş özellikler
+- [Preview Generation](./java/preview-generation/) – Generate visual comparison previews.  
+- [Metadata Management](./java/metadata-management/) – Control document metadata.  
+- [Security & Protection](./java/security-protection/) – Compare protected documents.  
+- [Comparison Options](./java/comparison-options/) – Fine‑tune comparison settings.  
+- [Document Information](./java/document-information) – Extract and display metadata.
 
 </div>
 </div>
 
-## Desteklenen Belge Formatları
+## Desteklenen belge formatları
 
-GroupDocs.Comparison, çok çeşitli belge formatlarını destekler:
+GroupDocs.Comparison supports a wide range of document formats:
 
-| Category | Formats |
-|----------|---------|
-| **Kelime İşleme** | DOCX, DOC, ODT, RTF, TXT |
-| **Elektronik Tablo** | XLSX, XLS, ODS, CSV |
+| Kategori | Formatlar |
+|----------|-----------|
+| **Kelime işlem** | DOCX, DOC, ODT, RTF, TXT |
+| **Elektronik tablolar** | XLSX, XLS, ODS, CSV |
 | **Sunumlar** | PPTX, PPT, ODP |
-| **PDF Belgeleri** | PDF, PDF/A |
-| **Görüntüler** | JPG, PNG, BMP, GIF, TIFF |
+| **PDF belgeleri** | PDF, PDF/A |
+| **Görseller** | JPG, PNG, BMP, GIF, TIFF |
 | **E-posta** | EML, MSG |
 | **Ve daha fazlası…** | HTML, EPUB, DJVU |
 
-## Geliştirici Kaynakları
+## Geliştirici kaynakları
 
-- [API Documentation](https://reference.groupdocs.com/comparison/) – Ayrıntılı API referansları.  
-- [GitHub Examples](https://github.com/groupdocs-comparison/) – Kod örnekleri deposu.  
-- [Developer Blog](https://blog.groupdocs.com/category/comparison/) – En son güncellemeler ve eğitimler.  
-- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) – Uzmanlarımızdan yardım alın.
+- [API Documentation](https://reference.groupdocs.com/comparison/) – Detailed API references.  
+- [GitHub Examples](https://github.com/groupdocs-comparison/) – Repository of code examples.  
+- [Developer Blog](https://blog.groupdocs.com/category/comparison/) – Latest updates and tutorials.  
+- [Free Support Forum](https://forum.groupdocs.com/c/comparison/) – Get help from our experts.  
+- [Download Free Trial](https://releases.groupdocs.com/comparison) – Try the API without a license.  
+- [Get Temporary License](https://purchase.groupdocs.com/temporary-license) – Obtain a short‑term license for testing.
 
-## GroupDocs.Comparison API için Yaygın Kullanım Senaryoları
-- **Hukuki belge incelemesi** – Sözleşme revizyonları arasındaki değişiklikleri hızlıca vurgulayın.  
-- **Finansal raporlama** – Yayınlamadan önce Excel veya PDF beyanlarındaki değişiklikleri tespit edin.  
-- **İçerik yönetim sistemleri** – Son kullanıcılara Word veya PowerPoint dosyaları için görsel fark araçları sunun.  
-- **Otomatik QA** – CI boru hatlarında oluşturulan PDF'leri temel şablonlarla karşılaştırın.  
-- **Regülasyon uyumu** – Politika belgelerinin istem dışı değiştirilmediğini doğrulayın.
-
-## Bugün Başlayın
-
-Uygulamalarınızda profesyonel belge karşılaştırma özelliklerini uygulamaya başlamak için eğitimlerimizi keşfedin. GroupDocs.Comparison, .NET ve Java projelerinizle sorunsuz bir şekilde bütünleşen güçlü, esnek bir API sunar.
-
-[Ücretsiz Deneme İndir](https://releases.groupdocs.com/comparison) | [Geçici Lisans Al](https://purchase.groupdocs.com/temporary-license)
+## GroupDocs.Comparison API için yaygın kullanım senaryoları
+- **Legal document review** – Quickly highlight changes between contract revisions.  
+- **Financial reporting** – Detect alterations in Excel or PDF statements before publishing.  
+- **Content management systems** – Provide end‑users with visual diff tools for Word or PowerPoint files.  
+- **Automated QA** – Compare generated PDFs against baseline templates in CI pipelines.  
+- **Regulatory compliance** – Verify that policy documents have not been unintentionally modified.
 
 ## Sıkça Sorulan Sorular
 
-**S:** GroupDocs.Comparison API'yi ticari bir ürün içinde kullanabilir miyim?  
-**C:** Evet, üretim dağıtımları için geçerli bir ticari lisans gereklidir. Değerlendirme için ücretsiz deneme mevcuttur.
+**Q:** Can I use the GroupDocs.Comparison API in a commercial product?  
+**A:** Yes, a valid commercial license is required for production deployments. A free trial is available for evaluation.
 
-**S:** API şifre korumalı dosyaları destekliyor mu?  
-**C:** Kesinlikle. Kaynak dosyaları yüklerken belge şifresini sağlayabilirsiniz.
+**Q:** Does the API support password‑protected files?  
+**A:** Absolutely. You can supply the document password when loading the source files.
 
-**S:** Hangi .NET sürümleri uyumludur?  
-**C:** API, .NET Framework 4.5+, .NET Core 3.1+, .NET 5 ve .NET 6+ ile çalışır.
+**Q:** Which .NET versions are compatible?  
+**A:** The API works with .NET Framework 4.5+, .NET Core 3.1+, .NET 5, and .NET 6+.
 
-**S:** API büyük belgeleri veya toplu klasör karşılaştırmalarını nasıl yönetir?  
-**C:** Bellek kullanımını düşük tutmak için akış ve optimize edilmiş algoritmalar kullanır ve klasör‑karşılaştırma özelliği ile tüm dizinleri karşılaştırabilirsiniz.
+**Q:** How does the API handle large documents or bulk folder comparisons?  
+**A:** It uses streaming and optimized algorithms to keep memory usage low, and you can compare entire directories with the folder‑comparison feature.
 
-**S:** Karşılaştırma çıktısının görsel stilini özelleştirmenin bir yolu var mı?  
-**C:** Evet, Comparison Options, oluşturulan fark için renkleri, işaretleme stillerini ve çıktı formatlarını tanımlamanıza olanak tanır.
+**Q:** Is there a way to customize the visual style of the comparison output?  
+**A:** Yes, the Comparison Options let you define colors, markup styles, and output formats for the generated diff.
 
 ---
 
-**Son Güncelleme:** 2026-06-21  
-**Test Edilen Versiyon:** GroupDocs.Comparison 24.0 (latest stable)  
+**Son Güncelleme:** 2026-10-21  
+**Test Edilen Sürüm:** GroupDocs.Comparison 24.0 (latest stable)  
 **Yazar:** GroupDocs

@@ -1,25 +1,31 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2026-06-21
-description: Dowiedz się, jak porównywać dokumenty w formatach Word, PDF, Excel i
-  innych przy użyciu API GroupDocs.Comparison do porównywania dokumentów. Szczegółowe
-  poradniki krok po kroku dla programistów .NET i Java z przykładami kodu, obsługą
-  formatów i informacjami o wydajności.
+date: 2026-10-21
+description: Poznaj samouczek API GroupDocs.Comparison dla .NET i Java, pokazujący,
+  jak porównywać dokumenty Word, PDF, Excel i inne z wysoką dokładnością oraz szybkim
+  działaniem.
 is_root: true
 keywords:
-- groupdocs comparison api
-- document diff tool
-- compare pdf files
+- groupdocs comparison api tutorial
+- document comparison .net
+- compare pdf java
+- groupdocs api guide
 - compare word documents
-- groupdocs api tutorial
-linktitle: Poradniki i przykłady GroupDocs.Comparison
+lastmod: 2026-10-21
+linktitle: Samouczki i przykłady GroupDocs.Comparison
+og_description: Poznaj samouczek API GroupDocs.Comparison dla .NET i Java, pokazujący,
+  jak porównywać dokumenty Word, PDF, Excel i inne z wysoką dokładnością oraz szybkim
+  działaniem.
+og_image_alt: Developer guide banner for GroupDocs.Comparison API showing document
+  comparison workflow
+og_title: Samouczek API GroupDocs.Comparison – porównywanie dokumentów w .NET i Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
-  description: Learn how to compare Word, PDF, Excel & other document formats with
-    GroupDocs.Comparison API for document comparison. Step‑by‑step tutorials for .NET
-    & Java developers with code examples, format support, and performance details.
-  headline: GroupDocs.Comparison API Tutorials & Developer Guide
+  dateModified: '2026-10-21'
+  description: Learn the GroupDocs.Comparison API tutorial for .NET and Java, showing
+    how to compare Word, PDF, Excel and other documents with high accuracy and fast
+    performance.
+  headline: 'GroupDocs.Comparison API tutorial: compare docs in .NET Java'
   type: TechArticle
 - questions:
   - answer: It detects and highlights changes between two documents of the same or
@@ -36,126 +42,130 @@ schemas:
       of the comparison result.
     question: Is there a way to generate visual previews?
   type: FAQPage
-title: Poradniki API GroupDocs.Comparison i przewodnik dla programistów
+tags:
+- document comparison
+- groupdocs comparison
+- .net tutorial
+- java tutorial
+- api guide
+title: 'Samouczek API GroupDocs.Comparison: porównywanie dokumentów w .NET i Java'
 type: docs
 url: /pl/
 weight: 11
 ---
 
-# Poradniki API GroupDocs.Comparison i przewodnik programisty
+# Samouczek API GroupDocs.Comparison: porównywanie dokumentów w .NET i Java
 
 ![Baner GroupDocs.Comparison](./groupdocs-comparison-net.svg)
 [Baner GroupDocs.Comparison](./groupdocs-comparison-net.svg)
 
-Witamy w **kompletnym przewodniku po porównywaniu dokumentów** z **GroupDocs.Comparison API**! Nasze obszerne poradniki pokażą Ci, jak skutecznie wykrywać różnice między dokumentami w różnych formatach, w tym **Word, PDF, Excel, PowerPoint, obrazy i inne**. Niezależnie od tego, czy tworzysz usługę internetową .NET, czy aplikację desktopową w Javie, ten przewodnik dostarczy Ci praktycznych kroków potrzebnych do szybkiego wdrożenia potężnych funkcji porównywania dokumentów.
+Witamy w **kompletnym przewodniku po porównywaniu dokumentów** z **GroupDocs.Comparison API**. W tym samouczku GroupDocs.Comparison API odkryjesz, jak programowo porównywać dokumenty Word, PDF, Excel, PowerPoint, obrazy i wiele innych formatów zarówno w środowiskach .NET, jak i Java. Samouczek przeprowadzi Cię przez konfigurację, podstawowe pojęcia, wskazówki dotyczące wydajności oraz rzeczywiste przypadki użycia, abyś już dziś mógł dodać niezawodną funkcję diff do swoich aplikacji.
 
 ## Szybkie odpowiedzi
 - **Co robi GroupDocs.Comparison API?** Wykrywa i podświetla zmiany pomiędzy dwoma dokumentami tego samego lub różnych formatów.  
-- **Jakie platformy są obsługiwane?** .NET (Framework, .NET Core, .NET 5/6) oraz Java (8+).  
-- **Czy potrzebna jest licencja do rozwoju?** Darmowa wersja próbna wystarcza do oceny; licencja komercyjna jest wymagana w środowisku produkcyjnym.  
-- **Czy mogę porównywać pliki zabezpieczone hasłem?** Tak – API akceptuje hasła do otwierania zabezpieczonych dokumentów.  
-- **Czy istnieje możliwość generowania podglądów wizualnych?** Oczywiście, API może tworzyć obrazy podglądu obok siebie lub nakładające się wyniku porównania.  
-- **Jak mogę porównać całe foldery?** Skorzystaj z funkcji porównywania folderów, aby przetwarzać wiele plików w jednym wywołaniu, idealne do walidacji wsadowej.  
+- **Jakie platformy są obsługiwane?** .NET (Framework, .NET Core, .NET 5/6) oraz Java (8+).  
+- **Czy potrzebna jest licencja do rozwoju?** Darmowa wersja próbna wystarczy do oceny; licencja komercyjna jest wymagana w środowisku produkcyjnym.  
+- **Czy mogę porównywać pliki zabezpieczone hasłem?** Tak – API przyjmuje hasła do otwierania zabezpieczonych dokumentów.  
+- **Czy istnieje możliwość generowania podglądów wizualnych?** Oczywiście, API może tworzyć obrazy podglądu obok siebie lub nałożone, przedstawiające wynik porównania.  
+- **Jak mogę porównać całe foldery?** Skorzystaj z funkcji porównywania folderów, aby przetworzyć wiele plików w jednym wywołaniu, idealne do walidacji wsadowej.  
 
-## Co to jest GroupDocs.Comparison API?
-`GroupDocs.Comparison API` to zestaw bibliotek umożliwiających programistom programowe porównywanie treści, układu i formatowania dokumentów. Obsługuje ponad 100 typów plików, dostarcza szczegółowe dzienniki zmian oraz oferuje opcje akceptacji lub odrzucenia modyfikacji w kodzie.
+## Czym jest GroupDocs.Comparison API?
+GroupDocs.Comparison API to zbiór bibliotek .NET i Java, które umożliwiają programowe porównywanie treści, układu i formatowania dwóch dokumentów. Obsługuje ponad 100 typów plików, dostarcza szczegółowy dziennik zmian i może zwrócić wynik jako nowy dokument, obraz lub PDF. API działa bez konieczności posiadania Microsoft Office ani innego oprogramowania firm trzecich, co czyni je idealnym do przetwarzania po stronie serwera.
 
 ## Dlaczego warto używać GroupDocs.Comparison API?
-GroupDocs.Comparison API umożliwia programistom programowe wykrywanie i podświetlanie różnic w szerokim zakresie typów dokumentów, zapewniając wysoką dokładność, elastyczne formaty wyjściowe oraz bezpieczne przetwarzanie bez konieczności instalacji zewnętrznych pakietów Office. Usprawnia procesy przeglądu, zmniejsza ręczną pracę i łatwo integruje się z aplikacjami .NET i Java.
-
-- **Obsługa wielu formatów** – Porównuj Word, PDF, Excel, PowerPoint, obrazy, e‑maile i wiele innych bez konieczności wcześniejszej konwersji plików.  
-- **Bogate wykrywanie zmian** – Zobacz wstawienia, usunięcia, korekty formatowania i zmiany stylów podświetlane automatycznie.  
-- **Programowe zarządzanie zmianami** – Akceptuj lub odrzucaj konkretne zmiany w swoim procesie, idealne dla systemów przeglądowych.  
-- **Bezpieczne przetwarzanie** – Pracuj bezpiecznie z zaszyfrowanymi lub zabezpieczonymi hasłem dokumentami.  
-- **Wysoka wydajność** – Zoptymalizowane algorytmy efektywnie obsługują duże pliki i masowe porównania folderów.  
+GroupDocs.Comparison API przetwarza dokumenty przy użyciu architektury strumieniowej, która utrzymuje zużycie pamięci poniżej 50 MB nawet przy 500‑stronicowych PDF‑ach, a także może porównać tysiące plików w folderze w czasie krótszym niż 3 sekundy na dokument 100‑stronicowy. Oferuje **ponad 50 formatów wejściowych i wyjściowych**, **99 % dokładności wykrywania zmian**, wbudowaną obsługę haseł oraz pełną personalizację stylów wizualnych diff — co czyni go szybszą i bardziej bezpieczną alternatywą dla ręcznych narzędzi przeglądowych.
 
 ## Jak GroupDocs.Comparison API radzi sobie z dużymi dokumentami?
-GroupDocs.Comparison przetwarza dokumenty przy użyciu architektury strumieniowej, która odczytuje dane w fragmentach, utrzymując zużycie pamięci poniżej 50 MB nawet przy 500‑stronicowych plikach PDF. Wbudowana funkcja porównywania folderów przetwarza pliki kolejno, umożliwiając porównanie tysięcy dokumentów bez wyczerpywania zasobów serwera.
+`LoadOptions` pozwala skonfigurować zachowanie ładowania dokumentu, np. włączając tryb oszczędzania pamięci.  
+GroupDocs.Comparison API odczytuje pliki źródłowe w małych fragmentach, utrzymując zużycie pamięci poniżej 50 MB niezależnie od rozmiaru dokumentu. Wbudowane porównywanie folderów przetwarza pliki kolejno, umożliwiając porównanie tysięcy dokumentów bez wyczerpania zasobów. Możesz również włączyć flagę `LoadOptions` `EnableMemorySaving`, aby dodatkowo zmniejszyć zużycie RAM przy zachowaniu pełnej dokładności wyników diff.
 
 ## Jak porównać dwa dokumenty przy użyciu GroupDocs.Comparison API?
-Klasa `Comparer` jest podstawowym komponentem, który ładuje dokumenty źródłowy i docelowy oraz wykonuje operację porównania. Załaduj pliki źródłowy i docelowy przy użyciu klasy `Comparer`, wywołaj `Compare`, a następnie zapisz wynik przy użyciu `Save`. Ten trzyetapowy przepływ — załaduj, porównaj, zapisz — obejmuje 99 % scenariuszy porównania i działa dla każdego obsługiwanego formatu, zapewniając przejrzystą i łatwą w utrzymaniu implementację dla programistów.
+`Comparer` jest główną klasą wykonującą porównanie dokumentów.  
+Załaduj swoje pliki źródłowe i docelowe przy użyciu klasy `Comparer`, wywołaj `Compare`, a następnie zapisz wynik przy pomocy `Save`. Klasa `Comparer` jest kluczowym komponentem, który koordynuje ładowanie, obliczanie diff i generowanie wyjścia. Ten trzyetapowy przepływ — załaduj, porównaj, zapisz — obejmuje 99 % scenariuszy porównania i działa dla każdego obsługiwanego formatu, zapewniając przejrzystą i łatwą w utrzymaniu implementację dla programistów.
 
 ## Jakie formaty plików obsługuje GroupDocs.Comparison API?
-GroupDocs.Comparison obsługuje **ponad 50 formatów wejściowych i wyjściowych**, w tym DOCX, DOC, ODT, RTF, TXT, XLSX, XLS, ODS, CSV, PPTX, PPT, ODP, PDF, PDF/A, JPG, PNG, BMP, GIF, TIFF, EML, MSG, HTML, EPUB, DJVU i wiele innych. API automatycznie wykrywa każdy format, eliminując potrzebę wstępnej konwersji i zapewniając płynne porównanie różnych typów plików.
+GroupDocs.Comparison API obsługuje **ponad 50 formatów wejściowych i wyjściowych**, w tym DOCX, DOC, ODT, RTF, TXT, XLSX, XLS, ODS, CSV, PPTX, PPT, ODP, PDF, PDF/A, JPG, PNG, BMP, GIF, TIFF, EML, MSG, HTML, EPUB, DJVU i wiele innych. API automatycznie wykrywa każdy format, eliminując potrzebę wstępnej konwersji i zapewniając płynne porównanie różnych typów plików.
 
-## Dlaczego wybrać GroupDocs.Comparison API zamiast innych narzędzi porównawczych?
-GroupDocs.Comparison zapewnia wiodącą w branży dokładność (99 % wykrywania zmian) w ponad 100 formatach, przetwarza 500‑stronicowe dokumenty w mniej niż 3 sekundy i zawiera wbudowane zabezpieczenia dla plików chronionych hasłem. Nie wymaga zewnętrznego oprogramowania, takiego jak Microsoft Office, oferuje rozbudowane opcje dostosowywania oraz solidne API zarówno dla .NET, jak i Java, co czyni go doskonałym wyborem do porównywania dokumentów na poziomie przedsiębiorstwa.
+## Dlaczego wybrać GroupDocs.Comparison API zamiast innych narzędzi do porównywania?
+GroupDocs.Comparison API zapewnia wiodącą w branży dokładność (99 % wykrywania zmian) w ponad 100 formatach, przetwarza 500‑stronicowe dokumenty w czasie krótszym niż 3 sekundy i zawiera wbudowane zabezpieczenia dla plików chronionych hasłem. Nie wymaga zewnętrznego oprogramowania, takiego jak Microsoft Office, oferuje rozbudowane opcje personalizacji oraz solidne API zarówno dla .NET, jak i Java, co czyni go lepszym wyborem do porównywania dokumentów na poziomie przedsiębiorstwa.
 
-## Poradniki GroupDocs.Comparison dla .NET
+## Samouczki GroupDocs.Comparison dla .NET
 
 {{% alert color="primary" %}}
-Opanuj porównywanie dokumentów w aplikacjach .NET dzięki naszym krok po kroku poradnikom. Dowiedz się, jak wdrożyć profesjonalne funkcje porównywania dokumentów dla Word, PDF, Excel i innych formatów przy użyciu C#. Nasze przewodniki skierowane do deweloperów obejmują wszystko, od podstawowej konfiguracji po zaawansowane scenariusze integracji.
+Opanuj porównywanie dokumentów w aplikacjach .NET dzięki naszym samouczkom krok po kroku. Dowiedz się, jak wdrożyć profesjonalne funkcje porównywania dokumentów Word, PDF, Excel i innych formatów przy użyciu C#. Nasze przewodniki skierowane do programistów obejmują wszystko, od podstawowej konfiguracji po zaawansowane scenariusze integracji.
 {{% /alert %}}
 
-### Niezbędne poradniki .NET
+### Niezbędne samouczki .NET
 
 <div class="row">
 <div class="col-md-6">
 
 #### Rozpoczęcie
-- [Przewodnik szybkiego startu](./net/quick-start/) – Skonfiguruj i uruchom pierwsze porównanie w kilka minut.  
-- [Instalacja i konfiguracja](./net/getting-started/) – Skonfiguruj środowisko programistyczne.  
-- [Opcje licencjonowania](./net/licensing-configuration/) – Zrozum opcje licencjonowania i wdrożenia.
+- [Przewodnik szybkiego startu](./net/quick-start/) – Set up and run your first comparison in minutes.  
+- [Instalacja i konfiguracja](./net/getting-started/) – Configure your development environment.  
+- [Opcje licencjonowania](./net/licensing-configuration/) – Understand licensing and deployment options.
 
 #### Podstawowa funkcjonalność
-- [Ładowanie dokumentów](./net/document-loading/) – Poznaj różne sposoby ładowania dokumentów.  
-- [Podstawowe porównanie](./net/basic-comparison/) – Zaimplementuj proste operacje porównywania.  
-- [Zaawansowane porównanie](./net/advanced-comparison/) – Opanuj złożone scenariusze porównywania.  
-- [Zarządzanie zmianami](./net/change-management/) – Akceptuj lub odrzucaj konkretne zmiany.
+- [Ładowanie dokumentów](./net/document-loading/) – Learn different ways to load documents.  
+- [Podstawowe porównanie](./net/basic-comparison/) – Implement simple comparison operations.  
+- [Zaawansowane porównanie](./net/advanced-comparison/) – Master complex comparison scenarios.  
+- [Zarządzanie zmianami](./net/change-management/) – Accept or reject specific changes.
 
 </div>
 <div class="col-md-6">
 
 #### Zaawansowane funkcje
-- [Generowanie podglądu](./net/preview-generation/) – Twórz wizualne podglądy wyników porównania.  
-- [Zarządzanie metadanymi](./net/metadata-management/) – Kontroluj właściwości dokumentu.  
-- [Bezpieczeństwo i ochrona](./net/security-protection/) – Pracuj z chronionymi dokumentami.  
-- [Opcje porównywania](./net/comparison-options/) – Dostosuj zachowanie porównywania.
+- [Generowanie podglądów](./net/preview-generation/) – Create visual previews of comparison results.  
+- [Zarządzanie metadanymi](./net/metadata-management/) – Control document properties.  
+- [Bezpieczeństwo i ochrona](./net/security-protection/) – Work with protected documents.  
+- [Opcje porównywania](./net/comparison-options/) – Customize comparison behavior.
 
 #### Specjalistyczne porównania
-- [Porównanie obrazów](./net/image-comparison/) – Porównuj obrazy z dokładnością do pojedynczego piksela.  
-- [Porównanie dokumentów i folderów](./net/documents-and-folder-comparison/) – Porównuj całe katalogi.  
-- [Informacje o dokumencie](./net/document-information/) – Wyodrębnij i analizuj metadane dokumentu.
+- [Porównanie obrazów](./net/image-comparison/) – Compare images with pixel‑perfect accuracy.  
+- [Porównanie dokumentów i folderów](./net/documents-and-folder-comparison/) – Compare entire directories.  
+- [Informacje o dokumencie](./net/document-information/) – Extract and analyze document metadata.
 
 </div>
 </div>
 
-## Poradniki GroupDocs.Comparison dla Java
+## Samouczki GroupDocs.Comparison dla Java
 
 {{% alert color="primary" %}}
-Wdroż potężne możliwości porównywania dokumentów w aplikacjach Java dzięki naszym kompleksowym poradnikom. Naucz się integrować GroupDocs.Comparison dla Java w systemach korporacyjnych, aplikacjach internetowych i oprogramowaniu desktopowym przy użyciu przejrzystych, praktycznych przykładów.
+Wdroż potężne możliwości porównywania dokumentów w aplikacjach Java dzięki naszym kompleksowym samouczkom. Naucz się integrować GroupDocs.Comparison dla Java w systemach korporacyjnych, aplikacjach internetowych i oprogramowaniu desktopowym przy użyciu przejrzystych, praktycznych przykładów.
 {{% /alert %}}
 
-### Niezbędne poradniki Java
+### Niezbędne samouczki Java
 
 <div class="row">
 <div class="col-md-6">
 
 #### Rozpoczęcie
-- [Opcje licencjonowania](./java/licensing-configuration) – Zrozum licencjonowanie wdrożeniowe.
+- [Opcje licencjonowania](./java/licensing-configuration) – Understand deployment licensing.
 
 #### Podstawowa funkcjonalność
-- [Ładowanie dokumentów](./java/document-loading/) – Ładuj dokumenty z różnych źródeł.  
-- [Podstawowe porównanie](./java/basic-comparison/) – Zaimplementuj podstawowe porównanie.  
-- [Zaawansowane porównanie](./java/advanced-comparison/) – Obsługuj złożone scenariusze porównywania.
+- [Ładowanie dokumentów](./java/document-loading/) – Load documents from various sources.  
+- [Podstawowe porównanie](./java/basic-comparison/) – Implement fundamental comparison.  
+- [Zaawansowane porównanie](./java/advanced-comparison/) – Handle complex comparison scenarios.
 
 </div>
 <div class="col-md-6">
 
 #### Zaawansowane funkcje
-- [Generowanie podglądu](./java/preview-generation/) – Generuj wizualne podglądy porównania.  
-- [Zarządzanie metadanymi](./java/metadata-management/) – Kontroluj metadane dokumentu.  
-- [Bezpieczeństwo i ochrona](./java/security-protection/) – Porównuj chronione dokumenty.  
-- [Opcje porównywania](./java/comparison-options/) – Dostosuj ustawienia porównywania.  
-- [Informacje o dokumencie](./java/document-information) – Wyodrębnij i wyświetl metadane.
+- [Generowanie podglądów](./java/preview-generation/) – Generate visual comparison previews.  
+- [Zarządzanie metadanymi](./java/metadata-management/) – Control document metadata.  
+- [Bezpieczeństwo i ochrona](./java/security-protection/) – Compare protected documents.  
+- [Opcje porównywania](./java/comparison-options/) – Fine‑tune comparison settings.  
+- [Informacje o dokumencie](./java/document-information) – Extract and display metadata.
 
 </div>
 </div>
 
 ## Obsługiwane formaty dokumentów
 
-| Kategoria | Formaty |
-|----------|---------|
+GroupDocs.Comparison obsługuje szeroką gamę formatów dokumentów:
+
+| **Kategoria** | Formaty |
+|---------------|---------|
 | **Przetwarzanie tekstu** | DOCX, DOC, ODT, RTF, TXT |
 | **Arkusze kalkulacyjne** | XLSX, XLS, ODS, CSV |
 | **Prezentacje** | PPTX, PPT, ODP |
@@ -166,43 +176,39 @@ Wdroż potężne możliwości porównywania dokumentów w aplikacjach Java dzię
 
 ## Zasoby dla deweloperów
 
-- [Dokumentacja API](https://reference.groupdocs.com/comparison/) – Szczegółowe odniesienia API.  
-- [Przykłady na GitHub](https://github.com/groupdocs-comparison/) – Repozytorium przykładów kodu.  
-- [Blog dewelopera](https://blog.groupdocs.com/category/comparison/) – Najnowsze aktualizacje i poradniki.  
-- [Darmowe forum wsparcia](https://forum.groupdocs.com/c/comparison/) – Uzyskaj pomoc od naszych ekspertów.
+- [Dokumentacja API](https://reference.groupdocs.com/comparison/) – Detailed API references.  
+- [Przykłady na GitHub](https://github.com/groupdocs-comparison/) – Repository of code examples.  
+- [Blog deweloperski](https://blog.groupdocs.com/category/comparison/) – Latest updates and tutorials.  
+- [Darmowe forum wsparcia](https://forum.groupdocs.com/c/comparison/) – Get help from our experts.  
+- [Pobierz darmową wersję próbną](https://releases.groupdocs.com/comparison) – Try the API without a license.  
+- [Uzyskaj tymczasową licencję](https://purchase.groupdocs.com/temporary-license) – Obtain a short‑term license for testing.
 
 ## Typowe przypadki użycia GroupDocs.Comparison API
-- **Przegląd dokumentów prawnych** – Szybko podświetl zmiany pomiędzy wersjami umów.  
-- **Raportowanie finansowe** – Wykryj zmiany w arkuszach Excel lub oświadczeniach PDF przed publikacją.  
-- **Systemy zarządzania treścią** – Udostępnij użytkownikom końcowym narzędzia wizualnego porównywania dla plików Word lub PowerPoint.  
-- **Automatyzowane QA** – Porównuj generowane pliki PDF z szablonami bazowymi w pipeline'ach CI.  
-- **Zgodność regulacyjna** – Zweryfikuj, że dokumenty polityk nie zostały nieumyślnie zmodyfikowane.
-
-## Rozpocznij już dziś
-
-Przeglądaj nasze poradniki, aby rozpocząć wdrażanie profesjonalnych funkcji porównywania dokumentów w swoich aplikacjach. GroupDocs.Comparison oferuje potężne, elastyczne API, które płynnie integruje się z Twoimi projektami .NET i Java.
-
-[Pobierz darmową wersję próbną](https://releases.groupdocs.com/comparison) | [Uzyskaj tymczasową licencję](https://purchase.groupdocs.com/temporary-license)
+- **Przegląd dokumentów prawnych** – Szybkie podświetlanie zmian pomiędzy wersjami umów.  
+- **Raportowanie finansowe** – Wykrywanie zmian w arkuszach Excel lub PDF przed publikacją.  
+- **Systemy zarządzania treścią** – Udostępnianie użytkownikom końcowym narzędzi wizualnego diff dla plików Word lub PowerPoint.  
+- **Automatyzowane QA** – Porównywanie wygenerowanych PDF‑ów z szablonami bazowymi w pipeline’ach CI.  
+- **Zgodność regulacyjna** – Weryfikacja, że dokumenty polityki nie zostały nieumyślnie zmodyfikowane.
 
 ## Najczęściej zadawane pytania
 
 **Q:** Czy mogę używać GroupDocs.Comparison API w produkcie komercyjnym?  
-**A:** Tak, wymagana jest ważna licencja komercyjna dla wdrożeń produkcyjnych. Dostępna jest darmowa wersja próbna do oceny.
+**A:** Tak, wymagana jest ważna licencja komercyjna do wdrożeń produkcyjnych. Dostępna jest darmowa wersja próbna do oceny.
 
-**Q:** Czy API obsługuje pliki zabezpieczone hasłem?  
+**Q:** Czy API obsługuje pliki chronione hasłem?  
 **A:** Absolutnie. Możesz podać hasło do dokumentu podczas ładowania plików źródłowych.
 
-**Q:** Z które wersje .NET jest kompatybilne?  
+**Q:** Które wersje .NET są kompatybilne?  
 **A:** API działa z .NET Framework 4.5+, .NET Core 3.1+, .NET 5 oraz .NET 6+.
 
 **Q:** Jak API radzi sobie z dużymi dokumentami lub masowymi porównaniami folderów?  
-**A:** Używa strumieniowania i zoptymalizowanych algorytmów, aby utrzymać niskie zużycie pamięci, a także umożliwia porównywanie całych katalogów dzięki funkcji porównywania folderów.
+**A:** Używa strumieniowania i zoptymalizowanych algorytmów, aby utrzymać niskie zużycie pamięci, a także umożliwia porównywanie całych katalogów przy użyciu funkcji porównywania folderów.
 
 **Q:** Czy istnieje możliwość dostosowania stylu wizualnego wyniku porównania?  
-**A:** Tak, opcje Comparison Options pozwalają definiować kolory, style oznaczeń i formaty wyjściowe dla generowanego diffu.
+**A:** Tak, opcje Comparison Options pozwalają definiować kolory, style oznaczeń oraz formaty wyjściowe dla generowanego diffu.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-06-21  
+**Ostatnia aktualizacja:** 2026-10-21  
 **Testowano z:** GroupDocs.Comparison 24.0 (najnowsza stabilna)  
 **Autor:** GroupDocs

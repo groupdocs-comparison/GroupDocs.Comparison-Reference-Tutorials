@@ -68,10 +68,6 @@ url: /pt/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Como definir o fluxo de licença do GroupDocs em Java
 
 Se você está integrando **GroupDocs.Comparison for Java** em uma aplicação moderna, a maneira mais confiável de lidar com licenciamento é com um **gerenciador de licença centralizado** que funciona com streams Java. Essa abordagem permite carregar a licença a partir de arquivos, recursos do classpath, URLs ou cofres seguros — eliminando caminhos codificados e melhorando a segurança.
@@ -373,10 +369,3 @@ Agora você tem um **gerenciador de licença centralizado** construído com stre
 - [Guia de configuração de licenciamento GroupDocs.Comparison Java - Tutorial completo de configuração](/comparison/java/licensing-configuration/)
 - [Configuração de licença GroupDocs Comparison Java - Guia completo de configuração de URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Como usar GroupDocs - Streams de comparação de documentos Java – Guia completo](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

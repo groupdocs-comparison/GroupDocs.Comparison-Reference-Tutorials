@@ -68,10 +68,6 @@ url: /hu/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan állítsuk be a GroupDocs licenc adatfolyamot Java-ban
 
 Ha a **GroupDocs.Comparison for Java**-t integrálja egy modern alkalmazásba, a licenckezelés legmegbízhatóbb módja egy **centralized license manager** használata, amely Java adatfolyamokkal működik. Ez a megközelítés lehetővé teszi a licenc betöltését fájlokból, classpath erőforrásokból, URL-ekből vagy biztonságos tárolókból – megszüntetve a keménykódolt útvonalakat és javítva a biztonságot.
@@ -372,10 +368,3 @@ Most már rendelkezik egy **centralized license manager**‑rel, amely Java adat
 - [GroupDocs.Comparison Java licenc beállítási útmutató – Teljes konfigurációs oktatóanyag](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java licenc beállítás – Teljes URL konfigurációs útmutató](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Hogyan használjuk a GroupDocs‑t – Java dokumentum összehasonlítás adatfolyamok – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -66,10 +66,6 @@ url: /ko/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java에서 GroupDocs 라이선스 스트림 설정 방법
 
 현대적인 애플리케이션에 **GroupDocs.Comparison for Java**를 통합하고 있다면, 라이선스를 처리하는 가장 신뢰할 수 있는 방법은 Java 스트림과 함께 작동하는 **중앙 집중식 라이선스 관리자**를 사용하는 것입니다. 이 접근 방식은 파일, 클래스패스 리소스, URL 또는 보안 금고에서 라이선스를 로드할 수 있게 하여 하드코딩된 경로를 없애고 보안을 향상시킵니다.
@@ -371,10 +367,3 @@ A: Negligible. The license is usually set once at start‑up; the stream read co
 - [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

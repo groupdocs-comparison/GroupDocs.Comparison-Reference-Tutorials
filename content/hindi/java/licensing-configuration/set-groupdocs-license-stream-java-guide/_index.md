@@ -68,10 +68,6 @@ url: /hi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs लाइसेंस स्ट्रीम को Java में सेट कैसे करें
 
 यदि आप **GroupDocs.Comparison for Java** को एक आधुनिक एप्लिकेशन में एकीकृत कर रहे हैं, तो लाइसेंसिंग को संभालने का सबसे भरोसेमंद तरीका **केंद्रीय लाइसेंस मैनेजर** का उपयोग करना है जो Java स्ट्रीम्स के साथ काम करता है। यह दृष्टिकोण आपको लाइसेंस को फ़ाइलों, क्लासपाथ रिसोर्सेज़, URL या सुरक्षित वॉल्ट्स से लोड करने की अनुमति देता है—हार्ड‑कोडेड पाथ्स को समाप्त करता है और सुरक्षा को बढ़ाता है।
@@ -373,10 +369,3 @@ try {
 - [GroupDocs.Comparison Java लाइसेंस सेटअप गाइड - पूर्ण कॉन्फ़िगरेशन ट्यूटोरियल](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java लाइसेंस सेटअप - पूर्ण URL कॉन्फ़िगरेशन गाइड](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs का उपयोग कैसे करें - Java दस्तावेज़ तुलना स्ट्रीम्स – पूर्ण गाइड](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

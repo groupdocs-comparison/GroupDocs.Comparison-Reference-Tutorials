@@ -67,10 +67,6 @@ url: /cs/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jak nastavit stream licence GroupDocs v Javě
 
 Pokud integrujete **GroupDocs.Comparison for Java** do moderní aplikace, nejspolehlivějším způsobem, jak spravovat licencování, je **centralizovaný správce licence**, který funguje s Java streamy. Tento přístup vám umožní načíst licenci ze souborů, zdrojů ve classpath, URL nebo zabezpečených úložišť — odstraňuje pevně zakódované cesty a zvyšuje bezpečnost.
@@ -371,10 +367,3 @@ Nyní máte **centralizovaný správce licence** postavený na Java streamech, k
 - [Kompletní průvodce nastavením licencování GroupDocs.Comparison pro Java - Kompletní konfigurační tutoriál](/comparison/java/licensing-configuration/)
 - [Nastavení licence GroupDocs Comparison pro Java - Kompletní průvodce konfigurací URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Jak používat GroupDocs – Java porovnání dokumentů pomocí streamů – Kompletní průvodce](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

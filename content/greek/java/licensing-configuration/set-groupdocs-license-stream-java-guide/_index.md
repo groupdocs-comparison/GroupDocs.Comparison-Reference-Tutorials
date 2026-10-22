@@ -68,10 +68,6 @@ url: /el/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να ορίσετε τη ροή άδειας GroupDocs σε Java
 
 Εάν ενσωματώνετε το **GroupDocs.Comparison for Java** σε μια σύγχρονη εφαρμογή, ο πιο αξιόπιστος τρόπος διαχείρισης της άδειας είναι με έναν **κεντρικό διαχειριστή άδειας** που λειτουργεί με ροές Java. Αυτή η προσέγγιση σας επιτρέπει να φορτώνετε την άδεια από αρχεία, πόρους classpath, URLs ή ασφαλείς θησαυρούς—αφαιρώντας τις σκληρά κωδικοποιημένες διαδρομές και βελτιώνοντας την ασφάλεια.
@@ -372,10 +368,3 @@ try {
 - [Οδηγός ρύθμισης αδειοδότησης GroupDocs.Comparison Java - Πλήρης διαμόρφωση](/comparison/java/licensing-configuration/)
 - [Ρύθμιση άδειας GroupDocs Comparison Java - Πλήρης οδηγός διαμόρφωσης URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Πώς να χρησιμοποιήσετε το GroupDocs - Ροές σύγκρισης εγγράφων Java – Πλήρης οδηγός](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

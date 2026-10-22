@@ -68,10 +68,6 @@ url: /ru/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Как установить поток лицензии GroupDocs в Java
 
 Если вы интегрируете **GroupDocs.Comparison for Java** в современное приложение, наиболее надёжный способ управления лицензированием — использовать **централизованный менеджер лицензий**, работающий с потоками Java. Такой подход позволяет загружать лицензию из файлов, ресурсов classpath, URL‑адресов или защищённых хранилищ — устраняя жёстко заданные пути и повышая безопасность.
@@ -373,10 +369,3 @@ A: Незначительное. Лицензия обычно устанавл�
 - [Руководство по настройке лицензирования GroupDocs.Comparison Java — Полный учебник по конфигурации](/comparison/java/licensing-configuration/)
 - [Настройка лицензии GroupDocs Comparison Java — Полное руководство по конфигурации URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Как использовать GroupDocs — Потоки сравнения документов Java — Полное руководство](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

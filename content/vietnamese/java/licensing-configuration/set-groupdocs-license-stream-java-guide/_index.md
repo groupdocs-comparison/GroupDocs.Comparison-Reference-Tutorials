@@ -68,10 +68,6 @@ url: /vi/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách thiết lập luồng giấy phép GroupDocs trong Java
 
 Nếu bạn đang tích hợp **GroupDocs.Comparison for Java** vào một ứng dụng hiện đại, cách đáng tin cậy nhất để xử lý giấy phép là sử dụng **trình quản lý giấy phép tập trung** hoạt động với các luồng Java. Cách tiếp cận này cho phép bạn tải giấy phép từ tệp, tài nguyên classpath, URL hoặc kho bảo mật—loại bỏ các đường dẫn cứng và cải thiện bảo mật.
@@ -373,10 +369,3 @@ Bạn đã có một **trình quản lý giấy phép tập trung** dựa trên 
 - [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

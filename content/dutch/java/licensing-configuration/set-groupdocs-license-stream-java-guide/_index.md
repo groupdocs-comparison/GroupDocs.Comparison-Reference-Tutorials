@@ -68,10 +68,6 @@ url: /nl/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hoe stel je de GroupDocs-licentiestroom in Java in
 
 Als je **GroupDocs.Comparison for Java** integreert in een moderne applicatie, is de meest betrouwbare manier om licenties te beheren een **gecentraliseerde licentiebeheerder** die werkt met Java‑streams. Deze aanpak laat je de licentie laden vanuit bestanden, classpath‑resources, URL’s of beveiligde kluizen — waardoor hard‑gecodeerde paden verdwijnen en de beveiliging verbetert.
@@ -373,10 +369,3 @@ Je beschikt nu over een **gecentraliseerde licentiebeheerder** gebouwd op Java�
 - [GroupDocs.Comparison Java Licensing Setup Guide - Complete Configuration Tutorial](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java License Setup - Complete URL Configuration Guide](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [How to Use GroupDocs - Java Document Comparison Streams – Complete Guide](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

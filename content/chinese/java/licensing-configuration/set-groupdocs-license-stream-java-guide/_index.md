@@ -64,10 +64,6 @@ url: /zh/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中设置 GroupDocs 许可证流
 
 如果您正在将 **GroupDocs.Comparison for Java** 集成到现代应用程序中，处理许可证的最可靠方式是使用能够与 Java 流配合的 **集中式许可证管理器**。这种方法允许您从文件、类路径资源、URL 或安全金库加载许可证——消除硬编码路径并提升安全性。
@@ -368,10 +364,3 @@ try {
 - [GroupDocs.Comparison Java 许可证设置指南 - 完整配置教程](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java 许可证设置 - 完整 URL 配置指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [如何使用 GroupDocs - Java 文档比较流 – 完整指南](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

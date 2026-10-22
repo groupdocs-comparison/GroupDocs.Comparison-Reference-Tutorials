@@ -67,10 +67,6 @@ url: /id/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cara mengatur aliran lisensi GroupDocs di Java
 
 Jika Anda mengintegrasikan **GroupDocs.Comparison for Java** ke dalam aplikasi modern, cara paling andal untuk menangani lisensi adalah dengan **pengelola lisensi terpusat** yang bekerja dengan aliran Java. Pendekatan ini memungkinkan Anda memuat lisensi dari file, sumber daya classpath, URL, atau vault yang aman—menghilangkan jalur yang dikodekan secara keras dan meningkatkan keamanan.
@@ -371,10 +367,3 @@ Anda kini memiliki **pengelola lisensi terpusat** yang dibangun di atas aliran J
 - [Panduan Pengaturan Lisensi GroupDocs.Comparison Java - Tutorial Konfigurasi Lengkap](/comparison/java/licensing-configuration/)
 - [Pengaturan Lisensi GroupDocs Comparison Java - Panduan Konfigurasi URL Lengkap](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Cara Menggunakan GroupDocs - Aliran Perbandingan Dokumen Java – Panduan Lengkap](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

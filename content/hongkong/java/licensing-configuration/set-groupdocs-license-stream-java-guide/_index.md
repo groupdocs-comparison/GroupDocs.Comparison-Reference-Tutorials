@@ -64,10 +64,6 @@ url: /zh-hant/java/licensing-configuration/set-groupdocs-license-stream-java-gui
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中設定 GroupDocs 授權串流
 
 如果您正在將 **GroupDocs.Comparison for Java** 整合到現代應用程式中，最可靠的授權處理方式是使用支援 Java 串流的 **centralized license manager**。此方法讓您可以從檔案、classpath 資源、URL 或安全保管庫載入授權，避免硬編碼路徑並提升安全性。
@@ -369,10 +365,3 @@ A: 幾乎可以忽略。授權通常在啟動時設定一次，讀取的串流�
 - [GroupDocs.Comparison Java 授權設定指南 - 完整配置教學](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java 授權設定 - 完整 URL 配置指南](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [如何使用 GroupDocs - Java 文件比較串流 – 完整指南](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

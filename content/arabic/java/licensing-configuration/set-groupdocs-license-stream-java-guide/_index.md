@@ -66,10 +66,6 @@ url: /ar/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية تعيين تدفق ترخيص GroupDocs في Java
 
 إذا كنت تقوم بدمج **GroupDocs.Comparison for Java** في تطبيق حديث، فإن أكثر طريقة موثوقة للتعامل مع الترخيص هي باستخدام **مدير ترخيص مركزي** يعمل مع تدفقات Java. يتيح لك هذا النهج تحميل الترخيص من الملفات أو موارد مسار الفئة أو عناوين URL أو الخزائن الآمنة—مما يلغي المسارات المرمزة صلبًا ويحسن الأمان.
@@ -370,10 +366,3 @@ try {
 - [دليل إعداد ترخيص GroupDocs.Comparison Java - برنامج تعليمي كامل للتهيئة](/comparison/java/licensing-configuration/)
 - [إعداد ترخيص GroupDocs Comparison Java - دليل تكوين URL كامل](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [كيفية استخدام GroupDocs - تدفقات مقارنة مستندات Java – دليل كامل](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

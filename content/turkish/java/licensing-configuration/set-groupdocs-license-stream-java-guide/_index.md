@@ -67,10 +67,6 @@ url: /tr/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # GroupDocs lisans akışını Java'da nasıl ayarlarsınız
 
 Modern bir uygulamaya **GroupDocs.Comparison for Java** entegre ediyorsanız, lisanslamayı yönetmenin en güvenilir yolu, Java akışlarıyla çalışan **merkezi lisans yöneticisi** kullanmaktır. Bu yaklaşım, lisansı dosyalardan, sınıf yolu (classpath) kaynaklarından, URL'lerden veya güvenli kasalardan yüklemenizi sağlar—kod içinde sabit yol tanımlamayı ortadan kaldırır ve güvenliği artırır.
@@ -371,10 +367,3 @@ Artık Java akışları üzerine inşa edilmiş bir **merkezi lisans yöneticisi
 - [GroupDocs.Comparison Java Lisans Kurulum Kılavuzu - Tam Konfigürasyon Öğreticisi](/comparison/java/licensing-configuration/)
 - [GroupDocs Comparison Java Lisans Kurulumu - Tam URL Konfigürasyon Kılavuzu](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [GroupDocs Nasıl Kullanılır - Java Belge Karşılaştırma Akışları – Tam Kılavuz](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

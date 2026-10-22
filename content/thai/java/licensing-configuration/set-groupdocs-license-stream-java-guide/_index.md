@@ -66,10 +66,6 @@ url: /th/java/licensing-configuration/set-groupdocs-license-stream-java-guide/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีตั้งสตรีมใบอนุญาต GroupDocs ใน Java
 
 หากคุณกำลังบูรณาการ **GroupDocs.Comparison for Java** เข้ากับแอปพลิเคชันสมัยใหม่ วิธีที่เชื่อถือได้ที่สุดในการจัดการใบอนุญาตคือด้วย **centralized license manager** ที่ทำงานกับ Java streams วิธีนี้ช่วยให้คุณโหลดใบอนุญาตจากไฟล์, แหล่งทรัพยากรใน classpath, URL, หรือ vault ที่ปลอดภัย—โดยกำจัดเส้นทางที่กำหนดไว้ล่วงหน้าและเพิ่มความปลอดภัย.
@@ -370,10 +366,3 @@ A: ไม่สำคัญ. ใบอนุญาตมักตั้งค่
 - [คู่มือการตั้งค่าใบอนุญาต GroupDocs.Comparison Java - การกำหนดค่าครบถ้วน](/comparison/java/licensing-configuration/)
 - [การตั้งค่าใบอนุญาต GroupDocs Comparison Java - คู่มือการกำหนดค่า URL ครบถ้วน](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [วิธีใช้ GroupDocs - สตรีมการเปรียบเทียบเอกสาร Java – คู่มือฉบับเต็ม](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

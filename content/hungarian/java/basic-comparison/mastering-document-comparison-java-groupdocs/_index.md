@@ -1,18 +1,22 @@
 ---
 categories:
 - Java Development
-date: '2026-05-16'
-description: Tanulja meg, hogyan lehet összehasonlítani Excel fájlokat Java-ban a
-  GroupDocs.Comparison for Java segítségével, példákkal PDF-re, nagy dokumentumokra
-  és titkosított fájlokra.
+date: '2026-11-01'
+description: Ismerje meg, hogyan hasonlíthatók össze az Excel-fájlok Java-ban a GroupDocs.Comparison
+  segítségével, példákkal PDF-ekre, nagy dokumentumokra és titkosított fájlokra.
 keywords:
+- how to compare excel
 - compare excel files java
-- compare pdf documents java
-- groupdocs comparison java
-- excel file diff java
+- set paper size java
+- java file comparison library
 - document comparison api
-lastmod: '2026-05-16'
-linktitle: Java Excel fájlok összehasonlítási útmutató
+lastmod: '2026-11-01'
+linktitle: Java Excel-fájlok összehasonlítása útmutató
+og_description: Ismerje meg, hogyan hasonlíthatók össze az Excel-fájlok Java-ban a
+  GroupDocs.Comparison segítségével. Szerezzen kódpéldákat, teljesítmény tippeket
+  és GYIK-ot a dokumentum-összehasonlításhoz.
+og_image_alt: Guide to comparing Excel files in Java with GroupDocs Comparison API
+og_title: Hogyan hasonlítsuk össze az Excel-fájlokat Java-ban a GroupDocs API-val
 schemas:
 - author: GroupDocs
   dateModified: '2026-05-16'
@@ -59,52 +63,33 @@ tags:
 - java-api
 - automation
 - groupdocs
-title: Excel fájlok összehasonlítása Java-val a GroupDocs Document Comparison API-val
+- excel comparison
+title: Hogyan hasonlítsuk össze az Excel-fájlokat Java-ban a GroupDocs Document Comparison
+  API-val
 type: docs
 url: /hu/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Excel fájlok összehasonlítása Java-val a GroupDocs Document Comparison API-val
+# Hogyan hasonlítsuk össze az Excel fájlokat Java-ban a GroupDocs Document Comparison API-val
 
-Töltöttél már órákat manuálisan dokumentumok összehasonlításával, soronként keresve a változásokat? Akár szerződésváltozatokat követed, kóddokumentációt vizsgálod, vagy **compare excel files java**-ra van szükséged pénzügyi jelentésekhez, a manuális dokumentum-összehasonlítás időigényes és hibára hajlamos. Ebben az útmutatóban megtanulod, hogyan lehet gyorsan és megbízhatóan összehasonlítani az Excel munkafüzeteket (és sok más formátumot) a GroupDocs.Comparison for Java használatával.
+Sok vállalatnál szükség van **Excel fájlok Java-ban történő összehasonlítására**, hogy észrevegyék a pénzügyi jelentések változásait, auditálják az adatrevíziókat, vagy ellenőrizzék a migráció eredményeit. Kézzel két munkafüzet megnyitása és celláról cellára átvizsgálása hibára hajlamos, és értékes időt pazarol. Ez a bemutató pontosan megmutatja, **hogyan hasonlítsuk össze az Excel** munkafüzeteket programozottan a GroupDocs.Comparison for Java segítségével, másodpercek alatt pixel‑pontos diff jelentéseket biztosítva.
 
 ## Gyors válaszok
 
-A `Comparer` osztály a fő komponens, amely betölti a forrásdokumentumokat és elvégzi az összehasonlítást.  
-`CompareOptions` egy konfigurálható paraméterkészletet biztosít, amely szabályozza, hogyan hajtódik végre az összehasonlítás.  
-`StyleSettings` lehetővé teszi a beszúrt, törölt és módosított elemek vizuális megjelenésének testreszabását a kimeneti jelentésben.
+- **Képes a GroupDocs Excel fájlok Java-ban történő összehasonlítására?** Igen – egyszerűen töltsd be a `.xlsx` fájlokat a `Comparer` osztállyal, és hívd a `compare` metódust.  
+- **Hogyan lehet figyelmen kívül hagyni a fejléceket/lábléceket?** Állítsd be a `setHeaderFootersComparison(false)` értéket a `CompareOptions`‑ban.  
+- **Mi a helyzet a nagy PDF-ekkel?** Növeld a JVM heap méretét, engedélyezd a streaming módot, és használj memória‑optimalizált beállításokat.  
+- **Össze tudok-e hasonlítani jelszóval védett PDF-eket?** Add meg a jelszót a `Comparer` létrehozásakor.  
+- **Van mód a kiemelés színeinek megváltoztatására?** Használd a `StyleSettings`‑et a beszúrt, törölt és módosított elemekhez.
 
-- **Össze tud-e a GroupDocs Excel fájlokat Java-ban?** Igen, egyszerűen töltse be a `.xlsx` fájlokat a `Comparer` osztállyal, és hívja meg a `compare` metódust.  
-- **Hogyan lehet figyelmen kívül hagyni a fejléceket/lábléceket?** Állítsa be a `setHeaderFootersComparison(false)` értéket a `CompareOptions`-ban.  
-- **Mi a helyzet a nagy PDF-ekkel?** Növelje a JVM heap méretét, engedélyezze a memóriaoptimalizálást, és használja a streaming módot.  
-- **Össze tudok-e hasonlítani jelszóval védett PDF-eket?** Adja meg a jelszót a `Comparer` létrehozásakor.  
-- **Van mód a kiemelés színeinek megváltoztatására?** Használja a `StyleSettings`-et a beszúrt, törölt és módosított elemekhez.
+## Mi az Excel fájlok Java-ban történő összehasonlítása?
 
-## Mi az a compare excel files java?
+Az Excel fájlok Java-ban történő összehasonlítása azt jelenti, hogy programozottan észleljük minden cellaszintű hozzáadást, törlést vagy módosítást két `.xlsx` munkafüzet között, és vizuális diff jelentést készítünk, amely kiemeli ezeket a változásokat. A GroupDocs.Comparison motor betölti minden táblázatot a memóriába, kiértékeli a képleteket, stílusokat és a lapstruktúrákat, majd oldal‑oldal vagy átfedő PDF/HTML jelentést generál, amelyet a fejlesztők beágyazhatnak irányítópultokba vagy e‑mailben küldhetnek az érintetteknek.
 
-`compare excel files java` a folyamat, amely programozottan észleli a cellaszintű különbségeket két Excel munkafüzet között Java használatával. A GroupDocs.Comparison API betölti az egyes táblázatokat, kiértékeli minden cellát, sort és képletet, majd egy diff jelentést generál, amely kiemeli a hozzáadásokat, törléseket és módosításokat egy világos vizuális formátumban.
+## Miért használjunk Java dokumentum-összehasonlító API-t?
 
-## Miért használjunk Java dokumentum-összehasonlítási API-t?
-
-### Az automatizálás üzleti esete
-
-A manuális dokumentum-összehasonlítás nem csak fárasztó – kockázatos is. Tanulmányok kimutatták, hogy az emberek körülbelül **20 %** jelentős változást mulasztanak el a dokumentumok manuális áttekintésekor. Az API megszünteti ezt a kockázatot és mérhető termelékenységnövekedést biztosít:
-
-- **99,9 % pontosság** – minden karakter‑szintű változás rögzítésre kerül.  
-- **Sebesség** – egy 100 oldalas PDF-et kevesebb mint **30 másodperc** alatt hasonlít össze egy standard szerveren.  
-- **Következetesség** – egységes kiemelés és jelentés minden dokumentumtípusban.  
-- **Skálázhatóság** – kötegelt feldolgozás több ezer fájlt manuális munka nélkül.
-
-### Mikor használjunk dokumentum-összehasonlítási API-kat
-
-A legnagyobb megtérülést akkor kapja, amikor szüksége van:
-
-- **Jogi szerződések** – automatikusan jelzi a záradék módosításait.  
-- **Műszaki dokumentáció nyomon követése** – pontosan láthatja, mi változott az API specifikáció kiadások között.  
-- **Tartalomeszközök kezelése** – hasonlítsa össze a marketing szövegeket, felhasználói kézikönyveket vagy blogvázlatokat.  
-- **Megfelelőség auditálása** – biztosítja, hogy a szabályzat frissítései rögzítésre és naplózásra kerülnek.  
-- **Verziókezelés kiegészítése** – ember által olvasható diff-eket biztosít a nem kódbeli artefaktusokhoz.
+A diff generálás automatizálása kiküszöböli az emberi hibákat, amelyek körülbelül **20 %**‑át teszik ki a manuális felülvizsgálatok során elmulasztott változásoknak, biztosítva a következetes és megbízható eredményeket. A GroupDocs magas pontosságú észlelést biztosít minden módosításra, gyors feldolgozási időket, és egységes stílusokat a kimeneti formátumokban, ami együtt növeli a termelékenységet a pénzügy, jog és tartalomkezelő csapatok számára.
 
 ## Támogatott fájlformátumok és képességek
 
@@ -116,26 +101,20 @@ A GroupDocs.Comparison for Java **50+** bemeneti és kimeneti formátumot támog
 - **Szöveg**: TXT, HTML, XML, MD  
 - **Képek**: PNG, JPEG, BMP, GIF (vizuális összehasonlítás)
 
-### Haladó funkciók
+A fejlett képességek közé tartozik a jelszóval védett dokumentumok kezelése, többnyelvű felismerés, egyedi érzékenység beállítása dokumentumtípusonként, kötegelt feldolgozás, valamint a felhő‑natív és helyi telepítési lehetőségek.
 
-- Jelszóval védett dokumentum-összehasonlítás  
-- Többnyelvű felismerés és összehasonlítás  
-- Egyedi érzékenységi beállítások dokumentumtípusonként  
-- Kötegelt feldolgozás több dokumentumpárra  
-- Felhőalapú és helyi telepítési lehetőségek  
-
-## Előkövetelmények és beállítás
+## Előfeltételek és beállítás
 
 ### Rendszerkövetelmények
 
 1. **Java Development Kit (JDK):** 8 vagy újabb (JDK 11+ ajánlott)  
 2. **Build eszköz:** Maven 3.6+ vagy Gradle 6.0+  
 3. **Memória:** Minimum **4 GB RAM** nagy fájlokhoz  
-4. **Tároló:** Legalább **500 MB** szabad hely a temporális összehasonlítási adatokhoz  
+4. **Tárhely:** Legalább **500 MB** szabad hely a temporális összehasonlítási adatokhoz  
 
 ### Maven konfiguráció
 
-Adja hozzá a GroupDocs tárolót és függőséget a `pom.xml`-hez. Ez biztosítja, hogy a hivatalos kiadást használja:
+Add hozzá a GroupDocs tárolót és függőséget a `pom.xml`‑hez. Ez biztosítja, hogy a hivatalos kiadást húzd be:
 
 ```xml
 <repositories>
@@ -156,14 +135,14 @@ Adja hozzá a GroupDocs tárolót és függőséget a `pom.xml`-hez. Ez biztosí
 
 ### Licenc beállítása
 
-**Fejlesztéshez és teszteléshez:**  
-- **Ingyenes próba:** Töltse le a [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) oldalról – vízjelezett kimenettel.  
-- **Ideiglenes licenc:** Szerezzen 30‑napos teljes hozzáférést a [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/) segítségével.  
+**Fejlesztéshez és teszteléshez**  
+- **Ingyenes próba:** Töltsd le a [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) oldalról – vízjelezett kimenettel.  
+- **Ideiglenes licenc:** Szerezz 30‑napos teljes hozzáférést a [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/) segítségével.  
 
-**Éles környezethez:**  
-- **Teljes licenc:** Vásárolja meg a [GroupDocs Purchase](https://purchase.groupdocs.com/buy) oldalon korlátlan kereskedelmi használathoz.  
+**Éles környezethez**  
+- **Teljes licenc:** Vásárolj a [GroupDocs Purchase](https://purchase.groupdocs.com/buy) oldalon, korlátlan kereskedelmi felhasználáshoz.  
 
-Inicializálja a licencet az alkalmazás indításakor:
+Inicializáld a licencet az alkalmazás indításakor:
 
 ```java
 // License initialization - do this once at application startup
@@ -171,17 +150,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Pro tipp:** Tárolja a licencfájlt az erőforrások mappájában, és töltse be a `getClass().getResourceAsStream()` segítségével a hordozható telepítésekhez.
+> **Pro tipp:** Tárold a licencfájlt a resources mappában, és töltsd be a `getClass().getResourceAsStream()` metódussal a hordozható telepítésekhez.
 
 ## Alapvető megvalósítási útmutató
 
-### 1. funkció: Fejléc és lábléc összehasonlításának figyelmen kívül hagyása
+### 1. funkció: fejléc és lábléc összehasonlításának kihagyása
 
-A `setHeaderFootersComparison` metódus letiltja a fejléc és lábléc tartalmának összehasonlítását, megakadályozva, hogy a diff-ben irreleváns eltérések jelenjenek meg.
+A `setHeaderFootersComparison` metódus letiltja a fejléc és lábléc tartalmának összehasonlítását, megakadályozva, hogy a diff‑ben irreleváns eltérések jelenjenek meg.
 
-**Miért fontos:** A fejlécek és láblécek gyakran tartalmaznak dinamikus adatokat (időbélyegek, oldalszámok), amelyek a verziók között változnak, de a tartalom áttekintése szempontjából lényegtelenek. Figyelmen kívül hagyásuk csökkenti a zajt és felgyorsítja a feldolgozást.
+**Miért fontos:** A fejlécek és láblécek gyakran tartalmaznak időbélyegeket vagy oldalszámokat, amelyek verziók között változnak, de nem részei a lényegi tartalomnak. Kihagyásuk csökkenti a zajt és felgyorsítja a feldolgozást.
 
-**Valós példa:** Két szerződésvázlat összehasonlítása, ahol minden verzió új dátumbélyeget ad a lábléchez; csak a záradék változásaira vagy kíváncsi.
+**Valós példák:** Két szerződésvázlat különböző generálási dátumot tartalmaz a láblécben; csak a záradék változások érdekelnek.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -208,18 +187,15 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**Fő előnyök:**  
-- Tisztább diff eredmények  
-- Kevesebb hamis pozitív  
-- Gyorsabb összehasonlítás, mivel ezek a szakaszok kihagyásra kerülnek  
+**Fő előnyök:** tisztább diff eredmények, kevesebb hamis pozitív, és gyorsabb végrehajtás, mivel ezek a szakaszok kihagyásra kerülnek.
 
-### 2. funkció: Kimeneti papírméret beállítása professzionális jelentésekhez
+### 2. funkció: kimeneti papírméret beállítása professzionális jelentésekhez
 
 A `PaperSize` enum szabványos oldalméreteket definiál, amelyeket a generált PDF használni fog.
 
-**Üzleti kontextus:** A jogi csapatok gyakran igényelnek nyomtatható összehasonlítási jelentéseket egy meghatározott papírméretben bírósági benyújtáshoz vagy ügyfélnek.
+**Üzleti kontextus:** A jogi csapatok gyakran igénylik a nyomtatható összehasonlítási jelentéseket egy meghatározott papírméretben bírósági benyújtáshoz vagy ügyfélnek.
 
-**Alkalmazás módja:** Használja a `PaperSize` enumot a `CompareOptions`-ban a célméret meghatározásához.
+**Alkalmazás módja:** Használd a `PaperSize` enumot a `CompareOptions`‑ban a célméret meghatározásához.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -246,19 +222,19 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-A támogatott méretek közé tartozik az A0‑A10, Letter, Legal, Tabloid és egyedi méretek. Válassza az A4-et európai ügyfeleknek vagy a Letter-t az USA-s partnereknek.
+A támogatott méretek közé tartozik A0‑A10, Letter, Legal, Tabloid és egyedi méretek. Válaszd az A4‑et európai ügyfeleknek vagy a Letter‑t amerikai partnereknek.
 
-### 3. funkció: Az összehasonlítás érzékenységének finomhangolása
+### 3. funkció: az összehasonlítás érzékenységének finomhangolása
 
-A `setSensitivityOfComparison` metódus beállítja, hogy a összehasonlító motor milyen részletességgel értékeli a változásokat, a nagy struktúraváltozásoktól az egyes karakterek különbségeiig.
+A `setSensitivityOfComparison` metódus beállítja, milyen részletességgel értékeli a változásokat az összehasonlító motor, a nagy szerkezeti módosításoktól az egy karakteres eltérésekig.
 
-**A kihívás:** Különböző dokumentumtípusok különböző részletességet igényelnek. A jogi szerződések karakter‑szintű pontosságot követelnek, míg a marketing szövegek csak bekezdés‑szintű változásokat igényelhetnek.
+**A kihívás:** Különböző dokumentumtípusok különböző részletességet igényelnek. A jogi szerződések karakter‑szintű pontosságot igényelnek, míg a marketing szövegek csak bekezdés‑szintű változásokat.
 
 **Érzékenységi skála (0‑100):**  
 - **0‑25:** Csak nagy változások (bekezdés hozzáadása/törlése)  
 - **26‑50:** Mérsékelt változások (mondat szerkesztése)  
 - **51‑75:** Részletes változások (szó‑szintű)  
-- **76‑100:** Finom változások (karakter‑szintű)  
+- **76‑100:** Granuláris változások (karakter‑szintű)  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -284,16 +260,13 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**Legjobb gyakorlat beállítások:**  
-- **Jogi dokumentumok:** 90‑100  
-- **Marketing tartalom:** 40‑60  
-- **Műszaki specifikációk:** 70‑80  
+**Legjobb gyakorlat beállítások:** Jogi dokumentumok 90‑100, marketing tartalom 40‑60, műszaki specifikációk 70‑80.
 
-### 4. funkció: Változási stílusok testreszabása a jobb vizuális kommunikáció érdekében
+### 4. funkció: változási stílusok testreszabása a jobb vizuális kommunikációért
 
 A `StyleSettings` objektum lehetővé teszi színek, betűtípusok, szegélyek és egyéb vizuális jelzések meghatározását a beszúrt, törölt és módosított tartalomhoz.
 
-**Miért fontosak az egyedi stílusok:** Az alapértelmezett kiemelés ütközhet a vállalati arculattal vagy a hozzáférhetőségi irányelvekkel. A színek, betűtípusok és szegélyek testreszabása azonnal érthetővé teszi a diff-eket.
+**Miért fontosak az egyedi stílusok:** Az alapértelmezett kiemelés ütközhet a vállalati arculattal vagy a hozzáférhetőségi irányelvekkel. A színek, betűtípusok és szegélyek testreszabása azonnal érthetővé teszi a diff‑eket.
 
 **Példa:** Piros háttér a törlésekhez, zöld a beszúrásokhoz, kék a módosításokhoz.
 
@@ -340,18 +313,45 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-A `StyleSettings` fejlett beállításai lehetővé teszik a betűvastagság, méret, háttér átlátszóság, szegély stílus és áthúzás viselkedésének módosítását.
+A fejlett beállítások lehetővé teszik a betűvastagság, méret, háttér átlátszóság, szegély stílus és áthúzás viselkedésének módosítását.
 
 ## Hogyan állítsuk be a papírméretet Java-ban az összehasonlítási jelentésekhez
 
-Állítsa be a papírméretet közvetlenül a `PaperSize` enum segítségével a `CompareOptions`-ban. Cserélje le a `PaperSize.A6`-t bármely támogatott konstansra (pl. `PaperSize.LETTER`), hogy megfeleljen a regionális nyomtatási szabványoknak. Ez biztosítja, hogy a generált PDF jelentés helyesen nyomtatható legyen manuális átméretezés nélkül. Továbbá a beállítást kombinálhatja egyedi margókkal és orientációs flag-ekkel, hogy olyan elrendezést hozzon létre, amely megfelel a szervezet dokumentum‑benyújtási irányelveinek, garantálva a professzionális megjelenést minden alkalommal.
+`Comparer` a fő osztály, amely a dokumentum-összehasonlítási műveleteket irányítja. Tölts be egy `Comparer` példányt a forrás munkafüzettel, konfigurálj egy `CompareOptions` objektumot, és hívd a `setPaperSize` metódust a kívánt `PaperSize` enum értékkel. Ez az egyetlen beállítás határozza meg a generált PDF oldalméreteit, biztosítva a helyes nyomtatást manuális átméretezés nélkül.
+
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.options.CompareOptions;
+import com.groupdocs.comparison.options.enums.PaperSize;
+
+public class SetOutputPaperSizeExample {
+    public static void main(String[] args) throws Exception {
+        String outputFileName = "YOUR_OUTPUT_DIRECTORY/SetOutputPaperSize_result.docx";
+
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word.docx")) {
+
+            comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
+
+            // Set the paper size to A6
+            CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setPaperSize(PaperSize.A6)
+                    .build();
+
+            final Path resultPath = comparer.compare(resultStream, compareOptions);
+        }
+    }
+}
+```
+
+Ezt a beállítást kombinálhatod egyedi margókkal és orientációs jelzőkkel, hogy olyan elrendezést hozz létre, amely megfelel a szervezet dokumentum‑benyújtási irányelveinek, garantálva a professzionális megjelenést minden alkalommal.
 
 ## Gyakori problémák és hibaelhárítás
 
 ### Memóriakezelés nagy dokumentumoknál
 
-**Probléma:** `OutOfMemoryError` nagyobb, mint 50 MB méretű fájlok összehasonlításakor.  
-**Megoldás:** Növelje a JVM heap-et (`-Xmx8g`) és engedélyezze a streaming módot.
+**Probléma:** `OutOfMemoryError` nagyobb, mint 50 MB fájlok összehasonlításakor.  
+**Megoldás:** Növeld a JVM heap-et (`-Xmx8g`) és engedélyezd a streaming módot.
 
 ```bash
 # Increase heap size for large document processing
@@ -360,10 +360,10 @@ java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 
 ### Sérült vagy jelszóval védett fájlok kezelése
 
-`PasswordRequiredException` kerül dobásra, amikor az API egy jelszóval védett dokumentummal találkozik, amelyhez nincs megadva jelszó.
+`PasswordRequiredException` kerül dobásra, amikor az API titkosított dokumentummal találkozik, anélkül, hogy jelszót kapna.
 
-**Probléma:** Az összehasonlítás sikertelen a zárolt dokumentumokon.  
-**Megelőzés:** Adja meg a jelszót a `Comparer` létrehozásakor, és kezelje a `PasswordRequiredException`-t.
+**Probléma:** Az összehasonlítás sikertelen a zárolt dokumentumoknál.  
+**Megelőzés:** Add meg a jelszót a `Comparer` létrehozásakor, és kezeld a `PasswordRequiredException`‑t.
 
 ```java
 // Check document accessibility before comparison
@@ -382,7 +382,7 @@ try {
 ### Teljesítményoptimalizálás kötegelt feldolgozáshoz
 
 **Kihívás:** Hatékonyan feldolgozni 100+ dokumentumpárt.  
-**Megoldás:** Használjon fix méretű szálkészletet, és küldje el minden összehasonlítást külön feladatként.
+**Megoldás:** Használj fix méretű szálpoolt, és küldd el minden összehasonlítást külön feladatként.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -402,15 +402,15 @@ executor.shutdown();
 
 ### Formátumspecifikus problémák
 
-- **Beolvasott PDF-ek:** Alkalmazzon OCR előfeldolgozást az összehasonlítás előtt.  
-- **Word dokumentumok:** Tiltsa le a meglévő „Track Changes” funkciót a hamis diff-ek elkerülése érdekében.  
-- **Beágyazott objektumok:** Különítsen ki és hasonlítsa össze őket külön a pontosság érdekében.
+- **Beolvasott PDF-ek:** Alkalmazz OCR előfeldolgozást az összehasonlítás előtt.  
+- **Word dokumentumok:** Kapcsold ki a meglévő „Track Changes” funkciót a hamis diff‑ek elkerülése érdekében.  
+- **Beágyazott objektumok:** Külön bontsd ki és hasonlítsd össze őket a pontosság érdekében.
 
 ## Legjobb gyakorlatok és teljesítmény tippek
 
-### 1. Dokumentum előfeldolgozás
+### 1. dokumentum előfeldolgozás
 
-Távolítsa el a felesleges metaadatokat és szabványosítsa a betűtípusokat az összehasonlítás előtt a sebesség és pontosság javítása érdekében.
+Távolítsd el a felesleges metaadatokat és szabványosítsd a betűtípusokat az összehasonlítás előtt a sebesség és pontosság javítása érdekében.
 
 ```java
 // Example preprocessing workflow
@@ -421,9 +421,9 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Optimális konfigurációs profilok
+### 2. optimális konfigurációs profilok
 
-Hozzon létre újrahasználható `CompareOptions` előbeállításokat minden dokumentumtípushoz (jogi, marketing, műszaki), és használja őket újra a folyamatában.
+Hozz létre újrahasználható `CompareOptions` előbeállításokat minden dokumentumtípushoz (jogi, marketing, műszaki), és használd őket a pipeline‑odban.
 
 ```java
 public class ComparisonProfiles {
@@ -445,10 +445,9 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Robusztus hibakezelés és naplózás
+### 3. robusztus hibakezelés és naplózás
 
-`ComparisonException` hibát jelez az összehasonlítási folyamat során, és részletes diagnosztikai információt nyújt.  
-Tegye az összehasonlítási hívásokat try‑catch blokkokba, naplózza a `ComparisonException` részleteit, és szükség esetén térjen vissza egy biztonságos alapértelmezett értékhez.
+`ComparisonException` hibát jelez az összehasonlítási folyamat során, és részletes diagnosztikai információkat ad. Tekerj be az összehasonlítási hívásokat try‑catch blokkokba, naplózd a `ComparisonException` részleteit, és szükség esetén térj vissza egy biztonságos alapértelmezett megoldáshoz.
 
 ```java
 public ComparisonResult safeCompareDocuments(String source, String target) {
@@ -461,15 +460,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Gyorsítótárazás és okos újrahasználat
+### 4. gyorsítótárazás és okos újrafelhasználás
 
-- Gyorsítótárazza a diff eredményeket azonos fájlpárokhoz.  
-- Tárolja a dokumentum ujjlenyomatokat (hash-eket), hogy kihagyja a változatlan fájlokat.  
-- Használjon aszinkron sorokat a nem kritikus összehasonlításokhoz, hogy a felhasználói felület reagálók maradjon.
+- Gyorsítótárazd a diff eredményeket azonos fájlpárok esetén.  
+- Tárold a dokumentum ujjlenyomatokat (hash‑eket), hogy kihagyhasd a változatlan fájlokat.  
+- Használj aszinkron sorokat a nem kritikus összehasonlításokhoz, hogy a UI reagálékép legyen.
 
 ## Valós integrációs forgatókönyvek
 
-### Forgatókönyv 1: Automatizált szerződés-ellenőrzési csővezeték
+### Forgatókönyv 1: automatizált szerződés-ellenőrző pipeline
 
 ```java
 @Service
@@ -492,7 +491,7 @@ public class ContractReviewService {
 }
 ```
 
-### Forgatókönyv 2: Tartalomkezelő rendszer integráció
+### Forgatókönyv 2: tartalomkezelő rendszer integráció
 
 ```java
 @RestController
@@ -514,38 +513,38 @@ public class DocumentComparisonController {
 }
 ```
 
-## Gyakran feltett kérdések
+## Gyakran ismételt kérdések
 
-**Q: Figyelmen kívül hagyhatom-e a fejléceket és lábléceket az összehasonlítás során a GroupDocs for Java-ban?**  
-A: Igen, hívja meg a `setHeaderFootersComparison(false)`-t a `CompareOptions`-on. Ez eltávolítja a dinamikus fejléc/lábléc zajt a diff-ből.
+**K: Figyelmen kívül hagyhatom a fejléceket és lábléceket a GroupDocs Java összehasonlítás során?**  
+V: Igen, hívd a `setHeaderFootersComparison(false)` metódust a `CompareOptions`‑on. Ez eltávolítja a dinamikus fejléc/lábléc zajt a diff‑ből.
 
-**Q: Hogyan állíthatom be a kimeneti papírméretet Java-ban a GroupDocs használatával?**  
-A: Használja a `setPaperSize(PaperSize.A6)`-t (vagy bármely más enum értéket) a `CompareOptions`-ban. Ez a választott méretű nyomtatásra kész PDF-et generál.
+**K: Hogyan állíthatom be a kimeneti papírméretet Java‑ban a GroupDocs használatával?**  
+V: Használd a `setPaperSize(PaperSize.A6)` (vagy bármely más enum értéket) a `CompareOptions`‑ban. Ez a választott méretű nyomtatásra kész PDF‑et generál.
 
-**Q: Lehetőség van az összehasonlítás érzékenységének finomhangolására különböző dokumentumtípusokhoz?**  
-A: Teljesen. Hívja meg a `setSensitivityOfComparison(85)`-t jogi szerződésekhez vagy a `setSensitivityOfComparison(45)`-t marketing vázlatokhoz a részletesség szabályozásához.
+**K: Lehetőség van az összehasonlítás érzékenységének finomhangolására különböző dokumentumtípusokhoz?**  
+V: Természetesen. Hívd a `setSensitivityOfComparison(85)`‑t jogi szerződésekhez vagy a `setSensitivityOfComparison(45)`‑t marketing vázlatokhoz a granularitás szabályozásához.
 
-**Q: Testreszabhatom-e a beszúrt, törölt és módosított szöveg stílusát az összehasonlítás során?**  
-A: Igen. Hozzon létre egy `StyleSettings` példányt minden változástípushoz, és rendelje hozzá a színeket, betűtípusokat vagy szegélyeket, mielőtt átadná a `CompareOptions`-nek.
+**K: Testreszabhatom a beszúrt, törölt és módosított szöveg stílusát az összehasonlítás során?**  
+V: Igen. Hozz létre egy `StyleSettings` példányt minden változástípushoz, és rendelj színeket, betűtípusokat vagy szegélyeket, mielőtt átadnád a `CompareOptions`‑nek.
 
-**Q: Milyen előkövetelmények szükségesek a GroupDocs Comparison Java-ban való elkezdéséhez?**  
-A: Szüksége van JDK 8+ (JDK 11+ ajánlott), Maven 3.6+ vagy Gradle 6.0+, legalább 4 GB RAM-ra, és egy érvényes GroupDocs licencre (ingyenes próba elérhető).
+**K: Mik a előfeltételek a GroupDocs Comparison Java‑ban történő használatához?**  
+V: Szükséged van JDK 8+ (JDK 11+ ajánlott), Maven 3.6+ vagy Gradle 6.0+, legalább 4 GB RAM‑ra, és egy érvényes GroupDocs licencre (ingyenes próba elérhető).
 
-**Q: Hogyan kezelem a jelszóval védett dokumentumokat a GroupDocs.Comparison-ban?**  
-A: Adja meg a jelszót a második argumentumként a `Comparer` létrehozásakor: `new Comparer(sourceFile, "myPassword")`. Fogja el a `PasswordRequiredException`-t a hibák elegáns kezeléséhez.
+**K: Hogyan kezelem a jelszóval védett dokumentumokat a GroupDocs.Comparison‑ban?**  
+V: Add meg a jelszót a második argumentumként a `Comparer` létrehozásakor: `new Comparer(sourceFile, "myPassword")`. Kezeld a `PasswordRequiredException`‑t a hibák elegáns kezeléséhez.
 
-**Q: Milyen fájlformátumokat támogat a GroupDocs.Comparison Java számára?**  
-A: Több mint **50** formátum, beleértve a DOCX, PDF, XLSX, PPTX, TXT, HTML, XML és a gyakori képtípusokat (PNG, JPEG). Az API automatikusan felismeri a formátumokat, de explicit módon is megadhatja őket a kötegelt teljesítményjavulás érdekében.
+**K: Milyen fájlformátumokat támogat a GroupDocs.Comparison for Java?**  
+V: Több mint **50** formátumot, többek között DOCX, PDF, XLSX, PPTX, TXT, HTML, XML és gyakori képformátumok (PNG, JPEG). Az API automatikusan felismeri a formátumokat, de explicit módon is megadhatod őket a kötegelt teljesítményjavítás érdekében.
 
 ## Következtetés
 
-Azáltal, hogy a GroupDocs.Comparison for Java-t használja, automatizálhatja az Excel munkafüzetek — és bármely más támogatott formátum — összehasonlításának fáradságos feladatát pontossággal, sebességgel és következetességgel. Integrálja az útmutatóban szereplő kódrészleteket és legjobb gyakorlat tippeket a CI/CD csővezetékekbe, dokumentumkezelő rendszerekbe vagy egyedi audit eszközökbe, hogy mérhető termelékenységnövekedést érjen el.
+A GroupDocs.Comparison for Java kihasználásával automatizálhatod az Excel munkafüzetek — és bármely más támogatott formátum — összehasonlításának fáradságos feladatát, pontos pontossággal, sebességgel és konzisztenciával. Integráld a bemutatóban szereplő kódrészleteket és legjobb gyakorlat tippeket a CI/CD pipeline‑jaidba, dokumentumkezelő rendszereidbe vagy egyedi audit eszközeidbe, hogy mérhető termelékenység növekedést érj el.
 
 ---
 
-**Last Updated:** 2026-05-16  
-**Tested With:** GroupDocs.Comparison 25.2 for Java  
-**Author:** GroupDocs
+**Utoljára frissítve:** 2026-11-01  
+**Tesztelve:** GroupDocs.Comparison 25.2 for Java  
+**Szerző:** GroupDocs
 
 ```java
 // Use streaming for memory efficiency
@@ -557,8 +556,8 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 }
 ```
 
-## Kapcsolódó oktatóanyagok
+## Kapcsolódó bemutatók
 
-- [compare pdf java – Java dokumentum-összehasonlítás oktatóanyag – Teljes útmutató a dokumentumok betöltéséhez és összehasonlításához](/comparison/java/document-loading/)
-- [GroupDocs Comparison Java licenc beállítása – Teljes URL konfigurációs útmutató](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
-- [Hogyan használjuk a GroupDocs-et – Java dokumentum-összehasonlítás stream-ek – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [pdf összehasonlítása java – Java Dokumentum-összehasonlítás Bemutató – Teljes útmutató a dokumentumok betöltéséhez és összehasonlításához](/comparison/java/document-loading/)
+- [GroupDocs Comparison Java Licenc Beállítás – Teljes URL Konfigurációs Útmutató](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Hogyan használjuk a GroupDocs - Java Dokumentum-összehasonlítás Stream‑ek – Teljes útmutató](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

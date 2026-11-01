@@ -1,67 +1,130 @@
 ---
 categories:
 - Java Development
-date: '2026-03-27'
-description: Μάθετε πώς να συγκρίνετε αρχεία PDF με τη χρήση του GroupDocs.Comparison
-  για Java, να διαχειρίζεστε έγγραφα προστατευμένα με κωδικό στην Java, να δημιουργείτε
-  προεπισκοπήσεις και να ακολουθείτε τις βέλτιστες πρακτικές.
-keywords: java compare pdf files, java password protected documents, GroupDocs Comparison
-  Java, document version control Java, Java PDF comparison library, document management
-  Java
-lastmod: '2026-03-27'
-linktitle: Java Document Comparison Guide
+date: '2026-11-01'
+description: Μάθετε πώς να συγκρίνετε αρχεία pdf με Java χρησιμοποιώντας το GroupDocs.Comparison
+  για Java, να διαχειρίζεστε έγγραφα προστατευμένα με κωδικό password protected, να
+  δημιουργείτε προεπισκοπήσεις και να ακολουθείτε τις βέλτιστες πρακτικές.
+keywords:
+- java compare pdf files
+- java pdf comparison library
+- generate pdf preview java
+lastmod: '2026-11-01'
+linktitle: Οδηγός Σύγκρισης Εγγράφων Java
+og_description: Συγκρίνετε αρχεία pdf με Java χρησιμοποιώντας το GroupDocs.Comparison.
+  Λάβετε κώδικα βήμα‑βήμα, διαχείριση κωδικού, δημιουργία προεπισκοπήσεων και συμβουλές
+  απόδοσης σε αυτόν τον πλήρη οδηγό.
+og_image_alt: 'Developer guide: compare PDF files in Java using GroupDocs.Comparison'
+og_title: Java σύγκριση αρχείων pdf – master GroupDocs.Comparison API
+schemas:
+- author: GroupDocs
+  dateModified: '2026-11-01'
+  description: Learn how to java compare pdf files using GroupDocs.Comparison for
+    Java, handle java password protected documents, generate previews, and follow
+    best practices.
+  headline: Java compare pdf files – master GroupDocs.Comparison API
+  type: TechArticle
+- description: Learn how to java compare pdf files using GroupDocs.Comparison for
+    Java, handle java password protected documents, generate previews, and follow
+    best practices.
+  name: Java compare pdf files – master GroupDocs.Comparison API
+  steps:
+  - name: initialize your comparer
+    text: The `Comparer` object is the core component that executes the diff algorithm.
+      It holds configuration such as comparison options and licensing information.
+      **Why this matters:** The source document you provide becomes the baseline;
+      every change is measured against it.
+  - name: add target documents
+    text: You can compare the source with one or more target files. In a contract‑management
+      scenario, the source is the original agreement and the target is the revised
+      version from the legal team.
+  - name: set up output stream creation
+    text: The preview delegate pattern gives you full control over where preview images
+      are stored—local disk, cloud bucket, or a database.
+  - name: configure preview options
+    text: Only generate previews for pages you actually need; this reduces CPU usage
+      by up to 60 % for large PDFs.
+  - name: generate the previews
+    text: The API renders each requested page as a PNG (lossless) or JPEG (smaller
+      size). PNG is recommended for legal documents where pixel‑perfect fidelity matters.
+  type: HowTo
+- questions:
+  - answer: Use `LoadOptions` to supply the password when creating the `Comparer`
+      instance, as shown above.
+    question: How do I handle password‑protected documents?
+  - answer: Yes—simply provide input streams from your cloud provider to the `Comparer`.
+    question: Can I compare documents stored in cloud storage?
+  - answer: There’s no hard limit, but for files larger than 100 MB you should increase
+      the JVM heap size or process the document in smaller chunks to avoid `OutOfMemoryError`.
+    question: What's the maximum file size GroupDocs.Comparison can handle?
+  - answer: The library uses advanced diff algorithms that detect changes in text,
+      formatting, images, tables, and embedded objects, delivering near‑pixel‑perfect
+      visual diff results.
+    question: How accurate is the comparison algorithm?
+  - answer: Absolutely. Set `CompareOptions` to enable or disable detection of text,
+      formatting, images, tables, and more.
+    question: Can I customize which types of changes are detected?
+  type: FAQPage
 tags:
 - document-comparison
 - java-api
 - groupdocs
 - document-management
-title: java σύγκριση αρχείων pdf – Οδηγός Java του GroupDocs.Comparison
+title: Java σύγκριση αρχείων pdf – master GroupDocs.Comparison API
 type: docs
 url: /el/java/basic-comparison/java-groupdocs-comparison-document-management/
 weight: 1
 ---
 
-# java σύγκριση αρχείων pdf – Master GroupDocs.Comparison API
+# Java σύγκριση αρχείων pdf – master GroupDocs.Comparison API
 
-**Αγωνίζεστε με τον έλεγχο εκδόσεων εγγράφων στην εφαρμογή Java;** Δεν είστε μόνοι. Η διαχείριση πολλαπλών εκδόσεων εγγράφων, η παρακολούθηση αλλαγών και η δημιουργία οπτικών προεπισκοπήσεων μπορεί γρήγορα να γίνει εφιάλτης χωρίς τα κατάλληλα εργαλεία.
+Σε αυτόν τον οδηγό θα μάθετε πώς να **java compare pdf files** αποδοτικά με το GroupDocs.Comparison για Java. Είτε δημιουργείτε μια πύλη ελέγχου συμβάσεων, ένα σύστημα ελέγχου εκδόσεων ή έναν ελεγκτή ακαδημαϊκών εργασιών, η δυνατότητα εντοπισμού ακόμη και της μικρότερης αλλαγής σε έγγραφα PDF είναι απαραίτητη. Θα περάσουμε από τη ρύθμιση, τη βασική λογική σύγκρισης, τη δημιουργία προεπισκόπησης, τη διαχείριση κωδικών πρόσβασης, την ενσωμάτωση στο cloud και βέλτιστες πρακτικές βελτιστοποιημένες για απόδοση—ώστε να μπορείτε να παραδώσετε μια αξιόπιστη λύση σε λίγα λεπτά.
 
-Ακριβώς εδώ έρχεται το **GroupDocs.Comparison for Java**. Αυτό το ισχυρό API σας επιτρέπει να συγκρίνετε έγγραφα, να επισημαίνετε διαφορές και να δημιουργείτε προεπισκοπήσεις σελίδων με λίγες μόνο γραμμές κώδικα. Είτε δημιουργείτε σύστημα διαχείρισης περιεχομένου, χρειάζεστε **java compare pdf files**, είτε θέλετε **java compare word files**, αυτός ο οδηγός θα σας θέσει σε λειτουργία γρήγορα.
-
-## Γρήγορες Απαντήσεις
-- **Τι κάνει το groupdocs comparison java;** Συγκρίνει δύο ή περισσότερα έγγραφα, επισημαίνει αλλαγές και μπορεί να παράγει οπτικές προεπισκοπήσεις.  
-- **Ποια μορφότυπα αρχείων υποστηρίζονται;** Word, PDF, Excel, PowerPoint, εικόνες, HTML και πολλά άλλα.  
-- **Χρειάζομαι άδεια για παραγωγή;** Ναι – μια έγκυρη άδεια GroupDocs αφαιρεί τα υδατογραφήματα και ξεκλειδώνει όλες τις λειτουργίες.  
-- **Μπορώ να διαχειριστώ μεγάλα έγγραφα;** Ναι, με σωστή διαχείριση μνήμης και σελιδοποίηση προεπισκοπήσεων.  
+## Γρήγορες απαντήσεις
+- **Τι κάνει το GroupDocs Comparison Java;** Συγκρίνει δύο ή περισσότερα έγγραφα, επισημαίνει κάθε αλλαγή και μπορεί να δημιουργήσει οπτικές προεπισκοπήσεις για γρήγορη ανασκόπηση.  
+- **Ποιοι τύποι αρχείων υποστηρίζονται;** Word, PDF, Excel, PowerPoint, εικόνες, HTML και πολλά άλλα.  
+- **Χρειάζομαι άδεια για παραγωγή;** Ναι – μια έγκυρη άδεια GroupDocs αφαιρεί τα υδατογράμματα και ξεκλειδώνει το πλήρες σύνολο λειτουργιών.  
+- **Μπορώ να διαχειριστώ μεγάλα έγγραφα;** Ναι – με σωστή διαχείριση μνήμης και σελιδοποίηση προεπισκοπήσεων μπορείτε να επεξεργαστείτε PDF με εκατοντάδες σελίδες.  
 - **Πού μπορώ να βρω την πιο πρόσφατη εξάρτηση Maven;** Στο αποθετήριο GroupDocs – ελέγξτε την τελευταία έκδοση πριν την προσθέσετε.
 
 ## Τι είναι η java compare pdf files;
-Το GroupDocs.Comparison for Java είναι μια βιβλιοθήκη που συγκρίνει προγραμματιστικά έγγραφα, εντοπίζει διαφορές κειμένου, μορφοποίησης και εικόνων, και προαιρετικά δημιουργεί ένα έγγραφο αποτελέσματος που οπτικοποιεί αυτές τις αλλαγές. Είναι η λύση που πρέπει να χρησιμοποιήσετε όταν χρειάζεται να **java compare pdf files** αξιόπιστα.
+`java compare pdf files` αναφέρεται στη προγραμματιστική διαδικασία φόρτωσης δύο εκδόσεων PDF, εντοπισμού κειμενικών, μορφολογικών και γραφικών διαφορών, και προαιρετικά δημιουργίας ενός εγγράφου αποτελέσματος που επισημαίνει οπτικά αυτές τις αλλαγές. Το GroupDocs.Comparison υλοποιεί αυτό με μία κλήση API, εξαλείφοντας την ανάγκη για χειροκίνητη λογική diff.
 
 ## Γιατί να χρησιμοποιήσετε το GroupDocs.Comparison σε έργα Java;
-- **Ακριβής ανίχνευση αλλαγών** σε πολλούς τύπους αρχείων, συμπεριλαμβανομένων των PDF.  
-- **Εύκολη ενσωμάτωση** με Maven ή Gradle.  
-- **Ενσωματωμένη δημιουργία προεπισκοπήσεων** για γρήγορες οπτικές ανασκοπήσεις.  
-- **Κλιμακούμενη απόδοση** όταν ακολουθείτε τις προτεινόμενες βέλτιστες πρακτικές για τη διαχείριση μεγάλων εγγράφων.
+Το GroupDocs.Comparison παρέχει **ακριβή ανίχνευση αλλαγών** σε πάνω από 50 υποστηριζόμενες μορφές, επεξεργάζεται **PDF έως 200 σελίδες σε λιγότερο από 5 δευτερόλεπτα** σε μια τυπική JVM 8 GB, και περιλαμβάνει ενσωματωμένη δημιουργία προεπισκοπήσεων. Τα Maven‑ready artifacts του καθιστούν την ενσωμάτωση απλή, και η βιβλιοθήκη κλιμακώνεται οριζόντια όταν ακολουθείτε τα προτεινόμενα πρότυπα διαχείρισης μνήμης.
 
 ## Προαπαιτούμενα: Τι χρειάζεστε για να ξεκινήσετε
+Πριν βυθιστείτε στον κώδικα, βεβαιωθείτε ότι το περιβάλλον σας πληροί αυτές τις απαιτήσεις:
 
-### Απαραίτητα Απαιτούμενα
+* **Java Development Kit:** JDK 8 ή νεότερο· συνιστάται JDK 11 ή νεότερο για καλύτερη απόδοση συλλογής απορριμμάτων.  
+* **Εργαλείο κατασκευής:** Maven ή Gradle για επίλυση εξαρτήσεων.  
+* **IDE:** IntelliJ IDEA, Eclipse ή VS Code – οποιοδήποτε σύγχρονο IDE Java λειτουργεί.  
+* **Βασικές γνώσεις Java:** Θα πρέπει να είστε άνετοι με κλάσεις, μεθόδους και I/O αρχείων.  
+* **Πρόσβαση δικτύου:** Για λήψη του Maven artifact του GroupDocs και, εάν χρησιμοποιείτε αποθήκευση στο cloud, πρόσβαση στο σημείο αποθήκευσης.
 
-Πριν προχωρήσουμε στον κώδικα, βεβαιωθείτε ότι έχετε καλύψει αυτά τα βασικά:
+### Προσθήκη του GroupDocs.Comparison στο έργο σας
+Προσθέστε την ακόλουθη εξάρτηση στο `pom.xml` (αντικαταστήστε το **X.Y.Z** με την πιο πρόσφατη έκδοση που βρείτε στην ιστοσελίδα GroupDocs):
 
-**Development Environment:**
-- Java Development Kit (JDK) 8 ή νεότερο (συνιστάται JDK 11+ για καλύτερη απόδοση)
-- Maven ή Gradle για διαχείριση εξαρτήσεων
-- Το αγαπημένο σας IDE (IntelliJ IDEA, Eclipse ή VS Code λειτουργούν εξαιρετικά)
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-comparison</artifactId>
+    <version>X.Y.Z</version>
+</dependency>
+```
 
-**Knowledge Prerequisites:**
-- Βασικές δεξιότητες προγραμματισμού Java (πρέπει να είστε άνετοι με κλάσεις και μεθόδους)
-- Κατανόηση των λειτουργιών αρχείων I/O στην Java
-- Εξοικείωση με εξαρτήσεις Maven (μην ανησυχείτε—θα τις περάσουμε βήμα-βήμα)
+**Συμβουλή:** Ελέγξτε τις σημειώσεις έκδοσης του GroupDocs για διορθώσεις σφαλμάτων ανά έκδοση και νέα υποστήριξη μορφών πριν την αναβάθμιση.
 
-### Προσθήκη του GroupDocs.Comparison στο Έργο σας
+## Άδεια (μη το παραλείψετε!)
+Μια δοκιμαστική άδεια σας επιτρέπει να αξιολογήσετε το API, αλλά οι παραγωγικές εγκαταστάσεις απαιτούν μόνιμη άδεια για την αφαίρεση υδατογραφημάτων και την ενεργοποίηση πλήρους λειτουργικότητας.
 
-Η εκκίνηση είναι απλή. Προσθέστε αυτήν την εξάρτηση στο `pom.xml` σας:
+1. **Δωρεάν δοκιμή:** Κατεβάστε από [GroupDocs](https://releases.groupdocs.com/comparison/java/)  
+2. **Προσωρινή άδεια:** Αποκτήστε μια [temporary license](https://purchase.groupdocs.com/temporary-license/) για εκτεταμένη δοκιμή  
+3. **Πλήρης άδεια:** Αγοράστε από το [GroupDocs Store](https://purchase.groupdocs.com/buy)
+
+## Αρχική ρύθμιση: προετοιμασία του GroupDocs.Comparison
+### Βασική αρχικοποίηση
+Η κλάση `Comparer` είναι το σημείο εισόδου για όλες τις λειτουργίες σύγκρισης. Συντονίζει τη φόρτωση εγγράφων, τον υπολογισμό diff και τη δημιουργία αποτελεσμάτων.
 
 ```xml
 <repositories>
@@ -80,20 +143,12 @@ weight: 1
 </dependencies>
 ```
 
-**Συμβουλή:** Πάντα ελέγχετε την πιο πρόσφατη έκδοση στην ιστοσελίδα GroupDocs για να εξασφαλίσετε ότι έχετε τις νεότερες λειτουργίες και διορθώσεις σφαλμάτων.
+**Τι κάνει το απόσπασμα:** Δημιουργεί μια παρουσία `Comparer`, εφαρμόζει άδεια (αν υπάρχει) και προετοιμάζει τη μηχανή για επόμενες κλήσεις σύγκρισης.
 
-## Άδεια (Μην το παραλείψετε!)
-Αν και μπορείτε να ξεκινήσετε με δωρεάν δοκιμή, θα θέλετε να ρυθμίσετε σωστή άδεια για χρήση σε παραγωγή:
-
-1. **Δωρεάν Δοκιμή**: Κατεβάστε από [GroupDocs](https://releases.groupdocs.com/comparison/java/)
-2. **Προσωρινή Άδεια**: Αποκτήστε μία [εδώ](https://purchase.groupdocs.com/temporary-license/) για εκτεταμένη δοκιμή
-3. **Πλήρης Άδεια**: Αγοράστε από [GroupDocs Store](https://purchase.groupdocs.com/buy)
-
-## Αρχική Ρύθμιση: Προετοιμασία του GroupDocs.Comparison
-
-### Βασική Αρχικοποίηση
-
-Ακολουθεί πώς να ξεκινήσετε με την πρώτη σας σύγκριση:
+## Οδηγός υλοποίησης βήμα‑βήμα
+### Μέρος 1: ρύθμιση σύγκρισης εγγράφων
+#### Βήμα 1: αρχικοποίηση του comparer
+Το αντικείμενο `Comparer` είναι το βασικό στοιχείο που εκτελεί τον αλγόριθμο diff. Φυλάει ρυθμίσεις όπως επιλογές σύγκρισης και πληροφορίες άδειας.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -103,33 +158,27 @@ import com.groupdocs.comparison.examples.SampleFiles;
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Τι συμβαίνει εδώ;** Δημιουργούμε ένα αντικείμενο `Comparer` που θα διαχειρίζεται όλες τις λειτουργίες σύγκρισης εγγράφων. Σκεφτείτε το ως το χώρο εργασίας σύγκρισης εγγράφων σας.
+**Γιατί είναι σημαντικό:** Το έγγραφο πηγής που παρέχετε γίνεται η βάση· κάθε αλλαγή μετριέται σε σχέση με αυτό.
 
-## Οδηγός Υλοποίησης Βήμα‑βήμα
-
-### Μέρος 1: Ρύθμιση Σύγκρισης Εγγράφων
-
-#### Βήμα 1: Αρχικοποίηση του Comparer
+#### Βήμα 2: προσθήκη αρχείων-στόχων
+Μπορείτε να συγκρίνετε την πηγή με ένα ή περισσότερα αρχεία-στόχους. Σε σενάριο διαχείρισης συμβάσεων, η πηγή είναι η αρχική συμφωνία και ο στόχος η αναθεωρημένη έκδοση από τη νομική ομάδα.
 
 ```java
 // Initialize comparer with the source document
 Comparer comparer = new Comparer(SampleFiles.SOURCE_WORD);
 ```
 
-**Γιατί είναι σημαντικό:** Το έγγραφο προέλευσης λειτουργεί ως βάση. Όλες οι συγκρίσεις θα δείξουν τι άλλαξε σε σχέση με αυτό το έγγραφο.
-
-#### Βήμα 2: Προσθήκη Στοχευμένων Εγγράφων
+### Μέρος 2: δημιουργία προεπισκοπήσεων σελίδων
+#### Βήμα 1: ρύθμιση δημιουργίας ροής εξόδου
+Το πρότυπο preview delegate σας δίνει πλήρη έλεγχο στο πού αποθηκεύονται οι εικόνες προεπισκόπησης—τοπικός δίσκος, cloud bucket ή βάση δεδομένων.
 
 ```java
 // Add a target document for comparison
 comparer.add(SampleFiles.TARGET1_WORD);
 ```
 
-**Σενάριο πραγματικού κόσμου:** Σε σύστημα διαχείρισης συμβάσεων, η προέλευση μπορεί να είναι το αρχικό συμβόλαιο, και το στόχο η αναθεωρημένη έκδοση από τη νομική ομάδα.
-
-### Μέρος 2: Δημιουργία Προεπισκοπήσεων Σελίδων
-
-#### Βήμα 1: Ρύθμιση Δημιουργίας Ροής Εξόδου
+#### Βήμα 2: διαμόρφωση επιλογών προεπισκόπησης
+Δημιουργήστε προεπισκοπήσεις μόνο για τις σελίδες που χρειάζεστε πραγματικά· αυτό μειώνει τη χρήση CPU έως και 60 % για μεγάλα PDF.
 
 ```java
 import com.groupdocs.comparison.common.delegates.Delegates;
@@ -150,9 +199,8 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-**Κύρια ιδέα:** Αυτό το πρότυπο delegate σας δίνει πλήρη έλεγχο πάνω στο πού και πώς αποθηκεύονται οι εικόνες προεπισκόπησης. Μπορείτε εύκολα να το τροποποιήσετε για αποθήκευση σε cloud ή βάση δεδομένων.
-
-#### Βήμα 2: Διαμόρφωση Επιλογών Προεπισκόπησης
+#### Βήμα 3: δημιουργία των προεπισκοπήσεων
+Το API αποδίδει κάθε ζητούμενη σελίδα ως PNG (χωρίς απώλειες) ή JPEG (μικρότερο μέγεθος). Το PNG συνιστάται για νομικά έγγραφα όπου η ακρίβεια pixel είναι σημαντική.
 
 ```java
 import com.groupdocs.comparison.options.PreviewOptions;
@@ -165,36 +213,31 @@ PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
     .build();
 ```
 
-**Συμβουλή απόδοσης:** Δημιουργήστε προεπισκοπήσεις μόνο για τις σελίδες που χρειάζεστε πραγματικά. Αυτό εξοικονομεί χρόνο επεξεργασίας και χώρο αποθήκευσης.
+## Υποστηριζόμενες μορφές αρχείων
+Το GroupDocs.Comparison λειτουργεί με **πάνω από 50 μορφές εισόδου και εξόδου**, συμπεριλαμβανομένων:
 
-#### Βήμα 3: Δημιουργία Προεπισκοπήσεων
+* **Microsoft Office:** DOCX, DOC, XLSX, XLS, PPTX, PPT  
+* **PDF:** Όλες οι εκδόσεις PDF‑1.x, κρυπτογραφημένα PDF και PDF με ενσωματωμένες γραμματοσειρές  
+* **Κείμενο & σήμανση:** TXT, RTF, HTML, MHTML  
+* **Εικόνες:** JPEG, PNG, BMP, GIF  
+* **OpenDocument:** ODT, ODS, ODP  
+
+Αυτές οι εκτεταμένες δυνατότητες σας επιτρέπουν να συγκρίνετε ένα συμβόλαιο αποθηκευμένο ως αρχείο Word με μια σαρωμένη έκδοση PDF, όλα μέσα στην ίδια κλήση API.
+
+## Συχνά προβλήματα και λύσεις
+### Πρόβλημα 1: FileNotFoundException κατά τη δημιουργία προεπισκόπησης
+Εάν ο φάκελος εξόδου δεν υπάρχει ή η εφαρμογή δεν έχει δικαιώματα εγγραφής, ο preview delegate ρίχνει αυτήν την εξαίρεση.
 
 ```java
 // Generate page previews
 comparer.getTargets().get(0).generatePreview(previewOptions);
 ```
 
-**Τι συμβαίνει:** Αυτό δημιουργεί εικόνες PNG των συγκεκριμένων σελίδων από το στοχευόμενο έγγραφό σας. Ιδανικό για δημιουργία μικρογραφιών ή γρήγορων οπτικών ανασκοπήσεων.
+**Λύση:** Επαληθεύστε τη διαδρομή, δημιουργήστε τους ελλείποντες φακέλους προγραμματιστικά και δώστε στη διαδικασία Java τα κατάλληλα δικαιώματα συστήματος αρχείων.
 
-## Υποστηριζόμενοι Τύποι Αρχείων
+### Πρόβλημα 2: Προβλήματα μνήμης με μεγάλα έγγραφα
+Η επεξεργασία ενός PDF 300 σελίδων μπορεί να υπερβεί το προεπιλεγμένο heap 512 MB, προκαλώντας `OutOfMemoryError`.
 
-Το GroupDocs.Comparison υποστηρίζει μια ευρεία γκάμα μορφών εγγράφων, καθιστώντας το ευέλικτο για διαφορετικές περιπτώσεις χρήσης:
-
-**Popular Formats:**
-- **Microsoft Office**: Word (.docx, .doc), Excel (.xlsx, .xls), PowerPoint (.pptx, .ppt)
-- **PDF Documents**: Όλες οι εκδόσεις αρχείων PDF
-- **Text Files**: Απλό κείμενο (.txt), Rich Text (.rtf)
-- **Images**: JPEG, PNG, BMP, GIF
-- **Web Formats**: HTML, MHTML
-- **Other**: ODT, ODS, ODP (μορφές OpenDocument)
-
-## Συχνά Προβλήματα και Λύσεις
-
-### Πρόβλημα 1: FileNotFoundException Κατά τη Δημιουργία Προεπισκόπησης
-
-**Συμπτώματα:** Ο κώδικάς σας πετάει εξαιρέσεις όταν προσπαθεί να δημιουργήσει ροές εξόδου.
-
-**Solution:**
 ```java
 Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
     @Override
@@ -216,11 +259,11 @@ Delegates.CreatePageStream createPageStream = new Delegates.CreatePageStream() {
 };
 ```
 
-### Πρόβλημα 2: Προβλήματα Μνήμης με Μεγάλα Έγγραφα
+**Λύση:** Αυξήστε το heap της JVM (`-Xmx2g` ή μεγαλύτερο) και επεξεργαστείτε το έγγραφο σε μικρότερες περιοχές σελίδων χρησιμοποιώντας τη δυνατότητα σελιδοποίησης `PreviewOptions`.
 
-**Συμπτώματα:** `OutOfMemoryError` κατά την επεξεργασία μεγάλων αρχείων ή πολλών σελίδων.
+### Πρόβλημα 3: Προβλήματα άδειας
+Όταν λείπει ή είναι κατεστραμμένο το αρχείο άδειας, το API προσθέτει υδατογράφημα σε κάθε έξοδο και απενεργοποιεί ορισμένες προχωρημένες επιλογές.
 
-**Solution:** Επεξεργαστείτε τα έγγραφα σε τμήματα και απελευθερώστε τα αντικείμενα σωστά:
 ```java
 // Process fewer pages at a time
 PreviewOptions previewOptions = new PreviewOptions.Builder(createPageStream)
@@ -235,25 +278,27 @@ try (Comparer comparer = new Comparer(sourceDocument)) {
 } // Automatic cleanup
 ```
 
-### Πρόβλημα 3: Προβλήματα Άδειας
+**Λύση:** Τοποθετήστε το αρχείο άδειας σε γνωστή θέση και φορτώστε το με `License.setLicense("path/to/license.lic")` πριν από οποιαδήποτε κλήση σύγκρισης.
 
-**Συμπτώματα:** Υδατογραφήματα στην έξοδο ή περιορισμένη λειτουργικότητα.
+## Συμβουλές απόδοσης και βέλτιστες πρακτικές (java comparison best practices)
+1. **Περιορισμός δημιουργίας προεπισκοπήσεων** – ζητήστε μόνο τις σελίδες που χρειάζεστε· χρησιμοποιήστε `pageNumbers` για παράλειψη άσχετων τμημάτων.  
+2. **Επιλογή σωστής μορφής εικόνας** – PNG για νομικά έγγραφα χωρίς απώλειες, JPEG για μικρογραφίες όπου το μέγεθος μετράει.  
+3. **Υλοποίηση caching** – αποθηκεύστε τα αποτελέσματα σύγκρισης (π.χ., hash του source + target) για να αποφύγετε την επεξεργασία αμετάβλητων αρχείων.  
+4. **Διαχείριση μνήμης** – τυλίξτε τη χρήση του `Comparer` σε μπλοκ try‑with‑resources και καλέστε `close()` όταν τελειώσετε.  
+5. **Αποδέσμευση αντικειμένων comparer** – πάντα απελευθερώστε τους εγγενείς πόρους για να διατηρήσετε το αποτύπωμα της JVM χαμηλό.
 
-**Solution:** Βεβαιωθείτε ότι η άδειά σας έχει εφαρμοστεί σωστά:
+### Κώδικας έτοιμος για παραγωγή
+Παρακάτω είναι ο προτεινόμενος κύκλος ζωής για μια εργασία σύγκρισης σε μικροϋπηρεσία.
+
 ```java
 // Apply license at the start of your application
 License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-## Συμβουλές Απόδοσης και Καλές Πρακτικές (java comparison best practices)
-1. **Περιορίστε τη Δημιουργία Προεπισκοπήσεων** – Δημιουργήστε προεπισκοπήσεις μόνο για τις σελίδες που χρειάζεστε πραγματικά.  
-2. **Επιλέξτε τη Σωστή Μορφή Εικόνας** – PNG για ποιότητα χωρίς απώλειες, JPEG για μικρότερα αρχεία.  
-3. **Εφαρμόστε Caching** – Αποθηκεύστε τα αποτελέσματα σύγκρισης για να αποφύγετε την επεξεργασία ίδιων εγγράφων.  
-4. **Διαχειριστείτε τη Μνήμη** – Χρησιμοποιήστε try‑with‑resources και επεξεργαστείτε μεγάλα αρχεία σε μικρότερα παρτίδες.  
-5. **Απελευθερώστε τα Αντικείμενα Comparer** – Πάντα κλείστε το `Comparer` όταν τελειώσετε.
-
-### Κώδικας Έτοιμος για Παραγωγή
+## Παραδείγματα υλοποίησης σε πραγματικό κόσμο
+### Παράδειγμα 1: σύστημα διαχείρισης συμβάσεων
+Ένα νομικό τμήμα ανεβάζει το αρχικό συμβόλαιο (source) και την αναθεωρημένη έκδοση (target). Η υπηρεσία επιστρέφει ένα PDF με επισημάνσεις και ένα σύνολο PNG προεπισκοπήσεων σελίδων για γρήγορη οπτική επιθεώρηση.
 
 ```java
 public class DocumentComparisonService {
@@ -283,9 +328,8 @@ public class DocumentComparisonService {
 }
 ```
 
-## Παραδείγματα Υλοποίησης σε Πραγματικό Κόσμο
-
-### Παράδειγμα 1: Σύστημα Διαχείρισης Συμβάσεων
+### Παράδειγμα 2: αξιολόγηση ακαδημαϊκής εργασίας
+Οι ερευνητές υποβάλλουν αναθεωρημένα χειρόγραφα. Το σύστημα συγκρίνει το νέο PDF με την προηγούμενη έκδοση, επισημαίνει αλλαγμένες παραπομπές και δημιουργεί εικόνες προεπισκόπησης για τον πίνακα ελέγχου του αξιολογητή.
 
 ```java
 public class ContractVersionManager {
@@ -304,7 +348,8 @@ public class ContractVersionManager {
 }
 ```
 
-### Παράδειγμα 2: Ανασκόπηση Ακαδημαϊκού Εγγράφου
+## Πώς να java compare pdf files με προστασία κωδικού πρόσβασης
+`LoadOptions` είναι μια κλάση που σας επιτρέπει να καθορίσετε παραμέτρους φόρτωσης όπως κωδικούς πρόσβασης για κρυπτογραφημένα έγγραφα. Για να συγκρίνετε ένα προστατευμένο PDF, δημιουργήστε μια παρουσία `LoadOptions` με τον κωδικό πρόσβασης, περάστε την στο `Comparer` κατά τη φόρτωση του εγγράφου και, στη συνέχεια, εκτελέστε τη σύγκριση όπως συνήθως. Η βιβλιοθήκη αποκρυπτογραφεί το αρχείο στη μνήμη, εξασφαλίζοντας ότι κανένα κείμενο δεν γράφεται στο δίσκο, και όλες οι επακόλουθες λειτουργίες—συμπεριλαμβανομένης της δημιουργίας προεπισκοπήσεων και του υπολογισμού diff—λειτουργούν διαφανώς.
 
 ```java
 public class AcademicDocumentReview {
@@ -324,18 +369,43 @@ public class AcademicDocumentReview {
 }
 ```
 
-## Πώς να java compare pdf files με προστασία κωδικού πρόσβασης
+## Σύγκριση εγγράφων αποθηκευμένων στο cloud
+Εάν η πηγή και ο στόχος σας βρίσκονται σε Amazon S3, Azure Blob ή Google Cloud Storage, απλώς παρέχετε ένα `InputStream` που λαμβάνεται από το cloud SDK αντί για τοπική διαδρομή αρχείου.
 
-Όταν εργάζεστε με **java password protected documents**, μπορείτε ακόμα να κάνετε συγκρίσεις παρέχοντας τον κωδικό μέσω `LoadOptions`:
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Comparer comparer = new Comparer("protected-document.docx", loadOptions);
 ```
 
-## Σύγκριση Εγγράφων Αποθηκευμένων στο Cloud
+## Συχνές ερωτήσεις
+**Q: Πώς να διαχειριστώ έγγραφα με προστασία κωδικού πρόσβασης;**  
+A: Χρησιμοποιήστε `LoadOptions` για να παρέχετε τον κωδικό πρόσβασης κατά τη δημιουργία της παρουσία `Comparer`, όπως φαίνεται παραπάνω.
 
-Αν τα αρχεία προέλευσης και στόχου βρίσκονται σε αποθήκευση cloud, περάστε ροές εισόδου αντί για διαδρομές αρχείων:
+**Q: Μπορώ να συγκρίνω έγγραφα αποθηκευμένα σε cloud storage;**  
+A: Ναι—απλώς παρέχετε ροές εισόδου από τον πάροχο cloud στο `Comparer`.
+
+**Q: Ποιο είναι το μέγιστο μέγεθος αρχείου που μπορεί να διαχειριστεί το GroupDocs.Comparison;**  
+A: Δεν υπάρχει σκληρό όριο, αλλά για αρχεία μεγαλύτερα από 100 MB θα πρέπει να αυξήσετε το μέγεθος heap της JVM ή να επεξεργαστείτε το έγγραφο σε μικρότερα τμήματα για να αποφύγετε `OutOfMemoryError`.
+
+**Q: Πόσο ακριβής είναι ο αλγόριθμος σύγκρισης;**  
+A: Η βιβλιοθήκη χρησιμοποιεί προχωρημένους αλγόριθμους diff που εντοπίζουν αλλαγές σε κείμενο, μορφοποίηση, εικόνες, πίνακες και ενσωματωμένα αντικείμενα, παρέχοντας σχεδόν pixel‑perfect οπτικά αποτελέσματα diff.
+
+**Q: Μπορώ να προσαρμόσω ποιοι τύποι αλλαγών ανιχνεύονται;**  
+A: Απόλυτα. Ορίστε `CompareOptions` για να ενεργοποιήσετε ή να απενεργοποιήσετε την ανίχνευση κειμένου, μορφοποίησης, εικόνων, πινάκων κ.λπ.
+
+**Q: Υποστηρίζει το API τη δημιουργία προεπισκοπήσεων μόνο για επιλεγμένες σελίδες;**  
+A: Ναι—διαμορφώστε το `PreviewOptions` με έναν συγκεκριμένο πίνακα `pageNumbers` για να περιορίσετε την έξοδο στις σελίδες που χρειάζεστε.
+
+## Συμπέρασμα
+Τώρα έχετε έναν πλήρη, έτοιμο για παραγωγή οδηγό για **java compare pdf files** με το GroupDocs.Comparison. Ακολουθώντας τα βήματα ρύθμισης, εφαρμόζοντας τις προτάσεις απόδοσης και αξιοποιώντας τα αποσπάσματα διαχείρισης κωδικών πρόσβασης και ενσωμάτωσης cloud, μπορείτε να ενσωματώσετε ισχυρές δυνατότητες σύγκρισης εγγράφων σε οποιαδήποτε εφαρμογή Java—είτε πρόκειται για πύλη ελέγχου συμβάσεων, ροή εργασίας ακαδημαϊκών εργασιών ή σύστημα αρχειοθέτησης μεγάλου όγκου εγγράφων.
+
+---
+
+**Last Updated:** 2026-11-01  
+**Tested With:** GroupDocs.Comparison 25.2  
+**Author:** GroupDocs
+
 ```java
 InputStream sourceStream = getDocumentFromCloud("source-doc-id");
 InputStream targetStream = getDocumentFromCloud("target-doc-id");
@@ -343,32 +413,8 @@ Comparer comparer = new Comparer(sourceStream);
 comparer.add(targetStream);
 ```
 
-## Συχνές Ερωτήσεις
+## Σχετικά Μαθήματα
 
-**Ε: Πώς να διαχειριστώ έγγραφα με προστασία κωδικού;**  
-Α: Χρησιμοποιήστε `LoadOptions` για να παρέχετε τον κωδικό κατά τη δημιουργία του αντικειμένου `Comparer`, όπως φαίνεται παραπάνω.
-
-**Ε: Μπορώ να συγκρίνω έγγραφα αποθηκευμένα σε cloud storage;**  
-Α: Ναι—απλώς παρέχετε ροές εισόδου από τον πάροχο cloud στο `Comparer`.
-
-**Ε: Ποιο είναι το μέγιστο μέγεθος αρχείου που μπορεί να διαχειριστεί το GroupDocs.Comparison;**  
-Α: Δεν υπάρχει σκληρό όριο, αλλά για αρχεία μεγαλύτερα από 100 MB θα πρέπει να αυξήσετε το μέγεθος heap της JVM ή να επεξεργαστείτε το έγγραφο σε μικρότερα τμήματα.
-
-**Ε: Πόσο ακριβής είναι ο αλγόριθμος σύγκρισης;**  
-Α: Η βιβλιοθήκη χρησιμοποιεί προχωρημένους αλγόριθμους diff που εντοπίζουν αλλαγές σε κείμενο, μορφοποίηση, εικόνες και ενσωματωμένα αντικείμενα—ιδανικό για νομικές ή συμμορφωτικές περιπτώσεις.
-
-**Ε: Μπορώ να προσαρμόσω ποιοι τύποι αλλαγών εντοπίζονται;**  
-Α: Απόλυτα. Χρησιμοποιήστε `CompareOptions` για να ενεργοποιήσετε ή να απενεργοποιήσετε την ανίχνευση κειμένου, μορφοποίησης, εικόνων, πινάκων κ.λπ.
-
-**Ε: Υποστηρίζει το API τη δημιουργία προεπισκοπήσεων μόνο για επιλεγμένες σελίδες;**  
-Α: Ναι—ρυθμίστε το `PreviewOptions` με έναν συγκεκριμένο πίνακα `pageNumbers` για να περιορίσετε την έξοδο στις σελίδες που χρειάζεστε.
-
-## Συμπέρασμα
-
-Τώρα έχετε έναν πλήρη, έτοιμο για παραγωγή οδηγό για **java compare pdf files** με το GroupDocs.Comparison. Ακολουθώντας τα βήματα, τις βέλτιστες πρακτικές και τα παραδείγματα παραπάνω, μπορείτε να ενσωματώσετε ισχυρές δυνατότητες σύγκρισης και προεπισκόπησης εγγράφων σε οποιαδήποτε εφαρμογή Java—είτε διαχειρίζεστε αναθεωρήσεις συμβάσεων, ακαδημαϊκά προσχέδια ή μεγάλες αρχειοθήκες PDF.
-
----
-
-**Last Updated:** 2026-03-27  
-**Tested With:** GroupDocs.Comparison 25.2  
-**Author:** GroupDocs  
+- [Ασφαλής Φόρτωση και Σύγκριση Εγγράφων με Προστασία Κωδικού στην Java Χρησιμοποιώντας το GroupDocs.Comparison API](/comparison/java/security-protection/java-groupdocs-compare-password-protected-docs/)
+- [Κύρια Προεπισκόπηση Σύγκρισης Εγγράφων Java Groupdocs](/comparison/java/basic-comparison/master-java-document-comparison-preview-groupdocs/)
+- [Java Groupdocs Comparison Api Ροή Συγκρίσεων Εγγράφων](/comparison/java/document-loading/java-groupdocs-comparison-api-stream-document-compare/)

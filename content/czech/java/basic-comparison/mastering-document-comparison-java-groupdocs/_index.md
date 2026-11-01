@@ -1,17 +1,21 @@
 ---
 categories:
 - Java Development
-date: '2026-05-16'
-description: Zjistěte, jak porovnávat soubory Excel v Javě pomocí GroupDocs.Comparison
-  for Java, s příklady pro PDF, velké dokumenty a šifrované soubory.
+date: '2026-11-01'
+description: Zjistěte, jak porovnat soubory Excel v Javě pomocí GroupDocs.Comparison,
+  s příklady pro PDF, velké dokumenty a šifrované soubory.
 keywords:
+- how to compare excel
 - compare excel files java
-- compare pdf documents java
-- groupdocs comparison java
-- excel file diff java
+- set paper size java
+- java file comparison library
 - document comparison api
-lastmod: '2026-05-16'
+lastmod: '2026-11-01'
 linktitle: Průvodce porovnáním souborů Excel v Javě
+og_description: Zjistěte, jak porovnat soubory Excel v Javě pomocí GroupDocs.Comparison.
+  Získejte ukázky kódu, tipy na výkon a FAQ pro porovnávání dokumentů.
+og_image_alt: Guide to comparing Excel files in Java with GroupDocs Comparison API
+og_title: Jak porovnat soubory Excel v Javě pomocí GroupDocs API
 schemas:
 - author: GroupDocs
   dateModified: '2026-05-16'
@@ -58,52 +62,32 @@ tags:
 - java-api
 - automation
 - groupdocs
-title: Porovnávejte soubory Excel v Javě s GroupDocs Document Comparison API
+- excel comparison
+title: Jak porovnat soubory Excel v Javě pomocí GroupDocs Document Comparison API
 type: docs
 url: /cs/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Porovnat Excel soubory Java s GroupDocs Document Comparison API
+# Jak porovnat soubory Excel v Javě pomocí GroupDocs Document Comparison API
 
-Už jste strávili hodiny ručním porovnáváním dokumentů, hledáním změn řádek po řádku? Ať už sledujete revize smluv, kontrolujete dokumentaci kódu, nebo potřebujete **compare excel files java** pro finanční zprávy, ruční porovnávání dokumentů je časově náročné a náchylné k chybám. V tomto průvodci se naučíte rychlý, spolehlivý způsob, jak porovnat sešity Excel (a mnoho dalších formátů) pomocí GroupDocs.Comparison pro Java.
+V mnoha podnicích potřebujete **porovnat soubory Excel v Javě**, abyste odhalili změny ve finančních zprávách, revize dat nebo ověřili výsledky migrace. Ruční otevírání dvou sešitů a procházení buněk po jedné je náchylné k chybám a plýtvá cenným časem. Tento tutoriál vám přesně ukáže **jak porovnat Excel** sešity programově pomocí GroupDocs.Comparison pro Javu, který během několika sekund poskytne pixel‑dokonalé diff zprávy.
 
 ## Rychlé odpovědi
 
-Třída `Comparer` je hlavní komponentou, která načítá zdrojové dokumenty a provádí porovnání.  
-`CompareOptions` poskytuje sadu konfigurovatelných parametrů, které řídí, jak je porovnání prováděno.  
-`StyleSettings` vám umožňuje přizpůsobit vizuální vzhled vložených, smazaných a změněných prvků ve výstupní zprávě.
-
-- **Může GroupDocs porovnat Excel soubory v Javě?** Ano, stačí načíst soubory `.xlsx` pomocí třídy `Comparer` a zavolat `compare`.  
-- **Jak ignorovat záhlaví/pati?** Nastavte `setHeaderFootersComparison(false)` v `CompareOptions`.  
-- **Co s velkými PDF?** Zvyšte haldu JVM, povolte optimalizaci paměti a použijte režim streamování.  
-- **Mohu porovnat PDF chráněné heslem?** Poskytněte heslo při vytváření instance `Comparer`.  
+- **Může GroupDocs porovnat soubory Excel v Javě?** Ano – stačí načíst soubory `.xlsx` pomocí třídy `Comparer` a zavolat `compare`.  
+- **Jak ignorovat záhlaví/zápatí?** Nastavte `setHeaderFootersComparison(false)` v `CompareOptions`.  
+- **Co s velkými PDF?** Zvyšte haldu JVM, povolte režim streamování a použijte možnosti optimalizované pro paměť.  
+- **Mohu porovnat PDF chráněné heslem?** Zadejte heslo při vytváření `Comparer`.  
 - **Existuje způsob, jak změnit barvy zvýraznění?** Použijte `StyleSettings` pro vložené, smazané a změněné položky.
 
-## Co je compare excel files java?
+## Co je porovnání excel souborů v Javě?
 
-`compare excel files java` je proces programového detekování rozdílů na úrovni buněk mezi dvěma sešity Excel pomocí Javy. API GroupDocs.Comparison načte každý tabulkový list, vyhodnotí každou buňku, řádek a vzorec a poté vygeneruje zprávu o rozdílech, která zvýrazní přidání, smazání a úpravy v přehledném vizuálním formátu.
+Porovnání souborů Excel v Javě znamená programově detekovat každé přidání, smazání nebo úpravu na úrovni buňky mezi dvěma sešity `.xlsx` a vytvořit vizuální diff zprávu, která zvýrazní tyto změny. Engine GroupDocs.Comparison načte každý tabulkový list do paměti, vyhodnotí vzorce, styly a strukturu listů a poté vygeneruje vedle‑vedle nebo překrývající PDF/HTML zprávu, kterou vývojáři mohou vložit do dashboardů nebo poslat e‑mailem zainteresovaným stranám.
 
-## Proč používat Java Document Comparison API?
+## Proč používat Java API pro porovnání dokumentů?
 
-### Obchodní případ pro automatizaci
-
-Ruční porovnávání dokumentů není jen nudné – je rizikové. Studie ukazují, že lidé při ruční kontrole dokumentů přehlédnou přibližně **20 %** významných změn. API eliminuje toto riziko a přináší měřitelné zisky v produktivitě:
-
-- **99,9 % Přesnost** – každá změna na úrovni znaků je zachycena.  
-- **Rychlost** – porovnejte 100‑stránkový PDF za méně než **30 sekund** na standardním serveru.  
-- **Konzistence** – jednotné zvýrazňování a reportování napříč všemi typy dokumentů.  
-- **Škálovatelnost** – dávkové zpracování tisíců souborů bez ručního úsilí.
-
-### Kdy používat Document Comparison API
-
-Největší užitek získáte, když potřebujete:
-
-- **Kontrolovat právní smlouvy** – automaticky označovat revize klauzulí.  
-- **Sledovat technickou dokumentaci** – přesně vidět, co se změnilo mezi vydáními specifikací API.  
-- **Spravovat obsahové aktiva** – porovnávat marketingové texty, uživatelské příručky nebo návrhy blogů.  
-- **Auditovat shodu** – zajistit, že aktualizace politik jsou zachyceny a zaznamenány.  
-- **Doplňovat správu verzí** – poskytovat srozumitelné rozdíly pro artefakty, které nejsou kódem.
+Automatizace generování diffů eliminuje lidské chyby, které představují přibližně **20 %** opomenutých změn při ručních kontrolách, a zajišťuje konzistentní a spolehlivé výsledky. GroupDocs poskytuje vysoce přesnou detekci každé úpravy, rychlé zpracování a jednotné stylování napříč výstupními formáty, což společně zvyšuje produktivitu týmů ve financích, právu a správě obsahu.
 
 ## Podporované formáty souborů a možnosti
 
@@ -115,15 +99,9 @@ GroupDocs.Comparison pro Java podporuje **50+** vstupních a výstupních formá
 - **Text**: TXT, HTML, XML, MD  
 - **Obrázky**: PNG, JPEG, BMP, GIF (vizuální porovnání)
 
-### Pokročilé funkce
+Pokročilé možnosti zahrnují zpracování dokumentů chráněných heslem, detekci více jazyků, vlastní citlivost podle typu dokumentu, dávkové zpracování a možnosti nasazení jak v cloudu, tak on‑premise.
 
-- Porovnání dokumentů chráněných heslem  
-- Detekce a porovnání více jazyků  
-- Vlastní nastavení citlivosti podle typu dokumentu  
-- Dávkové zpracování pro více párů dokumentů  
-- Možnosti nasazení v cloudu i lokálně  
-
-## Předpoklady a nastavení
+## Požadavky a nastavení
 
 ### Systémové požadavky
 
@@ -155,14 +133,14 @@ Přidejte repozitář GroupDocs a závislost do vašeho `pom.xml`. Tím zajistí
 
 ### Nastavení licence
 
-**Pro vývoj a testování:**  
+**Pro vývoj a testování**  
 - **Bezplatná zkušební verze:** Stáhněte z [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – obsahuje výstup s vodoznakem.  
-- **Dočasná licence:** Získejte 30‑denní plný přístup prostřednictvím [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
+- **Dočasná licence:** Získejte 30‑denní plný přístup přes [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
 
-**Pro produkci:**  
-- **Plná licence:** Zakupte přes [GroupDocs Purchase](https://purchase.groupdocs.com/buy) pro neomezené komerční využití.  
+**Pro produkci**  
+- **Plná licence:** Zakupte na [GroupDocs Purchase](https://purchase.groupdocs.com/buy) pro neomezené komerční využití.  
 
-Inicializujte licenci při spuštění aplikace:
+Inicializujte licenci při startu aplikace:
 
 ```java
 // License initialization - do this once at application startup
@@ -170,17 +148,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Tip:** Uložte soubor licence do složky resources a načtěte jej pomocí `getClass().getResourceAsStream()` pro přenosná nasazení.
+> **Pro tip:** Uložte soubor licence do složky resources a načtěte jej pomocí `getClass().getResourceAsStream()` pro přenosná nasazení.
 
-## Průvodce základní implementací
+## Průvodce hlavní implementací
 
-### Funkce 1: Ignorovat porovnání záhlaví a patičky
+### Funkce 1: ignorovat porovnání záhlaví a zápatí
 
-Metoda `setHeaderFootersComparison` zakáže porovnávání obsahu záhlaví a patičky, čímž zabrání zobrazení irelevantních rozdílů v diffu.
+Metoda `setHeaderFootersComparison` zakáže porovnání obsahu záhlaví a zápatí, čímž zabrání zobrazení nepodstatných rozdílů v diffu.
 
-**Proč je to důležité:** Záhlaví a patičky často obsahují dynamická data (časová razítka, čísla stránek), která se mezi verzemi mění, ale nejsou relevantní pro revizi obsahu. Ignorování těchto částí snižuje šum a urychluje zpracování.
+**Proč je to důležité:** Záhlaví a zápatí často obsahují časové razítka nebo čísla stránek, která se mezi verzemi mění, ale nejsou součástí podstatného obsahu. Vynechání těchto částí snižuje šum a urychluje zpracování.
 
-**Reálný scénář:** Porovnání dvou návrhů smlouvy, kde každá verze přidá nový datumový razítko do patičky; zajímá vás jen změna klauzulí.
+**Scénář z praxe:** Dva návrhy smluv obsahují různé datumy generování v zápatí; zajímá vás jen změna klauzulí.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -207,16 +185,13 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**Klíčové výhody:**  
-- Čistší výsledky diffu  
-- Méně falešných pozitiv  
-- Rychlejší porovnání, protože tyto sekce jsou přeskočeny  
+**Klíčové výhody:** čistší výsledky diffu, méně falešných pozitiv a rychlejší provedení, protože tyto sekce jsou vynechány.
 
-### Funkce 2: Nastavit velikost papíru výstupu pro profesionální zprávy
+### Funkce 2: nastavit velikost výstupního papíru pro profesionální zprávy
 
-Výčtový typ `PaperSize` definuje standardní rozměry stránky, které bude generovaný PDF používat.
+Výčtový typ `PaperSize` definuje standardní rozměry stránky, které bude generované PDF používat.
 
-**Obchodní kontext:** Právní týmy často potřebují tisknutelné zprávy o porovnání v konkrétní velikosti papíru pro podání soudu nebo dodání klientovi.
+**Obchodní kontext:** Právní týmy často potřebují tisknutelné porovnávací zprávy v konkrétní velikosti papíru pro soudní podání nebo dodání klientovi.
 
 **Jak použít:** Použijte výčtový typ `PaperSize` v `CompareOptions` k definování cílové velikosti.
 
@@ -247,17 +222,17 @@ public class SetOutputPaperSizeExample {
 
 Podporované velikosti zahrnují A0‑A10, Letter, Legal, Tabloid a vlastní rozměry. Zvolte A4 pro evropské klienty nebo Letter pro partnery v USA.
 
-### Funkce 3: Jemně doladit citlivost porovnání
+### Funkce 3: jemně doladit citlivost porovnání
 
-Metoda `setSensitivityOfComparison` upravuje, jak podrobně engine porovnání vyhodnocuje změny, od hlavních strukturálních úprav po rozdíly na úrovni jednotlivých znaků.
+Metoda `setSensitivityOfComparison` upravuje, jak podrobný je engine porovnání při vyhodnocování změn, od hlavních strukturálních úprav po rozdíly na úrovni jednotlivých znaků.
 
-**Výzva:** Různé kategorie dokumentů vyžadují různou úroveň podrobnosti. Právní smlouvy vyžadují přesnost na úrovni znaků, zatímco marketingové texty mohou potřebovat jen změny na úrovni odstavců.
+**Výzva:** Různé kategorie dokumentů vyžadují různou úroveň podrobnosti. Právní smlouvy požadují přesnost na úrovni znaků, zatímco marketingové texty mohou potřebovat jen změny na úrovni odstavců.
 
-**Měřítko citlivosti (0‑100):**  
-- **0‑25:** Pouze hlavní změny (přidání/odstranění odstavce)  
+**Stupnice citlivosti (0‑100):**  
+- **0‑25:** Pouze hlavní změny (přidání/odebrání odstavce)  
 - **26‑50:** Střední změny (úpravy vět)  
-- **51‑75:** Detailní změny (na úrovni slov)  
-- **76‑100:** Granulární změny (na úrovni znaků)
+- **51‑75:** Detailní změny (úroveň slov)  
+- **76‑100:** Granulární změny (úroveň znaků)  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -283,16 +258,13 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**Doporučená nastavení:**  
-- **Právní dokumenty:** 90‑100  
-- **Marketingový obsah:** 40‑60  
-- **Technické specifikace:** 70‑80  
+**Doporučená nastavení:** Právní dokumenty 90‑100, marketingový obsah 40‑60, technické specifikace 70‑80.
 
-### Funkce 4: Přizpůsobit styly změn pro lepší vizuální komunikaci
+### Funkce 4: přizpůsobit styly změn pro lepší vizuální komunikaci
 
 Objekt `StyleSettings` vám umožňuje definovat barvy, písma, okraje a další vizuální ukazatele pro vložený, smazaný a upravený obsah.
 
-**Proč jsou vlastní styly důležité:** Výchozí zvýraznění může kolidovat s firemní identitou nebo směrnicemi přístupnosti. Přizpůsobení barev, písem a okrajů činí rozdíly okamžitě srozumitelnými.
+**Proč jsou vlastní styly důležité:** Výchozí zvýraznění může kolidovat s firemní identitou nebo směrnicemi přístupnosti. Přizpůsobení barev, písem a okrajů činí diffy okamžitě srozumitelné.
 
 **Příklad:** Červené pozadí pro smazání, zelené pro vložení, modré pro úpravy.
 
@@ -339,11 +311,38 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-Pokročilé možnosti v `StyleSettings` vám umožňují upravit tloušťku písma, velikost, neprůhlednost pozadí, styl okraje a chování přeškrtnutí.
+Pokročilé možnosti vám umožní upravit tloušťku písma, velikost, průhlednost pozadí, styl okraje a chování přeškrtnutí.
 
-## Jak nastavit velikost papíru v Java v porovnávacích zprávách
+## Jak nastavit velikost papíru v Javě v porovnávacích zprávách
 
-Nastavte velikost papíru přímo pomocí výčtového typu `PaperSize` v `CompareOptions`. Nahraďte `PaperSize.A6` libovolnou podporovanou konstantou (např. `PaperSize.LETTER`), aby odpovídala regionálním tiskovým standardům. Tím zajistíte, že generovaná PDF zpráva bude správně tištěna bez ručního škálování. Navíc můžete kombinovat toto nastavení s vlastními okraji a příznaky orientace, abyste vytvořili rozvržení, které vyhovuje směrnicím pro podávání dokumentů vaší organizace, a zajistili profesionální vzhled pokaždé.
+`Comparer` je hlavní třída, která řídí operace porovnání dokumentů. Načtěte instanci `Comparer` se zdrojovým sešitem, nakonfigurujte objekt `CompareOptions` a zavolejte `setPaperSize` s požadovanou hodnotou výčtového typu `PaperSize`. Toto jediné nastavení určuje rozměry stránky generovaného PDF, což zaručuje správný tisk bez ručního škálování.
+
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.options.CompareOptions;
+import com.groupdocs.comparison.options.enums.PaperSize;
+
+public class SetOutputPaperSizeExample {
+    public static void main(String[] args) throws Exception {
+        String outputFileName = "YOUR_OUTPUT_DIRECTORY/SetOutputPaperSize_result.docx";
+
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word.docx")) {
+
+            comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
+
+            // Set the paper size to A6
+            CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setPaperSize(PaperSize.A6)
+                    .build();
+
+            final Path resultPath = comparer.compare(resultStream, compareOptions);
+        }
+    }
+}
+```
+
+Toto nastavení můžete kombinovat s vlastními okraji a příznaky orientace, abyste vytvořili rozvržení, které odpovídá směrnicím vaší organizace pro podávání dokumentů, a zajistili tak profesionální vzhled pokaždé.
 
 ## Časté problémy a řešení
 
@@ -357,12 +356,12 @@ Nastavte velikost papíru přímo pomocí výčtového typu `PaperSize` v `Compa
 java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 ```
 
-### Zpracování poškozených nebo chráněných souborů
+### Zpracování poškozených nebo chráněných souborů heslem
 
 `PasswordRequiredException` je vyvolána, když API narazí na šifrovaný dokument bez poskytnutého hesla.
 
-**Problém:** Porovnání selže u zamčených dokumentů.  
-**Prevence:** Poskytněte heslo při vytváření instance `Comparer` a zachyťte `PasswordRequiredException`.
+**Problém:** Porovnání selže u uzamčených dokumentů.  
+**Prevence:** Zadejte heslo při vytváření `Comparer` a zachyťte `PasswordRequiredException`.
 
 ```java
 // Check document accessibility before comparison
@@ -381,7 +380,7 @@ try {
 ### Optimalizace výkonu pro dávkové zpracování
 
 **Výzva:** Efektivně zpracovat více než 100 párů dokumentů.  
-**Řešení:** Použijte pevnou velikost thread poolu a odesílejte každé porovnání jako samostatný úkol.
+**Řešení:** Použijte pevnou velikost thread poolu a každé porovnání odešlete jako samostatný úkol.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -399,17 +398,17 @@ for (Future<ComparisonResult> future : futures) {
 executor.shutdown();
 ```
 
-### Problémy specifické pro formát
+### Formátově specifické problémy
 
 - **Naskenované PDF:** Aplikujte předzpracování OCR před porovnáním.  
-- **Word dokumenty:** Zakázat existující „Track Changes“, aby se předešlo falešným rozdílům.  
+- **Word dokumenty:** Zakázat existující „Track Changes“, aby se předešlo falešným diffům.  
 - **Vložené objekty:** Extrahujte a porovnejte je samostatně pro přesnost.
 
 ## Nejlepší postupy a tipy pro výkon
 
-### 1. Předzpracování dokumentu
+### 1. předzpracování dokumentu
 
-Odstraňte zbytečná metadata a standardizujte písma před porovnáním, aby se zlepšila rychlost a přesnost.
+Odeberte zbytečná metadata a standardizujte písma před porovnáním, aby se zlepšila rychlost a přesnost.
 
 ```java
 // Example preprocessing workflow
@@ -420,9 +419,9 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Optimální konfigurační profily
+### 2. optimální konfigurační profily
 
-Vytvořte opakovaně použitelné předvolby `CompareOptions` pro každý typ dokumentu (právní, marketing, technický) a používejte je napříč vaším pipeline.
+Vytvořte znovupoužitelné předvolby `CompareOptions` pro každý typ dokumentu (právní, marketing, technický) a používejte je napříč vaším pipeline.
 
 ```java
 public class ComparisonProfiles {
@@ -444,9 +443,9 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Robustní zpracování chyb a logování
+### 3. robustní zpracování chyb a logování
 
-`ComparisonException` signalizuje selhání během procesu porovnání a poskytuje podrobné diagnostické informace. Zabalte volání porovnání do try‑catch bloků, logujte podrobnosti `ComparisonException` a v případě potřeby přejděte na bezpečnou výchozí hodnotu.
+`ComparisonException` signalizuje selhání během procesu porovnání a poskytuje podrobné diagnostické informace. Zabalte volání porovnání do bloků try‑catch, logujte podrobnosti `ComparisonException` a v případě potřeby přejděte na bezpečnou výchozí hodnotu.
 
 ```java
 public ComparisonResult safeCompareDocuments(String source, String target) {
@@ -459,15 +458,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Caching a inteligentní opětovné využití
+### 4. cachování a inteligentní opětovné použití
 
 - Ukládejte výsledky diffu pro identické páry souborů.  
 - Ukládejte otisky dokumentů (hashy), abyste přeskočili nezměněné soubory.  
 - Používejte asynchronní fronty pro nekritické porovnání, aby UI zůstalo responzivní.
 
-## Reálné scénáře integrace
+## Scénáře reálné integrace
 
-### Scénář 1: Automatizovaná pipeline pro revizi smluv
+### Scénář 1: automatizovaná pipeline revize smluv
 
 ```java
 @Service
@@ -490,7 +489,7 @@ public class ContractReviewService {
 }
 ```
 
-### Scénář 2: Integrace systému pro správu obsahu
+### Scénář 2: integrace systému pro správu obsahu
 
 ```java
 @RestController
@@ -514,34 +513,34 @@ public class DocumentComparisonController {
 
 ## Často kladené otázky
 
-**Q: Mohu během porovnání v GroupDocs pro Java ignorovat záhlaví a patičky?**  
-A: Ano, zavolejte `setHeaderFootersComparison(false)` na `CompareOptions`. Tím se odstraní dynamický šum záhlaví/pati z diffu.
+**Q: Mohu během porovnání v GroupDocs pro Javu ignorovat záhlaví a zápatí?**  
+A: Ano, zavolejte `setHeaderFootersComparison(false)` na `CompareOptions`. Tím se odstraní dynamický šum záhlaví/zápatí z diffu.
 
-**Q: Jak nastavit velikost papíru výstupu v Javě pomocí GroupDocs?**  
-A: Použijte `setPaperSize(PaperSize.A6)` (nebo jakoukoli jinou hodnotu enumu) v `CompareOptions`. Tím se vygeneruje PDF připravené k tisku ve zvolené velikosti.
+**Q: Jak nastavit velikost výstupního papíru v Javě pomocí GroupDocs?**  
+A: Použijte `setPaperSize(PaperSize.A6)` (nebo jinou hodnotu výčtu) v `CompareOptions`. Tím se vygeneruje tiskně připravené PDF ve zvolené velikosti.
 
 **Q: Je možné jemně doladit citlivost porovnání pro různé typy dokumentů?**  
 A: Rozhodně. Zavolejte `setSensitivityOfComparison(85)` pro právní smlouvy nebo `setSensitivityOfComparison(45)` pro marketingové návrhy, abyste řídili úroveň podrobnosti.
 
 **Q: Mohu přizpůsobit stylování vloženého, smazaného a změněného textu během porovnání?**  
-A: Ano. Vytvořte instanci `StyleSettings` pro každý typ změny a přiřaďte barvy, písma nebo okraje před předáním do `CompareOptions`.
+A: Ano. Vytvořte instanci `StyleSettings` pro každý typ změny a přiřaďte barvy, písma nebo okraje před tím, než ji předáte do `CompareOptions`.
 
-**Q: Jaké jsou předpoklady pro zahájení práce s GroupDocs Comparison v Javě?**  
+**Q: Jaké jsou požadavky pro zahájení práce s GroupDocs Comparison v Javě?**  
 A: Potřebujete JDK 8+ (doporučeno JDK 11+), Maven 3.6+ nebo Gradle 6.0+, alespoň 4 GB RAM a platnou licenci GroupDocs (k dispozici bezplatná zkušební verze).
 
 **Q: Jak zacházet s dokumenty chráněnými heslem v GroupDocs.Comparison?**  
-A: Předávejte heslo jako druhý argument při vytváření instance `Comparer`: `new Comparer(sourceFile, "myPassword")`. Zachyťte `PasswordRequiredException`, abyste chyby ošetřili elegantně.
+A: Předávejte heslo jako druhý argument při vytváření `Comparer`: `new Comparer(sourceFile, "myPassword")`. Zachyťte `PasswordRequiredException` pro elegantní zpracování chyb.
 
-**Q: Jaké formáty souborů podporuje GroupDocs.Comparison pro Java?**  
-A: Více než **50** formátů, včetně DOCX, PDF, XLSX, PPTX, TXT, HTML, XML a běžných typů obrázků (PNG, JPEG). API automaticky detekuje formáty, ale můžete je explicitně specifikovat pro zlepšení výkonu při dávkovém zpracování.
+**Q: Jaké formáty souborů podporuje GroupDocs.Comparison pro Javu?**  
+A: Více než **50** formátů, včetně DOCX, PDF, XLSX, PPTX, TXT, HTML, XML a běžných typů obrázků (PNG, JPEG). API automaticky detekuje formáty, ale můžete je explicitně zadat pro zvýšení výkonu při dávkovém zpracování.
 
 ## Závěr
 
-Využitím GroupDocs.Comparison pro Java můžete automatizovat nudnou úlohu porovnávání sešitů Excel – a jakéhokoli jiného podporovaného formátu – s přesnou přesností, rychlostí a konzistencí. Integrujte úryvky kódu a tipy nejlepších postupů z tohoto průvodce do vašich CI/CD pipeline, systémů správy dokumentů nebo vlastních auditních nástrojů a získáte měřitelné zisky v produktivitě.
+Využitím GroupDocs.Comparison pro Javu můžete automatizovat nudný úkol porovnání sešitů Excel – a jakéhokoli jiného podporovaného formátu – s přesností, rychlostí a konzistencí. Integrujte úryvky kódu a tipy nejlepších postupů z tohoto průvodce do vašich CI/CD pipeline, systémů správy dokumentů nebo vlastních auditních nástrojů a získáte měřitelné zvýšení produktivity.
 
 ---
 
-**Poslední aktualizace:** 2026-05-16  
+**Poslední aktualizace:** 2026-11-01  
 **Testováno s:** GroupDocs.Comparison 25.2 for Java  
 **Autor:** GroupDocs
 
@@ -557,6 +556,6 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 
 ## Související tutoriály
 
-- [compare pdf java – Java Document Comparison Tutorial – Kompletní průvodce načítáním a porovnáváním dokumentů](/comparison/java/document-loading/)
-- [GroupDocs Comparison Java License Setup - Kompletní průvodce konfigurací URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
-- [Jak používat GroupDocs - Java Document Comparison Streams – Kompletní průvodce](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [porovnat pdf java – Java Document Comparison Tutorial – Kompletní průvodce načítáním a porovnáváním dokumentů](/comparison/java/document-loading/)
+- [Nastavení licence GroupDocs Comparison Java – Kompletní průvodce konfigurací URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Jak používat GroupDocs – Java Document Comparison Streams – Kompletní průvodce](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

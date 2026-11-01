@@ -1,17 +1,22 @@
 ---
 categories:
 - Java Development
-date: '2026-05-16'
-description: Dowiedz się, jak porównać pliki Excel w Javie przy użyciu GroupDocs.Comparison
-  for Java, z przykładami dla PDF, dużych dokumentów i zaszyfrowanych plików.
+date: '2026-11-01'
+description: Dowiedz się, jak porównać pliki Excel w Javie przy użyciu GroupDocs.Comparison,
+  z przykładami dla PDF‑ów, dużych dokumentów i zaszyfrowanych plików.
 keywords:
+- how to compare excel
 - compare excel files java
-- compare pdf documents java
-- groupdocs comparison java
-- excel file diff java
+- set paper size java
+- java file comparison library
 - document comparison api
-lastmod: '2026-05-16'
-linktitle: 'Przewodnik: Porównywanie plików Excel w Javie'
+lastmod: '2026-11-01'
+linktitle: Przewodnik po porównywaniu plików Excel w Javie
+og_description: Dowiedz się, jak porównać pliki Excel w Javie przy użyciu GroupDocs.Comparison.
+  Uzyskaj przykłady kodu, wskazówki dotyczące wydajności oraz FAQ dotyczące porównywania
+  dokumentów.
+og_image_alt: Guide to comparing Excel files in Java with GroupDocs Comparison API
+og_title: Jak porównać pliki Excel w Javie przy użyciu GroupDocs API
 schemas:
 - author: GroupDocs
   dateModified: '2026-05-16'
@@ -58,52 +63,33 @@ tags:
 - java-api
 - automation
 - groupdocs
-title: Porównaj pliki Excel w Javie przy użyciu GroupDocs Document Comparison API
+- excel comparison
+title: Jak porównać pliki Excel w Javie przy użyciu GroupDocs Document Comparison
+  API
 type: docs
 url: /pl/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Porównaj pliki Excel Java z GroupDocs Document Comparison API
+# Jak porównać pliki Excel w Javie przy użyciu GroupDocs Document Comparison API
 
-Czy kiedykolwiek spędzałeś godziny ręcznie porównując dokumenty, szukając zmian linia po linii? Niezależnie od tego, czy śledzisz zmiany w kontraktach, przeglądasz dokumentację kodu, czy potrzebujesz **compare excel files java** do raportów finansowych, ręczne porównywanie dokumentów jest czasochłonne i podatne na błędy. W tym przewodniku poznasz szybki, niezawodny sposób porównywania skoroszytów Excel (i wielu innych formatów) przy użyciu GroupDocs.Comparison dla Javy.
+W wielu przedsiębiorstwach musisz **porównywać pliki Excel w Javie**, aby wykrywać zmiany w raportach finansowych, audytować korekty danych lub weryfikować wyniki migracji. Ręczne otwieranie dwóch skoroszytów i przeglądanie komórka po komórce jest podatne na błędy i marnuje cenny czas. Ten samouczek pokazuje dokładnie **jak porównać Excel** programowo przy użyciu GroupDocs.Comparison dla Javy, dostarczając raporty różnic w pikselach w ciągu kilku sekund.
 
 ## Szybkie odpowiedzi
 
-Klasa `Comparer` jest podstawowym komponentem, który ładuje dokumenty źródłowe i wykonuje porównanie.  
-`CompareOptions` zapewnia zestaw konfigurowalnych parametrów kontrolujących sposób wykonywania porównania.  
-`StyleSettings` pozwala dostosować wygląd wizualny wstawionych, usuniętych i zmienionych elementów w raporcie wyjściowym.
-
-- **Czy GroupDocs może porównywać pliki Excel w Javie?** Tak, wystarczy załadować pliki `.xlsx` klasą `Comparer` i wywołać `compare`.  
+- **Czy GroupDocs może porównywać pliki Excel w Javie?** Tak – wystarczy załadować pliki `.xlsx` przy użyciu klasy `Comparer` i wywołać `compare`.  
 - **Jak pominąć nagłówki/stopki?** Ustaw `setHeaderFootersComparison(false)` w `CompareOptions`.  
-- **Co z dużymi plikami PDF?** Zwiększ przydział pamięci JVM, włącz optymalizację pamięci i użyj trybu strumieniowego.  
-- **Czy mogę porównać zabezpieczone hasłem pliki PDF?** Podaj hasło przy tworzeniu `Comparer`.  
-- **Czy istnieje sposób na zmianę kolorów podświetlenia?** Użyj `StyleSettings` dla wstawionych, usuniętych i zmienionych elementów.
+- **Co z dużymi plikami PDF?** Zwiększ przydział pamięci JVM, włącz tryb strumieniowy i użyj opcji zoptymalizowanych pod kątem pamięci.  
+- **Czy mogę porównywać zabezpieczone hasłem pliki PDF?** Podaj hasło przy tworzeniu obiektu `Comparer`.  
+- **Czy istnieje sposób zmiany kolorów podświetlenia?** Użyj `StyleSettings` dla wstawionych, usuniętych i zmienionych elementów.
 
-## Co to jest compare excel files java?
+## Co to jest porównywanie plików Excel w Javie?
 
-`compare excel files java` to proces programowego wykrywania różnic na poziomie komórek pomiędzy dwoma skoroszytami Excel przy użyciu Javy. API GroupDocs.Comparison ładuje każdy arkusz, ocenia każdą komórkę, wiersz i formułę, a następnie generuje raport różnic, który podświetla dodatki, usunięcia i modyfikacje w przejrzystym formacie wizualnym.
+Porównywanie plików Excel w Javie oznacza programowe wykrywanie każdej dodanej, usuniętej lub zmodyfikowanej komórki pomiędzy dwoma skoroszytami `.xlsx` oraz generowanie wizualnego raportu różnic, który podświetla te zmiany. Silnik GroupDocs.Comparison ładuje każdy arkusz do pamięci, ocenia formuły, style i struktury arkuszy, a następnie renderuje raport PDF/HTML obok siebie lub jako nakładkę, który programiści mogą osadzać w pulpitach nawigacyjnych lub wysyłać e‑mailem do interesariuszy.
 
-## Dlaczego używać API do porównywania dokumentów w Javie?
+## Dlaczego warto używać API do porównywania dokumentów w Javie?
 
-### Biznesowy przypadek automatyzacji
-
-Ręczne porównywanie dokumentów nie jest tylko żmudne — jest ryzykowne. Badania pokazują, że ludzie pomijają około **20 %** istotnych zmian przy ręcznym przeglądzie dokumentów. API eliminuje to ryzyko i zapewnia wymierne zyski w produktywności:
-
-- **99,9 % dokładności** – każdy znakowy zmian jest rejestrowany.  
-- **Szybkość** – porównaj 100‑stronicowy PDF w mniej niż **30 sekund** na standardowym serwerze.  
-- **Spójność** – jednolite podświetlanie i raportowanie we wszystkich typach dokumentów.  
-- **Skalowalność** – przetwarzaj partiami tysiące plików bez ręcznego wysiłku.
-
-### Kiedy używać API do porównywania dokumentów
-
-Największe korzyści uzyskasz, gdy potrzebujesz:
-
-- **Przegląd umów prawnych** – automatyczne oznaczanie zmian w klauzulach.  
-- **Śledzenie dokumentacji technicznej** – dokładne zobaczenie, co zmieniło się między wersjami specyfikacji API.  
-- **Zarządzanie zasobami treści** – porównywanie tekstów marketingowych, podręczników użytkownika lub szkiców blogów.  
-- **Audyt zgodności** – zapewnienie, że aktualizacje polityk są rejestrowane i logowane.  
-- **Uzupełnienie kontroli wersji** – dostarczanie czytelnych dla człowieka różnic dla artefaktów niebędących kodem.
+Automatyzacja generowania różnic eliminuje błąd ludzki, który odpowiada za około **20 %** pominiętych zmian w ręcznych przeglądach, zapewniając spójne i wiarygodne wyniki. GroupDocs zapewnia wysoką precyzję wykrywania każdej modyfikacji, szybkie czasy przetwarzania oraz jednolite formatowanie wyjść, co razem zwiększa produktywność zespołów finansowych, prawnych i zarządzania treścią.
 
 ## Obsługiwane formaty plików i możliwości
 
@@ -115,13 +101,7 @@ GroupDocs.Comparison dla Javy obsługuje **ponad 50** formatów wejściowych i w
 - **Tekst**: TXT, HTML, XML, MD  
 - **Obrazy**: PNG, JPEG, BMP, GIF (porównanie wizualne)
 
-### Zaawansowane funkcje
-
-- Porównywanie dokumentów zabezpieczonych hasłem  
-- Wykrywanie i porównywanie wielu języków  
-- Niestandardowe ustawienia czułości dla każdego typu dokumentu  
-- Przetwarzanie wsadowe wielu par dokumentów  
-- Opcje wdrożenia w chmurze i lokalnie
+Zaawansowane możliwości obejmują obsługę dokumentów zabezpieczonych hasłem, wykrywanie wielu języków, niestandardową czułość w zależności od typu dokumentu, przetwarzanie wsadowe oraz opcje wdrożenia zarówno w chmurze, jak i lokalnie.
 
 ## Wymagania wstępne i konfiguracja
 
@@ -134,7 +114,7 @@ GroupDocs.Comparison dla Javy obsługuje **ponad 50** formatów wejściowych i w
 
 ### Konfiguracja Maven
 
-Dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. To zapewnia pobranie oficjalnej wersji:
+Dodaj repozytorium GroupDocs i zależność do pliku `pom.xml`. To zapewnia pobranie oficjalnego wydania:
 
 ```xml
 <repositories>
@@ -155,14 +135,14 @@ Dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. To zapewnia po
 
 ### Konfiguracja licencji
 
-**Do rozwoju i testów:**  
-- **Bezpłatna wersja próbna:** Pobierz z [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – zawiera wyjście z znakiem wodnym.  
-- **Tymczasowa licencja:** Uzyskaj 30‑dniowy pełny dostęp przez [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
+**Do rozwoju i testów**  
+- **Bezpłatna wersja próbna:** Pobierz z [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – zawiera znak wodny w wynikach.  
+- **Licencja tymczasowa:** Uzyskaj 30‑dniowy pełny dostęp poprzez [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
 
-**Do produkcji:**  
+**Do produkcji**  
 - **Pełna licencja:** Kup przez [GroupDocs Purchase](https://purchase.groupdocs.com/buy) dla nieograniczonego użytku komercyjnego.  
 
-Inicjalizuj licencję przy uruchamianiu aplikacji:
+Zainicjalizuj licencję przy uruchamianiu aplikacji:
 
 ```java
 // License initialization - do this once at application startup
@@ -170,17 +150,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Wskazówka:** Przechowaj plik licencji w folderze zasobów i wczytaj go za pomocą `getClass().getResourceAsStream()` dla przenośnych wdrożeń.
+> **Wskazówka:** Przechowuj plik licencji w folderze zasobów i wczytuj go za pomocą `getClass().getResourceAsStream()` dla przenośnych wdrożeń.
 
-## Podstawowy przewodnik implementacji
+## Przewodnik po implementacji podstawowej
 
-### Funkcja 1: Ignorowanie porównania nagłówków i stopek
+### Funkcja 1: pomijanie porównywania nagłówka i stopki
 
-Metoda `setHeaderFootersComparison` wyłącza porównywanie zawartości nagłówków i stopek, zapobiegając pojawianiu się nieistotnych różnic w raporcie.
+Metoda `setHeaderFootersComparison` wyłącza porównywanie treści nagłówka i stopki, zapobiegając pojawianiu się nieistotnych różnic w raporcie.
 
-**Dlaczego to ważne:** Nagłówki i stopki często zawierają dynamiczne dane (znaczniki czasu, numery stron), które zmieniają się między wersjami, ale nie mają znaczenia dla przeglądu treści. Ich pomijanie redukuje szum i przyspiesza przetwarzanie.
+**Dlaczego to ważne:** Nagłówki i stopki często zawierają znaczniki czasu lub numery stron, które zmieniają się między wersjami, ale nie są częścią istotnej treści. Pominięcie ich redukuje szum i przyspiesza przetwarzanie.
 
-**Scenariusz z życia wzięty:** Porównywanie dwóch wersji umowy, gdzie każda wersja dodaje nowy znacznik daty w stopce; interesują Cię tylko zmiany w klauzulach.
+**Scenariusz z życia wzięty:** Dwa projekty umów zawierają różne daty generowania w stopce; interesują Cię tylko zmiany w klauzulach.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -207,18 +187,15 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**Key Benefits:**  
-- Czystsze wyniki diff  
-- Mniej fałszywych alarmów  
-- Szybsze porównanie, ponieważ te sekcje są pomijane  
+**Kluczowe korzyści:** czystsze wyniki różnic, mniej fałszywych alarmów oraz szybsze wykonanie, ponieważ te sekcje są pomijane.
 
-### Funkcja 2: Ustawienie rozmiaru papieru wyjściowego dla profesjonalnych raportów
+### Funkcja 2: ustawienie rozmiaru papieru wyjściowego dla raportów profesjonalnych
 
-Enum `PaperSize` definiuje standardowe wymiary stron, które będzie używać generowany PDF.
+Enum `PaperSize` definiuje standardowe wymiary stron, które będzie używał generowany PDF.
 
 **Kontekst biznesowy:** Zespoły prawne często potrzebują drukowalnych raportów porównawczych w określonym rozmiarze papieru do składania w sądzie lub dostarczania klientom.
 
-**Jak zastosować:** Użyj enum `PaperSize` w `CompareOptions`, aby określić docelowy rozmiar.
+**Jak zastosować:** Użyj enumu `PaperSize` w `CompareOptions`, aby określić docelowy rozmiar.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -247,17 +224,17 @@ public class SetOutputPaperSizeExample {
 
 Obsługiwane rozmiary obejmują A0‑A10, Letter, Legal, Tabloid oraz wymiary niestandardowe. Wybierz A4 dla klientów europejskich lub Letter dla partnerów z USA.
 
-### Funkcja 3: Dostosowanie czułości porównania
+### Funkcja 3: precyzyjne dostrojenie czułości porównania
 
 Metoda `setSensitivityOfComparison` dostosowuje, jak szczegółowo silnik porównania ocenia zmiany, od dużych edycji strukturalnych po różnice pojedynczych znaków.
 
-**Wyzwanie:** Różne kategorie dokumentów wymagają różnej szczegółowości. Umowy prawne wymagają precyzji na poziomie znaków, podczas gdy teksty marketingowe mogą wymagać zmian na poziomie akapitu.
+**Wyzwanie:** Różne kategorie dokumentów wymagają różnej szczegółowości. Umowy prawne wymagają precyzji na poziomie znaków, podczas gdy materiały marketingowe mogą wymagać zmian na poziomie akapitu.
 
-**Sensitivity Scale (0‑100):**  
+**Skala czułości (0‑100):**  
 - **0‑25:** Tylko duże zmiany (dodanie/usunięcie akapitu)  
 - **26‑50:** Średnie zmiany (edycje zdań)  
 - **51‑75:** Szczegółowe zmiany (poziom słowa)  
-- **76‑100:** Granularne zmiany (poziom znaków)  
+- **76‑100:** Granularne zmiany (poziom znaku)
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -283,16 +260,13 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**Best‑Practice Settings:**  
-- **Dokumenty prawne:** 90‑100  
-- **Treści marketingowe:** 40‑60  
-- **Specyfikacje techniczne:** 70‑80  
+**Ustawienia zalecane:** Dokumenty prawne 90‑100, treści marketingowe 40‑60, specyfikacje techniczne 70‑80.
 
-### Funkcja 4: Dostosowanie stylów zmian dla lepszej komunikacji wizualnej
+### Funkcja 4: dostosowanie stylów zmian dla lepszej komunikacji wizualnej
 
 Obiekt `StyleSettings` pozwala definiować kolory, czcionki, obramowania i inne wskazówki wizualne dla wstawionych, usuniętych i zmodyfikowanych treści.
 
-**Dlaczego niestandardowe style mają znaczenie:** Domyślne podświetlanie może kolidować z brandingiem korporacyjnym lub wytycznymi dostępności. Dostosowanie kolorów, czcionek i obramowań sprawia, że różnice są od razu zrozumiałe.
+**Dlaczego niestandardowe style mają znaczenie:** Domyślne podświetlenie może kolidować z identyfikacją wizualną firmy lub wytycznymi dostępności. Dostosowanie kolorów, czcionek i obramowań sprawia, że różnice są od razu zrozumiałe.
 
 **Przykład:** Czerwone tło dla usunięć, zielone dla wstawek, niebieskie dla modyfikacji.
 
@@ -339,11 +313,38 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-Zaawansowane opcje w `StyleSettings` pozwalają modyfikować grubość czcionki, rozmiar, przezroczystość tła, styl obramowania oraz zachowanie przekreślenia.
+Zaawansowane opcje pozwalają modyfikować grubość czcionki, rozmiar, przezroczystość tła, styl obramowania oraz zachowanie przekreślenia.
 
 ## Jak ustawić rozmiar papieru w raportach porównania w Javie
 
-Ustaw rozmiar papieru bezpośrednio za pomocą enum `PaperSize` w `CompareOptions`. Zastąp `PaperSize.A6` dowolną obsługiwaną stałą (np. `PaperSize.LETTER`), aby dopasować się do regionalnych standardów drukowania. Zapewnia to, że generowany raport PDF drukuje się poprawnie bez ręcznego skalowania. Dodatkowo możesz połączyć to ustawienie z własnymi marginesami i flagami orientacji, aby uzyskać układ zgodny z wytycznymi organizacji dotyczącymi składania dokumentów, gwarantując profesjonalny wygląd za każdym razem.
+`Comparer` jest główną klasą, która koordynuje operacje porównywania dokumentów. Załaduj instancję `Comparer` z źródłowym skoroszytem, skonfiguruj obiekt `CompareOptions` i wywołaj `setPaperSize` używając żądanej wartości enum `PaperSize`. To pojedyncze ustawienie definiuje wymiary strony generowanego PDF, zapewniając prawidłowe drukowanie bez ręcznego skalowania.
+
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.options.CompareOptions;
+import com.groupdocs.comparison.options.enums.PaperSize;
+
+public class SetOutputPaperSizeExample {
+    public static void main(String[] args) throws Exception {
+        String outputFileName = "YOUR_OUTPUT_DIRECTORY/SetOutputPaperSize_result.docx";
+
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word.docx")) {
+
+            comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
+
+            // Set the paper size to A6
+            CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setPaperSize(PaperSize.A6)
+                    .build();
+
+            final Path resultPath = comparer.compare(resultStream, compareOptions);
+        }
+    }
+}
+```
+
+Możesz połączyć to ustawienie z niestandardowymi marginesami i flagami orientacji, aby uzyskać układ spełniający wytyczne Twojej organizacji dotyczące składania dokumentów, gwarantując profesjonalny wygląd za każdym razem.
 
 ## Typowe problemy i rozwiązywanie
 
@@ -362,7 +363,7 @@ java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 `PasswordRequiredException` jest zgłaszany, gdy API napotyka zaszyfrowany dokument bez podanego hasła.
 
 **Problem:** Porównanie nie powodzi się przy zablokowanych dokumentach.  
-**Zapobieganie:** Podaj hasło przy tworzeniu `Comparer` i obsłuż `PasswordRequiredException`.
+**Zapobieganie:** Podaj hasło przy tworzeniu obiektu `Comparer` i przechwyć `PasswordRequiredException`.
 
 ```java
 // Check document accessibility before comparison
@@ -399,7 +400,7 @@ for (Future<ComparisonResult> future : futures) {
 executor.shutdown();
 ```
 
-### Problemy specyficzne dla formatu
+### Problemy specyficzne dla formatów
 
 - **Skanowane PDF:** Zastosuj wstępne przetwarzanie OCR przed porównaniem.  
 - **Dokumenty Word:** Wyłącz istniejącą funkcję „Track Changes”, aby uniknąć fałszywych różnic.  
@@ -407,9 +408,9 @@ executor.shutdown();
 
 ## Najlepsze praktyki i wskazówki dotyczące wydajności
 
-### 1. Przetwarzanie wstępne dokumentu
+### 1. wstępne przetwarzanie dokumentu
 
-Usuń niepotrzebne metadane i ujednolić czcionki przed porównaniem, aby poprawić szybkość i dokładność.
+Usuń niepotrzebne metadane i ujednolic czcionki przed porównaniem, aby poprawić szybkość i dokładność.
 
 ```java
 // Example preprocessing workflow
@@ -420,7 +421,7 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Optymalne profile konfiguracji
+### 2. optymalne profile konfiguracji
 
 Utwórz wielokrotnego użytku szablony `CompareOptions` dla każdego typu dokumentu (prawny, marketingowy, techniczny) i używaj ich w całym pipeline.
 
@@ -444,9 +445,9 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Solidna obsługa błędów i logowanie
+### 3. solidna obsługa błędów i logowanie
 
-`ComparisonException` wskazuje na błąd podczas procesu porównania i dostarcza szczegółowe informacje diagnostyczne. Otocz wywołania porównania blokami try‑catch, loguj szczegóły `ComparisonException` i w razie potrzeby przejdź do bezpiecznej wartości domyślnej.
+`ComparisonException` wskazuje na błąd podczas procesu porównywania i dostarcza szczegółowe informacje diagnostyczne. Otaczaj wywołania porównania blokami try‑catch, loguj szczegóły `ComparisonException` i w razie potrzeby przechodź do bezpiecznej wartości domyślnej.
 
 ```java
 public ComparisonResult safeCompareDocuments(String source, String target) {
@@ -459,15 +460,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Buforowanie i inteligentne ponowne użycie
+### 4. buforowanie i inteligentne ponowne użycie
 
 - Buforuj wyniki różnic dla identycznych par plików.  
-- Przechowuj odciski palców dokumentów (hashe), aby pomijać niezmienione pliki.  
+- Przechowuj odciski dokumentów (hashe), aby pomijać niezmienione pliki.  
 - Używaj asynchronicznych kolejek dla niekrytycznych porównań, aby interfejs był responsywny.
 
 ## Scenariusze integracji w praktyce
 
-### Scenariusz 1: Zautomatyzowany pipeline przeglądu umów
+### Scenariusz 1: zautomatyzowany pipeline przeglądu umów
 
 ```java
 @Service
@@ -490,7 +491,7 @@ public class ContractReviewService {
 }
 ```
 
-### Scenariusz 2: Integracja z systemem zarządzania treścią
+### Scenariusz 2: integracja z systemem zarządzania treścią
 
 ```java
 @RestController
@@ -514,34 +515,34 @@ public class DocumentComparisonController {
 
 ## Najczęściej zadawane pytania
 
-**Q: Czy mogę pominąć nagłówki i stopki podczas porównywania w GroupDocs dla Javy?**  
-A: Tak, wywołaj `setHeaderFootersComparison(false)` na `CompareOptions`. To usuwa dynamiczny szum nagłówków/stopki z różnicy.
+**Q:** Czy mogę pominąć nagłówki i stopki podczas porównywania w GroupDocs dla Javy?  
+A: Tak, wywołaj `setHeaderFootersComparison(false)` na `CompareOptions`. To usuwa dynamiczny szum nagłówka/stopki z raportu różnic.
 
-**Q: Jak ustawić rozmiar papieru wyjściowego w Javie przy użyciu GroupDocs?**  
-A: Użyj `setPaperSize(PaperSize.A6)` (lub dowolnej innej wartości enum) w `CompareOptions`. To generuje gotowy do druku PDF w wybranym rozmiarze.
+**Q:** Jak ustawić rozmiar papieru wyjściowego w Javie przy użyciu GroupDocs?  
+A: Użyj `setPaperSize(PaperSize.A6)` (lub innej wartości enum) w `CompareOptions`. To generuje gotowy do druku PDF w wybranym rozmiarze.
 
-**Q: Czy można dostosować czułość porównania dla różnych typów dokumentów?**  
+**Q:** Czy można precyzyjnie dostroić czułość porównania dla różnych typów dokumentów?  
 A: Oczywiście. Wywołaj `setSensitivityOfComparison(85)` dla umów prawnych lub `setSensitivityOfComparison(45)` dla projektów marketingowych, aby kontrolować szczegółowość.
 
-**Q: Czy mogę dostosować stylizację wstawionego, usuniętego i zmienionego tekstu podczas porównania?**  
+**Q:** Czy mogę dostosować stylowanie wstawionego, usuniętego i zmienionego tekstu podczas porównania?  
 A: Tak. Utwórz instancję `StyleSettings` dla każdego typu zmiany i przypisz kolory, czcionki lub obramowania przed przekazaniem jej do `CompareOptions`.
 
-**Q: Jakie są wymagania wstępne, aby rozpocząć pracę z GroupDocs Comparison w Javie?**  
+**Q:** Jakie są wymagania wstępne, aby rozpocząć pracę z GroupDocs Comparison w Javie?  
 A: Potrzebujesz JDK 8+ (zalecany JDK 11+), Maven 3.6+ lub Gradle 6.0+, co najmniej 4 GB RAM oraz ważnej licencji GroupDocs (dostępna wersja próbna).
 
-**Q: Jak obsługiwać dokumenty zabezpieczone hasłem w GroupDocs.Comparison?**  
-A: Przekaż hasło jako drugi argument przy tworzeniu `Comparer`: `new Comparer(sourceFile, "myPassword")`. Przechwytuj `PasswordRequiredException`, aby elegancko obsłużyć błędy.
+**Q:** Jak obsługiwać dokumenty zabezpieczone hasłem w GroupDocs.Comparison?  
+A: Przekaż hasło jako drugi argument przy tworzeniu `Comparer`: `new Comparer(sourceFile, "myPassword")`. Przechwyć `PasswordRequiredException`, aby elegancko obsłużyć błędy.
 
-**Q: Jakie formaty plików obsługuje GroupDocs.Comparison dla Javy?**  
-A: Ponad **50** formatów, w tym DOCX, PDF, XLSX, PPTX, TXT, HTML, XML oraz popularne typy obrazów (PNG, JPEG). API automatycznie wykrywa formaty, ale możesz je wyraźnie określić dla zwiększenia wydajności przetwarzania wsadowego.
+**Q:** Jakie formaty plików obsługuje GroupDocs.Comparison dla Javy?  
+A: Ponad **50** formatów, w tym DOCX, PDF, XLSX, PPTX, TXT, HTML, XML oraz popularne typy obrazów (PNG, JPEG). API automatycznie wykrywa formaty, ale możesz je jawnie określić dla zwiększenia wydajności przetwarzania wsadowego.
 
 ## Zakończenie
 
-Korzyścią z wykorzystania GroupDocs.Comparison dla Javy jest automatyzacja żmudnego zadania porównywania skoroszytów Excel — oraz dowolnego innego obsługiwanego formatu — z precyzyjną dokładnością, szybkością i spójnością. Zintegruj fragmenty kodu i wskazówki najlepszych praktyk z tego przewodnika w swoich pipeline'ach CI/CD, systemach zarządzania dokumentami lub własnych narzędziach audytowych, aby uzyskać wymierne zyski w produktywności.
+Korzystając z GroupDocs.Comparison dla Javy, możesz zautomatyzować żmudne zadanie porównywania skoroszytów Excel — oraz dowolnego innego obsługiwanego formatu — z precyzyjną dokładnością, szybkością i spójnością. Zintegruj fragmenty kodu i wskazówki najlepszych praktyk z tego przewodnika w swoich pipeline'ach CI/CD, systemach zarządzania dokumentami lub własnych narzędziach audytowych, aby uzyskać wymierne korzyści w produktywności.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-05-16  
+**Ostatnia aktualizacja:** 2026-11-01  
 **Testowano z:** GroupDocs.Comparison 25.2 for Java  
 **Autor:** GroupDocs
 
@@ -558,5 +559,5 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 ## Powiązane samouczki
 
 - [compare pdf java – Samouczek porównywania dokumentów w Javie – Kompletny przewodnik po ładowaniu i porównywaniu dokumentów](/comparison/java/document-loading/)
-- [Konfiguracja licencji GroupDocs Comparison Java – Kompletny przewodnik konfiguracji URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
-- [Jak używać GroupDocs – Strumienie porównywania dokumentów w Javie – Kompletny przewodnik](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
+- [GroupDocs Comparison Java License Setup - Kompletny przewodnik konfiguracji URL](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [How to Use GroupDocs - Java Document Comparison Streams – Kompletny przewodnik](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

@@ -1,17 +1,21 @@
 ---
 categories:
 - Java Development
-date: '2026-05-16'
-description: Leer hoe je Excel-bestanden in Java kunt vergelijken met GroupDocs.Comparison
-  voor Java, met voorbeelden voor PDF, grote documenten en versleutelde bestanden.
+date: '2026-11-01'
+description: Leer hoe je Excel-bestanden kunt vergelijken in Java met GroupDocs.Comparison,
+  met voorbeelden voor PDF's, grote documenten en versleutelde bestanden.
 keywords:
+- how to compare excel
 - compare excel files java
-- compare pdf documents java
-- groupdocs comparison java
-- excel file diff java
+- set paper size java
+- java file comparison library
 - document comparison api
-lastmod: '2026-05-16'
+lastmod: '2026-11-01'
 linktitle: Java-gids voor het vergelijken van Excel-bestanden
+og_description: Leer hoe je Excel-bestanden kunt vergelijken in Java met GroupDocs.Comparison.
+  Ontvang codevoorbeelden, prestatietips en FAQ voor documentvergelijking.
+og_image_alt: Guide to comparing Excel files in Java with GroupDocs Comparison API
+og_title: Hoe Excel-bestanden vergelijken in Java met de GroupDocs API
 schemas:
 - author: GroupDocs
   dateModified: '2026-05-16'
@@ -58,83 +62,58 @@ tags:
 - java-api
 - automation
 - groupdocs
-title: Excel-bestanden vergelijken in Java met GroupDocs Document Comparison API
+- excel comparison
+title: Hoe Excel-bestanden vergelijken in Java met de GroupDocs Document Comparison
+  API
 type: docs
 url: /nl/java/basic-comparison/mastering-document-comparison-java-groupdocs/
 weight: 1
 ---
 
-# Vergelijk Excel-bestanden Java met GroupDocs Document Comparison API
+# Hoe Excel-bestanden te vergelijken in Java met de GroupDocs Document Comparison API
 
-Heb je ooit uren besteed aan het handmatig vergelijken van documenten, op zoek naar wijzigingen regel voor regel? Of je nu contractwijzigingen bijhoudt, code‑documentatie beoordeelt, of **compare excel files java** nodig hebt voor financiële rapporten, handmatige documentvergelijking is tijdrovend en foutgevoelig. In deze gids leer je een snelle, betrouwbare manier om Excel-werkboeken (en vele andere formaten) te vergelijken met behulp van GroupDocs.Comparison voor Java.
+In veel bedrijven moet je **Excel-bestanden vergelijken in Java** om wijzigingen in financiële rapporten te ontdekken, gegevensrevisies te auditen of migratieresultaten te verifiëren. Handmatig twee werkmappen openen en cel voor cel scannen is foutgevoelig en verspilt kostbare tijd. Deze tutorial laat je precies zien **hoe je Excel**-werkmappen programmatically vergelijkt met behulp van GroupDocs.Comparison voor Java, en levert pixel‑perfecte diff‑rapporten in seconden.
 
-## Snelle Antwoorden
+## Snelle antwoorden
 
-De `Comparer`‑klasse is de kerncomponent die bron‑documenten laadt en de vergelijking uitvoert.  
-`CompareOptions` biedt een reeks configureerbare parameters die bepalen hoe de vergelijking wordt uitgevoerd.  
-`StyleSettings` stelt je in staat de visuele weergave van ingevoegde, verwijderde en gewijzigde elementen in het uitvoerrapport aan te passen.
+- **Kan GroupDocs Excel-bestanden vergelijken in Java?** Ja – laad gewoon de `.xlsx`-bestanden met de `Comparer`-klasse en roep `compare` aan.  
+- **Hoe negeer je headers/footers?** Stel `setHeaderFootersComparison(false)` in `CompareOptions` in.  
+- **Wat te doen met grote PDF's?** Verhoog de JVM-heap, schakel streaming-modus in, en gebruik geheugen‑geoptimaliseerde opties.  
+- **Kan ik wachtwoord‑beveiligde PDF's vergelijken?** Geef het wachtwoord op bij het maken van de `Comparer`.  
+- **Is er een manier om highlight‑kleuren te wijzigen?** Gebruik `StyleSettings` voor ingevoegde, verwijderde en gewijzigde items.
 
-- **Kan GroupDocs Excel‑bestanden vergelijken in Java?** Ja, laad gewoon de `.xlsx`‑bestanden met de `Comparer`‑klasse en roep `compare` aan.  
-- **Hoe negeer je kop- en voetteksten?** Stel `setHeaderFootersComparison(false)` in `CompareOptions` in.  
-- **Wat te doen met grote PDF's?** Verhoog de JVM‑heap, schakel geheugenoptimalisatie in en gebruik de streaming‑modus.  
-- **Kan ik wachtwoord‑beveiligde PDF's vergelijken?** Geef het wachtwoord op bij het aanmaken van de `Comparer`.  
-- **Is er een manier om markeerkleuren te wijzigen?** Gebruik `StyleSettings` voor ingevoegde, verwijderde en gewijzigde items.
+## Wat is excel-bestanden vergelijken in Java?
 
-## Wat is compare excel files java?
+Excel-bestanden vergelijken in Java betekent programmatically elke cel‑niveau toevoeging, verwijdering of wijziging tussen twee `.xlsx`-werkboeken detecteren en een visueel diff‑rapport produceren dat die veranderingen markeert. De GroupDocs.Comparison‑engine laadt elke spreadsheet in het geheugen, evalueert formules, stijlen en bladstructuren, en rendert vervolgens een naast‑elkaar of overlay PDF/HTML‑rapport dat ontwikkelaars kunnen embedden in dashboards of e‑mailen naar stakeholders.
 
-`compare excel files java` is het proces waarbij programmatisch cel‑niveau verschillen tussen twee Excel‑werkboeken worden gedetecteerd met Java. De GroupDocs.Comparison‑API laadt elke spreadsheet, evalueert elke cel, rij en formule, en genereert vervolgens een diff‑rapport dat toevoegingen, verwijderingen en wijzigingen in een duidelijk visueel formaat markeert.
+## Waarom een Java document comparison API gebruiken?
 
-## Waarom een Java Document Comparison API gebruiken?
-
-### De zakelijke reden voor automatisering
-
-Handmatige documentvergelijking is niet alleen vervelend—het is riskant. Studies tonen aan dat mensen ongeveer **20 %** van significante wijzigingen missen bij handmatige beoordeling van documenten. De API elimineert dit risico en levert meetbare productiviteitswinst op:
-
-- **99,9 % Nauwkeurigheid** – elke wijziging op teken‑niveau wordt vastgelegd.  
-- **Snelheid** – vergelijk een PDF van 100 pagina’s in minder dan **30 seconden** op een standaard server.  
-- **Consistentie** – uniforme markering en rapportage over alle documenttypen.  
-- **Schaalbaarheid** – batch‑verwerk duizenden bestanden zonder handmatige inspanning  
-
-### Wanneer Document Comparison API's te gebruiken
-
-Je haalt de grootste opbrengst wanneer je moet:
-
-- **Juridische contracten beoordelen** – markeer automatisch clausule‑wijzigingen.  
-- **Technische documentatie bijhouden** – zie precies wat er is veranderd tussen API‑specificatie‑releases.  
-- **Inhouds‑assets beheren** – vergelijk marketingteksten, gebruikershandleidingen of blog‑concepten.  
-- **Naleving auditen** – zorg ervoor dat beleidsupdates worden vastgelegd en gelogd.  
-- **Versiebeheer aanvullen** – lever menselijk leesbare diffs voor niet‑code artefacten.  
+Het automatiseren van diff‑generatie elimineert de menselijke fout die ongeveer **20 %** van gemiste wijzigingen in handmatige beoordelingen veroorzaakt, en zorgt voor consistente en betrouwbare resultaten. GroupDocs biedt hoge‑precisie detectie van elke wijziging, snelle verwerkingstijden, en uniforme styling over output‑formaten, wat samen de productiviteit verhoogt voor financiële, juridische en content‑management teams.
 
 ## Ondersteunde bestandsformaten en mogelijkheden
 
-GroupDocs.Comparison voor Java ondersteunt **50+** invoer‑ en uitvoerformaten, waaronder:
+GroupDocs.Comparison for Java ondersteunt **50+** invoer‑ en uitvoerformaten, inclusief:
 
 - **Documenten**: DOCX, DOC, PDF, RTF, ODT  
-- **Spreadsheets**: XLSX, XLS, CSV, ODS  
+- **Werkbladen**: XLSX, XLS, CSV, ODS  
 - **Presentaties**: PPTX, PPT, ODP  
 - **Tekst**: TXT, HTML, XML, MD  
-- **Afbeeldingen**: PNG, JPEG, BMP, GIF (visuele vergelijking)  
+- **Afbeeldingen**: PNG, JPEG, BMP, GIF (visuele vergelijking)
 
-### Geavanceerde functies
-
-- Vergelijking van wachtwoord‑beveiligde documenten  
-- Detectie en vergelijking van meerdere talen  
-- Aangepaste gevoeligheidsinstellingen per documenttype  
-- Batch‑verwerking voor meerdere documentparen  
-- Cloud‑native en on‑premise implementatie‑opties  
+Geavanceerde mogelijkheden omvatten handling van wachtwoord‑beveiligde documenten, meertalige detectie, aangepaste gevoeligheid per documenttype, batch‑verwerking, en zowel cloud‑native als on‑premise implementatie‑opties.
 
 ## Voorvereisten en installatie
 
 ### Systeemvereisten
 
 1. **Java Development Kit (JDK):** 8 of hoger (JDK 11+ aanbevolen)  
-2. **Build‑tool:** Maven 3.6+ of Gradle 6.0+  
-3. **Geheugen:** Minimaal **4 GB RAM** voor grote bestanden  
-4. **Opslag:** Minimaal **500 MB** vrij voor tijdelijke vergelijkingsdata  
+2. **Build tool:** Maven 3.6+ of Gradle 6.0+  
+3. **Geheugen:** Minimum **4 GB RAM** voor grote bestanden  
+4. **Opslag:** Ten minste **500 MB** vrij voor tijdelijke vergelijkingsdata  
 
-### Maven‑configuratie
+### Maven-configuratie
 
-Voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom.xml`. Dit zorgt ervoor dat je de officiële release haalt:
+Voeg de GroupDocs-repository en afhankelijkheid toe aan je `pom.xml`. Dit zorgt ervoor dat je de officiële release haalt:
 
 ```xml
 <repositories>
@@ -155,12 +134,12 @@ Voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom.xml`. Dit zorg
 
 ### Licentie‑instelling
 
-**Voor ontwikkeling en testen:**  
+**Voor ontwikkeling en testen**  
 - **Gratis proefversie:** Download van [GroupDocs Downloads](https://releases.groupdocs.com/comparison/java/) – bevat watermerk‑output.  
 - **Tijdelijke licentie:** Verkrijg 30‑daagse volledige toegang via [GroupDocs Support](https://purchase.groupdocs.com/temporary-license/).  
 
-**Voor productie:**  
-- **Volledige licentie:** Aanschaf via [GroupDocs Purchase](https://purchase.groupdocs.com/buy) voor onbeperkt commercieel gebruik.  
+**Voor productie**  
+- **Volledige licentie:** Aankoop via [GroupDocs Purchase](https://purchase.groupdocs.com/buy) voor onbeperkt commercieel gebruik.  
 
 Initialiseer de licentie bij het opstarten van de applicatie:
 
@@ -170,17 +149,17 @@ com.groupdocs.comparison.License license = new com.groupdocs.comparison.License(
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Pro Tip:** Sla het licentiebestand op in je resources‑map en laad het met `getClass().getResourceAsStream()` voor draagbare implementaties.
+> **Pro tip:** Sla het licentiebestand op in je resources‑map en laad het met `getClass().getResourceAsStream()` voor draagbare implementaties.
 
 ## Kernimplementatie‑gids
 
-### Functie 1: Header‑ en voettekst‑vergelijking negeren
+### Functie 1: header‑ en footer‑vergelijking negeren
 
-De `setHeaderFootersComparison`‑methode schakelt de vergelijking van header‑ en voettekstinhoud uit, waardoor irrelevante verschillen niet in de diff verschijnen.
+De `setHeaderFootersComparison`‑methode schakelt de vergelijking van header‑ en footer‑inhoud uit, waardoor irrelevante verschillen niet in de diff verschijnen.  
 
-**Waarom dit belangrijk is:** Headers en voetteksten bevatten vaak dynamische gegevens (tijdstempels, paginanummers) die tussen versies veranderen maar niet relevant zijn voor inhouds‑review. Ze negeren vermindert ruis en versnelt de verwerking.
+**Waarom dit belangrijk is:** Headers en footers bevatten vaak tijdstempels of paginanummers die tussen versies veranderen maar geen deel uitmaken van de inhoud. Het overslaan ervan vermindert ruis en versnelt de verwerking.
 
-**Praktisch voorbeeld:** Twee contractconcepten vergelijken waarbij elke versie een nieuwe datumstempel in de voettekst toevoegt; je bent alleen geïnteresseerd in clausule‑wijzigingen.
+**Praktijkvoorbeeld:** Twee contractontwerpen bevatten verschillende gegenereerde datums in de footer; je bent alleen geïnteresseerd in clausule‑wijzigingen.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -207,16 +186,13 @@ public class IgnoreHeaderFooterExample {
 }
 ```
 
-**Belangrijkste voordelen:**  
-- Schoner diff‑resultaat  
-- Minder valse positieven  
-- Snellere vergelijking omdat die secties worden overgeslagen  
+**Belangrijkste voordelen:** schonere diff‑resultaten, minder false positives, en snellere uitvoering omdat die secties worden weggelaten.
 
-### Functie 2: Papiergrootte van output instellen voor professionele rapporten
+### Functie 2: output‑papierformaat instellen voor professionele rapporten
 
-De `PaperSize`‑enum definieert standaard paginadimensies die de gegenereerde PDF zal gebruiken.
+De `PaperSize`‑enum definieert standaard paginadimensies die de gegenereerde PDF zal gebruiken.  
 
-**Zakelijke context:** Juridische teams hebben vaak afdrukbare vergelijkingsrapporten nodig in een specifieke papiergrootte voor gerechtelijke indieningen of klantlevering.
+**Zakelijke context:** Juridische teams hebben vaak afdrukbare vergelijkingsrapporten nodig in een specifiek papierformaat voor gerechtelijke indieningen of klantlevering.
 
 **Hoe toe te passen:** Gebruik de `PaperSize`‑enum in `CompareOptions` om de gewenste grootte te definiëren.
 
@@ -245,19 +221,19 @@ public class SetOutputPaperSizeExample {
 }
 ```
 
-Ondersteunde maten omvatten A0‑A10, Letter, Legal, Tabloid en aangepaste afmetingen. Kies A4 voor Europese klanten of Letter voor Amerikaanse partners.
+Ondersteunde formaten omvatten A0‑A10, Letter, Legal, Tabloid, en aangepaste afmetingen. Kies A4 voor Europese klanten of Letter voor Amerikaanse partners.
 
-### Functie 3: Vergelijkingsgevoeligheid fijn afstellen
+### Functie 3: gevoeligheid van vergelijking fijn afstellen
 
-De `setSensitivityOfComparison`‑methode past aan hoe gedetailleerd de vergelijkingsengine veranderingen evalueert, variërend van grote structurele bewerkingen tot enkel‑teken verschillen.
+De `setSensitivityOfComparison`‑methode past aan hoe gedetailleerd de vergelijkingsengine wijzigingen evalueert, variërend van grote structurele bewerkingen tot enkel‑karakter verschillen.  
 
-**De uitdaging:** Verschillende documentcategorieën vereisen verschillende granulariteit. Juridische contracten vragen om teken‑niveau precisie, terwijl marketingteksten mogelijk alleen alinea‑niveau wijzigingen nodig hebben.
+**De uitdaging:** Verschillende documentcategorieën vereisen verschillende granulariteit. Juridische contracten vragen om karakter‑niveau precisie, terwijl marketingteksten mogelijk alleen alinea‑niveau wijzigingen nodig hebben.
 
 **Gevoeligheidsschaal (0‑100):**  
 - **0‑25:** Alleen grote wijzigingen (paragraaf toevoegen/verwijderen)  
 - **26‑50:** Gemiddelde wijzigingen (zinnen bewerken)  
 - **51‑75:** Gedetailleerde wijzigingen (woord‑niveau)  
-- **76‑100:** Granulaire wijzigingen (teken‑niveau)  
+- **76‑100:** Granulaire wijzigingen (karakter‑niveau)  
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -283,18 +259,15 @@ public class AdjustComparisonSensitivityExample {
 }
 ```
 
-**Aanbevolen instellingen:**  
-- **Juridische documenten:** 90‑100  
-- **Marketinginhoud:** 40‑60  
-- **Technische specificaties:** 70‑80  
+**Aanbevolen instellingen:** juridische documenten 90‑100, marketing‑inhoud 40‑60, technische specificaties 70‑80.
 
-### Functie 4: Wijzigingsstijlen aanpassen voor betere visuele communicatie
+### Functie 4: wijzigingsstijlen aanpassen voor betere visuele communicatie
 
-Het `StyleSettings`‑object stelt je in staat kleuren, lettertypen, randen en andere visuele aanwijzingen te definiëren voor ingevoegde, verwijderde en gewijzigde inhoud.
+Het `StyleSettings`‑object stelt je in staat kleuren, lettertypen, randen en andere visuele aanwijzingen te definiëren voor ingevoegde, verwijderde en gewijzigde inhoud.  
 
-**Waarom aangepaste stijlen belangrijk zijn:** Standaard markering kan botsen met de huisstijl of toegankelijkheidsrichtlijnen. Het aanpassen van kleuren, lettertypen en randen maakt diffs direct begrijpelijk.
+**Waarom aangepaste stijlen belangrijk zijn:** Standaard markering kan botsen met corporate branding of toegankelijkheidsrichtlijnen. Het aanpassen van kleuren, lettertypen en randen maakt diffs direct begrijpelijk.
 
-**Voorbeeld:** Rode achtergrond voor verwijderingen, groen voor invoegingen, blauw voor aanpassingen.
+**Voorbeeld:** Rode achtergrond voor verwijderingen, groen voor invoegingen, blauw voor wijzigingen.
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -339,18 +312,45 @@ public class CustomizeChangesStylesStreamExample {
 }
 ```
 
-Geavanceerde opties in `StyleSettings` laten je lettertypegewicht, grootte, achtergrond‑opaciteit, randstijl en doorhalingsgedrag aanpassen.
+Geavanceerde opties laten je lettertype‑gewicht, grootte, achtergrond‑opaciteit, rand‑stijl en doorstrepingsgedrag aanpassen.
 
-## Hoe papiergrootte java in vergelijkingsrapporten in te stellen
+## Hoe papierformaat in Java instellen in vergelijkingsrapporten
 
-Stel de papiergrootte direct in via de `PaperSize`‑enum in `CompareOptions`. Vervang `PaperSize.A6` door een ondersteunde constante (bijv. `PaperSize.LETTER`) om te voldoen aan regionale afdrukstandaarden. Dit zorgt ervoor dat het gegenereerde PDF‑rapport correct afdrukt zonder handmatige schaalvergroting. Bovendien kun je de instelling combineren met aangepaste marges en oriëntatie‑vlaggen om een lay‑out te produceren die voldoet aan de document‑indieningsrichtlijnen van je organisatie, waardoor elke keer een professionele uitstraling gegarandeerd is.
+`Comparer` is de hoofdklasse die documentvergelijkingsoperaties orkestreert. Laad een `Comparer`‑instantie met de bron‑werkmap, configureer een `CompareOptions`‑object, en roep `setPaperSize` aan met de gewenste `PaperSize`‑enumwaarde. Deze enkele instelling bepaalt de paginadimensies van de gegenereerde PDF, waardoor correct afdrukken zonder handmatige schaalvergroting gegarandeerd is.
+
+```java
+import com.groupdocs.comparison.Comparer;
+import com.groupdocs.comparison.options.CompareOptions;
+import com.groupdocs.comparison.options.enums.PaperSize;
+
+public class SetOutputPaperSizeExample {
+    public static void main(String[] args) throws Exception {
+        String outputFileName = "YOUR_OUTPUT_DIRECTORY/SetOutputPaperSize_result.docx";
+
+        try (OutputStream resultStream = new FileOutputStream(outputFileName);
+             Comparer comparer = new Comparer("YOUR_DOCUMENT_DIRECTORY/source_word.docx")) {
+
+            comparer.add("YOUR_DOCUMENT_DIRECTORY/target1_word.docx");
+
+            // Set the paper size to A6
+            CompareOptions compareOptions = new CompareOptions.Builder()
+                    .setPaperSize(PaperSize.A6)
+                    .build();
+
+            final Path resultPath = comparer.compare(resultStream, compareOptions);
+        }
+    }
+}
+```
+
+Je kunt deze instelling combineren met aangepaste marges en oriëntatie‑vlaggen om een lay‑out te produceren die voldoet aan de document‑indieningsrichtlijnen van je organisatie, waardoor elke keer een professionele uitstraling gegarandeerd is.
 
 ## Veelvoorkomende problemen en foutopsporing
 
 ### Geheugenbeheer voor grote documenten
 
 **Probleem:** `OutOfMemoryError` bij het vergelijken van bestanden groter dan 50 MB.  
-**Oplossing:** Verhoog de JVM‑heap (`-Xmx8g`) en schakel de streaming‑modus in.
+**Oplossing:** Verhoog de JVM-heap (`-Xmx8g`) en schakel streaming‑modus in.
 
 ```bash
 # Increase heap size for large document processing
@@ -359,10 +359,10 @@ java -Xmx4g -XX:MaxMetaspaceSize=512m YourComparisonApp
 
 ### Omgaan met corrupte of wachtwoord‑beveiligde bestanden
 
-`PasswordRequiredException` wordt gegooid wanneer de API een versleuteld document tegenkomt zonder opgegeven wachtwoord.
+`PasswordRequiredException` wordt gegooid wanneer de API een versleuteld document tegenkomt zonder opgegeven wachtwoord.  
 
 **Probleem:** Vergelijking mislukt bij vergrendelde documenten.  
-**Preventie:** Geef het wachtwoord op bij het aanmaken van de `Comparer` en vang `PasswordRequiredException` af.
+**Preventie:** Geef het wachtwoord op bij het construeren van de `Comparer` en vang `PasswordRequiredException`.
 
 ```java
 // Check document accessibility before comparison
@@ -378,10 +378,10 @@ try {
 }
 ```
 
-### Prestatie‑optimalisatie voor batchverwerking
+### Prestatie‑optimalisatie voor batch‑verwerking
 
-**Uitdaging:** Efficiënt verwerken van meer dan 100 documentparen.  
-**Oplossing:** Gebruik een thread‑pool met vaste grootte en dien elke vergelijking in als een aparte taak.
+**Uitdaging:** Efficient 100+ documentparen verwerken.  
+**Oplossing:** Gebruik een thread‑pool met vaste grootte en dien elke vergelijking in als een afzonderlijke taak.
 
 ```java
 ExecutorService executor = Executors.newFixedThreadPool(4);
@@ -402,12 +402,12 @@ executor.shutdown();
 ### Formaat‑specifieke problemen
 
 - **Gescannde PDF's:** Pas OCR‑preprocessing toe vóór vergelijking.  
-- **Word‑documenten:** Schakel bestaande “Track Changes” uit om valse diffs te voorkomen.  
-- **Ingesloten objecten:** Extraheer en vergelijk ze afzonderlijk voor nauwkeurigheid.  
+- **Word‑documenten:** Schakel bestaande “Track Changes” uit om false diffs te voorkomen.  
+- **Ingesloten objecten:** Extraheer en vergelijk ze afzonderlijk voor nauwkeurigheid.
 
 ## Best practices en prestatie‑tips
 
-### 1. Document‑preprocessing
+### 1. document‑preprocessing
 
 Verwijder onnodige metadata en standaardiseer lettertypen vóór vergelijking om snelheid en nauwkeurigheid te verbeteren.
 
@@ -420,9 +420,9 @@ public void preprocessDocument(String filePath) {
 }
 ```
 
-### 2. Optimale configuratie‑profielen
+### 2. optimale configuratie‑profielen
 
-Maak herbruikbare `CompareOptions`‑presets voor elk documenttype (juridisch, marketing, technisch) en gebruik ze opnieuw in je pipeline.
+Maak herbruikbare `CompareOptions`‑presets voor elk documenttype (juridisch, marketing, technisch) en hergebruik ze in je pipeline.
 
 ```java
 public class ComparisonProfiles {
@@ -444,7 +444,7 @@ public class ComparisonProfiles {
 }
 ```
 
-### 3. Robuuste foutafhandeling en logging
+### 3. robuuste foutafhandeling en logging
 
 `ComparisonException` duidt op een fout tijdens het vergelijkingsproces en biedt gedetailleerde diagnostische informatie. Plaats vergelijkingsaanroepen in try‑catch‑blokken, log `ComparisonException`‑details, en val terug op een veilige standaard wanneer nodig.
 
@@ -459,15 +459,15 @@ public ComparisonResult safeCompareDocuments(String source, String target) {
 }
 ```
 
-### 4. Caching en slim hergebruik
+### 4. caching en slim hergebruik
 
 - Cache diff‑resultaten voor identieke bestandspaaren.  
-- Sla document‑vingerafdrukken (hashes) op om ongewijzigde bestanden over te slaan.  
-- Gebruik asynchrone wachtrijen voor niet‑kritieke vergelijkingen om de UI responsief te houden.  
+- Sla document‑fingerprints (hashes) op om ongewijzigde bestanden over te slaan.  
+- Gebruik asynchrone wachtrijen voor niet‑kritieke vergelijkingen om de UI responsief te houden.
 
-## Praktische integratiescenario's
+## Praktijkintegratiescenario's
 
-### Scenario 1: Geautomatiseerde contract‑review‑pipeline
+### Scenario 1: geautomatiseerde contract‑review‑pipeline
 
 ```java
 @Service
@@ -490,7 +490,7 @@ public class ContractReviewService {
 }
 ```
 
-### Scenario 2: Integratie met content‑managementsysteem
+### Scenario 2: integratie met content‑management‑systeem
 
 ```java
 @RestController
@@ -517,31 +517,31 @@ public class DocumentComparisonController {
 **V: Kan ik headers en footers negeren tijdens vergelijking in GroupDocs voor Java?**  
 A: Ja, roep `setHeaderFootersComparison(false)` aan op `CompareOptions`. Dit verwijdert dynamische header/footer‑ruis uit de diff.
 
-**V: Hoe stel ik de papiergrootte van de output in Java in met GroupDocs?**  
-A: Gebruik `setPaperSize(PaperSize.A6)` (of een andere enum‑waarde) in `CompareOptions`. Dit genereert een afdrukklare PDF in de gekozen grootte.
+**V: Hoe stel ik het output‑papierformaat in Java in met GroupDocs?**  
+A: Gebruik `setPaperSize(PaperSize.A6)` (of een andere enumwaarde) in `CompareOptions`. Dit genereert een print‑klare PDF in de gekozen grootte.
 
-**V: Is het mogelijk de vergelijkingsgevoeligheid fijn af te stellen voor verschillende documenttypen?**  
-A: Absoluut. Roep `setSensitivityOfComparison(85)` aan voor juridische contracten of `setSensitivityOfComparison(45)` voor marketingconcepten om de granulariteit te regelen.
+**V: Is het mogelijk om de gevoeligheid van de vergelijking fijn af te stellen voor verschillende documenttypen?**  
+A: Absoluut. Roep `setSensitivityOfComparison(85)` aan voor juridische contracten of `setSensitivityOfComparison(45)` voor marketing‑ontwerpen om de granulariteit te regelen.
 
 **V: Kan ik de styling van ingevoegde, verwijderde en gewijzigde tekst tijdens vergelijking aanpassen?**  
-A: Ja. Maak een `StyleSettings`‑instantie voor elk wijzigingstype en ken kleuren, lettertypen of randen toe voordat je deze aan `CompareOptions` doorgeeft.
+A: Ja. Maak een `StyleSettings`‑instantie voor elk wijzigingstype en wijs kleuren, lettertypen of randen toe voordat je deze aan `CompareOptions` doorgeeft.
 
-**V: Wat zijn de vereisten om aan de slag te gaan met GroupDocs Comparison in Java?**  
+**V: Wat zijn de vereisten om te beginnen met GroupDocs Comparison in Java?**  
 A: Je hebt JDK 8+ (JDK 11+ aanbevolen), Maven 3.6+ of Gradle 6.0+, minimaal 4 GB RAM, en een geldige GroupDocs‑licentie (gratis proefversie beschikbaar) nodig.
 
 **V: Hoe ga ik om met wachtwoord‑beveiligde documenten in GroupDocs.Comparison?**  
-A: Geef het wachtwoord als tweede argument mee bij het aanmaken van de `Comparer`: `new Comparer(sourceFile, "myPassword")`. Vang `PasswordRequiredException` af om fouten netjes af te handelen.
+A: Geef het wachtwoord als tweede argument mee bij het construeren van de `Comparer`: `new Comparer(sourceFile, "myPassword")`. Vang `PasswordRequiredException` om fouten netjes af te handelen.
 
 **V: Welke bestandsformaten ondersteunt GroupDocs.Comparison voor Java?**  
-A: Meer dan **50** formaten, waaronder DOCX, PDF, XLSX, PPTX, TXT, HTML, XML en gangbare afbeeldingsformaten (PNG, JPEG). De API detecteert formaten automatisch, maar je kunt ze expliciet opgeven voor batch‑prestatieverbeteringen.
+A: Meer dan **50** formaten, waaronder DOCX, PDF, XLSX, PPTX, TXT, HTML, XML, en gangbare beeldtypen (PNG, JPEG). De API detecteert formaten automatisch, maar je kunt ze expliciet specificeren voor batch‑prestatieverbeteringen.
 
 ## Conclusie
 
-Door gebruik te maken van GroupDocs.Comparison voor Java kun je de tijdrovende taak van het vergelijken van Excel‑werkboeken — en elk ander ondersteund formaat — automatiseren met pinpoint‑nauwkeurigheid, snelheid en consistentie. Integreer de code‑fragmenten en best‑practice‑tips uit deze gids in je CI/CD‑pipelines, document‑managementsystemen of aangepaste audit‑tools om meetbare productiviteitswinst te behalen.
+Door gebruik te maken van GroupDocs.Comparison voor Java kun je de tijdrovende taak van het vergelijken van Excel‑werkboeken—en elk ander ondersteund formaat—automatiseren met nauwkeurige, snelle en consistente resultaten. Integreer de code‑fragmenten en best‑practice‑tips uit deze gids in je CI/CD‑pipelines, document‑managementsystemen of aangepaste audit‑tools om meetbare productiviteitswinst te behalen.
 
 ---
 
-**Laatst bijgewerkt:** 2026-05-16  
+**Laatst bijgewerkt:** 2026-11-01  
 **Getest met:** GroupDocs.Comparison 25.2 for Java  
 **Auteur:** GroupDocs
 
@@ -558,5 +558,5 @@ try (Comparer comparer = new Comparer(sourceStream)) {
 ## Gerelateerde tutorials
 
 - [compare pdf java – Java Document Comparison Tutorial – Complete gids voor het laden & vergelijken van documenten](/comparison/java/document-loading/)
-- [GroupDocs Comparison Java licentie‑instelling – Complete URL‑configuratiegids](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [GroupDocs Comparison Java Licentie‑instelling – Complete URL‑configuratiegids](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
 - [Hoe GroupDocs te gebruiken – Java Document Comparison Streams – Complete gids](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)

@@ -53,10 +53,6 @@ url: /vi/java/basic-comparison/master-java-document-comparison-preview-groupdocs
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Pdf comparison java – hướng dẫn đầy đủ GroupDocs
 
 Nếu bạn cần **so sánh PDFs trong Java** một cách nhanh chóng và đáng tin cậy, bạn đã đến đúng nơi. Dù bạn đang xây dựng một cổng thông tin xem xét hợp đồng, một trình soạn thảo cộng tác, hay một công cụ kiểm tra tuân thủ tự động, việc kiểm tra thủ công từng trang PDF là dễ gây lỗi và chậm. Với **GroupDocs.Comparison for Java** bạn có thể tự động hoá toàn bộ quy trình: phát hiện mọi thay đổi về văn bản, cấu trúc và định dạng, tạo bản xem trước trực quan, và xử lý các tệp lớn mà không làm cạn kiệt bộ nhớ. Hướng dẫn này sẽ dẫn bạn qua cài đặt, cấp phép, mã so sánh cốt lõi, tạo bản xem trước, tối ưu hiệu năng, và khắc phục sự cố thực tế.
@@ -290,10 +286,3 @@ java -Xmx4g -XX:+UseG1GC -XX:MaxGCPauseMillis=200 YourApplication
 **Last Updated:** 2026-10-26  
 **Tested with:** GroupDocs.Comparison 25.2 for Java  
 **Author:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

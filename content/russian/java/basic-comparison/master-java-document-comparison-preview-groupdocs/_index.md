@@ -55,10 +55,6 @@ url: /ru/java/basic-comparison/master-java-document-comparison-preview-groupdocs
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Сравнение PDF в Java – полное руководство GroupDocs
 
 ## Быстрые ответы
@@ -290,10 +286,3 @@ java -Xmx4g -XX:+UseG1GC -XX:MaxGCPauseMillis=200 YourApplication
 **Последнее обновление:** 2026-10-26  
 **Тестировано с:** GroupDocs.Comparison 25.2 for Java  
 **Автор:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

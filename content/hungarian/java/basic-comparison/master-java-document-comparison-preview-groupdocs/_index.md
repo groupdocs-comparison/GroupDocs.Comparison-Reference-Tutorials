@@ -55,10 +55,6 @@ url: /hu/java/basic-comparison/master-java-document-comparison-preview-groupdocs
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Pdf összehasonlítás Java – teljes GroupDocs útmutató
 
 Ha gyorsan és megbízhatóan szeretnél **PDF-eket összehasonlítani Java-ban**, jó helyen vagy. Akár szerződés‑ellenőrző portált, együttműködő szerkesztőt vagy automatizált megfelelőség‑ellenőrzőt építesz, a PDF-ek kézi egymás melletti ellenőrzése hibára hajlamos és lassú. **GroupDocs.Comparison for Java**‑val automatizálhatod az egész munkafolyamatot: észlelheted minden szöveges, szerkezeti és formázási változást, vizuális előnézeteket generálhatsz, és hatalmas fájlokat dolgozhatsz fel anélkül, hogy a memória kimerülne. Ez az útmutató végigvezet a telepítésen, licencelésen, a fő összehasonlítási kódon, az előnézet generáláson, a teljesítményhangoláson és a valós környezetben felmerülő hibakeresésen.
@@ -292,10 +288,3 @@ A: Definiálj egy `@Service` bean‑t, amely befecskendezi a `Comparer`‑t, has
 **Legutóbb frissítve:** 2026-10-26  
 **Tesztelve a következővel:** GroupDocs.Comparison 25.2 for Java  
 **Szerző:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

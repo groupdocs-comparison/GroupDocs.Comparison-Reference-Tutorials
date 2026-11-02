@@ -52,10 +52,6 @@ url: /zh-hant/java/basic-comparison/master-java-document-comparison-preview-grou
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF 比較 Java – 完整 GroupDocs 指南
 
 如果您需要在 Java 中快速且可靠地**比較 PDF**，您來對地方了。無論您是構建合約審核門戶、協作編輯器，或是自動化合規檢查工具，手動逐頁檢視 PDF 容易出錯且效率低下。使用 **GroupDocs.Comparison for Java**，您可以自動化整個工作流程：偵測每一處文字、結構與格式的變更，產生視覺預覽，並在不耗盡記憶體的情況下處理大型檔案。本指南將帶您了解安裝、授權、核心比較程式碼、預覽產生、效能調校以及實務除錯。
@@ -289,10 +285,3 @@ A: 定義一個注入 `Comparer` 的 `@Service` Bean，使用 `@Async` 進行背
 **最後更新：** 2026-10-26  
 **測試環境：** GroupDocs.Comparison 25.2 for Java  
 **作者：** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

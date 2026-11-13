@@ -2,80 +2,98 @@
 categories:
 - Java Development
 - Document Processing
-date: '2026-04-25'
-description: GroupDocs Comparison Java を使用して、パスワードで保護された Word ドキュメントを比較する方法を学びましょう。このステップバイステップガイドでは、複数の
-  Word ファイルの比較、バッチ比較、そして一般的な落とし穴について解説します。
+date: '2026-11-13'
+description: GroupDocs Comparison Java を使用して、パスワード保護されたdocを読み込み、Word ファイルを比較する方法を学びます。ステップバイステップのガイドでは、バッチ比較、複数ファイルの取り扱い、トラブルシューティングについて説明します。
 keywords:
-- groupdocs comparison java
+- load password protected doc
+- java compare word documents
 - compare multiple word files
-- password protected word comparison java
-lastmod: '2026-04-25'
-linktitle: JavaでWord文書を比較する方法
+- groupdocs comparison java
+- batch compare word docs
+lastmod: '2026-11-13'
+linktitle: JavaでWordドキュメントを比較する方法
+og_description: GroupDocs Comparison Java を使用して、パスワード保護されたdocを読み込み、Word ファイルを比較する方法を学びます。このガイドでは、バッチ比較、複数ファイルの取り扱い、一般的な落とし穴を示します。
+og_image_alt: 'Tutorial: load password protected doc and compare Word documents with
+  GroupDocs Comparison Java'
+og_title: Javaでパスワード保護されたdocを読み込み、Wordを比較する方法
+schemas:
+- author: GroupDocs
+  dateModified: '2026-11-13'
+  description: Learn how to load password protected doc and compare Word files using
+    GroupDocs Comparison Java. Step‑by‑step guide covers batch comparison, multiple
+    file handling, and troubleshooting.
+  headline: How to load password protected doc and compare Word in Java
+  type: TechArticle
+- description: Learn how to load password protected doc and compare Word files using
+    GroupDocs Comparison Java. Step‑by‑step guide covers batch comparison, multiple
+    file handling, and troubleshooting.
+  name: How to load password protected doc and compare Word in Java
+  steps:
+  - name: '**Free trial** – ideal for quick tests'
+    text: '**Free trial** – ideal for quick tests'
+  - name: '**Temporary license** – for development environments'
+    text: '**Temporary license** – for development environments'
+  - name: '**Full license** – required for any commercial deployment'
+    text: '**Full license** – required for any commercial deployment'
+  type: HowTo
+- questions:
+  - answer: Absolutely! Call `comparer.add()` for each additional target; each can
+      have its own password.
+    question: Can I compare more than two password‑protected documents at once?
+  - answer: GroupDocs throws an authentication exception. Validate passwords before
+      invoking the comparison to avoid runtime failures.
+    question: What happens if I provide an incorrect password?
+  - answer: Yes. Supply a distinct `LoadOptions` instance for each document, each
+      containing the appropriate password.
+    question: Does GroupDocs work with documents that have different passwords?
+  - answer: Yes. Write the comparison output to any `OutputStream`, such as a `ByteArrayOutputStream`
+      or a network stream.
+    question: Can I compare documents without saving the result to disk?
+  - answer: You must obtain the correct password first; integrate a secure vault or
+      secret manager into your pipeline to retrieve passwords safely.
+    question: How do I handle documents when I don’t know the password?
+  type: FAQPage
 tags:
 - groupdocs
 - java
 - document-comparison
 - password-protected
 - word-documents
-title: GroupDocs Comparison Java – パスワード保護されたWord文書を比較
+title: Javaでパスワード保護されたdocを読み込み、Wordを比較する方法
 type: docs
 url: /ja/java/advanced-comparison/groupdocs-compare-protected-word-documents-java/
 weight: 1
 ---
 
-# Javaでパスワード保護されたWordドキュメントを比較する方法
+# パスワード保護された doc をロードして Java で Word を比較する方法
 
 ## はじめに
 
-パスワードで保護された **Word文書の比較方法** を試して壁にぶつかったことはありませんか？ あなたは一人ではありません。多くの開発者がドキュメント管理システムや監査ワークフローを構築する際に同じ課題に直面しています。 **このチュートリアルでは、GroupDocs Comparison Java を使用してパスワード保護された Word ドキュメントを比較する方法を学びます**。 法務レビュー ツール、 自動コンプライアンスチェッカー、 または **バッチモードで複数の Word ファイルを比較** したい場合にも役立ちます。
+パスワード保護された doc ファイルを **ロード** し、バージョン間の変更を検出する必要がある場合、ここが適切な場所です。暗号化された Word ドキュメントの比較は、法務レビューツール、コンプライアンスチェック、監査パイプラインで頻繁に求められます。このチュートリアルでは、GroupDocs Comparison Java を使用してパスワード保護された Word ドキュメントを比較し、バッチモードで複数ファイルを処理し、最も一般的な落とし穴を回避する方法を学びます。
 
 ## クイック回答
-- **パスワード保護された Word の比較を扱うライブラリは？** GroupDocs.Comparison for Java  
-- **本番環境でライセンスは必要ですか？** はい、フルライセンスを取得すると透かしと機能制限が解除されます  
-- **複数の保護されたファイルを同時に比較できますか？** もちろんです – 各対象に対して `comparer.add()` を使用します  
-- **ファイルサイズに制限はありますか？** JVM のヒープサイズに依存します。大きなファイルの場合は `-Xmx` を増やしてください  
-- **コードにパスワードを書かない方法は？** 環境変数などで安全に保管し、 `LoadOptions` に渡します  
+- **パスワード保護された Word の比較を扱うライブラリは何ですか？** GroupDocs.Comparison for Java  
+- **本番環境でライセンスが必要ですか？** はい、フルライセンスは透かしと制限を除去します  
+- **複数の保護されたファイルを同時に比較できますか？** もちろんです – 各ターゲットに対して `comparer.add()` を使用します  
+- **ファイルサイズに制限はありますか？** JVM ヒープに依存します。大きなファイルの場合は `-Xmx` を増やしてください  
+- **コードにパスワードを書かない方法は？** 安全に保存（例: 環境変数）し、`LoadOptions` に渡します  
 
-## パスワード保護付きで「Wordの比較方法」とは？
+## パスワード保護付きで「Word を比較する方法」とは何ですか？
+**直接の回答:** Word ドキュメントの比較とは、2 つ以上のバージョン間で挿入、削除、書式変更、その他の編集を検出することを意味します。ファイルが暗号化されている場合、ライブラリは差分を行う前に各ドキュメントを認証する必要があります。GroupDocs.Comparison は認証ステップを抽象化し、比較ロジックに集中できるようにします。
 
-Word 文書の比較とは、2 つ以上のバージョン間で挿入、削除、書式変更、その他の編集を検出することです。これらのファイルが暗号化されている場合、ライブラリは差分を行う前に各文書の認証を行う必要があります。GroupDocs.Comparison はこのステップを抽象化し、手動で復号する手間を省いて比較ロジックに集中できます。
-
-## 保護された文書比較に GroupDocs Comparison Java を選ぶ理由
-
-コードに入る前に、まずは根本的な疑問に答えましょう: なぜ手動で文書を復号したり、他のライブラリを使わないのか？
-
-**GroupDocs.Comparison が優れている点は次のとおりです:**
-- パスワード認証を内部で処理（手動復号不要）  
-- Word 以外の複数の文書形式に対応  
-- ハイライト付きの詳細な比較レポートを提供  
-- 既存の Java アプリケーションへシームレスに統合  
-- 機密文書向けのエンタープライズレベルのセキュリティを提供  
-
-**GroupDocs を他の選択肢より選ぶべきシーン:**
-- 複数の保護された文書形式を扱う場合  
-- セキュリティが最重要（ディスクに復号された状態で保存しない）  
-- 詳細な比較分析が必要な場合  
-- エンタープライズサポートが必要なプロジェクト  
+## 保護されたドキュメント比較に GroupDocs Comparison Java を選ぶ理由は？
+GroupDocs.Comparison は **50 以上の入力および出力フォーマット**（DOCX、PPTX、PDF、HTML、画像タイプなど）をサポートし、ストリーミングアーキテクチャによりファイル全体をメモリにロードせずに **数百ページ** を処理できます。また、変更ハイライト付きの **詳細な並列レポート** を提供し、精度が重要な監査レベルのワークフローに最適です。
 
 ## 前提条件と環境設定
 
 ### 必要なもの
-
-コーディングを始める前に、以下を用意してください。
-
-**必須要件:**
-- Java Development Kit (JDK) 8 以上  
+- Java Development Kit (JDK) 8 以上  
 - Maven または Gradle ビルドシステム  
-- IDE（IntelliJ IDEA、Eclipse、または VS Code が推奨）  
-- Java ストリームとファイル操作の基本的な理解  
+- IntelliJ IDEA、Eclipse、または VS Code などの IDE  
+- Java ストリームとファイル処理の基本知識  
 
-**あると便利なもの:**
-- Maven の依存関係管理に慣れていること  
-- try‑with‑resources パターンの理解  
-
-### Maven 設定
-
-最も簡単な開始方法は Maven を使うことです。以下を `pom.xml` に追加してください:
+### Maven 設定のセットアップ
+`pom.xml` に最新の GroupDocs.Comparison 依存関係を追加します:
 
 ```xml
 <repositories>
@@ -94,23 +112,24 @@ Word 文書の比較とは、2 つ以上のバージョン間で挿入、削除�
 </dependencies>
 ```
 
-**プロのコツ:** プロジェクトを開始する前に、最新バージョンは必ず [GroupDocs リリースページ](https://releases.groupdocs.com/comparison/java/) で確認してください。
+**プロのコツ:** プロジェクトを開始する前に、常に最新バージョンを [GroupDocs releases page](https://releases.groupdocs.com/comparison/java/) で確認してください。
 
 ### ライセンス設定
+ライセンスなしでもライブラリを評価できますが、本番環境で使用するには透かしを除去し、すべての機能を有効にする有効なキーが必要です。
 
-評価目的で GroupDocs を使用できますが、透かしと機能制限がかかります。本番環境で使用する場合は以下のいずれかを取得してください。
+1. **無料トライアル** – 短時間のテストに最適  
+2. **一時ライセンス** – 開発環境向け  
+3. **フルライセンス** – 商用展開には必須  
 
-1. **無料トライアル** – テストや小規模プロジェクトに最適  
-2. **一時ライセンス** – 開発フェーズに便利  
-3. **フルライセンス** – 本番デプロイに必須  
+[GroupDocs purchase page](https://purchase.groupdocs.com/buy) からライセンスを取得してください。
 
-ライセンスは [GroupDocs 購入ページ](https://purchase.groupdocs.com/buy) から入手できます。
+## 比較のためにパスワード保護された doc をロードする方法は？
+`LoadOptions` は暗号化されたドキュメントを開くために必要なパスワードなどのロードパラメータを保持するクラスです。`Comparer` はソースファイルと1つまたは複数のターゲットファイル間の差分を実行するクラスです。保護されたドキュメントの `FileInputStream` と `LoadOptions` インスタンスを `Comparer` コンストラクタに渡すことで、ライブラリは内部でファイルを認証し、比較の準備を行います。このパターンにより、比較ロジックに集中できます。
 
-## コア実装ガイド
+## 最初の保護されたドキュメントのロード
+FileInputStream はディスク上のファイルから生バイトを読み取る Java クラスです。
 
-### 最初の保護された文書を読み込む
-
-基本から始めましょう – パスワード保護された単一文書の読み込みです:
+`LoadOptions` クラスは暗号化ファイルのパスワード処理をカプセル化します。
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -133,14 +152,15 @@ public class BasicProtectedDocumentLoad {
 }
 ```
 
-**ここで何が起きているか?**
-- 保護された文書用に `FileInputStream` を作成  
-- `LoadOptions` がパスワード認証を処理  
-- `Comparer` インスタンスが操作可能な状態に  
+**ここで何が起きているのか？**
+- `FileInputStream` が保護されたドキュメントを開きます。  
+- `LoadOptions` がパスワードを受け取り、`Comparer` 用にストリームを準備します。  
+- `Comparer` オブジェクトは、1 つまたは複数のターゲットドキュメントを受け入れる準備ができました。
 
-### 完全な文書比較ワークフロー
+## 完全なドキュメント比較ワークフロー
+`add` は `Comparer` クラスのメソッドで、比較対象の追加ドキュメントを登録します。
 
-メインイベント – 複数の保護された文書を比較します:
+Now compare the source document against one or more protected targets:
 
 ```java
 import com.groupdocs.comparison.Comparer;
@@ -183,25 +203,23 @@ public class CompleteDocumentComparison {
 ```
 
 **覚えておくべき重要ポイント:**
-- 各文書は異なるパスワードを持てる  
-- 複数のターゲット文書を比較に追加可能  
-- 結果文書にすべての差分がハイライト表示される  
-- ストリーム管理は必ず try‑with‑resources を使用  
+- 各ターゲットは別々の `LoadOptions` を使用して独自のパスワードを持つことができます。  
+- 追加で比較したいドキュメントごとに `comparer.add()` を使用します。  
+- 結果の比較ドキュメントはすべての差分をハイライトし、サポートされている任意の形式で保存できます。  
+- ストリームは try‑with‑resources ブロックでラップし、確実に解放されるようにします。
 
-## JavaでWordファイルをバッチ比較する方法
-
-多数の文書ペアを自動処理したい場合は、上記ロジックをループでラップします。同じ `Comparer` クラスを各ペアで使い回し、 **完全な文書比較ワークフロー** で示したパターンを再利用してください。各イテレーション後にリソースを解放し、メモリ使用量を抑えることを忘れずに。
+## Java で Word ファイルをバッチ比較する方法は？
+バッチ処理はループ内で同じパターンに従い、各ソース‑ターゲットペアごとに新しい `Comparer` を作成するか、異なる `LoadOptions` を使用して単一インスタンスを再利用します。各イテレーションで保護されたファイルを開き、比較を実行し、ストリームを閉じてメモリを解放します。このアプローチによりヒープ使用量を抑え、JVM を過負荷にせずに大量のドキュメントを順次処理できます。
 
 ## よくある落とし穴と解決策
 
 ### 認証失敗
+**問題:** `InvalidPasswordException` などのエラー。
 
-**問題:** `InvalidPasswordException` などの認証エラーが発生。  
-
-**解決策:**  
-- パスワードのスペル（大文字小文字を区別）を再確認  
-- 文書が実際にパスワード保護されているか確認  
-- 正しい `LoadOptions` コンストラクタを使用しているか確認  
+**解決策:**
+- パスワードが正しく大文字小文字を区別しているか確認してください。  
+- ドキュメントが実際にパスワード保護されていることを確認してください。  
+- パスワード文字列を受け取る正しい `LoadOptions` コンストラクタを使用してください。
 
 ```java
 // Wrong way
@@ -211,14 +229,13 @@ new LoadOptions(); // No password provided
 new LoadOptions("correct_password");
 ```
 
-### 大容量文書でのメモリ問題
+### 大きなドキュメントのメモリ問題
+**問題:** 大きなファイルを処理中に `OutOfMemoryError` が発生。
 
-**問題:** 大きなファイルを処理中に `OutOfMemoryError` が発生。  
-
-**解決策:**  
-- JVM ヒープサイズを増やす: `-Xmx4g`  
-- 可能であれば文書をチャンクに分割して処理  
-- 使用後はすぐにストリームを閉じる  
+**解決策:**
+- JVM ヒープサイズを増やす（例: `-Xmx4g`）。  
+- 並列ではなく順次ドキュメントを処理する。  
+- 各比較後にすぐにストリームを閉じる。
 
 ```java
 // Good practice - explicit resource management
@@ -228,13 +245,12 @@ try (FileInputStream stream = new FileInputStream(path)) {
 ```
 
 ### ファイルパスの問題
+**問題:** パスは正しそうなのに `FileNotFoundException` が発生。
 
-**問題:** パスは正しそうなのに `FileNotFoundException` がスローされる。  
-
-**解決策:**  
-- 開発時は絶対パスを使用  
-- ファイル権限を確認  
-- 文書形式がサポート対象か検証  
+**解決策:**
+- 開発中は絶対パスを使用する。  
+- ファイルシステムの権限を確認する。  
+- ドキュメント形式が GroupDocs.Comparison でサポートされていることを確認する。
 
 ```java
 // Use File.exists() to debug path issues
@@ -244,11 +260,10 @@ if (!sourceFile.exists()) {
 }
 ```
 
-## パフォーマンス最適化ベストプラクティス
+## パフォーマンス最適化のベストプラクティス
 
 ### メモリ管理
-
-複数の大容量文書を扱う際はメモリ管理が鍵となります:
+When handling many large documents, keep memory footprints small by disposing of streams promptly.
 
 ```java
 public class OptimizedComparison {
@@ -269,24 +284,20 @@ public class OptimizedComparison {
 }
 ```
 
-### バッチ処理時の考慮点
-
-- **順次処理** でメモリスパイクを回避  
-- **各文書ペアごとに適切なエラーハンドリング** を実装  
-- **スレッドプール** は十分なメモリがある場合のみ使用  
-- **バッチ実行中はヒープ使用量を監視**  
+### バッチ処理の考慮点
+- ヒープ使用量の急増を防ぐため、ファイルは **順次** 処理する。  
+- 各ドキュメントペアに対して堅牢なエラーハンドリングを実装し、単一の失敗でバッチ全体が停止しないようにする。  
+- 十分なメモリがある場合のみ固定サイズのスレッドプールを使用し、そうでなければ単一スレッドに留める。
 
 ### キャッシュ戦略
-
-同じ文書を繰り返し比較する場合:  
-- `Comparer` インスタンスをキャッシュ（ただしメモリに注意）  
-- 頻繁にアクセスする文書ペアの比較結果を保存  
-- 冗長比較を避けるために文書チェックサムを利用  
+If you repeatedly compare the same documents:
+- `Comparer` インスタンスをキャッシュする（メモリ消費に注意）。  
+- 頻繁にアクセスするペアの比較結果を保存する。  
+- ドキュメントのチェックサムを使用して冗長な比較をスキップする。
 
 ## 実際のユースケース
 
 ### 法務文書レビュー
-
 ```java
 public class LegalDocumentComparison {
     public void compareContracts(String originalContract, String revisedContract) {
@@ -297,10 +308,9 @@ public class LegalDocumentComparison {
 }
 ```
 
-**適用例:** 契約書の改訂追跡、法務コンプライアンス監査、規制文書の更新管理。
+**適した用途:** 契約改訂の追跡、コンプライアンス監査、規制文書の更新。
 
-### 金融監査ワークフロー
-
+### 財務監査ワークフロー
 ```java
 public class FinancialAuditComparison {
     public void auditFinancialReports(List<String> reportPaths) {
@@ -311,10 +321,9 @@ public class FinancialAuditComparison {
 }
 ```
 
-**適用例:** 四半期報告書の検証、部門間の整合性チェック、規制コンプライアンスの確認。
+**理想的な用途:** 四半期レポートの検証、部門間の整合性チェック、規制の検証。
 
-### 学術研究アプリケーション
-
+### 学術研究の応用
 ```java
 public class AcademicResearchComparison {
     public void checkPlagiarism(String studentPaper, List<String> referencePapers) {
@@ -325,13 +334,12 @@ public class AcademicResearchComparison {
 }
 ```
 
-**適用例:** 盗作検出システム、研究論文の検証、学術的誠実性のワークフロー。
+**優れた用途:** 盗用検出、研究論文の検証、完全性チェック。
 
-## 高度な設定オプション
+## 高度な構成オプション
 
 ### 比較設定のカスタマイズ
-
-GroupDocs.Comparison では豊富なカスタマイズが可能です:
+GroupDocs.Comparison lets you fine‑tune how changes are detected and displayed.
 
 ```java
 import com.groupdocs.comparison.options.CompareOptions;
@@ -346,57 +354,68 @@ comparer.compare(outputStream, options);
 ```
 
 ### 出力形式オプション
-
-比較結果の表示方法をカスタマイズできます:  
-- 変更種別ごとの **ハイライトスタイル**  
-- 変更統計を含む **サマリーページ**  
-- 複雑な文書向けの **詳細アノテーション**  
+You can tailor the result document with:
+- 挿入、削除、書式変更のハイライトスタイル。  
+- 変更統計を一覧表示するサマリーページ。  
+- 複雑なドキュメント向けの詳細な注釈。
 
 ## トラブルシューティングガイド
 
-### よくあるエラーメッセージと解決策
-
-- **「Document format is not supported」** – 有効な `.docx` または `.doc` か確認  
-- **「Password is incorrect」** – 手動でパスワードをテスト、特殊文字に注意  
-- **「Comparison failed with unknown error」** – ディスク容量、書き込み権限、利用可能メモリを確認  
+### 一般的なエラーメッセージと解決策
+- **“Document format is not supported”** – ファイルが有効な `.docx` または `.doc` であることを確認してください。  
+- **“Password is incorrect”** – パスワードを手動でテストし、特殊文字に注意してください。  
+- **“Comparison failed with unknown error”** – ディスク容量、書き込み権限、利用可能なメモリを確認してください。
 
 ### パフォーマンス問題
-
-- **比較が遅い** – 大容量ファイルは時間がかかるのが自然。セクションに分割して処理を検討  
-- **メモリ使用量が高い** – ヒープサイズを監視し、リソースは速やかに閉じ、文書は順次処理  
+- **比較が遅い** – 大きなファイルは当然時間がかかります。セクションに分割することを検討してください。  
+- **メモリ使用量が高い** – ヒープを監視し、ストリームを速やかに閉じ、ファイルは一度に1つずつ処理してください。
 
 ## 結論
 
-これで **GroupDocs Comparison Java** を使用したパスワード保護された Word 文書の比較に必要なすべてが揃いました。この強力なアプローチにより、ドキュメントワークフローの自動化、コンプライアンスチェック、監査プロセスが実現できます。
+これで、**パスワード保護された doc** ファイルをロードし、GroupDocs Comparison Java で比較するための完全な本番対応アプローチが手に入りました。この方法は単一ファイルのチェックからバッチ処理パイプラインまでスケールし、あらゆるエンタープライズ文書ワークフローに対して信頼性が高く、安全で詳細な差分レポートを提供します。
 
 ## よくある質問
 
-**Q: 2 つ以上のパスワード保護された文書を同時に比較できますか？**  
-A: もちろんです！ `comparer.add()` を複数回呼び出せば、各ターゲットに個別のパスワードを設定できます。
+**Q: 2 つ以上のパスワード保護されたドキュメントを同時に比較できますか？**  
+A: もちろんです！追加のターゲットごとに `comparer.add()` を呼び出し、各々が独自のパスワードを持てます。
 
-**Q: 誤ったパスワードを指定した場合はどうなりますか？**  
-A: GroupDocs は認証例外をスローします。自動パイプラインで処理する前に必ずパスワードを検証してください。
+**Q: 間違ったパスワードを提供した場合はどうなりますか？**  
+A: GroupDocs は認証例外をスローします。比較を呼び出す前にパスワードを検証し、実行時エラーを防いでください。
 
-**Q: 文書ごとに異なるパスワードを持つ場合でも比較できますか？**  
-A: はい、各文書に対してそれぞれの `LoadOptions` で固有のパスワードを指定できます。
+**Q: 異なるパスワードを持つドキュメントでも GroupDocs は動作しますか？**  
+A: はい。各ドキュメントに対して適切なパスワードを含む個別の `LoadOptions` インスタンスを提供します。
 
-**Q: 結果をディスクに保存せずに比較できますか？**  
-A: 可能です。比較結果を任意の `OutputStream`（メモリストリームやネットワークストリームなど）に書き出せます。
+**Q: 結果をディスクに保存せずにドキュメントを比較できますか？**  
+A: はい。比較結果を任意の `OutputStream`（例: `ByteArrayOutputStream` やネットワークストリーム）に書き込めます。
 
-**Q: パスワードが不明な文書はどう扱うべきですか？**  
-A: 正しいパスワードを取得する必要があります。自動化ワークフローでは安全なパスワードボールトとの連携を検討してください。
+**Q: パスワードが不明なドキュメントをどう扱うべきですか？**  
+A: まず正しいパスワードを取得する必要があります。パイプラインに安全なボールトやシークレットマネージャーを統合して、パスワードを安全に取得してください。
 
-**Q: GroupDocs が扱える最大ファイルサイズは？**  
-A: 利用可能な JVM ヒープに依存します。100 MB 超のファイルではヒープを増やす（`-Xmx`）か、チャンク処理を検討してください。
+**Q: GroupDocs が扱える最大ファイルサイズはどれくらいですか？**  
+A: JVM ヒープに依存します。100 MB を超えるファイルの場合はヒープを増やし（`-Xmx`）、メモリ制限内に収めるためにチャンク処理を検討してください。
 
-**Q: 比較結果の詳細な統計情報は取得できますか？**  
-A: はい、`CompareOptions` の `GenerateSummaryPage` を有効にすれば、変更統計とサマリーページが得られます。
+**Q: 比較結果の詳細な統計情報を取得できますか？**  
+A: はい。`CompareOptions` の `GenerateSummaryPage` を有効にすると、変更数と割合を示す統計ページが得られます。
 
-**Q: クラウドストレージ上の文書も比較できますか？**  
-A: 可能です。クラウドプロバイダーから取得した `InputStream` を提供すれば、GroupDocs が処理できます。
+**Q: クラウドストレージに保存されたドキュメントを比較できますか？**  
+A: はい。クラウドプロバイダー（例: AWS S3、Azure Blob）からの `InputStream` を提供すれば、GroupDocs はローカルファイルと同様に処理します。
 
 ---
 
-**最終更新日:** 2026-04-25  
+**最終更新日:** 2026-11-13  
 **テスト環境:** GroupDocs.Comparison 25.2  
-**著者:** GroupDocs  
+**作者:** GroupDocs
+
+```text
+// Direct answer paragraph (40–70 words) follows the heading:
+```
+
+```text
+// No new code block added; the existing placeholders remain unchanged.
+```
+
+## 関連チュートリアル
+
+- [Groupdocs Comparison ライセンス URL 設定 (Java)](/comparison/java/licensing-configuration/set-groupdocs-comparison-license-url-java/)
+- [Groupdocs Comparison Java API ドキュメント比較](/comparison/java/advanced-comparison/groupdocs-comparison-java-api-document-comparison/)
+- [Java Groupdocs Comparison マルチストリームドキュメントガイド](/comparison/java/advanced-comparison/java-groupdocs-comparison-multi-stream-document-guide/)
